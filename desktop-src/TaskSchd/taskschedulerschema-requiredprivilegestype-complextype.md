@@ -1,9 +1,9 @@
 ---
-title: komplexer Typ "Requirements dprivilegestype"
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das Requirements dprivileges (Requirements dprivilegestype)-Element.
+title: requiredPrivilegesType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das RequiredPrivileges (requiredPrivilegesType)-Element.
 ms.assetid: ae96282a-d167-47ea-9d37-2d682f746d23
 keywords:
-- komplexer Typ "Requirements dprivilegestype" Taskplaner
+- komplexer requiredPrivilegesType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2a5ce81d96858488395e34f84232ca758ddabc59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d79b75a4d4bb44aded7367fd4acfd758887815bba6fc6fcfd965f9123ac58c54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119658790"
 ---
-# <a name="requiredprivilegestype-complex-type"></a>komplexer Typ "Requirements dprivilegestype"
+# <a name="requiredprivilegestype-complex-type"></a>requiredPrivilegesType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das Requirements [**dprivileges (Requirements dprivilegestype)**](taskschedulerschema-requiredprivileges-requiredprivilegestype-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das [**RequiredPrivileges (requiredPrivilegesType)-Element.**](taskschedulerschema-requiredprivileges-requiredprivilegestype-element.md)
 
 ``` syntax
 <xs:complexType name="requiredPrivilegesType">
@@ -40,9 +40,9 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 
 
-| Element                                                                           | type                                                                  | BESCHREIBUNG                                                |
+| Element                                                                           | Typ                                                                  | Beschreibung                                                |
 |-----------------------------------------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------|
-| [**Berechtigung**](taskschedulerschema-privilege-requiredprivilegestype-element.md) | [**PrivilegeType**](taskschedulerschema-privilegetype-simpletype.md) | Gibt die erforderlichen Berechtigungen für den Task an. <br/> |
+| [**Berechtigung**](taskschedulerschema-privilege-requiredprivilegestype-element.md) | [**privilegeType**](taskschedulerschema-privilegetype-simpletype.md) | Gibt die erforderlichen Berechtigungen für den Task an. <br/> |
 
 
 
@@ -52,8 +52,8 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -61,7 +61,7 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

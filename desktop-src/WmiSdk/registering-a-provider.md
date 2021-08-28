@@ -1,46 +1,46 @@
 ---
-description: Vor der Implementierung des Anbieters sollten Sie zunächst Ihren Anbieter bei WMI registrieren. Beim Registrieren des Anbieters werden der Typ des Anbieters und die vom Anbieter unterstützten Klassen definiert. WMI kann nur auf registrierte Anbieter zugreifen.
+description: Bevor Sie Ihren Anbieter implementieren, sollten Sie zuerst Ihren Anbieter bei WMI registrieren. Beim Registrieren des Anbieters werden der Typ des Anbieters und die vom Anbieter unterstützten Klassen definiert. WMI kann nur auf registrierte Anbieter zugreifen.
 ms.assetid: b0a1a11c-a8e8-4bc1-b286-fb9243667976
 ms.tgt_platform: multiple
 title: Registrieren eines Anbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53592ecb452de1b6071cbb8f59cfaaef42b57f1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 265d3a9f8617c68793fc30c0dc23fd3e9f0106ee98a9e3c757754e2fe589dda8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995920"
 ---
 # <a name="registering-a-provider"></a>Registrieren eines Anbieters
 
-Vor der Implementierung des Anbieters sollten Sie zunächst Ihren Anbieter bei WMI registrieren. Beim Registrieren des Anbieters werden der Typ des Anbieters und die vom Anbieter unterstützten Klassen definiert. WMI kann nur auf registrierte Anbieter zugreifen.
+Bevor Sie Ihren Anbieter implementieren, sollten Sie zuerst Ihren Anbieter bei WMI registrieren. Beim Registrieren des Anbieters werden der Typ des Anbieters und die vom Anbieter unterstützten Klassen definiert. WMI kann nur auf registrierte Anbieter zugreifen.
 
 > [!Note]  
-> Weitere Informationen zum Registrieren eines Mi-Anbieters finden Sie unter Gewusst [wie: Registrieren eines Mi-Anbieters](/previous-versions/windows/desktop/wmi_v2/how-to-register-an-mi-provider).
+> Weitere Informationen zum Registrieren eines MI-Anbieters finden Sie unter [Vorgehensweise: Registrieren eines MI-Anbieters.](/previous-versions/windows/desktop/wmi_v2/how-to-register-an-mi-provider)
 
  
 
-Sie können den Anbieter Code schreiben, bevor Sie den Anbieter registrieren. Es ist jedoch sehr schwierig, einen Anbieter zu debuggen, der nicht bei WMI registriert ist. Wenn Sie die Schnittstellen für Ihren Anbieter ermitteln, können Sie auch den Zweck und die Struktur eines Anbieters gliedern. Daher hilft Ihnen die Registrierung Ihres Anbieters beim Entwerfen Ihres Anbieters.
+Sie können Ihren Anbietercode schreiben, bevor Sie den Anbieter registrieren. Es ist jedoch sehr schwierig, einen Anbieter zu debuggen, der nicht bei WMI registriert ist. Die Bestimmung der Schnittstellen für Ihren Anbieter hilft auch dabei, den Zweck und die Struktur eines Anbieters zu beschreiben. Daher hilft Ihnen die Registrierung Ihres Anbieters beim Entwerfen Ihres Anbieters.
 
 Nur Administratoren können einen Anbieter registrieren oder löschen.
 
-Ein Anbieter muss für alle unterschiedlichen Typen von Anbieter Funktionen registriert werden, die er ausführt. Fast alle Anbieter stellen Instanzen von Klassen bereit, die Sie definieren, aber Sie können auch Eigenschafts Daten, Methoden, Ereignisse oder Klassen bereitstellen. Der Anbieter kann auch als Ereignisconsumeranbieter oder Leistungsindikatorenanbieter registriert werden. Es wird empfohlen, dass Sie alle Anbieter Funktionen in einem Anbieter kombinieren, anstatt für jeden Typ viele separate Anbieter zu haben. Ein Beispiel hierfür ist der [System Registrierungs Anbieter](/previous-versions/windows/desktop/regprov/system-registry-provider), der Methoden und Instanzen bereitstellt, sowie der Anbieter für Daten [Träger Kontingente](/previous-versions/windows/desktop/wmipdskq/disk-quota-provider), der Instanzen, Methoden und Ereignisse bereitstellt.
+Ein Anbieter muss für alle verschiedenen Typen von Anbieterfunktionen registriert werden, die er ausführt. Fast alle Anbieter stellen Instanzen von Klassen bereit, die sie definieren, aber sie können auch Eigenschaftsdaten, Methoden, Ereignisse oder Klassen bereitstellen. Der Anbieter kann auch als Ereignisverbraucheranbieter oder Leistungsindikatoranbieter registriert werden. Es wird empfohlen, alle Anbieterfunktionen in einem Anbieter zu kombinieren, anstatt für jeden Typ mehrere separate Anbieter zu verwenden. Ein Beispiel ist der [Systemregistrierungsanbieter](/previous-versions/windows/desktop/regprov/system-registry-provider), der Methoden und Instanzen bereitstellt, und der [Datenträgerkontingentanbieter](/previous-versions/windows/desktop/wmipdskq/disk-quota-provider), der Instanzen, Methoden und Ereignisse bereitstellt.
 
-Ein Anbieter muss für alle unterschiedlichen Typen von Anbieter Funktionen registriert werden, die er ausführt. Fast alle Anbieter stellen Instanzen von Klassen bereit, die Sie definieren, aber Sie können auch Eigenschafts Daten, Methoden, Ereignisse oder Klassen bereitstellen. Der Anbieter kann auch als Ereignisconsumeranbieter oder Leistungsindikatorenanbieter registriert werden.
+Ein Anbieter muss für alle verschiedenen Typen von Anbieterfunktionen registriert werden, die er ausführt. Fast alle Anbieter stellen Instanzen von Klassen bereit, die sie definieren, aber sie können auch Eigenschaftsdaten, Methoden, Ereignisse oder Klassen bereitstellen. Der Anbieter kann auch als Ereignisverbraucheranbieter oder Leistungsindikatoranbieter registriert werden.
 
-Dieselbe Instanz von [**\_ \_ Win32Provider**](--win32provider.md) wird für jeden Registrierungstyp verwendet:
+Die gleiche Instanz von [**\_ \_ Win32Provider**](--win32provider.md) wird für jeden Registrierungstyp verwendet:
 
 -   [Registrieren eines Instanzanbieters](registering-an-instance-provider.md)
--   [Registrieren eines Klassen Anbieters](registering-a-class-provider.md)
--   [Registrieren eines Methoden Anbieters](registering-a-method-provider.md)
--   [Registrieren eines Ereignis Anbieters](registering-an-event-provider.md)
--   [Registrieren eines Ereignisconsumeranbieters](registering-an-event-consumer-provider.md)
--   [Erstellen eines Instanzanbieters in einen High-Performance-Anbieter](making-an-instance-provider-into-a-high-performance-provider.md)
+-   [Registrieren eines Klassenanbieters](registering-a-class-provider.md)
+-   [Registrieren eines Methodenanbieters](registering-a-method-provider.md)
+-   [Registrieren eines Ereignisanbieters](registering-an-event-provider.md)
+-   [Registrieren eines Ereignisverbraucheranbieters](registering-an-event-consumer-provider.md)
+-   [Erstellen eines Instanzanbieters zu einem High-Performance Anbieter](making-an-instance-provider-into-a-high-performance-provider.md)
 
 ## <a name="example-creating-and-registering-an-instance-of-a-provider"></a>Beispiel: Erstellen und Registrieren einer Instanz eines Anbieters
 
-Das folgende Beispiel zeigt eine MOF-Datei, die eine Instanz des [System Registrierungs Anbieters](/previous-versions/windows/desktop/regprov/system-registry-provider) im root cimv2-Namespace erstellt und registriert \\ . Er weist den Alias $reg dem Anbieter zu, um den für die Instanz-und Methoden Registrierungen erforderlichen langen Pfadnamen zu vermeiden. Weitere Informationen finden Sie unter [Erstellen eines Alias](creating-an-alias.md).
+Das folgende Beispiel zeigt eine MOF-Datei, die eine Instanz des [Systemregistrierungsanbieters](/previous-versions/windows/desktop/regprov/system-registry-provider) im \\ cimv2-Stammnamespace erstellt und registriert. Sie weist dem Anbieter den Alias $Reg zu, um den langen Pfadnamen zu vermeiden, der in den Instanz- und Methodenregistrierungen erforderlich ist. Weitere Informationen finden Sie unter [Erstellen eines Alias.](creating-an-alias.md)
 
 ``` syntax
 // Place the Registry provider in the root\cimv2 namespace
@@ -157,19 +157,19 @@ class StdRegProv
 
 ## <a name="example-registering-a-provider"></a>Beispiel: Registrieren eines Anbieters
 
-Im folgenden Verfahren wird beschrieben, wie Sie einen-Anbieter registrieren.
+Im folgenden Verfahren wird beschrieben, wie ein Anbieter registriert wird.
 
 **So registrieren Sie einen Anbieter**
 
-1.  Registrieren Sie den Anbieter als com-Server.
+1.  Registrieren Sie den Anbieter als COM-Server.
 
-    Falls erforderlich, müssen Sie möglicherweise Registrierungseinträge erstellen. Dieser Vorgang gilt für alle com-Server und steht nicht im Zusammenhang mit WMI. Weitere Informationen finden Sie im Abschnitt zu com in der Dokumentation zum Microsoft Windows Software Development Kit (SDK).
+    Bei Bedarf müssen Sie möglicherweise Registrierungseinträge erstellen. Dieser Prozess gilt für alle COM-Server und steht nicht im Zusammenhang mit WMI. Weitere Informationen finden Sie im Com-Abschnitt in der Dokumentation zum Microsoft Windows Software Development Kit (SDK).
 
-2.  Erstellen Sie eine MOF-Datei, die Instanzen von [**\_ \_ Win32Provider**](--win32provider.md) und eine Instanz einer Klasse enthält, die entweder direkt oder indirekt von [**\_ \_ providerregistration**](--providerregistration.md)(z. b. [**\_ \_ instanceproviderregistration**](--instanceproviderregistration.md)) abgeleitet wird. Nur Administratoren können einen Anbieter registrieren oder löschen, indem Sie Instanzen von Klassen erstellen, die von **\_ \_ Win32Provider** oder [**\_ \_ providerregistration**](--providerregistration.md)abgeleitet werden.
-3.  Legen Sie das [**hostingmodel**](--win32provider.md) in der Instanz von **\_ \_ Win32Provider** entsprechend den Werten in den [Hostingmodellen](provider-hosting-and-security.md)fest.
+2.  Erstellen Sie eine MOF-Datei, die Instanzen von [**\_ \_ Win32Provider**](--win32provider.md) und eine Instanz einer Klasse enthält, die entweder direkt oder indirekt von [**\_ \_ ProviderRegistration**](--providerregistration.md)abgeleitet wird, z. B. [**\_ \_ InstanceProviderRegistration**](--instanceproviderregistration.md). Nur Administratoren können einen Anbieter registrieren oder löschen, indem sie Instanzen von Klassen erstellen, die von **\_ \_ Win32Provider** oder [**\_ \_ ProviderRegistration**](--providerregistration.md)abgeleitet sind.
+3.  Legen Sie das [**HostingModel**](--win32provider.md) in der Instanz von **\_ \_ Win32Provider** entsprechend den Werten in [Hostingmodelle](provider-hosting-and-security.md)fest.
 
     > [!Note]  
-    > Wenn der Anbieter die hohen Berechtigungen des Kontos LocalSystem erfordert, sollte die Eigenschaft [**\_ \_ Win32Provider. hostingmodel**](--win32provider.md) auf networkservicehost festgelegt werden. Weitere Informationen finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md).
+    > Sofern der Anbieter nicht die hohen Berechtigungen des LocalSystem-Kontos erfordert, sollte die [**\_ \_ Win32Provider.HostingModel-Eigenschaft**](--win32provider.md) auf "NetworkServiceHost" festgelegt werden. Weitere Informationen finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md)
 
      
 
@@ -186,17 +186,17 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen-Anbieter registrieren.
 
     
 
-4.  Eine Instanz einer Klasse, die entweder direkt oder indirekt von [**\_ \_ providerregistration**](--providerregistration.md)abgeleitet wird, um die logische Implementierung des Anbieters zu beschreiben. Ein Anbieter kann für verschiedene Arten von Funktionen registriert werden. Im obigen Beispiel wird RegProv als Instanz-und Methoden Anbieter registriert. Wenn RegProv die Funktionalität jedoch unterstützt, kann Sie auch als Eigenschaft oder Ereignis Anbieter registriert werden. In der folgenden Tabelle werden die-Klassen aufgelistet, die Anbieter Funktionen registrieren.
+4.  Eine Instanz einer Klasse, die entweder direkt oder indirekt von [**\_ \_ ProviderRegistration**](--providerregistration.md)abgeleitet wird, um die logische Implementierung des Anbieters zu beschreiben. Ein Anbieter kann für verschiedene Arten von Funktionen registriert werden. Im obigen Beispiel wird RegProv als Instanz- und Methodenanbieter registriert. Wenn RegProv die Funktionalität jedoch unterstützt, kann sie auch als Eigenschaften- oder Ereignisanbieter registriert werden. In der folgenden Tabelle sind die Klassen aufgeführt, die die Anbieterfunktionalität registrieren.
 
     
 
-    | Anbieter Registrierungs Klassen                                                        | BESCHREIBUNG                                                                         |
+    | Anbieterregistrierungsklassen                                                        | Beschreibung                                                                         |
     |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-    | [**\_\_Instanceproviderregistration**](--instanceproviderregistration.md)           | Registriert einen [Instanzanbieter](registering-an-instance-provider.md).             |
-    | [**\_\_Eventproviderregistration**](--eventproviderregistration.md)                 | Registriert einen [Ereignis Anbieter](registering-an-event-provider.md).                   |
-    | [**\_\_Eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) | Registriert einen [Ereignisconsumeranbieter](registering-an-event-consumer-provider.md). |
-    | [**\_\_Methodproviderregistration**](--methodproviderregistration.md)               | Registriert einen [Methoden Anbieter](registering-an-event-consumer-provider.md).          |
-    | [**\_\_Propertyproviderregistration**](--propertyproviderregistration.md)           | Registriert einen [Eigenschaften Anbieter](registering-a-property-provider.md).               |
+    | [**\_\_InstanceProviderRegistration**](--instanceproviderregistration.md)           | Registriert einen [Instanzanbieter.](registering-an-instance-provider.md)             |
+    | [**\_\_EventProviderRegistration**](--eventproviderregistration.md)                 | Registriert einen [Ereignisanbieter.](registering-an-event-provider.md)                   |
+    | [**\_\_EventConsumerProviderRegistration**](--eventconsumerproviderregistration.md) | Registriert einen [Ereignisverbraucheranbieter.](registering-an-event-consumer-provider.md) |
+    | [**\_\_MethodProviderRegistration**](--methodproviderregistration.md)               | Registriert einen [Methodenanbieter.](registering-an-event-consumer-provider.md)          |
+    | [**\_\_PropertyProviderRegistration**](--propertyproviderregistration.md)           | Registriert einen [Eigenschaftenanbieter.](registering-a-property-provider.md)               |
 
     
 
@@ -206,11 +206,11 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen-Anbieter registrieren.
 
     In der Regel sollten Sie die Datei im Installationsverzeichnis des Anbieters platzieren.
 
-6.  Kompilieren [Sie die](mofcomp.md) MOF-Datei mit der [**-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler) von "MOF".
+6.  Kompilieren Sie die MOF-Datei mithilfe von [mofcomp](mofcomp.md) oder der [**IMofCompiler-Schnittstelle.**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler)
 
-    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien](compiling-mof-files.md).
+    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien.](compiling-mof-files.md)
 
-    **Windows 8 und Windows Server 2012:** Beim Installieren von Anbietern werden [](mofcomp.md) [**die**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler) \[ Schlüssel \] -und \[ statischen \] Qualifizierer unabhängig von ihren tatsächlichen Werten als true behandelt, wenn Sie vorhanden sind. Andere Qualifizierer werden als false behandelt, wenn Sie vorhanden sind, aber nicht explizit auf true festgelegt sind.
+    **Windows 8 und Windows Server 2012:** Beim Installieren von Anbietern behandeln [**sowohl mofcomp**](mofcomp.md) als auch die [**IMofCompiler-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler) die \[ Key- \] und \[ \] Static-Qualifizierer als true, wenn sie vorhanden sind, unabhängig von ihren tatsächlichen Werten. Andere Qualifizierer werden als FALSE behandelt, wenn sie vorhanden sind, aber nicht explizit auf TRUE festgelegt sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -219,10 +219,10 @@ Im folgenden Verfahren wird beschrieben, wie Sie einen-Anbieter registrieren.
 [Entwickeln eines WMI-Anbieters](developing-a-wmi-provider.md)
 </dt> <dt>
 
-[Festlegen von namepace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md)
+[Festlegen von Namepace-Sicherheitsbeschreibungen](setting-namespace-security-descriptors.md)
 </dt> <dt>
 
-[Sichern Ihres Anbieters](securing-your-provider.md)
+[Schützen Ihres Anbieters](securing-your-provider.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-title: Debugging von Speicher Belegungen
-description: Debugging von Speicher Belegungen
+title: Debuggen von Speicherzuweisungen
+description: Debuggen von Speicherzuweisungen
 ms.assetid: 522adb1f-0e3e-4dfb-8836-f539a79a3d9e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: beb6a7dbe313cfe571fa6b4d244df35407fa331e
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: ae81b3376b2ffee17ce747197eb57fecbdae18e086d5252dd5f4721975181885
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993450"
 ---
-# <a name="debugging-memory-allocations"></a>Debugging von Speicher Belegungen
+# <a name="debugging-memory-allocations"></a>Debuggen von Speicherzuweisungen
 
-COM stellt die [**IMallocSpy**](/windows/desktop/api/ObjIdl/nn-objidl-imallocspy) -Schnittstelle bereit, die Entwickler zum Debuggen Ihrer Speicher Belegungen verwenden können. Für jede Methode in [**imzuzuordc**](/windows/win32/api/objidlbase/nn-objidlbase-imalloc)gibt es zwei Methoden in **imzuordcspy**, eine "Pre"-Methode und eine "Post"-Methode. Nachdem ein Entwickler es implementiert und im System veröffentlicht hat, ruft das System die **IMallocSpy** -Methode "Pre" direkt vor der entsprechenden **IMalloc** -Methode auf, sodass der Debugcode für die Zuordnungs Operation "Spy" und die Post-Methode aufgerufen wird, um den Spy freizugeben.
+COM stellt die [**IMallocSpy-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-imallocspy) bereit, mit der Entwickler ihre Speicherzuweisungen debuggen können. Für jede Methode in [**IMalloc gibt**](/windows/win32/api/objidlbase/nn-objidlbase-imalloc)es zwei Methoden in **IMallocSpy,** eine "pre"-Methode und eine "post"-Methode. Nachdem ein Entwickler sie implementiert und im System veröffentlicht hat, ruft das System die "pre"-Methode **von IMallocSpy** direkt vor der entsprechenden **IMalloc-Methode** auf, sodass der Debugcode den Zuordnungsvorgang "ausspionieren" kann, und ruft die "post"-Methode auf, um den Spy frei zu geben.
 
-Wenn com z. b. erkennt, dass der nächste Aufruf ein Aufruf von [**imzuzuordc:: zuordc**](/windows/desktop/api/ObjIdl/nf-objidl-imalloc-alloc)ist, wird [**imzuzuordcspy::P rezuzuzuweisung**](/windows/desktop/api/ObjIdl/nf-objidl-imallocspy-prealloc)aufgerufen. dabei werden die Debugvorgänge ausgeführt, die der Entwickler bei der **Zuord:P** **nungsausführung** wünscht [](/windows/desktop/api/ObjIdl/nf-objidl-imallocspy-postalloc)
+Wenn COM z. B. erkennt, dass der nächste Aufruf ein Aufruf von [**IMalloc::Alloc**](/windows/desktop/api/ObjIdl/nf-objidl-imalloc-alloc)ist, ruft es [**IMallocSpy::P reAlloc**](/windows/desktop/api/ObjIdl/nf-objidl-imallocspy-prealloc)auf, um alle Debugvorgänge durchzuführen, die der Entwickler während der **Alloc-Ausführung** möchte, und ruft dann nach der Rückgabe des **Alloc-Aufrufs** [**IMallocSpy::P ostAlloc**](/windows/desktop/api/ObjIdl/nf-objidl-imallocspy-postalloc) auf, um den Spy frei zu geben und die Steuerung an den Code zurückgibt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwalten der Speicher Belegung](managing-memory-allocation.md)
+[Verwalten der Speicherzuordnung](managing-memory-allocation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

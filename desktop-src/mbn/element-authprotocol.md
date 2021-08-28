@@ -1,5 +1,5 @@
 ---
-description: Mbnprofileext \/ ... \/ Authprotocol (v4)
+description: MBNProfileExt \/ ... \/ AuthProtocol (v4)
 MS-HAID: WWAN\_profile\_v4.element\_AuthProtocol
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -16,20 +16,20 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 90b3b64c5052a16f18c0a1b9fd154e2e73acd714
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 487c58bda5e3b891b0e14614fa6c91830bc7512e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347756"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482736"
 ---
-# <a name="span-idwwan_profile_v4element_authprotocolspanmbnprofileextauthprotocol-v4"></a><span id="WWAN_profile_v4.element_AuthProtocol"></span>Mbnprofileext \/ ... \/ Authprotocol (v4)
+# <a name="span-idwwan_profile_v4element_authprotocolspanmbnprofileextauthprotocol-v4"></a><span id="WWAN_profile_v4.element_AuthProtocol"></span>MBNProfileExt \/ ... \/ AuthProtocol (v4)
 
 >Gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
 
-Beachten Sie, dass in v4 ein neuer-Enumerationswert für dieses Element verfügbar ist. **Autoselection** bedeutet, dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden muss.
+Beachten Sie, dass in v4 ein neuer Enumerationswert für dieses Element verfügbar ist. **AutoSelection** bedeutet, dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden soll.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1 [**authprotocol**](./schema-authprotocol-contexttype-element.md) -Element.
+Weitere Informationen finden Sie in der Dokumentation für das [**v1-AuthProtocol-Element.**](./schema-authprotocol-contexttype-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -63,41 +63,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-context.md">Context</a></td>
-<td><p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-context.md">Context</a> | <p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

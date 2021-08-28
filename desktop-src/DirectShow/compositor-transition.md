@@ -1,34 +1,34 @@
 ---
-description: Compositorübergang
+description: Compositor-Übergang
 ms.assetid: 7903ecd7-88fb-4277-82ee-a7f71cae0412
-title: Compositorübergang
+title: Compositor-Übergang
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75488e9dbdea4926c515f52352b42f68a2bfa679
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 763194308ea01a31e132aebccdfca84f06dae56e9c01b47c689b03215cdb2698
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104566272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084294"
 ---
-# <a name="compositor-transition"></a>Compositorübergang
+# <a name="compositor-transition"></a>Compositor-Übergang
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Der Compositor-Übergang setzt ein unter Rechteck aus dem Vordergrund in ein bestimmtes Rechteck im Hintergrund zusammen, ohne den Rest des Hintergrunds zu ändern. Verwenden Sie diesen Übergang, um Effekte im Bildschirm oder Bild in Bildern zu erstellen.
+Der Compositor-Übergang zusammengesetzt einen Unterordngle aus dem Vordergrund in ein bestimmtes Rechteck im Hintergrund, ohne den Rest des Hintergrunds zu ändern. Verwenden Sie diesen Übergang, um Split-Screen- oder Picture-in-Picture-Effekte zu erstellen.
 
-In der folgenden Abbildung ist der compositorübergang dargestellt:
+Die folgende Abbildung zeigt den Compositorübergang:
 
-![compositorübergang](images/trans-compositor.png)
+![Compositorübergang](images/trans-compositor.png)
 
 Klassen-ID (CLSID): {BB44391D-6ABD-422f-9E2E-385C9DFF51FC}
 
-CLSID-Variablen Name: CLSID \_ dxtcompositor
+CLSID-Variablenname: CLSID \_ DxtCompositor
 
-Anzeige Name: "dxtcompositor"
+Name der Beschriftung: "DxtCompositor"
 
 Eigenschaften
 
@@ -36,22 +36,22 @@ Eigenschaften
 
 | Eigenschaft   | type | Standard | BESCHREIBUNG                                                    |
 |------------|------|---------|----------------------------------------------------------------|
-| Höhe     | long | 0       | Höhe des Ziel Rechtecks in Pixel.                     |
-| OffsetX    | long | 0       | Horizontaler Offset des Ziel Rechtecks in Pixel.          |
-| OffsetY    | long | 0       | Vertikaler Offset des Ziel Rechtecks in Pixel.            |
-| SrcHeight  | long | 0       | Die Höhe des unter Rechtecks in der Quelle in Pixel.       |
-| Srcoffsetx | long | 0       | Die x-Koordinate des unter Rechtecks in der Quelle in Pixel. |
-| Srcoff-Ty | long | 0       | Die y-Koordinate des unter Rechtecks in der Quelle in Pixel. |
-| SrcWidth   | long | 0       | Die Breite des unter Rechtecks in der Quelle in Pixel.        |
-| Breite      | long | 0       | Breite des Ziel Rechtecks in Pixel.                      |
+| Height     | long | 0       | Höhe des Zielrechtecks in Pixel.                     |
+| OffsetX    | long | 0       | Horizontaler Offset des Zielrechtecks in Pixel.          |
+| OffsetY    | long | 0       | Vertikaler Offset des Zielrechtecks in Pixel.            |
+| SrcHeight  | long | 0       | Die Höhe des UntergeordnetenRectangles auf der Quelle in Pixel.       |
+| SrcOffsetX | long | 0       | Die x-Koordinate des Subrekttangles auf der Quelle in Pixel. |
+| SrcOffsetY | long | 0       | Die y-Koordinate des Subrectangles auf der Quelle in Pixel. |
+| SrcWidth   | long | 0       | Die Breite des UntergeordnetenRectangles auf der Quelle in Pixel.        |
+| Width      | long | 0       | Breite des Zielrechtecks in Pixel.                      |
 
 
 
  
 
-Diese Eigenschaften werden im folgenden Diagramm veranschaulicht:
+Das folgende Diagramm veranschaulicht diese Eigenschaften:
 
-![Compositor-Eigenschaften](images/compmeasure.png)
+![Compositoreigenschaften](images/compmeasure.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

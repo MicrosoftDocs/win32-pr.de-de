@@ -1,12 +1,12 @@
 ---
-title: IMsRdpDeviceV2 cmclassguid (Eigenschaft)
-description: Enthält die Configuration Manager-Setup Klassen-GUID für das Gerät.
+title: IMsRdpDeviceV2 CmClassGuid (Eigenschaft)
+description: Enthält die GUID der Configuration Manager-Setupklasse für das Gerät.
 ms.assetid: 29ebe2ca-d669-4cc1-8cc1-33490fbb9497
 ms.tgt_platform: multiple
 keywords:
-- Cmclassguid-Eigenschaft Remotedesktopdienste
-- Cmclassguid-Eigenschaft Remotedesktopdienste, IMsRdpDeviceV2-Schnittstelle
-- IMsRdpDeviceV2 Interface Remotedesktopdienste, cmclassguid-Eigenschaft
+- CmClassGuid-Remotedesktopdienste
+- CmClassGuid-Eigenschaft Remotedesktopdienste , IMsRdpDeviceV2-Schnittstelle
+- IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste , CmClassGuid-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47a13a8ee706a1e6d2f512a9f6dca98928e3d8d9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 372d30ad6dc906b421a6f4a125d3f6fddb88addead17ea27f43369ceee758465
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099390"
 ---
-# <a name="imsrdpdevicev2cmclassguid-property"></a>IMsRdpDeviceV2:: cmclassguid (Eigenschaft)
+# <a name="imsrdpdevicev2cmclassguid-property"></a>IMsRdpDeviceV2::CmClassGuid (Eigenschaft)
 
-Enthält die Configuration Manager-Setup Klassen-GUID für das Gerät.
+Enthält die GUID der Configuration Manager-Setupklasse für das Gerät.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_CmClassGuid(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Configuration Manager-Setup Klassen-GUID für das Gerät.
+Die GUID der Configuration Manager-Setupklasse für das Gerät.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Die Configuration Manager-Setup Klassen-GUID für das Gerät.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 mit SP1<br/>                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpDeviceV2 wird als 5b94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
+| IID<br/>                      | IID \_ IMsRdpDeviceV2 ist als 5fb94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
 
 
 

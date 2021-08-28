@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings getMode-Methode
-description: Die getMode-Methode gibt einen Wert zurück, der angibt, ob der Schleifen-oder Shuffle-Modus aktiv ist.
+title: IWMPSettings getMode-Methode
+description: Die getMode-Methode gibt einen Wert zurück, der angibt, ob der Schleifenmodus oder der Shufflemodus aktiv ist.
 ms.assetid: a2e4bf74-017f-4c54-a3a1-a03b75a87a59
 keywords:
-- getMode-Methode, Windows-Media Player
-- getMode-Methode, Windows Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows Media Player, getMode-Methode
+- getMode-Methode Windows Media Player
+- getMode-Methode Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , getMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 229cacf629410f958a062615cd5feb22be2ab0d0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fae5d910dbbdf1fc2241a63dcf6c61c94e968cf0f2b36316407aafc8fc5f2dcf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119246300"
 ---
-# <a name="iwmpsettingsgetmode-method"></a>Iwmpsettings:: getMode-Methode
+# <a name="iwmpsettingsgetmode-method"></a>IWMPSettings::getMode-Methode
 
-Die **getMode** -Methode gibt einen Wert zurück, der angibt, ob der Schleifen-oder Shuffle-Modus aktiv ist.
+Die **getMode-Methode** gibt einen Wert zurück, der angibt, ob der Schleifenmodus oder der Shufflemodus aktiv ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,18 +53,18 @@ Implements IWMPSettings.getMode
 
 <dl> <dt>
 
-*bstraumode* \[ in\]
+*bstrMode* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der einem der folgenden Werte entspricht.
+Eine **System.String,die** einer der folgenden Werte ist.
 
 
 
 | Wert      | BESCHREIBUNG                                                                                      |
 |------------|--------------------------------------------------------------------------------------------------|
-| autorewind | Die Nachverfolgung wird von Anfang an neu gestartet.                                |
-| loop       | Die Reihenfolge der Spuren wird wiederholt.                                                           |
-| showframe  | Der nächste Keyframe wird angezeigt, wenn er nicht wiedergegeben wird. Dieser Modus ist für Audiospuren nicht relevant. |
+| autoRewind | Spuren werden von Anfang an neu gestartet, nachdem sie bis zum Ende wiedergegeben wurden.                                |
+| loop       | Die Sequenz von Spuren wiederholt sich selbst.                                                           |
+| showFrame  | Der nächstgelegene Keyframe wird angezeigt, wenn er nicht wiedergegeben wird. Dieser Modus ist für Audiospuren nicht relevant. |
 | Shuffle    | Spuren werden in zufälliger Reihenfolge wiedergegeben.                                                               |
 
 
@@ -75,7 +75,7 @@ Ein **System. String** -Wert, der einem der folgenden Werte entspricht.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Boolean** -Wert, der angibt, ob der angegebene Modus aktiv ist.
+Ein **System.Boolean-Wert,** der angibt, ob der angegebene Modus aktiv ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,20 +83,20 @@ Ein **System. Boolean** -Wert, der angibt, ob der angegebene Modus aktiv ist.
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. SetMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
+[**IWMPSettings.setMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
 </dt> </dl>
 
  

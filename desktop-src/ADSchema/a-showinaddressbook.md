@@ -1,11 +1,11 @@
 ---
-title: Attribut "in-Address-Book" anzeigen
-description: Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt angezeigt wird.
+title: Show-In-Address-Book-Attribut
+description: Dieses Attribut wird verwendet, um anzugeben, in welchen MAPI-Adressbüchern ein Objekt angezeigt wird.
 ms.assetid: de00da4d-7c04-4d1d-b375-ce3b5eb2f50f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Show-in-Address-Book-Attribut
-- AD-Schema für showInAddressBook-Attribut
+- Ad-Schema des Show-In-Address-Book-Attributs
+- showInAddressBook-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f44632604c539278c67e9dd46537d8e797e2d70d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 610e310297d3401548cc65adb53c77760893ba3a0c5777a9d440432d12dff77a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836270"
 ---
-# <a name="show-in-address-book-attribute"></a>Attribut "in-Address-Book" anzeigen
+# <a name="show-in-address-book-attribute"></a>Show-In-Address-Book-Attribut
 
-Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt angezeigt wird. Sie wird normalerweise vom Exchange-Empfänger Aktualisierungs Dienst verwaltet.
+Dieses Attribut wird verwendet, um anzugeben, in welchen MAPI-Adressbüchern ein Objekt angezeigt wird. Sie wird in der Regel vom Exchange Empfängeraktualisierungsdienst.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | In-Address-Book anzeigen                    |
-| LDAP-Display-Name | showInAddressBook                       |
+| CN                | Show-In-Address-Book                    |
+| Ldap-Anzeigename | showInAddressBook                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Diese wird vom System verwendet.             |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | Dies wird vom System verwendet.             |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.644                  |
-| System-ID-GUID    | 3e74f 60E-3e73-11d1-a9c0-0000e80367c1    |
+| System-Id-Guid    | 3e74f60e-3e73-11d1-a9c0-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |
@@ -70,7 +70,7 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |
@@ -99,11 +99,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |
@@ -120,11 +120,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |
@@ -141,11 +141,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |
@@ -162,11 +162,11 @@ Mit diesem Attribut wird angegeben, in welchen MAPI-Adressbüchern ein Objekt an
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | False                                                |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Falsch                                                |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000010                                           |

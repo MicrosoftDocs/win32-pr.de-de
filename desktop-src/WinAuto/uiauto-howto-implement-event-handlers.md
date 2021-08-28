@@ -1,29 +1,29 @@
 ---
-title: Vorgehensweise beim Implementieren von Ereignis Handlern
-description: Dieses Thema enthält Beispielcode, der veranschaulicht, wie Schnittstellen implementiert werden, die Clients das empfangen und Verarbeiten von Microsoft-Benutzeroberflächenautomatisierungs-Ereignissen ermöglichen.
+title: Implementieren von Ereignishandlern
+description: Dieses Thema enthält Beispielcode, der zeigt, wie Schnittstellen implementiert werden, mit denen Clients Microsoft Benutzeroberflächenautomatisierung Ereignisse empfangen und verarbeiten können.
 ms.assetid: 6b6549b8-795b-45a8-8fef-59842cc990e4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 159e95e739ae73f1c37d99ae065032fd680f0720
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 09448bd9088b8338e9de14079b2ee446bf43f4e2c41e15ce17114eda958ed210
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098380"
 ---
-# <a name="how-to-implement-event-handlers"></a>Vorgehensweise beim Implementieren von Ereignis Handlern
+# <a name="how-to-implement-event-handlers"></a>Implementieren von Ereignishandlern
 
-Dieses Thema enthält Beispielcode, der veranschaulicht, wie Schnittstellen implementiert werden, die Clients das empfangen und Verarbeiten von Microsoft-Benutzeroberflächenautomatisierungs-Ereignissen ermöglichen. In diesem Thema werden die folgenden Themen behandelt:
+Dieses Thema enthält Beispielcode, der zeigt, wie Schnittstellen implementiert werden, mit denen Clients Microsoft Benutzeroberflächenautomatisierung Ereignisse empfangen und verarbeiten können. Es werden die folgenden Themen behandelt:
 
--   [Behandeln allgemeiner Benutzeroberflächenautomatisierungs-Ereignisse](#handling-general-ui-automation-events)
+-   [Behandeln allgemeiner Benutzeroberflächenautomatisierung Ereignisse](#handling-general-ui-automation-events)
 -   [Behandeln von Focus-Changed Ereignissen](#handling-focus-changed-events)
 -   [Behandeln von Property-Changed Ereignissen](#handling-property-changed-events)
 -   [Behandeln von Structure-Changed Ereignissen](#handling-structure-changed-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="handling-general-ui-automation-events"></a>Behandeln allgemeiner Benutzeroberflächenautomatisierungs-Ereignisse
+## <a name="handling-general-ui-automation-events"></a>Behandeln allgemeiner Benutzeroberflächenautomatisierung Ereignisse
 
-Das folgende Codebeispiel ist eine Microsoft Windows-Konsolenanwendung, die einen Benutzeroberflächenautomatisierungs-Ereignishandler für allgemeine Benutzeroberflächenautomatisierungs-Ereignisse implementiert. In diesem Beispiel werden Erstellungs-und Zerstörungs Ereignisse für Quick Infos und andere Fenster behandelt.
+Das folgende Codebeispiel ist eine Microsoft Windows-Konsolenanwendung, die einen Benutzeroberflächenautomatisierung Ereignishandler für allgemeine Benutzeroberflächenautomatisierung implementiert. In diesem Beispiel werden Erstellungs- und Zerstörungsereignisse für QuickInfos und andere Fenster behandelt.
 
 
 ```C++
@@ -192,7 +192,7 @@ cleanup:
 
 ## <a name="handling-focus-changed-events"></a>Behandeln von Focus-Changed Ereignissen
 
-Das folgende Codebeispiel ist eine Windows-Konsolenanwendung, die einen Handler für durch Fokus geänderte Ereignisse implementiert.
+Das folgende Codebeispiel ist eine Windows Konsolenanwendung, die einen Handler für Ereignisse implementiert, die den Fokus geändert haben.
 
 
 ```C++
@@ -316,7 +316,7 @@ cleanup:
 
 ## <a name="handling-property-changed-events"></a>Behandeln von Property-Changed Ereignissen
 
-Das folgende Codebeispiel ist eine Windows-Konsolenanwendung, die einen Handler für Eigenschaften geänderte Ereignisse implementiert.
+Das folgende Codebeispiel ist eine Windows Konsolenanwendung, die einen Handler für Ereignisse implementiert, die durch Eigenschaften geändert wurden.
 
 
 ```C++
@@ -471,7 +471,7 @@ cleanup:
 
 ## <a name="handling-structure-changed-events"></a>Behandeln von Structure-Changed Ereignissen
 
-Das folgende Codebeispiel ist eine Windows-Konsolenanwendung, die einen Handler für Struktur geänderte Ereignisse implementiert.
+Das folgende Codebeispiel ist eine Windows Konsolenanwendung, die einen Handler für Ereignisse implementiert, die von der Struktur geändert wurden.
 
 
 ```C++
@@ -637,18 +637,18 @@ cleanup:
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](uiauto-eventsforclients.md)
+[Abonnieren von Benutzeroberflächenautomatisierung Ereignissen](uiauto-eventsforclients.md)
 </dt> <dt>
 
-[Themen zur Vorgehensweise für Benutzeroberflächenautomatisierungs-Clients](uiauto-howto-topics-for-uiautomation-clients.md)
+[Anleitungsthemen für Benutzeroberflächenautomatisierung Clients](uiauto-howto-topics-for-uiautomation-clients.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

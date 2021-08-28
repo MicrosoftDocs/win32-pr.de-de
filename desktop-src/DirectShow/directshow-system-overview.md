@@ -1,41 +1,41 @@
 ---
-description: Übersicht über das DirectShow-System
+description: DirectShow-Systemübersicht
 ms.assetid: aea1ab83-4c48-4b61-8a20-0ee6ad62ebe3
-title: Übersicht über das DirectShow-System
+title: DirectShow-Systemübersicht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 833fed4031c95ddb4ecbf91e7bb27c27741acc18
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d0fb7855277029adc563cc032740d3a59b3691fcf12ed2b2595d37a1abd0d923
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966350"
 ---
-# <a name="directshow-system-overview"></a>Übersicht über das DirectShow-System
+# <a name="directshow-system-overview"></a>DirectShow-Systemübersicht
 
 **Die Herausforderung von Multimedia**
 
-Das Arbeiten mit Multimedia stellt verschiedene Hauptprobleme dar:
+Die Arbeit mit Multimedia stellt mehrere große Herausforderungen dar:
 
--   Multimediarestreams enthalten große Datenmengen, die sehr schnell verarbeitet werden müssen.
--   Audiodaten und Videos müssen synchronisiert werden, sodass Sie gleichzeitig gestartet und angehalten werden und mit derselben Rate abgespielt werden.
--   Daten können aus vielen Quellen stammen, einschließlich lokaler Dateien, Computernetzwerken, Fernsehübertragungen und Videokameras.
--   Die Daten sind in einer Vielzahl von Formaten verfügbar, z. b. Audio-Video Interleaved (AVI), Advanced Streaming Format (ASF), Motion Picture Experts Group (MPEG) und Digital Video (DV).
--   Der Programmierer weiß im Voraus nicht, welche Hardware Geräte auf dem System des Endbenutzers vorhanden sein werden.
+-   Multimediastreams enthalten große Datenmengen, die sehr schnell verarbeitet werden müssen.
+-   Audio und Video müssen synchronisiert werden, damit sie gleichzeitig gestartet und beendet und mit der gleichen Rate wiedergegeben werden.
+-   Daten können aus vielen Quellen stammen, einschließlich lokaler Dateien, Computernetzwerke, Fernsehsendungen und Videokameras.
+-   Daten werden in einer Vielzahl von Formaten bereitgestellt, z. B. Audio-Video Interleaved (AVI), Advanced Streaming Format (ASF), Motion Picture Experts Group (MPEG) und Digital Video (DV).
+-   Der Programmierer weiß nicht im Voraus, welche Hardwaregeräte auf dem System des Endbenutzers vorhanden sein werden.
 
 **Die DirectShow-Lösung**
 
-DirectShow ist darauf ausgelegt, jede dieser Herausforderungen zu erfüllen. Das Hauptziel des Entwurfs Ziels besteht darin, die Aufgabe der Erstellung digitaler Medienanwendungen auf der Windows-Plattform zu vereinfachen, indem Anwendungen von den komplexen Daten Transporten, Hardware unterschieden und der Synchronisierung isoliert werden.
+DirectShow wurde entwickelt, um jede dieser Herausforderungen zu bewältigen. Das Hauptentwurfsziel besteht darin, die Erstellung digitaler Medienanwendungen auf der Windows Plattform zu vereinfachen, indem Anwendungen von der Komplexität von Datentransporten, Hardwareunterschieden und Synchronisierungen abgefangen werden.
 
-Um den Durchsatz zu erzielen, der zum Streamen von Video-und Audiodaten erforderlich ist, verwendet DirectShow nach Möglichkeit Direct3D und DirectSound. Diese Technologien Renderingdaten effizient in den Sound-und Grafikkarten des Benutzers. In DirectShow wird die Wiedergabe synchronisiert, indem Mediendaten in Zeitstempel Beispielen gekapselt werden. Für die unterschiedlichsten Quellen, Formate und Hardware Geräte, die möglich sind, verwendet DirectShow eine modulare Architektur, in der die Anwendung verschiedene Softwarekomponenten mit dem Namen " *Filter*" kombiniert und mit diesen übereinstimmt.
+Um den zum Streamen von Video und Audio erforderlichen Durchsatz zu erzielen, verwendet DirectShow nach Möglichkeit Direct3D und DirectSound. Diese Technologien rendern Daten effizient auf den Sound- und Grafikkarten des Benutzers. DirectShow synchronisiert die Wiedergabe, indem Mediendaten in Zeitstempelbeispielen gekapselt werden. Um die Vielzahl von Quellen, Formaten und Hardwaregeräten zu verarbeiten, die möglich sind, verwendet DirectShow eine modulare Architektur, in der die Anwendung verschiedene Softwarekomponenten, die als *Filter* bezeichnet werden, kombiniert und abstreicht.
 
-DirectShow stellt Filter bereit, die das erfassen und Optimieren von Geräten basierend auf dem Windows-Treibermodell (WDM) unterstützen, sowie Filter, die ältere Video für Windows (Vfw)-Erfassungs Karten unterstützen, und Codecs, die für die Schnittstellen von Audiokomprimierungs-Manager (ACM) und Video Compression Manager (VCM) geschrieben wurden.
+DirectShow bietet Filter, die Erfassungs- und Optimierungsgeräte basierend auf dem Windows Driver Model (WDM) unterstützen, sowie Filter, die ältere Video für Windows (VfW)-Erfassungskarten und Codecs unterstützen, die für die Schnittstellen Audio Compression Manager (ACM) und Video Compression Manager (VCM) geschrieben wurden.
 
-Das folgende Diagramm zeigt die Beziehung zwischen einer Anwendung, den DirectShow-Komponenten und einigen der Hardware-und Softwarekomponenten, die von DirectShow unterstützt werden.
+Das folgende Diagramm zeigt die Beziehung zwischen einer Anwendung, den DirectShow-Komponenten und einigen der Von DirectShow unterstützten Hardware- und Softwarekomponenten.
 
-![allgemeine Architektur](images/arch-oview2.png)
+![Architektur auf hoher Ebene](images/arch-oview2.png)
 
-Wie hier gezeigt, kommunizieren DirectShow-Filter mit einer großen Bandbreite von Geräten, darunter das lokale Dateisystem, TV-Tuner und Video Erfassungs Karten, VFW-Codecs, die Videoanzeige (über DirectDraw oder GDI) und die Soundkarte (über DirectSound). Daher isoliert DirectShow die Anwendung von vielen Komplexitäten dieser Geräte. DirectShow bietet auch systemeigene Komprimierungs-und Dekomprimierungs Filter für bestimmte Dateiformate.
+Wie hier gezeigt, kommunizieren DirectShow-Filter mit einer Vielzahl von Geräten, einschließlich des lokalen Dateisystems, TV-Tuner- und Videoerfassungskarten, VfW-Codecs, der Videoanzeige (über DirectDraw oder GDI) und der Soundkarte (über DirectSound). Daher isoliert DirectShow die Anwendung vor vielen der Komplexitäten dieser Geräte. DirectShow bietet auch native Komprimierungs- und Dekomprimierungsfilter für bestimmte Dateiformate.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

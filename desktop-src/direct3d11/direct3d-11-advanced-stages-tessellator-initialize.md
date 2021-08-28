@@ -1,27 +1,27 @@
 ---
-title: Initialisieren der Mosaik Phase
-description: In diesem Thema wird gezeigt, wie die Mosaik Stufe initialisiert wird.
+title: Initialisieren der Tessellator-Stufe
+description: In diesem Thema wird gezeigt, wie die Mosaikstufe initialisiert wird.
 ms.assetid: 81f5461a-0938-4c46-b3e8-bef2bea125a5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50cfe00a4d59396f0dc1b0157f84e57e9cabc4a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f842b1095a4053ad35838864bac6d6677194d85f48e0a78e2fc6975af1e3b8d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104992742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096280"
 ---
-# <a name="how-to-initialize-the-tessellator-stage"></a>Gewusst wie: Initialisieren der Mosaik Phase
+# <a name="how-to-initialize-the-tessellator-stage"></a>Vorgehensweise: Initialisieren der Tessellator-Stufe
 
-Im Allgemeinen erweitert das Mosaik Modell das kompakte, benutzerdefinierte Modell eines Patches in Geometry, das eine programmierbare Menge von Details enthält. Die Geometrie ist in der Regel eine Gruppe von Dreiecken, die eine detaillierte Oberflächengeometrie darstellt. In diesem Thema wird gezeigt, wie die Mosaik Stufe initialisiert wird.
+Im Allgemeinen erweitert das Mosaik das kompakte, benutzerdefinierte Modell eines Patches in geometrie, die eine programmierbare Detailmenge enthält. Die Geometrie ist in der Regel ein Satz von Dreiecken, die eine detaillierte Oberflächengeometrie darstellen. In diesem Thema wird gezeigt, wie die Mosaikstufe initialisiert wird.
 
-Die Mosaik Phase ist die zweite von drei Phasen, die zusammenarbeiten, um eine Oberfläche zu Mosaik oder zu Kacheln. Die erste Phase ist die Hull-Shader-Stufe. Es wird einmal pro Patch betrieben und konfiguriert, wie sich die nächste Stufe (der Mosaik-Mosaik Prozess) verhält. Ein Hull-Shader generiert auch benutzerdefinierte Ausgaben, wie z. b. Ausgabe Steuerungs Punkte und Patch-Konstanten, die über den Mosaik Prozess direkt an die dritte Phase gesendet werden, die Domäne-Shader-Stufe. Ein Domänen-Shader wird einmal pro Mosaik-Stagingpunkt aufgerufen und wertet Oberflächen Positionen aus.
+Die Mosaikphase ist die zweite von drei Phasen, die zusammenarbeiten, um eine Oberfläche zu mosaikieren oder zu kacheln. Die erste Phase ist die Hüllen-Shader-Stufe. sie funktioniert einmal pro Patch und konfiguriert, wie sich die nächste Phase (der feste Funktionstessellator) verhält. Ein Hüllen-Shader generiert auch benutzerdefinierte Ausgaben, z. B. Ausgabekontrollpunkte und Patchkonstanten, die direkt über den Mosaikator an die dritte Stufe gesendet werden, die Domänen-Shader-Stufe. Ein Domänen-Shader wird einmal pro Mosaikpunkt-Stufe aufgerufen und wertet Oberflächenpositionen aus.
 
-Die Mosaik Phase ist eine fixierte Funktions Phase, es ist kein Shader vorhanden, der generiert werden kann, und es kann kein Zustand festgelegt werden. Er empfängt seinen gesamten Setup Status aus der Hull-Shader-Stufe. Nachdem die Hülle-Shader-Stufe initialisiert wurde, wird die Mosaik Phase automatisch initialisiert.
+Die Mosaikstufe ist eine feste Funktionsphase, es ist kein shader zu generierender und kein festzulegender Zustand vorhanden. Er empfängt den gesamten Einrichtungsstatus aus der Phase des Hüllen-Shaders. Sobald die Hüllen-Shader-Stufe initialisiert wurde, wird die Mosaikstufe automatisch initialisiert.
 
-**So initialisieren Sie die Mosaik Phase**
+**So initialisieren Sie die Mosaikstufe**
 
--   Initialisieren Sie die Hull-Shader-Phase mit [**Verknüpfung id3d11devicecontext aus:: hssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader).
+-   Initialisieren Sie die Hüllen-Shader-Stufe mit [**ID3D11DeviceContext::HSSetShader.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader)
 
     ```
     void HSSetShader(
@@ -33,23 +33,23 @@ Die Mosaik Phase ist eine fixierte Funktions Phase, es ist kein Shader vorhanden
 
     
 
-    *ppclassinhaltungen* ist ein Zeiger auf ein Array von shaderschnittstellen, dargestellt durch [**ID3D11ClassInstance**](/windows/desktop/api/D3D11/nn-d3d11-id3d11classinstance) -Zeiger und die Anzahl der Schnittstellen, die durch *numclassinhaltungen* dargestellt werden. Wenn Sie nicht verwendet werden, können diese Parameter auf **null** bzw. 0 festgelegt werden.
+    *ppClassInstances* ist ein Zeiger auf ein Array von Shaderschnittstellen, dargestellt durch [**ID3D11ClassInstance-Zeiger**](/windows/desktop/api/D3D11/nn-d3d11-id3d11classinstance) und die Anzahl der Schnittstellen, dargestellt durch *NumClassInstances.* Wenn diese Parameter nicht verwendet werden, können sie auf **NULL** bzw. 0 festgelegt werden.
 
-Nachdem die Hull-Shader-Stufe initialisiert wurde, sollten Sie auch die Domäne-Shader-Stufe initialisieren.
+Nachdem die Phase des Hüllen-Shaders initialisiert wurde, sollten Sie auch die Domänen-Shader-Stufe initialisieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> <dt>
 
-[Mosaik Übersicht](direct3d-11-advanced-stages-tessellation.md)
+[Übersicht über Mosaik](direct3d-11-advanced-stages-tessellation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

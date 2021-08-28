@@ -1,23 +1,23 @@
 ---
-description: Beginnend mit TAPI 2,1 können die Benutzeroberflächen-DLLs des Telefoniedienstanbieters zum Verwalten und Anzeigen von Dialogfeldern verwendet werden. TAPI lädt die dll in den Prozess einer Anwendung, die eine beliebige Dienstanbieter Funktion aufruft, die ein Dialogfeld anzeigen kann.
+description: Ab TAPI 2.1 können die Benutzeroberflächen-DLLs des Telefoniedienstanbieters zum Verwalten und Anzeigen von Dialogfeldern verwendet werden. TAPI lädt die DLL in den Prozess einer Anwendung, die eine der Dienstanbieterfunktionen aufruft, die ein Dialogfeld anzeigen können.
 ms.assetid: 0a0320d1-fb75-405e-8074-b37cef956c9f
-title: Neuerungen bei TSPI Version 2,1
+title: Neues bei TSPI Version 2.1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51642fb9ac960732f8e4a56805652333d0c32468
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 260978ad99bf49ed0beae0e71b2a02a794eef1a7af0c25074c20a08c1da054c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659820"
 ---
-# <a name="whats-new-for-tspi-version-21"></a>Neuerungen bei TSPI Version 2,1
+# <a name="whats-new-for-tspi-version-21"></a>Neues bei TSPI Version 2.1
 
-Beginnend mit TAPI 2,1 können die Benutzeroberflächen-DLLs des Telefoniedienstanbieters zum Verwalten und Anzeigen von Dialogfeldern verwendet werden. TAPI lädt die dll in den Prozess einer Anwendung, die eine beliebige Dienstanbieter Funktion aufruft, die ein Dialogfeld anzeigen kann.
+Ab TAPI 2.1 können die Benutzeroberflächen-DLLs des Telefoniedienstanbieters zum Verwalten und Anzeigen von Dialogfeldern verwendet werden. TAPI lädt die DLL in den Prozess einer Anwendung, die eine der Dienstanbieterfunktionen aufruft, die ein Dialogfeld anzeigen können.
 
-Ab TAPI 2,1 können Proxy Anforderungs Handler implementiert werden. Ein Handler ist eine vollständige Telefonieanwendung, die normalerweise auf einem Telefonieserver ausgeführt wird und Dienste bereitstellt, die in einer Anwendung besser implementiert sind als ein Treiber.
+Ab TAPI 2.1 können Proxyanforderungshandler implementiert werden. Ein Handler ist eine vollständige Telefonieanwendung, die normalerweise auf einem Telefonieserver ausgeführt wird und Dienste bietet, die in einer Anwendung besser implementiert sind als ein Treiber.
 
-Funktionen und Nachrichten, die für TSPI Version 2,1 neu oder geändert wurden, lauten wie folgt:
+Funktionen und Meldungen, die für TSPI Version 2.1 neu oder geändert wurden, lauten wie folgt:
 
 -   [**TSPI_lineConditionalMediaDetection**](/windows/win32/api/tspi/nf-tspi-tspi_lineconditionalmediadetection)
 -   **TSPI_lineDropNoOwner**–**veraltet**
@@ -38,7 +38,7 @@ Funktionen und Nachrichten, die für TSPI Version 2,1 neu oder geändert wurden,
 -   [**LINE_REMOVE**](/previous-versions/windows/desktop/legacy/ms725237(v=vs.85))
 -   [**PHONE_REMOVE**](/previous-versions/windows/desktop/legacy/ms725260(v=vs.85))
 
-Die Benutzeroberflächen-DLL des Telefoniedienstanbieters bietet eine Möglichkeit, Benutzerinteraktionen im Kontext der Anwendung anstelle des Dienstanbieters selbst zuzulassen. TSPI Version 2,1 hat die folgenden neuen Funktionen, Meldungen und Strukturen für die Implementierung bereitgestellt:
+Die Benutzeroberflächen-DLL des Telefoniedienstanbieters bietet eine Möglichkeit, die Benutzerinteraktion im Kontext der Anwendung statt des Dienstanbieters selbst zu ermöglichen. TSPI Version 2.1 lieferte die folgenden neuen Funktionen, Meldungen und Strukturen für die Implementierung:
 
 -   [**TSPI_providerFreeDialogInstance**](/windows/win32/api/tspi/nf-tspi-tspi_providerfreedialoginstance)
 -   [**TSPI_providerGenericDialogData**](/windows/win32/api/tspi/nf-tspi-tspi_providergenericdialogdata)
@@ -51,8 +51,8 @@ Die Benutzeroberflächen-DLL des Telefoniedienstanbieters bietet eine Möglichke
 -   [**TUISPI_providerGenericDialogData**](/windows/win32/api/tspi/nf-tspi-tuispi_providergenericdialogdata)
 -   [**TUISPI_providerInstall**](/windows/win32/api/tspi/nf-tspi-tuispi_providerinstall)
 -   [**TUISPI_providerRemove**](/windows/win32/api/tspi/nf-tspi-tuispi_providerremove)
--   [**"Tuispikreatedialoginstanceparameginstancepara"**](/windows/win32/api/tspi/ns-tspi-tuispicreatedialoginstanceparams)
--   [**Tuispidllcallback**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback)
+-   [**STENSPICREATEDIALOGINSTANCEPARAMS**](/windows/win32/api/tspi/ns-tspi-tuispicreatedialoginstanceparams)
+-   [**RATESSPIDLLCALLBACK**](/windows/win32/api/tspi/nc-tspi-tuispidllcallback)
 -   [**LINE_CREATEDIALOGINSTANCE**](line-createdialoginstance.md)
 -   [**LINE_SENDDIALOGINSTANCEDATA**](line-senddialoginstancedata.md)
 

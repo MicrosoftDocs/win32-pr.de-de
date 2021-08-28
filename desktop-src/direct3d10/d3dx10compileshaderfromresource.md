@@ -4,12 +4,12 @@ ms.assetid: 3e4011dc-e657-4da5-b977-f229bcf86eaf
 title: D3DX10CompileShaderFromResource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc70cc9ff4ad8236b974f64bd9f6c7754c5a5513
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2b4b889743a19dc3b4eccf06eb82cbcc07ec2755d532bf78d1c1105f9da6aa7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119370970"
 ---
 # <a name="d3dx10compileshaderfromresource"></a>D3DX10CompileShaderFromResource
 

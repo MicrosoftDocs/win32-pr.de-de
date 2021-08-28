@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab, der angibt, ob das DigitalSignature-Bit festgelegt ist.
+description: Ruft einen booleschen Wert ab, der angibt, ob das digitalSignature-Bit festgelegt ist.
 ms.assetid: 561eea86-ff23-4a26-adf2-b43009566eaa
-title: KeyUsage. isdigitalsignatureaktivierte Eigenschaft
+title: KeyUsage.IsDigitalSignatureEnabled-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 3b323effebe60597e1d6cf66e75d48c39fcdca4f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 963fc78243cf235fe0975fae203e17d1d4f6e71bb909259c7c83acc4fe9e5f07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080650"
 ---
-# <a name="keyusageisdigitalsignatureenabled-property"></a>KeyUsage. isdigitalsignatureaktivierte Eigenschaft
+# <a name="keyusageisdigitalsignatureenabled-property"></a>KeyUsage.IsDigitalSignatureEnabled-Eigenschaft
 
-\[Die **isdigitalsignatureaktivierte** Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[Die **IsDigitalSignatureEnabled-Eigenschaft** ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509EnhancedKeyUsageExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509enhancedkeyusageextension?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **isdigitalsignatureaktivierte** -Eigenschaft ruft einen booleschen Wert ab, der angibt, ob das DigitalSignature-Bit festgelegt ist.
+Die **IsDigitalSignatureEnabled-Eigenschaft** ruft einen booleschen Wert ab, der angibt, ob das digitalSignature-Bit festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,15 +37,15 @@ KeyUsage.IsDigitalSignatureEnabled As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**True** gibt an, dass das DigitalSignature-Bit festgelegt ist.
+True gibt an, dass das digitalSignature-Bit festgelegt ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
@@ -54,7 +54,7 @@ KeyUsage.IsDigitalSignatureEnabled As Boolean
 
 <dl> <dt>
 
-[**Endeinheits Zertifikaten der**](keyusage.md)
+[**KeyUsage**](keyusage.md)
 </dt> </dl>
 
  

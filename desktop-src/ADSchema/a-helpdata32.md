@@ -1,11 +1,11 @@
 ---
 title: Help-Data32-Attribut
-description: Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwendet. Er wird nicht für andere Versionen von Exchange verwendet.
+description: Dieses Attribut wurde für das Win32-Hilfedateiformat für Exchange 4.0 verwendet. Sie wird nicht für andere Versionen von Exchange verwendet.
 ms.assetid: 33e64ff9-7cb4-43a6-8d7b-1c5e925b783c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Help-Data32-Attribut
-- helpData32-Attribut AD-Schema
+- Help-Data32 AD-Attributschema
+- helpData32-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 32debc8c72c95313b8da6288e0d31f5713a4205a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3a85833273c164538cebbe9a03b83eee2faa8ba7a7d0ae8815f10f19cf6bc1b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119305290"
 ---
 # <a name="help-data32-attribute"></a>Help-Data32-Attribut
 
-Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwendet. Er wird nicht für andere Versionen von Exchange verwendet.
+Dieses Attribut wurde für das Win32-Hilfedateiformat für Exchange 4.0 verwendet. Sie wird nicht für andere Versionen von Exchange verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Help-Data32                                           |
-| LDAP-Display-Name | helpData32                                            |
+| Ldap-Anzeigename | helpData32                                            |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Diese wird vom System verwendet.                           |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | Dies wird vom System verwendet.                           |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.2.9                                  |
-| System-ID-GUID    | 5F d424a8-1262-11D0-a060-00aa006c33ed                  |
+| System-ID-GUID    | 5fd424a8-1262-11d0-a060-00aa006c33ed                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Dieses Attribut wurde für das Win32-Hilfedatei Format für Exchange 4,0 verwend
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8010                                                   |
-| System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
-| Ist indiziert             | False                                                    |
-| Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Richtig                                                     |
+| Ist indiziert             | Falsch                                                    |
+| Im globalen Katalog      | Falsch                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 32768                                                    |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Anzeige-Vorlage**](c-displaytemplate.md)<br/> |
+| In verwendete Klassen        | [**Display-Template**](c-displaytemplate.md)<br/> |
 
 
 

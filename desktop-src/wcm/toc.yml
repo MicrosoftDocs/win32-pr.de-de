@@ -1,10 +1,10 @@
 - name: Windows-Verbindungs-Manager
   href: windows-connection-manager-portal.md
   items:
-    - name: Referenz zum Windows-Verbindungs-Manager
+    - name: Windows Verbindungs-Manager Referenz
       href: windows-connection-manager-reference.md
       items:
-        - name: Enumerationstypen des Windows-Verbindungs-Managers
+        - name: Windows Verbindungs-Manager aufzählte Typen
           href: wcm-enumerated-types.md
           items:
             - name: WCM_CONNECTION_COST
@@ -15,20 +15,20 @@
               href: /windows/win32/api/Wcmapi/ne-wcmapi-wcm_media_type
             - name: WCM_PROPERTY
               href: /windows/win32/api/Wcmapi/ne-wcmapi-wcm_property
-        - name: Windows-Verbindungs-Manager-Funktionen
+        - name: Windows Verbindungs-Manager Functions
           href: wcm-functions.md
           items:
-            - name: Wcmfrememory
+            - name: WcmFreeMemory
               href: /windows/desktop/api/Wcmapi/nf-wcmapi-wcmfreememory
-            - name: Wcmgetprofilelist
+            - name: WcmGetProfileList
               href: /windows/desktop/api/Wcmapi/nf-wcmapi-wcmgetprofilelist
-            - name: Wcmqueryproperty
+            - name: WcmQueryProperty
               href: /windows/desktop/api/Wcmapi/nf-wcmapi-wcmqueryproperty
-            - name: Wcmsetprofilelist
+            - name: WcmSetProfileList
               href: /windows/desktop/api/Wcmapi/nf-wcmapi-wcmsetprofilelist
-            - name: Wcmsetproperty
+            - name: WcmSetProperty
               href: /windows/desktop/api/Wcmapi/nf-wcmapi-wcmsetproperty
-        - name: Strukturen des Windows-Verbindungs-Managers
+        - name: Windows Verbindungs-Manager Strukturen
           href: wcm-structures.md
           items:
             - name: WCM_BILLING_CYCLE_INFO

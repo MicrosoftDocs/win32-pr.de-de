@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClient5 remoteprogram (Eigenschaft)
-description: Ruft ein Objekt ab, das die itsremoteprogram-Schnittstelle unterstützt.
+title: IMsRdpClient5-RemoteProgram-Eigenschaft
+description: Ruft ein Objekt ab, das die ITSRemoteProgram-Schnittstelle unterstützt.
 ms.assetid: 013f613b-af7b-4cc5-be1f-d45833806e3b
 ms.tgt_platform: multiple
 keywords:
-- Remoteprogram-Eigenschaft Remotedesktopdienste
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
-- Remoteprogram-Eigenschaft Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10 Interface Remotedesktopdienste, remoteprogram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
+- RemoteProgram-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , RemoteProgram-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -38,16 +38,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 267e367af090a7fd70e9482406104fd0403d63f0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 03da8fba499a45ded2d28a5d40cc391c4a137e987eda0c32edd442861d67abc3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099480"
 ---
-# <a name="imsrdpclient5remoteprogram-property"></a>IMsRdpClient5:: remoteprogram (Eigenschaft)
+# <a name="imsrdpclient5remoteprogram-property"></a>IMsRdpClient5::RemoteProgram-Eigenschaft
 
-Ruft ein Objekt ab, das die [**itsremoteprogram**](itsremoteprogram.md) -Schnittstelle unterstützt.
+Ruft ein Objekt ab, das die [**ITSRemoteProgram-Schnittstelle**](itsremoteprogram.md) unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -64,7 +64,7 @@ HRESULT get_RemoteProgram(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**itsremoteprogram**](itsremoteprogram.md) -Schnittstellen Zeiger.
+Ein [**ITSRemoteProgram-Schnittstellenzeiger.**](itsremoteprogram.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Ein [**itsremoteprogram**](itsremoteprogram.md) -Schnittstellen Zeiger.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-B922-e06a28ecd8bf definiert.<br/>       |
+| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-b922-e06a28ecd8bf definiert.<br/>       |
 
 
 

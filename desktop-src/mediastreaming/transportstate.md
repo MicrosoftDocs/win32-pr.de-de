@@ -1,9 +1,9 @@
 ---
-title: Transportstate-Enumeration
-description: Definiert die verfügbaren Transport Zustände gemäß den UPnP-Richtlinien.
+title: TransportState-Enumeration
+description: Definiert die verfügbaren Transportzustände gemäß den UPnP-Richtlinien.
 ms.assetid: 2F942EAC-514B-4E65-A12F-85558E9A96A0
 keywords:
-- Transportstate-Enumeration Medien Streaming-API
+- Media Streaming-API der TransportState-Enumeration
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - IDLDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 865d7e0f6a96727915833bb402860cde661162f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a21fc8d0f2799cfba734d605d0c4d2835744ddeb130327ea39a22090d13464f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663090"
 ---
-# <a name="transportstate-enumeration"></a>Transportstate-Enumeration
+# <a name="transportstate-enumeration"></a>TransportState-Enumeration
 
-Definiert die verfügbaren Transport Zustände gemäß den UPnP-Richtlinien.
+Definiert die verfügbaren Transportzustände gemäß den UPnP-Richtlinien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,59 +47,59 @@ typedef enum _TransportState {
 
 <dl> <dt>
 
-<span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannter**
+<span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt**
 </dt> <dd>
 
 Fehlerhafter Gerätezustand.
 
 </dd> <dt>
 
-<span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span>**Abgeh**
+<span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span>**Gestoppt**
 </dt> <dd>
 
-Der Transport des Geräts wurde beendet.
+Der Transport des Geräts befindet sich in einem angehaltenen Zustand.
 
 </dd> <dt>
 
-<span id="Playing"></span><span id="playing"></span><span id="PLAYING"></span>**Ens**
+<span id="Playing"></span><span id="playing"></span><span id="PLAYING"></span>**Spielen**
 </dt> <dd>
 
-Der Transport des Geräts befindet sich im Zustand "Wiedergabe".
+Der Transport des Geräts befindet sich im Wiedergabezustand.
 
 </dd> <dt>
 
 <span id="Transitioning"></span><span id="transitioning"></span><span id="TRANSITIONING"></span>**Übergang**
 </dt> <dd>
 
-Der Transport des Geräts befindet sich in einem Übergangszustand, der zu einem anderen Statuswert führt.
+Der Transport des Geräts befindet sich in einem Übergangszustand, der zu einem anderen Zustandswert führt.
 
 </dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>**Angehalten**
 </dt> <dd>
 
-Der Transport des Geräts befindet sich im angehaltenen Zustand.
+Der Transport des Geräts befindet sich in einem angehaltenen Zustand.
 
 </dd> <dt>
 
-<span id="Recording"></span><span id="recording"></span><span id="RECORDING"></span>**Verzeichnet**
+<span id="Recording"></span><span id="recording"></span><span id="RECORDING"></span>**Aufnahme**
 </dt> <dd>
 
-Der Transport des Geräts ist in einem Aufzeichnungs Zustand.
+Der Transport des Geräts befindet sich in einem Aufzeichnungszustand.
 
 </dd> <dt>
 
-<span id="NoMediaPresent"></span><span id="nomediapresent"></span><span id="NOMEDIAPRESENT"></span>**Nomediapresent**
+<span id="NoMediaPresent"></span><span id="nomediapresent"></span><span id="NOMEDIAPRESENT"></span>**NoMediaPresent**
 </dt> <dd>
 
-Für den Transport des Geräts ist kein URI für die Wiedergabe festgelegt.
+Für den Gerätetransport ist kein URI für die Wiedergabe festgelegt.
 
 </dd> <dt>
 
-<span id="Last"></span><span id="last"></span><span id="LAST"></span>**Letzten**
+<span id="Last"></span><span id="last"></span><span id="LAST"></span>**letzte**
 </dt> <dd>
 
-Der vorherige Zustand des Geräts zum aktuellen Transportzustand.
+Der vorherige Zustand des Geräts in den aktuellen Transportzustand.
 
 </dd> </dl>
 
@@ -109,7 +109,7 @@ Der vorherige Zustand des Geräts zum aktuellen Transportzustand.
 
 | Anforderung | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| IDL<br/> | <dl> <dt>Windows. Media. Streaming. idl (Referenz zu Windows. Media. Streaming. idl)</dt> </dl> |
+| Idl<br/> | <dl> <dt>Windows. Media.Streaming.idl (Referenz Windows. Media.Streaming.idl)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Zeiger auf den letzten Knoten in der Liste.
 ms.assetid: e72e4dab-da64-472a-b7bd-6af99883f703
-title: 'Cbaselist:: m_pLast Member (wxlist. h)'
+title: CBaseList::m_pLast-Member (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3fd3e7cbb2a8f121c21f2e845acadf1462bfa433
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 659dc3ab3f8979a0141b827cb4c66b27d5e241f71c65c9949a7ca611d62ffdfd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084510"
 ---
-# <a name="cbaselistm_plast-member"></a>Cbaselist:: m-pLast-Element \_
+# <a name="cbaselistm_plast-member"></a>CBaseList::m \_ pLast-Member
 
 Zeiger auf den letzten Knoten in der Liste.
 
@@ -42,8 +42,8 @@ CNode *m_pLast;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CNode *m_pLast;
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

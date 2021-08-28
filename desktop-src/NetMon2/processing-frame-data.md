@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispielcode legt der Monitor einen Aufzeichnungs Filter fest, der nur die IP-Adresse und die angeforderten Protokolldaten angibt.
+description: Im folgenden Beispielcode legt der Monitor einen Erfassungsfilter fest, der nur IP-Adressen und angeforderte Protokolldaten angibt.
 ms.assetid: 0945bceb-b5fe-4f07-866b-4e0468227610
-title: Verarbeiten von Frame-Daten
+title: Verarbeiten von Framedaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e41c49de62d630033aa7d3ed3e8e115fd1a02f7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a103dd2fea564eb6eb93ffcb32d5c21acbe991d515b7e75f287786dbce976c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995430"
 ---
-# <a name="processing-frame-data"></a>Verarbeiten von Frame-Daten
+# <a name="processing-frame-data"></a>Verarbeiten von Framedaten
 
-Im folgenden Beispielcode legt der Monitor einen Aufzeichnungs Filter fest, der **nur die IP-Adresse** und die angeforderten Protokolldaten angibt.
+Im folgenden Beispielcode legt der Monitor einen Erfassungsfilter fest, der nur **IP-Adressen** und angeforderte Protokolldaten angibt.
 
 
 ```C++

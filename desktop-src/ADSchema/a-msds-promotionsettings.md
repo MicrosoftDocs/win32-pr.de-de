@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Promotion-Settings-Attribut
-description: Enthält für einen Computer eine XML-Zeichenfolge, die für die Delegierte DSA-herauf Stufung verwendet werden soll.
+title: ms-DS-Promotion-Einstellungen-Attribut
+description: Enthält für einen Computer eine XML-Zeichenfolge, die für die delegierte DSA-Heraufstufung verwendet werden soll.
 ms.assetid: 5256da96-7713-4bc1-b2e7-a830ad508644
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Promotion-Einstellungs Attribut AD-Schema
-- AD-Schema des msDS-promotionsettings-Attributs
+- ms-DS-Promotion-Einstellungen AD-Attributschema
+- MSDS-PromotionSettings-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10026c2afca6c10785903f0f4e8cb5c52e9183ae
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8c68f4a4114af24009acefcba9df6115d8cff90561d29a3c06b09a9f6f8f9100
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322140"
 ---
-# <a name="ms-ds-promotion-settings-attribute"></a>ms-DS-Promotion-Settings-Attribut
+# <a name="ms-ds-promotion-settings-attribute"></a>ms-DS-Promotion-Einstellungen-Attribut
 
-Enthält für einen Computer eine XML-Zeichenfolge, die für die Delegierte DSA-herauf Stufung verwendet werden soll.
+Enthält für einen Computer eine XML-Zeichenfolge, die für die delegierte DSA-Heraufstufung verwendet werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ms-DS-Promotion-Einstellungen                    |
-| LDAP-Display-Name | MSDS-promotionsettings                      |
+| Ldap-Anzeigename | msDS-PromotionSettings                      |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1962                     |
 | System-ID-GUID    | c881b4e2-43c0-4ebe-b9bb-5250aa9b434c        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -55,10 +55,10 @@ Enthält für einen Computer eine XML-Zeichenfolge, die für die Delegierte DSA-
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | Richtig                                      |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -76,10 +76,10 @@ Enthält für einen Computer eine XML-Zeichenfolge, die für die Delegierte DSA-
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | Richtig                                      |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |
@@ -97,10 +97,10 @@ Enthält für einen Computer eine XML-Zeichenfolge, die für die Delegierte DSA-
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | Richtig                                      |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

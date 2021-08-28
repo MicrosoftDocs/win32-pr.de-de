@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_SESID'
+description: 'Weitere Informationen finden Sie unter: JET_SESID'
 title: JET_SESID
 TOCTitle: JET_SESID
 ms:assetid: 56b53532-e0a8-4255-8442-bb90184d91da
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: da7acc706017c0346e5a701144d60bcbbfd7cf40
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 60920995e72fdc1f45dcc6c083be7bcc1a91b3fa
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122983793"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466407"
 ---
 # <a name="jet_sesid"></a>JET_SESID
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_sesid"></a>JET_SESID
 
-Der **JET_SESID-Datentyp** enthält ein Handle für die Sitzung, das für einen Aufruf der JET-API verwendet werden soll.
+Der **JET_SESID** enthält ein Handle für die Sitzung, das für einen Aufruf der JET-API verwendet werden soll.
 
 ```cpp
     typedef JET_API_PTR JET_SESID;
@@ -39,26 +39,22 @@ Der **JET_SESID-Datentyp** enthält ein Handle für die Sitzung, das für einen 
 
 JET_SESID
 
-Entweder **NULL** oder [JET_sesidNil](./invalid-handle-constants.md) können verwendet werden, um ein ungültiges Sitzungshandle anzugeben.
+Entweder **NULL** oder [JET_sesidNil](./invalid-handle-constants.md) kann verwendet werden, um ein ungültiges Sitzungshand handle anzugeben.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Eine Sitzung ist der Transaktionskontext der Datenbank-Engine. Sie kann verwendet werden, um Transaktionen zu starten, zu committen oder abzubricht, die sich auf die Sichtbarkeit und Dauerhaftigkeit von Änderungen auswirken, die von dieser oder anderen Sitzungen vorgenommen werden.
+Eine Sitzung ist der Transaktionskontext der Datenbank-Engine. Sie kann zum Starten, Commit oder Abbrechen von Transaktionen verwendet werden, die sich auf die Sichtbarkeit und Dauerhaftigkeit von Änderungen auswirken, die von dieser oder anderen Sitzungen vorgenommen werden.
 
-Eine Transaktion kann mit [JetBeginTransaction](./jetbegintransaction-function.md)gestartet werden. Eine Sitzung kann mit [JetBeginSession](./jetbeginsession-function.md)erstellt werden. Die maximale Anzahl von Sitzungen, die gleichzeitig erstellt werden können, wird durch [JET_paramMaxSessions](./resource-parameters.md)gesteuert, die mit [jetSetSystemParameter](./jetsetsystemparameter-function.md)konfiguriert werden kann.
+Eine Transaktion kann mit [JetBeginTransaction gestartet werden.](./jetbegintransaction-function.md) Eine Sitzung kann mit [JetBeginSession erstellt werden.](./jetbeginsession-function.md) Die maximale Anzahl von Sitzungen, die zu einem [](./resource-parameters.md)beliebigen Zeitpunkt erstellt werden können, wird durch JET_paramMaxSessions gesteuert, die mit [JetSetSystemParameter konfiguriert werden kann.](./jetsetsystemparameter-function.md)
 
-Eine Sitzung wird explizit durch einen Aufruf von [JetEndSession](./jetendsession-function.md) oder implizit durch einen Aufruf von [JetTerm](./jetterm-function.md)beendet.
+Eine Sitzung wird explizit durch einen Aufruf von [JetEndSession](./jetendsession-function.md) oder implizit durch einen Aufruf von [JetTerm beendet.](./jetterm-function.md)
 
-Jede Sitzung kann jeweils nur von einem Thread verwendet werden. Darüber hinaus besteht das Standardverhalten der Engine darin, die Verwendung einer Sitzung auf denselben Thread von dem Zeitpunkt des ersten Aufrufs von [JetBeginTransaction](./jetbegintransaction-function.md) bis zum Zeitpunkt des übereinstimmenden Aufrufs von [JetCommitTransaction](./jetcommittransaction-function.md) oder [JetRollback](./jetrollback-function.md) einzuschränken. Dieses Verhalten kann geändert werden, um diese zweite Einschränkung durch Festlegen eines benutzerdefinierten Sitzungskontexts mit [JetSetSessionContext](./jetsetsessioncontext-function.md) und [JetResetSessionContext](./jetresetsessioncontext-function.md)zu entfernen.
+Jede Sitzung kann jeweils nur von einem Thread verwendet werden. Darüber hinaus besteht das Standardverhalten der Engine im Einschränken der Verwendung einer Sitzung auf denselben Thread ab dem Zeitpunkt, zu dem der erste Aufruf von [JetBeginTransaction](./jetbegintransaction-function.md) erfolgt, bis zu dem Zeitpunkt, zu dem der entsprechende Aufruf von [JetCommitTransaction](./jetcommittransaction-function.md) oder [JetRollback](./jetrollback-function.md) erfolgt. Dieses Verhalten kann geändert werden, um diese zweite Einschränkung zu entfernen, indem ein benutzerdefinierter Sitzungskontext mit [JetSetSessionContext](./jetsetsessioncontext-function.md) und [JetResetSessionContext gesetzt wird.](./jetresetsessioncontext-function.md)
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

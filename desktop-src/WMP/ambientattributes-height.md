@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. Height
-description: Das Height-Attribut gibt die Höhe des Steuer Elements an oder ruft diese ab.
+title: AmbientAttributes.height
+description: Das Height-Attribut gibt die Höhe des Steuerelements an oder ruft sie ab.
 ms.assetid: a5c85d86-15d4-451d-b8bc-ed3b6e0dfd7d
 keywords:
-- Ambientattribute. Height-Fenster Media Player
+- AmbientAttributes.height-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 662268bfeaf00b3185d531ff10d8dd17c9127a66
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5cbc03f631fffc4d1544906721476f229cbeb926e5d56b08dc1647f2dfd3b243
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098950"
 ---
-# <a name="ambientattributesheight"></a>Ambientattribute. Height
+# <a name="ambientattributesheight"></a>AmbientAttributes.height
 
-Das **height** -Attribut gibt die Höhe des Steuer Elements an oder ruft diese ab.
+Das **Height-Attribut** gibt die Höhe des Steuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.height
@@ -29,11 +29,11 @@ Das **height** -Attribut gibt die Höhe des Steuer Elements an oder ruft diese a
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die die Höhe des Steuer Elements in Pixel darstellt.  Der Standardwert ist 0 (null) oder die Höhe des Bilds, das im **Image** -Attribut des Steuer Elements angegeben ist.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die die Höhe des Steuerelements in Pixel darstellt.  Der Standardwert ist 0 (null) oder die Höhe des Bilds, das im Imageattribut des **Steuerelements angegeben** ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die angegebene Höhe kleiner als die Höhe des angegebenen Bilds ist, wird das Bild abgeschnitten. Wenn die Höhe größer als die Höhe des Bilds ist, geht der Klick Bereich über die Bild Begrenzung hinaus. Unabhängig davon, welcher Wert diesem Attribut zugewiesen wird, kann das Bild nicht über seine übergeordnete **Ansicht** oder **unter Ansicht** hinaus wachsen.
+Wenn die angegebene Höhe kleiner als die Höhe des bereitgestellten Bilds ist, wird das Bild abgeschnitten. Wenn die Höhe größer als die Höhe des Bilds ist, geht der Klickbereich über die Bildgrenze hinaus. Unabhängig davon, welcher Wert diesem Attribut gegeben wird, kann das Bild nicht über das übergeordnete **VIEW-** oder **SUBVIEW-Element hinaus wachsen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn die angegebene Höhe kleiner als die Höhe des angegebenen Bilds ist, wird 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 

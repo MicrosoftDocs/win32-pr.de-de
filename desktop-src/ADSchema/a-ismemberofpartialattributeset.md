@@ -1,11 +1,11 @@
 ---
 title: Is-Member-of-Partial-Attribute-Set-Attribut
-description: TRUE gibt an, dass dieses Attribut in den globalen Katalog repliziert wird.
+description: True gibt an, dass dieses Attribut in den globalen Katalog repliziert wird.
 ms.assetid: 9ffd85e8-da1a-4b39-9758-2dc049204ca0
 ms.tgt_platform: multiple
 keywords:
 - Is-Member-of-Partial-Attribute-Set-Attribut AD-Schema
-- AD-Schema des ismembership ofpartialattributeset-Attributs
+- isMemberOfPartialAttributeSet-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3cbbd05f95a46ec4e42c139ddda157a4057bde60
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6d299b14d85fa1c5c4be03c18462106d43f4bb8209378e2a77f78aeee39c7f90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322220"
 ---
 # <a name="is-member-of-partial-attribute-set-attribute"></a>Is-Member-of-Partial-Attribute-Set-Attribut
 
-**True** gibt an, dass dieses Attribut in den globalen Katalog repliziert wird.
+True **gibt an,** dass dieses Attribut in den globalen Katalog repliziert wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Is-Member-of-Partial-Attribute-Set   |
-| LDAP-Display-Name | isMemberOfPartialAttributeSet        |
+| Ldap-Anzeigename | isMemberOfPartialAttributeSet        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Schema Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.639               |
-| System-ID-GUID    | 19405b9d-3cfa-11d1-a9c0-0000f 80367c1 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | 19405b9d-3cfa-11d1-a9c0-0000f80367c1 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Is-Single-Valued       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ ms.locfileid: "103957333"
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
 | System-Only            | False                                                    |
-| Ist-einwertig       | Richtig                                                     |
+| Ist einwertig       | True                                                     |
 | Ist indiziert             | False                                                    |
 | Im globalen Katalog      | False                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | \-                                                       |
 | Range-Upper            | \-                                                       |
 | Search-Flags           | 0x00000000                                               |
 | System-Flags           | 0x00000010                                               |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> |
 
 
 

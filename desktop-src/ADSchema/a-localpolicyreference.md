@@ -1,11 +1,11 @@
 ---
 title: Local-Policy-Reference-Attribut
-description: Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Objekt kopiert wird.
+description: Distinguished Name eines lokalen Richtlinienobjekts, aus dem ein Richtlinienobjekt kopiert wird.
 ms.assetid: a574713e-0340-45af-b863-6cc1035e5bb9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Local-Policy-Reference-Attribut
-- localpolicyreference-Attribut, AD-Schema
+- AD-Schema des Attributs "Local-Policy-Reference"
+- AD-Schema des localPolicyReference-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed1956e5a583c70730a09097614a2e8f633916af
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 137edd036aea5b80c7d2035e19927dc6d943b7bdfe952268fd45f5a2299935e9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301820"
 ---
 # <a name="local-policy-reference-attribute"></a>Local-Policy-Reference-Attribut
 
-Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Objekt kopiert wird.
+Distinguished Name eines lokalen Richtlinienobjekts, aus dem ein Richtlinienobjekt kopiert wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Local-Policy-Reference                  |
-| LDAP-Display-Name | localpolicyreference                    |
+| Ldap-Anzeigename | localPolicyReference                    |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.457                  |
-| System-ID-GUID    | 80a67e4d-9F 22-11D0-AFDD-00c04f 930c9    |
+| System-Id-Guid    | 80a67e4d-9f22-11d0-afdd-00c04fd930c9    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -70,7 +70,7 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -100,10 +100,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -121,10 +121,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -142,10 +142,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -163,10 +163,10 @@ Definierter Name eines lokalen Richtlinien Objekts, von dem ein Richtlinien Obje
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

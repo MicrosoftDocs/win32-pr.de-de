@@ -1,36 +1,36 @@
 ---
-description: Die folgende Abbildung zeigt die Beziehung zwischen Monitoren und anderen Komponenten der Netzwerkmonitor Architektur.
+description: Die folgende Abbildung zeigt die Beziehung zwischen Monitoren und anderen Komponenten der Netzwerkmonitor-Architektur.
 ms.assetid: cbd6116c-1a95-4ac4-bc79-632ebe198197
-title: Monitor Architektur
+title: Überwachen der Architektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38c1a36ef19933d888f27079d8d94ddba16bde79
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9cd0a099fc1474255b36f1f04d28899b25a527fee19ba1d29434b4692615ab8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104551686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119677125"
 ---
-# <a name="monitor-architecture"></a>Monitor Architektur
+# <a name="monitor-architecture"></a>Überwachen der Architektur
 
-Die folgende Abbildung zeigt die Beziehung zwischen [*Monitoren*](m.md) und anderen Komponenten der Netzwerkmonitor Architektur.
+Die folgende Abbildung zeigt die Beziehung zwischen [*Monitoren*](m.md) und anderen Komponenten der Netzwerkmonitor-Architektur.
 
-![Beziehung zwischen Monitoren und anderen Komponenten des Netzwerk Monitors](images/nmarch2.png)
+![Beziehung zwischen Monitoren und anderen Komponenten des Netzwerkmonitors](images/nmarch2.png)
 
-Der Netzwerk Datenverkehr wird (als einzelne Frames) vom NDIS-Treiber gesammelt. Der Netzwerkmonitor Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerk Paketanbieter (NPP) weiter, der wiederum die Daten im Echtzeitmodus erfasst. Der npp ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die Schnittstelle " [**untc**](irtc.md) " verwendet, um eine echt Zeiterfassung auszuführen.
+Der Netzwerkdatenverkehr wird (als einzelne Frames) vom NDIS-Treiber erfasst. Der Netzwerkmonitor-Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerkpaketanbieter (Network Packet Provider, NPP) weiter, der wiederum die Daten im Echtzeitmodus erfasst. Das NPP ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die [**IRTC-Schnittstelle**](irtc.md) verwendet, um eine Echtzeiterfassung durchzuführen.
 
 > [!Note]  
-> Der NPP wird für verzögerte und Echt Zeit Erfassungen verwendet. Bei verzögerten Erfassungen, die von Experten und Parser verwendet werden, wird die [**idelta-DC**](idelaydc.md) -Schnittstelle verwendet.
+> Das NPP wird für verzögerte Erfassungen und Echtzeiterfassungen verwendet. Für verzögerte Erfassungen, die von Experten und Parsern verwendet werden, wird die [**IDelaydC-Schnittstelle**](idelaydc.md) verwendet.
 
  
 
-Der Monitor überprüft dann die erfassten Daten im Echtzeitmodus und erkennt bestimmte Netzwerkbedingungen und erzeugt Ereignisse nach Bedarf.
+Der Monitor untersucht dann die erfassten Daten im Echtzeitmodus, erkennt bestimmte Netzwerkbedingungen und generiert nach Bedarf Ereignisse.
 
-Drei weitere Komponenten werden von Überwachungsanwendungen verwendet: das Überwachungs Steuerungs Tool, der Überwachungs Steuerungs Dienst (Monitor Control Service, mcsvc) und die Ereignisanzeige:
+Drei weitere Komponenten werden von Monitoranwendungen verwendet: das Monitor Control Tool, der Monitor Control Service (MCSVC) und die Ereignisanzeige:
 
--   Das Monitor Steuerungs Tool wird zum Verwalten von Monitor Anwendungen verwendet. Dies umfasst das Konfigurieren und Ausführen aller ihrer Monitor Anwendungen.
--   Der Überwachungs Steuerungs Dienst (Monitor Control Service, mcsvc) löst Ereignisse aus, stellt für die Ereignisanzeige einen Kommunikationslink zu WMI bereit und koordiniert die Verarbeitung von Monitor Vorgängen.
--   Die Ereignisanzeige zeigt die vom Monitor Steuerungs Dienst ausgelösten Ereignisse an.
+-   Das Monitor Control Tool wird verwendet, um Ihre Überwachungsanwendungen zu verwalten. Dies umfasst das Konfigurieren und Ausführen aller Überwachungsanwendungen.
+-   Der Monitor Control Service (MCSVC) löst Ereignisse aus, stellt einen Kommunikationslink zu WMI für die Ereignisanzeige bereit und koordiniert die Verarbeitung von Überwachungsvorgängen.
+-   Der Ereignisanzeige zeigt die vom Überwachungssteuerungsdienst ausgelösten Ereignisse an.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -39,10 +39,10 @@ Drei weitere Komponenten werden von Überwachungsanwendungen verwendet: das Übe
 [**Imonitor**](imonitor.md)
 </dt> <dt>
 
-[**Imonitoreventer Enter**](imonitoreventer.md)
+[**IMonitorEventer**](imonitoreventer.md)
 </dt> <dt>
 
-[**"Iran"**](irtc.md)
+[**IRTC**](irtc.md)
 </dt> </dl>
 
  

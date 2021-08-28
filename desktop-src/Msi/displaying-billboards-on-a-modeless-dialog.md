@@ -1,71 +1,71 @@
 ---
-description: In einem Dialogfeld können während einer Installation eine Sequenz von Bildern und Text in einem Dialog angezeigt werden. In der Regel werden mithilfe von Billboards die visuellen Effekte einer Folien Anzeige oder-Animation erstellt, mit der der Benutzer über den Fortschritt einer Installation informiert wird.
+description: Bei einer Installation kann in einem Dialogfeld eine Sequenz von Bildern und Text angezeigt werden. In der Regel werden Tafeln verwendet, um den visuellen Effekt einer Diashow oder Animation zu erstellen, die den Benutzer über den Fortschritt einer Installation informiert.
 ms.assetid: 6432ee7d-0da2-48be-b14c-d36a83a3bb1d
-title: Anzeigen von Plakaten in einem nicht modalem Dialog Feld
+title: Anzeigen von Darstellungen in einem moduslosen Dialog
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1fd0ca40e47a8d52c16db7adde304177d4dc849
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: badf81e2b6d0131d1224f10b19e8de3c06f173ef91e3b08f3a45f31aef52be11
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086170"
 ---
-# <a name="displaying-billboards-on-a-modeless-dialog"></a>Anzeigen von Plakaten in einem nicht modalem Dialog Feld
+# <a name="displaying-billboards-on-a-modeless-dialog"></a>Anzeigen von Darstellungen in einem moduslosen Dialog
 
-In einem Dialogfeld können während einer Installation eine Sequenz von Bildern und Text in einem Dialog angezeigt werden. In der Regel werden mithilfe von Billboards die visuellen Effekte einer Folien Anzeige oder-Animation erstellt, mit der der Benutzer über den Fortschritt einer Installation informiert wird.
+Bei einer Installation kann in einem Dialogfeld eine Sequenz von Bildern und Text angezeigt werden. In der Regel werden Tafeln verwendet, um den visuellen Effekt einer Diashow oder Animation zu erstellen, die den Benutzer über den Fortschritt einer Installation informiert.
 
-**So zeigen Sie in einem nicht modalem Dialogfeld**
+**So zeigen Sie Schilde in einem nicht moduslosen Dialog an**
 
-1.  Fügen Sie einen Datensatz in die [Dialogfeld Tabelle](dialog-table.md) für das nicht Modelle Dialogfeld ein, das das Billboard enthält. Nachdem ein Billboard angezeigt wurde, gibt ein nicht modalem Dialogfeld die Steuerung an das Installationsprogramm zurück. Dadurch kann das Installationsprogramm Nachrichten verarbeiten und das Dialogfeld und das-Billboard aktualisieren. Um ein nicht modales Dialogfeld zu erstellen, legen Sie das modale Dialogfeld Format nicht im Feld Attribute der [Dialogfeld Tabelle](dialog-table.md)fest. Der folgende [Dialogfeld Tabellen](dialog-table.md) -Datensatz gibt das Dialogfeld "Aktions Dialogfeld" an
+1.  Schließen Sie einen Datensatz in [die Dialogfeldtabelle für](dialog-table.md) das dialogfeld ohne Modus ein, das die Tafel enthält. Nachdem ein Schild angezeigt wurde, gibt ein nicht modusloses Dialogfeld die Steuerung an den Installer zurück. Dadurch kann der Installer Nachrichten verarbeiten und das Dialogfeld und das Dialogfeld aktualisieren. Um ein modusloses Dialogfeld zu erstellen, legen Sie das Modale Dialogformatbit nicht im Feld Attribute der [Dialogtabelle fest.](dialog-table.md) Der folgende [Datensatz der Dialogfeldtabelle](dialog-table.md) gibt das Dialogfeld ActionDialog an.
 
-    [Dialog Feld Tabelle](dialog-table.md) (teilweise)
+    [Dialogtabelle](dialog-table.md) (partiell)
 
-    | Dialog\_     | Hcentering | Vcentering | Breite | Höhe | Attribute | Titel  | \_Zuerst Steuern | Standard Steuerelement \_ | Abbrechen von Steuerelementen \_ |
+    | Dialog\_     | HCentering | VCentering | Breite | Höhe | Attribute | Titel  | Control \_ First | \_Standardsteuersteuersystem | Abbrechen \_ des Steuerelements |
     |--------------|------------|------------|-------|--------|------------|--------|----------------|------------------|-----------------|
-    | Aktions Dialogfeld | 50         | 50         | 480   | 240    | 5          | Aktion | Abbrechen         | Abbrechen           | Abbrechen          |
+    | ActionDialog | 50         | 50         | 480   | 240    | 5          | Aktion | Abbrechen         | Abbrechen           | Abbrechen          |
 
     
 
      
 
-2.  Fügen Sie der Steuerelement [Tabelle](control-table.md) einen Datensatz hinzu, um anzugeben, dass im Dialogfeld ein Plakat angezeigt werden soll. Der Datensatz definiert die Größe und die Position des Bereichs im Dialogfeld, in dem die in der Tabelle " [bbcontrol](bbcontrol-table.md) " aufgeführten Register Steuerelemente angezeigt werden sollen. Im folgenden [Steuerelement Tabellen](control-table.md) Daten Satz werden die Position und die Größe des Billboard im Dialogfeld "Aktions Dialogfeld" definiert.
+2.  Fügen Sie der Steuertabelle [einen Datensatz hinzu,](control-table.md) um anzugeben, dass im Dialogfeld eine Tafel angezeigt wird. Der Datensatz definiert die Größe und Position des Bereich im Dialogfeld, in dem die in der [BBControl-Tabelle](bbcontrol-table.md) aufgeführten Steuerelementen angezeigt werden sollen. Der folgende [Control Table-Datensatz](control-table.md) definiert die Position und Größe des Kastens im Dialogfeld ActionDialog.
 
-    [Control-Tabelle](control-table.md) (partiell)
+    [Steuertabelle](control-table.md) (partiell)
 
     | Dialog\_     | Control   | type      | X   | J   | Breite | Höhe | Attribute |
     |--------------|-----------|-----------|-----|-----|-------|--------|------------|
-    | Aktions Dialogfeld | Billboard | Billboard | 0   | 110 | 480   | 130    | 1          |
+    | ActionDialog | Billboard | Billboard | 0   | 110 | 480   | 130    | 1          |
 
     
 
      
 
-3.  In der [Tabelle "Billboard](billboard-table.md) " sind die Billboard-Steuerelemente aufgelistet, und es wird angegeben, wann ein bestimmtes Steuerelement Fügen Sie der Tabelle " [Billboard](billboard-table.md) " einen Datensatz für jedes Billboard-Steuerelement hinzu. In der [Tabelle "Billboard](billboard-table.md) " werden während einer Installation gesendete Fortschrittsmeldungen überwacht. Ein Billboard wird nur angezeigt, wenn eine Statusmeldung von den in der Spalte Aktion der [Tabelle](billboard-table.md)"Aktion" aufgelisteten Aktionen gesendet wird, und nur, wenn die Funktion im Feld "Feature" \_ für die Installation ausgewählt ist. Nachdem ein Billboard angezeigt wird, bleibt es sichtbar, bis es von einem anderen Billboard abgedeckt oder das Dialogfeld geschlossen wird. Wenn für eine Aktion mehrere festgelegte festgelegt wurden, werden Sie nacheinander in der Reihenfolge angezeigt, die durch das Bestell Feld angegeben wird. Beispielsweise zeigen die folgenden Einträge in der [Tabelle](billboard-table.md) "BB1" zuerst das und dann das BB2-Steuerelement " [Billboard](billboard-control.md) " an, wenn die [InstallFiles](installfiles-action.md) -Aktion ausgeführt wird und die Schnelltest Funktion für die Installation ausgewählt wurde.
+3.  In [der Tabellentabelle Werden](billboard-table.md) die Ziersteuerelemente aufgeführt, und es wird angegeben, wann ein bestimmtes Steuerelement angezeigt wird. Fügen Sie der [Tabelle "Table Table" einen Datensatz für](billboard-table.md) jedes Steuerelement hinzu. Die [Tabellentabelle "Table" (Tabellen)](billboard-table.md) überwacht status-Meldungen, die während einer Installation gesendet werden. Ein Schild wird nur angezeigt, wenn eine Statusmeldung von den Aktionen gesendet wird, die in der Spalte Aktion der [Tabelle "Vorgang"](billboard-table.md)aufgeführt sind, und nur, wenn das Feature im Feld Feature für die Installation \_ ausgewählt ist. Nachdem ein Schild angezeigt wurde, bleibt es sichtbar, bis es von einem anderen Schild abgedeckt wird oder bis das Dialogfeld geschlossen wird. Wenn mehrere Tafeln für eine Aktion angegeben werden, werden sie nach und nach in der reihenfolge angezeigt, die durch das Feld Ordering angegeben wird. Die folgenden Tabelleneinträge zeigen beispielsweise zuerst BB1 und dann DIE BB2-Steuerelemente an, wenn die [Aktion InstallFiles](installfiles-action.md) ausgeführt wird und die QuickTest-Funktion für die Installation ausgewählt wurde. [](billboard-table.md) [](billboard-control.md)
 
-    [Billboard-Tabelle](billboard-table.md) (partiell)
+    [Tabellentabelle](billboard-table.md) (partiell)
 
-    | Billboard | Funktion   | Aktion       | Sortieren |
+    | Billboard | Komponente   | Aktion       | Sortieren |
     |-----------|-----------|--------------|----------|
-    | BB1       | QuickTest | InstallFiles | 1        |
-    | BB2       | QuickTest | InstallFiles | 2        |
+    | BB1       | Quicktest | InstallFiles | 1        |
+    | BB2       | Quicktest | InstallFiles | 2        |
 
     
 
      
 
-4.  Die [Tabelle "bbcontrol](bbcontrol-table.md) " gibt die Steuerelemente an, die zu den in der [Tabelle "Billboard](billboard-table.md)" aufgelisteten Billboard-Steuer [Elementen](billboard-control.md) gehören. Das [Text Steuer](text-control.md)Element, das [Bitmap-Steuer](bitmap-control.md)Element und das [Symbol Steuer](icon-control.md) Element sind die einzigen Typen von Steuerelementen, die auf einem Billboard wechseln können. Auf jedem Billboard können mehrere Steuerelemente platziert werden. Geben Sie den Namen des Billboard im Feld "Billboard" \_ der [Tabelle "bbcontrol](bbcontrol-table.md) " genau so ein, wie es in der [Tabelle "Billboard](billboard-table.md)" angezeigt wird.
+4.  Die [BBControl-Tabelle](bbcontrol-table.md) gibt die Steuerelemente an, die zu den [Steuerelementen gehören,](billboard-control.md) die in der [Tabelle "Table" aufgeführt sind.](billboard-table.md) Das [Textsteuerfeld,](text-control.md) [das Bitmap-Steuerelement](bitmap-control.md)und das [Symbolsteuerelemente](icon-control.md) sind die einzigen Arten von Steuerelementen, die auf einer Leiste verwendet werden können. Auf jedem Schild können mehrere Steuerelemente platziert werden. Geben Sie den Namen des Tafeln in das Feld \_ ["BbControl"](bbcontrol-table.md) der BBControl-Tabelle genau so ein, wie er in der Tabelle ["Table" angezeigt wird.](billboard-table.md)
 
-    Jede Steuerelement Position wird als Koordinaten der linken oberen Ecke des-Steuer Elements angegeben. Der Ursprung des Koordinatensystems befindet sich in der linken oberen Ecke des Billboard-Steuer Elements und nicht in einer Ecke des Dialog Felds. Die Koordinaten befinden sich in den installereinheiten und nicht in den Dialog Einheiten. Eine installereinheit ist gleich 1-zwölfte Höhe des 10-Punkt-MS Sans Serif-Schrift Grads. In der folgenden [Tabelle "bbcontrol](bbcontrol-table.md) " werden Steuerelemente an die Register Bänder gebunden
+    Jede Steuerelementposition wird als Koordinaten der oberen linken Ecke des Steuerelements angegeben. Der Ursprung des Koordinatensystems befindet sich in der oberen linken Ecke des Steuerelements und nicht in einer Ecke des Dialogfelds. Die Koordinaten befinden sich in Installationseinheiten, nicht in Dialogeinheiten. Eine Installer-Einheit entspricht einem Zwölftel der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads. In den folgenden [BBControl-Tabellendatensätzen](bbcontrol-table.md) werden Steuerelemente mit Denkelementen verbunden.
 
-    [Bbcontrol-Tabelle](bbcontrol-table.md) (partiell)
+    [BBControl-Tabelle](bbcontrol-table.md) (partiell)
 
-    | Billboard | Bbcontrol | type   | X   | J   | Breite | Höhe | Attribute | Text             |
+    | Billboard | BBControl | type   | X   | J   | Breite | Höhe | Attribute | Text             |
     |-----------|-----------|--------|-----|-----|-------|--------|------------|------------------|
-    | BB1       | Text      | Text   | 100 | 30  | 280   | 280    | 3          | Erstes Billboard  |
+    | BB1       | Text      | Text   | 100 | 30  | 280   | 280    | 3          | First Mans  |
     | BB1       | Bitmap1   | Bitmap | 0   | 0   | 100   | 100    | 3          | Software         |
     | BB1       | Bitmap2   | Bitmap | 380 | 0   | 100   | 100    | 3          | Musik            |
-    | BB2       | Text      | Text   | 100 | 30  | 280   | 20     | 3          | Zweites Billboard |
+    | BB2       | Text      | Text   | 100 | 30  | 280   | 20     | 3          | Zweiter Manding |
     | BB2       | Bitmap1   | Bitmap | 0   | 0   | 100   | 100    | 3          | Musik            |
     | BB2       | Bitmap2   | Bitmap | 380 | 0   | 100   | 100    | 3          | Software         |
 
@@ -73,13 +73,13 @@ In einem Dialogfeld können während einer Installation eine Sequenz von Bildern
 
      
 
-5.  Wenn Sie im Dialogfeld "action Dialog" ein Billboard-Steuerelement anzeigen möchten, müssen Sie das Billboard-Steuerelement für [setProgress ControlEvent](setprogress-controlevent.md) abonnieren, indem Sie der [Tabelle EventMapping](eventmapping-table.md)einen Datensatz hinzufügen. Wenn das Installationsprogramm das setProgress ControlEvent veröffentlicht, das in der Ereignis Spalte angegeben ist, legt das Installationsprogramm das im Feld Attribut angegebene Steuerelement Attribut fest. Das Ereignisfeld enthält den Zeichen folgen Bezeichner (ohne Anführungszeichen) des setProgress ControlEvent. Das Attribut Feld enthält den Zeichen folgen Bezeichner (ohne Anführungszeichen) des festzulegenden Attributs. Die Felder "Dialog" und "Steuerelement" \_ \_ identifizieren das Billboard-Steuerelement und sollten diesen Feldern in der [Steuerelement Tabelle](control-table.md)entsprechen. Beispielsweise wird in der folgenden [EventMapping-Tabelle](eventmapping-table.md) ein-Steuerelement für ein-Ereignis abonniert.
+5.  Um im Dialogfeld ActionDialog ein Steuerelement anzuzeigen, müssen Sie das Steuerelement ["ControlEvent" von "SetProgress"](setprogress-controlevent.md) abonnieren, indem Sie der [EventMapping-Tabelle](eventmapping-table.md)einen Datensatz hinzufügen. Wenn der Installer das setProgress ControlEvent veröffentlicht, das in der Spalte Ereignis angegeben ist, legt der Installer das Steuerelementattribut fest, das im Feld Attribut angegeben ist. Das Feld Ereignis enthält den Zeichenfolgenbezeichner (ohne Anführungszeichen) des SetProgress ControlEvent. Das Attributfeld enthält den Zeichenfolgenbezeichner (ohne Anführungszeichen) des festzulegenden Attributs. Die Felder Dialog \_ und Steuerelement identifizieren das Steuerelement \_ "Steuerelement" und sollten mit den Feldern in der [Steuerelementtabelle](control-table.md)übereinstimmen. Beispielsweise abonniert die folgende [EventMapping-Tabelle](eventmapping-table.md) ein -Steuerelement für ein Ereignis.
 
     [EventMapping-Tabelle](eventmapping-table.md) (partiell)
 
-    | Dialog\_     | Steuerelement\_ | Ereignis       | Attribut |
+    | Dialog\_     | Steuerelement\_ | Ereignis       | attribute |
     |--------------|-----------|-------------|-----------|
-    | Aktions Dialogfeld | Billboard | SetProgress | Fortschritt  |
+    | ActionDialog | Billboard | SetProgress | Fortschritt  |
 
     
 

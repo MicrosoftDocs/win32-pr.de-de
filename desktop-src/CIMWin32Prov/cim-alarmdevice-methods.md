@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ alarmdevice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ AlarmDevice-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: FF1E8B3B-2A38-47E9-A098-5FD086AD494D
 ms.tgt_platform: multiple
-title: CIM_AlarmDevice Methoden
+title: CIM_AlarmDevice-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6932c28c193aac99141bc3c53ec0a710db430e0b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2e1d5a2d7871f33ad5db603d198225de6a75d70df111293cf548b7a7c23e3cc6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322790"
 ---
-# <a name="cim_alarmdevice-methods"></a>CIM \_ alarmdevice-Methoden
+# <a name="cim_alarmdevice-methods"></a>CIM \_ AlarmDevice-Methoden
 
-Die [**CIM \_ alarmdevice**](cim-alarmdevice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ AlarmDevice-Klasse**](cim-alarmdevice.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -25,7 +25,7 @@ Die [**CIM \_ alarmdevice**](cim-alarmdevice.md) -Klasse stellt die folgenden Me
 
 -   [**Reset-Methode**](reset-method-in-class-cim-alarmdevice.md)
 -   [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-alarmdevice.md)
--   [**Methode "-Methode"**](seturgency-method-in-class-cim-alarmdevice.md)
+-   [**SetEncy-Methode**](seturgency-method-in-class-cim-alarmdevice.md)
 
  
 

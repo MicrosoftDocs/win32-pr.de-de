@@ -1,5 +1,5 @@
 ---
-description: Die folgenden Qualifizierer werden vom WDM-Anbieter in den Gerätetreiber-MOF-Dateien verwendet, wenn Sie Daten aus wnodes extrahieren, um Instanzen von WDM-Treiber Klassen zu generieren.
+description: Die folgenden Qualifizierer werden vom WDM-Anbieter in MOF-Gerätetreiberdateien verwendet, wenn sie Daten aus WNODEs extrahieren, um Instanzen von WDM-Treiberklassen zu generieren.
 ms.assetid: 11b0af59-979f-4908-baef-c9ec564b3cfd
 ms.tgt_platform: multiple
 title: Spezifische Qualifizierer für den WDM-Anbieter
@@ -13,60 +13,60 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: be2bc4593c19555dd5a851de89a1dc2e5db00596
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 673b53d8cea23cd044175129af85c367f6f20c8dc92240c8bdf52f34708d96f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996080"
 ---
 # <a name="qualifiers-specific-to-the-wdm-provider"></a>Spezifische Qualifizierer für den WDM-Anbieter
 
-Die folgenden Qualifizierer werden vom [WDM-Anbieter](/windows/desktop/WmiCoreProv/wdm-provider) in den Gerätetreiber-MOF-Dateien verwendet, wenn Sie Daten aus wnodes extrahieren, um Instanzen von WDM-Treiber Klassen zu generieren.
+Die folgenden Qualifizierer werden vom [WDM-Anbieter](/windows/desktop/WmiCoreProv/wdm-provider) in MOF-Gerätetreiberdateien verwendet, wenn sie Daten aus WNODEs extrahieren, um Instanzen von WDM-Treiberklassen zu generieren.
 
 <dt>
 
-<span id="MissingValue"></span><span id="missingvalue"></span><span id="MISSINGVALUE"></span>**Missingvalue**
+<span id="MissingValue"></span><span id="missingvalue"></span><span id="MISSINGVALUE"></span>**MissingValue**
 </dt> <dd>
 
-Datentyp: **DWORD, Array, Uint8, UInt16, UInt32, sint8, sint16 oder sint32.**
+Datentyp: **DWORD, array, uint8, uint16, uint32, sint8, sint16 oder sint32.**
 
 Gilt für: Eigenschaften
 
-Ein fehlender Wert für diese Eigenschaft sollte durch **null** anstelle von 0 (null) dargestellt werden.
+Ein fehlender Wert für diese Eigenschaft sollte durch **NULL anstelle** von 0 (null) dargestellt werden.
 
 </dd> <dt>
 
-<span id="WMIDataId"></span><span id="wmidataid"></span><span id="WMIDATAID"></span>**Wmidataid**
+<span id="WMIDataId"></span><span id="wmidataid"></span><span id="WMIDATAID"></span>**WMIDataId**
 </dt> <dd>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 
 Gilt für: Eigenschaften
 
-Index im wnode der Daten für die-Eigenschaft. Der WDM-Anbieter verwendet diesen Qualifizierer, um zu bestimmen, wie die Daten formatiert werden, während Daten aus dem wnode extrahiert und WMI-Klassen erzeugt werden Der Startwert ist 1.
+Index im WNODE der Daten für die Eigenschaft. Der WDM-Anbieter verwendet diesen Qualifizierer, um zu bestimmen, wie die Daten formatiert werden, während Daten aus WNODE extrahiert und WMI-Klassen generiert werden. Der Startwert ist 1.
 
 </dd> <dt>
 
-<span id="WMIExpense"></span><span id="wmiexpense"></span><span id="WMIEXPENSE"></span>**WMI-Ausgaben**
+<span id="WMIExpense"></span><span id="wmiexpense"></span><span id="WMIEXPENSE"></span>**WMIExpense**
 </dt> <dd>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 
 Gilt für: Klassen
 
-Gibt Aufschluss über die Ressourcenkosten für den Zugriff auf den Datenblock. Beispielsweise sind für Datenträger Geometrie Informationen nicht viele Ressourcen erforderlich, da Sie in der Geräte Erweiterung verfügbar sind. Die Datenträger-Lese-/Schreibleistung ist ressourcenintensiver, da für jeden Lese-/Schreibvorgang zusätzliche Arbeit erforderlich ist. Daher ist der Wert für den **WMI-Ausgaben** Qualifizierer für die Lese-/Schreibleistung des Datenträgers
+Angabe der Ressourcenkosten für den Zugriff auf den Datenblock. Beispielsweise sind für Informationen zur Datenträgergeometrie nicht viele Ressourcen erforderlich, da sie in der Geräteerweiterung verfügbar sind. Die Lese-/Schreibleistung des Datenträgers ist ressourcenintensiver, da bei jedem Lese-/Schreibvorgang zusätzliche Arbeit erforderlich ist. Daher ist der **WMIExpense-Qualifiziererwert** für die Lese-/Schreibleistung des Datenträgers größer.
 
 </dd> <dt>
 
-<span id="WMIMethodId"></span><span id="wmimethodid"></span><span id="WMIMETHODID"></span>**Wmimethodid**
+<span id="WMIMethodId"></span><span id="wmimethodid"></span><span id="WMIMETHODID"></span>**WMIMethodId**
 </dt> <dd>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 
 Gilt für: Methoden
 
-Index im wnode der Daten für die-Eigenschaft. Der WDM-Anbieter verwendet diesen Qualifizierer, um zu bestimmen, wie die Daten formatiert werden, während Daten aus dem wnode extrahiert und WMI-Klassen erzeugt werden Der Startwert ist 1.
+Index im WNODE der Daten für die Eigenschaft. Der WDM-Anbieter verwendet diesen Qualifizierer, um zu bestimmen, wie die Daten formatiert werden, während Daten aus WNODE extrahiert und WMI-Klassen generiert werden. Der Startwert ist 1.
 
 </dd> </dl>
 

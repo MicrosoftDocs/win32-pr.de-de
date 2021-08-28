@@ -4,8 +4,8 @@ description: Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, 
 ms.assetid: e476f4af-71a8-4bd9-a81d-f825bfbf267b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Link-Track-Secret-Attribut
-- linktracksecret-Attribut, AD-Schema
+- AD-Schema des Attributs "Link-Track-Secret"
+- linkTrackSecret-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5eb172ec0985acc7c93c62796881c369c7ad0b82
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c90fd71ed399c8a2881f16c13942f7210b152d20ebf5a284f071e8af85b40bf8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119302000"
 ---
 # <a name="link-track-secret-attribute"></a>Link-Track-Secret-Attribut
 
@@ -30,12 +30,12 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Link-Track-Secret                                     |
-| LDAP-Display-Name | linktracksecret                                       |
+| Ldap-Anzeigename | linkTrackSecret                                       |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.269                                |
-| System-ID-GUID    | 2ae80fe2-47b4-11D0-a1a4-00c04f 930c9                  |
+| System-ID-GUID    | 2ae80fe2-47b4-11d0-a1a4-00c04fd930c9                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -70,7 +70,7 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -100,10 +100,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -121,10 +121,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -142,10 +142,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -163,10 +163,10 @@ Dieses Attribut speichert einen Link zu einem geheimen Schlüssel, mit dem eine 
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 16                                                             |
 | Search-Flags           | 0x00000000                                                     |

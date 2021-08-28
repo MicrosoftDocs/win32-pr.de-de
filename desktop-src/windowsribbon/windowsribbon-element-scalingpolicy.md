@@ -1,9 +1,9 @@
 ---
 title: ScalingPolicy-Element
-description: Stellt einen Container zum Skalieren von Spezifikationen dar.
+description: Stellt einen Container für skalierungsspezifikationen dar.
 ms.assetid: 133e7994-9901-43e8-82b0-3d910cf8758e
 keywords:
-- ScalingPolicy-Element im Windows-Menüband
+- ScalingPolicy-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 812256b0ff329073eb516c6ab2eb7501db8de40d
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 202112a24a74c9b20d429910fd0ee9447002ce7f2cb95133165fb968eaaf4f69
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007470"
 ---
 # <a name="scalingpolicy-element"></a>ScalingPolicy-Element
 
-Stellt einen Container zum Skalieren von Spezifikationen dar.
+Stellt einen Container für skalierungsspezifikationen dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ScalingPolicy>
@@ -63,12 +63,12 @@ Erforderlich.
 
 Muss einmal für jedes [**Tab.ScalingPolicy-Objekt auftreten.**](windowsribbon-element-tab-scalingpolicy.md)
 
-Das **ScalingPolicy-Element** enthält ein Manifest von [**ScalingPolicy.IdealSizes-**](windowsribbon-element-scalingpolicy-idealsizes.md) und Scale-Deklarationen, die adaptive Layouteinstellungen für mindestens ein [**Group-Element**](windowsribbon-element-group.md) angeben, wenn die Größe des Menübands geändert wird. [](windowsribbon-element-scale.md)
+Das **ScalingPolicy-Element** enthält ein Manifest der [**Deklarationen ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) und [**Scale,**](windowsribbon-element-scale.md) die adaptive Layouteinstellungen für mindestens ein [**Group-Element**](windowsribbon-element-group.md) angeben, wenn die Größe des Menübands geändert wird.
 
 Die Liste [](windowsribbon-element-scale.md) der Skalierungsdeklarationen muss in absteigender Reihenfolge gültiger Größen (Groß, Mittel, Klein, Popup) für die [**SizeDefinition**](windowsribbon-element-sizedefinition.md) sein, die dem [**Group-Element zugeordnet**](windowsribbon-element-group.md) ist.
 
 > [!Note]  
-> Es wird dringend empfohlen, geeignete Skalierungsrichtliniedetails so anzugeben, dass ein Menüband ohne Bildlaufleisten gerendert werden kann, wenn die Größe auf eine Breite von 300 Pixel bei 96 DPI-Punkten (Dots per Inch) geändert wird.
+> Es wird dringend empfohlen, geeignete Skalierungsrichtliniedetails so anzugeben, dass ein Menüband ohne Bildlaufleisten gerendert werden kann, wenn die Größe auf eine Breite von 300 Pixel bei 96 DPI(Dots per Inch) geändert wird.
 
  
 

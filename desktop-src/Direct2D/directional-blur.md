@@ -1,30 +1,30 @@
 ---
-title: Richtungsweisendes Effekt
-description: Der direktionale Weichzeichnereffekt ähnelt dem gauischen weichungs Wert, mit der Ausnahme, dass Sie den Weichzeichner in eine bestimmte Richtung neigen können.
+title: Direktionaler Weichreffekt
+description: Der direktionale Weichdeeffekt ähnelt gaußschen Weichungen, mit der Ausnahme, dass Sie den Weich weicher in eine bestimmte Richtung verzerren können.
 ms.assetid: 59328FA4-5C27-4A81-AAB2-C5B25B3615C6
 keywords:
-- direktionaler weich
+- Richtungsunschärfe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0e1c098d17929563cf69f4e61416fa0d93a88dd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a2a43dcaa60f8627473444572ec36a13c3949e9430c9befbb5c064b51d7813bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119260434"
 ---
-# <a name="directional-blur-effect"></a>Richtungsweisendes Effekt
+# <a name="directional-blur-effect"></a>Direktionaler Weichreffekt
 
-Der direktionale Weichzeichnereffekt ähnelt dem [gauischen](gaussian-blur.md)weichungs Wert, mit der Ausnahme, dass Sie den Weichzeichner in eine bestimmte Richtung neigen können. Mit diesem Effekt können Sie sehen, wie sich das Bild in Bewegung befindet oder ein animiertes Bild hervorgehoben wird.
+Der direktionale Weichmereffekt ähnelt [Gaußs'schen](gaussian-blur.md)Weichungen, mit der Ausnahme, dass Sie die Weichde in eine bestimmte Richtung verzerren können. Sie können diesen Effekt verwenden, um ein Bild so aussehen zu lassen, als ob es sich in Bewegung befindet, oder um ein animiertes Bild zu hervorheben.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1DirectionalBlur.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Optimierungs Modi](#optimization-modes)
--   [Rahmen Modi](#border-modes)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Optimierungsmodi](#optimization-modes)
+-   [Rahmenmodi](#border-modes)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
@@ -34,7 +34,7 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1DirectionalBlur.
 | Vorher                                                          |
 |-----------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)      |
-| Nach                                                           |
+| Danach                                                           |
 | ![das Bild nach der Transformation.](images/2-directionalblur.png) |
 
 
@@ -56,58 +56,58 @@ m_d2dContext->EndDraw();
 
 
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                        |
+| Anzeigename und Indexenumeration                                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StandardDeviation (Standardabweichung)<br/> D2D1 \_ directionalblur \_ Prop- \_ Standard \_ Abweichung<br/> | Die auf das Bild anzuwendende Menge an weich. Sie können den weichungs Radius des Kernels berechnen, indem Sie die Standardabweichung um 3 multiplizieren. Die Einheiten der Standardabweichung und des weichungs RADIUS sind Dips. Durch den Wert 0 (null) wird dieser Effekt deaktiviert. Der Typ ist "float".<br/> Der Standardwert ist 3.0 f.<br/>                                                                            |
-| Angle<br/> D2D1 \_ directionalweichungs \_ \_ Winkel<br/>                           | Der Winkel des weichungs Winkels in Bezug auf die x-Achse, in Richtung gegen den Uhrzeigersinn. Die Einheiten werden in Grad angegeben.<br/> Der Weichzeichnerkernel wird zuerst mit dem gleichen Prozess wie für den [gauischen](gaussian-blur.md) Weichzeichnereffekt generiert. Die Kernel Werte werden dann entsprechend dem weichzeichnerwinkel transformiert.<br/> Der Typ ist "float".<br/> Der Standardwert ist 0,0 f.<br/> |
-| Optimization<br/> D2D1 \_ directionaloptimization- \_ Prop- \_ Optimierung<br/>             | Der Optimierungs Modus. Weitere Informationen finden Sie unter [Optimierungs Modi](#optimization-modes) .<br/> Der Typ ist "D2D1 \_ directionalblur \_ Optimization".<br/> Der Standardwert ist D2D1 \_ directionaloptimization \_ Optimization Balancing \_ ausgeglichen. <br/>                                                                                                                                                         |
-| Bordermode<br/> D2D1 \_ directionalblur-Prop-Rahmen \_ \_ \_ Modus<br/>               | Der Modus, der verwendet wird, um den Rahmen des Bilds zu berechnen, weich oder hart. Weitere Informationen finden Sie unter [Border Modes](#border-modes) .<br/> Der Typ ist "D2D1 \_ Border \_ Mode".<br/> Der Standardwert ist D2D1 \_ Border \_ Mode \_ Soft.<br/>                                                                                                                                                                 |
+| StandardDeviation (Standardabweichung)<br/> D2D1 \_ DIRECTIONALBLUR \_ PROP \_ STANDARD \_ DEVIATION<br/> | Die Auf das Bild anzuwendende Weichbildmenge. Sie können den Weichderadius des Kernels berechnen, indem Sie die Standardabweichung mit 3 multiplizieren. Die Einheiten der Standardabweichung und des Weicherradius sind DIPs. Dieser Effekt wird durch den Wert 0 DIPs deaktiviert. Der Typ ist FLOAT.<br/> Der Standardwert ist 3,0f.<br/>                                                                            |
+| Angle<br/> D2D1 \_ DIRECTIONALBLUR \_ PROP \_ ANGLE<br/>                           | Der Winkel der Weichansicht relativ zur x-Achse in der gegen den Uhrzeigersinn weisenden Richtung. Die Einheiten werden in Grad angegeben.<br/> Der Weichdekernel wird zuerst mit demselben Prozess wie für den [Gaußschen Weichdeeffekt](gaussian-blur.md) generiert. Die Kernelwerte werden dann entsprechend dem weicheren Winkel transformiert.<br/> Der Typ ist FLOAT.<br/> Der Standardwert ist 0,0f.<br/> |
+| Optimization<br/> D2D1 \_ DIRECTIONALBLUR \_ PROP \_ OPTIMIZATION<br/>             | Der Optimierungsmodus. Weitere [Informationen finden Sie](#optimization-modes) unter Optimierungsmodi.<br/> Der Typ ist D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION.<br/> Der Standardwert ist D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ BALANCED. <br/>                                                                                                                                                         |
+| BorderMode<br/> D2D1 \_ DIRECTIONALBLUR \_ PROP \_ BORDER \_ MODE<br/>               | Der Modus, der verwendet wird, um den Rahmen des Bilds zu berechnen, soft oder hard. Weitere [Informationen finden Sie](#border-modes) unter Rahmenmodi.<br/> Der Typ ist D2D1 \_ BORDER \_ MODE.<br/> Der Standardwert ist D2D1 \_ BORDER \_ MODE \_ SOFT.<br/>                                                                                                                                                                 |
 
 
 
  
 
-## <a name="optimization-modes"></a>Optimierungs Modi
+## <a name="optimization-modes"></a>Optimierungsmodi
 
 
 
-| Name                                          | BESCHREIBUNG                                                                                                                           |
+| Name                                          | Beschreibung                                                                                                                           |
 |-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1- \_ \_ Optimierungs Geschwindigkeit für directionalblur \_    | Wendet interne Optimierungen an, wie z. b. die vorab Skalierung bei relativ kleinen Radii. Verwendet lineare Filterung.                                  |
-| D2D1 \_ directionalblur- \_ Optimierung \_ ausgeglichen | Verwendet die gleichen Optimierungs Schwellenwerte wie der Geschwindigkeits Modus, verwendet jedoch die drei lineare Filterung.                                                    |
-| D2D1 \_ directionalblur- \_ Optimierungs \_ Qualität  | Verwendet nur interne Optimierungen mit großen weichungs Radien, bei denen es weniger wahrscheinlich ist, dass Näherungen sichtbar sind. Verwendet die drei lineare Filterung. |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ SPEED    | Wendet interne Optimierungen an, z. B. die Vorskalierung bei relativ kleinen Radien. Verwendet lineare Filterung.                                  |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ BALANCED | Verwendet dieselben Optimierungsschwellenwerte wie im Geschwindigkeitsmodus, verwendet jedoch die trilineare Filterung.                                                    |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ QUALITY  | Verwendet nur interne Optimierungen mit großen weicheren Radien, bei denen Näherungen weniger wahrscheinlich sichtbar sind. Verwendet die trilineare Filterung. |
 
 
 
  
 
-## <a name="border-modes"></a>Rahmen Modi
+## <a name="border-modes"></a>Rahmenmodi
 
 
 
-| Name                     | BESCHREIBUNG                                                                                                                                                                                                              |
+| Name                     | Beschreibung                                                                                                                                                                                                              |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1 \_ Border \_ Mode \_ Soft | Der Effekt füllt das Bild mit transparenten schwarzen Pixeln auf, da es den Weichzeichnerkernel anwendet, was zu einem weichen Rand führt. <br/>                                                                                             |
-| D2D1 \_ Rahmen \_ Modus \_ hart | Der Effekt bindet die Ausgabe an die Größe des Eingabe Bilds. Wenn der Effekt den Weichzeichnerkernel anwendet, erweitert er das Eingabebild mit einer Rahmen Transformation für einen Spiegelungs Typ für Beispiele außerhalb der Eingabe Begrenzungen.<br/> |
+| D2D1 \_ BORDER \_ MODE \_ SOFT | Der Effekt padt das Bild mit transparenten schwarzen Pixeln, wenn der Weichheitskernel angewendet wird, was zu einem weichen Rand führt. <br/>                                                                                             |
+| D2D1– \_ \_ RAHMENMODUS \_ FEST | Der Effekt klammert die Ausgabe an die Größe des Eingabebilds. Wenn der Effekt den weicheren Kernel an wendet, erweitert er das Eingabebild um eine Rahmentransformation vom Spiegeltyp für Stichproben außerhalb der Eingabegrenze.<br/> |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap erhöht sich basierend auf der Standardabweichung, dem Winkel des Effekts und dem Rahmen Modus. Wenn der Border-Modus auf D2D1 \_ Border Mode Soft festgelegt ist \_ , wird \_ die Größe der Ausgabe Bitmap um die Größe des Weichzeichnerkernels erhöht, dargestellt in Pixel. Diese Gleichungen können verwendet werden, um die Größe der Ausgabe Bitmap zu berechnen.
+Die Größe der Ausgabebitmap nimmt basierend auf der Standardabweichung, dem Winkel des Effekts und dem Rahmenmodus zu. Wenn der Rahmenmodus auf D2D1 BORDER MODE SOFT festgelegt ist, erhöht sich die Größe der Ausgabebitmap um die Größe des weicheren Kernels, dargestellt \_ \_ in \_ Pixel. Diese Gleichungen können verwendet werden, um die Größe der Ausgabebitmap zu berechnen.
 
 
 
 | Anforderung | Wert |
 |------------------------|-------------------------------------------------------------------|
-| Ergebnis der Ausgabe Bitmap X | Standardabweichung (Dips) \* 6 \* ((Benutzer dpi)/96) \* cos (Winkel)) |
-| Ergebnis der Ausgabe Bitmap Y | Standardabweichung (Dips) \* 6 \* ((Benutzer dpi)/96) \* Sin (Winkel)) |
+| Output Bitmap Growth X | StandardDeviation (DIPs) \* 6 \* ((User DPI) / 96) \* cos(Angle)) |
+| Output Bitmap Growth Y | StandardDeviation (DIPs) \* 6 \* ((User DPI) / 96) \* sin(Angle)) |
 
 
 
@@ -119,10 +119,10 @@ Die Größe der Ausgabe Bitmap erhöht sich basierend auf der Standardabweichung
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

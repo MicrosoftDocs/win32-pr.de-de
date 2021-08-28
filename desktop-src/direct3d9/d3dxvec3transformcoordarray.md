@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3TransformCoordArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, z, 1) durch eine bestimmte Matrix und projektiert das Ergebnis wieder in w = 1.'
+description: 'D3DXVec3TransformCoordArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, z, 1) durch eine angegebene Matrix und projiziert das Ergebnis zurück in w = 1.'
 ms.assetid: f1595861-d8cb-4787-8078-b9ba6f76507e
 title: D3DXVec3TransformCoordArray-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c373705307b2529b3d05609fc4b6ffb47d3abcc2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: dc5d1b18ee3beff052d389f12ec652c3cd263415f2db3eff3129ab085bbd006f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119607591"
 ---
 # <a name="d3dxvec3transformcoordarray-function-d3dx9mathh"></a>D3DXVec3TransformCoordArray-Funktion (D3dx9math.h)
 
-Transformiert ein Array (x, y, z, 1) durch eine bestimmte Matrix und gibt das Ergebnis zurück in w = 1.
+Transformiert ein Array (x, y, z, 1) durch eine bestimmte Matrix und projiziert das Ergebnis zurück in w = 1.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Ergebnis des 
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Ausgabedatenstrom.
+Schreitet zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Zeiger auf das [**D3DXVECTOR3-Quellarray.**](d3dxvector3.md)
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Eingabedatenstrom.
+Schreitet zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das transformierte Array ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion transformiert das Array *pV (* x, y, z, 1) durch die Matrix *pM* und projiziert das Ergebnis zurück in w = 1.
 
@@ -115,14 +115,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

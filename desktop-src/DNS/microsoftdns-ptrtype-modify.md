@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_PTRType-Klasse
-description: Die Modify-Methode aktualisiert einen Zeiger (PTR)-Ressourcen Daten Satz.
+title: Modify-Methode der MicrosoftDNS_PTRType Klasse
+description: Die Modify-Methode aktualisiert einen Zeigerressourcendatensatz (PTR).
 ms.assetid: 801a6bc9-e384-4912-a73a-6b04a1655002
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_PTRType-Klasse
-- DNS-MicrosoftDNS_PTRType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_PTRType class
+- MicrosoftDNS_PTRType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 840bf100ea5cdbbb606837e90d8fa9fcebab57fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cbda85610e34fa6208bac5f8b9ba196be1b24fcadf8a53d87cea627718e9bd04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432823"
 ---
-# <a name="modify-method-of-the-microsoftdns_ptrtype-class"></a>Modify-Methode der MicrosoftDNS \_ ptrtype-Klasse
+# <a name="modify-method-of-the-microsoftdns_ptrtype-class"></a>Modify-Methode der MicrosoftDNS \_ PTRType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Zeiger (PTR)-Ressourcen Daten Satz.
+Die **Modify-Methode** aktualisiert einen Zeigerressourcendatensatz (PTR).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Ptrdomainname* \[ in, optional\]
+*PTRDomainName* \[ in, optional\]
 </dt> <dd>
 
-Die Domänen Namen Adresse des PTR-Einsatzes.
+Domänennamenadresse des PTR-Eintrags.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -69,9 +69,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,21 +82,21 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ ptrtype**](microsoftdns-ptrtype.md)
+[**MicrosoftDNS \_ PTRType**](microsoftdns-ptrtype.md)
 </dt> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ ptrtype"**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ PTRType-Klasse**](microsoftdns-ptrtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: 72a77e83-ab18-438c-af11-fa6d55bf0180
 title: Kompatibilitätsadministrator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c735154115fb649d6c6d6b710709ce77c9e0b4e
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 504378dd4998118e0189a40d978b5649a0bc0215e88ff660d7cdafa6edf7602c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098540"
 ---
 # <a name="compatibility-administrator"></a>Kompatibilitätsadministrator
 
@@ -27,7 +27,7 @@ Mit dem vom Application Compatibility Toolkit (ACT) bereitgestellten Kompatibili
 -   Sie können benutzerdefinierte Kompatibilitätskorrekturen, Kompatibilitätsmodi, AppHelp-Meldungen und Kompatibilitätsdatenbanken erstellen.
 -   Bereitstellen eines Abfragetools, mit dem Sie nach installierten Fehlerbehebungen auf Ihren lokalen Computern suchen können
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 Das folgende Flussdiagramm veranschaulicht die Schritte, die erforderlich sind, um den Kompatibilitätsadministrator zu verwenden, um Ihre Kompatibilitätskorrekturen, Kompatibilitätsmodi und Ihre AppHelp-Meldungen zu erstellen.
 

@@ -1,9 +1,9 @@
 ---
-title: CCM_SETVERSION Meldung (kommstrg. h)
-description: Diese Meldung wird verwendet, um das Steuerelement zu informieren, dass Sie ein Verhalten erwarten, das mit einer bestimmten Version verknüpft ist.
+title: CCM_SETVERSION (Commctrl.h)
+description: Diese Meldung wird verwendet, um das Steuerelement darüber zu informieren, dass Sie ein Verhalten erwarten, das einer bestimmten Version zugeordnet ist.
 ms.assetid: f87b20bc-0139-4d0a-b38c-32c75743d6f6
 keywords:
-- Windows-Steuerelemente für CCM_SETVERSION Meldung
+- CCM_SETVERSION meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 349935173c41cd9c90a016ef3d2f3c77df8f159c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b9453b99ff9cd23675b3b5d79593071e4ebb3fbb65d06a78d0fe8094154b2486
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119320100"
 ---
-# <a name="ccm_setversion-message"></a>CCM- \_ setVersion-Meldung
+# <a name="ccm_setversion-message"></a>CCM \_ SETVERSION-Meldung
 
-Diese Meldung wird verwendet, um das Steuerelement zu informieren, dass Sie ein Verhalten erwarten, das mit einer bestimmten Version verknüpft ist.
+Diese Meldung wird verwendet, um das Steuerelement darüber zu informieren, dass Sie ein Verhalten erwarten, das einer bestimmten Version zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,16 +41,16 @@ Die Versionsnummer.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die in der vorherigen ccm- **\_ setVersion** -Meldung angegebene Version zurück. Wenn *wParam* auf einen Wert festgelegt ist, der höher als die aktuelle dll-Version ist, wird-1 zurückgegeben.
+Gibt die in der vorherigen **CCM \_ SETVERSION-Meldung angegebene Version** zurück. Wenn *wParam* auf einen Wert festgelegt ist, der größer als die aktuelle DLL-Version ist, wird -1 zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einigen Fällen kann sich ein Steuerelement abhängig von der jeweiligen Version anders Verhalten. Dies gilt hauptsächlich für Fehler, die in späteren Versionen behoben wurden. Die **ccm- \_ setVersion** -Meldung ermöglicht Ihnen, das Steuerelement zu informieren, welches Verhalten erwartet wird. Sie können ermitteln, welche Version Sie angegeben haben, indem Sie eine [**ccm- \_ GetVersion**](ccm-getversion.md) -Nachricht senden. Ein Beispiel für die Verwendung dieser Nachricht finden Sie unter [benutzerdefiniertes Zeichnen mit List-View und Tree-View Steuerelementen](custom-draw.md).
+In einigen Fällen kann sich ein Steuerelement je nach Version unterschiedlich verhalten. Dies gilt in erster Linie für Fehler, die in späteren Versionen behoben wurden. Mit **der CCM \_ SETVERSION-Meldung** können Sie das Steuerelement darüber informieren, welches Verhalten erwartet wird. Sie können ermitteln, welche Version Sie angegeben haben, indem Sie eine [**CCM \_ GETVERSION-Nachricht**](ccm-getversion.md) senden. Ein Beispiel für die Verwendung dieser Meldung finden Sie unter Benutzerdefiniertes Zeichnen mit List-View [und Tree-View Steuerelementen.](custom-draw.md)
 
-Wenn Sie ComCtl32.dll Version 6 installiert haben, gibt die **ccm- \_ setVersion** -Nachricht unabhängig von dem Wert, den Sie in *wParam* festlegen, Version 6 zurück.
+Wenn Sie ComCtl32.dll Version 6 installiert haben, gibt die **CCM \_ SETVERSION-Meldung** Version 6 zurück, unabhängig davon, welchen Wert Sie in *wParam* festgelegt haben.
 
 > [!Note]  
-> Mit dieser Meldung wird nur die Versionsnummer für das Steuerelement festgelegt, an das das Steuerelement gesendet wird.
+> Diese Meldung legt nur die Versionsnummer für das Steuerelement fest, an das sie gesendet wird.
 
  
 
@@ -60,9 +60,9 @@ Wenn Sie ComCtl32.dll Version 6 installiert haben, gibt die **ccm- \_ setVersion
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

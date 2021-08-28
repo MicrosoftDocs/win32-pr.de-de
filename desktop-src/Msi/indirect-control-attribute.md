@@ -1,19 +1,19 @@
 ---
-description: Das indirekte Steuerungs Attribut gibt an, ob indirekt auf den Wert verwiesen wird, der von diesem Steuerelement angezeigt oder geändert wird.
+description: Das Attribut Indirekte Steuerung gibt an, ob indirekt auf den von diesem Steuerelement angezeigten oder geänderten Wert verwiesen wird.
 ms.assetid: dc9c0dd6-7e19-44ec-b1a5-3d51a1855adf
-title: Indirektes Steuerungs Attribut
+title: Attribut der indirekten Steuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6d0c183f586c197b14810e7176bce607ac3adaf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c679938a818fb8393958c35694f3c2b7f782c91fc2dfcf1ac04777553ec629c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996688"
 ---
-# <a name="indirect-control-attribute"></a>Indirektes Steuerungs Attribut
+# <a name="indirect-control-attribute"></a>Attribut der indirekten Steuerung
 
-Das indirekte Steuerungs Attribut gibt an, ob indirekt auf den Wert verwiesen wird, der von diesem Steuerelement angezeigt oder geändert wird. Wenn dieses Bit festgelegt ist, zeigt das Steuerelement den Wert der Eigenschaft an oder ändert ihn, die den Bezeichner enthält, der in der Eigenschafts Spalte der [Steuerelement Tabelle](control-table.md)aufgeführt ist. Wenn dieses Bit nicht festgelegt ist, zeigt das Steuerelement den Wert der-Eigenschaft in der-Eigenschaften Spalte der Steuerelement Tabelle an oder ändert diesen.
+Das Attribut Indirekte Steuerung gibt an, ob indirekt auf den von diesem Steuerelement angezeigten oder geänderten Wert verwiesen wird. Wenn dieses Bit festgelegt ist, zeigt das Steuerelement den Wert der Eigenschaft an, deren Bezeichner in der Spalte Eigenschaft der [Control-Tabelle aufgeführt ist, oder ändert diesen.](control-table.md) Wenn dieses Bit nicht festgelegt ist, zeigt das -Steuerelement den Wert der -Eigenschaft in der Property -Spalte der Control-Tabelle an oder ändert diesen.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -25,15 +25,15 @@ Alle aktiven Steuerelemente.
 
 | Decimal | Hexadezimal | Konstante                           |
 |---------|-------------|------------------------------------|
-| 8       | 0x00000008  | **msidbcontrolattributesindirekte** |
+| 8       | 0x00000008  | **msidbControlAttributesIndirect** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere [Informationen finden Sie unter Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter Steuerelemente erstellen [müssen.](controls.md)
 
  
 

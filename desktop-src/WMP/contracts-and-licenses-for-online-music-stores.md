@@ -3,116 +3,30 @@ title: Verträge und Lizenzen für Online Musik Stores
 description: Verträge und Lizenzen für Online Musik Stores
 ms.assetid: fcc4601f-34e1-4373-bd4f-c18742a78da8
 keywords:
-- Windows Media Player Online Stores
+- Windows Media Player Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a6c8c79f72a8fb05d9de3496a2e2acd15eafe18
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6b169758f8e5a950686f335d3731e6879a6a4152
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310447"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482136"
 ---
 # <a name="contracts-and-licenses-for-online-music-stores"></a>Verträge und Lizenzen für Online Musik Stores
 
-In der folgenden Tabelle ist angegeben, wer welche Vereinbarungs Typen vor einem Online Shop in Windows Media Player enthalten muss.
+Die folgende Tabelle zeigt, wer welche Arten von Vereinbarungen unterzeichnen muss, bevor ein Onlineshop in Windows Media Player aufgenommen werden kann.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Was möchten Sie tun?</th>
-<th>Wer sind Sie?</th>
-<th>Vertrag oder Lizenzen, die Sie signieren müssen</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Erstellen Sie einen in Windows Media Player aufgeführten Online Store mit Marken. Die Marke des Online Stores wird vom Consumer angezeigt.</td>
-<td>Der Besitzer des Online Stores, der über Verteilungsrechte für den Inhalt verfügt, den Store für Windows Media Player entwickelt hat und für die Verwaltung des Lizenzservers (falls zutreffend) und der Kunden Pflegeaktivitäten wie Abrechnung und Support zuständig ist.</td>
-<td>Markeninhaber Zeichen:<br/>
-<ul>
-<li>Online Media Service-Auflistungs Vereinbarung für Windows Media Player</li>
-<li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li>
-<li>Windows Media-Format-SDK-Lizenz</li>
-<li>Windows Media Player-weitergabevereinbarung (zum erneuten Verteilen von Windows Media Player über eine CD, Website oder einen persönlichen Computer und zum Festlegen des Ladens als ersten aktiven Dienst) (optional)</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Bietet einen in Windows Media Player aufgeführten Online Store mit Marken.<br/> Die Marke des Online Stores wird vom Consumer angezeigt. <br/></td>
-<td>Der Besitzer des Online Stores, der mit einem oder mehreren Dienstanbietern für das Erstellen und betreiben eines eindeutigen Online Stores Verträge verarbeitet.<br/> Diese Aktivitäten können Folgendes umfassen:<br/>
-<ul>
-<li>Entwickeln der UI/UX-Features und-Funktionen, die das Windows Media Player SDK und technische Anforderungen erfüllen</li>
-<li>Betreiben des Lizenzservers (falls zutreffend)</li>
-<li>Bereitstellung von Kunden Pflegeaktivitäten, z. b. Abrechnung und Support.</li>
-</ul></td>
-<td>Markeninhaber Zeichen:<br/>
-<ul>
-<li>Online Media Service-Auflistungs Vereinbarung für Windows Media Player</li>
-<li>Windows Media Player-weitergabevereinbarung (zur erneuten Verteilung des Players über CD, Website oder persönlicher Computer und zum Festlegen des Ladens als ersten aktiven Dienst) (optional)</li>
-</ul>
-Dienstanbieter:<br/>
-<ul>
-<li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li>
-<li>Windows Media-Format-SDK-Lizenz</li>
-</ul>
-<blockquote>
-[!Note]<br />
-Der-Operator des Lizenzservers ist für das Signieren der Windows Media Rights Manager-Lizenz verantwortlich.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td>Bieten Sie sofort einsetzbare White-Label-Dienste für Marken Besitzer an und Listen Sie jeden eindeutigen Store in Windows Media Player auf<br/> Die Marke des Online Ladens wird vom Consumer angezeigt. <br/></td>
-<td>Dienstanbieter, der Online Stores für Marken Besitzer erstellt und bedient.<br/> Diese Aktivitäten können Folgendes umfassen:<br/>
-<ul>
-<li>Entwickeln der UI/UX-Features und-Funktionen, die das Windows Media Player SDK und technische Anforderungen erfüllen</li>
-<li>Betreiben des Lizenzservers (falls zutreffend)</li>
-<li>Bereitstellung von Kunden Pflegeaktivitäten, z. b. Abrechnung und Support.</li>
-</ul></td>
-<td>Dienstanbieter Vorzeichen:<br/>
-<ul>
-<li>Online Media Service-Auflistungs Vereinbarung für Windows Media Player</li>
-<li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li>
-<li>Windows Media-Format-SDK-Lizenz</li>
-</ul>
-Markeninhaber Zeichen:<br/>
-<ul>
-<li>Zeigt einen der Online-Media-Dienst-Auflistungs Vereinbarung für Windows-Media Player an, die der Dienstanbieter signiert hat</li>
-</ul>
-<blockquote>
-[!Note]<br />
-Der-Operator des Lizenzservers ist für das Signieren der Windows Media Rights Manager-Lizenz verantwortlich.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>Bieten Sie einen Co-Branding-Online Store, der in Windows Media Player aufgeführt ist.<br/> Es liegt an Ihnen und im Online Store, zu bestimmen, welche Marke in Windows Media Player und vom Consumer aufgeführt ist.<br/></td>
-<td>Drittanbieter (z. b. ein PC-OEM), der einen vorhandenen Online Shop aushandt.</td>
-<td>Zeichen von Drittanbietern (z. b. PC-OEM):<br/>
-<ul>
-<li>Windows Media Player-weitergabevereinbarung (um den Player über CD, Website oder persönlichen Computer weiter zuverteilen und den Speicher als ersten aktiven Dienst festzulegen)</li>
-</ul>
-Markeninhaber Zeichen:<br/>
-<ul>
-<li>Online Media Service-Auflistungs Vereinbarung für Windows Media Player</li>
-<li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li>
-<li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li>
-</ul>
-<blockquote>
-[!Note]<br />
-Diese Vereinbarungen wurden möglicherweise bereits vom Marken Besitzer des Online Stores oder von Ihrem Dienstanbieter signiert.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Was möchten Sie tun? | Wer sind Sie? | Vertrag oder Lizenzen, die Sie signieren müssen | 
+|----------------------------|--------------|------------------------------------------|
+| Erstellen Sie einen Onlineshop mit Branding, der in Windows Media Player aufgeführt ist. Die Marke des Onlineshops wird vom Kunden gesehen. | Der Markenbesitzer des Onlineshops, der über Verteilungsrechte für den Inhalt verfügt, den Store für Windows Media Player entwickelt hat und für die Verwaltung des Lizenzservers (falls zutreffend) und der Kundendienstaktivitäten wie Abrechnung und Support verantwortlich ist. | Markenbesitzer signiert:<br /><ul><li>Online Media Service Listing Agreement for Windows Media Player</li><li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li><li>Windows Media Format SDK-Lizenz</li><li>Windows Media Player Redistribution Agreement (um Windows Media Player über CD, Website oder PersonalComputer weiterzuverteilen und den Speicher als ersten aktiven Dienst festzulegen) (optional)</li></ul> | 
+| Anbieten eines Onlineshops mit Branding, der in Windows Media Player aufgeführt ist.<br /> Die Marke des Onlineshops wird vom Kunden gesehen. <br /> | Der Markenbesitzer des Onlineshops, der mit einem oder mehreren Dienstanbietern zusammenarbeitet, um einen eindeutigen Onlineshop zu erstellen und zu betreiben.<br /> Diese Aktivitäten können Folgendes umfassen:<br /><ul><li>Entwickeln der Benutzeroberflächen-/UX-Features und -Funktionen, die den Windows Media Player SDK und den technischen Anforderungen entsprechen</li><li>Betreiben des Lizenzservers (falls zutreffend)</li><li>Bereitstellen von Kundensupportaktivitäten wie Abrechnung und Support.</li></ul> | Markenbesitzer signiert:<br /><ul><li>Online Media Service Listing Agreement for Windows Media Player</li><li>Windows Media Player Redistribution Agreement (um den Player über CD, Website oder Pc weiterzuverteilen und den Speicher als ersten aktiven Dienst festzulegen) (optional)</li></ul>Signieren von Dienstanbietern:<br /><ul><li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li><li>Windows Media Format SDK-Lizenz</li></ul><blockquote>[!Note]<br />Der Operator des Lizenzservers ist für das Signieren der Windows Media Rights Manager-Lizenz verantwortlich.</blockquote><br /> | 
+| Bieten Sie schlüsselfertige White-Label-Dienste für Markenbesitzer an, und listen Sie jeden eindeutigen Store in Windows Media Player auf.<br /> Die Marke Online Store wird vom Consumer erkannt. <br /> | Dienstanbieter, der Onlineshops für Markenbesitzer erstellt und betreibt.<br /> Diese Aktivitäten können Folgendes umfassen:<br /><ul><li>Entwickeln der Benutzeroberflächen-/UX-Features und -Funktionen, die Windows Media Player SDK und den technischen Anforderungen entsprechen</li><li>Betreiben des Lizenzservers (falls zutreffend)</li><li>Bereitstellen von Kundensupportaktivitäten wie Abrechnung und Support.</li></ul> | Dienstanbieter signiert:<br /><ul><li>Online Media Service Listing Agreement for Windows Media Player</li><li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li><li>Windows Media Format SDK-Lizenz</li></ul>Markenbesitzer signiert:<br /><ul><li>Zeigen Sie A des Online Media Service-Auflistungsvertrags für Windows Media Player an, die der Dienstanbieter unterzeichnet hat.</li></ul><blockquote>[!Note]<br />Der Operator des Lizenzservers ist für das Signieren der Windows Media Rights Manager-Lizenz verantwortlich.</blockquote><br /> | 
+| Bieten Sie einen Onlineshop mit Co-Branding an, und lassen Sie ihn in Windows Media Player.<br /> Es liegt an Ihnen und dem Onlineshop, zu bestimmen, welche resultierende Marke in Windows Media Player aufgeführt und vom Kunden angezeigt wird.<br /> | Drittanbieter (z. B. ein PC-OEM), der mit einem vorhandenen Onlineshop aushandelt. | Drittanbieter(z. B. EIN PC-OEM) signiert:<br /><ul><li>Windows Media Player Redistribution Agreement (um den Player über CD, Website oder Personal Computer weiterzuverteilen und den Speicher als ersten aktiven Dienst festzulegen)</li></ul>Markenbesitzer signiert:<br /><ul><li>Online Media Service Listing Agreement for Windows Media Player</li><li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li><li>Windows Media Rights Manager-Lizenz (bei Verwendung von DRM)</li></ul><blockquote>[!Note]<br />Diese Vereinbarungen wurden möglicherweise zuvor vom Markenbesitzer des Onlineshops oder dessen Dienstanbieter unterzeichnet.</blockquote><br /> | 
+
 
 
 
@@ -122,7 +36,7 @@ Diese Vereinbarungen wurden möglicherweise bereits vom Marken Besitzer des Onli
 
 <dl> <dt>
 
-Willkommens-Kit für Online Stores
+Welcome Kit für Onlineshops
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Verarbeitet Status-und Fehlermeldungen während der Bild Datenübertragungen und zeigt Sie dem Benutzer an.
+description: Behandelt Status- und Fehlermeldungen während Bilddatenübertragungen und zeigt sie dem Benutzer an.
 ms.assetid: 23e85c63-80b9-4510-854d-289c8d23be2d
-title: 'Iwiaerrorhandler:: Report Status-Methode (WIA. h)'
+title: IWiaErrorHandler::ReportStatus-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 30a082502d4c7bc5b789fd1ec19fdb76f63d8fab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6604dc8dbf0cad5f31449ff3cc30945c1e6059727d513fa98dbf436eb199f70f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659750"
 ---
-# <a name="iwiaerrorhandlerreportstatus-method"></a>Iwiaerrorhandler:: Report Status-Methode
+# <a name="iwiaerrorhandlerreportstatus-method"></a>IWiaErrorHandler::ReportStatus-Methode
 
-Verarbeitet Status-und Fehlermeldungen während der Bild Datenübertragungen und zeigt Sie dem Benutzer an.
+Behandelt Status- und Fehlermeldungen während Bilddatenübertragungen und zeigt sie dem Benutzer an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT ReportStatus(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-**HWND** , das das übergeordnete Fenster für das Nachrichtenfenster ist.
+**HWND,** das das übergeordnete Fenster für das Meldungsfenster ist.
 
 </dd> <dt>
 
-*punkitem* \[ in\]
+*-Item* \[ In\]
 </dt> <dd>
 
-Typ: **[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) \** _
+Typ: **[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)\***
 
-Ein Zeiger auf die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle des übertragenen Elements. Dieses Objekt implementiert mindestens [_ *IWiaItem2* *](-wia-iwiaitem2.md) und [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer).
+Zeiger auf die [IUnknown-Schnittstelle](/windows/win32/api/unknwn/nn-unknwn-iunknown) des elements, das übertragen wird. Dieses Objekt implementiert [**IWiaItem2**](-wia-iwiaitem2.md) und [**IWiaDataTransfer minimal.**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer)
 
 </dd> <dt>
 
-*hrStatus* \[ in\]
+*hrStatus* \[ In\]
 </dt> <dd>
 
 Typ: **HRESULT**
 
-**HRESULT** , das der von [**BandedDataCallback**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)empfangene Statuscode ist.
+**HRESULT,** bei dem es sich um den Statuscode handelt, der von [**BandedDataCallback empfangen wird.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)
 
 </dd> <dt>
 
-*cbreslength* \[ in\]
+*cbResLength* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
-**Long** , d. h. die Größe der Daten, auf die von *pbData* verwiesen wird.
+**LONG,** das die Größe der Daten ist, auf die von *pbData verwiesen wird.*
 
 </dd> <dt>
 
-*pbData* \[ in\]
+*pbData* \[ In\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Zeiger auf den Datenpuffer, wie von [_ *banbeddatacallback* *](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)empfangen.
+Zeiger auf den Datenpuffer, der von [**BandedDataCallback empfangen wird.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)
 
 </dd> </dl>
 
@@ -93,27 +93,27 @@ Zeiger auf den Datenpuffer, wie von [_ *banbeddatacallback* *](/windows/desktop/
 
 Typ: **HRESULT**
 
-Gibt *hrStatus* zurück, wenn der Fehler nicht von wieder hergestellt werden kann. Andernfalls wird einer der folgenden Werte zurückgegeben.
+Gibt *hrStatus zurück,* wenn der Fehler nicht wiederhergestellt werden kann. Andernfalls wird einer der folgenden Werte zurückgegeben.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>    | Die entsprechende Aktion wurde durchgeführt, um den Fehler zu beheben, und die Übertragung kann fortgesetzt werden. <br/> |
-| <dl> <dt>**S \_ false**</dt> </dl> | Es wurde keine Aktion zum Behandeln des Fehlers oder zum Melden des Status für den Benutzer ausgeführt. <br/>                |
-| <dl> <dt>**E \_ Abbrechen**</dt> </dl> | Der Benutzer hat die Übertragung als Reaktion auf das angezeigte Dialogfeld abgebrochen. <br/>        |
+| <dl> <dt>**S \_ OK**</dt> </dl>    | Die entsprechende Aktion wurde ergriffen, um den Fehler zu beheben, und die Übertragung kann fortgesetzt werden. <br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Es wurde keine Aktion ergriffen, um den Fehler zu behandeln oder dem Benutzer den Status zu melden. <br/>                |
+| <dl> <dt>**E \_ ABORT**</dt> </dl> | Der Benutzer hat die Übertragung als Reaktion auf das angezeigte Dialogfeld abgebrochen. <br/>        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows-Abbild Beschaffung (WIA) 2,0 ruft **iwiaerrorhandler:: Report Status** auf, wenn der Treiber eine IT-Nachrichten **\_ \_ Geräte \_ Status** Meldung an [**BandedDataCallback**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback)sendet. Diese Methode verarbeitet die Nachricht und zeigt dem Benutzerinformationen zum Status oder Fehler an. Wenn es sich bei der Nachricht um einen Fehler handelt, kann der Benutzer die Methode nach Möglichkeit auswählen, ob versucht werden soll, den Fehler zu beheben und die Übertragung fortzusetzen oder abzubrechen.
+Windows Image Acquisition (WIA) 2.0 ruft **IWiaErrorHandler::ReportStatus** auf, wenn der Treiber eine **IT \_ MSG \_ DEVICE \_ STATUS-Meldung** an [**BandedDataCallback sendet.**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadatacallback-bandeddatacallback) Diese Methode verarbeitet die Meldung und zeigt dem Benutzer Informationen zum Status oder Fehler an. Wenn es sich bei der Meldung um einen Fehler handelt, kann der Benutzer mit der -Methode nach Möglichkeit auswählen, ob nach dem Fehler eine Wiederherstellung versucht und die Übertragung fortgesetzt oder abgebrochen werden soll.
 
-*hrStatus* ist auf WIA \_ Status \_ Transfer BEGIN festgelegt \_ , um den Handler darüber zu informieren, dass eine Übertragung gestartet wurde. \_ \_ \_ Wenn die Übertragung abgeschlossen ist, wird Sie auf das Ende der Status Übertragung festgelegt.
+*hrStatus* ist auf WIA STATUS TRANSFER BEGIN festgelegt, um den Handler zu informieren, \_ dass eine Übertragung gestartet \_ \_ wurde. Sie wird auf WIA \_ STATUS \_ TRANSFER END \_ festgelegt, wenn die Übertragung abgeschlossen ist.
 
-Wenn *hrStatus* den Schweregrad \_ Success hat, sollte der Benutzer die Übertragung abbrechen dürfen.
+Wenn *hrStatus* den Schweregrad ERFOLG hat, sollte der Benutzer \_ die Übertragung abbrechen dürfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,11 +121,11 @@ Wenn *hrStatus* den Schweregrad \_ Success hat, sollte der Benutzer die Übertra
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

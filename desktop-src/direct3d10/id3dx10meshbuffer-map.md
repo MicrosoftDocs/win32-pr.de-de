@@ -1,5 +1,5 @@
 ---
-description: Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.
+description: Abrufen eines Zeigers auf den Speicher des Gitternetzpuffers, um seinen Inhalt zu ändern.
 ms.assetid: d15ed47a-450e-404a-bcc2-a641abc2d02e
 title: ID3DX10MeshBuffer::Map-Methode (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c4a71aaaffe7ed11429efa67b6065f94ecd154d0
-ms.sourcegitcommit: ca37395fd832e798375e81142b97cffcffabf184
+ms.openlocfilehash: 38be37d9d11e40f336eab58691d18113664ff49138704ea563efe083800d7c14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110335354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096600"
 ---
 # <a name="id3dx10meshbuffermap-method"></a>ID3DX10MeshBuffer::Map-Methode
 
-Sie erhalten einen Zeiger auf den Gitternetzpufferspeicher, um dessen Inhalt zu ändern.
+Abrufen eines Zeigers auf den Speicher des Gitternetzpuffers, um seinen Inhalt zu ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ Größe des Puffers in Byte.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -71,7 +71,7 @@ Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten 
 
  Unterschiede zwischen Direct3D 9 und Direct3D 10:
 
-- Map() in Direct3D 10 entspricht der Ressourcenzuordnung () in Direct3D 9.
+- Map() in Direct3D 10 entspricht der Ressource Map() in Direct3D 9.
 
 
 
@@ -88,7 +88,7 @@ Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

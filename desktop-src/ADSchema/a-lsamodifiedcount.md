@@ -1,11 +1,11 @@
 ---
-title: LSA-modified-count-Attribut
-description: Das LSA-modified-count-Attribut wird zur Unterstützung der Replikation in Windows NT 4,0-Domänen verwendet.
+title: LSA-Modified-Count-Attribut
+description: Das LSA-Modified-Count-Attribut wird verwendet, um die Replikation in Windows NT 4.0-Domänen zu unterstützen.
 ms.assetid: 6af5931c-5d4f-4061-81a1-e8947d760abc
 ms.tgt_platform: multiple
 keywords:
-- LSA-modified-count-Attribut AD-Schema
-- Schema des lsamodimecount-Attributs
+- AD-Schema für LSA-Modified-Count-Attribut
+- AD-Schema des lSAModifiedCount-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e042d4d52974457eb1853a3705adb87cc24a7dc3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6ce292f49f779ddd8ecbf185bcb274a28c7267a44e85590dc1a481b65950a18f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119301530"
 ---
-# <a name="lsa-modified-count-attribute"></a>LSA-modified-count-Attribut
+# <a name="lsa-modified-count-attribute"></a>LSA-Modified-Count-Attribut
 
-Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in Windows NT 4,0-Domänen verwendet.
+Das **LSA-Modified-Count-Attribut** wird verwendet, um die Replikation in Windows NT 4.0-Domänen zu unterstützen.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | LSA-geändert-Anzahl                   |
-| LDAP-Display-Name | lsamodimecount                     |
+| CN                | LSA-Modified-Count                   |
+| Ldap-Anzeigename | lSAModifiedCount                     |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.67                |
 | System-ID-GUID    | bf9679ae-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
@@ -43,7 +43,7 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das **LSA-modified-count-** Attribut wird zur Unterstützung der Replikation in 
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 

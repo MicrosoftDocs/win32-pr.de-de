@@ -1,9 +1,9 @@
 ---
-title: Audiobitrate-Attribut
-description: Das Audiobitrate-Attribut ist die Bitrate für den Audiostream innerhalb einer Videodatei (in Bits pro Sekunde).
+title: AudioBitrate-Attribut
+description: Das AudioBitrate-Attribut ist die Bitrate für den Audiostream innerhalb einer Videodatei in Bits pro Sekunde.
 ms.assetid: 28272aa2-49ac-4c13-aa3e-6e733cc49514
 keywords:
-- Audiobitrate-Attribut (Windows Media Player)
+- AudioBitrate-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49dcbcd85d986bb9dd2d7ced329e5142a13eaa8c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86dbeb4f9b5fb728b759d8208df5cb8f5c14c85cb87552251eff5876c0dba3fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098900"
 ---
-# <a name="audiobitrate-attribute"></a>Audiobitrate-Attribut
+# <a name="audiobitrate-attribute"></a>AudioBitrate-Attribut
 
-Das **Audiobitrate** -Attribut ist die Bitrate für den Audiostream innerhalb einer Videodatei (in Bits pro Sekunde).
+Das **AudioBitrate-Attribut** ist die Bitrate für den Audiostream innerhalb einer Videodatei in Bits pro Sekunde.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek als auch in der Videodatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek als auch in der Videodatei gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

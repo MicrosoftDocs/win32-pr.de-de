@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code ist die Datei simplec. c, bei der es sich um einen nur-IPv4-Windows-Sockets-Client handelt (eine IPv6-aktivierte Version der Datei simplec. c finden Sie in Anhang B).
+description: Der folgende Code ist die Datei Simplec.c, bei der es sich um einen reinen IPv4-Windows Sockets-Client handelt (eine IPv6-fähige Version der Datei Simplec.c finden Sie in Anhang B).
 ms.assetid: 32a11b37-c2e9-455b-8359-92186d3801d1
-title: Nur-IPv4-Client Code
+title: Nur-IPv4-Clientcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b337ab8c56898c8fdef0de93a55868c27557b0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c51db140d6ebe47c365bdeb646877836ddfd5205da8e77fae7ab19830279e5d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097730"
 ---
-# <a name="ipv4-only-client-code"></a>Nur-IPv4-Client Code
+# <a name="ipv4-only-client-code"></a>Nur-IPv4-Clientcode
 
-Der folgende Code ist die Datei simplec. c, bei der es sich um einen nur-IPv4-Windows-Sockets-Client handelt (eine IPv6-aktivierte Version der Datei simplec. c finden Sie in Anhang B). Dieser Code wird nur zu Vergleichszwecken bereitgestellt – verwenden Sie Anhang B, um ein Beispiel für das Schreiben eines IPv6-fähigen Clients zu erhalten.
+Der folgende Code ist die Datei Simplec.c, bei der es sich um einen reinen IPv4-Windows Sockets-Client handelt (eine IPv6-fähige Version der Datei Simplec.c finden Sie in Anhang B). Dieser Code wird nur zu Vergleichszwecken bereitgestellt. Verwenden Sie Anhang B als Beispiel für das Schreiben eines IPv6-fähigen Clients.
 
 
 ```C++

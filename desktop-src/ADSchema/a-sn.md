@@ -4,8 +4,8 @@ description: Dieses Attribut enthält die Familie oder den Nachnamen eines Benut
 ms.assetid: d9d53c9f-4efa-47c4-aec4-518fb8a868b3
 ms.tgt_platform: multiple
 keywords:
-- Namens Schema des Nachnamen-Attributs
-- Schema des SN-Attributs AD
+- Nachnamenattribut AD-Schema
+- AD-Schema des sn-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 453352574a7aec10c56492060ac2de6ceeca030f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 655557c23475dbc2d7f2e92fb48f5f71a8e818954bff83f5a47bb2470a26ca20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836190"
 ---
 # <a name="surname-attribute"></a>Nachname-Attribut
 
@@ -30,12 +30,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
 | CN                | Surname                                                                          |
-| LDAP-Display-Name | sn                                                                               |
+| Ldap-Anzeigename | sn                                                                               |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des zu erstellenden Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 2.5.4.4                                                                          |
-| System-ID-GUID    | bf967a41-0de6-11d0-a285-00aa003049e2                                             |
+| System-Id-Guid    | bf967a41-0de6-11d0-a285-00aa003049e2                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
-| MAPI-Id                | 0x3a11                                |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
+| MAPI-Id                | 0x3A11                                |
+| System-Only            | Falsch                                 |
+| Is-Single-Valued       | Richtig                                  |
 | Ist indiziert             | Richtig                                  |
 | Im globalen Katalog      | Richtig                                  |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | 1                                     |
 | Range-Upper            | 64                                    |
 | Search-Flags           | 0x00000005                            |
@@ -70,19 +70,19 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|-----------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                            |
-| MAPI-Id                | 0x3a11                                                                                        |
-| System-Only            | False                                                                                         |
-| Ist-einwertig       | Richtig                                                                                          |
+| MAPI-Id                | 0x3A11                                                                                        |
+| System-Only            | Falsch                                                                                         |
+| Is-Single-Valued       | Richtig                                                                                          |
 | Ist indiziert             | Richtig                                                                                          |
 | Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | 1                                                                                             |
 | Range-Upper            | 64                                                                                            |
 | Search-Flags           | 0x00000005                                                                                    |
@@ -98,12 +98,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |------------------------|-----------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                            |
-| MAPI-Id                | 0x3a11                                                                                        |
-| System-Only            | False                                                                                         |
-| Ist-einwertig       | Richtig                                                                                          |
+| MAPI-Id                | 0x3A11                                                                                        |
+| System-Only            | Falsch                                                                                         |
+| Is-Single-Valued       | Richtig                                                                                          |
 | Ist indiziert             | Richtig                                                                                          |
 | Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | 1                                                                                             |
 | Range-Upper            | 64                                                                                            |
 | Search-Flags           | 0x00000005                                                                                    |
@@ -119,12 +119,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |------------------------|-----------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                            |
-| MAPI-Id                | 0x3a11                                                                                        |
-| System-Only            | False                                                                                         |
-| Ist-einwertig       | Richtig                                                                                          |
+| MAPI-Id                | 0x3A11                                                                                        |
+| System-Only            | Falsch                                                                                         |
+| Ist einwertig       | Richtig                                                                                          |
 | Ist indiziert             | Richtig                                                                                          |
 | Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | 1                                                                                             |
 | Range-Upper            | 64                                                                                            |
 | Search-Flags           | 0x00000005                                                                                    |
@@ -140,12 +140,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |------------------------|-----------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                            |
-| MAPI-Id                | 0x3a11                                                                                        |
-| System-Only            | False                                                                                         |
-| Ist-einwertig       | Richtig                                                                                          |
+| MAPI-Id                | 0x3A11                                                                                        |
+| System-Only            | Falsch                                                                                         |
+| Ist einwertig       | Richtig                                                                                          |
 | Ist indiziert             | Richtig                                                                                          |
 | Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | 1                                                                                             |
 | Range-Upper            | 64                                                                                            |
 | Search-Flags           | 0x00000005                                                                                    |
@@ -161,12 +161,12 @@ Dieses Attribut enthält die Familie oder den Nachnamen eines Benutzers.
 | Eingabe | Wert |
 |------------------------|-----------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                            |
-| MAPI-Id                | 0x3a11                                                                                        |
-| System-Only            | False                                                                                         |
-| Ist-einwertig       | Richtig                                                                                          |
+| MAPI-Id                | 0x3A11                                                                                        |
+| System-Only            | Falsch                                                                                         |
+| Ist einwertig       | Richtig                                                                                          |
 | Ist indiziert             | Richtig                                                                                          |
 | Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | 1                                                                                             |
 | Range-Upper            | 64                                                                                            |
 | Search-Flags           | 0x00000005                                                                                    |

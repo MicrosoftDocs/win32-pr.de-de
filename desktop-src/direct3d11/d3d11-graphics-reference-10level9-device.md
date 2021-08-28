@@ -4,12 +4,12 @@ description: In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 
 ms.assetid: c3bc32a9-8d97-430b-be6a-b4935d7ac56c
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 919e2b98980fa9ec93b23740e7c11fb6469ea439f41458f7e31f0f4d0447ca74
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f467e47d7ba623f1c28111cf3bf7cc6a07da8317
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118990080"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475786"
 ---
 # <a name="10level9-id3d11device-methods"></a>10Level9 ID3D11Gerätemethoden
 
@@ -47,29 +47,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Geräteabhängige Leistungsindikatoren werden optional unterstützt. Verwenden <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkcounterinfo"><strong>Sie ID3D11Device::CheckCounterInfo,</strong></a> um die Unterstützung zu ermitteln.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Geräteabhängige Leistungsindikatoren werden optional unterstützt. Verwenden <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkcounterinfo"><strong>Sie ID3D11Device::CheckCounterInfo,</strong></a> um die Unterstützung zu ermitteln.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -79,29 +63,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Weitere Informationen finden Sie unter Formatunterstützung <a href="overviews-direct3d-11-devices-downlevel-intro.md">nach Featureebene</a>${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Weitere Informationen finden Sie unter Formatunterstützung <a href="overviews-direct3d-11-devices-downlevel-intro.md">nach Featureebene</a>${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -111,29 +79,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Featureebenen bieten keine Garantien in Bezug auf die MSAA-Unterstützung.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Featureebenen bieten keine Garantien in Bezug auf die MSAA-Unterstützung.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -163,7 +115,7 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 | D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1  | Nicht unterstützt<br/>                                                                                                                                                                                                                                                                                                                                       |
 | D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2  | Nicht unterstützt<br/>                                                                                                                                                                                                                                                                                                                                       |
 | D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3  | Nicht unterstützt<br/>                                                                                                                                                                                                                                                                                                                                       |
-| \_D3D-FEATUREEBENE \_ \_ 10 \_ 0 | Das *OutputMergerLogicOp-Member* wurde [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options)hinzugefügt, um die Unterstützung logischer Vorgänge zu bestimmen (bitweise Logikvorgänge zwischen Pixel-Shaderausgabe und Renderzielinhalt finden Sie unter [**D3D11 \_ RENDER TARGET BLEND \_ \_ \_ DESC1**](/windows/desktop/api/D3D11_1/ns-d3d11_1-d3d11_render_target_blend_desc1)). |
+| \_D3D-FEATUREEBENE \_ \_ 10 \_ 0 | Das *OutputMergerLogicOp-Member* wurde [**zu D3D11 FEATURE DATA \_ \_ \_ D3D11 \_ OPTIONS**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options)hinzugefügt, um die Unterstützung logischer Vorgänge zu bestimmen (bitweise Logikvorgänge zwischen Pixel-Shaderausgabe und Renderzielinhalt finden Sie unter [**D3D11 \_ RENDER TARGET BLEND \_ \_ \_ DESC1**](/windows/desktop/api/D3D11_1/ns-d3d11_1-d3d11_render_target_blend_desc1)). |
 
 
 
@@ -173,29 +125,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td>Puffer können keine Renderzielansichten haben.<br/> Puffer müssen genau einen der D3D11_BIND_VERTEX_BUFFER, D3D11_BIND_INDEX_BUFFER oder D3D11_BIND_CONSTANT_BUFFER.<br/> Lässt nur Indexpuffer mit dem DXGI_FORMAT_R16_UINT zu. <br/></td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-<td rowspan="2"> Puffer können keine Renderzielansichten haben.<br/> Puffer müssen genau einen der D3D11_BIND_VERTEX_BUFFER, D3D11_BIND_INDEX_BUFFER oder D3D11_BIND_CONSTANT_BUFFER.<br/> Ermöglicht Indexpuffer mit den DXGI_FORMAT_R16_UINT und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
 
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Puffer können keine Renderzielansichten haben.<br /> Puffer müssen genau einen der D3D11_BIND_VERTEX_BUFFER, D3D11_BIND_INDEX_BUFFER oder D3D11_BIND_CONSTANT_BUFFER.<br /> Lässt nur Indexpuffer mit dem DXGI_FORMAT_R16_UINT zu. <br /> | 
+| D3D_FEATURE_LEVEL_9_2 |  Puffer können keine Renderzielansichten haben.<br /> Puffer müssen genau einen der D3D11_BIND_VERTEX_BUFFER, D3D11_BIND_INDEX_BUFFER oder D3D11_BIND_CONSTANT_BUFFER.<br /> Ermöglicht Indexpuffer mit dem DXGI_FORMAT_R16_UINT und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_3 | 
+
 
 
 
@@ -205,29 +141,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -237,29 +157,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Unterstützt keine zweiseitige Schablone.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Unterstützt keine zweiseitige Schablone.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -269,37 +173,15 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.*-Featureebene nicht unterstützt. ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.* oder 10.*-Featureebene nicht unterstützt. ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -309,29 +191,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -341,29 +207,13 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -373,37 +223,15 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -423,7 +251,7 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen Featureebenen
 
  
 
-Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den einzelnen Featureebenen verwendet werden können, finden Sie im Diagramm format support by [feature level](overviews-direct3d-11-devices-downlevel-intro.md) (Formatunterstützung nach Featureebene).
+Ausführliche Informationen dazu, welche Formate für Scheitelpunktdaten auf jeder [Featureebene](overviews-direct3d-11-devices-downlevel-intro.md) verwendet werden können, finden Sie im Diagramm format support by feature level (Formatunterstützung nach Featureebene).
 
 ## <a name="id3d11devicecreatepixelshader"></a>ID3D11Device::CreatePixelShader
 
@@ -443,29 +271,13 @@ Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -489,29 +301,13 @@ Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">DepthClipEnable muss <strong>TRUE</strong>sein. DepthBiasClamp muss auf 0.${REMOVE}$ festgelegt werden.<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | DepthClipEnable muss <strong>TRUE</strong>sein. DepthBiasClamp muss auf 0.${REMOVE}$ festgelegt werden.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -521,29 +317,13 @@ Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Kann nur Renderzielansichten von Texture2D-Objekten unterstützen.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Kann nur Renderzielansichten von Texture2D-Objekten unterstützen.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -553,29 +333,13 @@ Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td>Vergleichsfilter werden nicht unterstützt.<br/> Die Rahmenfarbe muss innerhalb von [0,1] sein.<br/> Min LOD darf nicht als Bruchteil verwendet werden<br/> Max. LOD muss FLT_MAX<br/> Die maximale Anisotropie ist 2.<br/> D3D11_TEXTURE_ADDRESS_MIRRORONCE nicht unterstützt.<br/></td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-<td rowspan="2"> Vergleichsfilter werden nicht unterstützt.<br/> Die Rahmenfarbe muss innerhalb von [0,1] sein.<br/> Min LOD darf nicht als Bruchteil verwendet werden<br/> Max. LOD muss FLT_MAX<br/> Die maximale Anisotropie beträgt 16.<br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
 
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Vergleichsfilter werden nicht unterstützt.<br /> Die Rahmenfarbe muss innerhalb von [0,1] sein.<br /> Min LOD darf nicht als Bruchteil verwendet werden<br /> Max. LOD muss FLT_MAX<br /> Die maximale Anisotropie ist 2.<br /> D3D11_TEXTURE_ADDRESS_MIRRORONCE nicht unterstützt.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 |  Vergleichsfilter werden nicht unterstützt.<br /> Die Rahmenfarbe muss innerhalb von [0,1] sein.<br /> Min LOD darf nicht als Bruchteil verwendet werden<br /> Max. LOD muss FLT_MAX<br /> Die maximale Anisotropie beträgt 16.<br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_3 | 
+
 
 
 
@@ -599,29 +363,13 @@ Ausführliche Informationen zu den Formaten, die für Scheitelpunktdaten auf den
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -633,7 +381,7 @@ Texture2D-Ressourcen haben Grenzwerte für ihre Breite und Höhe, die sich je na
 
 
 
-| Featureebene             | Wenn MipCount > 1 ist, müssen Dimensionen die Ganzzahlleistung 2 haben. | Unterstützte Mindesttexturdimension | Cubetexturdimensionen müssen eine Zweierleistung aufweisen. | Wenn MISC \_ TEXTURECUBE festgelegt ist, ist ArraySize: | Wenn MISC \_ TEXTURECUBE nicht festgelegt ist, ist ArraySize. |
+| Featureebene             | Wenn MipCount > 1 ist, müssen Dimensionen eine ganzzahl | Unterstützte Mindesttexturdimension | Cubetexturdimensionen müssen eine Zweierleistung aufweisen. | Wenn MISC \_ TEXTURECUBE festgelegt ist, ist ArraySize: | Wenn MISC \_ TEXTURECUBE nicht festgelegt ist, ist ArraySize. |
 |---------------------------|--------------------------------------------------------------|-------------------------------------|-----------------------------------------------|------------------------------------------------|----------------------------------------------------|
 | D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Ja                                                          | 2048                                | Ja                                           | 6                                              | 1                                                  |
 | D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Ja                                                          | 2048                                | Ja                                           | 6                                              | 1                                                  |
@@ -673,29 +421,13 @@ Wenn die Ressource D3D11 \_ USAGE \_ DEFAULT oder D3D11 \_ USAGE \_ IMMUTABLE is
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -719,38 +451,13 @@ Wenn die Ressource D3D11 \_ USAGE \_ DEFAULT oder D3D11 \_ USAGE \_ IMMUTABLE is
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3"> Verwenden Sie <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport"><strong>ID3D11Device::CheckFeatureSupport</strong></a> mit dem <a href="/windows/desktop/api/D3D11/ne-d3d11-d3d11_feature"><strong>D3D11_FEATURE_FORMAT_SUPPORT2-Wert</strong></a> und der <a href="/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2"><strong>D3D11_FEATURE_DATA_FORMAT_SUPPORT2-Struktur,</strong></a> um zu bestimmen, ob ein Format freigegeben werden kann. Wenn das Format freigegeben werden kann, gibt <strong>CheckFeatureSupport</strong> das <a href="/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2"><strong>flag D3D11_FORMAT_SUPPORT2_SHAREABLE</strong></a> zurück.<br/>
-<blockquote>
-[!Note]<br />
-[<strong>DXGI_FORMAT_R8G8B8A8_UNORM</strong>] (/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) und <strong>DXGI_FORMAT_R8G8B8A8_UNORM_SRGB</strong> können bei Verwendung von Featureebene 9 nie freigegeben werden, auch wenn das Gerät optionale Featureunterstützung für <strong>D3D11_FORMAT_SUPPORT_SHAREABLE</strong>angibt. Der Versuch, freigegebene Ressourcen mit DXGI-Formaten <strong>DXGI_FORMAT_R8G8B8A8_UNORM</strong> und <strong>DXGI_FORMAT_R8G8B8A8_UNORM_SRGB</strong> zu erstellen, schlägt immer fehl, es sei denn, die Featureebene ist 10_0 oder höher.
-</blockquote>
-<br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 |  Verwenden <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport"><strong>Sie ID3D11Device::CheckFeatureSupport</strong></a> mit dem <a href="/windows/desktop/api/D3D11/ne-d3d11-d3d11_feature"><strong>D3D11_FEATURE_FORMAT_SUPPORT2-Wert</strong></a> und der <a href="/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_format_support2"><strong>D3D11_FEATURE_DATA_FORMAT_SUPPORT2-Struktur,</strong></a> um zu bestimmen, ob ein Format freigegeben werden kann. Wenn das Format freigegeben werden kann, <strong>gibt CheckFeatureSupport</strong> <a href="/windows/desktop/api/D3D11/ne-d3d11-d3d11_format_support2"><strong>das</strong></a> D3D11_FORMAT_SUPPORT2_SHAREABLE zurück.<br /><blockquote>[!Note]<br />[<strong>DXGI_FORMAT_R8G8B8A8_UNORM</strong>](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) und <strong>DXGI_FORMAT_R8G8B8A8_UNORM_SRGB</strong> bei Verwendung von Featureebene 9 nie gemeinsam verwendet werden können, auch wenn das Gerät optionale Featureunterstützung für <strong>D3D11_FORMAT_SUPPORT_SHAREABLE.</strong> Der Versuch, freigegebene Ressourcen mit DXGI-Formaten <strong>DXGI_FORMAT_R8G8B8A8_UNORM</strong> und DXGI_FORMAT_R8G8B8A8_UNORM_SRGB zu erstellen, wird immer <strong>fehlschlagen,</strong> es sei denn, die Featureebene ist 10_0 oder höher.</blockquote><br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 

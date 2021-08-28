@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_ISDNType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen ISDN-Ressourcen Eintrag.
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_ISDNType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen ISDN-Ressourcendatensatz.
 ms.assetid: cd3b98e3-a804-473e-8831-5f045d43a54f
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_ISDNType
-- DNS-MicrosoftDNS_ISDNType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_ISDNType-Klasse
+- MicrosoftDNS_ISDNType-Klasse DNS, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39f6adaaf374cac56d7d29d04d83c8765b0080ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 082bf764c93e19b7829309de62c4ce5ff99650322c5bb4533db7e4c9b5c23bca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433040"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_isdntype-class"></a>Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ isdntype"
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_isdntype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ ISDNType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen ISDN-Ressourcen Eintrag.
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen ISDN-Ressourcendatensatz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Isdnnumber* \[ in\]
+*ISDNNumber* \[ In\]
 </dt> <dd>
 
-ISDN-Nummer und DDI für den Besitzer des Datensatzes.
+ISDN-Nummer und DDI des Besitzers des Datensatzes.
 
 </dd> <dt>
 
-*Unter Adresse* \[ in\]
+*SubAddress* \[ In\]
 </dt> <dd>
 
-Die untergeordnete Adresse des Besitzers, sofern definiert.
+Unteradresse des Besitzers, sofern definiert.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -130,22 +130,22 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ isdntype**](microsoftdns-isdntype.md)
+[**MicrosoftDNS \_ ISDNType**](microsoftdns-isdntype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ isdntype-Klasse**](microsoftdns-isdntype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ ISDNType-Klasse**](microsoftdns-isdntype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

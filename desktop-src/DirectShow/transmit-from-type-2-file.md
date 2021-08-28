@@ -1,23 +1,23 @@
 ---
-description: Übertragen von Typ-2-Datei
+description: Übertragen von Einer Typ-2-Datei
 ms.assetid: c14c1798-aeff-44d8-a2e4-2fe4c146dfb9
-title: Übertragen von Typ-2-Datei
+title: Übertragen von Einer Typ-2-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 96e15cb0b3aae5b5119739f327a84204730c9d05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23d1d6dec7c68cba177923dea04205d8dbc26faa8ff98cf5d6e79659fced46fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119315715"
 ---
-# <a name="transmit-from-type-2-file"></a>Übertragen von Typ-2-Datei
+# <a name="transmit-from-type-2-file"></a>Übertragen von Einer Typ-2-Datei
 
-Verwenden Sie das in der folgenden Abbildung gezeigte Filter Diagramm, um eine Typ-2-Datei während der Vorschau zu übertragen.
+Um eine Datei vom Typ 2 während der Vorschau zu übertragen, verwenden Sie das im folgenden Diagramm gezeigte Filterdiagramm.
 
 ![Type-2-Übertragung mit Vorschau](images/dv2-transmit.png)
 
-Eine Type-2-Datei enthält zwei Streams, einen Audiostream und einen DV-codierten Videostream. Dieses Diagramm verwendet den [DV-Muxer](dv-muxer-filter.md) -Filter, um die Audiodaten und Videodaten Ströme zu kombinieren. Der überlappende Datenstrom wird an den msdv-Filter gesendet, der Stream wird jedoch für die Vorschau erneut unterteilt.
+Eine Typ-2-Datei verfügt über zwei Streams: einen Audiostream und einen DV-codierten Videodatenstrom. In diesem Diagramm wird der [DV Muxer-Filter](dv-muxer-filter.md) verwendet, um die Audio- und Videostreams zu kombinieren. Er sendet den überlappenden Stream an den MSDV-Filter, teilt den Stream jedoch erneut für die Vorschau auf.
 
 Erstellen Sie dieses Diagramm wie folgt:
 
@@ -50,13 +50,13 @@ hr = pBuilder->RenderStream(0, &MEDIATYPE_Interleaved, pTee, 0, 0);
 
 
 
-Dieser Code führt mehrere Aufrufe von **RenderStream** aus:
+Dieser Code führt mehrere Aufrufe an **RenderStream** aus:
 
-Die ersten beiden verbinden den Quell Filter mit dem avi-Splitter und dem avi-Splitter mit dem DV-MUX. Beim ersten Aufruf fügt der Erfassungs Diagramm-Generator automatisch den avi-Splitter zum Diagramm hinzu und verbindet einen der Ausgabe Pins des AVI-Splitters mit dem DV-MUX. Im zweiten Aufruf findet der Erfassungs Diagramm-Generator die zweite Ausgabe-PIN des AVI-Splitters und verbindet diese mit dem DV-MUX.
+Die ersten beiden verbinden den Quellfilter mit dem AVI-Splitter und den AVI-Splitter mit dem DV Mux. Im ersten Aufruf fügt der Capture Graph Builder dem Graphen automatisch den AVI-Splitter hinzu und verbindet einen der Ausgabepins des AVI-Splitters mit dem DV Mux. Im zweiten Aufruf findet der Capture Graph Builder den zweiten Ausgabepin des AVI-Splitters und stellt eine Verbindung mit dem DV Mux her.
 
-Der dritte Aufruf von **RenderStream** verbindet den DV-Muxer mit dem Filter für unendliche PIN. Beim nächsten-Rückruf wird ein Stream von der unbegrenzten PIN mit dem msdv-Erfassungs Filter verbunden. Dieser Stream wird an das Gerät übertragen. Der letzte Aufruf von **RenderStream** erstellt den Vorschau Abschnitt des Diagramms.
+Der dritte Aufruf von **RenderStream** verbindet den DV Muxer mit dem Filter Infinite Pin Tee. Der nächste Aufruf verbindet einen Datenstrom vom Infinite Pin Tee mit dem MSDV-Erfassungsfilter. Dieser Stream wird an das Gerät übertragen. Der letzte Aufruf von **RenderStream** erstellt den Vorschauabschnitt des Diagramms.
 
-Wenn Sie die Vorschau während der Übertragung nicht anzeigen möchten, können Sie den unbegrenzten Pin-Empfänger weglassen und einfach die DV-MUX mit dem msdv-Filter verbinden:
+Wenn Sie während der Übertragung keine Vorschau anzeigen möchten, können Sie die Unendliche Pin Tee weglassen und einfach den DV Mux mit dem MSDV-Filter verbinden:
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Das Name-Makro generiert eine reine debugzeichenfolge.
+description: Das NAME-Makro generiert eine nur debugbasierte Zeichenfolge.
 ms.assetid: 5cb9f803-dd2b-4055-bdcc-e754ef5fa505
-title: Name (wxdebug. h)
+title: NAME (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0b698551789deb0c3775bd4ac722136e1abc9d38
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9fa3d9c7e343dcbc8c6959a1ead025cafb3e4722382d7fd61c085bcff05347ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107680"
 ---
 # <a name="name"></a>NAME
 
-Das **Name** -Makro generiert eine reine debugzeichenfolge.
+Das **NAME-Makro** generiert eine nur debugbasierte Zeichenfolge.
 
 ``` syntax
 NAME(strLiteral);
@@ -35,16 +35,16 @@ NAME(strLiteral);
 
 <dl> <dt>
 
-<span id="strLiteral"></span><span id="strliteral"></span><span id="STRLITERAL"></span>*"Straume"*
+<span id="strLiteral"></span><span id="strliteral"></span><span id="STRLITERAL"></span>*strLiteral*
 </dt> <dd>
 
-Text Zeichenfolge.
+Textzeichenfolge.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Debugbuilds entspricht dieses Makro dem **Text** Makro. In Einzelhandels Builds wird Sie in (TCHAR \* ) **null** aufgelöst. Dieses Makro ist hilfreich beim Deklarieren des Namens eines Objekts, das von der [**cbaseobject**](cbaseobject.md) -Klasse abgeleitet wird.
+In Debugbuilds entspricht dieses Makro dem **TEXT-Makro.** In Einzelhandels-Builds wird in (TCHAR \* ) **NULL auflöset.** Dieses Makro ist nützlich, wenn der Name eines Objekts deklariert wird, das von der [**CBaseObject-Klasse abgeleitet**](cbaseobject.md) wird.
 
 
 ```C++
@@ -59,8 +59,8 @@ pObject = new CBaseObject(NAME("My Object"));
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ pObject = new CBaseObject(NAME("My Object"));
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

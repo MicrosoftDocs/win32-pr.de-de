@@ -1,30 +1,30 @@
 ---
-description: Der wmiperfclass-Anbieter und der WMIPerfInst-Anbieter stellen dynamische Leistungsdaten für die WMI-Leistungs Leistungs Leistungsgruppen bereit.
+description: Der WMIPerfClass-Anbieter und der WMIPerfInst-Anbieter stellen dynamisch Leistungsindikatordaten für die WMI-Leistungsindikatorklassen zur Verfügung.
 ms.assetid: 8bf6d218-9a31-4efd-a809-222aca364138
 ms.tgt_platform: multiple
-title: Leistungs Bibliotheken und WMI
+title: Leistungsbibliotheken und WMI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4dedc9b98f492b3ab57e22cd1507f9e3651980a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 877623bcf27dffe71146df4f9c117da83941bd1d8e2ed46436a04c1d7ace95df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996410"
 ---
-# <a name="performance-libraries-and-wmi"></a>Leistungs Bibliotheken und WMI
+# <a name="performance-libraries-and-wmi"></a>Leistungsbibliotheken und WMI
 
-Der [wmiperfclass-Anbieter](wmiperfclass-provider.md) und der [WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellen dynamische Leistungsdaten für die WMI- [Leistungs Leistungs Leistungs](/windows/desktop/CIMWin32Prov/performance-counter-classes)Gruppen bereit.
+Der [WMIPerfClass-Anbieter](wmiperfclass-provider.md) und [der WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellen dynamisch Leistungsindikatordaten für die WMI-Leistungsindikatorklassen [zur Verfügung.](/windows/desktop/CIMWin32Prov/performance-counter-classes)
 
-## <a name="wmiperfclass-and-wmiperfinst-providers"></a>Wmiperfclass-und WMIPerfInst-Anbieter
+## <a name="wmiperfclass-and-wmiperfinst-providers"></a>WMIPerfClass- und WMIPerfInst-Anbieter
 
-Der [wmiperfclass-Anbieter](wmiperfclass-provider.md) erstellt bei der Systeminitialisierung WMI- [Leistungs Leistungs Zählers](/windows/desktop/CIMWin32Prov/performance-counter-classes) . Der [WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellt dynamisch Leistungsdaten für diese Klassen bereit. Der Anbieter des wmiperfclass-Anbieters liefert Klassen für [Leistungsindikatoren](/windows/desktop/PerfCtrs/performance-counters-portal)der Versionen 1 und Version 2.
+[Der WMIPerfClass-Anbieter](wmiperfclass-provider.md) erstellt [WMI-Leistungsindikatorklassen bei](/windows/desktop/CIMWin32Prov/performance-counter-classes) der Systemin initialisierung. Der [WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellt für diese Klassen dynamisch Leistungsindikatordaten zur Hand. Der WMIPerfClass-Anbieteranbieter stellt Klassen für die Leistungsindikatoren Version 1 und Version 2 [zur Hand.](/windows/desktop/PerfCtrs/performance-counters-portal)
 
-Leistungsindikatoren der Version 1 finden Sie in der Registrierung unter **HKEY \_ local \_ Machine \\ System \\ CurrentControlSet \\ Services**. Dienste, die Leistungsdaten bereitstellen, verfügen über einen **Leistungs** Unterschlüssel. WMI-Leistungsklassen, die aus den Leistungsindikatoren der Version 1 erstellt wurden, haben nicht als Teil Ihres Namens "Indikatoren".
+Leistungsindikatoren der Version 1 befinden sich in der Registrierung unter **HKEY \_ LOCAL MACHINE SYSTEM \_ \\ \\ CurrentControlSet \\ Services.** Dienste, die Leistungsdaten  bereitstellen, verfügen über einen Leistungsunterschlüssel. WMI-Leistungsklassen, die aus Leistungsindikatoren der Version 1 erstellt wurden, verfügen nicht über "Counters" als Teil ihres Namens.
 
-Die **GUID** s, die einen Leistungs Anbieter für die Version 2 identifizieren, finden Sie in der Registrierung unter **HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows NT \\ CurrentVersion \\ Perflib \\ \_ V2Providers**.
+Die **GUIDs,** die einen Leistungsindikatoranbieter der Version 2 identifizieren, befinden sich in der Registrierung unter **HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows NT \_ \\ \\ \\ \\ CurrentVersion \\ Perflib \\ \_ V2Providers.**
 
-Wmiperfclass ist als normaler WMI-Klassen Anbieter registriert. Wmiperfinst ist ein WMI-Instanzanbieter, der Daten aus dem Leistungsdaten-Hilfsprogramm (PDH) für die Leistungsindikatoren Version 1 und Version 2 bereitstellt. Weitere Informationen finden Sie unter [Verwenden der PDH-Funktionen zum](/windows/desktop/PerfCtrs/using-the-pdh-functions-to-consume-counter-data)verarbeiten von Counter-Daten.
+WMIPerfClass wird als normaler WMI-Klassenanbieter registriert. WMIPerfInst ist ein WMI-Instanzanbieter, der Daten des Leistungsdaten-Hilfsers (PERFORMANCE Data Helper, PDH) für Leistungsindikatoren der Version 1 und Version 2 liefert. Weitere Informationen finden Sie unter [Verwenden der PDH-Funktionen zum Nutzen von Indikatordaten.](/windows/desktop/PerfCtrs/using-the-pdh-functions-to-consume-counter-data)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

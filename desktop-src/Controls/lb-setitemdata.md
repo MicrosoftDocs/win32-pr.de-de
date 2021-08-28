@@ -1,9 +1,9 @@
 ---
-title: LB_SETITEMDATA Meldung (Winuser. h)
+title: LB_SETITEMDATA (Winuser.h)
 description: Legt einen Wert fest, der dem angegebenen Element in einem Listenfeld zugeordnet ist.
 ms.assetid: df974fa2-114a-43ef-b0ac-0451c31d95cd
 keywords:
-- Windows-Steuerelemente für LB_SETITEMDATA Meldung
+- LB_SETITEMDATA der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02d9f9cc952ea3bf2d83358ce3b15ce6c3a2546b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dd9a705014ef770edba5b540a7acbd2512b685d5ebf8ca913df8fa329dc6058a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085330"
 ---
-# <a name="lb_setitemdata-message"></a>LB- \_ Nachricht
+# <a name="lb_setitemdata-message"></a>LB \_ SETITEMDATA-Nachricht
 
 Legt einen Wert fest, der dem angegebenen Element in einem Listenfeld zugeordnet ist.
 
@@ -32,9 +32,9 @@ Legt einen Wert fest, der dem angegebenen Element in einem Listenfeld zugeordnet
 *wParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index des Elements an. Wenn dieser Wert-1 ist, gilt der *LPARAM* -Wert für alle Elemente im Listenfeld.
+Gibt den nullbasierten Index des Elements an. Wenn dieser Wert -1 ist, gilt *der lParam-Wert* für alle Elemente im Listenfeld.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/Windows 98/Windows Edition (Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 </dd> <dt>
 
@@ -47,11 +47,11 @@ Gibt den Wert an, der dem Element zugeordnet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein Fehler auftritt, ist der Rückgabewert lb \_ Err.
+Wenn ein Fehler auftritt, ist der Rückgabewert LB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich das Element in einem von einem Besitzer gezeichneten Listenfeld befindet, das ohne den [**lbs \_ hasstrings**](list-box-styles.md) -Stil erstellt wurde, ersetzt diese Nachricht den Wert, der im *LPARAM* -Parameter der [**lb \_ AddString**](lb-addstring.md) -oder [**lb \_ InsertString**](lb-insertstring.md) -Nachricht enthalten ist, die das Element dem Listenfeld hinzugefügt hat.
+Wenn sich das Element in einem vom Besitzer gezeichneten Listenfeld befindet, das ohne [**den LBS \_ HASSTRINGS-Stil**](list-box-styles.md) erstellt wurde, ersetzt diese Meldung den Wert, der im *lParam-Parameter* der [**LB \_ ADDSTRING-**](lb-addstring.md) oder [**LB \_ INSERTSTRING-Meldung**](lb-insertstring.md) enthalten ist, die das Element dem Listenfeld hinzugefügt hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Wenn sich das Element in einem von einem Besitzer gezeichneten Listenfeld befind
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,16 +69,16 @@ Wenn sich das Element in einem von einem Besitzer gezeichneten Listenfeld befind
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ AddString**](lb-addstring.md)
+[**LB \_ ADDSTRING**](lb-addstring.md)
 </dt> <dt>
 
-[**LB- \_ GetItemData**](lb-getitemdata.md)
+[**LB \_ GETITEMDATA**](lb-getitemdata.md)
 </dt> <dt>
 
-[**LB- \_ InsertString**](lb-insertstring.md)
+[**LB \_ INSERTSTRING**](lb-insertstring.md)
 </dt> </dl>
 
  

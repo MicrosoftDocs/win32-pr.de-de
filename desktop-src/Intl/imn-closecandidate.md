@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt eine Anwendung, wenn ein IME im Begriff ist, das Fenster Kandidaten zu schließen. Die Anwendung empfängt diesen Befehl über die WM- \_ IME- \_ Benachrichtigungs Meldung mit den Parametereinstellungen, wie unten gezeigt.
+description: Benachrichtigt eine Anwendung, wenn ein IME das Kandidatenfenster schließen soll. Die Anwendung empfängt diesen Befehl über die WM \_ IME \_ NOTIFY-Nachricht mit Parametereinstellungen, wie unten dargestellt.
 ms.assetid: d96cea0a-1fc4-4ba7-bb96-7e9c0b67ce5b
-title: IMN_CLOSECANDIDATE Benachrichtigungs Code (IMM. h)
+title: IMN_CLOSECANDIDATE Benachrichtigungscode (Imm.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3414d2aa37a50b7f35f0dfb936b641b7c86a932
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7dd0a71eac28b2c7dc170724e40c9b4ba6707cd5774145f38efdd791e7ebd8b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107150"
 ---
-# <a name="imn_closecandidate-notification-code"></a>IMN \_ closecandidate-Benachrichtigungs Code
+# <a name="imn_closecandidate-notification-code"></a>IMN \_ CLOSECANDIDATE-Benachrichtigungscode
 
-Benachrichtigt eine Anwendung, wenn ein IME im Begriff ist, das Fenster Kandidaten zu schließen. Die Anwendung empfängt diesen Befehl über die [**WM- \_ IME- \_ Benachrichtigungs**](wm-ime-notify.md) Meldung mit den Parametereinstellungen, wie unten gezeigt.
+Benachrichtigt eine Anwendung, wenn ein IME das Kandidatenfenster schließen soll. Die Anwendung empfängt diesen Befehl über die [**WM \_ IME \_ NOTIFY-Nachricht**](wm-ime-notify.md) mit Parametereinstellungen, wie unten dargestellt.
 
 
 ```C++
@@ -26,29 +26,29 @@ IMN_CLOSECANDIDATE
 
 <dl> <dt>
 
-<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*wParam*
+<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*Wparam*
 </dt> <dd>
 
-Legen Sie auf IMN \_ closecandidate fest.
+Legen Sie auf IMN \_ CLOSECANDIDATE fest.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Flag der Kandidatenliste. Jedes Bit entspricht einer Kandidatenliste: Bit 0 bis zur ersten Liste, Bit 1 bis zum zweiten usw. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidaten Fenster geschlossen.
+Kandidatenlistenflag. Jedes Bit entspricht einer Kandidatenliste: Bit 0 für die erste Liste, Bit 1 bis Sekunde und so weiter. Wenn ein angegebenes Bit 1 ist, wird das entsprechende Kandidatenfenster geschlossen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Befehl weist keinen Rückgabewert auf.
+Dieser Befehl hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte diesen Befehl verarbeiten, wenn Sie Kandidaten selbst anzeigt.
+Eine Anwendung sollte diesen Befehl verarbeiten, wenn sie Kandidaten selbst anzeigt.
 
-Standardmäßig zerstört das IME-Fenster ein Kandidaten Fenster, wenn es diesen Befehl verarbeitet.
+Standardmäßig zerstört das IME-Fenster ein Kandidatenfenster, wenn es diesen Befehl verarbeitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Standardmäßig zerstört das IME-Fenster ein Kandidaten Fenster, wenn es diesen
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -66,13 +66,13 @@ Standardmäßig zerstört das IME-Fenster ein Kandidaten Fenster, wenn es diesen
 
 <dl> <dt>
 
-[Eingabemethoden-Manager](input-method-manager.md)
+[Eingabemethode-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Befehle](input-method-manager-commands.md)
+[Befehle des Eingabemethode-Managers](input-method-manager-commands.md)
 </dt> <dt>
 
-[**WM- \_ IME \_ Benachrichtigen**](wm-ime-notify.md)
+[**WM \_ IME \_ NOTIFY**](wm-ime-notify.md)
 </dt> </dl>
 
  

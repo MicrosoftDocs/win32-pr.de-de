@@ -1,7 +1,7 @@
 ---
-description: Ruft alle icontextnode-Objekte des angegebenen Typs ab.
+description: Ruft alle IContextNode-Objekte des angegebenen Typs ab.
 ms.assetid: e6e68d78-9697-40e6-a4ae-a187ef01a769
-title: 'Iinkanalyzer:: findnodesoft ype-Methode (iacom. h)'
+title: IInkAnalyzer::FindNodesOfType-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 51611fd4b3c77b43f2ea0d967f81dcc9547edb24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab35825c47ddbbdeda3affc0ab0585dce111233990db28ae65a0636f7145ce4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939958"
 ---
-# <a name="iinkanalyzerfindnodesoftype-method"></a>Iinkanalyzer:: findnodesoft ype-Methode
+# <a name="iinkanalyzerfindnodesoftype-method"></a>IInkAnalyzer::FindNodesOfType-Methode
 
-Ruft alle [**icontextnode**](icontextnode.md) -Objekte des angegebenen Typs ab.
+Ruft alle [**IContextNode-Objekte**](icontextnode.md) des angegebenen Typs ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,34 +40,34 @@ HRESULT FindNodesOfType(
 
 <dl> <dt>
 
-*pnodetype* \[ in\]
+*pNodeType* \[ In\]
 </dt> <dd>
 
-Der **GUID** , der den Knotentyp angibt.
+Die **GUID,** die den Knotentyp angibt.
 
 </dd> <dt>
 
-*ppcontextnodesfound* \[ vorgenommen\]
+*ppContextNodesFound* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**icontextnodes**](icontextnodes.md) , die alle Knoten des Typs " *pnodetype*" enthält.
+Ein Zeiger auf die [**IContextNodes,**](icontextnodes.md) die alle Knoten vom Typ *pNodeType enthalten.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppcontextnodesfound* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppContextNodesFound* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Die *pnodetype* -Eigenschaft muss eine GUID aus den [Kontext Knoten Typen](context-node-types.md) Konstanten enthalten.
+Die *pNodeType-Eigenschaft* muss eine GUID aus den [Konstanten für Kontextknotentypen](context-node-types.md) enthalten.
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](icontextnode.md)enthält, wird eine leere [**icontextnodes**](icontextnodes.md) -Auflistung zurückgegeben.
+Wenn [**IInkAnalyzer keinen**](iinkanalyzer.md) solchen [**IContextNode**](icontextnode.md)enthält, wird eine leere [**IContextNodes-Auflistung**](icontextnodes.md) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,9 +75,9 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](ic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -86,34 +86,34 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](ic
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
+[**IInkAnalyzer::FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findinkleafnodesforstrokes-Methode**](iinkanalyzer-findinkleafnodesforstrokes.md)
+[**IInkAnalyzer::FindInkLeafNodesForStrokes-Methode**](iinkanalyzer-findinkleafnodesforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findleafnodes-Methode**](iinkanalyzer-findleafnodes.md)
+[**IInkAnalyzer::FindLeafNodes-Methode**](iinkanalyzer-findleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindNode-Methode**](iinkanalyzer-findnode.md)
+[**IInkAnalyzer::FindNode-Methode**](iinkanalyzer-findnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ypeer forstrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
+[**IInkAnalyzer::FindNodesOfTypeForStrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ypeinsubtree-Methode**](iinkanalyzer-findnodesoftypeinsubtree.md)
+[**IInkAnalyzer::FindNodesOfTypeInSubTree-Methode**](iinkanalyzer-findnodesoftypeinsubtree.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodeswithcallback.md)
+[**IInkAnalyzer::FindNodesWithCallBack-Methode**](iinkanalyzer-findnodeswithcallback.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallbackinsubtree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
+[**IInkAnalyzer::FindNodesWithCallBackInSubTree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

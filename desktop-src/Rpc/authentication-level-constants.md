@@ -1,6 +1,6 @@
 ---
-title: Authentication-Level Konstanten (rpcdce. h)
-description: Die Konstanten auf Authentifizierungs Ebene stellen Authentifizierungs Ebenen dar, die an verschiedene Lauf Zeitfunktionen übermittelt werden.
+title: Authentication-Level Konstanten (Rpcdce.h)
+description: Die Konstanten auf Authentifizierungsebene stellen Authentifizierungsebenen dar, die an verschiedene Laufzeitfunktionen übergeben werden.
 ms.assetid: b8bb2517-e1a0-4607-a672-259f8686fc3e
 topic_type:
 - apiref
@@ -18,36 +18,36 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 114e5624b2cbc8af0b86a29daff2c1761f6fee39
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 03c27fa63a437c3c8a93c3d2e5e1f1983e341d5709e986c83459a3f505b46c6f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080920"
 ---
 # <a name="authentication-level-constants"></a>Konstanten auf Authentifizierungsebene
 
-Die Konstanten auf Authentifizierungs Ebene stellen Authentifizierungs Ebenen dar, die an verschiedene Lauf Zeitfunktionen übermittelt werden. Diese Ebenen werden in der Reihenfolge der Erhöhung der Authentifizierung aufgeführt. Jede neue Ebene erhöht die Authentifizierung, die von der vorherigen Ebene bereitgestellt wird. Wenn die RPC-Lauf Zeit Bibliothek die angegebene Ebene nicht unterstützt, wird automatisch ein Upgrade auf die nächsthöhere unterstützte Ebene durchgeführt.
+Die Konstanten auf Authentifizierungsebene stellen Authentifizierungsebenen dar, die an verschiedene Laufzeitfunktionen übergeben werden. Diese Ebenen werden in der Reihenfolge aufgeführt, in der die Authentifizierung erhöht wird. Jede neue Ebene fügt der Authentifizierung hinzu, die von der vorherigen Ebene bereitgestellt wird. Wenn die RPC-Laufzeitbibliothek die angegebene Ebene nicht unterstützt, wird automatisch ein Upgrade auf die nächste höhere unterstützte Ebene ausgeführt.
 
 
 
 | Konstante                                                                                                                                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RPC_C_AUTHN_LEVEL_DEFAULT"></span><span id="rpc_c_authn_level_default"></span><dl> <dt>**Standardwert für RPC- \_ C- \_ authn \_ \_**</dt> </dl>                    | Verwendet die Standardauthentifizierungsebene für den angegebenen Authentifizierungsdienst.<br/>                                                                                                                                                                                                                                                                                                                                                    |
-| <span id="RPC_C_AUTHN_LEVEL_NONE"></span><span id="rpc_c_authn_level_none"></span><dl> <dt>**RPC- \_ C- \_ authn- \_ Ebene \_ None**</dt> </dl>                             | Führt keine Authentifizierung durch.<br/>                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <span id="RPC_C_AUTHN_LEVEL_CONNECT"></span><span id="rpc_c_authn_level_connect"></span><dl> <dt>**RPC- \_ C \_ authn \_ Level \_ Connect**</dt> </dl>                    | Führt nur eine Authentifizierung aus, wenn der Client eine Beziehung zu einem Server herstellt.<br/>                                                                                                                                                                                                                                                                                                                                                       |
-| <span id="RPC_C_AUTHN_LEVEL_CALL"></span><span id="rpc_c_authn_level_call"></span><dl> <dt>**RPC- \_ C \_ authn-Ebene- \_ \_ Aufruf**</dt> </dl>                             | Authentifiziert sich nur zu Beginn jedes Remote Prozedur Aufrufes, wenn der Server die Anforderung empfängt. Gilt nicht für Remote Prozedur Aufrufe, die mit den verbindungsbasierten Protokoll Sequenzen durchgeführt werden (solche, die mit dem Präfix "ncacn" beginnen). Wenn die Protokoll Sequenz in einem Bindungs handle eine Verbindungs basierte Protokoll Sequenz ist und Sie diese Ebene angeben, verwendet diese Routine stattdessen die Pkt-Konstante der RPC- \_ C- \_ authn- \_ Ebene \_ .<br/> |
-| <span id="RPC_C_AUTHN_LEVEL_PKT"></span><span id="rpc_c_authn_level_pkt"></span><dl> <dt>**Pkt der RPC- \_ C- \_ authn- \_ Ebene \_**</dt> </dl>                                | Authentifiziert nur, dass alle empfangenen Daten vom erwarteten Client stammen. Überprüft nicht die Daten selbst.<br/>                                                                                                                                                                                                                                                                                                                          |
-| <span id="RPC_C_AUTHN_LEVEL_PKT_INTEGRITY"></span><span id="rpc_c_authn_level_pkt_integrity"></span><dl> <dt>**\_Pkt-Integrität der RPC C- \_ authn- \_ Ebene \_ \_**</dt> </dl> | Authentifiziert und überprüft, ob keine der zwischen Client und Server übertragenen Daten geändert wurde.<br/>                                                                                                                                                                                                                                                                                                                          |
-| <span id="RPC_C_AUTHN_LEVEL_PKT_PRIVACY"></span><span id="rpc_c_authn_level_pkt_privacy"></span><dl> <dt>**\_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene**</dt> </dl>       | Schließt alle vorherigen Ebenen ein und stellt sicher, dass Klartext-Daten nur vom Absender und Empfänger angezeigt werden können. Im lokalen Fall umfasst dies die Verwendung eines sicheren Kanals. Im Remote Fall ist dies das Verschlüsseln des Argument Werts jedes Remote Prozedur Aufrufes.<br/>                                                                                                                                                                 |
+| <span id="RPC_C_AUTHN_LEVEL_DEFAULT"></span><span id="rpc_c_authn_level_default"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ DEFAULT**</dt> </dl>                    | Verwendet die Standardauthentifizierungsebene für den angegebenen Authentifizierungsdienst.<br/>                                                                                                                                                                                                                                                                                                                                                    |
+| <span id="RPC_C_AUTHN_LEVEL_NONE"></span><span id="rpc_c_authn_level_none"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ NONE**</dt> </dl>                             | Führt keine Authentifizierung aus.<br/>                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <span id="RPC_C_AUTHN_LEVEL_CONNECT"></span><span id="rpc_c_authn_level_connect"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ CONNECT**</dt> </dl>                    | Führt nur eine Authentifizierung aus, wenn der Client eine Beziehung zu einem Server herstellt.<br/>                                                                                                                                                                                                                                                                                                                                                       |
+| <span id="RPC_C_AUTHN_LEVEL_CALL"></span><span id="rpc_c_authn_level_call"></span><dl> <dt>**\_ \_ RPC-C-AUTHENTIFIZIERUNGSEBENENAUFRUF \_ \_**</dt> </dl>                             | Authentifiziert sich nur am Anfang jedes Remoteprozeduraufrufs, wenn der Server die Anforderung empfängt. Gilt nicht für Remoteprozeduraufrufe, die mithilfe der verbindungsbasierten Protokollsequenzen (die mit dem Präfix "ncacn" beginnen) vorgenommen werden. Wenn die Protokollsequenz in einem Bindungshand handle eine verbindungsbasierte Protokollsequenz ist und Sie diese Ebene angeben, verwendet diese Routine stattdessen die RPC \_ C \_ AUTHN \_ LEVEL \_ PKT-Konstante.<br/> |
+| <span id="RPC_C_AUTHN_LEVEL_PKT"></span><span id="rpc_c_authn_level_pkt"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ PKT**</dt> </dl>                                | Authentifiziert nur, dass alle empfangenen Daten vom erwarteten Client empfangen werden. Überprüft die Daten selbst nicht.<br/>                                                                                                                                                                                                                                                                                                                          |
+| <span id="RPC_C_AUTHN_LEVEL_PKT_INTEGRITY"></span><span id="rpc_c_authn_level_pkt_integrity"></span><dl> <dt>**PKT-INTEGRITÄT AUF \_ \_ \_ \_ RPC-C-AUTHENTIFIZIERUNGSEBENE \_**</dt> </dl> | Authentifiziert und überprüft, ob keine der zwischen Client und Server übertragenen Daten geändert wurde.<br/>                                                                                                                                                                                                                                                                                                                          |
+| <span id="RPC_C_AUTHN_LEVEL_PKT_PRIVACY"></span><span id="rpc_c_authn_level_pkt_privacy"></span><dl> <dt>**RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**</dt> </dl>       | Schließt alle vorherigen Ebenen ein und stellt sicher, dass Klartextdaten nur für den Absender und den Empfänger angezeigt werden können. Im lokalen Fall umfasst dies die Verwendung eines sicheren Kanals. Im Remotefall umfasst dies die Verschlüsselung des Argumentwerts jedes Remoteprozeduraufrufs.<br/>                                                                                                                                                                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Unabhängig von dem durch die Konstante angegebenen Wert verwendet **Ncalrpc** immer die \_ \_ \_ \_ Pkt- \_ Datenschutzebene der RPC-C-authn-Ebene.
+Unabhängig vom durch die Konstante angegebenen Wert verwendet **ncalrpc** immer RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -55,7 +55,7 @@ Unabhängig von dem durch die Konstante angegebenen Wert verwendet **Ncalrpc** i
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Rpcdce. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Rpcdce.h</dt> </dl> |
 
 
 
@@ -63,25 +63,25 @@ Unabhängig von dem durch die Konstante angegebenen Wert verwendet **Ncalrpc** i
 
 <dl> <dt>
 
-[**Rpcbindinginqauthinfo**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthinfo)
+[**RpcBindingInqAuthInfo**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthinfo)
 </dt> <dt>
 
-[**Rpcbindingsetauthinfo**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfo)
+[**RpcBindingSetAuthInfo**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfo)
 </dt> <dt>
 
 [**RpcMgmtInqDefaultProtectLevel**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqdefaultprotectlevel)
 </dt> <dt>
 
-[**Rpcbindinginqauthclient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthclient)
+[**RpcBindingInqAuthClient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthclient)
 </dt> <dt>
 
-[**Rpcbindinginqauthcliumtex**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthclientex)
+[**RpcBindingInqAuthClientEx**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthclientex)
 </dt> <dt>
 
-[**Rpcbindingsetauthinfoex**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfoexa)
+[**RpcBindingSetAuthInfoEx**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetauthinfoexa)
 </dt> <dt>
 
-[**Rpcbindinginqauthinfoex**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthinfoexa)
+[**RpcBindingInqAuthInfoEx**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindinginqauthinfoexa)
 </dt> </dl>
 
  

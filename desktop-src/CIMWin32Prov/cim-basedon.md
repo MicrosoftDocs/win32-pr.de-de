@@ -1,8 +1,8 @@
 ---
-description: Die CIM- \_ BasedOn-Klasse stellt eine Zuordnung dar, die beschreibt, wie Speicherblöcke aus Blöcken auf niedrigerer Ebene zusammengestellt werden können.
+description: Die CIM BasedOn-Klasse stellt eine Zuordnung dar, die beschreibt, wie Speicher extents aus \_ Unterebenen-Extents zusammengestellt werden können.
 ms.assetid: 82132012-5851-4be8-82db-edbdb50b70e5
 ms.tgt_platform: multiple
-title: CIM_BasedOn-Klasse (cimwin32-WMI-Anbieter)
+title: CIM_BasedOn -Klasse (CIMWin32 WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,19 +18,19 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5e25cd9a5f194df8c5cbc0c7dc24a4777cee3417
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0a6bdd4c61628c71dbcb58b7b1d177cf7e936f802165aa9beed0aa195aeef4a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439260"
 ---
-# <a name="cim_basedon-class-cimwin32-wmi-providers"></a>CIM_BasedOn-Klasse (cimwin32-WMI-Anbieter)
+# <a name="cim_basedon-class-cimwin32-wmi-providers"></a>CIM_BasedOn -Klasse (CIMWin32 WMI-Anbieter)
 
-Die **CIM- \_ BasedOn** -Klasse stellt eine Zuordnung dar, die beschreibt, wie Speicherblöcke aus Blöcken auf niedrigerer Ebene zusammengestellt werden können. Physische Blöcke enthalten beispielsweise Blöcke mit geschütztem Speicherplatz. Volumesätze werden daher aus einem oder mehreren physischen oder geschützten Speicherplatz Blöcken zusammengestellt. Der Cache Speicher kann unabhängig voneinander definiert und in einem physischen Element realisiert werden. er kann aber auch auf flüchtigen oder nicht flüchtigen Speicherblöcken basieren.
+Die **CIM \_ BasedOn-Klasse** stellt eine Zuordnung dar, die beschreibt, wie Speicher extents aus Unterebenen-Extents zusammengestellt werden können. Physische Extents enthalten z. B. Geschützte Speicherplatz-Extents. Daher werden Volumesätze aus einem oder mehr physischen oder geschützten Speicherplatzbereich zusammengestellt. Cachespeicher kann unabhängig voneinander definiert und in einem physischen Element realisiert werden, oder er kann auf flüchtigen oder nicht flüchtigen Speichermodulen basieren.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -51,85 +51,85 @@ class CIM_BasedOn : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ BasedOn** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ BasedOn-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ BasedOn** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ BasedOn-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM- \_ storageblock**](cim-storageextent.md) , der den Speicherblock auf niedrigerer Ebene beschreibt.
+Ein [**\_ CIM-SpeicherExtent,**](cim-storageextent.md) der den Speicherausdungsspeicher auf niedrigerer Ebene beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ storageblock**](cim-storageextent.md) , der den Speicherblock auf höherer Ebene beschreibt.
+Ein [**\_ CIM-SpeicherExtent,**](cim-storageextent.md) der den speichererhöheren Speicherausdungsgrad auf höherer Ebene beschreibt.
 
 </dd> <dt>
 
-**"Endadresse"**
+**EndingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt das Ende des hohen Wertebereichs in niedrigerer Speicher Ebene an. Diese Eigenschaft ist nützlich, wenn Sie nicht zusammenhängende Blöcke einer Gruppierung auf höherer Ebene zuordnen.
+Gibt das Ende des hohen Umfangs im Speicher auf niedrigerer Ebene an. Diese Eigenschaft ist nützlich, wenn nicht zusammenhängende Extent einer Gruppierung auf höherer Ebene zuordnen.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **StartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Anfang des hohen Bereichs in einem Speicher auf niedrigerer Ebene an.
+Gibt den Anfang des hohen Umfangs im Speicher auf niedrigerer Ebene an.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ BasedOn** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ BasedOn-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,17 +139,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

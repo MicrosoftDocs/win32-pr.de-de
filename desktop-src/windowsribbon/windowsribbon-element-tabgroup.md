@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cd2d2109abd92f791a14c5d2ba19fc7eaecd73e7f2718623100c6ec3eb0e1e4f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 55e2801ae8726fe10933b45e592e6f633f6455ea
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118706870"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622096"
 ---
 # <a name="tabgroup-element"></a>TabGroup-Element
 
 Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-controls-tabgroup.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <TabGroup
@@ -39,15 +39,15 @@ Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -71,7 +71,7 @@ Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-
 
 | Element                                             | Beschreibung                                     |
 |-----------------------------------------------------|-------------------------------------------------|
-| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
+| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -95,7 +95,7 @@ Muss mindestens einmal für jedes [**Ribbon.ContextualTabs-Element**](windowsrib
 
 Im folgenden Beispiel wird das grundlegende Markup für das **TabGroup-Element** veranschaulicht.
 
-Dieser Codeabschnitt zeigt eine **TabGroup** Command-Deklaration mit zwei kontextbezogenen Registerkarten.
+Dieser Codeabschnitt zeigt eine **TabGroup-Befehlsdeklaration** mit zwei kontextbezogenen Registerkarten.
 
 
 ```XML
@@ -113,7 +113,7 @@ Dieser Codeabschnitt zeigt eine **TabGroup** Command-Deklaration mit zwei kontex
 
 
 
-In diesem Codeabschnitt werden die entsprechenden **TabGroup-Steuerelementdeklarationen** angezeigt.
+Dieser Codeabschnitt zeigt die entsprechenden **TabGroup-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -162,7 +162,7 @@ In diesem Codeabschnitt werden die entsprechenden **TabGroup-Steuerelementdeklar
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

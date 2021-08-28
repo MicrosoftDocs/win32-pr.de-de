@@ -4,7 +4,7 @@ MS-HAID: vspixengine.Issue
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Problem Struktur
+title: Problemstruktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 4F42E617-3EC8-4308-B9FE-F48C78702504
@@ -17,14 +17,14 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d4878774a01016f52c25574b49cd8b8669bc6691
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 40eab8fa294a8b3843dfff471369a725c8875320
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339659"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622316"
 ---
-# <a name="span-idvspixengineissuespanissue-structure"></a><span id="vspixengine.issue"></span>Problem Struktur
+# <a name="span-idvspixengineissuespanissue-structure"></a><span id="vspixengine.issue"></span>Problemstruktur
 
 Stellt Informationen zu einem Problem dar.
 
@@ -38,20 +38,20 @@ Stellt Informationen zu einem Problem dar.
 ## <a name="members"></a>Member
 
 **Beschreibung**  
-Eine com-Zeichenfolge, die eine Beschreibung des Problems enthält.
+Eine COM-Zeichenfolge, die eine Beschreibung des Problems enthält.
 
 **Code**  
-Eine com-Zeichenfolge, die den dem Problem zugeordneten c-Code enthält.
+Eine COM-Zeichenfolge, die den dem Problem zugeordneten Code enthält.
 
 **ID**  
 Die ID des Problems.
 
-**VEI**  
+**EID**  
 Die ID des zugeordneten Ereignisses.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

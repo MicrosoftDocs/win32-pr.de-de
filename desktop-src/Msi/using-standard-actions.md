@@ -1,32 +1,32 @@
 ---
-description: Eine Aktion wird in der Windows Installer ausgeführt, indem entweder die msidoaction-Funktion aufgerufen oder die Aktion in einer Sequenz Tabelle eingeschlossen wird.
+description: Eine Aktion wird im Windows Installer entweder durch Aufrufen der MsiDoAction-Funktion oder durch Das Einreihen der Aktion in eine Sequenztabelle ausgeführt.
 ms.assetid: ee5bdc72-adf4-46f4-ae1f-4c41d22a1ed8
-title: Verwenden von Standard Aktionen
+title: Verwenden von Standardaktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f52118580f4e18f07f86bd15da73f9aafb453c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60696e79c12b054739d87ffe5696e898a8eb955c4c7bfe0aa9c2341db7c2d720
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996210"
 ---
-# <a name="using-standard-actions"></a>Verwenden von Standard Aktionen
+# <a name="using-standard-actions"></a>Verwenden von Standardaktionen
 
-Eine Aktion wird in der Windows Installer ausgeführt, indem entweder die [**msidoaction**](/windows/desktop/api/Msiquery/nf-msiquery-msidoactiona) -Funktion aufgerufen oder die Aktion in einer Sequenz Tabelle eingeschlossen wird. Da die meisten Aktionen einen einzigen Zweck Kapseln, besteht die gängigste Methode zum Verwenden von Aktionen darin, eine Reihe von Aktionen in einer Sequenz zu sortieren, um eine größere Aufgabe zu erledigen. Das Installationsprogramm verfügt über drei Standard Aktionen auf oberster Ebene, die einen zugeordneten Satz von Sequenz Tabellen aufzurufen. Diese zugeordneten Sequenz Tabellen können Standard Aktionen, benutzerdefinierte Aktionen und Benutzeroberflächen Elemente enthalten. Jede Aktion in einer Sequenz Tabelle verfügt über eine zugeordnete Sequenznummer und kann auch über einen zugeordneten bedingten Ausdruck verfügen. Alle Aktionen in einer Sequenz Tabelle werden in der angegebenen Reihenfolge besucht und nur ausgeführt, wenn der bedingte Ausdruck true ergibt.
+Eine Aktion wird im Windows Installer entweder durch Aufrufen der [**MsiDoAction-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidoactiona) oder durch Das Einreihen der Aktion in eine Sequenztabelle ausgeführt. Da die meisten Aktionen einen einzelnen Zweck kapseln, besteht die gängigste Methode zum Verwenden von Aktionen darin, eine Reihe von Aktionen in eine Sequenz zu geordnet, um eine größere Aufgabe auszuführen. Das Installationsprogramm verfügt über drei Standardaktionen der obersten Ebene, die einen zugeordneten Satz von Sequenztabellen aufrufen. Diese zugeordneten Sequenztabellen können Standardaktionen, benutzerdefinierte Aktionen und Benutzeroberflächenelemente enthalten. Jede Aktion in einer Sequenztabelle verfügt über eine zugeordnete Sequenznummer und kann auch über einen zugeordneten bedingten Ausdruck verfügen. Alle Aktionen in einer Sequenztabelle werden in der richtigen Reihenfolge besucht und nur ausgeführt, wenn der bedingte Ausdruck trueauswertet.
 
-Während einer Standardaktion eine beliebige Sequenznummer zugeordnet werden kann, haben viele Sequenz Beschränkungen, die befolgt werden müssen, damit die Aktion ordnungsgemäß funktioniert. Beispielsweise muss die [filecost-Aktion](filecost-action.md)nach der [costinitialize-Aktion](costinitialize-action.md)aufgerufen werden. Weitere Informationen zu den standardmäßigen Aktions Sequenz Beschränkungen finden Sie unter [Aktionen mit Sequenz Einschränkungen](actions-with-sequencing-restrictions.md), [Aktionen ohne Sequenz Beschränkungen](actions-without-sequencing-restrictions.md)oder [Referenz zu Standard Aktionen](standard-actions-reference.md).
+Einer Standardaktion kann zwar eine beliebige Sequenznummer zugeordnet sein, viele verfügen jedoch über Sequenzeinschränkungen, die befolgt werden müssen, damit die Aktion ordnungsgemäß funktioniert. Beispielsweise muss die [FileCost-Aktion](filecost-action.md)nach der [CostInitialize-Aktion aufgerufen werden.](costinitialize-action.md) Weitere Informationen zu Standardeinschränkungen für die Aktionssequenzierung finden Sie [unter](actions-with-sequencing-restrictions.md)Aktionen mit Sequenzierungseinschränkungen, Aktionen ohne Sequenzierungseinschränkungen oder Referenz zu [Standardaktionen.](standard-actions-reference.md) [](actions-without-sequencing-restrictions.md)
 
-Die folgenden Themen enthalten weitere Informationen zur Verwendung von Standard Aktionen.
+Die folgenden Themen enthalten weitere Informationen zur Verwendung von Standardaktionen.
 
 -   [Veröffentlichen von Produkten, Features und Komponenten](publishing-products-features-and-components.md)
 -   [Dateisuche](file-searching.md)
--   [Datei Kosten](file-costing.md)
--   [Datei Installation](file-installation.md)
+-   [Dateikosten](file-costing.md)
+-   [Dateiinstallation](file-installation.md)
 -   [Ändern der Registrierung](modifying-the-registry.md)
 -   [Ausführen von Aktionen](running-actions.md)
 
-Weitere Informationen finden Sie unter [Standard Aktionen](about-standard-actions.md) oder [Referenz zu Standard Aktionen](standard-actions-reference.md).
+Siehe auch [Referenz zu Standardaktionen](about-standard-actions.md) [oder Standardaktionen.](standard-actions-reference.md)
 
  
 

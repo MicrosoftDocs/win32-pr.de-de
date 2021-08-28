@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JetCloseDatabase-Funktion'
+description: Weitere Informationen finden Sie unter JetCloseDatabase-Funktion.
 title: JetCloseDatabase-Funktion
 TOCTitle: JetCloseDatabase Function
 ms:assetid: e17a05dd-c30b-4e8f-8538-91a65e8052d2
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 13657c59cafa589bb7d06626126677d01a7e471c
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: ef8bbc98d4cee68ecb8c5fab1ba62ea9be290e87
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985083"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466647"
 ---
 # <a name="jetclosedatabase-function"></a>JetCloseDatabase-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetclosedatabase-function"></a>JetCloseDatabase-Funktion
 
-Die **JetCloseDatabase-Funktion** schließt eine Datenbankdatei, die zuvor mit [JetOpenDatabase](./jetopendatabase-function.md)geöffnet wurde.
+Die **JetCloseDatabase-Funktion** schließt eine Datenbankdatei, die zuvor mit [JetOpenDatabase geöffnet wurde.](./jetopendatabase-function.md)
 
 ```cpp
     JET_ERR JET_API JetCloseDatabase(
@@ -58,7 +58,7 @@ Für die zukünftige Verwendung reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
 | <p>Rückgabecode</p> | <p>Beschreibung</p> | 
@@ -72,13 +72,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

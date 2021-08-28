@@ -1,9 +1,9 @@
 ---
-title: MCM_SETRANGE Meldung (kommstrg. h)
-description: Legt das minimal-und maximal zulässige Datum für ein Monatskalender-Steuerelement fest. Sie können diese Nachricht explizit oder mit dem monthcal-- \_ Makro senden.
+title: MCM_SETRANGE (Commctrl.h)
+description: Legt die minimalen und maximalen zulässigen Datumsangaben für ein Monatskalender-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ SetRange-Makros senden.
 ms.assetid: dab9ebb0-f397-4e71-b060-ef8d7d89a6bc
 keywords:
-- Windows-Steuerelemente für MCM_SETRANGE Meldung
+- MCM_SETRANGE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 380e599da8cd4a054c02135bc64f57f29d2c81d6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c66e9cca17aabd93bfba896d361da6b90eab0c5c21fc4d50ec3c81a9eba5ccd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119319250"
 ---
-# <a name="mcm_setrange-message"></a>MCM- \_ Nachricht
+# <a name="mcm_setrange-message"></a>MCM \_ SETRANGE-Nachricht
 
-Legt das minimal-und maximal zulässige Datum für ein Monatskalender-Steuerelement fest. Sie können diese Nachricht explizit oder mit dem [**monthcal \_**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setrange) --Makro senden.
+Legt die minimalen und maximalen zulässigen Datumsangaben für ein Monatskalender-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ SetRange-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setrange) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt das minimal-und maximal zulässige Datum für ein Monatskalender-Steuerelem
 *wParam* 
 </dt> <dd>
 
-Flagwerte, die angeben, welche Datums Limits festgelegt werden. Dieser Wert muss einer der folgenden Werte sein:
+Flagwerte, die angeben, welche Datumsgrenzwerte festgelegt werden. Dieser Wert muss eine oder beide der folgenden Werte haben:
 
 
 
 | Wert                                                                                                                                          | Bedeutung                                                                                                                                                          |
 |------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GDTR_MAX"></span><span id="gdtr_max"></span><dl> <dt>**maximal zulässige dstr \_**</dt> </dl> | Das maximal zulässige Datum wird festgelegt. Die [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur bei *lpsystimearray* \[ 1 \] muss Datumsinformationen enthalten. <br/> |
-| <span id="GDTR_MIN"></span><span id="gdtr_min"></span><dl> <dt>**dstr \_ Min.**</dt> </dl> | Das minimal zulässige Datum wird festgelegt. Die [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur bei *lpsystimearray* \[ 0 \] muss Datumsinformationen enthalten. <br/> |
+| <span id="GDTR_MAX"></span><span id="gdtr_max"></span><dl> <dt>**GDTR \_ MAX**</dt> </dl> | Das maximal zulässige Datum wird festgelegt. Die [**SYSTEMTIME-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) bei *lpSysTimeArray* \[ 1 muss \] Datumsinformationen enthalten. <br/> |
+| <span id="GDTR_MIN"></span><span id="gdtr_min"></span><dl> <dt>**GDTR \_ MIN**</dt> </dl> | Das zulässige Mindestdatum wird festgelegt. Die [**SYSTEMTIME-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) *bei lpSysTimeArray* \[ 0 muss \] Datumsinformationen enthalten. <br/> |
 
 
 
@@ -50,13 +50,13 @@ Flagwerte, die angeben, welche Datums Limits festgelegt werden. Dieser Wert muss
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array aus zwei Elementen von [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Strukturen, die die Datums Limits enthalten. Der maximale Grenzwert muss in *lpsystimearray* \[ 1 liegen \] , wenn dstr \_ Max angegeben ist, und *lpsystimearray* \[ 0 \] muss das minimale Limit enthalten, wenn dstr \_ Min angegeben wird.
+Zeiger auf ein Zwei-Element-Array von [**SYSTEMTIME-Strukturen,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die Datumsgrenzen enthalten. Der maximale Grenzwert muss in *lpSysTimeArray* 1 sein, wenn GDTR MAX angegeben ist, und \[ \] \_ *lpSysTimeArray* 0 muss den Mindestgrenzwert enthalten, wenn GDTR MIN angegeben \[ \] \_ wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,17 +64,17 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Uhrzeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
+[Zeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
 </dt> </dl>
 
  

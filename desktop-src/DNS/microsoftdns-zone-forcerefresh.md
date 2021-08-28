@@ -1,11 +1,11 @@
 ---
-title: ForceRefresh-Methode der MicrosoftDNS_Zone-Klasse
-description: Die forceRefresh-Methode erzwingt ein Update des sekundären DNS-Servers vom Master Server.
+title: ForceRefresh-Methode der MicrosoftDNS_Zone Klasse
+description: Die ForceRefresh-Methode erzwingt ein Update des sekundären DNS-Servers vom Masterserver.
 ms.assetid: 8dde1703-53c3-4d1e-bfb3-f6d5d1666740
 keywords:
-- ForceRefresh-Methode (DNS)
-- ForceRefresh-Methode, DNS, MicrosoftDNS_Zone-Klasse
-- DNS-MicrosoftDNS_Zone Klasse, forceRefresh-Methode
+- ForceRefresh-Methoden-DNS
+- ForceRefresh-Methode DNS , MicrosoftDNS_Zone-Klasse
+- MicrosoftDNS_Zone DNS-Klasse, ForceRefresh-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85390230b0a0852ee479bc8b7e396972f6e69080
-ms.sourcegitcommit: 03fb201e1ea36e353c335ff063ed993fb5993e61
+ms.openlocfilehash: 81b07206205a58ba2f8dc45cbd88caf2248a7937bd62d71b606aeea9538d84ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106341085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432902"
 ---
-# <a name="forcerefresh-method-of-the-microsoftdns_zone-class"></a>ForceRefresh-Methode der MicrosoftDNS- \_ Zonen Klasse
+# <a name="forcerefresh-method-of-the-microsoftdns_zone-class"></a>ForceRefresh-Methode der MicrosoftDNS \_ Zone-Klasse
 
 > [!NOTE]
-> Dieser Artikel enthält Verweise auf den Begriff Master Server, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
+> Dieser Artikel enthält Verweise auf den Begriff Masterserver, einen Begriff, der von Microsoft nicht mehr verwendet wird. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
-Die **forceRefresh** -Methode erzwingt ein Update des sekundären DNS-Servers vom Master Server.
+Die **ForceRefresh-Methode** erzwingt ein Update des sekundären DNS-Servers vom Masterserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,45 +56,45 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Zone**](microsoftdns-zone.md)
+[**MicrosoftDNS-Zone \_**](microsoftdns-zone.md)
 </dt> <dt>
 
-[**AgeAllRecords-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-ageallrecords.md)
+[**AgeAllRecords-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-ageallrecords.md)
 </dt> <dt>
 
-[**Changezonetype-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-changezonetype.md)
+[**ChangeZoneType-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-changezonetype.md)
 </dt> <dt>
 
-[**Die Methode "kreatezone" der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-createzone.md)
+[**CreateZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-createzone.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-getdistinguishedname.md)
 </dt> <dt>
 
-[**Pauzzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-pausezone.md)
+[**PauseZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-pausezone.md)
 </dt> <dt>
 
-[**Reloadzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-reloadzone.md)
+[**ReloadZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-reloadzone.md)
 </dt> <dt>
 
-[**Resetsecon-Replikats-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resetsecondaries.md)
+[**ResetSecondaries-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resetsecondaries.md)
 </dt> <dt>
 
-[**Resumezone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resumezone.md)
+[**ResumeZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resumezone.md)
 </dt> <dt>
 
-[**Updatefromds-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-updatefromds.md)
+[**UpdateFromDS-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-updatefromds.md)
 </dt> <dt>
 
-[**"Write Backzone"-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-writebackzone.md)
+[**WriteBackZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-writebackzone.md)
 </dt> </dl>
 
  

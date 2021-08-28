@@ -4,20 +4,20 @@ description: Zeigt, wie mehrere Transformationen auf ein Objekt angewendet werde
 ms.assetid: a3875072-bb73-4698-944e-102ab5539d80
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e031a46545c59513767ed4d260be9dc677b3fb77
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7d63db7899b79dd07a6a4a14a4efbbfaeefc5723ad09c71a3462ba5d2fd0c042
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259685"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Anwenden mehrerer Transformationen auf ein Objekt
 
-Das Ausführen mehrerer Transformationen für ein Objekt bedeutet, dass mehrere Transformationen in einem Objekt kombiniert werden. Das heißt, die Ausgabe jeder Transformationsmatrix zu verwenden und Sie als Eingabe für die nächste zu verwenden, wodurch die kumulativen Auswirkungen aller Matrix Transformationen erhalten werden.
+Das Ausführen mehrerer Transformationen für ein Objekt bedeutet, mehrere Transformationen zu einer Transformation zu kombinieren. Das heißt, die Ausgabe jeder Transformationsmatrix wird als Eingabe für die nächste matrix verwendet, wodurch die kumulativen Auswirkungen aller Matrixtransformationen erhalten werden.
 
-Angenommen, es werden zwei Transformations Matrizen, Drehung und Übersetzung, multipliziert. Das Ergebnis ist eine neue Matrix, die die Funktionen sowohl der Drehung als auch der Übersetzung ausführt. Da die Matrix Multiplikation nicht kommutativ ist, unterscheidet sich die Transformation für Rotation multipliziert mit einer Übersetzungs Transformation von der Transformations Transformation, multipliziert mit der Transformation für Rotation.
+Angenommen, zwei Transformationsmatrizen, Drehung und Übersetzung, werden miteinander multipliziert. Das Ergebnis ist eine neue Matrix, die die Funktionen von Drehung und Übersetzung ausführt. Da die Matrixmultiplikation nicht kommutativ ist, ist eine Drehungstransformation multipliziert mit einer Übersetzungstransformation anders als die Übersetzungstransformation multipliziert mit der Rotationstransformation.
 
-In den folgenden Codebeispielen wird veranschaulicht, wie die Drehung, gefolgt von der Übersetzung, gefolgt von der Drehung angewendet wird. Beachten Sie, dass die renderingergebnisse verschieden sind.
+In den folgenden Codebeispielen wird gezeigt, wie die Drehung gefolgt von der Übersetzung und dann der Übersetzung gefolgt von der Drehung angewendet wird. Beachten Sie, dass sich die Renderingergebnisse unterscheiden.
 
 
 ```C++
@@ -87,7 +87,7 @@ m_pRenderTarget->DrawRectangle(rectangle, m_pTransformedShapeBrush);
 
 Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung eines Rechtecks, das übersetzt und dann gedreht wurde, und ein Rechteck, das gedreht und dann übersetzt wurde](images/multipletransforms.png)
+![Abbildung eines Rechtecks, das übersetzt und dann gedreht wurde, und eines Rechtecks, das gedreht und dann übersetzt wurde](images/multipletransforms.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -99,9 +99,9 @@ Der Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 [Übersicht über Direct2D-Transformationen](direct2d-transforms-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

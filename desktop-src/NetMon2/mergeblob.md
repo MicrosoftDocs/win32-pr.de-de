@@ -1,7 +1,7 @@
 ---
-description: Die mergeblob-Funktion kopiert alle Einträge aus dem Quell-BLOB in ein Ziel-BLOB.
+description: Die MergeBlob-Funktion kopiert alle Einträge aus dem Quell-BLOB in ein Ziel-BLOB.
 ms.assetid: 7521ce0c-fd02-4002-bdae-0d74a2e4a646
-title: Mergeblob-Funktion (Netmon. h)
+title: MergeBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 6ea28f5bb6f337b20858baa544c890d5f71bf0c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c0ce93235a0c46286b9bfbef0773a5584f3db774aa52991b4e0eaa9dd38352f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119677190"
 ---
-# <a name="mergeblob-function"></a>Mergeblob-Funktion
+# <a name="mergeblob-function"></a>MergeBlob-Funktion
 
-Die **mergeblob** -Funktion kopiert alle Einträge aus dem Quell-BLOB in ein Ziel-BLOB.
+Die **MergeBlob-Funktion** kopiert alle Einträge aus dem Quell-BLOB in ein Ziel-BLOB.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,31 +40,31 @@ DWORD MergeBlob(
 
 <dl> <dt>
 
-*hdstblob* \[ in, out\]
+*hDstBlob* \[ in, out\]
 </dt> <dd>
 
-Handle für das Ziel-BLOB. Bei der Eingabe enthält dieses BLOB seine ursprünglichen Informationen. Bei der Ausgabe enthält dieses BLOB seine ursprünglichen Informationen sowie alle Informationen des Quell-BLOBs.
+Handle für das Ziel-BLOB. Bei der Eingabe enthält dieses BLOB seine ursprünglichen Informationen. Bei der Ausgabe enthält dieses BLOB seine ursprünglichen Informationen sowie alle Informationen des Quell-BLOB.
 
 </dd> <dt>
 
-*hsrcblob* \[ in\]
+*hSrcBlob* \[ In\]
 </dt> <dd>
 
-Handle für das Quell-BLOB.
+Handle für das Quellblob.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einträge, die den Quell-und Zieldateien gemeinsam sind, werden mit Daten aus dem Quell-BLOB überschrieben.
+Einträge, die für Quell- und Zieldateien gelten, werden mit Daten aus dem Quell-BLOB überschrieben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -72,8 +72,8 @@ Einträge, die den Quell-und Zieldateien gemeinsam sind, werden mit Daten aus de
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 

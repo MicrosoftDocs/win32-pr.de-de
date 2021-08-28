@@ -1,36 +1,36 @@
 ---
-title: Verwenden des System-Supplied Ersatz Zeichens
-description: Verwenden des System-Supplied Ersatz Zeichens
+title: Verwenden des System-Supplied Ersatzzeichens
+description: Verwenden des System-Supplied Ersatzzeichens
 ms.assetid: 6709e5e2-50e0-470f-b618-3d3043f6e180
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 444cb94c5564a78ec5580ae8e7f781e91a8a9c15
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e0faec7c57f0e2010d0e817a4e44b81d65ad207371b591296bea2354307c7b80
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119243430"
 ---
-# <a name="using-the-system-supplied-surrogate"></a>Verwenden des System-Supplied Ersatz Zeichens
+# <a name="using-the-system-supplied-surrogate"></a>Verwenden des System-Supplied Ersatzzeichens
 
-Wenn Sie das vom System bereitgestellte Ersatz Zeichen für den DLL-Server verwenden möchten, registrieren Sie die dll, indem Sie eine leere Zeichenfolge oder **null** für den Wert [dllersatz](dllsurrogate.md) in der Registrierung angeben. Wenn eine Aktivierungs Anforderung für einen dll-Server, der so festgelegt ist, auf com festgelegt wird, startet com den standardmäßigen Ersatzprozess und die angeforderte DLL (indem er die CLSID intern in der Befehlszeile für den Start angibt), um einen separaten Aufruf zu vermeiden. (Informationen zum Ausführen von mehr als einem DLL-Server in einem Ersatzprozess finden Sie unter [Ersatz für Ersatz](surrogate-sharing.md)Zeichen.)
+Um das vom System bereitgestellte Ersatzzeichen für Ihren DLL-Server zu verwenden, registrieren Sie die DLL, indem Sie eine leere Zeichenfolge oder **NULL** für den [DllSurrogate-Wert](dllsurrogate.md) in der Registrierung angeben. Wenn eine Aktivierungsanforderung für einen DLL-Server, der so festgelegt ist, an COM gesendet wird, startet COM gleichzeitig den Standard-Ersatzprozess und die angeforderte DLL (indem die CLSID intern in der Startbefehlszeile angegeben wird), um einen separaten Aufruf zu vermeiden. (Informationen zum Ausführen mehrerer DLL-Server in einem Ersatzprozess finden Sie unter [Ersatzzeichenfreigabe](surrogate-sharing.md).)
 
-Die Standard Implementierung des Ersatz Prozesses ist ein Pseudo-com-Server mit gemischtem Threading Modell Stil. Wenn mehrere dll-Server in einen einzelnen Ersatzprozess geladen werden, wird durch diesen Vorgang sichergestellt, dass jeder dll-Server mit dem Threading Modell instanziiert wird, das in der Registrierung für diesen Server angegeben ist. Alle geladenen frei Thread Server werden im Multithread-Apartment vereint, während sich jeder Apartment Thread Server in einem Single Thread-Apartment befindet. Wenn ein dll-Server beide Threading Modelle unterstützt, wählt com das Multithreading.
+Die Standardimplementierung des Ersatzzeichenprozesses ist ein Pseudo-COM-Server im Mixed Threading-Modellstil. Wenn mehrere DLL-Server in einen einzelnen Ersatzprozess geladen werden, stellt dieser Prozess sicher, dass jeder DLL-Server mithilfe des threadingmodells instanziiert wird, das in der Registrierung für diesen Server angegeben ist. Alle geladenen Freethreadserver befinden sich zusammen im Multithread-Apartment, während sich jeder Apartmentthreadserver in einem Singlethread-Apartment befindet. Wenn ein DLL-Server beide Threadingmodelle unterstützt, wählt COM Multithreading aus.
 
-Dieser Ersatzprozess wird so geschrieben, dass com sowohl das Entladen der DLL-Server als auch das Beenden des Ersatz Vorgangs verarbeitet.
+Dieser Ersatzprozess wird so geschrieben, dass COM sowohl das Entladen von DLL-Servern als auch das Beenden des Ersatzprozesses verarbeitet.
 
-Das vom System bereitgestellte Ersatz Zeichen funktioniert sehr gut für die meisten Entwickler und ist sehr einfach zu verwenden. Allerdings können Entwickler mit besonderen Überlegungen festlegen, dass ein benutzerdefiniertes Ersatz Zeichen erforderlich ist. Weitere Informationen finden Sie unter [Schreiben eines benutzerdefinierten Ersatz](writing-a-custom-surrogate.md)Zeichens.
+Das vom System bereitgestellte Ersatzzeichen funktioniert für die meisten Entwickler sehr gut und ist sehr einfach zu verwenden. Entwickler mit besonderen Überlegungen können jedoch entscheiden, dass ein benutzerdefiniertes Ersatzzeichen erforderlich ist. Weitere Informationen finden Sie unter [Schreiben eines benutzerdefinierten Ersatzzeichens.](writing-a-custom-surrogate.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[DLL-Surrogates](dll-surrogates.md)
+[DLL-Ersatzzeichen](dll-surrogates.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

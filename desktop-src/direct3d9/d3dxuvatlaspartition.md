@@ -1,5 +1,5 @@
 ---
-description: 'D3DXUVAtlasPartition-Funktion: Erstellen sie einen UV-Atlas für ein Gitternetz.'
+description: 'D3DXUVAtlasPartition-Funktion: Erstellen Sie einen UV-Atlas für ein Gitternetz.'
 ms.assetid: c46f3e47-8e72-435c-875d-cccfa4b893a2
 title: D3DXUVAtlasPartition-Funktion (D3DX9Mesh.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 63df6bbcc1b811b9617796bc6e7e51af2dfdca56
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e34c5b9fe69129cb60c604cbde1fc6bcb4df8e442b7ea29bc55cec44911505e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096126"
 ---
 # <a name="d3dxuvatlaspartition-function"></a>D3DXUVAtlasPartition-Funktion
 
@@ -70,7 +70,7 @@ Zeiger auf ein Eingabegittermodell (siehe [**ID3DXMesh),**](id3dxmesh.md)das die
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die maximale Anzahl von Diagrammen, in die das Gitternetz partitioniert werden soll. Weitere Informationen finden Sie in den Hinweisen zu den Partitionierungsmodi. Verwenden Sie 0, um D3DX mitzuteilen, dass der Atlas basierend auf Stretch parametrisiert werden soll.
+Die maximale Anzahl von Diagrammen, in die das Netz partitioniert werden soll. Weitere Informationen finden Sie in den Hinweisen zu den Partitionierungsmodi. Verwenden Sie 0, um D3DX mitzuteilen, dass der Atlas basierend auf Stretch parametrisiert werden soll.
 
 </dd> <dt>
 
@@ -88,16 +88,16 @@ Die zulässige Menge an Stretching. 0 bedeutet, dass kein Stretching zulässig i
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Nullbasierter Texturkoordinatenindex, der angibt, welcher Satz von Texturkoordinaten verwendet werden soll.
+Nullbasierter Texturkoordinatenindex, der angibt, welche Menge von Texturkoordinaten verwendet werden soll.
 
 </dd> <dt>
 
-*pdwAdjacency* \[ In\]
+*pdwAdjazenz* \[ In\]
 </dt> <dd>
 
 Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Ein Zeiger auf ein Array von Adjacency-Daten mit 3 DWORDs pro Gesicht, der angibt, welche Dreiecke nebeneinander liegen (siehe [**ID3DXBaseMesh::GenerateAdjacency**](id3dxbasemesh--generateadjacency.md)).
+Ein Zeiger auf ein Array von Adjazenzdaten mit 3 DWORDs pro Gesicht, der angibt, welche Dreiecke nebeneinander liegen (siehe [**ID3DXBaseMesh::GenerateAdencyency**](id3dxbasemesh--generateadjacency.md)).
 
 </dd> <dt>
 
@@ -106,7 +106,7 @@ Ein Zeiger auf ein Array von Adjacency-Daten mit 3 DWORDs pro Gesicht, der angib
 
 Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Ein Array mit 3 DWORDS pro Gesicht. Jedes Gesicht gibt an, ob ein Rand false ist oder nicht. Ein nicht falscher Rand wird durch -1 angegeben, ein falscher Rand wird durch einen anderen Wert angegeben. Dies ermöglicht die Parametrisierung eines Gitters von Quadern, bei dem die Ränder in der Mitte jedes Quader nicht ausgeschnitten werden.
+Ein Array mit 3 DWORDS pro Gesicht. Jedes Gesicht gibt an, ob ein Rand false ist oder nicht. Ein nicht falscher Rand wird durch -1 angegeben, ein falscher Rand durch einen anderen Wert. Dies ermöglicht die Parametrisierung eines Gitternetzes von Quads, wobei die Ränder in der Mitte jedes Quaders nicht geschnitten werden.
 
 </dd> <dt>
 
@@ -115,7 +115,7 @@ Ein Array mit 3 DWORDS pro Gesicht. Jedes Gesicht gibt an, ob ein Rand false ist
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein Array integrierter Metriktensoren, der beschreibt, wie ein Dreieck gestreckt wird (siehe [IntegratedMetricTensor](using-uvatlas.md)).
+Ein Zeiger auf ein Array integrierter Metrik tensors, der beschreibt, wie ein Dreieck gestreckt wird (siehe [IntegratedMetricTensor](using-uvatlas.md)).
 
 </dd> <dt>
 
@@ -133,7 +133,7 @@ Ein Zeiger auf eine Rückruffunktion (siehe [LPD3DXUVATLASCB),](lpd3dxuvatlascb.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Geben Sie an, wie oft D3DX den Rückruf aufruft. Ein angemessener Standardwert ist 0,0001f.
+Geben Sie an, wie oft D3DX den Rückruf aufruft. ein sinnvoller Standardwert ist 0,0001f.
 
 </dd> <dt>
 
@@ -187,7 +187,7 @@ Ein Zeiger auf ein Array neu zugeordneter Scheitelpunkte. Jedes Arrayelement ide
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) Dieser Puffer enthält ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Ausgabegitternetz angeben. Dieser Parameter darf nicht **NULL sein,** da der nachfolgende Aufruf von D3DXUVAtlasPack() dies erfordert.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) Dieser Puffer enthält ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Ausgabegitternetz angeben. Dieser Parameter darf nicht **NULL** sein, da er für den nachfolgenden Aufruf von D3DXUVAtlasPack() erforderlich ist.
 
 </dd> <dt>
 
@@ -196,7 +196,7 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) 
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf den maximalen Streckungswert, der vom Atlas-Algorithmus generiert wird. Der Bereich liegt zwischen 0,0 und 1,0.
+Ein Zeiger auf den maximalen Stretchwert, der vom Atlas-Algorithmus generiert wird. Der Bereich liegt zwischen 0,0 und 1,0.
 
 </dd> <dt>
 
@@ -205,7 +205,7 @@ Ein Zeiger auf den maximalen Streckungswert, der vom Atlas-Algorithmus generiert
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl von Diagrammen, die vom Atlas-Algorithmus erstellt wurden. Wenn dwMaxChartNumber zu niedrig ist, gibt dieser Parameter die Mindestanzahl von Diagrammen zurück, die zum Erstellen eines Atlas erforderlich sind.
+Ein Zeiger auf die Anzahl von Diagrammen, die vom Atlas-Algorithmus erstellt wurden. Wenn dwMaxChartNumber zu niedrig ist, gibt dieser Parameter die mindest erforderliche Anzahl von Diagrammen zurück, um einen Atlas zu erstellen.
 
 </dd> </dl>
 
@@ -213,24 +213,24 @@ Ein Zeiger auf die Anzahl von Diagrammen, die vom Atlas-Algorithmus erstellt wur
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D OK, andernfalls ist der Wert \_ D3DERR \_ INVALIDCALL.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Andernfalls ist der Wert D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-D3DXUVAtlasPartition ähnelt [**D3DXUVAtlasCreate,**](d3dxuvatlascreate.md)mit der Ausnahme, dass D3DXUVAtlasPartition den letzten Füllschritt nicht übernimmt.
+D3DXUVAtlasPartition ähnelt [**D3DXUVAtlasCreate,**](d3dxuvatlascreate.md)mit der Ausnahme, dass D3DXUVAtlasPartition den letzten Komprimierungsschritt nicht ausführt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

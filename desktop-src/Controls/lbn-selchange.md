@@ -1,9 +1,9 @@
 ---
-title: LBN_SELCHANGE Benachrichtigungs Code (Winuser. h)
-description: Benachrichtigt die Anwendung, dass sich die Auswahl in einem Listenfeld aufgrund von Benutzereingaben geändert hat. Das übergeordnete Fenster des Listen Felds empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: LBN_SELCHANGE Benachrichtigungscode (Winuser.h)
+description: Benachrichtigt die Anwendung, dass sich die Auswahl in einem Listenfeld aufgrund der Benutzereingabe geändert hat. Das übergeordnete Fenster des Listenfelds empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: 126d2c47-816e-4179-a870-f5c5a34c5513
 keywords:
-- Windows-Steuerelemente für LBN_SELCHANGE Benachrichtigungs
+- LBN_SELCHANGE Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e029d1753a0fa74f39a59a459d6ede45811a40fd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3ef87aebcf2ce804a10b4682bfaf2cba900bd227a06671959d11babce5f46774
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085180"
 ---
-# <a name="lbn_selchange-notification-code"></a>LBN \_ selChange-Benachrichtigungs Code
+# <a name="lbn_selchange-notification-code"></a>LBN \_ SELCHANGE-Benachrichtigungscode
 
-Benachrichtigt die Anwendung, dass sich die Auswahl in einem Listenfeld aufgrund von Benutzereingaben geändert hat. Das übergeordnete Fenster des Listen Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Benachrichtigt die Anwendung, dass sich die Auswahl in einem Listenfeld aufgrund der Benutzereingabe geändert hat. Das übergeordnete Fenster des Listenfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,7 +42,7 @@ LBN_SELCHANGE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Listen Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Listenfelds. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -53,13 +53,13 @@ Handle für das Listenfeld.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungs Code wird nur von einem Listenfeld gesendet, das über den [**lbs- \_ Benachrichtigungs**](list-box-styles.md) Stil verfügt.
+Dieser Benachrichtigungscode wird nur von einem Listenfeld mit dem [**LBS \_ NOTIFY-Format**](list-box-styles.md) gesendet.
 
-Dieser Benachrichtigungs Code wird nicht gesendet, wenn die Auswahl durch die Nachricht [**lb \_ SetSel**](lb-setsel.md), [**lb \_ setcurrsel**](lb-setcursel.md), [**lb \_ SelectString**](lb-selectstring.md), [**lb \_ selitemrange**](lb-selitemrange.md) oder [**lb \_ selitemrangeex**](lb-selitemrangeex.md) geändert wird.
+Dieser Benachrichtigungscode wird nicht gesendet, wenn die Meldung [**LB \_ SETSEL**](lb-setsel.md), [**LB \_ SETCURSEL**](lb-setcursel.md), [**LB \_ SELECTSTRING**](lb-selectstring.md), [**LB \_ SELITEMRANGE**](lb-selitemrange.md) oder [**LB \_ SELITEMRANGEEX**](lb-selitemrangeex.md) die Auswahl ändert.
 
-Bei einem Listenfeld mit Mehrfachauswahl wird der LBN \_ selChange-Benachrichtigungs Code immer dann gesendet, wenn der Benutzer eine Pfeiltaste drückt, auch wenn sich die Auswahl nicht ändert.
+Bei einem Listenfeld mit mehrfacher Auswahl wird der LBN \_ SELCHANGE-Benachrichtigungscode gesendet, wenn der Benutzer eine Pfeiltaste drückt, auch wenn sich die Auswahl nicht ändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Bei einem Listenfeld mit Mehrfachauswahl wird der LBN \_ selChange-Benachrichtig
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -77,22 +77,22 @@ Bei einem Listenfeld mit Mehrfachauswahl wird der LBN \_ selChange-Benachrichtig
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ setcurrsel**](lb-setcursel.md)
+[**LB \_ SETCURSEL**](lb-setcursel.md)
 </dt> <dt>
 
-[LBN- \_ dblclk](lbn-dblclk.md)
+[LBN \_ DBLCLK](lbn-dblclk.md)
 </dt> <dt>
 
-[LBN \_ selcancel](lbn-selcancel.md)
+[LBN \_ SELCANCEL](lbn-selcancel.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  
