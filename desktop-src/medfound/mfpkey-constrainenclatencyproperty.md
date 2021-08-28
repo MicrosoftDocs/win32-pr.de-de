@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob der Encoder durch eine maximale Latenz Anforderung eingeschränkt wird.
+description: Gibt an, ob der Encoder durch eine maximale Latenzanforderung eingeschränkt ist.
 ms.assetid: 8148ae1e-239e-40fa-a88d-810a1d93d8e9
-title: MFPKEY_CONSTRAINENCLATENCY-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_CONSTRAINENCLATENCY-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d6f880006bf2aba04196547a79e74f94a7210edd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8172b92b0b4d39602f0535b8bf1ef4456a896972e56c6da10f6585e5221fa7e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113420"
 ---
-# <a name="mfpkey_constrainenclatency-property"></a>Mfpkey- \_ einschrängericlatency (Eigenschaft)
+# <a name="mfpkey_constrainenclatency-property"></a>MFPKEY \_ CONSTRAINENCLATENCY-Eigenschaft
 
-Gibt an, ob der Encoder durch eine maximale Latenz Anforderung eingeschränkt wird.
+Gibt an, ob der Encoder durch eine maximale Latenzanforderung eingeschränkt ist.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -21,15 +21,15 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="default-value"></a>Standardwert
 
-**Variant \_ false**
+**VARIANT \_ FALSE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie für diese Eigenschaft den Standardwert **Variant \_ false** belassen, listet der Encoder einen Standardsatz von Modi auf, die ungefähr 2000 Millisekunden der Encoder-Latenzzeit haben. Wenn Sie diese Eigenschaft auf **Variant \_ true** festlegen, müssen Sie auch eine maximale encoderwartezeit angeben, indem Sie die Eigenschaft " [**mfpkey \_ maxenclatencyms**](mfpkey-maxenclatencymsproperty.md) " festlegen. In diesem Fall erstellt der Encoder Modi, die die Latenz Anforderung erfüllen, und listet nur diese Modi auf. Der Encoder garantiert ein Ausgabe Beispiel, sobald der Encoder Eingaben für einen Zeitraum empfangen hat, der **mfpkey \_ maxenclatencyms** entspricht.
+Wenn Sie diese Eigenschaft bei ihrem Standardwert **VARIANT \_ FALSE** belassen, zählt der Encoder einen Standardsatz von Modi auf, die eine Encoderlatenz von ca. 2.000 Millisekunden aufweisen. Wenn Sie diese Eigenschaft auf **VARIANT \_ TRUE** festlegen, müssen Sie auch eine maximale Encoderlatenz angeben, indem Sie die [**MFPKEY \_ MAXENCLATENCYMS-Eigenschaft**](mfpkey-maxenclatencymsproperty.md) festlegen. In diesem Fall erstellt der Encoder Modi, die die Latenzanforderung erfüllen, und listet nur diese Modi auf. Der Encoder garantiert ein Ausgabebeispiel, sobald der Encoder eine Eingabe für einen Zeitraum erhalten hat, der **MFPKEY \_ MAXENCLATENCYMS entspricht.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,17 +37,17 @@ Wenn Sie für diese Eigenschaft den Standardwert **Variant \_ false** belassen, 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

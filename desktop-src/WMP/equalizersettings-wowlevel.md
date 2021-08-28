@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. wowlevel
-description: Das wowlevel-Attribut gibt die SRS-WOW-Wirkungs Stufe an oder ruft Sie ab.
+title: EQUALIZERSETTINGS.wowLevel
+description: Das wowLevel-Attribut gibt die SRS WOW Effect-Ebene an oder ruft sie ab.
 ms.assetid: 8f99d7e1-39b9-42be-ab6d-8435ba7022fa
 keywords:
-- Fenster "equalizersettings. wowlevel" Media Player
+- EQUALIZERSETTINGS.wowLevel Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41d3994e8242ef6194ee0dbf3e395aa055727b81
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4ceef9ed737018951478baac1c62571e6cf9b2ff8eb6cf8d1bedc78f068aef60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123640"
 ---
-# <a name="equalizersettingswowlevel"></a>Equalizersettings. wowlevel
+# <a name="equalizersettingswowlevel"></a>EQUALIZERSETTINGS.wowLevel
 
-Das **wowlevel** -Attribut gibt die SRS-WOW-Wirkungs Stufe an oder ruft Sie ab.
+Das **wowLevel-Attribut** gibt die SRS WOW Effect-Ebene an oder ruft sie ab.
 
 ``` syntax
         elementID.wowLevel
@@ -29,11 +29,11 @@ Das **wowlevel** -Attribut gibt die SRS-WOW-Wirkungs Stufe an oder ruft Sie ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die zwischen 0 und 100 und dem Standardwert 50 liegt. 
+Dieses Attribut ist eine  Lese-/Schreibnummer (**long**) im Bereich von 0 bis 100 mit einem Standardwert von 50.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der SRS-WOW-Effekt ist ein Effekt der Audiooptimierung. Dieses Attribut wird ignoriert, wenn **enhancedaudiowert** auf false festgelegt ist.
+Der SRS WOW Effect ist ein Audioerweiterungseffekt. Dieses Attribut wird ignoriert, wenn **enhancedAudio** auf FALSE festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Der SRS-WOW-Effekt ist ein Effekt der Audiooptimierung. Dieses Attribut wird ign
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -49,10 +49,10 @@ Der SRS-WOW-Effekt ist ein Effekt der Audiooptimierung. Dieses Attribut wird ign
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. enhancedaudio**](equalizersettings-enhancedaudio.md)
+[**EQUALIZERSETTINGS.enhancedAudio**](equalizersettings-enhancedaudio.md)
 </dt> </dl>
 
  

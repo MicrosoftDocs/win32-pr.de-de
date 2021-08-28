@@ -1,9 +1,9 @@
 ---
-title: TTM_WINDOWFROMPOINT Meldung (kommstrg. h)
-description: Ermöglicht es einer Unterklassen Prozedur, eine QuickInfo für ein anderes Fenster als das unter dem Mauszeiger anzuzeigen.
+title: TTM_WINDOWFROMPOINT Nachricht (Commctrl.h)
+description: Ermöglicht einer Unterklassenprozedur, dass eine QuickInfo Text für ein anderes Fenster als das fenster unter dem Mauscursor anzeigt.
 ms.assetid: f3bf6917-1745-4e4f-a9c1-8fe86b2b3906
 keywords:
-- Windows-Steuerelemente für TTM_WINDOWFROMPOINT Meldung
+- TTM_WINDOWFROMPOINT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68679f6b6c2477a8279c22f11d0d300e44c8370d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 572ce204fd9f0056ef77d62c7909a7281c478c38f6abeb95089ce86b0bdb1b8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109540"
 ---
-# <a name="ttm_windowfrompoint-message"></a>TTM \_ WindowFromPoint-Meldung
+# <a name="ttm_windowfrompoint-message"></a>TTM \_ WINDOWFROMPOINT-Nachricht
 
-Ermöglicht es einer Unterklassen Prozedur, eine QuickInfo für ein anderes Fenster als das unter dem Mauszeiger anzuzeigen.
+Ermöglicht einer Unterklassenprozedur, dass eine QuickInfo Text für ein anderes Fenster als das fenster unter dem Mauscursor anzeigt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Ermöglicht es einer Unterklassen Prozedur, eine QuickInfo für ein anderes Fens
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Punkt**](/previous-versions//dd162805(v=vs.85)) Struktur, die den zu überprüfenden Punkt definiert.
+Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85)) die den zu überprüfenden Punkt definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist das Handle für das Fenster, das den Punkt enthält, oder **null** , wenn am angegebenen Punkt kein Fenster vorhanden ist.
+Der Rückgabewert ist das Handle für das Fenster, das den Punkt enthält, oder **NULL,** wenn am angegebenen Punkt kein Fenster vorhanden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht soll von einer Anwendung verarbeitet werden, die eine QuickInfo Unterklassen unterteilt. Sie ist nicht für das Senden durch eine Anwendung vorgesehen. Eine QuickInfo sendet diese Nachricht an sich selbst, bevor Sie den Text für ein Fenster anzeigt. Durch Ändern der Koordinaten des durch *LPARAM* angegebenen Punkts kann die Unterklassen Prozedur bewirken, dass die QuickInfo Text für ein anderes Fenster als das unter dem Mauszeiger anzeigt.
+Diese Nachricht soll von einer Anwendung verarbeitet werden, die eine QuickInfo untergliedert. Sie ist nicht für das Senden durch eine Anwendung vorgesehen. Eine QuickInfo sendet diese Nachricht an sich selbst, bevor der Text für ein Fenster angezeigt wird. Durch Ändern der Koordinaten des durch *lParam* angegebenen Punkts kann die Unterklassenprozedur dazu führen, dass die QuickInfo Text für ein anderes Fenster als das fenster unter dem Mauszeiger anzeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Diese Nachricht soll von einer Anwendung verarbeitet werden, die eine QuickInfo 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

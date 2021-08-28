@@ -1,31 +1,31 @@
 ---
-description: Beschreibt die Steuerung des Roamings durch das Profil.
+description: Beschreibt, wie das Profil das Roaming steuert.
 MS-HAID: WWAN\_profile\_v4.simpleType\_roamControlType
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: roamcontroltype simple-Typ
+title: roamControlType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 911e379773e7d8eabfb7a1524b1a21ba16718a53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19243625c07afae49011638a37734a5515e626d6
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343697"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480236"
 ---
-# <a name="span-idwwan_profile_v4simpletype_roamcontroltypespanroamcontroltype-simple-type"></a><span id="WWAN_profile_v4.simpleType_roamControlType"></span>roamcontroltype simple-Typ
+# <a name="span-idwwan_profile_v4simpletype_roamcontroltypespanroamcontroltype-simple-type"></a><span id="WWAN_profile_v4.simpleType_roamControlType"></span>roamControlType – einfacher Typ
 
-Beschreibt die Steuerung des Roamings durch das Profil.
+Beschreibt, wie das Profil das Roaming steuert.
 
-Es gibt zwei mögliche Roaming-Registrierungs Zustände:
+Es gibt zwei mögliche Roamingregistrierungszustände:
 
--   Partner: in einem Netzwerk registriert, das eng mit dem Heimnetzwerk verbunden ist
--   Nicht-Partner: in einem Netzwerk registriert, das nicht eng mit dem Heimnetzwerk verbunden ist
+-   Partner: Registriert in einem Netzwerk, das eng mit dem Heimnetzwerk verbunden ist
+-   Nicht-Partner: Registriert in einem Netzwerk, das nicht eng mit dem Heimnetzwerk verbunden ist
 
-Die genaue Bedeutung von "Partner" variiert abhängig vom Netzwerk, stellt jedoch eine engere Beziehung mit günstigeren Tarifen dar als ein nicht Partner. Dies kann der Fall sein, wenn ein Regional basierter Operator über eine geschäftliche Anordnung verfügt, das Funk Zugriffs Netzwerk eines anderen Operators außerhalb seines Startbereichs zu verwenden. Es könnte auch den Unterschied zwischen Roaming innerhalb eines Bereichs (z. b. EU) und außerhalb des Bereichs darstellen.
+Die genaue Bedeutung von "Partner" variiert je nach Netzwerk, stellt aber eine genauere Beziehung mit günstigeren Preisen als ein Nicht-Partner dar. Dies kann der Fall sein, wenn ein regionsbasierter Operator über eine Geschäftsanordnung verfügt, um das Funkzugriffsnetzwerk eines anderen Betreibers außerhalb seines Stammbereichs zu verwenden. Sie kann auch den Unterschied zwischen roaming innerhalb einer Region (z. B. EU) und außerhalb davon darstellen.
 
-Beachten Sie, dass [**roamapplicabilitytype**](simpletype-roamapplicabilitytype.md) ein ausdrucksstarkes Attribut ist als **roamcontroltype**, und ein Profil muss entweder **roamcontroltype** oder **roamapplicabilitytype**, aber nicht beides verwenden. (Wenn ein Profil beides verwendet, werden beide angewendet. Das Ergebnis ist die Schnittmenge der beiden.)
+Beachten Sie, dass [**roamApplicabilityType**](simpletype-roamapplicabilitytype.md) ein ausdrucksstärkeres Attribut als **roamControlType** ist, und ein Profil sollte entweder **roamControlType** oder **roamApplicabilityType** verwenden, aber nicht beides. (Wenn ein Profil beide verwendet, werden beide angewendet. Das Ergebnis ist die Schnittmenge der beiden.)
 
 ``` syntax
 <xs:simpleType name="roamControlType">
@@ -45,34 +45,15 @@ Beachten Sie, dass [**roamapplicabilitytype**](simpletype-roamapplicabilitytype.
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache **roamcontroltype** -Typ definiert die folgenden Werte.
+Der einfache typ **roamControlType** definiert die folgenden Werte.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Allroamallowed</td>
-<td><p>Roaming ist für Partnernetzwerke und nicht Partnernetzwerke zulässig.</p></td>
-</tr>
-<tr class="even">
-<td>Partnerroamamallowed</td>
-<td><p>Roaming ist nur in Partner Netzwerken zulässig.</p></td>
-</tr>
-<tr class="odd">
-<td>Noroamallowed</td>
-<td><p>Es ist kein Roaming zulässig.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | BESCHREIBUNG | 
+|-------|-------------|
+| AllRoamAllowed | <p>Roaming ist in Partner- und Nicht-Partnernetzwerken zulässig.</p> | 
+| PartnerRoamAllowed | <p>Roaming ist nur in Partnernetzwerken zulässig.</p> | 
+| NoRoamAllowed | <p>Roaming ist nicht zulässig.</p> | 
+
 
  
 

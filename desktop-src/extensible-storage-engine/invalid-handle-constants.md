@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: Ungültige handle-Konstanten'
-title: Ungültige handle-Konstanten
+description: 'Weitere Informationen zu: Ungültige Handlekonstanten'
+title: Ungültige Handlekonstanten
 TOCTitle: Invalid Handle Constants
 ms:assetid: 594d7804-725f-4f72-b5f0-56f099c1c17b
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269256(v=EXCHG.10)
@@ -15,89 +15,37 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f5614b36acfca8b5be4c13849d459d25f984336a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28a52b2fc7a51572cc7bb78ad7631df41438310a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050408"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473276"
 ---
-# <a name="invalid-handle-constants"></a>Ungültige handle-Konstanten
+# <a name="invalid-handle-constants"></a>Ungültige Handlekonstanten
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="invalid-handle-constants"></a>Ungültige handle-Konstanten
+## <a name="invalid-handle-constants"></a>Ungültige Handlekonstanten
 
-Die folgenden Konstanten weisen auf ungültige Handles für verschiedene Aspekte von ESE hin.
+Die folgenden Konstanten weisen auf ungültige Handles für verschiedene Ese-Aspekte hin.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Konstante/Wert</p></th>
-<th><p>BESCHREIBUNG</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_instanceNil<br />
-(~ (JET_INSTANCE) 0)</p></td>
-<td><p>Ein ungültiges Handle für eine Daten Bank Instanz.<br />
-<strong>Windows XP:</strong> Eingeführt in Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_sesidNil<br />
-(~ (JET_SESID) 0)</p></td>
-<td><p>Ein ungültiges Handle für eine Sitzungs-ID.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_tableidNil<br />
-(~ (JET_TABLEID) 0)</p></td>
-<td><p>Ein ungültiges Handle für eine Tabellen-ID.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitNil<br />
-((JET_GRBIT) 0)</p></td>
-<td><p>Ein ungültiges Handle für eine Gruppe von Bits.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_LSNil<br />
-(~ (JET_LS) 0)</p></td>
-<td><p>Ein ungültiges Handle für den lokalen Speicher.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_dbidNil<br />
-((JET_DBID) 0xFFFFFFFF)</p></td>
-<td><p>Ein ungültiges Handle für die Datenbank-ID.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Konstante/Wert</p> | <p>BESCHREIBUNG</p> | 
+|-----------------------|--------------------|
+| <p>JET_instanceNil<br />(~(JET_INSTANCE)0)</p> | <p>Ein ungültiges Handle für eine Datenbankinstanz.<br /><strong>Windows XP:</strong> Eingeführt in Windows XP.</p> | 
+| <p>JET_sesidNil<br />(~(JET_SESID)0)</p> | <p>Ein ungültiges Handle für eine Sitzungs-ID.</p> | 
+| <p>JET_tableidNil<br />(~(JET_TABLEID)0)</p> | <p>Ein ungültiges Handle für eine Tabellen-ID.</p> | 
+| <p>JET_bitNil<br />((JET_GRBIT)0)</p> | <p>Ein ungültiges Handle für eine Gruppe von Bits.</p> | 
+| <p>JET_LSNil<br />(~(JET_LS)0)</p> | <p>Ein ungültiges Handle für die lokale Storage.</p> | 
+| <p>JET_dbidNil<br />((JET_DBID) 0xFFFFFFFF)</p> | <p>Ein ungültiges Handle für die Datenbank-ID.</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 

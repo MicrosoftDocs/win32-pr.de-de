@@ -1,26 +1,26 @@
 ---
-title: VML focussize-Attribut
-description: VML focussize-Attribut
+title: VML FocusSize-Attribut
+description: VML FocusSize-Attribut
 ms.assetid: 6ca5af2c-3064-423f-a7bb-202f23bf95da
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8149973932e9601be2caa0306eefcec08951b238
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 322bea9f9d78ff76cd631cc36149939bb5b3db5f87dc9c80e9f2a5100f031c1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099260"
 ---
-# <a name="vml-focussize-attribute"></a>VML focussize-Attribut
+# <a name="vml-focussize-attribute"></a>VML FocusSize-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Fokus Größe für radiale Füllungen. Lese-/Schreibzugriff. **VgVector2D**.
+Definiert die Fokusgröße für radiale Füllungen. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert die Fokus Größe für radiale Füllungen. Lese-/Schreibzugriff. **VgV
 
 **Tagsyntax**
 
-<v: *Element* focussize = " *Expression* " >
+<v: *element* focussize="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . focussize = "*Ausdruck*"
+*element* .focussize="*expression*"
 
-*Ausdruck* = *Element*. focussize
+*expression* = *Element*.focussize
 
 **Anmerkungen**
 
-Die Werte sind Bruchteile der Breite und Höhe der Form. Der erste Wert ist ein Prozentsatz der Füllung am rechten Rand der Form, und der zweite Wert ist ein Prozentsatz der Füllung bis zum unteren Rand der Form. Der Standardwert ist 0,0. Ein **focussize** -Wert von 100%, 100% und eine **focusposition** von 0 (null) würde dazu führen, dass color2 die Mischung vollständig beherrschen würde. Für ausgeglichene Mischungen werden kleine Werte von ca. 10%, 10% empfohlen.
+Die Werte sind Bruchteile der Breite und Höhe der Form. Die erste ist ein Prozentsatz der Füllung am rechten Rand der Form, und die zweite ist ein Prozentsatz der Füllung am unteren Rand der Form. Der Standardwert ist 0,0. Ein **FocusSize-Wert** von 100 %,100 % und eine **FocusPosition** von 0,0 würden dazu sorgen, dass Color2 die Mischung vollständig überträgt. Für ausgewogene Mischungen werden kleine Werte von etwa 10 %,10 % empfohlen.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die radiale Füllung erstellt eine Mischung, die in der Mitte als blau beginnt und an allen vier Rändern rot wird. Der Mittelpunkt der Blend wird durch **focusposition** definiert, und die Größe der inneren anfangs Farbe wird durch **focussize** bestimmt.
+Die radiale Füllung erstellt eine Mischung, die in der Mitte blau beginnt und an allen vier Rändern rot wird. Der Mittelpunkt der Mischung wird durch **FocusPosition definiert,** und die Größe der inneren Anfangsfarbe wird durch **FocusSize bestimmt.**
 
 
 ```HTML
@@ -60,6 +60,6 @@ Die radiale Füllung erstellt eine Mischung, die in der Mitte als blau beginnt u
 
 
 
- 
+ 
 
- 
+ 

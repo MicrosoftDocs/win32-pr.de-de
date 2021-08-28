@@ -4,12 +4,12 @@ ms.assetid: a7402e02-9bdc-49ec-ba93-8a32f55b9dd8
 title: Hello Message
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 526b51576b36f143a932a757c70d0df19ddf9cc5efad3e51c4f7802003e6565e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 49562d212bb113bba2c1fca0a352b0f1a81cea76
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118552441"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627586"
 ---
 # <a name="hello-message"></a>Hello Message
 
@@ -65,9 +65,9 @@ Eine Hello-Nachricht hat die folgenden Fokuspunkte.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

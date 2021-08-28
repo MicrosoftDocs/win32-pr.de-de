@@ -1,21 +1,21 @@
 ---
 description: Im folgenden Beispiel wird das lokale System mithilfe der InitiateSystemShutdown-Funktion neu gestartet.
 ms.assetid: 928c2d48-daa5-4c27-816b-766adedba7eb
-title: Anzeigen des Dialog Felds "Herunterfahren"
+title: Anzeigen des Dialogfelds "Herunterfahren"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eedfee9e96fa1e6183cbe1d9322a603b65ae4b86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfae7475d1a0d861c06bf83dfcab95e0c939b44f1837a543584642f15ac43bb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100620"
 ---
-# <a name="displaying-the-shutdown-dialog-box"></a>Anzeigen des Dialog Felds "Herunterfahren"
+# <a name="displaying-the-shutdown-dialog-box"></a>Anzeigen des Dialogfelds "Herunterfahren"
 
-Im folgenden Beispiel wird das lokale System mithilfe der [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna) -Funktion neu gestartet. Das System zeigt ein Dialogfeld mit einer benutzerdefinierten Meldung und eine Meldung an den Benutzer an, um Anwendungen innerhalb des angegebenen Timeout Intervalls (30 Sekunden) zu schließen. Nachdem das Timeout Intervall abgelaufen ist, wird das System neu gestartet.
+Im folgenden Beispiel wird das lokale System mithilfe der [**InitiateSystemShutdown-Funktion**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna) neu gestartet. Das System zeigt ein Dialogfeld mit einer benutzerdefinierten Meldung und einer Meldung an den Benutzer an, um Anwendungen innerhalb des angegebenen Time out-Intervalls (30 Sekunden) zu schließen. Nach Ablauf des Time out-Intervalls wird das System neu gestartet.
 
-Die Anwendung muss die Berechtigung zum Herunterfahren des Namens "SE" aktivieren, \_ \_ bevor [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)aufgerufen wird. Weitere Informationen finden Sie unter [Berechtigungen](../secauthz/privileges.md).
+Die Anwendung muss die SE SHUTDOWN NAME-Berechtigung aktivieren, \_ bevor \_ [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)aufgerufen wird. Weitere Informationen finden Sie unter [Berechtigungen.](../secauthz/privileges.md)
 
 
 ```C++
@@ -79,7 +79,7 @@ BOOL MySystemShutdown( LPTSTR lpMsg )
 
 
 
-Wenn die Funktion " [**abortsystemshutdown**](/windows/desktop/api/Winreg/nf-winreg-abortsystemshutdowna) " in dem durch " [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)" angegebenen Timeout Zeitraum ausgeführt wird, wird das System nicht heruntergefahren. Wenn beispielsweise "preventsystemshutdown" nach "mysystemshutdown" aufgerufen wird, schließt das System das Dialogfeld und startet das System nicht neu.
+Wenn die [**AbortSystemShutdown-Funktion**](/windows/desktop/api/Winreg/nf-winreg-abortsystemshutdowna) in dem durch [**InitiateSystemShutdown**](/windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna)angegebenen Time out-Zeitraum ausgeführt wird, wird das System nicht heruntergefahren. Wenn preventSystemShutdown beispielsweise nach MySystemShutdown aufgerufen wird, schließt das System das Dialogfeld und startet das System nicht neu.
 
 
 ```C++

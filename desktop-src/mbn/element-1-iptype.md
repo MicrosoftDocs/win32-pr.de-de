@@ -1,32 +1,32 @@
 ---
-description: "\"Fidemdmconfigprofile\" \\/ ... \\/ Iptype (v4)"
+description: ModemDMConfigProfile \/ ... \/ IPType (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_IPType
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Iptype (v4)
+title: IPType (v4)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ec57fbe0bbcb4c633ddb8485f048ce4230e0ca5
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: f655d2f8592613fdb4953cbda32841dc9beaec0d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388805"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479976"
 ---
-# <a name="span-idwwan_profile_v4element_1_iptypespanmodemdmconfigprofileiptype-v4"></a><span id="WWAN_profile_v4.element_1_IPType"></span>"Fidemdmconfigprofile" \/ ... \/ Iptype (v4)
+# <a name="span-idwwan_profile_v4element_1_iptypespanmodemdmconfigprofileiptype-v4"></a><span id="WWAN_profile_v4.element_1_IPType"></span>ModemDMConfigProfile \/ ... \/ IPType (v4)
 
 Gibt den IP-Typ an, der für diese Datenverbindung verwendet werden soll.
 
-Dieses Element ist neu in v4 des Schemas. Das-Element kann einen der folgenden Werte aufweisen.
+Dieses Element ist neu in v4 des Schemas. Das -Element kann einen der folgenden Werte haben.
 
 | Wert   | Bedeutung                                       |
 |---------|-----------------------------------------------|
-| Standard | Der IP-Typ muss von niedrigeren Ebenen ausgewählt werden.     |
-| IPv4    | IPv4 verwenden                                      |
+| Standard | Der IP-Typ muss von einer niedrigeren Ebene(n)     |
+| IPv4    | Verwenden von IPv4                                      |
 | IPv6    | IPv6 verwenden                                      |
-| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6 als verfügbar.           |
-| Xlat    | Verwenden von 464xlat zum Tunneln von IPv4 über IPv6-Netzwerke |
+| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6, wie verfügbar.           |
+| XLAT    | Verwenden von 464XLAT zum Tunneln von IPv4 über IPv6-Netzwerke |
 
  
 
@@ -62,41 +62,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-1-context.md">Context</a></td>
-<td><p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-1-context.md">Context</a> | <p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

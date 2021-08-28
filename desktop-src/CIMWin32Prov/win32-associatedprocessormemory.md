@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32 associatedprocessormemory-Zuordnung bezieht einen Prozessor und den zugehörigen Cache Speicher.
+description: Die \_ WMI-Zuordnungsklasse Win32 AssociatedProcessorMemory verknüpft einen Prozessor und seinen Cachespeicher.
 ms.assetid: 23da2a9d-772e-4258-9489-07d47801b2d8
 ms.tgt_platform: multiple
 title: Win32_AssociatedProcessorMemory-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3737dca869c539d1414c4399f35fb8f107697b70
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8740aca290bbe116f867915fd15f4f2683bfe3b2d4c4a2e8cc731516ba8a0a09
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109630"
 ---
-# <a name="win32_associatedprocessormemory-class"></a>Win32 \_ associatedprocessormemory-Klasse
+# <a name="win32_associatedprocessormemory-class"></a>Win32 \_ AssociatedProcessorMemory-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) der **Win32 \_ associatedprocessormemory** -Zuordnung bezieht einen Prozessor und den zugehörigen Cache Speicher.
+Die [WMI-Zuordnungsklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ AssociatedProcessorMemory** verknüpft einen Prozessor und seinen Cachespeicher.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ class Win32_AssociatedProcessorMemory : CIM_AssociatedProcessorMemory
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ associatedprocessormemory** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ AssociatedProcessorMemory-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ associatedprocessormemory** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ AssociatedProcessorMemory-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Win32 \_ CacheMemory**
@@ -63,50 +63,50 @@ Datentyp: **Win32 \_ CacheMemory**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ CacheMemory")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ CacheMemory")
 </dt> </dl>
 
-Ein [**Win32- \_ CacheMemory**](win32-cachememory.md) , der den für den Prozessor verfügbaren Cache Speicher beschreibt.
+Ein [**Win32 \_ CacheMemory,**](win32-cachememory.md) der den für den Prozessor verfügbaren Cachespeicher beschreibt.
 
 </dd> <dt>
 
-**Busgeschwindigkeit**
+**BusSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Megahertz")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("megahertz")
 </dt> </dl>
 
-Geschwindigkeit des Busses in Megahertz (MHz) zwischen Prozessor und Arbeitsspeicher.
+Geschwindigkeit des Bus in Megahertz (MHz) zwischen Prozessor und Arbeitsspeicher.
 
-Diese Eigenschaft wird von [**CIM \_ associatedprocessormemory**](cim-associatedprocessormemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ AssociatedProcessorMemory**](cim-associatedprocessormemory.md)geerbt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Prozessor**
+Datentyp: **\_ Win32-Prozessor**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Processor")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ Processor")
 </dt> </dl>
 
-Ein [**Win32- \_ Prozessor**](win32-processor.md) , der den Prozessor beschreibt, von dem der Cache Speicher verwendet wird.
+Ein [**\_ Win32-Prozessor,**](win32-processor.md) der den Prozessor beschreibt, der den Cachespeicher verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ associatedprocessormemory** -Klasse wird von [**CIM \_ associatedprocessormemory**](cim-associatedprocessormemory.md)abgeleitet.
+Die **Win32 \_ AssociatedProcessorMemory-Klasse** wird von [**CIM \_ AssociatedProcessorMemory**](cim-associatedprocessormemory.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,8 +116,8 @@ Die **Win32 \_ associatedprocessormemory** -Klasse wird von [**CIM \_ associated
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -126,10 +126,10 @@ Die **Win32 \_ associatedprocessormemory** -Klasse wird von [**CIM \_ associated
 
 <dl> <dt>
 
-[**CIM \_ associatedprocessormemory**](cim-associatedprocessormemory.md)
+[**CIM \_ AssociatedProcessorMemory**](cim-associatedprocessormemory.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

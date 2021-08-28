@@ -1,9 +1,9 @@
 ---
-title: /Protocol-Schalter
-description: Der/Protocol-Schalter gibt an, welches Wire-Protokoll vom generierten Stub unterstützt wird.
+title: /protocol-Switch
+description: Der Schalter /protocol gibt an, welches Wire Protocol vom generierten Stub unterstützt wird.
 ms.assetid: b565b30c-72e5-442b-9588-324b9041524b
 keywords:
-- /Protocol-Schalter-Mittel l
+- /protocol switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9770fa94d010e21dcbd2a5574a0cffe29273a23
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 555482677afff83d9f52e06c7b8e445504d222c8
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104313025"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887375"
 ---
-# <a name="protocol-switch"></a>/Protocol-Schalter
+# <a name="protocol-switch"></a>/protocol-Switch
 
-Der **/Protocol** -Schalter gibt an, welches Wire-Protokoll vom generierten Stub unterstützt wird.
+Der Schalter **/protocol** gibt an, welches Wire Protocol vom generierten Stub unterstützt wird.
 
 ``` syntax
 midl /protocol (dce | ndr64 | all)
@@ -38,7 +38,7 @@ midl /protocol (dce | ndr64 | all)
 
 <span id="dce"></span><span id="DCE"></span>
 
-<span id="dce"></span><span id="DCE"></span>DCE * * * *
+<span id="dce"></span><span id="DCE"></span>dce
 
 
 </dt> <dd>
@@ -49,7 +49,7 @@ Der generierte Stub unterstützt nur das DCE-Protokoll.
 
 <span id="ndr64"></span><span id="NDR64"></span>
 
-<span id="ndr64"></span><span id="NDR64"></span>ndr64****
+<span id="ndr64"></span><span id="NDR64"></span>ndr64
 
 
 </dt> <dd>
@@ -60,7 +60,7 @@ Der generierte Stub unterstützt nur das Microsoft NDR64-Protokoll.
 
 <span id="all"></span><span id="ALL"></span>
 
-<span id="all"></span><span id="ALL"></span>Alle * * * *
+<span id="all"></span><span id="ALL"></span>all(
 
 
 </dt> <dd>
@@ -69,30 +69,30 @@ Der generierte Stub unterstützt alle verfügbaren Protokolle für eine bestimmt
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-RPC marshallt und entmarshallt Daten gemäß einem Strict-Übertragungsprotokoll (auch Übertragungs Syntax genannt), das die Daten Übertragungs Darstellung definiert, wie z. b. die Reihenfolge, in der Datenmember gemarshallt werden, die Ausrichtung der Daten im Netzwerk, zusätzliche Informationen, die in den Daten enthalten sind. Microsoft RPC ist mit dem Protokoll von OSF-DCE (Netzwerkdaten Darstellung) kompatibel. In der 64-Bit-Version von Windows XP führt Microsoft ein experimentelles Protokoll NDR64 ein, das für die Übertragung von 64-Bit-Daten optimiert ist. NDR64 ist nicht abwärts kompatibel mit dem DCE-Protokoll.
+RPC marshallt und entmarshalsiert Daten gemäß einem strengen Wire Protocol, das auch als Übertragungssyntax bezeichnet wird und die Darstellung der Datenverkabelung definiert, z. B. die Reihenfolge, in der Datenmember gemarshallt werden, die Ausrichtung der Daten auf dem Kabel, zusätzliche Informationen, die in den Daten enthalten sind, usw. Microsoft RPC ist mit dem NDR-Protokoll (Network Data Representation, Netzwerkdatendarstellung) von OSF DCE kompatibel. In der 64-Bit-Version von Windows XP führt Microsoft ein experimentelles Protokoll NDR64 ein, das für die Übertragung von 64-Bit-Daten optimiert ist. NDR64 ist nicht abwärtskompatibel mit dem DCE-Protokoll.
 
-Das **DCE** -Protokoll ist mit der NDR-Übertragungs Syntax von OSF DCE kompatibel. Dieses Protokoll ist für die Übertragung von 32-Bit-Daten optimiert.
+Das **DCE-Protokoll** ist mit der NDR-Übertragungssyntax von OSF DCE kompatibel. Dieses Protokoll ist für die Übertragung von 32-Bit-Daten optimiert.
 
-Das **ndr64** -Protokoll wird zurzeit nur unterstützt, wenn es in Verbindung mit dem [**/Win64**](-win64.md) -Switch verwendet wird. Wenn ein ndr64 only-Client versucht, eine Verbindung mit einem nur DCE-Server herzustellen (oder umgekehrt), wird der Aufruf mit der \_ \_ nicht unterstützten Transaktionsdatei RPC S abgelehnt \_ \_ .
+Das **ndr64-Protokoll** wird derzeit nur unterstützt, wenn es in Verbindung mit dem [**Schalter /win64**](-win64.md) verwendet wird. Wenn nur ein ndr64-Client versucht, eine Verbindung mit einem reinen DCE-Server herzustellen oder umgekehrt, wird der Aufruf mit RPC \_ S \_ UNSUPPORTED \_ TRANS SYN \_ abgelehnt.
 
-Mit der Option **all** wird ein Stub erstellt, von dem jedes verfügbare Protokoll verwendet werden kann. Bei 32-Bit-stubwerten ist das einzige derzeit verfügbare Protokoll DCE. Bei 64-Bit-stubwerten, die mit dem Schalter [**/Win64**](-win64.md) erstellt wurden, sind sowohl DCE als auch NDR64 verfügbar.
+Die Option **all** erstellt einen Stub, der ein beliebiges verfügbares Protokoll verwenden kann. Für 32-Bit-Stubs ist das einzige derzeit verfügbare Protokoll DCE. Für 64-Bit-Stubs, die mit dem Schalter [**/win64**](-win64.md) erstellt wurden, sind sowohl DCE als auch NDR64 verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Protocol alle/Win64 filename. idl**
+**midl /protocol all /win64 filename.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**/<system>**](-system-.md)
+[**/&lt;System&gt;**](-system-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

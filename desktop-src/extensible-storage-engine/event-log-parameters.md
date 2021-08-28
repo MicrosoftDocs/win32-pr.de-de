@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: Ereignisprotokoll Parameter'
-title: Ereignisprotokoll Parameter
+description: Weitere Informationen finden Sie unter Ereignisprotokollparameter.
+title: Ereignisprotokollparameter
 TOCTitle: Event Log Parameters
 ms:assetid: c660f555-2627-4d25-8f1c-8c1dc8a3a381
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294086(v=EXCHG.10)
@@ -15,339 +15,77 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 912dc3e1e8588e18ef0d1db8fbf7edccfca7bdeb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1c127f538ae80e8bec3dc5a34d5924b838b51ee
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042443"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122465877"
 ---
-# <a name="event-log-parameters"></a>Ereignisprotokoll Parameter
+# <a name="event-log-parameters"></a>Ereignisprotokollparameter
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="event-log-parameters"></a>Ereignisprotokoll Parameter
+## <a name="event-log-parameters"></a>Ereignisprotokollparameter
 
 Dieses Thema enthält Parameter, die für das Ereignisprotokoll verwendet werden.
 
 JET_paramEventLogCache  
-Dieser Parameter steuert die Größe (in Bytes) eines EventLog-Nachrichten Caches, der Ereignisprotokoll Meldungen enthält, die von der Datenbank-Engine ausgegeben werden, während der EventLog-Dienst beendet wird. Diese zwischengespeicherten Nachrichten werden in das Ereignisprotokoll geleert, wenn der Dienst betriebsbereit ist. Alle Nachrichten, die den Cache überlaufen, werden gelöscht.
+Dieser Parameter steuert die Größe (in Bytes) eines Ereignisprotokoll-Nachrichtencaches, der ereignisprotokollierte Nachrichten enthält, die von der Datenbank-Engine ausgegeben werden, während der Eventlog-Dienst beendet wird. Diese zwischengespeicherten Nachrichten werden in das Ereignisprotokoll geleert, wenn der Dienst betriebsbereit wird. Alle Nachrichten, die über den Cache überlaufen, werden gelöscht.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 – 2147483647</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Global</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>0</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0 – 2147483647</p> | | <p>Umfang:</p> | <p>Global</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Nein</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Ja</p> | | <p>Verfügbarkeit:</p> | <p>All</p> | 
+
 
 
 *JET_paramEventLoggingLevel*  
   
-Dieser Parameter konfiguriert die Detailebene von EventLog-Nachrichten, die von der Datenbank-Engine an das Ereignisprotokoll ausgegeben werden. Höhere Zahlen führen zu ausführlicheren Ereignisprotokoll Meldungen.
+Dieser Parameter konfiguriert die Detailebene von Ereignisprotokollmeldungen, die von der Datenbank-Engine an das Ereignisprotokoll ausgegeben werden. Eine höhere Anzahl führt zu ausführlicheren Ereignisprotokollmeldungen.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>JET_EventLoggingLevelMax</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>JET_EventLoggingDisable – JET_EventLoggingLevelMax</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>JET_EventLoggingLevelMax</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>JET_EventLoggingDisable – JET_EventLoggingLevelMax</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Windows XP und spätere Versionen</p> | 
+
 
 
 *JET_paramEventSource*  
 4  
 
-Dieser Parameter stellt eine anwendungsspezifische Zeichenfolge bereit, die allen Ereignisprotokoll Meldungen hinzugefügt wird, die von der Datenbank-Engine ausgegeben werden. Dies ermöglicht eine einfache Korrelation von Ereignisprotokoll Meldungen mit der Quell Anwendung. Wenn eine leere Zeichenfolge (wie die Standardeinstellung) angegeben wird, wird der Name der ausführbaren Datei der Host Anwendung verwendet.
+Dieser Parameter stellt eine anwendungsspezifische Zeichenfolge zur Verfügung, die allen Ereignisprotokollmeldungen hinzugefügt wird, die von der Datenbank-Engine ausgegeben werden. Dies ermöglicht eine einfache Korrelation von Ereignisprotokollmeldungen mit der Quellanwendung. Wenn eine leere Zeichenfolge angegeben wird (wie die Standardeinstellung), wird der Name der ausführbaren Hostanwendung verwendet.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>&quot;&quot;</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>String</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 – 259 Zeichen</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>""</p> | | <p>Typ:</p> | <p>String</p> | | <p>Gültiger Bereich:</p> | <p>0 bis 259 Zeichen</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>All</p> | 
+
 
 
 *JET_paramEventSourceKey*  
 49  
 
-Dieser Parameter kann verwendet werden, um zu steuern, welches Ereignisprotokoll die Datenbank-Engine für die Ereignisprotokoll Nachrichten verwendet. Standardmäßig werden alle Ereignisprotokoll Meldungen an das Anwendungs Ereignisprotokoll gesendet. Wenn der Registrierungsschlüssel Name für ein anderes Ereignisprotokoll konfiguriert ist, werden stattdessen die Ereignisprotokoll Meldungen angezeigt.
+Dieser Parameter kann verwendet werden, um zu steuern, welches Ereignisprotokoll die Datenbank-Engine für ihre Ereignisprotokollmeldungen verwendet. Standardmäßig werden alle Ereignisprotokollmeldungen an das Anwendungsereignisprotokoll gesendet. Wenn der Registrierungsschlüsselname für ein anderes Ereignisprotokoll konfiguriert ist, werden stattdessen die Ereignisprotokollmeldungen dort angezeigt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>&quot;&quot;</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>String</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 – 259 Zeichen</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>""</p> | | <p>Typ:</p> | <p>String</p> | | <p>Gültiger Bereich:</p> | <p>0 bis 259 Zeichen</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Leistung aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf Ressourcen aus:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>All</p> | 
+
 
 
 *JET_paramNoInformationEvent*  
 50  
 
-Wenn dieser Parameter true ist, werden Informations Ereignisprotokoll Meldungen, die normalerweise von der Datenbank-Engine generiert werden, unterdrückt.
+Wenn dieser Parameter true ist, werden Informationsereignisprotokollmeldungen, die normalerweise von der Datenbank-Engine generiert werden, unterdrückt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>False</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Boolean</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>False, True</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Alle</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>False</p> | | <p>Typ:</p> | <p>Boolesch</p> | | <p>Gültiger Bereich:</p> | <p>False, True</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Leistung aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf Ressourcen aus:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>All</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)

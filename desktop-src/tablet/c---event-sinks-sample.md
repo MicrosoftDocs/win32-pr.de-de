@@ -1,26 +1,26 @@
 ---
-description: Dieses Programm veranschaulicht, wie Sie eine Anwendung erstellen können, die InkCollector-Ereignisse nur mit C++ aufzeichnet. Dieses Programm erstellt ein InkCollector-Objekt, um das Fenster frei zu aktivieren. Es wird immer dann ein Meldungs Feld angezeigt, wenn ein Stroke-Ereignis empfangen wird.
+description: Dieses Programm veranschaulicht, wie Sie eine Anwendung erstellen können, die InkCollector-Ereignisse nur mit C++ erfasst. Dieses Programm erstellt gemeinsam ein InkCollector-Objekt, um das Fenster zu aktivieren. Jedes Mal, wenn ein Stroke-Ereignis empfangen wird, wird ein Meldungsfeld angezeigt.
 ms.assetid: 91450559-ae47-457a-a709-b4e4e78bde22
-title: C++ Event senken-Beispiel
+title: Beispiel für C++-Ereignissenken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e950254293b676088d8b281624c089b098e5dca8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b24cb718eb0d16830c285691ac5cfedf66d572f447870dc0219beb14c04548a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111130"
 ---
-# <a name="c-event-sinks-sample"></a>C++ Event senken-Beispiel
+# <a name="c-event-sinks-sample"></a>Beispiel für C++-Ereignissenken
 
-Dieses Programm veranschaulicht, wie Sie eine Anwendung erstellen können, die InkCollector-Ereignisse nur mit C++ aufzeichnet. Dieses Programm erstellt ein [**InkCollector**](inkcollector-class.md) -Objekt, um das Fenster frei zu aktivieren. Es wird immer dann ein Meldungs Feld angezeigt, wenn ein [**Stroke**](inkcollector-stroke.md) -Ereignis empfangen wird.
+Dieses Programm veranschaulicht, wie Sie eine Anwendung erstellen können, die InkCollector-Ereignisse nur mit C++ erfasst. Dieses Programm erstellt gemeinsam ein [**InkCollector-Objekt,**](inkcollector-class.md) um das Fenster zu aktivieren. Jedes Mal, wenn ein [**Stroke-Ereignis**](inkcollector-stroke.md) empfangen wird, wird ein Meldungsfeld angezeigt.
 
-## <a name="defining-a-wrapper-for-ink-collector-events"></a>Definieren eines Wrappers für frei Hand Sammler Ereignisse
+## <a name="defining-a-wrapper-for-ink-collector-events"></a>Definieren eines Wrappers für Ink Collector-Ereignisse
 
-Die- `InkCollectorEvents` Klasse verarbeitet die Übergabe von Ink Collector-Ereignissen vom Ink Collector an den Benutzer dieser Klasse. Die `AdviseInkCollector` -Methode richtet die Verbindung zwischen dem [**InkCollector**](inkcollector-class.md) -Objekt und dieser Klasse ein. Die- `Invoke` Methode konvertiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Ereignis Benachrichtigung in einen-Befehl für eine virtuelle Funktion, die der Benutzer dieser Klasse außer Kraft setzen kann, um ein bestimmtes Ereignis zu verarbeiten.
+Die `InkCollectorEvents` -Klasse behandelt die Übergabe von Ink-Collectorereignissen vom Ink-Collector an den Benutzer dieser Klasse. Die `AdviseInkCollector` -Methode richtet die Verbindung zwischen dem [**InkCollector-Objekt**](inkcollector-class.md) und dieser Klasse ein. Die `Invoke` -Methode konvertiert die [**IDispatch-Ereignisbenachrichtigung**](/windows/win32/api/oaidl/nn-oaidl-idispatch) in einen Aufruf einer virtuellen Funktion, die der Benutzer dieser Klasse überschreiben kann, um ein bestimmtes Ereignis zu verarbeiten.
 
 > [!Note]  
-> Sie müssen mehr als die virtuelle Funktion für einen Ereignishandler überschreiben, um dieses Ereignis zu erhalten. Für alle außer Standard Ereignisse müssen Sie [**die Methode "**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-seteventinterest) Methode" von Ink Collector aufrufen, um ein Ereignis zu gewährleisten. Zweitens marshallte dieses Objekt selbst einen frei Hand Thread, sodass alle implementierten Ereignishandler ebenfalls frei Thread sein müssen. Besonders wichtig ist die Verwendung von Windows-APIs, die einen Wechsel zu einem anderen Thread verursachen können, da der Ereignishandler nicht sicher ist, dass er im gleichen Thread ausgeführt wird wie das Fenster, das mit dem Ink Collector verbunden ist.
+> Sie müssen mehr als die virtuelle Funktion für einen Ereignishandler überschreiben, um dieses Ereignis zu erhalten. Bei allen Standardereignissen müssen Sie die [**SetEventInterest-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-seteventinterest) des Ink-Collectors aufrufen, um das Abrufen eines Ereignisses zu gewährleisten. Zweitens marshallt sich dieses Objekt selbst als free threaded, sodass auch alle implementierten Ereignishandler frei gethreadt werden müssen. Von besonderer Bedeutung ist die Verwendung von Windows-APIs. Dies kann dazu führen, dass ein Wechsel zu einem anderen Thread ausgeführt wird, da nicht garantiert wird, dass der Ereignishandler im selben Thread ausgeführt wird wie das Fenster, das mit dem Ink-Collector verbunden ist.
 
  
 
@@ -65,7 +65,7 @@ virtual void Stroke(
 
 
 
-Die- `Init` Methode ruft [cofroatefreethreadedmarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler) auf, um einen kostenlosen Thread-Mars Haller einzurichten.
+Die `Init` -Methode ruft [CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler) auf, um einen Marshaller mit freiem Thread zu erstellen.
 
 
 ```C++
@@ -78,7 +78,7 @@ HRESULT Init()
 
 
 
-Die `AdviseInkCollector` -Methode richtet die Verbindung zwischen dem [**InkCollector**](inkcollector-class.md) -Objekt und dieser Klasse ein. Zuerst wird ein Verbindungspunkt an den frei Hand Sammler abgerufen. Anschließend wird ein Zeiger auf das-Element abgerufen `IInkCollectorEvents` , um eine Beratungs Verbindung mit dem Steuerelement herstellen zu können.
+Die `AdviseInkCollector` -Methode richtet die Verbindung zwischen dem [**InkCollector-Objekt**](inkcollector-class.md) und dieser Klasse ein. Zuerst wird ein Verbindungspunkt zum Ink-Collector abgerufen. Anschließend wird ein Zeiger auf die abgerufen, damit eine Beratungsverbindung mit dem `IInkCollectorEvents` Steuerelement hergestellt werden kann.
 
 
 ```C++
@@ -113,7 +113,7 @@ HRESULT AdviseInkCollector(
 
 
 
-Die- `UnadviseInkCollector` Methode gibt die Verbindungen frei, die das-Objekt für das Steuerelement besitzt.
+Die `UnadviseInkCollector` -Methode gibt die Verbindungen frei, die das -Objekt mit dem -Steuerelement hat.
 
 
 ```C++
@@ -128,9 +128,9 @@ m_pIConnectionPoint = NULL;
 
 
 
-## <a name="defining-an-ink-collector-events-handler"></a>Definieren eines Ink Collector-Ereignis Handlers
+## <a name="defining-an-ink-collector-events-handler"></a>Definieren eines Ink Collector-Ereignishandlers
 
-Die cmyinkevents-Klasse überschreibt das Standardverhalten des [**Stroke**](inkcollector-stroke.md) -Ereignis Handlers der inkcollectorevents-Klasse. Die Stroke-Methode zeigt ein Meldungs Feld an, wenn [**InkCollector**](inkcollector-class.md) ein **Stroke** -Ereignis empfängt.
+Die CMyInkEvents-Klasse überschreibt das [](inkcollector-stroke.md) Standardverhalten des Stroke-Ereignishandlers der InkCollectorEvents-Klasse. Die Stroke-Methode zeigt ein Meldungsfeld an, wenn [**der InkCollector**](inkcollector-class.md) ein **Stroke-Ereignis** empfängt.
 
 
 ```C++
@@ -166,9 +166,9 @@ public:
 
 
 
-## <a name="defining-an-ink-collector-wrapper"></a>Definieren eines Ink Collector-Wrapper
+## <a name="defining-an-ink-collector-wrapper"></a>Definieren eines Ink Collector Wrappers
 
-Die Init-Methode der cmyinkcollector-Klasse deklariert und initialisiert ein cmyinkevents-Objekt. Anschließend wird ein [**InkCollector**](inkcollector-class.md) -Objekt erstellt und der Ink Collector und der Ereignishandler zugeordnet. Schließlich wird der **InkCollector** an das Fenster angefügt und aktiviert.
+Die Init-Methode der CMyInkCollector-Klasse deklariert und initialisiert ein CMyInkEvents-Objekt. Anschließend wird ein [**InkCollector-Objekt**](inkcollector-class.md) erstellt und der Ink-Collector und der Ereignishandler verknüpft. Schließlich wird **der InkCollector** an das Fenster angefügt und aktiviert.
 
 
 ```C++
@@ -208,9 +208,9 @@ HWND hWnd)
 
 
 
-## <a name="accessing-the-tablet-pc-interfaces-and-the-wrapper-classes"></a>Zugreifen auf die Tablet PC-Schnittstellen und die Wrapper Klassen
+## <a name="accessing-the-tablet-pc-interfaces-and-the-wrapper-classes"></a>Zugreifen auf die Tablet PC-Schnittstellen und die Wrapperklassen
 
-Fügen Sie zunächst die Header für die Schnittstellen von Tablet PC Automation ein. Diese werden mit dem Microsoft <entity type="reg"/> Windows <entity type="reg"/> XP Tablet PC Edition Development Kit 1,7 installiert.
+Schließen Sie zunächst die Header für Tablet PC Automation-Schnittstellen ein. Diese werden mit dem Microsoft <entity type="reg"/> Windows XP Tablet PC Edition Development Kit <entity type="reg"/> 1.7 installiert.
 
 
 ```C++
@@ -220,7 +220,7 @@ Fügen Sie zunächst die Header für die Schnittstellen von Tablet PC Automation
 
 
 
-Fügen Sie dann die Header für die Wrapper Klassen und den Ereignishandler für [**InkCollector**](inkcollector-class.md) fest.
+Schließen Sie dann die Header für die Wrapperklassen ein, und [**der InkCollector-Ereignishandler**](inkcollector-class.md) wurde definiert.
 
 
 ```C++
@@ -230,9 +230,9 @@ Fügen Sie dann die Header für die Wrapper Klassen und den Ereignishandler für
 
 
 
-## <a name="calling-the-wrapper-classes"></a>Aufrufen der Wrapper Klassen
+## <a name="calling-the-wrapper-classes"></a>Aufrufen der Wrapperklassen
 
-Wenn das Fenster erstellt wird, erstellt die Fenster Prozedur einen Ink Collector-Wrapper und initialisiert den Wrapper. Wenn das Fenster zerstört wird, löscht die Fenster Prozedur den Ink Collector-Wrapper. Der Ink Collector-Wrapper übernimmt das Erstellen und Löschen des zugehörigen Ereignis Handlers.
+Wenn das Fenster erstellt wird, erstellt die Window-Prozedur einen Ink Collector-Wrapper und initialisiert den Wrapper. Wenn das Fenster zerstört wird, löscht die Window-Prozedur den Wrapper für den Ink-Collector. Der Wrapper für den Ink-Collector verarbeitet das Erstellen und Löschen des zugehörigen Ereignishandlers.
 
 
 ```C++

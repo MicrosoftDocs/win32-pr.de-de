@@ -1,5 +1,5 @@
 ---
-description: Basis jeder Anforderung, die abgebrochen werden kann. Abgebrochene Anforderungen können nur abgebrochen werden, wenn sie sich noch in der Warteschlange befinden, sodass ein Abbricht möglicherweise ignoriert wird.
+description: Basis jeder Anforderung, die abgebrochen werden kann. Abgebrochene Anforderungen können nur abgebrochen werden, wenn sie sich noch in der Warteschlange befinden, sodass ein Abbruch ignoriert werden kann.
 MS-HAID: vspixengine.IPixCancelableRequest
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,24 +17,24 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d2264107889b5cb9cd46478075cca3ed5943890cbc85dcbea0a934ebeefb5bc6
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 9c8fd3d612a22e249572af0bae13bc7286fad38e
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119892490"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623546"
 ---
 # <a name="span-idvspixengineipixcancelablerequestspanipixcancelablerequest-interface"></a><span id="vspixengine.ipixcancelablerequest"></span>IPixCancelableRequest-Schnittstelle
 
-Basis jeder Anforderung, die abgebrochen werden kann. Abgebrochene Anforderungen können nur abgebrochen werden, wenn sie sich noch in der Warteschlange befinden, sodass ein Abbricht möglicherweise ignoriert wird.
+Basis jeder Anforderung, die abgebrochen werden kann. Abgebrochene Anforderungen können nur abgebrochen werden, wenn sie sich noch in der Warteschlange befinden, sodass ein Abbruch ignoriert werden kann.
 
 ## <a name="members"></a>Member
 
-Die **IPixCancelableRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
+Die **IPixCancelableRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

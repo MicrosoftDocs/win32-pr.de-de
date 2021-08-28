@@ -4,12 +4,12 @@ ms.assetid: 48527c4e-50fb-4800-ac87-1646234783ba
 title: Background-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46388d56c04fc24ecd578788eecf9926ef01a301
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 4896266887a075fed41a01d2e4493c417d2e01560f4537e272db28aacef820e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111280"
 ---
 # <a name="background-element"></a>Background-Element
 
@@ -46,7 +46,7 @@ Enthält den Hintergrund für ein [**JournalDocument-Element**](journaldocument-
 <th>attribute</th>
 <th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 <th>Mögliche Werte</th>
 </tr>
 </thead>
@@ -57,7 +57,7 @@ Enthält den Hintergrund für ein [**JournalDocument-Element**](journaldocument-
 <td>Erforderlich</td>
 <td>Gibt den Stil des Hintergrunds an.</td>
 <td><ul>
-<li>Ohne</li>
+<li>Keine</li>
 <li>Basis</li>
 </ul></td>
 </tr>

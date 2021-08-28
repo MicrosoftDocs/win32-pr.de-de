@@ -1,47 +1,47 @@
 ---
-title: VML-shininess-Attribut
-description: VML-shininess-Attribut
+title: VML-Überlänzungsattribut
+description: VML-Überlänzungsattribut
 ms.assetid: 99c301ff-ed61-48ef-95bb-ceaed1a2553c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7a116adeb955c0f3449b374947a3f8121bd848e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0dea0abba3f605f749e07d247d207a50a6fe7b247ec54bd88024bad3915285e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099050"
 ---
-# <a name="vml-shininess-attribute"></a>VML-shininess-Attribut
+# <a name="vml-shininess-attribute"></a>VML-Überlänzungsattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Konzentration des reflektierten Lichts auf einer-extrusionfläche. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert die Konzentration des reflektierten Lichts auf einerExtrusionsoberfläche. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* shininess = " *Ausdruck* " >
+<o: *elementiness="* *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . shininess = "*Ausdruck*"
+*element* .iness="*expression*"
 
-*Ausdruck* = *Element*. shininess
+*expression* = *Element*".iness"
 
 **Anmerkungen**
 
-Hohe Werte (8-10) würden den Glanz eines Spiegels angleichen, und niedrige Werte (2-3) würden einen gespesten Effekt angleichen. Die Werte 4-7 sind typisch. Reflektionen spiegeln keine anderen Objekte wider. nur PinPoint-Lichtquellen werden reflektiert. Der Standardwert ist 5.
+Hohe Werte (8-10) würden der Schläfrigkeit eines Spiegels und niedrigen Werten (2-3) einem gespiegelten Effekt ungefähren. Werte von 4 bis 7 sind typisch. Reflektionen spiegeln keine anderen Objekte wider. es werden nur punktgenaue Lichtquellen reflektiert. Der Standardwert ist 5.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

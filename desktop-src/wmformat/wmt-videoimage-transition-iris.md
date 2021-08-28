@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_IRIS (wmsdkidl. h)
-description: Der Iris-Übergang zeigt das neue Bild entlang einer x-Achse und einer y-Achse an. Der visuelle Effekt dieses Übergangs besteht darin, dass das neue Bild in einem erweiternden quer Sprung zu allen Seiten des Frames angezeigt wird.
+title: WMT_VIDEOIMAGE_TRANSITION_IRIS (Wmsdkidl.h)
+description: Der Irisübergang zeigt das neue Bild entlang einer x-Achse und einer y-Achse an. Der visuelle Effekt dieses Übergangs ist, dass das neue Bild in einem erweiternden Kreuz angezeigt wird, das alle Seiten des Frames erreicht.
 ms.assetid: 7390d959-a566-43e7-937d-1e617bc98a6e
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_IRIS Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_IRIS Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,68 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd216c7387f850f317417717c50216dd63449843
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 919af0b15ef8a7437c9852df3ff12623553cdabf
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372141"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472966"
 ---
-# <a name="wmt_videoimage_transition_iris"></a>WMT \_ Videoimage- \_ Übergangs \_ IRIS
+# <a name="wmt_videoimage_transition_iris"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ IRIS
 
-Der Iris-Übergang zeigt das neue Bild entlang einer x-Achse und einer y-Achse an. Der visuelle Effekt dieses Übergangs besteht darin, dass das neue Bild in einem erweiternden quer Sprung zu allen Seiten des Frames angezeigt wird.
+Der Irisübergang zeigt das neue Bild entlang einer x-Achse und einer y-Achse an. Der visuelle Effekt dieses Übergangs ist, dass das neue Bild in einem erweiternden Kreuz angezeigt wird, das alle Seiten des Frames erreicht.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Strukturmember</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>X zentrieren</td>
-<td><strong>fEffectPara0</strong></td>
-<td>X-Koordinate relativ zum Videorahmen der Mitte des IRIS-Effekts.</td>
-</tr>
-<tr class="even">
-<td>Y zentrieren</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Y-Koordinate relativ zum Videorahmen der Mitte des Schwert Effekts.</td>
-</tr>
-<tr class="odd">
-<td>Breite</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Breite der vertikalen Linie, die das neue Bild offenbart, in Pixel.</td>
-</tr>
-<tr class="even">
-<td>Höhe</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Höhe der horizontalen Linie, die das neue Bild aufzeigt, in Pixel.</td>
-</tr>
-<tr class="odd">
-<td>Aufbau</td>
-<td><strong>fEffectPara4</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
-<ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt die umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild der Vordergrund.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Strukturmember | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| X zentrieren | <strong>fEffectPara0</strong> | X-Koordinate relativ zum Videorahmen der Mitte des Iriseffekts. | 
+| Y zentrieren | <strong>fEffectPara1</strong> | Y-Koordinate relativ zum Videorahmen der Mitte des Iriseffekts. | 
+| Breite | <strong>fEffectPara2</strong> | Breite der vertikalen Linie, die das neue Bild in Pixel angibt. | 
+| Höhe | <strong>fEffectPara3</strong> | Höhe der horizontalen Linie, die das neue Bild in Pixel angibt. | 
+| Aufbau | <strong>fEffectPara4</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 
@@ -87,15 +51,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

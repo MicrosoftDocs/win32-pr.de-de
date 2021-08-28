@@ -1,7 +1,7 @@
 ---
-description: Die Struktur von Monitor \_ Info \_ 2 identifiziert einen Monitor.
+description: Die MONITOR \_ INFO \_ 2-Struktur identifiziert einen Monitor.
 ms.assetid: 4dd1ca15-6983-403e-8159-1a6d35a88162
-title: MONITOR_INFO_2 Struktur (winspool. h)
+title: MONITOR_INFO_2-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 9d3ad70a0728ca6e73c4dbefb248df58e858a996
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c01377740c77ef4cb2be15e785b9ea3e93449944c11f2014ed660d8c3e3245b7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112330"
 ---
-# <a name="monitor_info_2-structure"></a>Überwachen der \_ Info \_ 2-Struktur
+# <a name="monitor_info_2-structure"></a>MONITOR \_ INFO \_ 2-Struktur
 
-Die Struktur von **Monitor \_ Info \_ 2** identifiziert einen Monitor.
+Die **MONITOR \_ INFO \_ 2-Struktur** identifiziert einen Monitor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ typedef struct _MONITOR_INFO_2 {
 **pName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Monitors ist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die dem Namen des Monitors entspricht.
 
 </dd> <dt>
 
-**nach-oben**
+**pEnvironment**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die die Umgebung angibt, für die der Monitor geschrieben wurde (z. b. Windows NT x86, Windows ia64, Windows x64).
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die Umgebung angibt, für die der Monitor geschrieben wurde (z. B. Windows NT x86, Windows IA64, Windows x64).
 
 </dd> <dt>
 
-**pdllname**
+**pDLLName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die der Name der Monitor-dll ist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die dem Namen der Monitor-DLL entspricht.
 
 </dd> </dl>
 
@@ -72,8 +72,8 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die der Name der Monitor-dll 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Monitor \_ Info \_ 2W** (Unicode) und **\_ Monitor \_ Info \_ 2a** (ANSI)<br/>                           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ MONITOR \_ INFO \_ 2W** (Unicode) und **\_ MONITOR INFO \_ \_ 2A** (ANSI)<br/>                           |
 
 
 
@@ -84,16 +84,16 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die der Name der Monitor-dll 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Addmonitor**](addmonitor.md)
+[**AddMonitor**](addmonitor.md)
 </dt> <dt>
 
-[**Enumüberwachungen**](enummonitors.md)
+[**EnumMonitors**](enummonitors.md)
 </dt> <dt>
 
-[**Überwachen von \_ Informationen \_ 1**](monitor-info-1.md)
+[**MONITOR \_ INFO \_ 1**](monitor-info-1.md)
 </dt> </dl>
 
  

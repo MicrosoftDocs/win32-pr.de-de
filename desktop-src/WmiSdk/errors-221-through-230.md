@@ -1,20 +1,20 @@
 ---
-description: Beschreibt die Fehler 221 bis 230 des WMI-SNMP-Anbieters.
+description: Beschreibt die WMI-SNMP-Anbieterfehler 221 bis 230.
 ms.assetid: 50ca7a6b-2367-464b-98af-b65b0fab42c4
 ms.tgt_platform: multiple
 title: Fehler 221 bis 230
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e250430efb20af40445e11a67059a31c838eb36ddfb57b1d3d52e29e66074b2
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 462ed4786cc1f8be962a6e22556fdd39cc976b17
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119131422"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887234"
 ---
 # <a name="errors-221-through-230"></a>Fehler 221 bis 230
 
-Beschreibt die Fehler 221 bis 230 des WMI-SNMP-Anbieters.
+Beschreibt die WMI-SNMP-Anbieterfehler 221 bis 230.
 
 [Schwerwiegender Fehler 222](#fatal-error-222)
 
@@ -38,10 +38,10 @@ Beschreibt die Fehler 221 bis 230 des WMI-SNMP-Anbieters.
 
 <dl> <dt>
 
-<span id="_222__Fatal_____fileName___line____NOTIFICATION-TYPE_not_allowed_in_SNMPv1_SMI_"></span><span id="_222__fatal_____filename___line____notification-type_not_allowed_in_snmpv1_smi_"></span><span id="_222__FATAL_____FILENAME___LINE____NOTIFICATION-TYPE_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<222, Fatal>: <fileName> ":<line \#>: NOTIFICATION-TYPE not allowed in SNMPv1 SMI"**
+<span id="_222__Fatal_____fileName___line____NOTIFICATION-TYPE_not_allowed_in_SNMPv1_SMI_"></span><span id="_222__fatal_____filename___line____notification-type_not_allowed_in_snmpv1_smi_"></span><span id="_222__FATAL_____FILENAME___LINE____NOTIFICATION-TYPE_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<222, Fatal>: " &lt; fileName &gt; :<line \#>: NOTIFICATION-TYPE not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben den SNMPv2C-spezifischen NOTIFICATION-TYPE in MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben den SNMPv2C-spezifischen NOTIFICATION-TYPE im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -49,10 +49,10 @@ Modulsyntaxfehler. Sie haben den SNMPv2C-spezifischen NOTIFICATION-TYPE in MIB v
 
 <dl> <dt>
 
-<span id="_223__Fatal_____fileName___line____MODULE-IDENTITY_not_allowed_in_SNMPv1_SMI_"></span><span id="_223__fatal_____filename___line____module-identity_not_allowed_in_snmpv1_smi_"></span><span id="_223__FATAL_____FILENAME___LINE____MODULE-IDENTITY_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<223, Fatal>: <fileName> ":<line \#>: MODULE-IDENTITY not allowed in SNMPv1 SMI"**
+<span id="_223__Fatal_____fileName___line____MODULE-IDENTITY_not_allowed_in_SNMPv1_SMI_"></span><span id="_223__fatal_____filename___line____module-identity_not_allowed_in_snmpv1_smi_"></span><span id="_223__FATAL_____FILENAME___LINE____MODULE-IDENTITY_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<223, Fatal>: " &lt; fileName &gt; :<line \#>: MODULE-IDENTITY not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULIDENTITÄT in mib verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULIDENTITÄT im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -60,10 +60,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULIDENTITÄT in mib verw
 
 <dl> <dt>
 
-<span id="_224__Fatal_____fileName___line____OBJECT-IDENTITY_not_allowed_in_SNMPv1_SMI_"></span><span id="_224__fatal_____filename___line____object-identity_not_allowed_in_snmpv1_smi_"></span><span id="_224__FATAL_____FILENAME___LINE____OBJECT-IDENTITY_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<224, Fatal>: <fileName> ":<line \#>: OBJECT-IDENTITY not allowed in SNMPv1 SMI"**
+<span id="_224__Fatal_____fileName___line____OBJECT-IDENTITY_not_allowed_in_SNMPv1_SMI_"></span><span id="_224__fatal_____filename___line____object-identity_not_allowed_in_snmpv1_smi_"></span><span id="_224__FATAL_____FILENAME___LINE____OBJECT-IDENTITY_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<224, Fatal>: " &lt; fileName &gt; :<line \#>: OBJECT-IDENTITY not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-IDENTITY in MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-IDENTITY im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-IDENTITY in MIB verw
 
 <dl> <dt>
 
-<span id="_225__Fatal_____fileName___line____TEXTUAL-CONVENTION_not_allowed_in_SNMPv1_SMI_"></span><span id="_225__fatal_____filename___line____textual-convention_not_allowed_in_snmpv1_smi_"></span><span id="_225__FATAL_____FILENAME___LINE____TEXTUAL-CONVENTION_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<225, Fatal>: <fileName> ":<line \#>: TEXTUAL-CONVENTION not allowed in SNMPv1 SMI"**
+<span id="_225__Fatal_____fileName___line____TEXTUAL-CONVENTION_not_allowed_in_SNMPv1_SMI_"></span><span id="_225__fatal_____filename___line____textual-convention_not_allowed_in_snmpv1_smi_"></span><span id="_225__FATAL_____FILENAME___LINE____TEXTUAL-CONVENTION_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<225, Fatal>: " &lt; fileName &gt; :<line \#>: TEXTUAL-CONVENTION not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische TEXTUAL-CONVENTION in mib verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische TEXTUAL-CONVENTION im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -82,10 +82,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische TEXTUAL-CONVENTION in mib v
 
 <dl> <dt>
 
-<span id="_226__Fatal_____fileName___line____OBJECT-GROUP_not_allowed_in_SNMPv1_SMI_"></span><span id="_226__fatal_____filename___line____object-group_not_allowed_in_snmpv1_smi_"></span><span id="_226__FATAL_____FILENAME___LINE____OBJECT-GROUP_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<226, Fatal>: <fileName> ":<line \#>: OBJECT-GROUP not allowed in SNMPv1 SMI"**
+<span id="_226__Fatal_____fileName___line____OBJECT-GROUP_not_allowed_in_SNMPv1_SMI_"></span><span id="_226__fatal_____filename___line____object-group_not_allowed_in_snmpv1_smi_"></span><span id="_226__FATAL_____FILENAME___LINE____OBJECT-GROUP_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<226, Fatal>: " &lt; fileName &gt; :<line \#>: OBJECT-GROUP not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-GROUP in der MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-GROUP im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -93,10 +93,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische OBJECT-GROUP in der MIB ver
 
 <dl> <dt>
 
-<span id="_227__Fatal_____fileName___line____NOTIFICATION-GROUP_not_allowed_in_SNMPv1_SMI_"></span><span id="_227__fatal_____filename___line____notification-group_not_allowed_in_snmpv1_smi_"></span><span id="_227__FATAL_____FILENAME___LINE____NOTIFICATION-GROUP_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<227, Fatal>: <fileName> ":<line \#>: NOTIFICATION-GROUP not allowed in SNMPv1 SMI"**
+<span id="_227__Fatal_____fileName___line____NOTIFICATION-GROUP_not_allowed_in_SNMPv1_SMI_"></span><span id="_227__fatal_____filename___line____notification-group_not_allowed_in_snmpv1_smi_"></span><span id="_227__FATAL_____FILENAME___LINE____NOTIFICATION-GROUP_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<227, Fatal>: " &lt; fileName &gt; :<line \#>: NOTIFICATION-GROUP not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische NOTIFICATION-GROUP im MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische NOTIFICATION-GROUP im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -104,10 +104,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische NOTIFICATION-GROUP im MIB v
 
 <dl> <dt>
 
-<span id="_228__Fatal_____fileName___line____MODULE-COMPLIANCE_not_allowed_in_SNMPv1_SMI_"></span><span id="_228__fatal_____filename___line____module-compliance_not_allowed_in_snmpv1_smi_"></span><span id="_228__FATAL_____FILENAME___LINE____MODULE-COMPLIANCE_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<228, Fatal>: <fileName> ":<line \#>: MODULE-COMPLIANCE not allowed in SNMPv1 SMI"**
+<span id="_228__Fatal_____fileName___line____MODULE-COMPLIANCE_not_allowed_in_SNMPv1_SMI_"></span><span id="_228__fatal_____filename___line____module-compliance_not_allowed_in_snmpv1_smi_"></span><span id="_228__FATAL_____FILENAME___LINE____MODULE-COMPLIANCE_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<228, Fatal>: " &lt; fileName &gt; :<line \#>: MODULE-COMPLIANCE not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULE-COMPLIANCE in MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULE-COMPLIANCE im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -115,10 +115,10 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifische MODULE-COMPLIANCE in MIB ve
 
 <dl> <dt>
 
-<span id="_229__Fatal_____fileName___line____AGENT-CAPABILITIES_not_allowed_in_SNMPv1_SMI_"></span><span id="_229__fatal_____filename___line____agent-capabilities_not_allowed_in_snmpv1_smi_"></span><span id="_229__FATAL_____FILENAME___LINE____AGENT-CAPABILITIES_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<229, Fatal>: <fileName> ":<line \#>: AGENT-CAPABILITIES not allowed in SNMPv1 SMI"**
+<span id="_229__Fatal_____fileName___line____AGENT-CAPABILITIES_not_allowed_in_SNMPv1_SMI_"></span><span id="_229__fatal_____filename___line____agent-capabilities_not_allowed_in_snmpv1_smi_"></span><span id="_229__FATAL_____FILENAME___LINE____AGENT-CAPABILITIES_NOT_ALLOWED_IN_SNMPV1_SMI_"></span>**<229, Fatal>: " &lt; fileName &gt; :<line \#>: AGENT-CAPABILITIES not allowed in SNMPv1 SMI"**
 </dt> <dd>
 
-Modulsyntaxfehler. Sie haben die SNMPv2C-spezifischen AGENT-FUNKTIONEN im MIB verwendet, aber den Schalter **/v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
+Modulsyntaxfehler. Sie haben die SNMPv2C-spezifischen AGENT-CAPABILITIES im MIB verwendet, aber den **Schalter /v1** angegeben, der eine strikte Übereinstimmung mit der SNMPv1-Syntax erfordert.
 
 </dd> </dl>
 
@@ -126,7 +126,7 @@ Modulsyntaxfehler. Sie haben die SNMPv2C-spezifischen AGENT-FUNKTIONEN im MIB ve
 
 <dl> <dt>
 
-<span id="_230__Warning_____fileName___line______the_wrong_token___used._Assuming________"></span><span id="_230__warning_____filename___line______the_wrong_token___used._assuming________"></span><span id="_230__WARNING_____FILENAME___LINE______THE_WRONG_TOKEN___USED._ASSUMING________"></span>**<230, Warning>: " <fileName> :<line \#>: ' <the wrong token> ' used. Angenommen, '::=' "**
+<span id="_230__Warning_____fileName___line______the_wrong_token___used._Assuming________"></span><span id="_230__warning_____filename___line______the_wrong_token___used._assuming________"></span><span id="_230__WARNING_____FILENAME___LINE______THE_WRONG_TOKEN___USED._ASSUMING________"></span>**<230, Warning>: " &lt; fileName &gt; :<line \#>: ' ' <the wrong token> used. Angenommen, '::=' "**
 </dt> <dd>
 
 Das Token ":=", "::" oder "=" wurde anstelle von "::=" verwendet.

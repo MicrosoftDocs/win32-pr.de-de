@@ -1,19 +1,19 @@
 ---
-description: Das <propertyStore> -Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und weist keine Attribute auf.
+description: Das &lt; &gt; propertyStore-Element gibt einen Satz von Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und verfügt über keine Attribute.
 ms.assetid: 19532C1F-686F-4c14-8BA8-0043E77BE594
 title: propertyStore-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0ff30972a358916e715ff1b374a555c6db24ee6d512d114bcf47f57ac8a1954
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 089e87e6e7bdfa568ffa2e8903f6347cb6dc7b3d
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118452975"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880426"
 ---
 # <a name="propertystore-element-library-schema"></a>propertyStore-Element (Bibliotheksschema)
 
-Das <propertyStore> -Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und weist keine Attribute auf.
+Das &lt; &gt; propertyStore-Element gibt einen Satz von Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und verfügt über keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Das <propertyStore> -Element gibt einen Satz von einer oder mehreren Eigenschaft
 
 ## <a name="remarks"></a>Hinweise
 
-Das <propertyStore> -Element kann über mindestens ein <property> untergeordnetes Element verfügen.
+Das &lt; &gt; propertyStore-Element kann ein oder mehrere untergeordnete &lt; &gt; Eigenschaftenelemente enthalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bibliotheksbeschreibungsschema](library-schema-entry.md)
+[Schema der Bibliotheksbeschreibung](library-schema-entry.md)
 </dt> <dt>
 
 [Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)

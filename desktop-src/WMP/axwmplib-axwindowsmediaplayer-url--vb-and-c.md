@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. URL (Eigenschaft)
-description: Die URL-Eigenschaft ruft den Namen des wieder zugebende Medien Elements ab oder legt ihn fest.
+title: AxWindowsMediaPlayer.URL (Eigenschaft)
+description: Die URL-Eigenschaft ruft den Namen des medienelements ab, das wieder verwendet werden soll, oder legt diesen fest.
 ms.assetid: 521a3b39-efd6-45a7-895b-a9ae69e0bf39
 keywords:
-- URL-Eigenschaften Fenster Media Player
-- URL-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, URL-Eigenschaft
+- URL-Windows Media Player
+- URL-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , URL-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3ed9e601aa581e988bac1a233f06c4f5c552353
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d953f2d85fc1fd83edcd37a491cb2f7cbabc3e3dfaf61e48feb1cd30e6d01934
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123880"
 ---
-# <a name="axwindowsmediaplayerurl-property"></a>AxWindowsMediaPlayer. URL (Eigenschaft)
+# <a name="axwindowsmediaplayerurl-property"></a>AxWindowsMediaPlayer.URL (Eigenschaft)
 
-Die URL-Eigenschaft ruft den Namen des wieder zugebende Medien Elements ab oder legt ihn fest.
+Die URL-Eigenschaft ruft den Namen des medienelements ab, das wieder verwendet werden soll, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +46,19 @@ Public Property URL As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein System. String-Wert, der die URL des Medien Elements ist.
+Eine System.String,die die URL des Medienelements ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nur auf eine URL in einer Sicherheitszone festgelegt werden, die identisch ist oder weniger restriktiv ist als die Sicherheitszone des aufrufenden Programms oder der Webseite.
+Diese Eigenschaft kann nur auf eine URL in einer Sicherheitszone festgelegt werden, die identisch oder weniger restriktiv als die Sicherheitszone des aufrufenden Programms oder der aufrufenden Webseite ist.
 
-Anwendungen, die Medienelemente hinter einer Firewall öffnen, haben eine bessere Leistung, wenn die Adresse anstelle der IP-Adresse mit dem DNS-Namen (Domain Nameserver) angegeben wird.
+Anwendungen, die Medienelemente hinter einer Firewall öffnen, haben eine bessere Leistung, wenn die Adresse mithilfe des DNS-Namens (Domain Name Server) anstelle der IP-Adresse angegeben wird.
 
-Diese Methode kann nicht aus dem Ereignishandlercode aufgerufen werden. Das Aufrufen von **URL** von einem Ereignishandler kann zu unerwarteten Ergebnissen führen.
+Rufen Sie diese Methode nicht aus dem Ereignishandlercode auf. Das **Aufrufen einer URL** von einem Ereignishandler kann zu unerwarteten Ergebnissen führen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel kann der Benutzer eine Mediendatei angeben, indem er einen Dateipfad in ein Textfeld eingegeben hat. Wenn auf eine Schaltfläche geklickt wird, wird die URL-Eigenschaft auf die angegebene Datei festgelegt, und die Datei wird wiedergegeben. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel kann der Benutzer eine Mediendatei angeben, indem er einen Dateipfad in ein Textfeld ein gibt. Wenn auf eine Schaltfläche geklickt wird, wird die URL-Eigenschaft auf die angegebene Datei festgelegt, und die Datei wird abgespielt. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -96,7 +96,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -106,7 +106,7 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

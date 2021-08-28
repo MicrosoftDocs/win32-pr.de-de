@@ -4,12 +4,12 @@ ms.assetid: a70d8cc8-af47-4472-aabc-97481d97080d
 title: Befehlszeilenoptionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 287b5711468217105846a13496a23794235bbcfdfcbd0e79278aaba17e7c0341
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d4a45d59922a6c2c1d6cd0b5f8cd61b393944e23
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118380314"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880628"
 ---
 # <a name="command-line-options"></a>Befehlszeilenoptionen
 
@@ -21,9 +21,9 @@ Die Befehlszeilenoptionen in der folgenden Tabelle sind mit Windows Installer 3.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -76,17 +76,17 @@ Weitere Informationen zu allen Methoden, die zum Festlegen des Protokollierungsm
 Die Länge des <em>Dateinamens</em> darf nicht mehr als acht Zeichen umfassen.
 </blockquote>
 <br/></td>
-<td>Generiert eine MIF-Datei mit dem SMS-Status. Muss entweder mit den Optionen install (-i), remove (-x), administrative installation (-a) oder reinstall (-f) verwendet werden. Die ISMIF32.DLL wird als Teil von SMS installiert und muss sich im Pfad befindet.<br/> Die Felder der Mif-Statusdatei werden mit den folgenden Informationen gefüllt:<br/> Hersteller – <a href="author-summary.md"> <strong>Autor</strong></a><br/> Produkt – <a href="revision-number-summary.md"> <strong>Revisionsnummer</strong></a><br/> Version – <a href="subject-summary.md"> <strong>Betreff</strong></a><br/> Locale : <a href="template-summary.md"> <strong>Vorlage</strong></a><br/> Seriennummer – nicht festgelegt<br/> Installation– durch Festlegen von ISMIF32.DLL &quot; auf DateTime&quot;<br/> InstallStatus – &quot; Erfolg &quot; oder &quot; Fehler&quot;<br/> Beschreibung: Fehlermeldungen in der folgenden Reihenfolge: 1) Vom Installationsprogramm generierte Fehlermeldungen. 2) Ressource aus Msi.dll, wenn die Installation nicht beginnen oder der Benutzer beendet werden konnte. 3) Systemfehlermeldungsdatei. 4) Formatierte Meldung: &quot; Installationsprogrammfehler %i , wobei %i ein Fehler ist, der von der &quot; Msi.dll.<br/></td>
+<td>Generiert eine MIF-Datei mit dem SMS-Status. Muss entweder mit den Optionen install (-i), remove (-x), administrative installation (-a) oder reinstall (-f) verwendet werden. Der ISMIF32.DLL wird als Teil von SMS installiert und muss sich im Pfad befindet.<br/> Die Felder der Mif-Statusdatei werden mit den folgenden Informationen gefüllt:<br/> Hersteller – <a href="author-summary.md"> <strong>Autor</strong></a><br/> Produkt – <a href="revision-number-summary.md"> <strong>Revisionsnummer</strong></a><br/> Version – <a href="subject-summary.md"> <strong>Betreff</strong></a><br/> Locale : <a href="template-summary.md"> <strong>Vorlage</strong></a><br/> Seriennummer – nicht festgelegt<br/> Installation: Legen Sie diese ISMIF32.DLL &quot; auf DateTime fest.&quot;<br/> InstallStatus – &quot; Erfolg &quot; oder &quot; Fehler&quot;<br/> Beschreibung: Fehlermeldungen in der folgenden Reihenfolge: 1) Vom Installationsprogramm generierte Fehlermeldungen. 2) Ressource aus Msi.dll, wenn die Installation nicht beginnen oder der Benutzer beendet werden konnte. 3) Systemfehlermeldungsdatei. 4) Formatierte Meldung: &quot; Installationsprogrammfehler %i , wobei %i ein Fehler ist, der von der &quot; Msi.dll.<br/></td>
 </tr>
 <tr class="even">
 <td><strong>/p</strong></td>
 <td><em>PatchPackage[;p atchPackage2</em> ]</td>
-<td>Wendet einen Patch an. Um einen Patch auf ein installiertes administratives Image anzuwenden, müssen Sie die folgenden Optionen kombinieren:<br/> /p <em> <PatchPackage> [;p atchPackage2 ] </em> /a<em><Package></em><br/></td>
+<td>Wendet einen Patch an. Um einen Patch auf ein installiertes administratives Image anzuwenden, müssen Sie die folgenden Optionen kombinieren:<br/> /p <em> &lt; PatchPackage &gt; [;p atchPackage2 ]</em> /a<em><Package></em><br/></td>
 </tr>
 <tr class="odd">
 <td><strong>/q</strong></td>
 <td>n|b|r|f</td>
-<td>Legt die <a href="user-interface-levels.md">Benutzeroberflächenebene fest.</a><br/> q, qn – Keine Benutzeroberfläche<br/> qb – <a href="b-gly.md"><em>Einfache Benutzeroberfläche</em></a>. Verwenden Sie qb! , um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> qr: <a href="r-gly.md"><em>Reduzierte Benutzeroberfläche</em></a> ohne modales Dialogfeld, das am Ende der Installation angezeigt wird.<br/> qf: <a href="f-gly.md"><em>Vollständige Benutzeroberfläche</em></a> und alle am Ende der Modalen Dialogfelder <a href="fatalerror-dialog.md">FatalError,</a> <a href="userexit-dialog.md">UserExit</a>oder <a href="exit-dialog.md">Exit.</a><br/> qn+ – Keine Benutzeroberfläche außer einem modalen Dialogfeld, das am Ende angezeigt wird.<br/> qb+ – <a href="b-gly.md"><em>Einfache Benutzeroberfläche</em></a> mit einem modalen Dialogfeld, das am Ende angezeigt wird. Das modale Feld wird nicht angezeigt, wenn der Benutzer die Installation abbricht. Verwenden Sie qb+! oder qb!+, um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> qb– – <a href="b-gly.md"><em>Einfache Benutzeroberfläche</em></a> ohne modale Dialogfelder. Beachten Sie, dass /qb+- keine unterstützte Benutzeroberflächenebene ist. Verwenden Sie qb-! oder qb!-, um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> Beachten Sie, dass ! -Option ist mit Windows Installer 2.0 verfügbar und funktioniert nur mit der einfachen Benutzeroberfläche. Sie ist bei der vollständigen Benutzeroberfläche ungültig.<br/></td>
+<td>Legt <a href="user-interface-levels.md">die Benutzeroberflächesebene fest.</a><br/> q , qn – Keine Benutzeroberfläche<br/> qb: <a href="b-gly.md"><em>Grundlegende Benutzeroberfläche.</em></a> Verwenden Sie qb! , um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> qr: <a href="r-gly.md"><em>Reduzierte Benutzeroberfläche</em></a> ohne modales Dialogfeld, das am Ende der Installation angezeigt wird.<br/> modal: <a href="f-gly.md"><em>Vollständige Benutzeroberfläche</em></a> und alle erstellten modalen Dialogfelder <a href="fatalerror-dialog.md">"FatalError",</a> <a href="userexit-dialog.md">"UserExit"</a>oder <a href="exit-dialog.md">"Exit"</a> am Ende.<br/> qn+: Keine Benutzeroberfläche außer einem modalen Dialogfeld, das am Ende angezeigt wird.<br/> qb+: <a href="b-gly.md"><em>Einfache Benutzeroberfläche</em></a> mit einem modalen Dialogfeld, das am Ende angezeigt wird. Das modale Feld wird nicht angezeigt, wenn der Benutzer die Installation abbricht. Verwenden Sie qb+! oder qb!+, um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> qb: <a href="b-gly.md"><em>Einfache Benutzeroberfläche</em></a> ohne modale Dialogfelder. Beachten Sie, dass /qb+- keine unterstützte Benutzeroberflächenebene ist. Verwenden Sie qb-! oder qb!- , um die Schaltfläche <strong>Abbrechen</strong> auszublenden.<br/> Beachten Sie, dass die ! -Option ist mit Windows Installer 2.0 verfügbar und funktioniert nur mit der einfachen Benutzeroberfläche. Sie ist mit der vollständigen Benutzeroberfläche ungültig.<br/></td>
 </tr>
 <tr class="even">
 <td><strong>/?</strong> oder <strong>/h</strong></td>
@@ -96,22 +96,22 @@ Die Länge des <em>Dateinamens</em> darf nicht mehr als acht Zeichen umfassen.
 <tr class="odd">
 <td><strong>/y</strong></td>
 <td><em>Modul</em></td>
-<td>Ruft die Systemfunktion <strong>DllRegisterServer auf,</strong> um module, die in der Befehlszeile übergeben werden, selbst zu registrieren. Geben Sie den vollständigen Pfad zur DLL an. Beispielsweise können Sie MY_FILE.DLL im aktuellen Ordner verwenden:<br/> <strong>msiexec /y .\MY_FILE.DLL</strong><br/> Diese Option wird nur für Registrierungsinformationen verwendet, die nicht mithilfe der Registrierungstabellen der .msi werden können.<br/></td>
+<td>Ruft die Systemfunktion <strong>DllRegisterServer</strong> auf, um module, die über die Befehlszeile übergeben werden, selbst zu registrieren. Geben Sie den vollständigen Pfad zur DLL an. Für MY_FILE.DLL im aktuellen Ordner können Sie beispielsweise Folgendes verwenden:<br/> <strong>msiexec /y .\MY_FILE.DLL</strong><br/> Diese Option wird nur für Registrierungsinformationen verwendet, die nicht mithilfe der Registrierungstabellen der .msi-Datei hinzugefügt werden können.<br/></td>
 </tr>
 <tr class="even">
 <td><strong>/z</strong></td>
 <td><em>Modul</em></td>
-<td>Ruft die Systemfunktion <strong>DllUnRegisterServer auf,</strong> um die Registrierung von Modulen zu aufheben, die in der Befehlszeile übergeben werden. Geben Sie den vollständigen Pfad zur DLL an. Beispielsweise können Sie MY_FILE.DLL im aktuellen Ordner verwenden: <br/> <strong>msiexec /z .\MY_FILE.DLL</strong><br/> Diese Option wird nur für Registrierungsinformationen verwendet, die nicht mithilfe der Registrierungstabellen der .msi werden können.<br/></td>
+<td>Ruft die Systemfunktion <strong>DllUnRegisterServer</strong> auf, um die Registrierung der in der Befehlszeile übergebenen Module aufzuheben. Geben Sie den vollständigen Pfad zur DLL an. Für MY_FILE.DLL im aktuellen Ordner können Sie beispielsweise Folgendes verwenden: <br/> <strong>msiexec /z .\MY_FILE.DLL</strong><br/> Diese Option wird nur für Registrierungsinformationen verwendet, die nicht mithilfe der Registrierungstabellen der .msi-Datei entfernt werden können.<br/></td>
 </tr>
 <tr class="odd">
 <td><strong>/c</strong></td>
 
-<td>Gibt eine neue Instanz des Produkts an. Muss in Verbindung mit /t verwendet werden. Verfügbar ab der Windows Installer-Version, die im Lieferumfang von Windows Server 2003 und Windows XP mit Service Pack 1 (SP1) enthalten ist.<br/></td>
+<td>Kündigt eine neue Instanz des Produkts an. Muss in Verbindung mit /t verwendet werden. Verfügbar ab der Windows Installer-Version, die mit Windows Server 2003 und Windows XP mit Service Pack 1 (SP1) ausgeliefert wird.<br/></td>
 </tr>
 <tr class="even">
 <td><strong>/n</strong></td>
 <td><em>ProductCode</em></td>
-<td>Gibt eine bestimmte Instanz des Produkts an. Wird verwendet, um eine Instanz zu identifizieren, die mithilfe der Unterstützung mehrerer Instanzen installiert wurde, indem transformationen durch einen Produktcode geändert werden. Verfügbar ab der Windows Installer-Version, die im Lieferumfang von Windows Server 2003 und Windows XP mit SP1 enthalten ist. <br/></td>
+<td>Gibt eine bestimmte Instanz des Produkts an. Wird verwendet, um eine Instanz zu identifizieren, die mithilfe der Unterstützung mehrerer Instanzen über einen Produktcode installiert wurde, der Transformationen ändert. Verfügbar ab der Windows Installer-Version, die mit Windows Server 2003 und Windows XP mit SP1 ausgeliefert wird. <br/></td>
 </tr>
 </tbody>
 </table>
@@ -120,15 +120,15 @@ Die Länge des <em>Dateinamens</em> darf nicht mehr als acht Zeichen umfassen.
 
  
 
-Die Optionen /i, /x, /f \[ p o e d c a u m s \| v , \| \| \| \| \| \| \| \| \] /j u m , \[ \| \] /a, /p, /y und /z sollten nicht zusammen verwendet werden. Die einzige Ausnahme dieser Regel ist, dass für das Patchen einer [Administratorinstallation](administrative-installation.md) sowohl /p als auch /a verwendet werden müssen. Die Optionen /t, /c und /g sollten nur mit /j verwendet werden. Die Optionen /l und /q können mit /i, /x, /f \[ p o e d c a u m \| s \| \| \| \| \| \| \| \| \] v, /j \[ u \| \] m, /a und /p verwendet werden. Die Option /n kann mit /i, /f, /x und /p verwendet werden.
+Die Optionen /i, /x, /f \[ p o e d c a u m s \| v \| , \| \| \| \| \| \| \| \] /j u m , \[ \| \] /a, /p, /y und /z sollten nicht zusammen verwendet werden. Eine Ausnahme von dieser Regel ist, dass zum Patchen einer [Administratorinstallation](administrative-installation.md) sowohl /p als auch /a verwendet werden muss. Die Optionen /t, /c und /g sollten nur mit /j verwendet werden. Die Optionen /l und /q können mit /i, /x, /f \[ p o e d c a u m \| s v \| , \| \| \| \| \| \| \| \] /j u m , \[ \| \] /a und /p verwendet werden. Die Option /n kann mit /i, /f, /x und /p verwendet werden.
 
-Um ein Produkt von A: \\Example.msi installieren Sie das Produkt wie folgt:
+Um ein Produkt aus A: \\Example.msi zu installieren, installieren Sie das Produkt wie folgt:
 
 **msiexec /i A: \\Example.msi**
 
 Nur [öffentliche Eigenschaften](public-properties.md) können über die Befehlszeile geändert werden. Alle Eigenschaftsnamen in der Befehlszeile werden als Großbuchstaben interpretiert, aber der Wert behält die Groß-/Kleinschreibung bei. Wenn Sie **MyProperty** in einer Befehlszeile eingeben, überschreibt das Installationsprogramm den Wert von MYPROPERTY und nicht den Wert von **MyProperty** in der Property-Tabelle. Weitere Informationen finden Sie unter [Informationen zu Eigenschaften.](about-properties.md)
 
-Verwenden Sie die folgende Syntax in der Befehlszeile, um ein Produkt zu installieren, bei dem PROPERTY auf VALUE festgelegt ist. Sie können die Eigenschaft an einer beliebigen Stelle außer zwischen einer Option und ihrem Argument setzen.
+Verwenden Sie die folgende Syntax in der Befehlszeile, um ein Produkt zu installieren, für das PROPERTY auf VALUE festgelegt ist. Sie können die Eigenschaft an einer beliebigen Stelle außer zwischen einer Option und ihrem Argument setzen.
 
 Richtige Syntax:
 
@@ -138,7 +138,7 @@ Falsche Syntax:
 
 **msiexec /i PROPERTY=VALUE A: \\Example.msi**
 
-Eigenschaftswerte, die literale Zeichenfolgen sind, müssen in Anführungszeichen eingeschlossen werden. Schließen Sie alle Leerzeichen in die Zeichenfolge zwischen den Markierungen ein.
+Eigenschaftswerte, die Literalzeichenfolgen sind, müssen in Anführungszeichen eingeschlossen werden. Schließen Sie alle Leerzeichen in die Zeichenfolge zwischen den Markierungen ein.
 
 **msiexec /i A: \\Example.msi PROPERTY="Embedded White Space"**
 
@@ -152,17 +152,17 @@ Schließen Sie für Textabschnitte, die durch literale Anführungszeichen getren
 
 Das folgende Beispiel zeigt eine komplizierte Befehlszeile.
 
-**msiexec /i testdb.msi INSTALLLEVEL=3 /l \* msi.log COMPANYNAME="Acme ""Widgets"" und ""Mos.""**
+**msiexec /i testdb.msi INSTALLLEVEL=3 /l \* msi.log COMPANYNAME="Acme ""Widgets"" und ""Widgetmos.""**
 
-Im folgenden Beispiel werden Ankündigungsoptionen gezeigt. Beachten Sie, dass bei Schaltern nicht zwischen Schreibung und Schreibung zu beachten ist.
+Das folgende Beispiel zeigt Ankündigungsoptionen. Beachten Sie, dass bei Schaltern die Groß-/Kleinschreibung nicht beachtet wird.
 
 **msiexec /JM msisample.msi /T transform.mst /LIME logfile.txt**
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine neue Instanz eines Produkts installieren, das angekündigt werden soll. Dieses Produkt wurde für die Unterstützung mehrerer Instanztransformationen verfasst.
+Im folgenden Beispiel wird gezeigt, wie Sie eine neue Instanz eines Produkts installieren, das angekündigt werden soll. Dieses Produkt wurde zur Unterstützung mehrerer Instanztransformationen erstellt.
 
 **msiexec /JM msisample.msi /T :instance1.mst;customization.mst /c /LIME logfile.txt**
 
-Das folgende Beispiel zeigt, wie eine Instanz eines Produkts gepatcht wird, das mithilfe mehrerer Instanztransformationen installiert wird.
+Das folgende Beispiel zeigt, wie Sie eine Instanz eines Produkts patchen, das mithilfe von Transformationen für mehrere Instanzen installiert wird.
 
 **msiexec /p msipatch.msp;msipatch2.msp /n {00000001-0002-0000-0000-624474736554} /qb**
 

@@ -1,19 +1,19 @@
 ---
-description: Das <author> optionale -Element gibt den Autor dieser Bibliothek an. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
+description: Das optionale &lt; &gt; author-Element gibt den Autor dieser Bibliothek an. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 ms.assetid: c91042d5-9564-463a-9104-97b927027fc9
 title: author-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b0a6b0eb8103f1f1c962984be488a162b645a128f0477ab851d2819aacc3e74
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 6f5b99197db6c32be6b6e526a739a5e3fe1f00ef
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119885180"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887431"
 ---
 # <a name="author-element-search-connector-schema"></a>author-Element (Search Connector Schema)
 
-Das <author> optionale -Element gibt den Autor dieser Bibliothek an. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
+Das optionale &lt; &gt; author-Element gibt den Autor dieser Bibliothek an. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 

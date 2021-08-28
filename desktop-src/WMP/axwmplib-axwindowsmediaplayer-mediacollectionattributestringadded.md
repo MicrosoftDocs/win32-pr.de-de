@@ -1,9 +1,9 @@
 ---
-title: Mediacollectionattributestringadded-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das mediacollectionattributestringadded-Ereignis tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird. | Mediacollectionattributestringadded-Ereignis des AxWindowsMediaPlayer-Objekts
+title: MediaCollectionAttributeStringAdded-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaCollectionAttributeStringAdded-Ereignis tritt auf, wenn der Bibliothek ein Attributwert hinzugefügt wird. | MediaCollectionAttributeStringAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: b14db0ce-bd78-4e28-a42c-1a231c29da2b
 keywords:
-- Mediacollectionattributestringadded-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MediaCollectionAttributeStringAdded-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6712b6caa8f014ec75bf2b031e2d3f6db429dbd2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95d0612e18256f81529a8ad703ecf887ba5976ea9913e46598bc5a0fd44a903e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123940"
 ---
-# <a name="mediacollectionattributestringadded-event-of-the-axwindowsmediaplayer-object"></a>Mediacollectionattributestringadded-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediacollectionattributestringadded-event-of-the-axwindowsmediaplayer-object"></a>MediaCollectionAttributeStringAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das mediacollectionattributestringadded-Ereignis tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird.
+Das MediaCollectionAttributeStringAdded-Ereignis tritt auf, wenn der Bibliothek ein Attributwert hinzugefügt wird.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_MediaCollectionAttributeStringAdded(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestringaddedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionattributestringaddedevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringAddedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionAttributeStringAddedEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft           | BESCHREIBUNG                                                                                                                                                                                  |
+| Eigenschaft           | Beschreibung                                                                                                                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **bstrattribname** | System. StringGibt den Namen des Attributs an. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).<br/> |
-| bstrattribval      | System. StringGibt den Wert des Attributs an.<br/>                                                                                                                                |
+| **bstrAttribName** | System.String Gibt den Namen des Attributs an. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)<br/> |
+| bstrAttribVal      | System.StringSpecifisiert den Wert des Attributs.<br/>                                                                                                                                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Bibliothek ein Medien Element hinzugefügt wird, werden die zugehörigen Metadaten der Medien Auflistung hinzugefügt, und dieses Ereignis wird für jedes hinzugefügte Attribut ausgelöst.
+Wenn der Bibliothek ein Medienelement hinzugefügt wird, werden seine Metadaten der Mediensammlung hinzugefügt, und dieses Ereignis wird für jedes hinzugefügte Attribut ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,13 +74,13 @@ Wenn der Bibliothek ein Medien Element hinzugefügt wird, werden die zugehörige
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. mediacollection (VB und c#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
+[**AxWindowsMediaPlayer.mediaCollection (VB und C#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

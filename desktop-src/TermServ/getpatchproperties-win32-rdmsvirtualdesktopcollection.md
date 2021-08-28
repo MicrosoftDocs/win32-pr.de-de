@@ -1,12 +1,12 @@
 ---
-title: Getpatchproperties-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Ruft die Eigenschaften eines Bereitstellungs Auftrags für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+title: GetPatchProperties-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+description: Ruft die Eigenschaften eines Softwareupdatebereitstellungsauftrags für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 ms.assetid: 9f228d89-0613-49c7-8169-48491c3a2d9b
 ms.tgt_platform: multiple
 keywords:
-- Getpatchproperties-Methode Remotedesktopdienste
-- Getpatchproperties-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, getpatchproperties-Methode
+- GetPatchProperties-Remotedesktopdienste
+- GetPatchProperties-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , GetPatchProperties-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f0ca45c97512818aa5f8a9ea851d18fa5554c32
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 969a73e372dee430b280d4d16c267c6d8b75dda236c3ae7362d2392cb1bf8bf3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099510"
 ---
-# <a name="getpatchproperties-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Getpatchproperties-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="getpatchproperties-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>GetPatchProperties-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Ruft die Eigenschaften eines Bereitstellungs Auftrags für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
+Ruft die Eigenschaften eines Softwareupdatebereitstellungsauftrags für die virtuellen Computer in einer Sammlung virtueller Desktops ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,31 +46,31 @@ uint32 GetPatchProperties(
 
 <dl> <dt>
 
-*StartTime* \[ vorgenommen\]
+*StartTime* \[ out\]
 </dt> <dd>
 
 Das Datum und die Uhrzeit der Installation der Updates.
 
 </dd> <dt>
 
-*Forcelogofftime* \[ vorgenommen\]
+*ForceLogOffTime* \[ out\]
 </dt> <dd>
 
-Das Datum und die Uhrzeit, zu denen das Systembenutzer der virtuellen Maschinen abmeldet.
+Das Datum und die Uhrzeit, zu der das System Benutzer der virtuellen Computer abmelden soll.
 
 </dd> <dt>
 
-*Jobguid* \[ vorgenommen\]
+*JobGuid* \[ out\]
 </dt> <dd>
 
-Eine **GUID** , die den Bereitstellungs Auftrag eindeutig identifiziert.
+Eine **GUID,** die den Bereitstellungsauftrag eindeutig identifiziert.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
-Der Status des Bereitstellungs Auftrags.
+Der Status des Bereitstellungsauftrags.
 
 </dd> </dl>
 
@@ -86,8 +86,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -96,7 +96,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

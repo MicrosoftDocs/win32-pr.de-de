@@ -1,9 +1,9 @@
 ---
-title: DTM_SETSYSTEMTIME Meldung (kommstrg. h)
-description: Legt die Zeit in einem DTP-Steuerelement (Datums-und Zeitauswahl) fest. Sie können diese Nachricht explizit senden oder das DateTime- \_ SetSystemTime-Makro verwenden.
+title: DTM_SETSYSTEMTIME (Commctrl.h)
+description: Legt die Uhrzeit in einem DTP-Steuerelement (Date and Time Picker) fest. Sie können diese Nachricht explizit senden oder das DateTime \_ SetSystemtime-Makro verwenden.
 ms.assetid: aab023ac-22ef-485b-be2f-2aa76dfcf57f
 keywords:
-- Windows-Steuerelemente für DTM_SETSYSTEMTIME Meldung
+- DTM_SETSYSTEMTIME von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7b2a3c625ad4ff02bed138a8086ca0da984de35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5acd0c6a09e3fc7bd9d068e27049329f3289a8ba1968ffae4592c7e07db9f2eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088970"
 ---
-# <a name="dtm_setsystemtime-message"></a>DTM- \_ SetSystemTime-Nachricht
+# <a name="dtm_setsystemtime-message"></a>SMS \_ SETSYSTEMTIME-Meldung
 
-Legt die Zeit in einem DTP-Steuerelement (Datums-und Zeitauswahl) fest. Sie können diese Nachricht explizit senden oder das [**DateTime- \_ SetSystemTime**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setsystemtime) -Makro verwenden.
+Legt die Uhrzeit in einem DTP-Steuerelement (Date and Time Picker) fest. Sie können diese Nachricht explizit senden oder das [**DateTime \_ SetSystemtime-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setsystemtime) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt die Zeit in einem DTP-Steuerelement (Datums-und Zeitauswahl) fest. Sie kön
 *wParam* 
 </dt> <dd>
 
-Ein-Wert, der die Aktion angibt, die ausgeführt werden soll. Dieser Wert muss auf einen der folgenden Werte festgelegt werden:
+Ein -Wert, der die Aktion an, die ausgeführt werden soll. Dieser Wert muss auf einen der folgenden Werte festgelegt werden:
 
 
 
 | Wert                                                                                                                                             | Bedeutung                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GDT_VALID"></span><span id="gdt_valid"></span><dl> <dt>**GDT \_ gültig**</dt> </dl> | Legen Sie das DTP-Steuerelement gemäß den Daten in der Struktur fest, auf die *LPARAM* zeigt. <br/>                                                                                                                                                                 |
-| <span id="GDT_NONE"></span><span id="gdt_none"></span><dl> <dt>**GDT \_ None**</dt> </dl>    | Legen Sie das DTP-Steuerelement auf "No Date" fest, und deaktivieren Sie das entsprechende Kontrollkästchen. Wenn dieses Flag angegeben wird, wird *LPARAM* ignoriert. Dieses Flag gilt nur für DTP-Steuerelemente, die auf den [**DTS- \_ shownone**](date-and-time-picker-control-styles.md) -Stil festgelegt sind. <br/> |
+| <span id="GDT_VALID"></span><span id="gdt_valid"></span><dl> <dt>**GDT \_ VALID**</dt> </dl> | Legen Sie das DTP-Steuerelement gemäß den Daten in der Struktur fest, auf *die lParam* zeigt. <br/>                                                                                                                                                                 |
+| <span id="GDT_NONE"></span><span id="gdt_none"></span><dl> <dt>**GDT \_ NONE**</dt> </dl>    | Legen Sie das DTP-Steuerelement auf "No date" (Kein Datum) fest, und aktivieren Sie das Kontrollkästchen. Wenn dieses Flag angegeben wird, *wird lParam* ignoriert. Dieses Flag gilt nur für DTP-Steuerelemente, die auf den [**DTS \_ SHOWNONE-Stil festgelegt**](date-and-time-picker-control-styles.md) sind. <br/> |
 
 
 
@@ -50,13 +50,13 @@ Ein-Wert, der die Aktion angibt, die ausgeführt werden soll. Dieser Wert muss a
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die zum Festlegen des DTP-Steuer Elements verwendete Systemzeit enthält.
+Ein Zeiger auf eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die Systemzeit enthält, die zum Festlegen des DTP-Steuerelements verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

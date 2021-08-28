@@ -3,7 +3,7 @@ title: WMT_VIDEOIMAGE_TRANSITION_DIAMOND (Wmsdkidl.h)
 description: Der Rautenübergang zeigt das neue Bild in einer Raute an.
 ms.assetid: ff36a64d-62f7-424d-acc9-a7902926a90c
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_DIAMOND windows Media Format
+- WMT_VIDEOIMAGE_TRANSITION_DIAMOND Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af271c220fc48924905a067336a438baec1ef0ac4b2dca1b266d3ea77d665f71
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 38731c93ae9ada520f286ae1662d45ec95d399d4
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117653281"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473496"
 ---
 # <a name="wmt_videoimage_transition_diamond"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ DIAMOND
 
@@ -27,55 +27,19 @@ Der Rautenübergang zeigt das neue Bild in einer Raute an.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Member der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgeführt, der sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Struktur-Member</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>X zentrieren</td>
-<td><strong>fEffectPara0</strong></td>
-<td>X-Koordinate relativ zum Videoframe des Mittelpunkts der Raute.</td>
-</tr>
-<tr class="even">
-<td>Y zentrieren</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Y-Koordinate relativ zum Videoframe des Mittelpunkts der Raute.</td>
-</tr>
-<tr class="odd">
-<td>Breite</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Breite der Raute in Pixel.</td>
-</tr>
-<tr class="even">
-<td>Höhe</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Höhe der Raute in Pixel.</td>
-</tr>
-<tr class="odd">
-<td>Aufbau</td>
-<td><strong>fEffectPara4</strong></td>
-<td>Legen Sie auf einen der folgenden Werte fest:
-<ul>
-<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li>
-<li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Strukturmember | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| X zentrieren | <strong>fEffectPara0</strong> | X-Koordinate relativ zum Videorahmen der Rautenmitte. | 
+| Y zentrieren | <strong>fEffectPara1</strong> | Y-Koordinate relativ zum Videorahmen der Rautenmitte. | 
+| Breite | <strong>fEffectPara2</strong> | Breite des Rautens in Pixel. | 
+| Höhe | <strong>fEffectPara3</strong> | Höhe des Diamanten in Pixel. | 
+| Aufbau | <strong>fEffectPara4</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li><li>1 – Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 

@@ -3,7 +3,7 @@ title: HelpButton-Element
 description: Stellt das Steuerelement Hilfeschaltfläche dar.
 ms.assetid: 24c709da-539e-4ea0-bd3e-d3fbd72dfb97
 keywords:
-- HelpButton-Element Im Windows-Menüband
+- HelpButton-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9f34f04133b7628cce01ac0ce2808923b4f6bbdb
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: f138b615b0ae4a4e7a163364938808d945b60eb5
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111442841"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623496"
 ---
 # <a name="helpbutton-element"></a>HelpButton-Element
 
@@ -37,17 +37,17 @@ Stellt das Steuerelement [Hilfeschaltfläche](windowsribbon-controls-helpbutton.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
+<th>Attribut</th>
 <th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -79,15 +79,15 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann für jedes [**Ribbon.HelpButton--Menüband nur einmal auftreten.**](windowsribbon-element-ribbon-helpbutton.md)
+Kann für jedes [**Ribbon.HelpButton--Menüband mindestens einmal auftreten.**](windowsribbon-element-ribbon-helpbutton.md)
 
 Öffnet ein Anwendungshilfedialogfeld, wenn darauf geklickt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup veranschaulicht, das zum Implementieren eines [Menüband-Hilfeschaltfläche-Steuerelements erforderlich](windowsribbon-controls-helpbutton.md) ist.
+Im folgenden Beispiel wird das grundlegende Markup veranschaulicht, das zum Implementieren eines Menüband-Hilfeschaltfläche-Steuerelements [erforderlich](windowsribbon-controls-helpbutton.md) ist.
 
 Dieser Codeabschnitt zeigt die **HelpButton-Befehlsdeklaration.**
 
@@ -118,7 +118,7 @@ Dieser Codeabschnitt zeigt die **HelpButton-Steuerelementdeklaration.**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

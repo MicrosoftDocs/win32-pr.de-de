@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter JetComputeStats-Funktion.
+description: 'Weitere Informationen zu: JetComputeStats-Funktion'
 title: JetComputeStats-Funktion
 TOCTitle: JetComputeStats Function
 ms:assetid: 142f6ab0-715f-493a-a762-7a83854498d2
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1324722ed0bd239f4c5b26fbd3340d45f325e53c
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: d990e4ded7dc2485bec6b5ecf92d9999aad57ce5
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122465817"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981973"
 ---
 # <a name="jetcomputestats-function"></a>JetComputeStats-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetcomputestats-function"></a>JetComputeStats-Funktion
 
-Die **JetComputeStats-Funktion** führt jeden Index einer Tabelle durch, um genau die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Berechnungszeit in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.
+Die **JetComputeStats-Funktion** führt jeden Index einer Tabelle durch, um die Anzahl der Einträge in einem Index und die Anzahl der unterschiedlichen Schlüssel in einem Index genau zu berechnen. Diese Informationen werden zusammen mit der Anzahl der Datenbankseiten, die einem Index zugeordnet sind, und der aktuellen Berechnungszeit in Indexmetadaten in der Datenbank gespeichert. Diese Daten können anschließend mit Informationsvorgängen abgerufen werden.
 
 ```cpp
     JET_ERR JET_API JetComputeStats(
@@ -73,7 +73,7 @@ Bei Erfolg werden aktuelle Statistiken in den Datenbankkatalogen für die tabell
 
 Bei einem Fehler werden keineRlei Aktualisierungen an der Datenbank vorgenommen.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Dieser Vorgang kann ressourcenintensiv sein, da jeder Index in einer Tabelle vollständig erläutert werden muss. [JetGetRecordPosition](./jetgetrecordposition-function.md) kann verwendet werden, um eine grobe Schätzung der Anzahl von Einträgen in einem Index zu erhalten, die Anzahl unterschiedlicher Werte in einem Index kann jedoch nicht allein geschätzt werden.
 
@@ -84,7 +84,13 @@ Aktualisierungen der von **JetComputeStats vorgenommenen** Datenbank erfolgen ve
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

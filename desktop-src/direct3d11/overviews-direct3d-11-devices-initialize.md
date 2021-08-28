@@ -1,25 +1,25 @@
 ---
-title: Erstellen eines Geräts und unmittelbaren Kontexts
+title: Erstellen eines Geräts und des unmittelbaren Kontexts
 description: In diesem Thema wird gezeigt, wie Sie ein Gerät initialisieren.
 ms.assetid: 02a20ada-b3aa-435e-8d66-117a19222f9f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 530f2b9cbc77f5404b4e9e8973d326a8708d6436
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 546bee6631816beb699f282a3b4f46bbbc142afc
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039020"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786766"
 ---
-# <a name="how-to-create-a-device-and-immediate-context"></a>Gewusst wie: Erstellen eines Geräts und eines unmittelbaren Kontexts
+# <a name="how-to-create-a-device-and-immediate-context"></a>Vorgehensweise: Erstellen eines Geräts und des unmittelbaren Kontexts
 
-In diesem Thema wird gezeigt, wie Sie ein [Gerät](overviews-direct3d-11-devices-intro.md)initialisieren. Die Initialisierung eines [Geräts](overviews-direct3d-11-devices-intro.md) ist eine der ersten Aufgaben, die Ihre Anwendung abschließen muss, bevor Sie Ihre Szene Rendering können.
+In diesem Thema wird gezeigt, wie Ein [Gerät](overviews-direct3d-11-devices-intro.md)initialisiert wird. Das Initialisieren eines [Geräts](overviews-direct3d-11-devices-intro.md) ist eine der ersten Aufgaben, die Ihre Anwendung ausführen muss, bevor Sie Ihre Szene rendern können.
 
-**So erstellen Sie ein Gerät und unmittelbaren Kontext**
+**So erstellen Sie ein Gerät und sofortigen Kontext**
 
-Füllen Sie die [**\_ \_ \_ DESC-Struktur der DXGI-Austausch Kette**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) mit Informationen zu Puffer Formaten und-Dimensionen aus. Weitere Informationen finden Sie unter Erstellen einer Austausch Kette.
+Füllen Sie die [**DXGI \_ SWAP CHAIN \_ \_ DESC-Struktur**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) mit Informationen zu Pufferformaten und -dimensionen aus. Weitere Informationen finden Sie unter Erstellen einer Austauschkette.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die [**\_ \_ \_ DESC-Struktur der DXGI-Swap-Kette**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) ausgefüllt wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie die [**DXGI \_ SWAP CHAIN \_ \_ DESC-Struktur**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) ausgefüllt wird.
 
 
 ```
@@ -40,7 +40,7 @@ sd.Windowed = TRUE;
 
 
 
-Verwenden Sie die [**DXGI- \_ SwapChain \_ \_**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) -Struktur aus Schritt 1, und nennen Sie [**D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain) , um das Gerät zu initialisieren und die Kette gleichzeitig auszutauschen.
+Rufen Sie mithilfe der [**DXGI \_ SWAP CHAIN \_ \_ DESC-Struktur**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) aus Schritt [**1 D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain) auf, um das Gerät und die Austauschkette gleichzeitig zu initialisieren.
 
 
 ```
@@ -68,13 +68,13 @@ if( FAILED (hr = D3D11CreateDeviceAndSwapChain( NULL,
 
 
 > [!Note]  
-> Wenn Sie auf einem Computer, auf dem nur die Direct3D 11,0-Laufzeit vorhanden ist, ein Gerät der [**D3D- \_ Funktions \_ Ebene \_ 11 \_ 1**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_feature_level) anfordern, wird [**D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain) sofort mit **E \_ invalidArg** beendet. Um alle möglichen featureebenen auf einem Computer mit der DirectX 11,0-oder DirectX 11,1-Laufzeit sicher anzufordern, verwenden Sie den folgenden Code:
+> Wenn Sie ein [**D3D \_ FEATURE LEVEL \_ \_ 11 \_ 1-Gerät**](/windows/desktop/api/D3DCommon/ne-d3dcommon-d3d_feature_level) auf einem Computer mit nur der Direct3D 11.0-Runtime anfordern, wird [**D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain) sofort mit **E \_ INVALIDARG** beendet. Verwenden Sie diesen Code, um alle möglichen Featureebenen auf einem Computer mit der DirectX 11.0- oder DirectX 11.1-Runtime sicher anzufordern:
 >
-> <span codelanguage=""></span>
+> 
 >
 > <table>
 > <colgroup>
-> <col style="width: 100%" />
+> <col  />
 > </colgroup>
 > <tbody>
 > <tr class="odd">
@@ -98,17 +98,16 @@ if( FAILED (hr = D3D11CreateDeviceAndSwapChain( NULL,
 >     return hr;</code></pre></td>
 > </tr>
 > </tbody>
-> </table> 
+> </table>
+>  
 >
->  
+> Erstellen Sie eine Renderzielansicht, indem [**Sie ID3D11Device::CreateRenderTargetView**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createrendertargetview) aufrufen und den Backpuffer als Renderziel binden, indem [**Sie ID3D11DeviceContext::OMSetRenderTargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets)aufrufen.
 >
-> Erstellen Sie eine renderzielsicht durch Aufrufen von [**ID3D11Device:: createrendertargetview**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createrendertargetview) , und binden Sie den Back Puffer als Renderziel durch Aufrufen von [**Verknüpfung id3d11devicecontext aus:: omstrendertargets**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetrendertargets).
->
-> <span codelanguage=""></span>
+> 
 >
 > <table>
 > <colgroup>
-> <col style="width: 100%" />
+> <col  />
 > </colgroup>
 > <tbody>
 > <tr class="odd">
@@ -128,13 +127,13 @@ if( FAILED (hr = D3D11CreateDeviceAndSwapChain( NULL,
 > </tbody>
 > </table> 
 >
-> Erstellen Sie einen Viewport, um zu definieren, welche Teile des Renderziels sichtbar sind. Definieren Sie den Viewport mithilfe der [**D3D11 \_ Viewport**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) -Struktur, und legen Sie den Viewport mithilfe der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) -Methode fest.
+> Erstellen Sie einen Viewport, um zu definieren, welche Teile des Renderziels sichtbar sind. Definieren Sie den Viewport mithilfe der [**D3D11 \_ VIEWPORT-Struktur,**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) und legen Sie den Viewport mithilfe der [**ID3D11DeviceContext::RSSetViewports-Methode**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) fest.
 >
-> <span codelanguage="ManagedCPlusPlus"></span>
+> 
 >
 > <table>
 > <colgroup>
-> <col style="width: 100%" />
+> <col  />
 > </colgroup>
 > <thead>
 > <tr class="header">
@@ -163,10 +162,10 @@ if( FAILED (hr = D3D11CreateDeviceAndSwapChain( NULL,
 [Geräte](overviews-direct3d-11-devices.md)
 </dt> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> </dl>
 >
->  
+>  
 >
->  
+>  
 >

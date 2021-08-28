@@ -1,9 +1,9 @@
 ---
-title: CB_LIMITTEXT Meldung (Winuser. h)
-description: Schränkt die Länge des Texts ein, den der Benutzer in das Bearbeitungs Steuerelement eines Kombinations Felds eingeben darf.
+title: CB_LIMITTEXT (Winuser.h)
+description: Schränkt die Länge des Texts ein, den der Benutzer in das Bearbeitungssteuerfeld eines Kombinationsfelds eingeben kann.
 ms.assetid: 95b7d07a-594b-4096-afbb-4dab77bdc41d
 keywords:
-- Windows-Steuerelemente für CB_LIMITTEXT Meldung
+- CB_LIMITTEXT der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34ea9ccd63bb1503e73aebdd584a53bc32bcb8fa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e94cdb1bedfb1c0aa3efb401649524782183ced7728304951596c9383efaa0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089080"
 ---
-# <a name="cb_limittext-message"></a>CB- \_ limittext Nachricht
+# <a name="cb_limittext-message"></a>CB \_ LIMITTEXT-Nachricht
 
-Schränkt die Länge des Texts ein, den der Benutzer in das Bearbeitungs Steuerelement eines Kombinations Felds eingeben darf.
+Schränkt die Länge des Texts ein, den der Benutzer in das Bearbeitungssteuerfeld eines Kombinationsfelds eingeben kann.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Schränkt die Länge des Texts ein, den der Benutzer in das Bearbeitungs Steuere
 *wParam* 
 </dt> <dd>
 
-Die maximale Anzahl von **tchars** , die vom Benutzer eingegeben werden können, ohne das abschließende Null Zeichen. Wenn dieser Parameter 0 (null) ist, ist die Textlänge auf 0x7ffffffe-Zeichen beschränkt.
+Die maximale Anzahl von **TCHARs,** die der Benutzer eingeben kann, ohne das beendende NULL-Zeichen. Wenn dieser Parameter 0 (null) ist, ist die Textlänge auf 0x7FFFFFFE beschränkt.
 
 </dd> <dt>
 
@@ -45,15 +45,15 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist immer " **true**".
+Der Rückgabewert ist immer **TRUE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Kombinations Feld den [**\_ autohscroll**](combo-box-styles.md) -Stil "CBS" nicht aufweist, hat das Festlegen des Text Limits auf einen höheren Wert als die Größe des Bearbeitungs Steuer Elements keine Auswirkungen.
+Wenn das Kombinationsfeld nicht über den [**CBS \_ AUTOHSCROLL-Stil**](combo-box-styles.md) verfügt, hat das Festlegen des Textlimits, das größer als die Größe des Bearbeitungssteuerfelds ist, keine Auswirkungen.
 
-Die **CB- \_ limittext** -Nachricht schränkt nur den Text ein, den der Benutzer eingeben kann. Sie hat keine Auswirkung auf einen Text, der sich bereits im Bearbeitungs Steuerelement befindet, wenn die Nachricht gesendet wird, und wirkt sich auch nicht auf die Länge des Texts aus, der in das Bearbeitungs Steuerelement kopiert wird, wenn eine Zeichenfolge im Listenfeld ausgewählt ist.
+Die **CB \_ LIMITTEXT-Meldung** schränkt nur den Text ein, den der Benutzer eingeben kann. Sie hat keine Auswirkungen auf Text, der sich bereits im Bearbeitungssteuerfeld befindet, wenn die Nachricht gesendet wird, und wirkt sich auch nicht auf die Länge des Texts aus, der in das Bearbeitungssteuerfeld kopiert wird, wenn eine Zeichenfolge im Listenfeld ausgewählt wird.
 
-Der Standard Grenzwert für den Text, den ein Benutzer im Bearbeitungs Steuerelement eingeben kann, ist 30.000 **tchars**.
+Der Standardgrenzwert für den Text, den ein Benutzer in das Bearbeitungssteuerfeld eingeben kann, beträgt 30.000 **TCHARs.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Der Standard Grenzwert für den Text, den ein Benutzer im Bearbeitungs Steuerele
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

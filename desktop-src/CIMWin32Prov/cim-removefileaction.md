@@ -24,23 +24,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bc90b16e9507595f35330cce7b697cd357ccfe3c451deae802ebe00ef5ed2f59
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 660b467c48e3f762d3e8ea716ed00cda35e8574d
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119920360"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887202"
 ---
 # <a name="cim_removefileaction-class"></a>CIM \_ RemoveFileAction-Klasse
 
 Die **CIM \_ RemoveFileAction-Klasse** deinstalliert Dateien.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force, verteilte Verwaltungsaufgabe) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ class CIM_RemoveFileAction : CIM_FileAction
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ RemoveFileAction-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ RemoveFileAction-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -74,7 +74,7 @@ Die **CIM \_ RemoveFileAction-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                   |
+| Methode                                                        | Beschreibung                                                   |
 |:--------------------------------------------------------------|:--------------------------------------------------------------|
 | [**Invoke**](invoke-method-in-class-cim-removefileaction.md) | Führt eine bestimmte Aktion aus. Nicht von WMI implementiert.<br/> |
 
@@ -91,25 +91,25 @@ Die **CIM \_ RemoveFileAction-Klasse** verfügt über diese Eigenschaften.
 **ActionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Eindeutiger Bezeichner, der einer bestimmten Aktion für ein Softwareelement zugewiesen ist.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -120,14 +120,14 @@ Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 
 Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -135,7 +135,7 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 </dd> <dt>
 
@@ -148,9 +148,9 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob ein bestimmtes [**\_ CIM-Aktionsobjekt**](cim-action.md) Teil einer Sequenz von Aktionen ist, um das aktuelle Softwareelement in den nächsten Zustand wie "Install" zu übergehen oder das aktuelle Softwareelement zu entfernen, z. B. "Uninstall".
+Gibt an, ob ein bestimmtes CIM-Aktionsobjekt Teil einer Abfolge von Aktionen ist, um das aktuelle Softwareelement in den nächsten Zustand zu überwechseln, z. B. "Installieren", oder um das aktuelle Softwareelement zu entfernen, z. B. "Deinstallieren". [**\_**](cim-action.md)
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 <dt>
 
@@ -173,7 +173,7 @@ Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
 **File**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -189,36 +189,36 @@ Name der Datei, die entfernt werden soll.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Identifiziert das Softwareelement.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Bezeichner für das Softwareelement.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 </dd> <dt>
 
@@ -231,23 +231,23 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Status eines Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 <dt>
 
 <span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>
 
-<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellbar** (0)
+<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellungsfähig** (0)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installationsfähigen Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installierbaren Zustand (d. h. dem nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
@@ -258,18 +258,18 @@ Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind,
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, sowie die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d. h. im nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>
 
-<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare Datei** (2)
+<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare** Datei (2)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im Ausführungszustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Ausführungszustand (d. h. im nächsten Zustand) zu erstellen.
 
 </dd> <dt>
 
@@ -295,12 +295,12 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**TargetOperatingSystem**), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.5")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**TargetOperatingSystem**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.5")
 </dt> </dl>
 
 Zielbetriebssystem des besitzenden Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
+Diese Eigenschaft wird von der [**\_ CIM-Aktion geerbt.**](cim-action.md)
 
 <dt>
 
@@ -313,7 +313,7 @@ Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -352,7 +352,7 @@ Mac OS
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital Unix** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digitales Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -364,7 +364,7 @@ Mac OS
 
 </dt> <dd>
 
-Öffnen von VMs
+Öffnen von VMS
 
 </dd> <dt>
 
@@ -654,7 +654,7 @@ BS2000/OSD
 
 </dt> <dd>
 
-BSD UNIX
+BSD-UNIX
 
 </dd> <dt>
 
@@ -828,8 +828,8 @@ Version des Vorgangs.
 
 Die Version des Vorgangs sollte eine der folgenden Formen haben:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; nebenversion &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; Revision von &gt; &lt; Nebenbuchstaben &gt; &lt;&gt;
 
 Diese Eigenschaft wird von [**CIM \_ Action**](cim-action.md)geerbt.
 
@@ -843,7 +843,7 @@ WMI implementiert diese Klasse nicht.
 
 Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -857,7 +857,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

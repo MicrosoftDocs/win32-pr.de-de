@@ -34,12 +34,12 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d25137c9e976d05bd065837fed7753e26e3afdae020499b3388948e11733fd77
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7d405e33b7d84d3a5a58dc9a13d5c070c47a6536
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118252524"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467217"
 ---
 # <a name="jet_snt-enumeration"></a>JET_SNT-Enumeration
 
@@ -63,52 +63,19 @@ public enum JET_SNT
 
 ## <a name="members"></a>Member
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Membername</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>Starten</td>
-<td>Rückruf für den Anfang eines Vorgangs.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Fortschritt</td>
-<td>Rückruf für den Vorgangsfortschritt.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Abgeschlossen</td>
-<td>Rückruf für den Abschluss eines Vorgangs.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Fehler</td>
-<td>Rückruf für Fehler während des Vorgangs.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>RecoveryStep</td>
-<td>Rückruf für die Wiederherstellungssteuerung.
-<p>Wird für die interne Verarbeitung in Versionen des Windows Betriebssystems vor Windows 8 verwendet. Dieser Wert gilt nicht für Versionen von Windows, die mit Windows 8 beginnen.</p></td>
-</tr>
-</tbody>
-</table>
+
+|  | Membername | Beschreibung | 
+|--|-------------|-------------|
+|  | Starten | Rückruf für den Anfang eines Vorgangs. | 
+|  | Fortschritt | Rückruf für den Vorgangsfortschritt. | 
+|  | Abgeschlossen | Rückruf für den Abschluss eines Vorgangs. | 
+|  | Fehler | Rückruf für Fehler während des Vorgangs. | 
+|  | RecoveryStep | Rückruf für die Wiederherstellungssteuerung.<p>Wird für die interne Verarbeitung in Versionen des Windows Betriebssystems vor Windows 8 verwendet. Dieser Wert gilt nicht für Versionen von Windows, die mit Windows 8 beginnen.</p> | 
 
 
-## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+## <a name="see-also"></a>Weitere Informationen
+
+#### <a name="reference"></a>Verweis
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

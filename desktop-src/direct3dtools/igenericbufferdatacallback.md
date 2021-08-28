@@ -1,5 +1,5 @@
 ---
-description: Rückruf zum Zurückgeben des Inhalts eines Objekts in XML-Form.
+description: Rückruf, um den Inhalt eines Objekts in XML-Form zurückzugeben.
 MS-HAID: vspixengine.IGenericBufferDataCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 396b82b9bfc767fc73615a59a4d1e8577c5afb14a7a95f25298e33465174306d
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ee77cc9c21185bc296fe370f3c353e1540c66db1
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117722208"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621956"
 ---
 # <a name="span-idvspixengineigenericbufferdatacallbackspanigenericbufferdatacallback-interface"></a><span id="vspixengine.igenericbufferdatacallback"></span>IGenericBufferDataCallback-Schnittstelle
 
-Rückruf zum Zurückgeben des Inhalts eines Objekts in XML-Form.
+Rückruf, um den Inhalt eines Objekts in XML-Form zurückzugeben.
 
 ## <a name="members"></a>Member
 
-Die **IGenericBufferDataCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IGenericBufferDataCallback** verfügt auch über diese Membertypen:
+Die **IGenericBufferDataCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IGenericBufferDataCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,13 +38,13 @@ Die **IGenericBufferDataCallback-Schnittstelle** erbt von der [**IUnknown-Schnit
 
 Die **IGenericBufferDataCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/igenericbufferdatacallback-resultcallback-dword-byte-arr-bstr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über generische Pufferinformationen benachrichtigt, die von der assocaited-Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/igenericbufferdatacallback-resultcallback-dword-byte-arr-bstr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von generischen Pufferinformationen benachrichtigt, die von der assocaited-Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

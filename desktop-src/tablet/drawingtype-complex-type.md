@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der frei Hand Eingaben enthält, die von der Journal Analyse-Engine als Zeichnungs Element klassifiziert wurden (im Gegensatz zu einem InkWord-Element).
+description: Definiert den Typ, der Ink enthält, der von der Journalanalyse-Engine als Drawing-Element klassifiziert wurde (im Gegensatz zu einem InkWord-Element).
 ms.assetid: 9a47c245-a5cf-414c-b5cc-bdb66b47596f
-title: Komplexer drawingtype-Typ
+title: Komplexer DrawingType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: f5a614c2b89cd887aaf40fd7c8f7a34e1196c11b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ddee1f2fe357b2a92892eca08f40983d4f2cfb2a7115a6a2f44f9c4503abc53d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110950"
 ---
-# <a name="drawingtype-complex-type"></a>Komplexer drawingtype-Typ
+# <a name="drawingtype-complex-type"></a>Komplexer DrawingType-Typ
 
-Definiert den Typ, der frei Hand Eingaben enthält, die von der Journal Analyse-Engine als [Zeichnungs Element](drawing-element.md) klassifiziert wurden (im Gegensatz zu einem [InkWord-Element](inkword-element.md)).
+Definiert den Typ, der Ink enthält, der von der Journalanalyse-Engine als [Drawing-Element](drawing-element.md) klassifiziert wurde (im Gegensatz zu einem [InkWord-Element).](inkword-element.md)
 
 ``` syntax
 <xs:complexType name="DrawingType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der frei Hand Eingaben enthält, die von der Journal Analyse-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

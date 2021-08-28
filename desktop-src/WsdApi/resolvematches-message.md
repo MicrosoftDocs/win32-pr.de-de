@@ -4,16 +4,16 @@ ms.assetid: 0eaa4348-968e-4b45-9509-8b15476edaa1
 title: ResolveMatches-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1daffe985f3956e57ad69fd7c4fc4d199f0b24bd5fdab5677b7ef83765e5fcdd
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 42f2604859d39530377883179ec104dd078e9b6f
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119756800"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627756"
 ---
 # <a name="resolvematches-message"></a>ResolveMatches-Nachricht
 
-Eine ResolveMatches-Nachricht ist eine WS-Discovery Nachricht, die als Antwort auf die [Resolve-Nachricht](resolve-message.md) eines Clients durch einen übereinstimmenden Dienst gesendet wird. Weitere Informationen zu ResolveMatches-Meldungen finden Sie in Abschnitt 6.2 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
+Eine ResolveMatches-Nachricht ist eine WS-Discovery Nachricht, die als Antwort auf die [Resolve-Nachricht](resolve-message.md) eines Clients durch einen übereinstimmenden Dienst gesendet wird. Weitere Informationen zu ResolveMatches-Nachrichten finden Sie in Abschnitt 6.2 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
 Eine ResolveMatches-Nachricht wird von UDP unicast an Port 3702 gesendet (der Port, von dem die [Resolve-Nachricht](resolve-message.md) des Clients gesendet wurde). ResolveMatches muss innerhalb von 4 Sekunden nach der Auflösungsmeldung gesendet werden. Andernfalls kann Windows Firewall das Paket löschen.
 
@@ -76,9 +76,9 @@ Eine ResolveMatches-Nachricht weist die folgenden Fokuspunkte auf.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -138,7 +138,7 @@ Eine ResolveMatches-Nachricht weist die folgenden Fokuspunkte auf.
 [Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Auflösen von Nachrichten](resolve-message.md)
+[Auflösen einer Nachricht](resolve-message.md)
 </dt> </dl>
 
  
