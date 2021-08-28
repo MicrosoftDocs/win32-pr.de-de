@@ -1,84 +1,84 @@
 ---
-title: Drucken (Designgrundkenntnisse)
-description: Drucken ist die Benutzererfahrung auf Papier. Es ist leicht zu übersehen, aber es ist ein wichtiger Teil der allgemeinen Benutzererfahrung.
+title: Drucken (Entwurfsgrundlagen)
+description: Drucken ist die Benutzeroberfläche auf Papier. Es ist leicht zu übersehen, aber es ist ein wichtiger Teil der gesamten Benutzererfahrung.
 ms.assetid: 26f5a8dc-27b2-4c2d-a05a-f942784c3cf9
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 50eb7523b3f816e54bf296632687b4811fac1b1c
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 125c0eab965597c3e359f323f43b8881ff50b754
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122987263"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482156"
 ---
-# <a name="printing-design-basics"></a>Drucken (Designgrundkenntnisse)
+# <a name="printing-design-basics"></a>Drucken (Entwurfsgrundlagen)
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Drucken ist die Benutzererfahrung auf Papier. Es ist leicht zu übersehen, aber es ist ein wichtiger Teil der allgemeinen Benutzererfahrung.
+Drucken ist die Benutzeroberfläche auf Papier. Es ist leicht zu übersehen, aber es ist ein wichtiger Teil der gesamten Benutzererfahrung.
 
-In diesem Artikel bezieht *sich der* Druck auf die Benutzererfahrung auf Papier, bei der die Ausgabe an Papier anstatt an die Bildschirmanzeige geleitet wird. *Das druckerfreundliche Format* bezieht sich auf Änderungen, die das Programm an der Bildschirmanzeigeausgabe machen kann, die es für die Papierausgabe besser geeignet machen.
+In diesem Artikel bezieht sich *das Drucken* auf die Benutzeroberfläche auf Papier, bei der die Ausgabe an das Papier statt an die Bildschirmanzeige geleitet wird. *Druckerfreundliches Format* bezieht sich auf Änderungen, die das Programm an der Bildschirmanzeigeausgabe vornehmen kann, die es für die Papierausgabe besser geeignet machen.
 
-Trotz der Vorhersage, dass das Computing zu einem "papierlosen Büro" führen würde, wird jetzt so viel wie je zuvor gedruckt. Wir verteilen hard copies of Microsoft PowerPoint presentation decks (Festplattenkopien von Microsoft PowerPoint Presentation Decks), drucken Onlineartikel, die wir online entdecken, möchten aber später genauer recherchiert werden. Wir drucken wichtige E-Mails oder Lebensläufe, die wir erhalten haben, in elektronischer Form und so weiter. Auch wenn das Drucken beim Entwerfen einer Benutzeroberfläche leicht übersehen werden kann, denken Sie daran, dass das Drucken ein wichtiger Bestandteil der allgemeinen Benutzeroberfläche ist.
+Trotz der Vorhersage, dass das Computing zum "papierlosen Büro" führen würde, ist es überraschend, dass wir jetzt so viel wie je zuvor drucken. Wir verteilen Hartkopien von Microsoft PowerPoint Präsentationsstapeln, wir drucken Artikel, die wir online entdecken, möchten aber später genauer recherchieren, wir drucken wichtige E-Mails oder Lebensläufe, die wir in elektronischer Form erhalten haben usw. Beim Entwerfen einer Benutzeroberfläche ist das Drucken leicht zu übersehen, aber denken Sie daran, dass das Drucken ein wichtiger Teil der gesamten Benutzeroberfläche ist.
 
-**Hinweis:** Richtlinien im Zusammenhang [mit häufigen Dialogen](win-common-dlg.md) werden in einem separaten Artikel vorgestellt.
+**Hinweis:** Richtlinien im Zusammenhang mit [allgemeinen Dialogen](win-common-dlg.md) werden in einem separaten Artikel vorgestellt.
 
 ## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
-Um zu entscheiden, ob Ihr Programm das Drucken unterstützen muss, sollten Sie die folgenden Fragen berücksichtigen:
+Berücksichtigen Sie die folgenden Fragen, um zu entscheiden, ob Ihr Programm das Drucken unterstützen muss:
 
--   **Welche Art von Programm entwerfen Sie?** Der Programmtyp ist ein guter Indikator für die entsprechende Druckunterstützung. Dokument- und Bilderstellungs-, Anzeige- und Browserprogramme benötigen eine hervorragende Druckunterstützung, während andere Arten von Programmen möglicherweise nur in geringerem Maße Druckunterstützung benötigen. (Eine Liste der Programmtypen finden Sie im Abschnitt [Druckmuster](#printing-patterns) dieses Artikels.)
--   **Wird das Programm in Szenarien verwendet, die von direkter Papierausgabe profitieren?** Wenn ja, ist es bequemer, dem Programm Druckunterstützung hinzuzufügen, als benutzer müssen die Daten in ein anderes Programm kopieren, um sie zu drucken.
+-   **Welche Art von Programm entwerfen Sie?** Der Programmtyp ist ein guter Indikator für die entsprechende Druckunterstützung. Dokument- und Bilderstellungs-, Anzeige- und Browseprogramme benötigen eine hervorragende Druckunterstützung, während andere Programmtypen möglicherweise nur in geringerem Maße Druckunterstützung benötigen. (Eine Liste der Programmtypen finden Sie im Abschnitt [Druckmuster](#printing-patterns) dieses Artikels.)
+-   **Wird das Programm in Szenarien verwendet, die von der direkten Papierausgabe profitieren?** In diesem Falle ist es praktischer, Ihrem Programm Druckunterstützung hinzuzufügen, als dass Benutzer die Daten zum Drucken in ein anderes Programm kopieren müssen.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
 ### <a name="design-your-program-to-eliminate-unnecessary-printing"></a>Entwerfen Des Programms, um unnötiges Drucken zu vermeiden
 
-Es gibt viele Gründe, warum Benutzer einige gute und andere weniger gut drucken müssen. Benutzer sollten drucken, weil sie möchten, nicht, weil sie dies müssen. Die Anforderung, dass Benutzer drucken müssen, kann ein Zeichen für fehlende Features sein. In der Vergangenheit mussten Benutzer z. B. Dokumente drucken, um Kommentare zu machen und Revisionen vorschlagen zu können. Jetzt können Benutzer diese Aufgaben jedoch direkt innerhalb Microsoft Word ausführen. **Überprüfen Sie die Szenarios Ihres Programms, die drucken, und stellen Sie so weit wie möglich sicher, dass die Notwendigkeit des Druckens optional ist und nicht das Ergebnis fehlender Features ist.**
+Es gibt viele Gründe, warum Benutzer einige drucken müssen, die gut sind, andere weniger. Benutzer sollten drucken, weil sie möchten, und nicht, weil sie müssen. Die Anforderung, dass Benutzer drucken müssen, kann ein Zeichen für fehlende Features sein. Beispielsweise mussten Benutzer in der Vergangenheit Dokumente drucken, um Kommentare zu machen und Revisionen vorzuschlagen. Jetzt können Benutzer diese Aufgaben jedoch direkt in Microsoft Word Dokumenten ausführen. **Überprüfen Sie die Szenarien Ihres Programms, die das Drucken beinhalten, und stellen Sie so weit wie möglich sicher, dass das Drucken optional ist und nicht das Ergebnis fehlender Funktionen ist.**
 
-Es ist auch zu beachten, dass das Einsparen von Ressourcen wie Papier und Ink hilfreich ist und Organisationen langfristig Geld spart.
+Es ist auch zu beachten, dass die Einsparung von Ressourcen wie Papier und Ink hilfreich ist und Organisationen langfristig Geld spart.
 
-### <a name="understand-the-differences-between-screen-display-and-print"></a>Verstehen der Unterschiede zwischen Bildschirmanzeige und Drucken
+### <a name="understand-the-differences-between-screen-display-and-print"></a>Grundlegendes zu den Unterschieden zwischen Bildschirmanzeige und Druck
 
-Es gibt zwar viele Ähnlichkeiten zwischen Anzeigeausgabe und Druck, aber es gibt auch viele Unterschiede. Ausgabe drucken:
+Es gibt zwar viele Ähnlichkeiten zwischen Anzeigeausgabe und Druck, aber es gibt auch viele Unterschiede. Druckausgabe:
 
--   **Verfügt über einen hohen DPI-Durchdungs-/** Die Anzeigeausgabe liegt in der Regel bei 96 oder 120 DPI (Dots per Inch), während die Druckerausgabe in der Regel bei 600 dpi oder höher liegt.
--   **Verfügt über verschiedene optimale Schriftarten.** Obwohl gut entworfene Schriftarten sowohl für Anzeige- als auch für Druckschriftarten gut funktionieren, sind Serifenschriftarten bei hohen Auflösungen für große Mengen von Text besser lesbar als Serifenschriftarten. Daher sollten große Mengen von Text, der hauptsächlich für den Druck bestimmt ist, eine Serifenschriftart verwenden, während Text, der in erster Linie für die Anzeige vorgesehen ist, eine Sans Serif-Schriftart verwenden sollte. Weitere Informationen finden Sie unter [Schriftarten](vis-fonts.md) (Segoe UI).
--   **Verfügt über ein Seitenverhältnis.** Die Anzeige hat [](glossary.md) in der Regel ein niedriges Seitenverhältnis (4:3 oder 5:4), während der Druck ein hohes Seitenverhältnis verwendet (8,5:11 oder 1:1.4142 basierend auf den Standardseitengrößen). Dies liegt [daran, dass das Drucken](glossary.md) im Hochformat häufiger als der [Querformatmodus ist.](glossary.md)
--   **Verfügt über Seiten.** Folglich wird die Ausgabe ausgegeben:
-    -   Verfügt über Standardseitengrößen. Der Standard in den USA und Kanada ist das Papier 8,5"x11". Der Standard ist überall sonst A4-Papier.
+-   **Weist einen hohen DPI-Anteil auf.** Die Anzeigeausgabe liegt in der Regel bei 96 oder 120 Punkten pro Zoll (dpi), während die Druckerausgabe in der Regel bei 600 dpi oder höher liegt.
+-   **Verfügt über verschiedene optimale Schriftarten.** Obwohl gut entworfene Schriftarten sowohl für die Anzeige als auch für den Druck gut funktionieren, sind Serifschriftarten bei großen Textmengen besser lesbar als serifenschriftarten. Daher sollten große Textmengen, die in erster Linie für den Druck vorgesehen sind, eine Serifenschriftart verwenden, während Text, der in erster Linie für die Anzeige vorgesehen ist, eine Sans-Serifenschriftart verwenden sollte. Weitere Informationen finden Sie unter [Schriftarten](vis-fonts.md) (Segoe UI).
+-   **Weist ein Seitenverhältnis auf.** Die Anzeige weist in der Regel ein niedriges [Seitenverhältnis](glossary.md) auf (4:3 oder 5:4), während der Druck ein hohes Seitenverhältnis verwendet (8,5:11 oder 1:1,4142 basierend auf den Standardseitengrößen). Dies liegt daran, dass das Drucken [im Hochformat](glossary.md) häufiger als [der Querformatmodus](glossary.md)ist.
+-   **Verfügt über Seiten.** Folglich wird die Ausgabe wie folgt ausgegeben:
+    -   Verfügt über Standardseitengrößen. Der Standard im USA und Kanada ist 8,5 x11"-Papier. der Standard überall sonst ist A4-Papier.
     -   Verfügt über Seitenumbrüche.
     -   Verfügt über Seitenränder.
     -   Verfügt über Kopf- und Fußzeilen.
     -   Verfügt über eine ein- oder doppelseitige Ausgabe.
-    -   Kann mehrere Kopien haben.
-    -   Kann in der reihenfolgen- oder selektiven Reihenfolge gedruckt werden.
--   **Verfügt über viele Optionen.** Benutzer können einen Drucker und eine Papiergröße, Druckeroptionen (z. B. Druckqualität, doppelseitiges Drucken und Heften), Anzahl von Kopien, Seitenbereichen, Sortierung und Druckformat auswählen.
--   **Benötigt Zeit und Geld.** Es kann sehr lange dauern, bis ein großes Dokument oder ein hochwertiges Foto gedruckt wird, und die Kosten für Papier und Ink summiert sich im Laufe der Zeit. Im Gegensatz dazu ist die Anzeigeausgabe sofort und im Wesentlichen kostenlos.
+    -   Kann mehrere Kopien aufweisen.
+    -   Kann in der richtigen Reihenfolge oder selektiv gedruckt werden.
+-   **Es gibt viele Optionen.** Benutzer können einen Drucker und eine Papiergröße, Druckeroptionen (z. B. Druckqualität, doppelseitiges Drucken und Stapling), die Anzahl von Kopien, Seitenbereiche, Sortierung und Druckformat auswählen.
+-   **Nimmt Zeit und Geld in Anspruch.** Es kann viel Zeit in Anspruch nehmen, ein großes Dokument oder ein qualitativ hochwertiges Foto zu drucken, und die Kosten für Papier und Ink summiert sich im Laufe der Zeit. Im Gegensatz dazu ist die Anzeigeausgabe sofort und im Wesentlichen frei.
 -   **Kann schwarz und weiß sein.** Viele Drucker sind heute schwarz und weiß, während nur wenige Displays monofarbig sind.
--   **Ist nicht interaktiv.** Benutzer können keine Seiten oder Steuerelemente scrollen, um weitere Inhalte anzuzeigen. Sie können nicht auf Links oder Schaltflächen klicken oder auf Steuerelemente bewegen. Interaktive Inhalte haben beim Drucken keinen Wert.
--   **Es kann nicht mehr auf Papier, Ink oder Toner oder offline gehen.** Folglich benötigt die Papierausgabe mehr Fehlerbehandlung und Problembehandlung.
+-   **Ist nicht interaktiv.** Benutzer können keine Seiten oder Steuerelemente scrollen, um weitere Inhalte anzuzeigen. Sie können nicht auf Links oder Schaltflächen klicken oder mit dem Mauszeiger auf Steuerelemente zeigen. Interaktive Inhalte haben beim Drucken keinen Wert.
+-   **Es kann keine Papier-, Farb- oder Tonerdaten mehr oder offline sein.** Daher ist für die Papierausgabe eine weitere Fehlerbehandlung und Problembehandlung erforderlich.
 
-Diese Unterschiede können sich auf Ihren Druckentwurf auswirken. Das Erstellen einer guten Druckerfahrung erfordert mehr als nur das Ansenden der Programmausgabe an den Drucker.
+Diese Unterschiede können sich auf Ihren Druckentwurf auswirken. Um eine gute Druckerfahrung zu erzielen, müssen Sie nicht nur die Ausgabe Ihres Programms an den Drucker weiterleiten.
 
 ### <a name="wysiwyg-and-the-evolving-requirements-of-screen-display"></a>WYSIWYG und die sich entwickelnden Anforderungen der Bildschirmanzeige
 
-In der Vergangenheit wird das grundlegendste Prinzip für die Benutzeroberfläche für das Drucken als WYSIWYG ("what you see is what you get" (Was Sie sehen, ist das, was Sie erhalten) bekannt. Dieses Prinzip legt nahe, dass eine starke Beziehung zwischen dem, was auf der Anzeige zu sehen ist, und dem Gedruckten besteht. Bevor WYSIWYG zur Standardübung wurde, gab es häufig keine Beziehung zwischen der Anzeige- und der Druckversion eines Dokuments. Benutzer mussten drucken, um zu sehen, wie das Dokument tatsächlich auf Papier aussieht. Die Verwendung von WYSIWYG war eine deutliche Verbesserung der Produktivität, da die meisten Programme zu diesem Zeitpunkt in erster Linie für die Dokumenterstellung und den Druck konzipiert wurden.
+In der Vergangenheit wird das grundlegendste Prinzip für die Druckbenutzeroberfläche als WYSIWYG (was Sie sehen, was Sie erhalten) bezeichnet. Dieses Prinzip schlägt vor, dass eine starke Beziehung zwischen dem, was auf der Anzeige angezeigt wird, und dem, was gedruckt wird, bestehen sollte. Bevor WYSIWYG zum Standard wurde, gab es häufig keine Beziehung zwischen der Anzeige- und der Druckversion eines Dokuments. Benutzer mussten drucken, um zu sehen, wie das Dokument tatsächlich auf dem Papier aussieht. Die Verwendung von WYSIWYG war eine große Produktivitätsverbesserung, da die meisten Programme zu diesem Zeitpunkt in erster Linie für die Erstellung und den Druck von Dokumenten konzipiert waren.
 
-Heutzutage ist es üblich, dass Websites die Anzeige optimieren, und ihr druckerfreundliches Format kann sich deutlich unterscheiden. Darüber hinaus verfügen wir über verschiedene Computergeräte (z. B. Smartphones und persönliche digitale Assistenten), die häufig für kleine Displays optimierte Ausgaben benötigen. Obwohl WYSIWYG immer noch der beste Ansatz für Dokumenterstellungsprogramme ist, ist es für andere Programme oft sinnvoller, für eine Vielzahl von Zielgeräten zu optimieren. Bei solchen Programmen kann sich das, was auf einer PC-Anzeige angezeigt wird, von dem unterscheiden, was auf anderen Geräteanzeigen angezeigt wird. Dies kann sich von dem unterscheiden, was Sie auf der gedruckten Seite erhalten.
+Heutzutage ist es üblich, websites für die Anzeige zu optimieren, und ihr druckerfreundliches Format kann sehr unterschiedlich aussehen. Darüber hinaus verfügen wir über verschiedene Computergeräte (z. B. Smartphones und persönliche digitale Assistenten), die häufig für kleine Displays optimierte Ausgaben benötigen. Obwohl WYSIWYG immer noch der beste Ansatz für Programme zur Dokumenterstellung ist, ist es für andere Programme oft sinnvoller, für eine Vielzahl von Zielgeräten zu optimieren. Bei solchen Programmen kann sich das, was auf einem PC angezeigt wird, von dem unterscheiden, was auf anderen Geräteanzeigen angezeigt wird. Dies kann sich von dem unterscheiden, was Sie auf der gedruckten Seite erhalten.
 
 ### <a name="optimize-for-printing"></a>Optimieren für das Drucken
 
-Programme, die keine strenge WYSIWYG-Druckerfahrung verwenden, können für das Drucken weiterhin auf folgende Weise optimiert werden:
+Programme, die keine strenge WYSIWYG-Druckerfahrung verwenden, können weiterhin auf folgende Weise für den Druck optimiert werden:
 
--   Formatieren Sie das Layout für die Zielseitengröße neu.
--   Stellen Sie eine Druckvorschau zur Verfügung, vorzugsweise mit einfachen Anpassungsoptionen, mit denen Benutzer direkt im Druckdialogfeld experimentieren können (z. B. ziehende Ränder).
--   Geben Sie gegebenenfalls eine druckerfreundliche Formatoption an.
+-   Formatiert das Layout für die Zielseitengröße neu.
+-   Stellen Sie eine Druckvorschau bereit, vorzugsweise mit einfachen Anpassungsoptionen, mit denen Benutzer direkt im Druckdialogfeld experimentieren können (z. B. durch Ziehen von Rändern).
+-   Stellen Sie ggf. eine druckerfreundliche Formatoption bereit.
     -   Konsolidieren Sie separate Teildokumente in einem einzelnen Dokument.
-    -   Entfernen Sie Hintergründe und andere Entwurfselemente, z. B. Werbeanzeigen, insbesondere dann, wenn sie für einen Schwarz-Weiß-Drucker nicht geeignet sind.
+    -   Entfernen Sie Hintergründe und andere Entwurfselemente wie Werbespots, insbesondere, wenn sie für einen Schwarz-Weiß-Drucker ungeeignet sind.
     -   Entfernen Sie interaktive Elemente wie Navigationssteuerelemente und Befehlsschaltflächen.
-    -   Stellen Sie sicher, dass alle Daten sichtbar sind, ohne auf scrollbars oder mit dem Maus mausern zu müssen.
+    -   Stellen Sie sicher, dass alle Daten sichtbar sind, ohne scrollbars oder mit dem Mauszeiger darauf zu zeigen.
 
         **Anzeigeversion:**
 
@@ -86,7 +86,7 @@ Programme, die keine strenge WYSIWYG-Druckerfahrung verwenden, können für das 
 
         **Druckerfreundliche Version:**
 
-        ![Screenshot desselben Berichts, der für den Druck optimiert ist ](images/exper-printing-image2.png)
+        ![Screenshot des gleichen Berichts, der für den Druck optimiert ist ](images/exper-printing-image2.png)
 
         In der druckerfreundlichen Version sind alle Daten auf der gedruckten Seite sichtbar, und die interaktiven Elemente werden entfernt.
 
@@ -94,19 +94,19 @@ Programme, die keine strenge WYSIWYG-Druckerfahrung verwenden, können für das 
 
         **Annehmbar:**
 
-        Weitere Informationen finden Sie im UX-Handbuch.
+        Weitere Informationen finden Sie im Leitfaden zur Benutzererfahrung.
 
-        **Optimiert für das Drucken:**
+        **Für den Druck optimiert:**
 
-        Weitere Informationen finden Sie im UX-Handbuch ( https://msdn.microsoft.com/windowsvista/uxguide) .
+        Weitere Informationen finden Sie im Leitfaden zur Benutzererfahrung ( https://msdn.microsoft.com/windowsvista/uxguide) .
 
--   Konvertieren Sie hellen Text auf einem dunklen Hintergrund in dunklen Text auf einem weißen Hintergrund.
+-   Konvertieren von hellem Text auf einem dunklen Hintergrund in dunklen Text auf einem weißen Hintergrund.
 
-### <a name="include-the-right-print-options"></a>Schließen Sie die richtigen Druckoptionen ein.
+### <a name="include-the-right-print-options"></a>Einschließen der richtigen Druckoptionen
 
-Das Allgemeine Dialogfeld Druckoptionen bietet Optionen für:
+Das Allgemeine Dialogfeld Druckoptionen bietet Optionen für Folgendes:
 
--   Wählen Sie den Drucker und die Papiergröße aus.
+-   Wählen Sie die Drucker- und Papiergröße aus.
 -   Festlegen von Druckereigenschaften.
 -   Wählen Sie den Seitenbereich, die Anzahl der Kopien und die Sortierung aus.
 -   Verwenden Sie beide Seiten des Papiers.
@@ -123,7 +123,7 @@ Berücksichtigen Sie beim Entwerfen der Druckoptionen die Benutzererfahrung beim
 -   Durchsuchen Sie alle Seiten.
 -   Drucken Sie direkt aus der Druckvorschau.
 
-Das Rendern einiger komplexer Dokumente (z. B. cad-Zeichnungen mit computergestütztem Entwurf) kann \[ \] sehr lange dauern. Die Leistung der Vorschau ist wichtig, dass eine Druckvorschau recht mühsam werden kann, wenn es einige Zeit dauert, jede Seite zu rendern. **Daher ist es besser, über eine Druckvorschau zu verfügen, die schnell gerendert wird und genau genug ist, damit Benutzer die Druckergebnisse auswerten können, anstatt eine vollständig genaue Vorschau zu haben, die langsam gerendert wird.**
+Das Rendern einiger komplexer Dokumente (z. B. cad-Zeichnungen mit computergestütztem Entwurf) kann \[ \] sehr lange dauern. Die Leistung der Vorschau ist wichtig, dass eine Druckvorschau ziemlich mühsam werden kann, wenn es einige Zeit dauert, jede Seite zu rendern. **Daher ist es besser, über eine Druckvorschau zu verfügen, die schnell gerendert wird und genau genug ist, damit Benutzer die Druckergebnisse auswerten können, anstatt eine vollständig genaue Vorschau zu haben, die langsam gerendert wird.**
 
 Berücksichtigen Sie beim Entwerfen der Druckvorschau die gesamte Aufgabe der Vorbereitung des Drucks. Nach welchen Benutzern wird gesucht? Was werden sie ändern? Programme zum Erstellen von Dokumenten sollten eine interaktive Druckvorschau bieten, damit Benutzer häufig geänderte Einstellungen wie Ränder und Zeilenumbrüche innerhalb der Vorschau anpassen können.
 
@@ -144,13 +144,7 @@ Der Programmtyp ist der primäre Indikator für die entsprechende Druckerfahrung
 
 
 
-| Bezeichnung | Wert |
-|--------|-------|
-| <strong>Erweiterte Dokumenterstellung</strong><br /> Wird zum Erstellen, Anzeigen und Drucken von High-End-Dokumenten verwendet. Die Möglichkeit, hochwertige Drucke zu erstellen, ist einer der Hauptgründe, warum das Programm vorhanden ist. Für erfahrene Benutzer. <br /> | <strong>Benutzerziele:</strong> Perfekte Ergebnisse: Detaillierte Kontrolle über die Druckausgabe.<br /><strong>Beispiel:</strong> Microsoft Word<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Ausgabe optimiert für Print (WYSIWYG).</li><li>Erweiterte Dokumentformatierungsfeatures mit Optionen zum Drucken großer Objekte.</li><li>Erweiterte Druckoptionen, einschließlich Kopf- und Fußzeilen. Dokumentbezogene Druckoptionen werden im Dokument selbst gespeichert.</li><li>Schnelle, genaue und leistungsstarke Druckvorschauen.</li></ul> | 
-| <strong>Erstellen von Zwischendokumenten</strong><br /> Wird zum Erstellen und Anzeigen komplexerer Dokumente verwendet. Die Fähigkeit, hochwertige Drucke zu erstellen, ist wichtig, aber nicht unbedingt einer der Hauptgründe, warum das Programm vorhanden ist. Für Zwischenbenutzer. <br /> | <strong>Benutzerziele:</strong> Gute Ergebnisse mit minimalem Aufwand. Etwas Kontrolle über die Druckausgabe.<br /><strong>Beispiele:</strong> Die Microsoft Office, z. B. Outlook und Excel.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Ausgabe optimiert für Print (WYSIWYG).</li><li>Einige Dokumentformatierungsfeatures mit der Möglichkeit, große Objekte ohne Abschneiden zu drucken.</li><li>Einige benutzerdefinierte Druckoptionen, einschließlich Kopf- und Fußzeilen.</li><li>Präzise, einfach zu verwendende Druckvorschauen.</li></ul> | 
-| <strong>Einfache Dokumenterstellung</strong><br /> Wird zum Erstellen und Anzeigen einfacher Dokumente verwendet. Für alle Benutzer. <br /> | <strong>Benutzerziele:</strong> Einfache Druckunterstützung mit Standarddruckoptionen. Benutzer erwarten gute Ergebnisse ohne Optimierung.<br /><strong>Beispiele:</strong> WordPad, Paint.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Einige Dokumentformatierungsfeatures mit der Möglichkeit, große Objekte ohne Abschneiden zu drucken.</li><li>Standarddruckoptionen; Benutzerdefinierte Druckoptionen sind optional.</li><li>Einfache oder keine Druckvorschau.</li></ul> | 
-| <strong>Dokument-Viewer</strong><br /> Wird zum Anzeigen von Dokumenten verwendet. Benutzer können den Dokumentinhalt oder das Format nicht ändern. <br /> | <strong>Benutzerziele:</strong> Einfache Druckunterstützung mit Standarddruckoptionen. Benutzer erwarten gute Ergebnisse ohne Optimierung. Druckprobleme werden automatisch behandelt, da Benutzer das Dokument nicht ändern können.<br /><strong>Beispiel:</strong> Windows Internet Explorer<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Das Programm verarbeitet Seitenumbrüche automatisch, entfernt leere Seiten, verarbeitet große Objekte und entfernt Hintergründe und andere Entwurfselemente.</li><li>Standarddruckoptionen; Benutzerdefinierte Druckoptionen sind optional.</li><li>Einfache oder keine Druckvorschau.</li></ul> | 
-| <strong>Hilfsprogramme oder line-of-business-Anwendungen</strong><br /> Wird verwendet, um einfache, spezifische Aufgaben auszuführen. Für alle Benutzer. <br /> | <strong>Benutzerziele:</strong> Möglichkeit zum effizienten Exportieren ausgewählter Daten. Benutzer erwarten gute Ergebnisse ohne Optimierung. Häufig sind Benutzer bei solchen Programmen sehr versiert, überhaupt Druckunterstützung zu finden.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Druckunterstützung ist abhängig von den unterstützten Szenarien optional.</li><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Einige Dokumentformatierungsfeatures. Kann akzeptabel sein, wenn große Objekte abgeschnitten werden.</li><li>Standarddruckoptionen.</li><li>Druckvorschauen optional.</li></ul> | 
+| | | <strong>Erweiterte Dokumenterstellung</strong><br /> Wird zum Erstellen, Anzeigen und Drucken von High-End-Dokumenten verwendet. Die Möglichkeit, hochwertige Drucke zu erstellen, ist einer der Hauptgründe, warum das Programm vorhanden ist. Für erfahrene Benutzer. <br /> | <strong>Benutzerziele:</strong> Perfekte Ergebnisse: Detaillierte Kontrolle über die Druckausgabe.<br /><strong>Beispiel:</strong> Microsoft Word<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Ausgabe optimiert für Print (WYSIWYG).</li><li>Erweiterte Dokumentformatierungsfeatures mit Optionen zum Drucken großer Objekte.</li><li>Erweiterte Druckoptionen, einschließlich Kopf- und Fußzeilen. Dokumentbezogene Druckoptionen werden im Dokument selbst gespeichert.</li><li>Schnelle, genaue und leistungsstarke Druckvorschauen.</li></ul> | | <strong>Erstellen von Zwischendokumenten</strong><br /> Wird zum Erstellen und Anzeigen komplexerer Dokumente verwendet. Die Fähigkeit, hochwertige Drucke zu erstellen, ist wichtig, aber nicht unbedingt einer der Hauptgründe, warum das Programm vorhanden ist. Für Zwischenbenutzer. <br /> | <strong>Benutzerziele:</strong> Gute Ergebnisse mit minimalem Aufwand. Etwas Kontrolle über die Druckausgabe.<br /><strong>Beispiele:</strong> Die Microsoft Office programme, z. B. Outlook und Excel.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Ausgabe optimiert für Print (WYSIWYG).</li><li>Einige Dokumentformatierungsfeatures mit der Möglichkeit, große Objekte ohne Abschneiden zu drucken.</li><li>Einige benutzerdefinierte Druckoptionen, einschließlich Kopf- und Fußzeilen.</li><li>Präzise, einfach zu verwendende Druckvorschauen.</li></ul> | | <strong>Einfache Dokumenterstellung</strong><br /> Wird zum Erstellen und Anzeigen einfacher Dokumente verwendet. Für alle Benutzer. <br /> | <strong>Benutzerziele:</strong> Einfache Druckunterstützung mit Standarddruckoptionen. Benutzer erwarten gute Ergebnisse ohne Optimierung.<br /><strong>Beispiele:</strong> WordPad, Paint.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Einige Dokumentformatierungsfeatures mit der Möglichkeit, große Objekte ohne Abschneiden zu drucken.</li><li>Standarddruckoptionen; Benutzerdefinierte Druckoptionen sind optional.</li><li>Einfache oder keine Druckvorschau.</li></ul> | | <strong>Dokument-Viewer</strong><br /> Wird zum Anzeigen von Dokumenten verwendet. Benutzer können den Dokumentinhalt oder das Format nicht ändern. <br /> | <strong>Benutzerziele:</strong> Einfache Druckunterstützung mit Standarddruckoptionen. Benutzer erwarten gute Ergebnisse ohne Optimierung. Druckprobleme werden automatisch behandelt, da Benutzer das Dokument nicht ändern können.<br /><strong>Beispiel:</strong> Windows Internet Explorer<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Das Programm verarbeitet Seitenumbrüche automatisch, entfernt leere Seiten, verarbeitet große Objekte und entfernt Hintergründe und andere Entwurfselemente.</li><li>Standarddruckoptionen; Benutzerdefinierte Druckoptionen sind optional.</li><li>Einfache oder keine Druckvorschau.</li></ul> | | <strong>Hilfsprogramme oder line-of-business-Anwendungen</strong><br /> Wird verwendet, um einfache, spezifische Aufgaben auszuführen. Für alle Benutzer. <br /> | <strong>Benutzerziele:</strong> Möglichkeit zum effizienten Exportieren ausgewählter Daten. Benutzer erwarten gute Ergebnisse ohne Optimierung. Häufig sind Benutzer bei solchen Programmen sehr versiert, überhaupt Druckunterstützung zu finden.<br /><strong>Empfohlene Druckerfahrung:</strong><br /><ul><li>Die Druckunterstützung ist abhängig von den unterstützten Szenarien optional.</li><li>Die Ausgabe kann für print (WYSIWYG) optimiert werden, dies ist jedoch nicht erforderlich.</li><li>Einige Dokumentformatierungsfeatures. Kann akzeptabel sein, wenn große Objekte abgeschnitten werden.</li><li>Standarddruckoptionen.</li><li>Druckvorschauen optional.</li></ul> | 
 
 
 
@@ -161,7 +155,7 @@ Der Programmtyp ist der primäre Indikator für die entsprechende Druckerfahrung
 
 ### <a name="general"></a>Allgemein
 
--   **Geben Sie keine leeren Seiten oder Seiten mit nur Kopf- und Fußzeilen aus.** Drucken Sie jedoch leere Seiten, wenn die Kopf- oder Fußzeilen Seitenzahlen enthalten und auf diese Seitennummern an anderer Stelle verwiesen werden kann.
+-   **Drucken Sie keine leeren Seiten oder Seiten mit nur Kopf- und Fußzeilen.** Drucken Sie jedoch leere Seiten, wenn die Kopf- oder Fußzeilen Seitenzahlen enthalten und auf diese Seitenzahlen möglicherweise an anderer Stelle verwiesen wird.
 -   **Spoolt alle ausstehenden Druckaufträge vollständig aus, bevor ein Programm heruntergefahren wird.**
 
 ### <a name="formatting-pages"></a>Formatieren von Seiten
@@ -171,7 +165,7 @@ Der Programmtyp ist der primäre Indikator für die entsprechende Druckerfahrung
     -   **Behandeln Sie große Objekte automatisch durch Skalieren, Drehen oder Teilen auf mehrere Seiten.** Weitere Richtlinien zum Drucken großer Objekte finden Sie unter [Überdimensionierte Objekte.](#oversized-objects)
     -   **Optimieren Sie die Seitenumbrüche, um leere und fast leere Seiten zu vermeiden.**
     -   **Konvertieren von hellem Text auf einem dunklen Hintergrund in dunklen Text auf einem weißen Hintergrund.**
-    -   **Entfernen Sie Hintergründe und andere Entwurfselemente,** insbesondere wenn sie für einen Schwarz-Weiß-Drucker nicht geeignet sind.
+    -   **Entfernen Sie Hintergründe und andere Entwurfselemente, insbesondere,** wenn sie für einen Schwarz-Weiß-Drucker nicht geeignet sind.
 -   **Wenn Ihr Programm separate Teildokumente vorstellt, stellen Sie eine druckfreundliche Formatoption bereit, um sie in einem einzigen Dokument zum Drucken zu konsolidieren.**
 -   **Entfernen interaktiver Elemente:**
     -   Entfernen Sie Navigationssteuerelemente und Befehlsschaltflächen.
@@ -206,7 +200,7 @@ Die Behandlung großer Objekte, z. B. Tabellen, Grafiken und Fotos, ist ein Prob
 
     In diesem Beispiel wird das große Bild gedreht, damit es besser auf die Seite passt.
 
--   **Drucken Sie das Objekt auf mehreren Seiten.** Der Ansatz funktioniert gut, wenn das Objekt nicht skaliert werden kann oder nicht skaliert werden sollte und das Rotieren der Seite nicht hilfreich ist oder nicht erwünscht ist. Wenn das Objekt interne Grenzen hat (z. B. die Spalten- und Zeilenteiler in einer Kalkulationstabelle), unterbrechen Sie die Seiten an diesen Grenzen anstatt innerhalb des Inhalts. Wiederholen Sie außerdem alle Elemente, die zum Verstehen der Seite erforderlich sind, z. B. Legenden oder Spaltenüberschriften. Weisen Sie beim Aufteilen eines Objekts auf mehrere Seiten die Seitenzahlen in Lesereihenfolge zu (von links nach rechts, von oben nach unten).
+-   **Drucken Sie das Objekt auf mehreren Seiten.** Der Ansatz funktioniert gut, wenn das Objekt nicht skaliert werden kann oder nicht skaliert werden sollte und das Rotieren der Seite nicht hilfreich oder nicht erwünscht ist. Wenn das Objekt interne Grenzen hat (z. B. die Spalten- und Zeilenteiler in einer Kalkulationstabelle), unterbrechen Sie die Seiten an diesen Grenzen anstatt innerhalb des Inhalts. Wiederholen Sie außerdem alle Elemente, die zum Verstehen der Seite erforderlich sind, z. B. Legenden oder Spaltenüberschriften. Weisen Sie beim Aufteilen eines Objekts auf mehrere Seiten die Seitenzahlen in Lesereihenfolge zu (von links nach rechts, von oben nach unten).
 
     ![Screenshot der Spaltenköpfe, die auf der nächsten Seite wiederholt werden ](images/exper-printing-image5.png)
 
@@ -272,52 +266,52 @@ In diesem Beispiel verwendet Fabrikam fälschlicherweise ein separates Dialogfel
 
 -   **Speichern Sie bei erweiterten Dokumentenerstellungsprogrammen die dokumentbezogenen Druckoptionen im Dokument selbst.** Für diese Programme sind die Druckoptionen ein integraler Bestandteil des Dokuments.
 -   **Speichern Sie einstellungen für andere Arten von Programmen pro Benutzer.**
--   **Erwägen Sie die Auswahl eines nicht standardmäßigen Druckers für spezialisiertes Drucken.** Beispielsweise kann eine Fotodruckanwendung unabhängig vom Standarddrucker des Systems immer den zuletzt vom Programm verwendeten Drucker auswählen. Dabei wird davon ausgegangen, dass der Standarddrucker des Systems wahrscheinlich kein Fotodrucker ist. Solche Programme sollten die Einstellung für den zuletzt ausgewählten Drucker speichern.
--   **Sperren Sie Ihr Programm nicht, während Sie Druckerfunktionen erkennen.** Dies stellt eine schlechte Benutzererfahrung dar. Stattdessen haben Sie eine der beiden:
+-   **Erwägen Sie die Auswahl eines nicht standardmäßigen Druckers für den spezialisierten Druck.** Beispielsweise kann eine Fotodruckanwendung unabhängig vom Standarddrucker des Systems immer den zuletzt vom Programm verwendeten Drucker auswählen. Dabei wird davon ausgegangen, dass der Standarddrucker des Systems wahrscheinlich kein Fotodrucker ist. Solche Programme sollten die Einstellung für den zuletzt ausgewählten Drucker speichern.
+-   **Sperren Sie Ihr Programm nicht, während Sie Druckerfunktionen erkennen.** Dies führt zu einer schlechten Benutzererfahrung. Verwenden Sie stattdessen eine der beiden:
     -   Führen Sie die Druckerfunktionserkennung in einem separaten Thread aus.
-    -   Time out after 10 seconds. (Time out nach 10 Sekunden.
-    -   Geben Sie ein Dialogfeld an, in dem Benutzer abbrechen können.
+    -   Time out nach 10 Sekunden.
+    -   Geben Sie ein Dialogfeld an, um Benutzern das Abbrechen zu ermöglichen.
 
 ![Screenshot des Dialogfelds "Herstellen einer Verbindung mit" ](images/exper-printing-image12.png)
 
-In diesem Beispiel erleichtert das Dialogfeld das Abbrechen der Druckerfunktionserkennung, wenn der Benutzer entscheidet, dass die Aufgabe zu lange dauert.
+In diesem Beispiel erleichtert das Dialogfeld das Abbrechen der Druckerfunktionserkennung, wenn der Benutzer entscheidet, dass die Aufgabe zu lange dauern soll.
 
-### <a name="print-previews"></a>Druckvorschau
+### <a name="print-previews"></a>Drucken von Vorschauversionen
 
--   **Stellen Sie ggf. ein Druckvorschaufeature bereit.** Alle Programme zur Dokumenterstellung profitieren von Druckvorschau, benutzer erwarten sie jedoch nicht in einfachen Dokumentenerstellungsprogrammen. Bei erweiterten Programmen zur Dokumenterstellung sollten Sie erwägen, die Druckvorschau direkt im Hauptprogrammfenster zu unterstützen.
+-   **Stellen Sie bei Bedarf eine Druckvorschaufunktion zur Verfügung.** Alle Programme zum Erstellen von Dokumenten profitieren von Seitenvorschauen, benutzer erwarten sie jedoch nicht in einfachen Dokumentenerstellungsprogrammen. Für erweiterte Programme zum Erstellen von Dokumenten sollten Sie die Unterstützung der Druckvorschau direkt im Hauptfenster des Programms in Betracht ziehen.
 
-![Screenshot der Seite, die in der Druckvorschau angezeigt wird ](images/exper-printing-image13.png)
+![Screenshot der Seite, die in der Seitenvorschau angezeigt wird ](images/exper-printing-image13.png)
 
 In diesem Beispiel unterstützt Word die Seitenansicht im Hauptprogrammfenster.
 
--   Bereitstellen von Druckvorschaufeatures, mit denen Benutzer:
-    -   Werten Sie Ränder, Seitenumbrüche, Seitenausrichtung, Kopf- und Fußzeilen aus.
+-   Stellen Sie Druckvorschaufeatures zur Verfügung, die Benutzern Dies ermöglichen:
+    -   Wertet Ränder, Seitenumbrüche, Seitenausrichtung, Kopf- und Fußzeilen aus.
     -   Durchsuchen Sie alle Seiten.
-    -   Direktes Drucken aus der Druckvorschau.
+    -   Drucken Sie direkt aus der Druckvorschau.
 
-Erwägen Sie die Bereitstellung einer interaktiven Druckvorschau, damit Benutzer häufig geänderte Einstellungen wie Ränder und Zeilenumbrüche direkt innerhalb der Vorschau anpassen können.
+Erwägen Sie die Bereitstellung einer interaktiven Druckvorschau, damit Benutzer häufig geänderte Einstellungen wie Ränder und Zeilenumbrüche direkt in der Vorschau anpassen können.
 
--   **Lassen Sie Seiten der Druckvorschau innerhalb einer Sekunde rendern.** Es ist besser, eine Druckvorschau zu haben, die schnell gerendert wird und so genau ist, dass Benutzer die Druckergebnisse auswerten können, als eine vollständig genaue Vorschau zu haben, die langsam gerendert wird.
--   **Bei erweiterten Dokumentenerstellungsprogrammen sollten Sie erwägen, das Standarddialogfeld Drucken zu erweitern, indem Sie die Vorschaufunktionen direkt darin integrieren,** anstatt dafür ein separates Dialogfeld zu erstellen.
+-   **Seiten der Seitenansicht können innerhalb einer Sekunde gerendert werden.** Es ist besser, über eine Druckvorschau zu verfügen, die schnell gerendert wird und genau genug ist, damit Benutzer die Druckergebnisse auswerten können, anstatt eine vollständig genaue Vorschau zu haben, die langsam gerendert wird.
+-   **Für erweiterte Programme zum Erstellen von Dokumenten sollten** Sie das Standarddialogfeld Drucken erweitern, indem Sie Vorschaufunktionen direkt in das Dialogfeld integrieren, anstatt ein separates Dialogfeld dafür zu erstellen.
 -   **Geben Sie eine offensichtliche Schaltfläche zum Schließen des Vorschaumodus an.**
 
-![Screenshot des Symbols und der Bezeichnung zum Schließen der Druckvorschau ](images/exper-printing-image14.png)
+![Screenshot des Schließens des Symbols und der Bezeichnung der Druckvorschau ](images/exper-printing-image14.png)
 
-Der Druckvorschaumodus in Word verfügt über einen offensichtlichen Befehl zum Schließen der Vorschau.
+Der Druckvorschaumodus in Word verfügt über einen offensichtlichen Close Preview-Befehl.
 
 ### <a name="printing-errors"></a>Druckfehler
 
-**Hinweis:** Nachdem der Druckauftrag mit dem Drucker gespoolt wurde, ist Windows für alle nachfolgenden Fehler verantwortlich. Das Programm muss nur Fehler behandeln, die auftreten, bevor der Druckauftrag gespoolt wird.
+**Hinweis:** Nachdem der Druckauftrag mit dem Drucker in einen Pool poolt wurde, Windows für alle nachfolgenden Fehler verantwortlich. Ihr Programm muss nur Fehler behandeln, die auftreten, bevor der Druckauftrag in den Pool pooliert wird.
 
--   **Überprüfen Sie vor dem Spooling eines Druckauftrags auf mögliche Druckprobleme, die der Benutzer beheben kann.** Stellen Sie eine klare, präzise Bestätigung vor, bevor Sie mit dem Drucken fortfahren. Bieten Sie nach Möglichkeit an, das Problem automatisch zu beheben. Auf diese Weise können Zeit- und Geldverschwendung vermieden werden.
+-   **Überprüfen Sie vor dem Spoolen eines Druckauftrags auf mögliche Druckprobleme, die der Benutzer beheben kann.** Stellen Sie eine klare, präzise Bestätigung vor, bevor Sie mit dem Drucken fortfahren. Bieten Sie nach Möglichkeit an, das Problem automatisch zu beheben. Dies kann zeit- und geldverwenden.
 
 ## <a name="text"></a>Text
 
--   Wenn Sie auf beiden Seiten des Papiers drucken möchten, beschriften Sie die Option Doppelseitig drucken. Verwenden Sie nicht den Ausdruck Manual Duplex.
+-   Damit die Option auf beiden Seiten des Papiers gedruckt werden kann, beschriften Sie die Option Doppelseitiges Drucken. Verwenden Sie nicht den Ausdruck Manueller Duplex.
 
 ## <a name="documentation"></a>Dokumentation
 
--   Verwenden Sie print,, not print out, als Verb.
+-   Verwenden Sie print, nicht print out, als Verb.
 -   Es ist akzeptabel, printout zu verwenden, um auf das Ergebnis eines Druckauftrags zu verweisen.
 -   Verwenden Sie die Druckwarteschlange, nicht die Druckerwarteschlange.
 

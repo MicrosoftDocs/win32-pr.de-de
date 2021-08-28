@@ -1,5 +1,5 @@
 ---
-description: Fordert Informationen dazu an, ob eine Offlineanforderung zwischengespeichert wird oder nicht.
+description: Fordert Informationen dazu an, ob eine Offlineanforderung zwischengespeichert wird.
 MS-HAID: vspixengine.IOfflineAnalysisCacheRequest
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 01551f7b0347b3b6f0920e47a2666a480c67439d
-ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
+ms.openlocfilehash: 6ef4a30f76ac3e0f186d9cd903214b8075bb7476
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122786326"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122629321"
 ---
 # <a name="span-idvspixengineiofflineanalysiscacherequestspaniofflineanalysiscacherequest-interface"></a><span id="vspixengine.iofflineanalysiscacherequest"></span>IOfflineAnalysisCacheRequest-Schnittstelle
 
-Fordert Informationen dazu an, ob eine Offlineanforderung zwischengespeichert wird oder nicht.
+Fordert Informationen dazu an, ob eine Offlineanforderung zwischengespeichert wird.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 Die **IOfflineAnalysisCacheRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IOfflineAnalysisCacheRequest** verfügt auch über diese Typen von Membern:
 
@@ -38,11 +38,11 @@ Die **IOfflineAnalysisCacheRequest-Schnittstelle** erbt von der [**IUnknown-Schn
 
 Die **IOfflineAnalysisCacheRequest-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/iofflineanalysiscacherequest-requestofflineanalysisreportavailabilityasync-dword-dword-arr-iofflineanalysiscachecallback-ptr"><strong>RequestOfflineAnalysisReportAvailabilityAsync</strong></a></td><td ><p>Anforderungen zum Zwischenspeichern des Offlineanalyseberichts der angegebenen Frames.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/iofflineanalysiscacherequest-requestofflineanalysisreportavailabilityasync-dword-dword-arr-iofflineanalysiscachecallback-ptr"><strong>RequestOfflineAnalysisReportAvailabilityAsync</strong></a></td><td style="text-align: left;"><p>Anforderungen zum Zwischenspeichern des Offlineanalyseberichts der angegebenen Frames.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

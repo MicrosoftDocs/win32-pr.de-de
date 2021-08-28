@@ -16,12 +16,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7db85573072c54a613009c3afec4873a38db4ff7336e487553437967b4c6e1c
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ec67a00b55510aecb980fd8bd8a5b2fa4ad6c73e
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119060078"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885645"
 ---
 # <a name="principallogontype-property"></a>Principal.LogonType-Eigenschaft
 
@@ -60,11 +60,11 @@ Legen Sie auf eine der folgenden [**TASK \_ LOGON TYPE-Enumerationskonst**](/win
 
 Diese Eigenschaft ist nur gültig, wenn ein Benutzerbezeichner von der [**UserId-Eigenschaft angegeben**](principal-userid.md) wird.
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Anmeldetyp im -Element des Taskplaner [**<LogonType>**](taskschedulerschema-logontype-principaltype-element.md) angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Anmeldetyp im [**&lt; &gt; LogonType-Element**](taskschedulerschema-logontype-principaltype-element.md) des Taskplaner angegeben.
 
 Für eine Aufgabe, die eine Meldungsfeldaktion enthält, wird das Meldungsfeld angezeigt, wenn der Task aktiviert ist und der Task über einen interaktiven Anmeldetyp verfügt. Um den Taskanmeldungstyp auf interaktiv festzulegen, geben Sie 3 (**TASK \_ LOGON \_ INTERACTIVE \_ TOKEN**) oder 4 (**TASK \_ LOGON \_ GROUP**) in der **LogonType-Eigenschaft** des Aufgabenprinzipals oder im *logonType-Parameter* von [**TaskFolder.RegisterTask**](taskfolder-registertask.md) oder [**TaskFolder.RegisterTaskDefinition an.**](taskfolder-registertaskdefinition.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -77,7 +77,7 @@ Für eine Aufgabe, die eine Meldungsfeldaktion enthält, wird das Meldungsfeld a
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: vs_3_0
-description: Erfahren Sie mehr über vs_3_0, einen programmierbaren Vertex-Shader, der aus einer Reihe von Anweisungen besteht, die mit Scheitelpunktdaten arbeiten.
+description: Erfahren Sie vs_3_0, einem programmierbaren Vertex-Shader, der aus einer Reihe von Anweisungen besteht, die mit Scheitelpunktdaten arbeiten.
 ms.assetid: 0f40f946-3525-4203-bfe2-1cd941d8e2ec
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,31 +9,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 310d64170280053c34766f214969f78d66560ea3
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: fd10f6d726118679f395f01714233c7096fd5189
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112011073"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476416"
 ---
-# <a name="vs_3_0"></a>Vs \_ 3 \_ 0
+# <a name="vs_3_0"></a>vs \_ 3 \_ 0
 
-Ein programmierbarer Vertex-Shader besteht aus einer Reihe von Anweisungen, die für Scheitelpunktdaten ausgeführt werden. Registriert Datenübertragungen in und aus der ALU. Es kann ein zusätzliches Steuerelement angewendet werden, um die Anweisung, die Ergebnisse oder die geschriebenen Daten zu ändern.
+Ein programmierbarer Vertex-Shader besteht aus einer Reihe von Anweisungen, die mit Scheitelpunktdaten arbeiten. Registriert Übertragungsdaten in und aus der ALU. Zusätzliche Steuerung kann angewendet werden, um die Anweisung, die Ergebnisse oder die ausgeschriebenen Daten zu ändern.
 
-Die Vertex-Shaderversion im Vergleich \_ zu 3 \_ 0 erweitert den Featuresatz, der von und 2 x unterstützt \_ \_ wird. Jedes der Features in vs \_ 2 \_ X, für die eine Obergrenze festgelegt werden muss, ist in \_ Vs. 3 \_ 0 verfügbar, ohne dass die Obergrenze erforderlich ist.
+Vertex-Shaderversion im Vergleich zu 3 0 erweitert den von \_ \_ unterstützten Funktionssatz im Vergleich zu \_ 2 \_ x. Jedes der Features in im Vergleich zu 2 X, für das eine Obergrenze festgelegt werden muss, ist in im Vergleich \_ zu 3 0 verfügbar, \_ ohne dass die Obergrenze erforderlich \_ \_ ist.
 
--   [Anweisungen im Vergleich zu \_ 3 \_ 0](dx9-graphics-reference-asm-vs-instructions-vs-3-0.md) enthält eine Liste der verfügbaren Anweisungen.
--   [Register : Im Vergleich zu \_ 3 \_ 0](dx9-graphics-reference-asm-vs-registers-vs-3-0.md) werden die verschiedenen Registertypen aufgelistet, die von der Vertex-Shader-ALU verwendet werden.
--   [Vertex-Shaderregistermodifizierer](dx9-graphics-reference-asm-vs-registers-modifiers.md) werden verwendet, um die Funktionsweise einer Anweisung zu ändern.
+-   [Anweisungen im Vergleich \_ zu \_ 3 0](dx9-graphics-reference-asm-vs-instructions-vs-3-0.md) enthält eine Liste der verfügbaren Anweisungen.
+-   [Register: Im Vergleich \_ zu 3 \_ 0](dx9-graphics-reference-asm-vs-registers-vs-3-0.md) werden die verschiedenen Typen von Registern aufgeführt, die vom Vertex-Shader ALU verwendet werden.
+-   [Vertex-Shader-Registermodifizierer](dx9-graphics-reference-asm-vs-registers-modifiers.md) werden verwendet, um die Art und Weise zu ändern, wie eine Anweisung funktioniert.
 -   [Vertex-Shader-Quellregistermodifizierer](dx9-graphics-reference-asm-vs-registers-modifiers-source.md) ändern die Quellregisterdaten, bevor die Anweisung ausgeführt wird.
--   [Das Quellenregister swizzling](dx9-graphics-reference-asm-vs-registers-modifiers-source-swizzling.md) bietet zusätzliche Kontrolle darüber, welche Registerkomponenten gelesen, kopiert oder geschrieben werden.
--   [Die Zielregistermaskierung](dx9-graphics-reference-asm-vs-registers-modifiers-masking.md) bestimmt, welche Komponenten des Zielregisters geschrieben werden.
+-   [Source Register Swizzling bietet](dx9-graphics-reference-asm-vs-registers-modifiers-source-swizzling.md) zusätzliche Kontrolle darüber, welche Registerkomponenten gelesen, kopiert oder geschrieben werden.
+-   [Zielregistermaskierung](dx9-graphics-reference-asm-vs-registers-modifiers-masking.md) bestimmt, welche Komponenten des Zielregisters geschrieben werden.
 
 ## <a name="new-features"></a>Neue Funktionen
 
-Neue Features der Vertex-Shaderversion im Vergleich zu \_ Version \_ 3 0 sind in den folgenden Abschnitten aufgeführt.
+Neue Features der Vertex-Shaderversion im Vergleich \_ zu 3 \_ 0 sind in den folgenden Abschnitten aufgeführt.
 
-### <a name="indexing-registers"></a>Indizierungsregister
+### <a name="indexing-registers"></a>Indizieren von Registern
 
 In den früheren Shadermodellen konnte nur die konstante Registerbank indiziert werden. In diesem Modell können die folgenden Registerbanken mithilfe des Schleifenzählerregisters (Loop Counter Register, aL) indiziert werden:
 
@@ -42,107 +42,55 @@ In den früheren Shadermodellen konnte nur die konstante Registerbank indiziert 
 
 ### <a name="vertex-textures"></a>Scheitelpunkttexturen
 
-Dieses Shadermodell unterstützt die Textursuche im Vertex-Shader mithilfe von Texldl. Die Vertex-Engine verfügt über vier Textur-Samplerstufen (die sich von der Verschiebungszuordnungs-Sampler und den Textur-Samplern in der Pixel-Engine unterscheiden), die zum Abtasten von Texturen verwendet werden können, die in diesen Phasen festgelegt sind. Siehe [Vertextexturen in vs \_ 3 \_ 0 (DirectX HLSL)](/windows/desktop/direct3d9/vertex-textures-in-vs-3-0).
+Dieses Shadermodell unterstützt die Textursuche im Vertex-Shader mit texldl. Die Scheitelpunkt-Engine verfügt über vier Texturs sampler-Phasen (im Unterschied zum Verschiebungszuordnungs-Sampler und den Texturs samplern in der Pixel-Engine), die zum Abtasten von Texturen verwendet werden können, die in diesen Phasen festgelegt wurden. Weitere [Informationen finden Sie unter Vertextexturen in \_ vs. \_ 3 0 (DirectX HLSL).](/windows/desktop/direct3d9/vertex-textures-in-vs-3-0)
 
-### <a name="vertex-stream-frequency"></a>Vertexstreamfrequenz
+### <a name="vertex-stream-frequency"></a>Vertexstreamhäufigkeit
 
-Mit diesem Feature kann eine Teilmenge der Eingaberegister mit einer anderen Rate als einmal pro Scheitelpunkt initialisiert werden. Weitere Informationen finden Sie unter [Zeichnen einer nicht indizierten Geometrie.](/windows/desktop/direct3d9/efficiently-drawing-multiple-instances-of-geometry)
+Mit diesem Feature kann eine Teilmenge der Eingaberegister mit einer anderen Rate als einmal pro Scheitelpunkt initialisiert werden. Weitere Informationen [finden Sie unter Zeichnen von nicht indizierter Geometrie.](/windows/desktop/direct3d9/efficiently-drawing-multiple-instances-of-geometry)
 
 ### <a name="shader-output"></a>Shaderausgabe
 
-Ähnlich wie bei \_ 2 \_ 0 kann die Ausgabe des Shaders mit der statischen Flusssteuerung variieren. Seien Sie vorsichtig bei der dynamischen Verzweigung, da dies dazu führen kann, dass shader-Ausgaben pro Scheitelpunkt variieren. Dies führt zu unvorhersehbaren Ergebnissen auf unterschiedlichen Hardwarekomponenten.
+Ähnlich wie bei 2 0 kann die Ausgabe des Shaders bei der statischen \_ \_ Flusssteuerung variieren. Seien Sie vorsichtig bei dynamischen Verzweigungen, da dies dazu führen kann, dass shader-Ausgaben pro Scheitelpunkt variieren. Dies führt zu unvorhersehbaren Ergebnissen auf unterschiedlicher Hardware.
 
 ### <a name="dynamic-flow-control"></a>Dynamische Flusssteuerung
 
-Alle Anweisungen zur dynamischen Flusssteuerung werden unterstützt. Der maximal zulässige Schachtelungstiefewert ist 24. (Weitere Informationen finden Sie unter [Schachtelungsgrenzwerte](dx9-graphics-reference-asm-vs-instructions-flow-control.md) für die Flusssteuerung.)
+Alle Anweisungen zur dynamischen Flusssteuerung werden unterstützt. Der maximal zulässige Wert für die Schachtelungstiefe beträgt 24. (Weitere [Informationen finden Flow unter Steuern von Schachtelungsgrenzwerten.)](dx9-graphics-reference-asm-vs-instructions-flow-control.md)
 
 ### <a name="temporary-registers"></a>Temporäre Register
 
-Insgesamt werden 32 temporäre Register \# (r) unterstützt.
+Insgesamt werden 32 temporäre Register (r \# ) unterstützt.
 
-### <a name="static-flow-control"></a>Statische Flusssteuerung
+### <a name="static-flow-control"></a>Statisches Flow-Steuerelement
 
-Die maximale Schachtelungstiefe für [die Schleife – im Vergleich zu](loop---vs.md)rep – im Vergleich / [zu](rep---vs.md) 4. Die maximale Schachtelungstiefe für [call - vs](call---vs.md) / [callnz bool - vs](callnz-bool---vs.md) / [callnz pred - vs](callnz-pred---vs.md) ist 4. Bei [bool – im Vergleich](if-bool---vs.md)zu – ist der maximal zulässige Schachtelungstiefewert 24. (Weitere Informationen finden Sie unter [Schachtelungsgrenzwerte](dx9-graphics-reference-asm-vs-instructions-flow-control.md) für die Flusssteuerung.)
+Die maximale Schachtelungstiefe für [die Schleife im Vergleich zu](loop---vs.md)rep / [beträgt](rep---vs.md) 4. Die maximale Schachtelungstiefe für [aufruf – vs](call---vs.md) / [callnz bool – vs](callnz-bool---vs.md) / [callnz pred – vs](callnz-pred---vs.md) is 4. Bei [bool im Vergleich zu ist](if-bool---vs.md)der maximal zulässige Wert für die Schachtelungstiefe 24. (Weitere [Informationen finden Flow unter Steuern von Schachtelungsgrenzwerten.)](dx9-graphics-reference-asm-vs-instructions-flow-control.md)
 
 ### <a name="predication"></a>Prädikation
 
-Anweisungsprädikation wird unterstützt. Verwenden Sie [setp \_ comp - vs](setp-comp---vs.md) , um das Prädikatregister festzulegen.
+Anweisungsvordication wird unterstützt. Verwenden [Sie setp \_ comp im Vergleich zum](setp-comp---vs.md) Festlegen des Prädikatregisters.
 
 ### <a name="instruction-count"></a>Anweisungsanzahl
 
-Jeder Vertexshader ist überall von 512 bis zur Anzahl der Slots in MaxVertexShader30InstructionSlots in [**D3DCAPS9**](/windows/desktop/api/d3d9caps/ns-d3d9caps-d3dcaps9)zulässig. Die Anzahl der ausgeführten Anweisungen kann aufgrund der Schleifen-/Rep-Unterstützung deutlich höher sein. Dies ist jedoch durch MaxVShaderInstructionsExecuted in D3DCAPS9 begrenzt, das mindestens 0xFFFF sein sollte.
+Jeder Vertexshader ist zwischen 512 und der Anzahl von Slots in MaxVertexShader30InstructionSlots in [**D3DCAPS9 zulässig.**](/windows/desktop/api/d3d9caps/ns-d3d9caps-d3dcaps9) Die Anzahl der ausgeführten Anweisungen kann aufgrund der Unterstützung von Schleifen/Wiederholungen deutlich höher sein. Dies wird jedoch durch MaxVShaderInstructionsExecuted in D3DCAPS9 begrenzt, das mindestens 0xFFFF.
 
-### <a name="device-caps"></a>Geräteobergrenzen
+### <a name="device-caps"></a>Geräteobergrenze
 
-Wenn Vertex-Shader 3 \_ 0 unterstützt wird, werden die folgenden Obergrenzen (mindestens) in der Hardware unterstützt:
+Wenn Vertex-Shader 3 0 unterstützt wird, werden die folgenden Obergrenzen \_ in der Hardware unterstützt (mindestens):
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Cap</th>
-<th>Funktion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Shader-Kapselungen</td>
-<td><ul>
-<li>DynamicFlowControlDepth ist 24</li>
-<li>NumTemps ist 32</li>
-<li>StaticFlowControlDepth ist 4</li>
-<li>Prädikation wird unterstützt.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>GuardBandLeft, GuardBandTop, GuardBandRight, GuardBandBottom</td>
-<td>8 KB</td>
-</tr>
-<tr class="odd">
-<td>VertexShaderVersion</td>
-<td>3_0</td>
-</tr>
-<tr class="even">
-<td>MaxVertexShaderConst</td>
-<td>256</td>
-</tr>
-<tr class="odd">
-<td>MaxVertexShader30InstructionSlots</td>
-<td>512</td>
-</tr>
-<tr class="even">
-<td>Unterstützung für Diess</td>
-<td>D3DPRASTERCAPS_FOGVERTEX</td>
-</tr>
-<tr class="odd">
-<td>VertexTextureFilterCaps</td>
-<td><ul>
-<li><a href="/windows/desktop/direct3d9/d3dptfiltercaps">D3DPTFILTERCAPS_MINFPOINT</a></li>
-<li><a href="/windows/desktop/direct3d9/d3dptfiltercaps">D3DPTFILTERCAPS_MAGFPOINT</a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/direct3d9/d3ddevcaps2">D3DDEVCAPS2_VERTEXELEMENTSCANSHARESTREAMOFFSET</a></td>
-<td>Vertexelemente in einer Scheitelpunktdeklaration können denselben Datenstromoffset gemeinsam nutzen.</td>
-</tr>
-<tr class="odd">
-<td>Vertexformate</td>
-<td><ul>
-<li>D3DDECLTYPE_UBYTE4</li>
-<li>D3DDECLTYPE_UBYTE4N</li>
-<li>D3DDECLTYPE_SHORT2N</li>
-<li>D3DDECLTYPE_SHORT4N</li>
-<li>D3DDECLTYPE_FLOAT16_2</li>
-<li>D3DDECLTYPE_FLOAT16_4</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Cap | Funktion | 
+|-----|------------|
+| Shader-Obergrenzen | <ul><li>DynamicFlowControlDepth ist 24</li><li>NumTemps ist 32</li><li>StaticFlowControlDepth ist 4</li><li>Prädication wird unterstützt.</li></ul> | 
+| GuardBandLeft, GuardBandTop, GuardBandRight, GuardBandBottom | 8 KB | 
+| VertexShaderVersion | 3_0 | 
+| MaxVertexShaderConst | 256 | 
+| MaxVertexShader30InstructionSlots | 512 | 
+| Support für 50000 | D3DPRASTERCAPS_FOGVERTEX | 
+| VertexTextureFilterCaps | <ul><li><a href="/windows/desktop/direct3d9/d3dptfiltercaps">D3DPTFILTERCAPS_MINFPOINT</a></li><li><a href="/windows/desktop/direct3d9/d3dptfiltercaps">D3DPTFILTERCAPS_MAGFPOINT</a></li></ul> | 
+| <a href="/windows/desktop/direct3d9/d3ddevcaps2">D3DDEVCAPS2_VERTEXELEMENTSCANSHARESTREAMOFFSET</a> | Scheitelpunktelemente in einer Scheitelpunktdeklaration können denselben Streamoffset gemeinsam haben. | 
+| Vertexformate | <ul><li>D3DDECLTYPE_UBYTE4</li><li>D3DDECLTYPE_UBYTE4N</li><li>D3DDECLTYPE_SHORT2N</li><li>D3DDECLTYPE_SHORT4N</li><li>D3DDECLTYPE_FLOAT16_2</li><li>D3DDECLTYPE_FLOAT16_4</li></ul> | 
+
 
 
 

@@ -1,10 +1,10 @@
 ---
-description: Anforderungen zum Abbrechen der Generierung von shaderlaufverfolgungs-Anweisungen in einer Debuganforderung.
+description: Anforderungen zum Abbrechen der Generierung von Shader-Ablaufverfolgungsanweisungen in einer Debuganforderung.
 MS-HAID: vspixengine.IDebugShaderCancel\_CancelGenerate\_DebugShaderRequestInfo\_ptr\_PixelHistoryOperation\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Idebugshadercancel:: cancelgenerate-Methode'
+title: IDebugShaderCancel::CancelGenerate-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 10DA5080-3AA6-47AA-BFE7-774BC26C7F95
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5c2754f0d390960775b11ac5da121d5e6a20705a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 320eb64057ac078fc31851021f73b445094f8ab7
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345994"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632158"
 ---
-# <a name="span-idvspixengineidebugshadercancel_cancelgenerate_debugshaderrequestinfo_ptr_pixelhistoryoperation_ptrspanidebugshadercancelcancelgenerate-method"></a><span id="vspixengine.idebugshadercancel_cancelgenerate_debugshaderrequestinfo_ptr_pixelhistoryoperation_ptr"></span>Idebugshadercancel:: cancelgenerate-Methode
+# <a name="span-idvspixengineidebugshadercancel_cancelgenerate_debugshaderrequestinfo_ptr_pixelhistoryoperation_ptrspanidebugshadercancelcancelgenerate-method"></a><span id="vspixengine.idebugshadercancel_cancelgenerate_debugshaderrequestinfo_ptr_pixelhistoryoperation_ptr"></span>IDebugShaderCancel::CancelGenerate-Methode
 
-Anforderungen zum Abbrechen der Generierung von shaderlaufverfolgungs-Anweisungen in einer Debuganforderung.
+Anforderungen zum Abbrechen der Generierung von Shader-Ablaufverfolgungsanweisungen in einer Debuganforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT CancelGenerate(
 
 ## <a name="parameters"></a>Parameter
 
-*RequestInfo*   
-Die Adresse einer debugshaderrequestinfo-Struktur, die das angeforderte Ereignis/Scheitelpunkt/Pixel beschreibt.
+*requestInfo*   
+Die Adresse einer DebugShaderRequestInfo-Struktur, die das angeforderte Ereignis/den angeforderten Scheitelpunkt/Pixel beschreibt.
 
-*ppixelhistory*   
-Die Adresse der Pixel Verlaufs Ergebnisse, die zum Suchen des zugeordneten Pixels zum Debuggen verwendet werden. Gilt nur beim Debuggen eines Pixelshaders.
+*pPixelHistory*   
+Die Adresse der Pixelverlaufsergebnisse, die zum Suchen des zugeordneten zu debuggende Pixels verwendet werden. Gilt nur beim Debuggen eines Pixel-Shaders.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Idebugshadercancel**](/windows/desktop/direct3dtools/idebugshadercancel)
+[**IDebugShaderCancel**](/windows/desktop/direct3dtools/idebugshadercancel)
 
  
 

@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 832f98d32f164e91cd9dfc8befac4cbd0e518632
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: a22e9f21ab1c3d296a770c53bc6ad5847264b703
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122481156"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988413"
 ---
 # <a name="jetterm-function"></a>JetTerm-Funktion
 
@@ -73,14 +73,20 @@ Wenn diese Funktion erfolgreich ausgeführt wird, wird die angegebene Instanz he
 
 Wenn diese Funktion aufgrund eines Verwendungsfehlers fehlschlägt, verbleibt die Instanz in einem initialisierten Zustand, und es ändert sich nichts. Andernfalls wird die Instanz weiterhin gemäß dem Erfolgsfall heruntergefahren. Der Unterschied besteht darin, dass die Instanz bei der nächsten Initialisierung eine Absturzwiederherstellung durchlaufen muss. Die Engine versucht, so viele Daten wie möglich zu leeren, um die erforderliche Wiederherstellung zu minimieren. Konzeptionell unterscheidet sich ein solcher Fehler von **JetTerm** nicht von einem Prozessabsturz.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Wenn der Hostprozess einer Instanz aus irgendeinem Grund beendet wird, bevor **JetTerm** für diese Instanz erfolgreich aufgerufen wird, wird die Instanz als abgestürzt betrachtet. Die Wiederherstellung nach einem Absturz erfolgt beim nächsten Versuch, diese Instanz zu initialisieren.
+Wenn der Hostprozess einer Instanz aus irgendeinem Grund beendet wird, bevor **JetTerm** für diese Instanz erfolgreich aufgerufen wird, wird die Instanz als abgestürzt betrachtet. Die Absturzwiederherstellung erfolgt beim nächsten Versuch, diese Instanz zu initialisieren.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

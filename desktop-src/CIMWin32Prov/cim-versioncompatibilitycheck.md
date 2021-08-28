@@ -26,12 +26,12 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 4c10da966b4568a3296b93e2cbb8cd2408601d344b71d3dfcc5a21f9ca7bd2ed
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d9410c9dcddc99a9bffcf5d2e6e5b867f38f6e5c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118420387"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883299"
 ---
 # <a name="cim_versioncompatibilitycheck-class"></a>CIM \_ VersionCompatibilityCheck-Klasse
 
@@ -333,7 +333,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT-UNIX
+ATT UNIX
 
 </dd> <dt>
 
@@ -812,7 +812,7 @@ Handflächenbetriebssystem
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -825,8 +825,8 @@ Version des Vorgangs.
 
 Die Version des Vorgangs sollte in einer der folgenden Formen sein:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; neben &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; &gt; &lt; &gt; &lt; Nebenbuchstabenrevision&gt;
 
 Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
@@ -838,7 +838,7 @@ WMI implementiert diese Klasse nicht.
 
 Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -852,7 +852,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

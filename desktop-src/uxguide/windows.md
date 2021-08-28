@@ -1,70 +1,37 @@
 ---
-title: Windows (Grundlagen des Entwurfs)
-description: Windows sind die Haupt- \ 0034;Canvases \ 0034; oder Benutzeroberflächenoberflächen Ihrer Desktop-App, einschließlich der Hauptfenster selbst und Popups, Dialogfelder und Assistenten. Befolgen Sie diese Richtlinien, wenn Sie entscheiden, welche Oberfläche sie verwenden und wie sie am besten verwendet werden sollen.
+title: Windows (Entwurfsgrundlagen)
+description: Windows sind main \ 0034;canvases \ 0034; oder Benutzeroberflächen Ihrer Desktop-App, einschließlich der Hauptfenster selbst und Popups, Dialogfelder und Assistenten. Befolgen Sie diese Richtlinien, wenn Sie entscheiden, welche Oberfläche verwendet werden soll und wie sie am besten verwendet werden sollen.
 ms.assetid: E1FA78DA-D580-4B0E-AB59-29F013278766
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 0664a6671e477f2b12f25b928fb39be69ac698ceba876aae5d8b65774e006edb
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 61769143c7a26de662aa9d0446f28a01d628a7b1
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119028958"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480756"
 ---
-# <a name="windows-design-basics"></a>Windows (Grundlagen des Entwurfs)
+# <a name="windows-design-basics"></a>Windows (Entwurfsgrundlagen)
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Windows sind die Hauptoberflächen oder Benutzeroberflächen ihrer Desktop-App, einschließlich der Hauptfenster selbst und Popups, Dialogfelder und Assistenten. Befolgen Sie diese Richtlinien, wenn Sie entscheiden, welche Oberfläche sie verwenden und wie sie am besten verwendet werden sollen.
+Windows sind die Wichtigsten "Canvases" oder Benutzeroberflächen Ihrer Desktop-App, einschließlich der Hauptfenster selbst und Popups, Dialogfelder und Assistenten. Befolgen Sie diese Richtlinien, wenn Sie entscheiden, welche Oberfläche verwendet werden soll und wie sie am besten verwendet werden sollen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Thema</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="win-window-mgt.md">Fensterverwaltung</a><br/></td>
-<td>In diesem Artikel werden die Standardplatzierung von Fenstern bei der ersten Anzeige auf dem Bildschirm, ihre Stapelreihen reihenfolge im Vergleich zu anderen Fenstern<a href="glossary.md">(Z-Reihenfolge),</a>ihre Anfangsgröße und die Auswirkung ihrer Anzeige auf den Eingabefokus behandelt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="win-window-frames.md">Fensterrahmen</a><br/></td>
-<td>Die meisten Programme sollten Standardfensterrahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen ausblendet. Erwägen Sie die strategische Verwendung von Glass für ein einfacheres, leichteres, kohäsiveres Aussehen. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="win-dialog-box.md">Dialogfelder</a><br/></td>
-<td>Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Informationen oder Statusfeedback erhalten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="win-common-dlg.md">Allgemeine Dialogfelder</a><br/></td>
-<td>Die microsoft Windows-Dialogfelder bestehen aus den Dialogfeldern Datei öffnen, Datei speichern, Ordner öffnen, Suchen und Ersetzen, Drucken, Seiteneinrichtung, Schriftart und Farbe.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="win-wizards.md">Assistenten</a><br/></td>
-<td>Trotz dieses großartigen, launischen Namens sind Assistenten nicht wirklich eine besondere Form der Benutzeroberfläche, und sie haben nur einen bestimmten Bereich von Hilfsprogramm. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="win-property-win.md">Eigenschaften Windows</a><br/></td>
-<td>Das Eigenschaftenfenster ist der gemeinsame Name für die folgenden Typen von Benutzeroberflächen (UIs):<br/>
-<ul>
-<li>Eigenschaftenblatt: Dient zum Anzeigen und Ändern von Eigenschaften für ein Objekt oder eine Auflistung von Objekten <strong>in einem Dialogfeld.</strong></li>
-<li>Eigenschafteninspektor: Dient zum Anzeigen und Ändern von Eigenschaften für ein Objekt oder eine Auflistung von Objekten <strong>in einem Bereich.</strong></li>
-<li>Dialogfeld "Optionen": Dient zum <strong>Anzeigen und Ändern von Optionen für eine Anwendung.</strong></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Thema | BESCHREIBUNG | 
+|-------|-------------|
+| <a href="win-window-mgt.md">Fensterverwaltung</a><br /> | In diesem Artikel werden die Standardplatzierung von Fenstern bei der ersten Anzeige auf dem Bildschirm, ihre Stapelreihenfolge relativ zu anderen Fenstern<a href="glossary.md">(Z-Reihenfolge),</a>ihre Anfangsgröße und die Auswirkungen der Anzeige auf den Eingabefokus behandelt.<br /> | 
+| <a href="win-window-frames.md">Fensterrahmen</a><br /> | Die meisten Programme sollten Standardfensterrahmen verwenden. Immersive Anwendungen können über einen Vollbildmodus verfügen, der den Fensterrahmen ausblendet. Erwägen Sie die strategische Verwendung von Glass für ein einfacheres, leichteres, zusammenhängenderes Aussehen. <br /> | 
+| <a href="win-dialog-box.md">Dialogfelder</a><br /> | Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Benutzern Informationen oder Fortschrittsfeedback zur Verfügung stellen können.<br /> | 
+| <a href="win-common-dlg.md">Allgemeine Dialoge</a><br /> | Die allgemeinen Dialogfelder Microsoft Windows bestehen aus den Dialogfeldern Datei öffnen, Datei speichern, Ordner öffnen, Suchen und Ersetzen, Drucken, Seiteneinrichtung, Schriftart und Farbe.<br /> | 
+| <a href="win-wizards.md">Assistenten</a><br /> | Trotz dieses hervorragenden, einfachen Namens sind Assistenten keine besondere Form der Benutzeroberfläche und verfügen nur über einen bestimmten Hilfsbereich. <br /> | 
+| <a href="win-property-win.md">Eigenschaften Windows</a><br /> | Das Eigenschaftenfenster ist der gemeinsame Name für die folgenden Arten von Benutzeroberflächen (User Interfaces, UIs):<br /><ul><li>Eigenschaftenblatt: Dient zum <strong>Anzeigen und Ändern von Eigenschaften für ein Objekt oder eine Auflistung von Objekten in einem Dialogfeld.</strong></li><li>Eigenschafteninspektor: Dient zum <strong>Anzeigen und Ändern von Eigenschaften für ein Objekt oder eine Auflistung von Objekten in einem Bereich.</strong></li><li>Dialogfeld "Optionen": Dient zum <strong>Anzeigen und Ändern von Optionen für eine Anwendung.</strong></li></ul> | 
+
 
 
 

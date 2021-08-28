@@ -1,17 +1,17 @@
 ---
 description: Da Sie in vielen Fällen nur einen Teil der Komponentenfunktionen in der Microsoft Visual Basic-Umgebung debuggen können, müssen Sie Komponenten debuggen, die mit Visual Basic erstellt wurden, nachdem sie kompiliert wurden. Da die Visual Basic-Umgebung dies nicht aktiviert, müssen Sie stattdessen die Microsoft Visual C++-Umgebung verwenden.
 ms.assetid: a58c5884-3c2d-4699-8b19-277003912dfd
-title: Debuggen kompilierter Visual Basic-Komponenten
+title: Debuggen kompilierter Visual Basic Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2eac784808602d3554e4610e70a8d8a22ef2ca1594062599ec6acd43db68b98a
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 0e2dec15f90d14d534221193020417415d11ddec
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119128782"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882983"
 ---
-# <a name="debugging-compiled-visual-basic-components"></a>Debuggen kompilierter Visual Basic-Komponenten
+# <a name="debugging-compiled-visual-basic-components"></a>Debuggen kompilierter Visual Basic Komponenten
 
 Da Sie in vielen Fällen nur einen Teil der Funktionalität Ihrer Komponente in der Microsoft Visual Basic-Umgebung debuggen können, müssen Sie Komponenten debuggen, die mit Visual Basic erstellt wurden, nachdem sie kompiliert wurden. Da die Visual Basic-Umgebung dies nicht aktiviert, müssen Sie stattdessen die Microsoft Visual C++-Umgebung verwenden.
 
@@ -21,9 +21,9 @@ Da Sie in vielen Fällen nur einen Teil der Funktionalität Ihrer Komponente in 
 
 2.  Klicken Sie im Menü **Datei** auf **Make YourProject.dll**.
 
-3.  Klicken Sie im Dialogfeld **Make Project (Project erstellen)** auf **Optionen**.
+3.  Klicken Sie im Dialogfeld **Make Project (Project** erstellen) auf **Optionen**.
 
-4.  Klicken Sie im Dialogfeld **Project Eigenschaften** auf der Registerkarte **Kompilieren** auf **In nativen Code kompilieren** und **keine Optimierung,** und aktivieren Sie das Kontrollkästchen **Symbolische Debuginformationen erstellen.**
+4.  Klicken Sie im Dialogfeld **Project Eigenschaften** auf der Registerkarte **Kompilieren** auf **In nativen Code kompilieren** und **keine Optimierung,** und aktivieren Sie das Kontrollkästchen **Create Symbolic Debug Info (Symbolische Debuginformationen erstellen).**
 
 5.  Klicken Sie auf **OK** und dann erneut auf **OK,** um das Projekt zu kompilieren.
 
@@ -46,7 +46,7 @@ Da Sie in vielen Fällen nur einen Teil der Funktionalität Ihrer Komponente in 
 
 12. Wählen Sie im Dialogfeld **Project Einstellungen** auf der Registerkarte **Debuggen** im Feld **Kategorie** die Option **Allgemein** aus.
 
-13. Geben Sie im Feld **Ausführbare Datei für Debugsitzung** den vollqualifizierten Pfad für Dllhost.exe ein, gefolgt von einem Argument, das die Prozess-ID der COM+-Anwendung angibt, die die Komponente enthält. Sie finden die Prozess-ID auf der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften** der COM+-Anwendung. Es folgt ein Beispiel: C: \\ Winnt \\ System32 \\Dllhost.exe /ProcessID:{ <processID> }.
+13. Geben Sie im Feld **Ausführbare Datei für Debugsitzung** den vollqualifizierten Pfad für Dllhost.exe ein, gefolgt von einem Argument, das die Prozess-ID der COM+-Anwendung angibt, die die Komponente enthält. Sie finden die Prozess-ID auf der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften** der COM+-Anwendung. Es folgt ein Beispiel: C: \\ Winnt \\ System32 \\Dllhost.exe /ProcessID:{ &lt; processID &gt; }.
 
 14. Klicken Sie auf **OK**.
 

@@ -1,169 +1,138 @@
 ---
-title: Typ des Kalender Steuer Elements
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Steuer ungstyp "Kalender". Ein Kalender Steuerelement ermöglicht es dem Benutzer, das Datum leicht zu bestimmen und andere Datumsangaben auszuwählen.
+title: Calendar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den Calendar-Steuerelementtyp. Mit einem Kalender-Steuerelement kann der Benutzer das Datum leicht bestimmen und andere Datumsangaben auswählen.
 ms.assetid: 886cf1a4-0e6f-4ae1-9dc4-e97ac6a22359
 keywords:
-- Benutzeroberflächenautomatisierungs-Unterstützung für Kalender Steuerelement
-- Benutzeroberflächenautomatisierungs, Calendar-Steuerelement
-- Benutzeroberflächenautomatisierungs-Struktur für Kalender Steuerelement
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den Steuerelement Kalender
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für Kalender Steuerelement-Typ
-- Benutzeroberflächenautomatisierungs, Ereignisse für Kalender Steuerelement
-- Struktur Strukturen, Calendar-Steuerelement Typen
-- Eigenschaften, Calendar-Steuerelement Typen
-- Steuerelement Muster, Calendar-Steuerelement Typen
-- Ereignisse, Calendar-Steuerelement Typen
-- Unterstützung für Kalender Steuerelement
+- Benutzeroberflächenautomatisierung,Unterstützung für calendar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Calendar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für Calendar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für calendar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den Calendar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,events für calendar-Steuerelementtyp
+- Strukturstrukturen,Calendar-Steuerelementtyp
+- properties,Calendar-Steuerelementtyp
+- Steuerelementmuster,Calendar-Steuerelementtyp
+- events,Calendar-Steuerelementtyp
+- Unterstützung für den Calendar-Steuerelementtyp
 - Calendar-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für Kalender Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für den Calendar-Steuer ungstyp
-- Steuerelement Typen, Unterstützung für Kalender
-- Steuerelement Typen, Kalender
+- Steuerelementtypen,Struktur für Calendar-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für Calendar-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für Calendar
+- Steuerelementtypen, Kalender
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef936848f764c6937bfe36e6ed919f0a88dac78c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d51271fb2e9526bc293b9c5d36acc0a65b3b639
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037618"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482946"
 ---
-# <a name="calendar-control-type"></a>Typ des Kalender Steuer Elements
+# <a name="calendar-control-type"></a>Calendar-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Steuer ungstyp " **Kalender** ". Ein Kalender Steuerelement ermöglicht es dem Benutzer, das Datum leicht zu bestimmen und andere Datumsangaben auszuwählen.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **Calendar-Steuerelementtyp.** Mit einem Kalender-Steuerelement kann der Benutzer das Datum leicht bestimmen und andere Datumsangaben auswählen.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den Steuer ungstyp " **Kalender** " definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Kalender Steuerelemente, bei denen das UI-Framework/die Plattform die Benutzeroberflächenautomatisierungs-Unterstützung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **Calendar-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Kalendersteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Kalender Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Kalender
-<ul>
-<li>DataGrid
-<ul>
-<li>Header (0 oder 1)
-<ul>
-<li>Header Item (0 oder 7, Menge hängt davon ab, wie viele Tage in Spalten angezeigt werden)</li>
-</ul></li>
-<li>ListItem (die Menge hängt davon ab, wie viele Tage angezeigt werden)</li>
-<li>Button (0 oder 2; für Seitenverwaltung der Kalenderansicht)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>Kalender
-<ul>
-<li>ListItem (die Menge hängt davon ab, wie viele Tage angezeigt werden)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+In der folgenden Tabelle werden ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung dargestellt, die sich auf Kalendersteuerelemente bezieht, und es wird beschrieben, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
- 
 
-Kalendersteuerelemente können in vielen verschiedenen Formen in der Benutzeroberfläche dargestellt werden. Die einzigen Steuerelemente, die garantiert in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten sind, sind das Datenraster, Header, Header Element und Listenelement-Steuerelemente.
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>Kalender<ul><li>DataGrid<ul><li>Header (0 oder 1)<ul><li>HeaderItem (0 oder 7, Menge hängt davon ab, wie viele Tage in Spalten angezeigt werden)</li></ul></li><li>ListItem (die Menge hängt davon ab, wie viele Tage angezeigt werden)</li><li>Button (0 oder 2; für Seitenverwaltung der Kalenderansicht)</li></ul></li></ul></li></ul> | <ul><li>Kalender<ul><li>ListItem (die Menge hängt davon ab, wie viele Tage angezeigt werden)</li></ul></li></ul> | 
+
+
+
+
+ 
+
+Kalendersteuerelemente können in vielen verschiedenen Formen in der Benutzeroberfläche dargestellt werden. Die einzigen Steuerelemente, die sich garantiert in der Steuerelementansicht der Benutzeroberflächenautomatisierung struktur befinden, sind das Datenraster, der Header, das Headerelement und das Listenelement-Steuerelement.
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für den Steuer ungstyp " **Calendar** " besonders relevant ist Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren  Wert oder Definition für den Calendar-Steuerelementtyp besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert        | Notizen                                                                                                                                                                                                |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert        | Hinweise                                                                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                         |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.   | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.   | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **Kalender** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE         | Das Kalender Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                               |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE         | Das Kalender Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                               |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.   | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss die Bezeichnung des Dokumentsteuerelements sein. In der Regel wird der Titel des Dokuments verwendet.                                                                                |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge, die dem Steuerelement des **Kalender** Typs entspricht. Der Standardwert ist "Calendar" für en-US oder Englisch (USA).                                                               |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.   | Das Kalender Steuerelement erhält seinen Namen in der Regel aus dem aktuellen Datum.                                                                                                                                  |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                         |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.   | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.   | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebundenen Rechtecks angeklickt werden kann und das Element spezielle Treffertests ausführt, überschreiben Und stellen Sie einen klickbaren Punkt zur Verfügung. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Kalender** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE         | Das Calendar-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                               |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE         | Das Kalendersteuer steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                               |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.   | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss die Bezeichnung des Dokumentsteuerelements sein. In der Regel wird der Titel des Dokuments verwendet.                                                                                |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge, die dem **Calendar-Steuerelementtyp** entspricht. Der Standardwert ist "calendar" für en-US oder English (USA).                                                               |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.   | Das Kalendersteuer steuerelement ruft seinen Namen in der Regel ab dem aktuellen Datum ab.                                                                                                                                  |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von allen Kalender Steuerelementen unterstützt werden Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von allen Kalendersteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
-| Steuerelementmuster/Mustereigenschaft                        | Unterstützung/Wert | Notizen                                                                                                                                                                                                                                                                                                                          |
+| Steuerelementmuster/Mustereigenschaft                        | Unterstützung/Wert | Hinweise                                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider)           | Erforderlich      | Das Kalender Steuerelement unterstützt immer das [Raster](uiauto-implementinggrid.md) -Steuerelement Muster, da die Tage innerhalb eines Monats Elemente sind, die räumlich navigiert werden können.                                                                                                                                                        |
-| [**IScrollProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iscrollprovider)       | Depends (Abhängig)       | Die meisten Kalendersteuerelemente unterstützen seitenbezogenes Kippen der Ansicht. Das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster wird empfohlen, um Paging-Navigation zu unterstützen.                                                                                                                                                    |
-| [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) | Depends (Abhängig)       | Die meisten Kalender Steuerelemente behalten einen bestimmten Tag, einen bestimmten Monat oder ein bestimmtes Jahr als Auswahl des unter Elements bei. Einige Kalender sind mehrfach wählbar und können nur mit nur einem einzelnen ausgewählt werden. Ein Kalender Steuerelement mit auswählbaren unter Elementen sollte das [Auswahl](uiauto-implementingselection.md) Steuerelement Muster unterstützen.                         |
-| [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider)         | Erforderlich      | Da das Kalender Steuerelement immer über einen Header in seiner Unterstruktur für die Wochentage verfügt, muss das [Table](uiauto-implementingtable.md) -Steuerelement Muster unterstützt werden.                                                                                                                                                     |
-| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)         | Nein            | Das [value](uiauto-implementingvalue.md) -Steuerelement Muster ist für Kalender Steuerelemente nicht erforderlich, da der Wert nicht direkt für das Steuerelement festgelegt werden kann. Wenn dem Steuerelement ein bestimmtes Datum zugeordnet ist, sollten die Informationen über das [Auswahl](uiauto-implementingselection.md) Steuerelement Muster bereitgestellt werden. |
+| [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider)           | Erforderlich      | Das Kalendersteuerfeld unterstützt immer das [Grid-Steuerelementmuster,](uiauto-implementinggrid.md) da die Tage innerhalb eines Monats Elemente sind, durch die räumlich navigiert werden kann.                                                                                                                                                        |
+| [**IScrollProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iscrollprovider)       | Depends (Abhängig)       | Die meisten Kalendersteuerelemente unterstützen seitenbezogenes Kippen der Ansicht. Das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) wird empfohlen, um die Pagingnavigation zu unterstützen.                                                                                                                                                    |
+| [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider) | Depends (Abhängig)       | Die meisten Kalendersteuerelemente behalten einen bestimmten Tag, Monat oder Jahr als Auswahl des Unterelements bei. Einige Kalender sind mehrfach auswählbar und andere nur einzeln auswählbar. Das Kalendersteuerelement mit auswählbaren Unterelementen sollte das [Selection-Steuerelementmuster](uiauto-implementingselection.md) unterstützen.                         |
+| [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider)         | Erforderlich      | Da das Calendar-Steuerelement für die Wochentage immer über einen Header in der Unterstruktur verfügt, muss das [Tabellensteuermuster](uiauto-implementingtable.md) unterstützt werden.                                                                                                                                                     |
+| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)         | Nein            | Das [Value-Steuerelementmuster](uiauto-implementingvalue.md) ist für Kalendersteuerelemente nicht erforderlich, da das Element den Wert nicht direkt für das Steuerelement festlegen kann. Wenn dem Steuerelement ein bestimmtes Datum zugeordnet ist, [](uiauto-implementingselection.md) sollten die Informationen vom Selection-Steuerelementmuster bereitgestellt werden. |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von Kalender Steuerelementen Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die kalendersteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                                        | Notizen                                                                                                                                                                                                        |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                                        | Hinweise                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                                           |                                                                                                                                                                                                              |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                      |                                                                                                                                                                                                              |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                      | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.                                                                                     |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                  | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.                                                                                   |
-| [**UIA \_ layoutinvalidatedeventid**](uiauto-event-ids.md)                                                                     |                                                                                                                                                                                                              |
-| [**UIA \_ Multipleviewcurrentviewpropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**CurrentView**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-imultipleviewprovider-get_currentview) -Eigenschaft des [MultipleView](uiauto-implementingmultipleview.md) -Steuerelement Musters unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                                       |                                                                                                                                                                                                              |
-| [**UIA \_ Scrollhorizontallyscrollablepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.   | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA \_ Scrollhorizontalscrollprozpropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis. | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA \_ Scrollhorizontalviewsizepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.           | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA \_ Scrollverticalscrollprozpropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.     | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA \_ Scrollverticallyscrollablepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.       | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA \_ Scrollverticalviewsizepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.               | Wenn das Steuerelement das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
-| [**UIA- \_ Auswahl \_ invalidatedeventid**](uiauto-event-ids.md)                                                            |                                                                                                                                                                                                              |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                                           |                                                                                                                                                                                                              |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                      |                                                                                                                                                                                                              |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                      | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.                                                                                     |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                  | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.                                                                                   |
+| [**\_UIA-LayoutInvalidatedEventId**](uiauto-event-ids.md)                                                                     |                                                                                                                                                                                                              |
+| [**UIA \_ MultipleViewCurrentViewPropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)             | Wenn das Steuerelement die [**CurrentView-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-imultipleviewprovider-get_currentview) des [MultipleView-Steuerelementmusters](uiauto-implementingmultipleview.md) unterstützt, muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                                       |                                                                                                                                                                                                              |
+| [**UIA \_ ScrollHorizontallyScrollablePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)   | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ ScrollHorizontalScrollPercentPropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md) | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ ScrollHorizontalViewSizePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)           | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ ScrollVerticalScrollPercentPropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)     | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ ScrollVerticallyScrollablePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)       | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ ScrollVerticalViewSizePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)               | Wenn das Steuerelement das [Bildlauf-Steuerelementmuster](uiauto-implementingscroll.md) unterstützt, muss es dieses Ereignis unterstützen.                                                                                             |
+| [**UIA \_ Selection \_ InvalidatedEventId**](uiauto-event-ids.md)                                                            |                                                                                                                                                                                                              |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -172,9 +141,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

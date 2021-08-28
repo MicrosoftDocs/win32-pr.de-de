@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 455b46465733a906b879dcedc4b5a2f4e6ef1f9e
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 2f821d3aea8055f6c1344ed9d5107417adbaf604
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122472476"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985513"
 ---
 # <a name="meta-parameters"></a>Metaparameter
 
@@ -87,7 +87,19 @@ Small Configuration hat auch mehrere andere Auswirkungen auf die Datenbank-Engin
   - Verschiedene Wartungsaktivitäten werden zurückskaliert, um Hintergrundthreadaktivitäten zu vermeiden.
 
 
-| | | <p>Standardwert:</p> | <p>1 (Legacy)</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0 – 1</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Ja</p> | | <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
+| Bezeichnung | Wert |
+|--------|-------|
+| <p>Standardwert:</p> | <p>1 (Legacy)</p> | 
+| <p>Typ:</p> | <p>Integer</p> | 
+| <p>Gültiger Bereich:</p> | <p>0 – 1</p> | 
+| <p>Umfang:</p> | <p>Instanz</p> | 
+| <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Yes</p> | 
+| <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | 
+| <p>Wirkt sich auf das physische Layout aus:</p> | <p>No</p> | 
+| <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>No</p> | 
+| <p>Beeinträchtigt die Leistung:</p> | <p>Yes</p> | 
+| <p>Betrifft Ressourcen:</p> | <p>Yes</p> | 
+| <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
 
 
 
@@ -178,14 +190,30 @@ Die folgenden Systemparameter werden vor dem Festlegen geschützt, wenn dieser P
   - JET_paramCheckpointIOMax
 
 
-| | | <p>Standardwert:</p> | <p>True</p> | | <p>Typ:</p> | <p>Boolesch</p> | | <p>Gültiger Bereich:</p> | <p>False, True</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Ja</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
+| Bezeichnung | Wert |
+|--------|-------|
+| <p>Standardwert:</p> | <p>Richtig</p> | 
+| <p>Typ:</p> | <p>Boolean</p> | 
+| <p>Gültiger Bereich:</p> | <p>False, True</p> | 
+| <p>Umfang:</p> | <p>Instanz</p> | 
+| <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Yes</p> | 
+| <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Yes</p> | 
+| <p>Wirkt sich auf das physische Layout aus:</p> | <p>No</p> | 
+| <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>No</p> | 
+| <p>Beeinträchtigt die Leistung:</p> | <p>No</p> | 
+| <p>Betrifft Ressourcen:</p> | <p>No</p> | 
+| <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
 
 
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

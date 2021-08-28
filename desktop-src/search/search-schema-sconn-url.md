@@ -1,19 +1,19 @@
 ---
-description: Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an.
+description: Das &lt; &gt; url-Element gibt eine URL für den Speicherort für diesen Suchconnector an.
 ms.assetid: fdc9e138-2e98-4f01-ab7b-0c3dfad5a4dd
 title: simpleLocation url-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fce95943017f4905414f65b75086d4babdf3750505fece0b73255e0e63623e9b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 8818eacdaecd33353d4340270770e80b4a63ceee
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118226325"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883106"
 ---
 # <a name="simplelocation-url-element-search-connector-schema"></a>simpleLocation url-Element (Search Connector Schema)
 
-Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an. Dieser Wert kann eine reguläre file://-URL sein, wie im RFC 1738 (-Dokument oder einer URL, die das Protokoll https://www.ietf.org/rfc/rfc1738.txt) knownfolders: verwendet) definiert ist. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
+Das &lt; &gt; url-Element gibt eine URL für den Speicherort für diesen Suchconnector an. Dieser Wert kann eine reguläre file://-URL sein, wie im RFC 1738 (-Dokument oder eine URL, die das Protokoll https://www.ietf.org/rfc/rfc1738.txt) knownfolders: verwendet) definiert ist. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 

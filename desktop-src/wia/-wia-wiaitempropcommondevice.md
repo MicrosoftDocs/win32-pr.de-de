@@ -1,7 +1,7 @@
 ---
-description: Zusätzlich zu den Eigenschaften von Geräteinformationen verfügen Windows-Abbild Erfassungsgeräte (WIA) über Eigenschaftswerte, die in der Registrierung gespeichert sind und von Anwendungen gelesen und geschrieben werden.
+description: Zusätzlich zu den Geräteinformationseigenschaften verfügen Windows WIA-Geräte (Image Acquisition) über Eigenschaftswerte, die in der Registrierung gespeichert sind, die Anwendungen lesen und schreiben.
 ms.assetid: 9948318b-7171-45fa-b46f-48f9357fdb32
-title: Allgemeine Geräte Eigenschafts Konstanten (wiadef. h)
+title: Allgemeine Geräteeigenschaftskonstanten (Wiadef.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,42 +15,42 @@ api_type:
 - HeaderDef
 api_location:
 - wiadef.h
-ms.openlocfilehash: 23c8faf8317fa7bf2008baffe3e6bf0e89a27a8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5eda1266c8c99f1125e03dfbacc3eb325a69d1d
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526399"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632178"
 ---
-# <a name="common-device-property-constants"></a>Allgemeine Geräte Eigenschafts Konstanten
+# <a name="common-device-property-constants"></a>Allgemeine Geräteeigenschaftskonstanten
 
-Zusätzlich zu den Eigenschaften von Geräteinformationen verfügen Windows-Abbild Erfassungsgeräte (WIA) über Eigenschaftswerte, die in der Registrierung gespeichert sind und von Anwendungen gelesen und geschrieben werden. Sie sind dem [**iwiaitem**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) -Objekt oder dem [**IWiaItem2**](-wia-iwiaitem2.md) -Objekt zugeordnet. Geräteeigenschaften stellen Geräteinformationen dar, z. b. Verbindungsstatus und Geräte Zeit. Jede Geräte Eigenschaft verfügt über eine zugeordnete Geräteeigenschaften Zeichenfolge.
+Zusätzlich zu den Geräteinformationseigenschaften verfügen Windows WIA-Geräte (Image Acquisition) über Eigenschaftswerte, die in der Registrierung gespeichert sind, die Anwendungen lesen und schreiben. Sie sind dem [**IWiaItem-Objekt**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem) oder [**dem IWiaItem2-Objekt**](-wia-iwiaitem2.md) zugeordnet. Geräteeigenschaften stellen Geräteinformationen wie Verbindungsstatus und Gerätezeit dar. Jeder Geräteeigenschaft ist eine Geräteeigenschaftenzeichenfolge zugeordnet.
 
-Die hier aufgeführten Geräteeigenschaften Konstanten gelten für die meisten oder alle WIA-Hardware Geräte.
+Die hier aufgeführten Geräteeigenschaftskonstanten gelten für die meisten oder alle WIA-Hardwaregeräte.
 
-Das Präfix "WIA \_ DPA \_ " gibt eine Geräte Eigenschaft für alle Geräte an und ist die Benennungs Konvention, die in C/C++ verwendet wird. Bei der Skripterstellung verwenden diese Konstanten das Präfix "Device" und sind Teil des enumerierten Typs [wiaitempropertyid](-wia-wiaitempropertyid.md) . Der entsprechende Elementname aus dieser Skript Enumeration wird in Klammern neben dem Konstanten Namen C/C++ in der folgenden Liste angezeigt.
+Das Präfix "WIA \_ \_ DPA" gibt eine Geräteeigenschaft für Alle Geräte an und ist die benennungskonvention, die in C/C++ verwendet wird. Zu Skriptzwecken verwenden diese Konstanten das Präfix "Device" und sind Teil des Aufzählungstyps [WiaItemPropertyId.](-wia-wiaitempropertyid.md) Der entsprechende Membername aus dieser Skriptenumeration wird in Klammern neben dem C/C++-Konstantennamen in der folgenden Liste angezeigt.
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Konstante/Wert</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th >Konstante/Wert</th>
+<th >Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span id="WIA_DPA_CONNECT_STATUS"></span><span id="wia_dpa_connect_status"></span><dl> <dt><strong></strong></dt> <dt>Deviceconnectstatus</dt> WIA_DPA_CONNECT_STATUS </dl></td>
-<td style="text-align: left;">Der aktuelle Verbindungsstatus für das Gerät. Der Mini Treiber erstellt und verwaltet diese Eigenschaft.<br/> Typ: <strong>VT_I4</strong>, Zugriff: schreibgeschützt, gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a><br/> Die-Eigenschaft kann die folgenden möglichen Werte aufweisen.<br/> 
+<td ><span id="WIA_DPA_CONNECT_STATUS"></span><span id="wia_dpa_connect_status"></span><dl> <dt><strong>WIA_DPA_CONNECT_STATUS</strong></dt> <dt>DeviceConnectStatus</dt> </dl></td>
+<td >Der aktuelle Verbindungsstatus für das Gerät. Der Minitreiber erstellt und verwaltet diese Eigenschaft.<br/> Typ: <strong>VT_I4</strong>, Zugriff: Schreibgeschützt, Gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a><br/> Die -Eigenschaft kann die folgenden möglichen Werte aufweisen.<br/> 
 <table>
 <thead>
 <tr class="header">
-<th>Verbindungs Status</th>
+<th>Verbinden Status</th>
 <th>Definition</th>
 </tr>
 </thead>
@@ -69,31 +69,31 @@ Das Präfix "WIA \_ DPA \_ " gibt eine Geräte Eigenschaft für alle Geräte an 
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="WIA_DPA_DEVICE_TIME"></span><span id="wia_dpa_device_time"></span><dl> <dt><strong>WIA_DPA_DEVICE_TIME</strong></dt> <dt>devicedevicetime</dt> </dl></td>
-<td style="text-align: left;"><p>Die aktuelle Uhrzeit, die auf dem Gerät gespeichert ist. Der Mini Treiber erstellt und verwaltet diese Eigenschaft.</p>
-<p>Typ: <strong>VT_UI2</strong>  |  <strong>VT_VECTOR</strong>, Zugriff: Lese-/Schreibzugriff oder schreibgeschützt, gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a></p>
-<p>Diese Eigenschaft wird nur von Geräten mit einer internen Uhr unterstützt. Wenn die Geräteuhr festgelegt werden kann, lautet diese Eigenschaft Lese-/Schreibzugriff. Andernfalls ist sie schreibgeschützt.</p>
-<p>WIA-Geräte melden Zeit in einer <a href="/windows/desktop/api/minwinbase/ns-minwinbase-systemtime">SYSTEMTIME</a> -Struktur.</p></td>
+<td ><span id="WIA_DPA_DEVICE_TIME"></span><span id="wia_dpa_device_time"></span><dl> <dt><strong>WIA_DPA_DEVICE_TIME</strong></dt> <dt>DeviceDeviceTime</dt> </dl></td>
+<td ><p>Die aktuelle Uhrzeit, die auf dem Gerät gespeichert ist. Der Minitreiber erstellt und verwaltet diese Eigenschaft.</p>
+<p>Typ: <strong>VT_UI2</strong>  |  <strong>VT_VECTOR</strong>, Zugriff: Lesen/Schreiben oder Schreibgeschützt, Gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a></p>
+<p>Diese Eigenschaft wird nur von Geräten unterstützt, die über eine interne Uhr verfügen. Wenn die Geräteuhr festgelegt werden kann, lautet diese Eigenschaft Lese-/Schreibzugriff. Andernfalls ist sie schreibgeschützt.</p>
+<p>WIA-Geräte melden die Zeit in einer <a href="/windows/desktop/api/minwinbase/ns-minwinbase-systemtime">SYSTEMTIME-Struktur.</a></p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="WIA_DPA_FIRMWARE_VERSION"></span><span id="wia_dpa_firmware_version"></span><dl> <dt><strong>WIA_DPA_FIRMWARE_VERSION</strong></dt> <dt>devicefirmwareversion</dt> </dl></td>
-<td style="text-align: left;"><p>Die Firmwareversion des Geräts. Dieser Wert muss ein Zeichen folgen Wert sein, z &quot; &quot; . b. 1.0.4 oder &quot; 1.0 ABC &quot; . Der Mini Treiber erstellt und verwaltet diese Eigenschaft. Wenn der WIA-Mini Treiber keine Versions Ressource bereitstellt, liefert der WIA-Dienst den Wert &quot; 0.0.0.0 &quot; als Standardwert. Eine Anwendung liest diese Eigenschaft, um die Version der WIA Mini Treiber-DLL zu ermitteln.</p>
-<p>Typ: <strong>VT_BSTR</strong>, Zugriff: schreibgeschützt, gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a></p></td>
+<td ><span id="WIA_DPA_FIRMWARE_VERSION"></span><span id="wia_dpa_firmware_version"></span><dl> <dt><strong>WIA_DPA_FIRMWARE_VERSION</strong></dt> <dt>DeviceFirmwareVersion</dt> </dl></td>
+<td ><p>Die Firmwareversion des Geräts. Dieser Wert muss ein Zeichenfolgenwert sein, &quot; z.B. 1.0.4 &quot; oder &quot; 1.0abc. &quot; Der Minitreiber erstellt und verwaltet diese Eigenschaft. Wenn der WIA-Minitreiber keine Versionsressource ansteuert, stellt der WIA-Dienst standardmäßig den Wert &quot; 0.0.0.0 zur &quot; Verfügung. Eine Anwendung liest diese Eigenschaft, um die Version der WIA-Minitreiber-DLL zu bestimmen.</p>
+<p>Typ: <strong>VT_BSTR</strong>, Zugriff: Schreibgeschützt, Gültige Werte: <a href="-wia-property-attributes.md">WIA_PROP_NONE</a></p></td>
 </tr>
 </tbody>
 </table>
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wiadef. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wiadef.h</dt> </dl> |
 
 
 

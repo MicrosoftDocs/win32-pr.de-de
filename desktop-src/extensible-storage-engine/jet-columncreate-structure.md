@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1b14388f26e21550319b910ac01d9ee0dde4d5890336c91e1fca76bc68cce93f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ffe79dde0f24e82aa7ca9457604ea76b587e9b29
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118254980"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984023"
 ---
 # <a name="jet_columncreate-structure"></a>JET_COLUMNCREATE-Struktur
 
@@ -60,7 +60,7 @@ Der Name der zu erstellenden Spalte. Der Name muss die folgenden Kriterien erfü
 
 <!-- end list -->
 
-  - Sie darf nur Zeichen aus den folgenden Sätzen enthalten: 0 bis 9, A bis Z, a bis z und alle anderen Interpunktionen mit Ausnahme von Ausrufezeichen ( ), Komma (,), öffnenden Klammern () und schließenden Klammern ( ), d. h. ASCII-Zeichen 0x20, 0x22 bis \! \[ \] 0x2d, 0x2f bis 0x5a, 0x5c, 0x5d bis 0x7f.
+  - Sie darf nur Zeichen aus den folgenden Sätzen enthalten: 0 bis 9, A bis Z, a bis z und alle anderen Interpunktionen außer Ausrufezeichen ( ), Komma (,), öffnende Klammer () und schließende Klammer ( ), d. h. ASCII-Zeichen 0x20, 0x22 bis \! \[ \] 0x2d, 0x2f bis 0x5a, 0x5c, 0x5d bis 0x7f.
 
 <!-- end list -->
 
@@ -82,101 +82,24 @@ Die maximale Länge einer Spalte variabler Länge in Bytes. Die Länge der Spalt
 
 Eine Gruppe von Bits, die die Optionen für diese Struktur enthalten und null oder mehr der folgenden Werte enthalten.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitColumnFixed</p></td>
-<td><p>Die Spalte ist fest. Es wird immer die gleiche Menge an Speicherplatz in einer Zeile verwendet, unabhängig davon, wie viele Daten in der Spalte gespeichert werden. JET_bitColumnFixed kann nicht mit -JET_bitColumnTagged. Dieses Bit kann nicht mit langen Werten wie JET_coltypLongText <strong>und</strong> <strong>JET_coltypLongBinary.</strong></p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnTagged</p></td>
-<td><p>Die Spalte ist markiert. Markierte Spalten nehmen keinen Speicherplatz in der Datenbank ein, wenn sie keine Daten enthalten. Dieses Bit kann nicht mit -JET_bitColumnFixed.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnNotNULL</p></td>
-<td><p>Die Spalte darf nie auf einen NULL-Wert festgelegt werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnAutoincrement</p></td>
-<td><p>Die Spalte wird automatisch erhöht. Die Zahl ist eine steigende Zahl und innerhalb einer Tabelle garantiert eindeutig. Die Zahl ist jedoch möglicherweise nicht kontinuierlich. Wenn beispielsweise fünf Zeilen in eine Tabelle eingefügt werden, kann die Spalte für die automatische Inkrementierung die Werte { 1, 2, 6, 7, 8 } enthalten.</p>
-<p><strong>Windows 2000:</strong> Dieses Bit kann nur für Spalten vom Typ <strong>JET_coltypLong.</strong></p>
-<p><strong>Windows Server 2003 und höher:</strong> Dieses Bit kann nur für Spalten vom Typ JET_coltypLong <strong>oder</strong> <strong>JET_coltypCurrency.</strong></p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnUpdatable</p></td>
-<td><p>Dieses Bit ist nur für Aufrufe von <a href="gg269215(v=exchg.10).md">JetGetColumnInfo gültig.</a></p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnTTKey</p></td>
-<td><p>Dieses Bit ist nur für Aufrufe von <a href="gg269211(v=exchg.10).md">JetOpenTempTable gültig.</a></p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnTTDescending</p></td>
-<td><p>Dieses Bit ist nur für Aufrufe von <a href="gg269211(v=exchg.10).md">JetOpenTempTable gültig.</a></p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnMultiValued</p></td>
-<td><p>Die Spalte kann mehrere Werte haben. Einer mehrwertigen Spalte können null, ein oder mehrere Werte zugeordnet sein. Die verschiedenen Werte in einer mehrwertigen Spalte werden durch das <strong>itagSequence-Member</strong> verschiedener Strukturen identifiziert, z. B. <a href="gg294049(v=exchg.10).md">JET_RETINFO</a>, <a href="gg294090(v=exchg.10).md">JET_SETINFO</a>, <a href="gg269233(v=exchg.10).md">JET_SETCOLUMN</a>, <a href="gg269334(v=exchg.10).md">JET_RETRIEVECOLUMN</a> <a href="gg294052(v=exchg.10).md">, JET_ENUMCOLUMNVALUE</a>. Mehrwertige Spalten müssen mit Tags versehen sein. Das bedeutet, dass es sich nicht um Spalten fester länge oder variabler Länge handelt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnEscrowUpdate</p></td>
-<td><p>Die Spalte ist eine Spalte zum Aktualisieren der Stirnrunzeln. Eine Spalte zum Aktualisieren der Stirnrunzeln kann gleichzeitig von verschiedenen Sitzungen mit <a href="gg294125(v=exchg.10).md">JetEscrowUpdate</a> aktualisiert werden und die Transaktionskonsistenz erhalten.</p>
-<ul>
-<li><p>Eine Spalte zum Aktualisieren der Stirnrunzeln kann nur erstellt werden, wenn die Tabelle leer ist.</p></li>
-<li><p>Eine Spalte zum Aktualisieren der Stirnrunzeln muss vom Typ <strong>JET_coltypLong.</strong></p></li>
-<li><p>Eine Spalte zum Aktualisieren der Stirnrunzeln muss über einen Standardwert verfügen <strong>(cbDefault muss</strong> also positiv sein).</p></li>
-<li><p>JET_bitColumnEscrowUpdate kann nicht in Verbindung mit den folgenden Konstanten verwendet werden:</p>
-<ul>
-<li><p>JET_bitColumnTagged</p></li>
-<li><p>JET_bitColumnVersion</p></li>
-<li><p>JET_bitColumnAutoincrement</p></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnUnversioned</p></td>
-<td><p>Die Spalte wird ohne Version erstellt. Andere Transaktionen, die versuchen, eine Spalte mit dem gleichen Namen hinzuzufügen, führen zu einem Fehler. Dieses Bit ist nur bei <a href="gg294122(v=exchg.10).md">JetAddColumn nützlich.</a> Sie kann nicht innerhalb einer Transaktion verwendet werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnMaybeNull</p></td>
-<td><p>Für die zukünftige Verwendung reserviert.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnFinalize</p></td>
-<td><p>Verwenden JET_bitColumnDeleteOnZero anstelle von JET_bitColumnFinalize. JET_bitColumnFinalize gibt an, dass eine Spalte finalisiert werden kann. Wenn eine Spalte, die finalisiert werden kann, über eine Spalte mit einer Hinterlegungsaktualisierung verfügt, die 0 (null) erreicht, wird die Zeile gelöscht. Zukünftige Versionen können stattdessen eine Rückruffunktion aufrufen. Weitere Informationen finden Sie unter <a href="gg294098(v=exchg.10).md">JET_CALLBACK</a>. Eine Spalte, die finalisiert werden kann, muss eine Spalte zum Aktualisieren der Stirnrunzel sein. JET_bitColumnFinalize kann nicht mit -JET_bitColumnUserDefinedDefault.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitColumnUserDefinedDefault</p></td>
-<td><p>Der Standardwert für eine Spalte wird von der Rückruffunktion bereitgestellt, <a href="gg294098(v=exchg.10).md">JET_CALLBACK.</a> Eine Spalte mit einem benutzerdefinierten Standardwert muss eine markierte Spalte sein. <strong>pvDefault</strong> muss auf <a href="gg269200(v=exchg.10).md"></a> eine JET_USERDEFINEDDEFAULT-Struktur verweisen, <strong>und cbDefault</strong> muss auf sizeof( JET_USERDEFINEDDEFAULT<a href="gg269200(v=exchg.10).md">) festgelegt werden.</a></p>
-<p>JET_bitColumnUserDefinedDefault kann nicht in Verbindung mit den folgenden Konstanten verwendet werden:</p>
-<ul>
-<li><p>JET_bitColumnFixed</p></li>
-<li><p>JET_bitColumnNotNULL</p></li>
-<li><p>JET_bitColumnVersion</p></li>
-<li><p>JET_bitColumnAutoincrement</p></li>
-<li><p>JET_bitColumnUpdatable</p></li>
-<li><p>JET_bitColumnEscrowUpdate</p></li>
-<li><p>JET_bitColumnFinalize</p></li>
-<li><p>JET_bitColumnDeleteOnZero</p></li>
-<li><p>JET_bitColumnMaybeNull</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitColumnDeleteOnZero</p></td>
-<td><p>Bei der Spalte handelt es sich um eine Spalte zum Aktualisieren der Stirnrunzeln, und wenn sie 0 (null) erreicht, wird der Datensatz gelöscht. Eine häufige Verwendung für eine Spalte, die finalisiert werden kann, ist die Verwendung als Verweiszählerfeld, und wenn das Feld 0 (null) erreicht, wird der Datensatz gelöscht. JET_bitColumnDeleteOnZero bezieht sich auf JET_bitColumnFinalize. Eine delete-on-zero-Spalte muss eine Spalte für die Aktualisierung der Stirnrunzel sein. JET_bitColumnDeleteOnZero kann nicht mit JET_bitColumnFinalize verwendet werden. JET_bitColumnDeleteOnZero können nicht mit benutzerdefinierten Standardspalten verwendet werden.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitColumnFixed</p> | <p>Die Spalte ist fest. Es wird immer die gleiche Menge an Speicherplatz in einer Zeile verwendet, unabhängig davon, wie viele Daten in der Spalte gespeichert werden. JET_bitColumnFixed kann nicht mit -JET_bitColumnTagged. Dieses Bit kann nicht mit langen Werten wie JET_coltypLongText <strong>und</strong> <strong>JET_coltypLongBinary.</strong></p> | 
+| <p>JET_bitColumnTagged</p> | <p>Die Spalte ist markiert. Markierte Spalten nehmen keinen Speicherplatz in der Datenbank ein, wenn sie keine Daten enthalten. Dieses Bit kann nicht mit -JET_bitColumnFixed.</p> | 
+| <p>JET_bitColumnNotNULL</p> | <p>Die Spalte darf nie auf einen NULL-Wert festgelegt werden.</p> | 
+| <p>JET_bitColumnAutoincrement</p> | <p>Die Spalte wird automatisch erhöht. Die Zahl ist eine steigende Zahl, und es ist garantiert, dass sie innerhalb einer Tabelle eindeutig ist. Die Zahl ist jedoch möglicherweise nicht fortlaufend. Wenn beispielsweise fünf Zeilen in eine Tabelle eingefügt werden, kann die Spalte für die automatische Inkrementierung die Werte { 1, 2, 6, 7, 8 } enthalten.</p><p><strong>Windows 2000:</strong> Dieses Bit kann nur für Spalten vom Typ <strong>JET_coltypLong.</strong></p><p><strong>Windows Server 2003 und höher:</strong> Dieses Bit kann nur für Spalten vom Typ JET_coltypLong <strong>oder</strong> <strong>JET_coltypCurrency.</strong></p> | 
+| <p>JET_bitColumnUpdatable</p> | <p>Dieses Bit ist nur für Aufrufe von <a href="gg269215(v=exchg.10).md">JetGetColumnInfo gültig.</a></p> | 
+| <p>JET_bitColumnTTKey</p> | <p>Dieses Bit ist nur für Aufrufe von <a href="gg269211(v=exchg.10).md">JetOpenTempTable gültig.</a></p> | 
+| <p>JET_bitColumnTTDescending</p> | <p>Dieses Bit ist nur für Aufrufe von <a href="gg269211(v=exchg.10).md">JetOpenTempTable gültig.</a></p> | 
+| <p>JET_bitColumnMultiValued</p> | <p>Die Spalte kann mehrere Werte haben. Einer mehrwertigen Spalte können null, ein oder mehrere Werte zugeordnet sein. Die verschiedenen Werte in einer mehrwertigen Spalte werden durch das <strong>itagSequence-Member</strong> verschiedener Strukturen identifiziert, z. B. <a href="gg294049(v=exchg.10).md">JET_RETINFO</a>, <a href="gg294090(v=exchg.10).md">JET_SETINFO</a>, <a href="gg269233(v=exchg.10).md">JET_SETCOLUMN</a>, <a href="gg269334(v=exchg.10).md">JET_RETRIEVECOLUMN</a>, <a href="gg294052(v=exchg.10).md">JET_ENUMCOLUMNVALUE</a>. Mehrwertige Spalten müssen mit Tags versehen sein. Das bedeutet, dass es sich nicht um Spalten fester länge oder variabler Länge handelt.</p> | 
+| <p>JET_bitColumnEscrowUpdate</p> | <p>Die Spalte ist eine Spalte zum Aktualisieren der Stirnrunzeln. Eine Spalte zum Aktualisieren der Stirnrunzeln kann gleichzeitig von verschiedenen Sitzungen mit <a href="gg294125(v=exchg.10).md">JetEscrowUpdate</a> aktualisiert werden und die Transaktionskonsistenz erhalten.</p><ul><li><p>Eine Spalte zum Aktualisieren der Stirnrunzeln kann nur erstellt werden, wenn die Tabelle leer ist.</p></li><li><p>Eine Spalte zum Aktualisieren der Stirnrunzeln muss vom Typ <strong>JET_coltypLong.</strong></p></li><li><p>Eine Spalte zum Aktualisieren der Stirnrunzel muss über einen Standardwert verfügen (d. h. <strong>cbDefault</strong> muss positiv sein).</p></li><li><p>JET_bitColumnEscrowUpdate kann nicht in Verbindung mit den folgenden Konstanten verwendet werden:</p><ul><li><p>JET_bitColumnTagged</p></li><li><p>JET_bitColumnVersion</p></li><li><p>JET_bitColumnAutoincrement</p></li></ul></li></ul> | 
+| <p>JET_bitColumnUnversioned</p> | <p>Die Spalte wird ohne Version erstellt. Andere Transaktionen, die versuchen, eine Spalte mit dem gleichen Namen hinzuzufügen, führen zu einem Fehler. Dieses Bit ist nur bei <a href="gg294122(v=exchg.10).md">JetAddColumn nützlich.</a> Sie kann nicht innerhalb einer Transaktion verwendet werden.</p> | 
+| <p>JET_bitColumnMaybeNull</p> | <p>Für die zukünftige Verwendung reserviert.</p> | 
+| <p>JET_bitColumnFinalize</p> | <p>Verwenden JET_bitColumnDeleteOnZero anstelle von JET_bitColumnFinalize. JET_bitColumnFinalize gibt an, dass eine Spalte finalisiert werden kann. Wenn eine Spalte, die finalisiert werden kann, über eine Spalte zum Aktualisieren der Hinterlegung verfügt, die null erreicht, wird die Zeile gelöscht. Zukünftige Versionen können stattdessen eine Rückruffunktion aufrufen. Weitere Informationen finden Sie unter <a href="gg294098(v=exchg.10).md">JET_CALLBACK</a>. Eine Spalte, die finalisiert werden kann, muss eine Spalte für die Aktualisierung nach der Stirnrunzel sein. JET_bitColumnFinalize kann nicht mit -JET_bitColumnUserDefinedDefault.</p> | 
+| <p>JET_bitColumnUserDefinedDefault</p> | <p>Der Standardwert für eine Spalte wird von der Rückruffunktion <a href="gg294098(v=exchg.10).md">bereitgestellt,</a>JET_CALLBACK. Eine Spalte mit einem benutzerdefinierten Standardwert muss eine markierte Spalte sein. <strong>pvDefault</strong> muss auf <a href="gg269200(v=exchg.10).md"></a> eine JET_USERDEFINEDDEFAULT-Struktur verweisen, <strong>und cbDefault</strong> muss auf sizeof( JET_USERDEFINEDDEFAULT<a href="gg269200(v=exchg.10).md">) festgelegt werden.</a></p><p>JET_bitColumnUserDefinedDefault kann nicht in Verbindung mit den folgenden Konstanten verwendet werden:</p><ul><li><p>JET_bitColumnFixed</p></li><li><p>JET_bitColumnNotNULL</p></li><li><p>JET_bitColumnVersion</p></li><li><p>JET_bitColumnAutoincrement</p></li><li><p>JET_bitColumnUpdatable</p></li><li><p>JET_bitColumnEscrowUpdate</p></li><li><p>JET_bitColumnFinalize</p></li><li><p>JET_bitColumnDeleteOnZero</p></li><li><p>JET_bitColumnMaybeNull</p></li></ul> | 
+| <p>JET_bitColumnDeleteOnZero</p> | <p>Bei der Spalte handelt es sich um eine Spalte zum Aktualisieren der Stirnrunzeln, und wenn sie 0 (null) erreicht, wird der Datensatz gelöscht. Eine häufige Verwendung für eine Spalte, die finalisiert werden kann, ist die Verwendung als Verweiszählerfeld, und wenn das Feld 0 (null) erreicht, wird der Datensatz gelöscht. JET_bitColumnDeleteOnZero bezieht sich auf JET_bitColumnFinalize. Eine Spalte mit dem Wert delete-on-zero muss eine Spalte zum Aktualisieren der Löschspalte sein. JET_bitColumnDeleteOnZero kann nicht mit JET_bitColumnFinalize verwendet werden. JET_bitColumnDeleteOnZero können nicht mit benutzerdefinierten Standardspalten verwendet werden.</p> | 
+
 
 
 **pvDefault**
@@ -201,30 +124,14 @@ Das **Err-Feld** enthält den Status der Erstellung dieser Spalte. Eine Liste de
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>JET_COLUMNCREATE_W</strong> (Unicode) und <strong>JET_COLUMNCREATE_A</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JET_COLUMNCREATE_W</strong> (Unicode) und <strong>JET_COLUMNCREATE_A</strong> (ANSI).</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

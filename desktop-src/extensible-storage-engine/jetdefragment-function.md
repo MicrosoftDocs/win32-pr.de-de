@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2f9fdce5268e6981fa018f58ed14b31c2c078cce
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 9916039ee20f9d1c13865ce5dc3ba4d2de053029
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985945"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482856"
 ---
 # <a name="jetdefragment-function"></a>JetDefragment-Funktion
 
@@ -111,7 +111,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 | <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
 | <p>JET_errTransReadOnly</p> | <p>Die gegebene Sitzung verfügt nur über schreibgeschützte Berechtigungen und kann keine Aufgabe starten, die ein Update ausführen kann, einschließlich Defragmentierung.</p> | 
 | <p>JET_errVersionStoreOutOfMemory</p> | <p>Dieser Fehler tritt auf, wenn die konfigurierte Größe des Versionsspeichers nicht ausreicht, um alle ausstehenden Updates zu speichern.</p> | 
-| <p>JET_wrnDefragAlreadyRunning</p> | <p>Die JET_bitDefragmentBatchStart wurde übergeben, aber ein Defragmentierungs-Task wird bereits in der angegebenen Datenbank defragmentiert.</p> | 
+| <p>JET_wrnDefragAlreadyRunning</p> | <p>Die JET_bitDefragmentBatchStart wurde übergeben, aber ein Defragmentierungs-Task wird bereits für die gegebene Datenbank defragmentiert.</p> | 
 | <p>JET_wrnDefragNotRunning</p> | <p>Die JET_bitDefragmentBatchStop wurde übergeben, aber derzeit wird keine Defragmentierungsaufgabe ausgeführt.</p> | 
 
 
@@ -120,7 +120,7 @@ Bei Erfolg wird entweder die angeforderte Aktion zum Starten einer Defragmentier
 
 Bei einem Fehler wird die angeforderte Aktion zum Starten oder Beenden eines Onlinedefragmentierungsauftrags nicht durchgeführt. Es treten keine weiteren Nebeneffekte auf.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Die Onlinedefragmentierung wird sowohl durch eine Parametereinstellung als auch durch diese API gesteuert. Der Standardwert des Systemparameters ist JET_OnlineDefragAll, was bedeutet, dass die Defragmentierung für alle unterstützten Datenstrukturen aktiviert ist. Mit [JetSetSystemParameter](./jetsetsystemparameter-function.md)ist es jedoch möglich, die Onlinedefragmentierung zu deaktivieren oder selektiv nur für Datenbankbereichsstrukturen, nur Datenbanken, nur Streamingdateien oder eine beliebige Kombination dieser Optionen zu aktivieren. Wenn die Systemeinstellung für die Onlinedefragmentierung auf eine veraltete Einstellung festgelegt ist, behandelt **JetDefragment** die Einstellung als JET_OnlineDefragAll.
 
@@ -131,14 +131,7 @@ Die Sitzung, die zum Starten des Onlinedefragmentierungs-Task verwendet wird, ka
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetDefragmentW</strong> (Unicode) und <strong>JetDefragmentA</strong> (ANSI).</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetDefragmentW</strong> (Unicode) und <strong>JetDefragmentA</strong> (ANSI) implementiert.</p> | 
 
 
 

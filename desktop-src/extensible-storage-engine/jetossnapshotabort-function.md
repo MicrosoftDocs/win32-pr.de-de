@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter JetOSSnapshotAbort-Funktion.
+description: 'Weitere Informationen zu: JetOSSnapshotAbort-Funktion'
 title: JetOSSnapshotAbort-Funktion
 TOCTitle: JetOSSnapshotAbort Function
 ms:assetid: 629455af-b526-4366-9b9a-112757f72c32
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 08e56bc95798559453c383549570f9470b55fa82
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 7767a1c7e9dc9182fe521d2d903b52d3b88dadb3
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122474416"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983353"
 ---
 # <a name="jetossnapshotabort-function"></a>JetOSSnapshotAbort-Funktion
 
@@ -32,9 +32,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetossnapshotabort-function"></a>JetOSSnapshotAbort-Funktion
 
-Die **JetOSSnapshotAbort-Funktion** benachrichtigt die Engine, dass sie normale E/A-Vorgänge fortsetzen kann, nachdem ein Einfrierenzeitraum mit einer fehlerhaften Momentaufnahme beendet wurde.
+Die **JetOSSnapshotAbort-Funktion** benachrichtigt die Engine, dass sie normale E/A-Vorgänge fortsetzen kann, nachdem ein Einfrierenszeitraum mit einer fehlerhaften Momentaufnahme beendet wurde.
 
-**Windows Server 2003:****JetOSSnapshotAbort** is introduced in Windows Server 2003.  
+**Windows Server 2003:****JetOSSnapshotAbort** wird in Windows Server 2003 eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotAbort(
@@ -51,11 +51,11 @@ Der Bezeichner der Momentaufnahmesitzung.
 
 *grbit*
 
-Die Optionen für diesen Aufruf. Dieser Parameter ist für die zukünftige Verwendung reserviert, und der einzige unterstützte gültige Wert ist 0 (null).
+Die Optionen für diesen Aufruf. Dieser Parameter ist für die zukünftige Verwendung reserviert, und der einzige gültige unterstützte Wert ist 0 (null).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
 | <p>Rückgabecode</p> | <p>Beschreibung</p> | 
@@ -66,18 +66,24 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 
 
 
-Wenn diese Funktion erfolgreich ist, wird die Momentaufnahmesitzung beendet, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahmesitzung kann zu einem späteren Zeitpunkt gestartet werden.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird die Momentaufnahmesitzung beendet, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahmesitzung kann zu einem späteren Zeitpunkt gestartet werden.
 
 Wenn diese Funktion fehlschlägt, wird die Momentaufnahmesitzung nicht abgebrochen.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion sollte anstelle von [JetOSSnapshotThaw](./jetossnapshotthaw-function.md) aufgerufen werden, um die Engine darüber zu informieren, dass die Momentaufnahme aus Gründen abgebrochen wurde, die sich nicht auf die Engine beziehen. Diese Informationen können später verwendet werden, um Ereignisprotokollmeldungen zur Momentaufnahmesitzung ausausgaben oder andere geeignete Aktionen zu bestimmen.
+Diese Funktion sollte anstelle von [JetOSSnapshotThaw](./jetossnapshotthaw-function.md) aufgerufen werden, um die Engine darüber zu informieren, dass die Momentaufnahme aus Gründen abgebrochen wurde, die nicht mit der Engine in Zusammenhang stehen. Diese Informationen können später verwendet werden, um Ereignisprotokollmeldungen zur Momentaufnahmesitzung auszugeben oder andere geeignete Aktionen zu bestimmen.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

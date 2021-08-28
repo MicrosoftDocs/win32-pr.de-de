@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e5dd422013bdaf81d5d6aac6d0a34f4c9479af26cd79f64b854299caa3cac3f5
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 70841866ec656dc840fb467d598cc42bf919283b
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118202201"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630916"
 ---
 # <a name="ribbon-element"></a>Menübandelement
 
 Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Ribbon
@@ -40,17 +40,17 @@ Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -64,8 +64,8 @@ Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 <td><strong>Name</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Wird zum Kommentieren des Befehlselements verwendet.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Jede Sequenz von 0 (null) oder mehr Zeichen.<br/> Die maximale Länge ist ungebunden.<br/> </dd> </dl></td>
+<td>Wird verwendet, um das Befehlselement mit Anmerkungen zu kommentieren.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine beliebige Sequenz von null oder mehr Zeichen.<br/> Die maximale Länge ist ungebunden.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -76,14 +76,14 @@ Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 
 
 
-| Element                                                                                         | BESCHREIBUNG                                   |
+| Element                                                                                         | Beschreibung                                   |
 |-------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [**Ribbon.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/>       | Kann höchstens einmal auftreten.<br/> <br/> |
-| [**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/>         | Kann höchstens einmal auftreten.<br/> <br/> |
-| [**Ribbon.HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/>                 | Kann höchstens einmal auftreten.<br/> <br/> |
-| [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
-| [**Ribbon.SizeDefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)<br/>       | Kann höchstens einmal auftreten.<br/> <br/> |
-| [**Ribbon.Tabs**](windowsribbon-element-ribbon-tabs.md)<br/>                             | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**Ribbon.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)<br/>       | Kann nur einmal auftreten.<br/> <br/> |
+| [**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)<br/>         | Kann nur einmal auftreten.<br/> <br/> |
+| [**Ribbon.HelpButton**](windowsribbon-element-ribbon-helpbutton.md)<br/>                 | Kann nur einmal auftreten.<br/> <br/> |
+| [**Ribbon.QuickAccessToolbar**](windowsribbon-element-ribbon-quickaccesstoolbar.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
+| [**Ribbon.SizeDefinitions**](windowsribbon-element-ribbon-sizedefinitions.md)<br/>       | Kann nur einmal auftreten.<br/> <br/> |
+| [**Ribbon.Tabs**](windowsribbon-element-ribbon-tabs.md)<br/>                             | Kann nur einmal auftreten.<br/> <br/> |
 
 
 
@@ -101,7 +101,7 @@ Stellt das Menüband-Steuerelement in der Menübandansicht dar.
 
 Erforderlich.
 
-Muss für jedes [**Application.Views-Element**](windowsribbon-element-application-views.md) genau einmal auftreten.
+Muss genau einmal für jedes [**Application.Views-Element**](windowsribbon-element-application-views.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 

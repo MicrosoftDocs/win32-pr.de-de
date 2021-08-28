@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXID Struktur'
-title: JET_INDEXID Struktur
+description: 'Weitere Informationen zu: JET_INDEXID-Struktur'
+title: JET_INDEXID-Struktur
 TOCTitle: JET_INDEXID Structure
 ms:assetid: 8b1d90f0-bc93-4b30-90d1-b9e93ad26654
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269327(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e1a9c6a971e44604240d750163f0570937f9d4db
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89af1b81b5221ab1cdebc0c91d5340acc62dd330
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364247"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983973"
 ---
-# <a name="jet_indexid-structure"></a>JET_INDEXID Struktur
+# <a name="jet_indexid-structure"></a>JET_INDEXID-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_indexid-structure"></a>JET_INDEXID Struktur
+## <a name="jet_indexid-structure"></a>JET_INDEXID-Struktur
 
-Die **JET_INDEXID** -Struktur enthält eine Index-ID. Eine Index-ID ist ein Hinweis, der verwendet wird, um die Auswahl des aktuellen Indexes mithilfe von [jetsetcurrentindex](./jetsetcurrentindex-function.md)zu beschleunigen. Dies ist besonders nützlich, wenn eine Tabelle eine große Anzahl von Indizes enthält. Die Index-ID kann mit [jetgetindexinfo](./jetgetindexinfo-function.md) oder [jetgettableindexinfo](./jetgettableindexinfo-function.md)abgerufen werden.
+Die **JET_INDEXID-Struktur** enthält eine Index-ID. Eine Index-ID ist ein Hinweis, der verwendet wird, um die Auswahl des aktuellen Indexes mit [jetSetCurrentIndex](./jetsetcurrentindex-function.md)zu beschleunigen. Dies ist besonders nützlich, wenn es eine sehr große Anzahl von Indizes für eine Tabelle gibt. Die Index-ID kann mit [JetGetIndexInfo](./jetgetindexinfo-function.md) oder [JetGetTableIndexInfo](./jetgettableindexinfo-function.md)abgerufen werden.
 
 ```cpp
     typedef struct tagJET_INDEXID {
@@ -42,43 +42,30 @@ Die **JET_INDEXID** -Struktur enthält eine Index-ID. Eine Index-ID ist ein Hinw
 
 **cbStruct**
 
-Die Größe (in Bytes) der Index-ID.
+Die Größe der Index-ID in Bytes.
 
-Dies ist die tatsächliche Größe der Index-ID, die im Ausgabepuffer von [jetgetindexinfo](./jetgetindexinfo-function.md) oder [jetgettableindexinfo](./jetgettableindexinfo-function.md)zurückgegeben wird.
+Dies ist die tatsächliche Größe der Index-ID, die im Ausgabepuffer von [JetGetIndexInfo](./jetgetindexinfo-function.md) oder [JetGetTableIndexInfo](./jetgettableindexinfo-function.md)zurückgegeben wird.
 
-**rgbindexid**
+**rgbIndexId**
 
-Ein undurchsichtiges BLOB von Informationen, die von der-Engine verwendet werden, um schnell einen Index im Schema Cache zu identifizieren.
+Ein nicht transparentes BLOB von Informationen, das von der Engine verwendet wird, um schnell einen Index im Schemacache zu identifizieren.
 
 Versuchen Sie nicht, das BLOB von Informationen zu interpretieren. Es handelt sich nicht um eine festgelegte Größe.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetgetindexinfo](./jetgetindexinfo-function.md)  
-[Jetgettableindexinfo](./jetgettableindexinfo-function.md)  
-[Jetgettableinfo](./jetgettableinfo-function.md)  
-[Jetsetcurrentindex](./jetsetcurrentindex-function.md)
+[JetGetIndexInfo](./jetgetindexinfo-function.md)  
+[JetGetTableIndexInfo](./jetgettableindexinfo-function.md)  
+[JetGetTableInfo](./jetgettableinfo-function.md)  
+[JetSetCurrentIndex](./jetsetcurrentindex-function.md)

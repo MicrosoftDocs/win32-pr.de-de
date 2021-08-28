@@ -1,10 +1,10 @@
 ---
-description: Fordert zum Starten einer shaderdebugsitzung für die angegebene Pipeline Phase, Pixel/Scheitelpunkt, falls zutreffend, Ereignis und Frame.
+description: Fordert an, eine Shaderdebugsitzung für die angegebene Pipelinephase, ggf. Pixel/Scheitelpunkt, Ereignis und Frame zu starten.
 MS-HAID: vspixengine.IDebugShaderRequest\_BeginDebugShader\_IPixErrorCallback\_ptr\_EventID\_DWORD\_DWORD\_Point2D\_PipeLineStages\_PixelHistoryOperation\_ptr\_DWORD\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Idebugshaderrequest:: begindebugshader-Methode'
+title: IDebugShaderRequest::BeginDebugShader-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: CC93D31C-8593-4B03-B974-87B886B9431D
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b6512dc8aa67b3f4d128be3cd2dcd2b622ba2035
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 20e9667ba0c0d4d36175cd9694c2e6b57d192fab
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124633"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122629854"
 ---
-# <a name="span-idvspixengineidebugshaderrequest_begindebugshader_ipixerrorcallback_ptr_eventid_dword_dword_point2d_pipelinestages_pixelhistoryoperation_ptr_dword_ptrspanidebugshaderrequestbegindebugshader-method"></a><span id="vspixengine.idebugshaderrequest_begindebugshader_ipixerrorcallback_ptr_eventid_dword_dword_point2d_pipelinestages_pixelhistoryoperation_ptr_dword_ptr"></span>Idebugshaderrequest:: begindebugshader-Methode
+# <a name="span-idvspixengineidebugshaderrequest_begindebugshader_ipixerrorcallback_ptr_eventid_dword_dword_point2d_pipelinestages_pixelhistoryoperation_ptr_dword_ptrspanidebugshaderrequestbegindebugshader-method"></a><span id="vspixengine.idebugshaderrequest_begindebugshader_ipixerrorcallback_ptr_eventid_dword_dword_point2d_pipelinestages_pixelhistoryoperation_ptr_dword_ptr"></span>IDebugShaderRequest::BeginDebugShader-Methode
 
-Fordert zum Starten einer shaderdebugsitzung für die angegebene Pipeline Phase, Pixel/Scheitelpunkt, falls zutreffend, Ereignis und Frame.
+Fordert an, eine Shaderdebugsitzung für die angegebene Pipelinephase, ggf. Pixel/Scheitelpunkt, Ereignis und Frame zu starten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,41 +46,41 @@ HRESULT BeginDebugShader(
 
 ## <a name="parameters"></a>Parameter
 
-*errorcallback*   
+*errorCallback*   
 Die Adresse eines Rückrufs für Fehler, die während des Debuggens auftreten können.
 
-*EventID*   
+*Eventid*   
 Das angegebene Ereignis.
 
-*Framezahl*   
+*frameNumber*   
 Der angegebene Frame.
 
-*Vertex*   
-Der angegebene Scheitelpunkt. Gilt nur, wenn ein Vertexshader debuggt wird.
+*Scheitelpunkt*   
+Der angegebene Scheitelpunkt. Gilt nur beim Debuggen eines Vertex-Shaders.
 
-*Megapixel*   
-Das angegebene Pixel. Gilt nur beim Debuggen eines Pixelshaders.
+*Pixel*   
+Das angegebene Pixel. Gilt nur beim Debuggen eines Pixel-Shaders.
 
-*inszeniert*   
-Die angegebene Pipeline Phase.
+*Bühne*   
+Die angegebene Pipelinephase.
 
-*ppixelhistory*   
-Die Adresse der Pixel Verlaufs Ergebnisse, die zum Suchen des zugeordneten Pixels zum Debuggen verwendet werden. Gilt nur beim Debuggen eines Pixelshaders.
+*pPixelHistory*   
+Die Adresse der Pixelverlaufsergebnisse, die zum Suchen des zugeordneten zu debuggende Pixels verwendet werden. Gilt nur beim Debuggen eines Pixel-Shaders.
 
-*pdevice*   
-Die Adresse, die an die Debug-Engine für die Kommunikation mit dieser Debugsitzung übergeben werden soll (Debugmodul-lesenprozessspeicher für diese Adresse).
+*pDevice*   
+Die Adresse, die an die Debug-Engine für die Kommunikation mit dieser Debugsitzung übergeben werden soll (debug engine readprocessmemory für diese Adresse).
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Idebugshaderrequest**](/windows/desktop/direct3dtools/idebugshaderrequest)
+[**IDebugShaderRequest**](/windows/desktop/direct3dtools/idebugshaderrequest)
 
  
 

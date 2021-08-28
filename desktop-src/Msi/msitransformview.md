@@ -1,29 +1,29 @@
 ---
-description: Diese temporäre Tabelle aktiviert die Option "Custom Action Patch Uninstall" für benutzerdefinierte Aktionen, die durch einen Patch hinzugefügt oder aktualisiert werden.
+description: Diese temporäre Tabelle aktiviert die Option Zum Deinstallieren von benutzerdefinierten Aktionspatches für benutzerdefinierte Aktionen, die von einem Patch hinzugefügt oder aktualisiert werden.
 ms.assetid: 2d4a934f-e245-4d0a-b8bf-52457107ac08
 title: MsiTransformView
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 978f27fe68d89abd3ea94a4d13adc815bbc6510564caf949b937d8a4213428b9
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 8e1b6c46ebfcfb82ee23ce6acec998490f53fe67
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118944248"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882238"
 ---
 # <a name="msitransformview"></a>MsiTransformView
 
-Diese temporäre Tabelle aktiviert die Option ["Custom Action Patch Uninstall"](custom-action-patch-uninstall-option.md) für benutzerdefinierte Aktionen, die durch einen Patch hinzugefügt oder aktualisiert werden.
+Diese temporäre Tabelle aktiviert die Option Zum Deinstallieren von [benutzerdefinierten Aktionspatches](custom-action-patch-uninstall-option.md) für benutzerdefinierte Aktionen, die von einem Patch hinzugefügt oder aktualisiert werden.
 
-Wenn ein Patch eine benutzerdefinierte Aktion mit dem **Attribut msidbCustomActionTypePatchUninstall** hinzufügt oder aktualisiert, führt Windows Installer die neue oder aktualisierte benutzerdefinierte Aktion aus, wenn der Patch deinstalliert wird. Windows Das Installationsprogramm stellt die Updates innerhalb des zu deinstallierenden Patches für die benutzerdefinierte Aktion zur Patchdeinstallation zur Verfügung. Der Patch muss eine MsiTransformView-Tabelle *<PatchGUID>* enthalten, um diese Informationen für den Windows bereitstellen zu können. Die Informationen in dieser Tabelle sind für alle unmittelbaren benutzerdefinierten Aktionen verfügbar und für zurückgestellte benutzerdefinierte Aktionen nicht verfügbar.
+Wenn ein Patch eine benutzerdefinierte Aktion mit dem **msidbCustomActionTypePatchUninstall-Attribut** hinzufügt oder aktualisiert, führt Windows Installer die neue oder aktualisierte benutzerdefinierte Aktion aus, wenn der Patch deinstalliert wird. Windows Das Installationsprogramm macht die Updates innerhalb des zu deinstallierenden Patches für die benutzerdefinierte Aktion "Patchdeinstallation" verfügbar. Der Patch muss eine MsiTransformView *&lt; &gt; PatchGUID-Tabelle* enthalten, um diese Informationen für Windows Installer bereitzustellen. Die Informationen in dieser Tabelle sind für alle unmittelbaren benutzerdefinierten Aktionen verfügbar und nicht für verzögerte benutzerdefinierte Aktionen verfügbar.
 
-**[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)** Nicht unterstützt. Die [Option Zum Deinstallieren benutzerdefinierter Aktionspatches](custom-action-patch-uninstall-option.md) ist ab Windows Installer 4.5 verfügbar.
+**[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)** Wird nicht unterstützt. Die [Deinstallationsoption für benutzerdefinierte Aktionspatches](custom-action-patch-uninstall-option.md) ist ab Windows Installer 4.5 verfügbar.
 
-Diese Tabelle sollte msiTransformView Table heißen, wobei *<PatchGUID>* die GUID ist, die den Patch *<PatchGUID>* eindeutig identifiziert. Die MsiTransformView-Tabelle *<PatchGUID>* enthält die folgenden Spalten.
+Diese Tabelle sollte msiTransformView *&lt; &gt; PatchGUID-Tabelle* genannt werden, wobei *&lt; PatchGUID &gt;* die GUID ist, die den Patch eindeutig identifiziert. Die MsiTransformView *&lt; &gt; PatchGUID-Tabelle* enthält die folgenden Spalten.
 
 
 
-| Spalte  | Typ                         | Key | Nullwerte zulässig |
+| Spalte  | Typ                         | Schlüssel | Nullwerte zulässig |
 |---------|------------------------------|-----|----------|
 | Tabelle   | [Identifier](identifier.md) | J   | N        |
 | Column  | [Text](text.md)             | J   | N        |
@@ -35,7 +35,7 @@ Diese Tabelle sollte msiTransformView Table heißen, wobei *<PatchGUID>* die GUI
 
  
 
-## <a name="column"></a>Column
+## <a name="column"></a>Spalte
 
 <dl> <dt>
 
@@ -56,29 +56,29 @@ Name einer geänderten Tabellenspalte oder INSERT, DELETE, CREATE oder DROP.
 <span id="Row"></span><span id="row"></span><span id="ROW"></span>Zeile
 </dt> <dd>
 
-Eine Liste der Primärschlüsselwerte, die durch Tabstopps getrennt sind. Null-Primärschlüsselwerte werden durch ein einzelnes Leerzeichen dargestellt. Ein NULL-Wert in dieser Spalte gibt eine Schemaänderung an.
+Eine Liste der Primärschlüsselwerte, die durch Registerkarten getrennt sind. NULL-Primärschlüsselwerte werden durch ein einzelnes Leerzeichen dargestellt. Ein NULL-Wert in dieser Spalte gibt eine Schemaänderung an.
 
 </dd> <dt>
 
 <span id="Data"></span><span id="data"></span><span id="DATA"></span>Daten
 </dt> <dd>
 
-Daten, Name eines Datenstroms oder eine Spaltendefinition.
+Daten, Name eines Datenstroms oder einer Spaltendefinition.
 
 </dd> <dt>
 
 <span id="Current"></span><span id="current"></span><span id="CURRENT"></span>Aktuellen
 </dt> <dd>
 
-Der aktuelle Wert aus der Verweisdatenbank oder spaltet eine Zahl.
+Aktueller Wert aus der Verweisdatenbank oder Spalte einer Zahl.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Benutzerdefinierte Aktionen zur Patchdeinstallation werden ausgeführt, wenn der Patch deinstalliert wird. Sie werden nicht ausgeführt, wenn das Produkt deinstalliert wird. Verwenden Sie die [Deinstallationsoption Benutzerdefinierte](custom-action-patch-uninstall-option.md) Aktion Patch und diese Tabelle, um einen benutzerdefinierten nur dann ausführen, wenn der Patch deinstalliert wird.
+Benutzerdefinierte Aktionen zur Patchdeinstallation werden ausgeführt, wenn der Patch deinstalliert wird. Sie werden nicht ausgeführt, wenn das Produkt deinstalliert wird. Verwenden Sie die [Option Benutzerdefinierte Aktion Patchdeinstallation](custom-action-patch-uninstall-option.md) und diese Tabelle, um eine benutzerdefinierte nur auszuführen, wenn der Patch deinstalliert wird.
 
-Ein Patch kann eine benutzerdefinierte Aktion aktualisieren, die im ursprünglichen Paket bereitgestellt wird (.msi Datei). Um die aktualisierte Version der benutzerdefinierten Aktion beim Deinstallieren des Patches ausführen zu können, markieren Sie die benutzerdefinierte Aktion mit dem **Attribut msidbCustomActionTypePatchUninstall** im ursprünglichen Paket.
+Ein Patch kann eine benutzerdefinierte Aktion aktualisieren, die im ursprünglichen Paket (.msi-Datei) bereitgestellt wird. Um die aktualisierte Version der benutzerdefinierten Aktion auszuführen, wenn der Patch deinstalliert wird, markieren Sie die benutzerdefinierte Aktion mit dem **msidbCustomActionTypePatchUninstall-Attribut** im ursprünglichen Paket.
 
  
 

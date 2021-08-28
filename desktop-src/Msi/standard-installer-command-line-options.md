@@ -1,6 +1,6 @@
 ---
 description: Das ausführbare Programm, das Pakete interpretiert und Produkte installiert, ist Msiexec.exe. Beachten Sie, dass Msiexec bei der Rückgabe auch eine Fehlerebene festlegt, die Systemfehlercodes entspricht. In der folgenden Tabelle sind die Standardbefehlszeilenoptionen für dieses Programm aufgeführt. Bei Befehlszeilenoptionen wird die Groß-/Kleinschreibung nicht beachtet. Windows Installer 2.0: Die in diesem Thema identifizierten Befehlszeilenoptionen sind ab Windows Installer 3.0 verfügbar. Die Windows Installer Command-Line Optionen sind mit Windows Installer&\# 160;3.0 und früheren Versionen verfügbar.
-ms.assetid: b1707c88-1cca-45ab-bb23-6002bfd5204e title: Standard Installer Command-Line Options ms.topic: article ms.date: 05/31/2018
+ms.assetid: b1707c88-1cca-45ab-bb23-6002bfd5204e title: Standard Installer Command-Line Options ms.topic: article ms.date: 31.05.2018
 ---
 
 # <a name="standard-installer-command-line-options"></a>Standardinstallationsprogramm Command-Line Optionen
@@ -8,7 +8,7 @@ ms.assetid: b1707c88-1cca-45ab-bb23-6002bfd5204e title: Standard Installer Comma
 Das ausführbare Programm, das Pakete interpretiert und Produkte installiert, ist Msiexec.exe.
 
 > [!Note]  
-> Msiexec legt bei der Rückgabe auch eine Fehlerebene fest, die [systemfehlercodes](../debug/system-error-codes.md)entspricht.
+> Msiexec legt bei der Rückgabe auch eine Fehlerebene fest, die [den Systemfehlercodes](../debug/system-error-codes.md)entspricht.
 
  
 
@@ -94,7 +94,7 @@ Für die entsprechende Windows Installer-Befehlszeile ist <a href="rebootprompt.
 </tr>
 <tr class="odd">
 <td><strong>/uninstall</strong></td>
-<td><em><Package.msi|ProductCode></em></td>
+<td><em>&lt;Package.msi| ProductCode></em></td>
 <td>Option "Produkt deinstallieren". Deinstalliert ein Produkt.<br/>
 <blockquote>
 [!Note]<br />
@@ -104,11 +104,11 @@ Die entsprechende Windows <a href="command-line-options.md">Installer-Befehlszei
 </tr>
 <tr class="even">
 <td><strong>/uninstall</strong></td>
-<td><em>/package <Package.msi | ProductCode> /uninstall <Update1.msp | PatchGUID1> [; Update2.msp-| PatchGUID2]</em></td>
+<td><em>/package &lt;Package.msi | ProductCode> /uninstall <Update1.msp | PatchGUID1> [; Update2.msp | PatchGUID2]</em></td>
 <td>Option "Update deinstallieren". Deinstalliert einen Updatepatch.<br/>
 <blockquote>
 [!Note]<br />
-Die entsprechende Windows <a href="command-line-options.md">Installer-Befehlszeilenoption</a> ist <strong>/I</strong> mit <a href="msipatchremove.md"><strong>MSIPATCHREMOVE</strong></a>=Update1.msp | PatchGUID1[; Update2.msp-| PatchGUID2] in der Befehlszeile festgelegt.
+Die entsprechende Windows <a href="command-line-options.md">Installer-Befehlszeilenoption</a> ist <strong>/I</strong> mit <a href="msipatchremove.md"><strong>MSIPATCHREMOVE</strong></a>=Update1.msp | PatchGUID1[; Update2.msp | PatchGUID2] in der Befehlszeile festgelegt.
 </blockquote>
 <br/></td>
 </tr>
@@ -123,7 +123,7 @@ Die entsprechende Windows <a href="command-line-options.md">Installer-Befehlszei
 <li>Starten von Aktionen</li>
 <li>Aktionsspezifische Datensätze</li>
 <li>Benutzeranforderungen</li>
-<li>Parameter der ersten Benutzeroberfläche</li>
+<li>Anfängliche Benutzeroberflächenparameter</li>
 <li>Informationen zu nicht genügend Arbeitsspeicher oder schwerwiegenden Beendigungsinformationen</li>
 <li>Nachrichten mit nicht genügend Speicherplatz</li>
 <li>Terminaleigenschaften</li>
@@ -141,7 +141,7 @@ Weitere Informationen zu allen Methoden, die zum Festlegen des Protokollierungsm
 </tr>
 <tr class="even">
 <td><strong>/package</strong></td>
-<td><em><Package.msi|ProductCode></em></td>
+<td><em>&lt;Package.msi| ProductCode></em></td>
 <td>Option "Produkt installieren". Installiert oder konfiguriert ein Produkt.<br/>
 <blockquote>
 [!Note]<br />
@@ -155,7 +155,7 @@ Die entsprechende Windows <a href="command-line-options.md">Installer-Befehlszei
 <td>Option "Patches installieren". Installiert ein oder mehrere Patches. <br/>
 <blockquote>
 [!Note]<br />
-Die entsprechende Windows Installer-Befehlszeile weist <a href="patch.md"><strong>PATCH</strong></a> = [msipatch.msp]<; PatchGuid2> in der Befehlszeile festgelegt.
+Die entsprechende Windows Installer-Befehlszeile verfügt über <a href="patch.md"><strong>PATCH</strong></a> = [msipatch.msp]<; PatchGuid2> in der Befehlszeile festgelegt.
 </blockquote>
 <br/></td>
 </tr>

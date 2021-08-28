@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter JetGetVersion-Funktion.
+description: 'Weitere Informationen zu: JetGetVersion-Funktion'
 title: JetGetVersion-Funktion
 TOCTitle: JetGetVersion Function
 ms:assetid: f25c3639-ae2b-4357-9947-563ef3df72c6
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f4157b52d05716b00645bd7815c54e802bb55417
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 480953ace945cc180ae481a6b253336a114c62ea
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122474496"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984683"
 ---
 # <a name="jetgetversion-function"></a>JetGetVersion-Funktion
 
@@ -53,7 +53,7 @@ Ein Zeiger auf die Versionsnummer der Datenbank-Engine.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
 | <p>Rückgabecode</p> | <p>Beschreibung</p> | 
@@ -62,20 +62,26 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 
 
 
-Wenn diese Funktion erfolgreich ist, wird die Version der Datenbank-Engine abgerufen.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird die Version der Datenbank-Engine abgerufen.
 
 Es gibt keine bekannten Fehlermodi.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [Fehlerbehandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Extensible Storage Engine Errors (Erweiterbare Storage-Engine-Fehler)](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)

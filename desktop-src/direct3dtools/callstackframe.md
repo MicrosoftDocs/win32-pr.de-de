@@ -1,10 +1,10 @@
 ---
-description: Stellt Informationen über einen Frame in der Aufruf Liste dar.
+description: Stellt Informationen zu einem Frame in der Aufrufstapel dar.
 MS-HAID: vspixengine.CallStackFrame
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Callstackframe-Struktur
+title: CallStackFrame-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 50941BA0-968D-4341-8BF5-854FBDE8BD0C
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: fbe527c59a64e91f46a390344ea576c7560ef1f2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c6cb4b0e32213165149d7df8c7bf334049e37399
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342729"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631338"
 ---
-# <a name="span-idvspixenginecallstackframespancallstackframe-structure"></a><span id="vspixengine.callstackframe"></span>Callstackframe-Struktur
+# <a name="span-idvspixenginecallstackframespancallstackframe-structure"></a><span id="vspixengine.callstackframe"></span>CallStackFrame-Struktur
 
-Stellt Informationen über einen Frame in der Aufruf Liste dar.
+Stellt Informationen zu einem Frame in der Aufrufstapel dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,21 +37,21 @@ Stellt Informationen über einen Frame in der Aufruf Liste dar.
 
 ## <a name="members"></a>Member
 
-**FunctionName**  
-Eine com-Zeichenfolge, die den Namen der zugeordneten Funktion enthält.
+**Functionname**  
+Eine COM-Zeichenfolge, die den Namen der zugeordneten Funktion enthält.
 
-**SourceFile**  
-Eine com-Zeichenfolge, die den filePath der zugeordneten Quelldatei enthält.
+**Sourcefile**  
+Eine COM-Zeichenfolge, die den Dateipfad der zugeordneten Quelldatei enthält.
 
-**ModuleName**  
-Eine com-Zeichenfolge, die den Namen des zugeordneten Codemoduls enthält.
+**moduleName**  
+Eine COM-Zeichenfolge, die den Namen des zugeordneten Codemoduls enthält.
 
-**LineNumber**  
+**Linenumber**  
 Die zugeordnete Zeilennummer.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

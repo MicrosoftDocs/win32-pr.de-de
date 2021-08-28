@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7953c2359d651d1bb6c9d5a006c02d9b19de6662
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 183169f8356a664b450e74534558286607fed62c
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122477916"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984773"
 ---
 # <a name="jetgetsessionparameter-function"></a>JetGetSessionParameter-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **JetGetSessionParameter-Funktion** liest den Sitzungsparameter für die angegebene Sitzung.
+Die **JetGetSessionParameter-Funktion** liest den Sitzungsparameter für die gegebene Sitzung.
 
-Die **JetGetSessionParameter-Funktion** wurde im Windows 8 Betriebssystem eingeführt.
+Die **JetGetSessionParameter-Funktion** wurde im Windows 8 eingeführt.
 
 ``` c++
 JET_ERR JET_API JetGetSessionParameter (
@@ -51,11 +51,11 @@ JET_ERR JET_API JetGetSessionParameter (
 
 Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-Wenn angegeben, wird die angegebene Instanz ignoriert, und die der Sitzung zugeordnete Instanz wird verwendet.
+Wenn angegeben, wird die angegebene -Instanz ignoriert, und die der Sitzung zugeordnete -Instanz wird verwendet.
 
-*sesparbor*
+*sespartrenn*
 
-Die ID des festzulegende Sitzungsparameters.
+Die ID des sitzungsparameters, der festgelegt werden soll.
 
 *pvParam*
 
@@ -63,11 +63,11 @@ Daten in diesem Sitzungsparameter.
 
 *cbParamMax*
 
-Die maximale Größe des Datasets in diesem Sitzungsparameter.
+Die maximale Größe des DataSets in diesem Sitzungsparameter.
 
-*pwParamActual*
+*-ParamActual*
 
-Die tatsächliche Größe des Datasets in diesem Sitzungsparameter.
+Die tatsächliche Größe des DataSets in diesem Sitzungsparameter.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -75,18 +75,24 @@ Bei Erfolg wird der für den angeforderten Sitzungsparameter geeignete Ausgabepu
 
 Bei einem Fehler ist der Status der Ausgabepuffer nicht definiert.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Der Sitzungsparameter wird für die Lebensdauer der Sitzung oder bis zum Zurücksetzen des Werts verwendet.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2012.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2012.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 
-#### <a name="see-also"></a>Weitere Informationen
+#### <a name="see-also"></a>Siehe auch
 
 [JET_API_PTR](./jet-api-ptr.md)  
 [JET_ERR](./jet-err.md)  
