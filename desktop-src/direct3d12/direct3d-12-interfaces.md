@@ -6,12 +6,12 @@ ms.localizationpriority: low
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 0cc8fcecec2e2a0966ed34e23eb65ed9acd37e76
-ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
+ms.openlocfilehash: f204484b3565564f72e815bd21cf8e449ee55e4c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "121812891"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884293"
 ---
 # <a name="core-interfaces"></a>Core-Schnittstellen
 
@@ -59,6 +59,7 @@ Die folgenden Schnittstellen werden in d3d12.h deklariert.
 | [**ID3D12Resource**](/windows/win32/api/d3d12/nn-d3d12-id3d12resource) | Kapselt eine generalisierte Fähigkeit der CPU und GPU zum Lesen und Schreiben in den physischen Arbeitsspeicher oder Heaps. Sie enthält Abstraktionen zum Organisieren und Bearbeiten einfacher Datenarrays sowie mehrdimensionale Daten, die für die Shader-Stichprobenentnahme optimiert sind. |
 | [**ID3D12RootSignature**](/windows/win32/api/d3d12/nn-d3d12-id3d12rootsignature) | Die Stammsignatur definiert, welche Ressourcen an die Grafikpipeline gebunden sind. Eine Stammsignatur wird von der App konfiguriert und verknüpft Befehlslisten mit den Ressourcen, die shaders benötigen. Derzeit gibt es eine Grafik und eine Computestammsignatur pro App. |
 | [**ID3D12RootSignatureDeserializer**](/windows/win32/api/d3d12/nn-d3d12-id3d12rootsignaturedeserializer) | Enthält eine Methode zum Zurückgeben der deserialisierten [**D3D12-ROOT-SIGNATURE-DESC-Datenstruktur**](/windows/win32/api/d3d12/ns-d3d12-d3d12_root_signature_desc) einer serialisierten Stammsignaturversion 1.0.  |
+| [**ID3D12SDKConfiguration**](/windows/win32/api/d3d12/nn-d3d12-id3d12sdkconfiguration) | Stellt SDK-Konfigurationsmethoden bereit. |
 | [**ID3D12ShaderCacheSession**](/windows/win32/api/d3d12/nn-d3d12-id3d12shadercachesession) | Stellt eine Shadercachesitzung dar. |
 | [**ID3D12StateObject**](/windows/win32/api/d3d12/nn-d3d12-id3d12stateobject) | Stellt eine variable Menge des Konfigurationszustands dar, einschließlich Shadern, die eine Anwendung als einzelne Einheit verwaltet und die einem Treiber atomisch zur Verarbeitung zugewiesen wird, z. B. kompilieren oder optimieren.  |
 | [**ID3D12StateObjectProperties**](/windows/win32/api/d3d12/nn-d3d12-id3d12stateobjectproperties) | Stellt Methoden zum Abrufen und Festlegen der Eigenschaften eines [**ID3D12StateObject-Objekts zur**](/windows/win32/api/d3d12/nn-d3d12-id3d12stateobject)  |

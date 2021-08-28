@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_LogDisk-Klasse: Diese Klasse ist die Ereignistypklasse für Konfigurationsereignisse für logische Datenträger.'
+description: 'SystemConfig_LogDisk Klasse: Diese Klasse ist die Ereignistypklasse für logische Datenträgerkonfigurationsereignisse.'
 ms.assetid: a11a8245-8ace-4061-b6c7-938002d8b9fc
 title: SystemConfig_LogDisk-Klasse
 ms.topic: reference
@@ -28,16 +28,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c24ce209c51e0ac2d6167ae76d3f8289d73aa0fffa9ce607e51c8566cbb37c36
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 326509ea080b052c0ff435e0a6e573bf54ac298c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119582230"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880756"
 ---
 # <a name="systemconfig_logdisk-class"></a>SystemConfig \_ LogDisk-Klasse
 
-Diese Klasse ist die Ereignistypklasse für Konfigurationsereignisse des logischen Datenträgers.
+Diese Klasse ist die Ereignistypklasse für Logische Datenträgerkonfigurationsereignisse.
 
 Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
@@ -68,13 +68,13 @@ class SystemConfig_LogDisk : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ LogDisk-Klasse** verfügt über diese Typen von Membern:
+Die **\_ LogDisk-Klasse SystemConfig** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig \_ LogDisk-Klasse** verfügt über diese Eigenschaften.
+Die **\_ LogDisk-Klasse SystemConfig** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -90,7 +90,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
-Anzahl der Bytes in jedem Sektor für das physische Laufwerk.
+Anzahl von Bytes in jedem Sektor für das physische Laufwerk.
 
 </dd> <dt>
 
@@ -119,10 +119,10 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (6), **Max** (4), **Format(s)**
+Qualifizierer: **WmiDataId** (6), **Max** (4), **Format("s")**
 </dt> </dl>
 
-Laufwerkbuchstabe des Datenträgers im Format <letter> ":".
+Laufwerkbuchstaben des Datenträgers im Folgenden: &lt; "Letter &gt; :".
 
 </dd> <dt>
 
@@ -163,7 +163,7 @@ Datentyp: **char16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (14), Max(16), **Format(s)** 
+Qualifizierer: **WmiDataId** (14), **Max** (16), **Format("s")**
 </dt> </dl>
 
 Dateisystem auf dem logischen Datenträger, z. B. NTFS.
@@ -198,7 +198,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 </dd> <dt>
 
@@ -214,7 +214,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 </dd> <dt>
 
@@ -230,7 +230,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (16)
 </dt> </dl>
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 </dd> <dt>
 
@@ -346,18 +346,18 @@ Reserviert.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

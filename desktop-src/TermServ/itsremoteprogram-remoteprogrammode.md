@@ -1,16 +1,16 @@
 ---
-title: "\"Itsremoteprogram\"-remoteprogrammode-Eigenschaft"
-description: Der RemoteApp-Modus von Windows Server 2008 R2.
+title: ITSRemoteProgram RemoteProgramMode (Eigenschaft)
+description: Der Windows Server 2008 R2 RemoteApp-Modus.
 ms.assetid: 9ebdf966-db9c-4a14-8469-f8b153c6ea78
 ms.tgt_platform: multiple
 keywords:
-- Remoteprogrammode-Eigenschaft Remotedesktopdienste
-- Remoteprogrammode-Eigenschaft Remotedesktopdienste, itsremoteprogram-Schnittstelle
-- Itsremoteprogram-Schnittstelle Remotedesktopdienste, remoteprogrammode-Eigenschaft
-- Remoteprogrammode-Eigenschaft Remotedesktopdienste, ITSRemoteProgram2-Schnittstelle
-- ITSRemoteProgram2 Interface Remotedesktopdienste, remoteprogrammode-Eigenschaft
-- Remoteprogrammode-Eigenschaft Remotedesktopdienste, ITSRemoteProgram3-Schnittstelle
-- ITSRemoteProgram3 Interface Remotedesktopdienste, remoteprogrammode-Eigenschaft
+- RemoteProgramMode-Remotedesktopdienste
+- RemoteProgramMode-Eigenschaft Remotedesktopdienste , ITSRemoteProgram-Schnittstelle
+- ITSRemoteProgram-Schnittstelle Remotedesktopdienste , RemoteProgramMode-Eigenschaft
+- RemoteProgramMode-Eigenschaft Remotedesktopdienste , ITSRemoteProgram2-Schnittstelle
+- ITSRemoteProgram2-Schnittstelle Remotedesktopdienste , RemoteProgramMode-Eigenschaft
+- RemoteProgramMode-Eigenschaft Remotedesktopdienste , ITSRemoteProgram3-Schnittstelle
+- ITSRemoteProgram3-Schnittstelle Remotedesktopdienste , RemoteProgramMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8582824e2f6349e37b125ffd974847b602ad6fa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c36f450e6cbfec3922a56a42bc2f1f61466774eeff46c0987b6fad4ca9dc9731
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124820"
 ---
-# <a name="itsremoteprogramremoteprogrammode-property"></a>Itsremoteprogram:: remoteprogrammode-Eigenschaft
+# <a name="itsremoteprogramremoteprogrammode-property"></a>ITSRemoteProgram::RemoteProgramMode (Eigenschaft)
 
-Der RemoteApp-Modus von Windows Server 2008 R2.
+Der Windows Server 2008 R2 RemoteApp-Modus.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,11 +59,11 @@ HRESULT get_RemoteProgramMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der RemoteApp-Modus. Wenn der Wert auf **Variant \_ true** festgelegt ist, wird der RemoteApp-Modus aktiviert, und die Remote Sitzung hostet RemoteApp-Programme. Wenn der Wert auf **Variant \_ false** (Standardeinstellung) festgelegt ist, ist der RemoteApp-Modus nicht aktiviert. Die Remote Sitzung hostet einen Remote Desktop.
+Der RemoteApp-Modus. Wenn variant **\_ true festgelegt ist,** ist der RemoteApp-Modus aktiviert, und die Remotesitzung hosten RemoteApp-Programme. Wenn die **Standardeinstellung VARIANT \_ FALSE** festgelegt ist, ist der RemoteApp-Modus nicht aktiviert. Die Remotesitzung hosten einen Remotedesktop.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ itsremoteprogram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
+| IID<br/>                      | IID \_ ITSRemoteProgram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
 
 
 
@@ -89,7 +89,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 [**ITSRemoteProgram3**](itsremoteprogram3.md)
 </dt> <dt>
 
-[**Itsremoteprogram**](itsremoteprogram.md)
+[**ITSRemoteProgram**](itsremoteprogram.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_DIAGONAL (wmsdkidl. h)
-description: Der Diagonale Übergang zeigt das neue Bild entlang einer diagonalen Linie, die in einer Ecke des Frames steht.
+title: WMT_VIDEOIMAGE_TRANSITION_DIAGONAL (Wmsdkidl.h)
+description: Der diagonale Übergang zeigt das neue Bild entlang einer diagonalen Linie, die in einer Ecke des Rahmens entstanden ist.
 ms.assetid: 1aaaf9e8-bbb8-4289-948e-5d352798e831
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_DIAGONAL Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_DIAGONAL Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,69 +14,31 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6affa3e0727972e66e1ab6584c94ec233a11655
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ea028777580f7414a834a0aa3e73e18db607eccd
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358297"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471986"
 ---
-# <a name="wmt_videoimage_transition_diagonal"></a>Übergang von WMT \_ Videoimage \_ \_ Diagonal
+# <a name="wmt_videoimage_transition_diagonal"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ DIAGONAL
 
-Der Diagonale Übergang zeigt das neue Bild entlang einer diagonalen Linie, die in einer Ecke des Frames steht.
+Der diagonale Übergang zeigt das neue Bild entlang einer diagonalen Linie, die in einer Ecke des Rahmens entstanden ist.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Member der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgeführt, der sie zugewiesen sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Strukturmember</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Breite</td>
-<td><strong>fEffectPara0</strong></td>
-<td>Breite des diagonalen Abschnitts in Pixel.</td>
-</tr>
-<tr class="even">
-<td>Höhe</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Höhe des diagonalen Abschnitts in Pixel.</td>
-</tr>
-<tr class="odd">
-<td>Richtung</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Bestimmt die Ecke, aus der der Übergang stammt. Legen Sie einen der folgenden Wert fest:<br/>
-<ul>
-<li>0 (oben rechts)</li>
-<li>1-obere linke Seite</li>
-<li>2-unten rechts</li>
-<li>3-unten links</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Aufbau</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
-<ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt eine umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild ist der Vordergrund.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Struktur-Member | Beschreibung | 
+|-----------|------------------|-------------|
+| Breite | <strong>fEffectPara0</strong> | Breite des diagonalen Abschnitts in Pixel. | 
+| Höhe | <strong>fEffectPara1</strong> | Höhe des diagonalen Abschnitts in Pixel. | 
+| Direction | <strong>fEffectPara2</strong> | Bestimmt die Ecke, aus der der Übergang stammt. Legen Sie auf eine der folgenden Bedingungen fest:<br /><ul><li>0 – Oben rechts</li><li>1 – Links oben</li><li>2 – Unten rechts</li><li>3– Unten links</li></ul> | 
+| Aufbau | <strong>fEffectPara3</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 
@@ -88,15 +50,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

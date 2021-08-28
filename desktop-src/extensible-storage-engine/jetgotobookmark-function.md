@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 54a6370badcdd83e1beed4cc50f42a52eab797ba
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 8f71956816ca09e9522bcd0e0c7c93e044baf387
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122984643"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476426"
 ---
 # <a name="jetgotobookmark-function"></a>JetGotoBookmark-Funktion
 
@@ -81,26 +81,20 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird der Cursor an einem Indexeintrag für den Datensatz positioniert, der dem angegebenen Lesezeichen zugeordnet ist. Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebrochen. Wenn ein Indexbereich in Kraft ist, wird dieser Indexbereich abgebrochen. Wenn ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es wird keine Änderung am Datenbankzustand vorgenommen.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird der Cursor an einem Indexeintrag für den Datensatz positioniert, der dem angegebenen Lesezeichen zugeordnet ist. Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebrochen. Wenn ein Indexbereich in Kraft ist, wird dieser Indexbereich abgebrochen. Wenn ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es erfolgt keine Änderung des Datenbankzustands.
 
-Wenn diese Funktion fehlschlägt, bleibt die Position des Cursors unverändert. Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebrochen. Wenn ein Indexbereich in Kraft ist, wird dieser Indexbereich abgebrochen. Wenn ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es wird keine Änderung am Datenbankzustand vorgenommen.
+Wenn diese Funktion fehlschlägt, bleibt die Position des Cursors unverändert. Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebrochen. Wenn ein Indexbereich in Kraft ist, wird dieser Indexbereich abgebrochen. Wenn ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es erfolgt keine Änderung des Datenbankzustands.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Es gibt zwei Möglichkeiten, ein Lesezeichen zu verwenden, um einen Cursor auf einem Index zu positionieren. Die erste besteht darin, das Lesezeichen zu verwenden, um direkt auf dem Datensatz zu positionieren. Dies tritt auf, wenn der aktuelle Index des Cursors der primäre Index ist. Diese Technik funktioniert, da ein ESENT-Lesezeichen mit dem Primärschlüssel des zugeordneten Datensatzes identisch ist.
 
-Die zweite Möglichkeit zur Verwendung eines Lesezeichens besteht darin, es in einem Eintrag in einem sekundären Index zu positionieren, der dem Datensatz entspricht, der diesem Lesezeichen zugeordnet ist. Während dieses Vorgangs sucht die Engine den tatsächlichen Datensatz mithilfe des Lesezeichens für den primären Index. Anschließend werden die Datensatzdaten und die sekundäre Indexdefinition verwendet, um einen Schlüssel in den sekundären Index zu berechnen, der auf den Datensatz verweist. Anschließend positioniert er den Cursor auf dem Indexeintrag für diesen Schlüssel. Wenn sich der Cursor derzeit in einem sekundären Index für eine oder mehrere mehrwertige Schlüsselspalten befindet, wird der Cursor auf dem Indexeintrag positioniert, der dem ersten Mehrwert jeder dieser Schlüsselspalten entspricht.
+Die zweite Möglichkeit zur Verwendung eines Lesezeichens besteht darin, es in einem Eintrag in einem sekundären Index zu positionieren, der dem Datensatz entspricht, der diesem Lesezeichen zugeordnet ist. Während dieses Vorgangs sucht die Engine den tatsächlichen Datensatz mithilfe des Lesezeichens für den primären Index. Anschließend werden die Datensatzdaten und die Definition des sekundären Indexes verwendet, um einen Schlüssel in den sekundären Index zu berechnen, der auf den Datensatz verweist. Anschließend positioniert er den Cursor auf dem Indexeintrag für diesen Schlüssel. Wenn sich der Cursor derzeit in einem sekundären Index für eine oder mehrere mehrwertige Schlüsselspalten befindet, wird der Cursor auf dem Indexeintrag positioniert, der dem ersten Mehrwert jeder dieser Schlüsselspalten entspricht.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

@@ -10,18 +10,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 84e52c329fc311e7f99a6564ac51f90574308e31fa1eaa90bfb6d0bcdddc69b4
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ebbfbc1061d8bca03f52dd8cb7583fbe23ebb33a
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119130872"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885249"
 ---
 # <a name="scripting-api-constants"></a>Skripterstellungs-API-Konstanten
 
 WMI verwendet mehrere Typen von Konstanten im *iflags-Parameter* von Methodenaufrufen in der [Skripterstellungs-API für WMI.](scripting-api-for-wmi.md)
 
-Visual Basic Anwendungen können die Typbibliothek für die Skript-API Wbemdisp.tlb enthalten. Skripts können nicht auf Konstanten in der Typbibliothek zugreifen, es sei denn, sie verwenden die <REFERENCE> Tags oder aus dem <OBJECT> XML-Dateiformat Windows Script Host (WSH), wie unter [Verwenden der WMI-Skripttypbibliothek](using-the-wmi-scripting-type-library.md)beschrieben. Andernfalls muss ein Skript den Wert der Konstante verwenden.
+Visual Basic Anwendungen können die Typbibliothek für die Skript-API Wbemdisp.tlb enthalten. Skripts können nicht auf Konstanten in der Typbibliothek zugreifen, es sei denn, sie verwenden die &lt; &gt; REFERENCE- oder &lt; &gt; OBJECT-Tags aus dem XML-Dateiformat Windows Script Host (WSH), wie unter [Verwenden der WMI-Skripttypbibliothek](using-the-wmi-scripting-type-library.md)beschrieben. Andernfalls muss ein Skript den Wert der Konstante verwenden.
 
 ## <a name="constants"></a>Konstanten
 

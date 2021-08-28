@@ -1,23 +1,23 @@
 ---
-description: Gibt den Modus des voicecodec an.
+description: Gibt den Modus des Sprachcodecs an.
 ms.assetid: 8425cdab-e43c-41ca-9c20-09ab6a5f06f4
-title: MFPKEY_WMAVOICE_ENC_MusicSpeechClassMode-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAVOICE_ENC_MusicSpeechClassMode-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9776c76f2a8863afe73626f5a2940de2c0ccb7cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 303a86adbf9c443149ff78a47d19922284e38d2c0aeb56dcc13a74ca20cd54a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113120"
 ---
-# <a name="mfpkey_wmavoice_enc_musicspeechclassmode-property"></a>Mfpkey \_ wmavoice \_ ENC \_ musicvoiceclassmode (Eigenschaft)
+# <a name="mfpkey_wmavoice_enc_musicspeechclassmode-property"></a>MFPKEY \_ WMAVOICE \_ ENC \_ MusicSpeechClassMode-Eigenschaft
 
-Gibt den Modus des voicecodec an.
+Gibt den Modus des Sprachcodecs an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmacmusicredner classmode
+g \_ wszWMACModeSpeechClassMode
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,11 +27,11 @@ VT \_ I4
 
 1
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dem Wert 1 wird dem Codec mitgeteilt, dass der Inhalt sprach geschützt ist, bei einem Wert von 2 der Codec den Modus automatisch bestimmt, und jeder andere Wert informiert den Codec über die Verwendung des Musik Modus.
+Der Wert 1 informiert den Codec darüber, dass der Inhalt sprachgeeigent ist. Bei einem Wert von 2 wird der Modus automatisch vom Codec bestimmt, und jeder andere Wert informiert den Codec über die Verwendung des Musikmodus.
 
-Wenn der automatische Modus gemischte Sprache und Musik nicht ordnungsgemäß codiert, können Sie mithilfe der Eigenschaft [mfpkey \_ wmavoice \_ ENC \_ EDL](mfpkey-wmavoice-enc-edlproperty.md) die Codierung für einzelne Abschnitte der Datei angeben.
+Wenn der automatische Modus Mixed Voice und Musik nicht ordnungsgemäß codiert, können Sie die Codierung für einzelne Abschnitte der Datei mithilfe der [MFPKEY \_ WMAVOICE \_ ENC \_ EDL-Eigenschaft](mfpkey-wmavoice-enc-edlproperty.md) angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Wenn der automatische Modus gemischte Sprache und Musik nicht ordnungsgemäß co
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Wenn der automatische Modus gemischte Sprache und Musik nicht ordnungsgemäß co
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

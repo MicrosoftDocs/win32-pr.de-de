@@ -3,44 +3,44 @@ title: Verwenden des Formulas-Elements
 description: Verwenden des Formulas-Elements
 ms.assetid: f5a381b4-4132-4b66-b41a-3cada26b41e2
 keywords:
-- Web workshop,formulas-Element
+- Web-Workshop,formulas-Element
 - Entwerfen von Webseiten, Formulas-Element
 - Vector Markup Language (VML),formulas-Element
 - VML (Vector Markup Language),formulas-Element
-- Vektorgrafik, Formulas-Element
+- Vektorgrafik,Formulas-Element
 - formulas-Element
-- VML-Elemente, Formeln
-- VML-Formen, Formulas-Element
+- VML-Elemente,Formeln
+- VML-Formen,Formulas-Element
 - Vector Markup Language (VML), Definieren von Pfaden für Formen
-- VML (Vector Markup Language),Definieren von Pfaden für Formen
-- Vektorgrafiken, Definieren von Pfaden für Formen
-- VML-Formen, Definieren von Pfaden
+- VML (Vector Markup Language), Definieren von Pfaden für Formen
+- Vektorgrafiken,Definieren von Pfaden für Formen
+- VML-Formen,Definieren von Pfaden
 - Definieren von Pfaden für Formen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 23810ae6612e18132566c7d546db7f1f3a569871050b7919cbd8512f3d832808
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f9db791533190cd2f67e1043e345954fe71de251
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119512799"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885626"
 ---
 # <a name="using-the-formulas-element"></a>Verwenden des Formulas-Elements
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-In diesem Thema wird veranschaulicht, wie das `<formulas>` Unterelement verwendet wird, um einen anpassbaren Pfad für eine Form zu definieren.
+In diesem Thema wird veranschaulicht, wie sie das Unterelement verwenden, um einen anpassbaren `&lt;formulas&gt;` Pfad für eine Form zu definieren.
 
-Sie können das <formulas> Unterelement in `<shape>` oder `<shapetype>` platzieren, um Formeln zu definieren, die den Pfad einer Form variieren können. Innerhalb des `<formulas>` Unterelements definiert ein **f-Unterelement** eine Formel, sodass ein Wert basierend auf dieser Formel ausgewertet wird. Beispielsweise definiert die Formel einen Wert, der `<v:f eqn="prod 10 4 5"/>` "10 x 4 /5" entspricht.
+Sie können das Formelunterelement in oder platzieren, um Formeln zu definieren, die den Pfad &lt; &gt; einer Form variieren `<shape>` `<shapetype>` können. Innerhalb des `&lt;formulas&gt;` Unterelements definiert ein **f-Unterelement** eine Formel, sodass ein Wert basierend auf dieser Formel ausgewertet wird. Beispielsweise definiert die Formel einen Wert, der `<v:f eqn="prod 10 4 5"/>` "10 x 4 / 5" entspricht.
 
-Sie können  viele f-Unterelemente in einem `<formulas>` Unterelement platzieren. Formeln können auf die Werte verweisen, die zuvor in anderen Formeln innerhalb desselben `<formulas>` Unterelements definiert wurden. Der Wert, der in der ersten Formel definiert ist, kann als bezeichnet @0 werden, der Wert, der in der zweiten Formel definiert ist, kann als usw. bezeichnet @1 werden.
+Sie können  viele f-Unterelemente in einem unteren `&lt;formulas&gt;` Element platzieren. Formeln können auf die Werte verweisen, die zuvor in anderen Formeln innerhalb desselben Unterelements `&lt;formulas&gt;` definiert wurden. Der wert, der in der ersten Formel definiert ist, kann als bezeichnet werden, der in der zweiten Formel definierte Wert kann als @0 @1 bezeichnet werden, und so weiter.
 
-Darüber hinaus können Sie das adj-Eigenschaftsattribut des Elements  `<shape>` angeben, z.B. adj="100, 200, 150". Innerhalb des `<formulas>` -Elements können Sie dann auf diese Werte in der **AdJ-Liste** verweisen. Der erste Wert (100) in der **AdJ-Liste** kann als 0 bezeichnet \# werden, der zweite Wert (200) kann als \# 1 usw. bezeichnet werden.
+Darüber hinaus können Sie das AdJ-Eigenschaftenattribut des Elements angeben, z. B.  `<shape>` adj="100, 200, 150". Innerhalb des `&lt;formulas&gt;` -Elements können Sie dann in der AdJ-Liste auf **diese Werte** verweisen. Der erste Wert (100) in der **AdJ-Liste** kann als 0 bezeichnet werden, der zweite Wert (200) kann als 1 bezeichnet werden, \# \# und so weiter.
 
 Um beispielsweise ein lächelndes Gesicht zu zeichnen, können Sie die folgende VML-Darstellung eingeben:
 
@@ -67,14 +67,14 @@ m4960@0c8853@3,12747@3,16640@0nfe">
 
 
 
--   `adj="17520"` definiert einen Wert (= 17520). Auf diesen Wert kann als 0 verwiesen \# werden.
+-   `adj="17520"` definiert einen Wert (= 17520). Auf diesen Wert kann als \# 0 verwiesen werden.
 -   Die erste Formel, `<v:f eqn="sum 33030 0 #0"/>` , definiert den Wert (= 33030 + 0 - \# 0). Auf diesen Wert kann als verwiesen @0 werden.
--   Die zweite Formel, `<v:f eqn="prod #0 4 3"/>` , definiert den Wert (= \# 0 \* 4/3). Auf diesen Wert kann als verwiesen @1 werden.
--   Die dritte Formel, `<v:f eqn="prod @0 1 3"/>` , definiert den Wert (= @0 \* 1/3). Auf diesen Wert kann als verwiesen @2 werden.
+-   Die zweite Formel, `<v:f eqn="prod #0 4 3"/>` , definiert den Wert (= \# 0 \* 4 / 3). Auf diesen Wert kann als verwiesen @1 werden.
+-   Die dritte Formel, `<v:f eqn="prod @0 1 3"/>` , definiert den Wert (= @0 \* 1 / 3). Auf diesen Wert kann als verwiesen @2 werden.
 -   Die vierte Formel, `<v:f eqn="sum @1 0 @2"/>` , definiert den Wert (= + @1 0 -@2 ). Auf diesen Wert kann als verwiesen @3 werden.
--   Innerhalb des `<path>` -Elements werden die Werte, die in der ersten Formel ( ) und der vierten Formel ( ) definiert @0 @3 sind, verwendet, um die Kontur der Form zu bestimmen.
+-   Innerhalb des -Elements werden die werte, die in der ersten ( ) und der vierten Formel ( ) definiert sind, verwendet, um die `<path>` @0 @3 Kontur der Form zu bestimmen.
 
-Wenn Sie die **AdJ-Liste** ändern, z. B. `adj="20000"` , werden die Werte der Formeln, die auf die **AdJ-Liste** verweisen, ebenfalls geändert, was sich wie folgt auf das lächelnde Gesicht auswirkt:
+Wenn Sie die **AdJ-Liste** ändern, z. B. , werden auch die Werte der Formeln geändert, die auf die `adj="20000"` **AdJ-Liste** verweisen, und das lächelnde Gesicht wird wie folgt beeinflusst:
 
 ![shape2.gif (765 Bytes)](images/shape2f.gif)
 

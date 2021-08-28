@@ -7,12 +7,12 @@ keywords:
 - Gruppen-AD, Abrufen des Namens einer Gruppe im Domänenkontostil
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cc1b5a076ab3e63059fb79fa784039a8fb2ffb0b1c6396392140b64fa36e16f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: eac1a93689ab91d0fe4e349fefd99355a9273912
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118189089"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881416"
 ---
 # <a name="getting-the-domain-account-style-name-of-a-group"></a>Abrufen des Domänennamens Account-Style einer Gruppe
 
@@ -25,9 +25,9 @@ Benutzer, Gruppen, Computer und andere Sicherheitsprinzipale können in Domänen
 
 
 
-Wobei " " der Name der nt Windows domäne ist, die den Benutzer enthält, und " " ist die <domain> <account> **samAccountName-Eigenschaft** des angegebenen Benutzers. Beispiel: "Fabrikam \\ jeffsmith".
+Dabei ist " domain " der Name der nt Windows domäne, die den Benutzer enthält, und " account " ist die &lt; &gt; &lt; &gt; **samAccountName-Eigenschaft** des angegebenen Benutzers. Beispiel: "Fabrikam \\ jeffsmith".
 
-Das Domänenkontoformular kann den Vertrauenshänder in einem ACE in einer Sicherheitsbeschreibung angeben. Er wird auch für den Anmeldenamen auf Computern verwendet, auf denen Windows NT 4.0 und früher ausgeführt wird.
+Das Domänenkontoformular kann den Vertrauenshänder in einem ACE in einer Sicherheitsbeschreibung angeben. Sie wird auch für den Anmeldenamen auf Computern verwendet, auf denen Windows NT 4.0 und früher ausgeführt wird.
 
 
 ```C++

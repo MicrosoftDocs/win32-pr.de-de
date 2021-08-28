@@ -7,12 +7,12 @@ MSHAttr:
 title: Subscriberid
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ce668bd17b0d1579e8458c9dd378485c1fe1cc3
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 71a97eb32d38e058189a6523b0c8c77fb5b006d2
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122473936"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985403"
 ---
 # <a name="span-idwwan_profile_v4element_subscriberidspansubscriberid"></a><span id="WWAN_profile_v4.element_SubscriberID"></span>Subscriberid
 
@@ -24,8 +24,8 @@ Weitere Informationen finden Sie in der Dokumentation zum v1 [**SubscriberID-Ele
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[<MBNProfileExt>](element-mbnprofileext.md)  
-**<SubscriberID>**
+[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
+**&lt;Subscriberid&gt;**
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,9 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

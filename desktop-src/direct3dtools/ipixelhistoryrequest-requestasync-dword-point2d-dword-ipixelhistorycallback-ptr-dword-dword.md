@@ -1,5 +1,5 @@
 ---
-description: Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel an, rendert tartget /UAV und frame.
+description: Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel, rendern tartget /UAV und frame an.
 MS-HAID: vspixengine.IPixelHistoryRequest\_RequestAsync\_DWORD\_Point2D\_DWORD\_IPixelHistoryCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6aaeda3ae71880c3789d7fc0833b82403b8c6798fca5fef2ab475b57a29b0f71
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7f41a29ecef8a4ff08b6273386c5837bcaabc4b1
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118283074"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627936"
 ---
 # <a name="span-idvspixengineipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dwordspanipixelhistoryrequestrequestasync-method"></a><span id="vspixengine.ipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dword"></span>IPixelHistoryRequest::RequestAsync-Methode
 
-Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel an, rendert tartget /UAV und frame.
+Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel, rendern tartget /UAV und frame an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,21 +54,21 @@ Das angegebene Pixel.
 Das angegebene Renderziel.
 
 *requestCallback*   
-Die Adresse eines Rückrufs, mit dem der Host der Ergebnisse benachrichtigt wird.
+Die Adresse eines Rückrufs, der verwendet wird, um den Host der Ergebnisse zu notiffizieren.
 
 *requestCookie*   
 Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

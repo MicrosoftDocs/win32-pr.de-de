@@ -1,19 +1,19 @@
 ---
-description: Dieses <searchConnectorDescriptionList> Element enthält eine Liste von Suchconnectors, die in dieser Bibliothek enthaltene Standorte zugeordnet sind. Jeder Suchconnector wird durch ein- <searchConnectorDescription> Element definiert. Dieses Element ist optional und besitzt keine Attribute.
+description: Dieses &lt; searchConnectorDescriptionList-Element &gt; enthält eine Liste von Suchconnectors, die den in dieser Bibliothek enthaltenen Standorten zugeordnet sind. Jeder Suchconnector wird durch ein &lt; searchConnectorDescription-Element &gt; definiert. Dieses Element ist optional und weist keine Attribute auf.
 ms.assetid: 58A7BC21-0EB8-4bcf-98EE-31A56A4BC58C
-title: searchconnectordescriptionlist-Element (Bibliotheks Schema)
+title: searchConnectorDescriptionList-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4d7295796f205ca0d20f220ba827abfd5470bdb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04edc3a3cb7353529dccca66ffa15e1604bdd1c0
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980464"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885606"
 ---
-# <a name="searchconnectordescriptionlist-element-library-schema"></a>searchconnectordescriptionlist-Element (Bibliotheks Schema)
+# <a name="searchconnectordescriptionlist-element-library-schema"></a>searchConnectorDescriptionList-Element (Bibliotheksschema)
 
-Dieses <searchConnectorDescriptionList> Element enthält eine Liste von Suchconnectors, die in dieser Bibliothek enthaltene Standorte zugeordnet sind. Jeder Suchconnector wird durch ein- <searchConnectorDescription> Element definiert. Dieses Element ist optional und besitzt keine Attribute.
+Dieses &lt; searchConnectorDescriptionList-Element &gt; enthält eine Liste von Suchconnectors, die den in dieser Bibliothek enthaltenen Standorten zugeordnet sind. Jeder Suchconnector wird durch ein &lt; searchConnectorDescription-Element &gt; definiert. Dieses Element ist optional und weist keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ Dieses <searchConnectorDescriptionList> Element enthält eine Liste von Suchconn
 
 | Übergeordnetes Element                                                               | Untergeordnete Elemente                                                                                       |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md) | [searchconnectordescription-Element (Bibliotheks Schema)](schema-library-searchconnectordescription.md) |
+| [libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md) | [searchConnectorDescription-Element (Bibliotheksschema)](schema-library-searchconnectordescription.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Suchconnectors für die Windows-Verbund Suche und die protokollhandlerbereiche können nicht in einer Bibliothek enthalten sein.
+Suchconnectors für Windows Verbundsuche und Protokollhandlerbereiche können nicht in einer Bibliothek enthalten sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Bibliotheksbeschreibungsschema](library-schema-entry.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](/previous-versions//dd743009(v=vs.85))
+[Suchconnectorbeschreibungsschema](/previous-versions//dd743009(v=vs.85))
 </dt> </dl>
 
  

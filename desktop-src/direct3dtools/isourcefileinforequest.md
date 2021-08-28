@@ -1,5 +1,5 @@
 ---
-description: Anfordern von Quelldateiinformationen aus einer Aufrufstapeldatei.
+description: Anfordern von Quelldateiinformationen aus einer Aufrufstapel.
 MS-HAID: vspixengine.ISourceFileInfoRequest
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 51ffb8574eb600170533c5e4019db60677f28b9c
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 9703880e278a9443289f68526a70b762de0d630b
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122622336"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122787502"
 ---
 # <a name="span-idvspixengineisourcefileinforequestspanisourcefileinforequest-interface"></a><span id="vspixengine.isourcefileinforequest"></span>ISourceFileInfoRequest-Schnittstelle
 
-Anfordern von Quelldateiinformationen aus einer Aufrufstapeldatei.
+Anfordern von Quelldateiinformationen aus einer Aufrufstapel.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **ISourceFileInfoRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ISourceFileInfoRequest** verfügt auch über diese Typen von Membern:
 
@@ -38,11 +38,11 @@ Die **ISourceFileInfoRequest-Schnittstelle** erbt von der [**IUnknown-Schnittste
 
 Die **ISourceFileInfoRequest-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/isourcefileinforequest-requestasync-eventid-isourcefileinfocallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung zum Abruf der Quelldateien, die der Aufrufstapel eines Ereignisses zugeordnet sind.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/isourcefileinforequest-requestasync-eventid-isourcefileinfocallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td ><p>Eine asynchrone Anforderung zum Abrufen der Quelldateien, die der Aufrufstapel eines Ereignisses zugeordnet sind.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

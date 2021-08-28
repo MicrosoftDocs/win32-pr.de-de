@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 067fe72e2e00fc01b433dbda819d5e89336fc68c
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 24547a7970270943546e5fcfbc026ff24be144b0
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122467187"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986643"
 ---
 # <a name="jetprereadkeys-function"></a>JetPrereadKeys-Funktion
 
@@ -98,5 +98,11 @@ Es können verschiedene E/A-Fehler zusammen mit den folgenden API-Nutzungsfehler
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 7.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 R2.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows 7.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 R2.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 

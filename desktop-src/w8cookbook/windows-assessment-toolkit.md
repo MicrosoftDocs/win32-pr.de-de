@@ -4,106 +4,75 @@ description: Windows-Bewertungstoolkit
 ms.assetid: 9D0A4F42-F027-4032-8297-045937BD2B6E
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38d75aa02757acb54083e005d67a10e0fa42efec
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: 2d6eff172a59a7f0ee00f85a0cd8f237387aaa78
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "106337885"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482676"
 ---
 # <a name="windows-assessment-toolkit"></a>Windows-Bewertungstoolkit
 
 ## <a name="platforms"></a>Plattformen
 
-**Clients** -Windows 7 \| Windows 8  
+**Clients** – Windows 7 \| Windows 8  
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Das Windows Assessment Toolkit und das Windows Performance Toolkit bilden das Windows Assessment and Deployment Kit (ADK). Diese stellen eine umfassende Lösung zum Auswerten der gesamten Computerleistung und zur Automatisierung der Bereitstellung des Windows-Betriebssystems auf neuen Computern bereit.
+Das Windows Assessment Toolkit und das Windows Performance Toolkit bilden das Windows Assessment and Deployment Kit (ADK). Zusammen bieten sie eine vollständige Lösung zum Auswerten der gesamten Computerleistung und automatisieren die Bereitstellung des Windows Betriebssystems auf neuen Computern.
 
-Dieses Thema konzentriert sich auf das **Assessment Toolkit**. Die Bewertungsergebnisse werden verwendet, um potenzielle Probleme zu diagnostizieren, sodass die von Ihnen entwickelte Hardware und Software beide reaktionsfähig sind und eine minimale Auswirkung auf die Akku Lebensdauer, die Startleistung und das Herunterfahren haben. Die gleichen Bewertungen sind für OEM-Partner, ISV/IHV-Partner, Enthusiasten und andere Mitglieder der Community verfügbar, um ein gemeinsames Framework zum Messen, vergleichen und Überprüfen von Qualitätsaspekten einzurichten.
+In diesem Thema liegt der Schwerpunkt auf dem **Assessment Toolkit.** Die Bewertungsergebnisse werden verwendet, um potenzielle Probleme zu diagnostizieren, sodass die Hardware und Software, die Sie entwickeln, reaktionsfähig sind und sich minimal auf die Akkulaufzeit, die Startleistung und die Herunterfahrenszeit auswirken. Die gleichen Bewertungen sind für OEM-Partner, ISV-/IHV-Partner, Fans und andere Mitglieder der Community verfügbar, um ein gemeinsames Framework zum Messen, Vergleichen und Überprüfen von Qualitätsaspekten einzurichten.
 
-Mithilfe der Windows Assessment-Tools können Sie verschiedene Aspekte der Leistung in einer Vielzahl von Szenarios Messen, von der Startzeit bis hin zur Akku Lebensleistung bis hin zu Video Streaming mit hoher Definition. Anhand von Bewertungen können potenzielle Probleme, ein inkonsistentes Verhalten und die zu untersuchenden Bereiche aufgezeigt werden.
+Mithilfe der Windows Bewertungstools können Sie verschiedene Leistungsaspekte in einer Vielzahl von Szenarien messen– von der Startzeit über die Akkulebensdauer bis hin zum High-Definition-Videostreaming. Bewertungen können potenzielle Probleme, inkonsistentes Verhalten und zu untersuchende Bereiche identifizieren.
 
-In früheren Windows-Versionen waren mehrere Tools zum Messen der Qualität verfügbar, einschließlich der Velocity-Test Sammlung (VTS/Vos), der grundlegenden Quality Tool Suite (fqts) und der System Leistung und Leistungs Tools Suite (sppts). Das Assessment Toolkit kombiniert die Funktionalität dieser Leistungs Diagnosetools zu einem integrierten Satz von Tools, der einfacher zu verwenden ist und breitere, aussagekräftigere Ergebnisse bietet.
+In vorherigen Windows-Versionen waren mehrere Tools zum Messen der Qualität verfügbar, einschließlich Der Geschwindigkeitstestsuite (VTS/VOS), Fundamental Quality Tools Suite (FQTS) und System Power and Performance Tools Suite (SPPTS). Das Assessment Toolkit kombiniert die Funktionen dieser Leistungsdiagnosetools in einem integrierten Satz von Tools, die einfacher zu verwenden sind und umfassendere, aussagekräftige ergebnisse liefert.
 
-Das Windows Assessment Toolkit maximiert die Zufriedenheit der Consumer durch:
+Das Windows Assessment Toolkit maximiert die Zufriedenheit der Kunden durch Folgendes:
 
--   Unterstützung der Bewertung der Gesamtleistung von Fenstern, Mehrwert Software und-Treibern und Hardware Konfigurationen
--   Bereitstellen detaillierter Systemdaten, die Ihnen helfen können, die Ursachen von Qualitätsproblemen zu identifizieren
--   Senken der Kosten durch Offenlegen von Problemen während der Entwicklung
--   Erstellen von Vergleichen der Ergebnisse von verschiedenen Computern oder derselben Gruppe von Computern im Zeitverlauf durch das Erstellen von Vergleichs Diagrammen aus mehreren Resultsets
--   Erstellen von Feedback in einem standardisierten Format, das Sie verwenden können, um die Qualität ihrer Produkte zu verbessern
+-   Unterstützung bei der Bewertung der Gesamterfahrung von Windows, Mehrwertsoftware und Treibern sowie Hardwarekonfigurationen
+-   Bereitstellen detaillierter Systemdaten, die Ihnen helfen können, die Grundursachen von Qualitätsproblemen zu identifizieren
+-   Senken Ihrer Kosten durch Aufdecken von Problemen während der Entwicklung
+-   Generieren von Vergleichen von Ergebnissen von verschiedenen Computern oder derselben Gruppe von Computern im Zeitverlauf durch Erstellen von Vergleichsdiagrammen aus mehreren Resultsets
+-   Generieren von Feedback in einem standardisierten Format, mit dem Sie die Qualität Ihrer Produkte verbessern können
 
-Wichtige Geschäftsziele können mithilfe des Assessment Toolkit erreicht werden:
+Wichtige Geschäftsziele können mit dem Assessment Toolkit erreicht werden:
 
--   **Messen & vergleichen** : Sie können die Daten verwenden, um Komponenten (Software, Treiber oder beides) mit anderen ähnlichen Komponenten zu vergleichen, um ihre Entscheidungsfindung, Empfehlungen und Wettbewerbs-Bench-Markierung zu vereinfachen.
--   **Qualität verbessern** : Sie können unabhängig oder mit beteiligten Partnern arbeiten, um eine Komponente (Software, Treiber oder beides) gemäß den vordefinierten Qualitätskriterien zu erstellen.
--   **Qualität nachverfolgen**   Sie können einen Prozess für die effiziente Nachverfolgung der Qualität von Komponenten Versionen und das Erkennen von Regressionen nach jeder Iterationen erstellen.
+-   **Messen & Vergleichen:** Sie können die Daten verwenden, um Komponenten (Software, Treiber oder beides) mit anderen ähnlichen Komponenten zu vergleichen, um Ihre Entscheidungsfindung, Empfehlungen und die Kennzeichnung von Wehen zu erleichtern.
+-   **Verbessern der Qualität:** Sie können unabhängig oder mit beteiligten Partnern zusammenarbeiten, um eine Komponente (Software, Treiber oder beides) gemäß vordefinierten Qualitätskriterien zu erstellen.
+-   **Nachverfolgen der Qualität**   Sie können einen Prozess zum effizienten Nachverfolgen der Qualität von Komponentenversionen erstellen und Regressionen nach jeder Iteration erkennen.
 
 ## <a name="usage-and-best-practices"></a>Verwendung und bewährte Methoden
 
-Bei den Bewertungen handelt es sich um eine Kombination aus XML-und Binärdateien, die auf einem Computer einen bestimmten Satz von Zuständen auslösen, die Aktivität messen und aufzeichnen und die aufgezeichneten Ergebnisse erhalten. Ein Auftrag ist eine Sammlung von einer oder mehreren Bewertungen und deren Einstellungen, die gleichzeitig auf einem Computer ausgeführt werden. Die Bewertungsplattform stellt die Infrastruktur für das konsistente ausführen und Anzeigen von Aufträgen, BEWERTUNGEN und Ergebnissen bereit. Die Ergebnisse enthalten häufig Diagnose-und Wiederherstellungs Informationen, mit deren Hilfe Sie Bereiche ermitteln können, die zusätzliche Untersuchungen und Korrekturmaßnahmen erfordern. Ihre Möglichkeiten:
+Bewertungen sind eine Kombination aus XML- und Binärdateien, die einen bestimmten Satz von Zuständen auf einem Computer auslösen, die Aktivität messen und aufzeichnen und die aufgezeichneten Ergebnisse beibehalten. Ein Auftrag ist eine Sammlung von bewertungen und deren Einstellungen, die gleichzeitig auf einem Computer ausgeführt werden. Die Bewertungsplattform bietet die Infrastruktur für die konsistente Ausführung und Anzeige von Aufträgen, Bewertungen und Ergebnissen. Die Ergebnisse enthalten häufig Diagnose- und Korrekturinformationen, mit denen Sie Bereiche ermitteln können, die zusätzliche Untersuchungen und Korrekturmaßnahmen erfordern. Ihre Möglichkeiten:
 
--   Ausführen von Bewertungen für einen einzelnen Computer oder eine kleine Sammlung von Computern mit der **Windows Assessment Console** (Windows AC) <dl> Dieses Szenario ist für Benutzer gedacht, die Leistungsmerkmale für eine oder mehrere verschiedene Computerkonfigurationen anzeigen möchten. Windows AC ist eine grafische Benutzeroberfläche (GUI), die verwendet wird, um die Bewertungen zu gruppieren, einen Auftrag zu erstellen, einen Auftrag zu verpacken, den Auftrag auszuführen und die Auftrags Ergebnisse zu verwalten. Zu den Ergebnissen zählen häufig Empfohlene Aktionen.  
+-   Ausführen von Bewertungen für einen einzelnen Computer oder eine kleine Sammlung von Computern mit der **Windows Assessment Console** (Windows AC) <dl> Dieses Szenario richtet sich an Benutzer, die Leistungsmerkmale in einer oder mehreren verschiedenen Computerkonfigurationen anzeigen möchten. Windows AC ist eine grafische Benutzeroberfläche (GUI), die zum Gruppieren der Bewertungen, Erstellen eines Auftrags, Packen eines Auftrags, Ausführen des Auftrags und Verwalten der Auftragsergebnisse verwendet wird. Die Ergebnisse enthalten häufig empfohlene Aktionen.  
     </dl>
--   Run assessments against multiple computers in a lab environment with **Windows Assessment Services** (Windows AS) <dl> Dieses Szenario richtet sich hauptsächlich an Benutzer, die eine Reihe von qualitativen Bewertungen für eine komplette Reihe von Desktops, Laptops oder Tablet PCs in einer Entwicklungsumgebung ausführen möchten.  
+-   Run assessments against multiple computers in a lab environment with **Windows Assessment Services** (Windows AS) <dl> Dieses Szenario richtet sich in erster Linie an Benutzer, die eine Sammlung von qualitativen Bewertungen für eine vollständige Zeile von Desktops, Laptops oder Tabletcomputern in einer Entwicklungsumgebung durchführen möchten.  
     </dl>
 
 Das Assessment Toolkit bietet folgende Features:
 
--   Eine einfache grafische Benutzeroberfläche (GUI) und Bewertungen, die zur Bewertung eines Computers ohne umfassende technische Kenntnisse des Systems verwendet werden können
--   Bewertungsergebnisse, die in der-Konsole oder der Benutzeroberfläche angezeigt werden und häufig Empfehlungen enthalten, die Ihnen helfen, das System zu verbessern
--   Die Möglichkeit, einen vorkonfigurierten Auftrag mit einem Mausklick auszuführen.
--   Vordefinierte Bewertungs Einstellungen in jeder vorkonfigurierten Auftrags Bewertung, sodass Sie einen Auftrag auf mehreren Computern ausführen und sicher sein können, dass die Ergebnisse vergleichbar sind
--   Aufträge, die angepasst werden können, um die zu verwendenden Bewertungen und die gewünschten Einstellungen einzuschließen
--   Bewertungsplattform-Befehlszeilen Syntax für die Skripterstellung und Automatisierung von Aufträgen
--   Die Möglichkeit zum Ausführen eines Auftrags, zum Anzeigen der Ergebnisse, zum Ausführen von Wiederherstellungs Schritten, um das System zu verbessern, und zum anschließenden erneuten Ausführen des Auftrags und Vergleichen der neuen Ergebnisse mit den alten Ergebnissen, um zu sehen, wie sich das System verbessert hat
+-   Eine einfache grafische Benutzeroberfläche (GUI) und Bewertungen, die verwendet werden können, um einen Computer ohne detaillierte technische Kenntnisse des Systems zu bewerten.
+-   Bewertungsergebnisse, die in der Konsole oder Benutzeroberfläche angezeigt werden und häufig Empfehlungen enthalten, die Ihnen helfen, das System zu verbessern
+-   Die Möglichkeit, einen vorkonfigurierten Auftrag mit einem Klick auszuführen
+-   Vordefinierte Bewertungseinstellungen in jeder vorkonfigurierten Auftragsbewertung, sodass Sie einen Auftrag auf mehreren Computern ausführen und sicher sein können, dass die Ergebnisse vergleichbar sind
+-   Aufträge, die angepasst werden können, um die bewertungen, die Sie verwenden möchten, und die Einstellungen, die Sie verwenden möchten, einzubeziehen
+-   Befehlszeilensyntax der Bewertungsplattform für die Skripterstellung und Automatisierung von Aufträgen
+-   Die Möglichkeit, einen Auftrag auszuführen, die Ergebnisse anzuzeigen, Korrekturschritte zur Verbesserung des Systems auszuführen, den Auftrag dann erneut auszuführen und die neuen Ergebnisse nebeneinander mit den alten Ergebnissen zu vergleichen, um zu sehen, wie sich das System verbessert hat.
 
 Das Assessment Toolkit wird in der Regel in folgenden Szenarien verwendet:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Szenario</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>&quot;Schwarzes Feld&quot;</td>
-<td>Führen Sie einen vordefinierten Auftrag aus, und untersuchen Sie die Ergebnisse auf ungewöhnliche Werte oder Anzeichen für Probleme mit Treibern, der Speicherauslastung oder anderen Bereichen, die von den Bewertungen behandelt werden.</td>
-</tr>
-<tr class="even">
-<td>Vergleichen von Ergebnissen</td>
-<td><ol>
-<li>Führen Sie eine einzelne Bewertung mithilfe der empfohlenen Einstellungen auf allen Computern aus, auf denen ein unterstütztes Betriebssystem ausgeführt wird.</li>
-<li>Verwenden Sie Windows AC, um den Auftrag zum Ausführen auf einem anderen Computer zu verpacken.</li>
-<li>Speichern Sie die Ergebnisse in einer Freigabe, damit Sie die Ergebnisse vergleichen können.</li>
-<li>Vergleichen Sie die Ergebnisse von einem beliebigen Windows-Computer mit denen eines beliebigen anderen unterstützten Betriebssystems, um Unterschiede zu ermitteln.</li>
-</ol>
-<br/></td>
-</tr>
-<tr class="odd">
-<td>Computer bereinigen</td>
-<td>Führen Sie Bewertungen auf einem sauberen Computer aus, der nur das Betriebssystem enthält, um grundlegende System Ergebnisse zu erzielen.</td>
-</tr>
-<tr class="even">
-<td>Computer mit hinzugefügter Hardware oder Softwarekomponenten</td>
-<td>Fügen Sie dem System für saubere Computer neue Hardware oder Software hinzu, und führen Sie dann die Bewertungen erneut aus, um die Ergebnisse mit den Ergebnissen für saubere Computer zu vergleichen.</td>
-</tr>
-<tr class="odd">
-<td>Erstellen von Bewertungen</td>
-<td>Verwenden Sie öffentliche APIs, um eine Bewertung zu entwickeln oder zu erweitern, oder integrieren Sie Bewertungen in ihre Tools und ihre Infrastruktur.</td>
-</tr>
-</tbody>
-</table>
+
+| Szenario | BESCHREIBUNG | 
+|----------|-------------|
+| "Black box" | Führen Sie einen vordefinierten Auftrag aus, und untersuchen Sie die Ergebnisse auf ungewöhnliche Werte oder Anzeichen von Problemen mit Treibern, Speicherauslastung oder anderen Bereichen, die von den Bewertungen behandelt werden. | 
+| Vergleichen von Ergebnissen | <ol><li>Führen Sie eine einzelne Bewertung mit den empfohlenen Einstellungen auf jedem Computer aus, auf dem ein unterstütztes Betriebssystem ausgeführt wird.</li><li>Verwenden Sie die Windows AC, um den Auftrag für die Ausführung auf einem anderen Computer zu packen.</li><li>Speichern Sie die Ergebnisse in einer Freigabe, damit Sie die Ergebnisse vergleichen können.</li><li>Vergleichen Sie die Ergebnisse eines beliebigen Windows Computers mit denen eines anderen unterstützten Betriebssystems, um Unterschiede zu identifizieren.</li></ol><br /> | 
+| Bereinigen des Computers | Führen Sie Bewertungen auf einem bereinigten Computer aus, der nur das Betriebssystem enthält, um Baselinesystemergebnisse festzulegen. | 
+| Computer mit hinzugefügter Hardware oder Softwarekomponenten | Fügen Sie dem sauberen Computersystem neue Hardware oder Software hinzu, und führen Sie dann die Bewertungen erneut aus, um die Ergebnisse mit den Ergebnissen des bereinigten Computers zu vergleichen. | 
+| Erstellen von Bewertungen | Verwenden Sie öffentliche APIs, um eine Bewertung zu entwickeln oder zu erweitern, oder integrieren Sie Bewertungen in Ihre Tools und Infrastruktur. | 
+
 
 
 
@@ -115,42 +84,42 @@ Diese Bewertungen können verwendet werden:
 
 | Bewertung                                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vorab Validierung der Treiber Zertifizierung          | Die Bewertung der vorab Überprüfung der **Treiber Zertifizierung** überprüft, ob die Treiber auf einem laufenden Windows-Betriebssystem für das Windows-Zertifizierungsprogramm qualifiziert sind. Die Ergebnisse enthalten Empfehlungen, mit denen Sie Probleme beheben können, die von der Bewertung gefunden werden, z. b. nicht signierte Treiber oder abgelaufene Signaturen.                                                                                                                                                                                                                                                            |
-| Treiberüberprüfung                          | Bei der über **Prüfung der Treiber Überprüfung** wird überprüft, ob ein Offline-Windows-Abbild oder ein Betriebssystem unter Windows die richtigen Treiber Gruppe enthält. Die Ergebnisse enthalten Empfehlungen, mit deren Hilfe Sie Probleme beheben können, die von der Bewertung gefunden werden. Diese Probleme können fehlende, doppelte, ältere oder unnötige Treiber umfassen.                                                                                                                                                                                                                                         |
-| Dateibehandlung                                | Die **Datei Behandlungs** Bewertung bietet eine automatisierte Möglichkeit zum Ausführen allgemeiner Datei Vorgänge und zum Erfassen von Metriken. Die Metriken Messen Dauer und Durchsatz, damit Sie besser verstehen können, wie gut ein Computer in Szenarios für die Datei Behandlung durch Endbenutzer arbeitet. Die Datei Behandlungs Bewertung verwendet einen Satz von Arbeits Auslastungen, um einen Benutzer zu simulieren, der Dateien und Ordner auf Client Systemen kopiert, verschiebt, komprimiert, komprimiert und löscht.                                                                                                                                       |
-| Foto Behandlung                               | Die Bewertung der **Fotobearbeitung** misst die Leistung und die Akku Lebensdauer von Computern, indem ein Endbenutzer simuliert wird, der Fotos anzeigen und bearbeiten soll.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Internet Explorer Launch/Tab-Taste erstellen          | Mit der Leistungsbewertung für den **Internet Explorer-Start** können Sie Komponenten identifizieren, die sich auf die zum Starten von Internet Explorer benötigte Zeit auswirken können Die Bewertung misst die Zeit zum vollständigen Rendering einer leeren Seite, einschließlich der Ladezeit des IExplore.exe Prozesses sowie der Intervalle für Frame Erstellung und Registerkarten Erstellung. Außerdem werden die Auswirkungen aller Erweiterungen, Add-Ins und Symbolleisten gemessen, die auf dem System installiert sind. Die Leistung von Netzwerk-oder Browsen wird nicht gemessen.                                                                                         |
-| Ein/Aus                                       | **Mit der on/off-Übergangs** Bewertung wird die Leistung von Windows 8-Leistungs Szenarios für Start, Standby und Ruhe Zustands gemessen.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Internet Explorer-Browser Leistung       | Die Leistungsbewertung für das durch **Suchen von Internet Explorer** misst die Qualität der Browser Darstellung in Internet Explorer und wertet CPU-und grafische Hardwarefunktionen aus. Es werden drei separate browserworkloads bereitgestellt, um den Computer auf unterschiedliche Weise zu belasten.                                                                                                                                                                                                                                                                                                  |
-| Medientranscodierungsleistung                | Die **transcode-Video** Bewertung misst den Prozess der Änderung einer Video Datei in ein anderes Format oder eine andere Bitrate. Diese Bewertung führt eine Reihe von transcodieren-Vorgängen mit allgemeinen Eingabe-und Ausgabedatei Formaten und Auflösungen aus.                                                                                                                                                                                                                                                                                                                                           |
-| Windows-Benutzeroberflächen Leistung                       | Die **Leistungs** Bewertung der Windows-Benutzeroberfläche wertet die Leistung einiger grundlegender Erfahrungen innerhalb der Windows-Benutzeroberfläche aus. Bei der Bewertung werden Reaktionsfähigkeit und renderingqualität gemessen, während die Bewertung Workloads ausführt, die Benutzeraktivitäten simulieren, z. b. die Verwendung von suchen und wechseln von der Windows Store-App-Umgebung zum Desktop Die Reaktionsfähigkeit der Ergebnisse wird in Millisekunden gemessen. Niedrige Anzahl bedeutet, dass der Computer schneller und reaktionsfähiger ist. Zum Rendern zeigen die Ergebnisse die Framerate und die Anzahl der auftretenden Fehler an. |
-| Speicherbedarf                             | Mithilfe der Bewertung für den **Speicherbedarf** können Sie ein Baseline-Betriebssystem Abbild mit einem anderen Betriebssystem Abbild in quantitativer Art vergleichen. Anschließend können Sie die spezifischen Komponenten identifizieren, die sich auf den Speicherbedarf des physischen Systems auswirken. Diese Komponenten können Treiber, Add-in-apps, vorab geladene Softwarepakete und Antivirenprogramme enthalten.                                                                                                                                                                                                           |
-| Erste Startleistung                       | Die **erste Start Leistungs** Bewertung identifiziert Probleme, die sich darauf auswirken, wie lange Windows gestartet werden muss, und zeigt den Start Bildschirm an, wenn der Computer zum ersten Mal gestartet wird. Die Ergebnisse helfen OEMs bei der Diagnose von Verzögerungen und bieten Empfehlungen zur Verbesserung der Leistung.                                                                                                                                                                                                                                                                                      |
-| Medien Streaming                              | Mithilfe der Leistungsbewertung für **Streamingmedien** können Sie die Leistung einer Computerkonfiguration beurteilen, wenn Sie Medien mithilfe von Internet Explorer streamen. Mit den Bewertungsergebnissen können Sie das Streaming von Medien verstehen, vergleichen und verbessern.                                                                                                                                                                                                                                                                                                                 |
-| WinSAT-umfassend                         | Die **Windows-Systembewertung (WinSAT)** wird verwendet, um die Leistung eines Computers in mehreren System Komponenten, einschließlich CPU, Arbeitsspeicher, Datenträger und Grafiken, zu bewerten und zu verbessern. Durch die umfassenden Ergebnisse der WinSAT-Bewertung wird die Fähigkeit der Hardwarekonfiguration eines Computers in Zahlen ausgedrückt. Höhere Ergebnisse bedeuten im Allgemeinen, dass der bewertete Computer besser und schneller als ein Computer mit niedrigerer Bewertung funktioniert.                                                                                                                                                        |
-| Energieeffizienz                            | Der **Energieeffizienz** Auftrag bietet eine automatisierte Möglichkeit, um die Akku Lebensdauer eines Computers zu bewerten. Mithilfe von Arbeits Auslastungen führt der Energieeffizienz Auftrag auch Diagnose durch, die bewerten, ob Systemkomponenten Strom verwenden, wenn Sie sich im Leerlauf befinden.                                                                                                                                                                                                                                                                                                               |
-| Mini Filter-Diagnose Einstellungen               | Die **Minifilter-Diagnose** Option wird innerhalb der Leistungsbewertung für den Internet Explorer, die Datei Behandlungs Bewertung und die Start Leistungsbewertung (Windows 8) ausgeführt. Das Auswählen dieser Option in den Bewertungen, die die Mini Filter-Diagnose Option bieten, erzeugt Metriken, mit denen Sie die Auswirkungen von Minifilter-Vorgängen auf verschiedene Bewertungs Szenarien auswerten können.                                                                                                                                                                                  |
-| Leistung und Qualität des Windows Media Players | Mit der **Leistungs-und Qualitätsbewertung von Windows Media Player** wird WMP gestartet, und es werden mehrere Medienclips nacheinander abgespielt, um Leistungs-und Qualitäts Metriken in Bezug auf die Medienwiedergabe aufzuzeichnen.                                                                                                                                                                                                                                                                                                                                                                          |
+| Vorüberprüfung der Treiberzertifizierung          | Bei der **Vorvalidierungsbewertung** der Treiberzertifizierung wird überprüft, ob die Treiber auf einem ausgeführten Windows Betriebssystem für das Windows Certification Program qualifiziert sind. Die Ergebnisse enthalten Empfehlungen, die Sie bei der Behebung von Problemen unterstützen, die von der Bewertung gefunden werden, z. B. nicht signierte Treiber oder abgelaufene Signaturen.                                                                                                                                                                                                                                                            |
+| Treiberüberprüfung                          | Bei der **Überprüfung des Treibers** wird überprüft, ob ein Offline-Windows Image oder ein ausgeführtes Windows Betriebssystem den richtigen Treibersatz enthält. Die Ergebnisse enthalten Empfehlungen, die Sie bei der Behebung von Problemen unterstützen, die von der Bewertung gefunden werden. Zu diesen Problemen können fehlende, doppelte, ältere oder unnötige Treiber gehören.                                                                                                                                                                                                                                         |
+| Dateibehandlung                                | Die **Dateibehandlungsbewertung** bietet eine automatisierte Möglichkeit, allgemeine Dateivorgänge durchzuführen und Metriken zu erfassen. Die Metriken messen die Dauer und den Durchsatz, damit Sie besser verstehen können, wie gut ein Computer in Szenarien für die Dateiverarbeitung von Endbenutzern abschneidet. Die Dateibehandlungsbewertung verwendet eine Reihe von Workloads, um einen Benutzer zu simulieren, der Dateien und Ordner auf Clientsystemen kopiert, verschoben, komprimiert, dekomprimiert und löscht.                                                                                                                                       |
+| Fotobehandlung                               | Die **Fotobehandlungsbewertung** misst die Computerleistung und Akkulaufzeit, indem ein Endbenutzer simuliert wird, der Fotos anzeigt und bearbeitet.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Internet Explorer Starten/Erstellen von Registerkarten          | Die **Internet Explorer Startleistungsbewertung** hilft bei der Identifizierung von Komponenten, die sich auf die Zeit auswirken können, die zum Starten Internet Explorer erforderlich ist. Die Bewertung misst die Zeit zum vollständigen Rendern einer leeren Seite, einschließlich der Ladezeit des IExplore.exe Prozesses und der Intervalle für die Frameerstellung und die Tabstopperstellung. Außerdem werden die Auswirkungen aller Erweiterungen, Add-Ins und Symbolleisten, die auf dem System installiert sind, misst. Die Netzwerk- oder Browserleistung wird nicht gemessen.                                                                                         |
+| Ein/Aus                                       | Die Bewertung **"On/Off Transition"** misst die Leistung Windows 8 Leistungsszenarien "Start", "Standby" und "Ruhezustand".                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Internet Explorer Browserleistung       | Die Internet Explorer Bewertung der **Browserleistung** misst die Qualität der Browsererfahrung in Internet Explorer und wertet CPU- und Grafikhardwarefunktionen aus. Drei separate Browserworkloads werden bereitgestellt, um den Computer auf verschiedene Weise zu belastungen.                                                                                                                                                                                                                                                                                                  |
+| Medientranscodierungsleistung                | Die **Videobewertung transcodieren** misst den Prozess der Änderung einer Videodatei in ein anderes Format oder eine andere Bitrate. Diese Bewertung führt eine Reihe von Transcodierungsvorgängen mit gängigen Eingabe- und Ausgabedateiformaten und -auflösungen aus.                                                                                                                                                                                                                                                                                                                                           |
+| Windows Benutzeroberflächenleistung                       | Die **Windows-Benutzeroberflächenleistungsbewertung** wertet die Leistung einiger grundlegender Benutzeroberflächen innerhalb der Windows Benutzeroberfläche aus. Die Bewertung misst die Reaktionsfähigkeit und Renderingqualität, während die Bewertung Workloads durchsetzt, die Benutzeraktivitäten simulieren, z. B. die Suche und den Übergang von Windows Store App-Umgebung zum Desktop. Die Ergebnisse der Reaktionsfähigkeit werden in Millisekunden gemessen. Niedrige Zahlen bedeuten, dass der Computer schneller und reaktionsfähiger ist. Für das Rendering zeigen die Ergebnisse die Bildfrequenz und die Anzahl der auftretenden Störungen an. |
+| Speicherbedarf                             | Sie können die **Speicherbedarfsbewertung** verwenden, um ein Basisbetriebssystemimage quantitativ mit einem anderen Betriebssystemimage zu vergleichen. Anschließend können Sie die spezifischen Komponenten identifizieren, die sich auf den Speicherbedarf des physischen Systems auswirken. Diese Komponenten können Treiber, Add-In-Apps, vorab geladene Softwarepakete und Antivirenprogramme umfassen.                                                                                                                                                                                                           |
+| Leistung beim ersten Start                       | In **der Bewertung** der Ersten Startleistung werden Probleme identifiziert, die sich darauf auswirken, wie lange Windows starten und die Startbildschirm beim ersten Starten des Computers anzeigen. Die Ergebnisse helfen OEMs bei der Diagnose der Ursachen von Verzögerungen und bei der Bereitstellung von Empfehlungen zur Verbesserung der Benutzererfahrung.                                                                                                                                                                                                                                                                                      |
+| Medienstreaming                              | Mit **der Bewertung der Leistung von Streamingmedien** können Sie die Leistung einer Computerkonfiguration bewerten, wenn Sie Medien mithilfe von Internet Explorer. Sie können die Bewertungsergebnisse verwenden, um die Streamingmedienerfahrung zu verstehen, zu vergleichen und zu verbessern.                                                                                                                                                                                                                                                                                                                 |
+| WinSAT – umfassend                         | Die **Windows System Assessment (WinSAT)** wird verwendet, um die Leistung eines Computers in mehreren Systemkomponenten zu bewerten und zu verbessern, einschließlich CPU, Arbeitsspeicher, Datenträger und Grafiken. Die Ergebnisse der umfassenden WinSAT-Bewertung ausdrücken die Leistungsfähigkeit der Hardwarekonfiguration eines Computers in Zahlen. Höhere Bewertungen bedeuten im Allgemeinen, dass der bewertete Computer eine bessere und schnellere Leistung erzielt als ein Computer mit einer niedrigeren Bewertung.                                                                                                                                                        |
+| Energieeffizienz                            | Der **Auftrag Energieeffizienz** bietet Ihnen eine automatisierte Möglichkeit, die Akkulaufzeit eines Computers zu bewerten. Mithilfe von Workloads führt der Auftrag Energieeffizienz auch Diagnosen durch, die bewerten, ob Systemkomponenten Energie nutzen, wenn sie sich im Leerlauf befinden sollten.                                                                                                                                                                                                                                                                                                               |
+| MiniFilter-Einstellungen               | Die **MiniFilter-Diagnoseoption** wird in der Internet Explorer-Startleistungsbewertung, der Dateibehandlungsbewertung und der Startleistungsbewertung (Windows 8) ausgeführt. Wenn Sie diese Option innerhalb der Bewertungen auswählen, die die Diagnoseoption MiniFilter bieten, werden Metriken erstellt, mit denen Sie die Auswirkungen von MiniFilter-Vorgängen auf verschiedene Bewertungsszenarien bewerten können.                                                                                                                                                                                  |
+| Leistung und Qualität des Windows Media Players | Die **Windows Media Player Leistungs- und Qualitätsbewertung** startet WMP und gibt mehrere Medienclips nacheinander wieder, um Leistungs- und Qualitätsmetriken im Zusammenhang mit der Medienwiedergabe zu erfassen.                                                                                                                                                                                                                                                                                                                                                                          |
 
 
 
  
 
-Andere Tools, wie z. b. das Windows Performance Toolkit, sind im ADK enthalten. Diese Tools bieten detaillierte Informationen, mit denen Sie die System-und App-Leistung analysieren und verfolgen können. Weitere Informationen finden Sie im Abschnitt Ressourcen weiter unten.
+Andere Tools wie das Windows Performance Toolkit sind im ADK enthalten. Diese Tools bieten detaillierte Informationen, mit denen Sie die System- und App-Leistung analysieren und nachverfolgen können. Weitere Informationen finden Sie weiter unten im Abschnitt Ressourcen.
 
 ## <a name="resources"></a>Ressourcen
 
-**Video**
+**Video:**
 
--   [Channel9 Erstellen von ADK-Videos](https://channel9.msdn.com/Events/BUILD/BUILD2011?sort=status&direction=asc&term=&t=assessment+and+deployment+kit)
+-   [Channel9 BUILD ADK-Videos](https://channel9.msdn.com/Events/BUILD/BUILD2011?sort=status&direction=asc&term=&t=assessment+and+deployment+kit)
 
   
-**Dokumentation**
+**Dokumentation:**
 
 -   [Windows Assessment and Deployment Kit](/previous-versions/windows/hh825420(v=win.10))
 -   [Technische Referenz zum Windows-Bewertungstoolkit](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825508(v=win.10))
 -   [Bewertungsausführungsmodul](/previous-versions/windows/desktop/axe/axe-access-portal)
--   [Windows-Leistungsanalyse](https://msdn.microsoft.com/performance/default.aspx)
+-   [Windows Leistungsanalyse](https://msdn.microsoft.com/performance/default.aspx)
 
   
 

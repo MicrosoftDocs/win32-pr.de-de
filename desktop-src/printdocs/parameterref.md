@@ -4,12 +4,12 @@ ms.assetid: 35e1ccc2-ffc1-47a6-aba8-5a5cb442e8ae
 title: ParameterRef
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ff3b0e16f53e8399a5bbbb5974a05fd6886cdd2
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: fb3655ab62c8d11b4e9ee777d01a8e6bf5d63a1f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407183"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884112"
 ---
 # <a name="parameterref"></a>ParameterRef
 
@@ -19,7 +19,7 @@ Ein ParameterRef-Element definiert einen Verweis auf ein ParameterInit-Element. 
 
 ## <a name="element-tag"></a>Elementtag
 
-<ParameterRef>
+&lt;ParameterRef&gt;
 
 ## <a name="xml-attributes"></a>XML-Attribute
 
@@ -39,7 +39,7 @@ Weitere Informationen finden Sie im Abschnitt [XML-Attribute.](xml-attributes.md
 
 ## <a name="element-information"></a>Elementinformationen
 
-In der folgenden Tabelle sind die Elemente aufgeführt, die diesem Element unter Umständen über- oder unteren Elementen liegen, sowie alle Einschränkungen für das Element selbst.
+In der folgenden Tabelle sind die Elemente, die diesem Element unter Umständen über- und unteren Elementen liegen können, die Elemente, die diesem Element unter umständen unter stehen, und alle Einschränkungen für das Element selbst aufgeführt.
 
 
 

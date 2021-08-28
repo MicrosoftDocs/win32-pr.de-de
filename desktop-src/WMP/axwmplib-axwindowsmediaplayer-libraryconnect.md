@@ -1,9 +1,9 @@
 ---
-title: Libraryconnect-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das libraryconnect-Ereignis tritt auf, wenn eine Bibliothek verfügbar wird.
+title: LibraryConnect-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das LibraryConnect-Ereignis tritt auf, wenn eine Bibliothek verfügbar wird.
 ms.assetid: f67243ce-0e25-43a7-b754-6b0e80d72055
 keywords:
-- Libraryconnect-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- LibraryConnect-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c33353b8438c61e28a3d52975fe90b06f14f03a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 940eed16004009e928309ae1a2e5d8f792b9fd0cb36fe8e836abfefb89e3ab95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123950"
 ---
-# <a name="libraryconnect-event-of-the-axwindowsmediaplayer-object"></a>Libraryconnect-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="libraryconnect-event-of-the-axwindowsmediaplayer-object"></a>LibraryConnect-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das libraryconnect-Ereignis tritt auf, wenn eine Bibliothek verfügbar wird.
+Das LibraryConnect-Ereignis tritt auf, wenn eine Bibliothek verfügbar wird.
 
 ``` syntax
 [C#]
@@ -41,19 +41,19 @@ Private Sub player_LibraryConnect(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ libraryconnecteventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ libraryconnectevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ LibraryConnectEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ LibraryConnectEvent**, die die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                                                |
+| Eigenschaft | Beschreibung                                                                                |
 |----------|--------------------------------------------------------------------------------------------|
-| plibrary | **WMPLib. iwmplibrary** Die-Schnittstelle, die die verbundene Bibliothek darstellt.<br/> |
+| pLibrary | **WMPLib.IWMPLibrary** Die Schnittstelle, die die Bibliothek darstellt, die verbunden ist.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis tritt nicht für die lokale Bibliothek auf.
 
@@ -73,10 +73,10 @@ Dieses Ereignis tritt nicht für die lokale Bibliothek auf.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmplibrary-Schnittstelle (VB und c#)**](iwmplibrary--vb-and-c.md)
+[**IWMPLibrary-Schnittstelle (VB und C#)**](iwmplibrary--vb-and-c.md)
 </dt> </dl>
 
  

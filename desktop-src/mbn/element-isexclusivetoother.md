@@ -1,22 +1,22 @@
 ---
-description: Isexclusivean other
+description: IsExclusiveToOther
 MS-HAID: WWAN\_profile\_v4.element\_IsExclusiveToOther
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Isexclusivean other
+title: IsExclusiveToOther
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a948ad9b6a457f74e98eab745d851bdd2399c67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f51cb5ebdeb4e27d74cb1a8562be15cecd63f98
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359826"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480316"
 ---
-# <a name="span-idwwan_profile_v4element_isexclusivetootherspanisexclusivetoother"></a><span id="WWAN_profile_v4.element_IsExclusiveToOther"></span>Isexclusivean other
+# <a name="span-idwwan_profile_v4element_isexclusivetootherspanisexclusivetoother"></a><span id="WWAN_profile_v4.element_IsExclusiveToOther"></span>IsExclusiveToOther
 
-Gibt an, dass dieses Profil für andere Profile desselben Profil Satzes exklusiv ist. Dieses Element ist neu für v4.
+Gibt an, dass dieses Profil für andere Profile desselben Profils exklusiv ist. Dieses Element ist neu für v4.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -45,42 +45,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

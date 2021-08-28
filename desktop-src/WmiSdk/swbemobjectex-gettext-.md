@@ -16,12 +16,12 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 2f5772429fa0cd7f2f45009ff1867141a845088b
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: a75adbab65c735a298c6a1599718cc6df5b690dd
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122885486"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623326"
 ---
 # <a name="swbemobjectexgettext_-method"></a>SWbemObjectEx.GetText-Methode \_
 
@@ -56,7 +56,7 @@ Erforderlich. Ein Wert aus [**WbemObjectTextFormatEnum,**](/windows/desktop/api/
 *iFlags* \[ in, optional\]
 </dt> <dd>
 
-Reservierte Vorgangsflags. Der Standardwert ist 0 (null).
+Flags für reservierte Vorgänge. Der Standardwert ist 0 (null).
 
 </dd> <dt>
 
@@ -135,7 +135,7 @@ Beim Erstellen ihres [**SWbemNamedValueSet**](swbemnamedvalueset.md)sind nur die
 <td>PathLevel</td>
 <td><strong>VT-I4</strong><br/> Der Standardwert ist 0 (null). Mögliche Werte:<br/>
 <ul>
-<li>0: Eine KLASSE oder ein &lt; &gt; Element wird <INSTANCE> erstellt, je nachdem, ob das Objekt eine Klasse oder Instanz ist.</li>
+<li>0: Ein <CLASS> - oder <INSTANCE> -Element wird erstellt, je nachdem, ob das Objekt eine Klasse oder Instanz ist.</li>
 <li>1: Ein <VALUE.NAMEDOBJECT> Element wird generiert.</li>
 <li>2: Ein <VALUE.OBJECTWITHLOCALPATH> Element wird generiert.</li>
 <li>3: Ein <VALUE.OBJECTWITHPATH> Element wird generiert.</li>

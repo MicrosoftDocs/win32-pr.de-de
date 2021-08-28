@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: jetstopserviczustance-Funktion'
-title: Jetstopserviczustance-Funktion
+description: Weitere Informationen finden Sie unter JetStopServiceInstance-Funktion.
+title: JetStopServiceInstance-Funktion
 TOCTitle: JetStopServiceInstance Function
 ms:assetid: d8d3d047-91d6-4054-b3e1-44174666900e
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294108(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9b2e3307f13a63d00cbbaf33f491750bbfcdb9d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55f9a8c6e91a70e447f03bc19bcd191d01ba0e08
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346917"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984303"
 ---
-# <a name="jetstopserviceinstance-function"></a>Jetstopserviczustance-Funktion
+# <a name="jetstopserviceinstance-function"></a>JetStopServiceInstance-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetstopserviceinstance-function"></a>Jetstopserviczustance-Funktion
+## <a name="jetstopserviceinstance-function"></a>JetStopServiceInstance-Funktion
 
-Die **jetstopserviceinstance** -Funktion bereitet eine Instanz für die Beendigung vor.
+Die **JetStopServiceInstance-Funktion** bereitet eine Instanz für die Beendigung vor.
 
-**Windows XP:**  **jetstopserviceinstance** wird in Windows XP eingeführt.
+**Windows XP:****JetStopServiceInstance** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetStopServiceInstance(
@@ -44,96 +44,60 @@ Die **jetstopserviceinstance** -Funktion bereitet eine Instanz für die Beendigu
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die für den API-Befehl zu verwendende-Instanz.
+Die ausgeführte Instanz, die für den API-Aufruf verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Der angegebene Instanzparameter weist einen ungültigen Wert auf (keine Instanz, die derzeit ausgeführt wird).</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird eine zukünftige Beendigung vorbereitet. Die Schritte zur Vorbereitung auf eine Beendigung umfassen Folgendes:
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Der angegebene Instanzparameter hat einen ungültigen Wert (keine Instanz, die derzeit ausgeführt wird).</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in xp Windows eingeführt.</p> | 
 
-  - Stoppt die Online Defragmentierung, wenn Sie ausgeführt wird.
 
-  - Starten Sie eine Bereinigung des Versionsspeicher.
 
-  - Verringern Sie die Prüf Punkt Tiefe, indem Sie mit dem leeren von geänderten Seiten im Puffer-Manager beginnen.
+Wenn diese Funktion erfolgreich ist, bereitet sie sich auf eine zukünftige Beendigung vor. Die Schritte zur Vorbereitung auf eine Beendigung umfassen Folgendes:
 
-  - Vermeiden Sie zukünftige Aufrufe der meisten Funktionen für diese Instanz.
+  - Beenden Sie die Onlinedefragmentierung, wenn sie ausgeführt wird.
 
-Wenn diese Funktion fehlschlägt, wird keiner der Schritte zur Vorbereitung auf das Beenden einer Instanz durchgeführt, sodass keine Änderung am Instanzstatus erfolgt.
+  - Starten Sie eine Versionsspeicherbereinigung.
+
+  - Verringern Sie die Prüfpunkttiefe, indem Sie mit dem Leeren von dirty pages im Puffer-Manager beginnen.
+
+  - Verhindern sie zukünftige Aufrufe der meisten Funktionen für diese Instanz.
+
+Wenn diese Funktion fehlschlägt, wird keiner der Schritte zur Vorbereitung auf eine Instanzbeendigung unternommen, sodass keine Änderung des Instanzzustands erfolgt.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion reduziert die Arbeit, die die Instanz ausführen muss, wenn Sie beendet wird, die Instanz jedoch nicht beendet. Daher ist diese Funktion nur eine Optimierung und ist nicht für die Verwendung von obligatorisch. Beachten Sie, dass der Aufwand für die Vorbereitung in Windows 2000 und Windows XP geringer war. Wenn die Funktion erfolgreich ausgeführt wird, wird das Aufrufen von Funktionen, die nicht mehr zulässig sind, JET_errClientRequestToStopJetService zurückgeben. Funktionen, die nach diesem Aufrufvorgang weiterhin zulässig sind: [jetrollback](./jetrollback-function.md), [jetclosetable](./jetclosetable-function.md), [jetendsession](./jetendsession-function.md), [jetclosedatabase](./jetclosedatabase-function.md), [jetdetachdatabase](./jetdetachdatabase-function.md) und [jetressitzungscontext](./jetresetsessioncontext-function.md).
+Diese Funktion reduziert die Arbeit, die die Instanz beim Beenden der Instanz zu tun hat, beendet die Instanz jedoch nicht. Daher ist diese Funktion nur eine Optimierung und nicht zwingend erforderlich. Beachten Sie, dass die Menge an Vorbereitungen im Jahr Windows 2000 und Windows XP geringer war. Sobald die Funktion erfolgreich ist, geben aufrufende Funktionen, die nicht mehr zulässig sind, JET_errClientRequestToStopJetService. Funktionen, die nach diesem Aufruf weiterhin zulässig sind, sind: [JetRollback](./jetrollback-function.md), [JetCloseTable](./jetclosetable-function.md), [JetEndSession](./jetendsession-function.md), [JetCloseDatabase](./jetclosedatabase-function.md), [JetDetachDatabase](./jetdetachdatabase-function.md) und [JetResetSessionContext](./jetresetsessioncontext-function.md).
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetclosedatabase](./jetclosedatabase-function.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetdetachdatabase](./jetdetachdatabase-function.md)  
-[Jetendsession](./jetendsession-function.md)  
-[Jetresessioncontext](./jetresetsessioncontext-function.md)  
-[Jetrollback](./jetrollback-function.md)  
-[Jetterm](./jetterm-function.md)  
+[JetCloseDatabase](./jetclosedatabase-function.md)  
+[JetCloseTable](./jetclosetable-function.md)  
+[JetDetachDatabase](./jetdetachdatabase-function.md)  
+[JetEndSession](./jetendsession-function.md)  
+[JetResetSessionContext](./jetresetsessioncontext-function.md)  
+[JetRollback](./jetrollback-function.md)  
+[JetTerm](./jetterm-function.md)  
 [JetTerm2](./jetterm2-function.md)

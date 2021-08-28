@@ -1,49 +1,49 @@
 ---
-title: Inhalts Container
-description: Inhalts Container
+title: Inhaltscontainer
+description: Inhaltscontainer
 ms.assetid: bed0293b-4765-4d1b-861c-f0c0a064df5f
 keywords:
-- Windows Media Player Online Stores, Inhalts Container
-- Online Stores, Inhalts Container
-- Typ 1 Online Stores, Inhalts Container
-- Windows Media Player Online Stores, iwmpcontentcontainer-Schnittstelle
-- Online Stores, iwmpcontentcontainer-Schnittstelle
-- Typ 1 Online Stores, iwmpcontentcontainer-Schnittstelle
-- Windows Media Player, Inhalts Container
-- Windows Media Player, iwmpcontentcontainer-Schnittstelle
-- Inhalts Container
-- Iwmpcontentcontainer
+- Windows Media Player Onlineshops, Inhaltscontainer
+- Onlineshops, Inhaltscontainer
+- Geben Sie 1 Onlineshops, Inhaltscontainer ein.
+- Windows Media Player Onlineshops, IWMPContentContainer-Schnittstelle
+- Onlineshops, IWMPContentContainer-Schnittstelle
+- Geben Sie 1 Onlineshops ein, IWMPContentContainer-Schnittstelle
+- Windows Media Player,Inhaltscontainer
+- Windows Media Player,IWMPContentContainer-Schnittstelle
+- Inhaltscontainer
+- IWMPContentContainer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 801816c3e26920f3d0869190fc1101d6017a524e
-ms.sourcegitcommit: b04e152a7f51618fc174ffa872654623fe088db2
+ms.openlocfilehash: c582a04bd37e54a40f952402343c09fb7243fc07377ef7f507cc76f11390357c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "106342120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123680"
 ---
-# <a name="content-containers"></a>Inhalts Container
+# <a name="content-containers"></a>Inhaltscontainer
 
-In Windows Media Player werden Inhalts Container verwendet, um digitale Medieninhalte in einer Abonnement Download-oder Kauftransaktion darzustellen. Ein Inhalts Container wird durch die **iwmpcontentcontainer** -Schnittstelle dargestellt. Ein Inhalts Container enthält möglicherweise eine Liste verwandter Inhalte, z. b. ein-Album oder einen Satz von nicht verknüpften Inhalts Elementen oder- *Spuren*. Sie können die **iwmpcontentcontainer** -Schnittstelle verwenden, um die Spuren des Inhalts Containers aufzulisten und den Preis für jede Spur abzurufen. Sie können auch Informationen zum Inhalts Container selbst abrufen, z. b. die Container-ID, den Typ des Inhalts im Container und den Gesamtpreis für die Spuren im Container (die sich von der Summe der Preise der einzelnen Spuren unterscheiden können, wie bei einem Album Kauf).
+Windows Media Player verwendet Inhaltscontainer, um digitale Medieninhalte in einer Abonnementdownload- oder Kauftransaktion darzustellen. Ein Inhaltscontainer wird durch die **IWMPContentContainer-Schnittstelle** dargestellt. Ein Inhaltscontainer kann eine Liste verwandter Inhalte enthalten, z. B. ein Album, oder eine Reihe von nicht verknüpften Inhaltselementen oder *verfolgt* nach. Sie können die **IWMPContentContainer-Schnittstelle** verwenden, um die Spuren des Inhaltscontainers aufzuzählen und den Preis für jede Spur abzurufen. Sie können auch Informationen zum Inhaltscontainer selbst abrufen, z. B. die Container-ID, den Typ des Inhalts im Container und den Gesamtpreis für die Spuren im Container (der sich von der Summe der Preise der einzelnen Spuren unterscheiden kann, wie bei einem Albumkauf).
 
-Um einen Mechanismus zum Verpacken mehrerer Inhalts Container in einem einzelnen Objekt bereitzustellen, unterstützt Windows Media Player die **iwmpcontentcontainerlist** -Schnittstelle. **Iwmpcontentcontainerlist** stellt Methoden zum Aufzählen und Abrufen der Inhalts Container in der Liste bereit. Um zu ermitteln, ob die Inhalts Container Liste einen Kauf oder einen Abonnement Download darstellt, rufen Sie [iwmpcontentcontainerlist:: gettransaktiontype](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentcontainerlist-gettransactiontype) auf, um einen [wmptransaktionstyp](/previous-versions/windows/desktop/api/contentpartner/ne-contentpartner-wmptransactiontype) -Wert abzurufen.
+Um einen Mechanismus zum Packen mehrerer Inhaltscontainer in ein einzelnes Objekt bereitzustellen, unterstützt Windows Media Player die **IWMPContentContainerList-Schnittstelle.** **IWMPContentContainerList** stellt Methoden zum Auflisten und Abrufen der Inhaltscontainer in der Liste bereit. Um zu ermitteln, ob die Inhaltscontainerliste einen Kauf oder einen Abonnementdownload darstellt, rufen [Sie IWMPContentContainerList::GetTransactionType](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentcontainerlist-gettransactiontype) auf, um einen [WMPTransactionType-Wert](/previous-versions/windows/desktop/api/contentpartner/ne-contentpartner-wmptransactiontype) abzurufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Typ 1 Online Stores**](about-type-1-online-stores.md)
+[**Informationen zu Onlineshops vom Typ 1**](about-type-1-online-stores.md)
 </dt> <dt>
 
-[**Iwmpcontentcontainer-Schnittstelle**](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentcontainer)
+[**IWMPContentContainer-Schnittstelle**](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentcontainer)
 </dt> <dt>
 
-[**Iwmpcontentcontainerlist-Schnittstelle**](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentcontainerlist)
+[**IWMPContentContainerList-Schnittstelle**](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentcontainerlist)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

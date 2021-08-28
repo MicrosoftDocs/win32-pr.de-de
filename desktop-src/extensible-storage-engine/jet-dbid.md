@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 988dd14ca96a5818254602b5ab6dcaeab4952669
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: c576734a3e2da71f041509e5b7d7d9244427dbb8
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122470906"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986693"
 ---
 # <a name="jet_dbid"></a>JET_DBID
 
@@ -43,7 +43,7 @@ Handle für die Datenbank.
 
 Der Wert JET_dbidNil gibt an, dass das Handle ungültig ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Ein Datenbankhandl wird durch einen Aufruf von [JetCreateDatabase](./jetcreatedatabase-function.md) oder [JetOpenDatabase erstellt.](./jetopendatabase-function.md)
 
@@ -54,7 +54,11 @@ Ein Datenbankhand handle kann nur innerhalb der Sitzung verwendet werden, in der
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

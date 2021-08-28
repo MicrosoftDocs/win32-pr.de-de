@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 138d95c80070d8e1b1d7c958534cd93965db47aa
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 0a32b07ddcbe36a2a986a669592d3e047fc74178
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122472666"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983753"
 ---
 # <a name="jetbackupinstance-function"></a>JetBackupInstance-Funktion
 
@@ -109,7 +109,7 @@ Gleichzeitig werden die Datenbankheader mit den Informationen aktualisiert, als 
 
 Bei einem Fehler sind keine Dateien im Sicherungsverzeichnisziel vorhanden, sodass keine Wiederherstellung möglich ist. Gleichzeitig werden die aktuellen Protokolldateien nicht abgeschnitten.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Für die verschiedenen Schritte der Sicherung werden Ereignisprotokolleinträge generiert, einschließlich der Dateinamen, der Protokollkürzung und des Endergebnisses der Sicherung.
 
@@ -126,7 +126,14 @@ Es wird dringend empfohlen, die Sicherung nicht für andere Zwecke als die Siche
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetBackupInstanceW</strong> (Unicode) und <strong>JetBackupInstanceA</strong> (ANSI) implementiert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetBackupInstanceW</strong> (Unicode) und <strong>JetBackupInstanceA</strong> (ANSI) implementiert.</p> | 
 
 
 

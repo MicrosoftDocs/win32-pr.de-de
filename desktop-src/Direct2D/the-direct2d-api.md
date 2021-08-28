@@ -3,46 +3,46 @@ title: Übersicht über die Direct2D-API
 description: Bietet eine Übersicht über das Direct2D-Objektmodell.
 ms.assetid: b1362ef6-40fc-4fa5-ba5b-22c622c39f04
 keywords:
-- Direct2D, Informationen
-- Direct2D, Headerdateien
-- Direct2D,Objektmodell
+- Direct2D,about
+- Direct2D,Headerdateien
+- Direct2D, Objektmodell
 - Direct2D, Schnittstellen
 - ID2D1Factory-Schnittstelle
 - Direct2D, Renderziele
-- Renderziele, Informationen
+- Renderziele,About
 - Direct2D, Zeichnungsbefehle
-- Renderziele, Zeichnungsbefehle
+- Renderziele,Zeichnungsbefehle
 - Direct2D, Fehlerbehandlung
 - Renderziele,Fehlerbehandlung
 - Fehlerbehandlung
 - Pinsel
-- Renderziele, Pinsel
+- Renderziele,Pinsel
 - geometries
 - Direct2D, Geometrien
 - Bitmaps für Direct2D
-- Direct2D, Bitmaps
+- Direct2D,Bitmaps
 - Primitive
-- Direct2D, Primitive
+- Direct2D,primitive
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54f318e3542d54ee92817193ef6b749a3ba1cf4678407ca7a12f28c6c187ae86
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f757ea6f1dd2b5db0d0c96297098bc6a8443bf25
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119074994"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882846"
 ---
 # <a name="direct2d-api-overview"></a>Übersicht über die Direct2D-API
 
-Direct2D bietet eine API ähnlich wie Direct3D für die Verwendung mit C oder C++. Die API macht eine Vielzahl von zeichnungsbezogenen Funktionen verfügbar:
+Direct2D bietet eine API, die Direct3D ähnelt, für die Verwendung mit C oder C++. Die API macht eine Vielzahl von zeichnungsbezogenen Funktionen verfügbar:
 
--   Rendern von Zielen für das Anzeigen und Rendern außerhalb des Bildschirms mit Direct2D, Direct3D oder GDI.
+-   Renderziele für Anzeige- und Off-Screen-Rendering mit Direct2D, Direct3D oder GDI.
 -   Objekte zum Verwalten des Zeichnungszustands, z. B. Koordinatenraumtransformationen und Antialiasingmodi.
 -   Darstellungen für geometrische Daten und Funktionen für die Geometrieverarbeitung.
--   Renderingfunktionalität für Bitmaps, Geometrien und Text.
--   Stellen Sie für die Verwendung grafischer Inhalte, die mithilfe von GDI oder Direct3D erstellt wurden, ein.
+-   Renderingfunktionen für Bitmaps, Geometrien und Text.
+-   Bestimmungen für die Verwendung grafischer Inhalte, die mit GDI oder Direct3D erstellt wurden.
 
-Dieses Thema bietet eine Übersicht über die Objekte, aus denen die Direct2D-API besteht. Sie enthält die folgenden Abschnitte:
+Dieses Thema bietet eine Übersicht über die Objekte, aus denen die Direct2D-API erstellt wird. Sie enthält die folgenden Abschnitte:
 
 -   [Direct2D-Headerdateien](#direct2d-header-files)
 -   [Direct2D-Schnittstellen](#direct2d-interfaces)
@@ -64,7 +64,7 @@ Dieses Thema bietet eine Übersicht über die Objekte, aus denen die Direct2D-AP
 
 Die Direct2D-API wird durch die folgenden Headerdateien definiert.
 
-| Headerdatei         | BESCHREIBUNG                                                                                                                  |
+| Headerdatei         | Beschreibung                                                                                                                  |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------|
 | d2d1.h              | Definiert C- und C++-Versionen der primären Direct2D-API.                                                                      |
 | d2d1helper.h        | Definiert C++-Hilfsfunktionen, -Klassen und -Strukturen.                                                                       |
@@ -72,8 +72,8 @@ Die Direct2D-API wird durch die folgenden Headerdateien definiert.
 | d2derr.h            | Definiert die Fehlercodes für Direct2D. Dieser Header ist in d2d1.h enthalten.                                                   |
 | d2d1 \_ 1.h           | Definiert C- und C++-Versionen der primären Direct2D-API für Windows 8 und höher.                                              |
 | d2d1 \_ 1helper.h     | Definiert C++-Hilfsfunktionen, -Klassen und -Strukturen für Windows 8 und höher.                                               |
-| d2d1effects.h       | Definiert C- und C++-Versionen der Imageeffekte, die Teil der Direct2D-API für Windows 8 und höher sind.                            |
-| d2d1effecthelpers.h | Definiert C++-Hilfsfunktionen, Klassen und Strukturen der Bildeffekte, die Teil der Direct2D-API für Windows 8 und höher sind. |
+| d2d1effects.h       | Definiert C- und C++-Versionen der Bildeffekte, die Teil der Direct2D-API für Windows 8 höher sind.                            |
+| d2d1effecthelpers.h | Definiert C++-Hilfsfunktionen, -Klassen und -Strukturen der Bildeffekte, die Teil der Direct2D-API für Windows 8 und höher sind. |
 
 
 
@@ -81,41 +81,41 @@ Die Direct2D-API wird durch die folgenden Headerdateien definiert.
 
 Um Direct2D zu verwenden, sollte Ihre Anwendung die Headerdatei d2d1.h enthalten.
 
-Um eine Direct2D-Anwendung zu kompilieren, fügen Sie d2d1.lib zur Liste der Bibliotheken hinzu. Sie finden d2d1.h und d2d1.lib in [Windows Software Development Kit (SDK) für Windows 7.](https://msdn.microsoft.com/windows/bb980924.aspx)
+Um eine Direct2D-Anwendung zu kompilieren, fügen Sie d2d1.lib zur Liste der Bibliotheken hinzu. Sie finden d2d1.h und d2d1.lib im [Windows Software Development Kit (SDK) für Windows 7.](https://msdn.microsoft.com/windows/bb980924.aspx)
 
 In den folgenden Abschnitten werden einige der allgemeinen Schnittstellen beschrieben, die von der Direct2D-API bereitgestellt werden.
 
 ## <a name="direct2d-interfaces"></a>Direct2D-Schnittstellen
 
-Im Stammverzeichnis der Direct2D-API befinden sich die Schnittstellen [**ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) und [**ID2D1Resource.**](/windows/win32/api/d2d1/nn-d2d1-id2d1resource) Ein **ID2D1Factory-Objekt** erstellt **ID2D1Resource-Objekte** und dient als Ausgangspunkt für die Verwendung von Direct2D. Alle anderen Direct2D-Objekte erben von der **ID2D1Resource-Schnittstelle.** Es gibt zwei Arten von Direct2D-Ressourcen: geräteunabhängige Ressourcen und geräteabhängige Ressourcen.
+Im Stammverzeichnis der Direct2D-API befinden sich die [**Schnittstellen ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) und [**ID2D1Resource.**](/windows/win32/api/d2d1/nn-d2d1-id2d1resource) Ein **ID2D1Factory-Objekt** erstellt **ID2D1Resource-Objekte** und dient als Ausgangspunkt für die Verwendung von Direct2D. Alle anderen Direct2D-Objekte erben von der **ID2D1Resource-Schnittstelle.** Es gibt zwei Arten von Direct2D-Ressourcen: geräteunabhängige Ressourcen und geräteabhängige Ressourcen.
 
--   Geräteunabhängige Ressourcen sind keinem bestimmten Renderinggerät zugeordnet und können für die Lebensdauer einer Anwendung beibehalten werden.
--   Geräteabhängige Ressourcen werden einem bestimmten Renderinggerät zugeordnet und funktionieren nicht mehr, wenn dieses Gerät entfernt wird.
+-   Geräteunabhängige Ressourcen sind einem bestimmten Renderinggerät nicht zugeordnet und können für die Lebensdauer einer Anwendung beibehalten werden.
+-   Geräteabhängige Ressourcen sind einem bestimmten Renderinggerät zugeordnet und funktionieren nicht mehr, wenn das Gerät entfernt wird.
 
-(Weitere Informationen zu Ressourcen und zur Ressourcenfreigabe finden Sie in der [Ressourcenübersicht.)](resources-and-resource-domains.md)
+(Weitere Informationen zu Ressourcen und zur Gemeinsamen Nutzung von Ressourcen finden Sie in der [Übersicht über Ressourcen.)](resources-and-resource-domains.md)
 
 ## <a name="the-id2d1factory-interface"></a>Die ID2D1Factory-Schnittstelle
 
-Die [**ID2D1Factory-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) ist der Ausgangspunkt für die Verwendung von Direct2D. Sie verwenden **eine ID2D1Factory** zum Instanziieren von Direct2D-Ressourcen. Um eine ID2D1Factory zu erstellen, verwenden Sie eine der [**CreateFactory-Methoden.**](/windows/win32/api/d2d1/nf-d2d1-d2d1createfactory)
+Die [**ID2D1Factory-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) ist der Ausgangspunkt für die Verwendung von Direct2D. Sie verwenden eine **ID2D1Factory,** um Direct2D-Ressourcen zu instanziieren. Zum Erstellen einer ID2D1Factory verwenden Sie eine der [**CreateFactory-Methoden.**](/windows/win32/api/d2d1/nf-d2d1-d2d1createfactory)
 
-Eine Factory definiert einen Satz von Methoden zum Erstellen von *Ressourcen,* die die folgenden Zeichnungsressourcen erzeugen können:
+Eine Factory definiert einen Satz von Create *Resource-Methoden,* die die folgenden Zeichnungsressourcen erzeugen können:
 
 -   Renderziele sind Objekte, die Zeichnungsbefehle rendern.
--   Zeichnungszustandsblöcke sind Objekte, die Zeichnungszustandsinformationen speichern, z. B. die aktuelle Transformation und den Antialiasingmodus.
+-   Zeichnungszustandsblöcke sind Objekte, die Zeichnungszustandsinformationen wie die aktuelle Transformation und den Antialiasingmodus speichern.
 -   Geometrien sind Objekte, die einfache und potenziell komplexe Formen darstellen.
 
-Eines der nützlichsten Objekte, die eine Factory erstellen kann, ist die [**ID2D1RenderTarget,**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)die im folgenden Abschnitt beschrieben wird.
+Eines der nützlichsten Objekte, die eine Factory erstellen kann, ist [**id2D1RenderTarget,**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)das im folgenden Abschnitt beschrieben wird.
 
 ## <a name="render-targets"></a>Renderziele
 
-Ein Renderziel ist eine Ressource, die von der [**ID2D1RenderTarget-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) erbt. Ein Renderziel erstellt Ressourcen zum Zeichnen und führt Zeichnungsvorgänge aus. Es gibt verschiedene Arten von Renderzielen, die zum Rendern von Grafiken auf folgende Weise verwendet werden können:
+Ein Renderziel ist eine Ressource, die von der [**ID2D1RenderTarget-Schnittstelle erbt.**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) Ein Renderziel erstellt Ressourcen zum Zeichnen und führt Zeichnungsvorgänge aus. Es gibt verschiedene Arten von Renderzielen, mit denen Grafiken auf folgende Weise gerendert werden können:
 
 -   [**ID2D1HwndRenderTarget-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) rendern Inhalt in einem Fenster.
 -   [**ID2D1DCRenderTarget-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) werden in einem GDI-Gerätekontext gerendert.
--   Bitmap-Renderzielobjekte rendern Inhalt in einer Bitmap außerhalb des Bildschirms.
--   DXGI Renderzielobjekte werden zur Verwendung mit Direct3D auf einer DXGI-Oberfläche gerendert.
+-   Bitmap-Renderzielobjekte rendern Inhalt in einer Bitmap im Off-Screen-Format.
+-   DXGI rendert Zielobjekte zur Verwendung mit Direct3D auf einer DXGI-Oberfläche.
 
-Da ein Renderziel einem bestimmten Renderinggerät zugeordnet ist, ist es eine geräteabhängige Ressource und funktioniert nicht mehr, wenn das Gerät entfernt wird.
+Da ein Renderziel einem bestimmten Renderinggerät zugeordnet ist, handelt es sich um eine geräteabhängige Ressource und funktioniert nicht mehr, wenn das Gerät entfernt wird.
 
 ### <a name="render-target-features"></a>Renderzielfeatures
 
@@ -161,7 +161,7 @@ Ein Pinsel, dargestellt durch die [**ID2D1Brush-Schnittstelle,**](/windows/win32
 -   [**ID2D1RadialGradientBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1radialgradientbrush) zeichnet einen Bereich mit einem radialen Farbverlauf, der zwei oder mehr Farben um eine Ellipse kombiniert.
 -   [**ID2D1BitmapBrush zeichnet**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) einen Bereich mit einer Bitmap.
 
-Um einen Pinsel zu erstellen, verwenden Sie eine der [**ID2D1RenderTarget::**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)Create Brush-Methoden, z. B. *<Type>* [**CreateRadialGradientBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__constd2d1_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)). Pinsel können mit den Methoden Draw und Fill eines Renderziels verwendet werden, um einen Formstrich oder eine Kontur oder eine Deckkraftmaske zu zeichnen.
+Um einen Pinsel zu erstellen, verwenden Sie eine der [**ID2D1RenderTarget::**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)Create *&lt; Type &gt;* Brush-Methoden, z. B. [**CreateRadialGradientBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createradialgradientbrush(constd2d1_radial_gradient_brush_properties__constd2d1_brush_properties__id2d1gradientstopcollection_id2d1radialgradientbrush)). Pinsel können mit den Methoden Draw und Fill eines Renderziels verwendet werden, um einen Formstrich oder eine Kontur oder eine Deckkraftmaske zu zeichnen.
 
 Weitere Informationen zu Pinseln finden Sie in der [Übersicht über Pinsel.](direct2d-brushes-overview.md)
 
@@ -169,11 +169,11 @@ Weitere Informationen zu Pinseln finden Sie in der [Übersicht über Pinsel.](di
 
 Zusätzlich zu grundlegenden Zeichnungsprimitiven wie Punkten, Rechtecke und Ellipsen stellt Direct2D die [**ID2D1Geometry-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) zum Beschreiben einfacher und komplexer Formen bereit. Schnittstellen, die von **ID2D1Geometry** erben, definieren verschiedene Arten von Formen, z. B. [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) zum Darstellen von Rechtecke, [**ID2D1RoundedRectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1roundedrectanglegeometry) zum Darstellen abgerundeter Rechtecke und [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry) zum Darstellen von Ellipsen.
 
-Komplexere Formen können mithilfe der [**ID2D1GeometrySink-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) erstellt werden, um eine Reihe von Abbildungen anzugeben, die aus Linien, Kurven und Bogen bestehen. **ID2D1GeometrySink** wird an die Open-Methode einer [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) übergeben, um eine komplexe Geometrie zu generieren. [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) kann auch mit der DirectWrite-API verwendet werden, um Pfadgliederungen von formatiertem Text für das rendering-Rendering zu extrahieren.
+Komplexere Formen können mithilfe der [**ID2D1GeometrySink-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) erstellt werden, um eine Reihe von Abbildungen anzugeben, die aus Linien, Kurven und Bogen bestehen. **ID2D1GeometrySink** wird an die Open-Methode einer [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) übergeben, um eine komplexe Geometrie zu generieren. [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) kann auch mit der DirectWrite-API verwendet werden, um Pfadgliederungen von formatiertem Text für das renderende Rendering zu extrahieren.
 
 Die Geometrieschnittstellen stellen Methoden zum Bearbeiten von Formen bereit, indem vorhandene Geometrien verbreitert oder vereinfacht werden oder indem die Schnittmenge oder Vereinigung mehrerer Geometrien generiert wird. Sie bieten auch Methoden zum Bestimmen, ob Geometrien sich überschneiden oder überlappen, Begrenzungsinformationen abrufen, den Bereich oder die Länge einer Geometrie berechnen und Positionen entlang einer Geometrie interpolieren. Direct2D bietet auch die Möglichkeit, ein Gitter aus Dreiecken zu erstellen, das aus einer Geometrie mosaikiert ist.
 
-Um eine Geometrie zu erstellen, verwenden Sie eine der [**ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory)::Create Geometry-Methoden, z.B. *<Type>* [**CreatePathGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry). Eine Geometrie ist eine geräteunabhängige Ressource.
+Um eine Geometrie zu erstellen, verwenden Sie eine der [**ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory)::Create *&lt; Type &gt;* Geometry-Methoden, z.B. [**CreatePathGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createpathgeometry). Eine Geometrie ist eine geräteunabhängige Ressource.
 
 Zum Rendern einer Geometrie verwenden Sie die [**DrawGeometry-**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) und [**FillGeometry-Methoden**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) eines Renderziels.
 
@@ -191,7 +191,7 @@ Da das Erstellen von Bitmapressourcen auf Hardwarerenderzielen häufig ein aufwe
 
 Direct2D wurde für die Arbeit mit den Textvorgängen der neuen Text-API entwickelt, DirectWrite. Um die Verwendung der DirectWrite-API zu vereinfachen, stellen Renderziele drei Methoden zum Rendern DirectWrite Textressourcen bereit: [**DrawText**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)), [**DrawTextLayout**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout)und [**DrawGlyphRun**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawglyphrun). Da Direct2D die GPU für den ClearType-Textrenderingprozess verwendet, bietet Direct2D eine niedrigere CPU-Auslastung als GDI für Textvorgänge und eine bessere Skalierbarkeit, da mehr GPU-Verarbeitungsleistung verfügbar ist.
 
-[**ID2D1RenderTarget::D rawText**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) ist für die einfachsten Szenarien konzipiert, in denen eine Unicode-Textzeichenfolge mit minimaler Formatierung gerendert wird. Komplexeres Layout und typografische Flexibilität wird durch die [**ID2D1RenderTarget::D rawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) bereitgestellt, die ein [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) verwendet, um den Inhalt und die Formatierung anzugeben, die gerendert werden sollen. **Mit IDWriteTextLayout** können Sie individuelle Formatierungen für Teilzeichenfolgen von Text und andere erweiterte Typografieoptionen angeben.
+[**Id2D1RenderTarget::D rawText**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) ist für die einfachsten Szenarien konzipiert, in denen eine Unicode-Textzeichenfolge mit minimaler Formatierung gerendert wird. Komplexeres Layout und typografische Flexibilität wird durch die [**ID2D1RenderTarget::D rawTextLayout-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawtextlayout) bereitgestellt, die ein [**IDWriteTextLayout-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) verwendet, um den Inhalt und die Formatierung anzugeben, die gerendert werden sollen. **Mit IDWriteTextLayout** können Sie individuelle Formatierungen für Teilzeichenfolgen von Text und andere erweiterte Typografieoptionen angeben.
 
 In Szenarien, in denen eine genaue Steuerung des Layouts auf Glyphenebene erforderlich ist, kann die [**ID2D1RenderTarget::D rawGlyphRun-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawglyphrun) in Verbindung mit den von DirectWrite bereitgestellten Messmöglichkeiten verwendet [werden.](../directwrite/direct-write-portal.md)
 

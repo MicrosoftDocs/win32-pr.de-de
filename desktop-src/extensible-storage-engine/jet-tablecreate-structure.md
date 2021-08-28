@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_TABLECREATE Struktur'
 title: JET_TABLECREATE-Struktur
 TOCTitle: JET_TABLECREATE Structure
 ms:assetid: ff06325c-d61e-4239-b2d4-868f557f5f76
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f96b73daaf446023a7fe3a5729dcb1c90b5f14e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92695b9600ef18e716fa02cf58157c3c4781988e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128184"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468357"
 ---
 # <a name="jet_tablecreate-structure"></a>JET_TABLECREATE-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_tablecreate-structure"></a>JET_TABLECREATE-Struktur
 
-Die **JET_TABLECREATE** Struktur enthält die Informationen, die erforderlich sind, um eine Tabelle zu erstellen, die mit Spalten und Indizes in einer ESE-Datenbank aufgefüllt ist. Die **JET_TABLECREATE** Struktur wird von [jetkreatetablecolumnindex](./jetcreatetablecolumnindex-function.md) verwendet.
+Die **JET_TABLECREATE-Struktur** enthält die Informationen, die zum Erstellen einer Tabelle erforderlich sind, die mit Spalten und Indizes in einer ESE-Datenbank aufgefüllt wird. Die **JET_TABLECREATE** wird von [JetCreateTableColumnIndex verwendet.](./jetcreatetablecolumnindex-function.md)
 
 ```cpp
     typedef struct tagJET_TABLECREATE {
@@ -52,19 +52,19 @@ Die **JET_TABLECREATE** Struktur enthält die Informationen, die erforderlich si
 
 **cbStruct**
 
-Die Größe dieser-Struktur in Bytes (für zukünftige Erweiterungen). Er muss auf sizeof (JET_TABLECREATE) in Bytes festgelegt werden.
+Die Größe dieser Struktur in Bytes (für zukünftige Erweiterungen). Sie muss auf sizeof( JET_TABLECREATE ) in Bytes festgelegt werden.
 
-**sztablename**
+**szTableName**
 
 Der Name der zu erstellenden Tabelle.
 
-Der Name muss die folgenden Bedingungen erfüllen:
+Der Name muss folgende Bedingungen erfüllen:
 
-  - Ein Wert, der kleiner als JET_cbNameMost ist, ohne den abschließenden NULL-Wert.
+  - Der Wert ist kleiner als JET_cbNameMost, ohne den beendenden NULL-Wert.
 
 <!-- end list -->
 
-  - Besteht aus folgendem Zeichensatz: 0 bis 9, A bis Z, A bis Z und alle anderen Interpunktions Punkte außer Ausrufezeichen ( \! ), Komma (,), öffnende eckige Klammer ( \[ ) und schließende Klammer ( \] ), d. h. ASCII-Zeichen 0x20, 0x22 bis 0x2D, 0x2F bis 0x5A, 0x5c und 0x5d bis 0x7F.
+  - Bestehen aus den folgenden Zeichen: 0 bis 9, A bis Z, a bis z und alle anderen Interpunktionen mit Ausnahme von Ausrufezeichen ( ), Komma (,), öffnenden Klammern () und schließenden Klammern ( ), d. h. ASCII-Zeichen 0x20, 0x22 bis \! \[ \] 0x2d, 0x2f bis 0x5a, 0x5c und 0x5d bis 0x7f.
 
 <!-- end list -->
 
@@ -74,102 +74,62 @@ Der Name muss die folgenden Bedingungen erfüllen:
 
   - Besteht aus mindestens einem Zeichen, das kein Leerzeichen ist.
 
-**sztemplatetablename**
+**szTemplateTableName**
 
-Der Name einer bereits vorhandenen Tabelle, aus der die Basis-DDL (Data Definition Language) geerbt werden soll. Die Verwendung einer Vorlagen Tabelle ermöglicht die einfache Erstellung von vielen Tabellen mit identischen Spalten und Indizes.
+Der Name einer bereits vorhandenen Tabelle, von der die Basis-DDL (Data Definition Language) geerbt werden soll. Die Verwendung einer Vorlagentabelle ermöglicht die einfache Erstellung vieler Tabellen mit identischen Spalten und Indizes.
 
-**ulpages**
+**ulPages**
 
-Die anfängliche Anzahl von Datenbankseiten, die für die Tabelle zuzuordnen sind. Wenn eine Zahl größer als 1 angegeben wird, kann die Fragmentierung reduziert werden, wenn viele Zeilen in diese Tabelle eingefügt werden.
+Die anfängliche Anzahl von Datenbankseiten, die der Tabelle zuteilen sind. Wenn Sie eine Zahl angeben, die größer als 1 ist, kann die Fragmentierung reduziert werden, wenn viele Zeilen in diese Tabelle eingefügt werden.
 
-**uldensity**
+**ulDensity**
 
-Die Tabellen Dichte in Prozent. Die Zahl muss entweder 0 oder im Bereich von 20 bis 100 sein. Das übergeben von 0 bedeutet, dass der Standardwert verwendet werden soll. Der Standardwert ist 80.
+Die Tabellendichte in Prozent. Die Zahl muss entweder 0 oder im Bereich von 20 bis 100 liegen. Das Übergeben von 0 bedeutet, dass der Standardwert verwendet werden soll. Der Standardwert beträgt 80.
 
 **rgcolumncreate**
 
-Ein Array von [JET_COLUMNCREATE](./jet-columncreate-structure.md) Strukturen, die jeweils einer Spalte entsprechen, die in der neuen Tabelle erstellt werden soll.
+Ein Array [JET_COLUMNCREATE](./jet-columncreate-structure.md) Strukturen, die jeweils einer Spalte entsprechen, die in der neuen Tabelle erstellt werden soll.
 
 **cColumns**
 
-Die Anzahl der [JET_COLUMNCREATE](./jet-columncreate-structure.md) Elemente in **rgcolumncreate**.
+Die Anzahl der [JET_COLUMNCREATE](./jet-columncreate-structure.md) in **rgcolumncreate**.
 
 **rgindexcreate**
 
-Ein Array von [JET_INDEXCREATE](./jet-indexcreate-structure.md) Strukturen, von denen jede einem Index entspricht, der in der neuen Tabelle erstellt werden soll.
+Ein Array [JET_INDEXCREATE](./jet-indexcreate-structure.md) Strukturen, die jeweils einem Index entsprechen, der in der neuen Tabelle erstellt werden soll.
 
-**cindexes**
+**cIndexes**
 
-Die Anzahl der [JET_INDEXCREATE](./jet-indexcreate-structure.md) Elemente in **rgindexcreate**.
+Die Anzahl der [JET_INDEXCREATE](./jet-indexcreate-structure.md) in **rgindexerzeugen**.
 
 **grbit**
 
-Eine Gruppe von Bits, die die Optionen für diesen-Befehl enthalten, die 0 (null) oder mehrere der folgenden Werte enthalten.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitTableCreateFixedDDL</p></td>
-<td><p>Das Festlegen von JET_bitTableCreateFixedDDL verhindert DDL-Vorgänge für die Tabelle (z. b. das Hinzufügen oder Entfernen von Spalten)</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitTableCreateTemplateTable</p></td>
-<td><p>Das Festlegen von JET_bitTableCreateTemplateTable bewirkt, dass die Tabelle eine Vorlagen Tabelle ist. In neuen Tabellen kann dann der Name dieser Tabelle als Vorlagen Tabelle angegeben werden. Das Festlegen JET_bitTableCreateTemplateTable impliziert JET_bitTableCreateFixedDDL.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitTableCreateNoFixedVarColumnsInDerivedTables</p></td>
-<td><p>Veraltet. Nicht verwenden.</p></td>
-</tr>
-</tbody>
-</table>
+Eine Gruppe von Bits, die die Optionen für diesen Aufruf enthalten, die null oder mehr der folgenden Werte enthalten.
 
 
-**TableID**
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitTableCreateFixedDDL</p> | <p>Das JET_bitTableCreateFixedDDL verhindert DDL-Vorgänge für die Tabelle (z. B. das Hinzufügen oder Entfernen von Spalten).</p> | 
+| <p>JET_bitTableCreateTemplateTable</p> | <p>Das JET_bitTableCreateTemplateTable bewirkt, dass die Tabelle eine Vorlagentabelle ist. Neue Tabellen können dann den Namen dieser Tabelle als Vorlagentabelle angeben. Das JET_bitTableCreateTemplateTable impliziert JET_bitTableCreateFixedDDL.</p> | 
+| <p>JET_bitTableCreateNoFixedVarColumnsInDerivedTables</p> | <p>Veraltet. Nicht verwenden.</p> | 
 
-Ein Ausgabefeld, das den [JET_TABLEID](./jet-tableid.md) der neuen Tabelle enthält, wenn der API-Befehl erfolgreich ausgeführt wird. Wenn der API-Befehl fehlschlägt, ist der Wert nicht definiert.
 
-**erstellt**
 
-Ein Ausgabefeld, das die Anzahl der-Objekte enthält, die beim erfolgreichen API-Rückruf erstellt werden. Wenn der API-Befehl fehlschlägt, ist der Wert nicht definiert.
+**tableid**
 
-Die Anzahl der Objekte, die erstellt werden, entspricht der Summe der Spalten, Tabellen und Indizes, die erfolgreich erstellt wurden.
+Ein Ausgabefeld, das [die](./jet-tableid.md) JET_TABLEID der neuen Tabelle enthält, wenn der API-Aufruf erfolgreich ist. Wenn der API-Aufruf fehlschlägt, ist der Wert nicht definiert.
+
+**cCreated**
+
+Ein Ausgabefeld, das die Anzahl der erstellten Objekte enthält, wenn der API-Aufruf erfolgreich ist. Wenn der API-Aufruf fehlschlägt, ist der Wert nicht definiert.
+
+Die Anzahl der erstellten Objekte entspricht der Summe der Erfolgreich erstellten Spalten, Tabellen und Indizes.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JET_TABLECREATE_W</strong> (Unicode) und <strong>JET_TABLECREATE_A</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_TABLECREATE_W</strong> (Unicode) und JET_TABLECREATE_A (ANSI) implementiert. <strong></strong></p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
@@ -181,6 +141,6 @@ Die Anzahl der Objekte, die erstellt werden, entspricht der Summe der Spalten, T
 [JET_GRBIT](./jet-grbit.md)  
 [JET_TABLEID](./jet-tableid.md)  
 [JET_INDEXCREATE](./jet-indexcreate-structure.md)  
-[Jetkreatetable](./jetcreatetable-function.md)  
-[Jetkreatetablecolumnindex](./jetcreatetablecolumnindex-function.md)  
+[JetCreateTable](./jetcreatetable-function.md)  
+[JetCreateTableColumnIndex](./jetcreatetablecolumnindex-function.md)  
 [JetCreateTableColumnIndex2](./jetcreatetablecolumnindex2-function.md)

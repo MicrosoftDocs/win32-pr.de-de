@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7457e747a0539965efe0fab9ebfd69660178a2ea
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: f8a9ce96be028329dea18f32459fbde88b80b75f
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122480336"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985623"
 ---
 # <a name="jetretrievecolumn-function"></a>JetRetrieveColumn-Funktion
 
@@ -125,8 +125,8 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 | <p>JET_errColumnNotFound</p> | <p>Die von der angegebenen <em>columnid beschriebene</em> Spalte ist in der Tabelle nicht vorhanden.</p> | 
 | <p>JET_errIndexTuplesCannotRetrieveFromIndex</p> | <p>Als Teilzeichenfolgen indizierte Spalten können nicht aus dem Index abgerufen werden, da in der Regel nur ein kleiner Teil der Spalte in jedem Indexeintrag vorhanden ist.</p> | 
 | <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
-| <p>JET_errInvalidBufferSize</p> | <p>In einigen Fällen muss der für die Abrufspalte angegebene Puffer ausreichend groß sein, um eine beliebige Menge des Spaltenwerts zurückzugeben. Beispielsweise werden aktualisierbare Spalten für die Aktualisierung so angepasst, dass sie für den Transaktionskontext der aufrufenden Sitzung konsistent sind. Für diese Anpassung ist der vom Aufrufer bereitgestellte Puffer erforderlich. Wenn nicht genügend Pufferspeicher bereitgestellt wird, wird JET_errInvalidBufferSize zurückgegeben, und es werden keine Spaltendaten zurückgegeben.</p> | 
-| <p>JET_errInvalidParameter</p> | <p>Mindestens einer der angegebenen Parameter ist falsch. Dies kann passieren, wenn die retinfo.cbStruct kleiner als die Größe <a href="gg294049(v=exchg.10).md">von JET_RETINFO</a>ist.</p> | 
+| <p>JET_errInvalidBufferSize</p> | <p>In einigen Fällen muss der für die Abrufspalte angegebene Puffer ausreichend groß sein, um eine beliebige Menge des Spaltenwerts zurückzugeben. Aktualisierbare Spalten werden beispielsweise so angepasst, dass sie für den Transaktionskontext der aufrufenden Sitzung konsistent sind, und diese Anpassung erfordert den vom Aufrufer bereitgestellten Puffer. Wenn nicht genügend Pufferspeicher bereitgestellt wird, wird JET_errInvalidBufferSize zurückgegeben, und es werden keine Spaltendaten zurückgegeben.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Mindestens einer der angegebenen Parameter ist falsch. Dies kann passieren, wenn retinfo.cbStruct kleiner als die Größe <a href="gg294049(v=exchg.10).md">von JET_RETINFO</a>ist.</p> | 
 | <p>JET_errInvalidgrbit</p> | <p>Die angegebenen Optionen sind unbekannt oder eine unzulässige Kombination bekannter Biteinstellungen.</p> | 
 | <p>JET_errNoCurrentRecord</p> | <p>Der Cursor wird nicht auf einem Datensatz positioniert. Dafür sind viele verschiedene Gründe möglich. Dies geschieht beispielsweise, wenn der Cursor derzeit nach dem letzten Datensatz im aktuellen Index positioniert ist.</p> | 
 | <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
@@ -142,11 +142,11 @@ Bei Erfolg wird der Spaltenwert für die angegebene Spalte in den angegebenen Pu
 
 Bei einem Fehler bleibt die Cursorposition unverändert, und es werden keine Daten in den bereitgestellten Puffer kopiert.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Dieser Aufruf wird nur einmal verwendet, um Daten mit fester oder bekannter Größe für nicht mehrwertige Spalten abzurufen. Wenn Spaltendaten jedoch eine unbekannte Größe aufweisen, wird dieser Aufruf in der Regel zweimal verwendet. Sie wird zuerst aufgerufen, um die Größe der Daten zu bestimmen, damit sie den erforderlichen Speicherplatz zuordnen können. Anschließend wird derselbe Aufruf erneut durchgeführt, um die Spaltendaten abzurufen. Wenn die tatsächliche Anzahl von Werten unbekannt ist, da eine Spalte mehrwertige Werte enthält, wird der Aufruf in der Regel dreimal verwendet. Zuerst, um die Anzahl der Werte abzurufen, und dann zweimal mehr, um Speicher zuzuordnen und die tatsächlichen Daten abzurufen.
 
-Das Abrufen aller Werte für eine mehrwertige Spalte kann durch wiederholtes Aufrufen dieser Funktion mit einem pretinfo- \> itagSequence-Wert erfolgen, der bei 1 beginnt und bei jedem nachfolgenden Aufruf erhöht wird. Es ist bekannt, dass der letzte Spaltenwert abgerufen wird, wenn ein JET_wrnColumnNull von der Funktion zurückgegeben wird. Beachten Sie, dass diese Methode nicht ausgeführt werden kann, wenn in der Wertsequenz der Spalte mit mehreren Werten **explizite NULL-Werte** festgelegt sind, da diese Werte übersprungen werden würden. Wenn eine Anwendung alle mehrwertigen Spaltenwerte abrufen möchte, einschließlich der werte, die explizit auf **NULL** festgelegt sind, muss [JetRetrieveColumns](./jetretrievecolumns-function.md) anstelle von **JetRetrieveColumn** verwendet werden. Beachten Sie, dass diese Funktion nicht die Anzahl der Werte für eine mehrwertige Funktion zurückgibt, wenn ein *itagSequence-Wert* von 0 (null) angegeben wird. Nur [JetRetrieveColumns](./jetretrievecolumns-function.md) gibt die Anzahl der Werte eines Spaltenwerts zurück, wenn ein *itagSequence-Wert* von 0 (null) übergeben wird.
+Das Abrufen aller Werte für eine mehrwertige Spalte kann erfolgen, indem diese Funktion wiederholt mit einem pretinfo- \> itagSequence-Wert aufgerufen wird, der bei 1 beginnt und bei jedem nachfolgenden Aufruf erhöht wird. Es ist bekannt, dass der letzte Spaltenwert abgerufen wird, wenn ein JET_wrnColumnNull von der Funktion zurückgegeben wird. Beachten Sie, dass diese Methode nicht ausgeführt werden kann, wenn in der Wertsequenz der Spalte mit mehreren Werten **explizite NULL-Werte** festgelegt sind, da diese Werte übersprungen werden würden. Wenn eine Anwendung alle mehrwertigen Spaltenwerte abrufen möchte, einschließlich der werte, die explizit auf **NULL** festgelegt sind, muss [JetRetrieveColumns](./jetretrievecolumns-function.md) anstelle von **JetRetrieveColumn** verwendet werden. Beachten Sie, dass diese Funktion nicht die Anzahl der Werte für eine mehrwertige Funktion zurückgibt, wenn ein *itagSequence-Wert* von 0 (null) angegeben wird. Nur [JetRetrieveColumns](./jetretrievecolumns-function.md) gibt die Anzahl der Werte eines Spaltenwerts zurück, wenn ein *itagSequence-Wert* von 0 (null) übergeben wird.
 
 Wenn diese Funktion auf Transaktionsebene 0 (null) aufgerufen wird, z. B. ist die aufrufende Sitzung nicht selbst in einer Transaktion, wird eine Transaktion innerhalb der Funktion geöffnet und geschlossen. Der Zweck besteht darin, konsistente Ergebnisse zurückzugeben, falls sich ein langer Wert über Datenbankseiten erstreckt. Beachten Sie, dass die Transaktion zwischen Funktionsaufrufen und einer Reihe von Aufrufen dieser Funktion freigegeben wird, wenn sich die Sitzung nicht in einer Transaktion befindet und nach dem ersten Aufruf dieser Funktion aktualisierte Daten zurückgeben kann.
 
@@ -159,7 +159,13 @@ Beim Abrufen aller markierten, mehrwertigen und Sparsespalten durch Festlegen vo
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

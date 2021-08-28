@@ -1,7 +1,7 @@
 ---
-description: Stellt Statusinformationen zu einem Hardware Test eines vollständig entschlüsselten Betriebssystem Volumes bereit.
+description: Stellt Statusinformationen zu einem Hardwaretest eines vollständig entschlüsselten Betriebssystemvolumes bereit.
 ms.assetid: d76bc266-3718-443e-94f9-dcaa0ec53151
-title: Gethardwareteststatus-Methode der Win32_EncryptableVolume-Klasse
+title: GetHardwareTestStatus-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: 26d1984a79edef5f00f7687260fda7b211153863
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32d0d477459dbc7352d1d8f6779c5c76cfbd537d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350810"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475356"
 ---
-# <a name="gethardwareteststatus-method-of-the-win32_encryptablevolume-class"></a>Gethardwareteststatus-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="gethardwareteststatus-method-of-the-win32_encryptablevolume-class"></a>GetHardwareTestStatus-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **gethardwareteststatus** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " stellt Statusinformationen über einen Hardware Test eines vollständig entschlüsselten Betriebssystem Volumes bereit.
+Die **GetHardwareTestStatus-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) stellt Statusinformationen zu einem Hardwaretest eines vollständig entschlüsselten Betriebssystemvolumes bereit.
 
-Verwenden Sie diese Methode, um anzuzeigen, ob ein Hardware Test aussteht, sowie den Erfolg oder Misserfolg eines Hardware Tests, der beim letzten Neustart des Computers abgeschlossen wurde. Verwenden Sie die Methode " [**verschlüsseltafterhardwaretest**](encryptafterhardwaretest-win32-encryptablevolume.md) ", um einen Hardware Test anzufordern.
+Verwenden Sie diese Methode, um anzuzeigen, ob ein Hardwaretest aussteht, sowie den Erfolg oder Fehler eines Hardwaretests, der beim letzten Neustart des Computers abgeschlossen wurde. Um einen Hardwaretest anzufordern, verwenden Sie die [**EncryptAfterHardwareTest-Methode.**](encryptafterhardwaretest-win32-encryptablevolume.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,45 +42,22 @@ uint32 GetHardwareTestStatus(
 
 <dl> <dt>
 
-*Teststatus* \[ vorgenommen\]
+*TestStatus* \[ out\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt an, ob ein Hardware Test aussteht, sowie den Erfolg eines Fehlers eines Hardware Tests, der beim letzten Neustart des Computers abgeschlossen wurde.
+Gibt an, ob ein Hardwaretest aussteht, sowie der Erfolg eines Hardwaretests, der beim letzten Neustart des Computers abgeschlossen wurde.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="NotFailed_and_NonePending"></span><span id="notfailed_and_nonepending"></span><span id="NOTFAILED_AND_NONEPENDING"></span><dl> <dt><strong>NotFailed_and_NonePending</strong></dt> <dt>0</dt> </dl></td>
-<td>Wenn ein Test angefordert wurde, war der Test beim letzten Neustart des Computers erfolgreich, und die Volumeverschlüsselung wird jetzt ausgeführt. Den Verschlüsselungs Status finden Sie unter der <a href="getconversionstatus-win32-encryptablevolume.md"><strong>getkonversionstatus</strong></a> -Methode. Andernfalls wurde kein Test auf dem letzten Computer Neustart ausgeführt, und es ist kein ausstehend. <br/></td>
-</tr>
-<tr class="even">
-<td><span id="Failed"></span><span id="failed"></span><span id="FAILED"></span><dl> <dt><strong></strong></dt> Fehler <dt>1</dt> </dl></td>
-<td>Die Volumeverschlüsselung konnte nicht gestartet werden. Alle Schlüssel Schutzvorrichtungen wurden entfernt.<br/> So beheben Sie einen fehlgeschlagenen Test:<br/>
-<ul>
-<li>Überprüfen Sie die Informationen im <em>testerror</em> -Parameter.</li>
-<li>Fügen Sie Schlüssel Schutzvorrichtungen hinzu, und verwenden Sie die Methode " <a href="encryptafterhardwaretest-win32-encryptablevolume.md"><strong>verschlüsseltafterhardwaretest</strong></a> " erneut.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><span id="Pending"></span><span id="pending"></span><span id="PENDING"></span><dl> <dt><strong>Ausstehende</strong></dt> <dt>2</dt> </dl></td>
-<td>Ein Test wurde angefordert und wird beim nächsten Neustart des Computers ausgeführt.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <span id="NotFailed_and_NonePending"></span><span id="notfailed_and_nonepending"></span><span id="NOTFAILED_AND_NONEPENDING"></span><dl><dt><strong>NotFailed_and_NonePending</strong></dt><dt>0</dt></dl> | Wenn ein Test angefordert wurde, war der Test beim letzten Neustart des Computers erfolgreich, und die Volumeverschlüsselung wird jetzt ausgeführt. Informationen zum Verschlüsselungsstatus finden Sie in der <a href="getconversionstatus-win32-encryptablevolume.md"><strong>GetConversionStatus-Methode.</strong></a> Andernfalls wurde kein Test auf dem letzten Computerneustart ausgeführt, und keiner steht aus. <br /> | 
+| <span id="Failed"></span><span id="failed"></span><span id="FAILED"></span><dl><dt><strong>Fehler</strong></dt><dt>1</dt></dl> | Die Volumeverschlüsselung wurde nicht gestartet. Alle Schlüsselschutzvorrichtungen wurden entfernt.<br /> So beheben Sie einen fehlgeschlagenen Test:<br /><ul><li>Lesen Sie die Informationen im <em>TestError-Parameter.</em></li><li>Fügen Sie Schlüsselschutzvorrichtungen hinzu, und verwenden Sie erneut die <a href="encryptafterhardwaretest-win32-encryptablevolume.md"><strong>EncryptAfterHardwareTest-Methode.</strong></a></li></ul> | 
+| <span id="Pending"></span><span id="pending"></span><span id="PENDING"></span><dl><dt><strong>Ausstehend</strong></dt><dt>2</dt></dl> | Ein Test wurde angefordert und wird auf dem nächsten Computerneustart ausgeführt.<br /> | 
+
 
 
 
@@ -88,23 +65,23 @@ Gibt an, ob ein Hardware Test aussteht, sowie den Erfolg eines Fehlers eines Har
 
 </dd> <dt>
 
-" *Testerror* \[ " vorgenommen\]
+*TestError* \[ out\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt den Fehler des letzten abgeschlossenen Hardware Tests an.
+Gibt den Fehler aus dem letzten abgeschlossenen Hardwaretest an.
 
 
 
 | Wert                                                                                               | Bedeutung                                                                                                                                                                                                                                                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl>                        | Es sind keine Fehler aufgetreten, oder es wurde kein Hardware Test auf dem letzten Neustart des Computers ausgeführt.<br/>                                                                                                                                                                                                                                                                      |
-| <dl> <dt> 2150694972 (0x8031003c)</dt> </dl> | f- \_ E- \_ KeyFile \_ nicht \_ gefunden<br/> Ein USB-Speicherstick mit einer externen Schlüsseldatei wurde nicht gefunden. Wenn dieser Fehler weiterhin auftritt, kann der Computer während des Neustarts keine USB-Laufwerke lesen. Möglicherweise können Sie externe Schlüssel nicht verwenden, um das Betriebssystem Volume während des Neustarts zu entsperren.<br/>                                                                |
-| <dl> <dt> 2150694973 (0x8031003d)</dt> </dl> | \_ \_ ungültige E-Key-Datei \_<br/> Die externe Schlüsseldatei auf dem USB-Speicherstick war beschädigt. Probieren Sie einen anderen USB-Speicherstick zum Speichern der externen Schlüsseldatei aus.<br/>                                                                                                                                                                                 |
-| <dl> <dt> 2150694975 (0x8031003f)</dt> </dl> | \_E \_ TPM \_ deaktiviert<br/> Das TPM ist entweder deaktiviert oder deaktiviert oder deaktiviert und deaktiviert. Um das TPM zu aktivieren, verwenden Sie den [**Win32- \_ TPM**](win32-tpm.md) -WMI-Anbieter, oder führen Sie das TPM-Verwaltungs-Snap-in (TPM. msc) aus.<br/>                                                                                                            |
-| <dl> <dt> 2150694977 (0x80310041)</dt> </dl> | \_ \_ ungültige E TPM-Datei \_ \_<br/> Das TPM hat eine Änderung der Neustart Dienste des Betriebssystems im aktuellen Platt Form Validierungs Profil festgestellt. Entfernen Sie eine beliebige Start-CD oder DVD vom Computer. Wenn dieser Fehler weiterhin auftritt, überprüfen Sie, ob die neuesten Firmware-und BIOS-Upgrades installiert sind und ob das TPM andernfalls ordnungsgemäß funktioniert.<br/> |
-| <dl> <dt>2150694979 (0x80310043)</dt> </dl>  | \_ \_ ungültige E-Pin \_<br/> Die angegebene PIN war falsch.<br/>                                                                                                                                                                                                                                                                               |
+| <dl> <dt>0</dt> </dl>                        | Beim letzten Neustart des Computers sind keine Fehler aufgetreten oder es wurde kein Hardwaretest ausgeführt.<br/>                                                                                                                                                                                                                                                                      |
+| <dl> <dt> 2150694972 (0x8031003C)</dt> </dl> | FVE \_ E \_ KEYFILE NICHT \_ \_ GEFUNDEN<br/> Ein USB-Speicherstick mit einer externen Schlüsseldatei wurde nicht gefunden. Wenn dieser Fehler weiterhin auftritt, kann der Computer während des Neustarts keine USB-Laufwerke lesen. Möglicherweise können Sie während des Neustarts keine externen Schlüssel verwenden, um das Betriebssystemvolume zu entsperren.<br/>                                                                |
+| <dl> <dt> 2150694973 (0x8031003D)</dt> </dl> | FVE \_ E \_ KEYFILE \_ UNGÜLTIG<br/> Die externe Schlüsseldatei auf dem USB-Speicherstick war beschädigt. Probieren Sie einen anderen USB-Speicherstick aus, um die externe Schlüsseldatei zu speichern.<br/>                                                                                                                                                                                 |
+| <dl> <dt> 2150694975 (0x8031003F)</dt> </dl> | FVE \_ E \_ TPM \_ DEAKTIVIERT<br/> Das TPM ist entweder deaktiviert oder deaktiviert oder sowohl deaktiviert als auch deaktiviert. Um das TPM zu aktivieren, verwenden Sie den [**Win32 \_ Tpm**](win32-tpm.md) WMI-Anbieter, oder führen Sie das TPM-Verwaltungs-Snap-In (Tpm.msc) aus.<br/>                                                                                                            |
+| <dl> <dt> 2150694977 (0x80310041)</dt> </dl> | FVE \_ E \_ TPM \_ INVALID \_ PCR<br/> Das TPM hat eine Änderung der Neustartdienste des Betriebssystems innerhalb des aktuellen Plattformvalidierungsprofils erkannt. Entfernen Sie alle Start-CD- oder DVD-Dateien vom Computer. Wenn dieser Fehler weiterhin auftritt, überprüfen Sie, ob die neuesten Firmware- und BIOS-Upgrades installiert sind und dass das TPM andernfalls ordnungsgemäß funktioniert.<br/> |
+| <dl> <dt>2150694979 (0x80310043)</dt> </dl>  | FVE \_ E \_ PIN \_ UNGÜLTIG<br/> Die angegebene PIN war falsch.<br/>                                                                                                                                                                                                                                                                               |
 
 
 
@@ -114,7 +91,7 @@ Gibt den Fehler des letzten abgeschlossenen Hardware Tests an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 In der folgenden Tabelle sind einige der allgemeinen Rückgabecodes aufgeführt.
 
@@ -123,31 +100,31 @@ In der folgenden Tabelle sind einige der allgemeinen Rückgabecodes aufgeführt.
 | Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode wurde erfolgreich ausgeführt.<br/> |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/> |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Methode " [**verschlüsseltafterhardwaretest**](encryptafterhardwaretest-win32-encryptablevolume.md) ", um einen Hardware Test anzufordern.
+Um einen Hardwaretest anzufordern, verwenden Sie die [**EncryptAfterHardwareTest-Methode.**](encryptafterhardwaretest-win32-encryptablevolume.md)
 
-Führen Sie die folgenden Schritte aus, um einen Hardware Test auszuführen, wenn der Status "Ausstehend" lautet:
+Führen Sie die folgenden Schritte aus, um einen Hardwaretest auszuführen, wenn sein Status aussteht:
 
-1.  Fügen Sie einen USB-Speicherstick, der eine externe Schlüsseldatei enthält, in den Computer ein. Dieser Schritt gilt nur, wenn das Volume über eine Schlüssel Schutzvorrichtung vom Typ "externer Schlüssel" oder "TPM und Systemstart Schlüssel" verfügt.
-2.  Starten Sie den Computer neu. Beim Neustart des Computers wird der Hardware Test automatisch ausgeführt.
+1.  Fügen Sie auf dem Computer einen USB-Speicherstick ein, der eine externe Schlüsseldatei enthält. Dieser Schritt gilt nur, wenn das Volume über eine Schlüsselschutzvorrichtung vom Typ "Externer Schlüssel" oder "TPM und Startschlüssel" verfügt.
+2.  Starten Sie den Computer neu. Beim Neustart des Computers wird der Hardwaretest automatisch ausgeführt.
 
-Verwenden Sie die Methode [**verschlüsseln**](encrypt-win32-encryptablevolume.md) , um den Hardware Test abzubrechen.
+Um den Hardwaretest abzubrechen, verwenden Sie die [**Encrypt-Methode.**](encrypt-win32-encryptablevolume.md)
 
-Ein erfolgreicher Test bestimmt Folgendes:
+Bei einem erfolgreichen Test wird Festgestellt, dass:
 
--   Das TPM kann das Volume entsperren, wenn eine TPM-bezogene Schlüssel Schutzvorrichtung vorhanden ist.
--   Der Computer kann einen USB-Speicherstick lesen, der eine externe Schlüsseldatei während des Starts enthält, wenn das Volume durch einen externen Schlüssel (einschließlich eines Systemstart Schlüssels) entsperrt werden kann.
+-   Das TPM kann das Volume entsperren, wenn eine TPM-bezogene Schlüsselschutzvorrichtung vorhanden ist.
+-   Der Computer kann während des Starts einen USB-Speicherstick lesen, der eine externe Schlüsseldatei enthält, wenn das Volume durch einen externen Schlüssel (einschließlich eines Startschlüssels) entsperrt werden kann.
 
-Die Hardware Testergebnisse sind nach Änderungen an der Konvertierung oder nach dem nächsten Computer Neustart nicht verfügbar. Überprüfen Sie das System Ereignisprotokoll auf die Informationen zu Hardware Tests, die zuvor auf dem Computer ausgeführt wurden.
+Hardwaretestergebnisse sind nach Änderungen bei der Konvertierung oder nach dem nächsten Neustart des Computers nicht verfügbar. Überprüfen Sie das Systemereignisprotokoll auf Informationen zu Hardwaretests, die zuvor auf dem Computer ausgeführt wurden.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -155,18 +132,18 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, nur Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CIMV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

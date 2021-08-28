@@ -1,5 +1,5 @@
 ---
-description: Das <folderType> -Element gibt eine GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das <templateInfo> Element vorhanden ist, andernfalls ist es optional. Dieses Element verfügt über keine Attribute und keine untergeordneten Elemente.
+description: Das &lt; folderType-Element &gt; gibt eine GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das &lt; templateInfo-Element &gt; vorhanden ist, andernfalls ist es optional. Dieses Element verfügt über keine Attribute und keine untergeordneten Elemente.
 title: folderType-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 8d35f09a10cc88ae3873a507b6fa7000812503890240ce0b808ffecc84f23fd8
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: ba9d0163a00ab525fb0a52267c1226b6a48230a4
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119883950"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880866"
 ---
 # <a name="foldertype-element-library-schema"></a>folderType-Element (Bibliotheksschema)
 
-Das <folderType> -Element gibt eine GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das <templateInfo> Element vorhanden ist, andernfalls ist es optional. Dieses Element verfügt über keine Attribute und keine untergeordneten Elemente.
+Das &lt; folderType-Element &gt; gibt eine GUID für den Ordnertyp an. Dieses Element ist erforderlich, wenn das &lt; templateInfo-Element &gt; vorhanden ist, andernfalls ist es optional. Dieses Element verfügt über keine Attribute und keine untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Das <folderType> -Element gibt eine GUID für den Ordnertyp an. Dieses Element i
 
 ## <a name="remarks"></a>Hinweise
 
-Durch festlegen eines Ordnertyps werden die Spalten und Details bestimmt, die standardmäßig in Windows Explorer angezeigt werden. Ordnertypbezeichner ([**FOLDERTYPEID**](foldertypeid.md)) sind GUIDs, die in Shlguid.h definiert sind. In der folgenden Tabelle sind die GUIDs allgemeiner Ordnertypen aufgeführt.
+Das Festlegen eines Ordnertyps bestimmt die Spalten und Details, die standardmäßig in Windows Explorer angezeigt werden. Ordnertypbezeichner ([**FOLDERTYPEID**](foldertypeid.md)) sind GUIDs, die in Shlguid.h definiert sind. In der folgenden Tabelle sind die GUIDs allgemeiner Ordnertypen aufgeführt.
 
 
 
