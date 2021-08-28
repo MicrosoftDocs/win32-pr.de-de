@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 92695b9600ef18e716fa02cf58157c3c4781988e
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: fcc6c63b06614eb16379fbb18d59a5459a8e5085
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122468357"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983033"
 ---
 # <a name="jet_tablecreate-structure"></a>JET_TABLECREATE-Struktur
 
@@ -64,7 +64,7 @@ Der Name muss folgende Bedingungen erfüllen:
 
 <!-- end list -->
 
-  - Bestehen aus den folgenden Zeichen: 0 bis 9, A bis Z, a bis z und alle anderen Interpunktionen mit Ausnahme von Ausrufezeichen ( ), Komma (,), öffnenden Klammern () und schließenden Klammern ( ), d. h. ASCII-Zeichen 0x20, 0x22 bis \! \[ \] 0x2d, 0x2f bis 0x5a, 0x5c und 0x5d bis 0x7f.
+  - Sie bestehen aus den folgenden Zeichen: 0 bis 9, A bis Z, a bis z und alle anderen Interpunktionen mit Ausnahme von Ausrufezeichen ( ), Komma (,), öffnenden eckigen Klammern () und schließenden Klammern (), d. h. ASCII-Zeichen 0x20, 0x22 bis \! \[ \] 0x2d, 0x2f bis 0x5a, 0x5c und 0x5d bis 0x7f.
 
 <!-- end list -->
 
@@ -128,7 +128,12 @@ Die Anzahl der erstellten Objekte entspricht der Summe der Erfolgreich erstellte
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_TABLECREATE_W</strong> (Unicode) und JET_TABLECREATE_A (ANSI) implementiert. <strong></strong></p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_TABLECREATE_W</strong> (Unicode) <strong>und</strong> JET_TABLECREATE_A (ANSI) implementiert.</p> | 
 
 
 

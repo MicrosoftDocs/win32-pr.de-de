@@ -1,19 +1,19 @@
 ---
-description: Ein Handle für eine Windows-Runtime Zeichenfolge.
+description: Ein Handle für eine Windows Runtime-Zeichenfolge.
 ms.assetid: 763ACE57-EFDD-482E-851E-668D7756C5DF
-title: Hstring (hstring. h)
+title: HSTRING (Hstring.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76b9e73d7627a4bab8f02a95056e5b208569d922
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4b43c92d439cec10c0d1683efb1e8ceafd8165a35c3c8aa9a1b35150e43a33a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121570"
 ---
 # <a name="hstring"></a>HSTRING
 
-Ein Handle für eine Windows-Runtime Zeichenfolge.
+Ein Handle für eine Windows Runtime-Zeichenfolge.
 
 
 ```C++
@@ -22,18 +22,18 @@ typedef HSTRING__* HSTRING;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **hstring** , um unveränderliche Zeichen folgen in der Windows-Runtime darzustellen.
+Verwenden **Sie HSTRING,** um unveränderliche Zeichenfolgen in der Windows darstellen.
 
-In JavaScript und anderen Sprachen, wie z. b. C \# und Microsoft Visual Basic, können Zeichen folgen verwendet werden, die mithilfe von **hstring** dargestellt werden. In der folgenden Tabelle wird gezeigt, wie ein **hstring** in anderen Sprachen dargestellt wird.
+JavaScript und andere Sprachen wie C und Microsoft Visual Basic können Zeichenfolgen verwenden, die mithilfe von \# **HSTRING dargestellt werden.** Die folgende Tabelle zeigt, wie **HSTRING** in anderen Sprachen dargestellt wird.
 
 
 
-| Programmiersprache                                                                    | Zeichen folgen Darstellung                                      |
+| Programmiersprache                                                                    | Zeichenfolgendarstellung                                      |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------|
-| [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)              | [WinRT:: hstring](/uwp/cpp-ref-for-winrt/hstring) -Klasse     |
-| Komponenten Erweiterungen für Visual C++ ([C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)) | [Platform:: String](/cpp/cppcx/platform-string-class) -Klasse |
+| [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)              | [winrt::hstring-Klasse](/uwp/cpp-ref-for-winrt/hstring)     |
+| Visual C++ Komponentenerweiterungen ([C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)) | [Platform::String-Klasse](/cpp/cppcx/platform-string-class) |
 | JavaScript                                                                              | String-Objekt                                              |
 | .NET Framework                                                                          | System.String-Klasse                                        |
 
@@ -41,23 +41,23 @@ In JavaScript und anderen Sprachen, wie z. b. C \# und Microsoft Visual Basic, k
 
  
 
-Das **hstring** -Handle ist ein Standard behandlertyp. Semantisch stellt ein **hstring** , der den Wert **null** enthält, die leere Zeichenfolge dar, die aus keinem Inhalts Zeichen und einem abschließenden **null** -Zeichen besteht. Das Erstellen einer Zeichenfolge über [**windowscreatestring**](/windows/win32/api/winstring/nf-winstring-windowscreatestring) mit NULL Zeichen erzeugt den Handle-Wert **null**. Beim Aufrufen von [**windowsgetstringrawbuffer**](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) mit dem Wert **null** wird ein Zeiger auf eine leere Zeichenfolge zurückgegeben, auf die nur das Zeichen für das abschließende **NUL** -Zeichen folgt. Es gibt keinen eindeutigen Wert, der einen nicht initialisierten **hstring** darstellt.
+Das **HSTRING-Handle** ist ein Standardhandpunkttyp. Semantisch stellt **ein HSTRING-Objekt,** das den Wert **NULL** enthält, die leere Zeichenfolge dar, die aus null Inhaltszeichen und einem beendenden **NULL-Zeichen** besteht. Das Erstellen einer Zeichenfolge [**über WindowsCreateString**](/windows/win32/api/winstring/nf-winstring-windowscreatestring) mit 0 Zeichen erzeugt den Handlewert **NULL.** Beim Aufrufen [**von WindowsGetStringRawBuffer**](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) mit dem Wert **NULL** wird ein Zeiger auf eine leere Zeichenfolge gefolgt von nur dem **NUL-Abschlusszeichen** zurückgegeben. Es ist kein eindeutiger Wert vorhanden, um eine nicht initialisierte **HSTRING-Datei** zu darstellen.
 
-Rufen Sie die [**windowscreatestring**](/windows/win32/api/winstring/nf-winstring-windowscreatestring) -Funktion auf, um einen neuen **hstring**-Code zu erstellen, und rufen Sie die [**windowsdeletestring**](/windows/win32/api/winstring/nf-winstring-windowsdeletestring) -Funktion auf, um den Verweis auf den Zeichen folgen Speicher für die Rufen Sie die [**windowscreatestrauch ingreferenzierungsfunktion**](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference) auf, um einen Zeichen folgen Verweis zu erstellen. dieser wird auch als *fast-Pass-Zeichenfolge* bezeichnet.
+Rufen Sie [**die WindowsCreateString-Funktion**](/windows/win32/api/winstring/nf-winstring-windowscreatestring) auf, um eine neue **HSTRING-Funktion** zu erstellen, und rufen Sie die [**WindowsDeleteString-Funktion**](/windows/win32/api/winstring/nf-winstring-windowsdeletestring) auf, um den Verweis auf den Speicher der sichernden Zeichenfolge frei zu geben. Rufen Sie [**die WindowsCreateStringReference-Funktion auf,**](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference) um einen Zeichenfolgenverweis zu erstellen, der auch als *FastPass-Zeichenfolge bezeichnet wird.*
 
-Kopieren Sie ein **hstring-Zeichen** , indem Sie die [**windowsduplicatestring**](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) -Funktion aufrufen.
+Kopieren Sie **eine HSTRING-Datei,** indem Sie [**die WindowsDuplicateString-Funktion**](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) aufrufen.
 
-Verkettet zwei Zeichen folgen durch Aufrufen der [**windowsconcatstring**](/windows/win32/api/winstring/nf-winstring-windowsconcatstring) -Funktion.
+Verketten Sie zwei Zeichenfolgen, indem Sie die [**WindowsConcatString-Funktion**](/windows/win32/api/winstring/nf-winstring-windowsconcatstring) aufrufen.
 
-Greifen Sie über die [**windowsgetstringrawbuffer**](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) -Funktion auf den Speicher für die Unterstützungs Zeichenfolge zu.
+Greifen Sie auf den Speicher der hintergrundenden Zeichenfolge zu, indem Sie die [**WindowsGetStringRawBuffer-Funktion**](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer) aufrufen.
 
-**Hstring** kann eingebettete **NUL** -Zeichen speichern und verwenden. Verwenden Sie die [**windowsstringhasembeddednull**](/windows/win32/api/winstring/nf-winstring-windowsstringhasembeddednull) -Funktion, um vor der Verwendung von Funktionen, die möglicherweise unerwartete Ergebnisse verursachen, nach eingebetteten **NUL** -Zeichen zu suchen. Beispielsweise verwenden die meisten Windows-Funktionen **LPCWSTR** als Eingabeparameter und berechnen die Länge der Zeichenfolge nur, bis die erste **NUL** erreicht wird.
+**HSTRING kann** eingebettete **NUL-Zeichen** speichern und verwenden. Verwenden Sie [**die WindowsStringHasEmbeddedNull-Funktion,**](/windows/win32/api/winstring/nf-winstring-windowsstringhasembeddednull) um nach eingebetteten **NUL-Zeichen** zu überprüfen, bevor Sie Funktionen verwenden, die zu unerwarteten Ergebnissen führen können. Beispielsweise verwenden die meisten **Windows-Funktionen LPCWSTR** als Eingabeparameter und berechnen die Länge der Zeichenfolge nur, bis die erste **NUL** gefunden wird.
 
-Die Unterstützungs Zeichenfolge muss unveränderlich und NULL-terminiert bleiben. Wenn der aufrufende Code einen Zeichen folgen Verweis mithilfe der [**windowscreatestrauferenferenzierungsfunktion**](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference) erstellt, befindet sich der Arbeitsspeicher, der die zugrunde liegende Zeichen folgen Darstellung enthält, dem Aufrufer. Der Windows-Runtime der den Inhalt der ursprünglichen Zeichenfolge verlässt, bleibt unverändert. Wenn Sie einen Zeichen folgen Verweis an den Windows-Runtime übergeben, liegt es in der Verantwortung des Aufrufers sicherzustellen, dass sich der Inhalt der Zeichenfolge ändert und die **NUL** für die Dauer des Aufrufes beendet wird. Der Windows-Runtime gibt alle Verweise auf den Zeichen folgen Verweis frei, wenn der-Rückruf zurückgegeben wird.
+Die Zeichenfolge muss unveränderlich und mit NULL beendet bleiben. Wenn beim Aufrufen von Code mithilfe der [**WindowsCreateStringReference-Funktion**](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference) ein Zeichenfolgenverweis erstellt wird, befindet sich der Arbeitsspeicher, der die Zeichenfolgendarstellung enthält, im Besitz des Aufrufers. Die Windows Runtime basiert darauf, dass der Inhalt der ursprünglichen Zeichenfolge unverändert bleibt. Beim Übergeben eines Zeichenfolgenverweises an die Windows Runtime ist der Aufrufer dafür verantwortlich, sicherzustellen, dass der Inhalt der Zeichenfolge unveränderlich ist und **NUL** für die Dauer des Aufrufs beendet wird. Die Windows Runtime gibt alle Verweise auf den Zeichenfolgenverweis frei, wenn der Aufruf zurückgegeben wird.
 
-Wenn Sie ein **hstring** als out-Parameter erhalten, empfiehlt es sich, das Handle auf **null** festzulegen, wenn Sie damit fertig sind.
+Wenn Sie **HSTRING als** out-Parameter erhalten, ist es eine bewährte Methode, das Handle auf **NULL** zu setzen, wenn Sie damit fertig sind.
 
-Rufen Sie die [**windowshalallocatestringbuffer**](/windows/win32/api/winstring/nf-winstring-windowspreallocatestringbuffer) -Funktion auf, um einen änderbaren Zeichen folgen Puffer zuzuweisen, den Sie zum Erstellen eines unveränderlichen **hstring** verwenden können. Wenn Sie das Auffüllen des Puffers abgeschlossen haben, rufen Sie die [**windowspromotestringbuffer**](/windows/win32/api/winstring/nf-winstring-windowspromotestringbuffer) -Funktion auf, um den **hstring** zu erstellen. Dieses zweistufige Konstruktionsmuster ermöglicht eine ähnliche Funktionalität wie ein "String Builder".
+Rufen Sie [**die Funktion WindowsPreallocateStringBuffer**](/windows/win32/api/winstring/nf-winstring-windowspreallocatestringbuffer) auf, um einen änderbaren Zeichenfolgenpuffer zu reservieren, den Sie zum Erstellen eines unveränderlichen **HSTRING verwenden können.** Wenn Sie das Aufpopulieren des Puffers abgeschlossen haben, rufen Sie die [**WindowsPromoteStringBuffer-Funktion**](/windows/win32/api/winstring/nf-winstring-windowspromotestringbuffer) auf, um **HSTRING zu erstellen.** Dieses Zweiphasen-Konstruktionsmuster ermöglicht Funktionen, die einem "Zeichenfolgen-Generator" ähneln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Rufen Sie die [**windowshalallocatestringbuffer**](/windows/win32/api/winstring/
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Hstring. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Hstring.h</dt> </dl> |
 
 
 
@@ -78,16 +78,16 @@ Rufen Sie die [**windowshalallocatestringbuffer**](/windows/win32/api/winstring/
 
 </dt> <dt>
 
-[**Windowscreatestring**](/windows/win32/api/winstring/nf-winstring-windowscreatestring)
+[**WindowsCreateString**](/windows/win32/api/winstring/nf-winstring-windowscreatestring)
 </dt> <dt>
 
-[**Windowsdeletestring**](/windows/win32/api/winstring/nf-winstring-windowsdeletestring)
+[**WindowsDeleteString**](/windows/win32/api/winstring/nf-winstring-windowsdeletestring)
 </dt> <dt>
 
-[**Windowsduplicatestring**](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)
+[**WindowsDuplicateString**](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)
 </dt> <dt>
 
-[**Windowshalzugecatestringbuffer**](/windows/win32/api/winstring/nf-winstring-windowspreallocatestringbuffer)
+[**WindowsPreallocateStringBuffer**](/windows/win32/api/winstring/nf-winstring-windowspreallocatestringbuffer)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Die Blöcke der boundingorientedbox.
+description: Die Erweiterungen von BoundingOrientedBox.
 ms.assetid: ee7d7b7f-9c9c-4da9-8a88-b69dc7e8a004
-title: Boundingorientedbox. Extents (directxcollision. h)
+title: BoundingOrientedBox.Extents (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a901400a09511206717b6df21a638bf0c119d70
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba62227a7109450b0aec7b00917491290f9d962b06752cad61cd0f767b90d5b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117670"
 ---
-# <a name="boundingorientedboxextents"></a>Boundingorientedbox. Extents
+# <a name="boundingorientedboxextents"></a>BoundingOrientedBox.Extents
 
-Die Blöcke der [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox).
+Die Erweiterungen von [**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox).
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -35,7 +35,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
@@ -46,10 +46,10 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 [Fields](boundingorientedbox-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
+[**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
 </dt> </dl>
 
  

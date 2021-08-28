@@ -1,93 +1,93 @@
 ---
 title: Fehlermeldungen (Entwurfsgrundlagen)
-description: Eine Fehlermeldung warnt Benutzer über ein bereits aufgetretene Problem.
+description: Eine Fehlermeldung warnt Benutzer über ein Problem, das bereits aufgetreten ist.
 ms.assetid: b02110e9-985d-4448-9c95-eb958b0059b1
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 0a8ee17093618dc8a192cfad8ce962f7ed04fc76
-ms.sourcegitcommit: 70f39ec77d19d3c32c376ee2831753d2cafae41a
+ms.openlocfilehash: 0ceffd3d1fecccd8342cb1e634735653bdba9722
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104568010"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469017"
 ---
 # <a name="error-messages-design-basics"></a>Fehlermeldungen (Entwurfsgrundlagen)
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Eine Fehlermeldung warnt Benutzer über ein bereits aufgetretene Problem. Im Gegensatz dazu warnt eine Warnmeldung Benutzer über eine Bedingung, die in der Zukunft ein Problem verursachen könnte. Fehlermeldungen können mithilfe von modalen Dialogfeldern, direkten Nachrichten, Benachrichtigungen oder Luftballons angezeigt werden.
+Eine Fehlermeldung warnt Benutzer über ein Problem, das bereits aufgetreten ist. Im Gegensatz dazu werden Benutzer in einer Warnmeldung über eine Bedingung benachrichtigt, die in Zukunft ein Problem verursachen kann. Fehlermeldungen können mithilfe modaler Dialogfelder, direkt vorhandener Nachrichten, Benachrichtigungen oder Sprechblasen angezeigt werden.
 
-![Screenshot der Fehlermeldung: Umbenennen nicht möglich](images/mess-error-image1.png)
+![Screenshot der Fehlermeldung: Kann nicht umbenannt werden](images/mess-error-image1.png)
 
 Eine typische modale Fehlermeldung.
 
-Effektive Fehlermeldungen informieren Benutzer, dass ein Problem aufgetreten ist, erläutern, warum es passiert ist, und stellen eine Lösung bereit, damit Benutzer das Problem beheben können. Benutzer sollten entweder eine Aktion ausführen oder Ihr Verhalten im Ergebnis einer Fehlermeldung ändern.
+Effektive Fehlermeldungen informieren Benutzer darüber, dass ein Problem aufgetreten ist, erläutern, warum es aufgetreten ist, und stellen eine Lösung bereit, damit Benutzer das Problem beheben können. Benutzer sollten entweder eine Aktion ausführen oder ihr Verhalten als Ergebnis einer Fehlermeldung ändern.
 
-Gut geschriebene, hilfreiche Fehlermeldungen sind von entscheidender Bedeutung für eine Qualität des Benutzer Erlebnisses. Schlecht geschriebene Fehlermeldungen führen zu einer geringen Produktzufriedenheit und sind eine führende Ursache für vermeidbare technische Supportkosten. Unnötige Fehlermeldungen brechen den Benutzer Fluss ab.
+Gut geschriebene, hilfreiche Fehlermeldungen sind entscheidend für eine hochwertige Benutzererfahrung. Schlecht geschriebene Fehlermeldungen führen zu geringer Produktzufriedenheit und sind eine führende Ursache für vermeidbare Kosten für technischen Support. Unnötige Fehlermeldungen unterbrechen den Benutzerflow.
 
-**Hinweis:** Richtlinien, die sich auf [Dialogfelder](win-dialog-box.md), [Warnmeldungen](mess-warn.md), [Bestätigungen](mess-confirm.md), [Standardsymbole](vis-std-icons.md), [Benachrichtigungen](mess-notif.md)und [Layout](vis-layout.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang mit [Dialogfeldern,](win-dialog-box.md) [Warnmeldungen, Bestätigungen,](mess-confirm.md) [Standardsymbolen,](vis-std-icons.md) [Benachrichtigungen](mess-notif.md)und [Layout](vis-layout.md) werden in separaten Artikeln dargestellt. [](mess-warn.md)
 
-## <a name="is-this-the-right-user-interface"></a>Handelt es sich um die richtige Benutzeroberfläche?
+## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
 Orientieren Sie sich an folgenden Fragen:
 
-- **Stellt die Benutzeroberfläche (UI) ein bereits aufgetretene Problem dar?** Andernfalls handelt es sich bei der Meldung nicht um einen Fehler. Wenn der Benutzer über eine Bedingung benachrichtigt wird, die zu einem späteren Zeitpunkt ein Problem verursachen könnte, verwenden Sie eine Warnmeldung.
-- **Kann das Problem ohne Verwirrung vermieden werden?** Wenn dies der Fall ist, verhindern Sie das Problem. Verwenden Sie z. b. Steuerelemente, die auf gültige Werte beschränkt sind, anstatt nicht eingeschränkte Steuerelemente zu verwenden, die möglicherweise Fehlermeldungen erfordern. Deaktivieren Sie außerdem Steuerelemente, wenn Sie auf "Fehler" klicken, so lange es offensichtlich ist, warum das Steuerelement deaktiviert ist.
-- **Kann das Problem automatisch korrigiert werden?** Wenn dies der Fall ist, sollten Sie das Problem behandeln und die Fehlermeldung unterdrücken.
-- **Werden Benutzer wahrscheinlich eine Aktion ausführen oder Ihr Verhalten als Ergebnis der Nachricht ändern?** Wenn dies nicht der Fall ist, wird die Unterbrechung des Benutzers durch die Bedingung nicht rechtfertigen, sodass der Fehler besser unterdrückt werden kann
-- **Ist das Problem relevant, wenn Benutzer aktiv andere Programme verwenden?** Wenn dies der Fall ist, sollten Sie das Problem mithilfe eines [Benachrichtigungs Bereichs Symbols](winenv-notification.md)überprüfen.
-- **Steht das Problem nicht in Zusammenhang mit der aktuellen Benutzeraktivität, erfordert es keine sofortige Benutzeraktion und kann von Benutzern frei ignoriert werden?** Wenn dies der Fall ist, verwenden Sie stattdessen eine [Aktions Fehler Benachrichtigung](mess-notif.md) .
-- **Bezieht sich das Problem auf den Status einer Hintergrundaufgabe innerhalb eines primären Fensters?** Wenn dies der Fall ist, sollten Sie das Problem mithilfe einer [Statusleiste](ctrl-status-bars.md)anzeigen.
-- **Sind die primären Ziel Benutzer IT-Experten?** Wenn dies der Fall ist, sollten Sie einen alternativen Feedback Mechanismus verwenden, z.b. [Protokolldatei](glossary.md) Einträge oder e-Mail-Benachrichtigungen. IT-Experten bevorzugen Protokolldateien für nicht wichtige Informationen.
+- **Stellt die Benutzeroberfläche (UI) ein Problem dar, das bereits aufgetreten ist?** Wenn nicht, ist die Meldung kein Fehler. Wenn der Benutzer über eine Bedingung benachrichtigt wird, die in Zukunft ein Problem verursachen kann, verwenden Sie eine Warnmeldung.
+- **Kann das Problem ohne Verwirrung verhindert werden?** Wenn ja, verhindern Sie stattdessen das Problem. Verwenden Sie beispielsweise Steuerelemente, die auf gültige Werte beschränkt sind, anstatt uneingeschränkte Steuerelemente zu verwenden, die möglicherweise Fehlermeldungen erfordern. Außerdem würde das Deaktivieren von Steuerelementen beim Klicken zu einem Fehler führen, solange offensichtlich ist, warum das Steuerelement deaktiviert ist.
+- **Kann das Problem automatisch behoben werden?** Wenn ja, behandeln Sie das Problem, und unterdrücken Sie die Fehlermeldung.
+- **Führen Benutzer wahrscheinlich eine Aktion aus oder ändern ihr Verhalten als Ergebnis der Nachricht?** Wenn dies nicht der Lage ist, kann der Benutzer durch die Bedingung nicht unterbrochen werden. Daher ist es besser, den Fehler zu unterdrücken.
+- **Ist das Problem relevant, wenn Benutzer aktiv andere Programme verwenden?** Wenn ja, sollten Sie das Problem mithilfe eines [Infobereichssymbols](winenv-notification.md)anzeigen.
+- **Steht das Problem nicht im Zusammenhang mit der aktuellen Benutzeraktivität, erfordert es keine sofortige Benutzeraktion, und können Benutzer es frei ignorieren?** Verwenden Sie in diesem Falle stattdessen eine [Aktionsfehlerbenachrichtigung.](mess-notif.md)
+- **Bezieht sich das Problem auf den Status einer Hintergrundaufgabe in einem primären Fenster?** Falls ja, sollten Sie das Problem mithilfe einer [Statusleiste](ctrl-status-bars.md)anzeigen.
+- **Sind die IT-Experten der primären Zielbenutzer?** Falls ja, sollten Sie einen alternativen Feedbackmechanismus verwenden, z. B. [Protokolldateieinträge](glossary.md) oder E-Mail-Warnungen. IT-Experten bevorzugen Protokolldateien dringend für nicht kritische Informationen.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-**Die Merkmale von schlechten Fehlermeldungen**
+**Merkmale von fehlerhaften Fehlermeldungen**
 
-Es sollte nicht überraschend sein, dass es viele Fehlermeldungen gibt, die fehlerhaft, nicht hilfreich und unzureichend geschrieben sind. Und da Fehlermeldungen häufig mithilfe von modalen Dialogfeldern angezeigt werden, unterbrechen Sie die aktuelle Aktivität des Benutzers und verlangen, dass Sie bestätigt werden, bevor der Benutzer den Vorgang fortsetzen kann.
+Es sollte keine Überraschung sein, dass es viele heitere, nicht hilfreiche und schlecht geschriebene Fehlermeldungen gibt. Und da Fehlermeldungen häufig mit modalen Dialogen angezeigt werden, unterbrechen sie die aktuelle Aktivität des Benutzers und fordern, bestätigt zu werden, bevor der Benutzer fortfahren kann.
 
-Ein Teil des Problems ist, dass es so viele Möglichkeiten gibt, das Problem zu beheben. Beachten Sie diese Beispiele in der Fehlermeldung Hall of Shame:
+Ein Teil des Problems besteht darin, dass es so viele Möglichkeiten gibt, dies zu verfehlen. Sehen Sie sich diese Beispiele aus der Error Message Hall of Aussage an:
 
 **Unnötige Fehlermeldungen**
 
 **Falsch:**
 
-![Screenshot der Fehlermeldung: Fehler bei der Anwendung. ](images/mess-error-image2.png)
+![Screenshot der Fehlermeldung: Fehler bei der Anwendung ](images/mess-error-image2.png)
 
-Dieses Beispiel aus Windows XP ist möglicherweise die schlechteste Fehlermeldung. Es zeigt an, dass ein Programm nicht gestartet werden konnte, da Windows selbst gerade heruntergefahren wird. Es gibt nichts, was der Benutzer in diesem Fall tun kann oder was Sie tun möchten (der Benutzer hat sich entschieden, Windows herunterzufahren). Und wenn Sie diese Fehlermeldung anzeigen, verhindert Windows das Herunterfahren.
+Dieses Beispiel aus Windows XP ist möglicherweise die schlechteste Fehlermeldung überhaupt. Es gibt an, dass ein Programm nicht gestartet werden konnte, da Windows selbst gerade heruntergefahren wird. Es gibt nichts, was der Benutzer dagegen tun kann oder dies sogar tun möchte (der Benutzer hat sich entschieden, Windows schließlich herunterzufahren). Und durch das Anzeigen dieser Fehlermeldung verhindert Windows das Herunterfahren!
 
-**Das Problem:** Die Fehlermeldung selbst ist das Problem. Abgesehen davon, dass die Fehlermeldung verworfen wird, gibt es für die Benutzer nichts zu tun.
+**Das Problem:** Die Fehlermeldung selbst ist das Problem. Abgesehen davon, dass die Fehlermeldung verworfen wird, müssen Benutzer nichts tun.
 
-**Führende Ursache:** Alle Fehlerfälle werden gemeldet, unabhängig von den Zielen oder der Sicht der Benutzer.
+**Häufigste Ursache:** Berichterstellung für alle Fehlerfälle, unabhängig von den Zielen oder Sicht des Benutzers.
 
-**Empfohlene Alternative:** Melden Sie keine Fehler, die Benutzern nicht wichtig sind.
+**Empfohlene Alternative:** Melden Sie keine Fehler, die Benutzern egal sind.
 
-**Erfolgs Fehlermeldungen**
-
-**Falsch:**
-
-![Screenshot der Fehlermeldung: Entfernungs Fehler ](images/mess-error-image3.png)
-
-Diese Fehlermeldung ist darauf zurückzuführen, dass der Benutzer nicht sofort nach der Programm Entfernung neu gestartet wird. Die Programm Entfernung war aus Sicht des Benutzers erfolgreich.
-
-**Das Problem:** Aus Sicht des Benutzers gibt es keinen Fehler. Abgesehen davon, dass die Fehlermeldung verworfen wird, gibt es für die Benutzer nichts zu tun.
-
-**Führende Ursache:** Die Aufgabe wurde erfolgreich aus der Sicht des Benutzers abgeschlossen, konnte jedoch nicht aus der Sicht des Programms deinstalliert werden.
-
-**Empfohlene Alternative:** Keine Fehlermeldung für Bedingungen, die von Benutzern als akzeptabel angesehen werden.
-
-**Vollständig nutzlose Fehlermeldungen**
+**Fehlermeldungen zu "Erfolg"**
 
 **Falsch:**
 
-![Screenshot der Fehlermeldung: Unbekannter Fehler. ](images/mess-error-image4.png)
+![Screenshot der Fehlermeldung: Entfernungsfehler ](images/mess-error-image3.png)
 
-Benutzer erfahren, dass ein Fehler aufgetreten ist, aber Sie haben keine Ahnung, was der Fehler war oder was zu tun ist. Und Nein, das ist nicht OK!
+Diese Fehlermeldung hat dazu geführt, dass der Benutzer Windows nicht sofort nach dem Entfernen des Programms neu startet. Das Entfernen des Programms war aus Sicht des Benutzers erfolgreich.
 
-**Das Problem:** Die Fehlermeldung gibt kein bestimmtes Problem aus, und Benutzer können damit nichts tun.
+**Das Problem:** Aus Sicht des Benutzers tritt kein Fehler auf. Abgesehen davon, dass die Fehlermeldung verworfen wird, müssen Benutzer nichts tun.
 
-**Führende Ursache:** Höchstwahrscheinlich weist das Programm eine schlechte Fehlerbehandlung auf.
+**Häufigste Ursache:** Die Aufgabe wurde aus Sicht des Benutzers erfolgreich abgeschlossen, ist aber aus Sicht des Deinstallationsprogramms fehlgeschlagen.
+
+**Empfohlene Alternative:** Melden Sie keine Fehler für Bedingungen, die Benutzer als akzeptabel betrachten.
+
+**Vollständig unbrauchbare Fehlermeldungen**
+
+**Falsch:**
+
+![Screenshot der Fehlermeldung: unbekannter Fehler ](images/mess-error-image4.png)
+
+Benutzer erfahren, dass ein Fehler aufgetreten ist, haben aber keine Vorstellung davon, was der Fehler war oder wie er behoben werden soll. Und nein, das ist nicht in Ordnung!
+
+**Das Problem:** Die Fehlermeldung stellt kein bestimmtes Problem dar, und es gibt keine Benutzer, die dafür sorgen können.
+
+**Häufigste Ursache:** Höchstwahrscheinlich weist das Programm eine schlechte Fehlerbehandlung auf.
 
 **Empfohlene Alternative:** Entwerfen Sie eine gute Fehlerbehandlung im Programm.
 
@@ -95,476 +95,445 @@ Benutzer erfahren, dass ein Fehler aufgetreten ist, aber Sie haben keine Ahnung,
 
 **Falsch:**
 
-![Screenshot der Fehlermeldung: Sicherung ist nicht vollständig. ](images/mess-error-image5.png)
+![Screenshot der Fehlermeldung: Sicherung nicht abgeschlossen ](images/mess-error-image5.png)
 
-In diesem Beispiel ist die Problem Erklärung klar, aber die ergänzende Erläuterung ist vollkommen.
+In diesem Beispiel ist die Problem-Anweisung klar, aber die ergänzende Erklärung ist völlig verwirrend.
 
-**Das Problem:** Die Problem Erklärung oder Lösung ist unverständlich.
+**Das Problem:** Die Problem-Anweisung oder -Lösung ist nicht verständlich.
 
-**Führende Ursache:** Die Erläuterung des Problems aus der Sicht des Codes anstelle der des Benutzers.
+**Häufigste Ursache:** Erläuterung des Problems aus der Codesicht anstelle der des Benutzers.
 
-**Empfohlene Alternative:** Schreiben Sie Fehlermeldungs Text, der ihren Ziel Benutzern leicht verständlich ist. Bereitstellen von Lösungen, die Benutzer tatsächlich durchführen können. Entwerfen Sie die Fehlermeldung des Programms, dass Programmierer keine Fehlermeldungen an der Stelle verfassen.
+**Empfohlene Alternative:** Schreiben Sie einen Fehlermeldungstext, den Ihre Zielbenutzer leicht verstehen können. Stellen Sie Lösungen bereit, die Benutzer tatsächlich ausführen können. Entwerfen Sie die Fehlermeldungserfahrung Ihres Programms, ohne dass Programmierer Fehlermeldungen an Ort und Stelle erstellen.
 
-**Übermäßige Fehlermeldungen**
+**Fehlermeldungen, die zu stark kommunizieren**
 
 **Falsch:**
 
-![Screenshot der äußerst ausführlichen Meldung ](images/mess-error-image6.png)
+![Screenshot der extrem ausführlichen Meldung ](images/mess-error-image6.png)
 
-In diesem Beispiel versucht die Fehlermeldung, jeden Fehler Behebungs Schritt zu erläutern.
+In diesem Beispiel versucht die Fehlermeldung scheinbar, jeden Problembehandlungsschritt zu erklären.
 
 **Das Problem:** Zu viele Informationen.
 
-**Führende Ursache:** Es werden zu viele Details angezeigt, oder es wurde versucht, einen komplizierten Problem Behandlungsprozess in einer Fehlermeldung zu erläutern.
+**Häufigste Ursache:** Geben Sie zu viele Details an, oder versuchen Sie, einen komplizierten Problembehandlungsprozess innerhalb einer Fehlermeldung zu erklären.
 
-**Empfohlene Alternative:** Vermeiden Sie unnötige Details. Vermeiden Sie außerdem Problembehandlung. Wenn eine Problembehandlung erforderlich ist, konzentrieren Sie sich auf die wahrscheinlichsten Lösungen, und erläutern Sie den Rest, indem Sie eine Verknüpfung mit dem entsprechenden Thema in der Hilfe herstellen.
+**Empfohlene Alternative:** Vermeiden Sie unnötige Details. Vermeiden Sie außerdem Problembehandlungen. Wenn eine Problembehandlung erforderlich ist, konzentrieren Sie sich auf die wahrscheinlichsten Lösungen, und erläutern Sie den Rest, indem Sie mit dem entsprechenden Thema in der Hilfe verknüpfen.
 
-**Unnötigerweise harte Fehlermeldungen**
-
-**Falsch:**
-
-![Screenshot der Meldung: Objekt kann nicht gefunden werden. ](images/mess-error-image7.png)
-
-Das Programm ist nicht in der Lage, ein Objekt zu finden, klingt kaum etwas. Und wenn es sich um eine Katastrophe handelt, warum ist die Antwort in Ordnung?
-
-**Das Problem:** Der Ton des Programms ist unnötig hart oder dramatisch.
-
-**Führende Ursache:** Das Problem ist auf einen Fehler zurückzuführen, der aus der Sicht des Programms schwerwiegend erscheint.
-
-**Empfohlene Alternative:** Wählen Sie die Sprache auf der Grundlage der Sicht des Benutzers sorgfältig aus.
-
-**Fehlermeldungen, die Benutzer als Schuld zuweisen**
+**Unnötig unerklärliche Fehlermeldungen**
 
 **Falsch:**
 
-![Screenshot der Meldung: Ungültiges Zeichen ](images/mess-error-image8.png)
+![Screenshot der Meldung: Objekt kann nicht gefunden werden ](images/mess-error-image7.png)
 
-Warum fühlen sich die Benutzer als kriminell?
+Die Unfähigkeit des Programms, ein Objekt zu finden, klingt fatal. Und unter der Annahme, dass es sich um eine schwerwiegende Antwort handelt, warum ist die Antwort OK?
 
-**Das Problem:** Die Fehlermeldung wird so formuliert, dass der Benutzer eine Fehlermeldung sendet.
+**Das Problem:** Der Ton des Programms ist unnötig mäßig oder drastisch.
 
-**Führende Ursache:** Unempfindliche Formulierung, bei der es sich um das Verhalten des Benutzers und nicht um das Problem handelt.
+**Häufigste Ursache:** Das Problem ist auf einen Fehler zurückzuführen, der aus Programmsicht schwerwiegende Auswirkungen hat.
 
-**Empfohlene Alternative:** Konzentrieren Sie sich auf das Problem, nicht auf die Benutzeraktion, die zu dem Problem geführt hat, und verwenden Sie die passive Stimme nach Bedarf.
+**Empfohlene Alternative:** Wählen Sie die Sprache basierend auf dem Standpunkt des Benutzers sorgfältig aus.
 
-**Dumme Fehlermeldungen**
+**Fehlermeldungen, die Benutzern die Verantwortung geben**
+
+**Falsch:**
+
+![Screenshot der Meldung: ungültiges Zeichen ](images/mess-error-image8.png)
+
+Warum sollen Benutzer sich als Verkriminaler fühlen?
+
+**Das Problem:** Die Fehlermeldung wird so formuliert, dass der Benutzer einen Fehler verursacht.
+
+**Führende Ursache:** Unempfindliche Ausdrücke, die sich auf das Verhalten des Benutzers konzentrieren, anstatt auf das Problem.
+
+**Empfohlene Alternative:** Konzentrieren Sie sich auf das Problem, nicht auf die Benutzeraktion, die zu dem Problem geführt hat, und verwenden Sie bei Bedarf die passive Stimme.
+
+**Silly-Fehlermeldungen**
 
 **Falsch:**
 
 ![Screenshot der Meldung: Fehler im Fehlerbericht ](images/mess-error-image9.png)
 
-In diesem Beispiel ist die Problem Erklärung ziemlich ironisch, und es werden keine Lösungen bereitgestellt.
+In diesem Beispiel ist die Problem-Anweisung recht ironisch, und es werden keine Lösungen bereitgestellt.
 
-**Das Problem:** Fehlermeldungs Anweisungen, bei denen es sich um dumme oder nicht-sequenzielle handelt.
+**Das Problem:** Fehlermeldungen, die dumm oder nicht sequitors sind.
 
-**Führende Ursache:** Erstellen von Fehlermeldungen ohne Beachtung ihres Kontexts.
+**Häufigste Ursache:** Erstellen von Fehlermeldungen, ohne auf ihren Kontext zu achten.
 
-**Empfohlene Alternative:** Lassen Sie die Fehlermeldungen von einem Writer erstellt und überprüft werden. Berücksichtigen Sie den Kontext und den Benutzer Zustand, wenn Sie die Fehler überprüfen.
+**Empfohlene Alternative:** Lassen Sie Ihre Fehlermeldungen von einem Writer erstellen und überprüfen. Berücksichtigen Sie bei der Überprüfung der Fehler den Kontext und den Benutzerzustand.
 
-**Programmierer-Fehlermeldungen**
+**Fehlermeldungen des Programmierers**
 
 **Falsch:**
 
-![Screenshot der Meldung: Zugriffs Verletzungs Adresse ](images/mess-error-image10.png)
+![Screenshot der Meldung: Adresse der Zugriffsverletzung ](images/mess-error-image10.png)
 
-In diesem Beispiel gibt die Fehlermeldung an, dass ein Fehler im Programm vorliegt. Diese Fehlermeldung ist nur für den Programmierer von Bedeutung.
+In diesem Beispiel gibt die Fehlermeldung an, dass im Programm ein Fehler aufgetreten ist. Diese Fehlermeldung hat nur für den Programmierer eine Bedeutung.
 
-**Das Problem:** Nachrichten, die den Entwicklern des Programms helfen sollen, Fehler zu finden, bleiben in der Releaseversion des Programms erhalten. Diese Fehlermeldungen haben keine Bedeutung oder einen Wert für Benutzer.
+**Das Problem:** Nachrichten, die entwicklern helfen sollen, Fehler zu finden, sind in der Releaseversion des Programms enthalten. Diese Fehlermeldungen haben keine Bedeutung oder keinen Wert für Benutzer.
 
-**Führende Ursache:** Programmierer, die die normale Benutzeroberfläche verwenden, um Nachrichten zu erstellen.
+**Führende Ursache:** Programmierer verwenden die normale Benutzeroberfläche, um Nachrichten an sich selbst zu senden.
 
-**Empfohlene Alternative:** Entwickler müssen alle diese Nachrichten bedingt kompilieren, damit Sie automatisch aus der Releaseversion eines Produkts entfernt werden. Verschwenden Sie keine Zeit, wenn Sie versuchen, Fehler wie diese für Benutzer verständlich zu machen, da ihre einzige Zielgruppe die Programmierer sind.
+**Empfohlene Alternative:** Entwickler müssen alle derartigen Nachrichten bedingt kompilieren, damit sie automatisch aus der Releaseversion eines Produkts entfernt werden. Verschwenden Sie keine Zeit damit, Fehler wie diese für Benutzer zu verursachen, da ihre einzige Zielgruppe die Programmierer sind.
 
-**Fehlermeldungen mit schlechter Präsentation**
+**Schlecht dargestellte Fehlermeldungen**
 
 **Falsch:**
 
 ![Screenshot der Meldung: Unerwarteter Fehler ](images/mess-error-image11.png)
 
-Dieses Beispiel enthält viele gängige Präsentations Fehler.
+Dieses Beispiel weist viele häufige Präsentationsfehler auf.
 
-**Das Problem:** Alle Details werden in der Fehlermeldungs Präsentation falsch angezeigt.
+**Das Problem:** Alle Details werden in der Fehlermeldungspräsentation falsch angezeigt.
 
-**Führende Ursache:** Die Richtlinien für die Fehlermeldung werden nicht kennen und angewendet. Die Verwendung von Writer und Editoren zum Erstellen und Überprüfen der Fehlermeldungen wird nicht verwendet.
+**Führende Ursache:** Die Richtlinien für Fehlermeldungen sind nicht bekannt und werden nicht angewendet. Verwenden Sie keine Writer und Editoren, um die Fehlermeldungen zu erstellen und zu überprüfen.
 
-Die Art der Fehlerbehandlung ist so, dass viele dieser Fehler sehr einfach zu erstellen sind. Es ist beunruhigend zu erkennen, dass die meisten Fehlermeldungen für die Hall of Shame als Kandidaten gelten könnten.
+Die Art der Fehlerbehandlung ist so, dass viele dieser Fehler sehr einfach zu machen sind. Es ist unerwünslich zu erkennen, dass die meisten Fehlermeldungen für die Hall of Aushängesentschärft sein können.
 
 **Die Merkmale von guten Fehlermeldungen**
 
-Im Gegensatz zu den vorherigen, schlechten Beispielen haben gute Fehlermeldungen Folgendes:
+Im Gegensatz zu den vorherigen fehlerhaften Beispielen weisen gute Fehlermeldungen Folgendes auf:
 
 - **Ein Problem.** Gibt an, dass ein Problem aufgetreten ist.
 - **Eine Ursache.** Erläutert, warum das Problem aufgetreten ist.
-- **Eine-Lösung.** Bietet eine Lösung, mit der Benutzer das Problem beheben können.
+- **Eine Lösung.** Stellt eine Lösung bereit, damit Benutzer das Problem beheben können.
 
-Außerdem werden gute Fehlermeldungen wie folgt dargestellt:
+Darüber hinaus werden gute Fehlermeldungen in einer Weise angezeigt, die wie dies ist:
 
-- **Dienliche.** Die Meldung stellt ein Problem dar, das Benutzern wichtig ist.
-- **Verwertbare.** Benutzer sollten entweder eine Aktion ausführen oder Ihr Verhalten als Ergebnis der Nachricht ändern.
-- **Benutzer zentriert.** In der Meldung wird das Problem in Bezug auf die Ziel Benutzeraktionen oder-Ziele beschrieben, nicht in Bezug auf den Code, mit dem der Code nicht zufrieden ist.
+- **Relevanten.** Die Meldung stellt ein Problem dar, das den Benutzern wichtig ist.
+- **Umsetzbare.** Benutzer sollten entweder eine Aktion ausführen oder ihr Verhalten als Ergebnis der Nachricht ändern.
+- **Benutzerzentriert.** In der Meldung wird das Problem in Bezug auf Aktionen oder Ziele von Zielbenutzern beschrieben, nicht in Bezug auf das, was der Code nicht betrifft.
 - **Kurze.** Die Nachricht ist so kurz wie möglich, aber nicht kürzer.
-- **Klartext.** In der Meldung wird eine einfache Sprache verwendet, damit die Ziel Benutzer Probleme und Lösungen leicht verstehen können.
-- **Zugeschnitten.** In der Meldung wird das Problem in einer bestimmten Sprache beschrieben. dabei werden bestimmte Namen, Speicherorte und Werte der betroffenen Objekte bereit gegeben.
-- **Liche.** Benutzer sollten nicht beschuldigt werden, oder Sie werden nicht als dumm fest gemacht.
-- **Ere.** Wird nur selten angezeigt. Häufig angezeigte Fehlermeldungen sind ein Anzeichen für ein ungültiges Design.
+- **Klar.** Die Nachricht verwendet eine einfache Sprache, damit die Zielbenutzer das Problem und die Lösung leicht verstehen können.
+- **Bestimmten.** In der Meldung wird das Problem mithilfe einer bestimmten Sprache beschrieben, wobei bestimmte Namen, Speicherorte und Werte der beteiligten Objekte angegeben werden.
+- **Höflich.** Benutzer sollten nicht dafür verantwortlich gemacht werden oder sich nicht verunreinigen lassen.
+- **Selten.** Wird selten angezeigt. Häufig angezeigte Fehlermeldungen sind ein Anzeichen für einen fehlerhaften Entwurf.
 
-Wenn Sie die Fehlerbehandlung für diese Merkmale entwerfen, können Sie die Fehlermeldungen Ihres Programms aus der Fehlermeldungs-Hall der Schande bewahren.
+Indem Sie ihre Fehlerbehandlungserfahrung so entwerfen, dass sie diese Merkmale aufweist, können Sie die Fehlermeldungen Ihres Programms aus der Fehlermeldungssumerierung heraushalten.
 
 **Vermeiden unnötiger Fehlermeldungen**
 
-Häufig ist die beste Fehlermeldung keine Fehlermeldung. Viele Fehler können durch einen besseren Entwurf vermieden werden, und es gibt häufig bessere Alternativen zu Fehlermeldungen. Es ist in der Regel besser, einen Fehler zu vermeiden, als einen Bericht zu melden.
+Häufig ist die beste Fehlermeldung keine Fehlermeldung. Viele Fehler können durch einen besseren Entwurf vermieden werden, und es gibt häufig bessere Alternativen zu Fehlermeldungen. In der Regel ist es besser, einen Fehler zu verhindern, als einen Fehler zu melden.
 
-Die offensichtlichsten Fehlermeldungen, die vermieden werden können, sind solche, die nicht durchführbar sind. Wenn Benutzer die Nachricht wahrscheinlich ohne Änderung verwerfen, lassen Sie die Fehlermeldung Weg.
+Die offensichtlichsten Fehlermeldungen, die vermieden werden müssen, sind solche, die nicht umsetzbar sind. Wenn Benutzer die Nachricht wahrscheinlich schließen, ohne etwas zu tun oder zu ändern, lassen Sie die Fehlermeldung aus.
 
-Einige Fehlermeldungen können gelöscht werden, da Sie keine Probleme aus der Sicht des Benutzers haben. Angenommen, der Benutzer hat versucht, eine Datei zu löschen, die bereits gerade gelöscht wird. Dies kann ein unerwarteter Fall aus der Sicht des Codes sein. Benutzer betrachten dies jedoch nicht als Fehler, da das gewünschte Ergebnis erreicht wird.
+Einige Fehlermeldungen können entfernt werden, da sie aus Sicht des Benutzers keine Probleme darstellen. Angenommen, der Benutzer hat versucht, eine Datei zu löschen, die gerade gelöscht wird. Obwohl dies aus Codesicht ein unerwarteter Fall sein kann, betrachten Benutzer dies nicht als Fehler, da ihr gewünschtes Ergebnis erreicht wird.
 
 **Falsch:**
 
 ![Screenshot der Meldung: Datei kann nicht gelöscht werden ](images/mess-error-image12.png)
 
-Diese Fehlermeldung sollte gelöscht werden, da die Aktion aus Sicht des Benutzers erfolgreich war.
+Diese Fehlermeldung sollte entfernt werden, da die Aktion aus Sicht des Benutzers erfolgreich war.
 
-Ein weiteres Beispiel ist, dass der Benutzer eine Aufgabe explizit abbricht. Aus Sicht des Benutzers ist die folgende Bedingung kein Fehler.
-
-**Falsch:**
-
-![Screenshot der Meldung: Sicherung kann nicht vollständig ausgeführt werden ](images/mess-error-image13.png)
-
-Diese Fehlermeldung sollte auch gelöscht werden, da die Aktion aus Sicht des Benutzers erfolgreich war.
-
-Manchmal können Fehlermeldungen vermieden werden, indem Sie sich auf die Ziele der Benutzer anstatt auf die Technologie konzentrieren. Überdenken Sie dabei, was ein Fehler wirklich ist. Liegt das Problem bei den Benutzer Zielen oder der Fähigkeit Ihres Programms, Sie zu erfüllen? Wenn die Aktion des Benutzers in der realen Welt sinnvoll ist, sollte dies auch in Software sinnvoll sein.
-
-Nehmen wir beispielsweise an, dass ein Benutzer in einem e-Commerce-Programm versucht, ein Produkt mithilfe von Search zu finden, aber die Literale Suchabfrage hat keine Übereinstimmungen, und das gewünschte Produkt ist nicht mehr vorrätig. Technisch gesehen handelt es sich hierbei um einen Fehler, aber anstelle einer Fehlermeldung könnte das Programm Folgendes ausführen:
-
-- Suchen Sie weiterhin nach Produkten, die der Abfrage am ehesten entsprechen.
-- Wenn bei der Suche offensichtliche Fehler auftreten, sollten Sie automatisch eine korrigierte Abfrage empfehlen.
-- Behandeln Sie häufige Probleme, wie z. b. falsche Schreibweise, Alternative Rechtschreibprüfungen und nicht übereinstimmende pluralisierungs-und Verb Fälle.
-- Geben Sie an, wann das Produkt in der Aktien Version angezeigt wird.
-
-Solange die Anforderung des Benutzers angemessen ist, sollte ein gut konzipiertes e-Commerce-Programm sinnvolle Ergebnisse als Fehler zurückgeben.
-
-Eine weitere gute Möglichkeit, Fehlermeldungen zu vermeiden, besteht darin, Probleme an erster Stelle zu vermeiden. Sie können Fehler vermeiden, indem Sie Folgendes ausführen:
-
-- **Verwenden von eingeschränkten Steuerelementen.** Verwenden Sie Steuerelemente, die auf gültige Werte beschränkt sind. Steuerelemente wie Listen, Schieberegler, Kontrollkästchen, Options Felder und Datums-und Uhrzeit-Picker sind auf gültige Werte beschränkt, während Textfelder oft nicht sind und möglicherweise Fehlermeldungen erfordern. Sie können jedoch Textfelder einschränken, um nur bestimmte Zeichen zu akzeptieren und eine maximale Anzahl von Zeichen zu akzeptieren.
-- **Verwenden von eingeschränkten Interaktionen.** Erlauben Sie Benutzern bei Drag-Vorgängen nur das Ablegen gültiger Ziele.
-- **Verwenden deaktivierter Steuerelemente und Menü Elemente.** Deaktivieren Sie Steuerelemente und Menü Elemente, wenn Benutzer leicht ableiten können, warum das Steuerelement oder das Menü Element deaktiviert ist.
-- **Gute Standardwerte werden bereitgestellt.** Die Wahrscheinlichkeit, dass Benutzer die Standardwerte übernehmen können, ist weniger wahrscheinlich. Selbst wenn Benutzer sich entscheiden, den Wert zu ändern, können Benutzer mit dem Standardwert das erwartete Eingabeformat erkennen.
-- **Alles funktioniert einfach.** Es ist weniger wahrscheinlich, dass Benutzerfehler machen, wenn die Aufgaben unnötig sind oder automatisch ausgeführt werden. Wenn Benutzer kleine Fehler machen, deren Absicht aber klar ist, wird das Problem automatisch behoben. Beispielsweise können kleinere Formatierungs Probleme automatisch behoben werden.
-
-**Bereitstellen von erforderlichen Fehlermeldungen**
-
-Manchmal müssen Sie tatsächlich eine Fehlermeldung angeben. Benutzer führen zu Fehlern, Netzwerke und Geräte funktionieren nicht mehr, Objekte können nicht gefunden oder geändert werden, Aufgaben können nicht abgeschlossen werden, und Programme haben Fehler. Im Idealfall würden diese Probleme seltener auftreten. Wir können unsere Software so entwerfen, dass viele Arten von Benutzerfehlern vermieden werden, aber es ist nicht realistisch, alle diese Probleme zu vermeiden. Und wenn eines dieser Probleme auftritt, werden Benutzer durch eine hilfreiche Fehlermeldung schnell wieder auf den Fuß gelangen.
-
-Eine gängige Annahme ist, dass Fehlermeldungen die schlechteste Benutzer Leistung sind und bei allen Kosten vermieden werden sollten. es ist jedoch genauer gesagt zu sagen, dass die Benutzer Verwirrung das Schlimmste ist, und sollte bei allen Kosten vermieden werden. Manchmal sind diese Kosten eine hilfreiche Fehlermeldung.
-
-Deaktivieren Sie deaktivierte Steuerelemente In den meisten Fällen ist es offensichtlich, warum ein Steuerelement deaktiviert ist, sodass das Deaktivieren des Steuer Elements eine gute Möglichkeit ist, eine Fehlermeldung zu vermeiden. Was aber, wenn der Grund für die Deaktivierung eines Steuer Elements nicht offensichtlich ist? Der Benutzer kann nicht fortfahren, und es gibt kein Feedback, um das Problem zu ermitteln. Jetzt ist der Benutzer nicht mehr da und muss entweder das Problem ableiten oder technischen Support erhalten. In solchen Fällen ist es viel besser, das Steuerelement aktiviert zu lassen und stattdessen eine hilfreiche Fehlermeldung zu erhalten.
+Ein weiteres Beispiel: Angenommen, der Benutzer bricht eine Aufgabe explizit ab. Aus Sicht des Benutzers ist die folgende Bedingung kein Fehler.
 
 **Falsch:**
 
-![Screenshot der Meldung: wo speichern Sie die Sicherung? ](images/mess-error-image14.png)
+![Screenshot der Meldung: Sicherung kann nicht abgeschlossen werden ](images/mess-error-image13.png)
 
-Warum wird die Schaltfläche "weiter" hier deaktiviert? Sie sollten es besser aktivieren und die Benutzer Verwirrung vermeiden, indem Sie eine hilfreiche Fehlermeldung senden.
+Diese Fehlermeldung sollte auch entfernt werden, da die Aktion aus Sicht des Benutzers erfolgreich war.
 
-Wenn Sie nicht sicher sind, ob Sie eine Fehlermeldung erhalten sollten, erstellen Sie zunächst die Fehlermeldung, die Sie möglicherweise erhalten. Wenn Benutzer wahrscheinlich entweder eine Aktion ausführen oder Ihr Verhalten als Ergebnis ändern, geben Sie die Fehlermeldung an. Wenn Benutzer die Nachricht jedoch wahrscheinlich ohne Änderung verwerfen, lassen Sie die Fehlermeldung Weg.
+Manchmal können Fehlermeldungen vermieden werden, indem sie sich auf die Ziele der Benutzer und nicht auf die Technologie konzentrieren. Überprüfen Sie dabei, was ein Fehler tatsächlich ist. Liegt das Problem mit den Zielen des Benutzers oder mit der Fähigkeit Ihres Programms, diese zu erfüllen? Wenn die Aktion des Benutzers in der realen Welt sinnvoll ist, sollte dies auch in der Software sinnvoll sein.
+
+Nehmen wir beispielsweise an, dass ein Benutzer innerhalb eines E-Commerce-Programms versucht, ein Produkt mithilfe der Suche zu finden, aber die Literalsuchabfrage hat keine Übereinstimmungen, und das gewünschte Produkt ist nicht mehr vorrätig. Technisch gesehen ist dies ein Fehler, aber anstatt eine Fehlermeldung zu geben, könnte das Programm:
+
+- Suchen Sie weiterhin nach Produkten, die der Abfrage am besten entsprechen.
+- Wenn die Suche offensichtliche Fehler enthält, empfiehlt automatisch eine korrigierte Abfrage.
+- Behandeln Sie häufig auftretende Probleme wie Rechtschreibfehler, alternative Rechtschreibungen und nicht übereinstimmende Pluralisierungs- und Verbfälle automatisch.
+- Geben Sie an, wann das Produkt vorrätig ist.
+
+Solange die Anforderung des Benutzers angemessen ist, sollte ein gut entworfenes E-Commerce-Programm angemessene Ergebnisse und keine Fehler zurückgeben.
+
+Eine weitere hervorragende Möglichkeit, Fehlermeldungen zu vermeiden, besteht darin, Probleme überhaupt zu vermeiden. Sie können Fehler verhindern, indem Sie:
+
+- **Verwenden von eingeschränkten Steuerelementen.** Verwenden Sie Steuerelemente, die auf gültige Werte beschränkt sind. Steuerelemente wie Listen, Schieberegler, Kontrollkästchen, Optionsfelder und Datums- und Uhrzeitauswahl sind auf gültige Werte beschränkt, während Textfelder häufig nicht sind und möglicherweise Fehlermeldungen erfordern. Sie können Textfelder jedoch einschränken, um nur bestimmte Zeichen und eine maximale Anzahl von Zeichen zu akzeptieren.
+- **Verwenden von eingeschränkten Interaktionen.** Erlauben Sie Benutzern bei Ziehvorgängen, nur gültige Ziele zu löschen.
+- **Verwenden deaktivierter Steuerelemente und Menüelemente.** Deaktivieren Sie Steuerelemente und Menüelemente, wenn Benutzer leicht ableiten können, warum das Steuerelement oder Menüelement deaktiviert ist.
+- **Bereitstellen guter Standardwerte.** Benutzer sind weniger wahrscheinlich, Eingabefehler zu machen, wenn sie die Standardwerte akzeptieren können. Auch wenn Benutzer sich entscheiden, den Wert zu ändern, informiert der Standardwert Benutzer über das erwartete Eingabeformat.
+- **Die Dinge einfach funktionieren.** Benutzer machen weniger Fehler, wenn die Aufgaben für sie nicht erforderlich sind oder automatisch ausgeführt werden. Wenn Benutzer kleine Fehler machen, aber ihre Absicht klar ist, wird das Problem automatisch behoben. Beispielsweise können Sie kleinere Formatierungsprobleme automatisch beheben.
+
+**Bereitstellen der erforderlichen Fehlermeldungen**
+
+Manchmal müssen Sie tatsächlich eine Fehlermeldung bereitstellen. Benutzer machen Fehler, Netzwerke und Geräte funktionieren nicht mehr, Objekte können nicht gefunden oder geändert werden, Aufgaben können nicht abgeschlossen werden, und Programme haben Fehler. Im Idealfall würden diese Probleme weniger häufig auftreten, z. B. können wir unsere Software so entwerfen, dass viele Arten von Benutzerfehlern verhindert werden, aber es ist nicht realistisch, all diese Probleme zu verhindern. Und wenn eines dieser Probleme auftritt, führt eine hilfreiche Fehlermeldung dazu, dass Benutzer schnell wieder auf dem Richtigen sind.
+
+Eine gängige Annahme ist, dass Fehlermeldungen die schlechteste Benutzererfahrung sind und um alle Kosten vermieden werden sollten. Es ist jedoch genauer zu sagen, dass Benutzerverwechslungen die schlechteste Erfahrung sind und um alle Kosten vermieden werden sollten. Manchmal sind diese Kosten eine hilfreiche Fehlermeldung.
+
+Ziehen Sie deaktivierte Steuerelemente in Betracht. In den meisten Jahren ist es offensichtlich, warum ein Steuerelement deaktiviert ist. Daher ist das Deaktivieren des Steuerelements eine gute Möglichkeit, eine Fehlermeldung zu vermeiden. Was passiert jedoch, wenn der Grund, warum ein Steuerelement deaktiviert ist, nicht offensichtlich ist? Der Benutzer kann nicht fortfahren, und es gibt kein Feedback, um das Problem zu bestimmen. Jetzt bleibt der Benutzer hängen und muss entweder das Problem lösen oder technischen Support erhalten. In solchen Fällen ist es viel besser, das Steuerelement aktiviert zu lassen und stattdessen eine hilfreiche Fehlermeldung zu geben.
+
+**Falsch:**
+
+![Screenshot der Nachricht: Wo speichern Sie die Sicherung? ](images/mess-error-image14.png)
+
+Warum ist die Schaltfläche Weiter hier deaktiviert? Lassen Sie es besser aktiviert, und vermeiden Sie Benutzerverwechslungen, indem Sie eine hilfreiche Fehlermeldung geben.
+
+Wenn Sie nicht sicher sind, ob Sie eine Fehlermeldung senden sollten, beginnen Sie mit dem Verfassen der Fehlermeldung, die Sie möglicherweise geben. Wenn Benutzer wahrscheinlich entweder eine Aktion ausführen oder ihr Verhalten als Ergebnis ändern, geben Sie die Fehlermeldung an. Wenn Benutzer die Nachricht dagegen wahrscheinlich verlassen, ohne etwas zu tun oder zu ändern, sollten Sie die Fehlermeldung weglassen.
 
 **Entwerfen für eine gute Fehlerbehandlung**
 
-Obwohl das Erstellen von gutem Fehlermeldungs Text eine Herausforderung darstellen kann, ist es manchmal unmöglich, ohne eine gute Fehlerbehandlung durch das Programm zu unterstützen. Beachten Sie diese Fehlermeldung:
+Obwohl das Erstellen eines guten Fehlermeldungstexts schwierig sein kann, ist dies manchmal ohne eine gute Unterstützung der Fehlerbehandlung durch das Programm nicht möglich. Betrachten Sie diese Fehlermeldung:
 
 **Falsch:**
 
-![Screenshot der Meldung: Unbekannter Fehler. ](images/mess-error-image15.png)
+![Screenshot der Meldung: Unbekannter Fehler ](images/mess-error-image15.png)
 
-Die Wahrscheinlichkeit ist, dass das Problem wirklich unbekannt ist, weil die Fehler Behandlungs Unterstützung des Programms fehlt.
+Wahrscheinlich ist das Problem tatsächlich unbekannt, da die Unterstützung für die Fehlerbehandlung des Programms nicht besteht.
 
-Obwohl es möglich ist, dass es sich hierbei um eine sehr schlecht geschriebene Fehlermeldung handelt, ist es wahrscheinlicher, dass die fehlende gute Fehlerbehandlung durch den zugrunde liegenden Code nicht bekannt ist.
+Es ist zwar möglich, dass es sich um eine sehr schlecht geschriebene Fehlermeldung handelt, sie spiegelt jedoch wahrscheinlich die fehlende gute Fehlerbehandlung durch den zugrunde liegenden Code wider, es sind keine spezifischen Informationen zum Problem bekannt.
 
-Um bestimmte, Handlungs relevante, Benutzer zentrierte Fehlermeldungen zu erstellen, muss der Fehler Behandlungs Code des Programms bestimmte, Allgemeine Fehlerinformationen bereitstellen:
+Um spezifische, umsetzbare, benutzerzentrierte Fehlermeldungen zu erstellen, muss der Fehlerbehandlungscode Ihres Programms spezifische, auf hoher Ebene enthaltende Fehlerinformationen bereitstellen:
 
-- Jedem Problem sollte ein eindeutiger Fehlercode zugewiesen werden.
-- Wenn ein Problem mehrere Ursachen hat, sollte das Programm die jeweilige Ursache ermitteln, wann immer dies möglich ist.
+- Jedem Problem sollte ein eindeutiger Fehlercode zugewiesen sein.
+- Wenn ein Problem mehrere Ursachen hat, sollte das Programm nach Möglichkeit die spezifische Ursache ermitteln.
 - Wenn das Problem über Parameter verfügt, müssen die Parameter beibehalten werden.
-- Probleme auf niedriger Ebene müssen auf einer ausreichend hohen Ebene behandelt werden, damit die Fehlermeldung aus der Sicht des Benutzers angezeigt werden kann.
+- Probleme auf niedriger Ebene müssen auf einer ausreichend hohen Ebene behandelt werden, damit die Fehlermeldung aus Sicht des Benutzers angezeigt werden kann.
 
-Gute Fehlermeldungen sind nicht nur ein Problem mit der Benutzeroberfläche, sondern ein Software Entwurfsproblem. Ein guter Fehler bei der Fehlermeldung ist, dass Sie zu einem späteren Zeitpunkt nicht mehr in den Griff haben können.
+Gute Fehlermeldungen sind nicht nur ein Problem mit der Benutzeroberfläche, sondern ein Softwareentwurfsproblem. Eine gute Fehlermeldung ist nicht etwas, das später nicht mehr verwendet werden kann.
 
-**Problembehandlung (und Vorgehensweise beim vermeiden)**
+**Problembehandlung (und wie sie vermieden wird)**
 
-Fehler Behebungs Ergebnisse, wenn ein Problem mit mehreren unterschiedlichen Gründen mit einer einzelnen Fehlermeldung gemeldet wird.
-
-**Falsch:**
-
-![Diagramm einer Nachricht, die drei Gründe angibt ](images/mess-error-image16.png)
-
-**Richtig:**
-
-![Diagramm mit drei Nachrichten, die jeweils eine Ursache angeben](images/mess-error-image17.png)
-
-Problembehandlung, wenn mehrere Probleme mit einer einzelnen Fehlermeldung gemeldet werden.
-
-Im folgenden Beispiel konnte ein Element nicht verschoben werden, da es bereits verschoben oder gelöscht wurde oder der Zugriff verweigert wurde. Wenn das Programm die Ursache leicht ermitteln kann, warum sollten Sie den Benutzer belasten, um die genaue Ursache zu ermitteln?
+Problembehandlungsergebnisse, wenn ein Problem mit mehreren verschiedenen Ursachen mit einer einzelnen Fehlermeldung gemeldet wird.
 
 **Falsch:**
 
-![Screenshot der Meldung, die zwei Gründe angibt ](images/mess-error-image18.png)
-
-Und das ist das? Der Benutzer muss jetzt Probleme beheben.
-
-Das Programm kann ermitteln, ob der Zugriff verweigert wurde, sodass dieses Problem mit einer bestimmten Fehlermeldung gemeldet werden sollte.
+![Diagramm einer Meldung mit drei Ursachen ](images/mess-error-image16.png)
 
 **Richtig:**
 
-![Screenshot der Nachricht, die eine Ursache angibt ](images/mess-error-image19.png)
+![Diagramm mit drei Meldungen, die jeweils eine Ursache angeben](images/mess-error-image17.png)
 
-Mit einer bestimmten Ursache ist keine Problembehandlung erforderlich.
+Problembehandlungsergebnisse, wenn mehrere Probleme mit einer einzelnen Fehlermeldung gemeldet werden.
 
-Verwenden Sie Nachrichten mit mehreren Ursachen nur, wenn die jeweilige Ursache nicht ermittelt werden kann. In diesem Beispiel wäre es für das Programm schwierig zu bestimmen, ob das Element verschoben oder gelöscht wurde, sodass hier eine einzelne Fehlermeldung mit mehreren Gründen verwendet werden kann. Es ist jedoch unwahrscheinlich, dass Benutzer darauf achten, dass Sie z. b. eine gelöschte Datei nicht verschieben konnten. Aus diesen Gründen ist die Fehlermeldung nicht einmal erforderlich.
+Im folgenden Beispiel konnte ein Element nicht verschoben werden, da es bereits verschoben oder gelöscht wurde oder der Zugriff verweigert wurde. Wenn das Programm die Ursache leicht ermitteln kann, warum muss der Benutzer die spezifische Ursache ermitteln?
 
-**Behandeln von unbekannten Fehlern**
+**Falsch:**
 
-In einigen Fällen wissen Sie das Problem, die Ursache oder die Lösung wirklich nicht. Wenn es nicht erforderlich wäre, den Fehler zu unterdrücken, ist es besser, den Mangel an Informationen zu beheben, als Probleme, Ursachen oder Lösungen zu präsentieren, die möglicherweise nicht richtig sind.
+![Screenshot der Meldung mit zwei Ursachen ](images/mess-error-image18.png)
 
-Wenn das Programm z. b. eine nicht behandelte Ausnahme aufweist, ist die folgende Fehlermeldung geeignet:
+Was ist das? Nun muss der Benutzer eine Problembehandlung durchführen.
 
-![Screenshot der Meldung: Unbekannter Fehler aufgetreten. ](images/mess-error-image20.png)
+Das Programm kann ermitteln, ob der Zugriff verweigert wurde. Daher sollte dieses Problem mit einer bestimmten Fehlermeldung gemeldet werden.
 
-Wenn Sie einen unbekannten Fehler nicht unterdrücken können, ist es besser, sich über fehlende Informationen zu informieren.
+**Richtig:**
 
-Stellen Sie andererseits bestimmte, aussagekräftige Informationen bereit, wenn dies in den meisten Fällen hilfreich sein wird.
+![Screenshot der Meldung mit angabe einer Ursache ](images/mess-error-image19.png)
 
-![Screenshot, der die Meldung "Server nicht verfügbar" für Office Communicator anzeigt ](images/mess-error-image21.png)
+Bei einer bestimmten Ursache ist keine Problembehandlung erforderlich.
 
-Diese Fehlermeldung ist für einen unbekannten Fehler geeignet, wenn die Netzwerk Konnektivität in der Regel das Problem ist.
+Verwenden Sie Nachrichten mit mehreren Ursachen nur, wenn die spezifische Ursache nicht bestimmt werden kann. In diesem Beispiel wäre es für das Programm schwierig zu bestimmen, ob das Element verschoben oder gelöscht wurde. Daher kann hier eine einzelne Fehlermeldung mit mehreren Ursachen verwendet werden. Es ist jedoch unwahrscheinlich, dass sich Benutzer darum kümmern, wenn sie z. B. eine gelöschte Datei nicht verschieben können. Für diese Ursachen ist die Fehlermeldung nicht einmal erforderlich.
 
-**Bestimmen des geeigneten Nachrichten Typs**
+**Behandeln unbekannter Fehler**
 
-Einige Probleme können je nach Betonung und Formulierung als Fehler, Warnung oder Informationen angezeigt werden. Nehmen Sie beispielsweise an, eine Webseite kann ein nicht signiertes ActiveX-Steuerelement nicht auf Grundlage der aktuellen Windows Internet Explorer-Konfiguration laden:
+In einigen Fällen kennen Sie das Problem, die Ursache oder die Lösung nicht. Wenn es nicht unklug wäre, den Fehler zu unterdrücken, ist es besser, sich über das Fehlen von Informationen im Vordezüglich zu informieren, als Probleme, Ursachen oder Lösungen zu präsentieren, die möglicherweise nicht richtig sind.
 
-- **Zeit.** "Auf dieser Seite kann kein nicht signiertes ActiveX-Steuerelement geladen werden." (Als vorhandenes Problem formuliert.)
-- **Davor.** "Diese Seite verhält sich möglicherweise nicht wie erwartet, da Windows Internet Explorer nicht zum Laden von nicht signierten ActiveX-Steuerelementen konfiguriert ist." oder "Diese Seite darf ein nicht signiertes ActiveX-Steuerelement installieren? Wenn Sie dies aus nicht vertrauenswürdigen Quellen machen, kann dies Ihren Computer beeinträchtigen. " (Beide werden als Bedingungen formuliert, die möglicherweise zukünftige Probleme verursachen.)
-- **Informationen.** "Sie haben Windows Internet Explorer so konfiguriert, dass nicht signierte ActiveX-Steuerelemente blockiert werden." (Als eine-Anweisung formuliert.)
+Wenn ihr Programm z. B. über eine nicht behandelte Ausnahme verfügt, ist die folgende Fehlermeldung geeignet:
 
-**Um den richtigen Nachrichtentyp zu bestimmen, konzentrieren Sie sich auf den wichtigsten Aspekt des Problems, das Benutzer kennen oder reagieren müssen.** Wenn ein Problem darin besteht, dass der Benutzer nicht mehr fortfahren kann, sollten Sie es in der Regel als Fehler darstellen. Wenn der Benutzer fortfahren kann, stellen Sie ihn als Warnung dar. Erstellen Sie die [Haupt Anweisung](text-ui.md) oder einen anderen entsprechenden Text basierend auf diesem Fokus, und wählen Sie dann ein Symbol ([Standard](vis-std-icons.md) oder anderweitig), das mit dem Text übereinstimmt. Der Hauptanweisungs Text und die Symbole sollten immer mit dem Text identisch sein
+![Screenshot der Meldung: Unbekannter Fehler aufgetreten ](images/mess-error-image20.png)
 
-**Darstellung der Fehlermeldung**
+Wenn Sie einen unbekannten Fehler nicht unterdrücken können, ist es besser, sich mit dem Fehlen von Informationen im Überblick zu informieren.
 
-Die meisten Fehlermeldungen in Windows-Programmen werden mithilfe von modalen Dialogfeldern angezeigt (wie die meisten Beispiele in diesem Artikel), aber es gibt noch weitere Optionen:
+Stellen Sie andererseits spezifische, umsetzbare Informationen zur Verfügung, wenn dies in den meisten Zeit hilfreich sein wird.
+
+![Screenshot: Meldung Office Communicator "Server nicht verfügbar" ](images/mess-error-image21.png)
+
+Diese Fehlermeldung eignet sich für einen unbekannten Fehler, wenn die Netzwerkkonnektivität in der Regel das Problem ist.
+
+**Bestimmen des geeigneten Nachrichtentyps**
+
+Einige Probleme können je nach Schwerpunkt und Ausdruck als Fehler, Warnung oder Informationen dargestellt werden. Angenommen, eine Webseite kann kein nicht signiertes ActiveX basierend auf der aktuellen Windows Internet Explorer laden:
+
+- **Fehler.** "Diese Seite kann kein nicht signiertes ActiveX laden." (Wird als vorhandenes Problem formuliert.)
+- **Warnung.** "Diese Seite verhält sich möglicherweise nicht wie erwartet, da Windows Internet Explorer nicht zum Laden von nicht signierten ActiveX konfiguriert ist." oder "Zulassen, dass diese Seite ein nicht signiertes ActiveX Installiert? Dies aus nicht vertrauenswürdigen Quellen kann Ihren Computer schaden." (Beide werden als Bedingungen formuliert, die zukünftige Probleme verursachen können.)
+- **Informationen.** "Sie haben konfiguriert, Windows Internet Explorer, um nicht signierte ActiveX zu blockieren." (Wird als Faktenauszug formuliert.)
+
+**Um den geeigneten Nachrichtentyp zu bestimmen, konzentrieren Sie sich auf den wichtigsten Aspekt des Problems, den Benutzer kennen müssen oder mit dem sie handeln müssen.** Wenn ein Problem den Benutzer am Fortfahren blockiert, sollten Sie es in der Regel als Fehler präsentieren. wenn der Benutzer fortfahren kann, stellen Sie ihn als Warnung vor. Erstellen Sie [die Hauptanweisung](text-ui.md) oder einen anderen entsprechenden Text basierend auf diesem Fokus, und wählen Sie dann ein Symbol[(Standard](vis-std-icons.md) oder anderweitig) aus, das dem Text entspricht. Der Hauptanweisungstext und die Symbole sollten immer übereinstimmen.
+
+**Fehlermeldungspräsentation**
+
+Die meisten Fehlermeldungen in Windows werden über modale Dialogfelder angezeigt (wie die meisten Beispiele in diesem Artikel), aber es gibt andere Optionen:
 
 - Direkt
 - Ballons
 - Benachrichtigungen
-- Benachrichtigungs Bereichs Symbole
+- Symbole für den Benachrichtigungsbereich
 - Statusleisten
-- Protokolldateien (für Fehler, die auf IT-Experten abzielen)
+- Protokolldateien (für Fehler, die an IT-Experten ausgerichtet sind)
 
-Das Einfügen von Fehlermeldungen in modale Dialogfelder hat den Vorteil, dass die sofortige Aufmerksamkeit und die Bestätigung des Benutzers gefordert werden. Dies ist jedoch auch der primäre Nachteil, wenn diese Aufmerksamkeit nicht erforderlich ist.
+Das Einfügen von Fehlermeldungen in modale Dialogfelder hat den Vorteil, dass die unmittelbare Aufmerksamkeit und Bestätigung des Benutzers gefordert wird. Dies ist jedoch auch ihr Hauptnachteil, wenn diese Aufmerksamkeit nicht erforderlich ist.
 
-![Screenshot der Meldung: beendet das, was Sie tun ](images/mess-error-image22.png)
+![Screenshot der Nachricht: Beenden Ihrer Arbeit ](images/mess-error-image22.png)
 
-Müssen Sie Benutzer wirklich unterbrechen, damit Sie auf die Schaltfläche "Schließen" klicken können? Falls nicht, sollten Sie Alternativen zur Verwendung eines modalen Dialog Felds in Erwägung gezogen.
+Müssen Sie Benutzer wirklich unterbrechen, damit sie auf die Schaltfläche Schließen klicken können? Falls nicht, sollten Sie Alternativen zur Verwendung eines modalen Dialogfelds in Betracht ziehen.
 
-Modale Dialogfelder sind eine gute Wahl, wenn der Benutzer das Problem vor dem fortsetzen bestätigen muss, aber häufig eine schlechte Wahl. Im Allgemeinen empfiehlt es sich, die leichtesten Gewichtungs Präsentation zu verwenden, die den Auftrag gut erfüllt.
+Modale Dialoge sind eine gute Wahl, wenn der Benutzer das Problem unmittelbar vor dem Fortfahren bestätigen muss, andernfalls aber häufig eine schlechte Wahl. Im Allgemeinen sollten Sie es vorziehen, die leichteste Präsentation zu verwenden, die die Arbeit gut erledigt.
 
-**Vermeiden der über Kommunikation**
+**Vermeiden von Überkommunikation**
 
-Im allgemeinen [Lesen Benutzer nicht, Sie scannen](vis-layout.md). Umso mehr Text vorhanden ist, desto schwieriger ist es, den Text zu scannen, und desto wahrscheinlicher ist es, dass Benutzer den Text überhaupt nicht lesen. Daher ist es wichtig, den Text auf seine Grundlagen zu reduzieren und die Progressive Offenlegung und Hilfe Links zu verwenden, wenn dies erforderlich ist, um zusätzliche Informationen bereitzustellen.
+Im Allgemeinen [lesen Benutzer nicht, sie überprüfen](vis-layout.md). Je mehr Text vorhanden ist, desto schwieriger ist die Überprüfung des Texts, und je wahrscheinlicher Benutzer den Text überhaupt nicht lesen. Daher ist es wichtig, den Text auf seine Grundlagen zu reduzieren und bei Bedarf progressive Offenlegung und Hilfelinks zu verwenden, um zusätzliche Informationen bereitzustellen.
 
-Es gibt viele extreme Beispiele, aber sehen wir uns ein typisches Beispiel an. Im folgenden Beispiel wird der größte Teil der Attribute einer Fehlermeldung angezeigt, der Text ist jedoch nicht präzise und erfordert Motivation zum Lesen.
+Es gibt viele extreme Beispiele, aber sehen wir uns ein typisches beispiel an. Das folgende Beispiel weist die meisten Attribute einer guten Fehlermeldung auf, aber der Text ist nicht präzise und erfordert eine Motivation zum Lesen.
 
 **Falsch:**
 
 ![Screenshot der ausführlichen Meldung ](images/mess-error-image23.png)
 
-Bei diesem Beispiel handelt es sich um eine gute Fehlermeldung, die jedoch über kommuniziert.
+Dieses Beispiel ist eine gute Fehlermeldung, wird jedoch überschrieben.
 
-Was ist alles, was dieser Text wirklich sagt? Ungefähr so wie hier gezeigt:
+Was ist der gesamte Text, der wirklich sagt? Ungefähr so wie hier gezeigt:
 
 **Richtig:**
 
-![Screenshot der Meldung: CD Recorder nicht erkannt ](images/mess-error-image24.png)
+![Screenshot der Meldung: CD-Aufzeichnung nicht erkannt ](images/mess-error-image24.png)
 
-Diese Fehlermeldung weist im Wesentlichen die gleichen Informationen auf, ist aber weitaus präziser.
+Diese Fehlermeldung enthält im Wesentlichen die gleichen Informationen, ist aber wesentlich präziser.
 
-Wenn Sie die Details mithilfe der Hilfe bereitstellen, enthält diese Fehlermeldung einen [umgekehrten pyramidenstil](text-ui.md) .
+Wenn Sie die Details mithilfe der Hilfe angeben, weist diese Fehlermeldung einen [invertierten Pyramidenstil](text-ui.md) auf.
 
-Weitere Richtlinien und Beispiele für die übermäßige Kommunikation finden Sie unter [Benutzeroberflächen Text](text-ui.md).
+Weitere Richtlinien und Beispiele zur Überkommunikation finden Sie unter [Benutzeroberfläche Text](text-ui.md).
 
-**Wenn Sie nur acht Dinge ausführen**
+**Wenn Sie nur acht Dinge tun**
 
-1. Entwerfen Sie das Programm für die Fehlerbehandlung.
-2. Übergeben Sie keine unnötigen Fehlermeldungen.
-3. Vermeiden Sie Benutzer Verwirrung, indem Sie erforderliche Fehlermeldungen erteilen.
-4. Stellen Sie sicher, dass die Fehlermeldung Probleme, Ursachen und Lösungen enthält.
-5. Stellen Sie sicher, dass die Fehlermeldung relevant, handlungsfähig, kurz, klar, spezifisch, höflich und selten ist.
-6. Entwerfen von Fehlermeldungen aus der Sicht des Benutzers, nicht aus der Sicht des Programms.
-7. Vermeiden Sie die Einbindung des Benutzers bei der Problembehandlung verwenden Sie für jede erkennbare Ursache eine andere Fehlermeldung.
-8. Verwenden Sie die Methode mit der leichtesten Gewichtungsmethode, die den Auftrag gut erfüllt.
+1. Entwerfen Sie Ihr Programm für die Fehlerbehandlung.
+2. Geben Sie keine unnötigen Fehlermeldungen an.
+3. Vermeiden Sie Benutzerwechslungen, indem Sie die erforderlichen Fehlermeldungen senden.
+4. Stellen Sie sicher, dass die Fehlermeldung ein Problem, eine Ursache und eine Lösung enthält.
+5. Stellen Sie sicher, dass die Fehlermeldung relevant, umsetzbar, kurz, klar, spezifisch, zusichtig und selten ist.
+6. Entwerfen Sie Fehlermeldungen aus der Sicht des Benutzers, nicht aus der Sicht des Programms.
+7. Vermeiden Sie es, den Benutzer in die Problembehandlung einzubeziehen. Verwenden Sie für jede erkennbare Ursache eine andere Fehlermeldung.
+8. Verwenden Sie die methode mit der geringsten Gewichtungsdarstellung, die die Arbeit gut erledigt.
 
 **Verwendungsmuster**
 
-Fehlermeldungen weisen mehrere Verwendungs Muster auf:
+Fehlermeldungen weisen mehrere Verwendungsmuster auf:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>System Probleme</strong><br/> Das Betriebssystem, das Hardware Gerät, das Netzwerk oder das Programm ist ausgefallen oder weist nicht den zum Ausführen eines Tasks erforderlichen Zustand auf. <br/></td>
-<td>Viele System Probleme können vom Benutzer gelöst werden: <br/>
-<ul>
-<li>Geräte Probleme können gelöst werden, indem das Gerät eingeschaltet, das Gerät erneut angeschlossen und Medien eingefügt werden.</li>
-<li>Netzwerkprobleme können gelöst werden, indem Sie die physische Netzwerkverbindung überprüfen und die <strong>Diagnose und Reparatur des Netzwerks</strong>ausführen.</li>
-<li>Programm Probleme können gelöst werden, indem Programmoptionen geändert oder das Programm neu gestartet wird.</li>
-</ul>
-<img src="images/mess-error-image25.png" alt="Screen shot of message: Can&#39;t find a camera " /><br/> In diesem Beispiel kann das Programm keine Kamera finden, um eine Benutzer Aufgabe auszuführen.<br/> <img src="images/mess-error-image26.png" alt="Screen shot of message Network discovery off " /><br/> In diesem Beispiel muss ein Feature, das zum Ausführen einer Aufgabe erforderlich ist, aktiviert werden.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Datei Probleme</strong><br/> Eine Datei oder ein Ordner, der für eine vom Benutzer initiierte Aufgabe erforderlich ist, wurde nicht gefunden, wird bereits verwendet oder weist nicht das erwartete Format auf. <br/></td>
-<td><img src="images/mess-error-image27.png" alt="Screen shot of message: Can&#39;t delete file " /><br/> In diesem Beispiel kann die Datei oder der Ordner nicht gelöscht werden, da Sie nicht gefunden wurde.<br/> <img src="images/mess-error-image28.png" alt="Screen shot of message: Can&#39;t play this file " /><br/> In diesem Beispiel unterstützt das Programm das angegebene Dateiformat nicht.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Sicherheitsprobleme</strong><br/> Der Benutzer verfügt nicht über die Berechtigung für den Zugriff auf eine Ressource oder über ausreichende Berechtigungen, um eine vom Benutzer initiierte Aufgabe auszuführen. <br/></td>
-<td><img src="images/mess-error-image29.png" alt="Screen shot of message: You don&#39;t have permission " /><br/> In diesem Beispiel verfügt der Benutzer nicht über die Berechtigung, auf eine Ressource zuzugreifen.<br/> <img src="images/mess-error-image30.png" alt="Screen shot of message: You don&#39;t have privilege " /><br/> In diesem Beispiel verfügt der Benutzer nicht über die Berechtigung zum Ausführen einer Aufgabe.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Aufgaben Probleme</strong><br/> Es gibt ein bestimmtes Problem beim Ausführen einer vom Benutzer initiierten Aufgabe (außer einem System, einer Datei nicht gefunden, einem Dateiformat oder einem Sicherheitsproblem). <br/></td>
-<td><img src="images/mess-error-image31.png" alt="Screen shot of message: Data can&#39;t be pasted " /><br/> In diesem Beispiel können die Zwischenablage Daten nicht in Paint eingefügt werden.<br/> <img src="images/mess-error-image32.png" alt="Screen shot of message: Upgrade can&#39;t be installed " /><br/> In diesem Beispiel kann der Benutzer kein Software Upgrade installieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Probleme bei der Benutzereingabe</strong><br/> Der Benutzer hat einen Wert eingegeben, der falsch oder inkonsistent mit anderen Benutzereingaben ist. <br/></td>
-<td><img src="images/mess-error-image33.png" alt="Screen shot of message: Incorrect time value " /><br/> In diesem Beispiel hat der Benutzer einen falschen Uhrzeitwert eingegeben.<br/> <img src="images/mess-error-image34.png" alt="Screen shot of message: Incorrect input format " /><br/> In diesem Beispiel weist die Benutzereingabe nicht das richtige Format auf.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| | | <strong>Systemprobleme</strong><br /> Das Betriebssystem, das Hardwaregerät, das Netzwerk oder das Programm ist ausgefallen oder befindet sich nicht in dem Zustand, der zum Ausführen einer Aufgabe erforderlich ist. <br /> | Viele Systemprobleme können vom Benutzer gelöst werden: <br /><ul><li>Geräteprobleme können gelöst werden, indem sie das Gerät einschalten, das Gerät erneut verbinden und Medien einfügen.</li><li>Netzwerkprobleme können gelöst werden, indem sie die physische Netzwerkverbindung überprüfen und <strong>netzwerkdiagnose und reparieren</strong>ausführen.</li><li>Programmprobleme können gelöst werden, indem Programmoptionen geändert oder das Programm neu gestartet werden.</li></ul><img src="images/mess-error-image25.png" alt="Screen shot of message: Can't find a camera " /><br /> In diesem Beispiel kann das Programm keine Kamera finden, um eine Benutzeraufgabe auszuführen.<br /><img src="images/mess-error-image26.png" alt="Screen shot of message Network discovery off " /><br /> In diesem Beispiel muss ein Feature aktiviert werden, das zum Ausführen einer Aufgabe erforderlich ist.<br /> | | <strong>Dateiprobleme</strong><br /> Eine Datei oder ein Ordner, die bzw. der für eine vom Benutzer initiierte Aufgabe erforderlich ist, wurde nicht gefunden, wird bereits verwendet oder hat nicht das erwartete Format. <br /> | <img src="images/mess-error-image27.png" alt="Screen shot of message: Can't delete file " /><br /> In diesem Beispiel kann die Datei oder der Ordner nicht gelöscht werden, da sie nicht gefunden wurde.<br /><img src="images/mess-error-image28.png" alt="Screen shot of message: Can't play this file " /><br /> In diesem Beispiel unterstützt das Programm das angegebene Dateiformat nicht.<br /> | | <strong>Sicherheitsprobleme</strong><br /> Der Benutzer verfügt nicht über die Berechtigung für den Zugriff auf eine Ressource oder über ausreichende Berechtigungen zum Ausführen einer vom Benutzer initiierten Aufgabe. <br /> | <img src="images/mess-error-image29.png" alt="Screen shot of message: You don't have permission " /><br /> In diesem Beispiel verfügt der Benutzer nicht über die Berechtigung für den Zugriff auf eine Ressource.<br /><img src="images/mess-error-image30.png" alt="Screen shot of message: You don't have privilege " /><br /> In diesem Beispiel verfügt der Benutzer nicht über die Berechtigung, eine Aufgabe auszuführen.<br /> | | <strong>Aufgabenprobleme</strong><br /> Es liegt ein bestimmtes Problem vor, bei dem eine vom Benutzer initiierte Aufgabe ausgeführt wird (mit Ausnahme eines Systems, einer datei nicht gefundenen Datei, eines Dateiformats oder eines Sicherheitsproblems). <br /> | <img src="images/mess-error-image31.png" alt="Screen shot of message: Data can't be pasted " /><br /> In diesem Beispiel können die Zwischenablagedaten nicht in Paint eingefügt werden.<br /><img src="images/mess-error-image32.png" alt="Screen shot of message: Upgrade can't be installed " /><br /> In diesem Beispiel kann der Benutzer kein Softwareupgrade installieren.<br /> | | <strong>Benutzereingabeprobleme</strong><br /> Der Benutzer hat einen Wert eingegeben, der falsch oder inkonsistent mit anderen Benutzereingaben ist. <br /> | <img src="images/mess-error-image33.png" alt="Screen shot of message: Incorrect time value " /><br /> In diesem Beispiel hat der Benutzer einen falschen Zeitwert eingegeben.<br /><img src="images/mess-error-image34.png" alt="Screen shot of message: Incorrect input format " /><br /> In diesem Beispiel hat die Benutzereingabe nicht das richtige Format.<br /> | 
+
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="presentation"></a>Präsentation
 
-- **Verwenden Sie nach Bedarf Aufgaben Dialogfelder** , um ein konsistentes Aussehen und Layout zu erzielen. Aufgaben Dialogfelder erfordern Windows Vista oder höher, sodass Sie nicht für frühere Versionen von Windows geeignet sind. Wenn Sie ein Meldungs Feld verwenden müssen, trennen Sie die Haupt Anweisung von der ergänzenden Anweisung mit zwei Zeilenumbrüchen.
+- **Verwenden Sie Aufgabendialoge nach Bedarf,** um ein konsistentes Aussehen und Layout zu erzielen. Aufgabendialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Windows geeignet sind. Wenn Sie ein Meldungsfeld verwenden müssen, trennen Sie die Hauptanweisung durch zwei Zeilenumbrüche von der ergänzenden Anweisung.
 
-### <a name="user-input-errors"></a>Benutzereingabe Fehler
+### <a name="user-input-errors"></a>Benutzereingabefehler
 
-- **Verhindern oder verringern Sie nach Möglichkeit Benutzereingabe Fehler wie folgt:**
+- **Verhindern oder reduzieren Sie Benutzereingabefehler nach Möglichkeit wie folgt:**
   - Verwenden von Steuerelementen, die auf gültige Werte beschränkt sind.
-  - Das Deaktivieren von Steuerelementen und Menü Elementen, wenn Sie auf klicken, führt zu einem Fehler, solange offensichtlich ist, warum das Steuerelement oder das Menü Element deaktiviert ist.
-  - Gute Standardwerte werden bereitgestellt.
+  - Das Deaktivieren von Steuerelementen und Menüelementen beim Klicken würde zu einem Fehler führen, solange offensichtlich ist, warum das Steuerelement oder Menüelement deaktiviert ist.
+  - Bereitstellen guter Standardwerte.
 
 **Falsch:**
 
-![Screenshot des Textfelds mit der Lautstärke Bezeichnung des Lautsprechers ](images/mess-error-image35.png)
+![Screenshot des Textfelds mit Sprecherlautstärke ](images/mess-error-image35.png)
 
-In diesem Beispiel wird ein nicht eingeschränktes Textfeld für eingeschränkte Eingaben verwendet. Verwenden Sie stattdessen einen Schieberegler.
+In diesem Beispiel wird ein uneingeschränktes Textfeld für eingeschränkte Eingaben verwendet. Verwenden Sie stattdessen einen Schieberegler.
 
-- **Verwenden Sie für kontextabhängige Benutzereingaben Probleme mit der nicht modalem Fehlerbehandlung (direkte Fehler oder Luftballons).**
-- **Verwenden Sie für nicht kritische einpunktbenutzer-Eingabe Probleme, die bei einem Textfeld erkannt werden, oder unmittelbar nachdem ein Textfeld den Fokus verliert.** Für [Luftballons](https://msdn.microsoft.com/library/windows/desktop/aa511451.aspx) ist kein verfügbarer Bildschirmbereich oder das dynamische Layout erforderlich, das zum Anzeigen von direkten Nachrichten erforderlich ist. Zeigen Sie jeweils nur eine Sprechblase an. Da das Problem nicht entscheidend ist, ist kein Fehler Symbol erforderlich. Beim Klicken auf das Problem, wenn das Problem behoben ist oder nach einem Timeout, werden die Ballons entfernt.
+- **Verwenden Sie die moduslose Fehlerbehandlung (direkt auftretende Fehler oder Sprechblasen) für kontextbezogene Benutzereingabeprobleme.**
+- **Verwenden Sie Sprechblasen für nicht kritische Benutzereingabeprobleme mit nur einem Punkt, die erkannt wurden, während sie in einem Textfeld oder unmittelbar nach dem Verlust des Fokus in einem Textfeld erkannt wurden.** [Für Sprechblasen](https://msdn.microsoft.com/library/windows/desktop/aa511451.aspx) ist kein verfügbarer Bildschirmbereich oder das dynamische Layout erforderlich, das zum Anzeigen von Nachrichten an Ort und Stelle erforderlich ist. Zeigt nur einen einzelnen Sprechblasen gleichzeitig an. Da das Problem nicht kritisch ist, ist kein Fehlersymbol erforderlich. Sprechblasen werden beim Klicken, beim Beheben des Problems oder nach einem Timeout entfernt.
 
 ![Screenshot der Meldung: falsches Zeichen ](images/mess-error-image36.png)
 
-In diesem Beispiel gibt eine Sprechblase ein Eingabeproblem an, während Sie sich noch im-Steuerelement befinden.
+In diesem Beispiel weist ein Sprechblasen auf ein Eingabeproblem hin, während es sich noch im -Steuerelement hält.
 
-- Verwenden Sie direkte Fehler bei der **Erkennung verzögerter Fehler,** normalerweise durch Klicken auf die Schaltfläche Commit gefundene Fehler. (Verwenden Sie keine direkten [Fehler](glossary.md) für Einstellungen, für die sofort ein Commit ausgeführt wird.) Es können mehrere direkte Fehler gleichzeitig vorhanden sein. Verwenden Sie den normalen Text und ein 16x16-Pixel-Fehler Symbol, und platzieren Sie diese direkt neben dem Problem, wenn dies möglich ist. Direkte Fehler werden nicht entfernt, es sei denn, der Benutzer führt einen Commit aus, und es werden keine weiteren Fehler gefunden.
+- **Verwenden Sie direkt fehler für die verzögerte Fehlererkennung.** In der Regel werden Fehler gefunden, indem Sie auf eine Commitschaltfläche klicken. (Verwenden Sie keine [direkten Fehler](glossary.md) für Einstellungen, für die sofort ein Commit ausgeführt wird.) Es können mehrere fehlerverdingende Fehler gleichzeitig auftreten. Verwenden Sie normalen Text und ein 16 x 16 Pixel großes Fehlersymbol, und platzieren Sie sie nach Möglichkeit direkt neben dem Problem. Direkt auftretende Fehler werden nur dann entfernt, wenn der Benutzer einen Commit vorgibt und keine anderen Fehler gefunden werden.
 
-![Screenshot der Meldung: falsche e-Mail-Adresse ](images/mess-error-image37.png)
+![Screenshot der Meldung: falsche E-Mail-Adresse ](images/mess-error-image37.png)
 
-In diesem Beispiel wird ein direkter Fehler für einen Fehler verwendet, der durch Klicken auf die Schaltfläche Commit gefunden wurde.
+In diesem Beispiel wird ein direkt auftretender Fehler für einen Fehler verwendet, der durch Klicken auf die Commitschaltfläche gefunden wurde.
 
-- **Verwenden Sie die modale Fehlerbehandlung (Task Dialogfelder oder Meldungs Felder) für alle anderen Probleme,** einschließlich Fehlern, die mehrere Steuerelemente betreffen, oder nicht kontextabhängige oder nicht-Eingabefehler durch Klicken auf die Schaltfläche Commit gefunden werden.
-- **Wenn ein Benutzereingabe Problem gemeldet wird, legen Sie den Eingabefokus auf das erste Steuerelement mit den falschen Daten fest.** Scrollen Sie ggf. in das Steuerelement. Wenn das Steuerelement ein Textfeld ist, wählen Sie den gesamten Inhalt aus. Es sollte immer offensichtlich sein, auf welche Fehlermeldung verwiesen wird.
-- **Löschen Sie falsche Eingaben nicht.** Belassen Sie Sie stattdessen so, dass der Benutzer das Problem sehen und beheben kann, ohne zu beginnen.
-  - **Ausnahme:** Löschen Sie falsches Kennwort, und Heften Sie Textfelder ein, da Benutzer die maskierte Eingabe nicht effektiv korrigieren
+- **Verwenden Sie modale Fehlerbehandlung (Aufgabendialoge oder Meldungsfelder) für alle anderen Probleme,** einschließlich Fehlern, die mehrere Steuerelemente betreffen oder nicht kontextbezogene oder nicht eingabebezogene Fehler sind, die durch Klicken auf eine Commitschaltfläche gefunden werden.
+- **Wenn ein Benutzereingabeproblem gemeldet wird, legen Sie den Eingabefokus auf das erste Steuerelement mit den falschen Daten fest.** Scrollen Sie das Steuerelement bei Bedarf in die Ansicht. Wenn das Steuerelement ein Textfeld ist, wählen Sie den gesamten Inhalt aus. Es sollte immer offensichtlich sein, worauf die Fehlermeldung verweist.
+- **Löschen Sie keine falschen Eingaben.** Lassen Sie es stattdessen so, dass der Benutzer das Problem sehen und beheben kann, ohne von vorn anfangen zu müssen.
+  - **Ausnahme:** Deaktivieren Sie falsche Kennwort- und PIN-Textfelder, da Benutzer maskierte Eingaben nicht effektiv korrigieren können.
 
 ### <a name="troubleshooting"></a>Problembehandlung
 
-- **Vermeiden Sie die Problembehandlung.** Verlassen Sie sich nicht auf eine einzelne Fehlermeldung, um ein Problem mit verschiedenen erkennbaren Gründen zu melden.
-- **Verwenden Sie für jede erkennbare Ursache eine andere Fehlermeldung (in der Regel eine andere ergänzende Anweisung).** Wenn eine Datei z. b. aus verschiedenen Gründen nicht geöffnet werden kann, geben Sie eine separate ergänzende Anweisung aus jedem Grund an.
-- **Verwenden Sie eine Meldung mit mehreren Ursachen nur dann, wenn die jeweilige Ursache nicht ermittelt werden kann.** Stellen Sie in diesem Fall die Lösungen in der Reihenfolge der Wahrscheinlichkeit dar, dass Sie das Problem beheben. Dadurch können Benutzer das Problem effizienter lösen.
+- **Vermeiden Sie das Erstellen von Problemen bei der Problembehandlung.** Verlassen Sie sich nicht auf eine einzelne Fehlermeldung, um ein Problem mit mehreren verschiedenen erkennbaren Ursachen zu melden.
+- **Verwenden Sie für jede erkennbare Ursache eine andere Fehlermeldung (in der Regel eine andere ergänzende Anweisung).** Wenn eine Datei beispielsweise aus mehreren Gründen nicht geöffnet werden kann, geben Sie für jeden Grund eine separate ergänzende Anweisung an.
+- **Verwenden Sie eine Nachricht mit mehreren Ursachen nur, wenn die spezifische Ursache nicht bestimmt werden kann.** Stellen Sie in diesem Fall die Lösungen in der Reihenfolge der Wahrscheinlichkeit vor, dass das Problem behoben wird. Auf diese Weise können Benutzer das Problem effizienter lösen.
 
 ### <a name="icons"></a>Symbole
 
-- **Modale Fehlermeldungs Dialogfelder haben keine Titelleisten Symbole.** Symbole der Titelleiste werden als visueller Unterschied zwischen primären und sekundären Fenstern verwendet.
-- **Verwenden Sie ein Fehler Symbol.** Ausnahmen:
-  - Wenn es sich bei dem Fehler um ein Problem mit der Benutzereingabe handelt, das in einem modalen Dialogfeld oder in einer Sprechblase angezeigt wird, Dies ist gegen den ermutigenden Farbton von Windows. Bei direkten Fehlermeldungen sollte jedoch ein kleines Fehler Symbol (16x16 Pixel) verwendet werden, um Sie als Fehlermeldungen eindeutig zu identifizieren.
+- **Modale Fehlermeldungsdialogfelder verfügen nicht über Titelleistensymbole.** Titelleistensymbole werden als visueller Unterschied zwischen primären und sekundären Fenstern verwendet.
+- **Verwenden Sie ein Fehlersymbol.** Ausnahmen:
+  - Wenn der Fehler ein Benutzereingabeproblem ist, das mithilfe eines modalen Dialogfelds oder einer Sprechblase angezeigt wird, verwenden Sie kein Symbol. Dies steht gegen den ermutigenden Tonfall Windows. Für die fehlermeldungsbasierten Meldungen sollte jedoch ein kleines Fehlersymbol (16 x 16 Pixel) verwendet werden, um sie eindeutig als Fehlermeldungen zu identifizieren.
 
-     ![Screenshot der Nachricht mit fehlerhaftem Post Format](images/mess-error-image38.png)
+     ![Screenshot der Nachricht im falschen Postformat](images/mess-error-image38.png)
 
-     ![Screenshot des Nachrichten Computer namens zu lang](images/mess-error-image39.png)
+     ![Screenshot des Zu langen Computernamens der Nachricht](images/mess-error-image39.png)
 
-     In diesen Beispielen benötigen Benutzereingabe Probleme keine Fehler Symbole.
+     In diesen Beispielen benötigen Benutzereingabeprobleme keine Fehlersymbole.
 
-     ![Screenshot des falschen Formats der Nachrichten Telefonnummer](images/mess-error-image40.png)
+     ![Screenshot: Falsches Format der Nachrichtentelefonnummer](images/mess-error-image40.png)
 
-     In diesem Beispiel benötigt eine direkte Fehlermeldung ein kleines Fehler Symbol, um es eindeutig als Fehlermeldung zu identifizieren.
+     In diesem Beispiel benötigt eine fehlermeldung ein kleines Fehlersymbol, um sie eindeutig als Fehlermeldung zu identifizieren.
 
-- Wenn das Problem für eine Funktion ist, die über ein Symbol verfügt (und nicht über ein Benutzereingabe Problem), können Sie das Funktions Symbol mit einem Fehler Overlay verwenden. Wenn Sie dies tun, verwenden Sie den Funktionsnamen auch als Betreff des Fehlers.
+- Wenn das Problem für ein Feature mit einem Symbol (und nicht einem Benutzereingabeproblem) auftritt, können Sie das Featuresymbol mit einer Fehlerüberlagerung verwenden. Verwenden Sie in diesem Fall auch den Funktionsnamen als Betreff des Fehlers.
 
-    ![Screenshot der Nachricht ](images/mess-error-image41.png)
+    ![Screenshot der Meldung, dass der Media Player die Datei nicht wiedererknen kann ](images/mess-error-image41.png)
 
-    In diesem Beispiel enthält das Feature-Symbol eine Fehler Überlagerung, und die Funktion ist der Betreff des Fehlers.
+    In diesem Beispiel verfügt das Featuresymbol über eine Fehlerüberlagerung, und das Feature ist das Subjekt des Fehlers.
 
-- **Verwenden Sie keine Warn Symbole für Fehler.** Dies erfolgt häufig, damit die Darstellung weniger schwerwiegend ist. Fehler sind keine Warnungen.
+- **Verwenden Sie keine Warnsymbole für Fehler.** Dies wird häufig durchgeführt, um die Darstellung weniger schwerwiegend zu machen. Fehler sind keine Warnungen.
 
     **Falsch:**
 
-    ![Screenshot der schnellen Umstellung von Nachrichten nicht aktiviert ](images/mess-error-image42.png)
+    ![Screenshot: Schnelles Wechseln von Nachrichten nicht aktiviert ](images/mess-error-image42.png)
 
-    In diesem Beispiel wird fälschlicherweise ein Warnsymbol verwendet, damit der Fehler weniger schwerwiegend ist.
+    In diesem Beispiel wird fälschlicherweise ein Warnsymbol verwendet, damit sich der Fehler weniger schwerwiegend anfühlt.
 
-Weitere Richtlinien und Beispiele finden Sie unter [Standard Symbole](vis-std-icons.md).
+Weitere Richtlinien und Beispiele finden Sie unter [Standardsymbole.](vis-std-icons.md)
 
 ### <a name="progressive-disclosure"></a>Schrittweise Offenlegung
 
-- **Verwenden Sie die Schaltfläche Details progressives offenlegen/ausblenden, um erweiterte oder ausführliche Informationen in einer Fehlermeldung auszublenden.** Dies vereinfacht die Fehlermeldung für die typische Verwendung. Blenden Sie erforderliche Informationen nicht aus, da Sie von Benutzern möglicherweise nicht gefunden werden.
+- **Verwenden Sie die Schaltfläche Details progressive Offenlegung ein-/ausblenden, um erweiterte oder detaillierte Informationen in einer Fehlermeldung auszublenden.** Dadurch wird die Fehlermeldung für die typische Verwendung vereinfacht. Blenden Sie die erforderlichen Informationen nicht aus, da Benutzer sie möglicherweise nicht finden.
 
-![Screenshot der Meldung: "ActiveSync kann nicht angemeldet werden" ](images/mess-error-image43.png)
+![Screenshot der Meldung: ActiveSync kann sich nicht anmelden ](images/mess-error-image43.png)
 
-In diesem Beispiel kann der Benutzer mit der Schaltfläche "Progressive Offenlegung" Weitere Details anzeigen, wenn Sie dies wünschen, oder die Benutzeroberfläche vereinfachen, wenn dies nicht der Fall ist.
+In diesem Beispiel können Benutzer mit der Schaltfläche für die progressive Offenlegung einen Drilldown auf weitere Details anzeigen, wenn sie dies wünschen, oder die Benutzeroberfläche vereinfachen, wenn dies nicht der Fall ist.
 
-- **Verwenden Sie keine Details zum anzeigen/ausblenden, es sei denn, es gibt wirklich weitere Details.** Geben Sie die vorhandenen Informationen nicht nur in einem ausführlicheren Format wieder.
-- **Verwenden Sie keine Details zum anzeigen/ausblenden, um Hilfe Informationen anzuzeigen.** Verwenden Sie stattdessen Hilfe Links.
+- **Verwenden Sie Details nur dann ein-/ausblenden, wenn tatsächlich weitere Details zu finden sind.** Erstellen Sie nicht nur die vorhandenen Informationen in einem ausführlicheren Format.
+- **Verwenden Sie keine Details ein-/ausblenden, um Hilfeinformationen anzuzeigen.** Verwenden Sie stattdessen Hilfelinks.
 
-Informationen zur Bezeichnung finden Sie unter [Progressive Offenlegung](ctrl-progressive-disclosure-controls.md)von Steuerelementen.
+Bezeichnungsrichtlinien finden Sie unter [Progressive Disclosure Controls](ctrl-progressive-disclosure-controls.md).
 
 **Diese Meldung nicht mehr anzeigen**
 
-- **Wenn eine Fehlermeldung diese Option erfordert, überdenken Sie den Fehler und die Häufigkeit.** Wenn Sie alle Merkmale eines guten Fehlers hat (relevant, Handlungs relevant und unregelmäßig), sollte es für Benutzer nicht sinnvoll sein, Sie zu unterdrücken.
+- **Wenn diese Option für eine Fehlermeldung benötigt wird, überprüfen Sie den Fehler und dessen Häufigkeit.** Wenn sie alle Merkmale eines guten Fehlers aufweist (relevant, umsetzbar und selten), sollte es für Benutzer nicht sinnvoll sein, ihn zu unterdrücken.
 
-Weitere Richtlinien finden Sie unter [Dialog Felder](win-dialog-box.md).
+Weitere Richtlinien finden Sie unter [Dialogfelder](win-dialog-box.md).
 
 ### <a name="default-values"></a>Standardwerte
 
-- **Wählen Sie die sicherste, am wenigsten zerstörerische oder sicherste Antwort als Standard aus.** Wenn Sicherheit kein Faktor ist, wählen Sie den wahrscheinlichsten oder den bequemen Befehl aus.
+- **Wählen Sie die sicherste, am wenigsten destruktive oder sicherste Antwort als Standard aus.** Wenn die Sicherheit kein Faktor ist, wählen Sie den wahrscheinlichsten oder bequemsten Befehl aus.
 
 ### <a name="help"></a>Hilfe
 
-- **Entwerfen Sie Fehlermeldungen, um die Notwendigkeit von Hilfe zu vermeiden.** Normalerweise sollten Benutzer keinen externen Text lesen, um das Problem zu verstehen und zu lösen, es sei denn, für die Lösung sind mehrere Schritte erforderlich.
-- **Stellen Sie sicher, dass der Hilfe Inhalt relevant und hilfreich ist.** Es sollte keine ausführliche neuanweisung der Fehlermeldung sein, sondern sollte nützliche Informationen enthalten, die den Bereich der Fehlermeldung sprengen, wie z. b. Möglichkeiten, um das Problem in Zukunft zu vermeiden. Stellen Sie keinen Hilfe Link bereit, nur weil Sie dies tun können.
-- **Verwenden Sie bestimmte, präzise und relevante Hilfe Links, um auf Hilfe Inhalte zuzugreifen.** Verwenden Sie für diesen Zweck keine Befehls Schaltflächen oder Progressive Offenlegung.
-- **Wenn Sie Fehlermeldungen festlegen können, die nicht spezifisch und handlungsfähig sind, sollten Sie Links zu Online Hilfe Inhalten bereitstellen.** Auf diese Weise können Sie Benutzern zusätzliche Informationen bereitstellen, die Sie nach der Veröffentlichung des Programms aktualisieren können.
+- **Entwerfen Sie Fehlermeldungen, um die Notwendigkeit von Hilfe zu vermeiden.** Normalerweise sollten Benutzer keinen externen Text lesen müssen, um das Problem zu verstehen und zu lösen, es sei denn, die Lösung erfordert mehrere Schritte.
+- **Stellen Sie sicher, dass der Hilfeinhalt relevant und hilfreich ist.** Es sollte keine ausführliche Neuform der Fehlermeldung sein, sondern es sollte nützliche Informationen enthalten, die über den Bereich der Fehlermeldung hinausgehen, z. B. Möglichkeiten, das Problem in der Zukunft zu vermeiden. Geben Sie keinen Hilfelink an, nur weil dies der Reihe nach ist.
+- **Verwenden Sie spezifische, präzise und relevante Hilfelinks, um auf Hilfeinhalte zu zugreifen.** Verwenden Sie zu diesem Zweck keine Befehlsschaltflächen oder progressive Offenlegung.
+- **Für Fehlermeldungen, die Sie nicht spezifisch und umsetzbar machen können, sollten Sie Links zu Onlinehilfeinhalten bereitstellen.** Dadurch können Sie Benutzern zusätzliche Informationen bereitstellen, die Sie aktualisieren können, nachdem das Programm veröffentlicht wurde.
 
-Weitere Richtlinien finden Sie in der [Hilfe](winenv-help.md).
+Weitere Richtlinien finden Sie unter [Hilfe.](winenv-help.md)
 
 ### <a name="error-codes"></a>Fehlercodes
 
-- **Wenn Sie Fehlermeldungen erhalten, die nicht spezifisch und handlungsfähig sind oder von der Hilfe profitieren, sollten Sie auch Fehlercodes bereitstellen.** Benutzer verwenden diese Fehlercodes häufig, um weitere Informationen im Internet zu durchsuchen.
-- **Geben Sie immer eine Textbeschreibung des Problems und der Lösung an.** Verlassen Sie sich nicht nur auf den Fehlercode zu diesem Zweck.
+- **Für Fehlermeldungen, die Sie nicht spezifisch und umsetzbar machen können oder von der Hilfe profitieren, sollten Sie auch Fehlercodes bereitstellen.** Benutzer verwenden diese Fehlercodes häufig, um im Internet nach zusätzlichen Informationen zu suchen.
+- **Geben Sie immer eine Textbeschreibung des Problems und der Lösung an.** Hängen Sie nicht nur vom Fehlercode für diesen Zweck ab.
 
 **Falsch:**
 
-![Screenshot der Meldung: die Datei kann nicht geöffnet werden. ](images/mess-error-image44.png)
+![Screenshot der Nachricht: Datei kann nicht geöffnet werden ](images/mess-error-image44.png)
 
-In diesem Beispiel wird ein Fehlercode als Ersatz für einen projektmappentext verwendet.
+In diesem Beispiel wird ein Fehlercode als Ersatz für einen Lösungstext verwendet.
 
-- **Weisen Sie für jede andere Ursache einen eindeutigen Fehlercode zu.** Dadurch wird die Problembehandlung vermieden.
-- **Wählen Sie Fehlercodes aus, die im Internet problemlos durchsuchbar sind.** Wenn Sie 32-Bit-Codes verwenden, verwenden Sie eine hexadezimale Darstellung mit einem führenden "0x"-Zeichen und einem Großbuchstaben.
+- **Weisen Sie einen eindeutigen Fehlercode für jede unterschiedliche Ursache zu.** Dadurch wird die Problembehandlung vermieden.
+- **Wählen Sie Fehlercodes aus, die im Internet leicht durchsuchbar sind.** Wenn Sie 32-Bit-Codes verwenden, verwenden Sie eine Hexadezimaldarstellung mit einem führenden "0x" und Großbuchstaben.
 
 **Richtig:**
 
 1234
 
-0xc0001234
+0xC0001234
 
 **Falsch:**
 
@@ -572,66 +541,66 @@ In diesem Beispiel wird ein Fehlercode als Ersatz für einen projektmappentext v
 
 -67113524
 
-- **Verwenden Sie die Details zum anzeigen/ausblenden, um Fehlercodes anzuzeigen.** Ausdruck als Fehlercode: <error code> .
+- **Verwenden Sie Details ein-/ausblenden, um Fehlercodes anzuzeigen.** Ausdruck als Fehlercode: <error code> .
 
-![Screenshot der Meldung: das Programm wurde nicht initialisiert. ](images/mess-error-image45.png)
+![Screenshot der Meldung: Programm wurde nicht initialisiert ](images/mess-error-image45.png)
 
 In diesem Beispiel wird ein Fehlercode verwendet, um eine Fehlermeldung zu ergänzen, die von weiteren Informationen profitieren kann.
 
 ### <a name="sound"></a>Sound
 
-- **Führen Sie keine weiteren Fehlermeldungen mit einem Soundeffekt oder einem Signal aus.** Dabei handelt es sich um jarringverfahren und unnötig.
-  - **Ausnahme:** Wenn das Problem für den Betrieb des Computers wichtig ist, können Sie den kritischen Sound wiedergeben, und der Benutzer muss Sofortmaßnahmen ergreifen, um schwerwiegende Folgen zu vermeiden.
+- **Begleiten Sie Fehlermeldungen nicht mit einem Soundeffekt oder Signalton.** Dies ist nicht erforderlich.
+  - **Ausnahme:** Geben Sie den Soundeffekt Kritisches Beenden wieder, wenn das Problem für den Betrieb des Computers entscheidend ist und der Benutzer sofort Maßnahmen ergreifen muss, um schwerwiegende Folgen zu verhindern.
 
 ## <a name="text"></a>Text
 
 **Allgemein**
 
-- **Entfernen Sie den redundanten Text.** Suchen Sie nach dem Titel, den Haupt Anweisungen, zusätzlichen Anweisungen, Befehls Verknüpfungen und Commit-Schaltflächen. Im Allgemeinen sollten Sie voll Text in Anweisungen und interaktiven Steuerelementen belassen und Redundanz von den anderen Orten entfernen.
-- **Verwenden Sie Benutzer zentrierte Erläuterungen.** Beschreiben Sie das Problem im Hinblick auf Benutzeraktionen oder-Ziele, nicht in Bezug auf die unzufriedene Software. Verwenden Sie die Sprache, die die Ziel Benutzer verstehen und verwenden. Vermeiden Sie technische Fachjargon.
+- **Entfernen Sie redundanten Text.** Suchen Sie in Titeln, Hauptanweisungen, ergänzenden Anweisungen, Befehlslinks und Commitschaltflächen. Lassen Sie im Allgemeinen vollständigen Text in Anweisungen und interaktiven Steuerelementen, und entfernen Sie alle Redundanzen von den anderen Stellen.
+- **Verwenden Sie benutzerzentrierte Erklärungen.** Beschreiben Sie das Problem in Bezug auf Benutzeraktionen oder -ziele, nicht in Bezug auf die Unfreundlichkeit der Software. Verwenden Sie die Sprache, die die Zielbenutzer verstehen und verwenden. Vermeiden Sie den technischen Jargon.
 
 **Falsch:**
 
-![Screenshot der Meldung: Eingabe-synchroner Rückruf ](images/mess-error-image46.png)
+![Screenshot der Nachricht: eingabesynchroner Aufruf ](images/mess-error-image46.png)
 
 **Richtig:**
 
-![Screenshot der Nachricht: der Empfang eines Aufrufes ist ausgelastet. ](images/mess-error-image47.png)
+![Screenshot der Nachricht: Der Empfang eines Anrufs ist ausgelastet. ](images/mess-error-image47.png)
 
-In diesen Beispielen wird die Sprache des Benutzers von der richtigen Version gesprochen, während die falsche Version übermäßig technisch ist.
+In diesen Beispielen spricht die richtige Version die Sprache des Benutzers, während die falsche Version zu technisch ist.
 
 - **Verwenden Sie nicht die folgenden Wörter:**
   - Fehler, Fehler (verwenden Sie stattdessen Problem)
-  - Fehler bei (Verwendung nicht möglich).
+  - Failed to (use unable to instead)
   - Ungültig, ungültig, ungültig (verwenden Sie stattdessen falsch)
-  - Abbrechen, beenden, beenden (verwenden Sie stattdessen "beenden")
-  - Katastrophal, schwerwiegend (verwenden Sie stattdessen Ernst)
+  - Abbrechen, Beenden, Beenden (stattdessen beenden)
+  - Schwerwiegend, schwerwiegend (verwenden Sie stattdessen "schwerwiegend")
 
-Diese Begriffe sind unnötig und im Gegensatz zum ermutigenden Ton von Windows. Wenn das Fehler Symbol [ordnungsgemäß verwendet](vis-std-icons.md)wird, kommuniziert es ausreichend, dass ein Problem vorliegt.
-
-**Falsch:**
-
-![Screenshot der Meldung: Schwerwiegender Fehler! ](images/mess-error-image48.png)
-
-**Richtig:**
-
-![Screenshot der Meldung: die Sicherung muss gleichzeitig geschlossen werden. ](images/mess-error-image49.png)
-
-Im falschen Beispiel sind die Begriffe "katastrophal" und "Fehler" unnötig.
-
-- Verwenden Sie keinen Ausdruck, der den Benutzer BLT oder einen Benutzerfehler impliziert. Vermeiden Sie die Verwendung von und ihrer in der Formulierung. Obwohl die aktive Stimme in der Regel bevorzugt ist, verwenden Sie die passive Stimme, wenn der Benutzer der Betreff ist, und könnten sich für den Fehler verantwortlich machen, wenn die aktive Stimme verwendet wurde.
+Diese Begriffe sind unnötig und stehen im Gegensatz zum ermutigenden Tonfall Windows. Bei [ordnungsgemäßer Verwendung](vis-std-icons.md)teilt das Fehlersymbol ausreichend mit, dass ein Problem vor liegt.
 
 **Falsch:**
 
-![Screenshot der Meldung, dass Sie eine falsche Anmeldung eingegeben haben ](images/mess-error-image50.png)
+![Screenshot der Meldung: schwerwiegender Fehler! ](images/mess-error-image48.png)
 
 **Richtig:**
 
-![Screenshot der Meldung: falsches Kennwort ](images/mess-error-image51.png)
+![Screenshot der Meldung: Sicherung muss gleichzeitig geschlossen werden ](images/mess-error-image49.png)
 
-Im falschen Beispiel wird der Benutzer mit der aktiven Stimme umbenannt.
+Im falschen Beispiel sind die Begriffe "schwerwiegende" und "Fehler" nicht erforderlich.
 
-- **Sie sollten spezifisch sein.** Vermeiden Sie eine vage Formulierung, wie z. b. Syntax Fehler und ungültigen Vorgang. Geben Sie bestimmte Namen, Speicherorte und Werte der betroffenen Objekte an.
+- Verwenden Sie keinen Ausdruck, der den Benutzer verantwortlich macht oder einen Benutzerfehler impliziert. Vermeiden Sie es, Sie und im Ausdruck zu verwenden. Obwohl die aktive Stimme im Allgemeinen bevorzugt wird, verwenden Sie die passive Stimme, wenn der Benutzer das Subjekt ist, und können sich für den Fehler verantwortlich machen, wenn die aktive Stimme verwendet wird.
+
+**Falsch:**
+
+![Screenshot der Meldung, die Sie bei der falschen Anmeldung eingegeben haben ](images/mess-error-image50.png)
+
+**Richtig:**
+
+![Screenshot der Nachricht: falsches Kennwort ](images/mess-error-image51.png)
+
+Im falschen Beispiel wird der Benutzer mithilfe der aktiven Stimme dafür verantwortlich gemacht.
+
+- **Seien Sie spezifisch.** Vermeiden Sie ungenaue Formulierungen, z. B. Syntaxfehler und unzulässige Operation. Geben Sie bestimmte Namen, Speicherorte und Werte der beteiligten Objekte an.
 
 **Falsch:**
 
@@ -639,183 +608,183 @@ Die Datei wurde nicht gefunden.
 
 Der Datenträger ist voll.
 
-Der Wert liegt außerhalb des zulässigen Bereichs.
+Der Wert liegt nicht im Bereich.
 
 Das Zeichen ist ungültig.
 
 Gerät nicht verfügbar.
 
-Diese Probleme können mit bestimmten Namen, Positionen und Werten leichter gelöst werden.
+Diese Probleme wären viel einfacher mit bestimmten Namen, Speicherorten und Werten zu lösen.
 
-- **Geben Sie möglicherweise unwahrscheinlich Probleme, Ursachen oder Lösungen zu einem bestimmten Versuch an.** Geben Sie kein Problem, keine Ursache oder Lösung an, es sei denn, es ist wahrscheinlich Recht. Beispielsweise ist es besser zu sagen, dass ein unbekannter Fehler aufgetreten ist, als etwas, das wahrscheinlich ungenau ist.
-- **Vermeiden Sie das Wort "bitte",** außer in Situationen, in denen der Benutzer aufgefordert wird, etwas unpraktisch zu machen (z. b. warten), oder wenn die Software für die Situation verantwortlich ist.
-
-**Richtig:**
-
-Bitte warten Sie, während die Dateien von Windows auf Ihren Computer kopiert werden.
-
-- **Verwenden Sie das Wort "Sorry" nur in Fehlermeldungen, die zu schwerwiegenden Problemen für den Benutzer führen** (z. b. Datenverlust oder nicht die Verwendung des Computers). Entschuldigen Sie nicht, wenn das Problem während der normalen Funktionsweise des Programms aufgetreten ist (z. b. wenn der Benutzer auf eine Netzwerkverbindung warten muss).
+- **Geben Sie keine wahrscheinlich unwahrscheinlichen Probleme, Ursachen oder Lösungen, um spezifisch zu sein.** Geben Sie kein Problem, eine Ursache oder eine Lösung an, es sei denn, es ist wahrscheinlich richtig. Es ist beispielsweise besser zu sagen, dass ein unbekannter Fehler aufgetreten ist, als etwas, das wahrscheinlich ungenau ist.
+- Vermeiden Sie das Wort **"bitte",** außer in Situationen, in denen der Benutzer aufgefordert wird, etwas Unwesentliches (z. B. Warten) zu tun, oder die Software für die Situation verantwortlich ist.
 
 **Richtig:**
 
-Leider hat die Fabrikam-Sicherung ein nicht BEHEB bares Problem erkannt und zum Schutz von Dateien auf Ihrem Computer heruntergefahren.
+Warten Sie, während Windows die Dateien auf Ihren Computer kopiert.
 
-- **Weitere Informationen finden Sie unter Produkte mit Ihren Kurznamen.** Verwenden Sie keine vollständigen Produktnamen oder Marken Symbole. Schließen Sie den Firmennamen nicht ein, es sei denn, die Benutzer ordnen den Firmennamen dem Produkt zu. Fügen Sie keine Programm Versionsnummern ein.
+- **Verwenden Sie das Wort "sorry"** nur in Fehlermeldungen, die zu schwerwiegenden Problemen für den Benutzer führen (z. B. Datenverlust oder Nichtnutzung des Computers). Bitte entlogen Sie sich nicht, wenn das Problem während der normalen Funktionsweise des Programms aufgetreten ist (z. B. wenn der Benutzer warten muss, bis eine Netzwerkverbindung gefunden wurde).
+
+**Richtig:**
+
+Leider hat Fabrikam Backup ein nicht behebbares Problem erkannt und wurde heruntergefahren, um Dateien auf Ihrem Computer zu schützen.
+
+- **Verweisen Sie auf Produkte mit ihren Kurznamen.** Verwenden Sie keine vollständigen Produktnamen oder Markensymbole. Geben Sie den Unternehmensnamen nur an, wenn Benutzer den Unternehmensnamen dem Produkt zuordnen. Schließen Sie keine Programmversionsnummern ein.
 
 **Falsch:**
 
-![Screenshot, der zeigt, dass die Meldung "dieses Element kann nicht geöffnet werden" Microsoft Office. ](images/mess-error-image52.png)
+![Screenshot: Meldung "Dieses Microsoft Office Outlook kann nicht geöffnet werden" ](images/mess-error-image52.png)
 
 **Richtig:**
 
-![Screenshot der Meldung: dieses Element kann nicht geöffnet werden. ](images/mess-error-image53.png)
+![Screenshot der Nachricht: Dieses Element kann nicht geöffnet werden ](images/mess-error-image53.png)
 
-Im falschen Beispiel werden vollständige Produktnamen und Marken Symbole verwendet.
+Im falschen Beispiel werden vollständige Produktnamen und Markensymbole verwendet.
 
-- **Verwenden Sie doppelte Anführungszeichen, um Objektnamen zu verwenden.** Dadurch wird der Text leichter analysiert und potenziell peinliche Anweisungen vermieden.
-  - **Ausnahme:** Voll qualifizierte Dateipfade, URLs und Domänen Namen müssen nicht in doppelten Anführungszeichen stehen.
+- **Verwenden Sie doppelte Anführungszeichen um Objektnamen.** Dies erleichtert die Analyse des Texts und vermeidet potenziell peinliche Anweisungen.
+  - **Ausnahme:** Vollqualifizierte Dateipfade, URLs und Domänennamen müssen nicht in doppelten Anführungszeichen enthalten sein.
 
 **Richtig:**
 
-![Screenshot der Meldung: "mein Haus" ist nicht verfügbar. ](images/mess-error-image54.png)
+![Screenshot der Nachricht: "Mein Haus" ist nicht verfügbar ](images/mess-error-image54.png)
 
-In diesem Beispiel ist die Fehlermeldung verwirrend, wenn der Objektname nicht in Anführungszeichen steht.
+In diesem Beispiel wäre die Fehlermeldung verwirrend, wenn der Objektname nicht in Anführungszeichen steht.
 
-- **Vermeiden Sie das Starten von Sätzen mit Objektnamen.** Dies ist oft schwierig zu analysieren.
-- **Verwenden Sie keine Ausrufezeichen oder Wörter mit allen Großbuchstaben.** Ausrufezeichen und Großbuchstaben machen das Gefühl, dass Sie am Benutzer schreien.
+- **Vermeiden Sie das Starten von Sätzen mit Objektnamen.** Dies ist häufig schwierig zu analysieren.
+- **Verwenden Sie keine Ausrufezeichen oder Wörter mit groß geschriebenen Buchstaben.** Ausrufezeichen und Großbuchstaben machen es so, als ob Sie den Benutzer anschreiten.
 
-Weitere Richtlinien und Beispiele finden Sie unter [Stil und Ton](text-style-tone.md).
+Weitere Richtlinien und Beispiele finden Sie unter [Stil und Ton.](text-style-tone.md)
 
 **Titel**
 
-- **Verwenden Sie den Titel, um den Befehl oder das Feature zu identifizieren, von dem der Fehler verursacht wurde.** Ausnahmen:
+- **Verwenden Sie den Titel, um den Befehl oder das Feature zu identifizieren, von dem der Fehler stammt.** Ausnahmen:
   - Wenn ein Fehler von vielen verschiedenen Befehlen angezeigt wird, sollten Sie stattdessen den Programmnamen verwenden.
-  - Wenn der Titel mit der Main-Anweisung redundant oder verwirrend wäre, sollten Sie stattdessen den Programmnamen verwenden.
-- **Verwenden Sie den Titel nicht, um das Problem zu erläutern oder zusammenzufassen** , das den Zweck der Main-Anweisung darstellt.
+  - Wenn dieser Titel redundant oder verwirrend mit der Main-Anweisung wäre, verwenden Sie stattdessen den Programmnamen.
+- **Verwenden Sie den Titel nicht, um das Problem** zu erläutern oder zusammenzufassen, das der Zweck der Hauptanweisung ist.
 
 **Falsch:**
 
-![Screenshot mit der Meldung "neuer Ordner kann nicht umbenannt werden" ](images/mess-error-image55.png)
+![Screenshot: Meldung "Neuer Ordner kann nicht umbenannt werden" ](images/mess-error-image55.png)
 
-In diesem Beispiel wird der Titel fälschlicherweise verwendet, um das Problem zu erläutern.
+In diesem Beispiel wird der Titel fälschlicherweise verwendet, um das Problem zu erklären.
 
-- Verwenden Sie die Groß-/Kleinschreibung im Titel, ohne die Beendigung zu beenden
+- Verwenden Sie die Groß-/Groß-/Formatvorlage, ohne die Interpunktion zu beenden.
 
-**Haupt Anleitung**
+**Hauptanweisungen**
 
-- **Verwenden Sie die main-Anweisung, um das Problem in Klartext zu beschreiben.**
-- **Bei der präzisen Verwendung wird nur ein einzelner, kompletter Satz verwendet.** PiST die Haupt Anweisung der wichtigen Informationen. Sie können den Betreff implizit lassen, wenn es sich um Ihr Programm oder den Benutzer handelt. Fügen Sie den Grund für das Problem ein, wenn Sie dies möglich machen. Wenn Sie etwas anderes erläutern müssen, verwenden Sie eine ergänzende Anweisung.
+- **Verwenden Sie die Main-Anweisung, um das Problem in einer eindeutigen, einfachen, spezifischen Sprache zu beschreiben.**
+- **Seien Sie präzise, verwenden Sie nur einen einzelnen vollständigen Satz.** Sehen Sie sich die Hauptanweisung auf die wesentlichen Informationen an. Sie können den Betreff implizit be lassen, wenn es sich um Ihr Programm oder den Benutzer handelt. Geben Sie den Grund für das Problem an, wenn Sie dies präzise tun können. Wenn Sie mehr erklären müssen, verwenden Sie eine zusätzliche Anweisung.
 
 **Falsch:**
 
-![Screenshot der Meldung: das Upgrade kann nicht installiert werden. ](images/mess-error-image56.png)
+![Screenshot der Meldung: Upgrade kann nicht installiert werden ](images/mess-error-image56.png)
 
-In diesem Beispiel wird die gesamte Fehlermeldung in die Haupt Anweisung eingefügt, sodass Sie schwer lesbar ist.
+In diesem Beispiel wird die gesamte Fehlermeldung in die Main-Anweisung eingelesen, was das Lesen schwierig macht.
 
-- **Geben Sie einen bestimmten Namen an, wenn Objekte beteiligt sind.**
-- **Vermeiden Sie es, vollständige Dateipfade und URLs in der Haupt Anweisung zu platzieren.** Verwenden Sie stattdessen einen Kurznamen (z. b. den Dateinamen), und legen Sie den vollständigen Namen (z. b. den Dateipfad) in der ergänzenden Anweisung ab. Sie können jedoch einen einzelnen vollständigen Dateipfad oder eine URL in der Haupt Anweisung platzieren, wenn die Fehlermeldung nicht anderweitig eine ergänzende Anweisung benötigt.
+- **Seien Sie spezifisch, wenn Objekte beteiligt sind, geben Sie ihre Namen an.**
+- **Vermeiden Sie es, vollständige Dateipfade und URLs in die Hauptanweisung zu setzen.** Verwenden Sie stattdessen einen Kurznamen (z. B. den Dateinamen), und geben Sie den vollständigen Namen (z. B. den Dateipfad) in die ergänzende Anweisung ein. Sie können jedoch einen einzelnen vollständigen Dateipfad oder eine url in die Main-Anweisung eingeben, wenn die Fehlermeldung andernfalls keine zusätzliche Anweisung benötigt.
 
-![Screenshot der Meldung: die Fabrikam-Datei kann nicht gelöscht werden. ](images/mess-error-image57.png)
+![Screenshot der Nachricht: Fabrikam-Datei kann nicht gelöscht werden ](images/mess-error-image57.png)
 
-In diesem Beispiel befindet sich nur der Dateiname in der Main-Anweisung. Der vollständige Pfad ist in der ergänzenden Anweisung.
+In diesem Beispiel befindet sich nur der Dateiname in der main-Anweisung. Der vollständige Pfad befindet sich in der ergänzenden Anweisung.
 
-- **Lassen Sie den vollständigen Dateipfad und die URL nicht zu, wenn Sie im Kontext offensichtlich ist.**
+- **Geben Sie den vollständigen Dateipfad und die URL überhaupt nicht an, wenn dies aus dem Kontext offensichtlich ist.**
 
-![Screenshot der Meldung: neuer Ordner kann nicht umbenannt werden. ](images/mess-error-image58.png)
+![Screenshot der Nachricht: Neuer Ordner kann nicht umbenannt werden ](images/mess-error-image58.png)
 
-In diesem Beispiel benennt der Benutzer eine Datei aus Windows-Explorer um. In diesem Fall ist der vollständige Dateipfad nicht erforderlich, da er aus dem Kontext ersichtlich ist.
+In diesem Beispiel umbenennt der Benutzer eine Datei aus Windows Explorer. In diesem Fall ist der vollständige Dateipfad nicht erforderlich, da er im Kontext offensichtlich ist.
 
-- Verwenden Sie die aktuelle Spannung, wann immer möglich.
+- Verwenden Sie nach Möglichkeit present tense.
 - Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.
-- Schließen Sie keine abschließenden Zeiträume ein, wenn die Anweisung eine-Anweisung ist. Wenn die Anweisung eine Frage ist, müssen Sie ein endgültiges Fragezeichen einschließen.
+- Schließen Sie keine abschließenden Zeiträume ein, wenn die Anweisung eine -Anweisung ist. Wenn es sich bei der Anweisung um eine Frage handelt, fügen Sie ein abschließendes Fragezeichen ein.
 
-**Haupt Anweisungs Vorlagen**
+**Hauptanweisungsvorlagen**
 
-Obwohl es keine strengen Regeln für das formulieren gibt, versuchen Sie nach Möglichkeit, die folgenden Haupt Anweisungs Vorlagen zu verwenden:
+Es gibt zwar keine strengen Regeln für den Ausdruck, aber verwenden Sie nach Möglichkeit die folgenden Hauptanweisungsvorlagen:
 
-- [Optionaler Betreffname] nicht [Aktion ausführen]
-- [Optionaler Antragsteller Name] nicht [Aktion ausführen] aufgrund von [Grund]
-- [Optionaler Antragsteller Name] nicht [Ausführen einer Aktion] auf "[Objektname]"
-- [Optionaler Antragsteller Name] nicht [Durchführen einer Aktion] für "[Object Name]", da [Reason]
-- Es ist nicht genügend [Ressource] für [Aktion ausführen] vorhanden.
-- [Name des Antragstellers] hat keinen [Object Name] für [Zweck] erforderlich
-- [Gerät oder Einstellung] ist ausgeschaltet, sodass [unerwünschte Ergebnisse]
-- [Gerät oder Einstellung] ist nicht [verfügbar \| gefunden \| \| aktiviert)
-- "[Object Name]" ist zurzeit nicht verfügbar.
+- [Optionaler Name des Betreffs] kann nicht [Aktion ausführen]
+- [optionaler Name des Betreffs] kann [Aktion ausführen] nicht, da [Grund]
+- [Optionaler Betreffname] kann [Aktion ausführen] nicht auf "[Objektname]"
+- [optionaler Betreffname] kann [Aktion ausführen] nicht auf "[Objektname]" aus [Grund]
+- Es ist nicht genügend [Ressource] vorhanden, um [Aktion ausführen]
+- [Betreffname] ist für [Zweck] kein [Objektname] erforderlich.
+- [Gerät oder Einstellung] ist deaktiviert, sodass [unerwünschte Ergebnisse]
+- [Gerät oder Einstellung] ist nicht [verfügbar \| gefunden \| aktiviert \| aktiviert]
+- "[Objektname]" ist derzeit nicht verfügbar.
 - Der Benutzername oder das Kennwort ist falsch.
 - Sie verfügen nicht über die Berechtigung für den Zugriff auf "[Objektname]".
-- Sie haben keine Berechtigung zum [Ausführen von Aktionen].
+- Sie haben keine Berechtigung zum Ausführen einer Aktion.
 - [Programmname] hat ein schwerwiegendes Problem und muss sofort geschlossen werden.
 
-Nehmen Sie natürlich Änderungen nach Bedarf vor, damit die Haupt Anweisung ordnungsgemäß ist, und befolgen Sie die Haupt Anweisungs Richtlinien.
+Nehmen Sie natürlich nach Bedarf Änderungen vor, damit die Hauptanweisung grammatikalisch korrekt ist und den Richtlinien der Hauptanweisung entspricht.
 
-**Ergänzende Anweisungen**
+**Zusätzliche Anweisungen**
 
 - Verwenden Sie die ergänzende Anweisung für Folgendes:
-  - Weitere Informationen zu diesem Problem.
+  - Geben Sie zusätzliche Details zum Problem an.
   - Erläutern Sie die Ursache des Problems.
-  - Auflisten der Schritte, die der Benutzer ausführen kann, um das Problem zu beheben.
+  - Listet die Schritte auf, die der Benutzer ausführen kann, um das Problem zu beheben.
   - Stellen Sie Maßnahmen bereit, um zu verhindern, dass das Problem erneut auftritt.
-- **Wenn möglich, sollten Sie eine praktische, hilfreiche Lösung vorschlagen, damit Benutzer das Problem beheben können.** Stellen Sie jedoch sicher, dass die vorgeschlagene Lösung das Problem wahrscheinlich löst. Verschwenden Sie die Zeit der Benutzer nicht, indem Sie mögliche, aber unwahrscheinliche Lösungen vorschlagen.
+- **Schlagen Sie nach Möglichkeit eine praktische, hilfreiche Lösung vor, damit Benutzer das Problem beheben können.** Stellen Sie jedoch sicher, dass die vorgeschlagene Lösung das Problem wahrscheinlich löst. Verschwenden Sie die Zeit der Benutzer nicht, indem Sie mögliche, aber unwahrscheinliche Lösungen vorschlagen.
 
 **Falsch:**
 
-![Screenshot der Meldung: nicht genügend Arbeitsspeicher ](images/mess-error-image59.png)
+![Screenshot der Meldung: Nicht genügend Arbeitsspeicher ](images/mess-error-image59.png)
 
-In diesem Beispiel sind die Probleme und die empfohlene Lösung sehr unwahrscheinlich.
+In diesem Beispiel sind das Problem und die empfohlene Lösung zwar möglich, aber sehr unwahrscheinlich.
 
-- **Wenn das Problem ein falscher Wert ist, den der Benutzer eingegeben hat, verwenden Sie die ergänzende Anweisung, um die richtigen Werte zu erläutern.** Benutzer sollten diese Informationen nicht aus einer anderen Quelle ermitteln müssen.
-- **Stellen Sie keine Projekt Mappe bereit, wenn Sie von der Problem Anweisung trivial abgeleitet werden kann.**
+- **Wenn das Problem ein falscher Wert ist, den der Benutzer eingegeben hat, verwenden Sie die ergänzende Anweisung, um die richtigen Werte zu erläutern.** Benutzer sollten diese Informationen nicht aus einer anderen Quelle bestimmen müssen.
+- **Stellen Sie keine Lösung bereit, wenn sie einfach aus der Problem-Anweisung abgeleitet werden kann.**
 
-![Screenshot der Meldung: falscher Zeitwert ](images/mess-error-image33.png)
+![Screenshot der Meldung: Falscher Zeitwert ](images/mess-error-image33.png)
 
-In diesem Beispiel ist keine ergänzende Anweisung erforderlich. die Lösung kann in der Problem Anweisung trivial abgeleitet werden.
+In diesem Beispiel ist keine zusätzliche Anweisung erforderlich. Die Lösung kann einfach aus der Problem-Anweisung abgeleitet werden.
 
-- **Wenn die Lösung mehrere Schritte umfasst, stellen Sie die Schritte in der Reihenfolge dar, in der Sie abgeschlossen werden sollten.** Vermeiden Sie jedoch mehrstufige Lösungen, da Benutzer Schwierigkeiten haben, mehr als zwei oder drei einfache Schritte zu merken. Wenn weitere Schritte erforderlich sind, lesen Sie das entsprechende Hilfethema.
-- **Halten Sie ergänzende Anweisungen kurz.** Geben Sie nur an, was Benutzer wissen müssen. Lassen Sie unnötige Details aus. Ziel: maximal drei Sätze mit mittlerer Länge.
-- **Um Fehler zu vermeiden, während Benutzeranweisungen ausführen, fügen Sie die Ergebnisse vor der Aktion ein.**
+- **Wenn die Lösung mehrere Schritte enthält, geben Sie die Schritte in der Reihenfolge an, in der sie abgeschlossen werden sollen.** Vermeiden Sie jedoch lösungen mit mehreren Schritten, da Benutzer Schwierigkeiten haben, sich mehr als zwei oder drei einfache Schritte zu merken. Wenn weitere Schritte erforderlich sind, lesen Sie das entsprechende Hilfethema.
+- **Halten Sie zusätzliche Anweisungen kurz.** Geben Sie nur an, was Benutzer wissen müssen. Unnötige Details weglassen. Ziel: maximal drei Sätze mittlerer Länge.
+- **Um Fehler zu vermeiden, während Benutzer Anweisungen ausführen, setzen Sie die Ergebnisse vor die Aktion.**
 
 **Richtig:**
 
-Um Windows neu zu starten, klicken Sie auf OK.
+Klicken Sie auf OK, um Windows neu zu starten.
 
 **Falsch:**
 
-Klicken Sie zum Neustarten von Windows auf OK.
+Klicken Sie auf OK, um Windows neu zu starten.
 
-Im falschen Beispiel klicken Benutzer mit der Wahrscheinlichkeit, dass Sie versehentlich auf OK klicken.
+Im falschen Beispiel klicken Benutzer eher zufällig auf OK.
 
-- **Es empfiehlt sich nicht, einen Administrator zu kontaktieren, es sei denn, dies ist eine der wahrscheinlichsten Lösungen für das Problem.** Reservieren Sie solche Lösungen für Probleme, die nur von einem Administrator gelöst werden können.
+- **Es wird nicht empfohlen, sich an einen Administrator zu wenden, es sei denn, dies ist eine der wahrscheinlichsten Lösungen für das Problem.** Reservieren Sie solche Lösungen für Probleme, die wirklich nur von einem Administrator gelöst werden können.
 
 **Falsch:**
 
 ![Screenshot der Meldung: Server nicht verfügbar ](images/mess-error-image60.png)
 
-In diesem Beispiel ist das Problem wahrscheinlich mit der Netzwerkverbindung des Benutzers, daher ist es nicht sinnvoll, einen Administrator zu kontaktieren.
+In diesem Beispiel liegt das Problem wahrscheinlich in der Netzwerkverbindung des Benutzers, sodass es sich nicht lohnt, sich an einen Administrator zu wenden.
 
-- **Sie sollten sich nicht an den technischen Support wenden.** Die Option, sich an den technischen Support zu wenden, um ein Problem zu beheben, ist immer verfügbar und muss nicht durch Fehlermeldungen herauf gestuft werden. Konzentrieren Sie sich stattdessen auf das Schreiben hilfreicher Fehlermeldungen, damit Benutzer Probleme lösen können, ohne sich an den technischen Support zu wenden.
+- **Es wird nicht empfohlen, sich an den technischen Support zu wenden.** Die Option, sich an den technischen Support zu wenden, um ein Problem zu lösen, ist immer verfügbar und muss nicht durch Fehlermeldungen heraufgestuft werden. Konzentrieren Sie sich stattdessen auf das Schreiben hilfreicher Fehlermeldungen, damit Benutzer Probleme lösen können, ohne sich an den technischen Support wenden zu müssen.
 
 **Falsch:**
 
-![Screenshot, der die Meldung "dieses Element kann nicht geöffnet werden" anzeigt. ](images/mess-error-image61.png)
+![Screenshot: Meldung "Dieses Element kann nicht geöffnet werden" ](images/mess-error-image61.png)
 
-In diesem Beispiel empfiehlt die Fehlermeldung fälschlicherweise die Kontaktaufnahme mit dem technischen Support.
+In diesem Beispiel empfiehlt die Fehlermeldung fälschlicherweise, sich an den technischen Support zu wenden.
 
-- Verwenden Sie vollständige Sätze, die Groß-/Kleinschreibung und die endinterpunktions Zeichen.
+- Verwenden Sie vollständige Sätze, Groß- und Großschreibung im Satzstil und endende Interpunktion.
 
-**Commit-Schaltflächen**
+**Commitschaltflächen**
 
-- Wenn die Fehlermeldung Befehls Schaltflächen oder Befehls Verknüpfungen enthält, mit denen das Problem gelöst wird, befolgen Sie die entsprechenden Richtlinien in [Dialog Feldern](win-dialog-box.md).
-- Wenn das Programm aufgrund des Fehlers beendet werden muss, geben Sie eine Schaltfläche zum Beenden des Programms an. Um Verwirrung zu vermeiden, verwenden Sie für diesen Zweck nicht Close.
-- Stellen Sie andernfalls eine Schaltfläche Schließen bereit. Verwenden Sie für Fehlermeldungen nicht OK, da diese Formulierung impliziert, dass Probleme in Ordnung sind.
-  - **Ausnahme:** Verwenden Sie OK, wenn Ihr Fehler Berichterstattungs Mechanismus über behobene Bezeichnungen verfügt (wie bei der MessageBox-API).
+- Wenn die Fehlermeldung Befehlsschaltflächen oder Befehlslinks enthält, die das Problem lösen, befolgen Sie die entsprechenden Richtlinien in [Dialogfeldern.](win-dialog-box.md)
+- Wenn das Programm aufgrund des Fehlers beendet werden muss, geben Sie die Schaltfläche Programm beenden an. Verwenden Sie zu diesem Zweck nicht Close, um Verwirrung zu vermeiden.
+- Andernfalls geben Sie eine Schaltfläche Schließen an. Verwenden Sie ok nicht für Fehlermeldungen, da diese Formulierung impliziert, dass Probleme in Ordnung sind.
+  - **Ausnahme:** Verwenden Sie OK, wenn Ihr Fehlerberichtsmechanismus feste Bezeichnungen aufweist (wie bei der MessageBox-API).
 
 ## <a name="documentation"></a>Dokumentation
 
-Beim Verweis auf Fehler:
+Beim Verweisen auf Fehler:
 
-- Informationen zu Fehlern finden Sie in der Haupt Anweisung. Wenn die Haupt Anweisung lang oder ausführlich ist, fassen Sie sie zusammen.
-- Falls erforderlich, können Sie als Meldung auf das Dialogfeld Fehlermeldung verweisen. Weitere Informationen finden Sie als Fehlermeldung nur in der Programmierung und in anderen technischen Dokumentationen.
-- Formatieren Sie den Text nach Möglichkeit fett formatiert. Andernfalls sollten Sie den Text nur bei Bedarf in Anführungszeichen setzen, um Verwechslungen zu vermeiden.
+- Informationen zu Fehlern finden Sie in der Hauptanweisung. Wenn die Hauptanweisung lang oder ausführlich ist, fassen Sie sie zusammen.
+- Bei Bedarf können Sie als Meldung auf ein Fehlermeldungsdialogfeld verweisen. Beziehen Sie sich nur in der Programmierung und anderen technischen Dokumentationen auf als Fehlermeldung.
+- Formatieren Sie den Text nach Möglichkeit fett. Andernfalls setzen Sie den Text nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
 
-**Beispiel:** Wenn eine Laufwerk Nachricht **keine CD-CD** enthält, fügen Sie eine neue CD-CD in das Laufwerk ein, und wiederholen Sie den Vorgang.
+**Beispiel:** Wenn Sie die Meldung **There is no CD disc in the drive (Es ist kein CD-Datenträger in der Laufwerkmeldung** vorhanden) erhalten, fügen Sie eine neue CD-Festplatte in das Laufwerk ein, und versuchen Sie es erneut.

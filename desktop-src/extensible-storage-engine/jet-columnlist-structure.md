@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c61f3492a9f92700fc51b7e51e13f8c3c3febc69
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 6b7f874c95352ce29954adf46b1682dec89c7a9a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985263"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471796"
 ---
 # <a name="jet_columnlist-structure"></a>JET_COLUMNLIST-Struktur
 
@@ -57,7 +57,7 @@ Die **JET_COLUMNLIST-Struktur** enthält die Informationen, die zum Durchlaufen 
 
 **cbStruct**
 
-Die Größe der -Struktur in Bytes. Der API-Aufruf aktualisiert dieses Feld, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_COLUMNLIST ) übereinstimmt.
+Die Größe der -Struktur in Bytes. Durch den API-Aufruf wird dieses Feld aktualisiert, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_COLUMNLIST ) übereinstimmt.
 
 **tableid**
 
@@ -71,7 +71,7 @@ Die Anzahl der Datensätze in der temporären Tabelle, die durch den API-Aufruf 
 
 Der Spaltenbezeichner der Präsentationsreihenfolge.
 
-Die Präsentationsreihenfolge wird verwendet, um die Zeilen der temporären Tabelle zu sortieren. Die Präsentationsreihenfolge ist eine feste [JET_coltypLong](./jet-coltyp.md). Wenn es sich bei der angegebenen Informationsebene nicht um eine kompakte Ebene handelt, wird sie auch als JET_bitColumnTTKey markiert.
+Die Präsentationsreihenfolge wird verwendet, um die Zeilen der temporären Tabelle zu sortieren. Die Präsentationsreihenfolge ist eine feste [JET_coltypLong](./jet-coltyp.md). Wenn die angegebene Informationsebene keine kompakte Ebene war, wird sie auch als JET_bitColumnTTKey markiert.
 
 **columnidcolumnname**
 
@@ -173,7 +173,7 @@ Der Spaltenbezeichner des Namens der Spaltendefinition.
 
 Der Spaltendefinitionsname ist ein [JET_coltypText](./jet-coltyp.md).
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
 Standardmäßig wird die Reihenfolge der Zeilen in der temporären Tabelle nach dem Namen der Spalte sortiert. Sie kann auch nach Spaltenbezeichner sortiert werden. Weitere Informationen zum Sortieren nach Spaltenbezeichner finden Sie unter [JetGetColumnInfo](./jetgetcolumninfo-function.md) und [JetGetTableColumnInfo.](./jetgettablecolumninfo-function.md)
 
@@ -182,11 +182,7 @@ Der Aufruf von [JetGetColumnInfo](./jetgetcolumninfo-function.md) oder [JetGetTa
 ### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
 
 
 

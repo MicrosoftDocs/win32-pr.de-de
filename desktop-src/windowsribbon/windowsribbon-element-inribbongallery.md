@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1156c7a3b625496b0a4d50b750a3db5cda51a6b77745aaf26d4282de1be3443d
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: b1a1d992a9a9ad000a3a6e658b513bf8246657dd
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117850833"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625136"
 ---
 # <a name="inribbongallery-element"></a>InRibbonGallery-Element
 
 Stellt den [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)dar, ein katalogbasiertes Steuerelement, das eine Standardteilmenge von Elementen direkt im Menüband verfügbar macht. Alle verbleibenden Elemente werden angezeigt, wenn auf eine Dropdownmenüschaltfläche geklickt wird.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <InRibbonGallery
@@ -49,17 +49,17 @@ Stellt den [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)dar,
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -68,13 +68,13 @@ Stellt den [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)dar,
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>HasLargeItems</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Bestimmt, ob die große oder kleine Imageressource des Befehls im Katalogsteuerelement angezeigt wird. <br/>
+<td>Bestimmt, ob die große oder kleine Bildressource des Befehls im Katalogsteuerelement angezeigt wird. <br/>
 <blockquote>
 [!Note]<br />
 Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich <code>Command</code> ist.
@@ -110,14 +110,14 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich ist
 <td><strong>MaxColumns</strong><br/></td>
 <td>xs:integer<br/></td>
 <td>Nein<br/></td>
-<td>Gibt die maximale Anzahl von Spalten an, die <strong>von InRibbonGallery</strong> angezeigt werden, z. B. in der Dropdown-Liste <em>Großes</em> Gruppenlayout.<br/> <br/>
+<td>Gibt die maximale Anzahl von Spalten an, die <strong>von InRibbonGallery</strong> angezeigt werden, z. B. in der Dropdown-Dropdown-Liste <em>Großes</em> Gruppenlayout.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>MaxColumnsMedium</strong><br/></td>
 <td>xs:integer<br/></td>
 <td>Nein<br/></td>
-<td>Gibt die maximale Anzahl von Spalten an, die <strong>von InRibbonGallery</strong> im Gruppenlayout <em>Mittel</em> angezeigt werden, bevor zu <em>Großes</em> Layout gewechselt wird. <br/> <br/>
+<td>Gibt die maximale Anzahl von Spalten an, die die <strong>InRibbonGallery</strong> im Gruppenlayout <em>Mittel</em> anzeigt, bevor sie zu <em>Großes</em> Layout wechselt. <br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="odd">
@@ -164,13 +164,13 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich ist
 
 
 
-| Element                                                                                           | BESCHREIBUNG                                        |
+| Element                                                                                           | Beschreibung                                        |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                                     | Kann ein oder mehrere Male auftreten<br/> <br/> |
 | [**InRibbonGallery.MenuGroups**](windowsribbon-element-inribbongallery-menugroups.md)<br/> | Muss genau einmal auftreten<br/> <br/>     |
 | [**InRibbonGallery.MenuLayout**](windowsribbon-element-inribbongallery-menulayout.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>      |
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                       | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                               | Kann ein oder mehrere Male auftreten<br/> <br/> |
 | [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
@@ -181,8 +181,8 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich ist
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -216,17 +216,17 @@ Windows 8 und neuer.
 
 Optional.
 
-Kann höchstens einmal für jedes [**ControlGroup-**](windowsribbon-element-controlgroup.md) oder [**Group-Element**](windowsribbon-element-group.md) auftreten.
+Kann für jedes [**ControlGroup- oder Group-Element**](windowsribbon-element-controlgroup.md) [**mindestens einmal**](windowsribbon-element-group.md) auftreten.
 
 Der folgende Screenshot veranschaulicht das [Menüband-In-Ribbon Gallery-Steuerelement](windowsribbon-controls-inribbongallery.md) in Microsoft Paint für Windows 7.
 
-![Screenshot eines Katalog-Steuerelements im Menüband im Microsoft-Farbband.](images/controls/inribbongallery.png)
+![Screenshot eines Katalogsteuerelementes im Menüband im Microsoft-Farbband.](images/controls/inribbongallery.png)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für einen [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für einen [In-Ribbon Gallery veranschaulicht.](windowsribbon-controls-inribbongallery.md)
 
-Dieser Codeabschnitt zeigt die **InRibbonGallery-Befehlsdeklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **InRibbonGallery-Element** fungiert.
+Dieser Codeabschnitt zeigt die Deklarationen des **InRibbonGallery-Befehls** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **InRibbonGallery-Element** fungiert.
 
 
 ```XML
@@ -282,11 +282,11 @@ Dieser Codeabschnitt zeigt die **InRibbonGallery-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Katalogsteuerelement im Menüband](windowsribbon-controls-inribbongallery.md)
+[Steuerelement "Katalog im Menüband"](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
 [Arbeiten mit Katalogen](ribbon-controls-galleries.md)

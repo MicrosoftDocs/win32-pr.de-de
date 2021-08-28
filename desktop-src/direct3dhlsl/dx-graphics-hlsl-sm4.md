@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d90444aff674ce876f19f02f21104dd7e42143de5926ba068bbe2c49f427fdde
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: c863d952990cd05394244fe662650df59568eeaf
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117725887"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466967"
 ---
 # <a name="shader-model-4"></a>Shadermodell 4
 
@@ -22,49 +22,16 @@ Shadermodell 4 ist eine Obermenge der Funktionen in [ShaderModell 3,](dx-graphic
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Funktion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Instruktionssatz</td>
-<td><a href="dx-graphics-hlsl-intrinsic-functions.md"><strong>HLSL-Funktionen</strong></a></td>
-</tr>
-<tr class="even">
-<td>Registrieren von Set</td>
-<td>Auf den Registersatz kann über Member in Konstanten- und Texturpuffern zugegriffen werden, indem die HLSL-Semantik für Dinge wie das Packen von Komponenten verwendet wird.
-<ul>
-<li>Pixelshaderregister (siehe Register – <a href="dx-graphics-hlsl-sm4-registers-ps-4-0.md">ps_4_0</a> und Register <a href="dx-graphics-hlsl-sm4-registers-ps-4-1.md">– ps_4_1</a>)</li>
-<li>Vertex-Shaderregister (siehe <a href="dx-graphics-hlsl-sm4-registers-vs-4-0.md">Register – vs_4_0</a> und Register – <a href="dx-graphics-hlsl-sm4-registers-vs-4-1.md">vs_4_1</a>)</li>
-<li>Geometry-Shaderregister (siehe <a href="dx-graphics-hlsl-sm4-registers-gs-4-0.md">Register – gs_4_0</a> und Register – <a href="dx-graphics-hlsl-sm4-registers-gs-4-1.md">gs_4_1</a>)</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Vertex-Shader max</td>
-<td>Keine Einschränkung</td>
-</tr>
-<tr class="even">
-<td>Max. Pixel-Shader</td>
-<td>Keine Einschränkung</td>
-</tr>
-<tr class="odd">
-<td>Neue Shaderprofile hinzugefügt</td>
-<td>gs_4_0, ps_4_0, vs_4_0,*gs_4_1, ps_4_1,* gs_4_1*</td>
-</tr>
-<tr class="even">
-<td>Neues Effect-Framework-Profil hinzugefügt</td>
-<td>fx_4_0, fx_4_1*</td>
-</tr>
-</tbody>
-</table>
+
+| Feature | Funktion | 
+|---------|------------|
+| Instruktionssatz | <a href="dx-graphics-hlsl-intrinsic-functions.md"><strong>HLSL-Funktionen</strong></a> | 
+| Registrieren von Set | Auf den Registersatz kann über Member in Konstanten- und Texturpuffern zugegriffen werden, indem HLSL-Semantik für Dinge wie das Packen von Komponenten verwendet wird.<ul><li>Pixelshaderregister (siehe <a href="dx-graphics-hlsl-sm4-registers-ps-4-0.md">Register – ps_4_0</a> und Register – <a href="dx-graphics-hlsl-sm4-registers-ps-4-1.md">ps_4_1</a>)</li><li>Vertex-Shaderregister (siehe <a href="dx-graphics-hlsl-sm4-registers-vs-4-0.md">Register – vs_4_0</a> und Register – <a href="dx-graphics-hlsl-sm4-registers-vs-4-1.md">vs_4_1</a>)</li><li>Geometry-Shaderregister (siehe <a href="dx-graphics-hlsl-sm4-registers-gs-4-0.md">Register – gs_4_0</a> und Register – <a href="dx-graphics-hlsl-sm4-registers-gs-4-1.md">gs_4_1</a>)</li></ul> | 
+| Vertex-Shader max | Keine Einschränkung | 
+| Max. Pixel-Shader | Keine Einschränkung | 
+| Neue Shaderprofile hinzugefügt | gs_4_0, ps_4_0, vs_4_0,*gs_4_1, ps_4_1,* gs_4_1* | 
+| Neues Effect-Framework-Profil hinzugefügt | fx_4_0, fx_4_1* | 
+
 
 
 
@@ -82,7 +49,7 @@ ShaderModell 4 unterstützt eine neue Pipelinephase – die geometry-shader-Phas
 
 Shadermodell 4 unterstützt Komprimierungsregeln, die vorgeben, wie eng Daten beim Speichern angeordnet werden können. Diese Regeln werden unter [Komprimierungsregeln für konstante Variablen](dx-graphics-hlsl-packing-rules.md) beschrieben.
 
-Im Abschnitt [ShaderModell 4-Assembly](dx-graphics-hlsl-sm4-asm.md) werden die Assemblyanweisungen beschrieben, die von Shadermodell 4 und Shadermodell 4.1 unterstützt werden.
+Im Abschnitt [Shader Model 4 Assembly (Shadermodell 4-Assembly)](dx-graphics-hlsl-sm4-asm.md) werden die Assemblyanweisungen beschrieben, die von Shadermodell 4 und Shadermodell 4.1 unterstützt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

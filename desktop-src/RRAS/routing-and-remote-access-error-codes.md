@@ -1,6 +1,6 @@
 ---
-title: Fehlercodes für Routing und Remotezugriff
-description: Die folgenden Fehlercodes für die Routing- und Ras-API (RRAS) sind in raserror.h definiert.
+title: Routing- und RAS-Fehlercodes
+description: Die folgenden Fehlercodes der RRAS-API (Routing and Remote Access) sind in raserror.h definiert.
 ms.assetid: 1fa41438-7c93-4e9c-851c-652fba23da4f
 topic_type:
 - apiref
@@ -11,16 +11,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7bd68c31ef2b92cce75059d5d86ee68dc65d1151
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 5664bc6a4b6b820d7ce72b0605cea8339aa96b16
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122624326"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886022"
 ---
-# <a name="routing-and-remote-access-error-codes"></a>Fehlercodes für Routing und Remotezugriff
+# <a name="routing-and-remote-access-error-codes"></a>Routing- und RAS-Fehlercodes
 
-Die folgenden Fehlercodes für die Routing- und Ras-API (RRAS) sind in raserror.h definiert. Alle Fehlercodes werden in Windows 2000 oder höher von Windows unterstützt, sofern nichts anderes angegeben ist.
+Die folgenden Fehlercodes der RRAS-API (Routing and Remote Access) sind in raserror.h definiert. Alle Fehlercodes werden in version Windows 2000 oder höher von Windows sofern nicht anders angegeben.
 
 
 
@@ -37,12 +37,12 @@ Die folgenden Fehlercodes für die Routing- und Ras-API (RRAS) sind in raserror.
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="PENDING"></span><span id="pending"></span><dl> <dt><strong>AUSSTEHENDE</strong></dt> <dt>600</dt> </dl></td>
+<td><span id="PENDING"></span><span id="pending"></span><dl> <dt><strong>PENDING</strong></dt> <dt>600</dt> </dl></td>
 <td>Ein Vorgang steht aus.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_INVALID_PORT_HANDLE"></span><span id="error_invalid_port_handle"></span><dl> <dt><strong>ERROR_INVALID_PORT_HANDLE</strong></dt> <dt>601</dt> </dl></td>
-<td>Das angegebene Porthandle ist ungültig.<br/></td>
+<td>Das angegebene Porthand handle ist ungültig.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_PORT_ALREADY_OPEN"></span><span id="error_port_already_open"></span><dl> <dt><strong>ERROR_PORT_ALREADY_OPEN</strong></dt> <dt>602</dt> </dl></td>
@@ -50,7 +50,7 @@ Die folgenden Fehlercodes für die Routing- und Ras-API (RRAS) sind in raserror.
 </tr>
 <tr class="even">
 <td><span id="ERROR_BUFFER_TOO_SMALL"></span><span id="error_buffer_too_small"></span><dl> <dt><strong>ERROR_BUFFER_TOO_SMALL</strong></dt> <dt>603</dt> </dl></td>
-<td>Der bereitgestellte Puffer ist zu klein.<br/></td>
+<td>Der angegebene Puffer ist zu klein.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_WRONG_INFO_SPECIFIED"></span><span id="error_wrong_info_specified"></span><dl> <dt><strong>ERROR_WRONG_INFO_SPECIFIED</strong></dt> <dt>604</dt> </dl></td>
@@ -61,7 +61,7 @@ Die folgenden Fehlercodes für die Routing- und Ras-API (RRAS) sind in raserror.
 <td>Die angegebenen Portinformationen können nicht festgelegt werden.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -74,7 +74,7 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 <td>Ein ungültiges Ereignis wurde erkannt.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -95,7 +95,7 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 <td>Es wurde eine Route angegeben, die nicht verfügbar ist.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -108,7 +108,7 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 <td>Die angegebene Komprimierung ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -141,7 +141,7 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 <td>Es konnten keine Endpunkte bestimmt werden.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -155,7 +155,7 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 </tr>
 <tr class="even">
 <td><span id="ERROR_CANNOT_FIND_PHONEBOOK_ENTRY"></span><span id="error_cannot_find_phonebook_entry"></span><dl> <dt><strong>ERROR_CANNOT_FIND_PHONEBOOK_ENTRY</strong></dt> <dt>623</dt> </dl></td>
-<td>Der angegebene Telefonbucheintrag wurde nicht gefunden.<br/></td>
+<td>Der angegebene Telefonbucheintrag wurde nicht finden.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_CANNOT_WRITE_PHONEBOOK"></span><span id="error_cannot_write_phonebook"></span><dl> <dt><strong>ERROR_CANNOT_WRITE_PHONEBOOK</strong></dt> <dt>624</dt> </dl></td>
@@ -163,20 +163,20 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 </tr>
 <tr class="even">
 <td><span id="ERROR_CORRUPT_PHONEBOOK"></span><span id="error_corrupt_phonebook"></span><dl> <dt><strong>ERROR_CORRUPT_PHONEBOOK</strong></dt> <dt>625</dt> </dl></td>
-<td>Die im angegebenen Telefonbuch gefundenen Informationen sind ungültig.<br/></td>
+<td>Im angegebenen Telefonbuch gefundene Informationen sind ungültig.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_CANNOT_LOAD_STRING"></span><span id="error_cannot_load_string"></span><dl> <dt><strong>ERROR_CANNOT_LOAD_STRING</strong></dt> <dt>626</dt> </dl></td>
 <td>Eine Zeichenfolge konnte nicht geladen werden.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_KEY_NOT_FOUND"></span><span id="error_key_not_found"></span><dl> <dt><strong>ERROR_KEY_NOT_FOUND</strong></dt> <dt>627</dt> </dl></td>
-<td>Der angegebene Schlüssel wurde nicht gefunden.<br/></td>
+<td>Der angegebene Schlüssel wurde nicht finden.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_DISCONNECTION"></span><span id="error_disconnection"></span><dl> <dt><strong>ERROR_DISCONNECTION</strong></dt> <dt>628</dt> </dl></td>
@@ -200,20 +200,20 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 </tr>
 <tr class="even">
 <td><span id="ERROR_PORT_NOT_AVAILABLE"></span><span id="error_port_not_available"></span><dl> <dt><strong>ERROR_PORT_NOT_AVAILABLE</strong></dt> <dt>633</dt> </dl></td>
-<td>Der angegebene Port wird bereits verwendet oder ist nicht für die Remotezugriffs-DFÜ konfiguriert.<br/></td>
+<td>Der angegebene Port wird bereits verwendet oder ist nicht für das Remotezugriffs-DFÜ konfiguriert.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_CANNOT_PROJECT_CLIENT"></span><span id="error_cannot_project_client"></span><dl> <dt><strong>ERROR_CANNOT_PROJECT_CLIENT</strong></dt> <dt>634</dt> </dl></td>
 <td>Ihr Computer konnte nicht im Remotenetzwerk registriert werden.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_UNKNOWN"></span><span id="error_unknown"></span><dl> <dt><strong>ERROR_UNKNOWN</strong></dt> <dt>635</dt> </dl></td>
-<td>Es ist ein unbekannter Fehler aufgetreten.<br/></td>
+<td>Unbekannter Fehler.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_WRONG_DEVICE_ATTACHED"></span><span id="error_wrong_device_attached"></span><dl> <dt><strong>ERROR_WRONG_DEVICE_ATTACHED</strong></dt> <dt>636</dt> </dl></td>
@@ -221,10 +221,10 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 </tr>
 <tr class="even">
 <td><span id="ERROR_BAD_STRING"></span><span id="error_bad_string"></span><dl> <dt><strong>ERROR_BAD_STRING</strong></dt> <dt>637</dt> </dl></td>
-<td>Eine Zeichenfolge wurde erkannt, die nicht konvertiert werden konnte.<br/>
+<td>Es wurde eine Zeichenfolge erkannt, die nicht konvertiert werden konnte.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -237,16 +237,16 @@ In Windows Vista und neueren Versionen von Windows veraltet.
 <td>Es ist kein asynchrones Netz verfügbar.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_NETBIOS_ERROR"></span><span id="error_netbios_error"></span><dl> <dt><strong>ERROR_NETBIOS_ERROR</strong></dt> <dt>640</dt> </dl></td>
-<td>Bei NetBIOS ist ein Fehler aufgetreten.<br/>
+<td>Es ist ein Fehler im Zusammenhang mit NetBIOS aufgetreten.<br/>
 <blockquote>
 [!Note]<br />
-In Windows Vista und neueren Versionen von Windows veraltet.
+Veraltet in Windows Vista und neueren Versionen von Windows.
 </blockquote>
 <br/></td>
 </tr>
@@ -333,7 +333,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_MESSAGE_MACRO_NOT_FOUND"></span><span id="error_message_macro_not_found"></span><dl> <dt><strong>ERROR_MESSAGE_MACRO_NOT_FOUND</strong></dt> <dt>655</dt> </dl></td>
-<td>Das <message> Makro wurde auf dem Gerät nicht gefunden. Abschnitt "INF-Datei".<br/></td>
+<td>Das &lt; &gt; Nachrichtenmakro wurde auf dem Gerät nicht gefunden. Abschnitt "INF-Datei".<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_DEFAULTOFF_MACRO_NOT_FOUND"></span><span id="error_defaultoff_macro_not_found"></span><dl> <dt><strong>ERROR_DEFAULTOFF_MACRO_NOT_FOUND</strong></dt> <dt>656</dt> </dl></td>
@@ -345,7 +345,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_DEVICENAME_TOO_LONG"></span><span id="error_devicename_too_long"></span><dl> <dt><strong>ERROR_DEVICENAME_TOO_LONG</strong></dt> <dt>658</dt> </dl></td>
-<td>Der Gerätename auf dem Gerät. DIE INF- .INI Mediendatei ist zu lang. <br/></td>
+<td>Der Gerätename auf dem Gerät. DIE INF- oder .INI ist zu lang. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_DEVICENAME_NOT_FOUND"></span><span id="error_devicename_not_found"></span><dl> <dt><strong>ERROR_DEVICENAME_NOT_FOUND</strong></dt> <dt>659</dt> </dl></td>
@@ -389,11 +389,11 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_BAD_USAGE_IN_INI_FILE"></span><span id="error_bad_usage_in_ini_file"></span><dl> <dt><strong>ERROR_BAD_USAGE_IN_INI_FILE</strong></dt> <dt>669</dt> </dl></td>
-<td>Der Usage-Parameter in der Mediendatei .ini ungültig.<br/></td>
+<td>Der Verwendungsparameter in der Mediendatei .ini ungültig.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_READING_SECTIONNAME"></span><span id="error_reading_sectionname"></span><dl> <dt><strong>ERROR_READING_SECTIONNAME</strong></dt> <dt>670</dt> </dl></td>
-<td>Der Abschnittsname kann nicht aus der Mediendatei .INI werden.<br/></td>
+<td>Der Abschnittsname kann nicht aus der Mediendatei .INI gelesen werden.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_READING_DEVICETYPE"></span><span id="error_reading_devicetype"></span><dl> <dt><strong>ERROR_READING_DEVICETYPE</strong></dt> <dt>671</dt> </dl></td>
@@ -401,7 +401,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_READING_DEVICENAME"></span><span id="error_reading_devicename"></span><dl> <dt><strong>ERROR_READING_DEVICENAME</strong></dt> <dt>672</dt> </dl></td>
-<td>Der Gerätename kann nicht aus der Mediendatei .INI werden.<br/></td>
+<td>Der Gerätename kann nicht aus der Mediendatei gelesen .INI werden.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_READING_USAGE"></span><span id="error_reading_usage"></span><dl> <dt><strong>ERROR_READING_USAGE</strong></dt> <dt>673</dt> </dl></td>
@@ -700,11 +700,11 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_PPP_CP_REJECTED"></span><span id="error_ppp_cp_rejected"></span><dl> <dt><strong>ERROR_PPP_CP_REJECTED</strong></dt> <dt>733</dt> </dl></td>
-<td>Das CONTROL-Steuerungsprotokoll für das angegebene Netzwerkprotokoll ist auf dem Server nicht verfügbar.<br/></td>
+<td>Das STEUERELEMENTPROTOKOLL FÜR DAS ANGEGEBENE Netzwerkprotokoll ist auf dem Server nicht verfügbar.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_PPP_LCP_TERMINATED"></span><span id="error_ppp_lcp_terminated"></span><dl> <dt><strong>ERROR_PPP_LCP_TERMINATED</strong></dt> <dt>734</dt> </dl></td>
-<td>Das CONTROL-Linksteuerungsprotokoll wurde beendet.<br/></td>
+<td>Das PROTOKOLL FÜR DIE LINK-Steuerung wurde beendet.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_PPP_REQUIRED_ADDRESS_REJECTED"></span><span id="error_ppp_required_address_rejected"></span><dl> <dt><strong>ERROR_PPP_REQUIRED_ADDRESS_REJECTED</strong></dt> <dt>735</dt> </dl></td>
@@ -724,7 +724,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_CANNOT_USE_LOGON_CREDENTIALS"></span><span id="error_cannot_use_logon_credentials"></span><dl> <dt><strong>ERROR_CANNOT_USE_LOGON_CREDENTIALS</strong></dt> <dt>739</dt> </dl></td>
-<td>Der Remoteserver kann das kennwortgeschlüsselte Windows NT nicht verwenden.<br/></td>
+<td>Der Remoteserver kann das Windows NT-verschlüsselte Kennwort nicht verwenden.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_TAPI_CONFIGURATION"></span><span id="error_tapi_configuration"></span><dl> <dt><strong>ERROR_TAPI_CONFIGURATION</strong></dt> <dt>740</dt> </dl></td>
@@ -740,19 +740,19 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_REMOTE_REQUIRES_ENCRYPTION"></span><span id="error_remote_requires_encryption"></span><dl> <dt><strong>ERROR_REMOTE_REQUIRES_ENCRYPTION</strong></dt> <dt>743</dt> </dl></td>
-<td>Der Remotecomputer erfordert Datenverschlüsselung.<br/>
+<td>Für den Remotecomputer ist eine Datenverschlüsselung erforderlich.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_IPXCP_NET_NUMBER_CONFLICT"></span><span id="error_ipxcp_net_number_conflict"></span><dl> <dt><strong>ERROR_IPXCP_NET_NUMBER_CONFLICT</strong></dt> <dt>744</dt> </dl></td>
-<td>Das System kann die vom Remotecomputer zugewiesene IPX-Netzwerknummer nicht verwenden. Weitere Informationen finden Sie im Ereignisprotokoll.<br/>
+<td>Das System kann die vom Remotecomputer zugewiesene IPX-Netzwerknummer nicht verwenden. Zusätzliche Informationen werden im Ereignisprotokoll bereitgestellt.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -761,7 +761,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Das Sitzungsverwaltungsmodul (Session Management Module, SMM) ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -770,7 +770,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>SMM ist nicht initialisiert.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -779,7 +779,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Kein MAC für Port.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -788,20 +788,20 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Das SMM-Time out.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_BAD_PHONE_NUMBER"></span><span id="error_bad_phone_number"></span><dl> <dt><strong>ERROR_BAD_PHONE_NUMBER</strong></dt> <dt>749</dt> </dl></td>
-<td>Es wurde eine fehlerhafte Telefonnummer angegeben.<br/></td>
+<td>Eine ungültige Telefonnummer wurde angegeben.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_WRONG_MODULE"></span><span id="error_wrong_module"></span><dl> <dt><strong>ERROR_WRONG_MODULE</strong></dt> <dt>750</dt> </dl></td>
 <td>Der falsche SMM wurde angegeben.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -810,7 +810,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Die Rückrufnummer enthält ein ungültiges Zeichen. Nur die folgenden 18 Zeichen sind zulässig: 0 bis 9, T, P, W, (, ), -, @und Leerzeichen.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -824,11 +824,11 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_BUNDLE_NOT_FOUND"></span><span id="error_bundle_not_found"></span><dl> <dt><strong>ERROR_BUNDLE_NOT_FOUND</strong></dt> <dt>754</dt> </dl></td>
-<td>Das Multilinkpaket wurde vom System nicht finden.<br/></td>
+<td>Das System konnte das Paket mit mehreren Links nicht finden.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_CANNOT_DO_CUSTOMDIAL"></span><span id="error_cannot_do_customdial"></span><dl> <dt><strong>ERROR_CANNOT_DO_CUSTOMDIAL</strong></dt> <dt>755</dt> </dl></td>
-<td>Das System kann kein automatisiertes Wählen durchführen, da für diese Verbindung ein benutzerdefiniertes Wählfeld angegeben ist.<br/></td>
+<td>Das System kann kein automatisiertes Wählen ausführen, da für diese Verbindung ein benutzerdefiniertes Wählsystem angegeben ist.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_DIAL_ALREADY_IN_PROGRESS"></span><span id="error_dial_already_in_progress"></span><dl> <dt><strong>ERROR_DIAL_ALREADY_IN_PROGRESS</strong></dt> <dt>756</dt> </dl></td>
@@ -836,23 +836,23 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_RASAUTO_CANNOT_INITIALIZE"></span><span id="error_rasauto_cannot_initialize"></span><dl> <dt><strong>ERROR_RASAUTO_CANNOT_INITIALIZE</strong></dt> <dt>757</dt> </dl></td>
-<td>RAS konnte nicht automatisch gestartet werden. Weitere Informationen finden Sie im Ereignisprotokoll.<br/></td>
+<td>RAS konnte nicht automatisch gestartet werden. Zusätzliche Informationen werden im Ereignisprotokoll bereitgestellt.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_CONNECTION_ALREADY_SHARED"></span><span id="error_connection_already_shared"></span><dl> <dt><strong>ERROR_CONNECTION_ALREADY_SHARED</strong></dt> <dt>758</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung (Internet Connection Sharing, ICS) ist für die Verbindung bereits aktiviert.<br/>
+<td>Internet Connection Sharing (ICS) ist bereits für die Verbindung aktiviert.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_SHARING_CHANGE_FAILED"></span><span id="error_sharing_change_failed"></span><dl> <dt><strong>ERROR_SHARING_CHANGE_FAILED</strong></dt> <dt>759</dt> </dl></td>
-<td>Fehler beim Ändern der vorhandenen Einstellungen für die Gemeinsame Nutzung von Internetverbindung.<br/>
+<td>Fehler beim Ändern der vorhandenen Einstellungen für die Internetverbindungsfreigabe.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -861,7 +861,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Fehler beim Aktivieren von Routingfunktionen.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -870,7 +870,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Fehler beim Aktivieren der Internetverbindungsfreigabe für die Verbindung.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -879,16 +879,16 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Fehler beim Konfigurieren des lokalen Netzwerks für die Freigabe.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_CANNOT_SHARE_CONNECTION"></span><span id="error_cannot_share_connection"></span><dl> <dt><strong>ERROR_CANNOT_SHARE_CONNECTION</strong></dt> <dt>763</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung kann nicht aktiviert werden. Es gibt mehr als eine LAN-Verbindung als die verbindung, die freigegeben werden soll.<br/>
+<td>Die Freigabe von Internetverbindungen kann nicht aktiviert werden. Es gibt mehrere LAN-Verbindungen außer der zu teilenden Verbindung.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -898,7 +898,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_SHARING_ADDRESS_EXISTS"></span><span id="error_sharing_address_exists"></span><dl> <dt><strong>ERROR_SHARING_ADDRESS_EXISTS</strong></dt> <dt>765</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung kann nicht aktiviert werden. Eine LAN-Verbindung ist bereits mit der IP-Adresse konfiguriert, die für die automatische IP-Adressierung erforderlich ist. <br/></td>
+<td>Die Freigabe von Internetverbindungen kann nicht aktiviert werden. Eine LAN-Verbindung ist bereits mit der IP-Adresse konfiguriert, die für die automatische IP-Adressierung erforderlich ist. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_NO_CERTIFICATE"></span><span id="error_no_certificate"></span><dl> <dt><strong>ERROR_NO_CERTIFICATE</strong></dt> <dt>766</dt> </dl></td>
@@ -906,7 +906,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_SHARING_MULTIPLE_ADDRESSES"></span><span id="error_sharing_multiple_addresses"></span><dl> <dt><strong>ERROR_SHARING_MULTIPLE_ADDRESSES</strong></dt> <dt>767</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung kann nicht aktiviert werden. Für die als privates Netzwerk ausgewählte LAN-Verbindung sind mehrere IP-Adressen konfiguriert. Konfigurieren Sie die LAN-Verbindung mit einer einzelnen IP-Adresse neu, bevor Sie die Freigabe der Internetverbindung aktivieren. <br/></td>
+<td>Die Freigabe von Internetverbindungen kann nicht aktiviert werden. Für die als privates Netzwerk ausgewählte LAN-Verbindung sind mehrere IP-Adressen konfiguriert. Konfigurieren Sie die LAN-Verbindung mit einer einzelnen IP-Adresse neu, bevor Sie die Freigabe von Internetverbindung aktivieren. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_FAILED_TO_ENCRYPT"></span><span id="error_failed_to_encrypt"></span><dl> <dt><strong>ERROR_FAILED_TO_ENCRYPT</strong></dt> <dt>768</dt> </dl></td>
@@ -926,7 +926,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_INCOMPATIBLE"></span><span id="error_incompatible"></span><dl> <dt><strong>ERROR_INCOMPATIBLE</strong></dt> <dt>772</dt> </dl></td>
-<td>Die Netzwerkhardware des Remotecomputers ist nicht mit dem angeforderten Aufruftyp kompatibel. <br/></td>
+<td>Die Netzwerkhardware des Remotecomputers ist mit dem angeforderten Aufruftyp nicht kompatibel. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_NUMBERCHANGED"></span><span id="error_numberchanged"></span><dl> <dt><strong>ERROR_NUMBERCHANGED</strong></dt> <dt>773</dt> </dl></td>
@@ -934,7 +934,7 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_TEMPFAILURE"></span><span id="error_tempfailure"></span><dl> <dt><strong>ERROR_TEMPFAILURE</strong></dt> <dt>774</dt> </dl></td>
-<td>Der Verbindungsversuch ist aufgrund eines vorübergehenden Fehlers fehlgeschlagen. Try connecting again.<br/></td>
+<td>Der Verbindungsversuch ist aufgrund eines temporären Fehlers fehlgeschlagen. Try connecting again.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_BLOCKED"></span><span id="error_blocked"></span><dl> <dt><strong>ERROR_BLOCKED</strong></dt> <dt>775</dt> </dl></td>
@@ -942,11 +942,11 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_DONOTDISTURB"></span><span id="error_donotdisturb"></span><dl> <dt><strong>ERROR_DONOTDISTURB</strong></dt> <dt>776</dt> </dl></td>
-<td>Der Aufruf konnte nicht verbunden werden, da der Remotecomputer das Feature "Nicht störend" aufgerufen hat. <br/></td>
+<td>Der Aufruf konnte nicht verbunden werden, da der Remotecomputer das Feature Nicht stören aufgerufen hat. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_OUTOFORDER"></span><span id="error_outoforder"></span><dl> <dt><strong>ERROR_OUTOFORDER</strong></dt> <dt>777</dt> </dl></td>
-<td>Der Verbindungsversuch ist fehlgeschlagen, weil das Modem oder ein anderes Verbindungsgerät auf dem Remotecomputer nicht in der Reihenfolge ist. <br/></td>
+<td>Der Verbindungsversuch ist fehlgeschlagen, weil das Modem oder ein anderes Verbindungsgerät auf dem Remotecomputer nicht ordnungsgemäß ist. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_UNABLE_TO_AUTHENTICATE_SERVER"></span><span id="error_unable_to_authenticate_server"></span><dl> <dt><strong>ERROR_UNABLE_TO_AUTHENTICATE_SERVER</strong></dt> <dt>778</dt> </dl></td>
@@ -954,10 +954,10 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_SMART_CARD_REQUIRED"></span><span id="error_smart_card_required"></span><dl> <dt><strong>ERROR_SMART_CARD_REQUIRED</strong></dt> <dt>779</dt> </dl></td>
-<td>Um sich über diese Verbindung auswählen zu können, müssen Sie eine Smartcard verwenden.<br/>
+<td>Um diese Verbindung zu verwenden, müssen Sie eine Smartcard verwenden.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
@@ -970,69 +970,69 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 <td>Fehler beim Verschlüsselungsversuch, weil kein gültiges Zertifikat gefunden wurde.<br/>
 <blockquote>
 [!Note]<br />
-Veraltet in Windows Vista und neueren Versionen von Windows.
+In Windows Vista und neueren Versionen von Windows veraltet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_SHARING_RRAS_CONFLICT"></span><span id="error_sharing_rras_conflict"></span><dl> <dt><strong>ERROR_SHARING_RRAS_CONFLICT</strong></dt> <dt>782</dt> </dl></td>
-<td>Die Verbindungsfreigabe (Connection Sharing, NAT) ist derzeit als Routingprotokoll installiert und muss entfernt werden, bevor die Freigabe von Internetverbindungen ermöglicht wird.<br/></td>
+<td>Die Verbindungsfreigabe (NAT) ist derzeit als Routingprotokoll installiert und muss vor dem Aktivieren der Freigabe von Internetverbindung entfernt werden.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_SHARING_NO_PRIVATE_LAN"></span><span id="error_sharing_no_private_lan"></span><dl> <dt><strong>ERROR_SHARING_NO_PRIVATE_LAN</strong></dt> <dt>783</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung kann nicht aktiviert werden. Die als privates Netzwerk ausgewählte LAN-Verbindung ist entweder nicht vorhanden oder vom Netzwerk getrennt. Stellen Sie sicher, dass der LAN-Adapter verbunden ist, bevor Sie die Freigabe der Internetverbindung aktivieren. <br/></td>
+<td>Die Freigabe von Internetverbindungen kann nicht aktiviert werden. Die als privates Netzwerk ausgewählte LAN-Verbindung ist entweder nicht vorhanden oder vom Netzwerk getrennt. Stellen Sie sicher, dass der LAN-Adapter verbunden ist, bevor Sie die Freigabe von Internetverbindung aktivieren. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_NO_DIFF_USER_AT_LOGON"></span><span id="error_no_diff_user_at_logon"></span><dl> <dt><strong>ERROR_NO_DIFF_USER_AT_LOGON</strong></dt> <dt>784</dt> </dl></td>
-<td>Sie können diese Verbindung bei der Anmeldung nicht verwenden, da sie so konfiguriert ist, dass sie einen anderen Benutzernamen als den auf der Smartcard verwendet. Wenn Sie diese Verbindung zur Anmeldezeit verwenden möchten, müssen Sie sie für die Verwendung des Benutzernamens auf der Smartcard konfigurieren. <br/></td>
+<td>Sie können diese Verbindung nicht zur Anmeldezeit verwenden, da sie so konfiguriert ist, dass sie einen anderen Benutzernamen als den auf der Smartcard verwendet. Wenn Sie diese Verbindung zur Anmeldezeit verwenden möchten, müssen Sie sie für die Verwendung des Benutzernamens auf der Smartcard konfigurieren. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_NO_REG_CERT_AT_LOGON"></span><span id="error_no_reg_cert_at_logon"></span><dl> <dt><strong>ERROR_NO_REG_CERT_AT_LOGON</strong></dt> <dt>785</dt> </dl></td>
-<td>Sie können diese Verbindung bei der Anmeldung nicht verwenden, da sie nicht für die Verwendung einer Smartcard konfiguriert ist. Wenn Sie sie zur Anmeldezeit verwenden möchten, müssen Sie die Eigenschaften dieser Verbindung so bearbeiten, dass sie eine Smartcard verwendet. <br/></td>
+<td>Sie können diese Verbindung nicht zur Anmeldezeit verwenden, da sie nicht für die Verwendung einer Smartcard konfiguriert ist. Wenn Sie sie zur Anmeldezeit verwenden möchten, müssen Sie die Eigenschaften dieser Verbindung so bearbeiten, dass sie eine Smartcard verwendet. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_OAKLEY_NO_CERT"></span><span id="error_oakley_no_cert"></span><dl> <dt><strong>ERROR_OAKLEY_NO_CERT</strong></dt> <dt>786</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, da auf Ihrem Computer kein gültiges Computerzertifikat für die Sicherheitsauthentifizierung vor ort ist. <br/></td>
+<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, weil kein gültiges Computerzertifikat für die Sicherheitsauthentifizierung auf Ihrem Computer vorhanden ist. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_OAKLEY_AUTH_FAIL"></span><span id="error_oakley_auth_fail"></span><dl> <dt><strong>ERROR_OAKLEY_AUTH_FAIL</strong></dt> <dt>787</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, da die Sicherheitsschicht den Remotecomputer nicht authentifizieren konnte. <br/></td>
+<td>Beim L2TP-Verbindungsversuch ist ein Fehler aufgetreten, da der Remotecomputer von der Sicherheitsschicht nicht authentifiziert werden konnte. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_OAKLEY_ATTRIB_FAIL"></span><span id="error_oakley_attrib_fail"></span><dl> <dt><strong>ERROR_OAKLEY_ATTRIB_FAIL</strong></dt> <dt>788</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, da die Sicherheitsschicht keine kompatiblen Parameter mit dem Remotecomputer aushandeln konnte. <br/></td>
+<td>Fehler beim L2TP-Verbindungsversuch, weil die Sicherheitsschicht keine kompatiblen Parameter mit dem Remotecomputer aushandeln konnte. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_OAKLEY_GENERAL_PROCESSING"></span><span id="error_oakley_general_processing"></span><dl> <dt><strong>ERROR_OAKLEY_GENERAL_PROCESSING</strong></dt> <dt>789</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, da bei der Sicherheitsschicht beim ersten Versuch mit dem Remotecomputer ein Verarbeitungsfehler aufgetreten ist. <br/></td>
+<td>Beim L2TP-Verbindungsversuch ist ein Fehler aufgetreten, weil bei der Sicherheitsschicht während der ersten Aushandlung mit dem Remotecomputer ein Verarbeitungsfehler aufgetreten ist. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_OAKLEY_NO_PEER_CERT"></span><span id="error_oakley_no_peer_cert"></span><dl> <dt><strong>ERROR_OAKLEY_NO_PEER_CERT</strong></dt> <dt>790</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, weil die Zertifikatüberprüfung auf dem Remotecomputer fehlgeschlagen ist. <br/></td>
+<td>Fehler beim L2TP-Verbindungsversuch, weil die Zertifikatüberprüfung auf dem Remotecomputer fehlgeschlagen ist. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_OAKLEY_NO_POLICY"></span><span id="error_oakley_no_policy"></span><dl> <dt><strong>ERROR_OAKLEY_NO_POLICY</strong></dt> <dt>791</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, weil die Sicherheitsrichtlinie für die Verbindung nicht gefunden wurde. <br/></td>
+<td>Fehler beim L2TP-Verbindungsversuch, weil die Sicherheitsrichtlinie für die Verbindung nicht gefunden wurde. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_OAKLEY_TIMED_OUT"></span><span id="error_oakley_timed_out"></span><dl> <dt><strong>ERROR_OAKLEY_TIMED_OUT</strong></dt> <dt>792</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, weil bei der Sicherheitsaushandlung ein Time out auft war. <br/></td>
+<td>Fehler beim L2TP-Verbindungsversuch, weil bei der Sicherheitsaushandlung ein Time out aufgetreten ist. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_OAKLEY_ERROR"></span><span id="error_oakley_error"></span><dl> <dt><strong>ERROR_OAKLEY_ERROR</strong></dt> <dt>793</dt> </dl></td>
-<td>Der L2TP-Verbindungsversuch ist fehlgeschlagen, weil beim Aushandeln der Sicherheit ein Fehler aufgetreten ist. <br/></td>
+<td>Fehler beim L2TP-Verbindungsversuch, weil beim Aushandeln der Sicherheit ein Fehler aufgetreten ist. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_UNKNOWN_FRAMED_PROTOCOL"></span><span id="error_unknown_framed_protocol"></span><dl> <dt><strong>ERROR_UNKNOWN_FRAMED_PROTOCOL</strong></dt> <dt>794</dt> </dl></td>
-<td>Das FRAMED-Protokoll-RADIUS-Attribut für diesen Benutzer ist nicht RADIUS. <br/></td>
+<td>Das RADIUS-Attribut für framed Protocol für diesen Benutzer ist nicht FRAMES. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_WRONG_TUNNEL_TYPE"></span><span id="error_wrong_tunnel_type"></span><dl> <dt><strong>ERROR_WRONG_TUNNEL_TYPE</strong></dt> <dt>795</dt> </dl></td>
-<td>Das Tunnel RADIUS-Attribut vom Typ für diesen Benutzer ist nicht korrekt. <br/></td>
+<td>Das Tunnel TYPE RADIUS-Attribut für diesen Benutzer ist nicht richtig. <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_UNKNOWN_SERVICE_TYPE"></span><span id="error_unknown_service_type"></span><dl> <dt><strong>ERROR_UNKNOWN_SERVICE_TYPE</strong></dt> <dt>796</dt> </dl></td>
-<td>Das RADIUS-Attribut des Diensttyps für diesen Benutzer ist weder framed noch callback framed. <br/></td>
+<td>Das RADIUS-Attribut des Diensttyps für diesen Benutzer ist weder Framed noch Callback Framed. <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_CONNECTING_DEVICE_NOT_FOUND"></span><span id="error_connecting_device_not_found"></span><dl> <dt><strong>ERROR_CONNECTING_DEVICE_NOT_FOUND</strong></dt> <dt>797</dt> </dl></td>
@@ -1044,15 +1044,15 @@ Veraltet in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_SHARING_HOST_ADDRESS_CONFLICT"></span><span id="error_sharing_host_address_conflict"></span><dl> <dt><strong>ERROR_SHARING_HOST_ADDRESS_CONFLICT</strong></dt> <dt>799</dt> </dl></td>
-<td>Die Gemeinsame Nutzung von Internetverbindung (Internet Connection Sharing, ICS) kann aufgrund eines IP-Adresskonflikts im Netzwerk nicht aktiviert werden. Für ICS muss der Host für die Verwendung von <strong>192.168.0.1 konfiguriert sein.</strong> Stellen Sie sicher, dass kein anderer Client im Netzwerk für die Verwendung von <strong>192.168.0.1 konfiguriert ist.</strong><br/>
+<td>Internet Connection Sharing (ICS) kann aufgrund eines IP-Adresskonflikts im Netzwerk nicht aktiviert werden. ICS erfordert, dass der Host für die Verwendung von <strong>192.168.0.1</strong>konfiguriert ist. Stellen Sie sicher, dass kein anderer Client im Netzwerk für die Verwendung von <strong>192.168.0.1</strong>konfiguriert ist.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/>
 <blockquote>
 [!Note]<br />
-Windows 7 und höher: Der Host muss für die Verwendung von <strong>192.168.137.1 konfiguriert sein.</strong>
+Windows 7 und höher: Der Host muss für die Verwendung von <strong>192.168.137.1</strong> konfiguriert werden.
 </blockquote>
 <br/></td>
 </tr>
@@ -1061,16 +1061,16 @@ Windows 7 und höher: Der Host muss für die Verwendung von <strong>192.168.137.
 <td>Die VPN-Verbindung kann nicht hergestellt werden. Der VPN-Server ist möglicherweise nicht erreichbar, oder Sicherheitsparameter sind für diese Verbindung nicht ordnungsgemäß konfiguriert. <br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_VALIDATING_SERVER_CERT"></span><span id="error_validating_server_cert"></span><dl> <dt><strong>ERROR_VALIDATING_SERVER_CERT</strong></dt> <dt>801</dt> </dl></td>
-<td>Diese Verbindung ist so konfiguriert, dass die Identität des Zugriffsservers überprüft wird, Windows das vom Server gesendete digitale Zertifikat jedoch nicht überprüfen kann.<br/>
+<td>Diese Verbindung ist so konfiguriert, dass die Identität des Zugriffsservers überprüft wird, aber Windows kann das vom Server gesendete digitale Zertifikat nicht überprüfen.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
@@ -1079,61 +1079,61 @@ Wird in Windows XP und neueren Versionen von Windows.
 <td>Die angegebene Karte wurde nicht erkannt. Überprüfen Sie, ob die Karte ordnungsgemäß eingefügt wurde und sicher passt.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP mit SP1 und neueren Versionen von Windows.
+Wird in Windows XP mit SP1 und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_INVALID_PEAP_COOKIE_CONFIG"></span><span id="error_invalid_peap_cookie_config"></span><dl> <dt><strong>ERROR_INVALID_PEAP_COOKIE_CONFIG</strong></dt> <dt>803</dt> </dl></td>
-<td>Die im Sitzungscookie gespeicherte PEAP-Konfiguration passt nicht zur aktuellen Sitzungskonfiguration.<br/>
+<td>Die im Sitzungscookie gespeicherte PEAP-Konfiguration stimmt nicht mit der aktuellen Sitzungskonfiguration überein.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP mit SP1 und neueren Versionen von Windows.
+Wird in Windows XP mit SP1 und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_INVALID_PEAP_COOKIE_USER"></span><span id="error_invalid_peap_cookie_user"></span><dl> <dt><strong>ERROR_INVALID_PEAP_COOKIE_USER</strong></dt> <dt>804</dt> </dl></td>
-<td>Die im Sitzungscookie gespeicherte PEAP-Identität ist nicht mit der aktuellen Identität übereinstimmen.<br/>
+<td>Die im Sitzungscookie gespeicherte PEAP-Identität stimmt nicht mit der aktuellen Identität überein.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP mit SP1 und neueren Versionen von Windows.
+Wird in Windows XP mit SP1 und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_INVALID_MSCHAPV2_CONFIG"></span><span id="error_invalid_mschapv2_config"></span><dl> <dt><strong>ERROR_INVALID_MSCHAPV2_CONFIG</strong></dt> <dt>805</dt> </dl></td>
-<td>Sie können diese Verbindung zur Anmeldezeit nicht verwenden, da sie für die Verwendung der Anmeldeinformationen des aktuell angemeldeten Benutzers konfiguriert ist.<br/>
+<td>Sie können diese Verbindung nicht zur Anmeldezeit verwenden, da sie für die Verwendung der Anmeldeinformationen des derzeit angemeldeten Benutzers konfiguriert ist.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP mit SP1 und neueren Versionen von Windows.
+Wird in Windows XP mit SP1 und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_VPN_GRE_BLOCKED"></span><span id="error_vpn_gre_blocked"></span><dl> <dt><strong>ERROR_VPN_GRE_BLOCKED</strong></dt> <dt>806</dt> </dl></td>
-<td>Eine Verbindung zwischen Ihrem Computer und dem VPN-Server wurde gestartet, aber die VPN-Verbindung kann nicht hergestellt werden. Die häufigste Ursache hierfür ist, dass mindestens ein Internetgerät (z. B. eine Firewall oder ein Router) zwischen Ihrem Computer und dem VPN-Server nicht so konfiguriert ist, dass GRE-Protokollpakete (Generic Routing Encapsulation) zulässig sind.<br/>
+<td>Eine Verbindung zwischen Ihrem Computer und dem VPN-Server wurde gestartet, aber die VPN-Verbindung kann nicht hergestellt werden. Die häufigste Ursache hierfür ist, dass mindestens ein Internetgerät (z. B. eine Firewall oder ein Router) zwischen Ihrem Computer und dem VPN-Server nicht so konfiguriert ist, dass gre-Protokollpakete (Generic Routing Encapsulation) zugelassen werden.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows Vista und neueren Versionen von Windows.
+Wird in Windows Vista und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_VPN_DISCONNECT"></span><span id="error_vpn_disconnect"></span><dl> <dt><strong>ERROR_VPN_DISCONNECT</strong></dt> <dt>807</dt> </dl></td>
-<td>Die Netzwerkverbindung zwischen Ihrem Computer und dem VPN-Server wurde unterbrochen. Dies kann durch ein Problem bei der VPN-Übertragung verursacht werden und ist häufig das Ergebnis der Internetlatenz oder einfach, dass Ihr VPN-Server die Kapazität erreicht hat. Versuchen Sie, erneut eine Verbindung mit dem VPN-Server herzustellen.<br/>
+<td>Die Netzwerkverbindung zwischen Ihrem Computer und dem VPN-Server wurde unterbrochen. Dies kann durch ein Problem bei der VPN-Übertragung verursacht werden und ist häufig das Ergebnis der Internetlatenz oder einfach darauf zurückzuführen, dass ihr VPN-Server die Kapazität erreicht hat. Versuchen Sie, erneut eine Verbindung mit dem VPN-Server herzustellen.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows Vista und neueren Versionen von Windows.
+Wird in Windows Vista und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_VPN_REFUSED"></span><span id="error_vpn_refused"></span><dl> <dt><strong>ERROR_VPN_REFUSED</strong></dt> <dt>808</dt> </dl></td>
-<td>Die Netzwerkverbindung zwischen Ihrem Computer und dem VPN-Server konnte nicht hergestellt werden, da der Remoteserver die Verbindung abgelehnt hat. Dies wird in der Regel durch einen Konflikt zwischen der Konfiguration des Servers und Ihren Verbindungseinstellungen verursacht.<br/>
+<td>Die Netzwerkverbindung zwischen Ihrem Computer und dem VPN-Server konnte nicht hergestellt werden, da der Remoteserver die Verbindung verweigert hat. Dies wird in der Regel durch einen Konflikt zwischen der Serverkonfiguration und Ihren Verbindungseinstellungen verursacht.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows Vista und neueren Versionen von Windows.
+Wird in Windows Vista und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
@@ -1265,7 +1265,7 @@ Wird in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_PEAP_CRYPTOBINDING_INVALID"></span><span id="error_peap_cryptobinding_invalid"></span><dl> <dt><strong>ERROR_PEAP_CRYPTOBINDING_INVALID</strong></dt> <dt>823</dt> </dl></td>
-<td>Der Crypto-Binding Typlängenwert (TLV) ist ungültig.<br/>
+<td>Der Crypto-Binding typ-length-value (TLV) empfangene Wert ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
 Wird in Windows Vista und neueren Versionen von Windows.
@@ -1391,7 +1391,7 @@ Wird in Windows Vista und neueren Versionen von Windows.
 </tr>
 <tr class="even">
 <td><span id="ERROR_INVALID_TUNNELID"></span><span id="error_invalid_tunnelid"></span><dl> <dt><strong>ERROR_INVALID_TUNNELID</strong></dt> <dt>837</dt> </dl></td>
-<td>Ungültige Tunnel ID.<br/>
+<td>Ungültige Tunnel-ID.<br/>
 <blockquote>
 [!Note]<br />
 Wird in Windows 7 und neueren Versionen von Windows unterstützt.
@@ -1454,7 +1454,7 @@ Wird in Windows 7 und neueren Versionen von Windows unterstützt.
 </tr>
 <tr class="odd">
 <td><span id="ERROR_CANNOT_INITIATE_MOBIKE_UPDATE"></span><span id="error_cannot_initiate_mobike_update"></span><dl> <dt><strong>ERROR_CANNOT_INITIATE_MOBIKE_UPDATE</strong></dt> <dt>844</dt> </dl></td>
-<td>Die VPN-Verbindung stellt aufgrund einer Änderung des Quarantänezustands weiterhin eine Verbindung her oder authentifiziert sich erneut. Initiieren Sie ein mobiles Update nur, wenn der Verbindungsstatus "Verbunden" lautet.<br/>
+<td>Die VPN-Verbindung stellt aufgrund einer Änderung des Quarantänezustands weiterhin eine Verbindung her oder authentifiziert sich erneut. Initiieren Sie das mobile Update nur, wenn der Verbindungsstatus "Verbunden" lautet.<br/>
 <blockquote>
 [!Note]<br />
 Wird in Windows 7 und neueren Versionen von Windows unterstützt.
@@ -1510,7 +1510,7 @@ Wird in Windows 7 und neueren Versionen von Windows unterstützt.
 </tr>
 <tr class="even">
 <td><span id="ERROR_EAP_USER_CERT_INVALID"></span><span id="error_eap_user_cert_invalid"></span><dl> <dt><strong>ERROR_EAP_USER_CERT_INVALID</strong></dt> <dt>853</dt> </dl></td>
-<td>Die Remotezugriffsverbindung wurde abgeschlossen, aber die Authentifizierung ist fehlgeschlagen, da das Zertifikat, das den Client gegenüber dem Server authentifiziert, ungültig ist. Stellen Sie sicher, dass das für die Authentifizierung verwendete Zertifikat gültig ist.<br/></td>
+<td>Die Remotezugriffsverbindung wurde abgeschlossen, aber die Authentifizierung ist fehlgeschlagen, weil das Zertifikat, das den Client beim Server authentifiziert, ungültig ist. Stellen Sie sicher, dass das für die Authentifizierung verwendete Zertifikat gültig ist.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_EAP_USER_CERT_EXPIRED"></span><span id="error_eap_user_cert_expired"></span><dl> <dt><strong>ERROR_EAP_USER_CERT_EXPIRED</strong></dt> <dt>854</dt> </dl></td>
@@ -1827,16 +1827,16 @@ Wird in Windows XP und neueren Versionen von Windows.
 <td>Die Länge oder ID, die in einem Paket vom RADIUS-Server empfangen wird, ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_INVALID_ATTRIBUTE_LENGTH"></span><span id="error_invalid_attribute_length"></span><dl> <dt><strong>ERROR_INVALID_ATTRIBUTE_LENGTH</strong></dt> <dt>953</dt> </dl></td>
-<td>Die länge, die in einem Paket mit dem -Attribut vom RADIUS-Server empfangen wird, ist ungültig.<br/>
+<td>Die Länge, die in einem Paket mit attribut vom RADIUS-Server empfangen wird, ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
@@ -1845,25 +1845,25 @@ Wird in Windows XP und neueren Versionen von Windows.
 <td>Das vom RADIUS-Server empfangene Paket ist ungültig.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
 <td><span id="ERROR_AUTHENTICATOR_MISMATCH"></span><span id="error_authenticator_mismatch"></span><dl> <dt><strong>ERROR_AUTHENTICATOR_MISMATCH</strong></dt> <dt>955</dt> </dl></td>
-<td>Authenticator im Paket vom RADIUS-Server nicht übereinstimmen.<br/>
+<td>Authenticator stimmt im Paket vom RADIUS-Server nicht überein.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows XP und neueren Versionen von Windows.
+Wird in Windows XP und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><span id="ERROR_REMOTEACCESS_NOT_CONFIGURED"></span><span id="error_remoteaccess_not_configured"></span><dl> <dt><strong>ERROR_REMOTEACCESS_NOT_CONFIGURED</strong></dt> <dt>956</dt> </dl></td>
-<td>Routing- und RAS-Server sind entweder nicht konfiguriert oder werden nicht ausgeführt.<br/>
+<td>Der Routing- und Rasserver ist entweder nicht konfiguriert oder wird nicht ausgeführt.<br/>
 <blockquote>
 [!Note]<br />
-Wird in Windows 7 und neueren Versionen von Windows.
+Wird in Windows 7 und neueren Versionen von Windows unterstützt.
 </blockquote>
 <br/></td>
 </tr>

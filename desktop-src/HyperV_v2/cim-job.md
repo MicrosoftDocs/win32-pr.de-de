@@ -1,7 +1,7 @@
 ---
-description: Ein logisches Element, das eine Arbeitseinheit darstellt, die ausgeführt werden soll, z. b. ein Skript oder ein Druckauftrag. Ein Auftrag unterscheidet sich von einem Prozess, weil ein Auftrag geplant oder in die Warteschlange eingereiht werden kann, und seine Ausführung ist nicht auf ein einzelnes System beschränkt.
+description: Ein logisches Element, das eine auszuführende Arbeitseinheit darstellt, z. B. ein Skript oder einen Druckauftrag. Ein Auftrag ist von einem Prozess getrennt, da ein Auftrag geplant oder in die Warteschlange eingereiht werden kann und seine Ausführung nicht auf ein einzelnes System beschränkt ist.
 ms.assetid: 35e35c3f-617b-429b-b68f-fa0c0c330e92
-title: CIM_Job-Klasse (Hyper-V-Verwaltung)
+title: CIM_Job -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -34,16 +34,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6b59a162d36ee677ad00c8cc574282f970bc1d80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8eb8f63ec9d2cdd881a2ba0946f83a40fb8be866
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960276"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474586"
 ---
-# <a name="cim_job-class-hyper-v-management"></a>CIM_Job-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_job-class-hyper-v-management"></a>CIM_Job -Klasse (Hyper-V-Verwaltung)
 
-Ein logisches Element, das eine Arbeitseinheit darstellt, die ausgeführt werden soll, z. b. ein Skript oder ein Druckauftrag. Ein Auftrag unterscheidet sich von einem Prozess, weil ein Auftrag geplant oder in die Warteschlange eingereiht werden kann, und seine Ausführung ist nicht auf ein einzelnes System beschränkt.
+Ein logisches Element, das eine auszuführende Arbeitseinheit darstellt, z. B. ein Skript oder einen Druckauftrag. Ein Auftrag ist von einem Prozess getrennt, da ein Auftrag geplant oder in die Warteschlange eingereiht werden kann und seine Ausführung nicht auf ein einzelnes System beschränkt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,40 +77,22 @@ class CIM_Job : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Auftrags** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ Job-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ Auftrags** Klasse verfügt über diese Methoden.
+Die **CIM \_ Job-Klasse** verfügt über diese Methoden.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Methode</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="cim-job-killjob.md"><strong>Killjob</strong></a></td>
-<td style="text-align: left;">Diese Methode ist als veraltet markiert. Verwenden Sie stattdessen die <strong>requestStateChange</strong> -Methode.<br/>
-<blockquote>
-[!Note]<br />
-Veraltete Beschreibung: fährt einen Auftrag herunter.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Methode | BESCHREIBUNG | 
+|--------|-------------|
+| <a href="cim-job-killjob.md"><strong>KillJob</strong></a> | Diese Methode ist als veraltet markiert. Verwenden Sie stattdessen die <strong>RequestStateChange-Methode.</strong><br /><blockquote>[!Note]<br />Veraltete Beschreibung: Beendet einen Auftrag.</blockquote><br /> | 
+
 
 
 
@@ -118,32 +100,32 @@ Veraltete Beschreibung: fährt einen Auftrag herunter.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Auftrags** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Auftragsklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Deleteoncompletion**
+**DeleteOnCompletion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** , um den Auftrag nach dem Abschluss zu löschen. andernfalls **false**.
+**True,** um den Auftrag nach Abschluss zu löschen; andernfalls **FALSE.**
 
 > [!Note]  
-> Diese Eigenschaft löscht keine Aufträge, die beendet werden, bevor diese Eigenschaft auf " **true**" festgelegt ist.
+> Diese Eigenschaft löscht keine Abgeschlossenaufträge, bevor diese Eigenschaft auf **True festgelegt ist.**
 
  
 
 </dd> <dt>
 
-**Verweilzeit**
+**ElapsedTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -156,16 +138,16 @@ Die Dauer, für die der Auftrag ausgeführt wurde.
 **ErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**ErrorDescription**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**ErrorDescription**")
 </dt> </dl>
 
-Ein Hersteller spezifischer Fehlercode, der Verarbeitungs Informationen für wiederkehrende Aufträge erfasst. Der Wert muss auf 0 (null) festgelegt werden, wenn der Auftrag ohne Fehler abgeschlossen wurde.
+Ein herstellerspezifischer Fehlercode, der Verarbeitungsinformationen für wiederkehrende Aufträge erfasst. Der Wert muss auf 0 (null) festgelegt werden, wenn der Auftrag ohne Fehler abgeschlossen wurde.
 
 </dd> <dt>
 
@@ -178,17 +160,17 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**ErrorCode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**ErrorCode**")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die eine Beschreibung des entsprechenden Fehlercodes in der **errorCode** -Eigenschaft enthält.
+Eine Freiformzeichenfolge, die eine Beschreibung des entsprechenden Fehlercodes in der **ErrorCode-Eigenschaft** enthält.
 
 </dd> <dt>
 
-**Jobruntimes**
+**JobRunTimes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -207,23 +189,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)".**OperationalStatus**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md).**OperationalStatus**")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die den Status des Auftrags darstellt.
+Eine Freiformzeichenfolge, die den Status des Auftrags darstellt.
 
 </dd> <dt>
 
-**Localorutctime**
+**LocalOrUtcTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Uhrzeiten in den Eigenschaften **runstartinterval** und **UntilTime** Ortszeit oder UTC-Zeiten darstellen.
+Gibt an, ob die Zeiten in den **Eigenschaften RunStartInterval** und **UntilTime** lokale Oder UTC-Zeiten darstellen.
 
 <dt>
 
@@ -252,11 +234,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Benutzer, der benachrichtigt werden soll, wenn ein Auftrag abgeschlossen oder fehlschlägt.
+Der Benutzer, der benachrichtigt werden soll, wenn ein Auftrag abgeschlossen wird oder fehlschlägt.
 
 </dd> <dt>
 
-**Otherherstellyaction**
+**OtherRecoveryAction**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -265,10 +247,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Wiederherstellbares Action**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**RecoveryAction**")
 </dt> </dl>
 
-Eine Zeichenfolge, die die Wiederherstellungs Aktion beschreibt, wenn die **Wiederherstellungs Action** -Eigenschaft " **other** " ("1") ist.
+Eine Zeichenfolge, die die Wiederherstellungsaktion beschreibt, wenn die **RecoveryAction-Eigenschaft** **Other** ("1") ist.
 
 </dd> <dt>
 
@@ -281,29 +263,29 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ owningjobelements**](cim-owningjobelement.md)")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) [**("CIM \_ OwningJobElement**](cim-owningjobelement.md).")
 </dt> </dl>
 
-Der Benutzer, der den Auftrag übermittelt hat, oder der Dienst-oder Methodenname, der den Auftrag angefordert hat.
+Der Benutzer, der den Auftrag übermittelt hat, oder der Dienst- oder Methodenname, der den Auftrag angefordert hat.
 
 </dd> <dt>
 
 **PercentComplete**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Prozent"), [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (0), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (101), **Punit** ("Prozent")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Percent"), [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (0), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (101), **PUnit** ("percent")
 </dt> </dl>
 
-Der Prozentsatz des Auftrags, der beendet wurde.
+Der Prozentsatz des abgeschlossenen Auftrags.
 
 > [!Note]  
-> Der Wert "101" ist nicht definiert und wird in der nächsten Haupt Revision der Spezifikation nicht zugelassen.
+> Der Wert "101" ist nicht definiert und ist in der nächsten hauptrevision der Spezifikation nicht zulässig.
 
  
 
@@ -312,7 +294,7 @@ Der Prozentsatz des Auftrags, der beendet wurde.
 **Priority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -322,19 +304,19 @@ Die Wichtigkeit des Auftrags. Je niedriger die Zahl, desto höher die Priorität
 
 </dd> <dt>
 
-**Wiederherstellbarkeits Aktion**
+**RecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Otherherstellyaction**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**OtherRecoveryAction**")
 </dt> </dl>
 
-Beschreibt die Wiederherstellungs Aktion, die ausgeführt werden soll, wenn ein laufauftrag fehlschlägt.
+Beschreibt die Wiederherstellungsaktion, die ausgeführt werden soll, wenn ein Ausführungsauftrag fehlschlägt.
 
 <dt>
 
@@ -345,7 +327,7 @@ Beschreibt die Wiederherstellungs Aktion, die ausgeführt werden soll, wenn ein 
 
 </dt> <dd>
 
-Es ist unbekannt, welche Wiederherstellungs Aktion durchführen werden soll.
+Welche Wiederherstellungsaktion sie ergreifen soll, ist unbekannt.
 
 </dd> <dt>
 
@@ -356,24 +338,24 @@ Es ist unbekannt, welche Wiederherstellungs Aktion durchführen werden soll.
 
 </dt> <dd>
 
-Die Wiederherstellungs Aktion wird in der **otherwiederherstellungsaction** -Eigenschaft angegeben.
+Die Wiederherstellungsaktion wird in der **OtherRecoveryAction-Eigenschaft** angegeben.
 
 </dd> <dt>
 
 <span id="Do_Not_Continue"></span><span id="do_not_continue"></span><span id="DO_NOT_CONTINUE"></span>
 
-<span id="Do_Not_Continue"></span><span id="do_not_continue"></span><span id="DO_NOT_CONTINUE"></span>**Nicht fortsetzen** (2)
+<span id="Do_Not_Continue"></span><span id="do_not_continue"></span><span id="DO_NOT_CONTINUE"></span>**Nicht fortfahren** (2)
 
 
 </dt> <dd>
 
-Beendet die Ausführung des Auftrags und aktualisiert seinen Status entsprechend.
+Beenden Sie die Ausführung des Auftrags, und aktualisieren Sie den Status entsprechend.
 
 </dd> <dt>
 
 <span id="Continue_With_Next_Job"></span><span id="continue_with_next_job"></span><span id="CONTINUE_WITH_NEXT_JOB"></span>
 
-<span id="Continue_With_Next_Job"></span><span id="continue_with_next_job"></span><span id="CONTINUE_WITH_NEXT_JOB"></span>**Fortfahren mit dem nächsten Auftrag** (3)
+<span id="Continue_With_Next_Job"></span><span id="continue_with_next_job"></span><span id="CONTINUE_WITH_NEXT_JOB"></span>**Weiter mit nächstem Auftrag** (3)
 
 
 </dt> <dd>
@@ -395,18 +377,18 @@ Der Auftrag sollte erneut ausgeführt werden.
 
 <span id="Run_Recovery_Job"></span><span id="run_recovery_job"></span><span id="RUN_RECOVERY_JOB"></span>
 
-<span id="Run_Recovery_Job"></span><span id="run_recovery_job"></span><span id="RUN_RECOVERY_JOB"></span>**Wiederherstellungsauftrag ausführen** (5)
+<span id="Run_Recovery_Job"></span><span id="run_recovery_job"></span><span id="RUN_RECOVERY_JOB"></span>**Ausführen des Wiederherstellungsauftrags** (5)
 
 
 </dt> <dd>
 
-Führen Sie den mit der **wiederherstellungsjob** -Beziehung verknüpften Auftrag aus. Beachten Sie, dass sich der Wiederherstellungsauftrag bereits in der Warteschlange befinden muss, von der er ausgeführt wird.
+Führen Sie den auftrag aus, der mithilfe der **RecoveryJob-Beziehung zugeordnet** ist. Beachten Sie, dass sich der Wiederherstellungsauftrag bereits in der Warteschlange befinden muss, aus der er ausgeführt wird.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Runday**
+**RunDay**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -415,14 +397,14 @@ Datentyp: **sint8**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (-31), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (31), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Job**.**Runmonth**","**CIM- \_ Auftrag**.**Rundayof Week**","**CIM- \_ Auftrag**.**Runstartinterval**")
+Qualifizierer: [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (-31), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (31), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**RunMonth**", "**CIM \_ Job**.**RunDayOfWeek**", "**\_ CIM-Auftrag**.**RunStartInterval**")
 </dt> </dl>
 
-Eine ganze Zahl, die in Verbindung mit der **rundayofweek** -Eigenschaft verwendet wird, um den Tag anzugeben, an dem der Auftrag verarbeitet wird. Wenn **rundayofweek** auf NULL festgelegt ist, gibt **runday** den Tag des Monats an, an dem der Auftrag verarbeitet wird. Wenn **runday** eine negative Ganzzahl ist, gibt Sie einen Tag relativ zum Ende des Monats an, oder wenn **runday** eine positive ganze Zahl ist, gibt Sie einen Tag relativ zum Anfang des Monats an.
+Eine ganze Zahl, die in Verbindung mit der **RunDayOfWeek-Eigenschaft verwendet** wird, um den Tag anzugeben, an dem der Auftrag verarbeitet wird. Oder wenn **RunDayOfWeek** auf 0 (null) festgelegt ist, gibt **RunDay** den Tag des Monats an, an dem der Auftrag verarbeitet wird. Wenn **RunDay** eine negative ganze Zahl ist, wird ein Tag relativ zum Monatsende angegeben, oder wenn **RunDay** eine positive ganze Zahl ist, wird ein Tag relativ zum Monatsanfang angegeben.
 
 </dd> <dt>
 
-**Rundayof-Woche**
+**RunDayOfWeek**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -431,65 +413,65 @@ Datentyp: **sint8**
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Runmonth**","**CIM- \_ Auftrag**.**Runday**","**CIM- \_ Auftrag**.**Runstartinterval**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**RunMonth**", "**CIM \_ Job**.**RunDay**", "**CIM \_ Job**.**RunStartInterval**")
 </dt> </dl>
 
-Eine ganze Zahl, die in Verbindung mit der **runday** -Eigenschaft verwendet wird, um den Tag anzugeben, an dem der Auftrag verarbeitet wird. Wenn **rundayofweek** auf NULL festgelegt ist, gibt **runday** den Tag des Monats an, an dem der Auftrag verarbeitet wird.
+Eine ganze Zahl, die in Verbindung mit der **RunDay-Eigenschaft** verwendet wird, um den Tag anzugeben, an dem der Auftrag verarbeitet wird. Oder wenn **RunDayOfWeek** auf 0 (null) festgelegt ist, gibt **RunDay** den Tag des Monats an, an dem der Auftrag verarbeitet wird.
 
 <dt>
 
 <span id="-Saturday"></span><span id="-saturday"></span><span id="-SATURDAY"></span>
 
-**-Samstag** (-7)
+**-Saturday** (-7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Friday"></span><span id="-friday"></span><span id="-FRIDAY"></span>
 
-**-Freitag** (-6)
+**-Friday** (-6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Thursday"></span><span id="-thursday"></span><span id="-THURSDAY"></span>
 
-**-Donnerstag** (-5)
+**-Thursday** (-5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Wednesday"></span><span id="-wednesday"></span><span id="-WEDNESDAY"></span>
 
-**-Mittwoch** (-4)
+**-Wednesday** (-4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Tuesday"></span><span id="-tuesday"></span><span id="-TUESDAY"></span>
 
-**-Dienstag** (-3)
+**-Tuesday** (-3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Monday"></span><span id="-monday"></span><span id="-MONDAY"></span>
 
-**-Montag** (-2)
+**-Monday** (-2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="-Sunday"></span><span id="-sunday"></span><span id="-SUNDAY"></span>
 
-**-Sonntag** (-1)
+**-Sunday** (-1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ExactDayOfMonth"></span><span id="exactdayofmonth"></span><span id="EXACTDAYOFMONTH"></span>
 
-**Exactdayosmonth** (0)
+**ExactDayOfMonth** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -545,19 +527,19 @@ Eine ganze Zahl, die in Verbindung mit der **runday** -Eigenschaft verwendet wir
 
 </dd> <dt>
 
-**Runmonth**
+**RunMonth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Runday**","**CIM- \_ Auftrag**.**Rundayof Week**","**CIM- \_ Auftrag**.**Runstartinterval**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**RunDay**", "**CIM \_ Job**.**RunDayOfWeek**", "**\_ CIM-Auftrag**.**RunStartInterval**")
 </dt> </dl>
 
-Der Monat, an dem der Auftrag verarbeitet wird.
+Der Monat, in dem der Auftrag verarbeitet wird.
 
 <dt>
 
@@ -647,82 +629,82 @@ Der Monat, an dem der Auftrag verarbeitet wird.
 
 </dd> <dt>
 
-**Runstartinterval**
+**RunStartInterval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Runmonth**","**CIM- \_ Auftrag**.**Runday**","**CIM- \_ Auftrag**.**Rundayof Week**","**CIM- \_ Auftrag**.**Runstartinterval**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**RunMonth**", "**CIM \_ Job**.**RunDay**", "**CIM \_ Job**.**RunDayOfWeek**", "**\_ CIM-Auftrag**.**RunStartInterval**")
 </dt> </dl>
 
-Das Zeitintervall nach Mitternacht, zu dem der Auftrag verarbeitet wird. "00000000020000.000000:000" gibt z. b. an, dass der Auftrag unter oder nach zwei Uhr Ortszeit oder UTC-Zeit (UTC mit der **localorutctime** -Eigenschaft angegeben) ausgeführt wird.
+Das Zeitintervall nach Mitternacht, in dem der Auftrag verarbeitet wird. "0000000000200000.000000:000" gibt beispielsweise an, dass der Auftrag am oder nach zwei Uhr Ortszeit oder UTC-Zeit ausgeführt wird (UTC wird mit der **LocalOrUtcTime-Eigenschaft** angegeben).
 
 </dd> <dt>
 
-**Scheduledstarttime**
+**ScheduledStartTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**CIM- \_ Auftrag**.**Runmonth**","**CIM- \_ Auftrag**.**Runday**","**CIM- \_ Auftrag**.**Rundayof Week**","**CIM- \_ Auftrag**.**Runstartinterval**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**\_ CIM-Auftrag**.**RunMonth**", "**CIM \_ Job**.**RunDay**", "**CIM \_ Job**.**RunDayOfWeek**", "**\_ CIM-Auftrag**.**RunStartInterval**")
 </dt> </dl>
 
 > [!Note]  
-> Diese Eigenschaft ist veraltet. Stattdessen empfiehlt es sich, die Eigenschaften **runmonth**, **runday**, **rundayosweek** und **runstartinterval** zu verwenden.
+> Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die Eigenschaften **RunMonth,** **RunDay,** **RunDayOfWeek** und **RunStartInterval zu** verwenden.
 
  
 
-Der Zeitpunkt, zu dem der Start des aktuellen Auftrags geplant ist. Diese Zeit kann durch ein Datum und eine Uhrzeit oder ein Intervall in Relation zum Zeitpunkt, zu dem die Eigenschaft angefordert wird, dargestellt werden. Ein Wert aller Nullen gibt an, dass der Auftrag bereits ausgeführt wird.
+Die Zeit, zu der der aktuelle Auftrag gestartet werden soll. Diese Zeit kann durch ein Datum und eine Uhrzeit oder ein Intervall relativ zur Uhrzeit dargestellt werden, zu der die Eigenschaft angefordert wird. Der Wert aller Nullen gibt an, dass der Auftrag bereits ausgeführt wird.
 
 </dd> <dt>
 
 **StartTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Auftrag gestartet wurde. Diese Zeit kann durch ein Datum und eine Uhrzeit oder durch ein Intervall dargestellt werden, das relativ zu dem Zeitpunkt ist, zu dem die Eigenschaft angefordert wird.
+Die Uhrzeit, zu der der Auftrag gestartet wurde. Diese Uhrzeit kann durch ein Datum und eine Uhrzeit oder durch ein Intervall relativ zur Uhrzeit dargestellt werden, zu der die Eigenschaft angefordert wird.
 
 </dd> <dt>
 
-**Timesub;**
+**TimeSubmitted**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Auftrag übermittelt wurde. Ein Wert aller Nullen gibt an, dass das übergeordnete Element kein Datum und keine Uhrzeit melden kann.
+Die Zeit, zu der der Auftrag übermittelt wurde. Ein Wert aller Nullen gibt an, dass das übergeordnete Element kein Datum und keine Uhrzeit melden kann.
 
 </dd> <dt>
 
 **UntilTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Auftrag**".**Localorutctime**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Auftrag**.**LocalOrUtcTime**")
 </dt> </dl>
 
-Die Zeit, nach der der Auftrag ungültig wird oder angehalten werden soll. Die Zeit kann durch ein Datum und eine Uhrzeit oder durch ein Intervall in Relation zum Zeitpunkt, zu dem diese Eigenschaft angefordert wird, dargestellt werden. Ein Wert aller Neunen gibt an, dass der Auftrag unbegrenzt ausgeführt werden kann.
+Die Zeit, nach der der Auftrag ungültig wird oder beendet werden soll. Die Uhrzeit kann durch ein Datum und eine Uhrzeit oder durch ein Intervall relativ zur Uhrzeit dargestellt werden, zu der diese Eigenschaft angefordert wird. Der Wert "alle Neunen" gibt an, dass der Auftrag unbegrenzt ausgeführt werden kann.
 
 </dd> </dl>
 
@@ -735,12 +717,12 @@ Die Zeit, nach der der Auftrag ungültig wird oder angehalten werden soll. Die Z
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

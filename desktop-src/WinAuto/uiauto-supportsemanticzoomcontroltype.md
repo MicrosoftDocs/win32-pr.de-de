@@ -1,91 +1,65 @@
 ---
-title: Typ des semanticzoom-Steuer Elements
-description: Dieses Thema enthält Informationen zur Benutzeroberflächenautomatisierungs-Unterstützung für den semanticzoom-Steuerelement.
+title: SemanticZoom-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Benutzeroberflächenautomatisierung Unterstützung für den SemanticZoom-Steuerelementtyp.
 ms.assetid: 37C14610-431F-46BF-97B6-CB476EA1642D
 keywords:
-- Benutzeroberflächenautomatisierungs-Unterstützung für semanticzoom-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs-Steuerelement (semanticzoom)
-- UI-Automatisierung, Baumstruktur für semanticzoom-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Eigenschaften für semanticzoom-Steuerelement Typen
-- UI-Automatisierung, Steuerelement Muster für semanticzoom-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Ereignisse für semanticzoom-Steuerelement Typen
-- Struktur Strukturen, semanticzoom-Steuerelement Typen
-- Eigenschaften, semanticzoom-Steuerelement Typen
-- Steuerelement Muster, semanticzoom-Steuerelement Typen
-- Ereignisse, semanticzoom-Steuerelement Typen
-- Unterstützung für semanticzoom-Steuerelement Typen
-- Typ des semanticzoom-Steuer Elements
-- Steuerelement Typen, Baumstruktur für semanticzoom-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für semanticzoom-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für semanticzoom
-- Steuerelement Typen, semanticzoom
+- Benutzeroberflächenautomatisierung,Unterstützung für den SemanticZoom-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,SemanticZoom-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für semanticZoom-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den SemanticZoom-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den SemanticZoom-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Events für den SemanticZoom-Steuerelementtyp
+- Strukturstrukturen,SemanticZoom-Steuerelementtyp
+- properties,SemanticZoom-Steuerelementtyp
+- Steuerelementmuster,SemanticZoom-Steuerelementtyp
+- events,SemanticZoom-Steuerelementtyp
+- Unterstützung für den SemanticZoom-Steuerelementtyp
+- SemanticZoom-Steuerelementtyp
+- Steuerelementtypen,Struktur für SemanticZoom-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für SemanticZoom-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für SemanticZoom
+- Steuerelementtypen, SemanticZoom
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b17d4712aa4f10489081b1b5d0f69fed849080bc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9673c5e9beb0c78ecc7dfccc10b6716d6d3afa3f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101682"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467757"
 ---
-# <a name="semanticzoom-control-type"></a>Typ des semanticzoom-Steuer Elements
+# <a name="semanticzoom-control-type"></a>SemanticZoom-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Benutzeroberflächenautomatisierungs-Unterstützung für den **semanticzoom** -Steuerelement.
+Dieses Thema enthält Informationen zu Benutzeroberflächenautomatisierung Unterstützung für den **SemanticZoom-Steuerelementtyp.**
 
-Der semantische Zoom ist eine Technik, die in Windows 8 eingeführt wurde, um große Mengen verwandter Daten oder Inhalte in einer einzelnen Ansicht, z. b. ein Foto Album, eine APP-Liste oder ein Adressbuch, darzustellen und zu navigieren. Der semantische Zoom verwendet zwei verschiedene Modi für die Klassifizierung und Darstellung der Inhalte. Der Low-Level *(oder vergrößern*)-Modus zeigt Elemente in einer flachen, "gesamten" Struktur an; und der Modus für hohe Ebene (oder *Zoom*) zeigt Elemente in Gruppen an, sodass der Benutzer schnell navigieren und den Inhalt durchsuchen kann. Beispielsweise kann das Zoomen einer Liste von Städten zu einer Liste von Bundesstaaten wechseln, die diese Städte enthalten. Das Zoomen einer Liste von Programmen kann zu einer Liste logischer Programm Gruppen wechseln.
+Semantischer Zoom ist eine in Windows 8 eingeführte Technik zum Präsentieren und Navigieren in großen Sätzen verwandter Daten oder Inhalte in einer einzelnen Ansicht, z. B. einem Fotoalb, einer App-Liste oder einem Adressbuch. Der semantische Zoom verwendet zwei unterschiedliche Klassifizierungsmodi oder *Zoomstufen* zum Organisieren und Präsentieren des Inhalts. Im modus low-level (oder *zoomed in*) werden Elemente in einer flachen,"all-up"-Struktur angezeigt. und der modus high-level (oder *zoomed out)* zeigt Elemente in Gruppen an, sodass der Benutzer schnell durch den Inhalt navigieren und navigieren kann. Beispielsweise kann sich das Zoomen einer Liste von Städte in eine Liste von Bundesstaaten ändern, die diese Städte enthalten. Das Zoomen einer Liste von Programmen kann sich in eine Liste logischer Programmgruppen ändern.
 
-Weitere Informationen zum semantischen Zoom, der speziell für Windows Store-Apps verwendet wird, finden Sie unter [Richtlinien für den semantischen Zoom](/windows/uwp/controls-and-patterns/semantic-zoom).
+Weitere Informationen zum semantischen Zoom, der speziell für Windows Store-Apps verwendet wird, finden Sie unter [Richtlinien für semantischen Zoom.](/windows/uwp/controls-and-patterns/semantic-zoom)
 
-Das Verwendungs Modell des **semanticzoom** -Steuerelement Typs ist insofern ungewöhnlich, als es vor allem für den programmgesteuerten Zugriff vorhanden ist. Microsoft UI Automation-Clients können das semantische Zoom Steuerelement überwachen und bearbeiten, um den Zoomzustand der Liste zu steuern. Benutzer, die keine Hilfstechnologie verwenden, würden das semantische Zoom Steuerelement normalerweise direkt über Touchgesten oder Tastenkombinationen bearbeiten.
+Das Verwendungsmodell für den **SemanticZoom-Steuerelementtyp** ist ungewöhnlich, da es hauptsächlich für den programmgesteuerten Zugriff vorhanden ist. Microsoft Benutzeroberflächenautomatisierung clients can monitor and manipulate the Semantic Zoom control to control the zoomed in state of the list. Benutzer, die keine Hilfstechnologie verwenden, bearbeiten das Steuerelement Semantic Zoom in der Regel direkt über Touchgesten oder Tastenkombinationen.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **semanticzoom** -Steuerelement Typen definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle semantischen Zoom Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Benutzeroberflächenautomatisierungs-Unterstützung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **SemanticZoom-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Steuerelemente des semantischen Zooms, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster und-Eigenschaften](#required-control-patterns-and-properties)
+-   [Erforderliche Steuerelementmuster und -eigenschaften](#required-control-patterns-and-properties)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Anmerkungen](#remarks)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für den **semanticzoom** -Steuerelement Typen sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf den **SemanticZoom-Steuerelementtyp** bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>List
-<ul>
-<li>SemanticZoom
-<ul>
-<li>ListItem (beliebige Anzahl)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>List
-<ul>
-<li>ListItem (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>List<ul><li>[SemanticZoom]<ul><li>ListItem (beliebige Anzahl)</li></ul></li></ul></li></ul> | <ul><li>List<ul><li>ListItem (beliebige Anzahl)</li></ul></li></ul> | 
+
 
 
 
@@ -95,37 +69,11 @@ Oder:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>SemanticZoom
-<ul>
-<li>List
-<ul>
-<li>ListItem (beliebige Anzahl)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>List
-<ul>
-<li>ListItem (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>[SemanticZoom]<ul><li>List<ul><li>ListItem (beliebige Anzahl)</li></ul></li></ul></li></ul> | <ul><li>List<ul><li>ListItem (beliebige Anzahl)</li></ul></li></ul> | 
+
 
 
 
@@ -133,95 +81,38 @@ Oder:
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für die Steuerelemente, die den Steuerelement **semanticzoom** implementieren, besonders relevant sind. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für die Steuerelemente, die den **SemanticZoom-Steuerelementtyp** implementieren, besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Benutzeroberflächenautomatisierungs-Eigenschaft</th>
-<th>Wert</th>
-<th>Notizen</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_AutomationIdPropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.</td>
-</tr>
-<tr class="even">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_BoundingRectanglePropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Das äußere Rechteck, das das gesamte Steuerelement enthält.</td>
-</tr>
-<tr class="odd">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_ClickablePointPropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Wenn das Listen Steuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus erhält), muss dieser Punkt durch diese Eigenschaft verfügbar gemacht werden. Wenn der Wert der <a href="uiauto-automation-element-propids.md"><strong>UIA_IsOffscreenPropertyId</strong></a> -Eigenschaft <strong>true</strong>ist, führt der Versuch, diese Eigenschaft abzurufen, zu <a href="uiauto-error-codes.md"><strong>UIA_E_NOCLICKABLEPOINT</strong></a> Fehler.</td>
-</tr>
-<tr class="even">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_ControlTypePropertyId</strong></a></td>
-<td><strong>SemanticZoom</strong></td>
 
-</tr>
-<tr class="odd">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_IsContentElementPropertyId</strong></a></td>
-<td>TRUE</td>
+| Benutzeroberflächenautomatisierungs-Eigenschaft | Wert | Hinweise | 
+|------------------------|-------|-------|
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_AutomationIdPropertyId</strong></a> | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein. | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_BoundingRectanglePropertyId</strong></a> | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält. | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_ClickablePointPropertyId</strong></a> | Siehe Hinweise. | Wenn das Listensteuer steuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus besitzt), muss dieser Punkt über diese Eigenschaft verfügbar gemacht werden. Wenn der Wert der <a href="uiauto-automation-element-propids.md"><strong>UIA_IsOffscreenPropertyId</strong></a> TRUE <strong>ist,</strong>führt der Versuch, diese Eigenschaft abzurufen, zum <a href="uiauto-error-codes.md"><strong>UIA_E_NOCLICKABLEPOINT</strong></a> Fehler. | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_ControlTypePropertyId</strong></a> | <strong>SemanticZoom</strong> | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_IsContentElementPropertyId</strong></a> | TRUE | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_IsControlElementPropertyId</strong></a> | TRUE | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_IsKeyboardFocusablePropertyId</strong></a> | FALSE | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_LabeledByPropertyId</strong></a> | Siehe Hinweise. | Wenn es eine statische Textbezeichnung gibt, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen. | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_LocalizedControlTypePropertyId</strong></a> | Siehe Hinweise. | Eine lokalisierte Zeichenfolge, die dem <strong>SemanticZoom-Steuerelementtyp</strong> entspricht. Der Standardwert ist "semantischer Zoom" für en-US oder Englisch (USA).<blockquote>[!Note]<br />Einige Frameworks verketteten dies als "semanticzoom".</blockquote><br /> | 
+| <a href="uiauto-automation-element-propids.md"><strong>UIA_NamePropertyId</strong></a> | Siehe Hinweise. | Eine leere Zeichenfolge ist akzeptabel, oder es kann ein nützlicherer Name angegeben werden, solange er nicht den Begriff semantischen Zoom enthält, was die Kombination aus Steuerelementtyp und Name verwirrend machen würde. | 
 
-</tr>
-<tr class="even">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_IsControlElementPropertyId</strong></a></td>
-<td>TRUE</td>
-
-</tr>
-<tr class="odd">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_IsKeyboardFocusablePropertyId</strong></a></td>
-<td>false</td>
-
-</tr>
-<tr class="even">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_LabeledByPropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Wenn eine statische Text Bezeichnung vorhanden ist, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen.</td>
-</tr>
-<tr class="odd">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_LocalizedControlTypePropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Eine lokalisierte Zeichenfolge, die dem Typ des <strong>semanticzoom</strong> -Steuer Elements entspricht. Der Standardwert ist der &quot; semantische Zoom &quot; für en-US oder Englisch (USA).
-<blockquote>
-[!Note]<br />
-Einige Frameworks verkettet dies als &quot; semanticzoom &quot; .
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="uiauto-automation-element-propids.md"><strong>UIA_NamePropertyId</strong></a></td>
-<td>Siehe Hinweise.</td>
-<td>Eine leere Zeichenfolge ist zulässig, oder es kann ein hilfreicher Name bereitgestellt werden, solange Sie nicht den Begriff Semantik Zoom enthält, wodurch die Kombination aus Steuerungstyp und-Name verwirrend wäre.</td>
-</tr>
-</tbody>
-</table>
 
 
 
  
 
-## <a name="required-control-patterns-and-properties"></a>Erforderliche Steuerelement Muster und-Eigenschaften
+## <a name="required-control-patterns-and-properties"></a>Erforderliche Steuerelementmuster und -eigenschaften
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von allen Semantik Zoom Steuerelementen unterstützt werden Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von allen Steuerelementen für den semantischen Zoom unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
-| Steuerelementmuster/Mustereigenschaft                  | Unterstützung/Wert | Notizen                                                                                                                                                                                                                                                                                                                                                          |
+| Steuerelementmuster/Mustereigenschaft                  | Unterstützung/Wert | Hinweise                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IToggleProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itoggleprovider) | Depends (Abhängig)       | Semantik Zoom Steuerelemente unterstützen das [Toggle](uiauto-implementingtoggle.md) -Steuerelement Muster, um die Aktivierung oder Deaktivierung des Zoom zuzulassen. Objekt [**Status \_ Off**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-togglestate) entspricht dem flachen, dem gesamten up-Zustand und dem Wert von " [**degglestate" \_ in**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-togglestate) entspricht der Ansicht "hoch", "Zoomansicht". |
+| [**IToggleProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itoggleprovider) | Depends (Abhängig)       | Steuerelemente für semantischen Zoom unterstützen das [Steuerelementmuster](uiauto-implementingtoggle.md) Umschalten, damit der Zoom aktiviert oder deaktiviert werden kann. [**ToggleState \_ Off**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-togglestate) entspricht dem flachen All-Up-Zustand, und [**ToggleState \_ On**](/windows/desktop/api/UIAutomationCore/ne-uiautomationcore-togglestate) entspricht der ansicht mit hoher Vergrößerung. |
 
 
 
@@ -229,24 +120,24 @@ In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberfl
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die von Semantik Zoom Steuerelementen unterstützt werden Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die von Semantic Zoom-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ Toggletogglestatepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.    |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ ToggleToggleStatePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)    |                                                                                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Benutzeroberfläche über eine sichtbare Schaltfläche verfügt, um das semantische Zoom Steuerelement Verhalten umzuschalten, sollte diese Schaltfläche keinen **semanticzoom** -Steuer ungstyp aufweisen. Dies ist kontraintuitiv, aber der **semanticzoom** -Steuer ungstyp kennzeichnet den Container des Zoom Inhalts, nicht eine Schaltfläche, die den Zoom steuert. (Eine solche Schaltfläche könnte einfach als [Button](uiauto-supportbuttoncontroltype.md) -Steuerelement mit dem [Toggle](uiauto-implementingtoggle.md) -Steuerelement Muster dargestellt werden.)
+Wenn eine Benutzeroberfläche über eine sichtbare Schaltfläche zum Umschalten des Verhaltens des semantischen Zoomsteuerelementes verfügt, sollte diese Schaltfläche keinen **SemanticZoom-Steuerelementtyp** haben. Dies ist counter-intuitive, aber der **SemanticZoom-Steuerelementtyp** kennzeichnet den Container des zoomenden Inhalts, nicht eine Schaltfläche, die den Zoom steuert. (Eine solche Schaltfläche kann einfach [](uiauto-supportbuttoncontroltype.md) als Button-Steuerelementtyp mit dem [Steuerelementmuster Umschalten](uiauto-implementingtoggle.md) dargestellt werden.)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

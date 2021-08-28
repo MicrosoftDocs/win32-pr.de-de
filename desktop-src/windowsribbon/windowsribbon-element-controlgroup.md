@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a1777bd469b6bf07530881f9c20888d69fe98117ecbdeba4f3f5557f01ced172
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 33640f8e451f7124efda8c0e5377a3145d221668
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117851026"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631988"
 ---
 # <a name="controlgroup-element"></a>ControlGroup-Element
 
 Stellt eine Gruppe von Steuerelementen in einer [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ControlGroup
@@ -39,15 +39,15 @@ Stellt eine Gruppe von Steuerelementen in einer [**SizeDefinition-Layoutvorlage*
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -71,19 +71,19 @@ Stellt eine Gruppe von Steuerelementen in einer [**SizeDefinition-Layoutvorlage*
 
 | Element                                                                                 | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                               | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                           | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**Kombinationsfeld**](windowsribbon-element-combobox.md)<br/>                           | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>               | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>     | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>             | Kann ein oder mehrere Male auftreten<br/> <br/> |
 | [**FontControl**](windowsribbon-element-fontcontrol.md)<br/>                     | Kann höchstens einmal auftreten.<br/> <br/>      |
-| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)<br/>             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**Spinner**](windowsribbon-element-spinner.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)<br/>             | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**Spinner**](windowsribbon-element-spinner.md)<br/>                             | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                     | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>       | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                   | Kann ein oder mehrere Male auftreten<br/> <br/> |
 
 
 
@@ -211,7 +211,7 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

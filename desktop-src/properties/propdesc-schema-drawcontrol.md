@@ -1,23 +1,23 @@
 ---
-description: Gibt das Steuerelement an, das beim einfachen Anzeigen der Eigenschaft verwendet werden soll.
+description: Gibt an, welches Steuerelement beim einfachen Anzeigen der -Eigenschaft verwendet werden soll.
 ms.assetid: 0fb8afc4-d16b-4c2e-80b3-da9935b11bb5
-title: DrawControl
+title: drawControl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5318fdebc995ff45932f75b4000ceda6e74068e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58a330854f19005f7f2863c337451b1dcc56cea3
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042032"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632048"
 ---
-# <a name="drawcontrol"></a>DrawControl
+# <a name="drawcontrol"></a>drawControl
 
-Gibt das Steuerelement an, das beim einfachen Anzeigen der Eigenschaft verwendet werden soll. Es darf nur ein [DrawControl]() -Element für jedes [DisplayInfo](./propdesc-schema-displayinfo.md) -Element vorhanden sein.
+Gibt an, welches Steuerelement beim einfachen Anzeigen der -Eigenschaft verwendet werden soll. Es sollte nur ein [drawControl-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [DrawControl]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [drawControl-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
-Diese Form des Steuer Elements ermöglicht keine Eigenschaften Bearbeitung.
+Diese Form des Steuerelements lässt keine Eigenschaftenbearbeitung zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Diese Form des Steuer Elements ermöglicht keine Eigenschaften Bearbeitung.
 
 | Übergeordnetes Element                                   | Untergeordnete Elemente |
 |--------------------------------------------------|----------------|
-| [Display Info](./propdesc-schema-displayinfo.md) | Keine           |
+| [displayInfo](./propdesc-schema-displayinfo.md) | Keine           |
 
 
 
@@ -65,19 +65,19 @@ Diese Form des Steuer Elements ermöglicht keine Eigenschaften Bearbeitung.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Steuerung</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist Default &quot; &quot; . Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; Standard. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -88,19 +88,19 @@ Diese Form des Steuer Elements ermöglicht keine Eigenschaften Bearbeitung.
 <tbody>
 <tr class="odd">
 <td>Standard</td>
-<td>Standard. Verwendet das Standard Steuerelement auf Grundlage des- <typeInfo type=&quot;&quot;> Attributs. Der Standardtyp ist &quot; String &quot; (MultiValue), und das Standard Steuerelement ist &quot; multivaluetext &quot; . Jeder andere Typ führt zur Verwendung des &quot; StaticText- &quot; Steuer Elements.</td>
+<td>Standard. Verwendet das Standardsteuerelement basierend auf dem <typeInfo type=&quot;&quot;> -Attribut. Der Standardtyp ist &quot; String &quot; (mehrwertiges Steuerelement), und das Standardsteuerelement ist &quot; MultiValueText. &quot; Jeder andere Typ führt zur Verwendung des &quot; &quot; StaticText-Steuerelements.</td>
 </tr>
 <tr class="even">
-<td>Multilinetext</td>
-<td>Verwendet das mehrzeilige Text Steuerelement.</td>
+<td>MultiLineText</td>
+<td>Verwendet das mehrzeilige Textsteuerelement.</td>
 </tr>
 <tr class="odd">
-<td>Multivaluetext</td>
-<td>Verwendet das mehrwertige Text Steuerelement.</td>
+<td>MultiValueText</td>
+<td>Verwendet das Mehrwert-Textsteuerelement.</td>
 </tr>
 <tr class="even">
-<td>Prozentualbar</td>
-<td>Verwendet das Prozent leisten-Steuerelement.</td>
+<td>PercentBar</td>
+<td>Verwendet das Prozentleisten-Steuerelement.</td>
 </tr>
 <tr class="odd">
 <td>ProgressBar</td>
@@ -108,18 +108,18 @@ Diese Form des Steuer Elements ermöglicht keine Eigenschaften Bearbeitung.
 </tr>
 <tr class="even">
 <td>Rating</td>
-<td>Verwendet das 5-Sterne-Bewertungs Steuerelement.</td>
+<td>Verwendet das 5-Stern-Bewertungssteuerelement.</td>
 </tr>
 <tr class="odd">
 <td>StaticText</td>
-<td>Verwendet <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay"><strong>ipropertydescription:: formatfordisplay</strong></a> , um den Eigenschafts Wert anzuzeigen.</td>
+<td>Verwendet <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-formatfordisplay"><strong>IPropertyDescription::FormatForDisplay,</strong></a> um den Eigenschaftswert anzuzeigen.</td>
 </tr>
 <tr class="even">
 <td>IconList</td>
 <td><strong>Windows 7 und höher.</strong> Eine Enumeration von Symbolen.</td>
 </tr>
 <tr class="odd">
-<td>Booleancheckmark</td>
+<td>BooleanCheckMark</td>
 <td><strong>Windows 7 und höher.</strong></td>
 </tr>
 </tbody>

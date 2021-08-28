@@ -4,12 +4,12 @@ ms.assetid: 7a9e304c-57ef-41a3-83be-2b2d31435da8
 title: Beispiel für Ink-Websteuerelement
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8a2f305f1dcbb412325970510c6eaa5f09732bf10d870c961820ab8d8749eda
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: dfe2035028ab622f896489b304ca850db4e25462
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119032198"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882046"
 ---
 # <a name="ink-web-control-sample"></a>Beispiel für Ink-Websteuerelement
 
@@ -33,7 +33,7 @@ Dieses Beispiel besteht aus einer Projektmappe, die zwei Projekte und eine HTML-
 
 ## <a name="referencing-the-control-in-html"></a>Verweisen auf das Steuerelement in HTML
 
-Die Projektmappe enthält eine HTML-Datei default.htm. Diese Datei ist die Seite, zu der der Browser navigiert, um das Steuerelement zu laden. Die Datei enthält ein <object> Tag, das auf das Steuerelement verweist. Es enthält auch ein Skript, das aufgerufen wird, wenn die Seite entladen wird, wie durch das Vorhandensein des onload=" `OnUnload()` " -Attributs in der <body> ein. Diese Funktion ruft die `DisposeResources` -Methode für das -Steuerelement auf, um sicherzustellen, dass alle Ressourcen beim Herunterfahren ordnungsgemäß freigegeben werden.
+Die Projektmappe enthält eine HTML-Datei default.htm. Diese Datei ist die Seite, zu der der Browser navigiert, um das Steuerelement zu laden. Die Datei enthält ein &lt; &gt; Objekttag, das auf das Steuerelement verweist. Es enthält auch ein Skript, das aufgerufen wird, wenn die Seite entladen wird, wie durch das Vorhandensein des onload=" `OnUnload()` " -Attributs im &lt; &gt; Texttag angegeben. Diese Funktion ruft die `DisposeResources` -Methode für das -Steuerelement auf, um sicherzustellen, dass alle Ressourcen beim Herunterfahren ordnungsgemäß freigegeben werden.
 
 
 ```C++
@@ -59,13 +59,13 @@ Die Projektmappe enthält eine HTML-Datei default.htm. Diese Datei ist die Seite
 
 
 
-Beachten Sie das Format des classid-Attributwerts für das <object> -Tag. Er benennt die Assembly, gefolgt von einem \# Vorzeichentrennzeichen und dann den Namespace, der das Steuerelement enthält, und dann den Klassennamen des Steuerelements.
+Beachten Sie das Format des classid-Attributwerts für das &lt; &gt; Objekttag. Er benennt die Assembly, gefolgt von einem \# Vorzeichentrennzeichen und dann den Namespace, der das Steuerelement enthält, und dann den Klassennamen des Steuerelements.
 
 Ein echtes Benutzersteuerelement würde wahrscheinlich zusätzliche Methoden enthalten, die zum Beibehalten oder Senden der in der Anwendung gesammelten Daten verwendet werden.
 
 ## <a name="the-autoclaims_webcontrol-project"></a>AutoClaims \_ WebControl-Project
 
-Das AutoClaims \_ WebControl-Projekt ist eine Bereitstellungs-Project, die ein Setup erstellt, das bei der Installation einen virtuellen Stamm ( AutoClaims \_ WebControl) auf dem Webserver hinzufügt. Das Steuerelement und die HTML-Datei werden in diesem virtuellen Stamm abgelegt.
+Das AutoClaims \_ WebControl-Projekt ist eine Bereitstellungs-Project, die ein Setup erstellt, das bei der Installation ein virtuelles Stammverzeichnis (AutoClaims \_ WebControl) auf dem Webserver hinzufügt. Das Steuerelement und die HTML-Datei werden in diesem virtuellen Stamm abgelegt.
 
 > [!Note]  
 > Die kompilierten Webbeispiele werden nicht von der Standardinstallationsoption für das SDK installiert. Sie müssen eine benutzerdefinierte Installation abschließen und die Unteroption "Vorkompilierte Webbeispiele" auswählen, um sie zu installieren.

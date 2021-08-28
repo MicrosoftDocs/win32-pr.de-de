@@ -1,8 +1,8 @@
 ---
-description: Alle Ansichts Klassen müssen über einen Zeichen folgen Array-Qualifizierer namens viewsources verfügen.
+description: Alle Ansichtsklassen müssen über einen Zeichenfolgenarrayqualifizierer namens ViewSources verfügen.
 ms.assetid: aefa8cda-962f-4f6c-92a0-a8825d48db60
 ms.tgt_platform: multiple
-title: Viewsources Qualifizierer
+title: ViewSources-Qualifizierer
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1f39146f8065401052c352472b28c4946cca6b98
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2a0cadf3e1469fbdaf347b269813e76b780348d28482a00b4de290aaf4e0f28
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120760"
 ---
-# <a name="viewsources-qualifier"></a>Viewsources Qualifizierer
+# <a name="viewsources-qualifier"></a>ViewSources-Qualifizierer
 
-Alle Ansichts Klassen müssen über einen Zeichen folgen Array-Qualifizierer namens **viewsources** verfügen. Der **viewsources** -Qualifizierer enthält die Quell Abfragen, die die in der Ansichts Klasse verwendeten Quell Instanzen definieren. Der Wert des **viewsources** -Qualifizierers ist ein Zeichen folgen Array, das WMI Query Language-Abfragen [*(WQL)*](gloss-w.md) enthält. Sie können Quell Klassen definieren und die Quell Instanzen einschränken, die ihre Ansichts Klasse mit der [Abfrage with WQL](querying-with-wql.md)[WHERE-Klausel](where-clause.md) verwendet, um eine gefilterte Ansicht zu erstellen.
+Alle Ansichtsklassen müssen über einen Zeichenfolgenarrayqualifizierer namens **ViewSources verfügen.** Der **ViewSources-Qualifizierer** enthält die Quellabfragen, die die in der Ansichtsklasse verwendeten Quellinstanzen definieren. Der Wert des **ViewSources-Qualifizierers** ist ein Zeichenfolgenarray, das [*WQL-Abfragen (WMI Query Language)*](gloss-w.md) enthält. Sie können Quellklassen definieren und die Quellinstanzen einschränken, die Ihre Ansichtsklasse mit der [WHERE-Klausel querying with WQL](querying-with-wql.md)[](where-clause.md) verwendet, um eine gefilterte Sicht zu erstellen.
 
-Der [Ansichts Anbieter](view-provider.md) entspricht den Quell Abfragen im Ansichts **Quellen** -Qualifizierer mit den Namespaces, die im [viewspaces-Qualifizierer](viewspaces-qualifier.md) in der Reihenfolge aufgeführt sind, in der die Abfragen und Namespaces aufgelistet Die Anzahl der Quell Abfragen muss mit der Anzahl der Namespaces identisch sein, die im viewspaces-Qualifizierer aufgelistet sind. Die Reihenfolge, in der Sie die Quell Abfragen auflisten, bestimmt die Namespaces, von denen die Quell Instanzen gezeichnet werden.
+Der [Ansichtsanbieter](view-provider.md) gleicht die Quellabfragen im **ViewSources-Qualifizierer** mit den Namespaces ab, die im [ViewSpaces-Qualifizierer](viewspaces-qualifier.md) in der Reihenfolge aufgeführt sind, in der die Abfragen und Namespaces aufgeführt sind. Die Anzahl der Quellabfragen muss mit der Anzahl der Namespaces übereinstimmen, die im ViewSpaces-Qualifizierer aufgeführt sind. Die Reihenfolge, in der Sie die Quellabfragen auflisten, bestimmt die Namespaces, aus denen die Quellinstanzen gezeichnet werden.
 
-Im folgenden Beispiel werden nur Instanzen der **localdisk** -Klasse ausgewählt, wobei der Wert der **File System** -Eigenschaft "NTFS" ist, und Instanzen der Klasse " **remotedisk** ", bei denen der Wert der **FreeSpace** -Eigenschaft größer als 45 Megabyte ist:
+Im folgenden Beispiel werden nur Instanzen der **LocalDisk-Klasse** ausgewählt, bei denen der Wert der **FileSystem-Eigenschaft** "NTFS" ist, und Instanzen der **RemoteDisk-Klasse,** bei denen der Wert der **FreeSpace-Eigenschaft** größer als 45 Megabyte ist:
 
 
 ```sql
@@ -50,7 +50,7 @@ ViewSources{
 
 
 > [!Note]  
-> Die Anzahl der Quell Abfragen, die Sie für Verknüpfungs Ansichts Klassen definieren können, hängt von der Anzahl der Instanzen ab, die von diesen Abfragen zurückgegeben werden, und der Anzahl der Möglichkeiten, mit denen Die Anzahl möglicher Kombinationen von Quell Instanzen für Ansichts Klassen wächst exponentiell, sodass Sie Quell Abfragen für joinansichts Klassen so einfach wie möglich halten.
+> Die Anzahl der Quellabfragen, die Sie für Joinansichtsklassen definieren können, hängt von der Anzahl der Instanzen ab, die diese Abfragen zurückgeben, und von der Anzahl der Möglichkeiten, wie diese Instanzen verknüpft werden können. Die Anzahl der möglichen Kombinationen von Quellinstanzen für Ansichtsklassen wächst exponentiell, sodass Quellabfragen für Joinansichtsklassen so einfach wie möglich gehalten werden.
 
  
 
@@ -69,7 +69,7 @@ ViewSources{
 
 <dl> <dt>
 
-[**Spezifische Qualifizierer für den Ansichts Anbieter**](qualifiers-specific-to-the-view-provider.md)
+[**Qualifizierer, die für den Ansichtsanbieter spezifisch sind**](qualifiers-specific-to-the-view-provider.md)
 </dt> </dl>
 
  

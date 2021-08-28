@@ -1,7 +1,7 @@
 ---
-description: Flag zum angeben, ob für die Zuweisung ein Commit ausgeführt wurde.
+description: Flag, das angibt, ob für die Zuweisung ein Committed wurde.
 ms.assetid: 56cef548-c659-4faa-b45c-de2f8dc2b3ca
-title: 'Cbasezucator:: m_bCommitted Member (amfilter. h)'
+title: CBaseAllocator::m_bCommitted Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5b670559ab548d6c650c2a66d534289dd12d530a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cea1606f9053da3845ccfb93294a2cc8590d674124c8cf8cb8b1ee8bdecdee56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131480"
 ---
-# <a name="cbaseallocatorm_bcommitted-member"></a>Cbasezucator:: m \_ bcommit-Member
+# <a name="cbaseallocatorm_bcommitted-member"></a>CBaseAllocator::m \_ bCommitted-Member
 
-Flag zum angeben, ob für die Zuweisung ein Commit ausgeführt wurde.
+Flag, das angibt, ob für die Zuweisung ein Committed wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bCommitted;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bCommitted;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

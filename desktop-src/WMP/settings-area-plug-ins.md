@@ -1,38 +1,38 @@
 ---
-title: Einstellungs Bereichs-Plug-ins
-description: Einstellungs Bereichs-Plug-ins
+title: Einstellungen Bereichs-Plug-Ins
+description: Einstellungen Bereichs-Plug-Ins
 ms.assetid: 55626c4b-524c-45d3-9024-4d8f0a79ef0c
 keywords:
-- Windows Media Player-Plug-ins, Einstellungsbereich
-- Plug-ins, Einstellungsbereich
-- Benutzeroberflächen-Plug-ins, Einstellungsbereich
-- UI-Plug-ins, Einstellungsbereich
-- Einstellungs Bereichs-Plug-ins
+- Windows Media Player Plug-Ins, Bereich "Einstellungen"
+- Plug-Ins, Bereich "Einstellungen"
+- Benutzeroberflächen-Plug-Ins, Bereich "Einstellungen"
+- UI-Plug-Ins, Bereich "Einstellungen"
+- Einstellungenbereichs-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 171c2e66ba3002aea39190427fb3cb7ffd8444cf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b525ef76185f3e9104aed14eb542ee053f785d9bda599dbb11345bea06b91495
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123120"
 ---
-# <a name="settings-area-plug-ins"></a>Einstellungs Bereichs-Plug-ins
+# <a name="settings-area-plug-ins"></a>Einstellungen Bereichs-Plug-Ins
 
-Für Microsoft Windows Media Player 11 und früher werden Einstellungsbereich-Benutzeroberflächen-Plug-ins im Werkzeugbereich des Fensters " **jetzt Wiedergabe** " unterhalb des Haupt Anzeige Bereichs und über den Transport Steuerelementen angezeigt. Für Microsoft Windows Media Player 12 und höher werden Einstellungsbereich-Plug-Ins für die Benutzeroberfläche als separate Fenster angezeigt. Es kann jeweils nur ein Einstellungsbereich-Plug-in aktiviert werden.
+Für Microsoft Windows Media Player 11 und früher werden Ui-Plug-Ins für den Einstellungsbereich im Bereich Extras des Bereichs **Jetzt wiedergeben** unterhalb des Hauptanzeigebereichs und oberhalb der Transportsteuerelemente angezeigt. Für Microsoft Windows Media Player 12 und höher werden Ui-Plug-Ins für den Einstellungsbereich als separate Fenster angezeigt. Es kann jeweils nur ein Einstellungsbereichs-Plug-In aktiviert werden.
 
-Einstellungsbereich-Plug-ins sind nützlich, um benutzerdefinierte Steuerelemente anzuzeigen, die den Steuerelementen für Grafik-equalip oder Videoeinstellungen ähneln.
+Einstellungen Bereichs-Plug-Ins sind nützlich, um benutzerdefinierte Steuerelementpanels anzuzeigen, die den Steuerelementen für grafikbezogene Gleichheits- oder Videoeinstellungen ähneln.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über das UI-Plug-in**](ui-plug-in-overview.md)
+[**UI Plug-in Overview**](ui-plug-in-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

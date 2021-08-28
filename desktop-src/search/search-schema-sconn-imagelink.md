@@ -1,19 +1,19 @@
 ---
-description: Das <imageLink> optionale -Element gibt eine Miniaturansicht für diesen Suchconnector an. Dieses Element verfügt über ein obligatorisches untergeordnetes Element und keine Attribute.
+description: Das optionale &lt; imageLink-Element &gt; gibt eine Miniaturansicht für diesen Suchconnector an. Dieses Element verfügt über ein obligatorisches untergeordnetes Element und keine Attribute.
 ms.assetid: 71078d83-72f4-41f9-b80c-7ba0139206fb
-title: imageLink-Element (Connectorschema suchen)
+title: imageLink-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 007ad8c2500e2739210646c446d9f906d5a83571ea4ac9780ab9136b73805c83
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: bf6030f44e74f8f8441b3a6cd0835df9c5969619
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119711090"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882395"
 ---
-# <a name="imagelink-element-search-connector-schema"></a>imageLink-Element (Connectorschema suchen)
+# <a name="imagelink-element-search-connector-schema"></a>imageLink-Element (Search Connector Schema)
 
-Das <imageLink> optionale -Element gibt eine Miniaturansicht für diesen Suchconnector an. Dieses Element verfügt über ein obligatorisches untergeordnetes Element und keine Attribute.
+Das optionale &lt; imageLink-Element &gt; gibt eine Miniaturansicht für diesen Suchconnector an. Dieses Element verfügt über ein obligatorisches untergeordnetes Element und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Das <imageLink> optionale -Element gibt eine Miniaturansicht für diesen Suchcon
 
 ## <a name="remarks"></a>Hinweise
 
-Der ImageLink-Wert kann ein lokaler Dateisystempfad oder eine URL sein. Die Bilddatei kann einer der grundlegenden Bildtypen sein, die von Windows 7 (PNG, BMP, JPG, GIF) unterstützt werden.
+Der imageLink-Wert kann ein lokaler Dateisystempfad oder eine URL sein. Die Bilddatei kann jeder der grundlegenden Bildtypen sein, die von Windows 7 (PNG, BMP, JPG, GIF) unterstützt werden.
 
 ## <a name="example-of-an-imagelink-element"></a>Beispiel für ein imageLink-Element
 

@@ -1,89 +1,47 @@
 ---
-title: Informationen zu Typ 2 Online Stores
-description: Informationen zu Typ 2 Online Stores
+title: Informationen zu Onlineshops vom Typ 2
+description: Informationen zu Onlineshops vom Typ 2
 ms.assetid: 8569dfa8-11e2-49b7-a075-0f670247eec0
 keywords:
-- Windows Media Player Online Stores, geben Sie 2 Online Stores ein.
-- Online Stores, Typ 2 Online Stores
-- Geben Sie 2 Online Stores ein, Informationen zu
-- Windows Media Player, Typ 2 Online Stores
+- Windows Media Player Onlineshops, geben Sie 2 Onlineshops ein.
+- Onlineshops, geben Sie 2 Onlineshops ein.
+- Geben Sie 2 Onlineshops ein, informationen
+- Windows Media Player, geben Sie 2 Onlineshops ein.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f8a1bf78f2d34735c8c27744b57995bc21b153d
-ms.sourcegitcommit: 927b9c371f75f52b8011483edf3a4ba37d11ebe4
+ms.openlocfilehash: e699cdda7dd35445cef781fc194b74045a190f6f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389800"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476206"
 ---
-# <a name="about-type-2-online-stores"></a>Informationen zu Typ 2 Online Stores
+# <a name="about-type-2-online-stores"></a>Informationen zu Onlineshops vom Typ 2
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Windows Media Player unterstützt zwei Arten von Online Stores: Typ1 und Typ 2. Die Speicher vom Typ 1 werden von Windows Media Player 11 unterstützt. Die Speichertypen 2 werden von Windows Media Player 10 und Windows Media Player 11 unterstützt. Die Speichertypen 2 stellen eine grundlegende Ebene der Integration in die Benutzeroberfläche des Players dar, und Type 1 Stores bieten eine tiefere Integration. Weitere Informationen zu den Unterschieden zwischen Typ 1 und Typ 2 finden Sie unter [Windows Media Player Online Stores](windows-media-player-online-stores.md).
+Windows Media Player unterstützt zwei Arten von Onlineshops: Typ1 und Typ 2. Speicher vom Typ 1 werden von Windows Media Player 11 unterstützt. Speicher vom Typ 2 werden von Windows Media Player 10 und Windows Media Player 11 unterstützt. Speicher vom Typ 2 bieten ein grundlegendes Maß an Integration in die Benutzeroberfläche des Players, und Speicher vom Typ 1 bieten eine tiefere Integration. Weitere Informationen zum Unterschied zwischen Speicher vom Typ 1 und Typ 2 finden Sie unter [Windows Media Player Onlineshops.](windows-media-player-online-stores.md)
 
-In den folgenden Abschnitten finden Sie eine Übersicht über den Typ 2 Online Stores.
+Die folgenden Abschnitte enthalten Übersichtsinformationen zu Onlineshops vom Typ 2.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>`Section`</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="service-task-panes.md">Aufgabenbereiche für Dienste</a></td>
-<td>Bietet allgemeine Informationen zu den drei Dienstaufgaben Bereichen, die ein Online Shop in Windows Media Player 10 anzeigen kann.
-<blockquote>
-[!Note]<br />
-In Windows Media Player 11 gibt es nur einen Aufgabenbereich, der angezeigt wird, wenn der Benutzer auf die Registerkarte " <strong>Online Stores</strong> " klickt.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="purchase-integration-for-type-2-online-stores.md">Kauf Integration für den Typ 2-Online Speicher</a></td>
-<td>Beschreibt, wie Online Stores Anforderungen zum Erwerb von Medieninhalten verarbeiten.</td>
-</tr>
-<tr class="odd">
-<td><a href="download-manager.md">Download-Manager</a></td>
-<td>Beschreibt den Download-Manager von Windows Media Player.</td>
-</tr>
-<tr class="even">
-<td><a href="album-info-integration.md">Integration von Album Informationen</a></td>
-<td>Beschreibt, wie ein Online Shop Anforderungen zum Anzeigen von Albumdetails verarbeitet.</td>
-</tr>
-<tr class="odd">
-<td><a href="bits.md">Bohrer</a></td>
-<td>Enthält Informationen zur Verwendung des Windows XP-Background Intelligent Transfer Service (Bits) mit Windows Media Player.</td>
-</tr>
-<tr class="even">
-<td><a href="serviceinfo-document-for-a-type-2-online-store.md">ServiceInfo-Dokument für einen Typ 2-Online Store</a></td>
-<td>Beschreibt das Dokument, das Online Stores verfassen muss, um die Konfiguration von Windows Media Player zu beschreiben.</td>
-</tr>
-<tr class="odd">
-<td><a href="test-and-production-keys-for-a-type-2-online-store.md">Test-und Produktions Schlüssel für einen Typ 2-Online Shop</a></td>
-<td>Beschreibt Registrierungseinträge, die von einem Online Shop auf dem Computer des Benutzers erstellt werden müssen.</td>
-</tr>
-<tr class="even">
-<td><a href="type-2-online-store-plug-in.md">Plug-In für Typ 2-Onlineshops</a></td>
-<td>Beschreibt das Plug-in, das von einem Online Shop bereitgestellt wird.</td>
-</tr>
-<tr class="odd">
-<td><a href="type-2-online-store-samples.md">Type 2 Online Store-Beispiele</a></td>
-<td>Hier wird beschrieben, wie zwei von Microsoft erstellte Beispiel-Onlinespeicher angezeigt werden.</td>
-</tr>
-</tbody>
-</table>
+
+| `Section` | BESCHREIBUNG | 
+|---------|-------------|
+| <a href="service-task-panes.md">Dienstaufgabenbereiche</a> | Stellt allgemeine Informationen zu den drei Dienstaufgabenbereichen bereit, die ein Onlineshop in Windows Media Player 10 anzeigen kann.<blockquote>[!Note]<br />In Windows Media Player 11 gibt es nur einen Aufgabenbereich, der angezeigt wird, wenn der Benutzer auf die Registerkarte <strong>Onlineshops</strong> klickt.</blockquote><br /> | 
+| <a href="purchase-integration-for-type-2-online-stores.md">Kaufintegration für Onlineshops vom Typ 2</a> | Beschreibt, wie Onlineshops Anforderungen zum Erwerb von Medieninhalten verarbeiten. | 
+| <a href="download-manager.md">Download-Manager</a> | Beschreibt den Windows Media Player Download-Manager. | 
+| <a href="album-info-integration.md">Integration von Albuminformationen</a> | Beschreibt, wie ein Onlineshop Anforderungen zum Anzeigen von Albumdetails verarbeitet. | 
+| <a href="bits.md">BITS</a> | Enthält Informationen zur Verwendung des Windows XP Background Intelligent Transfer Service (BITS) mit Windows Media Player. | 
+| <a href="serviceinfo-document-for-a-type-2-online-store.md">ServiceInfo-Dokument für eine Online-Store vom Typ 2</a> | Beschreibt das Dokument, das Onlineshops erstellen müssen, um zu beschreiben, wie Windows Media Player konfiguriert werden. | 
+| <a href="test-and-production-keys-for-a-type-2-online-store.md">Test- und Produktionsschlüssel für eine Online-Store vom Typ 2</a> | Beschreibt Registrierungseinträge, die ein Onlineshop auf dem Computer des Benutzers erstellen muss. | 
+| <a href="type-2-online-store-plug-in.md">Plug-In für Typ 2-Onlineshops</a> | Beschreibt das Plug-In, das von einem Onlineshop bereitgestellt wird. | 
+| <a href="type-2-online-store-samples.md">Geben Sie 2 Online Store Beispiele ein.</a> | Beschreibt, wie zwei von Microsoft erstellte Beispiel-Onlineshops angezeigt werden. | 
+
 
 
 
@@ -93,7 +51,7 @@ In Windows Media Player 11 gibt es nur einen Aufgabenbereich, der angezeigt wird
 
 <dl> <dt>
 
-[**Typ 2 Online Stores**](type-2-online-stores.md)
+[**Geben Sie 2 Onlineshops ein.**](type-2-online-stores.md)
 </dt> </dl>
 
  

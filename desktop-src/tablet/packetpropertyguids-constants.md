@@ -4,25 +4,25 @@ ms.assetid: 3e8495f6-0860-4ea8-a258-784eaade85c7
 title: PacketPropertyGuids-Konstanten (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9eb946b170b1004deea7eb1f2faafeee5bc5dba
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: b8b88a59d63bc8b45ea04e133f0d002fa86e35e5
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122884505"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481076"
 ---
 # <a name="packetpropertyguids-constants"></a>PacketPropertyGuids-Konstanten
 
 Definiert Werte, die die Paketeigenschaften angeben. Die Tablet PCAPI verwendet GUIDs (Globally Unique Identifiers), um Paketeigenschaften zu identifizieren, bei denen es sich in COM um konstante Zeichenfolgen handelt.
 
-In C++ können Sie auf diese Konstanten in der Headerdatei Msinkaut.h zugreifen, die sich im Verzeichnis &lt; systemdrive &gt; : Programme Microsoft \\ \\ SDKs Windows \\ \\ v6.0 \\ Include befindet, wenn Sie das SDK am Standardspeicherort installiert haben. In C++ sind diese Konstanten WCHARs, nicht BSTRs. Konvertieren Sie sie vor der Verwendung in BSTRs. Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
+In C++ können Sie auf diese Konstanten in der Headerdatei Msinkaut.h zugreifen, die sich im Verzeichnis <systemdrive> Programme \\ Microsoft \\ SDKs Windows \\ \\ v6.0 \\ Include befindet, wenn Sie das SDK am Standardspeicherort installiert haben. In C++ sind diese Konstanten WCHARs, nicht BSTRs. Konvertieren Sie sie vor der Verwendung in BSTRs. Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
 In der folgenden Tabelle sind die verfügbaren Felder für die Paketeigenschaft globally unique identifier (GUID) aufgeführt. Verwenden Sie diese GUIDs, um anzugeben, welche Eigenschaften das Paket enthält, wenn Sie den Tablet-Kontext erstellen. Um den Bereich und die Auflösung einer Eigenschaft zu bestimmen, rufen Sie die [**GetPropertyMetrics-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinktablet-getpropertymetrics) auf. Die Konstanten in der folgenden Tabelle, die mit "STR" beginnen, sind Zeichenfolgendarstellungen der entsprechenden binären Konstanten, die \_ in derselben Tabellenzelle angezeigt werden.
 
 
 
 
-| Konstante | Beschreibung | 
+| Konstante | BESCHREIBUNG | 
 |----------|-------------|
 | <span id="STR_GUID_X_or_GUID_PACKETPROPERTY_GUID_X"></span><span id="str_guid_x_or_guid_packetproperty_guid_x"></span><span id="STR_GUID_X_OR_GUID_PACKETPROPERTY_GUID_X"></span><dl><dt><strong>STR_GUID_X oder GUID_PACKETPROPERTY_GUID_X</strong></dt></dl> | Die x-Koordinate im Tabletkoordinatenraum. Jedes Paket enthält diese Eigenschaft standardmäßig. Der Ursprung (0,0) des Tablets ist die linke obere Ecke.<br /> | 
 | <span id="STR_GUID_Y_or_GUID_PACKETPROPERTY_GUID_Y"></span><span id="str_guid_y_or_guid_packetproperty_guid_y"></span><span id="STR_GUID_Y_OR_GUID_PACKETPROPERTY_GUID_Y"></span><dl><dt><strong>STR_GUID_Y oder GUID_PACKETPROPERTY_GUID_Y</strong></dt></dl> | Die y-Koordinate im Tablettkoordinatenraum. Jedes Paket enthält diese Eigenschaft standardmäßig. Der Ursprung (0,0) des Tablets ist die linke obere Ecke.<br /> | 
@@ -59,7 +59,7 @@ In der folgenden Tabelle sind die verfügbaren Felder für die Paketeigenschaft 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

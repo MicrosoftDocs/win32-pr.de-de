@@ -59,12 +59,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a8a81d5e1503c868865f1f1fae7238be74f024c1bd1c992f5610ce75b5702ab6
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7e35ebd6000dfae5e99c4b589f4c0a62e84f1e1d
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119531784"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880913"
 ---
 # <a name="msvm_computersystem-class"></a>Msvm \_ ComputerSystem-Klasse
 
@@ -72,7 +72,7 @@ Stellt ein physisches Computersystem oder einen virtuellen Computer dar.
 
 Um Informationen für VMMS abzurufen, verwenden Sie die [**Msvm \_ VirtualSystemManagementService-Klasse.**](msvm-virtualsystemmanagementservice.md)
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax wird Managed Object Format MOF-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -209,13 +209,13 @@ Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von der [**CIM \_ ManagedElement-Klasse geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) und enthält einen der folgenden Werte.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von der [**CIM \_ ManagedElement-Klasse geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) und enthält einen der folgenden Werte.
 
 
 
@@ -246,7 +246,7 @@ Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalte
 **CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -265,14 +265,14 @@ Datentyp: **uint16 array**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob es sich bei dem Computersystem um ein spezielles System handelt (das einer bestimmten Verwendung dient) und ob es sich nicht um ein allgemeines System handelt. Diese Eigenschaft wird von [**CIM \_ ComputerSystem geerbt**](/windows/desktop/CIMWin32Prov/cim-computersystem)und immer auf 0 (Nicht de dedicated) festgelegt.
+Gibt an, ob es sich bei dem Computersystem um ein spezielles System handelt (das für eine bestimmte Verwendung vorgesehen ist) und ob es sich nicht um ein allgemeines System handelt. Diese Eigenschaft wird von [**CIM \_ ComputerSystem geerbt**](/windows/desktop/CIMWin32Prov/cim-computersystem)und immer auf 0 (Nicht de dedicated) festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -309,7 +309,7 @@ Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -328,7 +328,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt**](/previous-versions//cc136818(v=vs.85)) und ist einer der folgenden Werte.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85)) geerbt und ist einer der folgenden Werte.
 
 <dl> <dt>
 
@@ -352,7 +352,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Zustände eines Elements. Diese Eigenschaft kann auch die Übergänge zwischen diesen angeforderten Zuzuständen angeben. Diese Eigenschaft wird von der [**CIM \_ EnabledLogicalElement-Klasse**](/previous-versions//cc136818(v=vs.85)) geerbt und für einen physischen Computer oder einen der folgenden Werte für einen virtuellen Computer auf 2 (Aktiviert) festgelegt. Eine grafische Ansicht dieser Zustände finden Sie unter Hinweise.
+Der aktivierte und deaktivierte Status eines Elements. Diese Eigenschaft kann auch die Übergänge zwischen diesen angeforderten Zuständen angeben. Diese Eigenschaft wird von der [**CIM \_ EnabledLogicalElement-Klasse**](/previous-versions//cc136818(v=vs.85)) geerbt und für einen physischen Computer auf 2 (Aktiviert) oder auf einen der folgenden Werte für einen virtuellen Computer festgelegt. Eine grafische Ansicht dieser Zustände finden Sie unter Hinweise.
 
 
 
@@ -360,15 +360,15 @@ Der aktivierte und deaktivierte Zustände eines Elements. Diese Eigenschaft kann
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span><dl> <dt>**Unbekannt**</dt> <dt>0</dt> </dl>                                                 | Der Zustand des Elements konnte nicht bestimmt werden.<br/>                                                                                                                                                    |
 | <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Andere**</dt> <dt>1</dt> </dl>                                                         |                                                                                                                                                                                                                 |
-| <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span><dl> <dt>**Aktiviert**</dt> <dt>2</dt> </dl>                                                 | Das -Element wird ausgeführt.<br/>                                                                                                                                                                              |
-| <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span><dl> <dt>**Deaktiviert**</dt> <dt>3</dt> </dl>                                             | Das -Element ist deaktiviert.<br/>                                                                                                                                                                           |
-| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>**Herunterfahren von**</dt> <dt>4</dt> </dl>                         | Das -Element befindet sich im Zustand Deaktiviert.<br/>                                                                                                                                          |
+| <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span><dl> <dt>**Aktiviert**</dt> <dt>2</dt> </dl>                                                 | Das Element wird ausgeführt.<br/>                                                                                                                                                                              |
+| <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span><dl> <dt>**Deaktiviert**</dt> <dt>3</dt> </dl>                                             | Das Element ist deaktiviert.<br/>                                                                                                                                                                           |
+| <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span><dl> <dt>**Herunterfahren**</dt> <dt>4</dt> </dl>                         | Das Element befindet sich im Zustand Deaktiviert.<br/>                                                                                                                                          |
 | <span id="Not_Applicable"></span><span id="not_applicable"></span><span id="NOT_APPLICABLE"></span><dl> <dt>**Nicht zutreffend**</dt> <dt>5</dt> </dl>                     | Das -Element unterstützt nicht das Aktivieren oder Deaktivieren.<br/>                                                                                                                                              |
-| <span id="Enabled_but_Offline"></span><span id="enabled_but_offline"></span><span id="ENABLED_BUT_OFFLINE"></span><dl> <dt>**Aktiviert, aber offline**</dt> <dt>6</dt> </dl> | Das -Element kann Befehle abschließen und alle neuen Anforderungen ablegen.<br/>                                                                                                                         |
+| <span id="Enabled_but_Offline"></span><span id="enabled_but_offline"></span><span id="ENABLED_BUT_OFFLINE"></span><dl> <dt>**Aktiviert, aber offline**</dt> <dt>6</dt> </dl> | Das -Element kann Befehle abschließen und alle neuen Anforderungen löschen.<br/>                                                                                                                         |
 | <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span><dl> <dt>**In Test**</dt> <dt>7</dt> </dl>                                                 | Das Element befindet sich in einem Testzustand.<br/>                                                                                                                                                                      |
-| <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span><dl> <dt>**Zurückgestellt**</dt> <dt>8</dt> </dl>                                             | Das -Element kann Befehle abschließen, aber es werden alle neuen Anforderungen in die Warteschlange gestellt.<br/>                                                                                                                        |
-| <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span><dl> <dt>**Ruhe 9**</dt> <dt></dt> </dl>                                                 | Das -Element ist aktiviert, befindet sich jedoch im eingeschränkten Modus. Das Verhalten des Elements ähnelt dem Status Aktiviert (2), verarbeitet jedoch nur einen eingeschränkten Satz von Befehlen. Alle anderen Anforderungen werden in die Warteschlange gestellt.<br/> |
-| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Ab**</dt> <dt>10</dt> </dl>                                            | Das Element befindet sich im Zustand Aktiviert (2). Neue Anforderungen werden in die Warteschlange gestellt.<br/>                                                                                                             |
+| <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span><dl> <dt>**Verzögert 8**</dt> <dt></dt> </dl>                                             | Das Element schließt möglicherweise Befehle ab, stellt jedoch alle neuen Anforderungen in die Warteschlange.<br/>                                                                                                                        |
+| <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span><dl> <dt>**Stille**</dt> <dt>9</dt> </dl>                                                 | Das Element ist aktiviert, befindet sich jedoch im eingeschränkten Modus. Das Verhalten des Elements ähnelt dem Zustand Aktiviert (2), verarbeitet aber nur einen eingeschränkten Satz von Befehlen. Alle anderen Anforderungen werden in die Warteschlange eingereiht.<br/> |
+| <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span><dl> <dt>**Ab**</dt> <dt>10</dt> </dl>                                            | Das Element befindet sich im Zustand Aktiviert (2). Neue Anforderungen werden in die Warteschlange eingereiht.<br/>                                                                                                             |
 
 
 
@@ -385,11 +385,11 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den aktuellen Status des erweiterten Sitzungsmodus auf dem virtuellen Computer an.
+Gibt den aktuellen Zustand des erweiterten Sitzungsmodus auf dem virtuellen Computer an.
 
-Der Hyper-V-WMI-Anbieter löst jedes Mal ein [**\_ \_ InstanceModificationEvent**](/windows/desktop/WmiSdk/--instancemodificationevent) aus, wenn **sich enhancedSessionModeState** der **Msvm \_ ComputerSystem-Klasse** ändert. Wenn eine aktive vmconnection-Sitzung **\_ \_ ein InstanceModificationEvent** empfängt, versucht sie, in den erweiterten Sitzungsmodus zu wechseln, wenn der Benutzer diese Einstellung aktiviert hat.
+Der Hyper-V-WMI-Anbieter löst jedes Mal ein [**\_ \_ InstanceModificationEvent**](/windows/desktop/WmiSdk/--instancemodificationevent) aus, wenn sich **der EnhancedSessionModeState** der **Msvm \_ ComputerSystem-Klasse** ändert. Wenn eine aktive vmconnection-Sitzung ein **\_ \_ InstanceModificationEvent** empfängt, wird versucht, in den erweiterten Sitzungsmodus zu wechseln, wenn der Benutzer diese Einstellung aktiviert hat.
 
-**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 **EnhancedSessionModeState** kann einer der folgenden Werte sein:
 
@@ -442,10 +442,10 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("[**Msvm \_ ReplicationRelationship**](msvm-replicationrelationship.md).**FailedOverReplicationType**")
 </dt> </dl>
 
-Der Typ des Wiederherstellungsdatenpunkts, der während des Failovers angewendet wurde.
+Der Typ des Wiederherstellungsdatenpunkts, der während des Failovervorgangs angewendet wurde.
 
 > [!Note]  
-> Diese Eigenschaft ist veraltet, beginnend mit Windows 8.1; Verwenden Sie stattdessen die -Eigenschaft mit demselben Namen in der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) um den Wert für die primäre oder erweiterte Beziehung zu erhalten.
+> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen die -Eigenschaft mit dem gleichen Namen in der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) um den Wert für die primäre oder erweiterte Beziehung abzurufen.
 
  
 
@@ -455,21 +455,21 @@ Mögliche Werte:
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**Keine** (0)
+**None** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Regular"></span><span id="regular"></span><span id="REGULAR"></span>
 
-**Regular** (1)
+**Normal** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Application_consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>
 
-**Anwendungs konsistent** (2)
+**Anwendungskonsens** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -492,19 +492,19 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die aktuelle Integrität des Elements an. Dieses Attribut drückt die Integrität dieses Elements aus, aber nicht notwendigerweise die Integrität seiner Unterkomponenten.
+Gibt die aktuelle Integrität des Elements an. Dieses Attribut drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten.
 
-Wenn ein kritischer Fehler auftritt, überprüfen Sie das Ereignisprotokoll auf Details. Die **EnabledState-Eigenschaft** kann auch weitere Informationen enthalten. Wenn beispielsweise der Speicherplatz auf dem Datenträger kritisch niedrig ist, wird **HealthState** auf 25 festgelegt, der virtuelle Computer wird angehalten, und **EnabledState** ist auf 32768 (angehalten) festgelegt.
+Wenn ein kritischer Fehler auftritt, überprüfen Sie das Ereignisprotokoll auf Details. Die **EnabledState-Eigenschaft** kann auch weitere Informationen enthalten. Wenn der Speicherplatz auf dem Datenträger beispielsweise sehr gering ist, **healthState** auf 25 festgelegt ist, der virtuelle Computer angehalten wird und **EnabledState** auf 32768 (Angehalten) festgelegt ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 
 
 | Wert                                                                                                                                                                                                                                                            | Bedeutung                                                                                                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>5</dt> </dl>                                                                               | Der virtuelle Computer ist voll funktionsfähig und wird innerhalb normaler Betriebsparameter und ohne Fehler ausgeführt.<br/>                                                                                                                                                                                    |
-| <span id="Major_Failure"></span><span id="major_failure"></span><span id="MAJOR_FAILURE"></span><dl> <dt>**Hauptfehler**</dt> <dt>20</dt> </dl>             | Für den virtuellen Computer ist ein größerer Fehler vor worden. Dieser Wert wird verwendet, wenn mindestens ein Datenträger, der die VHDs des virtuellen Computers enthält, nicht über wenig Speicherplatz verfügt und der virtuelle Computer angehalten wurde.<br/>                                                                                                   |
-| <span id="Critical_failure"></span><span id="critical_failure"></span><span id="CRITICAL_FAILURE"></span><dl> <dt>**Kritischer Fehler**</dt> <dt>25</dt> </dl> | Das Element ist nichtfunktional, und eine Wiederherstellung ist möglicherweise nicht möglich. Dies kann darauf hindeuten, dass der Workerprozess für den virtuellen Computer (Vmwp.exe) nicht auf Steuerungs- oder Informationsanforderungen reagiert oder dass mindestens ein Datenträger, der die VHDs für den virtuellen Computer enthält, nicht über wenig Speicherplatz auf dem Datenträger verfläss.<br/> |
+| <span id="OK"></span><span id="ok"></span><dl> <dt>**OK**</dt> <dt>5</dt> </dl>                                                                               | Der virtuelle Computer ist voll funktionsfähig und arbeitet innerhalb normaler Betriebsparameter und ohne Fehler.<br/>                                                                                                                                                                                    |
+| <span id="Major_Failure"></span><span id="major_failure"></span><span id="MAJOR_FAILURE"></span><dl> <dt>**Hauptfehler**</dt> <dt>20</dt> </dl>             | Auf dem virtuellen Computer ist ein schwerwiegender Fehler aufgetreten. Dieser Wert wird verwendet, wenn mindestens ein Datenträger, der die VHDs des virtuellen Computers enthält, wenig Speicherplatz auf dem Datenträger hat und der virtuelle Computer angehalten wurde.<br/>                                                                                                   |
+| <span id="Critical_failure"></span><span id="critical_failure"></span><span id="CRITICAL_FAILURE"></span><dl> <dt>**Kritischer Fehler**</dt> <dt>25</dt> </dl> | Das Element ist nicht funktionstmöglich, und eine Wiederherstellung ist möglicherweise nicht möglich. Dies kann darauf hinweisen, dass der Arbeitsprozess für den virtuellen Computer (Vmwp.exe) nicht auf Steuerungs- oder Informationsanforderungen reagiert oder dass mindestens ein Datenträger, der die VHDs für den virtuellen Computer enthält, wenig Speicherplatz auf dem Datenträger hat.<br/> |
 
 
 
@@ -521,7 +521,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ ComputerSystem geerbt**](/windows/desktop/CIMWin32Prov/cim-computersystem)und immer auf **NULL festgelegt.**
+Diese Eigenschaft wird von [**CIM \_ ComputerSystem**](/windows/desktop/CIMWin32Prov/cim-computersystem)geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
@@ -534,7 +534,7 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit, zu dem die Konfiguration des virtuellen Computers für einen virtuellen Computer oder **NULL** für ein Verwaltungsbetriebssystem erstellt wurde. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Das Datum und die Uhrzeit, zu der die Konfiguration des virtuellen Computers für einen virtuellen Computer erstellt wurde, oder **NULL** für ein Verwaltungsbetriebssystem. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -550,7 +550,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 In Windows 8 gibt es eine einzelne Instanz von [**ReplicationSettingData**](msvm-replicationsettingdata.md) für jedes Computersystem oder jeden virtuellen Computer. Für Windows 8.1 verfügt ein virtueller Wiederherstellungscomputer über zwei Instanzen von **ReplicationSettingData.** Diese Änderung unterscheidet und ordnet Einstellungsdaten der Replikationsbeziehung zu.
 
@@ -558,7 +558,7 @@ In Windows 8 gibt es eine einzelne Instanz von [**ReplicationSettingData**](msvm
 
 | Eigenschaftenname  | Windows 8 Wert               | Windows 8.1 Wert                          |
 |----------------|-------------------------------|--------------------------------------------|
-| **InstanceID** | Microsoft: <vmguid> \\ HVR | Microsoft: <vmguid> \\ HVR \\<0/1> |
+| **InstanceID** | Microsoft: &lt; vmguid &gt; \\ HVR | Microsoft: &lt; vmguid &gt; \\ HVR \\<0/1> |
 
 
 
@@ -879,7 +879,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um umfassende und detaillierte Integritätsstatusinformationen für das Element und seine Unterkomponenten zur Verfügung zu stellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
+Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte Informationen zum Integritätsstatus für das Element und seine Unterkomponenten zu erhalten. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
@@ -1179,7 +1179,7 @@ Ein Array von Zeichenfolgen, die die Rollen beschreiben, die das System in der I
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1250,7 +1250,7 @@ Die folgende Abbildung zeigt die **EnabledState-Werte.**
 
 ![Statusdiagramm für enabledstate-Werte für Windows Server 2008 r2](images/msvm-computersystem-enabledstate-win2008r2.png)
 
-Wenn sich eine Eigenschaft der **Msvm \_ ComputerSystem-Klasse** ändert, gibt der WMI-Anbieter ein [**\_ \_ InstanceModificationEvent-Ereignis**](/windows/desktop/WmiSdk/--instancemodificationevent) an, das die Änderungen beschreibt. Der vorherige Zustand ist in der **PreviousInstance-Eigenschaft** enthalten, und der neue Zustand ist in der **TargetInstance-Eigenschaft** enthalten. Dieses Ereignis ist asynchron. Wenn das **\_ \_ InstanceModificationEvent-Ereignis verarbeitet** wird, spiegelt die **TargetInstance-Eigenschaft** möglicherweise nicht den aktuellen Zustand wider.
+Wenn sich eine Eigenschaft der **Msvm \_ ComputerSystem-Klasse** ändert, gibt der WMI-Anbieter ein [**\_ \_ InstanceModificationEvent-Ereignis**](/windows/desktop/WmiSdk/--instancemodificationevent) an, das die Änderungen beschreibt. Der vorherige Zustand ist in der **PreviousInstance-Eigenschaft** enthalten, und der neue Zustand ist in der **TargetInstance-Eigenschaft** enthalten. Dieses Ereignis ist asynchron. Wenn das **\_ \_ InstanceModificationEvent-Ereignis** verarbeitet wird, spiegelt die **TargetInstance-Eigenschaft** möglicherweise nicht den aktuellen Zustand wider.
 
 Der Zugriff auf die **Msvm \_ ComputerSystem-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
@@ -1258,7 +1258,7 @@ Der Zugriff auf die **Msvm \_ ComputerSystem-Klasse** kann durch UAC-Filterung e
 
 Weitere Informationen [finden Sie unter Abfragen von Netzwerkobjekten.](querying-networking-objects.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -1272,7 +1272,7 @@ Weitere Informationen [finden Sie unter Abfragen von Netzwerkobjekten.](querying
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

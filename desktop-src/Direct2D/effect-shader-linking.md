@@ -4,12 +4,12 @@ description: Direct2D verwendet eine Optimierung namens Effekt-Shaderverknüpfun
 ms.assetid: 431A5B39-6C84-442D-AC66-0F341E10DF2C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 608ae0b751840fc32b31e10012eb343c73ec3e0d941a26477a192b576204c247
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: e22d9ae245b5bbaa0c13dd7d5296dc419f740404
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119431458"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881825"
 ---
 # <a name="effect-shader-linking"></a>Effektshader-Verknüpfung
 
@@ -49,7 +49,7 @@ Effektautoren sind dafür verantwortlich, ihre Effekte auf eine Weise zu impleme
 
 Direct2D verknüpft nur benachbarte Renderingtransformationen in Situationen, in denen dies vorteilhaft ist. Bei der Entscheidung, ob zwei Transformationen verknüpft werden sollen, werden mehrere Faktoren berücksichtigt. Beispielsweise wird die Shaderverknüpfung nicht ausgeführt, wenn eine der Transformationen Scheitelpunkt- oder Compute-Shader verwendet, da nur Pixel-Shader verknüpft werden können. Wenn ein Effekt nicht so erstellt wurde, dass er mit der Shaderverknüpfung kompatibel ist, werden umgebende Transformationen nicht damit verknüpft.
 
-Falls eine solche Verknüpfungsgefahr vorliegt, verknüpft Direct2D keine Transformationen, die an die Gefahr angrenzen, sondern versucht weiterhin, den Rest des Diagramms zu verknüpfen.
+Falls eine solche Verknüpfungsgefahr vorliegt, verknüpft Direct2D keine Transformationen neben der Gefahr, sondern versucht weiterhin, den Rest des Diagramms zu verknüpfen.
 
 ![Transformieren eines Diagramms mit einer Verknüpfungsgefahr: 2 Durchläufe, 1 Zwischendiagramm.](images/shader-linking-graph-hazard.png)
 
@@ -89,7 +89,7 @@ Als Benutzerdefinierter Effektautor sollten Sie sich mehrerer wichtiger Konzepte
 
     Direct2D unterstützt keine Verknüpfung von Compute- oder Vertex-Shadern. Wenn Ihr Effekt jedoch sowohl einen Scheitelpunkt- als auch einen Pixel-Shader verwendet, kann die Ausgabe des Pixel-Shaders weiterhin verknüpft werden.
 
--   **Einfaches und komplexes Sampling**
+-   **Einfache und komplexe Stichprobenentnahme**
 
     Die Shaderfunktionsverknüpfung funktioniert, indem die Ausgabe eines Pixelshaderdurchlaufs mit der Eingabe eines nachfolgenden Pixelshaderdurchlaufs verbunden wird. Dies ist nur möglich, wenn der verbrauchende Pixel-Shader nur einen einzelnen Eingabewert für die Berechnung benötigt. Dieser Wert stammt normalerweise aus der Stichprobenentnahme einer Eingabetextur an der Texturkoordinate, die vom Vertex-Shader ausgegeben wird. Ein solcher Pixelshader wird als einfache Stichprobenentnahme bezeichnet.
 
@@ -125,7 +125,7 @@ D2D_PS_ENTRY(LinkingCompatiblePixelShader)
 
 Beachten Sie in diesem kurzen Beispiel, dass keine Funktionsparameter deklariert werden, dass die Anzahl der Eingaben und der Typ jeder Eingabe vor der Eingabefunktion deklariert wird, die Eingabe durch Aufrufen von [D2DGetInput](d2dgetinput.md)abgerufen wird und dass Präprozessordirektiven definiert werden müssen, bevor die Hilfsdatei eingeschlossen wird.
 
-Ein verknüpfungskompatibler Shader muss sowohl einen regulären Single-Pass-Pixel-Shader als auch eine Export-Shaderfunktion bereitstellen. Das [D2D \_ PS \_ ENTRY-Makro](d2d-ps-entry.md) ermöglicht, dass jedes dieser Makros aus dem gleichen Code generiert wird, wenn es in Verbindung mit dem Shaderkompilierungsskript verwendet wird.
+Ein verknüpfungskompatibler Shader muss sowohl einen regulären Single-Pass-Pixelshader als auch eine Export-Shaderfunktion bereitstellen. Das [D2D \_ PS \_ ENTRY-Makro](d2d-ps-entry.md) ermöglicht, dass jedes dieser Makros aus dem gleichen Code generiert wird, wenn es in Verbindung mit dem Shaderkompilierungsskript verwendet wird.
 
 Beim Kompilieren eines vollständigen Shaders werden die Makros in den folgenden Code erweitert, der über eine D2D Effects-kompatible Eingabesignatur verfügt.
 
@@ -163,7 +163,7 @@ Eine vollständige Schritt-für-Schritt-Beschreibung der Schritte zum Schreiben 
 
 ## <a name="compiling-a-linking-compatible-shader"></a>Kompilieren eines verknüpfungskompatiblen Shaders
 
-Damit die Verknüpfung hergestellt werden kann, muss das an D2D übergebene Pixel-Shaderblob sowohl die vollständige als auch die Exportfunktionsversion des Shaders enthalten. Dies wird erreicht, indem die kompilierte Exportfunktion in den \_ D3D BLOB \_ PRIVATE \_ DATA-Bereich eingebettet wird.
+Um verknüpft werden zu können, muss das an D2D übergebene Pixel-Shaderblob sowohl die vollständige als auch die Exportfunktionsversion des Shaders enthalten. Dies wird erreicht, indem die kompilierte Exportfunktion in den \_ D3D BLOB \_ PRIVATE \_ DATA-Bereich eingebettet wird.
 
 Wenn die Shader mit den D2D-Hilfsfunktionen erstellt werden, muss zur Kompilierungszeit ein D2D-Kompilierungsziel definiert werden. Die Kompilierungszieltypen sind D2D \_ FULL \_ SHADER und D2D \_ FUNCTION.
 
@@ -189,11 +189,11 @@ Um die Exportfunktionsversion Ihres Shaders zu kompilieren, müssen Sie die folg
 
 |    Flag                            |    Beschreibung                       |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /T <ShaderModel>         | Legen Sie <ShaderModel> auf das entsprechende Pixel-Shaderprofil fest, wie in [FXC-Syntax](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)definiert. Dies muss eines der Profile sein, die unter "HLSL-Shaderverknüpfung" aufgeführt sind. |
-| <MyShaderFile>.hlsl      | Legen Sie <MyShaderFile> auf den Namen der HLSL-Datei fest.                                                                                                                                                                                                    |
+| /T &lt; ShaderModel&gt;         | Legen Sie &lt; ShaderModel &gt; auf das entsprechende Pixel-Shaderprofil fest, wie in [FXC-Syntax](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)definiert. Dies muss eines der Profile sein, die unter "HLSL-Shaderverknüpfung" aufgeführt sind. |
+| &lt;MyShaderFile &gt; .hlsl      | Legen Sie &lt; MyShaderFile &gt; auf den Namen der HLSL-Datei fest.                                                                                                                                                                                                    |
 | /D \_ D2D-FUNKTION               | Diese Definition weist FXC an, die Exportfunktionsversion des Shaders zu kompilieren.                                                                                                                                                                       |
-| /D D2D \_ ENTRY=<entry>    | Legen Sie <entry> auf den Namen des HLSL-Einstiegspunkts fest, den Sie im [D2D \_ PS \_ ENTRY-Makro](d2d-ps-entry.md) definiert haben.                                                                                                                                    |
-| /Fl <MyShaderFile> .fxlib | Legen <MyShaderfile> Sie auf fest, wo Sie die Exportfunktionsversion des Shaders speichern möchten. Beachten Sie, dass die Erweiterung .fxlib nur zur einfacheren Identifizierung dient.                                                                                              |
+| /D D2D \_ &lt; ENTRY=-Eintrag&gt;    | Legen Sie &lt; entry auf den Namen des &gt; HLSL-Einstiegspunkts fest, den Sie im [D2D \_ PS \_ ENTRY-Makro](d2d-ps-entry.md) definiert haben.                                                                                                                                    |
+| /Fl &lt; MyShaderFile &gt; .fxlib | Legen &lt; Sie MyShaderfile &gt; auf fest, in dem Sie die Version der Exportfunktion des Shaders speichern möchten. Beachten Sie, dass die Erweiterung .fxlib nur zur einfacheren Identifizierung dient.                                                                                              |
 
 ### <a name="step-2-compile-the-full-shader-and-embed-the-export-function"></a>Schritt 2: Kompilieren des vollständigen Shaders und Einbetten der Exportfunktion
 
@@ -207,14 +207,14 @@ Um die Vollversion Ihres Shaders mit eingebetteter Exportversion zu kompilieren,
 
 |    Flag                                    |    Beschreibung                     |
 |----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /T <ShaderModel>                 | Legen Sie <ShaderModel> auf das entsprechende Pixel-Shaderprofil fest, wie in [FXC-Syntax](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)definiert. Dies muss das Pixel-Shaderprofil sein, das dem in Schritt 1 angegebenen Verknüpfungsprofil entspricht. |
-| <MyShaderFile>.hlsl              | Legen Sie <MyShaderFile> auf den Namen der HLSL-Datei fest.                                                                                                                                                                                                                               |
+| /T &lt; ShaderModel&gt;                 | Legen Sie &lt; ShaderModel &gt; auf das entsprechende Pixel-Shaderprofil fest, wie in [FXC-Syntax](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)definiert. Dies muss das Pixel-Shaderprofil sein, das dem in Schritt 1 angegebenen Verknüpfungsprofil entspricht. |
+| &lt;MyShaderFile &gt; .hlsl              | Legen Sie &lt; MyShaderFile &gt; auf den Namen der HLSL-Datei fest.                                                                                                                                                                                                                               |
 | /D D2D \_ FULL \_ SHADER                   | Diese Definition weist FXC an, die Vollversion des Shaders zu kompilieren.                                                                                                                                                                                                             |
-| /D D2D \_ ENTRY=<entry>            | Legen Sie <entry> auf den Namen des HLSL-Einstiegspunkts fest, den Sie im D2D PS \_ \_ ENTRY()-Makro definiert haben.                                                                                                                                                                                 |
-| /E <entry>                       | Legen Sie <entry> auf den Namen des HLSL-Einstiegspunkts fest, den Sie im D2D PS \_ \_ ENTRY()-Makro definiert haben.                                                                                                                                                                                 |
-| /setprivate <MyShaderFile> .fxlib | Dieses Argument weist FXC an, den in Schritt 1 generierten Exportfunktions-Shader in den \_ D3D BLOB \_ PRIVATE \_ DATA-Bereich einzubetten.                                                                                                                                                          |
-| /Fo <MyShader> .cso               | Legen <MyShader> Sie auf fest, wo Sie den endgültigen, kombinierten kompilierten Shader speichern möchten.                                                                                                                                                                                                 |
-| /Hv <MyShader> .h                 | Legen <MyShader> Sie auf fest, wo Sie den endgültigen kombinierten Header speichern möchten.                                                                                                                                                                                                          |
+| /D D2D \_ &lt; ENTRY=-Eintrag&gt;            | Legen Sie &lt; entry auf den Namen des &gt; HLSL-Einstiegspunkts fest, den Sie im \_ D2D PS \_ ENTRY()-Makro definiert haben.                                                                                                                                                                                 |
+| &lt;/E-Eintrag&gt;                       | Legen Sie &lt; entry auf den Namen des &gt; HLSL-Einstiegspunkts fest, den Sie im \_ D2D PS \_ ENTRY()-Makro definiert haben.                                                                                                                                                                                 |
+| /setprivate &lt; MyShaderFile &gt; .fxlib | Dieses Argument weist FXC an, den in Schritt 1 generierten Exportfunktions-Shader in den \_ D3D BLOB \_ PRIVATE \_ DATA-Bereich einzubetten.                                                                                                                                                          |
+| /Fo &lt; MyShader &gt; .cso               | Legen &lt; Sie MyShader &gt; auf den Ort fest, an dem Sie den endgültigen, kombinierten kompilierten Shader speichern möchten.                                                                                                                                                                                                 |
+| /Ung &lt; MyShader &gt; .h                 | Legen &lt; Sie MyShader &gt; auf den Ort fest, an dem Sie den letzten kombinierten Header speichern möchten.                                                                                                                                                                                                          |
 
 ## <a name="export-function-specifications"></a>Exportieren von Funktionsspezifikationen
 

@@ -1,25 +1,25 @@
 ---
 description: Eine Effekttechnik wird mit der folgenden Syntax deklariert.
 ms.assetid: 84f9b74d-8397-4cd5-91a0-7f910ba7b19e
-title: Effekttechniksyntax (Direct3D 10)
+title: Effect Technique Syntax (Direct3D 10)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3c0ff0c0f1b5e9c1fac4cdb12aac21e42d89771c0eae89d1cd9538d0281acee
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 106abd47e1148ce30127733f113a1b43a0058f60
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117914485"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625126"
 ---
-# <a name="effect-technique-syntax-direct3d-10"></a>Effekttechniksyntax (Direct3D 10)
+# <a name="effect-technique-syntax-direct3d-10"></a>Effect Technique Syntax (Direct3D 10)
 
 Eine Effekttechnik wird mit der folgenden Syntax deklariert.
 
-technique10 *TechniqueName-Anmerkungen* \[  <  > \]
+technique10 *TechniqueName* \[  < *Annotations* > \]
 
 {
 
-<dl>  \[  < *PassName-Anmerkungen* übergeben > \]  
+<dl>  \[  < *PassName-Anmerkungen* > \]  
 {
 <dl> \[*SetStateGroup*; \] \[ *SetStateGroup*;\]  
 ...  
@@ -50,7 +50,7 @@ Optional. Eine ASCII-Zeichenfolge, die den Namen der Effekttechnik eindeutig ide
 <span id="Annotations"></span><span id="annotations"></span><span id="ANNOTATIONS"></span>*Anmerkungen*
 </dt> <dd>
 
-\[in \] Optional. Eine oder mehrere vom Benutzer bereitgestellte Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Anmerkungssyntax (Direct3D 10).](d3d10-effect-annotation-syntax.md)
+\[in \] Optional. Mindestens ein Teil der vom Benutzer bereitgestellten Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Anmerkungssyntax (Direct3D 10).](d3d10-effect-annotation-syntax.md)
 
 </dd> <dt>
 
@@ -64,21 +64,21 @@ Erforderliches Schlüsselwort.
 <span id="PassName"></span><span id="passname"></span><span id="PASSNAME"></span>*PassName*
 </dt> <dd>
 
-\[in \] Optional. Eine ASCII-Zeichenfolge, die den Namen des Durchlaufs eindeutig identifiziert.
+\[in \] Optional. Eine ASCII-Zeichenfolge, die den Namen des Durchgangs eindeutig identifiziert.
 
 </dd> <dt>
 
 <span id="SetStateGroup"></span><span id="setstategroup"></span><span id="SETSTATEGROUP"></span>*SetStateGroup*
 </dt> <dd>
 
-\[in \] Legen Sie eine oder mehrere Statusgruppen fest, z. B.:
+\[In \] Legen Sie eine oder mehrere Zustandsgruppen fest, z. B.:
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -88,11 +88,11 @@ Erforderliches Schlüsselwort.
 </thead>
 <tbody>
 <tr class="odd">
-<td>Blendzustand</td>
+<td>Blend-Zustand</td>
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -104,12 +104,12 @@ Erforderliches Schlüsselwort.
 <p>Die Argumentliste finden Sie unter [<strong>OMSetBlendState</strong>](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-omsetblendstate).</p></td>
 </tr>
 <tr class="even">
-<td>Tiefenschablonenzustand</td>
+<td>Tiefen-Schablonenzustand</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -122,12 +122,12 @@ Erforderliches Schlüsselwort.
 <p>Die Argumentliste finden Sie unter <a href="/windows/desktop/api/D3D10/nf-d3d10-id3d10device-omsetdepthstencilstate"><strong>OMSetDepthStencilState.</strong></a></p></td>
 </tr>
 <tr class="odd">
-<td>Rasterizerstatus</td>
+<td>Status des Rasterizers</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -140,12 +140,12 @@ Erforderliches Schlüsselwort.
 <p>Die Argumentliste finden Sie unter [<strong>RSSetState</strong>](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rssetstate).</p></td>
 </tr>
 <tr class="even">
-<td>Shaderstatus</td>
+<td>Shaderzustand</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -160,7 +160,7 @@ Erforderliches Schlüsselwort.
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -175,7 +175,7 @@ Erforderliches Schlüsselwort.
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -196,11 +196,11 @@ Erforderliches Schlüsselwort.
 
 </dd> </dl>
 
-Effect-Zustandsgruppen werden im [Effect-Zustand](d3d10-effect-states.md)aufgelistet.
+Effektzustandsgruppen werden im [Effektzustand aufgelistet.](d3d10-effect-states.md)
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel (aus dem [CubeMapGS-Beispiel)](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)wird der Blendingzustand festgelegt.
+In diesem Beispiel (aus [dem CubeMapGS-Beispiel)](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)wird der Überblendungszustand definiert.
 
 
 ```
@@ -223,7 +223,7 @@ technique10
 
 
 
-In diesem Beispiel wird der Rasterizerzustand so eingerichtet, dass ein Objekt in Wireframe gerendert wird.
+In diesem Beispiel wird der Rasterizerzustand so eingerichtet, dass ein Objekt im Wireframe gerendert wird.
 
 
 ```
@@ -243,7 +243,7 @@ technique10
 
 
 
-In diesem Beispiel wird der Shaderzustand festgelegt (aus dem [BasicHLSL10-Beispiel).](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx) , der einen Scheitelpunkt und einen Pixel-Shader verwendet.
+In diesem Beispiel wird der Shaderzustand (aus [dem BasicHLSL10-Beispiel )](https://msdn.microsoft.com/library/Ee416395(v=VS.85).aspx) , die einen Scheitelpunkt und einen Pixel-Shader verwendet.
 
 
 ```
@@ -264,7 +264,7 @@ technique10 RenderSceneWithTexture1Light
 
 <dl> <dt>
 
-[Effektformat](d3d10-effect-format.md)
+[Effect-Format](d3d10-effect-format.md)
 </dt> </dl>
 
  

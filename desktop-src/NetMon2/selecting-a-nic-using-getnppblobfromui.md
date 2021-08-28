@@ -1,21 +1,21 @@
 ---
-description: Bei Netzwerkmonitor ist das programmgesteuerte Auswählen einer NIC ein zweistufiger Prozess. Erstellen Sie zuerst das filterblob, indem Sie die createBlob-Methode aufrufen. Wählen Sie dann die NIC aus, indem Sie die getnppblobfromui-Methode aufrufen.
+description: Bei Netzwerkmonitor ist die programmgesteuerte Auswahl einer NIC ein zweistufiger Prozess. Erstellen Sie zunächst das Filterblob, indem Sie die CreateBlob-Methode aufrufen. Wählen Sie dann die NIC aus, indem Sie die GetNPPBlobFromUI-Methode aufrufen.
 ms.assetid: 0556b20a-307e-4bc3-a986-cfee96a8655d
-title: Auswählen einer NIC mithilfe von getnppblobfromui
+title: Auswählen einer NIC mit GetNPPBlobFromUI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb429a87d284a5a6a03a20357728c8bbcb5acac4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3bd02ef5085bba511fb0d05844840eb92d85ef83c67f244ab321570fae4ad8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128900"
 ---
-# <a name="selecting-a-nic-using-getnppblobfromui"></a>Auswählen einer NIC mithilfe von getnppblobfromui
+# <a name="selecting-a-nic-using-getnppblobfromui"></a>Auswählen einer NIC mit GetNPPBlobFromUI
 
-Bei Netzwerkmonitor ist das programmgesteuerte Auswählen einer NIC ein zweistufiger Prozess. Erstellen Sie zuerst das filterblob, indem Sie die [**createBlob**](createblob.md) -Methode aufrufen. Wählen Sie dann die NIC aus, indem Sie die [**getnppblobfromui**](getnppblobfromui.md) -Methode aufrufen.
+Bei Netzwerkmonitor ist die programmgesteuerte Auswahl einer NIC ein zweistufiger Prozess. Erstellen Sie zunächst das Filterblob, indem Sie die [**CreateBlob-Methode**](createblob.md) aufrufen. Wählen Sie dann die NIC aus, indem Sie die [**GetNPPBlobFromUI-Methode**](getnppblobfromui.md) aufrufen.
 
-In diesem Beispiel wird ein filterblob verwendet, um die erforderliche NIC auszuwählen:
+In diesem Beispiel wird ein Filterblob verwendet, um die erforderliche NIC auszuwählen:
 
 
 ```C++

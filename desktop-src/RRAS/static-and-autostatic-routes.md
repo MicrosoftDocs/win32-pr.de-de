@@ -1,25 +1,25 @@
 ---
-title: Statische und automatische statische Routen
-description: In der Regel werden Routen zu Remote Netzwerken durch Routing Protokolle dynamisch abgerufen.
+title: Statische und autostatic Routen
+description: In der Regel werden Routen zu Remotenetzwerken dynamisch über Routingprotokolle abgerufen.
 ms.assetid: af2f2039-8131-4ca9-98bf-6aeb7a511034
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3faa8931e0fee5c75f598b920b7b97a1e0e829d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a0206190c86c75e4e50ce390cf3f084db956671de6efebe21022151879362ff4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127830"
 ---
-# <a name="static-and-autostatic-routes"></a>Statische und automatische statische Routen
+# <a name="static-and-autostatic-routes"></a>Statische und autostatic Routen
 
-In der Regel werden Routen zu Remote Netzwerken durch Routing Protokolle dynamisch abgerufen. *Der Administrator kann jedoch auch einen* Ausgangs Ausgangs für die Routing Tabelle angeben, indem er Routen manuell bereitstellt. Diese Routen werden als *statisch* bezeichnet. Eine statische Route ist einer Schnittstelle zugeordnet, die das Remote Netzwerk darstellt. Im Gegensatz zu dynamischen Routen werden statische Routen auch dann beibehalten, wenn der Router neu gestartet wird oder die Schnittstelle deaktiviert ist.
+In der Regel werden Routen zu Remotenetzwerken dynamisch über Routingprotokolle abgerufen. Der Administrator kann jedoch auch *ein Seeding* für die Routingtabelle ausführen, indem er Routen manuell bereitstellt. Diese Routen werden als *statische* bezeichnet. Eine statische Route ist einer Schnittstelle zugeordnet, die das Remotenetzwerk darstellt. Im Gegensatz zu dynamischen Routen werden statische Routen auch dann beibehalten, wenn der Router neu gestartet oder die Schnittstelle deaktiviert ist.
 
-Eine *Automatische statische* Route wird durch ein Routing Protokoll abgerufen, aber sobald Sie sich wie eine statische Route verhält, verhält sie sich. Der Vorgang zum Abrufen von automatisch statischen Routen lautet wie folgt: der IP-oder IPX-routermanager gibt eine Anforderung aus, dass ein Routing Protokoll die Routing Informationen für eine bestimmte Schnittstelle aktualisiert. Die Ergebnisse des Updates werden dann in statische Routen konvertiert. Beachten Sie, dass nur bestimmte Routing Protokolle Anforderungen für automatische, statische Routen Aktualisierungen unterstützen.
+Eine *autostatic* Route wird über ein Routingprotokoll abgerufen, verhält sich jedoch wie eine statische Route. Der Prozess zum Abrufen automatisch statischer Routen sieht wie folgt aus: Der IP- oder IPX-Router-Manager gibt eine Anforderung aus, dass ein Routingprotokoll die Routinginformationen für eine bestimmte Schnittstelle aktualisiert. Die Ergebnisse des Updates werden dann in statische Routen konvertiert. Beachten Sie, dass nur bestimmte Routingprotokolle Anforderungen für automatisch statische Routenupdates unterstützen.
 
- 
+ 
 
- 
+ 
 
 
 

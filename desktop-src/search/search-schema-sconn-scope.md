@@ -1,19 +1,19 @@
 ---
-description: Das optionale <scope> -Element gibt eine Auflistung von <scopeItem> Elementen an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren.
+description: Das optionale &lt; &gt; Scope-Element gibt eine Auflistung von &lt; scopeItem-Elementen &gt; an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren.
 ms.assetid: 9e92e3db-3d5e-4f86-8d67-90eb5469b04b
 title: scope-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18d5fcdb3908f495d07199c61a2005a4f97ba5a01c641fb4e854961489e7abe0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 80c011eee8def80a7f1d395a7a52a72d30fb4935
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119944300"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886692"
 ---
 # <a name="scope-element-search-connector-schema"></a>scope-Element (Search Connector Schema)
 
-Das optionale <scope> -Element gibt eine Auflistung von <scopeItem> Elementen an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren. Wenn <scope> vorhanden ist, MUSS es mindestens ein <scopeItem> Element enthalten. Dieses Element weist keine Attribute auf.
+Das optionale &lt; &gt; Scope-Element gibt eine Auflistung von &lt; scopeItem-Elementen &gt; an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren. Wenn &lt; scope &gt; vorhanden ist, MUSS er mindestens ein &lt; scopeItem-Element &gt; enthalten. Dieses Element weist keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Das optionale <scope> -Element gibt eine Auflistung von <scopeItem> Elementen an
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die <scope> Elemente und , um zu <scopeItem> ermitteln, welche Standorte durchsucht werden sollen und welche Standorte von der Suche ausgeschlossen werden sollen.
+Verwenden Sie die &lt; &gt; Scope- und &lt; scopeItem-Elemente, &gt; um zu ermitteln, welche Standorte durchsucht und von der Suche ausgeschlossen werden sollen.
 
 ## <a name="example"></a>Beispiel
 

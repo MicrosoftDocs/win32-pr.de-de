@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 03497e7249937be48b2156d674ac42b88eae68e64982b84344cfe9a935a92e02
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 4d3c5ea50ae50edc3d6be16ad771229ea82801f4
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119329080"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625736"
 ---
 # <a name="flowmenulayout-element"></a>FlowMenuLayout-Element
 
 Stellt ein horizontales Layout mit Zeilenumbrüchen für Elemente in einem Katalog dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <FlowMenuLayout
@@ -39,15 +39,15 @@ Stellt ein horizontales Layout mit Zeilenumbrüchen für Elemente in einem Katal
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -57,14 +57,14 @@ Stellt ein horizontales Layout mit Zeilenumbrüchen für Elemente in einem Katal
 <td><strong>Spalten</strong><br/></td>
 <td>xs:integer<br/></td>
 <td>Nein<br/></td>
-<td>Gibt die Anzahl der Elemente an, die in einer einzelnen Zeile angezeigt werden sollen.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd> Eine beliebige positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>2</strong>. <br/> </dd> </dl></td>
+<td>Gibt die Anzahl der Elemente an, die in einer einzelnen Zeile angezeigt werden.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd> Eine positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>2.</strong> <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Greifer</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ein Anfügehandle für die Größenänderung, das an die Dropdown-Dropdown-Datei des Katalogs angefügt ist. <br/> <img src="images/controls/gripper.png" alt="Screen shot of a vertical gripper." /><br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
+<td>Ein größenverfingendes Handle, das an die Dropdownliste des Katalogs angefügt ist. <br/> <img src="images/controls/gripper.png" alt="Screen shot of a vertical gripper." /><br/> Auf einen der folgenden Werte beschränkt:<br/> <br/>
 <dt><span></span><span></span><strong></strong> (Keine)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Vertikal)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Ecke)<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
@@ -72,7 +72,7 @@ Stellt ein horizontales Layout mit Zeilenumbrüchen für Elemente in einem Katal
 <td>xs:integer<br/></td>
 <td>Nein<br/></td>
 <td>Gibt die Anzahl der Elementzeilen an, die ohne Bildlauf sichtbar sein sollen. <br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd> Eine beliebige positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>-1,</strong> der angibt, dass so viele Elementzeilen wie möglich angezeigt werden sollen.<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:integer)<br/> </dt> <dd> Eine positive oder negative ganze Zahl. <br/> Der Standardwert ist <strong>-1,</strong> der angibt, dass so viele Elementzeilen wie möglich angezeigt werden.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -99,13 +99,13 @@ Es gibt keine untergeordneten Elemente.
 
 Erforderlich.
 
-Das [**VerticalMenuLayout-Element**](windowsribbon-element-verticalmenulayout.md) oder das **FlowMenuLayout-Element** muss einmal für jedes [**DropDownGallery.MenuLayout-,**](windowsribbon-element-dropdowngallery-menulayout.md) [**InRibbonGallery.MenuLayout-**](windowsribbon-element-inribbongallery-menulayout.md)oder [**SplitButtonGallery.MenuLayout-Element**](windowsribbon-element-splitbuttongallery-menulayout.md) auftreten.
+Entweder [**das VerticalMenuLayout-**](windowsribbon-element-verticalmenulayout.md) oder **das FlowMenuLayout-Element** muss einmal für jedes [**DropDownGallery.MenuLayout-,**](windowsribbon-element-dropdowngallery-menulayout.md) [**InRibbonGallery.MenuLayout-**](windowsribbon-element-inribbongallery-menulayout.md)oder [**SplitButtonGallery.MenuLayout-Element**](windowsribbon-element-splitbuttongallery-menulayout.md) auftreten.
 
-Elemente werden entsprechend den Zeilenumbrucheigenschaften angeordnet, die den *Zeilen-* und *Spaltenattributen* inhärent sind. Wenn der Inhalt die Länge einer einzelnen Zeile überschreitet, unterbricht das Menü Zeilen, umschließt Zeilen und richtet den Inhalt entsprechend aus.
+Elemente werden entsprechend den Zeilenumbrucheigenschaften angeordnet, die den Zeilen- *und* *Spaltenattributen inhärent* sind. Wenn inhalt die Länge einer einzelnen Zeile überschreitet, unterbricht das Menü Zeilen, umbricht Zeilen und richtet den Inhalt entsprechend aus.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für [**dropDownGallery**](windowsribbon-element-dropdowngallery.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [**die DropDownGallery veranschaulicht.**](windowsribbon-element-dropdowngallery.md)
 
 Dieser Codeabschnitt zeigt die [**DropDownGallery.MenuLayout-Steuerelementdeklaration**](windowsribbon-element-dropdowngallery-menulayout.md) mit einer **FlowMenuLayout-Spezifikation.**
 

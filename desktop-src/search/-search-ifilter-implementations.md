@@ -1,103 +1,103 @@
 ---
-description: Microsoft stellt mehrere Standardfilter mit Windows Search bereit. Clients bezeichnen diese Filter Handler (die Implementierungen der IFilter-Schnittstelle sind), um Text und Eigenschaften aus einem Dokument zu extrahieren.
+description: Microsoft stellt mehrere Standardfilter mit Windows Search zur Verfügung. Clients rufen diese Filterhandler auf (bei denen es sich um Implementierungen der IFilter-Schnittstelle handelt), um Text und Eigenschaften aus einem Dokument zu extrahieren.
 ms.assetid: e19ae220-5c59-482e-8b02-00889600c4d6
-title: Filtern von Handlern, die mit Windows ausgeliefert werden
+title: Filterhandler, die mit Windows
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5dd5603ab913117e2c968a7508b2fa061dfb4034
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1a245978482e0334d91e35031aa80186fd2cb32
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128568"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624366"
 ---
-# <a name="filter-handlers-that-ship-with-windows"></a>Filtern von Handlern, die mit Windows ausgeliefert werden
+# <a name="filter-handlers-that-ship-with-windows"></a>Filterhandler, die mit Windows
 
-Microsoft stellt mehrere Standardfilter mit Windows Search bereit. Clients bezeichnen diese Filter Handler (die Implementierungen der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle sind), um Text und Eigenschaften aus einem Dokument zu extrahieren.
+Microsoft stellt mehrere Standardfilter mit Windows Search zur Verfügung. Clients rufen diese Filterhandler auf (bei denen es sich um Implementierungen der [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter) handelt), um Text und Eigenschaften aus einem Dokument zu extrahieren.
 
 Dieses Thema ist wie folgt organisiert:
 
-- [Implementierungs Hinweise zur Windows-Suche](#windows-search-implementation-notes)
-  - [Windows 7-und 10-Implementierung](#windows-7-and-10-implementation)
+- [Windows Hinweise zur Implementierung der Suche](#windows-search-implementation-notes)
+  - [Windows 7- und 10-Implementierung](#windows-7-and-10-implementation)
   - [Windows Vista-Implementierung](#windows-vista-implementation)
-  - [Legacy Implementierung](#legacy-implementation)
-- [Windows-Suchfilter](#filter-handlers-that-ship-with-windows)
-  - [MIME-Filter Handler](#mime-filter-handler)
-  - [HTML-Filter Handler](#html-filter-handler)
-  - [Dokument Filter Handler](#document-filter-handler)
-  - [Nur-Text-Filter Handler](#plain-text-filter-handler)
-  - [Binärer oder NULL-Filter Handler](#binary-or-null-filter-handler)
+  - [Legacyimplementierungen](#legacy-implementation)
+- [Windows Suchfilter](#filter-handlers-that-ship-with-windows)
+  - [MIME-Filterhandler](#mime-filter-handler)
+  - [HTML-Filterhandler](#html-filter-handler)
+  - [Dokumentfilterhandler](#document-filter-handler)
+  - [Nur-Text-Filterhandler](#plain-text-filter-handler)
+  - [Binärer oder NULL-Filterhandler](#binary-or-null-filter-handler)
 - [Weitere Ressourcen](#additional-resources)
 - [Zugehörige Themen](#related-topics)
 
-## <a name="windows-search-implementation-notes"></a>Implementierungs Hinweise zur Windows-Suche
+## <a name="windows-search-implementation-notes"></a>Windows Hinweise zur Implementierung der Suche
 
-In Windows 7 und höher werden in verwaltetem Code geschriebene Filter explizit blockiert. Filter müssen in nativem Code geschrieben werden, da mögliche Probleme bei der CLR-Versionsverwaltung mit dem Prozess auftreten, in dem mehrere Add-Ins ausgeführt werden.
+In Windows 7 und höher werden in verwaltetem Code geschriebene Filter explizit blockiert. Filter MÜSSEN aufgrund potenzieller CLR-Versionsprobleme mit dem Prozess, in dem mehrere Add-Ins ausgeführt werden, in nativem Code geschrieben werden.
 
-### <a name="windows-7-and-10-implementation"></a>Windows 7-und 10-Implementierung
+### <a name="windows-7-and-10-implementation"></a>Windows 7- und 10-Implementierung
 
-In Windows 7 und höher gibt es ein neues Verhalten, das beim Registrieren eines Filter Handlers, eines Eigenschaften Handlers oder einer neuen Erweiterung auftritt. Wenn ein neuer Eigenschaften Handler und/oder Filter Handler installiert wird, werden Dateien mit den entsprechenden Erweiterungen automatisch neu indiziert.
+In Windows 7 und höher tritt beim Registrieren eines Filterhandlers, Eigenschaftenhandlers oder einer neuen Erweiterung ein neues Verhalten auf. Wenn ein neuer Eigenschaftenhandler und/oder Filterhandler installiert ist, werden Dateien mit den entsprechenden Erweiterungen automatisch neu indiziert.
 
-In Windows 7 und höher wird empfohlen, dass Sie einen Filter Handler in Verbindung mit den entsprechenden Eigenschaften Handlern installieren und den Filter Handler vor dem Eigenschaften Handler registrieren. Die Registrierung des Eigenschaften Handler initiiert die sofortige Neuindizierung von zuvor indizierten Dateien, ohne dass zuerst ein Neustart erforderlich ist, und nutzt alle zuvor registrierten Filter Handler für die Inhalts Indizierung.
+In Windows 7 und höher wird empfohlen, einen Filterhandler in Verbindung mit den entsprechenden Eigenschaftenhandlern zu installieren und den Filterhandler vor dem Eigenschaftenhandler zu registrieren. Die Registrierung des Eigenschaftenhandlers initiiert die sofortige erneute Indizierung zuvor indizierter Dateien, ohne dass zuerst ein Neustart erforderlich ist, und nutzt alle zuvor registrierten Filterhandler für die Inhaltsindizierung.
 
-Wenn nur ein Filter Handler ohne einen entsprechenden Eigenschaften Handler installiert wird, erfolgt die automatische Neuindizierung entweder nach einem Neustart des Indizierungs dienstanzdienstanbieter oder einem Neustart des Systems.
+Wenn nur ein Filterhandler ohne einen entsprechenden Eigenschaftenhandler installiert wird, erfolgt die automatische erneute Indizierung entweder nach einem Neustart des Indizierungsdiensts oder einem Neustart des Systems.
 
-Informationen zu eigenschaftenbeschreibungsflags, die speziell für Windows 7 gelten, finden Sie in den folgenden Referenz Themen: [getpropertystoreflags](/windows/win32/api/propsys/ne-propsys-getpropertystoreflags), [PropDesc \_ ColumnIndex \_ Type](/windows/win32/api/propsys/ne-propsys-propdesc_columnindex_type) und [PropDesc \_ SearchInfo \_ Flags](/windows/win32/api/propsys/ne-propsys-propdesc_searchinfo_flags).
+Spezifische Eigenschaftenbeschreibungsflags für Windows 7 finden Sie in den folgenden Referenzthemen: [GETPROPERTYSTOREFLAGS,](/windows/win32/api/propsys/ne-propsys-getpropertystoreflags) [PROPDESC \_ COLUMNINDEX \_ TYPE](/windows/win32/api/propsys/ne-propsys-propdesc_columnindex_type) und [PROPDESC \_ SEARCHINFO \_ FLAGS](/windows/win32/api/propsys/ne-propsys-propdesc_searchinfo_flags).
 
 ### <a name="windows-vista-implementation"></a>Windows Vista-Implementierung
 
-In Windows Vista und früheren Versionen initiiert die Installation eines [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -oder Eigenschaften Handlers keine Neuindizierung vorhandener Elemente, es sei denn, ein unabhängiger Softwarehersteller (ISV) ruft explizit eine Neuerstellung oder Neuindizierung der übereinstimmenden URLs auf.
+In Windows Vista und früheren Versionen initiiert die Installation eines [**IFilter-**](/windows/win32/api/filter/nn-filter-ifilter) oder Eigenschaftenhandlers keine erneute Indizierung vorhandener Elemente, es sei denn, ein unabhängiger Softwarehersteller (Independent Software Vendor, ISV) ruft explizit eine Neuerstellung oder Neuindizierung übereinstimmender URLs auf.
 
-Es gibt zwei wesentliche Unterschiede zwischen Legacy Anwendungen, wie z. b. dem Indizierungs Dienst und neueren Anwendungen wie Windows Search, die Sie beim Implementieren von Filtern beachten sollten:
+Es gibt zwei wesentliche Unterschiede zwischen Legacyanwendungen wie indexing Service und neueren Anwendungen wie Windows Search, die Sie beim Implementieren von Filtern beachten sollten:
 
-- Verwendung der [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) -Schnittstelle.
-- Verwendung von Eigenschaften Handlern.
+- Verwendung der [IPersistStream-Schnittstelle.](/windows/win32/api/objidl/nn-objidl-ipersiststream)
+- Verwendung von Eigenschaftenhandlern.
 
-Zuerst erfordern Windows Vista und Windows Search 3,0 und höher die Verwendung von [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) aus den folgenden Gründen:
+Zunächst müssen Sie Windows Vista und Windows Search 3.0 und höher [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) aus den folgenden Gründen verwenden:
 
-- Um Leistung und zukünftige Kompatibilität zu gewährleisten.
-- , Um die Sicherheit zu erhöhen. Mit [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) implementierte Filter sind sicherer, da der Kontext, in dem der Filter ausgeführt wird, nicht die Berechtigung zum Öffnen von Dateien auf dem Datenträger oder über das Netzwerk benötigt.
+- Um die Leistung und zukünftige Kompatibilität sicherzustellen.
+- Um die Sicherheit zu erhöhen. Filter, die mit [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) implementiert werden, sind sicherer, da der Kontext, in dem der Filter ausgeführt wird, nicht die Rechte zum Öffnen von Dateien auf dem Datenträger oder über das Netzwerk benötigt.
 
-Obwohl bei Windows Search nur [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream)verwendet wird, können Sie die [IPersistFile-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersistfile) und/oder [IPersistStorage-Schnittstellen](/windows/win32/api/objidl/nn-objidl-ipersiststorage) Implementierungen in Ihren Filtern für die Abwärtskompatibilität einschließen.
+Während Windows Search nur [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream)verwendet, können Sie aus Gründen der Abwärtskompatibilität auch implementierungen der [IPersistFile-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersistfile) und/oder [der IPersistStorage-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersiststorage) in Ihre Filter einschließen.
 
-Der zweite Hauptunterschied besteht darin, dass Windows Vista und Windows Search 3,0 und höher ein neues Eigenschaften [System](../properties/building-property-handlers.md) haben, das Eigenschafts Handler verwendet, um Eigenschaften von Elementen aufzuzählen.
+Der zweite hauptunterschied besteht darin, dass Windows Vista und Windows Search 3.0 und höher über ein neues [Eigenschaftensystem](../properties/building-property-handlers.md) verfügen, das Eigenschaftenhandler verwendet, um Eigenschaften von Elementen aufzuzählen.
 
-Es gibt jedoch Zeiten, in denen Sie einen Filter implementieren müssen, der sowohl den Inhalt als auch die Eigenschaften behandelt, um Folgendes zu tun:
+Es gibt jedoch Zeiten, in denen Sie einen Filter implementieren müssen, der sowohl Inhalt als auch Eigenschaften behandelt, um:
 
-- Unterstützung von Legacy-MSSearch-Implementierungen.
-- Durchsuchen von Links.
-- Sprachinformationen beibehalten.
+- Unterstützung von älteren MSSearch-Implementierungen.
+- Durchlaufen Sie Links.
+- Beibehalten von Sprachinformationen.
 - Filtern Sie eingebettete Elemente rekursiv.
 
-In diesen Fällen benötigen Sie eine vollständige Filter Implementierung, einschließlich der [**IFilter:: GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) -Methode, um auf Eigenschaftswerte zuzugreifen.
+In diesen Situationen benötigen Sie eine vollständige Filterimplementierungen, einschließlich der [**IFilter::GetValue-Methode,**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) um auf Eigenschaftswerte zuzugreifen.
 
-### <a name="legacy-implementation"></a>Legacy Implementierung
+### <a name="legacy-implementation"></a>Legacyimplementierungen
 
-Wie bereits erwähnt, enthalten Windows Vista und Windows Search ein neues Eigenschaften System, das die Eigenschaften eines Elements kapselt, das vom Inhalt eines Elements getrennt ist. Dieses Eigenschaften System ist in früheren Versionen von Microsoft Windows Desktop Search (WDS) 2. x nicht vorhanden. Wenn der Filter andere Anwendungen unterstützen muss, wie oben beschrieben, muss er möglicherweise sowohl den Inhalt als auch die Eigenschaften verarbeiten.
+Wie bereits erwähnt, enthalten Windows Vista und Windows Search ein neues Eigenschaftensystem, das die Eigenschaften eines Elements kapselt, die vom Inhalt eines Elements getrennt sind. Dieses Eigenschaftensystem ist in früheren Versionen von Microsoft Windows DesktopSuche (WDS) 2.x nicht vorhanden. Wenn Ihr Filter wie oben beschrieben andere Anwendungen unterstützen muss, muss er möglicherweise sowohl Inhalt als auch Eigenschaften behandeln.
 
-Weitere Informationen zum Entwickeln eines kompatiblen Filters finden Sie in den folgenden Themen: [IFilter (für ältere Anwendungen)](/windows/win32/api/filter/nn-filter-ifilter)und [entwickeln von Filter-Add-Ins (für ältere Anwendungen)](../lwef/-search-2x-wds-ifilteraddins.md).
+Weitere Informationen zum Entwickeln eines kompatiblen Filters finden Sie in den folgenden Themen: [IFilter (für Legacyanwendungen)](/windows/win32/api/filter/nn-filter-ifilter)und [Entwickeln von Filter-Add-Ins (für Legacyanwendungen).](../lwef/-search-2x-wds-ifilteraddins.md)
 
-## <a name="windows-search-filters"></a>Windows-Suchfilter
+## <a name="windows-search-filters"></a>Windows Suchfilter
 
-Microsoft stellt mehrere Standardfilter mit Windows Search bereit. Der Inhalt der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)  -dll wird in der folgenden Tabelle zusammengefasst. Wenn Sie auf den Namen eines Filter Handlers klicken, gelangen Sie zur Beschreibung der **IFilter** -Implementierung.
+Microsoft stellt mehrere Standardfilter mit Windows Search zur Verfügung. Die Inhalte der [**IFilter-DLL**](/windows/win32/api/filter/nn-filter-ifilter)  sind in der folgenden Tabelle zusammengefasst. Wenn Sie auf den Namen eines Filterhandlers klicken, gelangen Sie zur Beschreibung für diese **IFilter-Implementierung.**
 
-| Filter Handler                                                  | Gefilterte Dateien                              | IFilter-DLL  |
+| Filterhandler                                                  | Gefilterte Dateien                              | IFilter-DLL  |
 |-----------------------------------------------------------------|---------------------------------------------|--------------|
-| [MIME-Filter Handler](#mime-filter-handler)                     | Mehrzweck-Internet Mail Erweiterung (MIME) | mimefilt.dll |
-| [HTML-Filter Handler](#html-filter-handler)                     | HTML 3,0 oder früher                         | nlhtml.dll   |
-| [Dokument Filter Handler](#document-filter-handler)             | Microsoft Word, Excel, PowerPoint           | offfilt.dll  |
-| [Nur-Text-Filter Handler](#plain-text-filter-handler)         | Nur-Text-Dateien-Standard-IFilter          | query.dll    |
-| [Binärer oder NULL-Filter Handler](#binary-or-null-filter-handler) | Binäre Dateien-NULL-IFilter                 | query.dll    |
+| [MIME-Filterhandler](#mime-filter-handler)                     | Multipurpose Internet Mail Extension (MIME) | mimefilt.dll |
+| [HTML-Filterhandler](#html-filter-handler)                     | HTML 3.0 oder früher                         | nlhtml.dll   |
+| [Dokumentfilterhandler](#document-filter-handler)             | Microsoft Word, Excel, PowerPoint           | offfilt.dll  |
+| [Nur-Text-Filterhandler](#plain-text-filter-handler)         | Nur-Text-Dateien – Standard-IFilter          | query.dll    |
+| [Binärer oder NULL-Filterhandler](#binary-or-null-filter-handler) | Binärdateien – NULL-IFilter                 | query.dll    |
 
-### <a name="mime-filter-handler"></a>MIME-Filter Handler
+### <a name="mime-filter-handler"></a>MIME-Filterhandler
 
-Der MIME-Filter Handler (in mimefilt.dll) extrahiert Text-und Eigenschafts Informationen aus Dateien mit den Erweiterungen ". eml", ". MHT" und ". MHTML".
+Der MIME-Filterhandler (in mimefilt.dll) extrahiert Text- und Eigenschaftsinformationen aus Dateien mit den Erweiterungen EML, MHT und MHTML.
 
-### <a name="html-filter-handler"></a>HTML-Filter Handler
+### <a name="html-filter-handler"></a>HTML-Filterhandler
 
-Der HTML-Filter Handler (in nlhtml.dll) extrahiert Text-und Eigenschafts Informationen aus der Klasse "HtmlFiles", sodass er von Windows Search indiziert werden kann. Eine Beschreibung der Zuordnung zwischen [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) und Dateityp finden Sie unter "Suchen der IFilter-DLL für eine Datei" in [Registrieren von Filter Handlern](-search-ifilter-registering-filters.md).
+Der HTML-Filterhandler (in nlhtml.dll) extrahiert Text- und Eigenschaftsinformationen aus der Klasse "htmlfiles", sodass sie durch Windows Search indiziert werden können. Eine Beschreibung der Zuordnung zwischen [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) und dem Dateityp finden Sie unter "Suchen der IFilter-DLL für eine Datei" unter [Registrieren von Filterhandlern.](-search-ifilter-registering-filters.md)
 
-Sie können das `META` tagfeature von HTML-Dokumenten verwenden, um besondere Verarbeitungsanforderungen an den HTML- [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)zu übermitteln. `META` Tags treten am Anfang einer HTML-Datei innerhalb der `HEAD ... /HEAD` Tags auf, wie im folgenden Beispiel veranschaulicht.
+Sie können das `META` Tagfeature von HTML-Dokumenten verwenden, um spezielle Verarbeitungsanforderungen an den HTML-IFilter zu übermitteln. [](/windows/win32/api/filter/nn-filter-ifilter) `META` -Tags treten am Anfang einer HTML-Datei innerhalb der `HEAD ... /HEAD` Tags auf, wie im folgenden Beispiel veranschaulicht.
 
 ```XML
    <head>
@@ -106,25 +106,25 @@ Sie können das `META` tagfeature von HTML-Dokumenten verwenden, um besondere Ve
    </head>
 ```
 
-Einige HTML- `META` Tags werden automatisch bekannten Eigenschaften Satz-und Eigenschafts-ID-Werten (eigenschaftenbezeichnerwerte (PID)) zugeordnet, damit Abfragen für diese Eigenschaften den zugeordneten Inhalt durchsuchen. Einige Beispiele sind in der folgenden Tabelle aufgeführt. Eine Liste der Systemeigenschaften, die Sie für die Dateiformate verwenden können, finden Sie unter [System definierte Eigenschaften für benutzerdefinierte Dateiformate](-shell-systemdefinedpropertiesforfileformats.md).
+Einige `META` HTML-Tags werden automatisch bekannten Eigenschaftssatz- und Eigenschafts-ID-Werten (Property Identifier, PID) zugeordnet, sodass Abfragen dieser Eigenschaften den zugeordneten Inhalt durchsuchen. Einige Beispiele sind in der folgenden Tabelle aufgeführt. Eine Liste der Systemeigenschaften, die Sie für Ihre Dateiformate verwenden können, finden Sie unter [Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate.](-shell-systemdefinedpropertiesforfileformats.md)
 
-| Eigenschafts Beispiel                              | Zugeordnet zu                                                               |
+| Eigenschaftsbeispiel                              | Zugeordnet zu                                                               |
 |-----------------------------------------------|-------------------------------------------------------------------------|
-| Meta Name = "Author" Content = "Ruth"             | Die Eigenschaft "Author" in der Eigenschaften Gruppe für Zusammenfassungs Informationen.            |
-| Meta Name = "Subject" Content = "Word Processing" | Die Eigenschaft "Subject" in der Eigenschaften Gruppe für Zusammenfassungs Informationen.           |
-| Meta Name = "Keywords" Content = "Fonts, Serif"   | Die Schlüsselwort Eigenschaft im Eigenschaften Satz für Zusammenfassungs Informationen.           |
-| Meta Name = "MS. Category" Content = "Fiction"     | Die Kategorieeigenschaft in der Eigenschaft für die Dokument Zusammenfassungs Informationen. |
+| meta name="author" content="soll"             | Die author-Eigenschaft im Eigenschaftensatz Zusammenfassungsinformationen.            |
+| meta name="subject" content="word processing" | Die subject-Eigenschaft im Eigenschaftensatz Zusammenfassungsinformationen.           |
+| meta name="keywords" content="fonts, serif"   | Die Schlüsselworteigenschaft im Eigenschaftensatz Zusammenfassungsinformationen.           |
+| meta name="ms.category" content="fiction"     | Die Kategorieeigenschaft im Eigenschaftensatz zusammenfassungsinformationen. |
 
-Einige Features der HTML- [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) sind in der folgenden Tabelle aufgeführt.
+Einige Features des [**HTML-IFilters**](/windows/win32/api/filter/nn-filter-ifilter) sind in der folgenden Tabelle aufgeführt.
 
-[comment]: # (Diese Tabelle muss HTML sein, damit die Beispiele ordnungsgemäß formatiert werden.)
+[comment]: # (Diese Tabelle muss HTML sein, damit die Beispiele richtig formatiert sind.)
 
 <!-- markdownlint-disable MD033 -->
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -136,16 +136,16 @@ Einige Features der HTML- [**IFilter**](/windows/win32/api/filter/nn-filter-ifil
 <tbody>
 <tr class="odd">
 <td>Erstellen spezieller Abstracts aus Dateien</td>
-<td>Verwenden Sie das- <code>META NAME=&quot;DESCRIPTION&quot;...</code> Tag, um den <a href="https://www.bing.com/search?q=<strong>IFilter</strong>"><strong>IFilter</strong></a> anzuweisen, die Zeichenfolge nach dem <code>CONTENT</code> Schlüsselwort als Dokument abstrakt zu verwenden.
+<td>Verwenden Sie das <code>META NAME=&quot;DESCRIPTION&quot;...</code> -Tag, um den <a href="https://www.bing.com/search?q=<strong>IFilter</strong>"><strong>IFilter</strong></a> anzuweisen, die Zeichenfolge nach dem <code>CONTENT</code> Schlüsselwort als Dokumentstrah zu verwenden.
 <blockquote>
 [!Note]<br />
-Der Filterprozess kann für jede gefilterte Datei Abstraktionen generieren, bei denen es sich standardmäßig um einen Satz von Zeichen am Anfang der Datei handelt.
+Der Filterprozess kann Abstracts für jede gefilterte Datei generieren, die standardmäßig ein Zeichensatz am Anfang der Datei ist.
 </blockquote>
 <br/></td>
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -160,13 +160,13 @@ Der Filterprozess kann für jede gefilterte Datei Abstraktionen generieren, bei 
 </td>
 </tr>
 <tr class="even">
-<td>Verhindern, dass einzelne Dateien gefiltert werden</td>
-<td>Fügen Sie <code>meta name</code> der Datei ein-Tag hinzu.</td>
+<td>Verhindern der Filterung einzelner Dateien</td>
+<td>Fügen Sie der Datei ein <code>meta name</code> Tag hinzu.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -180,13 +180,13 @@ Der Filterprozess kann für jede gefilterte Datei Abstraktionen generieren, bei 
 </div></td>
 </tr>
 <tr class="odd">
-<td>Festlegen des Sprachcodes für eine Datei (um sicherzustellen, dass das System die richtigen Wörter Trennungen und Füll Wort Dateien der Sprache auswählt)</td>
-<td>Fügen Sie der Datei das folgende- <code>meta name</code> Tag hinzu, wobei das Inhaltsfeld den entsprechenden Sprachcode angibt (entweder in Zeichen oder mithilfe des Gebiets Schema Werts).</td>
+<td>Festlegen des Sprachcodes für eine Datei (um sicherzustellen, dass das System die richtigen Sprachbegriffs-Breaker und Füllwortdateien aus wählt)</td>
+<td>Fügen Sie der Datei das folgende <code>meta name</code> Tag hinzu, wobei das Inhaltsfeld den entsprechenden Sprachcode angibt (entweder in Zeichen oder mithilfe des Gebietsschemawerts).</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -204,41 +204,41 @@ Der Filterprozess kann für jede gefilterte Datei Abstraktionen generieren, bei 
 </table>
 <!-- markdownlint-enable MD033 -->
 
-### <a name="document-filter-handler"></a>Dokument Filter Handler
+### <a name="document-filter-handler"></a>Dokumentfilterhandler
 
-Der Dokument Filter Handler (in offilt.dll) filtert Dateien für einige Erweiterungen von Dokumenten in Microsoft Office. Dazu zählen beispielsweise Dateien mit den Erweiterungen ". doc", ". mdb", "ppt" und ". xlt".
+Der Dokumentfilterhandler (in offilt.dll) filtert Dateien nach einigen Erweiterungen von Dokumenten in Microsoft Office. Dazu gehören beispielsweise Dateien mit den Erweiterungen .doc, MDB, .ppt und XLT.
 
-### <a name="plain-text-filter-handler"></a>Nur-Text-Filter Handler
+### <a name="plain-text-filter-handler"></a>Nur-Text-Filterhandler
 
-Für nur-Text-Dateien verwendet Windows Search den Textfilter Handler, der sowohl die Systemeigenschaften (z. b. Dateinamen) als auch den Inhalt einer Datei filtert. Wenn ein Dateityp nicht über eine [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Zuordnung in der Registrierung verfügt, indiziert Windows Search nur die Shelleigenschaften für die Datei. Der Benutzer kann jedoch die **erweiterten Optionen** in der Systemsteuerung der **Indizierungs Optionen** verwenden, um Eigenschaften oder **Index Eigenschaften und Dateiinhalte** zu **indizieren** .
+Bei Nur-Text-Dateien verwendet Windows Search den Textfilterhandler, der sowohl die Systemeigenschaften (z. B. Dateinamen) als auch den Inhalt einer Datei filtert. Wenn ein Dateityp keine [**IFilter-Zuordnung**](/windows/win32/api/filter/nn-filter-ifilter) in der Registrierung aufweist, Windows Search-Indizes nur die Shell-Eigenschaften für die Datei. Der Benutzer kann jedoch die **erweiterten Optionen** in der Systemsteuerung **Indizierungsoptionen** verwenden, um Eigenschaften oder **Indexeigenschaften und Dateiinhalte** zu **indizieren.**
 
-![Screenshot mit dem Dialogfeld "Erweiterte Optionen"](images/ifilteradvancedoptions.png)
+![Screenshot des Dialogfelds "Erweiterte Optionen"](images/ifilteradvancedoptions.png)
 
-Wenn der Benutzer diese Option für einen Dateityp ohne zugeordneten [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)auswählt, wird der Inhalt der Datei mithilfe des Textfilter Handlers extrahiert. Der Textfilter Handler hat kein Verständnis für ein Dokumentformat. Wenn Sie den Inhalt einer Dateifiltern, wird die Datei als Sequenz von Zeichen behandelt. Er überprüft die Unicode-Byte Reihenfolge Markierung am Anfang der Datei.
+Wenn der Benutzer diese Option für einen Dateityp ohne zugeordneten [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)ausgibt, wird der Textfilterhandler verwendet, um den Inhalt der Datei zu extrahieren. Der Textfilterhandler "versteht" kein Dokumentformat. Beim Filtern des Inhalts einer Datei wird die Datei als Zeichensequenz behandelt. Es sucht am Anfang der Datei nach der Unicode-Bytereihenfolgemarkierung.
 
-### <a name="binary-or-null-filter-handler"></a>Binärer oder NULL-Filter Handler
+### <a name="binary-or-null-filter-handler"></a>Binärer oder NULL-Filterhandler
 
-Wenn eine registrierte Binärdatei gefunden wird, wird der NULL-Filter Handler verwendet. Der NULL-Filter Handler ruft nur die Systemeigenschaften ab. Der Inhalt einer Binärdatei wird nicht gefiltert. Beispiele für Systemeigenschaften sind **Dateiname**, **lastschreitezeit**, **FileSize** und **Attribute**.
+Wenn eine registrierte Binärdatei gefunden wird, wird der NULL-Filterhandler verwendet. Der NULL-Filterhandler ruft nur die Systemeigenschaften ab. Der Inhalt einer Binärdatei wird nicht gefiltert. Beispiele für Systemeigenschaften sind **FileName,** **LastWriteTime,** **FileSize** und **Attributes**.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-- Das in [GitHub](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)verfügbare [ifiltersample](-search-sample-ifiltersample.md) -Codebeispiel veranschaulicht, wie eine IFilter-Basisklasse für die Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle erstellt wird.
-- Eine Übersicht über den Indizierungsprozess finden Sie [im Abschnitt zur Indizierung](-search-indexing-process-overview.md).
-- Eine Übersicht über die Dateitypen finden Sie unter [Dateitypen](../shell/fa-file-types.md).
-- Informationen zum Abfragen von Datei Zuordnungs Attributen für einen Dateityp finden Sie unter " [wahrtentypen", "systemfileassociation" und "Anwendungs Registrierung](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85))".
+- Das [IFilterSample-Codebeispiel,](-search-sample-ifiltersample.md) das auf [GitHub](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)verfügbar ist, veranschaulicht das Erstellen einer IFilter-Basisklasse zum Implementieren der [**IFilter-Schnittstelle.**](/windows/win32/api/filter/nn-filter-ifilter)
+- Eine Übersicht über den Indizierungsprozess finden Sie unter [Der Indizierungsprozess.](-search-indexing-process-overview.md)
+- Eine Übersicht über Dateitypen finden Sie unter [Dateitypen.](../shell/fa-file-types.md)
+- Informationen zum Abfragen von Dateizuordnungsattributen für einen Dateityp finden Sie unter [PerceivedTypes, SystemFileAssociations und Application Registration](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85)).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Entwickeln von Filter Handlern](-search-ifilter-conceptual.md)
+[Entwickeln von Filterhandlern](-search-ifilter-conceptual.md)
 
-[Informationen zu Filter Handlern in Windows Search](-search-ifilter-about.md)
+[Informationen zu Filterhandlern in Windows Search](-search-ifilter-about.md)
 
-[Bewährte Methoden zum Erstellen von Filter Handlern in Windows Search](-search-3x-wds-extidx-filters.md)
+[Bewährte Methoden zum Erstellen von Filterhandlern in Windows Suche](-search-3x-wds-extidx-filters.md)
 
-[Zurückgeben von Eigenschaften aus einem Filter Handler](-search-ifilter-property-filtering.md)
+[Zurückgeben von Eigenschaften von einem Filterhandler](-search-ifilter-property-filtering.md)
 
-[Implementieren von Filter Handlern in Windows Search](-search-ifilter-constructing-filters.md)
+[Implementieren von Filterhandlern in Windows Search](-search-ifilter-constructing-filters.md)
 
-[Registrieren von Filter Handlern](-search-ifilter-registering-filters.md)
+[Registrieren von Filterhandlern](-search-ifilter-registering-filters.md)
 
-[Testen von Filter Handlern](-search-ifilter-testing-filters.md)
+[Testen von Filterhandlern](-search-ifilter-testing-filters.md)

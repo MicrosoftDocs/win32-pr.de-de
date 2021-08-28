@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d99b8dcef2ef21b4d75eb5262d2e3ecffa3804fa8e7a4889ae5dcbf8d68f018
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: ff6f4b88a355c25df40a847912d4e3352bd87962
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120081680"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475396"
 ---
 # <a name="glcolorsubtableext-function"></a>glColorSubTableEXT-Funktion
 
@@ -73,59 +73,18 @@ Das Format der Pixeldaten. Die folgenden symbolischen Konstanten werden akzeptie
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="GL_RGBA"></span><span id="gl_rgba"></span><dl> <dt><strong>GL_RGBA</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von vier Komponenten in der folgenden Reihenfolge: Rot, Grün, Blau, Alpha. Das RGBA-Format wird auf diese Weise bestimmt: <br/>
-<ol>
-<li>Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert Gleitkommawerte direkt in ein internes Format mit nicht angegebener Genauigkeit. Ganzzahlwerte mit Vorzeichen werden linear dem internen Format zugeordnet, damit der positivste darstellbare ganzzahlige Wert 1,0 und der negativste darstellbare Wert -1,0 zugeordnet wird. Ganzzahlige Daten ohne Vorzeichen werden ähnlich zugeordnet: Der größte ganzzahlige Wert wird 1,0 zugeordnet, 0,0 ist 0.0 zugeordnet.</li>
-<li>Die <strong>glColorSubTableEXT-Funktion</strong> multipliziert die resultierenden Farbwerte mit GL_c_SCALE und fügt sie GL_c_BIAS hinzu, wobei <em>c</em> für die jeweiligen Farbkomponenten ROT, GRÜN, BLAU und ALPHA ist. Die Ergebnisse werden an den Bereich [0,1] klammern.</li>
-<li>Wenn GL_MAP_COLOR <strong>TRUE</strong>ist, skaliert <strong>glColorSubTableEXT</strong> jede Farbkomponente um die Größe der Nachschlagetabelle GL_PIXEL_MAP_c_TO_c und ersetzt die Komponente durch den Wert, auf den sie in dieser Tabelle verweist. <em>c</em> ist R, G, B bzw. A.</li>
-<li>Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert die resultierenden RGBA-Farben in Fragmente, indem sie die aktuelle Rasterposition <em>z</em>-Koordinate und Texturkoordinaten an jedes Pixel anfügen und dann <em>x-</em> und y-Fensterkoordinaten dem <em>n-th-Fragment</em>so zuweisen,<em>dass x</em>? <em></em> = <em>x</em><sub>r</sub> + <em>n</em> mod <em>width</em><br/> <em>y</em>? = <em>y</em><sub>r</sub> +<em>n/width</em><br/> Wobei (<em>x</em><sub>r</sub> , <em>y</em><sub>r</sub> ) die aktuelle Rasterposition ist.<br/></li>
-<li>Diese Pixelfragmente werden dann genau wie die Fragmente behandelt, die durch Rastern von Punkten, Linien oder Polygonen generiert werden. Die <strong>glColorSubTableEXT-Funktion</strong> wendet Texturzuordnungs-, Farb- und alle Fragmentvorgänge an, bevor die Fragmente in den Framepuffer geschrieben werden.</li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><span id="GL_RED"></span><span id="gl_red"></span><dl> <dt><strong>GL_RED</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne rote Komponente.<br/> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die rote Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem grün und blau auf 0,0 und alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_GREEN"></span><span id="gl_green"></span><dl> <dt><strong>GL_GREEN</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne grüne Komponente.<br/> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die grüne Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot und Blau auf 0,0 und Alpha auf 1,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_BLUE"></span><span id="gl_blue"></span><dl> <dt><strong>GL_BLUE</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne blaue Komponente.<br/> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die blaue Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot und Grün auf 0,0 und Alpha auf 1,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_ALPHA"></span><span id="gl_alpha"></span><dl> <dt><strong>GL_ALPHA</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne Alphakomponente.<br/> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die Alphakomponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot, Grün und Blau auf 0,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_RGB"></span><span id="gl_rgb"></span><dl> <dt><strong>GL_RGB</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: Rot, Grün, Blau.<br/> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert jede Komponente auf die gleiche Weise in das interne Format wie die roten, grünen und blauen Komponenten eines RGBA-Pixels. Die Dreifachfarbe wird in ein RGBA-Pixel konvertiert, bei dem alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_BGR_EXT"></span><span id="gl_bgr_ext"></span><dl> <dt><strong>GL_BGR_EXT</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: blau, grün, rot.<br/> GL_BGR_EXT stellt ein Format zur Verfügung, das dem Speicherlayout Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows und OpenGL-Pixelfunktionsaufrufen verwenden.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_BGRA_EXT"></span><span id="gl_bgra_ext"></span><dl> <dt><strong>GL_BGRA_EXT</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von vier Komponenten in dieser Reihenfolge: blau, grün, rot, alpha.<br/> GL_BGRA_EXT stellt ein Format zur Verfügung, das dem Speicherlayout Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows und OpenGL-Pixelfunktionsaufrufen verwenden.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <span id="GL_RGBA"></span><span id="gl_rgba"></span><dl><dt><strong>GL_RGBA</strong></dt></dl> | Jedes Pixel ist eine Gruppe von vier Komponenten in der folgenden Reihenfolge: Rot, Grün, Blau, Alpha. Das RGBA-Format wird auf diese Weise bestimmt: <br /><ol><li>Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert Gleitkommawerte direkt in ein internes Format mit nicht angegebener Genauigkeit. Ganzzahlwerte mit Vorzeichen werden linear dem internen Format zugeordnet, damit der positivste darstellbare ganzzahlige Wert 1,0 und der negativste darstellbare Wert -1,0 zugeordnet wird. Ganzzahlige Daten ohne Vorzeichen werden ähnlich zugeordnet: Der größte ganzzahlige Wert wird 1,0 zugeordnet, 0,0 ist 0.0 zugeordnet.</li><li>Die <strong>glColorSubTableEXT-Funktion</strong> multipliziert die resultierenden Farbwerte mit GL_c_SCALE und fügt sie GL_c_BIAS hinzu, wobei <em>c</em> für die jeweiligen Farbkomponenten ROT, GRÜN, BLAU und ALPHA ist. Die Ergebnisse werden an den Bereich [0,1] klammern.</li><li>Wenn GL_MAP_COLOR <strong>TRUE</strong>ist, skaliert <strong>glColorSubTableEXT</strong> jede Farbkomponente um die Größe der Nachschlagetabelle GL_PIXEL_MAP_c_TO_c und ersetzt die Komponente durch den Wert, auf den sie in dieser Tabelle verweist. <em>c</em> ist R, G, B bzw. A.</li><li>Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert die resultierenden RGBA-Farben in Fragmente, indem sie die aktuelle Rasterposition <em>z</em>-Koordinate und Texturkoordinaten an jedes Pixel anfügen und dann <em>x-</em> und y-Fensterkoordinaten dem <em>n-th-Fragment</em>so zuweisen,<em>dass x</em>? <em></em> = <em>x</em><sub>r</sub>  +  <em>n</em> mod <em>width</em><br /><em>y</em>? = <em>y</em><sub>r</sub>  + <em>n/width</em><br /> Wobei (<em>x</em><sub>r</sub> , <em>y</em><sub>r</sub> ) die aktuelle Rasterposition ist.<br /></li><li>Diese Pixelfragmente werden dann genau wie die Fragmente behandelt, die durch Rastern von Punkten, Linien oder Polygonen generiert werden. Die <strong>glColorSubTableEXT-Funktion</strong> wendet Texturzuordnungs-, Farb- und alle Fragmentvorgänge an, bevor die Fragmente in den Framepuffer geschrieben werden.</li></ol> | 
+| <span id="GL_RED"></span><span id="gl_red"></span><dl><dt><strong>GL_RED</strong></dt></dl> | Jedes Pixel ist eine einzelne rote Komponente.<br /> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die rote Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem grün und blau auf 0,0 und alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_GREEN"></span><span id="gl_green"></span><dl><dt><strong>GL_GREEN</strong></dt></dl> | Jedes Pixel ist eine einzelne grüne Komponente.<br /> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die grüne Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot und Blau auf 0,0 und Alpha auf 1,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_BLUE"></span><span id="gl_blue"></span><dl><dt><strong>GL_BLUE</strong></dt></dl> | Jedes Pixel ist eine einzelne blaue Komponente.<br /> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die blaue Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot und Grün auf 0,0 und Alpha auf 1,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_ALPHA"></span><span id="gl_alpha"></span><dl><dt><strong>GL_ALPHA</strong></dt></dl> | Jedes Pixel ist eine einzelne Alphakomponente.<br /> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die Alphakomponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, bei dem Rot, Grün und Blau auf 0,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_RGB"></span><span id="gl_rgb"></span><dl><dt><strong>GL_RGB</strong></dt></dl> | Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: Rot, Grün, Blau.<br /> Die <strong>glColorSubTableEXT-Funktion</strong> konvertiert jede Komponente auf die gleiche Weise in das interne Format wie die roten, grünen und blauen Komponenten eines RGBA-Pixels. Die Dreifachfarbe wird in ein RGBA-Pixel konvertiert, bei dem alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_BGR_EXT"></span><span id="gl_bgr_ext"></span><dl><dt><strong>GL_BGR_EXT</strong></dt></dl> | Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: blau, grün, rot.<br /> GL_BGR_EXT stellt ein Format zur Verfügung, das dem Speicherlayout Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows und OpenGL-Pixelfunktionsaufrufen verwenden.<br /> | 
+| <span id="GL_BGRA_EXT"></span><span id="gl_bgra_ext"></span><dl><dt><strong>GL_BGRA_EXT</strong></dt></dl> | Jedes Pixel ist eine Gruppe von vier Komponenten in dieser Reihenfolge: blau, grün, rot, alpha.<br /> GL_BGRA_EXT stellt ein Format zur Verfügung, das dem Speicherlayout Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows und OpenGL-Pixelfunktionsaufrufen verwenden.<br /> | 
+
 
 
 
@@ -204,7 +163,7 @@ Die **glColorSubTableEXT-Funktion** gibt Teile der Palette der aktuellen Zieltex
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

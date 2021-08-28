@@ -1,29 +1,29 @@
 ---
-title: Beispiel Code in der D3D12-Referenz
+title: Beispielcode in der D3D12-Referenz
 description: Erläutert die Verwendung von Beispielcode in der Direct3D 12-Dokumentation.
 ms.assetid: C2323482-D06D-43B7-9BDE-BFB9A6A6B70D
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d65dd8db64dd829a7a318717e44a64ea189c7a3
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: 6a789ba8fa913b6852d8f7528183a71da31095d69539a79b2351e5b9ab7d3462
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119520"
 ---
-# <a name="example-code-in-the-d3d12-reference"></a>Beispiel Code in der D3D12-Referenz
+# <a name="example-code-in-the-d3d12-reference"></a>Beispielcode in der D3D12-Referenz
 
 Erläutert die Verwendung von Beispielcode in der Direct3D 12-Dokumentation.
 
--   [Code Ausschnitt Codebeispiel](#example-snippet-code)
--   [Verwandte Themen](#related-topics)
+-   [Beispielcode für Codeausschnitte](#example-snippet-code)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="example-snippet-code"></a>Code Ausschnitt Codebeispiel
+## <a name="example-snippet-code"></a>Beispielcode für Codeausschnitte
 
-Der Beispielcode, der in der Direct3D 12-Referenz gezeigt wird, ist nicht Kompilier-oder ausführbaren Code, sondern ein Code Ausschnitt, der ein Beispiel für den Aufruf der API bereitstellt. In einigen Beispielen werden die globalen Variablen und Klassenmember aufgelistet, die von den Aufrufen verwendet werden. Beispiel:
+Der im Direct3D 12-Verweis gezeigte Beispielcode ist kein kompilierbarer oder ausführungsfähiger Code. Es handelt sich lediglich um einen Codeausschnitt, der ein Beispiel für den Aufruf der API gibt. Einige Beispiele listen die globalen Variablen und Klassenmember auf, die von den Aufrufen verwendet werden, z. B.:
 
-Globale Pipeline Objekte.
+Globale Pipelineobjekte.
 
 
 ```C++
@@ -84,17 +84,17 @@ ThrowIfFailed(m_commandList->Close());
 
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
 [Erstellen einer einfachen Direct3D 12-Komponente](creating-a-basic-direct3d-12-component.md)
 </dt> <dt>
 
-[Direct3D 12-Referenz](direct3d-12-reference.md)
+[Referenz für Direct3D 12](direct3d-12-reference.md)
 </dt> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> <dt>
 
 [Funktionierende Beispiele](working-samples.md)

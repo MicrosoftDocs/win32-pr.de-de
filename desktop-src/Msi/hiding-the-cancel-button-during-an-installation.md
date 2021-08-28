@@ -1,31 +1,31 @@
 ---
-description: Sie können die Schaltfläche Abbrechen ausblenden, die verwendet wird, um eine Installation mit einer Befehlszeilenoption, der Windows Installer-API oder einer benutzerdefinierten Aktion abzubrechen. Je nachdem, welche Methode Sie verwenden, kann die Schaltfläche Abbrechen für einen Teil oder die gesamte Installation ausgeblendet werden.
+description: Sie können die Schaltfläche Abbrechen ausblenden, die zum Abbrechen einer Installation verwendet wird, indem Sie eine Befehlszeilenoption, die Windows Installer-API oder eine benutzerdefinierte Aktion verwenden. Die Schaltfläche Abbrechen kann für einen Teil oder die gesamte Installation ausgeblendet werden, je nachdem, welche Methode Sie verwenden.
 ms.assetid: de2bb788-0d19-4818-8038-cae6000b38c4
 title: Ausblenden der Schaltfläche "Abbrechen" während einer Installation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e55658bc69fe81b83b13d6c6ee7da84db77ad466
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9b838803b65b8923dc45f36e17579e30114c1bc6d86c8fba2e533252e524568
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129530"
 ---
 # <a name="hiding-the-cancel-button-during-an-installation"></a>Ausblenden der Schaltfläche "Abbrechen" während einer Installation
 
-Sie können die Schaltfläche **Abbrechen** ausblenden, die verwendet wird, um eine Installation mit einer Befehlszeilenoption, der Windows Installer-API oder einer benutzerdefinierten Aktion abzubrechen. Je nachdem, welche Methode Sie verwenden, kann die Schaltfläche **Abbrechen** für einen Teil oder die gesamte Installation ausgeblendet werden.
+Sie können die Schaltfläche **Abbrechen** ausblenden, die zum Abbrechen einer Installation verwendet wird, indem Sie eine Befehlszeilenoption, die Windows Installer-API oder eine benutzerdefinierte Aktion verwenden. Die Schaltfläche **Abbrechen** kann für einen Teil oder die gesamte Installation ausgeblendet werden, je nachdem, welche Methode Sie verwenden.
 
-## <a name="hiding-the-cancel-button-from-the-command-line"></a>Ausblenden der Schaltfläche "Abbrechen" in der Befehlszeile
+## <a name="hiding-the-cancel-button-from-the-command-line"></a>Ausblenden der Schaltfläche "Abbrechen" über die Befehlszeile
 
-Die Schaltfläche **Abbrechen** kann während der Installation mithilfe der Befehlszeilenoption (!) ausgeblendet werden. Dies kann nur für eine grundlegende Installation der Benutzeroberfläche (/QB) erfolgen. Die Schaltfläche **Abbrechen** ist für die gesamte Installation ausgeblendet. Weitere Informationen finden Sie unter [Befehlszeilenoptionen](command-line-options.md) und [Benutzeroberflächen Ebenen](user-interface-levels.md). Mit der folgenden Befehlszeile wird die Schaltfläche **Abbrechen** ausgeblendet und Example.msi installiert.
+Die Schaltfläche **Abbrechen** kann während der Installation mithilfe der Befehlszeilenoption (!) ausgeblendet werden. Dies kann nur für eine einfache Installation auf Benutzeroberflächenebene (/qb) erfolgen. Die Schaltfläche **Abbrechen** ist für die gesamte Installation ausgeblendet. Weitere Informationen finden Sie unter [Befehlszeilenoptionen](command-line-options.md) und [Benutzeroberfläche Ebenen.](user-interface-levels.md) Die folgende Befehlszeile blendet die Schaltfläche **Abbrechen** aus und installiert Example.msi.
 
-**msiexec/I example.msi/QB!**
+**msiexec /I example.msi /qb!**
 
-## <a name="hiding-the-cancel-button-from-an-application-or-script"></a>Ausblenden der Schaltfläche "Abbrechen" in einer Anwendung oder einem Skript
+## <a name="hiding-the-cancel-button-from-an-application-or-script"></a>Ausblenden der Schaltfläche "Abbrechen" aus einer Anwendung oder einem Skript
 
-Sie können eine Anwendung oder ein Skript schreiben, um die Schaltfläche " **Abbrechen** " auszublenden. Dies kann nur für eine einfache Installation auf Benutzeroberflächen Ebene erfolgen, sodass die Schaltfläche **Abbrechen** für die gesamte Installation ausgeblendet ist.
+Sie können eine Anwendung oder ein Skript schreiben, um die Schaltfläche **Abbrechen** auszublenden. Dies kann nur für eine einfache Installation auf Benutzeroberflächenebene erfolgen, sodass die Schaltfläche **Abbrechen** für die gesamte Installation ausgeblendet wird.
 
-Wenn Sie die Schaltfläche Abbrechen in einer Anwendung ausblenden möchten, legen Sie für den Aufruf von " \_ [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui)" den Wert für "installuilevel Im folgenden Beispiel wird die Schaltfläche **Abbrechen** ausgeblendet und Example.msi installiert.
+Um die Schaltfläche Abbrechen in einer Anwendung auszublenden, legen Sie INSTALLUILEVEL \_ HIDECANCEL beim Aufrufen von [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui)fest. Im folgenden Beispiel wird die Schaltfläche **Abbrechen** ausgeblendet und Example.msi installiert.
 
 
 ```C++
@@ -49,7 +49,7 @@ return 0;
 
 
 
-Um die Schaltfläche **Abbrechen** im Skript auszublenden, fügen Sie msiuilevelhidecancel der [**uilevel**](installer-uilevel.md) -Eigenschaft des [**Installer-Objekts**](installer-object.md)hinzu. Das folgende VBScript-Beispiel blendet die Schaltfläche **Abbrechen** aus und installiert Example.msi.
+Um die Schaltfläche **Abbrechen** im Skript auszublenden, fügen Sie msiUILevelHideCancel zur [**UILevel-Eigenschaft**](installer-uilevel.md) des [**Installerobjekts hinzu.**](installer-object.md) Im folgenden VBScript-Beispiel wird die Schaltfläche **Abbrechen** ausgeblendet und Example.msi installiert.
 
 
 ```VB
@@ -63,11 +63,11 @@ Installer.InstallProduct "example.msi"
 
 ## <a name="hiding-the-cancel-button-for-parts-of-an-installation-using-a-custom-action"></a>Ausblenden der Schaltfläche "Abbrechen" für Teile einer Installation mithilfe einer benutzerdefinierten Aktion
 
-Die Installation kann die Schaltfläche **Abbrechen** während der Teile einer Installation ausblenden und einblenden, indem eine installmessage \_ commondata-Nachricht mithilfe einer benutzerdefinierten DLL-Aktion oder Skripts gesendet wird. Weitere Informationen finden Sie unter [Dynamic Link Libraries](dynamic-link-libraries.md), [Scripts](scripts.md), [Custom Actions](custom-actions.md)und [send messages to Windows Installer using msiprocessmessage](sending-messages-to-windows-installer-using-msiprocessmessage.md).
+Ihre Installation kann die Schaltfläche **Abbrechen** während teilen einer Installation ausblenden und aufheben, indem sie eine INSTALLMESSAGE \_ COMMONDATA-Nachricht mithilfe einer benutzerdefinierten DLL-Aktion oder skripts sendet. Weitere Informationen finden Sie unter [Dynamic Link Libraries](dynamic-link-libraries.md), [Scripts](scripts.md), [Custom Actions](custom-actions.md)und Sending Messages to Windows Installer [Using MsiProcessMessage](sending-messages-to-windows-installer-using-msiprocessmessage.md).
 
-Ein benutzerdefinierte Aktion muss einen Datensatz bereitstellen. Feld 1 dieses Datensatzes muss den Wert 2 (zwei) enthalten, um die Schaltfläche **Abbrechen** anzugeben. Feld 2 muss entweder den Wert 0 oder 1 enthalten. Der Wert 0 in Feld 2 blendet die Schaltfläche aus, und der Wert 1 in Feld 2 blendet die Schaltfläche aus. Beachten Sie, dass die Zuordnung eines Datensatzes der Größe 2 mit [**msikreaterecord**](/windows/desktop/api/Msiquery/nf-msiquery-msicreaterecord) die Felder 0, 1 und 2 bereitstellt.
+Ein Aufruf einer benutzerdefinierten Aktion muss einen Datensatz bereitstellen. Feld 1 dieses Datensatzes muss den Wert 2 (zwei) enthalten, um die Schaltfläche **Abbrechen** anzugeben. Feld 2 muss entweder den Wert 0 oder 1 enthalten. Der Wert 0 in Feld 2 blendet die Schaltfläche aus, und der Wert 1 in Feld 2 entpackt die Schaltfläche. Beachten Sie, dass das Zuordnen eines Datensatzes der Größe 2 mit [**MsiCreateRecord**](/windows/desktop/api/Msiquery/nf-msiquery-msicreaterecord) die Felder 0, 1 und 2 bereitstellt.
 
-Die folgende benutzerdefinierte DLL-Beispiel Aktion blendet die Schaltfläche **Abbrechen** aus.
+Die folgende benutzerdefinierte DLL-Beispielaktion blendet die Schaltfläche **Abbrechen** aus.
 
 
 ```C++

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8d54651e11f1b3de02803d9ea123ca7eff24d7a5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 92a233f70ca43764a7d7a1898749cd8e59ef0a0b9fdb49baf6a3f73d5e1b083f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119100"
 ---
 # <a name="d3dxmatrixdeterminant-function-d3dx9mathh"></a>D3DXMatrixDeterminant-Funktion (D3dx9math.h)
 
@@ -59,14 +59,14 @@ Gibt die Determinante der Matrix zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

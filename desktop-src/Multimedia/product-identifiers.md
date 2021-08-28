@@ -3,19 +3,19 @@ title: Produktbezeichner
 description: Produktbezeichner
 ms.assetid: 671440bb-0ed7-44fe-873c-fcefda8380bc
 keywords:
-- Windows Multimedia,Produktbezeichner
+- Windows,Produktbezeichner
 - Multimedia,Produktbezeichner
 - Produktbezeichner
 - Multimedia-Produktbezeichner
 - Multimediaunternehmen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20bb5a4e958e53c8dda6df71360d5512be0a61ff2ddb42fb77065ee7ce38f8a9
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 15f9117299214aba4658443739f1bc359f7b5ed7
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120037600"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625326"
 ---
 # <a name="product-identifiers"></a>Produktbezeichner
 
@@ -23,8 +23,8 @@ ms.locfileid: "120037600"
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -399,7 +399,7 @@ ms.locfileid: "120037600"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Bei der Corporation</td>
+<td>Vereinigungsunternehmen</td>
 <td><ul>
 <li>MM_ROLAND_MPU401_MIDIIN</li>
 <li>MM_ROLAND_MPU401_MIDIOUT</li>
@@ -414,7 +414,7 @@ ms.locfileid: "120037600"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Sierra Semiconductor Corporation</td>
+<td>Sierra Corp.</td>
 <td><ul>
 <li>MM_SIERRA_ARIA_AUX</li>
 <li>MM_SIERRA_ARIA_AUX2</li>
@@ -482,14 +482,14 @@ ms.locfileid: "120037600"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Tec, Inc.</td>
+<td>UcTec, Inc.</td>
 <td><ul>
 <li>MM_VOCALTEC_WAVEIN</li>
 <li>MM_VOCALTEC_WAVEOUT</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Gegenkn.</td>
+<td>Soll Solls</td>
 <td><ul>
 <li>MM_WANGLABS_WAVEIN1</li>
 <li>MM_WANGLABS_WAVEOUT1</li>

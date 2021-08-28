@@ -1,9 +1,9 @@
 ---
-title: Author-Element
-description: Das Author-Element enthält den Namen des Autors einer Windows Media-Metadatei oder eines Medienclips.
+title: AUTHOR-Element
+description: Das AUTHOR-Element enthält den Namen des Autors einer Windows Medienmetadatei oder eines Medienclips.
 ms.assetid: d80aad3d-4471-4310-8d43-2733ed83103c
 keywords:
-- Fenster "Author Element Windows Media Player"
+- AUTHOR-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9d20498ebd7c8a56edc2e32bc2e76422c9b22242
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 058753d73049debe01e442f49bf12476642111549ad890e931100026badaeb3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098890"
 ---
-# <a name="author-element"></a>Author-Element
+# <a name="author-element"></a>AUTHOR-Element
 
-Das **Author** -Element enthält den Namen des Autors einer Windows Media-Metadatei oder eines Medienclips.
+Das **AUTHOR-Element** enthält den Namen des Autors einer Windows Medienmetadatei oder eines Medienclips.
 
 ``` syntax
 <AUTHOR>   
@@ -34,13 +34,13 @@ Das **Author** -Element enthält den Namen des Autors einer Windows Media-Metada
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Element            |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag** |
+| Übergeordnete Elemente | **ASX**, **ENTRY** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -49,13 +49,13 @@ Dieses Element weist keine Attribute auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element enthält eine Text Zeichenfolge, die den Namen des Autors einer Windows Media-Metadatei oder eines Medienclips darstellt. Sie können das **Author** -Element innerhalb des **ASX** -Elements und innerhalb der **Entry** -Elemente verwenden.
+Dieses Element enthält eine Textzeichenfolge, die den Namen des Autors einer Medienmetadatei Windows Medienclips darstellt. Sie können das **AUTHOR-Element** innerhalb des **ASX-Elements** und in **ENTRY-Elementen** verwenden.
 
-Wenn dieses Element im Element " **ASX** " angezeigt wird, wird der Text als "Informationen **anzeigen** " angezeigt.
+Wenn dieses Element im **ASX-Element angezeigt** wird, wird der Text als Informationen **anzeigen** angezeigt.
 
-Wenn dieses Element in einem **Entry** -Element angezeigt wird, wird der Text als Clip-Autor angezeigt.
+Wenn dieses Element in einem **ENTRY-Element angezeigt** wird, wird der Text als Clipautor angezeigt.
 
-Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeordnetes **Author** -Element enthalten. Mehrere **Autoren** Elemente nach dem ersten werden ignoriert und werden nicht angezeigt.
+Jedes übergeordnete **ASX-** **und ENTRY-Element** sollte mindestens ein untergeordnetes **AUTHOR-Element** enthalten. Mehrere **AUTHOR-Elemente** nach dem ersten werden ignoriert und nicht angezeigt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -79,7 +79,7 @@ Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeor
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -87,10 +87,10 @@ Jedes über **geordnete-** und- **Entry** -Element muss höchstens ein untergeor
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zur Medienmetadatei**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

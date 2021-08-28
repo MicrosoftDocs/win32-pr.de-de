@@ -7,25 +7,25 @@ MSHAttr:
 title: MmsConfiguration
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0217dae3aad8afb70997d27db3053a6bac9f41b2
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: ff6612ce37bfa39b9498b6db4b9ce49cb06a6326
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/26/2021
-ms.locfileid: "122882938"
+ms.locfileid: "122982133"
 ---
 # <a name="span-idwwan_profile_v4element_mmsconfigurationspanmmsconfiguration"></a><span id="WWAN_profile_v4.element_MmsConfiguration"></span>MmsConfiguration
 
-Konfigurationsinformationen für den Multimedia Messaging Service (MMS).
+Konfigurationsinformationen für Multimedia Messaging Service (MMS).
 
 Zusätzlich zum Festlegen der Konfigurationselemente in diesem Element muss ein MMS-Profil die folgenden Einstellungen aufweisen.
 
--   Das [**Name-Element**](element-name.md) muss einen systemweiten eindeutigen Namen enthalten.
--   [**ProfileCreationType muss**](./schema-profilecreationtype-mbnprofile-element.md) auf **UserProvisioned festgelegt werden.**
--   Die [**SimIccID muss**](/windows/win32/api/mbnapi/nf-mbnapi-imbnsubscriberinformation-get_simiccid) die SIM-ID der SIM enthalten, für die dieses Profil vorgesehen ist.
--   Der [**ConnectionMode muss**](./schema-connectionmode-mbnprofile-element.md) auf Manual **festgelegt werden.**
--   Die [**PurposeGroupGuid muss**](element-purposegroupguid.md) die GUID für die MMS-Zweckgruppe enthalten.
--   Das [**IsAdditionalPdpContextProfile**](/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)) muss auf true festgelegt **werden.**
+-   Das [**Name-Element**](element-name.md) muss einen systemweit eindeutigen Namen enthalten.
+-   [**ProfileCreationType**](./schema-profilecreationtype-mbnprofile-element.md) muss auf **UserProvisioned** festgelegt werden.
+-   Die [**SimIccID**](/windows/win32/api/mbnapi/nf-mbnapi-imbnsubscriberinformation-get_simiccid) muss die MUSTID der SIM enthalten, für die dieses Profil vorgesehen ist.
+-   [**ConnectionMode**](./schema-connectionmode-mbnprofile-element.md) muss auf **Manuell** festgelegt werden.
+-   [**PurposeGroupGuid**](element-purposegroupguid.md) muss die GUID für die MMS-Zweckgruppe enthalten.
+-   [**IsAdditionalPdpContextProfile**](/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)) muss auf **true** festgelegt werden.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -70,17 +70,19 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | Beschreibung | 
+| Übergeordnetes Element | BESCHREIBUNG | 
 |----------------|-------------|
-| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
+| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein mobiles Breitbandprofil mit einem umfangreicheren Satz von Optionen als das MBNProfile-Element.</p><p>Ein Profil kann mehrere MbnProfileExt-Elemente enthalten, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

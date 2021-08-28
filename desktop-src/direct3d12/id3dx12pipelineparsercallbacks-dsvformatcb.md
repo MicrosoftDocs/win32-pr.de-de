@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks depthstencilstatuecb-Methode (D3DX12. h) (DSV)
-description: Ruft den untergeordneten Rückruf eines Objekts, das diese Schnittstelle implementiert, mit dem tiefen Schablone-Wert Format auf.
+title: ID3DX12PipelineParserCallbacks DepthStencilStateCb-Methode (D3DX12.h) (DSV)
+description: Ruft den Rückruf des Unterobjektrückrufs für das Format des Tiefenschablonenwerts eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: BDD3AB24-34C6-41C8-984D-78A45867BF24
 keywords:
-- Depthstencilstatuecb-Methode
-- Depthstencilstatus ECB-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks Interface, depthstencilstatuecb-Methode
+- DepthStencilStateCb-Methode
+- DepthStencilStateCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, DepthStencilStateCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd40b138c357c143deafffe01252b3c8b3e87cda
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: d72a7501c57af515a9c9e26a435aaae02ae3ebd4cdb260f37800fda1be3d720e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106372031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096418"
 ---
-# <a name="id3dx12pipelineparsercallbacks-depthstencilstatecb-method-d3dx12h-for-depth-stencil-value"></a>ID3DX12PipelineParserCallbacks depthstencilstatuecb-Methode (D3DX12. h) für den tiefen Schablonen Wert
+# <a name="id3dx12pipelineparsercallbacks-depthstencilstatecb-method-d3dx12h-for-depth-stencil-value"></a>ID3DX12PipelineParserCallbacks DepthStencilStateCb-Methode (D3DX12.h) für den Tiefenschablonenwert
 
-Ruft den untergeordneten Rückruf eines Objekts, das diese Schnittstelle implementiert, mit dem tiefen Schablone-Wert Format auf.
+Ruft den Rückruf des Unterobjektrückrufs für das Format des Tiefenschablonenwerts eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ void DepthStencilStateCb(
 
 <dl> <dt>
 
-*Depthstencilstate* 
+*DepthStencilState* 
 </dt> <dd>
 
-Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Details zum Format des tiefen Schablone-Wert Formats, das aus einem Pipeline Status-Stream analysiert wurde.
+Details des Unterobjekts für das Format des Tiefenschablonenwerts, das aus einem Pipelinezustandsdatenstrom analysiert wird.
 
 </dd> </dl>
 
@@ -62,8 +62,8 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
@@ -78,7 +78,7 @@ Gibt nichts zurück.
 [**ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)
 </dt> <dt>
 
-[**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+[**\_DXGI-FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 </dt> </dl>
 
  

@@ -1,48 +1,48 @@
 ---
-title: Steuern von Zugriffsrechten (AD DS)
-description: Alle Objekte in Active Directory Domain Services unterstützen einen Standardsatz von Zugriffsrechten, der in der AD \_ Rights \_ enum-Enumeration definiert ist.
+title: Zugriffssteuerungsrechte (AD DS)
+description: Alle Objekte in Active Directory Domain Services unterstützen einen Standardsatz von Zugriffsrechten, die in der ADS \_ RIGHTS \_ ENUM-Enumeration definiert sind.
 ms.assetid: 27ad74bd-ad87-422e-a4a2-02c0d51c4dd4
 ms.tgt_platform: multiple
 keywords:
-- Zugriffsrechte Steuern
+- Steuern von Zugriffsrechten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 048c4aa685e0c569ef2ac762dcf17366a2394826
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: c975ac20cac683e754f1b703bd272356c9b8df8f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472644"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881618"
 ---
-# <a name="control-access-rights-ad-ds"></a>Steuern von Zugriffsrechten (AD DS)
+# <a name="control-access-rights-ad-ds"></a>Zugriffssteuerungsrechte (AD DS)
 
-Alle Objekte in Active Directory Domain Services unterstützen einen Standardsatz von Zugriffsrechten, der in der [**AD \_ Rights \_ enum**](/windows/win32/api/iads/ne-iads-ads_rights_enum) -Enumeration definiert ist. Diese Zugriffsrechte können in den Access Control Einträgen (ACEs) der Sicherheits Beschreibung eines Objekts verwendet werden, um den Zugriff auf das Objekt zu steuern. Das heißt, um zu steuern, wer Standard Vorgänge ausführen kann, z. b. das Erstellen und Löschen von untergeordneten Objekten oder das Lesen und Schreiben der Objekt Attribute. Bei manchen Objektklassen kann es jedoch wünschenswert sein, den Zugriff auf eine Art und Weise zu steuern, die von den Standard Zugriffsrechten nicht unterstützt wird. Um dies zu vereinfachen, Active Directory Domain Services zulassen, dass der standardmäßige Zugriffs Steuerungsmechanismus durch das **controlAccessRight** -Objekt erweitert wird.
+Alle Objekte in Active Directory Domain Services unterstützen einen Standardsatz von Zugriffsrechten, die in der [**ADS \_ RIGHTS \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_rights_enum) definiert sind. Diese Zugriffsrechte können in den Access Control Einträgen (ACEs) der Sicherheitsbeschreibung eines Objekts verwendet werden, um den Zugriff auf das Objekt zu steuern. Das heißt, um zu steuern, wer Standardvorgänge ausführen kann, z. B. das Erstellen und Löschen von untergeordneten Objekten oder das Lesen und Schreiben der Objektattribute. Für einige Objektklassen kann es jedoch wünschenswert sein, den Zugriff auf eine Weise zu steuern, die von den Standardzugriffsrechten nicht unterstützt wird. Um dies zu erleichtern, Active Directory Domain Services zulassen, dass der Standardmechanismus für die Zugriffssteuerung über das **controlAccessRight-Objekt** erweitert wird.
 
-Zugriffsrechte für das Steuerelement werden auf drei Arten verwendet:
+Zugriffssteuerungsrechte werden auf drei Arten verwendet:
 
--   Für erweiterte Rechte, bei denen es sich um spezielle Vorgänge handelt, die nicht vom Standardsatz von Zugriffsrechten abgedeckt werden. Der Benutzerklasse kann z. b. ein "Send as"-Recht erteilt werden, das von Exchange, Outlook oder einer beliebigen anderen e-Mail-Anwendung verwendet werden kann, um zu bestimmen, ob ein bestimmter Benutzer in seinem Namen eine e-Mail senden kann. Erweiterte Rechte werden für **controlAccessRight** -Objekte erstellt, indem das **validzugriffsattribut** auf die gleiche Anzeige des Zugriffsrechts **\_ \_ DS \_ Control \_ Access** (256) festgelegt wird.
--   Zum Definieren von Eigenschaften Sätzen, um das Steuern des Zugriffs auf eine Teilmenge der Attribute eines Objekts anstelle der einzelnen Attribute zu aktivieren. Mithilfe der standardmäßigen Zugriffsrechte kann ein einzelner Ace den Zugriff auf alle Attribute eines Objekts oder auf ein einzelnes Attribut gewähren oder verweigern. Steuerungs Zugriffsrechte bieten eine Möglichkeit für einen einzelnen ACE, den Zugriff auf einen Satz von Attributen zu steuern. Beispielsweise unterstützt die User-Klasse die Eigenschaft " **Personal-Information** ", die Attribute wie z. b. die Adresse der Straße und die Telefonnummer enthält. Eigenschaften Satz Rechte werden für **controlAccessRight** -Objekte erstellt, indem das **validaccess** -Attribut so festgelegt wird, dass es die **actr \_ DS \_ Read \_ Prop** (16) und die **actrl \_ DS- \_ Schreib \_ Prop** -Zugriffsrechte (32) enthält.
--   Für validierte Schreibvorgänge, die erfordern, dass das System eine Wert Überprüfung durchführt, oder Überprüfung, die über die für das Schema erforderliche Validierung hinausgeht, bevor ein Wert in ein Attribut für ein DS-Objekt geschrieben wird. Dadurch wird sichergestellt, dass der für das Attribut eingegebene Wert der erforderlichen Semantik entspricht, sich innerhalb eines gültigen Bereichs von Werten befindet oder eine andere besondere Prüfung durchführt, die für einen einfachen Schreibvorgang auf niedriger Ebene in das Attribut nicht durchgeführt würde. Ein validierter Schreibvorgang ist einer speziellen Berechtigung zugeordnet, die sich von der Berechtigung "Write" unterscheidet <attribute> , die es ermöglicht, dass ein beliebiger Wert in das Attribut geschrieben wird, ohne dass eine Wert Überprüfung durchgeführt wird Der validierte Schreibvorgang ist das einzige der drei Steuerungs Zugriffsrechte, das nicht als neues Zugriffsrecht für eine Anwendung erstellt werden kann. Dies liegt daran, dass das vorhandene System nicht Programm gesteuert geändert werden kann, um die Überprüfung zu erzwingen. Wenn ein Zugriffsrecht für das Steuerelement im System als validierter Schreibvorgang eingerichtet wurde, enthält das **validzugriffsattribut** für die **controlAccessRight** -Objekte das Zugriffsrecht " **AD \_ right \_ DS \_ Self** (8)".
+-   Für erweiterte Rechte, bei denen es sich um spezielle Vorgänge handelt, die nicht durch den Standardsatz von Zugriffsrechten abgedeckt sind. Der Benutzerklasse kann z. B. das Recht "Senden als" gewährt werden, das von Exchange, Outlook oder einer anderen E-Mail-Anwendung verwendet werden kann, um zu bestimmen, ob ein bestimmter Benutzer von einem anderen Benutzer E-Mails in dessen Namen senden kann. Erweiterte Rechte werden für **controlAccessRight-Objekte** erstellt, indem das **attribut validAccesses** auf das **Zugriffsrecht ADS \_ RIGHT \_ DS CONTROL \_ \_ ACCESS** (256) festgelegt wird.
+-   Zum Definieren von Eigenschaftensätzen, um die Steuerung des Zugriffs auf eine Teilmenge der Attribute eines Objekts zu ermöglichen, anstatt nur auf die einzelnen Attribute. Mithilfe der Standardzugriffsrechte kann ein einzelner ACE den Zugriff auf alle Attribute eines Objekts oder auf ein einzelnes Attribut gewähren oder verweigern. Zugriffssteuerungsrechte bieten einem einzelnen ACE die Möglichkeit, den Zugriff auf einen Satz von Attributen zu steuern. Die Benutzerklasse unterstützt z. B. den Eigenschaftensatz **Personal-Information,** der Attribute wie Adresse und Telefonnummer enthält. Eigenschaftssatzrechte werden für **controlAccessRight-Objekte** erstellt, indem das **attribut validAccesses** auf die Zugriffsberechtigungen **ACTR \_ DS \_ READ \_ PROP** (16) und **ACTRL \_ DS WRITE \_ \_ PROP** (32) festgelegt wird.
+-   Für validierte Schreibvorgänge, um vor dem Schreiben eines Werts in ein Attribut für ein DS-Objekt eine Wertüberprüfung oder -validierung zu erzwingen, die über das hinausgeht, was für das Schema erforderlich ist. Dadurch wird sichergestellt, dass der für das Attribut eingegebene Wert der erforderlichen Semantik entspricht, innerhalb eines rechtlichen Wertebereichs liegt oder einer anderen speziellen Überprüfung unterzogen wird, die nicht für einen einfachen Schreibvorgang auf niedriger Ebene in das Attribut durchgeführt würde. Ein überprüfter Schreibvorgang ist einer speziellen Berechtigung zugeordnet, die sich von der Berechtigung "Write &lt; &gt; attribute" unterscheidet, die das Schreiben eines beliebigen Werts in das Attribut ohne durchgeführte Wertüberprüfung ermöglicht. Der überprüfte Schreibvorgang ist die einzige der drei Steuerelementzugriffsrechte, die nicht als neues Steuerelementzugriffsrecht für eine Anwendung erstellt werden können. Dies liegt daran, dass das vorhandene System nicht programmgesteuert geändert werden kann, um die Validierung zu erzwingen. Wenn ein Steuerelementzugriffsrecht im System als überprüfter Schreibvorgang eingerichtet wurde, enthält das **validAccesses-Attribut** für die **controlAccessRight-Objekte** das **ADS RIGHT \_ \_ DS \_ SELF** (8)-Zugriffsrecht.
 
-    Im Windows 2000-Active Directory Schema sind nur drei validierte Schreibvorgänge definiert:
+    Im Active Directory-Schema Windows 2000 sind nur drei überprüfte Schreibvorgänge definiert:
 
-    -   Self-Membership Berechtigung für ein Gruppen Objekt, mit dem das Konto des Aufrufers, aber kein anderes Konto, der Mitgliedschaft einer Gruppe hinzugefügt oder daraus entfernt werden kann.
-    -   Validieren der DNS-Host-Name-Berechtigung für ein Computer Objekt, das ein DNS-Hostname-Attribut zulässt, das mit dem festzulegenden Computer Namen und Domänen Namen kompatibel ist.
-    -   Validierte SPN-Berechtigung für ein Computer Objekt, das ein SPN-Attribut zulässt, das mit dem DNS-Hostnamen des festzulegenden Computers kompatibel ist.
+    -   Self-Membership Berechtigung für ein Group-Objekt, mit dem das Konto des Aufrufers, aber kein anderes Konto, der Mitgliedschaft einer Gruppe hinzugefügt oder daraus entfernt werden kann.
+    -   Überprüfte DNS-Hostname-Berechtigung für ein Computerobjekt, das das Festlegen eines DNS-Hostnamenattributs ermöglicht, das mit dem Computernamen und Domänennamen kompatibel ist.
+    -   Überprüfte SPN-Berechtigung für ein Computerobjekt, das das Festlegen eines SPN-Attributs ermöglicht, das mit dem DNS-Hostnamen des Computers kompatibel ist.
 
-Aus praktischer Gründen wird jedes Steuerelement Zugriffsrecht durch ein **controlAccessRight** -Objekt im Extended-Rights Container der Konfigurations Partition dargestellt, auch wenn Eigenschaften Sätze und validierte Schreibvorgänge nicht als erweiterte Rechte betrachtet werden. Da der Konfigurations Container über die gesamte Gesamtstruktur repliziert wird, werden die Steuerungs Rechte über alle Domänen in einer Gesamtstruktur hinweg weitergegeben. Es gibt eine Reihe von vordefinierten Steuerungs Zugriffsrechten, und natürlich können auch benutzerdefinierte Zugriffsrechte definiert werden.
+Der Einfachheit halber wird jedes Steuerelementzugriffsrecht durch ein **controlAccessRight-Objekt** im Extended-Rights Container der Konfigurationspartition dargestellt, obwohl Eigenschaftssätze und überprüfte Schreibvorgänge nicht als erweiterte Rechte betrachtet werden. Da der Konfigurationscontainer in der gesamten Gesamtstruktur repliziert wird, werden Steuerungsrechte über alle Domänen in einer Gesamtstruktur verteilt. Es gibt eine Reihe vordefinierter Zugriffsberechtigungen für die Steuerung, und natürlich können auch benutzerdefinierte Zugriffsrechte definiert werden.
 
-Alle Steuerungs Zugriffsrechte können im ACL-Editor als Berechtigungen angezeigt werden.
+Alle Zugriffssteuerungsrechte können als Berechtigungen im ACL-Editor angezeigt werden.
 
-Weitere Informationen und ein C++-und Visual Basic Codebeispiel, in dem ein ACE zum Steuern des Lese-/Schreibzugriffs auf einen Eigenschaften Satz festgelegt wird, finden Sie unter [Beispielcode für das Festlegen eines ACE für ein Verzeichnis Objekt](example-code-for-setting-an-ace-on-a-directory-object.md).
+Weitere Informationen und ein C++- und Visual Basic Codebeispiel, das einen ACE zum Steuern des Lese-/Schreibzugriffs auf einen Eigenschaftensatz festlegt, finden Sie unter [Beispielcode zum Festlegen eines ACE für ein Verzeichnisobjekt.](example-code-for-setting-an-ace-on-a-directory-object.md)
 
-Weitere Informationen zum Steuern des Zugriffs auf besondere Vorgänge mithilfe von Zugriffsrechten finden Sie unter:
+Weitere Informationen zur Verwendung von Zugriffssteuerungsrechten zum Steuern des Zugriffs auf spezielle Vorgänge finden Sie unter:
 
--   [Erstellen eines Zugriffsrechts für das Steuerelement](creating-a-control-access-right.md)
--   [Festlegen eines Steuerungs Zugriffsrechts-ACE in der ACL eines Objekts](setting-a-control-access-right-ace-in-an-objectampaposs-acl.md)
--   [Überprüfen des Zugriffs auf das Steuerungs Recht in der ACL eines Objekts](checking-a-control-access-right-in-an-objectampaposs-acl.md)
--   [Lesen eines Steuerelement Zugriffsrechts, das in der ACL eines Objekts festgelegt ist](reading-a-control-access-right-set-in-an-objectampaposs-acl.md)
+-   [Erstellen eines Steuerelementzugriffsrechts](creating-a-control-access-right.md)
+-   [Festlegen eines Zugriffssteuerungs-ACE in der Zugriffssteuerungsliste eines Objekts](setting-a-control-access-right-ace-in-an-objectampaposs-acl.md)
+-   [Überprüfen eines Steuerelementzugriffsrechts in der ACL eines Objekts](checking-a-control-access-right-in-an-objectampaposs-acl.md)
+-   [Lesen eines Steuerelementzugriffs-Berechtigungssatzes in der ACL eines Objekts](reading-a-control-access-right-set-in-an-objectampaposs-acl.md)
 
- 
+ 
 
- 
+ 

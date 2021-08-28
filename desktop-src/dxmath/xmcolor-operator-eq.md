@@ -11,12 +11,12 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 7f7b158c0f059e6bc3efda9d7a45cf62a8d524271fea98c18ebd02ed503a9777
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 37edc20a644b6e25ce3a973b8dc77c583423447c
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118276524"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626326"
 ---
 # <a name="xmcolor-operator--operators"></a>XMCOLOR-Operator = Operatoren
 
@@ -28,19 +28,19 @@ Weist der aktuellen Instanz von [**XMCOLOR**](/windows/desktop/api/DirectXPacked
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Operator</th>
-<th style="text-align: left;">Beschreibung</th>
+<th >Operator</th>
+<th >Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const XMCOLOR&)</a></td>
-<td style="text-align: left;">Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a> der aktuellen Instanz von <strong>XMCOLOR</strong>zu.<br/>
+<td ><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const XMCOLOR&)</a></td>
+<td >Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a> der aktuellen Instanz von <strong>XMCOLOR</strong>zu.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -48,8 +48,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const uint32_t)</a></td>
-<td style="text-align: left;">Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a>zu.<br/>
+<td ><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const uint32_t)</a></td>
+<td >Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a>zu.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -61,7 +61,7 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: SampleBias (DirectX HLSL-Texturobjekt)
-description: Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene angewendet wurde.
+description: Samples a texture, after applying the input bias to the mipmap level.
 ms.assetid: 1bc03ad8-7b69-4001-81c7-64d8c631d68d
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,18 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0e1cb91c7564bfff6e21fb1cdf0dcdbf28f68d928b85274e33c964a290f3231e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: a279a92db9d38c8f0a8e80edbd87ec667d580d05
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119119774"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624526"
 ---
 # <a name="samplebias-directx-hlsl-texture-object"></a>SampleBias (DirectX HLSL-Texturobjekt)
 
-Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene angewendet wurde.
+Samples a texture, after applying the input bias to the mipmap level.
 
-&lt;Template Type &gt; Object.SampleBias( sampler \_ state S, float Location, float Bias \[ , int Offset \] );
+&lt;Vorlagentyp &gt; Object.SampleBias( \_ Samplerzustand S, float Location, float Bias \[ , int Offset \] );
 
 
 
@@ -32,8 +32,8 @@ Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene ange
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -44,7 +44,7 @@ Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene ange
 <tbody>
 <tr class="odd">
 <td><span id="Object"></span><span id="object"></span><span id="OBJECT"></span><em>Objekt</em><br/></td>
-<td>Jeder <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (mit Ausnahme von Texture2DMS und Texture2DMSArray).<br/></td>
+<td>Beliebiger <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (außer Texture2DMS und Texture2DMSArray).<br/></td>
 </tr>
 <tr class="even">
 <td><span id="S"></span><span id="s"></span><em>S</em><br/></td>
@@ -56,7 +56,7 @@ Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene ange
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -84,16 +84,16 @@ Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene ange
 </tr>
 <tr class="even">
 <td><p><span id="Bias"></span><span id="bias"></span><span id="BIAS"></span><em>Vorurteil</em></p></td>
-<td><p>[in] Der Biaswert, bei dem es sich um eine Gleitkommazahl zwischen -16,0 und 15,99 handelt, wird vor der Stichprobenentnahme auf eine Mip-Ebene angewendet.</p></td>
+<td><p>[in] Der Biaswert, bei dem es sich um eine Gleitkommazahl zwischen -16,0 und 15,99 handelt, wird vor der Stichprobenentnahme auf eine MIP-Ebene angewendet.</p></td>
 </tr>
 <tr class="odd">
 <td><p><span id="Offset"></span><span id="offset"></span><span id="OFFSET"></span><em>Offset</em></p></td>
-<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Die Texturoffsets müssen statisch sein. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter <a href="/windows/win32/direct3dhlsl/dx-graphics-hlsl-to-sample#applying-texture-coordinate-offsets">Anwenden von Texturkoordinatenoffsets.</a></p>
+<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Die Texturoffsets müssen statisch sein. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter <a href="/windows/win32/direct3dhlsl/dx-graphics-hlsl-to-sample#applying-texture-coordinate-offsets">Anwenden von Texturkoordinatenoffsets.</a></p>
 
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -128,15 +128,15 @@ Stichproben einer Textur, nachdem die Eingabeabweichung auf die Mipmapebene ange
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Vorlagentyp der Textur, bei dem es sich um einen Ein- oder Mehrkomponentenvektor aussetzen kann. Das Format basiert auf dem [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)der Textur.
+Der Vorlagentyp der Textur, der ein Vektor mit einer oder mehreren Komponenten sein kann. Das Format basiert auf dem DXGI FORMAT der [**\_ Textur.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-| Vs \_ 4 \_ 0 | Vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
+| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
 |----------|-----------|----------|-----------|----------|-----------|
 |          |           | x        | x         |          |           |
 
@@ -144,14 +144,14 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
  
 
-1.  TextureCubeArray ist im Shadermodell 4.1 oder höher verfügbar.
-2.  Shadermodell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
+1.  TextureCubeArray ist in Shader Model 4.1 oder höher verfügbar.
+2.  ShaderModell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Texturobjekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

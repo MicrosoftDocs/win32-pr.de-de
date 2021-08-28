@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 4271a0b70e9468a816302b8c78e3d59f7388a3e8c2ef9973c3082500da6ea2d7
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 22e2bc8654306031e417532ea8eb3c7b8df8c5bc
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118985950"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632138"
 ---
 # <a name="span-idvspixengineipixenginesingletonspanipixenginesingleton-interface"></a><span id="vspixengine.ipixenginesingleton"></span>IPixEngineSingleton-Schnittstelle
 
@@ -32,9 +32,9 @@ Bestimmt, ob die Engine eine Singletoninstanz unterstützt oder nicht.
 
 Die **IPixEngineSingleton-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 1ebe9ab0232104886078256effdfaf5534144dc30421dab2ac2359ef390c0a69
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 90e60f3f197db78a3ec399c2f8ffe7144901b097
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120118150"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625366"
 ---
 # <a name="span-idvspixengineexperimentspanexperiment-structure"></a><span id="vspixengine.experiment"></span>Experimentstruktur
 
@@ -41,7 +41,7 @@ Stellt Informationen zu einem Experiment (Erfassung) dar.
 Die zugeordnete Prozess-ID.
 
 **applicationName**  
-Eine COM-Zeichenfolge, die den Namen der Anwendung enthält, für die das Experiment ausgeführt werden soll.
+Eine COM-Zeichenfolge, die den Namen der Anwendung enthält, auf der das Experiment ausgeführt werden soll.
 
 **commandLineArguments**  
 Eine COM-Zeichenfolge, die die Befehlszeilenargumente enthält.
@@ -53,20 +53,20 @@ Eine COM-Zeichenfolge, die den Pfad des Arbeitsverzeichnisses enthält.
 Eine COM-Zeichenfolge, die den Dateipfad der temporären Datei enthält, die zum Ausführen des Experiments verwendet wird.
 
 **startOption**  
-Die dem Experiment zugeordnete Startoption.
+Die start-Option, die dem Experiment zugeordnet ist.
 
 **experimentType**  
 Die Art des Experiments (Erfassung).
 
 **uiLocale**  
-Die ID des Gebietsschemas, das während der Erfassung für UI-Überlagerungselemente verwendet wird. Dies wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
+Die ID des Für benutzeroberflächenüberlagerungselemente während der Auslösung (Erfassung) verwendeten Locales. Diese wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
 
 **registryRoot**  
-Eine COM-Zeichenfolge, die den Registrierungsstamm enthält. Dies wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
+Eine COM-Zeichenfolge, die den Registrierungsstamm enthält. Diese wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

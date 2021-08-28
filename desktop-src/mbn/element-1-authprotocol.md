@@ -16,20 +16,20 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 46840bf958688ff8a1a1da4a796c07bfe21bd89d
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 26dff13e189d70ce0c57dbd0ce9642ffd1722283
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122469407"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122982823"
 ---
 # <a name="span-idwwan_profile_v4element_1_authprotocolspanmodemdmconfigprofileauthprotocol-v4"></a><span id="WWAN_profile_v4.element_1_AuthProtocol"></span>ModemDMConfigProfile \/ ... \/ AuthProtocol (v4)
 
 >Gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
 
-Beachten Sie, dass in v4 ein neuer Enumerationswert für dieses Element verfügbar ist. **AutoSelection bedeutet,** dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden soll.
+Beachten Sie, dass in v4 ein neuer Enumerationswert für dieses Element verfügbar ist. **AutoSelection** bedeutet, dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden soll.
 
-Weitere Informationen finden Sie in der Dokumentation zum [**v1-AuthProtocol-Element.**](./schema-authprotocol-contexttype-element.md)
+Weitere Informationen finden Sie in der Dokumentation für das [**v1-AuthProtocol-Element.**](./schema-authprotocol-contexttype-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -74,7 +74,9 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

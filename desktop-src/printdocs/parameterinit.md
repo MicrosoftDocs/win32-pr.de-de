@@ -4,26 +4,26 @@ ms.assetid: d5419c40-43e9-49ff-a378-9aeb0757e400
 title: ParameterInit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b961ede78b313e7fb3655024705a13f04edb947344493be4fe49ff14b5d00843
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d60fa8cc98034d289a61d11e247ed2cd64f656c4
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119947856"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886188"
 ---
 # <a name="parameterinit"></a>ParameterInit
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Definiert einen Wert für eine Instanz eines ParameterDef-Elements. Ein ParameterInit-Element ist das Ziel des Verweises, der von einem ParameterRef-Element vorgenommen wird.
+Definiert einen Wert für eine Instanz eines ParameterDef-Elements. Ein ParameterInit-Element ist das Ziel des Verweises, der von einem ParameterRef-Element erstellt wird.
 
 ## <a name="element-tag"></a>Elementtag
 
-<ParameterInit>
+&lt;ParameterInit&gt;
 
 ## <a name="xml-attributes"></a>XML-Attribute
 
-In der folgenden Tabelle sind die XML-Attribute aufgeführt, die für dieses Element gelten können.
+In der folgenden Tabelle sind die XML-Attribute aufgeführt, die möglicherweise zu diesem Element gehören.
 
 
 
@@ -39,15 +39,15 @@ Weitere Informationen finden Sie im Abschnitt [XML-Attribute.](xml-attributes.md
 
 ## <a name="element-information"></a>Elementinformationen
 
-In der folgenden Tabelle sind die Elemente aufgeführt, die diesem Element unter Umständen über- oder unteren Elementen liegen, sowie alle Einschränkungen für das Element selbst.
+In der folgenden Tabelle sind die Elemente aufgeführt, die möglicherweise die untergeordneten Elemente dieses Elements sind, sowie alle Einschränkungen für das Element selbst.
 
 
 
-| Kategorie                   | Name oder Einschränkung                                                                                                  |
+| Category                   | Name oder Einschränkung                                                                                                  |
 |----------------------------|---------------------------------------------------------------------------------------------------|
-| Übergeordnete Elemente<br/> | PrintTicket (PrintTicket root)<br/>                                                         |
+| Übergeordnete Elemente<br/> | PrintTicket (PrintTicket-Stamm)<br/>                                                         |
 | Untergeordnete Elemente<br/>  | Wert (eins)<br/>                                                                            |
-| Dieses Element<br/>    | Zeichendaten sind nicht zulässig.<br/> Doppelte untergeordnete gleichgeordnete Elemente sind nicht zulässig.<br/> |
+| Dieses Element<br/>    | Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete gleichgeordnete Elemente sind nicht zulässig.<br/> |
 
 
 
@@ -59,7 +59,7 @@ Keine
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein -Parameter mit 1 initialisiert. Im Beispiel in [ParameterDef](parameterdef.md) wird veranschaulicht, wie alle erforderlichen Property-Elemente für diesen Parameter festgelegt werden.
+Im folgenden Beispiel wird ein Parameter mit 1 initialisiert. Das Beispiel in [ParameterDef](parameterdef.md) veranschaulicht, wie alle erforderlichen Property-Elemente für diesen Parameter festgelegt werden.
 
 ``` syntax
 <psf:ParameterInit name="psk:PageCopyCount">

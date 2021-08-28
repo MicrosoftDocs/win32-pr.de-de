@@ -1,28 +1,28 @@
 ---
 description: Eine WS-Transfer Meldung, die zum Anfordern von Metadaten verwendet wird.
 ms.assetid: 18bf27aa-6ae5-4419-ae68-6df9eda10cd4
-title: Get-http-Anforderung und-Nachricht (Metadatenaustausch)
+title: Get-HTTP-Anforderung und -Nachricht (Metadata Exchange)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8ad240a51fdbabf4184b8769f4e3cca6daa4244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 994e02b990dc87cf8551e215bc7eae94dbcf7852
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343815"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632068"
 ---
-# <a name="get-metadata-exchange-http-request-and-message"></a>Get-http-Anforderung und-Nachricht (Metadatenaustausch)
+# <a name="get-metadata-exchange-http-request-and-message"></a>Get-HTTP-Anforderung und -Nachricht (Metadata Exchange)
 
-Eine GET-Nachricht ist eine WS-Transfer Nachricht, die zum Anfordern von Metadaten verwendet wird. Weitere Informationen zu Get-Nachrichten finden Sie im Abschnitt 3,1 der [WS-Transfer-Spezifikation](https://specs.xmlsoap.org/ws/2004/09/transfer/WS-Transfer.pdf). Da der Metadatenaustausch über HTTP erfolgt, ist eine GET-Nachricht die Nutzlast einer HTTP-Anforderung.
+Eine Get-Nachricht ist eine WS-Transfer Nachricht, die zum Anfordern von Metadaten verwendet wird. Weitere Informationen zum Abrufen von Nachrichten finden Sie in Abschnitt 3.1 der [WS-Transfer-Spezifikation.](https://specs.xmlsoap.org/ws/2004/09/transfer/WS-Transfer.pdf) Da der Metadatenaustausch über HTTP erfolgt, ist eine Get-Nachricht die Nutzlast einer HTTP-Anforderung.
 
-DPWS-Clients senden Get-Nachrichten. Funktions Ermittlungs Clients, WSDAPI-Clients, die [**wsdcreatedeviceproxy**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy)aufrufen, und WSDAPI-Clients, die [**wsdcreatedeviceproxyadvanced**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxyadvanced) aufrufen, senden diese Nachricht.
+DPWS-Clients senden Get-Nachrichten. Funktionsermittlungsclients, WSDAPI-Clients, die [**WSDCreateDeviceProxy**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy)aufrufen, und WSDAPI-Clients, die [**WSDCreateDeviceProxyAdvanced**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxyadvanced) aufrufen, senden diese Nachricht.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Das folgende Beispiel zeigt eine HTTP-Beispiel Anforderung.
+Das folgende Beispiel zeigt eine Get HTTP-Anforderung.
 
 ``` syntax
 POST /37f86d35-e6ac-4241-964f-1d9ae46fb366
@@ -36,33 +36,33 @@ Cache-Control: no-cache
 Pragma: no-cache
 ```
 
-Eine get http-Anforderung weist die folgenden Schwerpunkt Punkte auf.
+Eine GET-HTTP-Anforderung verfügt über die folgenden Fokuspunkte.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>Kopfzeile</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>URL-Pfad</td>
 <td><pre class="syntax" data-space="preserve"><code>POST /37f86d35-e6ac-4241-964f-1d9ae46fb366</code></pre></td>
-<td>Der URL-Pfad, an den die HTTP-Anforderung Get gesendet wurde.</td>
+<td>Der URL-Pfad, unter dem die GET-HTTP-Anforderung gesendet wurde.</td>
 </tr>
 <tr class="even">
 <td>Host und Port</td>
 <td><pre class="syntax" data-space="preserve"><code>Host: 192.168.0.2:5357</code></pre></td>
-<td>Der Host und der Port, an den die HTTP-Anforderung Get weitergeleitet wurde.</td>
+<td>Der Host und Port, an den die GET-HTTP-Anforderung weitergeleitet wurde.</td>
 </tr>
 </tbody>
 </table>
@@ -71,7 +71,7 @@ Eine get http-Anforderung weist die folgenden Schwerpunkt Punkte auf.
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Beispiel Nachricht für das Get-Beispiel.
+Die folgende SOAP-Nachricht zeigt eine Get-Beispielnachricht.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -103,15 +103,15 @@ Die folgende SOAP-Nachricht zeigt eine Beispiel Nachricht für das Get-Beispiel.
 </soap:Body>
 ```
 
-Eine GET-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine Get-Nachricht hat die folgenden Fokuspunkte.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -126,21 +126,21 @@ Eine GET-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <td><pre class="syntax" data-space="preserve"><code><wsa:To>
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsa:To></code></pre></td>
-<td>Der Bezeichner des Geräts, das nach Metadaten angefordert wird.</td>
+<td>Der Bezeichner des Geräts, das nach Metadaten gefragt wird.</td>
 </tr>
 <tr class="even">
 <td>Herunterladen</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2004/09/transfer/Get
 </wsa:Action</code></pre></td>
-<td>Mit der Get SOAP-Aktion wird die Nachricht als GET-Nachricht identifiziert.</td>
+<td>Die Aktion SOAP abrufen identifiziert die Nachricht als Get-Nachricht.</td>
 </tr>
 <tr class="odd">
 <td>Meldungs-ID</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:MessageID>
     urn:uuid:027bec45-c37c-466c-936c-68f648abe2bb
 </wsa:MessageID></code></pre></td>
-<td>Enthält den Nachrichten Bezeichner, auf den in einer <a href="getresponse--metadata-exchange--message.md">GetResponse</a> -Meldung verwiesen wird.</td>
+<td>Enthält den Nachrichtenbezeichner, auf den in einer <a href="getresponse--metadata-exchange--message.md">GetResponse-Nachricht</a> verwiesen wird.</td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +153,7 @@ Eine GET-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
 [GetResponse-Nachricht](getresponse--metadata-exchange--message.md)

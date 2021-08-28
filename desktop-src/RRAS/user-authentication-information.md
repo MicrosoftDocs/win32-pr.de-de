@@ -1,22 +1,22 @@
 ---
-title: Informationen zur Benutzerauthentifizierung
-description: Der RAS-Verbindungs-Manager-Dienst auf dem Client Computer sendet einen Benutzernamen und ein Kennwort an den RAS-Server auf dem Remote Computer.
+title: Benutzerauthentifizierungsinformationen
+description: Der Ras-Verbindungs-Manager-Dienst auf dem Clientcomputer sendet einen Benutzernamen und ein Kennwort an den RAS-Server auf dem Remotecomputer.
 ms.assetid: b27bf520-d871-4314-8ed9-3a6a9583ab52
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0cb95d0e941c47deb398c03277013e0e0a35f9d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f347cd9f42106619f2558bdcbc677c961b4fae749912c92dd32ac2c8096f6fd7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127810"
 ---
-# <a name="user-authentication-information"></a>Informationen zur Benutzerauthentifizierung
+# <a name="user-authentication-information"></a>Benutzerauthentifizierungsinformationen
 
-Der RAS-Verbindungs-Manager-Dienst auf dem Client Computer sendet einen Benutzernamen und ein Kennwort an den RAS-Server auf dem Remote Computer. Bevor eine Verbindung hergestellt wird, werden diese Informationen vom Remote Server zum Authentifizieren des Benutzers verwendet. Standardmäßig sendet der RAS-Verbindungs-Manager den Benutzernamen und das Kennwort des aktuell angemeldeten Benutzers. Der RAS-Client kann die im Befehl " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " angegebene Struktur " [**rasdialparameams**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85)) " verwenden, um einen anderen Benutzernamen und ein anderes Kennwort anzugeben.
+Der Ras-Verbindungs-Manager-Dienst auf dem Clientcomputer sendet einen Benutzernamen und ein Kennwort an den RAS-Server auf dem Remotecomputer. Bevor eine Verbindung hergestellt wird, verwendet der Remoteserver diese Informationen, um den Benutzer zu authentifizieren. Standardmäßig sendet die Remotezugriffs-Verbindungs-Manager den Benutzernamen und das Kennwort des aktuell angemeldeten Benutzers. Der RAS-Client kann die im [**RasDial-Aufruf**](/windows/desktop/api/Ras/nf-ras-rasdiala) angegebene [**RASDIALPARAMS-Struktur**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85)) verwenden, um einen anderen Benutzernamen und ein anderes Kennwort anzugeben.
 
-Wenn der Remote Server den Benutzer nicht mit den angegebenen Informationen authentifizieren kann, kann der Verbindungsvorgang in einen [angehaltenen Zustand](paused-states.md) versetzt werden, damit der RAS-Client verschiedene Authentifizierungsdaten des Benutzers erfassen kann.
+Wenn der Remoteserver den Benutzer nicht mit den angegebenen Informationen authentifizieren kann, kann er zulassen, dass der Verbindungsvorgang in einen [angehaltenen Zustand](paused-states.md) versetzt wird, damit der RAS-Client unterschiedliche Authentifizierungsdaten vom Benutzer sammeln kann.
 
- 
+ 
 
- 
+ 

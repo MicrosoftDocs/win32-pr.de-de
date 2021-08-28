@@ -16,12 +16,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cede8964636073c393cb34bfa1be22855467f4cb243834bd1e11a4ffc492665
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: e147b48ffb80e1114133b59018cef514eefd2ae7
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120031420"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885868"
 ---
 # <a name="iwmpclosedcaptionsamistyle-property"></a>IWMPClosedCaption::SAMIStyle -Eigenschaft
 
@@ -50,7 +50,7 @@ Die **System.String-Datei,** bei der es sich um den im Stilbezeichner einer SAMI
 
 ## <a name="remarks"></a>Hinweise
 
-Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
+Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen &lt; style und tags in der &gt; </STYLE> SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
 
 
 ```
@@ -65,7 +65,7 @@ Dies gibt einen Stil an, der eine bestimmte Schriftart erzeugt.
 
 Wenn kein SAMI-Stil angegeben ist, wird standardmäßig der erste in der SAMI-Datei definierte Stil verwendet.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -77,7 +77,7 @@ Wenn kein SAMI-Stil angegeben ist, wird standardmäßig der erste in der SAMI-Da
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
