@@ -1,7 +1,7 @@
 ---
-description: Disassembliert einen Shader.
+description: Disassemblieren sie einen Shader.
 ms.assetid: 30159223-8f88-4929-8ef1-7a6acc13f485
-title: D3DXDisassembleShader-Funktion (D3DX9Shader. h)
+title: D3DXDisassembleShader-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,19 +14,19 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6192b77c190ed73dc6e5038c9119152836eca375
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b185945098d4439753b5582a81d4d112c7984f53155e2901af8560afb404bf62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857070"
 ---
 # <a name="d3dxdisassembleshader-function"></a>D3DXDisassembleShader-Funktion
 
-Disassembliert einen Shader.
+Disassemblieren sie einen Shader.
 
 > [!Note]  
-> Anstatt diese Legacy Funktion zu verwenden, empfiehlt es sich, die [**D3DDisassemble**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble) -API zu verwenden.
+> Anstatt diese Legacyfunktion zu verwenden, wird empfohlen, die [**D3DDisassemble-API zu**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3ddisassemble) verwenden.
 
  
 
@@ -48,34 +48,34 @@ HRESULT D3DXDisassembleShader(
 
 <dl> <dt>
 
-*pshader* \[ in\]
+*pShader* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf einen Arbeitsspeicher Puffer, der die Shader-Daten enthält.
+Zeiger auf einen Speicherpuffer, der die Shaderdaten enthält.
 
 </dd> <dt>
 
-*Enablecolorcode* \[ in\]
+*EnableColorCode* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Aktivieren Sie Farbcode, um die Disassembly leichter lesbar zu machen.
+Aktivieren Sie Farbcode, um das Lesen der Disassemblierung zu vereinfachen.
 
 </dd> <dt>
 
-*pcomments* \[ in\]
+*pComments* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Eine optionale, auf NULL endenden Kommentar Zeichenfolge. Dieser Wert kann **null** sein.
+Eine optionale auf NULL beendete Kommentarzeichenfolge. Dieser Wert kann NULL **sein.**
 
 </dd> <dt>
 
-*ppdisassembly* \[ vorgenommen\]
+*ppDisassembly* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
@@ -88,7 +88,7 @@ Gibt einen Puffer zurück, der den disassemblierten Shader enthält. Siehe [**ID
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,12 +96,12 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: TVM_SETINSERTMARK Meldung (kommstrg. h)
-description: Legt die Einfügemarke in einem Strukturansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des TreeView- \_ mapresertmark-Makros senden.
+title: TVM_SETINSERTMARK-Nachricht (Commctrl.h)
+description: Legt die Einfügemarke in einem Strukturansichtssteuerelement fest. Sie können diese Nachricht explizit oder mit dem TreeView \_ SetInsertMark-Makro senden.
 ms.assetid: 35441807-406a-408c-ad89-6dd40c907e3c
 keywords:
-- Windows-Steuerelemente für TVM_SETINSERTMARK Meldung
+- TVM_SETINSERTMARK Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff5a9cc9b05e9cd7dc3281d778734bee1048ffd2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0c3004395dcc7ea0b83af2fc2b7dae370c303228f79599215d5b6d264379b793
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875630"
 ---
-# <a name="tvm_setinsertmark-message"></a>TVM- \_ Nachricht "tmark"
+# <a name="tvm_setinsertmark-message"></a>TVM \_ SETINSERTMARK-Nachricht
 
-Legt die Einfügemarke in einem Strukturansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**TreeView- \_ mapresertmark**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setinsertmark) -Makros senden.
+Legt die Einfügemarke in einem Strukturansichtssteuerelement fest. Sie können diese Nachricht explizit oder mit dem [**TreeView \_ SetInsertMark-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setinsertmark) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Legt die Einfügemarke in einem Strukturansicht-Steuerelement fest. Sie können 
 *wParam* 
 </dt> <dd>
 
-**Boolescher** Wert, der angibt, ob die Einfügemarke vor oder nach dem angegebenen Element eingefügt wird. Wenn dieses Argument ungleich 0 (null) ist, wird die Einfügemarke hinter dem Element platziert. Wenn dieses Argument 0 (null) ist, wird die Einfügemarke vor dem Element platziert.
+**BOOL-Wert,** der angibt, ob die Einfügemarke vor oder nach dem angegebenen Element platziert wird. Wenn dieses Argument ungleich 0 (null) ist, wird die Einfügemarke hinter dem Element platziert. Wenn dieses Argument 0 (null) ist, wird die Einfügemarke vor dem Element platziert.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-**HTREEITEM** , das angibt, an welchem Punkt die Einfügemarke platziert werden soll. Wenn dieses Argument **null** ist, wird die Einfügemarke entfernt.
+**HTREEITEM,** das angibt, an welchem Element die Einfügemarke platziert wird. Wenn dieses Argument **NULL** ist, wird die Einfügemarke entfernt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einigen Fällen kann die Einfügemarke an zwei Stellen angezeigt werden, nachdem ein Knoten erweitert wurde. Wenn Sie Einfügezeichen verwenden, wird empfohlen, nach dem Erweitern eines Knotens eine Aktualisierung des Steuer Elements zu erzwingen.
+In einigen Fällen kann das Einfügezeichen an zwei Stellen angezeigt werden, nachdem ein Knoten erweitert wurde. Wenn Sie Einfügezeichen verwenden, wird empfohlen, nach dem Erweitern eines Knotens eine Aktualisierung des Steuerelements zu erzwingen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ In einigen Fällen kann die Einfügemarke an zwei Stellen angezeigt werden, nach
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

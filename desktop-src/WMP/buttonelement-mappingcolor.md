@@ -1,9 +1,9 @@
 ---
-title: ButtonElement. mappingColor
-description: Das mappingColor-Attribut gibt den Farbschlüssel an, der dieses ButtonElement in der ButtonGroup identifiziert, oder ruft ihn ab.
+title: BUTTONELEMENT.mappingColor
+description: Das attribut mappingColor gibt den Farbschlüssel an, der dieses BUTTONELEMENT in BUTTONGROUP identifiziert, oder ruft diesen ab.
 ms.assetid: e7b1663c-3263-41d5-9a69-4cf1dcf0fc1f
 keywords:
-- ButtonElement. mappingColor-Fenster Media Player
+- BUTTONELEMENT.mappingColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7318f01246578fe8ff34118427c95afb7b3bb098
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 29badef71eda70782203effb7098c7ee5bc7a62b67d28ccbc9428c74e9473012
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764340"
 ---
-# <a name="buttonelementmappingcolor"></a>ButtonElement. mappingColor
+# <a name="buttonelementmappingcolor"></a>BUTTONELEMENT.mappingColor
 
-Das **mappingColor** -Attribut gibt den Farbschlüssel an, der dieses **ButtonElement** in der **ButtonGroup** identifiziert, oder ruft ihn ab.
+Das **attribut mappingColor** gibt den Farbschlüssel an, der dieses **BUTTONELEMENT** in **buttongroup** identifiziert, oder ruft diesen ab.
 
 ``` syntax
         elementID.mappingColor
@@ -29,17 +29,17 @@ Das **mappingColor** -Attribut gibt den Farbschlüssel an, der dieses **ButtonEl
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gibt die Farbe des Bereichs in der Schaltflächen Gruppe **mappingImage** an, die diesem Schaltflächen Element entspricht. Alle Klicks in diesem Bereich werden von diesem Schaltflächen Element behandelt.
+Dieses Attribut gibt die Farbe des Bereichs  in der Zuordnung der SchaltflächengruppeImage an, die diesem Schaltflächenelement entspricht. Alle Klicks auf diesen Bereich werden von diesem Schaltflächenelement verarbeitet.
 
-Wenn eine ungültige Farbe angegeben ist, wird das **ButtonElement** nicht aktiviert.
+Wenn eine ungültige Farbe angegeben wird, wird **BUTTONELEMENT** nicht aktiviert.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel ist eine komplette Skin-Definitionsdatei, die veranschaulicht, wie einige der **ButtonElement** -Attribute verwendet werden. Sie befindet sich im Verzeichnis Samples, das mit dem SDK installiert wurde.
+Das folgende Beispiel ist eine vollständige Skindefinitionsdatei, die veranschaulicht, wie einige der **BUTTONELEMENT-Attribute** verwendet werden. Sie finden sie im Beispielverzeichnis, das mit dem SDK installiert wurde.
 
 
 ```
@@ -86,7 +86,7 @@ Das folgende Beispiel ist eine komplette Skin-Definitionsdatei, die veranschauli
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -94,13 +94,13 @@ Das folgende Beispiel ist eine komplette Skin-Definitionsdatei, die veranschauli
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> <dt>
 
-[**ButtonGroup. mappingImage**](buttongroup-mappingimage.md)
+[**BUTTONGROUP.mappingImage**](buttongroup-mappingimage.md)
 </dt> </dl>
 
  

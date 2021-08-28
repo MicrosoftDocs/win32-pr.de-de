@@ -1,11 +1,11 @@
 ---
-title: PKI-default-Key-spec-Attribut
-description: Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
+title: PKI-Default-Key-Spec-Attribut
+description: Die Spezifikation des privaten Schlüssels für die Zertifikatvorlage.
 ms.assetid: 0f22fd08-1417-4f71-80c8-aabff16f5985
 ms.tgt_platform: multiple
 keywords:
-- PKI-default-Key-spec-Attribut AD-Schema
-- pkidefaultkeyspec-Attribut AD-Schema
+- AD-Schema des PKI-Default-Key-Spec-Attributs
+- AD-Schema des pKIDefaultKeySpec-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82419858c46c108892b538e03ac22dd3ada2241b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: de91b3f04c13d6f3b0b0eb20b872767cfed58eb876be11c53644e805230a36e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802600"
 ---
-# <a name="pki-default-key-spec-attribute"></a>PKI-default-Key-spec-Attribut
+# <a name="pki-default-key-spec-attribute"></a>PKI-Default-Key-Spec-Attribut
 
-Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
+Die Spezifikation des privaten Schlüssels für die Zertifikatvorlage.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | PKI-default-Key-spec                 |
-| LDAP-Display-Name | pkidefaultkeyspec                    |
+| CN                | PKI-Default-Key-Spec                 |
+| Ldap-Anzeigename | pKIDefaultKeySpec                    |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1327              |
-| System-ID-GUID    | 426cae6e-3b9d-11d2-90cc-00c04f d91ab1 |
+| System-Id-Guid    | 426cae6e-3b9d-11d2-90cc-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die Spezifikation für den privaten Schlüssel für die Zertifikat Vorlage.
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
+| Is-Single-Valued       | True                                                                    |
 | Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | Richtig                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| Im globalen Katalog      | True                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

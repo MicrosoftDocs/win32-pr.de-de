@@ -1,9 +1,9 @@
 ---
-title: TB_CHECKBUTTON Meldung (kommstrg. h)
-description: Überprüft oder überprüft eine angegebene Schaltfläche in einer Symbolleiste.
+title: TB_CHECKBUTTON (Commctrl.h)
+description: Überprüft oder deaktiviert eine bestimmte Schaltfläche in einer Symbolleiste.
 ms.assetid: e67734a9-851c-41ab-8ad7-15d434f58e5a
 keywords:
-- Windows-Steuerelemente für TB_CHECKBUTTON Meldung
+- TB_CHECKBUTTON meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7734b37da44db38d9ca09b34ad9e666cc90eb5b5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fec35b6a333e0663acc8c94dec22c2b8f4138cb6024b1f7919fd0ec73cdb0eb8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104041014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919130"
 ---
-# <a name="tb_checkbutton-message"></a>TB \_ checkbutton-Meldung
+# <a name="tb_checkbutton-message"></a>TB \_ CHECKBUTTON-Meldung
 
-Überprüft oder überprüft eine angegebene Schaltfläche in einer Symbolleiste.
+Überprüft oder deaktiviert eine bestimmte Schaltfläche in einer Symbolleiste.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ ms.locfileid: "104041014"
 *wParam* 
 </dt> <dd>
 
-Der Befehls Bezeichner der zu Überprüfung enden Schaltfläche.
+Befehlsbezeichner der zu überprüfenden Schaltfläche.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **boolescher** Wert, der angibt, ob die angegebene Schaltfläche überprüft oder nicht überprüft werden soll. **True** gibt an, dass die Überprüfung hinzugefügt wird. Wenn der Wert **false** ist, wird die Überprüfung entfernt.
+LOWORD [**ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine **BOOL,** die angibt, ob die angegebene Schaltfläche überprüft oder deaktiviert werden soll. True **gibt an,** dass die Überprüfung hinzugefügt wird. False **gibt an,** dass die Überprüfung entfernt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Schaltfläche aktiviert ist, wird Sie im gedrückten Zustand angezeigt.
+Wenn eine Schaltfläche überprüft wird, wird sie im gedrückten Zustand angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn eine Schaltfläche aktiviert ist, wird Sie im gedrückten Zustand angezeigt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

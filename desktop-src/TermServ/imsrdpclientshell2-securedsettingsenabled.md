@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientShell2 securedsettingsenabled (Eigenschaft)
-description: Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer-URL-Sicherheitszone befindet.
+title: IMsRdpClientShell2 SecuredSettingsEnabled-Eigenschaft
+description: Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer URL-Sicherheitszone befindet.
 ms.assetid: 51988473-fff7-4574-bd6e-d05ca452da54
 ms.tgt_platform: multiple
 keywords:
-- Securedsettingsenabled-Eigenschaft Remotedesktopdienste
-- Securedsettingsenabled-Eigenschaft Remotedesktopdienste, IMsRdpClientShell2-Schnittstelle
-- IMsRdpClientShell2 Interface Remotedesktopdienste, securedsettingsenabled (Eigenschaft)
+- SecuredSettingsEnabled-Eigenschaft Remotedesktopdienste
+- SecuredSettingsEnabled-Eigenschaft Remotedesktopdienste , IMsRdpClientShell2-Schnittstelle
+- IMsRdpClientShell2-Schnittstelle Remotedesktopdienste , SecuredSettingsEnabled-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1009759051207db7e6b8d741c1dd91e3de1ffc36
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d418df76de38313d681f9f01a4dea33ba0803ad67e42d92d90d2ba5a354a8eac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870880"
 ---
-# <a name="imsrdpclientshell2securedsettingsenabled-property"></a>IMsRdpClientShell2:: securedsettingsenabled (Eigenschaft)
+# <a name="imsrdpclientshell2securedsettingsenabled-property"></a>IMsRdpClientShell2::SecuredSettingsEnabled-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer-URL-Sicherheitszone befindet.
+Ruft einen Wert ab, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer URL-Sicherheitszone befindet.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_SecuredSettingsEnabled(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf einen booleschen Wert, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer-URL-Sicherheitszone befindet.
+Ein Zeiger auf einen booleschen Wert, der angibt, ob sich die aktuelle Webseite in einer vertrauenswürdigen Internet Explorer URL-Sicherheitszone befindet.
 
 ## <a name="requirements"></a>Anforderungen
 

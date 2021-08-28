@@ -4,8 +4,8 @@ description: Erstellt und verwaltet eine Sammlung virtueller Desktops.
 ms.assetid: fe0a484e-f9e3-4b99-8e69-da8f337ae957
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste
-- Win32_RDMSVirtualDesktopCollection Klasse Remotedesktopdienste, beschrieben
+- Win32_RDMSVirtualDesktopCollection-Klassen-Remotedesktopdienste
+- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -29,14 +29,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a6da0c13b6ab223afc7afe6e92039a5388c6204
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 580b5ae194a28726a06143dce0007eeedfbb8564b49a4cbc2e7c2d0d8507dfe4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868070"
 ---
-# <a name="win32_rdmsvirtualdesktopcollection-class"></a>Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="win32_rdmsvirtualdesktopcollection-class"></a>Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
 Erstellt und verwaltet eine Sammlung virtueller Desktops.
 
@@ -66,33 +66,33 @@ class Win32_RDMSVirtualDesktopCollection
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdmsvirtualdesktopcollection** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDMSVirtualDesktopCollection-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ rdmsvirtualdesktopcollection** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ RDMSVirtualDesktopCollection-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                            | BESCHREIBUNG                                                                                                                                     |
 |:--------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Addvirtualdesktop**](addvirtualdesktop-win32-rdmsvirtualdesktopcollection.md)                 | Fügt einer Sammlung virtueller Desktops einen virtuellen Desktop hinzu.<br/>                                                                              |
-| [**Cancelpatch**](cancelpatch-win32-rdmsvirtualdesktopcollection.md)                             | Bricht einen Bereitstellungs Auftrag für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.<br/>                                 |
-| [**GetInt32Property**](getint32property-win32-rdmsvirtualdesktopcollection.md)                   | Ruft einen ganzzahligen Eigenschafts Wert aus einer Sammlung virtueller Desktops ab.<br/>                                                               |
-| [**Getpatchproperties**](getpatchproperties-win32-rdmsvirtualdesktopcollection.md)               | Ruft die Eigenschaften eines Bereitstellungs Auftrags für Software Updates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.<br/>             |
-| [**GetStringProperty**](getstringproperty-win32-rdmsvirtualdesktopcollection.md)                 | Ruft einen Zeichen folgen Eigenschafts Wert aus einer Sammlung virtueller Desktops ab.<br/>                                                                 |
-| [**Provisioningenvereratejobs**](provisioningenumeratejobs-win32-rdmsvirtualdesktopcollection.md) | Listet die Bereitstellungs Aufträge virtueller Desktops für diesen Dienst auf.<br/>                                                                       |
-| [**Provisioningjobcancel**](provisioningjobcancel-win32-rdmsvirtualdesktopcollection.md)         | Bricht einen Bereitstellungs Auftrag für virtuelle Desktops ab.<br/>                                                                                          |
-| [**Provisioningjobexecute**](provisioningjobexecute-win32-rdmsvirtualdesktopcollection.md)       | Führt einen Bereitstellungs Auftrag für virtuelle Desktops aus.<br/>                                                                                             |
-| [**Provisioningjobgetreport**](provisioningjobgetreport-win32-rdmsvirtualdesktopcollection.md)   | Ruft einen Bericht zum Status eines virtuellen Desktop Bereitstellungs Auftrags ab.<br/>                                                                |
-| [**Provisioningprepjob**](win32-rdmsvirtualdesktopcollection-provisioningprepjob.md)             | Erstellt einen Bereitstellungs Auftrag für virtuelle Desktops.<br/>                                                                                          |
-| [**Removevirtualdesktop**](removevirtualdesktop-win32-rdmsvirtualdesktopcollection.md)           | Entfernt einen virtuellen Desktop aus einer Sammlung virtueller Desktops.<br/>                                                                         |
-| [**Schedulepatch**](schedulepatch-win32-rdmsvirtualdesktopcollection.md)                         | Plant einen Bereitstellungs Auftrag für Software Updates, mit dem Software Updates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.<br/> |
-| [**SetInt32Property**](setint32property-win32-rdmsvirtualdesktopcollection.md)                   | Aktualisiert einen ganzzahligen Eigenschafts Wert einer Sammlung virtueller Desktops.<br/>                                                                   |
-| [**SetStringProperty**](setstringproperty-win32-rdmsvirtualdesktopcollection.md)                 | Aktualisiert den Wert einer Zeichen folgen Eigenschaft einer Sammlung virtueller Desktops.<br/>                                                                     |
+| [**AddVirtualDesktop**](addvirtualdesktop-win32-rdmsvirtualdesktopcollection.md)                 | Fügt einer Sammlung virtueller Desktops einen virtuellen Desktop hinzu.<br/>                                                                              |
+| [**CancelPatch**](cancelpatch-win32-rdmsvirtualdesktopcollection.md)                             | Bricht einen Auftrag zur Bereitstellung von Softwareupdates für die virtuellen Computer in einer Sammlung virtueller Desktops ab.<br/>                                 |
+| [**GetInt32Property**](getint32property-win32-rdmsvirtualdesktopcollection.md)                   | Ruft einen ganzzahligen Eigenschaftswert aus einer Sammlung virtueller Desktops ab.<br/>                                                               |
+| [**GetPatchProperties**](getpatchproperties-win32-rdmsvirtualdesktopcollection.md)               | Ruft die Eigenschaften eines Softwareupdatebereitstellungsauftrags für die virtuellen Computer in einer Sammlung virtueller Desktops ab.<br/>             |
+| [**GetStringProperty**](getstringproperty-win32-rdmsvirtualdesktopcollection.md)                 | Ruft einen Zeichenfolgeneigenschaftswert aus einer Sammlung virtueller Desktops ab.<br/>                                                                 |
+| [**ProvisioningEnumerateJobs**](provisioningenumeratejobs-win32-rdmsvirtualdesktopcollection.md) | Listet Aufträge für die Bereitstellung virtueller Desktops für diesen Dienst auf.<br/>                                                                       |
+| [**ProvisioningJobCancel**](provisioningjobcancel-win32-rdmsvirtualdesktopcollection.md)         | Bricht einen Bereitstellungsauftrag für virtuelle Desktops ab.<br/>                                                                                          |
+| [**ProvisioningJobExecute**](provisioningjobexecute-win32-rdmsvirtualdesktopcollection.md)       | Führt einen Bereitstellungsauftrag für virtuelle Desktops aus.<br/>                                                                                             |
+| [**ProvisioningJobGetReport**](provisioningjobgetreport-win32-rdmsvirtualdesktopcollection.md)   | Ruft einen Bericht über den Status eines Bereitstellungsauftrags für virtuelle Desktops ab.<br/>                                                                |
+| [**ProvisioningPrepJob**](win32-rdmsvirtualdesktopcollection-provisioningprepjob.md)             | Erstellt einen Bereitstellungsauftrag für virtuelle Desktops.<br/>                                                                                          |
+| [**RemoveVirtualDesktop**](removevirtualdesktop-win32-rdmsvirtualdesktopcollection.md)           | Entfernt einen virtuellen Desktop aus einer Sammlung virtueller Desktops.<br/>                                                                         |
+| [**SchedulePatch**](schedulepatch-win32-rdmsvirtualdesktopcollection.md)                         | Plant einen Auftrag zur Bereitstellung von Softwareupdates, mit dem Softwareupdates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.<br/> |
+| [**SetInt32Property**](setint32property-win32-rdmsvirtualdesktopcollection.md)                   | Aktualisiert einen ganzzahligen Eigenschaftswert einer sammlung virtueller Desktops.<br/>                                                                   |
+| [**SetStringProperty**](setstringproperty-win32-rdmsvirtualdesktopcollection.md)                 | Aktualisiert einen Zeichenfolgeneigenschaftswert einer Sammlung virtueller Desktops.<br/>                                                                     |
 
 
 
@@ -100,30 +100,30 @@ Die **Win32 \_ rdmsvirtualdesktopcollection** -Klasse verfügt über diese Metho
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdmsvirtualdesktopcollection** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDMSVirtualDesktopCollection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Alias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Ruft den Alias der Auflistung ab oder legt ihn fest.
+Ruft den Alias der Auflistung ab oder legt den Alias fest.
 
 </dd> <dt>
 
-**Collectiondescription**
+**CollectionDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -132,14 +132,14 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ruft die Beschreibung der Auflistung ab oder legt Sie fest.
+Ruft die Beschreibung der Auflistung ab oder legt sie fest.
 
 </dd> <dt>
 
-**Iconcontent**
+**IconContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -148,53 +148,53 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ruft ein Array von-Werten ab, die Symbole für die Auflistung angeben, oder legt dieses fest.
+Ruft ein Array von Werten ab, die Symbole für die Auflistung angeben, oder legt dieses fest.
 
 </dd> <dt>
 
 **Isha**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der angibt, ob die Auflistung hoch verfügbare VMS enthält, oder legt ihn fest. **True** , wenn die Sammlung hoch verfügbare VMS enthält. andernfalls **false**.
+Ruft einen Wert ab, der angibt, ob die Auflistung hoch verfügbare VMs enthält, oder legt diesen fest. **TRUE,** wenn die Sammlung hoch verfügbare VMs enthält. Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **IsManaged**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der angibt, ob die Auflistung verwaltet wird, oder legt ihn fest. **True** , wenn die Auflistung verwaltet wird. andernfalls **false**.
+Ruft einen Wert ab, der angibt, ob die Auflistung verwaltet wird, oder legt diesen fest. **TRUE,** wenn die Sammlung verwaltet wird; Andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Isuseradmin**
+**IsUserAdmin**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der angibt, ob ein Benutzer ein Administrator auf einem virtuellen Computer ist, oder legt ihn fest. **True** , wenn der Benutzer ein Administrator auf einem virtuellen Computer ist. andernfalls **false**.
+Ruft einen Wert ab, der angibt, ob ein Benutzer ein Administrator auf einem virtuellen Computer ist, oder legt diesen fest. **TRUE,** wenn der Benutzer ein Administrator auf einem virtuellen Computer ist; Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -204,23 +204,23 @@ Ruft den Namen der Auflistung ab oder legt ihn fest.
 
 </dd> <dt>
 
-**Rollback aktiviert**
+**RollbackEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der angibt, ob ein virtueller Computer mit einer VM-Momentaufnahme erstellt wurde. **True** , wenn die VM mit einer VM-Momentaufnahme erstellt wurde. andernfalls **false**.
+Ruft einen Wert ab, der angibt, ob ein virtueller Computer mit einer VM-Momentaufnahme gerollt wurde, oder legt diesen fest. **TRUE,** wenn für den virtuellen Computer ein Rollback mit einer VM-Momentaufnahme ausgeführt wurde. Andernfalls **FALSE**.
 
 </dd> <dt>
 
 **SecurityDescriptor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -229,33 +229,33 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Dient zum Abrufen oder Festlegen einer Sicherheits Beschreibung, die die SSDL-Sicherheit steuert, die den Zugriff auf die Auflistung steuert.
+Ruft einen SSDL-formatierten Sicherheitsdeskriptor ab, der den Zugriff auf die Auflistung steuert, oder legt diesen fest.
 
 </dd> <dt>
 
-**Showinportal**
+**ShowInPortal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der angibt, ob die Auflistung in terminaldiensteWebzugriff (TS Webzugriff) angezeigt wird, oder legt ihn fest. **True** zum Anzeigen der Auflistung in TS Webzugriff; andernfalls **false**.
+Ruft einen Wert ab, der angibt, ob die Auflistung in terminal services Webzugriff (TS Webzugriff) angezeigt wird, oder legt diesen fest. **TRUE,** um die Auflistung in TS Webzugriff anzuzeigen; Andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ruft einen Wert ab, der den Typ der von der Auflistung gehosteten Sitzungen von virtuellen Maschinen angibt, oder legt diesen fest.
+Ruft einen Wert ab, der den Typ der von der Auflistung gehosteten VM-Sitzungen angibt, oder legt diesen fest.
 
 Diese Eigenschaft enthält einen der folgenden Werte:
 
@@ -263,7 +263,7 @@ Diese Eigenschaft enthält einen der folgenden Werte:
 
 <span id="TempVM"></span><span id="tempvm"></span><span id="TEMPVM"></span>
 
-<span id="TempVM"></span><span id="tempvm"></span><span id="TEMPVM"></span>**Tempvm** (1)
+<span id="TempVM"></span><span id="tempvm"></span><span id="TEMPVM"></span>**TempVM** (1)
 
 
 </dt> <dd>
@@ -274,7 +274,7 @@ Temporäre virtuelle Computer.
 
 <span id="ManualPersonalVM"></span><span id="manualpersonalvm"></span><span id="MANUALPERSONALVM"></span>
 
-<span id="ManualPersonalVM"></span><span id="manualpersonalvm"></span><span id="MANUALPERSONALVM"></span>**Manualpersonalvm** (2)
+<span id="ManualPersonalVM"></span><span id="manualpersonalvm"></span><span id="MANUALPERSONALVM"></span>**ManualPersonalVM** (2)
 
 
 </dt> <dd>
@@ -285,7 +285,7 @@ Manuell erstellte virtuelle Computer.
 
 <span id="AutoPersonalVM"></span><span id="autopersonalvm"></span><span id="AUTOPERSONALVM"></span>
 
-<span id="AutoPersonalVM"></span><span id="autopersonalvm"></span><span id="AUTOPERSONALVM"></span>**Autopersonalvm** (3)
+<span id="AutoPersonalVM"></span><span id="autopersonalvm"></span><span id="AUTOPERSONALVM"></span>**AutoPersonalVM** (3)
 
 
 </dt> <dd>
@@ -296,10 +296,10 @@ Automatisch generierte virtuelle Computer.
 
 </dd> <dt>
 
-**Uservhdsetting**
+**UserVHDSetting**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -308,14 +308,14 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ruft die Einstellung für die Benutzerdaten-VHD für die Auflistung ab oder legt Sie fest.
+Ruft die VHD-Einstellung für Benutzerdaten für die Auflistung ab oder legt diese fest.
 
 </dd> <dt>
 
-**Vmfarmsettings**
+**VmFarmSettings**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -324,7 +324,7 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **optional**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Ruft die Desktop Einstellungen für die virtuellen Maschinen in der Auflistung ab oder legt Sie fest.
+Ruft die Desktopeinstellungen für die virtuellen Computer in der Auflistung ab oder legt diese fest.
 
 </dd> </dl>
 
@@ -336,8 +336,8 @@ Ruft die Desktop Einstellungen für die virtuellen Maschinen in der Auflistung a
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 

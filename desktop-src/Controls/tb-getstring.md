@@ -1,9 +1,9 @@
 ---
-title: TB_GETSTRING Meldung (kommstrg. h)
-description: Ruft eine Zeichenfolge aus dem Zeichen folgen Pool einer Symbolleiste ab.
+title: TB_GETSTRING (Commctrl.h)
+description: Ruft eine Zeichenfolge aus dem Zeichenfolgenpool einer Symbolleiste ab.
 ms.assetid: a5f80c16-bc6d-466d-8ec6-77451432148e
 keywords:
-- Windows-Steuerelemente für TB_GETSTRING Meldung
+- TB_GETSTRING message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 465ad2546397fa31c33d6a52b4989902c979d91d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d25cbf20fd084c2ce60b29d131b7f488ca2b8cee178a2218fcfac191b3c1af33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918482"
 ---
-# <a name="tb_getstring-message"></a>TB \_ GetString-Nachricht
+# <a name="tb_getstring-message"></a>TB \_ GETSTRING-Nachricht
 
-Ruft eine Zeichenfolge aus dem Zeichen folgen Pool einer Symbolleiste ab.
+Ruft eine Zeichenfolge aus dem Zeichenfolgenpool einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,7 +34,7 @@ Ruft eine Zeichenfolge aus dem Zeichen folgen Pool einer Symbolleiste ab.
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die Länge des *LPARAM* -Puffers in Bytes an. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Index der Zeichenfolge an.
+Das [**LOWORD gibt**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) die Länge des *lParam-Puffers* in Bytes an. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Index der Zeichenfolge an.
 
 </dd> <dt>
 
@@ -47,11 +47,11 @@ Zeiger auf einen Puffer, der zum Zurückgeben der Zeichenfolge verwendet wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeichen folgen Länge zurück, wenn erfolgreich, andernfalls-1.
+Gibt die Zeichenfolgenlänge zurück, wenn erfolgreich, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung gibt die angegebene Zeichenfolge aus dem Zeichen folgen Pool der Symbolleiste zurück. Sie entspricht nicht notwendigerweise der Text Zeichenfolge, die derzeit von einer Schaltfläche angezeigt wird. Um die aktuelle Text Zeichenfolge einer Schaltfläche abzurufen, senden Sie der Symbolleiste eine [**TB \_ getbuttontext**](tb-getbuttontext.md) -Nachricht.
+Diese Meldung gibt die angegebene Zeichenfolge aus dem Zeichenfolgenpool der Symbolleiste zurück. Er entspricht nicht unbedingt der Textzeichenfolge, die derzeit von einer Schaltfläche angezeigt wird. Um die aktuelle Textzeichenfolge einer Schaltfläche abzurufen, senden Sie der Symbolleiste eine [**\_ GETBUTTONTEXT-TB-Nachricht.**](tb-getbuttontext.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,27 +59,27 @@ Diese Meldung gibt die angegebene Zeichenfolge aus dem Zeichen folgen Pool der S
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Getstringw** (Unicode) und **TB \_ getstraninga** (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ GETSTRINGW** (Unicode) und **TB \_ GETSTRINGA** (ANSI)<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TB \_ AddString**](tb-addstring.md)
+[**TB \_ ADDSTRING**](tb-addstring.md)
 </dt> <dt>
 
-[**TB ( \_ AddButtons)**](tb-addbuttons.md)
+[**TB \_ ADDBUTTONS**](tb-addbuttons.md)
 </dt> <dt>
 
-[**TB ( \_ InsertButton)**](tb-insertbutton.md)
+[**TB \_ INSERTBUTTON**](tb-insertbutton.md)
 </dt> </dl>
 
  

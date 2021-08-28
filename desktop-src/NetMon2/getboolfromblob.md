@@ -1,7 +1,7 @@
 ---
 description: Ruft einen benannten booleschen Wert aus einem BLOB ab.
 ms.assetid: 26acfd2a-5b17-47ad-8f7b-7793174a13c3
-title: Getboolfromblob-Funktion (Netmon. h)
+title: GetBoolFromBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: e09a35f71181343cd401b3288c2b2c74a46f677b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec9f5333e3f85f92b30d52689288c971ca04437df647a7a7e5fe89379e06533e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119743920"
 ---
-# <a name="getboolfromblob-function"></a>Getboolfromblob-Funktion
+# <a name="getboolfromblob-function"></a>GetBoolFromBlob-Funktion
 
-Mit der **getboolfromblob** -Funktion wird ein benannter boolescher Wert aus einem BLOB abgerufen.
+Die **GetBoolFromBlob-Funktion** ruft einen benannten booleschen Wert aus einem BLOB ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,46 +43,46 @@ DWORD GetBoolFromBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Ein Handle für ein BLOB.
 
 </dd> <dt>
 
-*pownername* \[ in\]
+*pOwnerName* \[ In\]
 </dt> <dd>
 
 Ein Zeiger auf den Namen des BLOB-Besitzers.
 
 </dd> <dt>
 
-*pcategoryname* \[ in\]
+*pCategoryName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den BLOB-Kategoriename.
+Ein Zeiger auf den Blobkategorienamen.
 
 </dd> <dt>
 
-*ptagname* \[ in\]
+*pTagName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den BLOB-Tagnamen.
+Ein Zeiger auf den Namen des BLOB-Tags.
 
 </dd> <dt>
 
-*pbool* \[ vorgenommen\]
+*pBool* \[ out\]
 </dt> <dd>
 
-Zeiger auf den booleschen Wert des BLOBs.
+Zeiger auf den booleschen Wert des BLOB.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler beschreibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler beschreibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,44 +92,44 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Getclassidfromblob](getclassidfromblob.md)
+[GetClassIDFromBlob](getclassidfromblob.md)
 </dt> <dt>
 
-[Getdwordfromblob](getdwordfromblob.md)
+[GetDwordFromBlob](getdwordfromblob.md)
 </dt> <dt>
 
-[Getmacaddressfromblob](getmacaddressfromblob.md)
+[GetMacAddressFromBlob](getmacaddressfromblob.md)
 </dt> <dt>
 
-[Getnetworkinfofromblob](getnetworkinfofromblob.md)
+[GetNetworkInfoFromBlob](getnetworkinfofromblob.md)
 </dt> <dt>
 
-[Getnppaddressfilterfromblob](getnppaddressfilterfromblob.md)
+[GetNPPAddressFilterFromBlob](getnppaddressfilterfromblob.md)
 </dt> <dt>
 
-[Getnpppatternfilterfromblob](getnpppatternfilterfromblob.md)
+[GetNPPPatternFilterFromBlob](getnpppatternfilterfromblob.md)
 </dt> <dt>
 
-[Getnpptriggerfromblob](getnpptriggerfromblob.md)
+[GetNPPTriggerFromBlob](getnpptriggerfromblob.md)
 </dt> <dt>
 
-[Getstringfromblob](getstringfromblob.md)
+[GetStringFromBlob](getstringfromblob.md)
 </dt> <dt>
 
-[Getstringsfromblob](getstringsfromblob.md)
+[GetStringsFromBlob](getstringsfromblob.md)
 </dt> </dl>
 
  

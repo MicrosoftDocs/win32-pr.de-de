@@ -4,22 +4,22 @@ ms.assetid: a6721c13-a3dc-4273-b40f-2a28184b04a9
 title: JobStapleAllDocuments
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f9598f09181a225bf10d097b8c2aedaf19373a1
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 17a6d87e814665d9e9ff8433cae7734da24b6f5a8bce674fee1bd5fe7e2a7f2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845900"
 ---
 # <a name="jobstaplealldocuments"></a>JobStapleAllDocuments
 
 Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die Staplingmerkmale der Ausgabe. Alle Dokumente im Auftrag sind zusammen zusammengestellt. Die Schlüsselwörter JobStapleAllDocuments und DocumentStaple schließen sich gegenseitig aus. Es obliegt dem Treiber, die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern zu bestimmen.
+Beschreibt die Staplingmerkmale der Ausgabe. Alle Dokumente im Auftrag werden zusammen zusammengestellt. Die Schlüsselwörter JobStapleAllDocuments und DocumentStaple schließen sich gegenseitig aus. Es liegt an dem Treiber, die Einschränkungsbehandlung zwischen diesen Schlüsselwörtern zu bestimmen.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt die Staplingmerkmale der Ausgabe. Alle Dokumente im Auftrag sind zusa
 
 | Name | Wert |
 |----------------------------|--------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                             |
+| Elementtyp <br/>   | Komponente<br/>                                                             |
 | Bereichspräfix <br/> | Auftrag<br/>                                                                 |
 | Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize. <br/> |
 
@@ -67,7 +67,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                               | Datentyp          | Einheit                       | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                                               |
 |------------------------------------|--------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/>  | Zeichen<br/>      | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                    |
+| \_Optionname\_<br/>          | Zeichenfolge<br/>  | Zeichen<br/>      | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                    |
 | \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | –<br/>             | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                                          |
 | \_AngleValue\_<br/>          | integer<br/> | Grad<br/>         | Größer 0<br/>                                                                                                                                                            | Gibt den Klammerwinkel relativ zur Breite von PageImageableSize an. Der Klammerwinkel wird gegen den Uhrzeigersinn gemessen.<br/> |
 | \_SheetCapacityValue\_<br/>  | integer<br/> | Medienblätter<br/> | Größer 0<br/>                                                                                                                                                            | Gibt die Anzahl von Blättern an, die von der Staplingoption für den aktuell ausgewählten MediaType unterstützt werden.<br/>                                          |
@@ -76,7 +76,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

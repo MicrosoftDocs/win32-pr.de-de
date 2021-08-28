@@ -1,10 +1,10 @@
 ---
-title: BITS_JOB_PROPERTY_VALUE-Struktur (deliveryoptimization. h)
-description: Die BITS_JOB_PROPERTY_VALUE Union stellt den Eigenschafts Wert des Do-Auftrags basierend auf dem Wert der BITS_JOB_PROPERTY_ID-Enumeration bereit.
+title: BITS_JOB_PROPERTY_VALUE -Struktur (Deliveryoptimization.h)
+description: Die BITS_JOB_PROPERTY_VALUE Union stellt den Eigenschaftswert des DO-Auftrags basierend auf dem Wert der BITS_JOB_PROPERTY_ID dar.
 ms.assetid: C24D9EA1-2E72-4403-939A-7B01D7133FE7
 keywords:
-- BITS_JOB_PROPERTY_VALUE Struktur
-- BITS_JOB_PROPERTY_VALUE Struktur
+- BITS_JOB_PROPERTY_VALUE-Struktur
+- BITS_JOB_PROPERTY_VALUE-Struktur
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c48c1fe550db51b6b838379d44df21c95fa95e41
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f7366f993f23a16aa6c0d4486c33f45cd501962add9ab524a008aba51cd8ec9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755730"
 ---
-# <a name="bits_job_property_value-structure"></a>BITS_JOB_PROPERTY_VALUE Struktur
+# <a name="bits_job_property_value-structure"></a>BITS_JOB_PROPERTY_VALUE-Struktur
 
-Die **BITS_JOB_PROPERTY_VALUE** Union stellt den Eigenschafts Wert des Do-Auftrags basierend auf dem Wert der [**BITS_JOB_PROPERTY_ID**](bits-job-property-id.md) -Enumeration bereit.
+Die **BITS_JOB_PROPERTY_VALUE** Union stellt den Eigenschaftswert des DO-Auftrags basierend auf dem Wert der BITS_JOB_PROPERTY_ID [**dar.**](bits-job-property-id.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ typedef struct {
 
 <dl> <dt>
 
-**DWORD**
+**Dword**
 </dt> <dd>
 
-Dieser Wert wird zurückgegeben, wenn die Enumeration-Eigenschaften-ID verwendet wird **BITS_JOB_PROPERTY_ID_COST_FLAGS** und wird als [Übertragungs Richtlinie](https://www.bing.com/search?q=transfer+policy) für den Do-Auftrag angewendet.
+Dieser Wert wird zurückgegeben, wenn die  enum-Eigenschaften-ID BITS_JOB_PROPERTY_ID_COST_FLAGS und als Übertragungsrichtlinie für [den](https://www.bing.com/search?q=transfer+policy) DO-Auftrag angewendet wird.
 
 </dd> <dt>
 
-**CLSID**
+**Clsid**
 </dt> <dd>
 
-Dieser Wert wird zurückgegeben, wenn die enumerationseigenschafts-ID **BITS_JOB_PROPERTY_NOTIFICATION_CLSID** verwendet wird, und stellt die CLSID des Rückruf Objekts dar, das bei der do-Aufgabe registriert werden soll
+Dieser Wert wird zurückgegeben, wenn die  enum-Eigenschaften-ID BITS_JOB_PROPERTY_NOTIFICATION_CLSID und stellt die CLSID des Rückrufobjekts dar, das beim DO-Auftrag registriert werden soll.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Wird nicht unterstützt.
 
 </dd> <dt>
 
-**UInt64**
+**Uint64**
 </dt> <dd>
 
 Wird nicht unterstützt.
@@ -87,13 +87,13 @@ Wird nicht unterstützt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

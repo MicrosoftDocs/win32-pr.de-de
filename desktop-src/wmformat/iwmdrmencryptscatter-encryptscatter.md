@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmencryptscatter-Verschlüsselungsmethode (wmdrmsdk. h)
-description: Die verschlüsselungsscatter-Methode entkratzt und verschlüsselt Daten.
+title: IWMDRMEncryptScatter EncryptScatter-Methode (Wmdrmsdk.h)
+description: Die EncryptScatter-Methode verwirft und verschlüsselt Daten.
 ms.assetid: e7f87aac-387b-4483-956e-bfbca0cec0f2
 keywords:
-- Verschlüsseltscatter-Methode Windows Media-Format
-- Verschlüsseltscatter-Methode Windows Media-Format, iwmdrmencryptscatter-Schnittstelle
-- Iwmdrmencryptscatter-Schnittstelle Windows Media-Format, verschlüsseltscatter-Methode
+- EncryptScatter-Methode windows Media Format
+- EncryptScatter-Methode windows Media Format , IWMDRMEncryptScatter-Schnittstelle
+- IWMDRMEncryptScatter-Schnittstelle windows Media Format , EncryptScatter-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58b2d1d6182aed55b60aa1cedfbce5dd870691bc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0fae3f8a40bc5468898424dcf33bf947235a632db44f4dada7f2c96b2a3a064b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839710"
 ---
-# <a name="iwmdrmencryptscatterencryptscatter-method"></a>Iwmdrmencryptscatter:: verschlüsseltscatter-Methode
+# <a name="iwmdrmencryptscatterencryptscatter-method"></a>IWMDRMEncryptScatter::EncryptScatter-Methode
 
-Die **verschlüsselungsscatter** -Methode entkratzt und verschlüsselt Daten.
+Die **EncryptScatter-Methode** verwirft und verschlüsselt Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ HRESULT EncryptScatter(
 
 <dl> <dt>
 
-*cblocks* \[ in\]
+*cBlocks* \[ In\]
 </dt> <dd>
 
-Anzahl der Elemente im *rgblocks* -Array.
+Anzahl der Elemente im *rgBlocks-Array.*
 
 </dd> <dt>
 
-*rgblocks* \[ in\]
+*rgBlocks* \[ In\]
 </dt> <dd>
 
-Array von mindestens einer [**WMDRM- \_ Verschlüsselungs \_ Punkt \_ Block**](wmdrm-encrypt-scatter-block.md) Struktur. Jedes Element beschreibt einen Datenblock, der entfernt und verschlüsselt werden soll.
+Array von mindestens einer [**WMDRM \_ ENCRYPT \_ SCATTER \_ BLOCK-Struktur.**](wmdrm-encrypt-scatter-block.md) Jedes Element beschreibt einen Datenblock, der unscrambled und verschlüsselt werden soll.
 
 </dd> <dt>
 
-*pwmcryptodata* \[ in\]
+*pWMCryptoData* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**wmdrmcryptodata**](wmdrmcryptodata.md) -Struktur, die Verschlüsselungs Parameter enthält. Legen Sie auf **null** fest, um die Standardparameter zu verwenden.
+Zeiger auf eine [**WMDRMCryptoData-Struktur,**](wmdrmcryptodata.md) die Verschlüsselungsparameter enthält. Legen Sie diese Einstellung auf **NULL** fest, um die Standardparameter zu verwenden.
 
 </dd> <dt>
 
-*cboutput* \[ in\]
+*cbOutput* \[ In\]
 </dt> <dd>
 
-Die Größe des Ausgabedaten Puffers, der als *pboutput* übergeben wird.
+Größe des Ausgabedatenpuffers, der als *pbOutput* übergeben wird.
 
 </dd> <dt>
 
-*pboutput* \[ vorgenommen\]
+*pbOutput* \[ out\]
 </dt> <dd>
 
 Ausgabepuffer.
@@ -83,7 +83,7 @@ Ausgabepuffer.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -105,18 +105,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Initencryptscatter**](iwmdrmencryptscatter-initencryptscatter.md)
+[**InitEncryptScatter**](iwmdrmencryptscatter-initencryptscatter.md)
 </dt> <dt>
 
-[**Iwmdrmencryptscatter-Schnittstelle**](iwmdrmencryptscatter.md)
+[**IWMDRMEncryptScatter-Schnittstelle**](iwmdrmencryptscatter.md)
 </dt> </dl>
 
  

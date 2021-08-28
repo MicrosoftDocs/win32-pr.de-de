@@ -1,9 +1,9 @@
 ---
 title: delete sslcert
-description: Löscht SSL-Serverzertifikat Bindungen und die entsprechenden Client Zertifikat Richtlinien für eine IP-Adresse und einen Port.
+description: Löscht SSL-Serverzertifikatbindungen und die entsprechenden Clientzertifikatrichtlinien für eine IP-Adresse und einen Port.
 ms.assetid: 2adea7a8-f31f-4c02-8279-7d452e36cd9b
 keywords:
-- Löschen von sslcert http
+- sslcert HTTP löschen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7672df5eee1634c41ff153435edcbecc58c2595
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: a45d811bedfa1d2a228cd29decf2272d85b8ca6de5c1d27656b3e37b8d6b4d4e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "103719002"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870540"
 ---
 # <a name="delete-sslcert"></a>delete sslcert
 
-Löscht SSL-Serverzertifikat Bindungen und die entsprechenden Client Zertifikat Richtlinien für eine IP-Adresse und einen Port.
+Löscht SSL-Serverzertifikatbindungen und die entsprechenden Clientzertifikatrichtlinien für eine IP-Adresse und einen Port.
 
 ``` syntax
 delete sslcert [ipport=]IP Address:port
@@ -32,10 +32,10 @@ delete sslcert [ipport=]IP Address:port
 
 <dl> <dt>
 
-<span id="_ipport__IP_Address_port"></span><span id="_ipport__ip_address_port"></span><span id="_IPPORT__IP_ADDRESS_PORT"></span>**\[IPPort = \] * * * IP-Adresse: Port*
+<span id="_ipport__IP_Address_port"></span><span id="_ipport__ip_address_port"></span><span id="_IPPORT__IP_ADDRESS_PORT"></span>**\[ ipport= \]**_IP-Adresse:Port_
 </dt> <dd>
 
-Gibt die IPv4-oder IPv6-Adresse und den Port an, für die die SSL-Zertifikat Bindungen gelöscht werden.
+Gibt die IPv4- oder IPv6-Adresse und den Port an, für die die SSL-Zertifikatbindungen gelöscht werden.
 
 </dd> </dl>
 
@@ -45,11 +45,11 @@ Gibt die IPv4-oder IPv6-Adresse und den Port an, für die die SSL-Zertifikat Bin
 
 **delete sslcert ipport=0.0.0.0:443**
 
-**Löschen von sslcert IPPort = \[ :: \] : 443**
+**delete sslcert ipport= \[ :: \] :443**
 
- 
+ 
 
- 
+ 
 
 
 

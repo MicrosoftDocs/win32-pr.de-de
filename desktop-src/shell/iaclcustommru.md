@@ -1,5 +1,5 @@
 ---
-description: Macht Methoden verfügbar, die verwendet werden, um eine LISTE der zuletzt verwendeten (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
+description: Macht Methoden verfügbar, die verwendet werden, um eine zuletzt verwendete Liste (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
 title: IACLCustomMRU-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,20 +12,20 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 6ebf64da-9eba-4ea7-91aa-242474097be1
-ms.openlocfilehash: f47a9df320da5c710c21ddbab83ca87b49c28e12
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: c4130ead959c326da55d2c02726c9db89ce363b616ea34cbfa545d179d1ee139
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119937040"
 ---
 # <a name="iaclcustommru-interface"></a>IACLCustomMRU-Schnittstelle
 
-Macht Methoden verfügbar, die verwendet werden, um eine LISTE der zuletzt verwendeten (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
+Macht Methoden verfügbar, die verwendet werden, um eine zuletzt verwendete Liste (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.
 
 ## <a name="members"></a>Member
 
-Die **IACLCustomMRU-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IACLCustomMRU** verfügt auch über diese Membertypen:
+Die **IACLCustomMRU-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IACLCustomMRU** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -50,8 +50,8 @@ Die **IACLCustomMRU-Schnittstelle** verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

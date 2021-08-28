@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Session. Jet-sid-Eigenschaft.
-title: Session. jetgsid (Eigenschaft)
+description: 'Weitere Informationen zu: Session.JetSesid-Eigenschaft'
+title: Session.JetSesid-Eigenschaft
 TOCTitle: 'JetSesid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Session.JetSesid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.session.jetsesid(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71f8742b5b0166681b0f20007d27b6d8797498f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1a21711b083ccd5aa00d94419a8dee6ee6df8ec136724bdd58821dc2cb5a944
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119718830"
 ---
-# <a name="sessionjetsesid-property"></a>Session. jetgsid (Eigenschaft)
+# <a name="sessionjetsesid-property"></a>Session.JetSesid-Eigenschaft
 
-Ruft das JET_SESID ab, das in dieser Sitzung enthalten ist.
+Ruft die JET_SESID ab, die diese Sitzung enthält.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public JET_SESID JetSesid { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Sitzungsklasse](./session-class.md)
 
-[Sitzungs Mitglieder](./session-members.md)
+[Sitzungsmitglieder](./session-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,31 +1,31 @@
 ---
-description: Auf dieser Seite wird beschrieben, wie Grafiken in einem XPS-OM gezeichnet werden.
+description: Auf dieser Seite wird beschrieben, wie Grafiken in einer XPS OM gezeichnet werden.
 ms.assetid: 2384b522-208a-48db-ae0d-f82fa0214d09
-title: Zeichnen von Grafiken in einem XPS-OM
+title: Zeichnen von Grafiken in einer XPS OM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fabbf8cfb821c80dfff43e2e7844331c8920f726
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ee2f9eacb19ba39263cff3898451479d8bed28e1d83ac6fe251fb9b4da62f49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119719310"
 ---
-# <a name="draw-graphics-in-an-xps-om"></a>Zeichnen von Grafiken in einem XPS-OM
+# <a name="draw-graphics-in-an-xps-om"></a>Zeichnen von Grafiken in einer XPS OM
 
-Auf dieser Seite wird beschrieben, wie Grafiken in einem XPS-OM gezeichnet werden.
+Auf dieser Seite wird beschrieben, wie Grafiken in einer XPS OM gezeichnet werden.
 
-Um vektorbasierte Grafiken in einer Seite zu zeichnen, instanziieren Sie eine [**ixpsompath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) -Schnittstelle, füllen Sie Sie mit dem gewünschten Inhalt auf, und fügen Sie Sie der Liste der visuellen Objekte der Seite oder Canvas hinzu. Eine **ixpsompath** -Schnittstelle enthält solche Eigenschaften einer vektorbasierten Form als Kontur, Füllfarbe, Linienart und Linien Farbe. Die Form des Pfads wird durch eine [**ixpsomgeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry) -Schnittstelle angegeben, die eine Auflistung von [**ixpsomgeometryfigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure) -Schnittstellen und optional eine [**ixpsommatrixtransform**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsommatrixtransform) -Schnittstelle enthält. Sie können jede beliebige Schnittstelle verwenden, die von der [**ixpsombrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsombrush) -Schnittstelle erbt, um den Umkreis des Pfads und das Innere der Form auszufüllen, die durch den Pfad beschrieben wird.
+Um vektorbasierte Grafiken auf einer Seite zu zeichnen, instanziieren Sie eine [**IXpsOMPath-Schnittstelle,**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) füllen Sie sie mit dem gewünschten Inhalt auf, und fügen Sie sie der Liste der visuellen Objekte der Seite oder canvas hinzu. Eine **IXpsOMPath-Schnittstelle** enthält solche Eigenschaften einer vektorbasierten Form wie Kontur, Füllfarbe, Linienstil und Linienfarbe. Die Form des Pfads wird von einer [**IXpsOMGeometry-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry) angegeben, die eine Auflistung von [**IXpsOMGeometryFigure-Schnittstellen**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure) und optional eine [**IXpsOMMatrixTransform-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsommatrixtransform) enthält. Sie können eine beliebige Schnittstelle verwenden, die von der [**IXpsOMBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsombrush) erbt, um den Umkreis des Pfads und das Innere der Form zu füllen, die vom Pfad beschrieben wird.
 
-Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokument Programmieraufgaben](common-xps-document-tasks.md).
+Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss unter [Common XPS Document Programming Tasks (Allgemeine XPS-Dokumentprogrammierungsaufgaben).](common-xps-document-tasks.md)
 
 ## <a name="code-example"></a>Codebeispiel
 
-Im folgenden Codebeispiel wird ein einfacher Pfad zum Beschreiben eines Rechtecks erstellt, das mit einer einzelnen Farbe gefüllt ist.
+Im folgenden Codebeispiel wird ein einfacher Pfad erstellt, der ein Rechteck beschreibt, das mit einer einzelnen Farbe gefüllt ist.
 
-### <a name="create-the-stroke-and-the-fill-brushes"></a>Erstellen der Striche und Füll Pinsel
+### <a name="create-the-stroke-and-the-fill-brushes"></a>Erstellen des Strichs und der Füllpinsel
 
-Im ersten Abschnitt des Code Beispiels wird [**ixpsomsolidcolorbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush) erstellt, das zum Ausfüllen des Path-Objekts verwendet wird.
+Im ersten Abschnitt des Codebeispiels wird der [**IXpsOMSolidColorBrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush) erstellt, der zum Füllen des Pfadobjekts verwendet wird.
 
 
 ```C++
@@ -70,7 +70,7 @@ Im ersten Abschnitt des Code Beispiels wird [**ixpsomsolidcolorbrush**](/windows
 
 ### <a name="define-the-shape"></a>Definieren der Form
 
-Im zweiten Abschnitt des Code Beispiels wird die [**ixpsomgeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry) -Schnittstelle erstellt. Anschließend wird die [**ixpsomgeometryfigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure) -Schnittstelle erstellt, die die Form der Abbildung angibt, und die Abbildung wird der **ixpsomgeometry** -Schnittstelle hinzugefügt. Im Beispiel wird ein Rechteck erstellt, das von *Rect* angegeben wird. Segmente müssen nur für drei der vier Seiten des Rechtecks definiert werden. Der Umkreis der Form, das Rechteck in diesem Fall, beginnt am Startpunkt und erweitert die Definition durch die Segmente der Geometrie-Abbildung. Wenn die **IsClosed** -Eigenschaft auf **true** festgelegt wird, wird angegeben, dass das Rechteck geschlossen wird, indem ein zusätzliches Segment hinzugefügt wird, das das Ende des letzten Segments mit dem Startpunkt verbindet.
+Im zweiten Abschnitt des Codebeispiels wird die [**IXpsOMGeometry-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry) erstellt. Anschließend wird die [**IXpsOMGeometryFigure-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure) erstellt, die die Form der Figur angibt, und die Figur der **IXpsOMGeometry-Schnittstelle** hinzugefügt. Im Beispiel wird ein Rechteck erstellt, das durch *rect* angegeben wird. Segmente müssen nur für drei der vier Seiten des Rechtecks definiert werden. Der Umkreis der Form, in diesem Fall das Rechteck, beginnt am Anfangspunkt und erstreckt sich entsprechend der Definition durch die Segmente der Geometriefigur. Wenn Sie die **IsClosed-Eigenschaft** auf **TRUE** festlegen, wird das Rechteck geschlossen, indem ein zusätzliches Segment hinzugefügt wird, das das Ende des letzten Segments mit dem Startpunkt verbindet.
 
 
 ```C++
@@ -144,9 +144,9 @@ Im zweiten Abschnitt des Code Beispiels wird die [**ixpsomgeometry**](/windows/d
 
 
 
-### <a name="create-the-path-and-add-it-to-the-visual-collection"></a>Erstellen Sie den Pfad, und fügen Sie ihn der visuellen Auflistung hinzu.
+### <a name="create-the-path-and-add-it-to-the-visual-collection"></a>Erstellen sie den Pfad, und fügen Sie ihn der visuellen Sammlung hinzu.
 
-Im letzten Abschnitt dieses Code Beispiels wird das Path-Objekt erstellt und konfiguriert und dann der Liste der visuellen Objekte der Seite hinzugefügt.
+Der letzte Abschnitt dieses Codebeispiels erstellt und konfiguriert das Pfadobjekt und fügt es dann der Liste der visuellen Objekte der Seite hinzu.
 
 
 ```C++
@@ -194,22 +194,22 @@ Im letzten Abschnitt dieses Code Beispiels wird das Path-Objekt erstellt und kon
 
 
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="best-practices"></a>Empfehlungen
 
-Fügen Sie eine Textbeschreibung der Form hinzu, die durch die [**ixpsompath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) -Schnittstelle angegeben wird. Verwenden Sie die Methoden [**setaccessibilityshortdescription**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilityshortdescription) und [**setaccessibilitylongdescription**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilitylongdescription) , um Textinhalte für Barrierefreiheits Funktionen bereitzustellen, z. b. Sprachausgaben.
+Fügen Sie eine Textbeschreibung der Form hinzu, die von der [**IXpsOMPath-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) angegeben wird. Verwenden Sie für Benutzer mit Sehbehinderung die Methoden [**SetAccessibilityShortDescription**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilityshortdescription) und [**SetAccessibilityLongDescription,**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setaccessibilitylongdescription) um Textinhalte für Barrierefreiheitsunterstützungsfunktionen wie Sprachausgaben bereitzustellen.
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 
-Das Codebeispiel auf dieser Seite verwendet eine [**ixpsomsolidcolorbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush) -Schnittstelle als Füll Pinsel und einen Strich Pinsel für den Pfad. Zusätzlich zur **ixpsomsolidcolorbrush** -Schnittstelle können Sie eine [**ixpsomgradientbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush)-, [**ixpsomimagebrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)-oder [**ixpsomvisualbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush) -Schnittstelle verwenden.
+Im Codebeispiel auf dieser Seite wird eine [**IXpsOMSolidColorBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush) als Füllpinsel und Strichpinsel für den Pfad verwendet. Zusätzlich zur **IXpsOMSolidColorBrush-Schnittstelle** können Sie eine [**IXpsOMGradientBrush-,**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush) [**IXpsOMImageBrush-**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)oder [**IXpsOMVisualBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush) verwenden.
 
-Der Strich ist die Linie, die um den Umkreis der Abbildung herum gezeichnet werden kann. Die [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf) unterstützt viele verschiedene Strich Linienstile. Um den Strich Linienstil anzugeben, legen Sie die Stroke-Eigenschaften mit den folgenden Methoden der [**ixpsompath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) -Schnittstelle fest:
+Der Strich ist die Linie, die um den Umkreis der Figur gezeichnet werden kann. Die [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf) unterstützt viele verschiedene Strichlinienstile. Um die Strichlinienart anzugeben, legen Sie die Stricheigenschaften mit den folgenden Methoden der [**IXpsOMPath-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath) fest:
 
--   [**Setstrokebrushlocal**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlocal) oder [**setstrokebrushlookup**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlookup) zum Festlegen des Pinselstrichs
--   [**Getstrokedashes**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokedashes) zum Aufrufen der Stroke Dash-Auflistung, in der die Striche beschrieben werden.
--   [**Setstrokedashcap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashcap) auf und [**setstrokedashoffset**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashoffset) , um die Darstellung eines gestrichelten Strichs zu beschreiben
--   [**Setstrokeendlinecap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokeendlinecap) und [**setstrokestartlinecap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokestartlinecap) zum Definieren des linienbeendigungs Stils
--   [**Setstrokelinejoin**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokelinejoin) und [**setstrokemiterlimit**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokemiterlimit) , um zu beschreiben, wie die Segmente verknüpft werden
--   [**Setstrokedicke**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokethickness) zum Festlegen der Strichstärke
+-   [**SetStrokeBrushLocal**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlocal) oder [**SetStrokeBrushLookup**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokebrushlookup) zum Festlegen des Strichpinsels
+-   [**GetStrokeDashes**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-getstrokedashes) zum Abrufen der Strichstrichauflistung, die die Striche beschreibt
+-   [**SetStrokeDashCap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashcap) auf und [**SetStrokeDashOffset,**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokedashoffset) um die Darstellung eines gestrichelten Strichs zu beschreiben
+-   [**SetStrokeEndLineCap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokeendlinecap) und [**SetStrokeStartLineCap**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokestartlinecap) zum Definieren des Stils für die Zeilenbeendigung
+-   [**SetStrokeLineJoin**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokelinejoin) und [**SetStrokeMiterLimit,**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokemiterlimit) um zu beschreiben, wie die Segmente verknüpft werden
+-   [**SetStrokeThickness**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsompath-setstrokethickness) zum Festlegen der Strichstärke
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -218,58 +218,58 @@ Der Strich ist die Linie, die um den Umkreis der Abbildung herum gezeichnet werd
 **Next Steps**
 </dt> <dt>
 
-[Navigieren im XPS-OM](navigate-the-xps-om.md)
+[Navigieren im XPS OM](navigate-the-xps-om.md)
 </dt> <dt>
 
-[Schreiben von Text in ein XPS-OM](write-text-to-an-xps-om.md)
+[Schreiben von Text in eine XPS OM](write-text-to-an-xps-om.md)
 </dt> <dt>
 
-[Platzieren von Bildern in einem XPS-OM](place-images-in-an-xps-om.md)
+[Platzieren von Bildern in einer XPS OM](place-images-in-an-xps-om.md)
 </dt> <dt>
 
-[Schreiben eines XPS-om in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
+[Schreiben einer XPS OM in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
 </dt> <dt>
 
-[Drucken eines XPS-OM](print-an-xps-om.md)
+[Drucken einer XPS OM](print-an-xps-om.md)
 </dt> <dt>
 
-**Auf dieser Seite verwendet**
+**Wird auf dieser Seite verwendet**
 </dt> <dt>
 
-[**Iopcparamei**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
+[**IOpcPartUri**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
 </dt> <dt>
 
-[**Ixpsomgeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
+[**IXpsOMGeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
 </dt> <dt>
 
-[**Ixpsomgeometryfigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
+[**IXpsOMGeometryFigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
 </dt> <dt>
 
-[**Ixpsomgeometryfigurückruf**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
+[**IXpsOMGeometryFigureCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
 </dt> <dt>
 
-[**Ixpsomobjectfactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
+[**IXpsOMObjectFactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
 </dt> <dt>
 
-[**Ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
+[**IXpsOMPage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
 </dt> <dt>
 
-[**Ixpsompath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath)
+[**IXpsOMPath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath)
 </dt> <dt>
 
-[**Ixpsomsolidcolorbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
+[**IXpsOMSolidColorBrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
 </dt> <dt>
 
-[**Ixpsomvisualcollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
+[**IXpsOMVisualCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Initialisieren eines XPS-OMS](xps-object-model-initialization.md)
+[Initialisieren einer XPS OM](xps-object-model-initialization.md)
 </dt> <dt>
 
-[XPS-Dokument-API-Referenz](xps-programming-reference.md)
+[REFERENZ ZUR XPS-Dokument-API](xps-programming-reference.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

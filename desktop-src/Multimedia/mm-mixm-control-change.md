@@ -1,9 +1,9 @@
 ---
-title: MM_MIXM_CONTROL_CHANGE Meldung (MMSYSTEM. h)
-description: Die Änderungen an der mm \_ mixm- \_ Steuerungs \_ Änderung werden von einem Mischgerät gesendet, um eine Anwendung zu benachrichtigen, dass sich der Zustand eines Steuer Elements, das einer audiozeile zugeordnet ist, geändert hat. Die Anwendung sollte die Anzeige und die zwischengespeicherten Werte für das angegebene Steuerelement aktualisieren.
+title: MM_MIXM_CONTROL_CHANGE (Mmsystem.h)
+description: Die MELDUNG MM MIXM CONTROL CHANGE wird von einem Mixergerät gesendet, um eine Anwendung darüber zu informieren, dass sich der Zustand eines Steuerelements geändert hat, das einer \_ \_ \_ Audiozeile zugeordnet ist. Die Anwendung sollte ihre Anzeige- und zwischengespeicherten Werte für das angegebene Steuerelement aktualisieren.
 ms.assetid: 921c55a7-86c0-43d1-b817-bfbd3c4bb28b
 keywords:
-- MM_MIXM_CONTROL_CHANGE-Nachricht (Multimedia)
+- MM_MIXM_CONTROL_CHANGE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12daa4d9e107a9ba687331731ee9fd7e6f0dc886
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 44305a5a441e4d12a1b3f43029ae3a41f7642c13b15a50f74a1acab158c2ed58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807180"
 ---
-# <a name="mm_mixm_control_change-message"></a>Meldung zum Ändern des mm \_ mixm- \_ Steuer Elements \_
+# <a name="mm_mixm_control_change-message"></a>MELDUNG \_ "MM MIXM \_ CONTROL \_ CHANGE"
 
-Die **Änderungen an der mm \_ mixm- \_ Steuerungs \_ Änderung** werden von einem Mischgerät gesendet, um eine Anwendung zu benachrichtigen, dass sich der Zustand eines Steuer Elements, das einer audiozeile zugeordnet ist, geändert hat. Die Anwendung sollte die Anzeige und die zwischengespeicherten Werte für das angegebene Steuerelement aktualisieren.
+Die **MELDUNG \_ MM MIXM CONTROL \_ \_ CHANGE** wird von einem Mixergerät gesendet, um eine Anwendung darüber zu informieren, dass sich der Zustand eines Steuerelements geändert hat, das einer Audiozeile zugeordnet ist. Die Anwendung sollte ihre Anzeige- und zwischengespeicherten Werte für das angegebene Steuerelement aktualisieren.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = (LPARAM) dwControlID
 
 <dl> <dt>
 
-<span id="hMixer"></span><span id="hmixer"></span><span id="HMIXER"></span>*hmixer*
+<span id="hMixer"></span><span id="hmixer"></span><span id="HMIXER"></span>*hMixer*
 </dt> <dd>
 
-Handle für das Mischgerät (**hmixer**), das die Benachrichtigungs Meldung gesendet hat.
+Handle für das Mixergerät (**HMIXER**), das die Benachrichtigungsnachricht gesendet hat.
 
 </dd> <dt>
 
-<span id="dwControlID"></span><span id="dwcontrolid"></span><span id="DWCONTROLID"></span>*dwcontrolid*
+<span id="dwControlID"></span><span id="dwcontrolid"></span><span id="DWCONTROLID"></span>*dwControlID*
 </dt> <dd>
 
-Steuerelement Bezeichner für das Mixer-Steuerelement, das den Zustand geändert hat Dieser Bezeichner ist identisch mit dem **dwcontrolid** -Member der **mixercontrol**-Struktur, die von der Funktion "**mixergetlinecontrols**" zurückgegeben wird.
+Steuerelementbezeichner für das Mixer-Steuerelement, das den Zustand geändert hat. Dieser Bezeichner ist identisch mit dem **dwControlID-Member** der **MIXERCONTROL-Struktur,** die von der **mixerGetLineControls-Funktion zurückgegeben** wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung muss ein Mischgerät öffnen und ein Rückruf Fenster angeben, um die Meldung zum **Ändern des mm \_ mixm- \_ Steuer \_** Elements zu empfangen.
+Eine Anwendung muss ein Mixergerät öffnen und ein Rückruffenster angeben, um die **MM \_ MIXM \_ CONTROL \_ CHANGE-Nachricht zu** empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Eine Anwendung muss ein Mischgerät öffnen und ein Rückruf Fenster angeben, um
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Eine Anwendung muss ein Mischgerät öffnen und ein Rückruf Fenster angeben, um
 [Audiomixer](audio-mixers.md)
 </dt> <dt>
 
-[Audiomischmeldungen](audio-mixer-messages.md)
+[Audio Mixer Messages](audio-mixer-messages.md)
 </dt> </dl>
 
  

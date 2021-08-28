@@ -1,6 +1,6 @@
 ---
-title: Ändern von Info bezeichgern (UIAutomationClient. h)
-description: In diesem Thema werden die benannten Konstanten beschrieben, die zum Identifizieren von Änderungs Informationen von Microsoft UI Automation verwendet werden.
+title: Infobezeichner ändern (UIAutomationClient.h)
+description: In diesem Thema werden die benannten Konstanten beschrieben, mit denen Microsoft-Benutzeroberflächenautomatisierung identifiziert werden.
 ms.assetid: 583A1FA3-68E5-419E-8E38-2B239928FF75
 topic_type:
 - apiref
@@ -12,20 +12,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f3e27951f3b9b348583821ddc62bd3dddd5de58
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cf9cf397f4f1bc2ea10291b46d21c32b0b32a61609e9f3a33272170f4debdde3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119759660"
 ---
-# <a name="change-info-identifiers"></a>Ändern von Info bezeichgern
+# <a name="change-info-identifiers"></a>Ändern von Infobezeichnern
 
-In diesem Thema werden die benannten Konstanten beschrieben, die zum Identifizieren von Änderungs Informationen von Microsoft UI Automation verwendet werden.
+In diesem Thema werden die benannten Konstanten beschrieben, mit denen Microsoft-Benutzeroberflächenautomatisierung identifiziert werden.
 
 <dl> <dt>
 
-<span id="UIA_SummaryChangeId"></span><span id="uia_summarychangeid"></span><span id="UIA_SUMMARYCHANGEID"></span>**UIA \_ summarychangeid**
+<span id="UIA_SummaryChangeId"></span><span id="uia_summarychangeid"></span><span id="UIA_SUMMARYCHANGEID"></span>**UIA \_ SummaryChangeId**
 </dt> <dd> <dl> <dt>
 
 90000
@@ -33,7 +33,7 @@ In diesem Thema werden die benannten Konstanten beschrieben, die zum Identifizie
 
 
 
-Eine Zeichenfolge, die die Bedeutung der Änderung aus einem Anwendungs Sichtpunkt beschreibt.
+Eine Zeichenfolge, die die Bedeutung der Änderung aus Anwendungssicht beschreibt.
 
 
 </dt> </dl> </dd> </dl>
@@ -44,9 +44,9 @@ Eine Zeichenfolge, die die Bedeutung der Änderung aus einem Anwendungs Sichtpun
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                            |
-| Header<br/>                   | <dl> <dt>UIAutomationClient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                            |
+| Header<br/>                   | <dl> <dt>UIAutomationClient.h</dt> </dl> |
 
 
 

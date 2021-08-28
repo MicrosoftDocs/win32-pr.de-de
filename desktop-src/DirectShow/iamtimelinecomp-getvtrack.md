@@ -1,7 +1,7 @@
 ---
-description: Die getvtrack-Methode ruft den virtuellen Track mit der angegebenen Priorität ab.
+description: Die GetVTrack-Methode ruft die virtuelle Spur mit der angegebenen Priorität ab.
 ms.assetid: e866064b-a511-4f0c-8cb1-62e4f1c42347
-title: 'Iamtimelinecomp:: getvtrack-Methode (qedit. h)'
+title: IAMTimelineComp::GetVTrack-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 06c205f700cbdb98fdc5f45bdd2ca7727e2456f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 245f19783f7a472f86544d14f27c588e7a5938e899f2f389887d7a7817d6254e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756300"
 ---
-# <a name="iamtimelinecompgetvtrack-method"></a>Iamtimelinecomp:: getvtrack-Methode
+# <a name="iamtimelinecompgetvtrack-method"></a>IAMTimelineComp::GetVTrack-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `GetVTrack` Methode ruft den virtuellen Track mit der angegebenen Priorität ab.
+Die `GetVTrack` -Methode ruft die virtuelle Spur mit der angegebenen Priorität ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,47 +46,47 @@ HRESULT GetVTrack(
 
 <dl> <dt>
 
-*ppvirtualtrack* \[ vorgenommen\]
+*ppVirtualTrack* \[ out\]
 </dt> <dd>
 
-Empfängt die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des virtuellen Titels.
+Empfängt die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) der virtuellen Spur.
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Priorität des abzurufenden virtuellen Titels.
+Priorität der abzurufenden virtuellen Spur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück:
+Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                              |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                                      |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Keine virtuelle Spur mit der angegebenen Priorität.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Keine virtuelle Spur mit der angegebenen Priorität.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    |  NULL-Zeigerargument.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamtimelineobj** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode erfolgreich ist, verfügt die **IAMTimelineObj-Schnittstelle,** die sie zurückgibt, über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie die -Schnittstelle wieder frei geben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -96,19 +96,19 @@ Wenn die Methode erfolgreich ausgeführt wird, weist die zurückgegebene **iamti
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinecomp-Schnittstelle**](iamtimelinecomp.md)
+[**IAMTimelineComp-Schnittstelle**](iamtimelinecomp.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

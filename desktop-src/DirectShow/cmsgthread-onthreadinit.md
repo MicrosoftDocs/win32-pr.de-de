@@ -1,7 +1,7 @@
 ---
-description: Stellt die Initialisierung für einen Thread bereit.
+description: Stellt die Initialisierung für einen Thread zur Seite.
 ms.assetid: a9c330bb-0a2b-45bf-9b24-d03dd61d7dbf
-title: Cmsgthread. onthreadinit-Methode (msgthrd. h)
+title: CMsgThread.OnThreadInit-Methode (Msgthrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 80e15d6430da77c0f22f5566375394b8fe6994ca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b9105bf8399b036421c5360c62a63d8c3fac44471adc13b9e8c224fb0eb84e8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119831840"
 ---
-# <a name="cmsgthreadonthreadinit-method"></a>Cmsgthread. onthreadinit-Methode
+# <a name="cmsgthreadonthreadinit-method"></a>CMsgThread.OnThreadInit-Methode
 
-Stellt die Initialisierung für einen Thread bereit.
+Stellt die Initialisierung für einen Thread zur Seite.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Funktion, wenn Sie eine eigene spezifische Initialisierung beim Starten des Threads durchführen möchten.
+Überschreiben Sie diese Funktion, wenn Sie ihre eigene spezifische Initialisierung beim Starten des Threads verwenden möchten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Msgthrd. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msgthrd.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmsgthread-Klasse**](cmsgthread.md)
+[**CMsgThread-Klasse**](cmsgthread.md)
 </dt> </dl>
 
  

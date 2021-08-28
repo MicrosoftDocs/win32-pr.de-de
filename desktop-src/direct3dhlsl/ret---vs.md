@@ -1,6 +1,6 @@
 ---
-title: Ret-vs
-description: Rückgabe aus einer Unterroutine oder einer Main-Funktion.
+title: ret – im Vergleich zu
+description: Gibt von einer Unterroutine oder einer Main-Funktion zurück.
 ms.assetid: ee3a6a7a-c068-442f-9f86-c637b5707224
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,58 +9,58 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3b91a9f2fb30dbd243e29043a1655d441215bc75
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 6bec0356f2f1542da421a807598707e4857033c13cda2077d9281ac24e4fc3e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853770"
 ---
-# <a name="ret---vs"></a>Ret-vs
+# <a name="ret---vs"></a>ret – im Vergleich zu
 
-Rückgabe aus einer Unterroutine oder einer Main-Funktion.
+Gibt von einer Unterroutine oder einer Main-Funktion zurück.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| TZI |
+| Ret |
 |-----|
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| TZI                    |      | x    | x    | x     | x    | x     |
+| Ret                    |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Diese Anweisung übernimmt die Adresse einer Anweisung aus dem Rückgabe Adress Stapel und setzt deren Ausführung fort. Bei der Main-Funktion beendet diese Anweisung die Ausführung von Shaders.
+Diese Anweisung übernimmt die Adresse einer Anweisung aus dem Rückgabeadressstapel und setzt ihre Ausführung fort. Im Fall der Main-Funktion beendet diese Anweisung die Shaderausführung.
 
-Die ret-Anweisung verwendet einen Vertex-Shader-Anweisungs Slot.
+Die Ret-Anweisung verwendet einen Vertex-Shaderanweisungsslot.
 
-Wenn ein Shader keine Unterroutinen enthält, ist die Verwendung von Ret am Ende des Hauptprogramms optional.
+Wenn ein Shader keine Unterroutinen enthält, ist die Verwendung von ret am Ende des Hauptprogramms optional.
 
-Mehrere Return-Anweisungen sind im Hauptprogramm oder in einer Unterroutine nicht zulässig. die erste Return-Anweisung wird als Ende des Hauptprogramms oder der Unterroutine behandelt.
+Mehrere Rückgabeanweisungen sind im Hauptprogramm oder in einer Unterroutine nicht zulässig. Die erste return-Anweisung wird als Ende des Hauptprogramms oder der Unterroutine behandelt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

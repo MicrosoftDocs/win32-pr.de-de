@@ -1,25 +1,25 @@
 ---
-description: Die iwpcproviderconfig-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWPCProviderConfig-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 4370095A-DFF4-4D87-AEC3-3875E295847D
-title: Iwpcproviderconfig-Methoden
+title: IWPCProviderConfig-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 379d7a8cc5d59cff2b23a9e144a51b562907c133
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 104a90bf17b60f21275422b7c5f2b8775944e44b05ba8d27a89c41db79d8cfed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846660"
 ---
-# <a name="iwpcproviderconfig-methods"></a>Iwpcproviderconfig-Methoden
+# <a name="iwpcproviderconfig-methods"></a>IWPCProviderConfig-Methoden
 
-Die [**iwpcproviderconfig**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderconfig) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWPCProviderConfig-Schnittstelle**](/windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderconfig) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Configure-Methode**](/windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-configure)
--   [**Getusersummary-Methode**](/windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-getusersummary)
--   [**Requestoverride-Methode**](/windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-requestoverride)
+-   [**GetUserSummary-Methode**](/windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-getusersummary)
+-   [**RequestOverride-Methode**](/windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-requestoverride)
 
  
 

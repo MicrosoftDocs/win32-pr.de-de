@@ -1,25 +1,25 @@
 ---
-description: Enthält das Referenzmaterial zur Verwendung der drahtlosen Ad-hoc-Programmierschnittstelle.
+description: Enthält das Referenzmaterial zur Verwendung der Drahtlosen Ad-hoc-Programmierschnittstelle.
 ms.assetid: f1dbcc9b-e60b-4044-9167-e9e87ead0a8b
 title: Drahtlose Ad-hoc-Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95dc938df2d9cb8d0e3a44e6133ef09de4b04874
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d515ed688d09a4ebf67a1dd47aa314dad3943df4665851833c66b2c21bd9d4a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119780070"
 ---
 # <a name="wireless-ad-hoc-reference"></a>Drahtlose Ad-hoc-Referenz
 
-Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der drahtlosen Ad-hoc-Programmierschnittstelle. Die Themen umfassen Folgendes:
+Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der Drahtlosen Ad-hoc-Programmierschnittstelle. Die Themen umfassen Folgendes:
 
 -   [Drahtlose Ad-hoc-Enumerationen](wireless-ad-hoc-enumerations.md)
 -   [Drahtlose Ad-hoc-Schnittstellen](wireless-ad-hoc-interfaces.md)
 
 > [!Note]  
-> Der Ad-hoc-Modus ist möglicherweise in zukünftigen Versionen von Windows nicht verfügbar. Beginnen Sie mit Windows 8.1 und Windows Server 2012 R2, und verwenden Sie stattdessen [Wi-Fi Direct](about-the-wi-fi-direct-api.md) .
+> Der Ad-hoc-Modus ist in zukünftigen Versionen von Windows möglicherweise nicht mehr verfügbar. Verwenden Sie ab Windows 8.1 und Windows Server 2012 R2 stattdessen [Wi-Fi Direct.](about-the-wi-fi-direct-api.md)
 
  
 
@@ -27,7 +27,7 @@ Dieser Abschnitt enthält das Referenzmaterial zur Verwendung der drahtlosen Ad-
 
 <dl> <dt>
 
-[Informationen zur drahtlosen Ad-hoc-API](about-the-wireless-ad-hoc-api.md)
+[Informationen zur Drahtlosen Ad-hoc-API](about-the-wireless-ad-hoc-api.md)
 </dt> </dl>
 
  

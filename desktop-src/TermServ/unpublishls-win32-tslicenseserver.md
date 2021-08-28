@@ -1,12 +1,12 @@
 ---
-title: Unpublishls-Methode der Win32_TSLicenseServer-Klasse
-description: Veröffentlichung eines Remotedesktop Lizenzservers aus Active Directory Domain Services.
+title: UnpublishLS-Methode der Win32_TSLicenseServer-Klasse
+description: Aufheben der Veröffentlichung Remotedesktop Lizenzservers Active Directory Domain Services.
 ms.assetid: 275854e2-85f6-4142-8bce-8d633bfcff7d
 ms.tgt_platform: multiple
 keywords:
-- Unpublishls-Methode Remotedesktopdienste
-- Unpublishls-Methode Remotedesktopdienste, Win32_TSLicenseServer-Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, unpublishls-Methode
+- UnpublishLS-Remotedesktopdienste
+- UnpublishLS-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer klasse Remotedesktopdienste , UnpublishLS-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1ec183b5be8055dc30add5bc00a7eb537cd20f8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4990488dba9610dc307878f09fdcf2faab6b61b452aebe9860668aee7d59111a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869000"
 ---
-# <a name="unpublishls-method-of-the-win32_tslicenseserver-class"></a>Unpublishls-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="unpublishls-method-of-the-win32_tslicenseserver-class"></a>UnpublishLS-Methode der Win32 \_ TSLicenseServer-Klasse
 
-Veröffentlichung eines Remotedesktop Lizenzservers aus Active Directory Domain Services.
+Aufheben der Veröffentlichung Remotedesktop Lizenzservers Active Directory Domain Services.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode aufzurufen, müssen Sie als Unternehmens Administrator an der Gesamtstruktur angemeldet sein, in der der Lizenzserver Mitglied ist.
+Zum Aufrufen dieser Methode müssen Sie als Unternehmensadministrator bei der Gesamtstruktur angemeldet sein, in der der Lizenzserver Mitglied ist.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -69,7 +69,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

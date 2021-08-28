@@ -1,7 +1,7 @@
 ---
-description: Extrahiert die pro-Beispiel-PCA-Projektions Koeffizienten (Principal Component Analysis) aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer.
+description: Extrahiert die Pro-Sample-Projektionskoeffizienten für die Prinzipalkomponentenanalyse (Principal Component Analysis, PCA) aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer.
 ms.assetid: 149098c2-35ca-46e9-a13a-94906c95cfd9
-title: 'ID3DXPRTCompBuffer:: extractpca-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTCompBuffer::ExtractPCA-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 6ef949e9f88a843f4636643dadd7d00ffd94d98b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b172682883c5e5272ece103879aefbbdfb79193b0576e9be04432b5d48b1bb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856140"
 ---
-# <a name="id3dxprtcompbufferextractpca-method"></a>ID3DXPRTCompBuffer:: extractpca-Methode
+# <a name="id3dxprtcompbufferextractpca-method"></a>ID3DXPRTCompBuffer::ExtractPCA-Methode
 
-Extrahiert die pro-Beispiel-PCA-Projektions Koeffizienten (Principal Component Analysis) aus einem komprimierten [**ID3DXPRTCompBuffer**](id3dxprtcompbuffer.md) -Datenpuffer.
+Extrahiert die Pro-Sample-Projektionskoeffizienten für die Prinzipalkomponentenanalyse (Principal Component Analysis, PCA) aus einem komprimierten [**ID3DXPRTCompBuffer-Datenpuffer.**](id3dxprtcompbuffer.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT ExtractPCA(
 
 <dl> <dt>
 
-*Startpca* \[ in\]
+*StartPCA* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Start Index für die PCA-Projektions Koeffizienten zum Extrahieren aus dem Puffer.
+Startindex für PCA-Projektionskoeffizienten, die aus dem Puffer extrahiert werden sollen.
 
 </dd> <dt>
 
-*Numextract* \[ in\]
+*NumExtract* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der aus dem Puffer zu extrahierenden PCA-Projektions Koeffizienten.
+Anzahl der PCA-Projektionskoeffizienten, die aus dem Puffer extrahiert werden sollen.
 
 </dd> <dt>
 
-*ppcacoefficients* \[ in\]
+*pPCACoefficients* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Speicherort, an dem die CPCA (gruppierten Principal Component Analysis)-Koeffizienten geschrieben werden. Die Größe der geschriebenen Daten ist (Anzahl der Stichproben) \* (Anzahl der PCA-Koeffizienten).
+Zeiger auf den Speicherort, an dem CPCA-Koeffizienten (Cluster Principal Component Analysis) geschrieben werden. Die Größe der geschriebenen Daten ist (Anzahl der Stichproben) \* (Anzahl der PCA-Koeffizienten).
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf den Speicherort, an dem die CPCA (gruppierten Principal Component Ana
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

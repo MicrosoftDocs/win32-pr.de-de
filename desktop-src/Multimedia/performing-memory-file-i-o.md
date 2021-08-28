@@ -1,40 +1,40 @@
 ---
-title: Ausführen von Speicherdatei-e/a
-description: Ausführen von Speicherdatei-e/a
+title: Ausführen von Speicherdatei-E/A
+description: Ausführen von Speicherdatei-E/A
 ms.assetid: c0a5c8a0-978f-47d9-8ef0-ad391b9d1e63
 keywords:
-- Multimedia-Datei-e/a, Arbeitsspeicher
-- Datei-e/a, Arbeitsspeicher
-- Eingabe und Ausgabe (e/a), Arbeitsspeicher
-- E/a (Eingabe und Ausgabe), Arbeitsspeicher
-- Arbeitsspeicher-e/a
-- mmioopen-Funktion
+- Multimediadatei-E/A, Arbeitsspeicher
+- Datei-E/A, Arbeitsspeicher
+- Eingabe und Ausgabe (E/A), Arbeitsspeicher
+- E/A (Eingabe und Ausgabe), Arbeitsspeicher
+- Speicher-E/A
+- mmioOpen-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82c3e98bbd3636fb88c834957ba2c3fb856406a8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 90a2b1e2e47ffccc21b2684dcb6bd285b7e55470776fb57eb382a969091a19e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805890"
 ---
-# <a name="performing-memory-file-io"></a>Ausführen von Speicherdatei-e/a
+# <a name="performing-memory-file-io"></a>Ausführen von Speicherdatei-E/A
 
-Die Multimedia-Datei-e/a-Dienste ermöglichen es Ihnen, einen Speicherblock als Datei zu behandeln. Dies kann hilfreich sein, wenn Sie bereits über ein Datei Image im Arbeitsspeicher verfügen. Mithilfe von Speicherdateien können Sie die Anzahl von Sonderbedingungen im Code reduzieren, da Sie für e/a-Zwecke Speicherdateien als Datenträger basierte Dateien behandeln können. Sie können auch Speicherdateien mit der Zwischenablage verwenden.
+Mit den E/A-Diensten für Multimediadateien können Sie einen Speicherblock als Datei behandeln. Dies kann nützlich sein, wenn Sie bereits über ein Dateiimage im Arbeitsspeicher verfügen. Mit Speicherdateien können Sie die Anzahl von Sonderbedingungen im Code reduzieren, da Sie für E/A-Zwecke Speicherdateien so behandeln können, als ob es sich um datenträgerbasierte Dateien wäre. Sie können auch Speicherdateien mit der Zwischenablage verwenden.
 
-Wie bei e/a-Puffern können Speicherdateien den von der Anwendung oder dem Datei-e/a-Manager zugeordneten Arbeitsspeicher verwenden. Außerdem können Speicherdateien entweder erweiterbar oder nicht erweiterbar sein. Wenn der Datei-e/a-Manager das Ende einer erweiterbaren Speicherdatei erreicht, erweitert er die Speicherdatei um ein vordefiniertes Inkrement.
+Wie bei E/A-Puffern können Speicherdateien Arbeitsspeicher verwenden, der von der Anwendung oder vom Datei-E/A-Manager zugeordnet wird. Darüber hinaus können Speicherdateien entweder erweiterbar oder nicht erweiterbar sein. Wenn der Datei-E/A-Manager das Ende einer erweiterbaren Speicherdatei erreicht, wird die Speicherdatei um ein vordefiniertes Inkrement erweitert.
 
-Um eine Speicherdatei zu öffnen, verwenden Sie die [**mmioopen**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioopen) -Funktion, wobei der *szFilename* -Parameter auf **null** festgelegt ist und das MMIO- \_ Schreib Flag im *dwOpenFlags* -Parameter festgelegt ist. Legen Sie den *lpmmioinfo* -Parameter so fest, dass er auf eine [**mmioinfo**](/previous-versions//dd757322(v=vs.85)) -Struktur verweist, die wie folgt eingerichtet wurde:
+Um eine Speicherdatei zu öffnen, verwenden Sie die [**mmioOpen-Funktion,**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioopen) bei der der *szFilename-Parameter* auf **NULL** und das MMIO READWRITE-Flag im \_ *dwOpenFlags-Parameter festgelegt* ist. Legen Sie *den lpmmioinfo-Parameter* so fest, dass er auf eine [**MMIOINFO-Struktur**](/previous-versions//dd757322(v=vs.85)) zeigen soll, die wie folgt eingerichtet wurde:
 
-1.  Legen Sie den **pioproc** -Member auf **null** fest.
-2.  Legen Sie den **fccioproc** -Member auf FourCC \_ mem fest.
-3.  Legen Sie den **pchBuffer** -Member so fest, dass er auf den Speicherblock verweist. Legen Sie **pchBuffer** auf **null** fest, um anzufordern, dass der Datei-e/a-Manager den Speicherblock zuweist.
-4.  Legen Sie den **cchBuffer** -Member auf die anfängliche Größe des Speicherblocks fest.
-5.  Legen Sie den **adwinfo** -Member auf die minimale Erweiterungs Größe des Speicherblocks fest. Legen Sie für eine nicht erweiterbare Speicherdatei **adwinfo** auf **null** fest.
-6.  Legen Sie alle anderen Elemente auf 0 (null) fest.
+1.  Legen Sie den **pIOProc-Member** auf **NULL fest.**
+2.  Legen Sie **das fccIOProc-Mitglied** auf FOURCC \_ MEM fest.
+3.  Legen Sie den **pchBuffer-Member** so fest, dass er auf den Speicherblock zeigen soll. Wenn Sie anfordern, dass der Datei-E/A-Manager den Speicherblock zuordnt, legen **Sie pchBuffer** auf **NULL fest.**
+4.  Legen Sie **den cchBuffer-Member** auf die Anfangsgröße des Speicherblocks fest.
+5.  Legen Sie **den AdwInfo-Member** auf die minimale Erweiterungsgröße des Speicherblocks fest. Legen Sie für eine nicht ersetzbare Speicherdatei **adwInfo** auf **NULL fest.**
+6.  Legen Sie alle anderen Member auf 0 (null) fest.
 
-Es gibt keine Einschränkungen für das belegen von Speicher für die Verwendung als nicht erweiterbare Speicherdatei.
+Es gibt keine Einschränkungen bei der Zuweisung von Arbeitsspeicher für die Verwendung als nicht ersetzbare Speicherdatei.
 
- 
+ 
 
- 
+ 

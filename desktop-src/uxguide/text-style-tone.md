@@ -1,126 +1,126 @@
 ---
 title: Stil und Ton
-description: Der Ton beim Schreiben ist die Haltung, die der Writer dem Reader überträgt.
+description: Ton beim Schreiben ist die Stimmung, die der Schreiber dem Leser vermittelt.
 ms.assetid: b9a03709-301f-46de-b4b4-0dd1214c0ed7
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 6009491b54de9035b253a10b9fd48f2233947104
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 20bd9fff1093607bfc554eb458f0e1904fda0a496772ce244922d03e9890d982
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104554203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841684"
 ---
 # <a name="style-and-tone"></a>Stil und Ton
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Der Ton beim Schreiben ist die Haltung, die der Writer dem Reader überträgt. Es ist nicht unbedingt das, was Sie sagen, sondern wie Sie es sagen. Der Ton dient zum Erstellen einer bestimmten Antwort oder Emotionen im Reader. Es wird eine Persönlichkeit erstellt, die Benutzer einbinden oder repliell kann.
+Ton beim Schreiben ist die Stimmung, die der Schreiber dem Leser vermittelt. Es ist nicht notwendigerweise, was Sie sagen, sondern wie Sie es sagen. Der Ton dient dazu, eine bestimmte Antwort oder Emotion im Reader zu erstellen. es erstellt eine Persönlichkeit, die benutzer entweder binden oder abdringen kann.
 
-**Hinweis:** Richtlinien im Zusammenhang mit dem [Text der Benutzeroberfläche](text-ui.md) werden in einem separaten Artikel dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang [mit Benutzeroberflächentext](text-ui.md) werden in einem separaten Artikel vorgestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-### <a name="the-windows-tone"></a>Der Windows-Ton
+### <a name="the-windows-tone"></a>Der Windows ton
 
-Verwenden Sie den Windows-Ton, um Vertrauen zu gewinnen, indem Sie den Benutzern auf persönlicher Ebene Vertrauen, indem Sie genau, ermutigend, aufschlussreich, Ziel und Benutzer orientiert sind. Der Windows-Ton zielt auch darauf ab, leicht, inspirierend, unkompliziert und vertrauenswürdig zu sein.
+Verwenden Sie Windows Ton, um Vertrauen zu schaffen, indem Sie mit Benutzern auf persönlicher Ebene kommunizieren, indem Sie präzise, ermutigend, aufschlussreich, zielorientiert und benutzerorientiert sind. Der Windows ist auch darauf aus, einfach, unkompliziert, einfach und vertrauenswürdig zu sein.
 
-Verwenden Sie keinen ablenkend-, absteigenden oder arroganten Ton. Vermeiden Sie die Extreme der "Machine"-Stimme (bei der der Redner aus der Sprache entfernt wurde) und die Stimme des Vertriebsmitarbeiters (bei der das Schreiben versucht, uns etwas zu verkaufen, an cajole US.
+Verwenden Sie keinen ablenkenden, herablassenden oder abscheischen Ton. Vermeiden Sie die Extreme der "Computer"-Stimme (bei der der Sprecher aus der Sprache entfernt wird) und der "Vertriebsmitarbeiter"-Stimme (bei der der Schriftsatz versucht, uns etwas zu verkaufen, uns zu überschreiben, uns zu jubeln, alles als "einfach" zu überschreiben.)
 
-Research von Microsoft zeigt, dass es in der Software häufig:
+Untersuchungen von Microsoft zeigen, dass es in der Software häufig:
 
--   **Über Verwendung von Computerterminologie und-Fachjargon,** die viele Benutzer nicht verstehen oder interpretieren.
+-   **Übermäßige Nutzung der Computerterminologie und des Jargons,** die viele Benutzer nicht verstehen oder falsch interpretiert.
 -   **Inkonsistente Verwendung der Terminologie.**
--   **Unveränderlich, häufig versehentlich patronier Nachrichten,** die die Benutzer zum Entschlüsseln kämpfen.
+-   **Undurchdringlich, oft** unbeabsichtigte Überlönung von Nachrichten, die Benutzer schwer entschlüsseln können.
 
-Diese Probleme sorgen dafür, dass Benutzer verwirrend, unintelligent, unproblematisch und letztendlich von ihrer Erfahrung mit Software entzaubert werden.
+Diese Probleme führen dazu, dass sich Benutzer verwirrend, unentirnt, verunsichert und letztendlich von ihrer Erfahrung mit Software abwechseln.
 
-Die neue Aufmerksamkeit auf die Nachrichten Qualität, einschließlich des Texts des Texts, impliziert, dass die Sprache selbst ein wichtiger Bestandteil der Kundenzufriedenheit ist. Unterstützen Sie Benutzer mit unterschiedlichen technischen Kenntnissen, insbesondere bei Einsteiger, damit Sie von den Vorteilen Ihres Programms profitieren können.
+Die erneuerte Aufmerksamkeit auf die Nachrichtenqualität, einschließlich des Tons des Texts, impliziert, dass die Sprache selbst ein wichtiger Bestandteil der allgemeinen Kundenzufriedenheit ist. Unterstützen Sie Benutzer mit unterschiedlichen technischen Kenntnissen, insbesondere durch erfahrene Benutzer, um alle Möglichkeiten Ihres Programms zu nutzen.
 
-**Wenn Sie nur eine Aktion ausführen...**
+**Wenn Sie nur eins tun...**
 
-Stellen Sie sicher, dass Ihr Text genau, ermutigend, aufschlussreich, Ziel und Benutzer orientiert ist. Seien Sie unkompliziert und vertrauenswürdig, und verwenden Sie bei Bedarf einen hellen und inspirierenden Ton.
+Stellen Sie sicher, dass Ihr Text präzise, ermutigend, aufschlussreich, zielorientiert und benutzerorientiert ist. Seien Sie unkompliziert und vertrauenswürdig, und verwenden Sie gegebenenfalls einen hellen und tönen Ton.
 
 ## <a name="guidelines"></a>Richtlinien
 
-### <a name="use-the-windows-tone"></a>Windows-Ton verwenden
+### <a name="use-the-windows-tone"></a>Verwenden des Windows Ton
 
-Der Ton in Ihrem Programm sollte wie folgt lauten:
+Der Ton in Ihrem Programm sollte wie im
 
--   **Präzi.** Benutzer sollten sich sicher sein, dass die Informationen technisch genau sind. Wenn die Informationen nicht exakt sind, ist die Benutzeroberflächen Funktion für diese spezielle Aufgabe verdorben, und Sie verliert den Glauben an jede andere Unterstützung, die er aus dieser Quelle liest.
--   **Dere.** Verwenden Sie die Sprache, mit der die Software den Benutzern ermöglicht wird, Dinge zu erledigen, anstatt Sie zu erledigen. Verwenden Sie z. b. "Sie können" statt "Windows ermöglicht Ihnen" oder "Diese Funktion ermöglicht Ihnen". (Ausnahme: Es ist in Ordnung, "zulassen" zu verwenden, wenn auf Features verwiesen wird – z. b. Sicherheitsfeatures –, die eine Aktion zulassen oder verweigern.)
--   **Aufschlussreiche.** Benutzer sollten der Meinung sein, dass Sie (und durch Erweiterung Ihrer Anwendung) wissen, wann eine bestimmte Aufgabe kompliziert ist und Sie durch Sie geführt werden. Gleichzeitig sollten Sie Benutzer als intelligente Personen behandeln, die Unterstützung für ein bestimmtes Problem benötigen.
--   **Objektiver.** Manchmal möchten die Benutzer eine umfassendere Erläuterung erhalten. Häufig möchten Sie aber nur wissen, was Sie benötigen, um fortzufahren. Dies erfordert eine Objektivität –, um zu erkennen, dass das Ziel (Produktivität, Neugier, Genuss) das Ziel des Benutzers ist, nicht die des Writers. Außerdem ist es erforderlich, dass Sie alle vorab freigegebenen Vorstellungen über den Benutzer ablegen.
--   **Benutzer orientiert.** Schreiben Sie aus der Perspektive des Benutzers und vorzugsweise aus der Sicht, was Sie für den Benutzer tun können. Benutzer werden feststellen, dass Sie Informationen finden, die für Sie relevant und zugänglich sind.
+-   **Genau.** Benutzer sollten sich sicher sein, dass die Informationen technisch korrekt sind. Wenn die Informationen nicht genau sind, wird die Erfahrung des Benutzers mit dieser bestimmten Aufgabe überstanden, und er verliert jegliche andere Unterstützung, die er aus dieser Quelle liest.
+-   **Förderung.** Verwenden Sie eine Sprache, die vermittelt, dass die Software Benutzern die Möglichkeit gibt, Dinge zu tun, anstatt ihnen die Möglichkeit zu geben, Dinge zu tun. Verwenden Sie beispielsweise "you can" anstelle von "Windows lets you" oder "this feature allows you". (Ausnahme: Es ist in Ordnung, "zulassen" zu verwenden, wenn auf Features wie Sicherheitsfeatures, die eine Aktion zulassen oder verweigern, verweisen.)
+-   **Aufschlussreiche.** Benutzer sollten der Meinung sein, dass Sie (und durch erweiterungsweise Ihre Anwendung) wissen, wann eine bestimmte Aufgabe kompliziert ist, und dass Sie sie durch sie leiten werden. Gleichzeitig behandeln Sie Benutzer als intelligente Personen, die bei einem bestimmten Problem Hilfe benötigen.
+-   **Ziel.** Manchmal wünschen sich Benutzer eine vielfältigere Erklärung. oft möchten sie nur wissen, was sie benötigen, um weiter zu kommen. Dies erfordert Objektivität, um zu erkennen, dass das Ziel (Produktivität, Produktivität, Gier) das Ziel des Benutzers und nicht das des Autors ist. Außerdem ist es erforderlich, dass Sie alle vordefinierten Begriffe über den Benutzer verinnen.
+-   **Benutzerorientiert.** Schreiben Sie aus Der Perspektive des Benutzers und vorzugsweise aus der Perspektive, was Sie für den Benutzer tun können. Benutzer sollten das Gefühl haben, dass sie Informationen finden, die für sie relevant und zugänglich sind.
 
-Sie können die Kommunikation mit ihren Benutzern weiterentwickeln, indem Sie Folgendes ausführen:
+Sie können die Kommunikation mit Ihren Benutzern weiterentwickeln, indem Sie:
 
--   **Grün.** Eine helle Stimme ist einfach zu behandeln und schnell zu verstehen. Dies ist nicht schwierig oder schwer zu vermeiden, und es wird vermieden, dass eine Tiefe oder schwerwiegende Belastung ist.
--   **Inspirierende.** Eine inspirierende Stimme motiviert Benutzer und fördert Sie, damit Sie Maßnahmen ergreifen können. Eine bestimmte Begeisterung markiert diese Art von Stimme, sodass Sie eine ansprechende Persönlichkeit bietet, als die Benutzer, die häufig von ihren Computern erwartet werden.
--   **Direkte.** Eine unkomplizierte Stimme ist "offene" und "Open", von der vorab-oder Betrugs freie Sprache.
--   **Zuverlässigen.** Eine vertrauenswürdige Stimme ist vertrauenswürdig, zuverlässig, genau und ehrlich. Es dauert nur wenige Ungenauigkeiten, um die Vertrauenswürdigkeit des Benutzers zu verlieren, aber es kann sehr lange dauern, bis diese Vertrauensstellung wiederholt wird.
+-   **Licht.** Eine helle Stimme ist einfach zu bedienen und schnell verständlich. Dies ist nicht schwierig oder mühsam, und es wird vermieden, dass es schwierig oder schwerwiegend ist.
+-   **Inspirierende.** Eine stimme Stimme motiviert Benutzer und spricht sie dazu an, Maßnahmen zu ergreifen. Eine bestimmte Stimme kennzeichnet diese Art von Stimme und gibt ihr eine ansprechendere Persönlichkeit als der computerbasierte Ton, den Benutzer häufig von ihren Computern erwarten.
+-   **Einfach.** Eine einfache Stimme ist frei und offen, frei von Vorverlangen oder Täuschung.
+-   **Vertrauenswürdig.** Eine vertrauenswürdige Stimme ist vertrauenswürdig, zuverlässig, präzise und offen. Es dauert nur wenige Ungenauigkeiten, um das Vertrauen des Benutzers zu verlieren, aber es kann sehr lange dauern, bis dieses Vertrauen wiederernennt wird.
 
-Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, die mit höherer Wahrscheinlichkeit eine negative Reaktion erhalten:
+Vermeiden Sie im Gegensatz dazu die folgenden Töne, bei denen eine negative Reaktion viel wahrscheinlicher ist:
 
--   **Computerton.** Sie haben einen unpersönlichen, unflexiblen Austausch mit einem Computer oder Roboter.
--   **Unternehmenston.** Sie haben einen Monolog mit einer vollständig leistungsfähigen, nicht persönlichen Corporation.
--   **Strafverfolgungs-Ton.** Es hat sich gewünscht, dass Sie mit einer Flut von eindringlichen Fragen abgefragt werden.
--   **Lawyerly-Ton.** Es ist so, als ob Sie dazu aufgefordert werden, einen rechts wichtigen Act auszuführen
--   **Vertriebsmitarbeiter.** Sie werden aufgefordert, etwas zu kaufen oder auszuprobieren, bei dem es darum geht, etwas zu tun.
--   **Übergeordnetes, absteigende oder zornige Ton.** Der Meinung nach ist, dass die Software Benutzer absinkt, sich mit Ihnen in Zusammenhang setzen oder mit Ihnen verärgert ist. In der Regel ist dieser Farbton sehr technisch, setzt unnötige Aufmerksamkeit auf die Fehler des Benutzers und spürt ungrob.
--   **Boastiger Ton.** Der Meinung nach ist, dass die Software an sich über die zugehörigen Leistungen Meriten ist
--   **Flippanter Ton.** Sie fühlen sich wie die Ziele der Benutzer, oder die Emotionen werden nicht ernst genommen, oder die Verwendung des Programms wird gewährt.
+-   **Computerton.** Das Gefühl, einen unpersönlichen, unflexiblen Austausch mit einem Computer oder Roboter zu haben.
+-   **Unternehmenston.** Hat das Gefühl, einen Monolog mit einem all leistungsfähigen, allwissenden, unpersönlichen Unternehmen zu haben.
+-   **Tonfall der Rechtsdurchsetzung.** Hat das Gefühl, mit einer Welle von aufdringlichen Fragen verhört zu werden.
+-   **Tonfall.** Es hat das Gefühl, dass Sie aufgefordert werden, eine rechtsgült große Akte durchzuführen.
+-   **Vertriebsmitarbeiterton.** Es hat das Gefühl, dass Sie aufgefordert werden, etwas zu kaufen oder auszuprobieren, ohne bedenken zu müssen.
+-   **Überlegener, herablassender oder heiterer Ton.** Es ist so, als würde die Software Benutzer verärgern, mit ihnen sprechen oder sie verärgern. In der Regel ist dieser Ton sehr technisch, lenkt unnötige Aufmerksamkeit auf die Fehler des Benutzers und wirkt unanfällig.
+-   **Besendiger Ton.** Es ist so, als ob die Software über ihre Eigenen spricht oder anderweitig zu viel Aufmerksamkeit auf sich selbst zieht.
+-   **Flippant-Ton.** Das Gefühl, dass die Ziele und Emotionen der Benutzer nicht ernst genommen werden, oder ihre Verwendung des Programms wird als selbstverständlich bezeichnet.
 
-### <a name="use-real-world-language"></a>Reale Sprache verwenden
+### <a name="use-real-world-language"></a>Verwenden der realen Sprache
 
--   **Verwenden Sie alltägliche Wörter, wenn Sie Wörter haben, die Sie nicht an andere Personen weitergibt.** Dies ist insbesondere dann effektiv, wenn Sie ein komplexes technisches Konzept oder eine komplexe Maßnahme erläutern. Stellen Sie sich vor, dass Sie sich die Schulter des Benutzers ansehen und erläutern, wie Sie die Aufgabe erledigen können.
+-   **Verwenden Sie alltägliche Wörter, wenn Sie Wörter vermeiden können, die Sie einer anderen Person nicht persönlich sagen würden.** Dies ist besonders effektiv, wenn Sie ein komplexes technisches Konzept oder eine komplexe Aktion erläutern. Imagine sich selbst, dem Benutzer über die Beinen zu schauen und zu erklären, wie die Aufgabe erfüllt werden kann.
 
     **Annehmbar:**
 
     Verwenden Sie dieses Verfahren, um Ihr Kennwort zu ändern.
 
-    **Besserer**
+    **Besser:**
 
-    Führen Sie diese Schritte aus, um Ihr Kennwort zu ändern
+    Führen Sie die folgenden Schritte aus, um Ihr Kennwort zu ändern.
 
--   **Verwenden Sie nach Möglichkeit kurze, einfache Wörter.** Kürzere Wörter sind eher konverational, sparen Sie Speicherplatz auf dem Bildschirm und sind einfacher zu scannen.
+-   **Verwenden Sie nach Möglichkeit kurze, einfache Wörter.** Kürzere Wörter sind konversationsärer, sparen Platz auf dem Bildschirm und sind einfacher zu scannen.
 
     **Annehmbar:**
 
-    Außerdem wird in diesem Abschnitt angezeigt...
+    Darüber hinaus wird in diesem Abschnitt gezeigt, wie Sie...
 
-    Digitale Kameras verwenden kleine Mikrochips...
+    Digitalkameras verwenden kleine Mikrochips...
 
-    Digitale Kameras verwenden kleine Mikrochips...
+    Digitalkameras verwenden kleine Mikrochips...
 
-    **Besserer**
+    **Besser:**
 
-    Dieser Abschnitt zeigt Ihnen auch...
+    In diesem Abschnitt wird auch gezeigt, wie Sie...
 
-    Digitale Kameras verwenden kleine Mikrochips...
+    Digitalkameras verwenden kleine Mikrochips...
 
--   **Sie sollten keine Wörter erfinden oder neue Bedeutungen auf Standard Wörter anwenden.** Nehmen Sie an, dass Benutzer besser mit der Bedeutung eines Worts vertraut sind als mit einer besonderen Bedeutung, die von der Technologiebranche angegeben wurde. Wenn ein Branchen Begriff erforderlich ist, stellen Sie eine kontextbasierte Definition bereit. Vermeiden Sie den Fachjargon, aber denken Sie daran, dass einige Ausdrücke, die für die Computer Verwendung – Hacker, Burn a CD usw. –, bereits Teil der alltäglichen Sprache sind.
+-   **Erfinden Sie keine Wörter, und wenden Sie keine neuen Bedeutungen auf Standardwörter an.** Gehen Sie davon aus, dass Benutzer mit der etablierten Bedeutung eines Worts vertrauter sind als mit einer speziellen Bedeutung, die ihm von der Technologiebranche gegeben wird. Wenn ein Branchenbegriff erforderlich ist, geben Sie eine Kontextdefinition an. Vermeiden Sie jargon, aber denken Sie daran, dass einige spezifische Ausdrücke für die Computerverwendung – Hacker, Burn a CD und so weiter – bereits Teil der täglichen Sprache sind.
 
     **Falsch:**
 
-    Sie können Ordner verwenden, um Ihre Favoriten zu bucktieren.
+    Sie können Ordner verwenden, um Ihre Favoriten zu bucketen.
 
     **Richtig:**
 
-    Sie können Ordner verwenden, um die Favoriten zu kategorisieren.
+    Sie können Ordner verwenden, um Ihre Favoriten zu kategorisieren.
 
--   **Verwenden Sie Symbole nicht als Ersatz für einfache Wörter.**
+-   **Verwenden Sie keine Symbole als Ersatz für einfache Wörter.**
 
     **Falsch:**
 
-    Benutzer & Computer
+    Benutzer & Computern
 
-    Benutzer und Computer
+    Benutzer + Computer
 
-    Domäne/Arbeitsgruppe
+    domain/workgroup
 
-    \# von Benutzern
+    \# der Benutzer
 
     **Richtig:**
 
@@ -130,106 +130,106 @@ Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, di
 
     Anzahl der Benutzer
 
-### <a name="be-precise"></a>Genaue Genauigkeit
+### <a name="be-precise"></a>Seien Sie präzise.
 
--   Wählen Sie Wörter aus, die eine klare Bedeutung haben.
+-   Wählen Sie Wörter mit einer eindeutigen Bedeutung aus.
 
     **Annehmbar:**
 
-    Da Sie die Tabelle erstellt haben, können Sie Änderungen vornehmen.
+    Da Sie die Tabelle erstellt haben, können Sie Änderungen an ihr vornehmen.
 
-    Sorgen Sie dafür, dass die Firewall aktiviert ist, da das Ausschalten ein Sicherheitsrisiko darstellen könnte.
+    Lassen Sie Ihre Firewall aktiviert, da das Deaktivieren ein Sicherheitsrisiko darstellen kann.
 
-    **Besserer**
+    **Besser:**
 
-    Da Sie die Tabelle erstellt haben, können Sie Änderungen vornehmen.
+    Da Sie die Tabelle erstellt haben, können Sie Änderungen daran vornehmen.
 
-    Sorgen Sie dafür, dass die Firewall aktiviert ist, da das Ausschalten ein Sicherheitsrisiko darstellen könnte.
+    Lassen Sie Ihre Firewall aktiviert, da das Deaktivieren ein Sicherheitsrisiko darstellen kann.
 
--   Lassen Sie unnötige Wörter aus – verwenden Sie nicht zwei oder drei Wörter, wenn eine solche verwendet wird.
+-   Keine unnötigen Wörter– Verwenden Sie nicht zwei oder drei Wörter, wenn sie verwendet werden.
 
-    **Ausführliche**
+    **Ausführliche:**
 
     Führen Sie die folgenden Schritte aus, um Ihr Kennwort zu ändern:
 
-    **Besserer**
+    **Besser:**
 
     So ändern Sie Ihr Kennwort:
 
--   Vermeiden Sie unnötige adversb.
+-   Vermeiden Sie unnötige Adverbs.
 
     **Falsch:**
 
-    Es ist nicht schrecklich schwierig, Ihr Kennwort zu ändern.
+    Es ist nicht schwierig, Ihr Kennwort zu ändern.
 
     **Richtig:**
 
     Es ist nicht schwierig, Ihr Kennwort zu ändern.
 
--   Wählen Sie einzelne Wort Verben für Verben mit mehreren Wörtern aus.
+-   Wählen Sie Einzelwortverben gegenüber Mehrwortverben aus.
 
     **Annehmbar:**
 
-    Wenn Sie den Computer sperren,...
+    Wenn Sie Ihren Computer sperren, ...
 
-    **Besserer**
+    **Besser:**
 
-    Wenn Sie den Computer sperren,...
+    Wenn Sie Ihren Computer sperren, ...
 
--   Konvertieren Sie Verben nicht in Nomen und Nomen in Verben.
+-   Konvertieren Sie Verben nicht in Nomen und Nomen nicht in Verben.
 
     **Falsch:**
 
-    Um den Computer mit einem Kennwort zu schützen...
+    So schützen Sie Ihren Computer mit einem Kennwort...
 
-    Zum Herstellen der Konnektivität...
+    So stellen Sie konnektivitäts...
 
     **Richtig:**
 
     So schützen Sie Ihren Computer mit einem Kennwort...
 
-    Verbindung wird hergestellt...
+    So stellen Sie eine Verbindung...
 
-### <a name="be-consistent"></a>Einheitlich sein
+### <a name="be-consistent"></a>Seien Sie konsistent.
 
--   Konsistente Terminologie fördert das Erlernen von Kenntnissen und ein besseres Verständnis der technischen Konzepte. Die Inkonsistenz zwingt Benutzer, herauszufinden, ob verschiedene Wörter und Aktionen dasselbe Ergebnis bedeuten.
+-   Konsistente Terminologie fördert das Lernen und ein besseres Verständnis technischer Konzepte. Inkonsistenz zwingt Benutzer, herauszufinden, ob unterschiedliche Wörter und Aktionen dasselbe bedeuten.
 
     Beispiele:
 
-    umschalten, Umschalten
+    switch, toggle
 
-    starten, ausführen, starten, starten, ausführen
+    start, run, launch, boot, execute
 
-    aktivieren, aktivieren, einschalten
+    Aktivieren, Aktivieren, Aktivieren
 
-    Brennen, kopieren
+    burn, copy
 
--   Konsistente Syntax hilft beim Festlegen der Erwartungen der Benutzer. Nachdem diese Erwartungen festgelegt wurden, können Benutzer Text schneller analysieren, der eine konsistente Syntax verwendet. Wenn z. b. Anweisungen immer im imperativen Format geschrieben werden, lernen Benutzer, dass Sie sich auf imperative Sätze achten müssen.
+-   Konsistente Syntax trägt dazu bei, die Erwartungen der Benutzer zu erfüllen. Sobald diese Erwartungen festgelegt sind, können Benutzer Text, der konsistente Syntax verwendet, schneller analysieren. Wenn Anweisungen beispielsweise immer in imperativer Form geschrieben werden, lernen Benutzer, imperative Sätze genauer zu beachten.
 
 ### <a name="contractions"></a>Kontraktionen
 
--   Kontra KTIONEN verleihen einen kürzeren, Auslassungs Zeichen-und besser konvergenten Rhythmus beim Schreiben. Verwenden Sie diese nach Bedarf und im Kontext. Verwenden Sie keine gegen übereinstigkeiten mit Produktnamen oder anderen richtigen Substantiven.
+-   Contractions eignen sich für das Schreiben eines kürzeren, snappier- und konversationsübergreifenden Rhythmus. Verwenden Sie sie entsprechend und im Kontext. Verwenden Sie keine Contractions mit Produktnamen oder anderen richtigen Nomen.
 
-### <a name="colloquialisms-idioms-and-slang"></a>Colloquialismen, Idioms und slang
+### <a name="colloquialisms-idioms-and-slang"></a>Umgangssprachlichkeiten, Idiome und Slang
 
--   Verwenden Sie in besonderen Situationen, wie z. b. Produkt Fahrten, Einrichtungs Bildschirme oder Inhalt, der nicht lokalisiert werden soll, die Verwendung von Umgangs-oder-slang. In den letzten Studien wurde gezeigt, dass die Benutzer das unerwartete Wort oder den vertrauten Ausdruck genießen. Beachten Sie, dass die Verwendung von Umgangs-und slang möglicherweise schwierig und kostspielig ist, um effektiv zu übersetzen, sodass eine solche Sprache am besten mit Bedacht verwendet werden kann.
+-   Erwägen Sie die Verwendung von Umgangssprachlichkeiten oder Slang nur in speziellen Situationen, z. B. Produktkatalogen, Setupbildschirmen oder Inhalten, die nicht lokalisiert werden. Aktuelle Studien haben ergeben, dass Benutzer das unerwartete Wort oder den vertrauten Ausdruck verwenden. Beachten Sie, dass die effektive Übersetzung von Umgangssprachlichkeiten und Slangen schwierig und kostspielig sein kann, sodass eine solche Sprache am besten überdrungen verwendet werden kann.
 
     **Beispiele:**
 
-    Auf der anderen Seite gibt es jedoch bestimmte Werte in der Registrierung, die nicht geändert werden sollten.
+    Andererseits gibt es bestimmte Werte in der Registrierung, die nicht geändert werden sollten.
 
-    Mit SDSL ist die Linie für die Verwendung durch den Internet reserviert, sodass Sie im Internet keine gestürzten Verkehrsbehinderungen durchführen können, wie dies bei einem Kabeldienst der Fall ist.
+    Mit SDSL ist die Linie für Ihre Internetnutzung de dedicated, sodass es im Internet nicht zu stundenlangen Verkehrsbehinderungen kommt, wie es bei kabelbasiertem Kabeldienst möglich ist.
 
 ### <a name="person"></a>Person
 
--   **Wenden Sie sich direkt oder indirekt an den Benutzer.**
--   **Verwenden Sie die zweite Person (Sie, ihre), um den Benutzern mitzuteilen, was zu tun ist.** Häufig wird die zweite Person impliziert.
+-   **Wenden Sie sich direkt oder indirekt direkt oder indirekt an den Benutzer.**
+-   **Verwenden Sie die zweite Person (Sie, Ihre), um Benutzern zu sagen, was sie tun müssen.** Häufig wird die zweite Person impliziert.
 
     **Beispiele:**
 
     Wählen Sie die Bilder aus, die Sie drucken möchten.
 
-    Wählen Sie ein Konto. impliziert
+    Wählen Sie ein Konto. (impliziert)
 
 -   **Verwenden Sie die erste Person (I, me, my), damit Benutzer dem Programm mitteilen können, was zu tun ist.**
 
@@ -237,12 +237,12 @@ Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, di
 
     Drucken Sie die Fotos auf meiner Kamera.
 
--   **Verwenden Sie wir mit Bedacht.** Der Plural der ersten Person kann eine gewaltige Unternehmens Präsenz vorschlagen. Es ist jedoch besser, den Namen Ihrer Anwendung zu verwenden. Wir empfehlen Ihnen, anstelle der empfohlenen Verwendung zu verwenden.
--   **Vermeiden Sie Verweise von Dritt Personen (Benutzer)** , da Sie einen formelleren, weniger persönlichen Ton erstellen.
+-   **Verwenden Sie uns mit Umsicht.** Der Plural der ersten Person kann auf eine bemutigende Unternehmenspräsenz hindeuten. Es kann jedoch vorzuziehen sein, den Namen Ihrer Anwendung zu verwenden. Verwenden Sie die empfohlene Verwendung anstelle der empfohlenen.
+-   **Vermeiden Sie Verweise von Dritten (der Benutzer),** da sie einen formaleren, weniger persönlichen Ton erzeugen.
 
 ### <a name="voice"></a>Sprache
 
--   **Verwenden Sie die aktive Stimme,** mit der die Person oder das, das die Aktion durchführen, hervorgehoben wird Es ist direkter und persönlicher als die passive Stimme, was verwirrend oder audioformal sein kann.
+-   **Verwenden Sie die aktive Stimme,** die die Person oder die Aktion hervorruft. Sie ist direkter und persönlicher als die passive Stimme, was verwirrend oder formal klingen kann.
 
     **Annehmbar:**
 
@@ -250,82 +250,82 @@ Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, di
 
     Wenn ein persönlicher digitaler Assistent (PDA) oder Laptop angeschlossen ist...
 
-    **Besserer**
+    **Besser:**
 
     Sie können Symbole in alphabetischer Reihenfolge nach dem Symbolnamen anordnen.
 
-    Wenn Sie einen beliebigen persönlichen Digital Assistant (PDA) oder Laptop anschließen...
+    Wenn Sie einen persönlichen digitalen Assistenten (PDA) oder laptop...
 
--   Verwenden Sie die passive Stimme nur, um eine verfassen-oder unschöne Konstruktion zu vermeiden. Wenn die Aktion nicht der hoch ist, liegt der Schwerpunkt auf dem Satz. Wenn der Betreff unbekannt ist. oder in Fehlermeldungen, wenn der Benutzer den Betreff hat und wahrscheinlich für den Fehler verantwortlich ist, wenn die aktive Stimme verwendet wurde.
+-   Verwenden Sie die passive Stimme nur, um eine wortwenige oder ums andere Konstruktion zu vermeiden. , wenn die Aktion und nicht der Doer der Fokus des Satzes ist; , wenn das Subjekt unbekannt ist; oder in Fehlermeldungen, wenn der Benutzer das Subjekt ist und sich möglicherweise für den Fehler verantwortlich macht, wenn die aktive Stimme verwendet wird.
 
     **Richtig:**
 
-    Das neue Symbol sollte in der oberen linken Ecke angezeigt werden.
+    Das neue Symbol sollte in der linken oberen Ecke angezeigt werden.
 
-    Updates müssen heruntergeladen und installiert werden, damit Sie funktionieren können.
+    Updates müssen heruntergeladen und installiert werden, damit sie funktionieren.
 
--   **Ausdrucks Anweisungen in der positiven Form** und betonen, was Benutzer tun können, anstatt Sie zu überschreiten.
+-   **Ausdrucks-Anweisungen in positiver Form** und heben hervor, was Benutzer erreichen können, und nicht, was sie nicht können.
 
-### <a name="attitude-toward-the-user"></a>Haltung zum Benutzer
+### <a name="attitude-toward-the-user"></a>Verhalten gegenüber dem Benutzer
 
--   **Seien Sie höflich, unterstützend und ermutigend.** Der Benutzer sollte sich niemals an einen oder anderen Benutzer fühlen.
+-   **Seien Sie besend, beehmt und ermutigend.** Der Benutzer sollte sich niemals herablassen, dafür verantwortlich gemacht oder eingeschädigt werden.
 
     **Annehmbar:**
 
-    Das neue Text Dokument kann nicht gelöscht werden: der Zugriff wurde verweigert.
+    Neues Textdokument kann nicht gelöscht werden: Der Zugriff wird verweigert.
 
-    **Besserer**
+    **Besser:**
 
-    Diese Datei ist geschützt und kann ohne spezielle Berechtigung nicht gelöscht werden.
+    Diese Datei ist geschützt und kann nicht ohne bestimmte Berechtigung gelöscht werden.
 
--   **Erreichen Sie das richtige Gleichgewicht: seien Sie für den Benutzer so, dass er nicht zu intim oder zu Geschäfts ähnlich ist.** Stellen Sie sich vor, dass Sie einem Freund helfen, das Produkt zum ersten Mal zu verwenden. Diese Person ist nicht der beste Freund, sondern ein Nachbar oder Familienfreund. Benutzer sollten sich bei der Verwendung des Programms als gut ansehen, aber die Sprache sollte nicht anmaßend oder zu vertraut sein.
--   **Beschränken Sie in Situationen, in denen der Benutzer nicht beeinträchtigt wird,** z. b.:
+-   **Die richtige Balance finden: Seien Sie dem Benutzer gegenüber warm, ohne zu übersteinend oder zu geschäftseigen zu sein.** Imagine, dass Sie einem Freund helfen, das Produkt zum ersten Mal zu verwenden. Diese Person ist nicht Ihr bestes Freund oder Partnerinfo, sondern ein Nachbar oder Einfamilienfreund. Benutzer sollten sich bei der Verwendung Ihres Programms wohl und zu Hause fühlen, aber die Sprache sollte sich nicht anmaßend oder zu vertraut anfühlen.
+-   **Beschränken Sie sich auf Situationen, in denen der Benutzer in irgendeiner Weise belästigt wird,** z. B.:
 
-    -   Der Benutzer wird aufgefordert, etwas unpraktisch zu machen, z. b. das warten, das Wiederholen einer Aufgabe oder das Aktualisieren eines Programms.
-
-        **Richtig:**
-
-        Bitte warten Sie, während die Dateien von Windows auf Ihren Computer kopiert werden.
-
-    -   Der Benutzer kann eine Aufgabe aufgrund fehlender Features, Entwurfs Fehler oder Programmfehler nicht ausführen.
+    -   Der Benutzer wird aufgefordert, etwas Unwesentliches zu tun, z. B. warten, eine Aufgabe wiederholen oder ein Programm aktualisieren.
 
         **Richtig:**
 
-        Das Speichern mit dem angegebenen Format ist nicht möglich. Wählen Sie ein anderes Format aus.
+        Warten Sie, während Windows die Dateien auf Ihren Computer kopiert.
 
-    -   Der Benutzer hat seine Möglichkeit verlassen, um hilfreich zu sein, da er an einem Kundenfeedback Programm teilnimmt oder einen Fehlerbericht eingibt.
+    -   Der Benutzer kann eine Aufgabe aufgrund eines fehlenden Features, Entwurfsfehlers oder Programmfehlers nicht abschließen.
 
         **Richtig:**
 
-        Um die Fabrikam-Sicherung zu verbessern, nehmen Sie am Kundenfeedback Programm von Fabrikam Teil.
+        Speichern mit dem angegebenen Format nicht möglich. Wählen Sie ein anderes Format aus.
 
-    Sie sollten auch immer dann verwenden, wenn ihre Abwesenheit als Curt angesehen wird.
+    -   Der Benutzer hat sich nicht mehr als hilfreich erwiesen, z. B. durch Die Teilnahme an einem Kundenfeedbackprogramm oder das Erstellen eines Fehlerberichts.
 
-    ![Screenshot der Richtungen, die mit "bitte" beginnen ](images/text-style-tone-image1.png)
+        **Richtig:**
 
-    In diesem Beispiel sind die Inline Fehlermeldungen ohne bitte "Curt".
+        Um die Fabrikam Backup-Erfahrung zu verbessern, nehmen Sie am Fabrikam-Kundenfeedbackprogramm teil.
 
--   **Verwenden Sie leider nur Fehlermeldungen, die zu schwerwiegenden Problemen für den Benutzer führen** (z. b. Datenverlust, der Benutzer kann den Computer nicht weiter verwenden, oder der Benutzer muss von einem technischen Vertreter unterstützt werden). Entschuldigen Sie nicht, wenn das Problem während der normalen Funktionsweise des Programms aufgetreten ist (z. b. wenn der Benutzer auf eine Netzwerkverbindung warten muss).
+    Sie sollten auch verwenden, wenn sein Fehlen als curt betrachtet wird.
+
+    ![Screenshot der Wegbeschreibungen, die mit please beginnen ](images/text-style-tone-image1.png)
+
+    In diesem Beispiel würden die Inlinefehlermeldungen ohne "please" "curt" sein.
+
+-   Verwenden Sie nur **in** Fehlermeldungen, die zu schwerwiegenden Problemen für den Benutzer führen (z. B. Datenverlust, der Benutzer kann den Computer nicht mehr verwenden, oder der Benutzer muss Hilfe von einem technischen Vertreter erhalten). Bitte entlogen Sie sich nicht, wenn das Problem während der normalen Funktionsweise des Programms aufgetreten ist (z. B. wenn der Benutzer warten muss, bis eine Netzwerkverbindung gefunden wurde).
 
     **Richtig:**
 
-    Leider hat die Fabrikam-Sicherung ein nicht BEHEB bares Problem festgestellt und wurde heruntergefahren.
+    Leider hat Fabrikam Backup ein nicht behebbares Problem erkannt und wurde heruntergefahren.
 
-### <a name="sentence-structure-and-length"></a>Satzstruktur und-Länge
+### <a name="sentence-structure-and-length"></a>Satzstruktur und -länge
 
--   Da Benutzer häufig Text scannen, **machen Sie jede Wort Anzahl.** Einfache, präzise Sätze (und Absätze) sparen nicht nur Speicherplatz auf dem Bildschirm, sondern sind das effektivste Mittel, um zu vermitteln, dass eine Idee oder eine Aktion wichtig ist. Verwenden Sie Ihre Best-Urteils – legen Sie Sätze eng, aber nicht so streng, dass der Ton abrupt und unschädlich erscheint.
--   **Vermeiden Sie eine Wiederholung.** Überprüfen Sie jedes Fenster, und vermeiden Sie doppelte Wörter und Anweisungen. Vermeiden Sie einen wichtigen Text – bei Bedarf explizit – Sie sind aber nicht redundant, und erläutern Sie nichts, was Sie sagen müssen.
--   **Verwenden Sie gegebenenfalls Satzfragmente.** Satzfragmente sind kurz und punssig – und wenn Sie in der Regel das abgefragende Formular verwenden, sind Sie eine gute Methode, um den Benutzer direkt einzubinden.
+-   Da Benutzer häufig Text scannen, **zählen Sie jedes Wort.** Einfache, präzise Sätze (und Absätze) sparen nicht nur Platz auf dem Bildschirm, sondern sind das effektivste Mittel, um zu vermitteln, dass eine Idee oder Aktion wichtig ist. Verwenden Sie Ihr bestes Beurteilungsvermögen– Sätze sollten zwar eng, aber nicht so streng sein, dass der Ton plötzlich und unfreundlicher zu sein scheint.
+-   **Vermeiden Sie Wiederholungen.** Überprüfen Sie jedes Fenster, und vermeiden Sie doppelte Wörter und Anweisungen. Vermeiden Sie keinen wichtigen Text – seien Sie bei Bedarf explizit – aber sind Sie nicht redundant, und erläutern Sie nicht dinge, die ohne Angabe von bedeutungslos sind.
+-   **Verwenden Sie gegebenenfalls Satzfragmente.** Satzfragmente sind kurz und unerhört – und da sie in der Regel die Interrogativform haben, sind sie eine gute Möglichkeit, den Benutzer direkt zu ansprechen.
 
     **Richtig:**
 
-    Werden die Änderungen an "meine Fotos" gespeichert?
+    Speichern Sie Die Änderungen an "Mein Fotos"?
 
-    Haben Sie jemals eine Datei gespeichert und dann nicht daran gespeichert, wo Sie Sie gespeichert haben?
+    Haben Sie jemals eine Datei gespeichert und dann nicht dort gespeichert, wo Sie sie gespeichert haben?
 
--   **Beginnen Sie mit** der Verwendung von-Sätzen (und, aber oder), wenn dies erforderlich ist.
--   **Ersetzen Sie Listen und Tabellen in komplexen Sätzen.** Listen (ob nummeriert oder aufzählig) und Tabellen sind übersichtlicher und leichter zu scannen.
--   **Verwenden paralleler Grammatiken.** Parallelität erfordert, dass Wörter und Ausdrücke, die dieselbe Funktion aufweisen, dieselbe Form aufweisen. Verwenden Sie die parallele Sprache immer dann, wenn Sie Ideen von gleicher Gewichtung und Benutzeroberflächen Elemente, die parallel in der Funktion sind (z. b. Überschriften, Bezeichnungen, Listen oder Seitentitel), Ausdrücken.
+-   **Beginnen Sie Sätze mit Konjunktionen** (und, aber, oder), falls dies notwendig ist.
+-   **Ersetzen Sie Listen und Tabellen durch komplexe Sätze.** Listen (nummeriert oder aufzählungssicher) und Tabellen sind übersichtlicher und einfacher zu überprüfen.
+-   **Verwenden Sie parallele grammatikalische Konstruktionen.** Parallelität erfordert, dass Wörter und Ausdrücke, die dieselbe Funktion haben, die gleiche Form haben. Verwenden Sie parallele Sprache, wenn Sie Ideen gleicher Gewichtung ausdrücken, und für Benutzeroberflächenelemente, die parallel funktionieren (z. B. Überschriften, Bezeichnungen, Listen oder Seitentitel).
 
     **Richtig:**
 
@@ -337,7 +337,7 @@ Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, di
 
     Collect
 
-    Diese Elemente sind parallel, da es sich um ein einzelnes Wort, Imperatives Verben handelt.
+    Diese Elemente sind parallel, da sie alle ein wortbasierte imperative Verben sind.
 
     **Falsch:**
 
@@ -349,7 +349,7 @@ Stellen Sie im Gegensatz dazu sicher, dass Sie die folgenden Töne vermeiden, di
 
     Lauschen
 
-    Diese Elemente sind nicht parallel, da Musik und Video Nomen sind, aber freigeben und lauschen sind Verben.
+    Diese Elemente sind nicht parallel, Musik und Video Nomen sind, aber Freigabe und Lauschen sind Verben.
 
  
 

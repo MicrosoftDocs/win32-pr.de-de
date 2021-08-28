@@ -1,9 +1,9 @@
 ---
-title: glgetclipplane-Funktion (GL. h)
-description: Die Funktion "glgetclipplane" gibt die Koeffizienten der angegebenen Clippingebene zurück.
+title: glGetClipPlane-Funktion (Gl.h)
+description: Die glGetClipPlane-Funktion gibt die Koeffizienten der angegebenen Clippingebene zurück.
 ms.assetid: 8ff5ee0a-95c1-4321-8aa8-3d9d144d1ef6
 keywords:
-- glgetclipplane-Funktion OpenGL
+- glGetClipPlane-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b3e29d730c09bcc7c2b12082116e174cb39eb74
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cf551356088db2b99b79a28a396be785ab60f2196cc3e27353cb867d4b151dd8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742039"
 ---
-# <a name="glgetclipplane-function"></a>glgetclipplane-Funktion
+# <a name="glgetclipplane-function"></a>glGetClipPlane-Funktion
 
-Die Funktion " **glgetclipplane** " gibt die Koeffizienten der angegebenen Clippingebene zurück.
+Die **glGetClipPlane-Funktion** gibt die Koeffizienten der angegebenen Clippingebene zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glGetClipPlane(
 
 <dl> <dt>
 
-*Wasser* 
+*Flugzeug* 
 </dt> <dd>
 
-Eine Clippingebene. Die Anzahl der Clippingebenen hängt von der Implementierung ab, es werden jedoch mindestens sechs Clippingebenen unterstützt. Sie werden durch symbolische Namen der Form "GL \_ Clip Plane i" identifiziert, \_ wobei 0 = *i* < GL  \_ Max \_ \_ .
+Eine Clippingebene. Die Anzahl der Clippingebenen hängt von der Implementierung ab, es werden jedoch mindestens sechs Clippingebenen unterstützt. Sie werden durch symbolische Namen der Form GL \_ CLIP \_ PLANE *i* identifiziert, wobei 0 = *i* < GL MAX \_ CLIP \_ \_ PLANES.
 
 </dd> <dt>
 
 *Gleichung* 
 </dt> <dd>
 
-Gibt vier Werte mit doppelter Genauigkeit zurück, bei denen es sich um die Koeffizienten der ebenengleichung *der Ebenen in* Eye-Koordinaten handelt.
+Gibt vier Werte mit doppelter Genauigkeit zurück, die die Koeffizienten der Ebenengleichung der *Ebene* in Augenkoordinaten sind.
 
 </dd> </dl>
 
@@ -61,24 +61,24 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | die *Ebene* war kein akzeptierter Wert.<br/>                                                                                         |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *plane* war kein akzeptierter Wert.<br/>                                                                                         |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgetclipplane** " gibt die vier Koeffizienten der ebenengleichung für die *Ebene* in *Gleichung* zurück.
+Die **glGetClipPlane-Funktion** gibt in *Gleichung* die vier Koeffizienten der Ebenengleichung für *ebene* zurück.
 
-Es ist immer der Fall, dass GL \_ Clip \_ Plane *i* = GL \_ Clip \_ PLANE0 + *i*.
+Es ist immer der Fall, dass GL \_ CLIP \_ PLANE *i* = GL \_ CLIP \_ PLANE0 + *i*.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Gleichung* vorgenommen.
+Wenn ein Fehler generiert wird, werden keine Änderungen am Inhalt der *Formel* vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Gleichung* v
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -101,7 +101,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Gleichung* v
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glclipplane**](glclipplane.md)
+[**glClipPlane**](glclipplane.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)

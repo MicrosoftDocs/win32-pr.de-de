@@ -1,10 +1,10 @@
 ---
-title: Opaquecommand-Struktur
-description: Die opaquecommand-Struktur enthält Daten für Befehle, die über Windows Media Device Manager an ein Gerät übermittelt werden, aber nicht von Windows Media Device Manager verarbeitet werden sollen.
+title: OPAQUECOMMAND-Struktur
+description: Die OPAQUECOMMAND-Struktur enthält Daten für Befehle, die über Windows Media Geräte-Manager an ein Gerät übergeben werden, aber nicht von Windows Media Geräte-Manager verarbeitet werden sollen.
 ms.assetid: 5b39cf07-2816-4615-a754-e3f0c57bf4ce
 keywords:
-- Opaquecommand-Struktur Windows Media Device Manager
-- Struktur der Windows Media-Device Manager
+- OPAQUECOMMAND-Strukturfenster Media Geräte-Manager
+- struktur windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 672147cb99336f95a1ced88a3cc6b8df977aec74
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 76d3f0b94146262c480e7e510497111bf82f0c020001717cb0000ee4a88df440
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904010"
 ---
-# <a name="opaquecommand-structure"></a>Opaquecommand-Struktur
+# <a name="opaquecommand-structure"></a>OPAQUECOMMAND-Struktur
 
-Die **opaquecommand** -Struktur enthält Daten für Befehle, die über Windows Media Device Manager an ein Gerät übermittelt werden, aber nicht von Windows Media Device Manager verarbeitet werden sollen.
+Die **OPAQUECOMMAND-Struktur** enthält Daten für Befehle, die über Windows Media-Geräte-Manager an ein Gerät übergeben werden, aber nicht von Windows Media Geräte-Manager verarbeitet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ typedef struct OPAQUECOMMAND {
 
 <dl> <dt>
 
-**guidcommand**
+**guidCommand**
 </dt> <dd>
 
-**GUID** , die den angeforderten Befehl darstellt.
+**GUID,** die den angeforderten Befehl darstellt.
 
 </dd> <dt>
 
-**dwdatalen**
+**dwDataLen**
 </dt> <dd>
 
-Länge der Daten, auf die *pData* verweist (in Bytes).
+Länge der Daten, auf die *pData* verweist, in Bytes.
 
 </dd> <dt>
 
-**pData**
+**Pdata**
 </dt> <dd>
 
-Die zum Ausführen des Befehls erforderlichen Daten und/oder Daten, die vom Befehl zurückgegeben werden.
+Daten, die zum Ausführen des Befehls erforderlich sind, und/oder daten, die vom Befehl zurückgegeben werden.
 
 </dd> <dt>
 
-**abmac \[ 20\]**
+**abMAC \[ 20\]**
 </dt> <dd>
 
-Dieser Nachrichten Authentifizierungscode (Mac) sollte den **guidcommand** -Member, die Daten, auf die *pdwdatalen* verweist, und die Daten, auf die *pData* verweist, ggf. einschließen. Wenn *pData* **null** ist, darf es nicht in den Mac eingeschlossen werden. Die Länge von WMDM \_ Mac \_ ist als 20 definiert.
+Dieser Nachrichtenauthentifizierungscode (MAC) sollte den **guidCommand-Member,** die Daten, auf die *pdwDataLen* verweist, und die Daten, auf die *pData-Punkte* (falls vorhanden) enthalten. Wenn *pData* **NULL** ist, darf es nicht im MAC enthalten sein. WMDM \_ MAC LENGTH ist als \_ 20 definiert.
 
 </dd> </dl>
 
@@ -78,7 +78,7 @@ Dieser Nachrichten Authentifizierungscode (Mac) sollte den **guidcommand** -Memb
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
@@ -86,16 +86,16 @@ Dieser Nachrichten Authentifizierungscode (Mac) sollte den **guidcommand** -Memb
 
 <dl> <dt>
 
-[**Imdspdevice:: sendopaquecommand**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspdevice-sendopaquecommand)
+[**IMDSPDevice::SendOpaqueCommand**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspdevice-sendopaquecommand)
 </dt> <dt>
 
-[**Imdspstorage:: sendopaquecommands**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-sendopaquecommand)
+[**IMDSPStorage::SendOpaqueCommands**](/windows/desktop/api/mswmdm/nf-mswmdm-imdspstorage-sendopaquecommand)
 </dt> <dt>
 
-[**Iwmdmdevice:: sendopaquecommand**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-sendopaquecommand)
+[**IWMDMDevice::SendOpaqueCommand**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-sendopaquecommand)
 </dt> <dt>
 
-[**Iwmdmstorage:: sendopaquecommand**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-sendopaquecommand)
+[**IWMDMStorage::SendOpaqueCommand**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-sendopaquecommand)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

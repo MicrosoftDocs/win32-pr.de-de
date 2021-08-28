@@ -1,7 +1,7 @@
 ---
 description: Die Get-Methode ruft das Element an der angegebenen Position ab.
 ms.assetid: cafa4083-96e6-4ed3-afbc-5828b7f1c5be
-title: Cgenericlist. Get-Methode (wxlist. h)
+title: CGenericList.Get-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 02af7d57d2219e6eb0506a8ab11521b4cf3570eb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dae90872ea607571b215aafe3f9f35a645cd50d140dcbad0783369ce2189c881
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813770"
 ---
-# <a name="cgenericlistget-method"></a>Cgenericlist. Get-Methode
+# <a name="cgenericlistget-method"></a>CGenericList.Get-Methode
 
-Die- `Get` Methode ruft das Element an der angegebenen Position ab.
+Die `Get` -Methode ruft das Element an der angegebenen Position ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ OBJECT* Get(
 *pos* 
 </dt> <dd>
 
-Positionsindikator für das Element, das abgerufen werden soll.
+Positionsindikator für das abzurufende Element.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein Objekt vom Typ " **Object** " (der Vorlagentyp) zurück.
+Gibt einen Zeiger auf ein Objekt vom Typ **OBJECT** (vorlagentyp) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *POS* **null** ist, gibt die Methode **null** zurück.
+Wenn *pos* NULL **ist,** gibt die Methode **NULL zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn *POS* **null** ist, gibt die Methode **null** zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn *POS* **null** ist, gibt die Methode **null** zurück.
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

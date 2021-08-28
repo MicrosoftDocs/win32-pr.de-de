@@ -1,27 +1,27 @@
 ---
-title: WFP-Version-Independent Namen und für bestimmte Versionen von Windows
-description: In vielen Fällen stellt die Windows-Filter Plattform-API (WFP) mehr als eine Version einer Funktion oder Struktur bereit.
+title: WFP Version-Independent- und Zielversionen von Windows
+description: In vielen Fällen stellt die WFP-API (Windows Filtering Platform) mehrere Versionen einer Funktion oder Struktur bereit.
 ms.assetid: FBDF53E5-F7DE-4DEB-AC18-6D2BB59FE670
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41be83a50b4786aa4b98cd7f8dd7405a33fe94be
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: baf5fbef08c3284d94eb215e0cce2fc44fc9b827b686e531057db22b60020132
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766670"
 ---
-# <a name="wfp-version-independent-names-and-targeting-specific-versions-of-windows"></a>WFP-Version-Independent Namen und für bestimmte Versionen von Windows
+# <a name="wfp-version-independent-names-and-targeting-specific-versions-of-windows"></a>WFP Version-Independent- und Zielversionen von Windows
 
-In vielen Fällen stellt die Windows-Filter Plattform-API (WFP) mehr als eine Version einer Funktion oder Struktur bereit.
+In vielen Fällen stellt die WFP-API (Windows Filtering Platform) mehrere Versionen einer Funktion oder Struktur bereit.
 
-Die meisten Daten-und Funktionsnamen in der WFP-API enden mit einer Versionsnummer, z. b. "0" oder "1", auch wenn nur eine Version vorhanden ist.
+Die meisten Daten- und Funktionsnamen in der WFP-API enden mit einer Versionsnummer wie "0" oder "1", auch wenn nur eine Version vorhanden ist.
 
-## <a name="version-mapping-in-fwpvih"></a>Versions Zuordnung in "f. h"
+## <a name="version-mapping-in-fwpvih"></a>Versionszuordnung in "fwpvi.h"
 
-Die Header Datei "swpvi. h" ist ab dem Windows 7 SDK und dem WDK enthalten. Diese Header Datei ordnet den Namen der versionlosen API der Version zu, die für die Verwendung mit einem bestimmten Betriebssystem geeignet ist.
+Die Headerdatei fwpvi.h ist ab dem Windows 7 SDK und WDK enthalten. Diese Headerdatei ordnet den versionslosen API-Namen der Version zu, die für die Verwendung mit einem bestimmten Betriebssystem geeignet ist.
 
-Hier ist beispielsweise ein kurzer Auszug aus der Version von "f. h", die im Windows 8 SDK enthalten ist.
+Hier sehen Sie beispielsweise einen kurzen Auszug aus der Version von fwpvi.h, die im Windows 8 SDK enthalten ist.
 
 
 ```C++
@@ -37,25 +37,25 @@ Hier ist beispielsweise ein kurzer Auszug aus der Version von "f. h", die im Win
 
 
 
-Wie oben gezeigt, gibt es nur eine Version von **fwpmneteventkreateenumhandle** – [**FwpmNetEventCreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventcreateenumhandle0) – daher wird jeder **fwpmneteventkreateenumhandle** -Befehl immer **FwpmNetEventCreateEnumHandle0** aufrufen, unabhängig vom Ziel des Betriebssystems.
+Wie oben gezeigt, gibt es nur eine Version von **FwpmNetEventCreateEnumHandle** – [**FwpmNetEventCreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventcreateenumhandle0) – daher ruft jeder Aufruf von **FwpmNetEventCreateEnumHandle** immer **FwpmNetEventCreateEnumHandle0** auf, unabhängig vom Zielbetriebssystem.
 
-Es gibt jedoch drei Versionen von von " **f**", " [**FwpmNetEventEnum0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum0)", " [**FwpmNetEventEnum1**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum1)" und " [**FwpmNetEventEnum2**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum2)". Die Header Datei "fwpvi. h" stellt sicher, dass ein Aufrufen von **fwpmneteventerum** die Version aufruft, die für das Ziel Betriebssystem am besten geeignet ist:
+Es gibt jedoch drei Versionen von **FwpmNetEventEnum:** [**FwpmNetEventEnum0,**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum0) [**FwpmNetEventEnum1**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum1)und [**FwpmNetEventEnum2.**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum2) Die Headerdatei fwpvi.h stellt sicher, dass bei einem Aufruf von **FwpmNetEventEnum** die Version aufgerufen wird, die am besten für das Zielbetriebssystem geeignet ist:
 
 -   [**FwpmNetEventEnum2**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum2) für Windows 8 (oder höher)
--   [**FwpmNetEventEnum1**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum1) für Windows 7 ist Ziel
--   [**FwpmNetEventEnum0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum0) für frühere Betriebssysteme (z. b. Windows Vista oder Windows Vista mit Service Pack 1 (SP1))
+-   [**FwpmNetEventEnum1**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum1) für Windows 7 als Ziel
+-   [**FwpmNetEventEnum0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventenum0) für frühere Betriebssysteme (z.B. Windows Vista oder Windows Vista mit Service Pack 1 (SP1))
 
-## <a name="calling-version-independent-functions-and-structures"></a>Aufrufen von Version-Independent-Funktionen und-Strukturen
+## <a name="calling-version-independent-functions-and-structures"></a>Aufrufen von Version-Independent Funktionen und Strukturen
 
-Für WFP-Entwickler, die auf ein bestimmtes Betriebssystem oder eine WDK-Version abzielen, wird empfohlen, immer für Versions unabhängige Makros zu programmieren. Dadurch wird automatisch die aktuellste Version ausgewählt, die im Ziel Betriebssystem unterstützt wird. Die Verwendung der neuesten Header Dateien wird empfohlen, selbst wenn ein älteres Betriebssystem als Ziel verwendet wird. Dadurch wird sichergestellt, dass die neueste unterstützte Version verwendet wird, und Sie können den Code leichter verwalten und aktualisieren.
+WFP-Entwicklern, die auf ein bestimmtes Betriebssystem oder eine bestimmte WDK-Version abzielen, wird empfohlen, immer für die versionsunabhängigen Makros zu programmieren. Dadurch wird automatisch die neueste Version ausgewählt, die in dem Betriebssystem unterstützt wird, das Sie als Ziel verwenden. Die Verwendung der neuesten Headerdateien wird empfohlen, auch wenn sie auf ein früheres Betriebssystem ausgerichtet sind. Dadurch wird sichergestellt, dass die neueste unterstützte Version verwendet wird, und sie kann auch die Verwaltung und Aktualisierung Ihres Codes vereinfachen.
 
-In der [WFP-API-Referenz Dokumentation](fwp-reference.md) werden die einzelnen Versionen einer nummerierten API beschrieben. Wenn mehr als eine Version vorhanden ist, wird das Ziel Betriebssystem notiert. Entwickler möchten jedoch in der Regel die Versions unabhängigen (zahllosen) APIs aufzurufen und das Ziel Betriebssystem angeben (z. b. **ntddi \_ WIN6** für Windows Vista oder **ntddi \_ WIN8** für Windows 8).
+Die [WFP-API-Referenzdokumentation](fwp-reference.md) beschreibt jede Version einer nummerierten API. Wenn mehrere Versionen vorhanden sind, wird das Zielbetriebssystem notiert. Entwickler möchten jedoch im Allgemeinen die versionsunabhängigen (nummerlosen) APIs aufrufen und das Zielbetriebssystem angeben (z. B. **NTDDI \_ WIN6** für Windows Vista oder **NTDDI \_ WIN8** für Windows 8).
 
-Um die ordnungsgemäße Handhabung von Funktionen sicherzustellen, die verschiedene Parameter in verschiedenen Versionen verwenden, können Sie bedingte Blöcke wie einschließen `#if (NTDDI_VERSION >= NTDDI_WIN7)` .
+Um eine ordnungsgemäße Behandlung von Funktionen sicherzustellen, die unterschiedliche Parameter in verschiedenen Versionen verwenden, können Sie bedingte Blöcke wie `#if (NTDDI_VERSION >= NTDDI_WIN7)` einschließen.
 
- 
+ 
 
- 
+ 
 
 
 

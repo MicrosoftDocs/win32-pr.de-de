@@ -1,9 +1,9 @@
 ---
 title: smil-Element
-description: Das smil-Element ist immer das Element der obersten Ebene in einer Windows Media-Wiedergabe Datei (WPL). Er gibt an, dass die Datei SMIL-Syntax und-Grammatik (synchronisiert Multimedia Integration Language) verwendet.
+description: Das smil-Element ist immer das Element der obersten Ebene in einer Windows Media Playlist(WPL)-Datei. Sie gibt an, dass die Datei die Syntax und Grammatik von SMIL (Synchronized Multimedia Integration Language) verwendet.
 ms.assetid: bb14f1b8-53d0-47ff-9fd3-4620a1467985
 keywords:
-- smil-Element Windows-Media Player
+- smil-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 78ec8900139cfbd5982228c59010674bbc14765e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 15ed9c3d70b0af65019cd384bc68ab9c26f8d01673481b9ced3595730379bf1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763460"
 ---
 # <a name="smil-element"></a>smil-Element
 
-Das **SMIL** -Element ist immer das Element der obersten Ebene in einer Windows Media-Wiedergabe Datei (WPL). Er gibt an, dass die Datei SMIL-Syntax und-Grammatik (synchronisiert Multimedia Integration Language) verwendet.
+Das **smil-Element** ist immer das Element der obersten Ebene in einer Windows Media Playlist(WPL)-Datei. Sie gibt an, dass die Datei die Syntax und Grammatik von SMIL (Synchronized Multimedia Integration Language) verwendet.
 
 ``` syntax
 <smil>
@@ -33,22 +33,22 @@ Das **SMIL** -Element ist immer das Element der obersten Ebene in einer Windows 
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                                           |
 |-----------|----------------------------------------------------|
 | Parent    | Keine                                               |
-| Untergeordnet     | [Kopf](head-element.md), [Text](body-element.md) |
+| Untergeordnet     | [head,](head-element.md) [body](body-element.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede Windows-Medienwiedergabe Liste muss über das **SMIL** -Element im Stammverzeichnis verfügen.
+Jede Windows Medienwiedergabeliste muss das **smil-Element** im Stamm enthalten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -74,7 +74,7 @@ Jede Windows-Medienwiedergabe Liste muss über das **SMIL** -Element im Stammver
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/> |
 
 
 
@@ -82,13 +82,13 @@ Jede Windows-Medienwiedergabe Liste muss über das **SMIL** -Element im Stammver
 
 <dl> <dt>
 
-[**Body-Element**](body-element.md)
+[**body-Element**](body-element.md)
 </dt> <dt>
 
-[**Head-Element**](head-element.md)
+[**head-Element**](head-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

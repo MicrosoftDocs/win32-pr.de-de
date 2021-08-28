@@ -1,7 +1,7 @@
 ---
-description: Beschreibt die Auflösung des Schatten-z-Puffers, der in der direkt Beleuchtungs Simulation der vorab berechneten Strahlen Übertragung (PRT) auf der GPU verwendet wird.
+description: Beschreibt die Auflösung des Schatten-Z-Puffers, der in der direkten Beleuchtungssimulation precomputed Radiance Transfer (PRT) auf der GPU verwendet wird.
 ms.assetid: 05354328-9b6f-45f5-a913-47ede170b03f
-title: D3DXSHGPUSIMOPT-Enumeration (D3dx9mesh. h)
+title: D3DXSLKPUSLIPPT-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: a94845faf4c34657f486cfa371c5d41a12dc4336
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a73323dc9d6596f848fa50fe6dc21e236a5b9f2d4362b3c2a27cf773d3939fac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849750"
 ---
-# <a name="d3dxshgpusimopt-enumeration"></a>D3DXSHGPUSIMOPT-Enumeration
+# <a name="d3dxshgpusimopt-enumeration"></a>D3DXSLKPUSLIPPT-Enumeration
 
-Beschreibt die Auflösung des Schatten-z-Puffers, der in der direkt Beleuchtungs Simulation der vorab berechneten Strahlen Übertragung (PRT) auf der GPU verwendet wird. Ein z-Puffer mit höherer Qualität kann auch angegeben werden, um das Rauschen der Ergebnisse der direkt Beleuchtungs Simulation zu reduzieren, obwohl die Simulation langsamer ist.
+Beschreibt die Auflösung des Schatten-Z-Puffers, der in der direkten Beleuchtungssimulation precomputed Radiance Transfer (PRT) auf der GPU verwendet wird. Es kann auch ein qualitativ hochwertigerer Z-Puffer angegeben werden, um Rauschen in den Ergebnissen der direkten Beleuchtungssimulation zu reduzieren, obwohl die Simulation langsamer ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,51 +44,51 @@ typedef enum D3DXSHGPUSIMOPT {
 
 <dl> <dt>
 
-<span id="D3DXSHGPUSIMOPT_SHADOWRES256"></span><span id="d3dxshgpusimopt_shadowres256"></span>**D3DXSHGPUSIMOPT \_ SHADOWRES256**
+<span id="D3DXSHGPUSIMOPT_SHADOWRES256"></span><span id="d3dxshgpusimopt_shadowres256"></span>**D3DXSLKPUSLIPPT \_ SHADOWRES256**
 </dt> <dd>
 
-Simulation mit niedriger Auflösung. In der Simulation wird eine 256 x 256 Pixel Textur zum Codieren des Schatten-z-Puffers verwendet.
+Simulation mit niedriger Auflösung. In der Simulation wird eine Textur mit 256 x 256 Pixeln verwendet, um den Schatten-Z-Puffer zu codieren.
 
 </dd> <dt>
 
-<span id="D3DXSHGPUSIMOPT_SHADOWRES512"></span><span id="d3dxshgpusimopt_shadowres512"></span>**D3DXSHGPUSIMOPT \_ SHADOWRES512**
+<span id="D3DXSHGPUSIMOPT_SHADOWRES512"></span><span id="d3dxshgpusimopt_shadowres512"></span>**D3DXSLKPUSLIPPT \_ SHADOWRES512**
 </dt> <dd>
 
-Simulation mit mittlerer Auflösung. In der Simulation wird eine 512 x 512 Pixel Textur zum Codieren des Schatten-z-Puffers verwendet. Dies ist der Standardwert.
+Simulation mit mittlerer Auflösung. Eine Textur mit 512 x 512 Pixeln wird in der Simulation verwendet, um den Schatten-Z-Puffer zu codieren. Dies ist der Standardwert.
 
 </dd> <dt>
 
-<span id="D3DXSHGPUSIMOPT_SHADOWRES1024"></span><span id="d3dxshgpusimopt_shadowres1024"></span>**D3DXSHGPUSIMOPT \_ SHADOWRES1024**
+<span id="D3DXSHGPUSIMOPT_SHADOWRES1024"></span><span id="d3dxshgpusimopt_shadowres1024"></span>**D3DXSLKPUSLIPPT \_ SHADOWRES1024**
 </dt> <dd>
 
-Hochauflösende Simulation. In der Simulation wird eine 1024 x 1024 Pixel Textur zum Codieren des Schatten-z-Puffers verwendet.
+Simulation mit hoher Auflösung. Eine Textur mit 1024 x 1024 Pixel wird in der Simulation verwendet, um den Schatten z-Puffer zu codieren.
 
 </dd> <dt>
 
-<span id="D3DXSHGPUSIMOPT_SHADOWRES2048"></span><span id="d3dxshgpusimopt_shadowres2048"></span>**D3DXSHGPUSIMOPT \_ SHADOWRES2048**
+<span id="D3DXSHGPUSIMOPT_SHADOWRES2048"></span><span id="d3dxshgpusimopt_shadowres2048"></span>**D3DXSLKPUSLIPPT \_ SHADOWRES2048**
 </dt> <dd>
 
-Simulation mit der höchsten Auflösung. In der Simulation wird eine 2048 x 2048 Pixel Textur zum Codieren des Schatten-z-Puffers verwendet.
+Simulation mit der höchsten Auflösung. Eine Textur mit 2048 x 2048 Pixel wird in der Simulation verwendet, um den Schatten z-Puffer zu codieren.
 
 </dd> <dt>
 
-<span id="D3DXSHGPUSIMOPT_HIGHQUALITY"></span><span id="d3dxshgpusimopt_highquality"></span>**D3DXSHGPUSIMOPT \_ HighQuality**
+<span id="D3DXSHGPUSIMOPT_HIGHQUALITY"></span><span id="d3dxshgpusimopt_highquality"></span>**D3DXSLKPUSLIPPT \_ HIGHQUALITY**
 </dt> <dd>
 
-Die Simulation ist unabhängig von der ausgewählten Auflösung mit hoher Genauigkeit. Durch Festlegen dieses Werts wird das Rauschen der Ergebnisse der direkt Beleuchtungs Simulation reduziert, obwohl die Simulation langsamer verläuft. Kann mit einem der Auflösungswerte kombiniert werden.
+Die Simulation ist unabhängig von der ausgewählten Auflösung von hoher Genauigkeit. Wenn Sie diesen Wert festlegen, wird das Rauschen in den Ergebnissen der simulation der direkten Beleuchtung reduziert, obwohl die Simulation langsamer ist. Kann mit einem der Auflösungswerte kombiniert werden.
 
 </dd> <dt>
 
-<span id="D3DXSHGPUSIMOPT_FORCE_DWORD"></span><span id="d3dxshgpusimopt_force_dword"></span>**D3DXSHGPUSIMOPT \_ Erzwingen von \_ DWORD**
+<span id="D3DXSHGPUSIMOPT_FORCE_DWORD"></span><span id="d3dxshgpusimopt_force_dword"></span>**D3DXSLKPUSLIPPT \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es kann nur einer der Auflösungswerte angegeben werden, der mit dem hochwertigen Wert kombiniert werden kann.
+Es kann nur einer der Auflösungswerte angegeben und mit dem hochwertigen Wert kombiniert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,11 +96,11 @@ Es kann nur einer der Auflösungswerte angegeben werden, der mit dem hochwertige
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

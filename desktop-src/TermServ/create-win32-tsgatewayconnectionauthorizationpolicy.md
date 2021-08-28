@@ -1,12 +1,12 @@
 ---
-title: Create-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-description: Erstellt eine Remotedesktop Verbindungs Autorisierungs Richtlinie (RD \ 160; Cap) unter Verwendung der angegebenen Werte. Die neue RD \ 160; Die Obergrenze wird am oberen Rand des RD \ 160; eingefügt. Cap-Auswertungs Reihenfolge mit einem Order-Eigenschafts Wert von \ 0034; 1 \ 0034;.
+title: Create-Methode der Win32_TSGatewayConnectionAuthorizationPolicy Klasse
+description: Erstellt eine Remotedesktop Verbindungsautorisierungsrichtlinie (RD \ 160; CAP) mithilfe der angegebenen Werte. Das neue RD \ 160; CAP wird oben auf rd \ 160 eingefügt. CAP-Auswertungsauftrag mit dem Order-Eigenschaftswert \0034;1 \ 0034;.
 ms.assetid: 0010cd2b-9c23-488a-9337-d2ed338136d3
 ms.tgt_platform: multiple
 keywords:
-- Create-Methode Remotedesktopdienste
-- Create Method Remotedesktopdienste, Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-- Win32_TSGatewayConnectionAuthorizationPolicy Klasse Remotedesktopdienste, Methode erstellen
+- Erstellen einer Remotedesktopdienste
+- Create method Remotedesktopdienste , Win32_TSGatewayConnectionAuthorizationPolicy class
+- Win32_TSGatewayConnectionAuthorizationPolicy klasse Remotedesktopdienste , Create-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: edc027c2f7fc90318bd1af6fd1254077a860a5d8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b16bf9dadb2a76a46d607a6cf2554192e3658686b58a089c19c3604c0c510bc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871860"
 ---
-# <a name="create-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>Create-Methode der Win32-Klasse "t- \_ gatewayconnectionauthorizationpolicy"
+# <a name="create-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>Create-Methode der Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse
 
-Erstellt eine Remotedesktop Verbindungs Autorisierungs Richtlinie (RD-CAP) mithilfe der angegebenen Werte. Die neue RD-Obergrenze wird am oberen Rand der Auswertungs Reihenfolge für die RD-CAP eingefügt, wobei der Wert für die **Order** -Eigenschaft "1" lautet.
+Erstellt eine Remotedesktop-Verbindungsautorisierungsrichtlinie (RD CAP) mithilfe der angegebenen Werte. Die neue RD-CAP wird am Anfang der Rd CAP-Auswertungsauftrag eingefügt, mit dem **Order-Eigenschaftswert** "1".
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,58 +60,58 @@ uint32 Create(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-Name der RD-Obergrenze. Der Name muss 64 Zeichen oder kleiner, eindeutig (Groß-/Kleinschreibung wird ignoriert) sein und darf die folgenden reservierten Zeichen nicht enthalten:
+Name der RD-CAP. Der Name muss mindestens 64 Zeichen lang sein, muss eindeutig sein (case wird ignoriert) und darf nicht die folgenden reservierten Zeichen enthalten:
 
-<> :; " / \\ \| ? \*\[Registerkarte\]
+<> : ; " / \\ \| ? \*\[REGISTERKARTE\]
 
 </dd> <dt>
 
-*Usergroupnames* \[ in\]
+*UserGroupNames* \[ In\]
 </dt> <dd>
 
-Eine Liste von Benutzergruppen Namen, die durch Semikolons getrennt sind, für die neue RD-Obergrenze.
+Liste der durch Semikolons getrennten Benutzergruppennamen für die neue RD-CAP.
 
 </dd> <dt>
 
-*Computer groupnames* \[ in\]
+*ComputerGroupNames* \[ In\]
 </dt> <dd>
 
-Die Liste der Computer Gruppennamen, die durch Semikolons getrennt sind, für die neue RD-Obergrenze.
+Liste der Durch Semikolons getrennten Computergruppennamen für die neue RD-CAP.
 
 </dd> <dt>
 
-*Smartcard* \[ in\]
+*SmartCard* \[ In\]
 </dt> <dd>
 
-Gibt an, ob Smartcards zum Authentifizieren beim RD-Gateway Server verwendet werden können.
+Gibt an, ob Smartcards für die Authentifizierung beim RD-Gatewayserver verwendet werden können.
 
 </dd> <dt>
 
-*Kennwort* \[ in\]
+*Kennwort* \[ In\]
 </dt> <dd>
 
-Gibt an, ob Kenn Wörter verwendet werden können, um sich beim RD-Gateway Server zu authentifizieren.
+Gibt an, ob Kennwörter für die Authentifizierung beim RD-Gatewayserver verwendet werden können.
 
 </dd> <dt>
 
-*SecureID* \[ in\]
+*SecureId* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 </dd> <dt>
 
-*Aktiviert* \[ in\]
+*Aktiviert* \[ In\]
 </dt> <dd>
 
-Gibt an, ob dieses RD-CAP aktiviert ist.
+Gibt an, ob diese RD-CAP aktiviert ist.
 
 </dd> <dt>
 
-*Deviceredirectiontype* \[ in\]
+*DeviceRedirectionType* \[ In\]
 </dt> <dd>
 
 Gibt an, welche Gerätetypen umgeleitet werden.
@@ -128,96 +128,96 @@ Alle Geräte werden umgeleitet.
 1
 </dt> <dd>
 
-Keine Geräte werden umgeleitet.
+Es werden keine Geräte umgeleitet.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Angegebene Geräte werden nicht umgeleitet. Die Parameter *diskdrivesdebug*, *printersdeaktiviert*, *serialportsdeaktiviert*, *clipboarddeaktiviert* und *plugandplaydevicesdeaktiviert* steuern, welche Geräte nicht umgeleitet werden.
+Angegebene Geräte werden nicht umgeleitet. Die *Parameter DiskDrivesDisabled,* *PrinterDisabled,* *SerialPortsDisabled,* *ClipboardDisabled* und *PlugAndPlayDevicesDisabled* steuern, welche Geräte nicht umgeleitet werden.
 
 </dd> </dl> </dd> <dt>
 
-*Diskdrivesdeaktivierte* \[ in\]
+*DiskDrivesDisabled* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Laufwerk Umleitung deaktiviert werden soll, wenn der *deviceredirectiontype* -Parameter den Wert "2" aufweist.
+Gibt an, ob die Laufwerkumleitung deaktiviert werden soll, wenn *der DeviceRedirectionType-Parameter* "2" ist.
 
 </dd> <dt>
 
-" *Printersdeaktiviert* \[ " in\]
+*PrinterDisabled* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Drucker Umleitung deaktiviert werden soll, wenn der *deviceredirectiontype* -Parameter den Wert "2" aufweist.
+Gibt an, ob die Druckerumleitung deaktiviert werden soll, wenn *der DeviceRedirectionType-Parameter* "2" ist.
 
 </dd> <dt>
 
-*Serialportsdeaktiviert* \[ in\]
+*SerialPortsDisabled* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die serielle Port Umleitung deaktiviert werden soll, wenn der *deviceredirectiontype* -Parameter "2" ist.
+Gibt an, ob die Umleitung des seriellen Ports deaktiviert werden soll, wenn der *DeviceRedirectionType-Parameter* "2" ist.
 
 </dd> <dt>
 
-*Clipboarddeaktiviert* \[ in\]
+*ZwischenablageDeabled* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Zwischenablage Umleitung deaktiviert werden soll, wenn der *deviceredirectiontype* -Parameter "2" ist.
+Gibt an, ob die Umleitung der Zwischenablage deaktiviert werden soll, wenn der *DeviceRedirectionType-Parameter* "2" ist.
 
 </dd> <dt>
 
-*Plugandplaydevicesdeaktiviert* \[ in\]
+*PlugAndPlayDevicesDisabled* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Umleitung von Plug & Play Geräten deaktiviert werden soll, wenn der *deviceredirectiontype* -Parameter "2" ist.
+Specifies whether to disable redirection of Plug and Play devices if the *DeviceRedirectionType* parameter is "2".
 
 </dd> <dt>
 
-*IdleTimeout* \[ in\]
+*IdleTimeout* \[ In\]
 </dt> <dd>
 
-Leerlauf Timeout Wert in Minuten
+Leerlaufzeitüberschreitungswert in Minuten
 
 </dd> <dt>
 
-*Sessiontimeout* \[ in\]
+*SessionTimeout* \[ In\]
 </dt> <dd>
 
-Sitzungs Timeout Wert in Minuten
+Sitzungszeitüberschreitungswert in Minuten
 
 </dd> <dt>
 
-*Sessiontimeoutaction* \[ in\]
+*SessionTimeoutAction* \[ In\]
 </dt> <dd>
 
-Sitzungs Timeout Aktion in Minuten
+Sitzungszeitüberschreitungsaktion in Minuten
 
 </dd> <dt>
 
-" *Zuweisung der Server* \[ " in\]
+*AllowOnlySDRServers* \[ In\]
 </dt> <dd>
 
-Gibt an, ob Verbindungen nur für Server mit SZR zulässig sind
+Gibt an, ob Verbindungen nur mit SDR-TS-Servern zulässig sind
 
 </dd> <dt>
 
-*Cookieauthentifizierung* \[ in\]
+*CookieAuthentication* \[ In\]
 </dt> <dd>
 
-Gibt an, ob für die Verbindung mit dem Terminaldienstegateway-Server eine Cookie-Authentifizierung
+Gibt an, ob die Cookieauthentifizierung verwendet werden kann, um eine Verbindung mit dem TS-Gatewayserver herzustellen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -227,8 +227,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -237,7 +237,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> </dl>
 
  

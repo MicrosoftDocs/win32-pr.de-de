@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmsecurity getcontentenablersfromhashes-Methode (wmdrmsdk. h)
-description: Die getcontentenablersfromhashes-Methode ruft inhaltsenabler-Schnittstellen ab, die das Erneuern von Komponenten auf der Grundlage von Hash Zertifikaten ermöglichen.
+title: IWMDRMSecurity GetContentEnablersFromHashes-Methode (Wmdrmsdk.h)
+description: Die GetContentEnablersFromHashes-Methode ruft Schnittstellen für die Inhaltsermöglichung ab, die die Erneuerung von Komponenten basierend auf Hashzertifikaten ermöglichen.
 ms.assetid: d7429859-b609-49a2-a369-d02260bc15bf
 keywords:
-- Getcontentenablersfromhashes-Methode Windows Media-Format
-- Getcontentenablersfromhashes-Methode, Windows Media-Format, iwmdrmsecurity-Schnittstelle
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format, getcontentenablersfromhashes-Methode
+- GetContentEnablersFromHashes-Methode windows Media Format
+- GetContentEnablersFromHashes-Methode Windows Media Format, IWMDRMSecurity-Schnittstelle
+- IWMDRMSecurity interface windows Media Format , GetContentEnablersFromHashes method
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f44b4187699cb4a55d0c6215e3f31b430a87d299
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d5b2b5e126555a0d09ea88017e2a290c180434b18fb8a61f668afd8e12fa02a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808550"
 ---
-# <a name="iwmdrmsecuritygetcontentenablersfromhashes-method"></a>Iwmdrmsecurity:: getcontentenablersfromhashes-Methode
+# <a name="iwmdrmsecuritygetcontentenablersfromhashes-method"></a>IWMDRMSecurity::GetContentEnablersFromHashes-Methode
 
-Die **getcontentenablersfromhashes** -Methode ruft inhaltsenabler-Schnittstellen ab, die das Erneuern von Komponenten auf der Grundlage von Hash Zertifikaten ermöglichen.
+Die **GetContentEnablersFromHashes-Methode** ruft Schnittstellen für die Inhaltsermöglichung ab, die die Erneuerung von Komponenten basierend auf Hashzertifikaten ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,44 +47,44 @@ HRESULT GetContentEnablersFromHashes(
 
 <dl> <dt>
 
-*rgpbcerthashes* \[ in\]
+*rgpbCertHashes* \[ In\]
 </dt> <dd>
 
-Ein Array von zertifikathashes zum Abrufen von Inhalts Enablern.
+Array von Zertifikathashes zum Abrufen von Inhalts-Enablern.
 
 </dd> <dt>
 
-*ccerts* \[ in\]
+*cCerts* \[ In\]
 </dt> <dd>
 
-Anzahl von Zertifikaten, für die Inhalts Enabler abgerufen werden sollen. Dies ist die Anzahl der Elemente im *rgpbcerthashes* -Array.
+Anzahl der Zertifikate, für die Inhalts-Enabler abgerufen werden. Dies ist die Anzahl der Elemente im *rgpbCertHashes-Array.*
 
 </dd> <dt>
 
-*hresulthint* \[ in\]
+*hResultHint* \[ In\]
 </dt> <dd>
 
-Rückgabewert, der von dem Vorgang empfangen wurde, der aufgrund eines gesperrten Zertifikats nicht erfolgreich war. Wenn Sie nicht als Antwort auf einen fehlgeschlagenen Methodenaufruf aufrufen, legen Sie auf \_ OK fest.
+Gibt den Wert zurück, der von dem Vorgang empfangen wurde, der aufgrund eines gesperrten Zertifikats fehlgeschlagen ist. Wenn Sie nicht als Reaktion auf einen fehlgeschlagenen Methodenaufruf aufrufen, legen Sie auf S \_ OK fest.
 
 </dd> <dt>
 
-*prgcontentenablers* \[ vorgenommen\]
+*prgContentEnablers* \[ out\]
 </dt> <dd>
 
-Ein Array, das die Adressen der neu erstellten **IMF contentenabler** -Schnittstellen empfängt. Legen Sie diese Einstellung auf **null** fest, um die Anzahl der Inhalts-Enabler im *pccontentenablers* -Parameter zu erhalten.
+Array, das die Adressen der neu erstellten **BENUTZEROBERFLÄCHEContentEnabler-Schnittstellen** empfängt. Legen Sie diese **Option auf NULL** fest, um die Anzahl der Inhalts-Enabler im Parameter *pcContentEnablers* zu erhalten.
 
 </dd> <dt>
 
-*pccontentenablers* \[ in, out\]
+*pcContentEnablers* \[ in, out\]
 </dt> <dd>
 
-Anzahl der Elemente im *prgcontentenablers* -Array. Wenn *prgcontentenablers* den Wert **null** hat, wird dieser Wert auf die Anzahl der benötigten Inhalts-Enabler bei der Ausgabe festgelegt.
+Anzahl der Elemente im *prgContentEnablers-Array.* Wenn *prgContentEnablers* **NULL ist,** wird dieser Wert auf die Anzahl der erforderlichen Inhalts-Enabler in der Ausgabe festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -96,11 +96,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die **imfcontentenabler** -Schnittstelle zum Erneuern von widerrufenen Komponenten verwenden, müssen Sie den Prozess für den Benutzer verdeutlichen. Diese Erläuterung muss vorgenommen werden, da der Aktualisierungsprozess Informationen vom Client Computer an eine Microsoft-Website sendet.
+Wenn Sie die **BENUTZEROBERFLÄCHEContentEnabler-Schnittstelle** verwenden, um gesperrte Komponenten zu erneuern, müssen Sie den Prozess für den Benutzer verdeutlichen. Diese Erläuterung muss getroffen werden, da der Updateprozess Informationen vom Clientcomputer an eine Microsoft-Website sendet.
 
-Wenn Sie **imfcontentenabler:: automaticenable** aufgerufen haben, wird der Standardbrowser von Content Wegbereiter mit der Adresse des Aktualisierungs Diensts auf der Microsoft-Website gestartet. Ein eindeutiger Bezeichner, der die widerrufene Komponente identifiziert, wird an den Aktualisierungs Dienst gesendet. Der Dienst leitet dann den Browser an eine Webseite weiter, von der aus der Benutzer die neue Version der gesperrten Komponente herunterladen und installieren kann.
+Wenn Sie **DENTCONTENTEnabler::AutomaticEnable** aufrufen, startet die Inhalts-Aktivierung den Standardbrowser mit der Adresse des Updatediensts auf der Microsoft-Website. Ein eindeutiger Bezeichner, der die gesperrte Komponente identifiziert, wird an den Updatedienst gesendet. Der Dienst leitet den Browser dann zu einer Webseite um, von der der Benutzer möglicherweise die neue Version der gesperrten Komponente herunterladen und installieren kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,8 +108,8 @@ Wenn Sie **imfcontentenabler:: automaticenable** aufgerufen haben, wird der Stan
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -117,7 +117,7 @@ Wenn Sie **imfcontentenabler:: automaticenable** aufgerufen haben, wird der Stan
 
 <dl> <dt>
 
-[**Iwmdrmsecurity-Schnittstelle**](iwmdrmsecurity.md)
+[**IWMDRMSecurity-Schnittstelle**](iwmdrmsecurity.md)
 </dt> </dl>
 
  

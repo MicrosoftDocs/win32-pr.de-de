@@ -1,7 +1,7 @@
 ---
-description: Die Run-Methode wechselt in den Modus "wird ausgeführt", sodass Befehle, die von der streamzeit verzögert werden, ausgeführt werden können.
+description: Die Run-Methode wechselt in den Ausführungsmodus, sodass Befehle, die um die Streamzeit zurückgestellt werden, ausgeführt werden können.
 ms.assetid: c529ae84-c9b7-46f1-a1e4-716fc9e9df13
-title: Ccmdqueue. Run-Methode (winutil. h)
+title: CCmdQueue.Run-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 424914e53a12ff0f43e8b7e2a3345c28d84437d2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5da70c4ac0c5890e4483f7facdc4d1f5a3d5dd70906c53917bd83029dfaa6c6e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757140"
 ---
-# <a name="ccmdqueuerun-method"></a>Ccmdqueue. Run-Methode
+# <a name="ccmdqueuerun-method"></a>CCmdQueue.Run-Methode
 
-Die `Run` Methode wechselt in den Modus "wird ausgeführt", sodass Befehle, die von der streamzeit verzögert werden, ausgeführt werden können.
+Die `Run` -Methode wechselt in den Ausführungsmodus, sodass Befehle, die durch die Streamzeit zurückgestellt werden, ausgeführt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual HRESULT Run(
 
 <dl> <dt>
 
-*tstreamtimeoffset* 
+*tStreamTimeOffset* 
 </dt> <dd>
 
-Offset Zeit.
+Offsetzeit.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Offset Zeit.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während des laufenden Modus ist die Zuordnung von streamzeit zu Präsentationszeit bekannt.
+Während des Ausführungsmodus ist die Zuordnung von Streamzeit zu Präsentationszeit bekannt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Während des laufenden Modus ist die Zuordnung von streamzeit zu Präsentationsz
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Während des laufenden Modus ist die Zuordnung von streamzeit zu Präsentationsz
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

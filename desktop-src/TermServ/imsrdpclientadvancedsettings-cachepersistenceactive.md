@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings cachepersistenceactive (Eigenschaft)
-description: Gibt an, ob das persistente Bitmap-Caching verwendet werden soll. Persistentes zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
+title: IMsRdpClientAdvancedSettings CachePersistenceActive (Eigenschaft)
+description: Gibt an, ob die persistente Bitmapzwischenspeicherung verwendet werden soll. Das beständige Zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
 ms.assetid: 5eb986c4-98dd-426f-8d55-d3a9a526e1b2
 ms.tgt_platform: multiple
 keywords:
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, cachepersistenceactive-Eigenschaft
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
-- Cachepersistenceactive-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, cachepersistenceactive (Eigenschaft)
+- CachePersistenceActive-Remotedesktopdienste
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
+- CachePersistenceActive-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , CachePersistenceActive-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb34e90cc028e95c750a444d53f42c9c0ab77400
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8e9975bcfeca8ff5dfbedf3507003432cb4bd3167c794ecd0b690492caf3e40d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871180"
 ---
-# <a name="imsrdpclientadvancedsettingscachepersistenceactive-property"></a>Imsrdpclientadvancedsettings:: cachepersistenceactive-Eigenschaft
+# <a name="imsrdpclientadvancedsettingscachepersistenceactive-property"></a>IMsRdpClientAdvancedSettings::CachePersistenceActive (Eigenschaft)
 
-Gibt an, ob das persistente Bitmap-Caching verwendet werden soll. Persistentes zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
+Gibt an, ob die persistente Bitmapzwischenspeicherung verwendet werden soll. Das beständige Zwischenspeichern kann die Leistung verbessern, erfordert jedoch zusätzlichen Speicherplatz.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,13 +84,13 @@ HRESULT get_CachePersistenceActive(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren.
+Legen Sie diesen Parameter auf 0 fest, um das Feature oder einen Wert ungleich 0 (null) zu deaktivieren, um das Feature zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -104,11 +104,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

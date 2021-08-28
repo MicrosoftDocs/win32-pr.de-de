@@ -4,30 +4,30 @@ ms.assetid: d9fdafed-5958-4995-a1b5-8881feca1291
 title: Verwenden eines Effekts (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1170fde625e5eee5e9665f0759d302b5f5450a41
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d240148c8817a3e480099a3ad1acb81bbff60803b0d0a8327e3a77cba681b5b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856100"
 ---
 # <a name="using-an-effect-direct3d-9"></a>Verwenden eines Effekts (Direct3D 9)
 
 Auf dieser Seite erfahren Sie, wie Sie einen Effekt generieren und verwenden. Die behandelten Themen umfassen Folgendes:
 
 -   [Erstellen eines Effekts](#create-an-effect)
--   [Einen Effekt Rendering](#render-an-effect)
--   [Verwenden der Semantik zum Suchen von Effekt Parametern](#use-semantics-to-find-effect-parameters)
--   [Verwenden von Handles zum effizienten erhalten und Festlegen von Parametern](#use-handles-to-get-and-set-parameters-efficiently)
--   [Hinzufügen von Parameter Informationen mit Anmerkungen](#add-parameter-information-with-annotations)
--   [Parameter für Freigabe Effekte](#share-effect-parameters)
--   [Einen Effekt Offline kompilieren](#compile-an-effect-offline)
--   [Verbessern der Leistung durch preshaders](#improve-performance-with-preshaders)
--   [Verwenden von Parameter Blöcken zum Verwalten von Effekt Parametern](#use-parameter-blocks-to-manage-effect-parameters)
+-   [Rendern eines Effekts](#render-an-effect)
+-   [Verwenden von Semantik zum Suchen von Effektparametern](#use-semantics-to-find-effect-parameters)
+-   [Effizientes Abrufen und Festlegen von Parametern mithilfe von Handles](#use-handles-to-get-and-set-parameters-efficiently)
+-   [Hinzufügen von Parameterinformationen mit Anmerkungen](#add-parameter-information-with-annotations)
+-   [Share Effect-Parameter](#share-effect-parameters)
+-   [Offlinekompilieren eines Effekts](#compile-an-effect-offline)
+-   [Verbessern der Leistung mit Preshadern](#improve-performance-with-preshaders)
+-   [Verwenden von Parameterblöcken zum Verwalten von Effektparametern](#use-parameter-blocks-to-manage-effect-parameters)
 
 ## <a name="create-an-effect"></a>Erstellen eines Effekts
 
-Hier ist ein Beispiel für das Erstellen eines Effekts, der aus dem [basichlsl-Beispiel](../directx-sdk--august-2009-.md)stammt. Der Effekt Erstellungs Code zum Erstellen eines debugshaders ist von **onkreatedevice**:
+Im Folgenden finden Sie ein Beispiel für das Erstellen eines Effekts aus dem [BasicHLSL-Beispiel.](../directx-sdk--august-2009-.md) Der Effekterstellungscode zum Erstellen eines Debug-Shaders stammt aus **OnCreateDevice:**
 
 
 ```
@@ -55,36 +55,36 @@ DWORD dwShaderFlags = 0;
 
 
 
-Diese Funktion übernimmt die folgenden Argumente:
+Diese Funktion verwendet die folgenden Argumente:
 
 -   Das Gerät.
--   Der Dateiname der Effekt Datei.
--   Ein Zeiger auf eine mit NULL endende Liste von \# definiert, die beim Durchführen des Shaders verwendet werden soll.
--   Ein optionaler Zeiger auf einen Benutzer geschriebenen include-Handler. Der-Handler wird vom Prozessor aufgerufen, wenn er eine include auflösen muss \# .
--   Ein Shader-kompilierungsflag, das die compilerhinweise darüber gibt, wie der Shader verwendet wird. Die Optionen lauten:
-    -   Die Validierung wird übersprungen, wenn bekannte gute Shader kompiliert werden.
-    -   Die Optimierung wird übersprungen (manchmal verwendet, wenn Optimierungen das Debuggen erschweren).
-    -   Anfordern von Debuginformationen, die in den Shader eingeschlossen werden sollen, damit Sie gedebuggt werden können.
--   Der Effekt Pool. Wenn mehr als ein Effekt denselben Speicherpool Zeiger verwendet, werden die globalen Variablen in den Effekten gemeinsam genutzt. Wenn Sie keine Auswirkung-Variablen freigeben müssen, kann der Speicherpool auf **null** festgelegt werden.
+-   Der Dateiname der Effektdatei.
+-   Ein Zeiger auf eine auf NULL endende Liste von \# definiert, die beim Analysieren des Shaders verwendet werden soll.
+-   Ein optionaler Zeiger auf einen vom Benutzer geschriebenen Includehandler. Der Handler wird immer dann vom Prozessor aufgerufen, wenn er ein Include auflösen \# muss.
+-   Ein Shaderkompilierungsflag, das dem Compiler Hinweise zur Verwendung des Shaders gibt. Die Optionen lauten:
+    -   Überspringen der Validierung, wenn als gut bekannte Shader kompiliert werden.
+    -   Überspringen der Optimierung (wird manchmal verwendet, wenn das Debuggen durch Optimierungen erschwert wird).
+    -   Anfordern von Debuginformationen, die in den Shader eingeschlossen werden sollen, damit sie debuggen werden können.
+-   Der Effektpool. Wenn mehrere Effekte denselben Speicherpoolzeiger verwenden, werden die globalen Variablen in den Effekten gemeinsam verwendet. Wenn keine Auswirkungsvariablen freigegeben werden müssen, kann der Speicherpool auf **NULL** festgelegt werden.
 -   Ein Zeiger auf den neuen Effekt.
--   Ein Zeiger auf einen Puffer, an den Validierungs Fehler gesendet werden können. In diesem Beispiel wurde der-Parameter auf **null** festgelegt und nicht verwendet.
+-   Ein Zeiger auf einen Puffer, an den Validierungsfehler gesendet werden können. In diesem Beispiel wurde der -Parameter auf **NULL** festgelegt und nicht verwendet.
 
 > [!Note]  
-> Ab dem SDK vom Dezember 2006 ist der DirectX 10 HLSL-Compiler nun der Standard Compiler in DirectX 9 und DirectX 10. Ausführliche Informationen finden Sie unter [Effect-Compiler-Tool](../direct3dtools/fxc.md) .
+> Ab dem SDK vom Dezember 2006 ist der DirectX 10 HLSL-Compiler jetzt sowohl in DirectX 9 als auch in DirectX 10 der Standardcompiler. Weitere Informationen finden Sie [unter Effektcompilertool.](../direct3dtools/fxc.md)
 
  
 
-## <a name="render-an-effect"></a>Einen Effekt Rendering
+## <a name="render-an-effect"></a>Rendern eines Effekts
 
-Die Abfolge der Aufrufe zum Anwenden des Wirkungs Zustands auf ein Gerät lautet wie folgt:
+Die Reihenfolge der Aufrufe zum Anwenden des Effektzustands auf ein Gerät lautet:
 
--   [**ID3DXEffect:: begin**](id3dxeffect--begin.md) legt die aktive Technik fest.
--   [**ID3DXEffect:: beginpass**](id3dxeffect--beginpass.md) legt den aktiven Durchlauf fest.
--   [**ID3DXEffect:: CommitChanges**](id3dxeffect--commitchanges.md) aktualisiert Änderungen an beliebigen Set-aufrufen im Durchlauf. Dies sollte vor einem Draw-Aufruf aufgerufen werden.
--   [**ID3DXEffect:: endpass**](id3dxeffect--endpass.md) beendet einen Durchlauf.
--   [**ID3DXEffect:: End**](id3dxeffect--end.md) beendet die aktive Technik.
+-   [**ID3DXEffect::Begin**](id3dxeffect--begin.md) legt die aktive Technik fest.
+-   [**ID3DXEffect::BeginPass**](id3dxeffect--beginpass.md) legt den aktiven Pass fest.
+-   [**ID3DXEffect::CommitChanges**](id3dxeffect--commitchanges.md) aktualisiert Änderungen an allen festgelegten Aufrufen im Durchlauf. Dies sollte vor einem Draw-Aufruf aufgerufen werden.
+-   [**ID3DXEffect::EndPass**](id3dxeffect--endpass.md) beendet einen Pass.
+-   [**ID3DXEffect::End**](id3dxeffect--end.md) beendet die aktive Technik.
 
-Der Effekt-Rendering-Code ist auch einfacher als der entsprechende Rendering-Code. Hier ist der Rendering-Code mit einem Effekt:
+Der Effektrenderingcode ist auch einfacher als der entsprechende Rendercode ohne Effekt. Hier ist der Rendercode mit einem Effekt:
 
 
 ```
@@ -109,11 +109,11 @@ g_pEffect->End();
 
 
 
-Die Renderschleife besteht darin, den Effekt abzufragen, um zu sehen, wie viele Pass Sie enthält, und dann alle Durchgänge für eine Technik abzurufen. Die Renderschleife kann erweitert werden, um mehrere Techniken aufzurufen, die jeweils mehrere Durchgänge haben.
+Die Renderschleife besteht aus dem Abfragen des Effekts, um zu sehen, wie viele Durchläufe darin enthalten sind, und anschließendes Aufrufen aller Durchläufe für eine Technik. Die Renderschleife kann erweitert werden, um mehrere Techniken mit jeweils mehreren Durchläufen aufzurufen.
 
-## <a name="use-semantics-to-find-effect-parameters"></a>Verwenden der Semantik zum Suchen von Effekt Parametern
+## <a name="use-semantics-to-find-effect-parameters"></a>Verwenden von Semantik zum Suchen von Effektparametern
 
-Eine Semantik ist ein Bezeichner, der an einen Effektparameter angefügt wird, um einer Anwendung das Suchen nach dem Parameter zu ermöglichen. Ein Parameter kann höchstens über eine Semantik verfügen. Die Semantik befindet sich nach einem Doppelpunkt (:) nach dem Parameternamen. Beispiel:
+Eine Semantik ist ein Bezeichner, der an einen Effect-Parameter angefügt ist, damit eine Anwendung nach dem Parameter suchen kann. Ein Parameter kann höchstens eine Semantik aufweisen. Die Semantik befindet sich nach einem Doppelpunkt (:) nach dem Parameternamen. Zum Beispiel:
 
 
 ```
@@ -122,7 +122,7 @@ float4x4 matWorldViewProj : WORLDVIEWPROJ;
 
 
 
-Wenn Sie die globale Variable Auswirkung ohne Verwendung einer Semantik deklariert haben, sieht Sie stattdessen wie folgt aus:
+Wenn Sie die globale Auswirkungsvariable deklariert haben, ohne eine Semantik zu verwenden, würde sie stattdessen wie folgt aussehen:
 
 
 ```
@@ -131,7 +131,7 @@ float4x4 matWorldViewProj;
 
 
 
-Die Effect-Schnittstelle kann eine Semantik verwenden, um ein Handle für einen bestimmten Effektparameter zu erhalten. Im folgenden Beispiel wird das Handle der Matrix zurückgegeben:
+Die Effektschnittstelle kann eine Semantik verwenden, um ein Handle für einen bestimmten Effektparameter abzurufen. Beispielsweise gibt Folgendes das Handle der Matrix zurück:
 
 
 ```
@@ -141,17 +141,17 @@ D3DHANDLE handle =
 
 
 
-Zusätzlich zum Durchsuchen des semantischen namens verfügt die Effect-Schnittstelle über viele andere Methoden, um nach Parametern zu suchen.
+Neben der Suche nach semantischem Namen verfügt die Effect-Schnittstelle über viele andere Methoden, um nach Parametern zu suchen.
 
-## <a name="use-handles-to-get-and-set-parameters-efficiently"></a>Verwenden von Handles zum effizienten erhalten und Festlegen von Parametern
+## <a name="use-handles-to-get-and-set-parameters-efficiently"></a>Effizientes Abrufen und Festlegen von Parametern mithilfe von Handles
 
-Handles bieten eine effiziente Möglichkeit zum Verweisen auf wirkungsparameter, Techniken, Pass-und Anmerkungen mit einem Effekt. Handles (die vom Typ D3DXHANDLE sind) sind Zeichen folgen Zeiger. Die Handles, die an Funktionen wie getparameterxxx oder getannotationxxx übermittelt werden, können in einer von drei Formen vorliegen:
+Handles stellen eine effiziente Möglichkeit zum Verweisen auf Effektparameter, Techniken, Durchläufe und Anmerkungen mit einem Effekt bereit. Handles (vom Typ D3DXHANDLE) sind Zeichenfolgenzeiger. Die Handles, die an Funktionen wie GetParameterxxx oder GetAnnotationxxx übergeben werden, können in einer von drei Formen vorliegen:
 
--   Ein Handle, das von einer Funktion wie getparameterxxx zurückgegeben wurde.
--   Eine Zeichenfolge, die den Namen des Parameters, der Technik, der Übergabe oder der Anmerkung enthält.
--   Ein Handle, das auf **null** festgelegt ist.
+-   Ein handle, das von einer Funktion wie GetParameterxxx zurückgegeben wird.
+-   Eine Zeichenfolge, die den Namen des Parameters, der Technik, des Durchlaufs oder der Anmerkung enthält.
+-   Ein Handle, das auf **NULL** festgelegt ist.
 
-In diesem Beispiel wird ein Handle für den Parameter zurückgegeben, dem die "worldviewproj"-Semantik angefügt ist:
+In diesem Beispiel wird ein Handle für den Parameter zurückgegeben, an den die WORLDVIEWPROJ-Semantik angefügt ist:
 
 
 ```
@@ -161,17 +161,17 @@ D3DHANDLE handle =
 
 
 
-## <a name="add-parameter-information-with-annotations"></a>Hinzufügen von Parameter Informationen mit Anmerkungen
+## <a name="add-parameter-information-with-annotations"></a>Hinzufügen von Parameterinformationen mit Anmerkungen
 
-Anmerkungen sind benutzerspezifische Daten, die an beliebige Techniken, Pass oder Parameter angefügt werden können. Eine Anmerkung ist eine flexible Möglichkeit zum Hinzufügen von Informationen zu einzelnen Parametern. Die Informationen können gelesen und auf jede Weise verwendet werden, die die Anwendung auswählt. Eine Anmerkung kann einen beliebigen Datentyp aufweisen und kann dynamisch hinzugefügt werden. Annotation-Deklarationen werden durch spitzen Klammern getrennt. Eine Anmerkung enthält Folgendes:
+Anmerkungen sind benutzerspezifische Daten, die an jede technik-, pass- oder parameter-Methode angefügt werden können. Eine Anmerkung ist eine flexible Möglichkeit zum Hinzufügen von Informationen zu einzelnen Parametern. Die Informationen können auf beliebige Weise von der Anwendung gelesen und verwendet werden. Eine Anmerkung kann einen beliebigen Datentyp aufweisen und dynamisch hinzugefügt werden. Anmerkungsdeklarationen werden durch spitzen Klammern getrennt. Eine Anmerkung enthält Folgendes:
 
--   Ein-Datentyp.
+-   Ein -Datentyp.
 -   Ein Variablenname.
 -   Ein Gleichheitszeichen (=).
 -   Der Datenwert.
--   Ein Semikolon mit Endpunkten (;).
+-   Ein endendes Semikolon (;).
 
-Beispielsweise enthalten beide vorherigen Beispiele in diesem Dokument diese Anmerkung:
+Beispielsweise enthalten die beiden vorherigen Beispiele in diesem Artikel diese Anmerkung:
 
 
 ```
@@ -180,23 +180,23 @@ texture Tex0 < string name = "tiger.bmp"; >;
 
 
 
-Die-Anmerkung wird an das Textur Objekt angefügt und gibt die Textur Datei an, die zum Initialisieren des Textur Objekts verwendet werden soll. Die-Anmerkung initialisiert nicht das Textur Objekt, sondern lediglich ein Teil der Benutzerinformationen, die an die Variable angefügt sind. Eine Anwendung kann die-Anmerkung entweder mit [**ID3DXBaseEffect:: GetAnnotation**](id3dxbaseeffect--getannotation.md) oder [**ID3DXBaseEffect:: getannotationbyname**](id3dxbaseeffect--getannotationbyname.md) lesen, um die Zeichenfolge zurückzugeben. Anmerkungen können auch von der Anwendung hinzugefügt werden.
+Die Anmerkung wird an das Texturobjekt angefügt und gibt die Texturdatei an, die zum Initialisieren des Texturobjekts verwendet werden soll. Die Anmerkung initialisiert das Texturobjekt nicht. Es handelt sich lediglich um benutzerbezogene Informationen, die an die Variable angefügt sind. Eine Anwendung kann die Anmerkung entweder mit [**ID3DXBaseEffect::GetAnnotation**](id3dxbaseeffect--getannotation.md) oder [**ID3DXBaseEffect::GetAnnotationByName**](id3dxbaseeffect--getannotationbyname.md) lesen, um die Zeichenfolge zurückzugeben. Anmerkungen können auch von der Anwendung hinzugefügt werden.
 
 Jede Anmerkung:
 
--   Muss entweder numerisch oder Zeichen folgen sein.
+-   Muss entweder numerisch oder Zeichenfolgen sein.
 -   Muss immer mit einem Standardwert initialisiert werden.
--   Kann [Techniken und übergebenen (Direct3D 9)](techniques-and-passes.md) und [Effektparameter](/previous-versions/windows/desktop/ee417539(v=vs.85))der obersten Ebene zugeordnet werden.
--   Kann mit [**ID3DXEffect**](id3dxeffect.md) oder [**ID3DXEffectCompiler**](id3dxeffectcompiler.md)geschrieben und daraus gelesen werden.
+-   Kann Techniken [und Durchläufen (Direct3D 9)](techniques-and-passes.md) und [Effektparametern](/previous-versions/windows/desktop/ee417539(v=vs.85))der obersten Ebene zugeordnet werden.
+-   Kann mit [**ID3DXEffect**](id3dxeffect.md) oder [**ID3DXEffectCompiler**](id3dxeffectcompiler.md)in geschrieben und daraus gelesen werden.
 -   Kann mit [**ID3DXEffect**](id3dxeffect.md)hinzugefügt werden.
--   Innerhalb des Effekts kann nicht auf Sie verwiesen werden.
--   Unter Semantik oder untergeordnete Anmerkungen sind nicht möglich.
+-   Innerhalb des Effekts kann nicht darauf verwiesen werden.
+-   Kann keine Untersemantik oder untergeordnete Anmerkungen aufweisen.
 
-## <a name="share-effect-parameters"></a>Parameter für Freigabe Effekte
+## <a name="share-effect-parameters"></a>Share Effect-Parameter
 
-Effektparameter sind alle nicht statischen Variablen, die in einem Effekt deklariert werden. Dies kann globale Variablen und Anmerkungen enthalten. Effektparameter können von verschiedenen Effekten gemeinsam genutzt werden, indem Parameter mit dem "Shared"-Schlüsselwort deklariert und dann der Effekt mit einem Effekt Pool erstellt wird.
+Effektparameter sind alle nicht statischen Variablen, die in einem Effekt deklariert werden. Dies kann globale Variablen und Anmerkungen enthalten. Effektparameter können von verschiedenen Effekten gemeinsam verwendet werden, indem Parameter mit dem Schlüsselwort "shared" deklariert und dann der Effekt mit einem Effektpool erstellt wird.
 
-Ein Effekt Pool enthält Parameter für gemeinsame Effekte. Der Pool wird durch Aufrufen von [**D3DXCreateEffectPool**](d3dxcreateeffectpool.md)erstellt, wodurch eine [**ID3DXEffectPool**](id3dxeffectpool.md) -Schnittstelle zurückgegeben wird. Die-Schnittstelle kann bei der Erstellung eines Effekts als Eingabe für jede der D3DXCreateEffectxxx-Funktionen bereitgestellt werden. Damit ein Parameter von mehreren Effekten gemeinsam genutzt werden kann, muss der Parameter in den einzelnen gemeinsamen Effekten denselben Namen, denselben Typ und dieselbe Semantik aufweisen.
+Ein Effektpool enthält Parameter für gemeinsame Effekte. Der Pool wird durch Aufrufen von [**D3DXCreateEffectPool**](d3dxcreateeffectpool.md)erstellt, der eine [**ID3DXEffectPool-Schnittstelle**](id3dxeffectpool.md) zurückgibt. Die -Schnittstelle kann als Eingabe für jede der D3DXCreateEffectxxx-Funktionen bereitgestellt werden, wenn ein Effekt erstellt wird. Damit ein Parameter für mehrere Effekte freigegeben werden kann, muss der Parameter in jedem der freigegebenen Effekte denselben Namen, Typ und dieselbe Semantik aufweisen.
 
 
 ```
@@ -207,13 +207,13 @@ ID3DXEffectPool* g_pEffectPool = NULL;   // Effect pool for sharing parameters
 
 
 
-Die Auswirkungen von Freigabe Parametern müssen das gleiche Gerät verwenden. Dies wird erzwungen, um zu verhindern, dass Geräte abhängige Parameter (z. b. Shader oder Texturen) auf verschiedenen Geräten gemeinsam genutzt werden. Parameter werden aus dem Pool gelöscht, wenn die Auswirkungen, die die freigegebenen Parameter enthalten, freigegeben werden. Wenn Freigabe Parameter nicht erforderlich sind, geben Sie bei der Erstellung eines Effekts **null** für den Effekt Pool an.
+Effekte, die Parameter gemeinsam nutzen, müssen dasselbe Gerät verwenden. Dies wird erzwungen, um die gemeinsame Nutzung von geräteabhängigen Parametern (z. B. Shadern oder Texturen) auf verschiedenen Geräten zu verhindern. Parameter werden immer dann aus dem Pool gelöscht, wenn die Auswirkungen, die die freigegebenen Parameter enthalten, freigegeben werden. Wenn keine Freigabeparameter erforderlich sind, stellen Sie **NULL** für den Auswirkungspool beim Erstellen eines Effekts zur Verfügung.
 
-Geklonte Effekte verwenden denselben Effekt Pool wie der Effekt, von dem Sie geklont werden. Das Klonen eines Effekts führt zu einer exakten Kopie eines Effekts, einschließlich globaler Variablen, Techniken, Durchläufen und Anmerkungen.
+Geklonte Effekte verwenden denselben Effektpool wie der Effekt, aus dem sie geklont werden. Beim Klonen eines Effekts wird eine genaue Kopie eines Effekts erstellt, einschließlich globaler Variablen, Techniken, Durchläufe und Anmerkungen.
 
-## <a name="compile-an-effect-offline"></a>Einen Effekt Offline kompilieren
+## <a name="compile-an-effect-offline"></a>Offlinekompilieren eines Effekts
 
-Sie können einen Effekt zur Laufzeit mit [**D3DXCreateEffect**](d3dxcreateeffect.md)kompilieren, oder Sie können einen Effekt Offline kompilieren, indem Sie das Befehlszeilen-Compilertool fxc.exe verwenden. Der Effekt im [compiledebug-Beispiel](https://msdn.microsoft.com/library/Ee416326(v=VS.85).aspx) enthält einen Vertex-Shader, einen Pixel-Shader und eine Technik:
+Sie können einen Effekt zur Laufzeit mit [**D3DXCreateEffect**](d3dxcreateeffect.md)kompilieren, oder Sie können einen Effekt offline mit dem Befehlszeilencompilertool fxc.exe kompilieren. Der Effekt im [CompiledEffect-Beispiel](https://msdn.microsoft.com/library/Ee416326(v=VS.85).aspx) enthält einen Vertex-Shader, einen Pixel-Shader und eine Technik:
 
 
 ```
@@ -254,7 +254,7 @@ technique RenderScene
 
 
 
-Wenn Sie den Shader für vs 1 1 mit dem [Effekt-Compilertool](../direct3dtools/fxc.md) kompilieren, werden \_ die folgenden assemblyshaderanweisungen \_ generiert:
+Mithilfe des [Effektcompilertools](../direct3dtools/fxc.md) zum Kompilieren des Shaders für \_ Vs. \_ 1 1 wurden die folgenden Assembly-Shaderanweisungen generiert:
 
 
 ```
@@ -349,9 +349,9 @@ Wenn Sie den Shader für vs 1 1 mit dem [Effekt-Compilertool](../direct3dtools/f
 
 
 
-## <a name="improve-performance-with-preshaders"></a>Verbessern der Leistung durch preshaders
+## <a name="improve-performance-with-preshaders"></a>Verbessern der Leistung mit Preshadern
 
-Ein preshader ist eine Technik zum Erhöhen der shadereffizienz, indem Konstante shaderausdrücke vorab berechnet werden. Der Effekt Compiler ruft die Shader-Berechnungen automatisch aus dem Text eines Shaders ab und führt Sie auf der CPU aus, bevor der Shader ausgeführt wird. Folglich arbeiten präshader nur mit Effekten. Diese beiden Ausdrücke können beispielsweise außerhalb des Shaders ausgewertet werden, bevor Sie ausgeführt werden.
+Ein Preshader ist eine Technik zur Steigerung der Shadereffizienz durch Vorabberechnung konstanter Shaderausdrücke. Der Effektcompiler pullt automatisch Shaderberechnungen aus dem Text eines Shaders und führt sie auf der CPU aus, bevor der Shader ausgeführt wird. Folglich funktionieren Preshader nur mit Effekten. Beispielsweise können diese beiden Ausdrücke außerhalb des Shaders ausgewertet werden, bevor sie ausgeführt werden.
 
 
 ```
@@ -361,9 +361,9 @@ sin(time)
 
 
 
-Shader-Berechnungen, die verschoben werden können, sind die, die einheitlichen Parametern zugeordnet sind. Das heißt, dass die Berechnungen für jeden Scheitelpunkt oder Pixel nicht geändert werden. Wenn Sie Effekte verwenden, generiert und führt der Effekt Compiler automatisch einen preshader für Sie aus. Es sind keine Flags zum Aktivieren vorhanden. Preshaders können die Anzahl der Anweisungen pro Shader verringern und auch die Anzahl der Konstanten Registrierungen verringern, die ein Shader beansprucht.
+Shaderberechnungen, die verschoben werden können, sind solche, die einheitlichen Parametern zugeordnet sind. Das heißt, die Berechnungen ändern sich nicht für jeden Scheitelpunkt oder jedes Pixel. Wenn Sie Effekte verwenden, generiert der Effektcompiler automatisch einen Preshader und führt diesen aus. Es sind keine zu aktivierenden Flags vorhanden. Preshader können die Anzahl der Anweisungen pro Shader reduzieren und auch die Anzahl konstanter Register reduzieren, die ein Shader nutzt.
 
-Stellen Sie sich den Effekt Compiler als eine Art von multiprozessorcompiler vor, da er Shader-Code für zwei Arten von Prozessoren kompiliert: eine CPU und eine GPU. Außerdem ist der Effekt Compiler so konzipiert, dass Code von der GPU in die CPU verschoben und somit die shaderleistung verbessert wird. Dies ist sehr ähnlich, wenn ein statischer Ausdruck aus einer Schleife abgerufen wird. Ein Shader, der die Position aus dem Raum in den Projektions Bereich umwandelt und Texturkoordinaten in HLSL wie folgt aussehen würde:
+Stellen Sie sich den Effektcompiler als eine Art Compiler mit mehreren Prozessoren vor, da er Shadercode für zwei Arten von Prozessoren kompiliert: eine CPU und eine GPU. Darüber hinaus wurde der Effektcompiler entwickelt, um Code von der GPU auf die CPU zu verschieben und somit die Shaderleistung zu verbessern. Dies ähnelt dem Pullen eines statischen Ausdrucks aus einer Schleife. Ein Shader, der die Position vom Weltraum in den Projektionsbereich transformiert und Texturkoordinaten kopiert, würde in HLSL wie folgt aussehen:
 
 
 ```
@@ -410,7 +410,7 @@ technique RenderVS
 
 
 
-Wenn Sie den Shader für vs 1 1 mit dem [Effekt-Compilertool](../direct3dtools/fxc.md) kompilieren, werden \_ die folgenden Assemblyanweisungen \_ generiert:
+Mithilfe des [Effektcompilertools](../direct3dtools/fxc.md) zum Kompilieren des Shaders für \_ Vs. \_ 1 1 werden die folgenden Assemblyanweisungen generiert:
 
 
 ```
@@ -469,7 +469,7 @@ technique RenderVS
 
 
 
-Dies verbraucht ungefähr 14 Slots und beansprucht 9 Konstante Register. Bei einem preshader verschiebt der Compiler die statischen Ausdrücke aus dem Shader und in den preshader. Derselbe Shader würde wie folgt mit einem preshader aussehen:
+Dies verbraucht ungefähr 14 Slots und 9 Konstantenregister. Mit einem Preshader verschiebt der Compiler die statischen Ausdrücke aus dem Shader und in den Preshader. Der gleiche Shader würde wie folgt mit einem Preshader aussehen:
 
 
 ```
@@ -543,9 +543,9 @@ technique RenderVS
 
 
 
-Ein Effekt führt einen preshader direkt vor dem Ausführen eines Shaders aus. Das Ergebnis ist die gleiche Funktionalität mit erhöhter shaderleistung, da die Anzahl der Anweisungen, die ausgeführt werden müssen (für jeden Scheitelpunkt oder jedes Pixel, abhängig vom Typ des Shader), reduziert wurde. Außerdem werden weniger Konstante Register vom Shader beansprucht, weil die statischen Ausdrücke in den preshader verschoben werden. Dies bedeutet, dass Shader, die zuvor durch die Anzahl der benötigten Konstanten registriert wurden, jetzt kompiliert werden können, da Sie weniger Konstante Register benötigen. Es empfiehlt sich, eine Leistungsverbesserung von 5 Prozent und 20 Prozent zu erwarten.
+Ein Effekt führt einen Preshader direkt vor dem Ausführen eines Shaders aus. Das Ergebnis ist die gleiche Funktionalität mit höherer Shaderleistung, da die Anzahl der auszuführenden Anweisungen (je nach Shadertyp für jeden Scheitelpunkt oder jedes Pixel) reduziert wurde. Darüber hinaus werden weniger konstante Register vom Shader als Ergebnis der statischen Ausdrücke genutzt, die in den Preshader verschoben werden. Dies bedeutet, dass Shader, die zuvor durch die Anzahl der erforderlichen Konstantenregister begrenzt waren, jetzt möglicherweise kompiliert werden können, da sie weniger Konstantenregister erfordern. Es ist sinnvoll, von Preshadern eine Leistungsverbesserung von 5 Prozent und einer Leistungsverbesserung von 20 Prozent zu erwarten.
 
-Beachten Sie, dass sich die Eingabe Konstanten von den Ausgabe Konstanten in einem preshader unterscheiden. Die Ausgabe C1 ist nicht mit der Eingabe C1-Register identisch. Das Schreiben in ein konstantes Register in einem preshader schreibt tatsächlich in den eingabeslot (konstant) des Shader.
+Beachten Sie, dass sich die Eingabekonstanten von den Ausgabekonstanten in einem Preshader unterscheiden. Die Ausgabe c1 entspricht nicht dem C1-Eingaberegister. Das Schreiben in ein Konstantenregister in einem Preshader schreibt tatsächlich in den Eingabeslot (Konstanten) des entsprechenden Shaders.
 
 
 ```
@@ -559,11 +559,11 @@ cmp c5.x, c1.x, (1), (0)
 
 
 
-Die obige CMP-Anweisung liest den preshader C1-Wert, während die mul-Anweisung in die Hardware-Shader-Register schreibt, die vom Vertexshader verwendet werden sollen.
+Die obige cmp-Anweisung liest den Preshader c1-Wert, während die mul-Anweisung in die Hardwareshaderregister schreibt, die vom Vertexshader verwendet werden sollen.
 
-## <a name="use-parameter-blocks-to-manage-effect-parameters"></a>Verwenden von Parameter Blöcken zum Verwalten von Effekt Parametern
+## <a name="use-parameter-blocks-to-manage-effect-parameters"></a>Verwenden von Parameterblöcken zum Verwalten von Effektparametern
 
-Parameter Blöcke sind Blöcke der Auswirkung des Zustands. Ein Parameter Block kann Zustandsänderungen aufzeichnen, sodass Sie später mit einem einzigen-Befehl angewendet werden können. Erstellen Sie einen Parameter Block durch Aufrufen von [**ID3DXEffect:: beginparameterblock**](id3dxeffect--beginparameterblock.md):
+Parameterblöcke sind Blöcke mit Auswirkungszustandsänderungen. Ein Parameterblock kann Zustandsänderungen aufzeichnen, sodass sie später mit einem einzigen Aufruf angewendet werden können. Erstellen Sie einen Parameterblock, indem [**Sie ID3DXEffect::BeginParameterBlock**](id3dxeffect--beginparameterblock.md)aufrufen:
 
 
 ```
@@ -580,9 +580,9 @@ Parameter Blöcke sind Blöcke der Auswirkung des Zustands. Ein Parameter Block 
 
 
 
-Der Parameter Block speichert vier von den API-aufrufen angewendete Änderungen. Durch Aufrufen von [**ID3DXEffect:: beginparameterblock**](id3dxeffect--beginparameterblock.md) wird die Aufzeichnung der Zustandsänderungen gestartet. [**ID3DXEffect:: endparameterblock**](id3dxeffect--endparameterblock.md) beendet das Hinzufügen der Änderungen zum Parameter Block und gibt ein Handle zurück. Das Handle wird beim Aufrufen von [**ID3DXEffect:: applyparameterblock**](id3dxeffect--applyparameterblock.md)verwendet.
+Der Parameterblock speichert vier Änderungen, die von den API-Aufrufen angewendet werden. Der Aufruf [**von ID3DXEffect::BeginParameterBlock**](id3dxeffect--beginparameterblock.md) beginnt mit der Aufzeichnung der Zustandsänderungen. [**ID3DXEffect::EndParameterBlock**](id3dxeffect--endparameterblock.md) beendet das Hinzufügen der Änderungen zum Parameterblock und gibt ein Handle zurück. Das Handle wird beim Aufrufen von [**ID3DXEffect::ApplyParameterBlock**](id3dxeffect--applyparameterblock.md)verwendet.
 
-Im [effectparam-Beispiel](https://msdn.microsoft.com/library/Ee417535(v=VS.85).aspx)wird der Parameter Block in der Rendering-Sequenz angewendet:
+Im [EffectParam-Beispiel](https://msdn.microsoft.com/library/Ee417535(v=VS.85).aspx)wird der Parameterblock in der Rendersequenz angewendet:
 
 
 ```
@@ -617,7 +617,7 @@ CObj g_aObj[NUM_OBJS];       // Object instances
 
 
 
-Der Parameter Block legt den Wert aller vier Zustandsänderungen fest, kurz bevor [**ID3DXEffect:: begin**](id3dxeffect--begin.md) aufgerufen wird. Parameter Blöcke sind eine praktische Möglichkeit, mehrere Zustandsänderungen mit einem einzigen API-Befehl festzulegen.
+Der Parameterblock legt den Wert aller vier Zustandsänderungen unmittelbar vor dem Aufruf von [**ID3DXEffect::Begin**](id3dxeffect--begin.md) fest. Parameterblöcke sind eine praktische Möglichkeit, mehrere Zustandsänderungen mit einem einzelnen API-Aufruf festzulegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

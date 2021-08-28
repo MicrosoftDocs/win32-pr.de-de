@@ -1,26 +1,26 @@
 ---
-description: Die folgenden Strukturen ermöglichen Softwareentwicklern die Verwendung der Funktionen, die vom Modul für die drahtlose Null-Konfiguration bereitgestellt werden.
+description: Mit den folgenden Strukturen können Softwareentwickler die Funktionen des Moduls Wireless Zero Configuration verwenden.
 ms.assetid: d9b8042e-5e06-43d1-9738-34d31f36f6db
-title: Konfigurations Strukturen mit drahtlos NULL
+title: Drahtlose Nullkonfigurationsstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b53533ac063aafb58abd542427100feb7974a0fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 62c24fa8fdbf3720f4a3539aae0420213aa715abe9d72d3790897ee59771d71f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800300"
 ---
-# <a name="wireless-zero-configuration-structures"></a>Konfigurations Strukturen mit drahtlos NULL
+# <a name="wireless-zero-configuration-structures"></a>Drahtlose Nullkonfigurationsstrukturen
 
-\[Die Programmierschnittstelle für die drahtlose Null-Konfiguration wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [native WiFi-API](native-wifi-reference.md), die eine ähnliche Funktionalität bietet. Weitere Informationen finden Sie unter Informationen zur [nativen WiFi-API](about-the-native-wifi-api.md).\]
+\[Die Wireless Zero Configuration-Programmierschnittstelle wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [Native Wifi-API](native-wifi-reference.md), die ähnliche Funktionen bereitstellt. Weitere Informationen finden Sie unter [Informationen zur Native Wifi-API.](about-the-native-wifi-api.md)\]
 
-Die folgenden Strukturen ermöglichen Softwareentwicklern die Verwendung der Funktionen, die vom Modul für die drahtlose Null-Konfiguration bereitgestellt werden.
+Mit den folgenden Strukturen können Softwareentwickler die Funktionen des Moduls Wireless Zero Configuration verwenden.
 
--   [**EAPOL \_ INTF-Parameter \_**](eapol-intf-params.md)
--   [**INTF- \_ Eintrag**](intf-entry.md)
--   [**INTF- \_ Schlüssel \_ Eintrag**](intf-key-entry.md)
--   [**intfs- \_ Schlüssel \_ Tabelle**](intfs-key-table.md)
+-   [**EAPOL \_ INTF \_ PARAMS**](eapol-intf-params.md)
+-   [**\_INTF-EINTRAG**](intf-entry.md)
+-   [**\_INTF-SCHLÜSSELEINTRAG \_**](intf-key-entry.md)
+-   [**\_INTFS-SCHLÜSSELTABELLE \_**](intfs-key-table.md)
 
  
 

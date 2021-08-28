@@ -1,19 +1,19 @@
 ---
 title: Reservieren von Ports
-description: Der folgende Beispielcode veranschaulicht, wie die Ressourcen Zuweisungs Ebenen verwendet werden, um einen Bereich von Ports für Administratoren zu reservieren.
+description: Der folgende Beispielcode veranschaulicht, wie sie die Ressourcenzuweisungsebenen verwenden, um eine Reihe von Ports für Administratoren zu reservieren.
 ms.assetid: 415aa0c9-40d6-4dc9-9ce9-352f52ef7a76
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 853faa22b75e90eec8992c736ae693860ebaf112
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 22c5fd8e2819e70d9dcc51b88556d153d974158372bb4c63b148566fbe5cd6dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755180"
 ---
 # <a name="reserving-ports"></a>Reservieren von Ports
 
-Der folgende Beispielcode veranschaulicht, wie die Ressourcen Zuweisungs Ebenen verwendet werden, um einen Bereich von Ports für Administratoren zu reservieren.
+Der folgende Beispielcode veranschaulicht die Verwendung der Ressourcenzuweisungsebenen, um eine Reihe von Ports für Administratoren zu reservieren.
 
 
 ```C++
@@ -184,12 +184,12 @@ CLEANUP:
 
 <dl> <dt>
 
-[**Filterbedingungen, die auf jeder Filter Ebene verfügbar sind**](filtering-conditions-available-at-each-filtering-layer.md)
+[**Filterbedingungen, die auf jeder Filterebene verfügbar sind**](filtering-conditions-available-at-each-filtering-layer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,36 +1,36 @@
 ---
 title: Scheitelpunkte
-description: In den Themen in diesem Abschnitt werden die OpenGL-Funktionen erläutert, die pro-Vertex-Vorgänge für die Verarbeitungsphasen ausführen, die auf der vorherigen Seite in der OpenGL-Verarbeitungs Pipeline angezeigt werden.
+description: In den Themen in diesem Abschnitt werden die OpenGL-Funktionen erläutert, die Pro-Scheitelpunkt-Vorgänge für die Verarbeitungsphasen ausführen, die auf der vorherigen Seite unter OpenGL-Verarbeitungspipeline gezeigt werden.
 ms.assetid: c30962b5-f2d3-4667-abe2-61e34e7a4564
 keywords:
-- OpenGL-Verarbeitungs Pipeline, Vertices
-- Vertices OpenGL
+- OpenGL-Verarbeitungspipeline, Scheitelpunkte
+- Scheitelpunkte OpenGL
 - OpenGL-Vorgänge pro Scheitelpunkt
-- OpenGL, Vertices
-- Framebuffers-, pro-Vertex-Vorgänge
+- OpenGL, Scheitelpunkte
+- Framepuffer,Pro-Scheitelpunkt-Vorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3207f2716ca59456328078fd10bd03ea9de09da6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dfe7f0606d0b2cd74402ac7015323b68dcda7337478a060791ee0ab97f0294a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776460"
 ---
 # <a name="vertices"></a>Scheitelpunkte
 
-In den Themen in diesem Abschnitt werden die OpenGL-Funktionen erläutert, die pro-Vertex-Vorgänge für die Verarbeitungsphasen ausführen, die auf der vorherigen Seite in der [OpenGL-Verarbeitungs Pipeline](opengl-processing-pipeline.md) angezeigt werden.
+In den Themen in diesem Abschnitt werden die OpenGL-Funktionen erläutert, die Pro-Scheitelpunkt-Vorgänge für die Verarbeitungsphasen ausführen, die in [der OpenGL-Verarbeitungspipeline](opengl-processing-pipeline.md) auf der vorherigen Seite angezeigt werden.
 
 -   [Eingabedaten](input-data.md)
--   [Matrix Transformationen](matrix-transformations.md)
--   [Festlegen von Beleuchtung und Farben](setting-lighting-and-coloring.md)
--   [Texturkoordinaten werden erzeugt.](generating-texture-coordinates.md)
--   [Assemblierungsprimitive](assembling-primitives.md)
--   [Vertices-Referenz](vertices-reference.md)
+-   [Matrixtransformationen](matrix-transformations.md)
+-   [Festlegen von Beleuchtung und Färbung](setting-lighting-and-coloring.md)
+-   [Generieren von Texturkoordinaten](generating-texture-coordinates.md)
+-   [Zusammenbauen von Primitiven](assembling-primitives.md)
+-   [Vertices Reference](vertices-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

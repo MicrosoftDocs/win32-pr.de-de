@@ -1,9 +1,9 @@
 ---
-title: Komplexer userdatatype-Typ
+title: Komplexer UserDataType-Typ
 description: Definiert ein XML-Fragment, das das Layout der Ereignisdaten angibt.
 ms.assetid: 25147ace-cc36-43cc-ad85-6a1714f43dbe
 keywords:
-- Ereignisprotokoll des komplexen userdatatype-Typs
+- Komplexer UserDataType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 31186fbcc833219b6523f1fdeb986532984eb7b4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 747f2e30f6b2588cdfd6a9f0dd50187b73817996bd3725a571283a7929c91b98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904190"
 ---
-# <a name="userdatatype-complex-type"></a>Komplexer userdatatype-Typ
+# <a name="userdatatype-complex-type"></a>Komplexer UserDataType-Typ
 
 Definiert ein XML-Fragment, das das Layout der Ereignisdaten angibt.
 
@@ -47,8 +47,8 @@ Definiert ein XML-Fragment, das das Layout der Ereignisdaten angibt.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

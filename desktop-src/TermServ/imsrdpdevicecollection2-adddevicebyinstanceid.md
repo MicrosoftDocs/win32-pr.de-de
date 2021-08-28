@@ -1,12 +1,12 @@
 ---
-title: IMsRdpDeviceCollection2 adddevicebyinstanceid-Methode
-description: Fügt der Geräte Sammlung ein nicht aufgeführtes Gerät hinzu.
+title: IMsRdpDeviceCollection2 AddDeviceByInstanceId-Methode
+description: Fügt der Gerätesammlung ein nicht aufgeführtes Gerät hinzu.
 ms.assetid: 7ef200c5-b99e-40c9-80e1-0758ddfa0902
 ms.tgt_platform: multiple
 keywords:
-- Adddevicebyinstanceid-Methode Remotedesktopdienste
-- Adddevicebyinstanceid-Methode Remotedesktopdienste, IMsRdpDeviceCollection2-Schnittstelle
-- IMsRdpDeviceCollection2 Interface Remotedesktopdienste, adddevicebyinstanceid-Methode
+- AddDeviceByInstanceId-Remotedesktopdienste
+- AddDeviceByInstanceId-Methode Remotedesktopdienste , IMsRdpDeviceCollection2-Schnittstelle
+- IMsRdpDeviceCollection2-Schnittstelle Remotedesktopdienste , AddDeviceByInstanceId-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97f817a5beb4d8762787c4bf2f8a3995d3918e8e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df11fa2a58aca505661da1f7643f8d1d6ff2f502e6c10bf835aa67a6e2d0615d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870820"
 ---
-# <a name="imsrdpdevicecollection2adddevicebyinstanceid-method"></a>IMsRdpDeviceCollection2:: adddevicebyinstanceid-Methode
+# <a name="imsrdpdevicecollection2adddevicebyinstanceid-method"></a>IMsRdpDeviceCollection2::AddDeviceByInstanceId-Methode
 
-Fügt der Geräte Sammlung ein nicht aufgeführtes Gerät hinzu.
+Fügt der Gerätesammlung ein nicht aufgeführtes Gerät hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ HRESULT AddDeviceByInstanceId(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*Typ* \[ In\]
 </dt> <dd>
 
-Type: **[ **redirectdevicetype**](redirectdevicetype.md)**
+Typ: **[ **RedirectDeviceType**](redirectdevicetype.md)**
 
-Ein Wert der [**redirectdevicetype**](redirectdevicetype.md) -Enumeration, der den Typ des hinzugefügten Geräts angibt.
+Ein Wert der [**RedirectDeviceType-Enumeration,**](redirectdevicetype.md) der den Typ des hinzugefügten Geräts angibt.
 
 </dd> <dt>
 
-*InstanceId* \[ in\]
+*InstanceId* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Der Instanzbezeichner des hinzu zufügenden Geräts.
+Der Instanzbezeichner des hinzuzufügenden Geräts.
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Der Instanzbezeichner des hinzu zufügenden Geräts.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Redirectde vicetype**](redirectdevicetype.md)
+[**RedirectDeviceType**](redirectdevicetype.md)
 </dt> <dt>
 
 [**IMsRdpDeviceCollection2**](imsrdpdevicecollection2.md)

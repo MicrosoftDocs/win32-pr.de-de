@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für das Laden von Bildern in Auslagerungs Datei Ereignissen. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für das Laden von Bildern in Seitendateiereignissen. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 7d2f08e8-ec1f-4630-922a-548b55eadfda
 title: PageFault_ImageLoadBacked-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1644db74c5c7c361acda796219ae1415ecc262bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75104fcf923ed59bfcc99e214e66a235549b7059ca0e36c41b6f90d308a3efff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811770"
 ---
-# <a name="pagefault_imageloadbacked-class"></a>Pagefault \_ imageloadbackup-Klasse
+# <a name="pagefault_imageloadbacked-class"></a>PageFault \_ ImageLoadBacked-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für das Laden von Bildern in Auslagerungs Datei Ereignissen.
+Diese Klasse ist die Ereignistypklasse für das Laden von Bildern in Seitendateiereignissen.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,100 +44,100 @@ class PageFault_ImageLoadBacked : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **Pagefault \_ imageloadbackup** -Klasse verfügt über diese Typen von Membern:
+Die **PageFault \_ ImageLoadBacked-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Pagefault \_ imageloadbackup** -Klasse verfügt über diese Eigenschaften.
+Die **PageFault \_ ImageLoadBacked-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Devicechar**
+**DeviceChar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-**Filechar**
+**FileChar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Format ("x")
+Qualifizierer: WmiDataId(3), Format("x")
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**FileIO- \_ namens**](fileio-name.md) Ereignis, um den Namen der Datei zu bestimmen.
+Übereinstimmung mit dem Wert dieses Zeigers mit dem **FileObject-Zeigerwert** in einem [**FileIo \_ Name-Ereignis,**](fileio-name.md) um den Namen der Datei zu bestimmen.
 
 </dd> <dt>
 
-**Loadflags**
+**LoadFlags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Format ("x")
+Qualifizierer: WmiDataId(4), Format("x")
 </dt> </dl>
 
 Reserviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ereignis wird während der Erstellung eines Bild Abschnitts (z. b. beim Laden einer DLL) protokolliert, wenn der Speicher-Manager feststellt, dass das Image in die Auslagerungs Datei kopiert und aus dieser ausgeführt werden muss. In der Regel werden Bilder aus der Quelldatei ausgeführt, aber eine Auslagerungs Datei kann auftreten, wenn der Speicher-Manager feststellt, dass die Quelldatei asynchron durch vorhandene Writer geändert werden kann oder wenn sich die Quelldatei auf einem Wechselmedium oder einem Remote Gerät befindet.
+Das Ereignis wird während der Erstellung eines Imageabschnitts protokolliert (z. B. beim Laden einer DLL), wenn der Speicher-Manager feststellt, dass das Image kopiert und aus der Seitendatei ausgeführt werden muss. In der Regel werden Bilder aus der Quelldatei ausgeführt, aber die Seitendateisicherung kann auftreten, wenn der Speicher-Manager feststellt, dass die Quelldatei von vorhandenen Writern asynchron geändert werden kann oder wenn sich die Quelldatei auf einem Wechselmedium oder einem Remotegerät befindet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Pagefault \_ v2**](pagefault-v2.md)
+[**PageFault \_ V2**](pagefault-v2.md)
 </dt> </dl>
 
  

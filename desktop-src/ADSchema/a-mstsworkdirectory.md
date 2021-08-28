@@ -1,11 +1,11 @@
 ---
-title: MS-TS-work-Directory-Attribut
-description: Terminal Dienste-Sitzungs Arbeitsverzeichnis gibt den Pfad des Arbeitsverzeichnisses für den Benutzer an.
+title: ms-TS-Work-Directory-Attribut
+description: Terminal services session Work Directory gibt den Arbeitsverzeichnispfad für den Benutzer an.
 ms.assetid: 0939c2d3-e8bf-4e96-a357-e2712fa1175b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-work-Directory-Attribut
-- AD-Schema für mstsworkdirectory-Attribut
+- MS-TS-Work-Directory-Attribut AD-Schema
+- MSTSWorkDirectory-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 93fd77b2809d80ce87e47e022c6537d9707deb93
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e69572d1abeb483e56424ef905923329c0b7a455ebeceaf0b5e1fec5fe67940d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760890"
 ---
-# <a name="ms-ts-work-directory-attribute"></a>MS-TS-work-Directory-Attribut
+# <a name="ms-ts-work-directory-attribute"></a>ms-TS-Work-Directory-Attribut
 
-Terminal Dienste-Sitzungs Arbeitsverzeichnis gibt den Pfad des Arbeitsverzeichnisses für den Benutzer an.
+Terminal services session Work Directory gibt den Arbeitsverzeichnispfad für den Benutzer an.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-TS-Arbeitsverzeichnis                        |
-| LDAP-Display-Name | mstsworkdirectory                           |
+| CN                | ms-TS-Work-Directory                        |
+| Ldap-Anzeigename | msTSWorkDirectory                           |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1989                     |
 | System-ID-GUID    | a744f666-3d3c-4cc8-834b-9d4f6f687b8b        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -55,10 +55,10 @@ Terminal Dienste-Sitzungs Arbeitsverzeichnis gibt den Pfad des Arbeitsverzeichni
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Terminal Dienste-Sitzungs Arbeitsverzeichnis gibt den Pfad des Arbeitsverzeichni
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Terminal Dienste-Sitzungs Arbeitsverzeichnis gibt den Pfad des Arbeitsverzeichni
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |

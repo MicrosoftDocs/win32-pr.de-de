@@ -3,34 +3,34 @@ title: Erweiterte Übersetzung
 description: Erweiterte Übersetzung
 ms.assetid: 48a1bdd5-8b7b-4460-9b7b-1ab8969a28f8
 keywords:
-- Windows-Fingereingabe, Übersetzung
-- Windows-Fingereingabe, erweiterte Übersetzung
-- Windows-Fingereingabe, Manipulationen
+- Windows Toucheingabe, Übersetzung
+- Windows Toucheingabe, erweiterte Übersetzung
+- Windows Toucheingabe, Bearbeitungen
 - Manipulationen, Übersetzung
 - Manipulationen, erweiterte Übersetzung
 - Verschiebung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc383c71e1f1417d30b64db18aa627039602b942
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4712375c12420e076bb93c1240d18dc8e3c1d58006eb24ced7a62a7485e01c5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810345"
 ---
 # <a name="advanced-translation"></a>Erweiterte Übersetzung
 
-Die folgende Abbildung zeigt zwei Interpretationen der Übersetzung.
+Die folgende Abbildung zeigt zwei Übersetzungsinterpretationen.
 
-![Abbildung, die zuerst die einfache Übersetzung anzeigt, bei der ein Objekt ohne Drehung verschoben wird, und dann die erweiterte Übersetzung anzeigt, die das Verschieben mit Drehung einschließt](images/translation.png)
+![Abbildung, die zuerst die einfache Übersetzung zeigt, in der ein Objekt ohne Drehung verschoben wird, und dann die erweiterte Übersetzung, die das Verschieben mit Drehung umfasst](images/translation.png)
 
-In Beispiel A, dem Beispiel für die einfache Übersetzung, wird das Objekt ohne Drehung verschoben. In Beispiel B wird das Objekt während der Übersetzung gedreht, je nachdem, wo sich der Objekt Kontaktpunkt befindet. Wenn Sie die Drehung mit einem Finger wie in [Einzel Finger Drehung](single-finger-rotation.md)beschrieben aktivieren, können Sie die komplexe Übersetzung aktivieren. Das folgende Diagramm zeigt die verschiedenen Komponenten der Einzel Finger Drehung, wenn Sie die Übersetzung durchführen.
+In Beispiel A, dem einfachen Übersetzungsbeispiel, wird das Objekt ohne Drehung verschoben. In Beispiel B wird das Objekt während der Übersetzung gedreht, je nachdem, wo sich der Objektkontaktpunkt befindet. Wenn Sie die Drehung mit einem Finger aktivieren, wie unter [Einfingerrotation](single-finger-rotation.md)beschrieben, können Sie die komplexe Übersetzung aktivieren. Das folgende Diagramm zeigt die verschiedenen Komponenten der Drehung mit einem Finger, wenn Sie die Übersetzung durchführen.
 
-![die Abbildung zeigt die Komponenten der Einzel Finger Drehung: pivotpointx, pivotpointy und pivotradius.](images/translation-complex-components.png)
+![Abbildung, die die Komponenten der Single-Finger-Drehung zeigt: pivotpointx, pivotpointy und pivotradius](images/translation-complex-components.png)
 
-Beim Verschieben des Objekts wird der RADIUS neu berechnet, und der Pivotpunkt wird verschoben.
+Wenn das Objekt verschoben wird, wird der Radius neu berechnet, und der Pivotpunkt wird verschoben.
 
-Der folgende Code zeigt eine Möglichkeit, wie Sie dies in einer Implementierung von [**ManipulationDelta**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta) durchführen können, die eine komplexe Übersetzung ermöglicht.
+Der folgende Code zeigt eine Möglichkeit, dies in einer Implementierung von [**ManipulationDelta**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta) zu erreichen, die eine komplexe Übersetzung ermöglicht.
 
 
 ```C++
@@ -58,9 +58,9 @@ Der folgende Code zeigt eine Möglichkeit, wie Sie dies in einer Implementierung
 
 
 > [!Note]  
-> Objekt Transformationen treten auf, bevor die pivotpunkte und der Radius berechnet werden. Auf diese Weise wird das Objekt ordnungsgemäß verschoben, wenn der Benutzer während des Verschiebens eine Erweiterung des Objekts ausführt.
+> Objekttransformationen treten auf, bevor die Pivotpunkte und der Radius berechnet werden. Auf diese Weise wird das Objekt ordnungsgemäß verschoben, wenn der Benutzer während des Verschiebens eine Erweiterung des Objekts ausführt.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -69,9 +69,9 @@ Der folgende Code zeigt eine Möglichkeit, wie Sie dies in einer Implementierung
 [Manipulationen](getting-started-with-manipulations.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

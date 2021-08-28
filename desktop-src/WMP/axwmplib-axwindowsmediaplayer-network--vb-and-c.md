@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. Network (Eigenschaft)
-description: Die Network-Eigenschaft erhält eine iwmpnetwork-Schnittstelle, die Zugriff auf Netzwerkinformationen und-Einstellungen bietet.
+title: AxWindowsMediaPlayer.network (Eigenschaft)
+description: Die Netzwerkeigenschaft ruft eine IWMPNetwork-Schnittstelle ab, die Zugriff auf Netzwerkinformationen und -einstellungen bietet.
 ms.assetid: 0a6c4a8c-8759-47d4-be03-9909a8460e71
 keywords:
-- Windows-Media Player für Netzwerk Eigenschaften
-- Netzwerk Eigenschaften-Windows-Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, Network-Eigenschaft
+- Netzwerkeigenschafts-Windows Media Player
+- network property Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , Netzwerkeigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 287efa3df7887aa7e448d5e732444cf5e79e0e37
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d68d05b8d3c360d3008ec9ba699bdf71655dc6a953091c21605d354a4610d66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764820"
 ---
-# <a name="axwindowsmediaplayernetwork-property"></a>AxWindowsMediaPlayer. Network (Eigenschaft)
+# <a name="axwindowsmediaplayernetwork-property"></a>AxWindowsMediaPlayer.network (Eigenschaft)
 
-Die Network-Eigenschaft erhält eine iwmpnetwork-Schnittstelle, die Zugriff auf Netzwerkinformationen und-Einstellungen bietet.
+Die Netzwerkeigenschaft ruft eine IWMPNetwork-Schnittstelle ab, die Zugriff auf Netzwerkinformationen und -einstellungen bietet.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,7 +48,7 @@ Public ReadOnly Property network As IWMPNetwork
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die WMPLib. iwmpnetwork-Schnittstelle.
+Die WMPLib.IWMPNetwork-Schnittstelle.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,20 +56,20 @@ Die WMPLib. iwmpnetwork-Schnittstelle.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

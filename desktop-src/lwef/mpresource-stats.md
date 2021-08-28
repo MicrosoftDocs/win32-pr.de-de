@@ -1,10 +1,10 @@
 ---
-title: MPRESOURCE_STATS Struktur (mpclient. h)
+title: MPRESOURCE_STATS -Struktur (MpClient.h)
 description: Ressourcenbezogene Statistiken.
 ms.assetid: D1DC4BC9-911D-448C-A421-11D2F51F0A61
 keywords:
-- MPRESOURCE_STATS Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPRESOURCE_STATS Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPRESOURCE_STATS struktur Legacy Windows Umgebungsfeatures
+- PMPRESOURCE_STATS strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afbe1ce6734aabd1093f7acd886af757c51ed83e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b72a21bf0ec020c1fc2cf5ba1394b4cd5ed04dc32721a4aac9f8349034907b49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848470"
 ---
-# <a name="mpresource_stats-structure"></a>Mpresource- \_ Statistik Struktur
+# <a name="mpresource_stats-structure"></a>MPRESOURCE \_ STATS-Struktur
 
 Ressourcenbezogene Statistiken.
 
@@ -46,14 +46,14 @@ typedef struct tagMPRESOURCE_STATS {
 
 <dl> <dt>
 
-**Ppmprogress**
+**PPMProgress**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der ungefähre Fortschritt für die Überprüfung in ppm (Teile pro Million). Legen Sie auf **mpprogress \_ ungültig** fest, wenn keine Fortschrittsinformationen verfügbar sind.
+Ungefährer Fortschritt für die Überprüfung in ppm (Teile pro Million). Legen Sie **auf MPPROGRESS \_ INVALID fest,** wenn keine Statusinformationen verfügbar sind.
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Typ: **UINT64**
 
 </dd> <dd>
 
-Anzahl der gescannten Prozesse.
+Anzahl der überprüften Prozesse.
 
 </dd> <dt>
 
@@ -79,25 +79,25 @@ Anzahl der gescannten Dateien.
 
 </dd> <dt>
 
-**Filebytescount**
+**FileBytesCount**
 </dt> <dd>
 
 Typ: **UINT64**
 
 </dd> <dd>
 
-Anzahl von Bytes, die für Dateien gescannt wurden.
+Anzahl von Bytes, die auf Dateien überprüft wurden.
 
 </dd> <dt>
 
-**Regkeycount**
+**RegKeyCount**
 </dt> <dd>
 
 Typ: **UINT64**
 
 </dd> <dd>
 
-Anzahl der gescannten Regkeys.
+Anzahl der überprüften RegKeys.
 
 </dd> <dt>
 
@@ -118,9 +118,9 @@ Felder, die für die zukünftige Verwendung reserviert sind.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

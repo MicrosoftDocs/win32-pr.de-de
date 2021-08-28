@@ -1,23 +1,23 @@
 ---
-description: In Direct3D 9 ermöglicht Direct3D dem Treiber das Zurückgeben von Fehlercodes, wie z \_ . b. "E outo fmemory", "D3DERR \_ outo fvideomemory" und "D3DERR \_ unsupportedcolorarg", damit eine Anwendung darauf reagieren kann.
+description: In Direct3D 9 ermöglicht Direct3D dem Treiber die Rückgabe von Fehlercodes wie E \_ OUTOFMEMORY, D3DERR \_ OUTOFVIDEOMEMORY und D3DERR UNSUPPORTEDCOLORARG, damit eine Anwendung darauf reagieren \_ kann.
 ms.assetid: 483fdb03-e453-4a1b-bd8e-294e9e9a20c2
-title: Interne Treiber Fehler (Direct3D 9)
+title: Interne Treiberfehler (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c81b0ee8ba50edb3c14fbd9a22c9fa9dc93aab8f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f6c2290e2190081c54a1e0e97fcbf1d6f76fdb16b9b2b7d45648059f9c839396
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849461"
 ---
-# <a name="driver-internal-errors-direct3d-9"></a>Interne Treiber Fehler (Direct3D 9)
+# <a name="driver-internal-errors-direct3d-9"></a>Interne Treiberfehler (Direct3D 9)
 
-In Direct3D 9 ermöglicht Direct3D dem Treiber das Zurückgeben von Fehlercodes, wie z \_ . b. "E outo fmemory", "D3DERR \_ outo fvideomemory" und "D3DERR \_ unsupportedcolorarg", damit eine Anwendung darauf reagieren kann. Manchmal werden jedoch die API-Aufrufe, die diese Rückgabe Typen generiert haben, in einen Befehls Puffer geladen und in einem Batch zusammengefasst, um Sie an die GPU zu senden (Weitere Informationen finden Sie unter [Steuern von Lauf Zeit-und Treiber Optimierungen](accurately-profiling-direct3d-api-calls.md)). In diesem Fall können die Fehler nicht an die Anwendung weitergeleitet werden, wenn eine Aktion ausgeführt werden muss, sodass der Fehlercode von der Laufzeit genutzt wird und für das Geräte Objekt, auf dem dies aufgetreten ist, ein Hinweis ausgegeben wird. Wenn die Anwendung zu einem späteren Zeitpunkt " [**:P IDirect3DDevice9**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)" aufruft, wird " **IDirect3DDevice9::P Resent** " D3DERR \_ driverinternalerror zurückgegeben. Aus diesem Grund ist der beste Ansatz für eine Anwendung beim Empfang eines D3DERR \_ driverinternalerror von **IDirect3DDevice9::P** erneutes Senden besteht darin, das Gerät zu zerstören und neu zu erstellen.
+In Direct3D 9 ermöglicht Direct3D dem Treiber die Rückgabe von Fehlercodes wie E \_ OUTOFMEMORY, D3DERR \_ OUTOFVIDEOMEMORY und D3DERR UNSUPPORTEDCOLORARG, damit eine Anwendung darauf reagieren \_ kann. Manchmal werden die API-Aufrufe, die diese Rückgabetypen generiert haben, jedoch in einen Befehlspuffer geladen und per Batch an die GPU gesendet (siehe Steuern von Laufzeit- und [Treiberoptimierungen).](accurately-profiling-direct3d-api-calls.md) In diesem Fall können die Fehler nicht an die Anwendung übermittelt werden, wenn eine Aktion ausgeführt werden muss. Daher wird der Fehlercode von der Laufzeit verwendet, und es wird ein Hinweis auf das Geräteobjekt ausgegeben, dass dies aufgetreten ist. Später, wenn die Anwendung [**IDirect3DDevice9::P resent aufruft,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)gibt **IDirect3DDevice9::P resent** D3DERR \_ DRIVERINTERNALERROR zurück. Aus diesem Grund ist der beste Ansatz für eine Anwendung, wenn sie einen D3DERR \_ DRIVERINTERNALERROR von **IDirect3DDevice9::P resent empfängt,** das Gerät zu zerstören und neu zu erstellen.
 
-Wenn Sie versuchen möchten, das Debugging weiter zu versuchen, finden Sie hier einige Vorschläge, um herauszufinden, welcher API-Befehl den Fehler erzeugt:
+Wenn Sie versuchen möchten, weiter zu debuggen, finden Sie hier einige Vorschläge, wie Sie herausfinden können, welcher API-Aufruf den Fehler generiert:
 
--   Da die Liste der möglichen Rückgabewerte nicht erfüllt ist, können Sie versuchen, den Fehler zu ermitteln, indem Sie die einzelnen API-Aufrufe wie folgt umschließen:
+-   Da die Liste der möglichen Rückgabewerte nicht vollständig ist, können Sie versuchen, herauszufinden, welcher Aufruf fehlschlägt, indem Sie jeden API-Aufruf wie den folgenden umhingen:
 
     ```
     TRACE ( "Calling DrawPrimitive" );
@@ -27,12 +27,12 @@ Wenn Sie versuchen möchten, das Debugging weiter zu versuchen, finden Sie hier 
 
     
 
-    Der ausgabedebugstream sollte dann den-Befehl anzeigen, der das Problem verursacht.
+    Der Ausgabedebugstream sollte dann den Aufruf anzeigen, der das Problem verursacht.
 
--   Versuchen Sie zusätzlich zu Debuggingzwecken, [**IDirect3DDevice9:: ValidateDevice**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-validatedevice) direkt vor jedem [**IDirect3DDevice9::D rawprimiprimitiv**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) zu aufrufen, um zu ermitteln, ob ein zusätzliches Problem mit dem Gerätetreiber vorliegt (nicht unterstützter Vorgang, nicht verwendbare Kombination von Textur Formaten usw.).
+-   Versuchen Sie außerdem zu Debugzwecken, [**IDirect3DDevice9::ValidateDevice**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-validatedevice) unmittelbar vor jedem [**IDirect3DDevice9::D rawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) aufrufen, um zu überprüfen, ob ein zusätzliches Problem mit dem Gerätetreiber vor liegt (nicht unterstützter Vorgang, nicht verwendbare Kombination von Texturformaten usw.).
 
     > [!Note]  
-    > [**IDirect3DDevice9:: ValidateDevice**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-validatedevice) sollte aufgrund der Menge an Validierungsarbeiten, die der Treiber ausführen muss, um eine Antwort zurückzugeben, sorgfältig und sparsam verwendet werden.
+    > [**IDirect3DDevice9::ValidateDevice**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-validatedevice) sollte sorgfältig und mit Bedacht verwendet werden, da der Treiber viel Validierungsarbeit zum Zurückgeben einer Antwort ausführen muss.
 
      
 
@@ -40,7 +40,7 @@ Wenn Sie versuchen möchten, das Debugging weiter zu versuchen, finden Sie hier 
 
 <dl> <dt>
 
-[Programmiertipps](programming-tips.md)
+[Programmieren Tipps](programming-tips.md)
 </dt> </dl>
 
  

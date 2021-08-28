@@ -1,16 +1,16 @@
 ---
-description: Glossar der Netzwerkmonitor Begriffe, die mit dem Buchstaben A beginnen.
+description: Glossar mit Netzwerkmonitor Begriffen, die mit dem Buchstaben A beginnen.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 0aa58f61-c753-4a32-b37e-b5a7a0e842cc
 title: A (Netzwerkmonitor)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d0321c1af278fb0046c9236d3d0d9d5e422de7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c11d99ff8dd2d724f6490f3d2d31884cdfbd0fd570614852e7817838e2a4f0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779500"
 ---
 # <a name="a-network-monitor"></a>A (Netzwerkmonitor)
 
@@ -19,14 +19,14 @@ ms.locfileid: "106359079"
 <span id="_netmon_address_gly"></span><span id="_NETMON_ADDRESS_GLY"></span>**Adresse**
 </dt> <dd>
 
-Ein Bezeichner eines Netzwerk Knotens, der einen Knoten von einem anderen in einem Netzwerk unterscheidet. Wird auch als *Netzwerkadresse* oder Mac- *Adresse* bezeichnet. Im Microsoft Systems Management Server (SMS) wird eine Adresse verwendet, um eine Verbindung zwischen einem Standort und einem Standortsystem herzustellen. Ein Absender verwendet eine bestimmte Adresse, um Anweisungen und Daten an andere Standorte zu senden.
+Ein Bezeichner eines Netzwerkknotens, der einen Knoten von einem anderen knoten in einem Netzwerk unterscheidet. Wird auch als *NET-Adresse oder* *MAC-Adresse bezeichnet.* In Microsoft Systems Management Server (SMS) wird eine Adresse verwendet, um eine Verbindung zwischen einem Standort und einem Standortsystem herzustellen. Ein Absender verwendet eine bestimmte Adresse, um Anweisungen und Daten an andere Websites zu senden.
 
 </dd> <dt>
 
-<span id="_netmon_address_pair_gly"></span><span id="_NETMON_ADDRESS_PAIR_GLY"></span>**Adress paar**
+<span id="_netmon_address_pair_gly"></span><span id="_NETMON_ADDRESS_PAIR_GLY"></span>**Adresspaar**
 </dt> <dd>
 
-Quell-und Zieladresse einer Datenübertragung. Bei dem Ziel kann es sich um eine einzelne Adresse, einen Multicast oder einen Broadcast handeln. Bei aufgezeichneten Daten handelt es sich bei der Quelladresse um eine bestimmte Adresse. In Filter Spezifikationen kann die Quelladresse eine bestimmte Adresse oder eine beliebige Adresse sein, aber Sie kann nicht übertragen oder Multicast gesendet werden.
+Quell- und Zieladressen einer Datenübertragung. Das Ziel kann eine einzelne Adresse, multicast oder broadcast sein. In erfassten Daten ist die Quelladresse eine bestimmte Adresse. In Filterspezifikationen kann die Quelladresse eine bestimmte Adresse oder ANY sein, aber sie kann nicht übertragen oder Multicast sein.
 
 </dd> </dl>
 

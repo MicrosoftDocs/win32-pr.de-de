@@ -1,23 +1,23 @@
 ---
-description: Die pkey- \_ Eigenschaft "tviceinterface \_ FriendlyName".
+description: Die \_ PKEY-Eigenschaft DeviceInterface \_ FriendlyName.
 ms.assetid: beef2153-489f-4ff5-a161-b4e2cd4ac1fa
-title: PKEY_DeviceInterface_FriendlyName (functiondiscoverykeys \_ devpkey. h)
+title: PKEY_DeviceInterface_FriendlyName (Functiondiscoverykeys \_ devpkey.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b7590e9254e336bf9dbfe0fdeb3349bf19c0b8c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 25a401a4e97c8ceaace49784d6541882c95cab2891603e6b89fa3c285889ce82
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875350"
 ---
-# <a name="pkey_deviceinterface_friendlyname"></a>Pkey-Geräte \_ Name (tviceinterface \_ FriendlyName)
+# <a name="pkey_deviceinterface_friendlyname"></a>PKEY \_ DeviceInterface \_ FriendlyName
 
-Die **pkey-Eigenschaft " \_ deviceinterface \_ FriendlyName** " enthält den anzeigen amen des audioadapters, an den das Endpunkt Gerät angefügt wird (z. b. "XYZ-Audioadapter").
+Die **\_ PKEY-Eigenschaft DeviceInterface \_ FriendlyName** enthält den Benutzernamen des Audioadapters, an den das Endpunktgerät angefügt ist (z. B. "XYZ-Audioadapter").
 
-Der **VT** -Member der **PROPVARIANT** -Struktur ist auf VT \_ LPWSTR festgelegt.
+Der **vt-Member** der **PROPVARIANT-Struktur** ist auf VT \_ LPWSTR festgelegt.
 
-Der **pwszval** -Member der **PROPVARIANT** -Struktur verweist auf eine mit NULL endenden Zeichenfolge mit breit Zeichen, die den anzeigen Amen enthält.
+Der **pwszVal-Member** der **PROPVARIANT-Struktur** zeigt auf eine auf NULL terminierende Zeichenfolge mit Breitzeichen, die den Benutzerfreundlichen Namen enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,9 +25,9 @@ Der **pwszval** -Member der **PROPVARIANT** -Struktur verweist auf eine mit NULL
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Functiondiscoverykeys \_ devpkey. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Functiondiscoverykeys \_ devpkey.h</dt> </dl> |
 
 
 

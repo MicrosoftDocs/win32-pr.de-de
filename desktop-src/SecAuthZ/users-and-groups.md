@@ -4,38 +4,38 @@ ms.assetid: 783be0b2-7894-4780-900d-98918f824a04
 title: Benutzer und Gruppen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7c40ee9234fa8d6259282855011cfc3fc008d6e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea7d6ae84dba833ddd06eb81944cecb9aa401c0f8f1971c3164317cefae14fbe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906820"
 ---
 # <a name="users-and-groups"></a>Benutzer und Gruppen
 
-Im Autorisierungs-Manager werden die Empfänger der Autorisierungs Richtlinie durch die folgenden Gruppen dargestellt:
+Im Autorisierungs-Manager werden Empfänger von Autorisierungsrichtlinien durch die folgenden Gruppen dargestellt:
 
--   Windows-Benutzer und-Gruppen
+-   Windows Benutzer und Gruppen
 
-    Zu diesen Gruppen gehören Benutzer, Computer und integrierte Gruppen für Sicherheits Prinzipale.
+    Zu diesen Gruppen gehören Benutzer, Computer und integrierte Gruppen für Sicherheitsprinzipale.
 
--   LDAP-Abfrage Gruppen
+-   LDAP-Abfragegruppen
 
-    Die Mitgliedschaft in diesen Gruppen wird nach Bedarf dynamisch in LDAP-Abfragen (Lightweight Directory Access Protocol) berechnet. Eine LDAP-Abfrage Gruppe ist ein Typ von Anwendungs Gruppe.
+    Die Mitgliedschaft in diesen Gruppen wird bei Bedarf dynamisch anhand von LDAP-Abfragen (Lightweight Directory Access Protocol) berechnet. Eine LDAP-Abfragegruppe ist ein Typ von Anwendungsgruppe.
 
--   Grundlegende Anwendungs Gruppen
+-   Grundlegende Anwendungsgruppen
 
-    Diese Gruppen bestehen aus LDAP-Abfrage Gruppen, Windows-Benutzern und-Gruppen und anderen grundlegenden Anwendungs Gruppen.
+    Diese Gruppen bestehen aus LDAP-Abfragegruppen, Windows Benutzern und Gruppen und anderen grundlegenden Anwendungsgruppen.
 
-## <a name="windows-users-and-groups"></a>Windows-Benutzer und-Gruppen
+## <a name="windows-users-and-groups"></a>Windows Benutzer und Gruppen
 
-Diese sind identisch mit den Benutzern und Gruppen, die im gesamten Windows-Betriebssystem verwendet werden.
+Diese sind identisch mit den Benutzern und Gruppen, die im Windows Betriebssystem verwendet werden.
 
-## <a name="ldap-query-groups"></a>LDAP-Abfrage Gruppen
+## <a name="ldap-query-groups"></a>LDAP-Abfragegruppen
 
-Im Autorisierungs-Manager können Sie LDAP-Abfragen verwenden, um die Attribute des Benutzers in Active Directory mit denen des Benutzer Objekts abzugleichen.
+Im Autorisierungs-Manager können Sie LDAP-Abfragen verwenden, um die Attribute des Benutzers mit denen des Benutzerobjekts in Active Directory abzugleichen.
 
-Die folgende Abfrage findet z. b. alle außer Andy.
+Die folgende Abfrage findet beispielsweise alle Außer-Andy-Benutzer.
 
 
 ```C++
@@ -44,7 +44,7 @@ Die folgende Abfrage findet z. b. alle außer Andy.
 
 
 
-Die folgende Abfrage findet alle Member des Alias "jemand" unter www.fabrikam.com.
+Die folgende Abfrage sucht alle Member des Alias "someone" auf www.fabrikam.com.
 
 
 ```C++
@@ -53,15 +53,15 @@ Die folgende Abfrage findet alle Member des Alias "jemand" unter www.fabrikam.co
 
 
 
-## <a name="basic-application-groups"></a>Grundlegende Anwendungs Gruppen
+## <a name="basic-application-groups"></a>Grundlegende Anwendungsgruppen
 
-In der Autorisierungs-Manager-API wird eine Anwendungs Gruppe durch ein [**iazapplicationgroup**](/windows/desktop/api/Azroles/nn-azroles-iazapplicationgroup) -Objekt dargestellt. Eine einfache Anwendungs Gruppe ist eine Art von Anwendungs Gruppe.
+In der Autorisierungs-Manager-API wird eine Anwendungsgruppe durch ein [**IAzApplicationGroup-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazapplicationgroup) dargestellt. Eine einfache Anwendungsgruppe ist ein Typ von Anwendungsgruppe.
 
-Zum Definieren der grundlegenden Anwendungs Gruppenmitgliedschaft definieren Sie, wer ein Mitglied ist, und definieren, wer kein Mitglied ist. Beide Schritte werden auf die gleiche Weise ausgeführt. Geben Sie 0 (null) oder mehr Windows-Benutzer und-Gruppen, zuvor definierte Basis Anwendungs Gruppen oder LDAP-Abfrage Gruppen an. Die Mitgliedschaft der Basis Anwendungs Gruppe wird berechnet, indem alle nicht Mitglieder aus der Gruppe entfernt werden. Der Autorisierungs-Manager führt dies automatisch zur Laufzeit aus.
+Definieren Sie zum Definieren der grundlegenden Anwendungsgruppenmitgliedschaft, wer Mitglied ist, und definieren Sie, wer kein Mitglied ist. Beide Schritte werden auf die gleiche Weise ausgeführt. Geben Sie 0 (null) oder mehr Windows Benutzer und Gruppen, zuvor definierte grundlegende Anwendungsgruppen oder LDAP-Abfragegruppen an. Die Mitgliedschaft der grundlegenden Anwendungsgruppe wird berechnet, indem alle Nichtmitglieder aus der Gruppe entfernt werden. Der Autorisierungs-Manager führt dies zur Laufzeit automatisch aus.
 
-Die Nichtmitgliedschaft in einer grundlegenden Anwendungs Gruppe hat Vorrang vor der Mitgliedschaft.
+Die Nichtmitgliedschaft in einer einfachen Anwendungsgruppe hat Vorrang vor der Mitgliedschaft.
 
-Zirkuläre Mitgliedschafts Definitionen sind nicht zulässig. Sie führen zu folgender Fehlermeldung: "GroupName kann nicht hinzugefügt werden. Das folgende Problem ist aufgetreten: eine Schleife wurde erkannt. "
+Zirkuläre Mitgliedschaftsdefinitionen sind nicht zulässig. sie führen zu der folgenden Fehlermeldung: "GroupName kann nicht hinzugefügt werden. Das folgende Problem ist aufgetreten: Eine Schleife wurde erkannt."
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

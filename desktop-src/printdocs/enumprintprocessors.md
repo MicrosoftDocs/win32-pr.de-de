@@ -1,7 +1,7 @@
 ---
-description: Die Funktion enumprintprozessoren listet die auf dem angegebenen Server installierten Druck Prozessoren auf.
+description: Die EnumPrintProcessors-Funktion enumPrintProcessors enumeriert die auf dem angegebenen Server installierten Druckprozessoren.
 ms.assetid: 98c9185c-c89d-4b4e-8c1e-7e22b315f188
-title: Enumprintprocessor-Funktion (winspool. h)
+title: EnumPrintProcessors-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: 0c446c39cdfc37ae7c578f5123afe57d61519704
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 800ed5afcf332a0c34dc272158f98fed64e47e86cb3c16cb24d6013951ffd3f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846040"
 ---
-# <a name="enumprintprocessors-function"></a>Enumprintprozessoren-Funktion
+# <a name="enumprintprocessors-function"></a>EnumPrintProcessors-Funktion
 
-Die Funktion **enumprintprozessoren** listet die auf dem angegebenen Server installierten Druck Prozessoren auf.
+Die **EnumPrintProcessors-Funktion** aufzählt die Druckprozessoren, die auf dem angegebenen Server installiert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,67 +47,67 @@ BOOL EnumPrintProcessors(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Servers angibt, auf dem sich die Druck Prozessoren befinden. Wenn dieser Parameter **null** ist, werden die lokalen Druck Prozessoren aufgezählt.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Servers angibt, auf dem sich die Druckprozessoren befinden. Wenn dieser Parameter **NULL ist,** werden die lokalen Druckprozessoren aufzählt.
 
 </dd> <dt>
 
-nach-oben  \[ in\]
+*pUmgebung* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die die Umgebung angibt (z. b. Windows x86, Windows ia64 oder Windows x64). Wenn dieser Parameter **null** ist, wird die aktuelle Umgebung der aufrufenden Anwendung und des Client Computers (nicht der Zielanwendung und des Druck Servers) verwendet.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die die Umgebung angibt (z. B. Windows x86, Windows IA64 oder Windows x64). Wenn dieser Parameter **NULL ist,** wird die aktuelle Umgebung der aufrufenden Anwendung und des Clientcomputers (nicht der Zielanwendung und des Druckerservers) verwendet.
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*Ebene* \[ In\]
 </dt> <dd>
 
-Der Typ der Informationen, die im *pprintprocessorinfo* -Puffer zurückgegeben werden. Dieser Parameter muss 1 sein.
+Der Typ der im *pPrintProcessorInfo-Puffer zurückgegebenen* Informationen. Dieser Parameter muss 1 sein.
 
 </dd> <dt>
 
-*pprintprocessorinfo* \[ vorgenommen\]
+*pPrintProcessorInfo* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der ein Array von [**PrintProcessor \_ Info \_ 1**](printprocessor-info-1.md) -Strukturen empfängt. Jede Struktur beschreibt einen verfügbaren Druck Prozessor. Der Puffer muss groß genug sein, um das Array von Strukturen und Zeichen folgen zu erhalten, auf die die Strukturmember zeigen.
+Ein Zeiger auf einen Puffer, der ein Array von [**PRINTPROCESSOR \_ INFO \_ 1-Strukturen**](printprocessor-info-1.md) empfängt. Jede -Struktur beschreibt einen verfügbaren Druckprozessor. Der Puffer muss groß genug sein, um das Array von Strukturen und alle Zeichenfolgen zu empfangen, auf die die Strukturmitglieder zeigen.
 
-Um die erforderliche Puffergröße zu ermitteln, muss **enumprintprocessor** aufgerufen werden, wobei *cbbuf* auf NULL festgelegt ist. **Enumprintprocessor** schlägt fehl, [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt einen fehlerhaften \_ Puffer zurück \_ , und der *pcbrequired* -Parameter gibt die Größe (in Bytes) des Puffers zurück, der für das Array von Strukturen und deren Daten erforderlich ist.
+Um die erforderliche Puffergröße zu bestimmen, rufen Sie **EnumPrintProcessors** mit *cbBuf* auf 0 (null) auf. **Bei EnumPrintProcessors** tritt ein Fehler auf, [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt ERROR INSUFFICIENT BUFFER zurück, und der \_ parameter \_ *"arraysNeeded"* gibt die Größe des Puffers in Bytes zurück, der zum Speichern des Arrays von Strukturen und deren Daten erforderlich ist.
 
 </dd> <dt>
 
-*cbbuf* \[ in\]
+*cbBuf* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pprintprocessorinfo* zeigt.
+Die Größe des Puffers in Bytes, auf den *pPrintProcessorInfo zeigt.*
 
 </dd> <dt>
 
-*pcbbenötigte* \[ vorgenommen\]
+*-Needed* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl von Bytes empfängt, die in den *pprintprocessorinfo* -Puffer kopiert werden, wenn die Funktion erfolgreich ausgeführt wird. Wenn der Puffer zu klein ist, schlägt die Funktion fehl, und die Variable erhält die erforderliche Anzahl von Bytes.
+Ein Zeiger auf eine Variable, die die Anzahl der in den *pPrintProcessorInfo-Puffer* kopierten Bytes empfängt, wenn die Funktion erfolgreich ist. Wenn der Puffer zu klein ist, schlägt die Funktion fehl, und die Variable empfängt die erforderliche Anzahl von Bytes.
 
 </dd> <dt>
 
-*pkreturned* \[ vorgenommen\]
+*pcReturned* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der im *pprintprocessorinfo* -Puffer zurückgegebenen Strukturen empfängt.
+Ein Zeiger auf eine Variable, die die Anzahl der im *pPrintProcessorInfo-Puffer* zurückgegebenen Strukturen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Wert ungleich 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
@@ -119,14 +119,14 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Enumprintprocessorsw** (Unicode) und **enumprintprocessorsa** (ANSI)<br/>                         |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **EnumPrintProcessorsW** (Unicode) und **EnumPrintProcessorsA** (ANSI)<br/>                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -136,13 +136,13 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Addprintprocessor**](addprintprocessor.md)
+[**AddPrintProcessor**](addprintprocessor.md)
 </dt> <dt>
 
-[**Enumprintprocessordatatypes**](enumprintprocessordatatypes.md)
+[**EnumPrintProcessorDatatypes**](enumprintprocessordatatypes.md)
 </dt> <dt>
 
-[**PrintProcessor \_ Info \_ 1**](printprocessor-info-1.md)
+[**PRINTPROCESSOR \_ INFO \_ 1**](printprocessor-info-1.md)
 </dt> </dl>
 
  

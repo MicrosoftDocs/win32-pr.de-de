@@ -1,11 +1,11 @@
 ---
 title: Seq-Notification-Attribut
-description: Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungswert wird an den Link Überwachungsdienst übergeben, der den Wert seinen Volumes hinzufügt und Quelldateien verknüpft, wenn diese aktualisiert werden. Der Domänen Controller behält diesen Wert bei.
+description: Dieses Attribut enthält einen Leistungsindikator, der täglich erhöht wird. Dieser Indikatorwert wird an den Linkverfolgungsdienst übergeben, der den Wert den Volumes und Linkquelldateien hinzufügt, wenn sie aktualisiert werden. Der Domänencontroller behält diesen Wert bei.
 ms.assetid: 63fbded5-a21f-4a0e-aadc-568e199e8b9e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Seq-Notification-Attribut
-- seqnotification-Attribut, AD-Schema
+- Seq-Notification AD-Attributschema
+- seqNotification-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31fc3abc61a8102ced02c87897d5e7a4f706dbbb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 85e33b2cb90617796ee48bbe3790d2692dbee9d424944135a0f4c31f5faa7724
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836710"
 ---
 # <a name="seq-notification-attribute"></a>Seq-Notification-Attribut
 
-Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungswert wird an den Link Überwachungsdienst übergeben, der den Wert seinen Volumes hinzufügt und Quelldateien verknüpft, wenn diese aktualisiert werden. Der Domänen Controller behält diesen Wert bei.
+Dieses Attribut enthält einen Leistungsindikator, der täglich erhöht wird. Dieser Indikatorwert wird an den Linkverfolgungsdienst übergeben, der den Wert den Volumes und Linkquelldateien hinzufügt, wenn sie aktualisiert werden. Der Domänencontroller behält diesen Wert bei.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Seq-Notification                     |
-| LDAP-Display-Name | "Abmeldung"                      |
+| Ldap-Anzeigename | seqNotification                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.504               |
 | System-ID-GUID    | ddac0cf2-af8f-11d0-afeb-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -70,7 +70,7 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -99,11 +99,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Ist einwertig       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -120,11 +120,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -141,11 +141,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |
@@ -162,11 +162,11 @@ Dieses Attribut enthält einen gegen Tag inkrementierten Wert. Dieser Leistungsw
 |------------------------|----------------------------------------------------------------|
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
-| System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | False                                                          |
-| Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| System-Only            | Falsch                                                          |
+| Is-Single-Valued       | Richtig                                                           |
+| Ist indiziert             | Falsch                                                          |
+| Im globalen Katalog      | Falsch                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000000                                                     |

@@ -1,32 +1,32 @@
 ---
-title: Such Größen Limit
-description: Um die Arbeitsspeicher Anforderungen zu reduzieren, kann sich ein Client auf eine kleine Anzahl von Objekten konzentrieren, die vom Server zurückgegeben werden, und den Rest des Resultsets ignorieren.
+title: Größenbeschränkung für Suche
+description: Um die Arbeitsspeicheranforderungen zu reduzieren, kann sich ein Client auf eine kleine Anzahl von Objekten konzentrieren, die vom Server zurückgegeben werden, und den Rest des Resultset ignorieren.
 ms.assetid: 675a4931-dfa4-4948-936b-dee27add530c
 ms.tgt_platform: multiple
 keywords:
-- Such Größenbeschränkung (ADSI)
+- Search Size Limit ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd11148f9e887df1e15e221e8188f9e9e3b10d33
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5a48961532891f6573ccf8cb230117fad76daef95c57559e672eae93f022caf5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763450"
 ---
-# <a name="search-size-limit"></a>Such Größen Limit
+# <a name="search-size-limit"></a>Größenbeschränkung für Suche
 
-Um die Arbeitsspeicher Anforderungen zu reduzieren, kann sich ein Client auf eine kleine Anzahl von Objekten konzentrieren, die vom Server zurückgegeben werden, und den Rest des Resultsets ignorieren. Um dies zu erreichen, gibt der Client eine Such Größenbeschränkung und andere geeignete Suchkriterien an. Wenn ein Verzeichnis z. b. die Testergebnisse eines Schulbezirks speichert, können Sie die Top-zehn Studenten mit den höchsten Testergebnissen Abfragen, indem Sie eine Größenbeschränkung von zehn und eine absteigende Sortierreihenfolge angeben.
+Um die Arbeitsspeicheranforderungen zu reduzieren, kann sich ein Client auf eine kleine Anzahl von Objekten konzentrieren, die vom Server zurückgegeben werden, und den Rest des Resultset ignorieren. Um dies zu erreichen, gibt der Client eine Größenbeschränkung für die Suche und andere geeignete Suchkriterien an. Wenn beispielsweise ein Verzeichnis die Testergebnisse eines Schulgebiets speichert, können Sie die zehn besten Studenten mit den höchsten Testergebnissen abfragen, indem Sie eine Größenbeschränkung von zehn und eine absteigende Sortierreihenfolge angeben.
 
-Weitere Informationen zur Verwendung der Option Such Größenbeschränkung für eine bestimmte Suchschnittstelle finden Sie unter:
+Weitere Informationen zur Verwendung der Suchgrößenbeschränkungsoption mit einer bestimmten Suchschnittstelle finden Sie unter:
 
--   [Größenbeschränkung mit idirector ysearch](size-limit-with-idirectorysearch.md)
--   [Suchen mit ActiveX Data Objects](searching-with-activex-data-objects-ado.md)
+-   [Größenbeschränkung mit IDirectorySearch](size-limit-with-idirectorysearch.md)
+-   [Suchen mit ActiveX Datenobjekten](searching-with-activex-data-objects-ado.md)
 -   [Suchen mit OLE DB](searching-with-ole-db.md)
 
- 
+ 
 
- 
+ 
 
 
 

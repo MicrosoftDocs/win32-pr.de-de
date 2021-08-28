@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: d467769308707032b8e92b4ac7877488991356dd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a06ac5428743c31bae22c6d106ee927791739295754b15ac9764045c3aeeffab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813870"
 ---
 # <a name="iwiauiextensiondevicedialog-method"></a>IWiaUIExtension::D eviceDialog-Methode
 
@@ -54,7 +54,7 @@ Typ: **HRESULT**
 
 Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn der Benutzer den Dialog abbricht, gibt die Methode S \_ FALSE zurück. Wenn die Methode nicht implementiert ist, wird E \_ NOTIMPL zurückgegeben. Wenn die Methode fehlschlägt, wird ein COM-Standardfehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie die [**IWiaUIExtension-Schnittstelle**](-wia-iwiauiextension.md) implementieren und die Systembenutzerschnittstelle nicht ersetzen möchten, muss diese Methode weiterhin implementiert werden, sollte aber nur E \_ NOTIMPL zurückgeben.
 
@@ -62,10 +62,10 @@ Wenn Sie die [**IWiaUIExtension-Schnittstelle**](-wia-iwiauiextension.md) implem
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 

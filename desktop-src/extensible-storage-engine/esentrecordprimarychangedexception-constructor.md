@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrecordprimarychangedexception-Konstruktor'
-title: Esentrecordprimarychangedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentRecordPrimaryChangedException-Konstruktor'
+title: EsentRecordPrimaryChangedException-Konstruktor
 TOCTitle: 'EsentRecordPrimaryChangedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRecordPrimaryChangedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrecordprimarychangedexception.esentrecordprimarychangedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8dfdb39dc081a508946897d3985bea10ff7882a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 058c86ae947256aa1a5dc2c97a5079f18caf2a08ca8104c080d8b760d53f5ff5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781950"
 ---
-# <a name="esentrecordprimarychangedexception-constructor"></a>Esentrecordprimarychangedexception-Konstruktor
+# <a name="esentrecordprimarychangedexception-constructor"></a>EsentRecordPrimaryChangedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrecordprimarychangedexception-Klasse.
+Initialisiert eine neue Instanz der EsentRecordPrimaryChangedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentRecordPrimaryChangedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrecordprimarychangedexception-Klasse](./esentrecordprimarychangedexception-class.md)
+[EsentRecordPrimaryChangedException-Klasse](./esentrecordprimarychangedexception-class.md)
 
-[Esentrecordprimarychangedexception-Elemente](./esentrecordprimarychangedexception-members.md)
+[EsentRecordPrimaryChangedException-Member](./esentrecordprimarychangedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

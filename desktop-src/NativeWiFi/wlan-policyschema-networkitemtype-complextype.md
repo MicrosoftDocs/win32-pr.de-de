@@ -1,7 +1,7 @@
 ---
-description: Gibt den Namen und den Typ eines drahtlos Netzwerks an.
+description: Gibt den Namen und Typ eines Drahtlosnetzwerks an.
 ms.assetid: 839afae0-b8e1-489f-8811-19a82c173627
-title: komplexer networkitemtype-Typ
+title: komplexer networkItemType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 5db7c5fc4d9b5227d9cd29c5e2dfc69da6fad139
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c5a08eafebc81a1ff9f18c3d4c2cc9df9c096ac0fef9c10ff1caf1142a1ecf8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800190"
 ---
-# <a name="networkitemtype-complex-type"></a>komplexer networkitemtype-Typ
+# <a name="networkitemtype-complex-type"></a>komplexer networkItemType-Typ
 
-Der komplexe Typ networkitemtype gibt den Namen und den Typ eines drahtlos Netzwerks an.
+Der komplexe NetworkItemType-Typ gibt den Namen und Typ eines Drahtlosnetzwerks an.
 
 ``` syntax
 <xs:complexType name="networkItemType">
@@ -46,10 +46,10 @@ Der komplexe Typ networkitemtype gibt den Namen und den Typ eines drahtlos Netzw
 
 
 
-| Element                                                                      | type                                                                    | BESCHREIBUNG                                                   |
+| Element                                                                      | Typ                                                                    | Beschreibung                                                   |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------|
-| [**Network Name**](wlan-policyschema-networkname-networkitemtype-element.md) | [**networknametype**](wlan-policyschema-networknametype-simpletype.md) | Der Service Set Identifier (SSID) des Netzwerks. <br/> |
-| [**Network Type**](wlan-policyschema-networktype-networkitemtype-element.md) | [**Network Typetype**](wlan-policyschema-networktypetype-simpletype.md) | Der Netzwerktyp. <br/>                                 |
+| [**networkName**](wlan-policyschema-networkname-networkitemtype-element.md) | [**networkNameType**](wlan-policyschema-networknametype-simpletype.md) | Der Dienstsatzbezeichner (Service Set Identifier, SSID) des Netzwerks. <br/> |
+| [**Networktype**](wlan-policyschema-networktype-networkitemtype-element.md) | [**networkTypeType**](wlan-policyschema-networktypetype-simpletype.md) | Der Netzwerktyp. <br/>                                 |
 
 
 
@@ -59,8 +59,8 @@ Der komplexe Typ networkitemtype gibt den Namen und den Typ eines drahtlos Netzw
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
