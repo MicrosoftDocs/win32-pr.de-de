@@ -1,7 +1,7 @@
 ---
-description: Legen Sie die Rotations Informationen für einen bestimmten Keyframe im Animations Satz fest.
+description: Legen Sie Drehungsinformationen für einen bestimmten Keyframe im Animationssatz fest.
 ms.assetid: b31edc88-0d77-49f3-b4c4-39cd866e1379
-title: 'ID3DXKeyframedAnimationSet:: abskey-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::SetRotationKey-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b03a6818a6a59904c3db5b4819775d9e58d4f8ec
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2375167b9c848c0ccec10853f04c2f1aa7b59992d3198164df46c0ba7c08b68c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856600"
 ---
-# <a name="id3dxkeyframedanimationsetsetrotationkey-method"></a>ID3DXKeyframedAnimationSet:: abskey-Methode
+# <a name="id3dxkeyframedanimationsetsetrotationkey-method"></a>ID3DXKeyframedAnimationSet::SetRotationKey-Methode
 
-Legen Sie die Rotations Informationen für einen bestimmten Keyframe im Animations Satz fest.
+Legen Sie Drehungsinformationen für einen bestimmten Keyframe im Animationssatz fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetRotationKey(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Keyframe.
 
 </dd> <dt>
 
-" *protationkeys* \[ " in\]
+*pRotationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **LPD3DXKEY \_ Quaternion**](d3dxkey-quaternion.md)**
+Typ: **[ **LPD3DXKEY \_ QUATERNION**](d3dxkey-quaternion.md)**
 
-Zeiger auf die Rotationsdaten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md).
+Zeiger auf die Drehungsdaten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md).
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf die Rotationsdaten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

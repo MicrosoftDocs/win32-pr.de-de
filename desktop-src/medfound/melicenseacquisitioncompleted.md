@@ -1,29 +1,29 @@
 ---
-description: Wird ausgelöst, wenn die Lizenz Erfassung beendet ist. Weitere Informationen finden Sie unter "melicenabacquisitionstart".
+description: Wird ausgelöst, wenn der Lizenzerwerb abgeschlossen ist. Weitere Informationen finden Sie unter MELicenseAcquisitionStart.
 ms.assetid: f577131b-887a-4912-8278-1165a801c2b3
-title: Melicenmenacquisitionabgeschlossene-Ereignis (mfobjects. h)
+title: MELicenseAcquisitionCompleted-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 545fa012f974637f5d268a7d8257daaf9b393f06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22ac7d24f99083153223614e7421dd8bd83468991c4d9a63fbb8e5933963f1e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013610"
 ---
-# <a name="melicenseacquisitioncompleted-event"></a>Melicenmenacquisitionabgeschlossene-Ereignis
+# <a name="melicenseacquisitioncompleted-event"></a>MELicenseAcquisitionCompleted-Ereignis
 
-Wird ausgelöst, wenn die Lizenz Erfassung beendet ist. Weitere Informationen finden Sie unter " [melicenabacquisitionstart](melicenseacquisitionstart.md)".
+Wird ausgelöst, wenn der Lizenzerwerb abgeschlossen ist. Weitere Informationen finden Sie unter [MELicenseAcquisitionStart](melicenseacquisitionstart.md).
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,9 +33,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

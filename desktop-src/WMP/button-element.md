@@ -1,86 +1,86 @@
 ---
-title: Button-Element (WMP)
-description: Button-Element
+title: BUTTON-Element (WMP)
+description: BUTTON-Element
 ms.assetid: 2818ff6a-4fc5-4150-9ff9-ff143feb9204
 keywords:
-- Windows Media Player Skins, Button-Element
-- Skins, Button-Element
-- Button-Element
-- Verweis für Skins, Button-Element
-- Elemente, Schaltfläche
+- Windows Media Player,BUTTON-Element
+- skins,BUTTON-Element
+- BUTTON-Element
+- Referenz für Skins, BUTTON-Element
+- elements,BUTTON
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c069207e15be62e06b4d2b18f13c052026932dc
-ms.sourcegitcommit: 6f7576b297d54c0b8f9c79e02c912b83041aa4fb
+ms.openlocfilehash: 13ca4e57dafdc01fc194c4cf4bc534e067297a58fcc2527939e3672f2d705628
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "103719607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119736730"
 ---
-# <a name="button-element"></a>Button-Element
+# <a name="button-element"></a>BUTTON-Element
 
-Das **Button** -Element bietet eine Möglichkeit zum Erstellen einer Schaltfläche in einem Skin. Die unten aufgeführten Attribute können verwendet werden, um das Verhalten einer Schaltfläche anzupassen, oder es kann eine vordefinierte Schaltfläche verwendet werden.
+Das **BUTTON-Element** bietet eine Möglichkeit, eine Schaltfläche in einer Skin zu erstellen. Die folgenden Attribute können verwendet werden, um das Verhalten einer Schaltfläche anzupassen, oder eine vordefinierte Schaltfläche kann der Einfachheit halber verwendet werden.
 
-Das **Button** -Element unterstützt die folgenden Attribute.
+Das **BUTTON-Element** unterstützt die folgenden Attribute.
 
 
 
-| Attribut                                         | BESCHREIBUNG                                                                                                                                      |
+| attribute                                         | Beschreibung                                                                                                                                      |
 |---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Cursor](button-cursor.md)                       | Gibt den Cursor an oder ruft ihn ab, der angezeigt wird, wenn mit dem Mauszeiger auf die **Schaltfläche** gezeigt wird.                                                |
-| [disabledImage](button-disabledimage.md)         | Gibt das Bild an, das beim Deaktivieren der **Schaltfläche** angezeigt wird, oder ruft es ab.                                                                  |
-| [auf](button-down.md)                           | Gibt einen Wert an oder Ruft einen Wert ab, der angibt, ob sich die **Schaltfläche** an der nach-oben-oder                                                  |
-| [Windows Mage](button-downimage.md)                 | Gibt das Bild an, das den Zustand der **Schaltfläche** nach unten darstellt, oder ruft es ab.                                                                  |
-| [downtooltip](button-downtooltip.md)             | Gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der **Schaltfläche** befindet und sich die **Schaltfläche** im Zustand "gedrückt" |
-| [hoverdownimage](button-hoverdownimage.md)       | Gibt das Bild an oder ruft es ab, das angezeigt wird, wenn sich die **Schaltfläche** im Zustand "gedrückt" befindet, und der Benutzer mit dem Mauszeiger darüber bewegt wird.          |
-| [hoverimage](button-hoverimage.md)               | Gibt das Bild an, das angezeigt wird, wenn sich die **Schaltfläche** im Zustand "up" befindet, und der Benutzer mit dem Mauszeiger darauf zeigt.            |
-| [image](button-image.md)                         | Gibt das Standardbild der **Schaltfläche** an oder ruft es ab.                                                                                      |
-| [Klebe](button-sticky.md)                       | Gibt einen Wert an bzw. Ruft einen Wert ab, der angibt, ob die **Schaltfläche** eine UMSCHALT Fläche ist, d. h. ob es sich um eine Schaltfläche mit zwei oder einem Bundesstaat handelt         |
-| [Ken](button-tiled.md)                         | Gibt einen Wert an, der angibt, ob das **Schalt** Flächen Bild angezeigt wird, oder ruft diesen ab.                                                            |
-| [transparendcolor](button-transparencycolor.md) | Gibt die Farbe an, die im **Schalt** Flächen Bild transparent sein wird, oder ruft Sie ab.                                                               |
-| [uptooltip](button-uptooltip.md)                 | Gibt den QuickInfo-Text an oder ruft ihn ab, der angezeigt wird, wenn sich der Mauszeiger über der **Schaltfläche** befindet und sich die **Schaltfläche** im Zustand "                |
+| [Cursor](button-cursor.md)                       | Gibt den Cursor an, der angezeigt wird, wenn der Mauszeiger auf button zeigt, oder ruft **diesen ab.**                                                |
+| [disabledImage](button-disabledimage.md)         | Gibt das Bild an, das angezeigt wird, wenn button deaktiviert ist, **oder** ruft es ab.                                                                  |
+| [down](button-down.md)                           | Gibt einen Wert an oder ruft einen Wert ab, der angibt, ob **sich button** an der Position nach oben oder unten befindet.                                                  |
+| [downImage](button-downimage.md)                 | Gibt das Bild an, das den Zustand "Down" der SCHALTFLÄCHE darstellt, oder ruft **es ab.**                                                                  |
+| [downToolTip](button-downtooltip.md)             | Gibt den QuickInfo-Text an oder ruft diesen ab, der angezeigt wird, wenn sich der Mauszeiger über der **SCHALTFLÄCHE** befindet und sich **button** im nach unten oder unten geschwungenen Zustand befindet. |
+| [hoverDownImage](button-hoverdownimage.md)       | Gibt das Bild an, das angezeigt wird, wenn sich **die SCHALTFLÄCHE** im Zustand "Down" befindet, und der Benutzer mit dem Mauszeiger darauf zeigt, oder ruft es ab.          |
+| [hoverImage](button-hoverimage.md)               | Gibt das Bild an, das angezeigt wird, wenn sich **die SCHALTFLÄCHE** im Auf-Zustand befindet, und der Benutzer mit dem Mauszeiger darauf zeigt, oder ruft es ab.            |
+| [image](button-image.md)                         | Gibt das Standardbild von BUTTON an oder ruft **es ab.**                                                                                      |
+| [Klebrig](button-sticky.md)                       | Gibt einen Wert an oder ruft einen Wert ab, der angibt, ob es sich bei **button** um eine Umschaltfläche handelt, d. b. ob es sich um eine Schaltfläche mit zwei oder einem Zustand handelt.         |
+| [Gekachelte](button-tiled.md)                         | Gibt einen Wert an, der angibt, ob das **BUTTON-Bild** gekachelt wird, oder ruft einen Wert ab.                                                            |
+| [transparencyColor](button-transparencycolor.md) | Gibt die Farbe an, die im BUTTON-Bild transparent ist, oder **ruft sie** ab.                                                               |
+| [upToolTip](button-uptooltip.md)                 | Gibt den QuickInfo-Text an oder ruft diesen ab, der angezeigt wird, wenn sich der Mauszeiger über **button** befindet und sich **button** im Auf-Zustand befindet.                |
 
 
 
- 
+ 
 
-Das **Button** -Element unterstützt die Ambient-Attribute und kann die Umgebungs Ereignishandler implementieren. Weitere Informationen finden Sie unter [Ambient-Attribute](ambient-attributes.md) und [Ambient-Ereignishandler](ambient-event-handlers.md).
+Das **BUTTON-Element** unterstützt die Ambient-Attribute und kann die Ambient-Ereignishandler implementieren. Weitere Informationen finden Sie unter [Ambient Attributes (Umgebungsattribute)](ambient-attributes.md) [und Ambient Event Handlers (Umgebungsereignishandler).](ambient-event-handlers.md)
 
-Vordefinierte Schaltflächen sind normale **Schalt** Flächen Elemente mit verschiedenen allgemeinen Attribut Einstellungen, die standardmäßig angegeben werden. Die folgenden vordefinierten Schaltflächen sind verfügbar.
+Vordefinierte Schaltflächen sind normale **BUTTON-Elemente** mit verschiedenen allgemeinen Attributeinstellungen, die standardmäßig angegeben sind. Die folgenden vordefinierten Schaltflächen sind verfügbar.
 
 
 
-| Vordefinierte Schaltfläche                    | BESCHREIBUNG                                                                        |
+| Vordefinierte SCHALTFLÄCHE                    | Beschreibung                                                                        |
 |--------------------------------------|------------------------------------------------------------------------------------|
-| [CLOSEBUTTON](closebutton.md)       | Eine **Schaltfläche** zum Schließen des Players.                                             |
-| [Ffwdbutton](ffwdbutton.md)         | Eine **Schaltfläche** mit einem integrierten-Befehl für **Player. Controls. FastForward** , wenn darauf geklickt wird. |
-| [Image Button](imagebutton.md)       | Eine **Schaltfläche** , mit der ein Bild angezeigt wird.                                             |
-| [Minimizebutton](minimizebutton.md) | Eine **Schaltfläche** , mit der der Spieler minimiert wird.                                          |
-| [MuteButton](mutebutton.md)         | Eine **Schaltfläche** , mit der die Audiodatei stumm geschaltet wird.                                   |
-| [NEXTBUTTON](nextbutton.md)         | Eine **Schaltfläche** mit einem integrierten Befehl für **Player. Controls. Next** , wenn darauf geklickt wird.        |
-| [Pausen Schaltfläche](pausebutton.md)       | Eine **Schaltfläche** mit einem integrierten Befehl für **Player. Controls. Pause** , wenn darauf geklickt wird.       |
-| [PlayButton](playbutton.md)         | Eine **Schaltfläche** mit einem integrierten Befehl für **Player. Controls. Play** , wenn darauf geklickt wird.        |
-| [Prevbutton](prevbutton.md)         | Eine **Schaltfläche** mit einem integrierten-Befehl für **Player. Controls. Previous** , wenn darauf geklickt wird.    |
-| [REPEATBUTTON](repeatbutton.md)     | Eine **Schaltfläche** , die die Wiederholungs Option schaltet.                                       |
-| [Returnbutton](returnbutton.md)     | Eine **Schaltfläche** , die Windows Media Player an das Mediencenter zurückgibt.                |
-| [Rewbutton](rewbutton.md)           | Eine **Schaltfläche** mit einem integrierten-Befehl für **Player. Controls. fastreverse** , wenn darauf geklickt wird. |
-| [Shufflebutton](shufflebutton.md)   | Eine **Schaltfläche** , die die Shuffle-Option umschaltet.                                      |
-| [StopButton](stopbutton.md)         | Eine **Schaltfläche** mit einem integrierten Befehl für **Player. Controls. beenden** , wenn darauf geklickt wird.        |
+| [CLOSEBUTTON](closebutton.md)       | Eine **SCHALTFLÄCHE,** die zum Schließen des Players verwendet wird.                                             |
+| [FFWDBUTTON](ffwdbutton.md)         | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.fastForward,** wenn darauf geklickt wird. |
+| [Imagebutton](imagebutton.md)       | Eine **SCHALTFLÄCHE,** die zum Anzeigen eines Bilds verwendet wird.                                             |
+| [MINIMIZEBUTTON](minimizebutton.md) | Eine **SCHALTFLÄCHE,** die verwendet wird, um den Player zu minimieren.                                          |
+| [MUTEBUTTON](mutebutton.md)         | Eine **SCHALTFLÄCHE,** die zum Stummschalten und Ent stummschalten des Audios verwendet wird.                                   |
+| [NEXTBUTTON](nextbutton.md)         | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.next,** wenn darauf geklickt wird.        |
+| [PAUSEBUTTON](pausebutton.md)       | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.pause,** wenn darauf geklickt wird.       |
+| [Playbutton](playbutton.md)         | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.play, wenn** darauf geklickt wird.        |
+| [PREVBUTTON](prevbutton.md)         | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.previous, wenn** darauf geklickt wird.    |
+| [Repeatbutton](repeatbutton.md)     | Eine **SCHALTFLÄCHE,** die die Option Wiederholen umschaltet.                                       |
+| [RETURNBUTTON](returnbutton.md)     | Eine **SCHALTFLÄCHE,** die Windows Media Player an das Mediencenter zurückgibt.                |
+| [REWBUTTON](rewbutton.md)           | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.fastReverse, wenn** darauf geklickt wird. |
+| [SHUFFLEBUTTON](shufflebutton.md)   | Eine **SCHALTFLÄCHE,** die die Option Shuffle umschaltet.                                      |
+| [STOPBUTTON](stopbutton.md)         | Eine **SCHALTFLÄCHE** mit einem integrierten Aufruf von **player.controls.stop, wenn** darauf geklickt wird.        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Transformiert ein Array (x, y, z, w) durch eine angegebene Matrix.
+description: Transformiert ein Array (x, y, z, w) durch eine bestimmte Matrix.
 ms.assetid: afd5cccb-e22f-4726-a84e-9eac1c1c277f
-title: D3DXVec4TransformArray-Funktion (D3DX10Math. h)
+title: D3DXVec4TransformArray-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 5571fb19786e19a61c85741bcf6d4acb5231e977
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2c6fdcdd2a404e4122a0c8c66995fdabaf1284dfa67ebade888d2964c0c1fb8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852800"
 ---
-# <a name="d3dxvec4transformarray-function-d3dx10mathh"></a>D3DXVec4TransformArray-Funktion (D3DX10Math. h)
+# <a name="d3dxvec4transformarray-function-d3dx10mathh"></a>D3DXVec4TransformArray-Funktion (D3DX10Math.h)
 
-Transformiert ein Array (x, y, z, w) durch eine angegebene Matrix.
+Transformiert ein Array (x, y, z, w) durch eine bestimmte Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,55 +44,55 @@ D3DXVECTOR4* D3DXVec4TransformArray(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
 
-Zeiger auf das [**D3DXVECTOR4**](d3d10-d3dxvector4.md) -Array, das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXVECTOR4-Array,**](d3d10-d3dxvector4.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*Outstride* \[ in\]
+*OutStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Ausgabedatenstrom.
+Stride zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](../direct3d9/d3dxvector4.md) \***
 
-Zeiger auf das Quell-D3DXVECTOR4 Array.
+Zeiger auf das D3DXVECTOR4-Quellarray.
 
 </dd> <dt>
 
-*Vstride* \[ in\]
+*VStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Schritt zwischen Vektoren im Eingabedaten Strom.
+Stride zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
-*pm* \[ in\]
+*pM* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXMATRIX**](d3d10-d3dxmatrix.md) -Struktur.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur.**](d3d10-d3dxmatrix.md)
 
 </dd> <dt>
 
 *n* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Anzahl der Elemente im Array.
 
@@ -102,13 +102,13 @@ Anzahl der Elemente im Array.
 
 Typ: **[ **D3DXVECTOR4**](../direct3d9/d3dxvector4.md)\***
 
-Zeiger auf eine [**D3DXVECTOR4**](d3d10-d3dxvector4.md) -Struktur, die das transformierte Array ist.
+Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3d10-d3dxvector4.md) die das transformierte Array ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wandelt das Array PV (x, y, z, w) durch die Matrix pm um.
+Diese Funktion transformiert das Array pV (x, y, z, w) durch die Matrix pM.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec4TransformArray** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXVec4TransformArray-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,7 +116,7 @@ Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Paramete
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 

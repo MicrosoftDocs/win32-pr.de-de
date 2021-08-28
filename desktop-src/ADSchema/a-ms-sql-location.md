@@ -1,11 +1,11 @@
 ---
 title: MS-SQL-Location-Attribut
-description: Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgelegt.
+description: Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Speicherort festgelegt.
 ms.assetid: e0d8a83f-a979-49a8-a92d-842c18c8f9fd
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-SQL-Location-Attribut
-- AD-Schema für MS-SQL-Location-Attribut
+- AD-Schema des MS-SQL-Location-Attributs
+- AD-Schema des mS-SQL-Location-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ffa71a40e7deff12385e0e45eb16d8dcc998269
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 003da9f90c77d3ee79a77c8132ab8afa4a6e1431018405cc07f67bbf607f41ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705270"
 ---
 # <a name="ms-sql-location-attribute"></a>MS-SQL-Location-Attribut
 
-Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgelegt.
+Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Speicherort festgelegt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-SQL-Location                             |
-| LDAP-Display-Name | MS-SQL-Location                             |
+| Ldap-Anzeigename | mS-SQL-Location                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | Beim System Setup.                            |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | Beim Systemsetup.                            |
 | Attribute-Id      | 1.2.840.113556.1.4.1366                     |
-| System-ID-GUID    | 561c9644-CCEE-11d2-9993-0000f 87a57d4        |
+| System-Id-Guid    | 561c9644-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -70,7 +70,7 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -100,10 +100,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -121,10 +121,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -142,10 +142,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |
@@ -163,10 +163,10 @@ Eine benutzerdefinierte Zeichenfolge. Der Standardwert ist auf Location festgele
 | Link-ID                | \-                                                        |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist-einwertig       | Richtig                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                              |
 | Range-Lower            | \-                                                        |
 | Range-Upper            | \-                                                        |
 | Search-Flags           | 0x00000000                                                |

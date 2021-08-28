@@ -1,24 +1,24 @@
 ---
-description: Die selectupperbutton-Methode wählt die obere direktionale Schaltfläche aus dem angezeigten Menü aus.
+description: Die SelectUpperButton-Methode wählt die obere Richtungsschaltfläche aus dem angezeigten Menü aus.
 ms.assetid: ace9e5b4-5461-46d6-94a5-420ec0825c70
-title: Selectupperbutton-Methode (Segment. h)
+title: SelectUpperButton-Methode (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85065da379672265aefc47f104ef0f1515c32a42
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 78ffeb7b22f21ed2b238960991031a36a19fd4eb8104f253b78f3b6b81526937
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119683940"
 ---
-# <a name="selectupperbutton-method"></a>Selectupperbutton-Methode
+# <a name="selectupperbutton-method"></a>SelectUpperButton-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `SelectUpperButton` Methode wählt die obere direktionale Schaltfläche aus dem angezeigten Menü aus.
+Die `SelectUpperButton` -Methode wählt die Oberrichtungsschaltfläche aus dem angezeigten Menü aus.
 
 ``` syntax
 MSWebDVD.SelectUpperButton()
@@ -34,7 +34,7 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 
@@ -42,34 +42,34 @@ Kein Rückgabewert.
 
 <dl> <dt>
 
-[**Buttonsavailable**](buttonsavailable-property.md)
+[**SchaltflächenVerfügbar**](buttonsavailable-property.md)
 </dt> <dt>
 
-[**Currentbutton**](currentbutton-property.md)
+[**CurrentButton**](currentbutton-property.md)
 </dt> <dt>
 
-[**Activatebutton**](activatebutton-method.md)
+[**ActivateButton**](activatebutton-method.md)
 </dt> <dt>
 
-[**Getbuttonatposition**](getbuttonatposition-method.md)
+[**GetButtonAtPosition**](getbuttonatposition-method.md)
 </dt> <dt>
 
-[**Getbuttonrect**](getbuttonrect-method.md)
+[**GetButtonRect**](getbuttonrect-method.md)
 </dt> <dt>
 
-[**Selectandactivatebutton**](selectandactivatebutton-method.md)
+[**SelectAndActivateButton**](selectandactivatebutton-method.md)
 </dt> <dt>
 
-[**Selectatposition**](selectatposition-method.md)
+[**SelectAtPosition**](selectatposition-method.md)
 </dt> <dt>
 
-[**Selectleftbutton**](selectleftbutton-method.md)
+[**SelectLeftButton**](selectleftbutton-method.md)
 </dt> <dt>
 
-[**Selectlowerbutton**](selectlowerbutton-method.md)
+[**SelectLowerButton**](selectlowerbutton-method.md)
 </dt> <dt>
 
-[**Selectaghtbutton**](selectrightbutton-method.md)
+[**SelectRightButton**](selectrightbutton-method.md)
 </dt> </dl>
 
  

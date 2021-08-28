@@ -1,21 +1,21 @@
 ---
 description: Die Add-Methode fügt das Attribut am angegebenen Index hinzu.
 ms.assetid: 5b74c177-bf5c-4547-bebb-034a9a10be13
-title: 'Itattributelist:: Add-Methode (sdpblb. h)'
+title: ITAttributeList::Add-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5504a216549231aca82eac3b3311ae7208eb8432
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9817fa413234f2eb2fa9bfb84f87ad794549443b5f807d743fa22805c30d9b49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905940"
 ---
-# <a name="itattributelistadd-method"></a>Itattributelist:: Add-Methode
+# <a name="itattributelistadd-method"></a>ITAttributeList::Add-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Add** -Methode fügt das Attribut am angegebenen Index hinzu.
+Die **Add-Methode** fügt das Attribut am angegebenen Index hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT Add(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Der Index des hinzu zufügenden Attributs.
+Index des hinzuzufügenden Attributs.
 
 </dd> <dt>
 
-*pattribute* \[ in\]
+*pAttribute* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der den Wert des hinzu zufügenden Attributs enthält.
+Zeiger auf einen **BSTR,** der den Wert des hinzuzufügenden Attributs enthält.
 
 </dd> </dl>
 
@@ -56,18 +56,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *Index* -oder der *pattribute* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *Index-* *oder pAttribute-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *pattribute* -Parameter zuzuweisen, und " [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Arbeitsspeicher für den *pAttribute-Parameter* zu reservieren, und [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher frei zu geben, wenn die Variable nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,9 +75,9 @@ Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-
 
 <dl> <dt>
 
-[**Itattributelist**](itattributelist.md)
+[**ITAttributeList**](itattributelist.md)
 </dt> </dl>
 
  

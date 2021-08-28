@@ -1,29 +1,29 @@
 ---
-description: Beschreibt, wie die Rahmen in einem Video Medientyp mit Zeilen Sprung verknüpft werden.
+description: Beschreibt, wie die Frames in einem Videomedientyp geschachtelt werden.
 ms.assetid: 19aa0147-ac49-4a2e-ac75-e967fec9ca68
-title: MF_MT_INTERLACE_MODE-Attribut (mfapi. h)
+title: MF_MT_INTERLACE_MODE -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1826978c39ff8cd80b2aa66b91161ee8b476944f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 569b41e121caaeb431cf842221bfc215d5ba411c75a26e557e300ba03690cc39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013010"
 ---
-# <a name="mf_mt_interlace_mode-attribute"></a>MF \_ MT- \_ Interlace- \_ Modus-Attribut
+# <a name="mf_mt_interlace_mode-attribute"></a>MF \_ MT \_ INTERLACE \_ MODE-Attribut
 
-Beschreibt, wie die Rahmen in einem Video Medientyp mit Zeilen Sprung verknüpft werden.
+Beschreibt, wie die Frames in einem Videomedientyp geschachtelt werden.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Member der [**mfvideointerlacemode**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideointerlacemode) -Enumeration.
+Der Wert dieses Attributs ist ein Member der [**MFVideoInterlaceMode-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideointerlacemode)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -41,22 +41,22 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
-[Video-Interlacing](video-interlacing.md)
+[Video Interlacing](video-interlacing.md)
 </dt> </dl>
 
  

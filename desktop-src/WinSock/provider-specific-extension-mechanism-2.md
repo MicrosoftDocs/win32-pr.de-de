@@ -4,22 +4,22 @@ ms.assetid: 8b0d86ad-2f8b-4f5e-a8a6-839cb8dba4d8
 title: Provider-Specific-Erweiterungsmechanismus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e58a8bba3c83e7dbf973ff8fe5b7d91c1065cfc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed627aefdfefda2bf4b395098f6680086fd37dd7a302d977d9bf238f77d89d3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733570"
 ---
 # <a name="provider-specific-extension-mechanism"></a>Provider-Specific-Erweiterungsmechanismus
 
-Mit der [**WSAIoctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) -Funktion können Dienstanbieter anbieterspezifische Featureerweiterungen anbieten. Dieser Mechanismus geht natürlich davon aus, dass eine Anwendung eine bestimmte Erweiterung kennt und sowohl die Semantik als auch die Syntax versteht. Diese Informationen werden in der Regel vom Anbieter des Dienstanbieters bereitgestellt.
+Mit [**der WSAIoctl-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) können Dienstanbieter anbieterspezifische Featureerweiterungen anbieten. Bei diesem Mechanismus wird natürlich davon ausgegangen, dass eine Anwendung eine bestimmte Erweiterung kennt und sowohl die semantische als auch die damit verbundenen Syntax versteht. Solche Informationen werden in der Regel vom Anbieter des Dienstanbieters bereitgestellt.
 
-Um eine Erweiterungs Funktion aufzurufen, muss die Anwendung zuerst einen Zeiger auf die gewünschte Funktion anfordern. Dies erfolgt über die [**WSAIoctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) -Funktion mithilfe des \_ Befehls Codes für die Befehlszeilen Erweiterung der Erweiterung "get \_ extension function" \_ \_ . Der Eingabepuffer für **WSAIoctl** enthält einen Bezeichner für die gewünschte Erweiterungs Funktion, während der Ausgabepuffer den Funktionszeiger selbst enthält. Die Anwendung kann dann die Erweiterungs Funktion direkt aufrufen, ohne den Ws2- \_32.dll zu übergeben.
+Zum Aufrufen einer Erweiterungsfunktion muss die Anwendung zunächst nach einem Zeiger auf die gewünschte Funktion fragen. Dies erfolgt über die [**WSAIoctl-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) unter Verwendung des Befehlscodes SIO \_ GET EXTENSION FUNCTION \_ \_ \_ POINTER. Der Eingabepuffer für **WSAIoctl** enthält einen Bezeichner für die gewünschte Erweiterungsfunktion, während der Ausgabepuffer den Funktionszeiger selbst enthält. Die Anwendung kann dann die Erweiterungsfunktion direkt aufrufen, ohne die Ws2-32.dll. \_
 
-Die Erweiterungsfunktionen zugewiesenen Bezeichner sind Global Unique Identifier (GUIDs), die von Dienstanbieter Anbietern zugewiesen werden. Anbieter, die Erweiterungsfunktionen erstellen, werden aufgefordert, vollständige Details zur Funktion einschließlich der Syntax des Funktions Prototyps zu veröffentlichen. Dies ermöglicht es, dass gängige und beliebte Erweiterungsfunktionen von mehreren Dienstanbieter Anbietern angeboten werden. Eine Anwendung kann den Funktionszeiger abrufen und die Funktion verwenden, ohne dass Sie Informationen über den bestimmten Dienstanbieter kennen müssen, der die Funktion implementiert.
+Die Bezeichner, die Erweiterungsfunktionen zugewiesen sind, sind GUIDs (Globally Unique Identifiers), die von Dienstanbieteranbietern zugeordnet werden. Anbieter, die Erweiterungsfunktionen erstellen, können vollständige Details zur Funktion veröffentlichen, einschließlich der Syntax des Funktionsprototyps. Dadurch können allgemeine und beliebte Erweiterungsfunktionen von mehr als einem Dienstanbieteranbieter angeboten werden. Eine Anwendung kann den Funktionszeiger abrufen und die Funktion verwenden, ohne etwas über den bestimmten Dienstanbieter wissen zu müssen, der die Funktion implementiert.
 
-Unter Windows Vista und höher werden neue Winsock-Systemerweiterungen direkt aus der Winsock-DLL exportiert, sodass die [**WSAIoctl**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) -Funktion nicht benötigt wird, um diese Erweiterungen zu laden. Zu den neuen Erweiterungsfunktionen, die unter Windows Vista und höher verfügbar sind, gehören die [**wsapoll**](/windows/win32/api/winsock2/nf-winsock2-wsapoll) -und [**wsasendmsg**](/windows/desktop/api/winsock2/nf-winsock2-wsasendmsg) -Funktionen, die aus *Ws2- \_32.dll* exportiert werden.
+Unter Windows Vista und höher werden neue Winsock-Systemerweiterungen direkt aus der Winsock-DLL exportiert, sodass die [**WSAIoctl-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-wsaioctl) zum Laden dieser Erweiterungen nicht erforderlich ist. Die neuen Erweiterungsfunktionen, die unter Windows Vista und höher verfügbar sind, enthalten die [**WSAPoll-**](/windows/win32/api/winsock2/nf-winsock2-wsapoll) und [**WSASendMsg-Funktionen,**](/windows/desktop/api/winsock2/nf-winsock2-wsasendmsg) die aus *Ws2 \_* 32.dll.
 
  
 

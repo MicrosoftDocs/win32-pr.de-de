@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-NSEC3-OptOut-Attribut
-description: Ein Attribut, mit dem definiert wird, ob die DNS-Zone mithilfe von nsec-Opt-out signiert werden soll.
+title: ms-DNS-NSEC3-OptOut-Attribut
+description: Ein Attribut, mit dem definiert wird, ob die DNS-Zone mithilfe der NSEC-Abmeldung signiert werden soll.
 ms.assetid: 1ef0c394-9597-4c04-b471-7fb284a26ca9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-DNS-NSEC3-OptOut-Attributs
-- MSDNs-NSEC3OptOut-Attribut AD-Schema
+- MS-DNS-NSEC3-OptOut-Attribut AD-Schema
+- MSDNS-NSEC3OptOut-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af7726302675d66ee3f4da75b89cfe4c369108ec
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fbd8339edf4bbefe3b5c81e070e8bf2c980046f5dcfc8833aebf635907d1e9c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119553040"
 ---
-# <a name="ms-dns-nsec3-optout-attribute"></a>MS-DNS-NSEC3-OptOut-Attribut
+# <a name="ms-dns-nsec3-optout-attribute"></a>ms-DNS-NSEC3-OptOut-Attribut
 
-Ein Attribut, mit dem definiert wird, ob die DNS-Zone mithilfe von nsec-Opt-out signiert werden soll.
+Ein Attribut, mit dem definiert wird, ob die DNS-Zone mithilfe der NSEC-Abmeldung signiert werden soll.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-NSEC3-OptOut                  |
-| LDAP-Display-Name | MSDNs-NSEC3OptOut                    |
+| CN                | ms-DNS-NSEC3-OptOut                  |
+| Ldap-Anzeigename | msDNS-NSEC3OptOut                    |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2132              |
-| System-ID-GUID    | 7bea2088-8ce2-423c-B191-66ec506b1595 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-ID-GUID    | 7bea2088-8ce2-423c-b191-66ec506b1595 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -53,15 +53,15 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone mithilfe von nsec-Opt-out 
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Ist einwertig       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: WM_DWMWINDOWMAXIMIZEDCHANGE Meldung (Winuser. h)
-description: Wird gesendet, wenn ein aus Desktopfenster-Manager (DWM) zusammengesetztes Fenster maximiert ist.
+title: WM_DWMWINDOWMAXIMIZEDCHANGE (Winuser.h)
+description: Wird gesendet, wenn ein Desktopfenster-Manager(DWM) zusammengesetztes Fenster maximiert wird.
 ms.assetid: db8cd104-388e-4211-9e4e-f169aef9651c
 keywords:
-- WM_DWMWINDOWMAXIMIZEDCHANGE Meldung Desktopfenster-Manager
+- WM_DWMWINDOWMAXIMIZEDCHANGE-Desktopfenster-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2dc49af267ea826eb9e35a627e14f6fc8b381df0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 93cfa4ac380b6ff439fb2bf4805846c0b774a90bcfdcd83673ead2334a3c7094
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117750"
 ---
-# <a name="wm_dwmwindowmaximizedchange-message"></a>WM \_ dwmwindowmaximizedchange-Meldung
+# <a name="wm_dwmwindowmaximizedchange-message"></a>WM \_ DWMWINDOWMAXIMIZEDCHANGE-Nachricht
 
-Wird gesendet, wenn ein aus Desktopfenster-Manager (DWM) zusammengesetztes Fenster maximiert ist.
+Wird gesendet, wenn ein Desktopfenster-Manager(DWM) zusammengesetztes Fenster maximiert wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Wird gesendet, wenn ein aus Desktopfenster-Manager (DWM) zusammengesetztes Fenst
 *wParam* 
 </dt> <dd>
 
-Legen Sie diese Einstellung auf "true" fest, um anzugeben, dass das Fenster maximiert ist.
+Legen Sie auf TRUE fest, um anzugeben, dass das Fenster maximiert wurde.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 

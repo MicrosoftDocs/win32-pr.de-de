@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine iscardauth-Schnittstelle.
+description: Erstellt eine ISCardAuth-Schnittstelle.
 ms.assetid: a091e361-416e-45c9-8077-617b16db654c
-title: 'Iscardmanage:: featecardauth-Methode'
+title: ISCardManage::CreateCardAuth-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: d0b81fd8211491527f39999c6873f7b047bcb32f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6f78e938e8c739bcc2bca6c2ce7769d64d6f72ad02296aa9b2fb692d6c129a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014130"
 ---
-# <a name="iscardmanagecreatecardauth-method"></a>Iscardmanage:: featecardauth-Methode
+# <a name="iscardmanagecreatecardauth-method"></a>ISCardManage::CreateCardAuth-Methode
 
-\[Die Methode " **kreatecardauth** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **CreateCardAuth-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die Methode " **kreatecardauth** " erstellt eine [**iscardauth**](iscardauth.md) -Schnittstelle.
+Die **CreateCardAuth-Methode** erstellt eine [**ISCardAuth-Schnittstelle.**](iscardauth.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,35 +40,35 @@ HRESULT CreateCardAuth(
 
 <dl> <dt>
 
-*ppiscardauth* \[ vorgenommen\]
+*ppISCardAuth* \[ out\]
 </dt> <dd>
 
-Der Zeiger auf die erstellte Schnittstelle wurde zurückgegeben.
+Gibt einen Zeiger auf die erstellte Schnittstelle zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                            |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>           |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *ppiscardauth* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppiscardauth* übergeben.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                              |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *ppISCardAuth-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde in *ppISCardAuth* übergeben.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardmanage**](iscardmanage.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardManage**](iscardmanage.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,10 +76,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -87,7 +87,7 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Iscardmanage**](iscardmanage.md)
+[**ISCardManage**](iscardmanage.md)
 </dt> </dl>
 
  

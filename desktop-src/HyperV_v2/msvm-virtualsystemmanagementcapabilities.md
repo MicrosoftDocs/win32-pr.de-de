@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Funktionen des zugeordneten MSVM \_ virtualsystemmanagementservice.
+description: Beschreibt die Funktionen des zugeordneten Msvm \_ VirtualSystemManagementService.
 ms.assetid: 3a167b06-bddd-4bac-95c0-ecf14e01eec0
 title: Msvm_VirtualSystemManagementCapabilities-Klasse
 ms.topic: reference
@@ -25,16 +25,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 24bc8ce66393a5e9ccd13848ab74640aec8d1760
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9bacbdac9552a82f884542095c3ea0e5169ba4c6c381e0d969d08f8e29b2e79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681120"
 ---
-# <a name="msvm_virtualsystemmanagementcapabilities-class"></a>MSVM \_ virtualsystemmanagementfunktionalitäten-Klasse
+# <a name="msvm_virtualsystemmanagementcapabilities-class"></a>Msvm \_ VirtualSystemManagementCapabilities-Klasse
 
-Beschreibt die Funktionen des zugeordneten [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md).
+Beschreibt die Funktionen des zugeordneten [**Msvm \_ VirtualSystemManagementService.**](msvm-virtualsystemmanagementservice.md)
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -61,217 +61,217 @@ class Msvm_VirtualSystemManagementCapabilities : CIM_VirtualSystemManagementCapa
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemmanagementfunktionsklasse** verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemManagementCapabilities-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemmanagementfunktionalitäten** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemManagementCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Asynchronousmethodssupported**
+**AsynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ virtualsystemmanagementfunktionalitäten. asynchronousmethodssupported")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VirtualSystemManagementCapabilities.AsynchronousMethodsSupported")
 </dt> </dl>
 
-Gibt die [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Methoden an, die asynchron von der-Implementierung unterstützt werden.
+Gibt die [**Msvm \_ VirtualSystemManagementService-Methoden**](msvm-virtualsystemmanagementservice.md) an, die von der Implementierung asynchron unterstützt werden.
 
 <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ValidatePlannedSystem"></span><span id="validateplannedsystem"></span><span id="VALIDATEPLANNEDSYSTEM"></span>
 
-**[**Validateplannedsystem**](validateplannedsystem-msvm-virtualsystemmanagementservice.md)** (32767)
+**[**ValidatePlannedSystem**](validateplannedsystem-msvm-virtualsystemmanagementservice.md)** (32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ImportSystemDefinition"></span><span id="importsystemdefinition"></span><span id="IMPORTSYSTEMDEFINITION"></span>
 
-**[**Importsystemdefinition**](importsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32770)
+**[**ImportSystemDefinition**](importsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32770)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ImportSnapshotDefinitions"></span><span id="importsnapshotdefinitions"></span><span id="IMPORTSNAPSHOTDEFINITIONS"></span>
 
-**[**Importsnapshotdefinitions**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md)** (32771)
+**[**ImportSnapshotDefinitions**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md)** (32771)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RealizePlannedSystem"></span><span id="realizeplannedsystem"></span><span id="REALIZEPLANNEDSYSTEM"></span>
 
-**[**Realizeplannedsystem**](realizeplannedsystem-msvm-virtualsystemmanagementservice.md)** (32772)
+**[**RealizePlannedSystem**](realizeplannedsystem-msvm-virtualsystemmanagementservice.md)** (32772)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ExportSystemDefinition"></span><span id="exportsystemdefinition"></span><span id="EXPORTSYSTEMDEFINITION"></span>
 
-**[**Exportsystemdefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32778)
+**[**ExportSystemDefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32778)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddFeatureSettings"></span><span id="addfeaturesettings"></span><span id="ADDFEATURESETTINGS"></span>
 
-**[**Addfeaturesettings**](addfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32779)
+**[**AddFeatureSettings**](addfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32779)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyFeatureSettings"></span><span id="modifyfeaturesettings"></span><span id="MODIFYFEATURESETTINGS"></span>
 
-**[**Modifyfeaturesettings**](modifyfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32780)
+**[**ModifyFeatureSettings**](modifyfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32780)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveFeatureSettings"></span><span id="removefeaturesettings"></span><span id="REMOVEFEATURESETTINGS"></span>
 
-**[**Removefeaturesettings**](removefeaturesettings-msvm-virtualsystemmanagementservice.md)** (32781)
+**[**RemoveFeatureSettings**](removefeaturesettings-msvm-virtualsystemmanagementservice.md)** (32781)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetVirtualSystemThumbnailImage"></span><span id="getvirtualsystemthumbnailimage"></span><span id="GETVIRTUALSYSTEMTHUMBNAILIMAGE"></span>
 
-**[**Getvirtualsystemthumbnailimage**](getvirtualsystemthumbnailimage-msvm-virtualsystemmanagementservice.md)** (32782)
+**[**GetVirtualSystemThumbnailImage**](getvirtualsystemthumbnailimage-msvm-virtualsystemmanagementservice.md)** (32782)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyServiceSettings"></span><span id="modifyservicesettings"></span><span id="MODIFYSERVICESETTINGS"></span>
 
-**[**Modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)** (32783)
+**[**ModifyServiceSettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)** (32783)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetSummaryInformation"></span><span id="getsummaryinformation"></span><span id="GETSUMMARYINFORMATION"></span>
 
-**[**Getsummaryinformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md)** (32784)
+**[**GetSummaryInformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md)** (32784)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddKvpItems"></span><span id="addkvpitems"></span><span id="ADDKVPITEMS"></span>
 
-**[**Addkvpitems**](addkvpitems-msvm-virtualsystemmanagementservice.md)** (32785)
+**[**AddKvpItems**](addkvpitems-msvm-virtualsystemmanagementservice.md)** (32785)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyKvpItems"></span><span id="modifykvpitems"></span><span id="MODIFYKVPITEMS"></span>
 
-**[**Modifykvpitems**](modifykvpitems-msvm-virtualsystemmanagementservice.md)** (32786)
+**[**ModifyKvpItems**](modifykvpitems-msvm-virtualsystemmanagementservice.md)** (32786)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveKvpItems"></span><span id="removekvpitems"></span><span id="REMOVEKVPITEMS"></span>
 
-**[**Removekvpitems**](removekvpitems-msvm-virtualsystemmanagementservice.md)** (32787)
+**[**RemoveKvpItems**](removekvpitems-msvm-virtualsystemmanagementservice.md)** (32787)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FormatError"></span><span id="formaterror"></span><span id="FORMATERROR"></span>
 
-**[**Formaterror**](formaterror-msvm-virtualsystemmanagementservice.md)** (32788)
+**[**FormatError**](formaterror-msvm-virtualsystemmanagementservice.md)** (32788)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RequestStateChangeSupported"></span><span id="requeststatechangesupported"></span><span id="REQUESTSTATECHANGESUPPORTED"></span>
 
-**Requeststatechangesupported** (32789)
+**RequestStateChangeSupported** (32789)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StartServiceSupported"></span><span id="startservicesupported"></span><span id="STARTSERVICESUPPORTED"></span>
 
-**Startservicesupportiert** (32790)
+**StartServiceSupported** (32790)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StopServiceSupported"></span><span id="stopservicesupported"></span><span id="STOPSERVICESUPPORTED"></span>
 
-**Stopservicesupportiert** (32791)
+**StopServiceSupported** (32791)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyDiskMergeSettings"></span><span id="modifydiskmergesettings"></span><span id="MODIFYDISKMERGESETTINGS"></span>
 
-**[**Modifydiskmergesettings**](modifydiskmergesettings-msvm-virtualsystemmanagementservice.md)** (32792)
+**[**ModifyDiskMergeSettings**](modifydiskmergesettings-msvm-virtualsystemmanagementservice.md)** (32792)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GenerateWwpn"></span><span id="generatewwpn"></span><span id="GENERATEWWPN"></span>
 
-**[**Generatewwpn**](generatewwpn-msvm-virtualsystemmanagementservice.md)** (32793)
+**[**GenerateWwpn**](generatewwpn-msvm-virtualsystemmanagementservice.md)** (32793)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddFibreChannelChap"></span><span id="addfibrechannelchap"></span><span id="ADDFIBRECHANNELCHAP"></span>
 
-**[**Addspbrechannelchap**](addfibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32794)
+**[**AddFibreChannelChap**](addfibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32794)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveFibreChannelChap"></span><span id="removefibrechannelchap"></span><span id="REMOVEFIBRECHANNELCHAP"></span>
 
-**[**Removefbrechannelchap**](removefibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32795)
+**[**RemoveFibreChannelChap**](removefibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32795)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SetGuestNetworkAdapterConfiguration"></span><span id="setguestnetworkadapterconfiguration"></span><span id="SETGUESTNETWORKADAPTERCONFIGURATION"></span>
 
-**[**Setguestnetworkadapterconfiguration**](setguestnetworkadapterconfiguration-msvm-virtualsystemmanagementservice.md)** (32796)
+**[**SetGuestNetworkAdapterConfiguration**](setguestnetworkadapterconfiguration-msvm-virtualsystemmanagementservice.md)** (32796)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetSizeOfSystemFiles"></span><span id="getsizeofsystemfiles"></span><span id="GETSIZEOFSYSTEMFILES"></span>
 
-**[**Getsizeofsystemfiles**](getsizeofsystemfiles-msvm-virtualsystemmanagementservice.md)** (32797)
+**[**GetSizeOfSystemFiles**](getsizeofsystemfiles-msvm-virtualsystemmanagementservice.md)** (32797)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetCurrentWwpnFromGenerator"></span><span id="getcurrentwwpnfromgenerator"></span><span id="GETCURRENTWWPNFROMGENERATOR"></span>
 
-**[**Getcurrentwwpnfromgenerator**](getcurrentwwpnfromgenerator-msvm-virtualsystemmanagementservice.md)** (32798)
+**[**GetCurrentWwpnFromGenerator**](getcurrentwwpnfromgenerator-msvm-virtualsystemmanagementservice.md)** (32798)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32799.65535)
+**Vendor Reserved** (32799..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -281,129 +281,129 @@ Gibt die [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanageme
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Elementnameeditsupported**
+**ElementNameEditSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **ElementName** -Eigenschaft geändert werden kann. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt an, ob **die ElementName-Eigenschaft** geändert werden kann. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities geerbt.**
 
 </dd> <dt>
 
-**Elementnamemask**
+**ElementNameMask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Einschränkungen für **ElementName** an, ausgedrückt als regulärer Ausdruck. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die Einschränkungen für **ElementName** an, ausgedrückt als regulärer Ausdruck. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities geerbt.**
 
 </dd> <dt>
 
-**Unterstützt**
+**IndicationsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ virtualsystemmanagementfunktionalitäten. indicationssupported")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VirtualSystemManagementCapabilities.IndicationsSupported")
 </dt> </dl>
 
-Gibt die von der-Implementierung unterstützten Hinweise an.
+Gibt die von der Implementierung unterstützten Hinweise an.
 
-Enumeration von Indikator Bezeichner, die jeweils einen von der-Implementierung unterstützten Hinweis identifizieren.
+Enumeration von Anzeigebezeichnern, die jeweils einen Hinweis identifizieren, der von der Implementierung unterstützt wird.
 
 <dt>
 
 <span id="VirtualResourceStateChangeIndicationsSupported"></span><span id="virtualresourcestatechangeindicationssupported"></span><span id="VIRTUALRESOURCESTATECHANGEINDICATIONSSUPPORTED"></span>
 
-<span id="VirtualResourceStateChangeIndicationsSupported"></span><span id="virtualresourcestatechangeindicationssupported"></span><span id="VIRTUALRESOURCESTATECHANGEINDICATIONSSUPPORTED"></span>**Virtualresourcestatus echanginditerationssupported** (2)
+<span id="VirtualResourceStateChangeIndicationsSupported"></span><span id="virtualresourcestatechangeindicationssupported"></span><span id="VIRTUALRESOURCESTATECHANGEINDICATIONSSUPPORTED"></span>**VirtualResourceStateChangeIndicationsSupported** (2)
 
 
 </dt> <dd>
 
-Die-Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) -Instanzen, die Ressourcen virtueller Systeme darstellen.
+Die Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**CIM \_ LogicalDevice-Instanzen,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) die Ressourcen virtueller Systeme darstellen.
 
 </dd> <dt>
 
 <span id="ConcreteJobStateChangeIndicationsSupported"></span><span id="concretejobstatechangeindicationssupported"></span><span id="CONCRETEJOBSTATECHANGEINDICATIONSSUPPORTED"></span>
 
-<span id="ConcreteJobStateChangeIndicationsSupported"></span><span id="concretejobstatechangeindicationssupported"></span><span id="CONCRETEJOBSTATECHANGEINDICATIONSSUPPORTED"></span>" **Concretejobstatus echangein" unterstützt** (3)
+<span id="ConcreteJobStateChangeIndicationsSupported"></span><span id="concretejobstatechangeindicationssupported"></span><span id="CONCRETEJOBSTATECHANGEINDICATIONSSUPPORTED"></span>**ConcreteJobStateChangeIndicationsSupported** (3)
 
 
 </dt> <dd>
 
-Die-Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**CIM- \_ concretejob**](/previous-versions//cc136808(v=vs.85)) -Instanzen.
+Die Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**CIM \_ ConcreteJob-Instanzen.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> <dt>
 
 <span id="VirtualSystemStateChangeIndicationsSupported"></span><span id="virtualsystemstatechangeindicationssupported"></span><span id="VIRTUALSYSTEMSTATECHANGEINDICATIONSSUPPORTED"></span>
 
-<span id="VirtualSystemStateChangeIndicationsSupported"></span><span id="virtualsystemstatechangeindicationssupported"></span><span id="VIRTUALSYSTEMSTATECHANGEINDICATIONSSUPPORTED"></span>**Virtualsystemstatus echangin-Unterstützung** (4)
+<span id="VirtualSystemStateChangeIndicationsSupported"></span><span id="virtualsystemstatechangeindicationssupported"></span><span id="VIRTUALSYSTEMSTATECHANGEINDICATIONSSUPPORTED"></span>**VirtualSystemStateChangeIndicationsSupported** (4)
 
 
 </dt> <dd>
 
-Die-Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanzen, die virtuelle Systeme darstellen.
+Die Implementierung unterstützt Benachrichtigungen über Zustandsänderungen von [**\_ CIM-ComputerSysteminstanzen,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die virtuelle Systeme darstellen.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Hersteller reserviert** (32767.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32767..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -413,7 +413,7 @@ Die-Implementierung unterstützt Benachrichtigungen über Zustandsänderungen vo
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -422,11 +422,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Maxelementnamelen**
+**MaxElementNameLen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **unit16**
@@ -438,20 +438,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **MaxValue** (256)
 </dt> </dl>
 
-Gibt die maximal unterstützte Länge der **ElementName** -Eigenschaft an. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die maximal unterstützte Länge der **ElementName-Eigenschaft** an. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities geerbt.**
 
 </dd> <dt>
 
-**Requestedstaatunter stützt**
+**RequestedStatesSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **unit16** Array
+Datentyp: **Unit16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** -Methode für das aktivierte logische Element angefordert werden können. Diese Eigenschaft wird von **CIM \_ enabledlogicalelementfunktionalitäten** geerbt.
+Gibt die möglichen Zustände an, die angefordert werden können, wenn die **RequestStateChange-Methode** für das aktivierte logische Element verwendet wird. Diese Eigenschaft wird von **CIM \_ EnabledLogicalElementCapabilities geerbt.**
 
 
 
@@ -462,9 +462,9 @@ Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** 
 | <dl> <dt>4</dt> </dl>  | Herunterfahren<br/> |
 | <dl> <dt>6</dt> </dl>  | Offline<br/>   |
 | <dl> <dt>7</dt> </dl>  | Test<br/>      |
-| <dl> <dt>8</dt> </dl>  | Wickeln<br/>     |
+| <dl> <dt>8</dt> </dl>  | Verschieben<br/>     |
 | <dl> <dt>9</dt> </dl>  | Stilllegen<br/>   |
-| <dl> <dt>10</dt> </dl> | Reboot<br/>    |
+| <dl> <dt>10</dt> </dl> | Neustart<br/>    |
 | <dl> <dt>11</dt> </dl> | Reset<br/>     |
 
 
@@ -473,223 +473,223 @@ Gibt die möglichen Zustände an, die bei Verwendung der **requestStateChange** 
 
 </dd> <dt>
 
-**Synchronousmethodssupported**
+**SynchronousMethodsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ virtualsystemmanagementfunktionalitäten. synchronousmethodssupported")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VirtualSystemManagementCapabilities.SynchronousMethodsSupported")
 </dt> </dl>
 
-Gibt die [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Methoden an, die von der-Implementierung synchron unterstützt werden.
+Gibt die [**Msvm \_ VirtualSystemManagementService-Methoden**](msvm-virtualsystemmanagementservice.md) an, die synchron von der Implementierung unterstützt werden.
 
 <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ValidatePlannedSystem"></span><span id="validateplannedsystem"></span><span id="VALIDATEPLANNEDSYSTEM"></span>
 
-**[**Validateplannedsystem**](validateplannedsystem-msvm-virtualsystemmanagementservice.md)** (32767)
+**[**ValidatePlannedSystem**](validateplannedsystem-msvm-virtualsystemmanagementservice.md)** (32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ImportSystemDefinition"></span><span id="importsystemdefinition"></span><span id="IMPORTSYSTEMDEFINITION"></span>
 
-**[**Importsystemdefinition**](importsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32770)
+**[**ImportSystemDefinition**](importsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32770)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ImportSnapshotDefinitions"></span><span id="importsnapshotdefinitions"></span><span id="IMPORTSNAPSHOTDEFINITIONS"></span>
 
-**[**Importsnapshotdefinitions**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md)** (32771)
+**[**ImportSnapshotDefinitions**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md)** (32771)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RealizePlannedSystem"></span><span id="realizeplannedsystem"></span><span id="REALIZEPLANNEDSYSTEM"></span>
 
-**[**Realizeplannedsystem**](realizeplannedsystem-msvm-virtualsystemmanagementservice.md)** (32772)
+**[**RealizePlannedSystem**](realizeplannedsystem-msvm-virtualsystemmanagementservice.md)** (32772)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ExportSystemDefinition"></span><span id="exportsystemdefinition"></span><span id="EXPORTSYSTEMDEFINITION"></span>
 
-**[**Exportsystemdefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32778)
+**[**ExportSystemDefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)** (32778)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddFeatureSettings"></span><span id="addfeaturesettings"></span><span id="ADDFEATURESETTINGS"></span>
 
-**[**Addfeaturesettings**](addfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32779)
+**[**AddFeatureSettings**](addfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32779)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyFeatureSettings"></span><span id="modifyfeaturesettings"></span><span id="MODIFYFEATURESETTINGS"></span>
 
-**[**Modifyfeaturesettings**](modifyfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32780)
+**[**ModifyFeatureSettings**](modifyfeaturesettings-msvm-virtualsystemmanagementservice.md)** (32780)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveFeatureSettings"></span><span id="removefeaturesettings"></span><span id="REMOVEFEATURESETTINGS"></span>
 
-**[**Removefeaturesettings**](removefeaturesettings-msvm-virtualsystemmanagementservice.md)** (32781)
+**[**RemoveFeatureSettings**](removefeaturesettings-msvm-virtualsystemmanagementservice.md)** (32781)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetVirtualSystemThumbnailImage"></span><span id="getvirtualsystemthumbnailimage"></span><span id="GETVIRTUALSYSTEMTHUMBNAILIMAGE"></span>
 
-**[**Getvirtualsystemthumbnailimage**](getvirtualsystemthumbnailimage-msvm-virtualsystemmanagementservice.md)** (32782)
+**[**GetVirtualSystemThumbnailImage**](getvirtualsystemthumbnailimage-msvm-virtualsystemmanagementservice.md)** (32782)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyServiceSettings"></span><span id="modifyservicesettings"></span><span id="MODIFYSERVICESETTINGS"></span>
 
-**[**Modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)** (32783)
+**[**ModifyServiceSettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)** (32783)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetSummaryInformation"></span><span id="getsummaryinformation"></span><span id="GETSUMMARYINFORMATION"></span>
 
-**[**Getsummaryinformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md)** (32784)
+**[**GetSummaryInformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md)** (32784)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddKvpItems"></span><span id="addkvpitems"></span><span id="ADDKVPITEMS"></span>
 
-**[**Addkvpitems**](addkvpitems-msvm-virtualsystemmanagementservice.md)** (32785)
+**[**AddKvpItems**](addkvpitems-msvm-virtualsystemmanagementservice.md)** (32785)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyKvpItems"></span><span id="modifykvpitems"></span><span id="MODIFYKVPITEMS"></span>
 
-**[**Modifykvpitems**](modifykvpitems-msvm-virtualsystemmanagementservice.md)** (32786)
+**[**ModifyKvpItems**](modifykvpitems-msvm-virtualsystemmanagementservice.md)** (32786)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveKvpItems"></span><span id="removekvpitems"></span><span id="REMOVEKVPITEMS"></span>
 
-**[**Removekvpitems**](removekvpitems-msvm-virtualsystemmanagementservice.md)** (32787)
+**[**RemoveKvpItems**](removekvpitems-msvm-virtualsystemmanagementservice.md)** (32787)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FormatError"></span><span id="formaterror"></span><span id="FORMATERROR"></span>
 
-**[**Formaterror**](formaterror-msvm-virtualsystemmanagementservice.md)** (32788)
+**[**FormatError**](formaterror-msvm-virtualsystemmanagementservice.md)** (32788)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RequestStateChangeSupported"></span><span id="requeststatechangesupported"></span><span id="REQUESTSTATECHANGESUPPORTED"></span>
 
-**Requeststatechangesupported** (32789)
+**RequestStateChangeSupported** (32789)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StartServiceSupported"></span><span id="startservicesupported"></span><span id="STARTSERVICESUPPORTED"></span>
 
-**Startservicesupportiert** (32790)
+**StartServiceSupported** (32790)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StopServiceSupported"></span><span id="stopservicesupported"></span><span id="STOPSERVICESUPPORTED"></span>
 
-**Stopservicesupportiert** (32791)
+**StopServiceSupported** (32791)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ModifyDiskMergeSettings"></span><span id="modifydiskmergesettings"></span><span id="MODIFYDISKMERGESETTINGS"></span>
 
-**[**Modifydiskmergesettings**](modifydiskmergesettings-msvm-virtualsystemmanagementservice.md)** (32792)
+**[**ModifyDiskMergeSettings**](modifydiskmergesettings-msvm-virtualsystemmanagementservice.md)** (32792)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GenerateWwpn"></span><span id="generatewwpn"></span><span id="GENERATEWWPN"></span>
 
-**[**Generatewwpn**](generatewwpn-msvm-virtualsystemmanagementservice.md)** (32793)
+**[**GenerateWwpn**](generatewwpn-msvm-virtualsystemmanagementservice.md)** (32793)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AddFibreChannelChap"></span><span id="addfibrechannelchap"></span><span id="ADDFIBRECHANNELCHAP"></span>
 
-**[**Addspbrechannelchap**](addfibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32794)
+**[**AddFibreChannelChap**](addfibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32794)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="RemoveFibreChannelChap"></span><span id="removefibrechannelchap"></span><span id="REMOVEFIBRECHANNELCHAP"></span>
 
-**[**Removefbrechannelchap**](removefibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32795)
+**[**RemoveFibreChannelChap**](removefibrechannelchap-msvm-virtualsystemmanagementservice.md)** (32795)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SetGuestNetworkAdapterConfiguration"></span><span id="setguestnetworkadapterconfiguration"></span><span id="SETGUESTNETWORKADAPTERCONFIGURATION"></span>
 
-**[**Setguestnetworkadapterconfiguration**](setguestnetworkadapterconfiguration-msvm-virtualsystemmanagementservice.md)** (32796)
+**[**SetGuestNetworkAdapterConfiguration**](setguestnetworkadapterconfiguration-msvm-virtualsystemmanagementservice.md)** (32796)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetSizeOfSystemFiles"></span><span id="getsizeofsystemfiles"></span><span id="GETSIZEOFSYSTEMFILES"></span>
 
-**[**Getsizeofsystemfiles**](getsizeofsystemfiles-msvm-virtualsystemmanagementservice.md)** (32797)
+**[**GetSizeOfSystemFiles**](getsizeofsystemfiles-msvm-virtualsystemmanagementservice.md)** (32797)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="GetCurrentWwpnFromGenerator"></span><span id="getcurrentwwpnfromgenerator"></span><span id="GETCURRENTWWPNFROMGENERATOR"></span>
 
-**[**Getcurrentwwpnfromgenerator**](getcurrentwwpnfromgenerator-msvm-virtualsystemmanagementservice.md)** (32798)
+**[**GetCurrentWwpnFromGenerator**](getcurrentwwpnfromgenerator-msvm-virtualsystemmanagementservice.md)** (32798)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32799.65535)
+**Reservierter Anbieter** (32799..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Virtualsystemtypessupported**
+**VirtualSystemTypesSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Zeichen folgen, die jeweils einen Typ eines virtuellen Systems festlegen, das von der Implementierung unterstützt wird. Der Wert jedes Array Elements, das nicht **null** ist, muss den Zeichen folgen entsprechen, die für die Eigenschaft " [**MSVM \_ virtualsystemsettingdata. virtualsystemtype**](msvm-virtualsystemsettingdata.md) " definiert sind.
+Ein Array von Zeichenfolgen, die jeweils einen Typ des virtuellen Systems benennen, das von der Implementierung unterstützt wird. Der Wert jedes Arrayelements ungleich **NULL** muss den Zeichenfolgen entsprechen, die für die [**Msvm \_ VirtualSystemSettingData.VirtualSystemType-Eigenschaft**](msvm-virtualsystemsettingdata.md) definiert sind.
 
 </dd> </dl>
 
@@ -699,10 +699,10 @@ Ein Array von Zeichen folgen, die jeweils einen Typ eines virtuellen Systems fes
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

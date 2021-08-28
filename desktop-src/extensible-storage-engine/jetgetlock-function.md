@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: jetgetlock-Funktion'
-title: Jetgetlock-Funktion
+description: 'Weitere Informationen zu: JetGetLock-Funktion'
+title: JetGetLock-Funktion
 TOCTitle: JetGetLock Function
 ms:assetid: cebf0789-3d31-4ae8-9b23-dcf5e34e98fc
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294094(v=EXCHG.10)
@@ -18,21 +18,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5757616214336de25ce30ca49755ac229b10afbe
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 51509f4027d4748f32b8c9dfb8756433b5f93935
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104132433"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984833"
 ---
-# <a name="jetgetlock-function"></a>Jetgetlock-Funktion
+# <a name="jetgetlock-function"></a>JetGetLock-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgetlock-function"></a>Jetgetlock-Funktion
+## <a name="jetgetlock-function"></a>JetGetLock-Funktion
 
-Die **jetgetlock** -Funktion bietet die Möglichkeit, die Möglichkeit zum Aktualisieren von Zeilen, Schreiben einer Sperre oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung (Lesesperre) aktualisiert wird. Normalerweise werden Zeilen Schreib Sperren implizit durch das Aktualisieren von Zeilen abgerufen. Lese Sperren sind in der Regel aufgrund von Daten Satz Versionsverwaltung nicht erforderlich. In einigen Fällen möchte eine Transaktion jedoch möglicherweise eine Zeile explizit sperren, um die Serialisierung zu erzwingen, oder um sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ausgeführt wird, da die erforderlichen Sperren bereits übernommen wurden.
+Die **JetGetLock-Funktion** bietet eine Möglichkeit, eine Zeile explizit zu aktualisieren, eine Schreibsperre zu schreiben oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung aktualisiert wird( Lesesperre). Normalerweise werden Zeilenschreibsperren implizit als Ergebnis der Aktualisierung von Zeilen eingerichtet. Lesesperren sind aufgrund der Datensatzversionsierung in der Regel nicht erforderlich. In einigen Fällen möchte eine Transaktion jedoch möglicherweise explizit eine Zeile sperren, um die Serialisierung zu erzwingen, oder um sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ist, da die erforderlichen Sperren bereits eingerichtet wurden.
 
 ```cpp
 JET_ERR JET_API JetGetLock(
@@ -44,162 +44,78 @@ JET_ERR JET_API JetGetLock(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet wird.
+Die Sitzung, die für diesen Aufruf verwendet wird.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet wird.
+Der Cursor, der für diesen Aufruf verwendet wird.
 
 *grbit*
 
-Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthalten, die NULL oder mehr der folgenden Elemente enthalten:
+Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthalten, die null oder mehr der folgenden Elemente enthalten:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitReadLock</p></td>
-<td><p>Dieses Flag bewirkt, dass eine Lesesperre für den aktuellen Datensatz abgerufen wird. Lese Sperren sind nicht kompatibel mit Schreib sperren, die bereits von anderen Sitzungen gehalten wurden, aber mit Lese Sperren von anderen Sitzungen kompatibel sind.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitWriteLock</p></td>
-<td><p>Dieses Flag bewirkt, dass eine Schreibsperre für den aktuellen Datensatz abgerufen wird. Schreib Sperren sind nicht kompatibel mit Schreib-oder Lese sperren, die von anderen Sitzungen aufrechterhalten werden, aber mit Lese Sperren in derselben Sitzung kompatibel sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitReadLock</p> | <p>Dieses Flag bewirkt, dass eine Lesesperre für den aktuellen Datensatz eingerichtet wird. Lesesperren sind nicht kompatibel mit Schreibsperren, die bereits von anderen Sitzungen gehalten werden, sind aber mit Lesesperren kompatibel, die von anderen Sitzungen gehalten werden.</p> | 
+| <p>JET_bitWriteLock</p> | <p>Dieses Flag bewirkt, dass eine Schreibsperre für den aktuellen Datensatz eingerichtet wird. Schreibsperren sind nicht mit Schreib- oder Lesesperren kompatibel, die von anderen Sitzungen gehalten werden, sind jedoch mit Lesesperren kompatibel, die von derselben Sitzung gehalten werden.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidgrbit</p></td>
-<td><p>Das angegebene <em>grbit</em> ist weder JET_bitReadLock noch JET_bitWriteLock. Dabei muss es sich um eines dieser beiden Flags handeln.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNoCurrentRecord</p></td>
-<td><p>Der Cursor muss sich in einem Datensatz befinden, um eine Sperre zu erhalten. Sperren sind Always on-Datensätze.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInTransaction</p></td>
-<td><p>Sperren können nur von Sitzungen in einer Transaktion abgerufen werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errPermissionDenied</p></td>
-<td><p>Der Cursor kann nicht schreibgeschützt sein und eine Schreibsperre erhalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Die Sitzung muss über Schreibberechtigungen verfügen, um eine Schreibsperre zu erhalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errWriteConflict</p></td>
-<td><p>Der Fehler, der zurückgegeben wird, wenn eine widersprüchliche Sperre angefordert wird.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg hat die Sitzung die angeforderte Sperre erhalten.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidgrbit</p> | <p>Das angegebene <em>Grbit</em> ist weder JET_bitReadLock noch JET_bitWriteLock. Es muss eines dieser beiden Flags sein.</p> | 
+| <p>JET_errNoCurrentRecord</p> | <p>Der Cursor muss sich in einem Datensatz befindet, um eine Sperre zu erhalten. Sperren sind immer für Datensätze aktiviert.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errNotInTransaction</p> | <p>Sperren können nur von Sitzungen in einer Transaktion eingerichtet werden.</p> | 
+| <p>JET_errPermissionDenied</p> | <p>Cursor kann nicht schreibbar sein und erhält eine Schreibsperre.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Die Sitzung muss über Schreibberechtigungen verfügen, um die Schreibsperre zu erhalten.</p> | 
+| <p>JET_errWriteConflict</p> | <p>Der Fehler, der zurückgegeben wird, wenn eine in Konflikt geratene Sperre angefordert wird.</p> | 
+
+
+
+Bei Erfolg hat die Sitzung die angeforderte Sperre abgerufen.
 
 Bei einem Fehler hat die Sitzung die angeforderte Sperre nicht abgerufen.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Schreib Sperren können nicht mit Sitzungen oder Cursorn mit schreibgeschützten Berechtigungen abgerufen werden, auch wenn die Sitzung und der Cursor letztendlich keinen Aktualisierungs Vorgang ausführen. Sowohl die Sitzung als auch der Cursor müssen über Schreibberechtigungen verfügen, um eine Schreibsperre zu erhalten.
+Schreibsperren können nicht mit Sitzungen oder Cursorn mit schreibgeschützten Berechtigungen abgerufen werden, auch wenn die Sitzung und der Cursor letztendlich keinen Aktualisierungsvorgang ausführen. Sowohl die Sitzung als auch der Cursor müssen über Schreibberechtigungen verfügen, um eine Schreibsperre zu erhalten.
 
-Lese-und Schreib Sperren sind eine Möglichkeit der pessimistischen Sperrung. Das pessimistische sperren erwartet, dass mehrere gleichzeitige Sitzungen in Konflikt stehen und Sperren im Voraus erhalten, um sicherzustellen, dass Ihre Vorgänge erfolgreich
+Lese- und Schreibsperren sind ein Mittel zur pessimistischen Sperrung. Bei der pessimistischen Sperrung wird erwartet, dass mehrere gleichzeitige Sitzungen in Konflikt geraten und Sperren im Voraus eingerichtet werden, um sicherzustellen, dass ihre Vorgänge erfolgreich sind.
 
-Die meisten Vorgänge werden aufgrund von implizit ergriffene Sperren serialisierbar sein. Bei einigen Vorgängen wird dies jedoch nicht der Fall sein. Um dies zu veranschaulichen, sehen Sie sich die beiden Transaktionen an:
+Die meisten Vorgänge sind aufgrund impliziter Sperren serialisierbar. Einige Vorgänge werden jedoch nicht durchgeführt. Betrachten Sie die beiden Transaktionen, um dies zu veranschaulichen:
 
-T1: R (a), U (B)
+T1 : R(A), U(B)
 
-T2: R (B), U (a)
+T2 : R(B), U(A)
 
-Durch die Versionsverwaltung auf Datensatzebene wird sichergestellt, dass jede Transaktion bei gleichzeitiger Ausführung die ursprünglichen Werte für A und B angezeigt wird. Es gibt keine serielle Reihenfolge der Ausführung, die dieselben Ergebnisse für A und B erzielen kann, wenn die Ergebnisse von den gelesenen Daten abhängig sind. Damit die Anwendung diese Transaktion serialisierbar macht, sollte Sie eine explizite Lesesperre für A und B in jeder Transaktion erhalten, wenn der Wert gelesen wird.
+Durch die Versionsangaben auf Datensatzebene wird sichergestellt, dass bei gleichzeitiger Ausführung jeder Transaktion die ursprünglichen Werte für A und B angezeigt werden. Es gibt keine serielle Ausführungsreihenfolge, die die gleichen Ergebnisse für A und B erzeugen kann, falls die Ergebnisse von den gelesenen Daten abhängig sind. Damit die Anwendung diese Transaktion serialisierbar machen kann, sollte sie eine explizite Lesesperre für A und B in jeder Transaktion erhalten, wenn der Wert gelesen wird.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -207,6 +123,6 @@ Durch die Versionsverwaltung auf Datensatzebene wird sichergestellt, dass jede T
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetprepareupdate](./jetprepareupdate-function.md)  
-[Jetstopservice](./jetstopservice-function.md)  
-[Jetupdate](./jetupdate-function.md)
+[JetPrepareUpdate](./jetprepareupdate-function.md)  
+[JetStopService](./jetstopservice-function.md)  
+[JetUpdate](./jetupdate-function.md)

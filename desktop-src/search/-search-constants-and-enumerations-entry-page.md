@@ -1,17 +1,17 @@
 ---
-description: Windows Search Konstanten und Enumerationen
+description: Windows Suchen nach Konstanten und Enumerationen
 ms.assetid: 27b25e6b-49e6-4c70-947e-d67bd1335924
-title: Windows Search Konstanten und Enumerationen
+title: Windows Suchen nach Konstanten und Enumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b18cee15be8bc9cec3bae22b55da6e6bf6c4624
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a4afc7ad8d1659921a3605e1f27b95e5b2303ad69a75e1807a230c9b21733523
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119594930"
 ---
-# <a name="windows-search-constants-and-enumerations"></a>Windows Search Konstanten und Enumerationen
+# <a name="windows-search-constants-and-enumerations"></a>Windows Suchen nach Konstanten und Enumerationen
 
 
 In diesem Abschnitt werden die folgenden Konstanten und Enumerationen dokumentiert:
@@ -56,11 +56,11 @@ In diesem Abschnitt werden die folgenden Konstanten und Enumerationen dokumentie
 
 [**\_PROXYZUGRIFF**](/windows/desktop/api/Searchapi/ne-searchapi-proxy_access)
 
-[**\_ \_ ABFRAGEPARSER-MANAGER-OPTION \_**](/windows/win32/api/structuredquery/ne-structuredquery-query_parser_manager_option)
+[**\_ \_ OPTION "ABFRAGEPARSER-MANAGER" \_**](/windows/win32/api/structuredquery/ne-structuredquery-query_parser_manager_option)
 
 [**ROWSETEVENT \_ ITEMSTATE**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_itemstate)
 
-[**ROWSETEVENT-TYP \_**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type)
+[**\_ROWSETEVENT-TYP**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type)
 
 [**\_SUCHINDIZIERUNGSPHASE \_**](/windows/desktop/api/Searchapi/ne-searchapi-search_indexing_phase)
 
@@ -74,15 +74,15 @@ In diesem Abschnitt werden die folgenden Konstanten und Enumerationen dokumentie
 
 [**STRUCTURED \_ QUERY \_ MULTIOPTION**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_multioption)
 
-[**FEHLER BEI \_ DER \_ ANALYSE STRUKTURIERTER \_ ABFRAGEN**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_parse_error)
+[**ANALYSEFEHLER BEI STRUKTURIERTER \_ ABFRAGE \_ \_**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_parse_error)
 
-[**OPTION ZUM \_ AUFLÖSEN \_ STRUKTURIERTER \_ ABFRAGEN**](/windows/desktop/api/Structuredquery/ne-structuredquery-structured_query_resolve_option)
+[**\_STRUCTURED QUERY \_ \_ RESOLVE-OPTION**](/windows/desktop/api/Structuredquery/ne-structuredquery-structured_query_resolve_option)
 
 [**STRUCTURED \_ QUERY \_ SINGLE \_ OPTION**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_single_option)
 
-[**STRUKTURIERTE \_ \_ ABFRAGESYNTAX**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_syntax)
+[**SYNTAX STRUKTURIERTER \_ ABFRAGEN \_**](/windows/win32/api/structuredquery/ne-structuredquery-structured_query_syntax)
 
-[**\_ \_ WORDREP-UNTERBRECHUNGSTYP**](/previous-versions/windows/desktop/legacy/ff819130(v=vs.85))
+[**\_WORDREP-UNTERBRECHUNGSTYP \_**](/previous-versions/windows/desktop/legacy/ff819130(v=vs.85))
 
  
 

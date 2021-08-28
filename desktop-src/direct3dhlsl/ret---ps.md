@@ -1,6 +1,6 @@
 ---
-title: Ret-PS
-description: Nimmt die Adresse einer Anweisung aus dem Rückgabe Adress Stapel und setzt deren Ausführung fort. Bei der Main-Funktion beendet diese Anweisung die Ausführung von Shaders.
+title: ret – ps
+description: Übernimmt die Adresse einer Anweisung aus dem Rückgabeadressenstapel und setzt die Ausführung davon fort. Im Fall der main-Funktion beendet diese Anweisung die Shaderausführung.
 ms.assetid: f853a137-8944-4f6e-89c0-7fd37d1a468e
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,58 +9,58 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b0535a4fcd66a1872b5eaa9ec97c292de710b48c
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: b77d2bb63655a83716d74621a5ece097259b0a90461f902801c375a079f118f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853780"
 ---
-# <a name="ret---ps"></a>Ret-PS
+# <a name="ret---ps"></a>ret – ps
 
-Nimmt die Adresse einer Anweisung aus dem Rückgabe Adress Stapel und setzt deren Ausführung fort. Bei der Main-Funktion beendet diese Anweisung die Ausführung von Shaders.
+Übernimmt die Adresse einer Anweisung aus dem Rückgabeadressenstapel und setzt die Ausführung davon fort. Im Fall der main-Funktion beendet diese Anweisung die Shaderausführung.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| TZI |
+| Ret |
 |-----|
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| TZI                   |      |      |      |      |      | x    | x     | x    | x     |
+| Ret                   |      |      |      |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Diese Anweisung übernimmt die Adresse einer Anweisung aus dem Rückgabe Adress Stapel und setzt deren Ausführung fort. Bei der Main-Funktion beendet diese Anweisung die Ausführung von Shaders.
+Diese Anweisung verwendet die Adresse einer Anweisung aus dem Rückgabeadressenstapel und setzt die Ausführung davon fort. Im Fall der main-Funktion beendet diese Anweisung die Shaderausführung.
 
-Die ret-Anweisung verwendet einen Vertex-Shader-Anweisungs Slot.
+Die ret-Anweisung verwendet einen Vertex-Shaderanweisungsslot.
 
-Wenn ein Shader keine Unterroutinen enthält, ist die Verwendung von Ret am Ende des Hauptprogramms optional.
+Wenn ein Shader keine Unterroutinen enthält, ist die Verwendung von ret am Ende des Hauptprogramms optional.
 
-Mehrere Return-Anweisungen sind im Hauptprogramm oder in einer Unterroutine nicht zulässig. die erste Return-Anweisung wird als Ende des Hauptprogramms oder der Unterroutine behandelt.
+Mehrere Return-Anweisungen sind im Hauptprogramm oder in einer Unterroutine nicht zulässig. Die erste return-Anweisung wird als Das Ende des Hauptprogramms oder der Unterroutine behandelt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

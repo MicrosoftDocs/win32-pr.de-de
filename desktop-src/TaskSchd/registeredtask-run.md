@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. Run-Methode
-description: Führt bei der Skripterstellung die registrierte Aufgabe sofort aus.
+title: RegisteredTask.Run-Methode
+description: Für die Skripterstellung führt den registrierten Task sofort aus.
 ms.assetid: 99c8f6ea-6dcf-4f9a-bf61-5191df5958c6
 keywords:
-- Run-Methode Taskplaner
-- Run-Methode Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, Run-Methode
+- Ausführen der Taskplaner
+- Ausführen der Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , Run-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd10539518b22f596e42afd56324c90b881412b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e747688ba80c08a39b0336fda126ae7d85a558f53c97aab230bc5d3d0113b360
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681620"
 ---
-# <a name="registeredtaskrun-method"></a>Registeredtask. Run-Methode
+# <a name="registeredtaskrun-method"></a>RegisteredTask.Run-Methode
 
-Führt bei der Skripterstellung die registrierte Aufgabe sofort aus.
+Für die Skripterstellung führt den registrierten Task sofort aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,25 +43,25 @@ RegisteredTask.Run( _
 
 <dl> <dt>
 
- Parameter \[ in\]
+*params* \[ In\]
 </dt> <dd>
 
-Die Parameter, die als Werte in den Aufgaben Aktionen verwendet werden. Wenn Sie keine Parameterwerte für die Task Aktionen angeben möchten, legen Sie diesen Parameter auf " **Nothing**" fest. Andernfalls kann ein einzelner Zeichen folgen Wert oder ein Array von Zeichen folgen Werten angegeben werden.
+Die Parameter, die als Werte in den Aufgabenaktionen verwendet werden. Um keine Parameterwerte für die Aufgabenaktionen anzugeben, legen Sie diesen Parameter auf **Nothing fest.** Andernfalls kann ein einzelner Zeichenfolgenwert oder ein Array von Zeichenfolgenwerten angegeben werden.
 
-Die Zeichen folgen Werte, die Sie angeben, werden mit Namen gekoppelt und als Name-Wert-Paare gespeichert. Wenn Sie einen einzelnen Zeichen folgen Wert angeben, ist Arg0 der Name, der dem Wert zugewiesen wird. Der Wert kann in der Task Aktion verwendet werden, bei der die $ (Arg0)-Variable in den Aktions Eigenschaften verwendet wird.
+Die angegebenen Zeichenfolgenwerte werden mit Namen gekoppelt und als Name-Wert-Paare gespeichert. Wenn Sie einen einzelnen Zeichenfolgenwert angeben, ist Arg0 der Name, der dem Wert zugewiesen ist. Der Wert kann in der Taskaktion verwendet werden, bei der die $(Arg0)-Variable in den Aktionseigenschaften verwendet wird.
 
-Wenn Sie Werte wie z. b. "0", "100" und "250" als Array von Zeichen folgen Werten übergeben, ersetzt "0" die Variablen "$ (Arg0)", "100" ersetzt die Variablen "$ (arg1)", und "250" ersetzt die $ (arg2)-Variablen, die in den Aktions Eigenschaften verwendet werden.
+Wenn Sie Werte wie "0", "100" und "250" als Array von Zeichenfolgenwerten übergeben, ersetzt "0" die $(Arg0)-Variablen, "100" ersetzt die $(Arg1)-Variablen, und "250" ersetzt die $(Arg2)-Variablen, die in den Aktionseigenschaften verwendet werden.
 
-Es können maximal 32 Zeichen folgen Werte angegeben werden.
+Es können maximal 32 Zeichenfolgenwerte angegeben werden.
 
-Weitere Informationen und eine Liste der Aktions Eigenschaften, die die Variablen $ (Arg0), $ (arg1),..., $ (Arg32) in ihren Werten verwenden können, finden Sie unter [Task Actions](task-actions.md).
+Weitere Informationen und eine Liste der Aktionseigenschaften, die variablen $(Arg0), $(Arg1), ..., $(Arg32) in ihren Werten verwenden können, finden Sie unter [Aufgabenaktionen](task-actions.md).
 
 </dd> <dt>
 
-*pprunningtask* \[ vorgenommen\]
+*ppRunningTask* \[ out\]
 </dt> <dd>
 
-Ein [**runningtask**](runningtask.md) -Objekt, das die neue Instanz der Aufgabe definiert.
+Ein [**RunningTask-Objekt,**](runningtask.md) das die neue Instanz der Aufgabe definiert.
 
 </dd> </dl>
 
@@ -69,11 +69,11 @@ Ein [**runningtask**](runningtask.md) -Objekt, das die neue Instanz der Aufgabe 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **registeredtask. Run** -Funktion entspricht der [**registeredtask. RunEx**](registeredtask-runex.md) -Funktion, wobei der Flags-Parameter gleich 0 und für den User-Parameter nichts angegeben ist.
+Die **RegisteredTask.Run-Funktion** entspricht der [**RegisteredTask.RunEx-Funktion**](registeredtask-runex.md) mit dem flags-Parameter gleich 0 und nichts, das für den Benutzerparameter angegeben ist.
 
-Diese Methode wird ohne Fehler zurückgegeben, aber die Aufgabe wird nicht ausgeführt, wenn die [**Task Settings. allowdemandstart**](tasksettings-allowdemandstart.md) -Eigenschaft für die registrierte Aufgabe auf false festgelegt ist.
+Diese Methode gibt ohne Fehler zurück, aber die Aufgabe wird nicht ausgeführt, wenn die [**TaskSettings.AllowDemandStart-Eigenschaft**](tasksettings-allowdemandstart.md) für den registrierten Task auf FALSE festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Diese Methode wird ohne Fehler zurückgegeben, aber die Aufgabe wird nicht ausge
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -95,7 +95,7 @@ Diese Methode wird ohne Fehler zurückgegeben, aber die Aufgabe wird nicht ausge
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

@@ -1,17 +1,17 @@
 ---
-description: Offset zwischen der Präsentationszeit und den Medienquellen-Zeitstempeln.
+description: Offset zwischen der Präsentationszeit und den Zeitstempeln der Medienquellen.
 ms.assetid: 450f3c39-063e-4bf3-838a-0f7c240d6647
-title: MF_EVENT_PRESENTATION_TIME_OFFSET-Attribut (mfapi. h)
+title: MF_EVENT_PRESENTATION_TIME_OFFSET -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 030d9d10eb5daf4fa1c920ad027397710b937881
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5ff2285bc624d42f17d4662cf93e3f46a65fcbef465e731874ef255c40c076d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013080"
 ---
-# <a name="mf_event_presentation_time_offset-attribute"></a>\_ \_ \_ Zeit \_ Offset Attribut der MF-Ereignis Präsentation
+# <a name="mf_event_presentation_time_offset-attribute"></a>MF \_ EVENT PRESENTATION TIME \_ \_ \_ OFFSET-Attribut
 
 Offset zwischen der Präsentationszeit und den Zeitstempeln der Medienquelle.
 
@@ -19,14 +19,14 @@ Offset zwischen der Präsentationszeit und den Zeitstempeln der Medienquelle.
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Offset wird wie folgt berechnet: Offset = Präsentationszeit-Quell Zeit. Dieses Attribut wird mit den folgenden Ereignissen verwendet:
+Der Offset wird wie folgt berechnet: offset = Präsentationszeit – Quellzeit. Dieses Attribut wird mit den folgenden Ereignissen verwendet:
 
--   [Mesessionnotifypresentationtime](mesessionnotifypresentationtime.md)
--   [Mesessionstarted](mesessionstarted.md)
+-   [MESessionNotifyPresentationTime](mesessionnotifypresentationtime.md)
+-   [MESessionStarted](mesessionstarted.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -44,16 +44,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Ereignisattribute](event-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
+[**ATTRIBUTEs::GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
+[**ATTRIBUTEs::SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 </dt> </dl>
 
  

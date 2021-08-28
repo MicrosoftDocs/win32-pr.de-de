@@ -1,19 +1,19 @@
 ---
-description: Ein Objekt, das den Typ beschreibt, da der WPD- \_ \_ Inhaltstyp \_ Fernsehen eine Fernsehaufzeichnung darstellt.
+description: Ein Objekt, das seinen Typ als WPD \_ CONTENT \_ TYPE TV \_ beschreibt, stellt eine Fernsehaufzeichnung dar.
 ms.assetid: b8e8da1a-94a9-4540-a4eb-fe0c0cd383f9
 title: WPD_CONTENT_TYPE_TELEVISION
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9e5141be847c0701f8828af0de8df41b8be21e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df7affe9058cf80c05d876becb2446186494161c085a383b0ee1b31b57452e61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119703860"
 ---
-# <a name="wpd_content_type_television"></a>WPD \_ - \_ Inhaltstyp \_ Fernsehen
+# <a name="wpd_content_type_television"></a>\_WPD-INHALTSTYP \_ \_ TV
 
-Ein Objekt, das den Typ beschreibt, da der WPD- \_ \_ Inhaltstyp \_ Fernsehen eine Fernsehaufzeichnung darstellt.
+Ein Objekt, das seinen Typ als WPD \_ CONTENT \_ TYPE TV \_ beschreibt, stellt eine Fernsehaufzeichnung dar.
 
 Dieser Objekttyp sollte die folgenden Eigenschaften hosten.
 
@@ -21,29 +21,29 @@ Dieser Objekttyp sollte die folgenden Eigenschaften hosten.
 
 | Eigenschaftsname                                                                                                         | Erforderlich oder optional                                                         |
 |-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](object-properties.md)                                                                | Erforderlich.                                                                    |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](object-properties.md)                                                 | Erforderlich.                                                                    |
-| [WPD- \_ Objekt \_ Name](object-properties.md)                                                            | Erforderlich, wenn das-Objekt eine Datei darstellt.                                    |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](object-properties.md)                          | Erforderlich.                                                                    |
-| [WPD- \_ Objekt \_ Format](object-properties.md)                                                        | Erforderlich.                                                                    |
-| [Inhaltstyp für WPD- \_ Objekt \_ \_](object-properties.md)                                           | Erforderlich.                                                                    |
-| [WPD- \_ Objekt \_ IsHidden](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                            |
-| [WPD- \_ Objekt \_ IsSystem](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).        |
-| [WPD- \_ Objekt \_ Größe](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                            |
-| [\_ \_ ursprünglicher \_ Dateiname \_ des WPD-Objekts](object-properties.md)                              | Erforderlich, wenn das-Objekt eine Datei darstellt.                                    |
-| [WPD- \_ Objekt \_ nicht \_ verwendbar](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.        |
-| [Verweise auf WPD- \_ Objekte \_](object-properties.md)                                                | Erforderlich, wenn das-Objekt über Verweise auf andere-Objekte verfügt.                      |
-| [WPD- \_ Objekt \_ Schlüsselwörter](object-properties.md)                                                    | Dies ist optional.                                                                    |
-| [WPD- \_ Objekt \_ Synchronisierungs- \_ ID](object-properties.md)                                                     | Dies ist optional.                                                                    |
-| [WPD- \_ Objekt \_ ist DRM- \_ \_ geschützt](object-properties.md)                                  | Erforderlich, wenn das Objekt durch Digital Rights Management-Technologie geschützt wird. |
-| [\_ \_ Erstellungsdatum des WPD-Objekts \_](object-properties.md)                                           | Dies ist optional.                                                                    |
-| [Datum des WPD- \_ Objekts \_ \_ geändert](object-properties.md)                                         | Empfohlen.                                                                 |
-| [erstelltes WPD- \_ Objekt \_ Datum \_](object-properties.md)                                         | Dies ist optional.                                                                    |
-| [\_ \_ zurück \_ Verweise auf WPD-Objekte](object-properties.md)                                     | Empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                   |
-| [\_ \_ \_ Funktions \_ Objekt- \_ ID des WPD-Objekt Containers](object-properties.md)     | Dies ist optional.                                                                    |
-| [\_ \_ \_ Funktions \_ Objekt- \_ ID des WPD-Objekt Containers](object-properties.md)     | Dies ist optional.                                                                    |
-| [WPD \_ - \_ Objekt \_ generieren \_ der Miniaturansicht aus der \_ Ressource](object-properties.md) | Dies ist optional.                                                                    |
-| [WPD- \_ Objekt \_ kann \_ Löschen](object-properties.md)                                               | Erforderlich, wenn das Objekt nicht gelöscht werden kann.                                    |
+| [\_WPD-OBJEKT-ID \_](object-properties.md)                                                                | Erforderlich.                                                                    |
+| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](object-properties.md)                                                 | Erforderlich.                                                                    |
+| [\_WPD-OBJEKTNAME \_](object-properties.md)                                                            | Erforderlich, wenn das -Objekt eine Datei darstellt.                                    |
+| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md)                          | Erforderlich.                                                                    |
+| [\_WPD-OBJEKTFORMAT \_](object-properties.md)                                                        | Erforderlich.                                                                    |
+| [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                                           | Erforderlich.                                                                    |
+| [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                            |
+| [\_WPD-OBJEKT \_ ISSYSTEM](object-properties.md)                                                    | Erforderlich, wenn das -Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).        |
+| [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                            |
+| [\_WPD-OBJEKT \_ \_ URSPRÜNGLICHER \_ DATEINAME](object-properties.md)                              | Erforderlich, wenn das -Objekt eine Datei darstellt.                                    |
+| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.        |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das -Objekt Verweise auf andere Objekte enthält.                      |
+| [\_WPD-OBJEKTSCHLÜSSELWÖRTER \_](object-properties.md)                                                    | Optional.                                                                    |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Optional.                                                                    |
+| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                  | Erforderlich, wenn das Objekt durch Digital Rights Management geschützt ist. |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                           | Optional.                                                                    |
+| [\_WPD-OBJEKTDATUM \_ \_ GEÄNDERT](object-properties.md)                                         | Empfohlen.                                                                 |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Optional.                                                                    |
+| [WPD \_ OBJECT BACK REFERENCES (WPD-OBJEKTVERWEISE \_ \_ ZURÜCK)](object-properties.md)                                     | Wird empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                   |
+| [\_ \_ WPD-OBJEKTCONTAINER \_ FUNKTIONALE \_ \_ OBJEKT-ID](object-properties.md)     | Optional.                                                                    |
+| [\_ \_ WPD-OBJEKTCONTAINER \_ FUNKTIONALE \_ \_ OBJEKT-ID](object-properties.md)     | Optional.                                                                    |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHT AUS \_ RESSOURCE](object-properties.md) | Optional.                                                                    |
+| [\_WPD-OBJEKT \_ KANN LÖSCHEN \_](object-properties.md)                                               | Erforderlich, wenn das Objekt nicht gelöscht werden kann.                                    |
 
 
 

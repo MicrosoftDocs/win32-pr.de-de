@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Linien- \_ devspecificfeature-Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Rückruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
+description: Die TAPI LINE DEVSPECIFICFEATURE-Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem \_ Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
 ms.assetid: 5f1a4da2-1a2a-4a18-8a69-82d27ddca9cf
-title: LINE_DEVSPECIFICFEATURE Meldung (TAPI. h)
+title: LINE_DEVSPECIFICFEATURE (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d45f91f4b3d45b52a345827e6535b054e9cf2c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 95c1ec56a41d6e57c6e090c9af682cb91c8ffdb891e376fcd9760ff1b51c5d51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012530"
 ---
-# <a name="line_devspecificfeature-message"></a>LINE \_ devspecificfeature-Meldung
+# <a name="line_devspecificfeature-message"></a>LINE \_ DEVSPECIFICFEATURE-Meldung
 
-Die TAPI- **Linien- \_ devspecificfeature** -Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Rückruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
+Die TAPI **LINE \_ DEVSPECIFICFEATURE-Nachricht** wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
 
 
 ```C++
@@ -26,17 +26,17 @@ Die TAPI- **Linien- \_ devspecificfeature** -Nachricht wird gesendet, um die Anw
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für ein Zeilen Gerät oder einen-Befehl. Dies ist gerätespezifisch.
+Ein Handle für ein Liniengerät oder einen Anruf. Dies ist gerätespezifisch.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wurde.
 
 </dd> <dt>
 
@@ -65,9 +65,9 @@ Gerätespezifisch.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Zeile \_ devspecificfeature** -Nachricht wird von einem Dienstanbieter in Verbindung mit der Funktion [**linedevspecificfeature**](/windows/desktop/api/Tapi/nf-tapi-linedevspecificfeature) verwendet. Seine Bedeutung ist gerätespezifisch.
+Die **LINE \_ DEVSPECIFICFEATURE-Nachricht** wird von einem Dienstanbieter in Verbindung mit der [**lineDevSpecificFeature-Funktion**](/windows/desktop/api/Tapi/nf-tapi-linedevspecificfeature) verwendet. Seine Bedeutung ist gerätespezifisch.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die **Zeile \_ devspecificfeature** -Nachricht wird von einem Dienstanbieter in 
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

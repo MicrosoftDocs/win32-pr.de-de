@@ -1,47 +1,47 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Topologie für die Audiowiedergabe oder Videowiedergabe erstellt wird.
+description: In diesem Thema wird beschrieben, wie Sie eine Topologie für die Audio- oder Videowiedergabe erstellen.
 ms.assetid: 9c536c4e-fbf8-4c16-932f-e5863b7652fe
-title: Erstellen von Wiedergabe Topologien
+title: Erstellen von Wiedergabetopologien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f6d34e9237278766ccb1ee174ba6c09bf953933
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 563fcef0c9ba8b1a4a33aefc17c5cea744f051470bb04df0ab4699ed4af6fa8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600820"
 ---
-# <a name="creating-playback-topologies"></a>Erstellen von Wiedergabe Topologien
+# <a name="creating-playback-topologies"></a>Erstellen von Wiedergabetopologien
 
-In diesem Thema wird beschrieben, wie eine Topologie für die Audiowiedergabe oder Videowiedergabe erstellt wird. Für die einfache Wiedergabe können Sie eine partielle Topologie erstellen, in der die Quellknoten direkt mit den Ausgabe Knoten verbunden sind. Sie müssen keine Knoten für die zwischen Transformationen, wie z. b. Decoder oder Farb Konverter, einfügen. Die Medien Sitzung verwendet den topologielader zum Auflösen der Topologie, und das topologielader fügt die benötigten Transformationen ein.
+In diesem Thema wird beschrieben, wie Sie eine Topologie für die Audio- oder Videowiedergabe erstellen. Für die grundlegende Wiedergabe können Sie eine partielle Topologie erstellen, in der die Quellknoten direkt mit den Ausgabeknoten verbunden sind. Sie müssen keine Knoten für die Zwischentransformationen einfügen, z. B. Decoder oder Farbkonverter. Die Mediensitzung verwendet das Topologielader zum Auflösen der Topologie, und das Topologielader fügt die erforderlichen Transformationen ein.
 
 -   [Erstellen der Topologie](#creating-the-topology)
--   [Verbinden von Datenströmen mit Medien senken](#connecting-streams-to-media-sinks)
--   [Erstellen der Medien Senke](#creating-the-media-sink)
+-   [Verbinden von Streams mit Mediensenken](#connecting-streams-to-media-sinks)
+-   [Erstellen der Mediensenke](#creating-the-media-sink)
 -   [Next Steps](#next-steps)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="creating-the-topology"></a>Erstellen der Topologie
 
-Im folgenden finden Sie die allgemeinen Schritte zum Erstellen einer partiellen Wiedergabe Topologie aus einer Medienquelle:
+Im Folgenden finden Sie die allgemeinen Schritte zum Erstellen einer Topologie für die Teilwiedergabe aus einer Medienquelle:
 
-1.  Erstellen Sie die Medienquelle. In den meisten Fällen verwenden Sie den quellresolver zum Erstellen der Medienquelle. Weitere Informationen finden Sie unter [quellresolver](source-resolver.md).
-2.  Den Präsentations Deskriptor der Medienquelle erhalten.
+1.  Erstellen Sie die Medienquelle. In den meisten Fällen verwenden Sie den Quellre resolver, um die Medienquelle zu erstellen. Weitere Informationen finden Sie unter [Quellre resolver](source-resolver.md).
+2.  Hier erhalten Sie den Präsentationsdeskriptor der Medienquelle.
 3.  Erstellen Sie eine leere Topologie.
-4.  Verwenden Sie den Präsentations Deskriptor, um die streamdeskriptoren aufzuzählen. Für jeden Datenstrom Deskriptor:
-    1.  Holen Sie sich den Haupt Medientyp des Streams, z. b. Audiodaten oder Videos.
-    2.  Überprüfen Sie, ob der Stream aktuell ausgewählt ist. (Optional können Sie einen Stream basierend auf dem Medientyp auswählen oder deaktivieren.)
-    3.  Wenn der Stream ausgewählt ist, erstellen Sie basierend auf dem Medientyp des Streams ein Aktivierungs Objekt für die Medien Senke.
-    4.  Fügen Sie einen Quellknoten für den Stream und einen Ausgabe Knoten für die Medien Senke hinzu.
-    5.  Verbinden Sie den Quellknoten mit dem Ausgabe Knoten.
+4.  Verwenden Sie den Präsentationsdeskriptor, um die Streamdeskriptoren aufzählen. Für jeden Streamdeskriptor:
+    1.  Hier erhalten Sie den Hauptmedientyp des Streams, z. B. Audio oder Video.
+    2.  Überprüfen Sie, ob der Stream derzeit ausgewählt ist. (Optional können Sie einen Stream basierend auf dem Medientyp auswählen oder deaktivieren.)
+    3.  Wenn der Stream ausgewählt ist, erstellen Sie basierend auf dem Medientyp des Streams ein Aktivierungsobjekt für die Mediensenke.
+    4.  Fügen Sie einen Quellknoten für den Stream und einen Ausgabeknoten für die Mediensenke hinzu.
+    5.  Verbinden quellknoten auf den Ausgabeknoten.
 
-Um diesen Prozess zu vereinfachen, ist der Beispielcode in diesem Thema in mehrere Funktionen gegliedert. Die Funktion der obersten Ebene hat den Namen `CreatePlaybackTopology` . Es werden drei Parameter benötigt:
+Um diesen Prozess einfacher zu verfolgen, ist der Beispielcode in diesem Thema in mehrere Funktionen organisiert. Die Funktion der obersten Ebene heißt `CreatePlaybackTopology` . Es werden drei Parameter verwendet:
 
--   Ein Zeiger auf eine [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) -Schnittstelle der Medienquelle.
--   Ein Zeiger auf die [**imfpresentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) -Schnittstelle des Präsentations Deskriptors. Rufen Sie diesen Zeiger durch Aufrufen von [**imfmediasource:: createpresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)ab. Für Quellen mit mehreren Präsentationen werden die Präsentations Deskriptoren für nachfolgende Präsentationen im Ereignis [menewpresentation](menewpresentation.md) übermittelt.
+-   Ein Zeiger auf eine [**BENUTZEROBERFLÄCHEMediaSource-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) der Medienquelle.
+-   Ein Zeiger auf die [**BESCHRIFTUNGDescriptor-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) des Präsentationsdeskriptors. Rufen Sie diesen Zeiger ab, indem [**Sie DENKMediaSource::CreatePresentationDescriptor aufrufen.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) Für Quellen mit mehreren Präsentationen werden die Präsentationsdeskriptoren für nachfolgende Präsentationen im [MENewPresentation-Ereignis](menewpresentation.md) bereitgestellt.
 -   Ein Handle für ein Anwendungsfenster. Wenn die Quelle über einen Videostream verfügt, wird das Video in diesem Fenster angezeigt.
 
-Die-Funktion gibt einen Zeiger auf eine partielle Wiedergabe Topologie im *pptopology* -Parameter zurück.
+Die Funktion gibt einen Zeiger auf eine Teilwiedergabetopologie im *ppTopology-Parameter* zurück.
 
 
 ```C++
@@ -96,20 +96,20 @@ done:
 
 Diese Funktion führt folgende Schritte aus:
 
-1.  Rufen Sie [**mfkreatetopology**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology) auf, um die Topologie zu erstellen. Anfänglich enthält die Topologie keine Knoten.
-2.  Aufrufen von [**imfpresentationdescriptor:: getstreamdescriptorcount**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorcount) , um die Anzahl der Streams in der Präsentation zu erhalten.
-3.  Für jeden Stream wird die Anwendungs definierte Funktion für `AddBranchToPartialTopology` eine Verzweigung in der Topologie aufgerufen. Diese Funktion wird im nächsten Abschnitt angezeigt.
+1.  Rufen [**Sie MFCreateTopology auf,**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetopology) um die Topologie zu erstellen. Anfänglich enthält die Topologie keine Knoten.
+2.  Rufen [**SieGEPRESENTationDescriptor::GetStreamDescriptorCount**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorcount) auf, um die Anzahl der Streams in der Präsentation zu erhalten.
+3.  Rufen Sie für jeden Stream die anwendungsdefinierte Funktion `AddBranchToPartialTopology` für einen Branch in der Topologie auf. Diese Funktion wird im nächsten Abschnitt gezeigt.
 
-## <a name="connecting-streams-to-media-sinks"></a>Verbinden von Datenströmen mit Medien senken
+## <a name="connecting-streams-to-media-sinks"></a>Verbinden von Streams mit Mediensenken
 
-Fügen Sie für jeden ausgewählten Stream einen Quellknoten und einen Ausgabe Knoten hinzu, und verbinden Sie dann die beiden Knoten. Der Quellknoten stellt den Datenstrom dar. Der Ausgabe Knoten stellt den [erweiterten Videorenderer](enhanced-video-renderer.md) (EVR) oder den [streamingaudiorenderer](streaming-audio-renderer.md) (SAR) dar.
+Fügen Sie für jeden ausgewählten Stream einen Quellknoten und einen Ausgabeknoten hinzu, und verbinden Sie dann die beiden Knoten. Der Quellknoten stellt den Stream dar. Der Ausgabeknoten stellt entweder den [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR) oder den [Streaming Audio Renderer](streaming-audio-renderer.md) (SAR) dar.
 
-Die- `AddBranchToPartialTopology` Funktion, wie im folgenden Beispiel gezeigt, übernimmt die folgenden Parameter:
+Die `AddBranchToPartialTopology` im nächsten Beispiel gezeigte Funktion verwendet die folgenden Parameter:
 
--   Ein Zeiger auf die [**imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) -Schnittstelle der Topologie.
--   Ein Zeiger auf die [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) -Schnittstelle der Medienquelle.
--   Ein Zeiger auf die [**imfpresentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) -Schnittstelle des Präsentations Deskriptors.
--   Der null basierte Index des Streams.
+-   Ein Zeiger auf [**dieTOPOLOGYTopology-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) der Topologie.
+-   Ein Zeiger auf die [**BENUTZEROBERFLÄCHEMediaSource-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) der Medienquelle.
+-   Ein Zeiger auf die [**BESCHRIFTUNGDescriptor-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) des Präsentationsdeskriptors.
+-   Der nullbasierte Index des Streams.
 -   Ein Handle für das Videofenster. Dieses Handle wird nur für den Videostream verwendet.
 
 
@@ -185,19 +185,19 @@ done:
 
 Die Funktion führt Folgendes aus:
 
-1.  Ruft [**IMF presentationdescriptor:: getstreamdescriptorbyindex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) auf und übergibt den streamindex. Diese Methode gibt einen Zeiger auf den Datenstrom Deskriptor für diesen Stream zusammen mit einem booleschen Wert zurück, der angibt, ob der Stream ausgewählt ist.
-2.  Wenn der Stream nicht ausgewählt ist, wird die Funktion beendet, und \_ es wird OK zurückgegeben, da die Anwendung nur dann eine topologieverzweigung für einen Stream erstellen muss, wenn Sie ausgewählt ist.
-3.  Wenn der Stream ausgewählt ist, vervollständigt die Funktion den topologiebranch wie folgt:
-    1.  Erstellt ein Aktivierungs Objekt für die Senke, indem die von der Anwendung definierte createmediasinkaktivierungs-Funktion aufgerufen wird. Diese Funktion wird im nächsten Abschnitt angezeigt.
-    2.  Fügt der Topologie einen Quellknoten hinzu. Code für diesen Schritt finden Sie im Thema [Erstellen von Quellknoten](creating-source-nodes.md).
-    3.  Fügt der Topologie einen Ausgabe Knoten hinzu. Code für diesen Schritt wird im Thema Erstellen von [Ausgabe Knoten](creating-output-nodes.md)gezeigt.
-    4.  Verbindet die beiden Knoten durch Aufrufen von [**imftopologynode:: ConnectOutput**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-connectoutput) auf dem Quellknoten. Durch das Verbinden der Knoten gibt die Anwendung an, dass der upstreamknoten Daten an den downstreamknoten übermitteln soll. Ein Quellknoten verfügt über eine Ausgabe, und ein Ausgabe Knoten verfügt über eine Eingabe, sodass beide streamindizes NULL sind.
+1.  Ruft [**DIEPRESENTPresentationDescriptor::GetStreamDescriptorByIndex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) auf und übergibt den Streamindex. Diese Methode gibt einen Zeiger auf den Streamdeskriptor für diesen Stream zurück, zusammen mit einem booleschen Wert, der angibt, ob der Stream ausgewählt ist.
+2.  Wenn der Stream nicht ausgewählt ist, wird die Funktion beendet und gibt S OK zurück, da die Anwendung keinen Topologiezweig für einen Stream erstellen muss, es sei denn, \_ er ist ausgewählt.
+3.  Wenn der Stream ausgewählt ist, schließt die Funktion den Topologiezweig wie folgt ab:
+    1.  Erstellt ein Aktivierungsobjekt für die Senke, indem die anwendungsdefinierte CreateMediaSinkActivate-Funktion aufruft. Diese Funktion wird im nächsten Abschnitt gezeigt.
+    2.  Fügt der Topologie einen Quellknoten hinzu. Der Code für diesen Schritt wird im Thema Erstellen [von Quellknoten gezeigt.](creating-source-nodes.md)
+    3.  Fügt der Topologie einen Ausgabeknoten hinzu. Der Code für diesen Schritt wird im Thema Erstellen [von Ausgabeknoten gezeigt.](creating-output-nodes.md)
+    4.  Verbindet die beiden Knoten durch Aufrufen [**vonTOPOLOGYNode::ConnectOutput**](/windows/desktop/api/mfidl/nf-mfidl-imftopologynode-connectoutput) auf dem Quellknoten. Durch das Verbinden der Knoten gibt die Anwendung an, dass der Upstreamknoten Daten an den Downstreamknoten liefern soll. Ein Quellknoten verfügt über eine Ausgabe, und ein Ausgabeknoten verfügt über eine Eingabe, sodass beide Streamindizes 0 (null) sind.
 
-Erweiterte Anwendungen können Streams auswählen oder deaktivieren, anstatt die Standardkonfiguration der Quelle zu verwenden. Eine Quelle kann über mehrere Datenströme verfügen, von denen jede möglicherweise standardmäßig ausgewählt ist. Der Präsentations Deskriptor der Medienquelle verfügt über einen Standardsatz von streamauswahlen. In einer einfachen Videodatei mit einem einzelnen Audiostream und Videostream wählt die Medienquelle in der Regel beide Streams standardmäßig aus. Eine Datei kann jedoch mehrere Audiostreams für verschiedene Sprachen oder mehrere Videostreams enthalten, die mit unterschiedlichen Bitraten codiert sind. In diesem Fall werden einige der Streams standardmäßig deaktiviert. Die Anwendung kann die Auswahl ändern, indem Sie [**imfpresentationdescriptor:: selectstream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-selectstream) und [**imfpresentationdescriptor::D eselectstream**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-deselectstream) im Präsentations Deskriptor aufrufen.
+Erweiterte Anwendungen können Streams auswählen oder deaktivieren, anstatt die Standardkonfiguration der Quelle zu verwenden. Eine Quelle kann mehrere Datenströme haben, und jeder dieser Datenströme kann standardmäßig ausgewählt werden. Der Präsentationsdeskriptor der Medienquelle verfügt über einen Standardsatz von Streamauswahlen. In einer einfachen Videodatei mit einem einzelnen Audio- und Videostream wählt die Medienquelle in der Regel standardmäßig beide Streams aus. Eine Datei kann jedoch mehrere Audiostreams für verschiedene Sprachen oder mehrere Videostreams haben, die mit unterschiedlichen Bitraten codiert sind. In diesem Fall wird die Auswahl einiger Streams standardmäßig aufgehoben. Die Anwendung kann die Auswahl ändern, indem [**sie FÜR DEN Präsentationsdeskriptor DIE FOLGENDEN Aufrufe**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-selectstream) ankn.: SELECTStream und [**DANNPresentationDescriptor::D eselectStream.**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-deselectstream)
 
-## <a name="creating-the-media-sink"></a>Erstellen der Medien Senke
+## <a name="creating-the-media-sink"></a>Erstellen der Mediensenke
 
-Die Next-Funktion erstellt ein Aktivierungs Objekt für die EVR-oder SAR-Medien Senke.
+Die nächste Funktion erstellt ein Aktivierungsobjekt für die EVR- oder SAR-Mediensenke.
 
 
 ```C++
@@ -264,26 +264,26 @@ done:
 
 Diese Funktion führt folgende Schritte aus:
 
-1.  Ruft [**IMF-Deskriptor:: getmediatypeer Handler**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamdescriptor-getmediatypehandler) für den Datenstrom Deskriptor auf. Diese Methode gibt einen [**IMF Media**](/windows/desktop/api/mfidl/nn-mfidl-imfmediatypehandler) Type-Schnittstellen Zeiger zurück.
+1.  Ruft [**FÜR DEN Streamdeskriptor DEN WERTSTREAMDescriptor::GetMediaTypeHandler**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamdescriptor-getmediatypehandler) auf. Diese Methode gibt einen [**INTERFACE-Zeiger FÜR DIEMEDIATYPEHandler-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediatypehandler) zurück.
 
-2.  Ruft [**IMF mediatypeer Handler:: getmajortype**](/windows/desktop/api/mfidl/nf-mfidl-imfmediatypehandler-getmajortype)auf. Diese Methode gibt die GUID des Haupt Typs für den Datenstrom zurück.
+2.  Ruft [**DEN TYP DESMEDIATYPEHandler::GetMajorType auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediatypehandler-getmajortype) Diese Methode gibt die Haupttyp-GUID für den Stream zurück.
 
-3.  Wenn der Streamtyp audiobasiert ist, ruft die Funktion [**mfkreateaudiorendereractivation**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) auf, um das Aktivierungs Objekt für audiorenderer zu erstellen. Wenn der Streamtyp "Video" ist, ruft die Funktion " [**mfkreatevideorendereractivation**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) " auf, um das Videorenderer-Aktivierungs Objekt zu erstellen. Beide Funktionen geben einen Zeiger auf die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstelle zurück. Dieser Zeiger wird verwendet, um den Ausgabe Knoten für die Senke zu initialisieren, wie zuvor gezeigt.
+3.  Wenn der Streamtyp Audio ist, ruft die Funktion [**MFCreateAudioRendererActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) auf, um das Aktivierungsobjekt des Audiorenderers zu erstellen. Wenn der Streamtyp Video ist, ruft die Funktion [**MFCreateVideoRendererActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatevideorendereractivate) auf, um das Aktivierungsobjekt des Videorenderers zu erstellen. Beide Funktionen geben einen Zeiger auf die [**BERACTIVate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) zurück. Dieser Zeiger wird verwendet, um den Ausgabeknoten für die Senke zu initialisieren, wie zuvor gezeigt.
 
-Für jeden anderen Streamtyp wird in diesem Beispiel ein Fehlercode zurückgegeben. Alternativ können Sie einfach den Datenstrom deaktivieren.
+Für jeden anderen Streamtyp gibt dieses Beispiel einen Fehlercode zurück. Alternativ können Sie einfach die Auswahl des Streams aufheben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um jeweils eine Mediendatei wiederzugeben, stellen Sie die Topologie in der Medien Sitzung durch Aufrufen von [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology)in eine Warteschlange. Die Medien Sitzung verwendet den topologielader zum Auflösen der Topologie. Ein umfassendes Beispiel finden Sie unter wieder [Gabe von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md).
+Um eine Mediendatei nach der anderen wiederzugeben, stellen Sie die Topologie in der Mediensitzung in die Warteschlange, indem [**Sie DEN AUFRUF VON DURCHWAHLMediaSession::SetTopology aufrufen.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) Die Mediensitzung verwendet das Topologielader, um die Topologie aufzulösen. Ein vollständiges Beispiel finden Sie unter [How to Play Media Files with Media Foundation](how-to-play-unprotected-media-files.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Wiedergabe nicht geschützter Mediendateien](how-to-play-unprotected-media-files.md)
+[Wiederspielen von ungeschützten Mediendateien](how-to-play-unprotected-media-files.md)
 </dt> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> <dt>
 
 [Topologien](topologies.md)

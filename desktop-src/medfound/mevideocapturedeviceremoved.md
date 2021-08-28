@@ -1,35 +1,35 @@
 ---
-description: Wird von imfmediasource gesendet, die das Gerät kapselt, um anzugeben, dass das Gerät entfernt wurde.
+description: Wird von DER QUELLEMEDIASOURCE gesendet, die das Gerät kapselt, um anzugeben, dass das Gerät entfernt wurde.
 ms.assetid: 107AFF19-B444-4B62-9217-46A99AC3632C
-title: Mevideocapturedeviceremoved-Ereignis (mfobjects. h)
+title: MEVideoCaptureDeviceRemoved-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e3276f53f86bdce78825b94828577eab9e40954
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f209dc4be6e8f45639b060de1328cb04c932463f6b76355b7538b5649a69634e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013480"
 ---
-# <a name="mevideocapturedeviceremoved-event"></a>Mevideocapturedeviceremoved-Ereignis
+# <a name="mevideocapturedeviceremoved-event"></a>MEVideoCaptureDeviceRemoved-Ereignis
 
-Wird von [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) gesendet, die das Gerät kapselt, um anzugeben, dass das Gerät entfernt wurde.
+Wird von [**DER QUELLEMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) gesendet, die das Gerät kapselt, um anzugeben, dass das Gerät entfernt wurde.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE               | BESCHREIBUNG                           |
+| VARTYPE               | Beschreibung                           |
 |-----------------------|---------------------------------------|
-| VT \_ leer <br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY <br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird von der [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) gesendet, die das Gerät kapselt.
+Dieses Ereignis wird von [**DERENMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) gesendet, die das Gerät kapselt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Dieses Ereignis wird von der [**imfmediasource**](/windows/desktop/api/mfidl/nn-
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Dieses Ereignis wird von der [**imfmediasource**](/windows/desktop/api/mfidl/nn-
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

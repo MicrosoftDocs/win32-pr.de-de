@@ -1,6 +1,6 @@
 ---
-title: Sub-vs
-description: Subtrahiert Quellen. | Sub-vs
+title: sub – vs
+description: Subtrahiert Quellen. | sub – vs
 ms.assetid: ccd7ca57-05a9-4ee8-8bda-c8c875476aaf
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a4bf15522798e1da5ec0bde5b729f241ff9dabde
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f52098bd48d8530d0214cf104bde027908fea9b0d21f895a382cc118133f5b3e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853160"
 ---
-# <a name="sub---vs"></a>Sub-vs
+# <a name="sub---vs"></a>sub – vs
 
 Subtrahiert Quellen.
 
@@ -24,7 +24,7 @@ Subtrahiert Quellen.
 
 
 
-| Sub DST, src0, Quelle1 |
+| sub dst, src0, src1 |
 |---------------------|
 
 
@@ -33,15 +33,15 @@ Subtrahiert Quellen.
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | sub                    | x    | x    | x    | x     | x    | x     |
 
@@ -49,7 +49,7 @@ where
 
  
 
-Diese Anweisung führt die Subtraktion aus, die in dieser Formel angezeigt wird.
+Diese Anweisung führt die in dieser Formel gezeigte Subtraktion aus.
 
 
 ```
@@ -65,7 +65,7 @@ dest.w = src0.w - src1.w
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

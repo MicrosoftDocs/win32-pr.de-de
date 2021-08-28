@@ -1,19 +1,19 @@
 ---
-description: Die IAzApplication2-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAzApplication2-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: AF5BDF93-B36E-4074-B707-A8111D383554
 title: IAzApplication2-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2462b78f63049fdbb91c5cd37607675978c06621
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae326fade6b75073c199ef8dddd2dc717b666e81bf292bf4d64528a292f0e111
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671940"
 ---
 # <a name="iazapplication2-methods"></a>IAzApplication2-Methoden
 
-Die [**IAzApplication2**](/windows/desktop/api/Azroles/nn-azroles-iazapplication2) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAzApplication2-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazapplication2) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

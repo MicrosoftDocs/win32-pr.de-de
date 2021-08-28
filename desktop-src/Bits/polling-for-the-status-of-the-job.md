@@ -1,28 +1,28 @@
 ---
-title: Abrufen des Auftrags Status
-description: Standardmäßig muss eine Anwendung Änderungen im Status eines Auftrags Abfragen.
+title: Abruf des Status des Auftrags
+description: Standardmäßig muss eine Anwendung Änderungen am Status eines Auftrags überprüfen.
 ms.assetid: b12ee1e0-d3d9-4d31-b2af-7491480968f0
 keywords:
-- Übertragen von Auftrags Bits, Abrufen
-- Abrufen von Auftragsstatus Bits
+- BITS des Übertragungsauftrags , Abruf
+- Abruf von Auftragsstatus BITS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2df7fcde49d7359ff8cfa38326eba1e1e0bfeac5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: af7f1f47a891968e686ae1ffc083bfa9b00d79c8bdc22e2c78ea523ef7ec707e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119701720"
 ---
-# <a name="polling-for-the-status-of-the-job"></a>Abrufen des Auftrags Status
+# <a name="polling-for-the-status-of-the-job"></a>Abruf des Status des Auftrags
 
-Standardmäßig muss eine Anwendung Änderungen im Status eines Auftrags Abfragen. Um Änderungen im Status des Auftrags aufzuzeichnen, müssen Sie die [**ibackgroundcopyjob:: GetState**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getstate) -Methode aufrufen. Um Änderungen in der Anzahl der übertragenen Bytes und Dateien aufzuzeichnen, müssen Sie die [**ibackgroundcopyjob:: GetProgress**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress) -Methode aufrufen. Rufen Sie die [**IBackgroundCopyJob2:: getreplyprogress**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyprogress) -Methode auf, um Statusinformationen über den Antwort Teil eines Upload-Antwort-Auftrags abzurufen. Ein Beispiel, in dem die Fortschrittsinformationen verwendet werden, finden Sie unter [bestimmen des Fortschritts eines Auftrags](determining-the-progress-of-a-job.md).
+Standardmäßig muss eine Anwendung Änderungen am Status eines Auftrags überprüfen. Um Änderungen im Zustand des Auftrags zu erfassen, rufen Sie die [**IBackgroundCopyJob::GetState-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getstate) auf. Um Änderungen an der Anzahl der übertragenen Bytes und Dateien zu erfassen, rufen Sie die [**IBackgroundCopyJob::GetProgress-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress) auf. Um Statusinformationen zum Antwortteil eines Upload-Antwort-Auftrags abzurufen, rufen Sie die [**IBackgroundCopyJob2::GetReplyProgress-Methode**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyprogress) auf. Ein Beispiel, in dem die Statusinformationen verwendet werden, finden Sie unter [Bestimmen des Fortschritts eines Auftrags.](determining-the-progress-of-a-job.md)
 
-Die [**BG- \_ Auftrags \_ Status**](/windows/desktop/api/Bits/ne-bits-bg_job_state) -Enumeration definiert die Zustände eines Auftrags, und die Status Struktur der [**BG- \_ Aufträge \_**](/windows/desktop/api/Bits/ns-bits-bg_job_progress) enthält Informationen zur Anzahl von Bytes und übertragenen Dateien.
+Die [**BG \_ JOB \_ STATE-Enumeration**](/windows/desktop/api/Bits/ne-bits-bg_job_state) definiert die Status eines Auftrags, und die [**BG JOB \_ \_ PROGRESS-Struktur**](/windows/desktop/api/Bits/ns-bits-bg_job_progress) enthält Informationen zur Anzahl der übertragenen Bytes und Dateien.
 
-Zum Verwenden von Abruf müssen Sie einen Mechanismus zum Initiieren des Abruf Vorgangs erstellen. Erstellen Sie z. b. einen Timer, oder verwenden Sie die Schaltfläche "Aktualisieren" auf der Benutzeroberfläche. Allerdings ist es möglicherweise einfacher, sich für Ereignis Benachrichtigungen zu registrieren und Ereignisse zu empfangen, wenn sich der Status oder der Fortschritt ändert. Weitere Informationen zur Ereignis Benachrichtigung finden Sie unter [Registrieren eines com-Rückrufs](registering-a-com-callback.md).
+Um Abrufe zu verwenden, müssen Sie einen Mechanismus zum Initiieren von Abrufen erstellen. Erstellen Sie beispielsweise einen Timer, oder verwenden Sie die Schaltfläche "Aktualisieren" auf der Benutzeroberfläche. Es kann jedoch einfacher sein, sich für Ereignisbenachrichtigungen zu registrieren und Ereignisse zu empfangen, wenn sich der Status oder fortschritt ändert. Informationen zur Ereignisbenachrichtigung finden Sie unter [Registrieren eines COM-Rückrufs.](registering-a-com-callback.md)
 
-Im folgenden Beispiel wird ein Timer verwendet, um den Status eines Auftrags abzurufen. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist.
+Im folgenden Beispiel wird ein Timer verwendet, um den Status eines Auftrags zu fragen. Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist.
 
 
 ```C++
@@ -71,9 +71,9 @@ CloseHandle(hTimer);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

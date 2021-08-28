@@ -1,35 +1,35 @@
 ---
-description: Ab Windows Vista bietet die Tablet PC-Technologie Unterstützung für Fingereingabe auf Tablet PCs mit Touchscreen-fähigen Digitalisierern. Diese Unterstützung umfasst eine erweiterte Benutzeroberfläche, um die Ziel-und Befehlsfenster zu unterstützen, wenn Sie einen Finger für die Eingabe verwenden.
+description: Ab Windows Vista bietet Tablet PC Technology Unterstützung für Toucheingaben auf Tablet-PCs mit touchfähigen Digitizern. Diese Unterstützung umfasst eine erweiterte Benutzeroberfläche, die bei der Ausrichtung und Befehlssteuerung Windows beim Verwenden eines Fingers für die Eingabe hilft.
 ms.assetid: 63f1d71f-03d8-4d83-a174-e3dc7c57bad0
-title: Unterstützung für Berührungs Eingaben in Windows Vista
+title: Toucheingabeunterstützung in Windows Vista
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b623630c93c33b846ab1bb491fc56fe46dfe825
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e81b22130a7c731d49556db263d5c1d5565ef51aa103925969b35c98548a32d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119335070"
 ---
-# <a name="touch-input-support-in-windows-vista"></a>Unterstützung für Berührungs Eingaben in Windows Vista
+# <a name="touch-input-support-in-windows-vista"></a>Toucheingabeunterstützung in Windows Vista
 
-Ab Windows Vista bietet die Tablet PC-Technologie Unterstützung für Fingereingabe auf Tablet PCs mit Touchscreen-fähigen Digitalisierern. Diese Unterstützung umfasst eine erweiterte Benutzeroberfläche, um die Ziel-und Befehlsfenster zu unterstützen, wenn Sie einen Finger für die Eingabe verwenden.
+Ab Windows Vista bietet Tablet PC Technology Unterstützung für Toucheingaben auf Tablet-PCs mit touchfähigen Digitizern. Diese Unterstützung umfasst eine erweiterte Benutzeroberfläche, die bei der Ausrichtung und Befehlssteuerung Windows beim Verwenden eines Fingers für die Eingabe hilft.
 
-## <a name="touch-digitizer-support"></a>Unterstützung für Fingerabdruck Unterstützung
+## <a name="touch-digitizer-support"></a>Touch Digitizer-Unterstützung
 
-### <a name="pen-and-touch-input-not-exclusive"></a>Stift-und Berührungs Eingabe nicht exklusiv
+### <a name="pen-and-touch-input-not-exclusive"></a>Stift und Toucheingabe nicht exklusiv
 
-Gehen Sie nicht davon aus, dass sich Stift-und Berührungs Eingaben in den Anwendungen [**InkCollector**](inkcollector-class.md), [**InkOverlay**](inkoverlay-class.md)und [**RealTimeStylus**](realtimestylus-class.md) gegenseitig ausschließen.
+Gehen Sie nicht davon aus, dass Stift- und Toucheingaben sich in [**InkCollector-,**](inkcollector-class.md) [**InkOverlay-**](inkoverlay-class.md)und [**RealTimeStylus-Anwendungen**](realtimestylus-class.md) gegenseitig ausschließen.
 
-Wenn das System in Windows Vista einen Stift erkennt, werden Berührungs Eingaben ignoriert. Das heißt, der Fingerabdruck wird beendet, und der Stift Strich beginnt. Da sich dies möglicherweise in der Zukunft ändern kann, sollte der Code nicht annehmen, dass der Stift und die Berührungs Eingabe sich gegenseitig ausschließen.
+Wenn das System in Windows Vista einen Stift erkennt, ignoriert es Toucheingaben. Das heißt, der Touchstrich endet, und der Stiftstrich beginnt. Da sich dies in Zukunft möglicherweise ändern könnte, sollte Ihr Code nicht davon ausgehen, dass Stift- und Toucheingaben sich gegenseitig ausschließen.
 
-### <a name="other-mouse-message-sources"></a>Andere Maus Nachrichtenquellen
+### <a name="other-mouse-message-sources"></a>Andere Mausnachrichtenquellen
 
-Es gibt auch andere Quellen für Maus Meldungen, auch wenn der Benutzer nur mit Finger oder Pen interagiert. Zu den Quellen gehören Touchpads sowie eine Bewegung, mit der eine Anwendung hinter einem geschichteten Fenster erkennen kann, dass der Mauszeiger über der Anwendung bewegt wird.
+Es gibt auch andere Quellen für Mausnachrichten, auch wenn der Benutzer nur mit dem Finger oder Stift interagiert. Zu den Quellen gehören Touchpads sowie Bewegung, mit der eine Anwendung hinter einem mehrstufigen Fenster darauf achten kann, dass sich die Maus über der Anwendung bewegt.
 
-### <a name="enabling-and-disabling-the-touch-input-user-interface"></a>Aktivieren und Deaktivieren der Benutzeroberfläche für Berührungs Eingaben
+### <a name="enabling-and-disabling-the-touch-input-user-interface"></a>Aktivieren und Deaktivieren der Toucheingabe-Benutzeroberfläche
 
-Abhängig von den Anforderungen Ihrer Anwendung möchten Sie möglicherweise die Benutzeroberfläche für die Berührungs Eingabe aktivieren oder deaktivieren. Um dies zu erreichen, fangen Sie die Meldungen des Betriebssystem Fensters in einer Fenster Prozedur ab, und ändern Sie die Windows-Meldung. Überschreiben Sie [WndProc](/dotnet/api/system.windows.forms.control.wndproc?view=netcore-3.1) in Ihrer Anwendung, um diese Meldungen abzufangen. Der folgende C \# -Pseudo Code zeigt, wie Sie die Benutzeroberfläche für die Berührungs Eingabe aktivieren und deaktivieren. Der Code zeigt auch die Verwendung desselben Verfahrens zum Deaktivieren der Press-und-Halt-Geste. Diese Methode kann auch zum Deaktivieren des Tablettstifts verwendet werden.
+Abhängig von den Anforderungen Ihrer Anwendung können Sie die Toucheingabe-Benutzeroberfläche aktivieren oder deaktivieren. Um dies zu erreichen, fangen Sie Betriebssystemfenstermeldungen in einer Fensterprozedur ab, und ändern Sie die Windows Meldung. Überschreiben Sie [WndProc](/dotnet/api/system.windows.forms.control.wndproc?view=netcore-3.1) in Ihrer Anwendung, um diese Nachrichten abzufangen. Der folgende \# C-Pseudocode zeigt, wie die Benutzeroberfläche für die Toucheingabe aktiviert und deaktiviert wird. Der Code zeigt auch die Verwendung der gleichen Technik zum Deaktivieren der Gedrückt halten-Geste. Diese Methode funktioniert auch zum Deaktivieren des Stifts.
 
 
 ```C++
@@ -78,7 +78,7 @@ protected override void WndProc(ref Message msg)
 
 <dl> <dt>
 
-[Windows-Fingereingabe](../wintouch/windows-touch-portal.md)
+[Windows Touch](../wintouch/windows-touch-portal.md)
 </dt> </dl>
 
  

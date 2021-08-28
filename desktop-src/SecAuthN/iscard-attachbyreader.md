@@ -1,7 +1,7 @@
 ---
-description: Die attachbyreader-Methode öffnet die Smartcard im benannten Reader.
+description: Die AttachByReader-Methode öffnet die Smartcard im benannten Reader.
 ms.assetid: a92f3281-5018-4e90-bfa0-f03eb9373bb1
-title: 'Iscard:: attachbyreader-Methode (scardmgr. h)'
+title: ISCard::AttachByReader-Methode (Scardmgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 2607ea2e13be2dcccc3c1b6beebd40c86822d0a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1227c94edbf5816a8f1e867436462a743e6961e3ca70bb7b8a521c289312f18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015680"
 ---
-# <a name="iscardattachbyreader-method"></a>Iscard:: attachbyreader-Methode
+# <a name="iscardattachbyreader-method"></a>ISCard::AttachByReader-Methode
 
-\[Die **attachbyreader** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **AttachByReader-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **attachbyreader** -Methode öffnet die [*Smartcard*](../secgloss/s-gly.md) im benannten [*Reader*](../secgloss/r-gly.md).
+Die **AttachByReader-Methode** öffnet die [*Smartcard*](../secgloss/s-gly.md) im benannten [*Reader*](../secgloss/r-gly.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ HRESULT AttachByReader(
 
 <dl> <dt>
 
-*bstrinreadername* \[ in\]
+*bstrReaderName* \[ In\]
 </dt> <dd>
 
-Ein **BSTR** -Wert, der den Namen des smartcardreaders enthält.
+Ein **BSTR,** der den Namen des Smartcardlesers enthält.
 
 </dd> <dt>
 
-*Share Mode* \[ in\]
+*ShareMode* \[ In\]
 </dt> <dd>
 
-Der Modus, in dem der Zugriff auf die Smartcard beansprucht werden soll.
+Modus, in dem der Zugriff auf die Smartcard beansprucht werden soll.
 
 
 
 | Wert                                                                                                                                            | Bedeutung                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="EXCLUSIVE"></span><span id="exclusive"></span><dl> <dt>**Ausschließliche**</dt> </dl> | Diese Verbindung wird von keiner anderen Person mit der Smartcard verwendet.<br/> |
-| <span id="SHARED"></span><span id="shared"></span><dl> <dt>**Genu**</dt> </dl>          | Diese Verbindung kann von anderen Anwendungen verwendet werden.<br/>        |
+| <span id="EXCLUSIVE"></span><span id="exclusive"></span><dl> <dt>**Exklusive**</dt> </dl> | Niemand anderes verwendet diese Verbindung mit der Smartcard.<br/> |
+| <span id="SHARED"></span><span id="shared"></span><dl> <dt>**geteilt**</dt> </dl>          | Andere Anwendungen können diese Verbindung verwenden.<br/>        |
 
 
 
@@ -68,10 +68,10 @@ Der Modus, in dem der Zugriff auf die Smartcard beansprucht werden soll.
 
 </dd> <dt>
 
-*Präfetokoll* \[ in\]
+*PrefProtocol* \[ In\]
 </dt> <dd>
 
-Bevorzugter Protokoll Wert.
+Bevorzugter Protokollwert.
 
 <dl><span id="T0"></span><span id="t0"></span><dt>
 
@@ -89,28 +89,28 @@ Bevorzugter Protokoll Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Das Öffnen auf der Smartcard im benannten Reader wurde erfolgreich abgeschlossen.<br/>           |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Es liegt ein Problem mit einem oder mehreren parametern vor, die an die Funktion übergeben werden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
-Wenn Sie die Verwendung des Readers abgeschlossen haben, geben Sie die Anlage frei, indem Sie die [**iscard::D Etach**](iscard-detach.md) -Methode aufrufen.
+Wenn Sie die Verwendung des Readers abgeschlossen haben, geben Sie die Anlage frei, indem Sie die [**ISCard::D etach-Methode**](iscard-detach.md) aufrufen.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt das Anfügen an eine Smartcard in einem angegebenen Smartcardlesegerät.
+Das folgende Beispiel zeigt das Anfügen an eine Smartcard in einem angegebenen Smartcardleser.
 
 
 ```C++
@@ -159,31 +159,31 @@ void main()
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardmgr. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardmgr. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardmgr.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardmgr.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscard ist definiert als 1461aac3-6810-11D0-918f -00aa00c18068<br/>               |
+| IID<br/>                      | IID \_ ISCard ist als 1461AAC3-6810-11D0-918F-00AA00C18068 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attachbyhandle**](iscard-attachbyhandle.md)
+[**AttachByHandle**](iscard-attachbyhandle.md)
 </dt> <dt>
 
 [**Trennen**](iscard-detach.md)
 </dt> <dt>
 
-[**Iscard**](iscard.md)
+[**ISCard**](iscard.md)
 </dt> <dt>
 
-[**Erneut**](iscard-reattach.md)
+[**Anfügen**](iscard-reattach.md)
 </dt> </dl>
 
  

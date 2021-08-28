@@ -1,44 +1,44 @@
 ---
-description: Der letzte Schritt beim Erstellen einer Ereignis Referenzseite (ERP) ist das Testen.
+description: Der letzte Schritt beim Erstellen einer Ereignisverweisseite (ERP) besteht darin, sie zu testen.
 ms.assetid: 12690317-1cd2-496c-8a0d-ba6caca58b86
-title: Testen einer Ereignis Referenzseite
+title: Testen einer Ereignisverweisseite
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6afaaec279403922abde578b9e73931e607680f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2aa9fb8697181085a9b74333dba82328e90b502e6590a764fac589efa8e6f90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676635"
 ---
-# <a name="testing-an-event-reference-page"></a>Testen einer Ereignis Referenzseite
+# <a name="testing-an-event-reference-page"></a>Testen einer Ereignisverweisseite
 
-Der letzte Schritt beim Erstellen einer Ereignis Referenzseite (ERP) ist das Testen. Sie können ein ERP testen, indem Sie die Datei in einem HTML-Browser wie z. b. Microsoft Internet Explorer anzeigen. Oder Sie können das ERP und seine Experten-dll installieren, um es für den Ereignis Aufruf zu testen und in der Netzwerkmonitor Ereignisanzeige anzuzeigen.
+Der letzte Schritt beim Erstellen einer Ereignisverweisseite (ERP) besteht darin, sie zu testen. Sie können ein ERP testen, indem Sie die Datei in einem HTML-Browser wie Microsoft Internet Explorer anzeigen. Alternativ können Sie erp und die zugehörige Experten-DLL installieren, um sie auf den Ereignisaufruf zu testen und im Netzwerkmonitor Ereignisanzeige anzuzeigen.
 
-## <a name="viewing-erps-that-have-no-dll"></a>Anzeigen von Erps ohne dll
+## <a name="viewing-erps-that-have-no-dll"></a>Anzeigen von ERPs ohne DLL
 
-Öffnen Sie die Datei mit einem HTML-Viewer, der Ihre eingebetteten Quellen unterstützt, um das abgeschlossene ERP ohne eine installierte Experte-dll anzuzeigen. Die folgende Abbildung zeigt die ERP-Beispieldatei, die in [Schreiben eines ERP](writing-an-event-reference-page.md) -Dokuments beschrieben wird, wie es mit Microsoft Internet Explorer Version 4,01 angezeigt wird.
+Um das fertige ERP ohne installierte Experten-DLL anzuzeigen, öffnen Sie die Datei mit einem HTML-Viewer, der Ihre eingebetteten Quellen unterstützt. Die folgende Abbildung zeigt die ERP-Beispieldatei, die unter [Schreiben eines ERP](writing-an-event-reference-page.md) beschrieben wird, da sie mit Microsoft Internet Explorer Version 4.01 angezeigt wird.
 
-![Beispiel-ERP-Datei](images/ie-erp.png)
+![ERP-Beispieldatei](images/ie-erp.png)
 
-Testen von Erps mit einer dll
+Testen von ERPs, die über eine DLL verfügen
 
-Nachdem die ERP-Dateien und die [**Experten-**](experts.md) dll erstellt wurden, können Sie die gesamte Funktionalität Ihrer Erps mit Netzwerkmonitor testen. Es wird davon ausgegangen, dass die dll debuggten ist und gültige Ereignisse generieren kann.
+Nachdem die ERP-Dateien und die [**Experten-DLL**](experts.md) erstellt wurden, können Sie die vollständige Funktionalität Ihrer ERPs mit Netzwerkmonitor testen. Es wird davon ausgegangen, dass die DLL gedebuggt ist und gültige Ereignisse generieren kann.
 
-**So testen Sie Erps, die eine DLL haben**
+**So testen Sie ERPs mit einer DLL**
 
-1.  Vergewissern Sie sich, dass die richtige Experten-dll im entsprechenden Verzeichnis installiert ist. Weitere Informationen finden Sie unter [Installieren eines Experten in Netzwerkmonitor 2,1](installing-an-expert-to-network-monitor-2-1.md).
+1.  Überprüfen Sie, ob die richtige Experten-DLL im entsprechenden Verzeichnis installiert ist. Weitere Informationen finden Sie unter [Installing an Expert to Netzwerkmonitor 2.1](installing-an-expert-to-network-monitor-2-1.md).
 2.  Überprüfen Sie den [richtigen Namen](naming-an-event-reference-page.md) der ERP-Datei.
-3.  Überprüfen Sie den [richtigen Speicherort](installing-existing-erps-to-network-monitor-2-1.md) der Erps im Netzwerkmonitor Verzeichnis.
-4.  Testen von Experten Erps in der Netzwerkmonitor-Benutzeroberfläche.
-5.  Generieren Sie ein Test Ereignis.
-6.  Überprüfen Sie, ob das ERP in der Netzwerkmonitor Ereignisanzeige angezeigt wird.
+3.  Überprüfen Sie den [richtigen Speicherort](installing-existing-erps-to-network-monitor-2-1.md) der ERPs im Netzwerkmonitor Verzeichnis.
+4.  Testen Sie Experten-ERPs auf der Netzwerkmonitor-Benutzeroberfläche.
+5.  Generieren sie ein Testereignis.
+6.  Vergewissern Sie sich, dass das ERP im Netzwerkmonitor Ereignisanzeige angezeigt wird.
 
 Weitere Informationen zum Erstellen eines ERP finden Sie unter:
 
--   [Erstellen von Referenzseiten für Experten und Überwachungs Ereignisse](creating-expert-and-monitor-event-reference-pages.md)
--   [Schreiben einer Ereignis Referenzseite](writing-an-event-reference-page.md)
--   [Benennen einer Ereignis Referenzseite](naming-an-event-reference-page.md)
+-   [Erstellen von Referenzseiten für Experten- und Überwachungsereignisse](creating-expert-and-monitor-event-reference-pages.md)
+-   [Schreiben einer Ereignisverweisseite](writing-an-event-reference-page.md)
+-   [Benennen einer Ereignisverweisseite](naming-an-event-reference-page.md)
 
  
 

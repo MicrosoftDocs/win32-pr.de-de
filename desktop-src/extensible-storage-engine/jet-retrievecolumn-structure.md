@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4f29f3c6a9ca3262b3cd09d726634afd70db9c6a
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 52b8a36946776ad43120f13e85d9ef7678594337
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122471456"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983133"
 ---
 # <a name="jet_retrievecolumn-structure"></a>JET_RETRIEVECOLUMN-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_retrievecolumn-structure"></a>JET_RETRIEVECOLUMN-Struktur
 
-Die **JET_RETRIEVECOLUMN-Struktur** enthält Eingabe- und Ausgabeparameter für [JetRetrizugColumns](./jetretrievecolumns-function.md). Felder in der Struktur beschreiben, welcher Spaltenwert abgerufen werden soll, wie er abgerufen wird und wo Ergebnisse zu speichern sind.
+Die **JET_RETRIEVECOLUMN-Struktur** enthält Eingabe- und Ausgabeparameter für [JetRetrieveColumns.](./jetretrievecolumns-function.md) Felder in der Struktur beschreiben, welcher Spaltenwert abgerufen werden soll, wie er abgerufen wird und wo Ergebnisse zu speichern sind.
 
 ```cpp
     typedef struct {
@@ -100,7 +100,11 @@ Fehlercodes und Warnungen, die beim Abrufen der Spalte zurückgegeben werden.
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

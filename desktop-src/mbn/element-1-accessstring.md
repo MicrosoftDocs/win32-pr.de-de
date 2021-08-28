@@ -16,16 +16,16 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5ca8a917dacadd68a2727006471ea1277acc2462
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 536ef31df9bbd60bfbb6a48c3f6de07718c5ce31
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122469437"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122982153"
 ---
 # <a name="span-idwwan_profile_v4element_1_accessstringspanmodemdmconfigprofileaccessstring-v4"></a><span id="WWAN_profile_v4.element_1_AccessString"></span>ModemDMConfigProfile \/ ... \/ AccessString (v4)
 
-Identifiziert den APN oder die Wählzeichenfolge, die zum Herstellen einer Datenverbindung verwendet werden soll.
+Identifiziert den APN oder die Wählzeichenfolge, der bzw. die zum Herstellen einer Datenverbindung verwendet werden soll.
 
 Weitere Informationen finden Sie in der Dokumentation für das [**AccessString-Element**](./schema-accessstring-contexttype-element.md) v1.
 
@@ -72,7 +72,9 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

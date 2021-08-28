@@ -1,7 +1,7 @@
 ---
-description: Ruft den Pfad zum angegebenen Druckertreiber Paket auf einem Druckserver ab.
+description: Ruft den Pfad zum angegebenen Druckertreiberpaket auf einem Druckerserver ab.
 ms.assetid: e88e984b-d2c0-43b4-8f70-b05ec202ab14
-title: GetPrinterDriverPackagePath-Funktion (winspool. h)
+title: GetPrinterDriverPackagePath-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: ea355782df6cce7910f92a46af3cde320536106e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5058d57a0275019c5e603673d260c9969cc0b5d5641dea15e09ffe242addff10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600800"
 ---
 # <a name="getprinterdriverpackagepath-function"></a>GetPrinterDriverPackagePath-Funktion
 
-Ruft den Pfad zum angegebenen Druckertreiber Paket auf einem Druckserver ab.
+Ruft den Pfad zum angegebenen Druckertreiberpaket auf einem Druckerserver ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,71 +47,71 @@ HRESULT GetPrinterDriverPackagePath(
 
 <dl> <dt>
 
-*pszserver* \[ in\]
+*pszServer* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Namen des Drucker Servers angibt. Verwenden Sie für den lokalen Computer **null** .
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Namen des Druckerservers angibt. Verwenden **Sie NULL** für den lokalen Computer.
 
 </dd> <dt>
 
-*pszenvironment* \[ in\]
+*pszEnvironment* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die Prozessorarchitektur angibt (z. b. Windows NT x86). Dieser Wert kann **null** sein.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die Prozessorarchitektur angibt (z. B. Windows NT x86). Dies kann **NULL sein.**
 
 </dd> <dt>
 
-*pszlanguage* \[ in\]
+*pszLanguage* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die [mehrsprachige Benutzeroberflächen](/windows/desktop/Intl/mui-resource-management) Sprache für den installierten Treiber angibt. Dieser Wert kann **null** sein.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die mehrsprachige Benutzeroberfläche [sprache](/windows/desktop/Intl/mui-resource-management) für den installierten Treiber angibt. Dies kann **NULL sein.**
 
 </dd> <dt>
 
-*pszpackageid* \[ in\]
+*pszPackageID* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die ID des Treiber Pakets angibt.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die ID des Treiberpakets angibt.
 
 </dd> <dt>
 
 *pszDriverPackageCab* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Pfad zur CAB-Datei für das Treiber Paket angibt. Dieser Wert kann **null** sein. Siehe Hinweise.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pfad zur Schränkdatei für das Treiberpaket angibt. Dies kann **NULL sein.** Siehe Hinweise.
 
 </dd> <dt>
 
-*cchDriverPackageCab* \[ in\]
+*cchDriverPackageCab* \[ In\]
 </dt> <dd>
 
-Die Größe des *pszDriverPackageCab* -Puffers in Zeichen. Dieser Wert kann **null** sein.
+Die Größe des Puffers *pszDriverPackageCab* in Zeichen. Dies kann **NULL sein.**
 
 </dd> <dt>
 
-*pcchrequirements dsize* \[ vorgenommen\]
+*pcchRequiredSize* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die erforderliche Größe des *pszDriverPackageCab* -Puffers.
+Ein Zeiger auf die erforderliche Größe des *pszDriverPackageCab-Puffers.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, ist der Rückgabewert S \_ OK; andernfalls enthält das **HRESULT** einen Fehlercode.
+Wenn der Vorgang erfolgreich ist, ist der Rückgabewert S \_ OK, andernfalls enthält **das HRESULT** einen Fehlercode.
 
-Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Um einen Wert für *cchDriverPackageCab* zu erhalten, rufen Sie die Funktion mit **null** als Wert von *pszDriverPackageCab* auf. Verwenden Sie den Wert, der in *pcchrequirements dsize* zurückgegeben wurde, als Wert von *cchDriverPackageCab* , und führen Sie die Funktion erneut aus.
+Um einen Wert für *cchDriverPackageCab* zu erhalten, rufen Sie die Funktion mit **NULL** als Wert von *pszDriverPackageCab auf.* Verwenden Sie den in *pcchRequiredSize* zurückgegebenen Wert als Wert von *cchDriverPackageCab,* und rufen Sie die Funktion erneut auf.
 
-*Pszpackageid* wird in der Regel von einem get-Befehl [**getcoreprinterdrivers**](getcoreprinterdrivers.md)abgerufen.
+Die *pszPackageID* wird in der Regel durch einen Aufruf von [**GetCorePrinterDrivers erhalten.**](getcoreprinterdrivers.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,10 +119,10 @@ Um einen Wert für *cchDriverPackageCab* zu erhalten, rufen Sie die Funktion mit
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 | Unicode- und ANSI-Name<br/>   | **GetPrinterDriverPackagePathW** (Unicode) und **GetPrinterDriverPackagePathA** (ANSI)<br/>         |
 

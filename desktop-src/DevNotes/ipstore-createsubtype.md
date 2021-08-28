@@ -1,7 +1,7 @@
 ---
 description: Erstellt den angegebenen Untertyp innerhalb des angegebenen Typs.
 ms.assetid: afd5c0c6-5779-4a78-83aa-cae36f5de564
-title: 'Ipstore:: kreatesubtype-Methode (pstore. h)'
+title: IPStore::CreateSubtype-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: e7f304b2d54bb1ae09673e77f37f95257fa6fd10
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da82d1edac78fab26f47be5bc333558355d04c3627342ece904a4005e9ebfa2f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749990"
 ---
-# <a name="ipstorecreatesubtype-method"></a>Ipstore:: kreatesubtype-Methode
+# <a name="ipstorecreatesubtype-method"></a>IPStore::CreateSubtype-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
 Erstellt den angegebenen Untertyp innerhalb des angegebenen Typs.
 
@@ -46,17 +46,17 @@ HRESULT CreateSubtype(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Gibt den Speicherbereich des Anbieters an.
+Gibt den Anbieterspeicherbereich an.
 
 
 
 | Wert                                                                                                                                                                                                                                                   | Bedeutung                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ Schlüssel \_ aktueller \_ Benutzer**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im Abschnitt Aktueller Benutzer der Registrierung verwaltet.<br/>  |
-| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ Key \_ local \_ Machine**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
+| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ KEY \_ CURRENT \_ USER**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im aktuellen Benutzerabschnitt der Registrierung verwaltet.<br/>  |
+| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ KEY \_ LOCAL \_ MACHINE**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
 
 
 
@@ -64,46 +64,46 @@ Gibt den Speicherbereich des Anbieters an.
 
 </dd> <dt>
 
-*pType* \[ in\]
+*pType* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine **GUID** , die den Datentyp des Speichers identifiziert.
+Ein Zeiger auf eine **GUID,** die den Datentyp des Speichers identifiziert.
 
 </dd> <dt>
 
-*psubtype* \[ in\]
+*pSubtype* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine **GUID** , die den Daten Untertyp des Speichers identifiziert.
+Ein Zeiger auf eine **GUID,** die den Datenuntertyp des Speichers identifiziert.
 
 </dd> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**PST- \_ TypInfo**](pst-typeinfo.md) -Struktur.
+Ein Zeiger auf eine [**PST \_ TYPEINFO-Struktur.**](pst-typeinfo.md)
 
 </dd> <dt>
 
-*prules* \[ in\]
+*pRules* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**PST- \_ accessruleset**](pst-accessruleset.md) -Struktur.
+Ein Zeiger auf eine [**PST \_ ACCESSRULESET-Struktur.**](pst-accessruleset.md)
 
 **Windows XP:** Dieser Parameter wird ignoriert.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Bleiben muss auf 0 (null) festgelegt werden.
+Reserviert; muss auf 0 (null) festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
+Der Rückgabewert ist ein **HRESULT-Wert.** Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,22 +111,22 @@ Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipstore**](ipstore.md)
+[**IPStore**](ipstore.md)
 </dt> <dt>
 
-[**PST- \_ accessruleset**](pst-accessruleset.md)
+[**PST \_ ACCESSRULESET**](pst-accessruleset.md)
 </dt> <dt>
 
-[**PST- \_ Typeingabe Info**](pst-typeinfo.md)
+[**PST \_ TYPEINFO**](pst-typeinfo.md)
 </dt> </dl>
 
  

@@ -1,77 +1,77 @@
 ---
-title: AuthenticationLevel
-description: Legt die Authentifizierungs Ebene für Anwendungen fest, die CoInitializeSecurity nicht aufzurufen, oder für Anwendungen, die CoInitializeSecurity anrufen und eine AppID angeben.
+title: Authenticationlevel
+description: Legt die Authentifizierungsebene für Anwendungen fest, die CoInitializeSecurity nicht aufrufen, oder für Anwendungen, die CoInitializeSecurity aufrufen und eine AppID angeben.
 ms.assetid: 137cbffe-6f45-43f4-bf35-b064b3607fcc
 keywords:
-- Registrierungs Wert "AuthenticationLevel" com
+- AuthenticationLevel-Registrierungswert COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 697b04bcf4992c8a6943bcb515fa0a4eae616fec
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7968382ea97243c1116dd6785be34a0d1c3e6eafc6cb9ee13f16b939029a6611
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120530"
 ---
-# <a name="authenticationlevel"></a>AuthenticationLevel
+# <a name="authenticationlevel"></a>Authenticationlevel
 
-Legt die Authentifizierungs Ebene für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) nicht aufzurufen, oder für Anwendungen, die **CoInitializeSecurity** anrufen und eine AppID angeben.
+Legt die Authentifizierungsebene für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) nicht aufrufen, oder für Anwendungen, die **CoInitializeSecurity** aufrufen und eine AppID angeben.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID
-   {AppID_GUID}
-      AuthenticationLevel = value
+   {AppID_GUID}
+      AuthenticationLevel = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ DWORD** -Wert, der den Konstanten der RPC- \_ C- \_ authn- \_ Ebene entspricht.
+Dies ist ein **REG \_ DWORD-Wert,** der den RPC \_ C \_ AUTHN \_ LEVEL-Konstanten entspricht.
 
 
 
 | Wert | Konstante                             |
 |-------|--------------------------------------|
-| 1     | RPC- \_ C- \_ authn- \_ Ebene \_ None           |
-| 2     | RPC- \_ C \_ authn \_ Level \_ Connect        |
-| 3     | RPC- \_ C \_ authn-Ebene- \_ \_ Aufruf           |
-| 4     | Pkt der RPC- \_ C- \_ authn- \_ Ebene \_            |
-| 5     | \_Pkt-Integrität der RPC C- \_ authn- \_ Ebene \_ \_ |
-| 6     | \_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene   |
+| 1     | RPC \_ C \_ AUTHN \_ LEVEL \_ NONE           |
+| 2     | RPC \_ C \_ AUTHN \_ LEVEL \_ CONNECT        |
+| 3     | RPC \_ \_ \_ C-AUFRUF AUF AUTHENTIFIZIERUNGSEBENE \_           |
+| 4     | RPC \_ C \_ AUTHN \_ LEVEL \_ PKT            |
+| 5     | \_ \_ \_ \_ PKT-INTEGRITÄT AUF RPC-C-AUTHENTIFIZIERUNGSEBENE \_ |
+| 6     | RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY   |
 
 
 
- 
+ 
 
-Der Wert **AuthenticationLevel** ähnelt dem Wert von [**legacyauthenticationlevel**](legacyauthenticationlevel.md) . Wenn der **AuthenticationLevel** -Wert vorhanden ist, wird er anstelle des **legacyauthenticationlevel** -Werts für diese AppID verwendet.
+Der **AuthenticationLevel-Wert** ähnelt dem [**LegacyAuthenticationLevel-Wert.**](legacyauthenticationlevel.md) Wenn der **AuthenticationLevel-Wert** vorhanden ist, wird er anstelle des **LegacyAuthenticationLevel-Werts** für diese AppID verwendet.
 
-Wenn der **AuthenticationLevel** -Wert vom falschen Typ oder außerhalb des gültigen Bereichs ist, schlägt [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) fehl, wodurch das Marshalling der Schnittstelle fehlschlägt. Dadurch wird verhindert, dass die Anwendung überhaupt Aufrufe durchführen kann (Apartment übergreifend, Thread übergreifend, Prozess übergreifend oder Computer übergreifend).
+Wenn der **AuthenticationLevel-Wert** den falschen Typ auf oder außerhalb des Bereichs hat, schlägt [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) fehl, was zu einem Fehler beim Marshalling der Schnittstelle führt. Dadurch wird verhindert, dass die Anwendung überhaupt Aufrufe (apartmentübergreifend, threadübergreifend, prozessübergreifend oder computerübergreifend) vornimmt.
 
-Die Werte " **AuthenticationLevel** " und " [**AccessPermission**](accesspermission.md) " sind unabhängig voneinander. Wenn kein Wert vorhanden ist, wird der Standardwert verwendet. In den folgenden Regeln wird die Interaktion zwischen dem Wert **AuthenticationLevel** und dem **AccessPermission** -Wert aufgeführt:
+Die Werte **AuthenticationLevel** und [**AccessPermission**](accesspermission.md) sind unabhängig. Wenn keine vorhanden ist, wird der Standardwert verwendet. Die folgenden Regeln listen die Interaktion zwischen dem **AuthenticationLevel-Wert** und dem **AccessPermission-Wert** auf:
 
--   Wenn **AuthenticationLevel** den Wert None hat, werden die Werte [**AccessPermission**](accesspermission.md) und [**DefaultAccessPermission**](defaultaccesspermission.md) ignoriert (für diese Anwendung).
--   Wenn " **AuthenticationLevel** " nicht vorhanden ist und " [**legacyauthenticationlevel**](legacyauthenticationlevel.md) " auf "None" festgelegt ist, werden die Werte [**AccessPermission**](accesspermission.md) und [**DefaultAccessPermission**](defaultaccesspermission.md) ignoriert (für diese Anwendung).
+-   Wenn **AuthenticationLevel** NONE ist, werden die Werte [**AccessPermission**](accesspermission.md) und [**DefaultAccessPermission**](defaultaccesspermission.md) (für diese Anwendung) ignoriert.
+-   Wenn **AuthenticationLevel** nicht vorhanden ist und [**LegacyAuthenticationLevel**](legacyauthenticationlevel.md) NONE ist, werden die Werte [**AccessPermission**](accesspermission.md) und [**DefaultAccessPermission**](defaultaccesspermission.md) (für diese Anwendung) ignoriert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konstanten auf Authentifizierungs Ebene](com-authentication-level-constants.md)
+[Konstanten auf Authentifizierungsebene](com-authentication-level-constants.md)
 </dt> <dt>
 
-[**Legacyauthenticationlevel**](legacyauthenticationlevel.md)
+[**LegacyAuthenticationLevel**](legacyauthenticationlevel.md)
 </dt> <dt>
 
-[Registrieren von com-Servern](registering-com-servers.md)
+[Registrieren von COM-Servern](registering-com-servers.md)
 </dt> <dt>
 
-[Sicherheit in com](security-in-com.md)
+[Sicherheit in COM](security-in-com.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

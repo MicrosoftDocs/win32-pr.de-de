@@ -1,17 +1,17 @@
 ---
 description: Ein Bewertungssystem, das ganzzahlige Werte zwischen 1 und 99 verwendet. Dies ist das Bewertungssystem, das von der Windows Vista-Shell verwendet wird.
 ms.assetid: a6288d29-1ef3-4da1-bd30-577336ab6817
-title: System. Rating
+title: System.Rating
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e411e313f0fa6042a8cbe3a076a7166928020af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9adc62e69ced0f82426f19badb1aebef0453084a9b951b749aed256aa64820a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119598130"
 ---
-# <a name="systemrating"></a>System. Rating
+# <a name="systemrating"></a>System.Rating
 
 Ein Bewertungssystem, das ganzzahlige Werte zwischen 1 und 99 verwendet. Dies ist das Bewertungssystem, das von der Windows Vista-Shell verwendet wird.
 
@@ -137,17 +137,17 @@ propertyDescription
             minValue = 100
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Informationen zur Kompatibilität mit Bewertungssystemen, die Werte zwischen 1 und 5 verwenden, finden Sie unter Eigenschaften [System. simplerating](./props-system-simplerating.md). Beachten Sie jedoch, dass System. simplerating in der Windows Vista-Shell nicht verwendet wird.
+Informationen zur Kompatibilität mit Bewertungssystemen, die Werte zwischen 1 und 5 verwenden, finden Sie in der [Eigenschaft System.SimpleRating](./props-system-simplerating.md). Beachten Sie jedoch, dass System.SimpleRating nicht in der Vista-Shell Windows wird.
 
-In der folgenden Tabelle wird beschrieben, was das in der Shell-Benutzeroberfläche verwendete sternbewertungssystem im Hinblick auf den [System. Rating]() -Wert bedeutet.
+In der folgenden Tabelle wird beschrieben, was das in der Shell-Benutzeroberfläche verwendete Sternbewertungssystem im Hinblick auf den [System.Rating-Wert]() bedeutet.
 
 
 
-| System. Rating | Bewertung mit Sternen |
+| System.Rating | Bewertung mit Sternen |
 |---------------|-------------|
 | 1-12          | Ein Stern      |
 | 13-37         | Zwei Sterne     |
@@ -159,7 +159,7 @@ In der folgenden Tabelle wird beschrieben, was das in der Shell-Benutzeroberflä
 
  
 
-Wenn ein Benutzer ein Element durch Auswahl eines Stern Bewertungs Werts in der Benutzeroberfläche bewertet, werden die tatsächlichen [System. Rating]() -Werte wie in der folgenden Tabelle dargestellt zugewiesen:
+Wenn ein Benutzer ein Element bewertet, indem er auf der Benutzeroberfläche einen Sternbewertungswert auswählt, werden die tatsächlichen [System.Rating-Werte]() wie in der folgenden Tabelle gezeigt zugewiesen:
 
 
 
@@ -175,11 +175,11 @@ Wenn ein Benutzer ein Element durch Auswahl eines Stern Bewertungs Werts in der 
 
  
 
-Wenn die Datei einen [System. simplerating](./props-system-simplerating.md) -Wert anstelle eines [System. Rating]() -Werts aufweist, verwenden Sie die folgende Tabelle, um Werte für System. Rating zu konvertieren und anzugeben.
+Wenn Ihre Datei über einen [System.SimpleRating-Wert](./props-system-simplerating.md) anstelle eines [System.Rating-Werts]() verfügt, verwenden Sie die folgende Tabelle, um Werte für System.Rating zu konvertieren und anzugeben.
 
 
 
-| System. simplerating | System. Rating |
+| System.SimpleRating | System.Rating |
 |---------------------|---------------|
 | 1                   | 1             |
 | 2                   | 25            |
@@ -191,52 +191,52 @@ Wenn die Datei einen [System. simplerating](./props-system-simplerating.md) -Wer
 
  
 
-Wenn die Datei sowohl [System. Rating]() als auch [System. simplerating](./props-system-simplerating.md) persistent ist, verwenden Sie immer den Wert System. Rating, wenn Sie direkt angefordert wird, ohne dass auf System. simplerating verwiesen wird.
+Wenn Ihre Datei sowohl [persistente System.Rating-]() als auch [System.SimpleRating-Werte](./props-system-simplerating.md) enthält, verwenden Sie immer den System.Rating-Wert, wenn er direkt angefordert wird, ohne Verweis auf System.SimpleRating.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f82af0be3185db36498d9a5888da190e92314184
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 79666023f965a01f128e95d604a63ab400a35dfd
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122479176"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983713"
 ---
 # <a name="jetendexternalbackupinstance-function"></a>JetEndExternalBackupInstance-Funktion
 
@@ -67,7 +67,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>JET_errNoBackup</p> | <p>Fehler beim Vorgang, weil keine externe Sicherung ausgeführt wird.</p> | 
 | <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p> | 
 | <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
-| <p>JET_errRunningInMultiInstanceMode</p> | <p>Der Vorgang ist fehlgeschlagen, weil versucht wurde, die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) zu verwenden, wobei nur eine Instanz unterstützt wird, obwohl tatsächlich bereits mehrere Instanzen vorhanden sind.</p> | 
+| <p>JET_errRunningInMultiInstanceMode</p> | <p>Fehler beim Vorgang, weil versucht wurde, die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) zu verwenden, wobei nur eine Instanz unterstützt wird, obwohl tatsächlich bereits mehrere Instanzen vorhanden sind.</p> | 
 | <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p> | 
 
 
@@ -76,7 +76,7 @@ Wenn die Funktion erfolgreich war, war die externe Sicherung erfolgreich. Erfolg
 
 Wenn diese Funktion fehlschlägt, wird die externe Sicherung in der Regel beendet. Fehler bedeutet, dass die Sicherung aufgrund eines Client- oder Anwendungsverwendungsfehlers ungültig ist. Es ist wichtig, den Rückgabecode für diese API zu überprüfen, um sicherzustellen, dass die Sicherungssequenz erfolgreich war.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Wenn die Engine zum Protokollieren von Ereignissen konfiguriert ist, wird ein Ereignis protokolliert, um die Auflösung der externen Sicherung anzugeben.
 
@@ -84,12 +84,18 @@ Wenn die Sicherungssequenz nicht in der angegebenen Reihenfolge und mit einem er
 
 Weitere Informationen zur API-Sequenz für externe Sicherungen finden Sie unter [JetBeginExternalBackup.](./jetbeginexternalbackup-function.md)
 
-Wenn die Protokollkürzung vor Windows Vista nicht durchgeführt wurde, hat die Engine davon ausgegangen, dass es sich bei der Sicherung um eine Kopiersicherung handelt. Die Sicherung kann jedoch eine normale Sicherung sein, für die keine Kürzung durchgeführt wurde (z. B. wenn getrennte Datenbanken vorhanden sind). Die option JET_bitBackupTruncateDone kann verwendet werden, um die Engine darüber zu informieren und ordnungsgemäße Änderungen des Datenbankheaders zuzulassen.
+Wenn die Protokollkürzung nicht durchgeführt wurde, hat die Engine vor Windows Vista davon ausgegangen, dass es sich bei der Sicherung um eine Kopiersicherung handelt. Die Sicherung kann jedoch eine normale Sicherung sein, für die keine Kürzung durchgeführt wurde (z. B. wenn getrennte Datenbanken vorhanden sind). Die JET_bitBackupTruncateDone Option kann verwendet werden, um die Engine darüber zu informieren und ordnungsgemäße Änderungen des Datenbankheaders zuzulassen.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

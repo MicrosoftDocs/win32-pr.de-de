@@ -1,7 +1,7 @@
 ---
-description: Widerruft den Zugriff auf die interaktive Sitzung der virtuellen Maschine aus der angegebenen Liste von Treuhändern.
+description: Widerruft den Zugriff auf die interaktive Sitzung des virtuellen Computers aus der angegebenen Vertrauensnehmerliste.
 ms.assetid: c6d3df04-c31e-404a-9a04-3e8653bdc14f
-title: Revokeinteractivesessionaccess-Methode der Msvm_TerminalService-Klasse
+title: RevokeInteractiveSessionAccess-Methode der Msvm_TerminalService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ab92f375f082d3af1f04b3fe52db5cb7964e3d4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48fa52d97e58e421442c77f1503e72bb6a3d793e35a4d1dbd12624bffdbcd9d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746200"
 ---
-# <a name="revokeinteractivesessionaccess-method-of-the-msvm_terminalservice-class"></a>Revokeinteractivesessionaccess-Methode der MSVM \_ Terminalservice-Klasse
+# <a name="revokeinteractivesessionaccess-method-of-the-msvm_terminalservice-class"></a>RevokeInteractiveSessionAccess-Methode der Msvm \_ TerminalService-Klasse
 
-Widerruft den Zugriff auf die interaktive Sitzung der virtuellen Maschine aus der angegebenen Liste von Treuhändern.
+Widerruft den Zugriff auf die interaktive Sitzung des virtuellen Computers aus der angegebenen Vertrauensnehmerliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 RevokeInteractiveSessionAccess(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**CIM \_ Computersystem**](cim-computersystem.md) -Klasse, die den virtuellen Computer darstellt, auf den der Zugriff aufgehoben wird.
+Ein Verweis auf eine Instanz der [**CIM \_ ComputerSystem-Klasse,**](cim-computersystem.md) die den virtuellen Computer darstellt, auf den der Zugriff aufgehoben wird.
 
 </dd> <dt>
 
-*Treuhänder* \[ in\]
+*Vertrauensnehmer* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, das jeweils einen Vertrauens nehmer identifiziert, dessen Zugriffsrechte widerrufen werden. Die Treuhänder-IDs müssen im Windows Sam-kompatiblen Format oder im Windows-SID-Zeichen folgen Format angegeben werden.
+Ein Array von Zeichenfolgen, die jeweils einen Vertrauensnehmer identifizieren, dessen Zugriffsrechte widerrufen werden. Die Vertrauensnehmerbezeichner sollten in Windows SAM-kompatiblen Format oder Windows SID-Zeichenfolgenformat angegeben werden.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,22 +83,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible Parameter** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,19 +107,19 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ Terminalservice**](msvm-terminalservice.md)
+[**Msvm \_ TerminalService**](msvm-terminalservice.md)
 </dt> </dl>
 
  

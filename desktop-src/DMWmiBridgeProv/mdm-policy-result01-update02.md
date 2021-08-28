@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Update02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ Update02-Klasse stellt die verfügbaren Update Richtlinien dar.
+description: Die MDM \_ Policy \_ Result01 \_ Update02-Klasse stellt die verfügbaren Updaterichtlinien dar.
 ms.assetid: 06604da6-5298-4273-a030-529491c2823c
 keywords:
 - MDM_Policy_Result01_Update02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0be844bb4ef8fc20e7ab5bbc8b7709cdfde4034
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e77c82ad29d44ebcf0c83f33de3355e877b77f62a1f6a97dc587ca2f7424496
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750500"
 ---
-# <a name="mdm_policy_result01_update02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Update02-Klasse
+# <a name="mdm_policy_result01_update02-class"></a>MDM \_ Policy \_ Result01 \_ Update02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Update02** -Klasse stellt die verfügbaren Update Richtlinien dar.
+Die **MDM \_ Policy \_ Result01 \_ Update02-Klasse** stellt die verfügbaren Updaterichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -92,17 +92,17 @@ class MDM_Policy_Result01_Update02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Update02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ Update02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Update02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ Update02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Activehoursend](/windows/client-management/mdm/policy-csp-update#update-activehoursend)
+[ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -113,7 +113,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Activehoursmaxrange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
+[ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -124,7 +124,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Activehoursstart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
+[ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -135,7 +135,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowautoupdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)
+[AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -146,7 +146,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowautowindowsupdatedownloadovermeterednetwork](/windows/client-management/mdm/policy-csp-update#update-allowautowindowsupdatedownloadovermeterednetwork)
+[AllowAutoWindowsUpdateDownloadOverMeteredNetwork](/windows/client-management/mdm/policy-csp-update#update-allowautowindowsupdatedownloadovermeterednetwork)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -157,7 +157,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowmuupdateservice](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+[AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -168,7 +168,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allownonmicrosoftsignetdupdate](/windows/client-management/mdm/policy-csp-update#update-allownonmicrosoftsignedupdate)
+[AllowNonMicrosoftSignedUpdate](/windows/client-management/mdm/policy-csp-update#update-allownonmicrosoftsignedupdate)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -190,7 +190,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Autorestartdeadlineperiodindays](/windows/client-management/mdm/policy-csp-update#update-autorestartdeadlineperiodindays)
+[AutoRestartDeadlinePeriodInDays](/windows/client-management/mdm/policy-csp-update#update-autorestartdeadlineperiodindays)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -201,7 +201,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Autorestartnotificationschedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+[AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -212,7 +212,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Autorestartrequirednotificationentlassung](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+[AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -245,7 +245,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Deferqualityupdatesperiodindays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)
+[DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -267,7 +267,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Deferupgradezperiod](/windows/client-management/mdm/policy-csp-update#update-deferupgradeperiod)
+[DeferUpgradePeriod](/windows/client-management/mdm/policy-csp-update#update-deferupgradeperiod)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -278,7 +278,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Erkenctionfrequency](/windows/client-management/mdm/policy-csp-update#update-detectionfrequency)
+[DetectionFrequency](/windows/client-management/mdm/policy-csp-update#update-detectionfrequency)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -289,7 +289,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disabledualscan](/windows/client-management/mdm/policy-csp-update#update-disabledualscan)
+[DisableDualScan](/windows/client-management/mdm/policy-csp-update#update-disabledualscan)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -300,7 +300,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Engagedrestartstichtag](/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)
+[EngagedRestartDeadline](/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -311,7 +311,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Engagedrestartnoozeschedule](/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)
+[EngagedRestartSnoozeSchedule](/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -322,7 +322,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Engagedrestarttransitionschedule](/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)
+[EngagedRestartTransitionSchedule](/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -333,7 +333,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Excluabwudriversinqualityupdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
+[ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -344,7 +344,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Fillemptycontenturls](/windows/client-management/mdm/policy-csp-update#update-fillemptycontenturls)
+[FillEmptyContentUrls](/windows/client-management/mdm/policy-csp-update#update-fillemptycontenturls)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -355,7 +355,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Ignoremoappdownloadlimit](/windows/client-management/mdm/policy-csp-update#update-ignoremoappdownloadlimit)
+[IgnoreMOAppDownloadLimit](/windows/client-management/mdm/policy-csp-update#update-ignoremoappdownloadlimit)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -366,7 +366,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Ignoremoupdatedownloadlimit](/windows/client-management/mdm/policy-csp-update#update-ignoremoupdatedownloadlimit)
+[IgnoreMOUpdateDownloadLimit](/windows/client-management/mdm/policy-csp-update#update-ignoremoupdatedownloadlimit)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -380,7 +380,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -389,11 +389,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Update".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Update".
 
 </dd> <dt>
 
-[Managepreviewbuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds)
+[ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -404,10 +404,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -416,7 +416,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
@@ -442,10 +442,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Pausefeatureupdatesstarttime](/windows/client-management/mdm/policy-csp-update#update-pausefeatureupdatesstarttime)
+[PauseFeatureUpdatesStartTime](/windows/client-management/mdm/policy-csp-update#update-pausefeatureupdatesstarttime)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -464,10 +464,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Pausequalityupdatesstarttime](/windows/client-management/mdm/policy-csp-update#update-pausequalityupdatesstarttime)
+[PauseQualityUpdatesStartTime](/windows/client-management/mdm/policy-csp-update#update-pausequalityupdatesstarttime)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -475,7 +475,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Phoneupdaterestrictions](/windows/client-management/mdm/policy-csp-update#update-phoneupdaterestrictions)
+[PhoneUpdateRestrictions](/windows/client-management/mdm/policy-csp-update#update-phoneupdaterestrictions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -519,7 +519,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduledinstalleveryweek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalleveryweek)
+[ScheduledInstallEveryWeek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalleveryweek)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -530,7 +530,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduledinstallfirstweek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallfirstweek)
+[ScheduledInstallFirstWeek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallfirstweek)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -541,7 +541,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduledinstallfourthweek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallfourthweek)
+[ScheduledInstallFourthWeek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallfourthweek)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -552,7 +552,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduledinstallsecondweek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallsecondweek)
+[ScheduledInstallSecondWeek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallsecondweek)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -563,7 +563,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduledinstallthirdweek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallthirdweek)
+[ScheduledInstallThirdWeek](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallthirdweek)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -585,7 +585,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scheduleimminentrestartwarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
+[ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -596,7 +596,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Schedulerestartwarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
+[ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -607,7 +607,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Setautoriestartnotificationdeaktivieren](/windows/client-management/mdm/policy-csp-update#update-setautorestartnotificationdisable)
+[SetAutoRestartNotificationDisable](/windows/client-management/mdm/policy-csp-update#update-setautorestartnotificationdisable)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -618,7 +618,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["".](/windows/client-management/mdm/policy-csp-update#update-setedurestart)
+[SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -629,10 +629,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Updateserviceurl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+[UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -640,10 +640,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Updateserviceurlalternate](/windows/client-management/mdm/policy-csp-update#update-updateserviceurlalternate)
+[UpdateServiceUrlAlternate](/windows/client-management/mdm/policy-csp-update#update-updateserviceurlalternate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -657,19 +657,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

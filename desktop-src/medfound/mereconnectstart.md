@@ -1,31 +1,31 @@
 ---
-description: Signalisiert, dass eine Medienquelle versucht, eine erneute Verbindung mit dem Server herzustellen.
+description: Signalisiert, dass eine Medienquelle versucht, erneut eine Verbindung mit dem Server herzustellen.
 ms.assetid: c5975279-c710-4046-9152-d1e1c62eb785
-title: Mereconnectstart-Ereignis (mfobjects. h)
+title: MEReconnectStart-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d21944e937f52205416b5e6e2b52d18c3a3c768c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc365acf5d91796b6d9c3fe371b9a0ec54435769381c41f0bf45cedb73003660
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114010"
 ---
-# <a name="mereconnectstart-event"></a>Mereconnectstart-Ereignis
+# <a name="mereconnectstart-event"></a>MEReconnectStart-Ereignis
 
-Signalisiert, dass eine Medienquelle versucht, eine erneute Verbindung mit dem Server herzustellen.
+Signalisiert, dass eine Medienquelle versucht, erneut eine Verbindung mit dem Server herzustellen.
 
-Ausgelöst durch eine Medienquelle zu Beginn eines erneuten Verbindungsversuchs. Die Netzwerkquelle löst dieses Ereignis aus, wenn versucht wird, erneut eine Verbindung mit dem Server herzustellen. Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Wird von einer Medienquelle zu Beginn eines Verbindungswiederherstellungsversuchs ausgelöst. Die Netzwerkquelle löst dieses Ereignis aus, wenn versucht wird, erneut eine Verbindung mit dem Server herzustellen. Die Mediensitzung leitet dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -35,9 +35,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c8bf502cca48701a7d71a083e515f9988cafe303
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 29f0ae90c8a6fee1f675a6128fce1b2b8276490f61e93e707e5471f734449b94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853390"
 ---
 # <a name="d3dxintersecttri-function-d3dx10mathh"></a>D3DXIntersectTri-Funktion (D3DX10math.h)
 
@@ -52,7 +52,7 @@ BOOL D3DXIntersectTri(
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Erste Dreiecksvertexposition beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die position des ersten Dreiecksvertex beschreibt.
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Erste 
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Position des zweiten Dreiecks vertex beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die position des zweiten Dreiecksvertex beschreibt.
 
 </dd> <dt>
 
@@ -70,7 +70,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Positi
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Position des dritten Dreiecks vertex beschreibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Position des dritten Dreiecksvertex beschreibt.
 
 </dd> <dt>
 
@@ -79,7 +79,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Positi
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) wobei der Punkt angegeben wird, an dem der Strahl beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) der den Punkt angibt, an dem der Strahl beginnt.
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) wobei der Punk
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Richtung des Strahls.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Richtung des Strahls angibt.
 
 </dd> <dt>
 
@@ -125,7 +125,7 @@ Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 Gibt **TRUE** zurück, wenn der Strahl den Bereich des Dreiecks überschneidet. Andernfalls gibt **FALSE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U,V) dargestellt werden. Der Parameter U steuert, wie viel V2 in das Ergebnis gewichtet wird, und der Parameter V steuert, wie viel V3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von 1 – \[ (U + V), \] wie viel V1 in das Ergebnis gewichtet wird.
 
@@ -137,18 +137,18 @@ Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Mesh-Funktionen](d3d10-graphics-reference-d3dx10-functions-mesh.md)
+[Meshfunktionen](d3d10-graphics-reference-d3dx10-functions-mesh.md)
 </dt> </dl>
 
  

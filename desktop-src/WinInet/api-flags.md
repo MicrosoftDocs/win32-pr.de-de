@@ -1,6 +1,6 @@
 ---
-title: API-Flags (WinInet. h)
-description: Viele der WinInet-Funktionen akzeptieren ein Array von Flags als Parameter. Im folgenden finden Sie eine kurze Beschreibung der definierten Flags.
+title: API-Flags (Wininet.h)
+description: Viele winINet-Funktionen akzeptieren ein Array von Flags als Parameter. Im Folgenden werden die definierten Flags kurz beschrieben.
 ms.assetid: 63027a3b-dc59-41c4-a22a-5d6e841159aa
 topic_type:
 - apiref
@@ -51,20 +51,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a111bf418e6cf599f99c9dfa34ca0f5025a1d779
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 761677a7110e5291171b39618d4315052ea1f86fd95361ce4f51f174b130a012
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119386540"
 ---
 # <a name="api-flags"></a>API-Flags
 
-Viele der WinInet-Funktionen akzeptieren ein Array von Flags als Parameter. Im folgenden finden Sie eine kurze Beschreibung der definierten Flags.
+Viele winINet-Funktionen akzeptieren ein Array von Flags als Parameter. Im Folgenden werden die definierten Flags kurz beschrieben.
 
 <dl> <dt>
 
-<span id="INTERNET_COOKIE_EVALUATE_P3P"></span><span id="internet_cookie_evaluate_p3p"></span>**Internet \_ Cookie \_ \_ P3P auswerten**
+<span id="INTERNET_COOKIE_EVALUATE_P3P"></span><span id="internet_cookie_evaluate_p3p"></span>**\_ \_ INTERNETCOOKIE EVALUATE \_ P3P**
 </dt> <dd> <dl> <dt>
 
 0x80
@@ -72,12 +72,12 @@ Viele der WinInet-Funktionen akzeptieren ein Array von Flags als Parameter. Im f
 
 
 
-Gibt an, dass eine Plattform für den P3P-Header (Privacy Protection) einem Cookie zugeordnet werden soll.
+Gibt an, dass ein P3P-Header (Platform for Privacy Protection) einem Cookie zugeordnet werden soll.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_COOKIE_THIRD_PARTY"></span><span id="internet_cookie_third_party"></span>**Internet \_ Cookie, \_ Dritt \_ Anbieter**
+<span id="INTERNET_COOKIE_THIRD_PARTY"></span><span id="internet_cookie_third_party"></span>**\_ \_ \_ INTERNETCOOKIE-DRITTANBIETER**
 </dt> <dd> <dl> <dt>
 
 0x10
@@ -85,12 +85,12 @@ Gibt an, dass eine Plattform für den P3P-Header (Privacy Protection) einem Cook
 
 
 
-Gibt an, dass ein Drittanbieter Cookie festgelegt oder abgerufen wird.
+Gibt an, dass ein Drittanbietercookie festgelegt oder abgerufen wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_ASYNC"></span><span id="internet_flag_async"></span>**Internet \_ Kennzeichen \_ Async**
+<span id="INTERNET_FLAG_ASYNC"></span><span id="internet_flag_async"></span>**INTERNET \_ FLAG \_ ASYNC**
 </dt> <dd> <dl> <dt>
 
 0x10000000
@@ -98,12 +98,12 @@ Gibt an, dass ein Drittanbieter Cookie festgelegt oder abgerufen wird.
 
 
 
-Macht nur asynchrone Anforderungen an Handles, die von dem von dieser Funktion zurückgegebenen handle abgeleitet werden. Nur die [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) -Funktion verwendet dieses Flag.
+Führt nur asynchrone Anforderungen für Handles aus, die von dem von dieser Funktion zurückgegebenen Handle abgeleitet sind. Nur die [**InternetOpen-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopena) verwendet dieses Flag.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_CACHE_ASYNC"></span><span id="internet_flag_cache_async"></span>**Internet- \_ Flag- \_ Cache \_ Async**
+<span id="INTERNET_FLAG_CACHE_ASYNC"></span><span id="internet_flag_cache_async"></span>**INTERNET \_ FLAG \_ CACHE \_ ASYNC**
 </dt> <dd> <dl> <dt>
 
 0x00000080
@@ -111,12 +111,12 @@ Macht nur asynchrone Anforderungen an Handles, die von dem von dieser Funktion z
 
 
 
-Ermöglicht einen verzögerten Cache Schreibvorgang.
+Ermöglicht einen verzögerten Cacheschreibvorgang.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_CACHE_IF_NET_FAIL"></span><span id="internet_flag_cache_if_net_fail"></span>**Internet- \_ Flag- \_ Cache, \_ Wenn \_ net \_ fehlschlägt**
+<span id="INTERNET_FLAG_CACHE_IF_NET_FAIL"></span><span id="internet_flag_cache_if_net_fail"></span>**\_INTERNETFLAGCACHE \_ BEI \_ \_ \_ NET-FEHLER**
 </dt> <dd> <dl> <dt>
 
 0x00010000
@@ -124,12 +124,12 @@ Ermöglicht einen verzögerten Cache Schreibvorgang.
 
 
 
-Gibt die Ressource aus dem Cache zurück, wenn die Netzwerk Anforderung für die Ressource aufgrund eines [Fehlers \_ beim \_ \_ Zurücksetzen der Internetverbindung](wininet-errors.md) oder des Fehlers " [ \_ Internet \_ kann nicht \_ verbunden](wininet-errors.md) werden" fehlschlägt. Dieses Flag wird von [**httpoperrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)verwendet.
+Gibt die Ressource aus dem Cache zurück, wenn die Netzwerkanforderung für die Ressource aufgrund eines FEHLERS BEI [ \_ DER \_ \_ ZURÜCKSETZUNG](wininet-errors.md) DER INTERNETVERBINDUNG oder eines [FEHLERS INTERNET CANNOT \_ \_ \_ CONNECT](wininet-errors.md) fehlschlägt. Dieses Flag wird von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_DONT_CACHE"></span><span id="internet_flag_dont_cache"></span>**internetflag nicht zwischen \_ \_ \_ Speichern**
+<span id="INTERNET_FLAG_DONT_CACHE"></span><span id="internet_flag_dont_cache"></span>**\_INTERNETFLAG \_ DONT \_ CACHE**
 </dt> <dd> <dl> <dt>
 
 0x04000000
@@ -137,12 +137,12 @@ Gibt die Ressource aus dem Cache zurück, wenn die Netzwerk Anforderung für die
 
 
 
-Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dies ist identisch mit dem bevorzugten Wert, [Internet \_ Flag \_ kein \_ Cache \_ Schreibvorgang](/windows).
+Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dies ist identisch mit dem bevorzugten Wert INTERNET [ \_ FLAG NO CACHE \_ \_ \_ WRITE](/windows).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_EXISTING_CONNECT"></span><span id="internet_flag_existing_connect"></span>**\_vorhandenes Internet Flag " \_ \_ Connect"**
+<span id="INTERNET_FLAG_EXISTING_CONNECT"></span><span id="internet_flag_existing_connect"></span>**\_INTERNETFLAG \_ : VORHANDENE \_ VERBINDUNG**
 </dt> <dd> <dl> <dt>
 
 0x20000000
@@ -150,12 +150,12 @@ Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dies ist identisch mit
 
 
 
-Versucht, ein vorhandenes [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) -Objekt zu verwenden, wenn es mit denselben Attributen vorhanden ist, die für die Anforderung erforderlich sind. Dies ist nur bei FTP-Vorgängen nützlich, da FTP das einzige Protokoll ist, das in der Regel mehrere Vorgänge während der gleichen Sitzung ausführt. WinInet speichert ein einzelnes Verbindungs Handle für jedes [**hinternethandle**](appendix-a-hinternet-handles.md) zwischen, das von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena)generiert wurde. Die Funktionen [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) und **InternetConnect** verwenden dieses Flag für http-und FTP-Verbindungen.
+Versucht, ein vorhandenes [**InternetConnect-Objekt**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) zu verwenden, wenn eines mit den attributen vorhanden ist, die für die Anforderung erforderlich sind. Dies ist nur bei FTP-Vorgängen nützlich, da FTP das einzige Protokoll ist, das in der Regel mehrere Vorgänge während derselben Sitzung ausführt. WinINet speichert ein einzelnes Verbindungshandle für jedes [**HINTERNET-Handle**](appendix-a-hinternet-handles.md) zwischen, das von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena)generiert wird. Die Funktionen [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) und **InternetConnect** verwenden dieses Flag für HTTP- und FTP-Verbindungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_FORMS_SUBMIT"></span><span id="internet_flag_forms_submit"></span>**Internet \_ Flag \_ zum \_ Senden von Formularen**
+<span id="INTERNET_FLAG_FORMS_SUBMIT"></span><span id="internet_flag_forms_submit"></span>**\_ \_ INTERNETFLAGFORMULARE \_ ÜBERMITTELN**
 </dt> <dd> <dl> <dt>
 
 0x00000040
@@ -163,12 +163,12 @@ Versucht, ein vorhandenes [**InternetConnect**](/windows/desktop/api/Wininet/nf-
 
 
 
-Gibt an, dass dies eine Formular Übermittlung ist.
+Gibt an, dass es sich um eine Formularübermittlung handelt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_FROM_CACHE"></span><span id="internet_flag_from_cache"></span>**Internet \_ Kennzeichen \_ aus dem \_ Cache**
+<span id="INTERNET_FLAG_FROM_CACHE"></span><span id="internet_flag_from_cache"></span>**\_INTERNETFLAG \_ AUS \_ CACHE**
 </dt> <dd> <dl> <dt>
 
 0x01000000
@@ -176,12 +176,12 @@ Gibt an, dass dies eine Formular Übermittlung ist.
 
 
 
-Keine Netzwerk Anforderungen. Alle Entitäten werden aus dem Cache zurückgegeben. Wenn sich das angeforderte Element nicht im Cache befindet, wird ein geeigneter Fehler (z \_ . b. Fehler Datei \_ nicht \_ gefunden) zurückgegeben. Nur die [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) -Funktion verwendet dieses Flag.
+Stellt keine Netzwerkanforderungen. Alle Entitäten werden aus dem Cache zurückgegeben. Wenn sich das angeforderte Element nicht im Cache befindet, wird ein geeigneter Fehler zurückgegeben, z. B. ERROR \_ FILE \_ NOT \_ FOUND. Nur die [**InternetOpen-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopena) verwendet dieses Flag.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_FWD_BACK"></span><span id="internet_flag_fwd_back"></span>**Internet Kennzeichen- \_ Flag \_ \_ zurück**
+<span id="INTERNET_FLAG_FWD_BACK"></span><span id="internet_flag_fwd_back"></span>**\_ \_ INTERNETFLAG FWD \_ BACK**
 </dt> <dd> <dl> <dt>
 
 0x00000020
@@ -189,12 +189,12 @@ Keine Netzwerk Anforderungen. Alle Entitäten werden aus dem Cache zurückgegebe
 
 
 
-Gibt an, dass die Funktion die Kopie der Ressource verwenden soll, die sich derzeit im Internet Cache befindet. Das Ablaufdatum und andere Informationen über die Ressource werden nicht geprüft. Wenn das angeforderte Element nicht im Internet Cache gefunden wird, versucht das System, die Ressource im Netzwerk zu finden. Dieser Wert wurde in Microsoft Internet Explorer 5 eingeführt und ist den vorwärts-und **rückwärts** -Schaltflächen **Vorgängen** von Internet Explorer zugeordnet.
+Gibt an, dass die Funktion die Kopie der Ressource verwenden soll, die sich derzeit im Internetcache befindet. Das Ablaufdatum und andere Informationen zur Ressource werden nicht überprüft. Wenn das angeforderte Element nicht im Internetcache gefunden wird, versucht das System, die Ressource im Netzwerk zu finden. Dieser Wert wurde in Microsoft Internet Explorer 5 eingeführt und ist **den** Vorwärts- und Zurück-Schaltflächenvorgängen von Internet Explorer zugeordnet. 
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_HYPERLINK"></span><span id="internet_flag_hyperlink"></span>**Hyperlink zum Internet Kennzeichen \_ \_**
+<span id="INTERNET_FLAG_HYPERLINK"></span><span id="internet_flag_hyperlink"></span>**\_ \_ INTERNETFLAGLINK**
 </dt> <dd> <dl> <dt>
 
 0x00000400
@@ -202,14 +202,14 @@ Gibt an, dass die Funktion die Kopie der Ressource verwenden soll, die sich derz
 
 
 
-Erzwingt ein erneutes Laden, wenn keine Ablaufzeit und keine LastModified-Zeit vom Server zurückgegeben wird, wenn bestimmt wird, ob das Element aus dem Netzwerk neu geladen werden soll. Dieses Flag kann von [**ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea), [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea), [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
+Erzwingt ein erneutes Laden, wenn keine Expires-Zeit und keine LastModified-Zeit vom Server zurückgegeben wird, wenn bestimmt wird, ob das Element erneut aus dem Netzwerk geladen werden soll. Dieses Flag kann von [**FtpFindFirstFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) [**FtpGetFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpPutFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von " [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) " und " [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)" verwendet.
+**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_IGNORE_CERT_CN_INVALID"></span><span id="internet_flag_ignore_cert_cn_invalid"></span>**Internet \_ Kennzeichen \_ Ignorieren von \_ Zertifikat \_ CN \_ ungültig**
+<span id="INTERNET_FLAG_IGNORE_CERT_CN_INVALID"></span><span id="internet_flag_ignore_cert_cn_invalid"></span>**\_INTERNETFLAG \_ IGNORE \_ CERT \_ CN \_ INVALID**
 </dt> <dd> <dl> <dt>
 
 0x00001000
@@ -217,12 +217,12 @@ Erzwingt ein erneutes Laden, wenn keine Ablaufzeit und keine LastModified-Zeit v
 
 
 
-Deaktiviert die Überprüfung von SSL/PCT-basierten Zertifikaten, die vom Server zurückgegeben werden, mit dem in der Anforderung angegebenen Hostnamen. WinInet verwendet eine einfache Überprüfung auf Zertifikate, indem Sie übereinstimmende Hostnamen und einfache Platzhalter Regeln vergleicht. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Deaktiviert die Überprüfung von SSL-/PCT-basierten Zertifikaten, die vom Server anhand des in der Anforderung angegebenen Hostnamens zurückgegeben werden. WinINet verwendet eine einfache Überprüfung von Zertifikaten, indem auf übereinstimmende Hostnamen und einfache Platzhalterregeln verglichen wird. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_IGNORE_CERT_DATE_INVALID"></span><span id="internet_flag_ignore_cert_date_invalid"></span>**Internet Kennzeichen " \_ \_ Zertifikat ignorieren" \_ \_ \_ ungültig**
+<span id="INTERNET_FLAG_IGNORE_CERT_DATE_INVALID"></span><span id="internet_flag_ignore_cert_date_invalid"></span>**\_INTERNETFLAG \_ IGNORE \_ CERT DATE \_ \_ INVALID**
 </dt> <dd> <dl> <dt>
 
 0x00002000
@@ -230,12 +230,12 @@ Deaktiviert die Überprüfung von SSL/PCT-basierten Zertifikaten, die vom Server
 
 
 
-Deaktiviert die Überprüfung von SSL-/PCT-basierten Zertifikaten auf ordnungsgemäße Gültigkeits Daten. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Deaktiviert die Überprüfung von SSL-/PCT-basierten Zertifikaten auf ordnungsgemäße Gültigkeitsdauern. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTP"></span><span id="internet_flag_ignore_redirect_to_http"></span>**Internet- \_ Flag " \_ \_ Umleitung \_ an \_ http ignorieren"**
+<span id="INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTP"></span><span id="internet_flag_ignore_redirect_to_http"></span>**\_INTERNETFLAG IGNORE REDIRECT TO HTTP \_ \_ (UMLEITUNG ZU \_ HTTP IGNORIEREN) \_**
 </dt> <dd> <dl> <dt>
 
 0x00008000
@@ -243,12 +243,12 @@ Deaktiviert die Überprüfung von SSL-/PCT-basierten Zertifikaten auf ordnungsge
 
 
 
-Deaktiviert die Erkennung dieses besonderen Umleitungs Typs. Wenn dieses Flag verwendet wird, lässt WinInet transparent Umleitungen von HTTPS an HTTP-URLs zu. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Deaktiviert die Erkennung dieses speziellen Umleitungstyps. Wenn dieses Flag verwendet wird, lässt WinINet Umleitungen von HTTPS zu HTTP-URLs transparent zu. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTPS"></span><span id="internet_flag_ignore_redirect_to_https"></span>**Internet- \_ Flag " \_ \_ Umleitung \_ an \_ https ignorieren"**
+<span id="INTERNET_FLAG_IGNORE_REDIRECT_TO_HTTPS"></span><span id="internet_flag_ignore_redirect_to_https"></span>**\_INTERNETFLAG IGNORE REDIRECT TO HTTPS \_ \_ (UMLEITUNG ZU \_ HTTPS IGNORIEREN) \_**
 </dt> <dd> <dl> <dt>
 
 0x00004000
@@ -256,12 +256,12 @@ Deaktiviert die Erkennung dieses besonderen Umleitungs Typs. Wenn dieses Flag ve
 
 
 
-Deaktiviert die Erkennung dieses besonderen Umleitungs Typs. Wenn dieses Flag verwendet wird, lässt WinInet transparent Umleitungen von http-zu-HTTPS-URLs zu. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Deaktiviert die Erkennung dieses speziellen Umleitungstyps. Wenn dieses Flag verwendet wird, lässt WinINet Umleitungen von HTTP zu HTTPS-URLs transparent zu. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_KEEP_CONNECTION"></span><span id="internet_flag_keep_connection"></span>**\_internetflag \_ \_ Verbindung beibehalten**
+<span id="INTERNET_FLAG_KEEP_CONNECTION"></span><span id="internet_flag_keep_connection"></span>**\_INTERNETFLAG \_ " VERBINDUNG \_ BEIBEHALTEN"**
 </dt> <dd> <dl> <dt>
 
 0x00400000
@@ -269,12 +269,12 @@ Deaktiviert die Erkennung dieses besonderen Umleitungs Typs. Wenn dieses Flag ve
 
 
 
-Verwendet die Keep-Alive-Semantik (falls verfügbar) für die Verbindung. Dieses Flag wird von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet. Dieses Flag ist für Microsoft Network (MSN), NTLM und andere Arten der Authentifizierung erforderlich.
+Verwendet die Keep-Alive-Semantik für die Verbindung, sofern verfügbar. Dieses Flag wird von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet. Dieses Flag ist für Microsoft Network (MSN), NTLM und andere Authentifizierungstypen erforderlich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_MAKE_PERSISTENT"></span><span id="internet_flag_make_persistent"></span>**\_internetflag \_ \_ dauerhaft machen**
+<span id="INTERNET_FLAG_MAKE_PERSISTENT"></span><span id="internet_flag_make_persistent"></span>**\_INTERNETFLAG \_ MAKE \_ PERSISTENT**
 </dt> <dd> <dl> <dt>
 
 0x02000000
@@ -287,7 +287,7 @@ Wird nicht mehr unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_MUST_CACHE_REQUEST"></span><span id="internet_flag_must_cache_request"></span>**Internet \_ Kennzeichen \_ muss \_ Anforderung Zwischenspeichern \_**
+<span id="INTERNET_FLAG_MUST_CACHE_REQUEST"></span><span id="internet_flag_must_cache_request"></span>**\_INTERNETFLAG \_ MUSS ANFORDERUNG \_ \_ ZWISCHENSPEICHERN**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -295,14 +295,14 @@ Wird nicht mehr unterstützt.
 
 
 
-Identisch mit dem bevorzugten Wert, **Internet \_ Flag \_ benötigt \_ Datei**. Bewirkt, dass eine temporäre Datei erstellt wird, wenn die Datei nicht zwischengespeichert werden kann. Dieses Flag kann von [**ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea), [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea), [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
+Identisch mit dem bevorzugten Wert, **INTERNET \_ FLAG NEED \_ \_ FILE**. Bewirkt, dass eine temporäre Datei erstellt wird, wenn die Datei nicht zwischengespeichert werden kann. Dieses Flag kann von [**FtpFindFirstFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) [**FtpGetFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpPutFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von " [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) " und " [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)" verwendet.
+**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NEED_FILE"></span><span id="internet_flag_need_file"></span>**Internet- \_ Flag \_ benötigt \_ Datei**
+<span id="INTERNET_FLAG_NEED_FILE"></span><span id="internet_flag_need_file"></span>**\_INTERNETFLAG: \_ DATEI ERFORDERLICH \_**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -310,14 +310,14 @@ Identisch mit dem bevorzugten Wert, **Internet \_ Flag \_ benötigt \_ Datei**. 
 
 
 
-Bewirkt, dass eine temporäre Datei erstellt wird, wenn die Datei nicht zwischengespeichert werden kann. Dieses Flag kann von [**ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea), [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea), [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
+Bewirkt, dass eine temporäre Datei erstellt wird, wenn die Datei nicht zwischengespeichert werden kann. Dieses Flag kann von [**FtpFindFirstFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) [**FtpGetFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpPutFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von " [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) " und " [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)" verwendet.
+**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NO_AUTH"></span><span id="internet_flag_no_auth"></span>**Internet \_ Flag \_ nicht \_ Authentifizierung.**
+<span id="INTERNET_FLAG_NO_AUTH"></span><span id="internet_flag_no_auth"></span>**\_INTERNETFLAG \_ KEINE \_ AUTHENTIFIZIERUNG**
 </dt> <dd> <dl> <dt>
 
 0x00040000
@@ -325,12 +325,12 @@ Bewirkt, dass eine temporäre Datei erstellt wird, wenn die Datei nicht zwischen
 
 
 
-Versucht nicht, automatisch eine Authentifizierung durchführen. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Versucht die Authentifizierung nicht automatisch. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NO_AUTO_REDIRECT"></span><span id="internet_flag_no_auto_redirect"></span>**Internet \_ Flag \_ keine \_ automatische \_ Umleitung**
+<span id="INTERNET_FLAG_NO_AUTO_REDIRECT"></span><span id="internet_flag_no_auto_redirect"></span>**\_INTERNETFLAG \_ KEINE AUTOMATISCHE \_ \_ UMLEITUNG**
 </dt> <dd> <dl> <dt>
 
 0x00200000
@@ -338,12 +338,12 @@ Versucht nicht, automatisch eine Authentifizierung durchführen. Dieses Flag kan
 
 
 
-Führt keine automatische Umleitung in [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta)aus. Dieses Flag kann auch von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) für HTTP-Anforderungen verwendet werden.
+Verarbeitet die Umleitung in [**HttpSendRequest**](/windows/desktop/api/Wininet/nf-wininet-httpsendrequesta)nicht automatisch. Dieses Flag kann auch von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) für HTTP-Anforderungen verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NO_CACHE_WRITE"></span><span id="internet_flag_no_cache_write"></span>**Internet \_ Kennzeichen \_ ohne \_ Cache \_ Schreibvorgang**
+<span id="INTERNET_FLAG_NO_CACHE_WRITE"></span><span id="internet_flag_no_cache_write"></span>**\_INTERNETFLAG \_ KEIN \_ \_ CACHESCHREIBVORGANG**
 </dt> <dd> <dl> <dt>
 
 0x04000000
@@ -351,14 +351,14 @@ Führt keine automatische Umleitung in [**HttpSendRequest**](/windows/desktop/ap
 
 
 
-Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dieses Flag wird von, [**httpopaufrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet.
+Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dieses Flag wird von , [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von " [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) " und " [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)" verwendet.
+**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NO_COOKIES"></span><span id="internet_flag_no_cookies"></span>**Internet \_ Flag \_ No \_ Cookies**
+<span id="INTERNET_FLAG_NO_COOKIES"></span><span id="internet_flag_no_cookies"></span>**\_INTERNETFLAG \_ KEINE \_ COOKIES**
 </dt> <dd> <dl> <dt>
 
 0x00080000
@@ -366,12 +366,12 @@ Fügt die zurückgegebene Entität nicht dem Cache hinzu. Dieses Flag wird von, 
 
 
 
-Fügt nicht automatisch Cookieheader zu Anforderungen hinzu und fügt der cookiedatenbank automatisch zurückgegebene Cookies hinzu. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
+Fügt Den Anforderungen nicht automatisch Cookieheader hinzu, und der Cookiedatenbank werden nicht automatisch zurückgegebene Cookies hinzugefügt. Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (für HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_NO_UI"></span><span id="internet_flag_no_ui"></span>**Internet \_ Flag \_ keine \_ Benutzeroberfläche**
+<span id="INTERNET_FLAG_NO_UI"></span><span id="internet_flag_no_ui"></span>**\_INTERNETFLAG \_ KEINE \_ BENUTZEROBERFLÄCHE**
 </dt> <dd> <dl> <dt>
 
 0x00000200
@@ -379,12 +379,12 @@ Fügt nicht automatisch Cookieheader zu Anforderungen hinzu und fügt der cookie
 
 
 
-Deaktiviert das Cookie-Dialogfeld. Dieses Flag kann von [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet werden (nur HTTP-Anforderungen).
+Deaktiviert das Dialogfeld "Cookie". Dieses Flag kann von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (nur HTTP-Anforderungen) verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_OFFLINE"></span><span id="internet_flag_offline"></span>**Internet- \_ Flag \_ Offline**
+<span id="INTERNET_FLAG_OFFLINE"></span><span id="internet_flag_offline"></span>**\_INTERNETFLAG \_ OFFLINE**
 </dt> <dd> <dl> <dt>
 
 0x01000000
@@ -392,12 +392,12 @@ Deaktiviert das Cookie-Dialogfeld. Dieses Flag kann von [**httpopanrequest**](/w
 
 
 
-Identisch mit **dem \_ internetflag \_ aus dem \_ Cache**. Keine Netzwerk Anforderungen. Alle Entitäten werden aus dem Cache zurückgegeben. Wenn sich das angeforderte Element nicht im Cache befindet, wird ein geeigneter Fehler (z \_ . b. Fehler Datei \_ nicht \_ gefunden) zurückgegeben. Nur die [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) -Funktion verwendet dieses Flag.
+Identisch mit **INTERNET \_ FLAG FROM \_ \_ CACHE**. Stellt keine Netzwerkanforderungen. Alle Entitäten werden aus dem Cache zurückgegeben. Wenn sich das angeforderte Element nicht im Cache befindet, wird ein geeigneter Fehler zurückgegeben, z. B. ERROR \_ FILE \_ NOT \_ FOUND. Nur die [**InternetOpen-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopena) verwendet dieses Flag.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_PASSIVE"></span><span id="internet_flag_passive"></span>**\_internetflag \_ passiv**
+<span id="INTERNET_FLAG_PASSIVE"></span><span id="internet_flag_passive"></span>**\_INTERNETFLAG \_ PASSIV**
 </dt> <dd> <dl> <dt>
 
 0x08000000
@@ -405,12 +405,12 @@ Identisch mit **dem \_ internetflag \_ aus dem \_ Cache**. Keine Netzwerk Anford
 
 
 
-Verwendet passive FTP-Semantik. Dieses Flag wird nur von [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet. [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet dieses Flag für FTP-Anforderungen, und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet dieses Flag für FTP-Dateien und-Verzeichnisse.
+Verwendet passive FTP-Semantik. Nur [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwenden dieses Flag. [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet dieses Flag für FTP-Anforderungen, und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet dieses Flag für FTP-Dateien und -Verzeichnisse.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_PRAGMA_NOCACHE"></span><span id="internet_flag_pragma_nocache"></span>**Internet \_ Flag \_ pragma \_ NoCache**
+<span id="INTERNET_FLAG_PRAGMA_NOCACHE"></span><span id="internet_flag_pragma_nocache"></span>**\_INTERNETFLAG \_ PRAGMA \_ NOCACHE**
 </dt> <dd> <dl> <dt>
 
 0x00000100
@@ -418,12 +418,12 @@ Verwendet passive FTP-Semantik. Dieses Flag wird nur von [**InternetConnect**](/
 
 
 
-Erzwingt, dass die Anforderung vom Ursprungsserver aufgelöst wird, auch wenn eine zwischengespeicherte Kopie auf dem Proxy vorhanden ist. Die Funktion " [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) " (nur bei http-und HTTPS-Anforderungen) und die Funktion " [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) " verwenden dieses Flag.
+Erzwingt, dass die Anforderung vom Ursprungsserver aufgelöst wird, auch wenn eine zwischengespeicherte Kopie auf dem Proxy vorhanden ist. Die [**Funktion InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) (nur bei HTTP- und HTTPS-Anforderungen) und [**die HttpOpenRequest-Funktion**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) verwenden dieses Flag.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_RAW_DATA"></span><span id="internet_flag_raw_data"></span>**\_internetflag \_ für \_ Rohdaten**
+<span id="INTERNET_FLAG_RAW_DATA"></span><span id="internet_flag_raw_data"></span>**\_INTERNETFLAG- \_ \_ ROHDATEN**
 </dt> <dd> <dl> <dt>
 
 0x40000000
@@ -431,14 +431,14 @@ Erzwingt, dass die Anforderung vom Ursprungsserver aufgelöst wird, auch wenn ei
 
 
 
-Gibt die Daten beim Abrufen von FTP-Verzeichnisinformationen als [**Win32- \_ \_ Datenstruktur suchen**](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) zurück. Wenn dieses Flag nicht angegeben ist oder der-Aufrufe über einen CERN-Proxy erfolgt, gibt [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) die HTML-Version des Verzeichnisses zurück. Nur die [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) -Funktion verwendet dieses Flag.
+Gibt die Daten beim Abrufen von FTP-Verzeichnisinformationen als [**WIN32 \_ FIND \_ DATA-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) zurück. Wenn dieses Flag nicht angegeben ist oder der Aufruf über einen CERN-Proxy erfolgt, gibt [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) die HTML-Version des Verzeichnisses zurück. Nur die [**InternetOpenUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet dieses Flag.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Gibt beim Abrufen von Gopher-Verzeichnisinformationen auch eine [**Gopher \_ Find \_ Data**](/windows/desktop/api/Wininet/ns-wininet-gopher_find_dataa) -Struktur zurück.
+**Windows XP und Windows Server 2003 R2 und früher:** Gibt auch eine [**GOPHER \_ FIND \_ DATA-Struktur**](/windows/desktop/api/Wininet/ns-wininet-gopher_find_dataa) zurück, wenn Gopher-Verzeichnisinformationen abgerufen werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_READ_PREFETCH"></span><span id="internet_flag_read_prefetch"></span>**Internet \_ Kennzeichen \_ Lese \_ Vorabruf**
+<span id="INTERNET_FLAG_READ_PREFETCH"></span><span id="internet_flag_read_prefetch"></span>**\_INTERNETFLAG \_ READ \_ PREFETCH**
 </dt> <dd> <dl> <dt>
 
 0x00100000
@@ -446,12 +446,12 @@ Gibt die Daten beim Abrufen von FTP-Verzeichnisinformationen als [**Win32- \_ \_
 
 
 
-Dieses Flag ist zurzeit deaktiviert.
+Dieses Flag ist derzeit deaktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_RELOAD"></span><span id="internet_flag_reload"></span>**Internet Kennzeichen erneut \_ \_ Laden**
+<span id="INTERNET_FLAG_RELOAD"></span><span id="internet_flag_reload"></span>**ERNEUTES \_ LADEN DES INTERNETFLAGS \_**
 </dt> <dd> <dl> <dt>
 
 0x80000000
@@ -459,14 +459,14 @@ Dieses Flag ist zurzeit deaktiviert.
 
 
 
-Erzwingt einen Download der angeforderten Datei, des angeforderten Objekts oder der angeforderten Verzeichnisliste vom ursprünglichen Server, nicht aus dem Cache. Dieses Flag wird von den Funktionen [**ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea), [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea), [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet.
+Erzwingt einen Download der angeforderten Datei, des angeforderten Objekts oder der angeforderten Verzeichnisliste vom ursprünglichen Server, nicht aus dem Cache. Die Funktionen [**FtpFindFirstFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) [**FtpGetFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpPutFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwenden dieses Flag.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von " [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) " und " [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)" verwendet.
+**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_RESTRICTED_ZONE"></span><span id="internet_flag_restricted_zone"></span>**\_Zone mit \_ eingeschränkten Internet Kennzeichen \_**
+<span id="INTERNET_FLAG_RESTRICTED_ZONE"></span><span id="internet_flag_restricted_zone"></span>**\_ \_ EINGESCHRÄNKTE ZONE MIT INTERNETFLAG \_**
 </dt> <dd> <dl> <dt>
 
 0x00020000
@@ -474,12 +474,12 @@ Erzwingt einen Download der angeforderten Datei, des angeforderten Objekts oder 
 
 
 
-Gibt an, dass das festgelegte Cookie einer nicht vertrauenswürdigen Site zugeordnet ist.
+Gibt an, dass das festgelegte Cookie einer nicht vertrauenswürdigen Website zugeordnet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_RESYNCHRONIZE"></span><span id="internet_flag_resynchronize"></span>**Internet- \_ Flag \_ erneut synchronisieren**
+<span id="INTERNET_FLAG_RESYNCHRONIZE"></span><span id="internet_flag_resynchronize"></span>**\_INTERNETFLAG \_ NEU SYNCHRONISIEREN**
 </dt> <dd> <dl> <dt>
 
 0x00000800
@@ -487,14 +487,14 @@ Gibt an, dass das festgelegte Cookie einer nicht vertrauenswürdigen Site zugeor
 
 
 
-Lädt http-Ressourcen erneut, wenn die Ressource seit dem letzten herunterladen geändert wurde. Alle FTP-Ressourcen werden erneut geladen. Dieses Flag kann von [**ftpfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea), [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea), [**httpopanrequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
+Lädt HTTP-Ressourcen erneut, wenn die Ressource seit dem letzten Herunterladen geändert wurde. Alle FTP-Ressourcen werden neu geladen. Dieses Flag kann von [**FtpFindFirstFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpfindfirstfilea) [**FtpGetFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea) [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpPutFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea) [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta)und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet werden.
 
-**Windows XP und Windows Server 2003 R2 und früher:** Wird auch von [**gopherfindfirstfile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**gopheropenfile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet, und Gopher-Ressourcen werden erneut geladen.
+**Windows XP und Windows Server 2003 R2 und früher:** Auch von [**GopherFindFirstFile**](/windows/desktop/api/Wininet/nf-wininet-gopherfindfirstfilea) und [**GopherOpenFile**](/windows/desktop/api/Wininet/nf-wininet-gopheropenfilea)verwendet, und Gopher-Ressourcen werden neu geladen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_SECURE"></span><span id="internet_flag_secure"></span>**Internet \_ Kennzeichen \_ sicher**
+<span id="INTERNET_FLAG_SECURE"></span><span id="internet_flag_secure"></span>**\_INTERNETFLAG \_ SICHER**
 </dt> <dd> <dl> <dt>
 
 0x00800000
@@ -502,12 +502,12 @@ Lädt http-Ressourcen erneut, wenn die Ressource seit dem letzten herunterladen 
 
 
 
-Verwendung eine sichere Transaktionssemantik. Dies bedeutet, dass Secure Sockets Layer/private Communications Technology (SSL/PCT) verwendet wird und nur in HTTP-Anforderungen sinnvoll ist. Dieses Flag wird von [**httpopzurequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet. Dies ist jedoch redundant, wenn https://in der URL angezeigt wird. Die [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) -Funktion verwendet dieses Flag für http-Verbindungen. Alle Anforderungs Handles, die unter dieser Verbindung erstellt werden, erben dieses Flag.
+Verwendung eine sichere Transaktionssemantik. Dies bedeutet die Verwendung Secure Sockets Layer/Private Communications Technology (SSL/PCT) und ist nur in HTTP-Anforderungen sinnvoll. Dieses Flag wird von [**HttpOpenRequest**](/windows/desktop/api/Wininet/nf-wininet-httpopenrequesta) und [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet. Dies ist jedoch redundant, wenn https:// in der URL angezeigt wird. Die [**InternetConnect-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet dieses Flag für HTTP-Verbindungen. alle Anforderungshandles, die unter dieser Verbindung erstellt wurden, erben dieses Flag.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_TRANSFER_ASCII"></span><span id="internet_flag_transfer_ascii"></span>**Internet \_ Flag \_ Transfer \_ ASCII**
+<span id="INTERNET_FLAG_TRANSFER_ASCII"></span><span id="internet_flag_transfer_ascii"></span>**\_INTERNETFLAGÜBERTRAGUNG \_ \_ ASCII**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -515,12 +515,12 @@ Verwendung eine sichere Transaktionssemantik. Dies bedeutet, dass Secure Sockets
 
 
 
-Überträgt die Datei als ASCII (nur FTP). Dieses Flag kann von [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)und [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)verwendet werden.
+Überträgt die Datei als ASCII (nur FTP). Dieses Flag kann von [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)und [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_FLAG_TRANSFER_BINARY"></span><span id="internet_flag_transfer_binary"></span>**Internet- \_ Flag- \_ Übertragungs \_ Binärdatei**
+<span id="INTERNET_FLAG_TRANSFER_BINARY"></span><span id="internet_flag_transfer_binary"></span>**\_ \_ \_ INTERNETFLAGÜBERTRAGUNGSBINÄRDATEI**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -528,12 +528,12 @@ Verwendung eine sichere Transaktionssemantik. Dies bedeutet, dass Secure Sockets
 
 
 
-Überträgt die Datei als Binärdatei (nur FTP). Dieses Flag kann von [**ftpopeinfile**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea), [**ftpgetfile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)und [**ftpputfile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)verwendet werden.
+Überträgt die Datei als Binärdatei (nur FTP). Dieses Flag kann von [**FtpOpenFile,**](/windows/desktop/api/Wininet/nf-wininet-ftpopenfilea) [**FtpGetFile**](/windows/desktop/api/Wininet/nf-wininet-ftpgetfilea)und [**FtpPutFile**](/windows/desktop/api/Wininet/nf-wininet-ftpputfilea)verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_NO_CALLBACK"></span><span id="internet_no_callback"></span>**Internet \_ kein \_ Rückruf**
+<span id="INTERNET_NO_CALLBACK"></span><span id="internet_no_callback"></span>**INTERNET \_ OHNE \_ RÜCKRUF**
 </dt> <dd> <dl> <dt>
 
 0x00000000
@@ -541,12 +541,12 @@ Verwendung eine sichere Transaktionssemantik. Dies bedeutet, dass Secure Sockets
 
 
 
-Gibt an, dass für diese API keine Rückrufe erstellt werden sollen. Dies wird für den *dxcontext* -Parameter der Funktionen verwendet, die asynchrone Vorgänge zulassen.
+Gibt an, dass für diese API keine Rückrufe erfolgen sollen. Dies wird für den *dxContext-Parameter* der Funktionen verwendet, die asynchrone Vorgänge zulassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="INTERNET_OPTION_SUPPRESS_SERVER_AUTH"></span><span id="internet_option_suppress_server_auth"></span>**Internet \_ Option \_ Server Authentifizierung unterdrücken \_ \_**
+<span id="INTERNET_OPTION_SUPPRESS_SERVER_AUTH"></span><span id="internet_option_suppress_server_auth"></span>**INTERNETOPTION UNTERDRÜCKEN DER \_ \_ \_ \_ SERVERAUTHENTIFIZIERUNG**
 </dt> <dd> <dl> <dt>
 
 104
@@ -554,12 +554,12 @@ Gibt an, dass für diese API keine Rückrufe erstellt werden sollen. Dies wird f
 
 
 
-Legt ein HTTP-Anforderungs Objekt so fest, dass es sich nicht bei Ursprungs Servern anmelden, sondern die automatische Anmeldung bei http-Proxy Servern ausführt. Diese Option unterscheidet sich vom anwendungsflag Internet \_ Flag \_ No \_ auth, das die Authentifizierung bei Proxy Servern und Ursprungs Servern verhindert. Wenn Sie diesen Modus festlegen, wird bei der Kommunikation mit einem Ursprungsserver die Verwendung von Anmelde Informationsmaterial (entweder zuvor bereitgestellter Benutzername/Kennwort oder Client-SSL-Zertifikat) unterdrückt. Wenn die Anforderung jedoch über einen authentifizier enden Proxy übertragen werden muss, führt WinInet weiterhin eine automatische Authentifizierung für den HTTP-Proxy Gemäß den Intranet-Zonen Einstellungen für den Benutzer aus. Die Standardeinstellung für die Intranetzone besteht darin, die automatische Anmeldung mithilfe der Standard Anmelde Informationen des Benutzers zuzulassen. Um die Unterdrückung aller identifizierenden Informationen sicherzustellen, sollte der Aufrufer die Internet \_ Option Server Authentifizierung unter \_ drücken \_ \_ mit dem Anforderungs Kennzeichen Internet \_ Flag \_ No \_ Cookies kombinieren. Diese Option kann nur für Anforderungs Objekte festgelegt werden, bevor Sie gesendet wurden. Wenn versucht wird, diese Option festzulegen, nachdem die Anforderung gesendet wurde, wird der Fehler " \_ Internet \_ fehlerhafter Handle" zurückgegeben \_ \_ . Für diese Option ist kein Puffer erforderlich. Diese wird von InternetSetOption bei Handles verwendet, die nur von httpopanrequest zurückgegeben werden. Version: erfordert Internet Explorer 8,0 oder höher.
+Legt ein HTTP-Anforderungsobjekt so fest, dass es sich nicht bei Ursprungsservern anmeldet, sondern automatisch bei HTTP-Proxyservern anmeldet. Diese Option unterscheidet sich vom Anforderungsflag INTERNET \_ FLAG \_ NO \_ AUTH, das die Authentifizierung bei Proxyservern und Ursprungsservern verhindert. Wenn Sie diesen Modus festlegen, wird die Verwendung von Anmeldeinformationen (entweder zuvor bereitgestellter Benutzername/Kennwort oder CLIENT-SSL-Zertifikat) bei der Kommunikation mit einem Ursprungsserver unterdrückt. Wenn die Anforderung jedoch über einen Authentifizierungsproxy übertragen werden muss, führt WinINet weiterhin die automatische Authentifizierung beim HTTP-Proxy gemäß den Intranetzoneneinstellungen für den Benutzer durch. Die Standardeinstellung Intranetzone ist das Zulassen der automatischen Anmeldung mit den Standardanmeldeinformationen des Benutzers. Um die Unterdrückung aller identifizierenden Informationen sicherzustellen, sollte der Aufrufer INTERNET \_ OPTION \_ SUPPRESS SERVER \_ \_ AUTH mit dem \_ \_ Anforderungsflag INTERNET FLAG NO \_ COOKIES kombinieren. Diese Option kann nur für Anforderungsobjekte festgelegt werden, bevor sie gesendet wurden. Wenn versucht wird, diese Option festzulegen, nachdem die Anforderung gesendet wurde, wird ERROR \_ INTERNET INCORRECT HANDLE STATE \_ \_ \_ zurückgegeben. Für diese Option ist kein Puffer erforderlich. Dies wird von InternetSetOption nur für Handles verwendet, die von HttpOpenRequest zurückgegeben werden. Version: Erfordert Internet Explorer 8.0 oder höher.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WININET_API_FLAG_ASYNC"></span><span id="wininet_api_flag_async"></span>**WinInet- \_ API- \_ Flag " \_ Async"**
+<span id="WININET_API_FLAG_ASYNC"></span><span id="wininet_api_flag_async"></span>**WININET \_ API \_ FLAG \_ ASYNC**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -572,7 +572,7 @@ Erzwingt asynchrone Vorgänge.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WININET_API_FLAG_SYNC"></span><span id="wininet_api_flag_sync"></span>**Synchronisierung der WinInet- \_ API \_ \_**
+<span id="WININET_API_FLAG_SYNC"></span><span id="wininet_api_flag_sync"></span>**\_ \_ WININET-API-FLAGSYNCHRONISIERUNG \_**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -585,7 +585,7 @@ Erzwingt synchrone Vorgänge.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WININET_API_FLAG_USE_CONTEXT"></span><span id="wininet_api_flag_use_context"></span>**WinInet- \_ API- \_ Flag verwenden des \_ \_ Kontexts**
+<span id="WININET_API_FLAG_USE_CONTEXT"></span><span id="wininet_api_flag_use_context"></span>**VERWENDUNGSKONTEXT DES \_ WININET-API-FLAGS \_ \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -593,15 +593,15 @@ Erzwingt synchrone Vorgänge.
 
 
 
-Erzwingt, dass die API den Kontextwert verwendet, auch wenn Sie auf 0 (null) festgelegt ist.
+Erzwingt, dass die API den Kontextwert verwendet, auch wenn er auf 0 (null) festgelegt ist.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP-Dienste (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
  
 
@@ -613,7 +613,7 @@ Erzwingt, dass die API den Kontextwert verwendet, auch wenn Sie auf 0 (null) fes
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Wininet. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wininet.h</dt> </dl> |
 
 
 
