@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 14ace8227df7064caff249b02ec381b6ff7cb751
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: a898b7789479f216c677a8624ec41ec4a774f611
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122476346"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985533"
 ---
 # <a name="jetsetcurrentindex4-function"></a>JetSetCurrentIndex4-Funktion
 
@@ -106,10 +106,10 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 | <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p>Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errInvalidIndexId</p> | <p>Der Inhalt der Index-ID war ungültig oder abgelaufen und muss aktualisiert werden. Dies kann für <strong>JetSetCurrentIndex4 auftreten, wenn:</strong></p><ul><li><p>pindexid- cbStruct hat nicht die erwartete Größe &gt; (Windows Server 2003 und spätere Versionen).</p></li><li><p>Die Engine wurde heruntergefahren, seit die Index-ID abgerufen wurde.</p></li><li><p>Alle Cursor, die auf die Tabelle verweisen, die den Index enthält, der der Index-ID entspricht, wurden geschlossen, und die Engine hat die Definition dieses Indexes aus dem Schemacache entfernt.</p></li><li><p>Die Index-ID wird mit einem Cursor verwendet, der in der falschen Tabelle geöffnet ist.</p></li><li><p>Der Index wurde gelöscht oder ist für die Sitzung noch nicht sichtbar.</p></li></ul> | 
 | <p>JET_errInvalidName</p> | <p>Einer der angegebenen Objektnamen war ungültig. Alle Objektnamen müssen demselben Satz von Regeln entsprechen. Nachfolgend sind diese Regeln aufgeführt:</p><ul><li><p>Objektnamen müssen aus ASCII-Zeichen bestehen.</p></li><li><p>Objektnamen müssen mindestens ein Zeichen lang sein.</p></li><li><p>Objektnamen dürfen die Länge JET_cbNameMost (64) Zeichen nicht überschreiten.</p></li><li><p>Objektnamen beginnen möglicherweise nicht mit einem Leerzeichen.</p></li><li><p>Objektnamen dürfen keine ASCII-Steuerzeichen enthalten (0x00 bis 0x1F).</p></li><li><p>Objektnamen dürfen kein Ausrufezeichen (!), Punkt (.), linke Klammer ([) oder rechte Klammer (]) enthalten.</p></li><li><p>Nach der Überprüfung wird nur der Teil der Zeichenfolge bis zum ersten Leerzeichen (falls möglich) für den Objektnamen verwendet. Dies bedeutet, dass Objektnamen möglicherweise auch kein Leerzeichen enthalten.</p></li></ul> | 
-| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetSetCurrentIndex4</strong> passieren, wenn <em>pindexid</em> nicht NULL und pindexid- cbStruct nicht die erwartete Größe auf hat (Windows XP und frühere &gt; Releases).</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetSetCurrentIndex4</strong> passieren, wenn <em>pindexid</em> nicht NULL ist und pindexid- cbStruct nicht die erwartete Größe hat (Windows XP und frühere &gt; Releases).</p> | 
 | <p>JET_errNoCurrentRecord</p> | <p>Ein sekundärer Index wird mit der Option JET_bitNoMove ausgewählt, und es gibt keinen Indexeintrag im neuen Index, der dem Datensatz entspricht, der dem Indexeintrag an der aktuellen Position des Cursors im alten Index zugeordnet ist.</p> | 
 | <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
-| <p>JET_errOutOfCursors</p> | <p>Die Engine hat ihren Ressourcenpool zum Öffnen von Cursorn ausgeschöpft. Die maximale Anzahl von Cursorn, die gleichzeitig geöffnet werden können, wird mithilfe von <a href="gg269201(v=exchg.10).md">JET_paramMaxCursors.</a> Weitere Informationen finden Sie <a href="gg294044(v=exchg.10).md">unter JetSetSystemParameter.</a> Dies kann für <strong>JetSetCurrentIndex4</strong> passieren, wenn ein sekundärer Index ausgewählt wurde und die Engine keinen internen Cursor öffnen kann, um diesen Index zu verwenden.</p> | 
+| <p>JET_errOutOfCursors</p> | <p>Die Engine hat ihren Ressourcenpool zum Öffnen von Cursorn ausgeschöpft. Die maximale Anzahl von Cursorn, die zu einem beliebigen Zeitpunkt geöffnet werden können, wird mithilfe von <a href="gg269201(v=exchg.10).md">JET_paramMaxCursors.</a> Weitere Informationen finden Sie <a href="gg294044(v=exchg.10).md">unter JetSetSystemParameter.</a> Dies kann für <strong>JetSetCurrentIndex4</strong> passieren, wenn ein sekundärer Index ausgewählt wurde und die Engine keinen internen Cursor öffnen kann, um diesen Index zu verwenden.</p> | 
 | <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
 | <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden.</p><p>Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
@@ -120,14 +120,21 @@ Bei Erfolg wird der aktuelle Index des Cursors auf den angeforderten Index festg
 
 Bei einem Fehler befinden sich der aktuelle Index und die aktuelle Position des Cursors in einem nicht definierten Zustand. Es wird keine Änderung am Datenbankzustand vorgenommen.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Wenn der Index-ID-Hinweis veraltet ist, schlägt die API einfach fehl. Es gibt in diesem Fall kein Fallback auf den Textnamen des Indexes, wie man erwarten könnte. Dieser Fallback muss manuell vom Aufrufer der API durchgeführt werden.
+Wenn der Index-ID-Hinweis veraltet ist, schlägt die API einfach fehl. Es gibt in diesem Fall keinen Fallback auf den Textnamen des Indexes, wie man erwarten könnte. Dieser Fallback muss manuell vom Aufrufer der API durchgeführt werden.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetSetCurrentIndex4W</strong> (Unicode) und <strong>JetSetCurrentIndex4A</strong> (ANSI) implementiert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetSetCurrentIndex4W</strong> (Unicode) und <strong>JetSetCurrentIndex4A</strong> (ANSI) implementiert.</p> | 
 
 
 

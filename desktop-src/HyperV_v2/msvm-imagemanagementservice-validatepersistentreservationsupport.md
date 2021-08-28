@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob ein Dateisystem eine virtuelle Festplatte mit aktivierten permanenten Reservierungen unterstützen kann.
+description: Überprüft, ob ein Dateisystem eine virtuelle Festplatte mit aktivierten persistenten Reservierungen unterstützen kann.
 ms.assetid: c5fed9d5-0fa6-4b96-ae6e-84468b011e2a
-title: Validatepersistentreservationsupport-Methode der Msvm_ImageManagementService-Klasse
+title: ValidatePersistentReservationSupport-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 596e5cf840ee65dc0b3ad5315462db4666c8b262
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 36f1384ca9b56c24a40925a08fb87595fd57acef3e50c1d5d09593d9cfd7f545
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118147722"
 ---
-# <a name="validatepersistentreservationsupport-method-of-the-msvm_imagemanagementservice-class"></a>Validatepersistentreservationsupport-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="validatepersistentreservationsupport-method-of-the-msvm_imagemanagementservice-class"></a>ValidatePersistentReservationSupport-Methode der Msvm \_ ImageManagementService-Klasse
 
-Überprüft, ob ein Dateisystem eine virtuelle Festplatte mit aktivierten permanenten Reservierungen unterstützen kann.
+Überprüft, ob ein Dateisystem eine virtuelle Festplatte mit aktivierten persistenten Reservierungen unterstützen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 ValidatePersistentReservationSupport(
 
 <dl> <dt>
 
-*Pfad* \[ in\]
+*Pfad* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort einer Datenträger Image Datei oder eines Verzeichnisses angibt, in dem eine Datenträger Image Datei abgelegt werden kann.
+Ein vollqualifizierter Pfad, der den Speicherort einer Datenträgerimagedatei oder eines Verzeichnisses angibt, in dem eine Datenträgerimagedatei platziert werden kann.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task erfolgreich abgeschlossen wurde).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe erfolgreich abgeschlossen wurde).
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,31 +75,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -111,7 +111,7 @@ Die **Datei wurde nicht gefunden** (32779).
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -120,7 +120,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

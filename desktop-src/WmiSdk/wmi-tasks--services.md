@@ -1,5 +1,5 @@
 ---
-description: WMI-Tasks für Dienste rufen Informationen zu Diensten ab, einschließlich abhängiger oder Vorgängerdienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
+description: WMI-Tasks für Dienste erhalten Informationen zu Diensten, einschließlich abhängiger oder vorgängerischer Dienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: 1cd92981-c074-4ff7-a32c-ce492e6d6aa5
 ms.tgt_platform: multiple
 title: 'WMI-Aufgaben: Dienste'
@@ -10,16 +10,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1e96080dfde59ac5ca910082b764700b9ce51149dce82d87e8a716cfdcf73027
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7a5de08eccb501288697cee77eaa28a087e07d96
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117738829"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631428"
 ---
 # <a name="wmi-tasks-services"></a>WMI-Aufgaben: Dienste
 
-WMI-Tasks für Dienste rufen Informationen zu Diensten ab, einschließlich abhängiger oder Vorgängerdienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+WMI-Tasks für Dienste erhalten Informationen zu Diensten, einschließlich abhängiger oder vorgängerischer Dienste. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
 Die in diesem Thema gezeigten Skriptbeispiele rufen Daten nur vom lokalen Computer ab. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
@@ -44,8 +44,8 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -56,10 +56,10 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 <tbody>
 <tr class="odd">
 <td>... ermitteln, welche Dienste ausgeführt werden und welche nicht?</td>
-<td>Verwenden <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong></strong></a> Sie die Win32_Service-Klasse, um den Status aller Dienste zu überprüfen. Die Zustandseigenschaft informiert Sie darüber, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse, um den Status aller Dienste zu überprüfen. Die Zustandseigenschaft informiert Sie darüber, ob ein Dienst beendet oder ausgeführt wird.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -80,7 +80,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -102,7 +102,7 @@ Next</code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -124,7 +124,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -148,7 +148,7 @@ Next</code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -171,7 +171,7 @@ Next
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -195,7 +195,7 @@ Next
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -225,7 +225,7 @@ Next</code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -246,7 +246,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -265,12 +265,12 @@ Next</code></pre></td>
 </tr>
 <tr class="even">
 <td>... finden Sie die Dienste, die ausgeführt werden müssen, bevor ich den DHCP-Dienst starten kann?</td>
-<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse namens &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und abhängig in &quot; der &quot; <strong>Role-Eigenschaft</strong> haben. <strong>Rolle</strong> bedeutet die Rolle des DHCP-Diensts: In diesem Fall ist sie von den anderen Diensten abhängig, die gestartet werden.</p>
+<td><p>Fragen Sie <a href="associators-of-statement.md">ASSOCIATORS DER</a> <a href="/windows/desktop/CIMWin32Prov/win32-service"><strong>Win32_Service</strong></a> -Klasse mit dem Namen &quot; DHCP &quot; ab, die sich in der <a href="/windows/desktop/CIMWin32Prov/win32-dependentservice"><strong>Win32_DependentService-Klasse</strong></a> befinden und in &quot; der &quot; <strong>Role-Eigenschaft</strong> abhängig sind. <strong>Rolle</strong> bedeutet die Rolle des DHCP-Diensts: In diesem Fall ist sie von den anderen Diensten abhängig, die gestartet werden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -294,7 +294,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -318,7 +318,7 @@ Get-WmiObject -Query $query -Namespace &quot;root\cimv2&quot; | format-list Disp
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -343,7 +343,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

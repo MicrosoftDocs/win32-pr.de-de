@@ -4,12 +4,12 @@ ms.assetid: 6c87448b-5b8d-4694-ac3f-be83a258fbb0
 title: SSPI-Kontextsemantik
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ddadd2c8a76f1fdc151273dca2027b8cb55776a50b78a7c08343c22410ae90e8
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 423ce097d1ab71cf50983285f3ca8731497ed5a9
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118916979"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482536"
 ---
 # <a name="sspi-context-semantics"></a>SSPI-Kontextsemantik
 
@@ -21,37 +21,13 @@ Das SSPI-Modell unterstützt drei Arten von Sicherheitskontexten.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>type</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="connection-oriented-contexts.md">Connection</a></td>
-<td>Ein verbindungsorientierter <a href="/windows/desktop/SecGloss/c-gly"><em>Kontext</em></a> ist der gängigste und am einfachsten zu verwendende Sicherheitskontext. Der Aufrufer ist für das gesamte Nachrichtenformat und den Speicherort der Daten in der Nachricht verantwortlich. Der Aufrufer ist auch für den Speicherort der sicherheitsrelevanten Felder in einer Nachricht verantwortlich, z. B. für den Speicherort der Signaturdaten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="datagram-contexts.md">Datagramm</a></td>
-<td>Ein <a href="/windows/desktop/SecGloss/d-gly"><em>Datagramm-orientierter</em></a>Kontext bietet zusätzliche Unterstützung für die DcE-Datagrammkommunikation. Sie kann auch generisch für eine datagramorientierte Transportanwendung verwendet werden.<br/>
-<blockquote>
-<p>[!Important]</p>
-<p>Das <a href="microsoft-kerberos.md">Microsoft Kerberos-Paket</a> unterstützt keine Datagrammkontexte im Benutzer-zu-Benutzer-Modus.<br/></p>
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="stream-contexts.md">Stream</a></td>
-<td>Ein streamorientierter Kontext ist für die Blockierung und Nachrichtenformatierung im Sicherheitspaket verantwortlich. Der Aufrufer ist nicht an der Formatierung interessiert, sondern an einem unformatierten Datenstrom.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| type | BESCHREIBUNG | 
+|------|-------------|
+| <a href="connection-oriented-contexts.md">Connection</a> | Ein verbindungsorientierter <a href="/windows/desktop/SecGloss/c-gly"><em>Kontext</em></a> ist der gängigste und am einfachsten zu verwendende Sicherheitskontext. Der Aufrufer ist für das gesamte Nachrichtenformat und den Speicherort der Daten in der Nachricht verantwortlich. Der Aufrufer ist auch für den Speicherort der sicherheitsrelevanten Felder innerhalb einer Nachricht verantwortlich, z. B. für den Speicherort der Signaturdaten.<br /> | 
+| <a href="datagram-contexts.md">Datagramm</a> | Ein <a href="/windows/desktop/SecGloss/d-gly"><em>Datagramm-orientierter</em></a>Kontext bietet zusätzliche Unterstützung für die DcE-Datagrammkommunikation. Sie kann auch generisch für eine datagramorientierte Transportanwendung verwendet werden.<br /><blockquote><p>[!Important]</p><p>Das <a href="microsoft-kerberos.md">Microsoft Kerberos-Paket</a> unterstützt keine Datagrammkontexte im Benutzer-zu-Benutzer-Modus.<br /></p></blockquote><br /> | 
+| <a href="stream-contexts.md">STREAM</a> | Ein streamorientierter Kontext ist für die Blockierung und Nachrichtenformatierung im Sicherheitspaket verantwortlich. Der Aufrufer ist nicht an der Formatierung interessiert, sondern an einem unformatierten Datenstrom.<br /> | 
+
 
 
 

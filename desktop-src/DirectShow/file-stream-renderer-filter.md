@@ -4,12 +4,12 @@ ms.assetid: e26462bb-e67f-4522-bec2-88378c4ff442
 title: Filter für den Dateistreamrenderer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3da8651d61559a9b22b722f91563426cb067f7a3
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: d438d77b4f402cefed2e80f2c32d061d1652710f
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122470565"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987863"
 ---
 # <a name="file-stream-renderer-filter"></a>Filter für den Dateistreamrenderer
 
@@ -20,14 +20,24 @@ Die Verwendung dieses Filters ist veraltet. Um mehrere Dateien innerhalb desselb
 
 
 
-| | | Filtern von Schnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a> | | Eingabepinmedientypen | <ul><li>Haupttyp: MEDIATYPE_File</li><li>Untertyp: GUID_NULL</li><li>Formattyp: MEDIATYPE_File</li></ul> | | Eingabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a> | | Ausgabepinmedientypen | Keine | | Ausgabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-istreambuilder"><strong>IStreamBuilder</strong></a> | | Filtern von CLSID-| CLSID_FileRend | | Ausführbare | Quartz.dll | | <a href="merit.md">|</a> MERIT_UNLIKELY | | <a href="filter-categories.md">| "Filterkategorie"</a> CLSID_LegacyAmFilterCategory | 
+| Bezeichnung | Wert |
+|--------|-------|
+| Filterschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a> | 
+| Eingabepinmedientypen | <ul><li>Haupttyp: MEDIATYPE_File</li><li>Untertyp: GUID_NULL</li><li>Formattyp: MEDIATYPE_File</li></ul> | 
+| Eingabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"> <strong>IQualityControl</strong></a> | 
+| Medientypen des Ausgabepins | Keine | 
+| Ausgabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-istreambuilder"><strong>IStreamBuilder</strong></a> | 
+| Filtern von CLSID | CLSID_FileRend | 
+| Ausführbare Datei | Quartz.dll | 
+| <a href="merit.md">Verdienst</a> | MERIT_UNLIKELY | 
+| <a href="filter-categories.md">Filterkategorie</a> | CLSID_LegacyAmFilterCategory | 
 
 
 
 
  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die CLSID des Filters ist in Uuids.h nicht definiert. Verwenden Sie dieses Makro in Ihrer eigenen Headerdatei:
 

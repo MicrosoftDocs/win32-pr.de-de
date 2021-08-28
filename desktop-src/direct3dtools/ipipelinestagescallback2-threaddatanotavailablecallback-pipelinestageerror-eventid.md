@@ -1,5 +1,5 @@
 ---
-description: Ein Rückruf, der den Host benachrichtigt, dass ThreadData für eine bestimmte Pipelinephase und ein bestimmtes Ereignis nicht verfügbar ist.
+description: Ein Rückruf, der den Host benachrichtigt, dass ThreadData für eine bestimmte Pipelinephase und ein bestimmtes Pipelineereignis nicht verfügbar ist.
 MS-HAID: vspixengine.IPipeLineStagesCallback2\_ThreadDataNotAvailableCallback\_PipeLineStageError\_EventID
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6e7f4f39a08e6370472fa54a41dbff41e21d38d3bbe994d124bdbf134cdd5dca
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 21d5d285cfc775ed294ca09a544eb810eff4b9ba
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119484760"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627166"
 ---
 # <a name="span-idvspixengineipipelinestagescallback2_threaddatanotavailablecallback_pipelinestageerror_eventidspanipipelinestagescallback2threaddatanotavailablecallback-method"></a><span id="vspixengine.ipipelinestagescallback2_threaddatanotavailablecallback_pipelinestageerror_eventid"></span>IPipeLineStagesCallback2::ThreadDataNotAvailableCallback-Methode
 
-Ein Rückruf, der den Host benachrichtigt, dass ThreadData für eine bestimmte Pipelinephase und ein bestimmtes Ereignis nicht verfügbar ist.
+Ein Rückruf, der den Host benachrichtigt, dass ThreadData für eine bestimmte Pipelinephase und ein bestimmtes Pipelineereignis nicht verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,18 +41,18 @@ HRESULT ThreadDataNotAvailableCallback(
 ## <a name="parameters"></a>Parameter
 
 *Fehler*   
-Der Fehler in der Pipelinephase.
+Der Pipelinephasenfehler.
 
-*eid*   
+*Im 16.*   
 Das in den Ergebnissen dargestellte Ereignis.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

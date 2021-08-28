@@ -1,6 +1,6 @@
 ---
-title: WINBIO_BIOMETRIC_SUBTYPE Konstanten (winbio \_ types. h)
-description: Stellen Sie Informationen zu einer biometrischen Messung bereit.
+title: WINBIO_BIOMETRIC_SUBTYPE Konstanten (Winbio \_ types.h)
+description: Geben Sie Informationen zu einer biometrischen Messung an.
 ms.assetid: 019569A9-6184-4E75-9B82-C98F4F45F61A
 topic_type:
 - apiref
@@ -13,41 +13,41 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba1bc25337bf49a48b54b6b2426673daf8a15bd9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 07e6dc285e1a19fab8e0363391fbd81429e931cd
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956690"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630839"
 ---
-# <a name="winbio_biometric_subtype-constants"></a>Subtypkonstanten von winbio- \_ Biometrie \_
+# <a name="winbio_biometric_subtype-constants"></a>WINBIO \_ BIOMETRIC \_ SUBTYPE Constants
 
-**Winbio \_ Biometrische \_ subtypkonstanten** werden im gesamten Windows-Biometrieframework verwendet, um zusätzliche Informationen zu einer biometrischen Messung bereitzustellen. Die folgenden Konstanten können verwendet werden, wenn kein Untertyp erforderlich ist oder wenn ein beliebiger Untertyp erforderlich ist.
+**WINBIO \_ BIOMETRISCHE \_ SUBTYPE-Konstanten** werden im gesamten Windows Biometric Framework verwendet, um zusätzliche Informationen zu einer biometrischen Messung bereitzustellen. Die folgenden Konstanten können verwendet werden, wenn kein Untertyp erforderlich ist oder wenn ein Untertyp erforderlich ist.
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                            | BESCHREIBUNG                        |
+| Konstante/Wert                                                                                                                                                                                                                                                            | Beschreibung                        |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------|
-| <span id="WINBIO_SUBTYPE_NO_INFORMATION"></span><span id="winbio_subtype_no_information"></span><dl> <dt>**Winbio \_ Untertyp \_ keine \_ Informationen**</dt> <dt>0x00</dt> </dl> | Keine Untertyp Informationen.<br/> |
-| <span id="WINBIO_SUBTYPE_ANY"></span><span id="winbio_subtype_any"></span><dl> <dt>**Winbio \_ Untertyp \_ beliebiger**</dt> <dt>0xFF</dt> </dl>                                   | Ein beliebiger Untertyp.<br/>            |
+| <span id="WINBIO_SUBTYPE_NO_INFORMATION"></span><span id="winbio_subtype_no_information"></span><dl> <dt>**WINBIO \_ UNTERTYP \_ KEINE \_ INFORMATIONEN**</dt> <dt>0x00</dt> </dl> | Keine Untertypinformationen.<br/> |
+| <span id="WINBIO_SUBTYPE_ANY"></span><span id="winbio_subtype_any"></span><dl> <dt>**WINBIO \_ SUBTYPE \_ ANY**</dt> <dt>0xFF</dt> </dl>                                   | Ein beliebiger Untertyp.<br/>            |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die folgende Tabelle, um die verfügbaren biometrischen Untertypen für einen bestimmten biometrischen Typ zu finden:
+Um die verfügbaren biometrischen Untertypen für einen bestimmten biometrischen Typ zu finden, verwenden Sie die folgende Tabelle:
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th><strong>WINBIO_BIOMETRIC_TYPE</strong> Wert</th>
-<th>Thema (e) zum Suchen nach <strong>WINBIO_BIOMETRIC_SUBTYPE</strong> Werten</th>
+<th>Themen zum Suchen <strong>von WINBIO_BIOMETRIC_SUBTYPE</strong> Werten</th>
 </tr>
 </thead>
 <tbody>
@@ -69,7 +69,7 @@ Diese Werte gelten nur für Windows 10 und höher.
 <li><a href="winbio-ansi-381-img-acq-constants.md"><strong>WINBIO_ANSI_381_IMG_ACQ Konstanten</strong></a></li>
 <li><a href="winbio-ansi-381-imp-type-constants.md"><strong>WINBIO_ANSI_381_IMP_TYPE Konstanten</strong></a></li>
 <li><a href="winbio-ansi-381-pixels-constants.md"><strong>WINBIO_ANSI_381_PIXELS Konstanten</strong></a></li>
-<li><a href="winbio-ansi-381-pos-fingerprint-constants.md"><strong>WINBIO_ANSI_381_POS Fingerabdruck Konstanten</strong></a></li>
+<li><a href="winbio-ansi-381-pos-fingerprint-constants.md"><strong>WINBIO_ANSI_381_POS Fingerabdruckkonstanten</strong></a></li>
 <li><a href="winbio-ansi-381-pos-palm-constants.md"><strong>WINBIO_ANSI_381_POS_Palm Konstanten</strong></a></li>
 </ul></td>
 </tr>
@@ -98,17 +98,17 @@ Diese Werte gelten nur für Windows 10 und höher.
 
  
 
-Weitere Informationen finden Sie unter [Client Anwendungs Konstanten](client-application-constants.md).
+Weitere Informationen finden Sie unter [Clientanwendungskonstanten.](client-application-constants.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 

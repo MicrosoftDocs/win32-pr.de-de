@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter JetGetInstanceInfo-Funktion.
+description: Weitere Informationen zur JetGetInstanceInfo-Funktion
 title: JetGetInstanceInfo-Funktion
 TOCTitle: JetGetInstanceInfo Function
 ms:assetid: ffccdac0-3631-4753-876a-90ddfdd0252f
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6db8dce5861f6b75590becf2fd8ce3da112d09ae9d01e6e7514043fa47241861
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 9dfc8bec0e6cee6e127dc99135d82db3ee3001ab
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119849980"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478346"
 ---
 # <a name="jetgetinstanceinfo-function"></a>JetGetInstanceInfo-Funktion
 
@@ -49,87 +49,36 @@ Die **JetGetInstanceInfo-Funktion** ruft Informationen zu den ausgeführten Inst
 
 *pcInstanceInfo*
 
-Ein Zeiger auf einen Puffer, der die Anzahl der in *paInstanceInfo gespeicherten Elemente erhält.*
+Ein Zeiger auf einen Puffer, der die Anzahl der in *paInstanceInfo* gespeicherten Elemente empfängt.
 
 *paInstanceInfo*
 
-Ein Zeiger auf einen Puffer, der die Adresse des ersten Elements eines Arrays von Strukturen erhält.
+Ein Zeiger auf einen Puffer, der die Adresse des ersten Elements eines Arrays von Strukturen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dieser Fehler wird von <strong>JetGetInstanceInfo zurückgegeben, wenn:</strong></p>
-<ul>
-<li><p><em>pcInstanceInfo oder</em> <em>paInstanceInfo sind</em> NULL.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOutOfMemory</p></td>
-<td><p>Es ist nicht genügend Arbeitsspeicher verfügbar, um die Anforderung zu verarbeiten.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dieser Fehler wird von <strong>JetGetInstanceInfo</strong> zurückgegeben, wenn:</p><ul><li><p><em>pcInstanceInfo</em> oder <em>paInstanceInfo</em> sind NULL.</p></li></ul> | 
+| <p>JET_errOutOfMemory</p> | <p>Es ist nicht genügend Arbeitsspeicher zum Verarbeiten der Anforderung vorhanden.</p> | 
+
 
 
 #### <a name="remarks"></a>Hinweise
 
-Die Datenbank-Engine ordnet ein Array [von](./jet-instance-info-structure.md) JET_INSTANCE_INFO zu. Der Aufrufer ist dafür verantwortlich, diesen Arbeitsspeicher mit [JetFreeBuffer frei zu geben.](./jetfreebuffer-function.md)
+Die Datenbank-Engine ordnet ein Array von [JET_INSTANCE_INFO](./jet-instance-info-structure.md) Strukturen zu. Der Aufrufer ist dafür verantwortlich, diesen Arbeitsspeicher mit [JetFreeBuffer](./jetfreebuffer-function.md)freizugeben.
 
-Wenn keine aktiven Instanzen verfügbar sind, gibt **JetGetInstanceInfo** JET_errSuccess zurück, *und pcInstanceInfo* erhält den Wert 0.
+Wenn keine aktiven Instanzen vorhanden sind, gibt **JetGetInstanceInfo** JET_errSuccess zurück, und *pcInstanceInfo* erhält den Wert 0.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JetGetInstanceInfoW</strong> (Unicode) und <strong>JetGetInstanceInfoA</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetGetInstanceInfoW</strong> (Unicode) und <strong>JetGetInstanceInfoA</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

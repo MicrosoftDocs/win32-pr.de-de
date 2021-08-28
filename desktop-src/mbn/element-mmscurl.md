@@ -7,12 +7,12 @@ MSHAttr:
 title: MmscUrl
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eab913845a12f8a54c9cbc4f65de5208f7661555
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 24bf6cee6ee20a9906238db851eb72f4dfe47d10
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122986273"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480266"
 ---
 # <a name="span-idwwan_profile_v4element_mmscurlspanmmscurl"></a><span id="WWAN_profile_v4.element_MmscUrl"></span>MmscUrl
 
@@ -20,9 +20,9 @@ Gibt die URL des MMSC-Servers für das Gerät an. Optional.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
-[&lt;MmsConfiguration&gt;](element-mmsconfiguration.md)  
-**&lt;MmscUrl&gt;**
+[<MBNProfileExt>](element-mbnprofileext.md)  
+[<MmsConfiguration>](element-mmsconfiguration.md)  
+**<MmscUrl>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Keine.
 
 | Übergeordnetes Element | BESCHREIBUNG | 
 |----------------|-------------|
-| <a href="element-mmsconfiguration.md">MmsConfiguration</a> | <p>Konfigurationsinformationen für den Multimedia Messaging Service (MMS).</p><p>Zusätzlich zum Festlegen der Konfigurationselemente in diesem Element muss ein MMS-Profil die folgenden Einstellungen aufweisen.</p><ul><li>Das <a href="element-name.md"><strong>Name-Element</strong></a> muss einen systemweiten eindeutigen Namen enthalten.</li><li><a href="../mbn/schema-profilecreationtype-mbnprofile-element.md"><strong>ProfileCreationType muss</strong></a> auf <strong>UserProvisioned festgelegt werden.</strong></li><li>Die <a href="/windows/desktop/api/mbnapi/nf-mbnapi-imbnsubscriberinformation-get_simiccid"><strong>SimIccID muss</strong></a> die SIM-ID der SIM enthalten, für die dieses Profil vorgesehen ist.</li><li>Der <a href="../mbn/schema-connectionmode-mbnprofile-element.md"><strong>ConnectionMode muss</strong></a> auf Manual <strong>festgelegt werden.</strong></li><li>Die <a href="element-purposegroupguid.md"><strong>PurposeGroupGuid muss</strong></a> die GUID für die MMS-Zweckgruppe enthalten.</li><li>Das <a href="/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)"><strong>IsAdditionalPdpContextProfile</strong></a> muss auf true festgelegt <strong>werden.</strong></li></ul> | 
+| <a href="element-mmsconfiguration.md">MmsConfiguration</a> | <p>Konfigurationsinformationen für Multimedia Messaging Service (MMS).</p><p>Zusätzlich zum Festlegen der Konfigurationselemente in diesem Element muss ein MMS-Profil die folgenden Einstellungen aufweisen.</p><ul><li>Das <a href="element-name.md"><strong>Name-Element</strong></a> muss einen systemweit eindeutigen Namen enthalten.</li><li><a href="../mbn/schema-profilecreationtype-mbnprofile-element.md"><strong>ProfileCreationType</strong></a> muss auf <strong>UserProvisioned</strong>festgelegt werden.</li><li>Die <a href="/windows/desktop/api/mbnapi/nf-mbnapi-imbnsubscriberinformation-get_simiccid"><strong>SimIccID</strong></a> muss die MUSTID der SIM enthalten, für die dieses Profil vorgesehen ist.</li><li><a href="../mbn/schema-connectionmode-mbnprofile-element.md"><strong>ConnectionMode</strong></a> muss auf <strong>Manuell</strong>festgelegt werden.</li><li><a href="element-purposegroupguid.md"><strong>PurposeGroupGuid</strong></a> muss die GUID für die MMS-Zweckgruppe enthalten.</li><li><a href="/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)"><strong>IsAdditionalPdpContextProfile</strong></a> muss auf <strong>true</strong>festgelegt werden.</li></ul> | 
 
 
  
@@ -57,9 +57,7 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

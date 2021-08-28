@@ -5,28 +5,28 @@ ms.assetid: 8cb579ab-92c9-4311-aad7-5363f4cf2eaf
 keywords:
 - Benutzeroberflächenautomatisierung,Unterstützung für den ListItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,ListItem-Steuerelementtyp
-- Benutzeroberflächenautomatisierung,Struktur für listItem-Steuerelementtyp
-- Benutzeroberflächenautomatisierung,Eigenschaften für listItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den ListItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Properties für den ListItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Steuerelementmuster für den ListItem-Steuerelementtyp
-- Benutzeroberflächenautomatisierung,Ereignisse für den ListItem-Steuerelementtyp
-- Strukturstrukturen, ListItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,events für den ListItem-Steuerelementtyp
+- Strukturstrukturen,ListItem-Steuerelementtyp
 - properties,ListItem-Steuerelementtyp
-- Steuerelementmuster, ListItem-Steuerelementtyp
+- Steuerelementmuster,ListItem-Steuerelementtyp
 - events,ListItem-Steuerelementtyp
 - Unterstützung für den ListItem-Steuerelementtyp
 - ListItem-Steuerelementtyp
 - Steuerelementtypen,Struktur für ListItem-Steuerelementtyp
-- Steuerelementtypen,Steuerelementmuster für listItem-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für den ListItem-Steuerelementtyp
 - Steuerelementtypen,Unterstützung für ListItem
-- Steuerelementtypen,ListItem
+- Steuerelementtypen, ListItem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7fc7df30fc9aeebbabd5a5fdb9572c9f4b81bda4507eac751f283841a14054a
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 3cf7275212d44b795f354cb895c2d64727e375ea
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118825552"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122483196"
 ---
 # <a name="listitem-control-type"></a>ListItem-Steuerelementtyp
 
@@ -34,79 +34,57 @@ Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisie
 
 Listenelementsteuerelemente sind ein Beispiel für Steuerelemente, die den **ListItem-Steuerelementtyp** implementieren.
 
-In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **ListItem-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung Anforderungen gelten für alle Listenelementsteuerelemente, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **ListItem-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Listenelementsteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Struktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
 -   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Anmerkungen](#remarks)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Struktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Listenelementsteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf Listenelementsteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>ListItem
-<ul>
-<li>Bild (beliebige Anzahl)</li>
-<li>Text (beliebige Anzahl)</li>
-<li>Bearbeiten (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>ListItem</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>ListItem<ul><li>Bild (beliebige Anzahl)</li><li>Text (beliebige Anzahl)</li><li>Bearbeiten (beliebige Anzahl)</li></ul></li></ul> | <ul><li>ListItem</li></ul> | 
+
 
 
 
  
 
-Die untergeordneten Elemente eines Listenelementsteuerelements in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur müssen immer null untergeordnete Elemente anzeigen. Wenn die Struktur des Steuerelements so ist, dass unter dem Listenelement andere Elemente enthalten sind, sollte es die Anforderungen für die Benutzeroberflächenautomatisierung Unterstützung für den [TreeItem-Steuerelementtyp](uiauto-supporttreeitemcontroltype.md) erfüllen.
+Die unteren Elemente eines Listenelement-Steuerelements in der Inhaltsansicht der Benutzeroberflächenautomatisierung struktur muss immer 0 (null) elemente anzeigen. Wenn die Struktur des Steuerelements so ist, dass andere Elemente unter dem Listenelement enthalten sind, sollte es die Anforderungen für die Benutzeroberflächenautomatisierung-Unterstützung für den [TreeItem-Steuerelementtyp](uiauto-supporttreeitemcontroltype.md) erfüllen.
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für den **ListItem-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für den **ListItem-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
 | Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert        | Hinweise                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peerelemente in der Rohansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein. Ordnen Sie die **AutomationId-Eigenschaft** für ein Listenelement zu, wenn bekannt ist, dass das Element über verschiedene Instanzen der Benutzeroberfläche hinweg konsistent ist. Wenn das Listenelement dynamisch aufgefüllt und nicht vorhersagbar ist, lassen Sie die **AutomationId-Eigenschaft** leer.                                                          |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein. Ordnen Sie **die AutomationId-Eigenschaft** für ein Listenelement zu, wenn bekannt ist, dass das Element über verschiedene Instanzen der Benutzeroberfläche hinweg konsistent ist. Wenn das Listenelement dynamisch aufgefüllt und nicht vorhersagbar ist, lassen Sie die **AutomationId-Eigenschaft** leer.                                                          |
 | [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.   | Der Wert dieser Eigenschaft sollte den Bereich des Bilds und den Textinhalt des Listenelements enthalten.                                                                                                                                                                                                                                                                                                                              |
-| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Depends (Abhängig)      | Wenn das Listensteuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus erhält), muss dieser Punkt über diese Eigenschaft verfügbar gemacht werden. Wenn das Listensteuerelement vollständig von Nachfolgerlistenelementen abgedeckt wird, wird der [**UIA \_ E \_ NOCLICKABLEPOINT-Fehler**](uiauto-error-codes.md) zurückgegeben, um anzugeben, dass der Client ein Element innerhalb des Listensteuerelements nach einem klickbaren Punkt fragen muss. |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Depends (Abhängig)      | Wenn das Listensteuer steuerelement über einen klickbaren Punkt verfügt (ein Punkt, auf den geklickt werden kann, damit die Liste den Fokus besitzt), muss dieser Punkt über diese Eigenschaft verfügbar gemacht werden. Wenn das Listensteuerelement vollständig von Nachfolgerlistenelementen abgedeckt wird, wird der [**UIA \_ E \_ NOCLICKABLEPOINT-Fehler**](uiauto-error-codes.md) zurückgegeben, um anzugeben, dass der Client ein Element innerhalb des Listensteuerelements nach einem klickbaren Punkt fragen muss. |
 | [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **ListItem** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                                                                                                                                                                                                                                                     |
-| [**UIA \_ HelpTextPropertyId**](uiauto-automation-element-propids.md)                         | Siehe Hinweise.   | Im Hilfetext für Listensteuerelemente sollte erklärt werden, warum der Benutzer aufgefordert wird, eine Auswahl aus einer Liste von Optionen zu treffen. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden. Beispiel: "Wählen Sie ein Element aus, um die Anzeigeauflösung für Ihren Monitor festzulegen".                                                                                                                                                    |
-| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**     | Das Listensteuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                                                                                                                                                                                                                                                |
-| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**     | Das Listensteuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                                                                                                                                                                                                                                                |
-| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.   | Wenn der Container Tastatureingaben akzeptieren kann, sollte dieser Eigenschaftswert **TRUE** sein.                                                                                                                                                                                                                                                                                                                                           |
-| [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)      | Diese Eigenschaft muss einen Wert zurückgeben, der angibt, ob das Listenelement derzeit innerhalb des übergeordneten Containers, der [das Scroll-Steuerelementmuster](uiauto-implementingscroll.md) implementiert, in die Ansicht gescrollt wird.                                                                                                                                                                                                                                  |
-| [**UIA \_ ItemStatusPropertyId**](uiauto-automation-element-propids.md)                     | Depends (Abhängig)      | Wenn das Steuerelement den Status enthält, der dynamisch aktualisiert wird, muss diese Eigenschaft unterstützt werden, damit eine Hilfstechnologie Updates erhalten kann, wenn sich der Status des Elements ändert.                                                                                                                                                                                                                                     |
+| [**UIA \_ HelpTextPropertyId**](uiauto-automation-element-propids.md)                         | Siehe Hinweise.   | Im Hilfetext für Listensteuerelemente sollte erklärt werden, warum der Benutzer aufgefordert wird, eine Auswahl aus einer Liste von Optionen zu treffen. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden. Beispiel: "Wählen Sie ein Element aus, um die Anzeigeauflösung für Ihren Monitor fest."                                                                                                                                                    |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**     | Das Listensteuer steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                                                                                                                                                                                                                                |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**     | Das Listensteuer steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                                                                                                                                                                                                                                |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.   | Wenn der Container Tastatureingaben akzeptieren kann, sollte dieser Eigenschaftswert **TRUE sein.**                                                                                                                                                                                                                                                                                                                                           |
+| [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)      | Diese Eigenschaft muss einen Wert zurückgeben, um zu bestimmen, ob das Listenelement derzeit innerhalb des übergeordneten Containers, der das Bildlauf-Steuerelementmuster implementiert, in die Ansicht [gescrollt](uiauto-implementingscroll.md) wird.                                                                                                                                                                                                                                  |
+| [**UIA \_ ItemStatusPropertyId**](uiauto-automation-element-propids.md)                     | Depends (Abhängig)      | Wenn das Steuerelement den Status enthält, der dynamisch aktualisiert wird, muss diese Eigenschaft unterstützt werden, damit eine Hilfstechnologie Updates empfangen kann, wenn sich der Status des Elements ändert.                                                                                                                                                                                                                                     |
 | [**UIA \_ ItemTypePropertyId**](uiauto-automation-element-propids.md)                         | Depends (Abhängig)      | Diese Eigenschaft sollte für Listenelement-Steuerelemente verfügbar gemacht werden, die ein zugrunde liegendes Objekt darstellen. Bei diesen Listenelement-Steuerelementen ist dem Steuerelement normalerweise ein Symbol zugeordnet, das Benutzer mit dem zugrunde liegenden Objekt assoziieren.                                                                                                                                                                                                   |
 | [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.   | Wenn eine statische Textbezeichnung vorhanden ist, muss diese Eigenschaft einen Verweis auf das entsprechende Steuerelement verfügbar machen.                                                                                                                                                                                                                                                                                                                                       |
-| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge, die dem **ListItem-Steuerelementtyp entspricht.** Der Standardwert ist "list item" für en-US oder Englisch (USA).                                                                                                                                                                                                                                                                                           |
-| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.   | Der Wert der Namenseigenschaft eines Listenelementsteuerelements stammt aus der Textbezeichnung des Elements.                                                                                                                                                                                                                                                                                                                                           |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge, die dem **ListItem-Steuerelementtyp** entspricht. Der Standardwert ist "Listenelement" für en-US oder Englisch (USA).                                                                                                                                                                                                                                                                                           |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.   | Der Wert der Name-Eigenschaft eines Listenelement-Steuerelements stammt aus der Textbezeichnung des Elements.                                                                                                                                                                                                                                                                                                                                           |
 
 
 
@@ -114,7 +92,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaf
 
 ## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die von allen Listenelementsteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von allen Listenelementsteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 

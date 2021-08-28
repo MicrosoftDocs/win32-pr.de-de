@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBID. GetHashCode-Methode'
+description: 'Erfahren Sie mehr über: JET_DBID. GetHashCode-Methode'
 title: JET_DBID. GetHashCode-Methode
 TOCTitle: 'GetHashCode method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_DBID.GetHashCode
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 81f9c03896787907021805e06b21967bfbd57140
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f29755550e1532178e14ca27e5cb0f10d3148d76c5070220200b62e4398540f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017360"
 ---
 # <a name="jet_dbidgethashcode-method"></a>JET_DBID. GetHashCode-Methode
 
 Gibt den Hashcode für diese Instanz zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override int GetHashCode()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 Der Hashcode für diese Instanz.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_DBID Struktur](./jet-dbid-structure.md)
+[JET_DBID-Struktur](./jet-dbid-structure.md)
 
-[Mitglieder JET_DBID](./jet-dbid-members.md)
+[JET_DBID-Member](./jet-dbid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

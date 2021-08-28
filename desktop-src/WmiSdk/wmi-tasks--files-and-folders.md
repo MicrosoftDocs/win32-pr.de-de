@@ -1,8 +1,8 @@
 ---
-description: WMI-Tasks für Dateien und Ordner ändern Datei-oder Ordnereigenschaften über WMI, einschließlich der Erstellung einer Freigabe oder dem Umbenennen einer Datei.
+description: WMI-Aufgaben für Dateien und Ordner ändern Datei- oder Ordnereigenschaften über WMI, einschließlich erstellen einer Freigabe oder Umbenennen einer Datei.
 ms.assetid: 91281fe1-0461-48da-ac5c-cab7e8e1b285
 ms.tgt_platform: multiple
-title: 'WMI-Tasks: Dateien und Ordner'
+title: 'WMI-Aufgaben: Dateien und Ordner'
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,37 +10,37 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b24d5f7708b88507cd08b73c0b08a83c94f6bb28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d91eb6faebd01ed687ec5ef99371abfb68322e3449266da747266b8be64d863
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639450"
 ---
-# <a name="wmi-tasks-files-and-folders"></a>WMI-Tasks: Dateien und Ordner
+# <a name="wmi-tasks-files-and-folders"></a>WMI-Aufgaben: Dateien und Ordner
 
-WMI-Tasks für Dateien und Ordner ändern Datei-oder Ordnereigenschaften über WMI, einschließlich der Erstellung einer Freigabe oder dem Umbenennen einer Datei. Wenn Sie eine Datei kopieren oder eine Datei lesen und schreiben möchten, ist es am einfachsten, Windows Script Host [FileSystemObject](/previous-versions/visualstudio/visual-basic-6/aa242706(v=vs.60)) anstelle von WMI zu verwenden. Weitere Beispiele finden Sie im Abschnitt " [Dateien und Ordner](/previous-versions/tn-archive/ee176985(v=technet.10)) " von [technet scriptcenter](https://www.microsoft.com/technet/scriptcenter).
+WMI-Aufgaben für Dateien und Ordner ändern Datei- oder Ordnereigenschaften über WMI, einschließlich erstellen einer Freigabe oder Umbenennen einer Datei. Wenn Sie eine Datei kopieren oder eine Datei lesen und schreiben möchten, ist die einfachste Möglichkeit die Verwendung von Windows Script [Host FileSystemObject](/previous-versions/visualstudio/visual-basic-6/aa242706(v=vs.60)) anstelle von WMI. Weitere Beispiele finden Sie im Abschnitt [Dateien und Ordner](/previous-versions/tn-archive/ee176985(v=technet.10)) des [TechNet ScriptCenter.](https://www.microsoft.com/technet/scriptcenter)
 
-[**CIM \_ DataFile**](/windows/desktop/CIMWin32Prov/cim-datafile) ist eine der wenigen [CIM-Klassen](cimclas.md) in WMI, die implementiert wird. Vermeiden Sie es, alle Instanzen von **CIM- \_ Datendateien** auf einem Computer aufzulisten oder abzufragen, weil sich die Datenmenge wahrscheinlich auf die Leistung auswirkt oder der Computer nicht mehr reagiert.
+[**CIM \_ DataFile**](/windows/desktop/CIMWin32Prov/cim-datafile) ist eine der wenigen [CIM-Klassen](cimclas.md) in WMI, die implementiert ist. Vermeiden Sie das Aufzählen oder Abfragen aller Instanzen von **CIM \_ DataFile** auf einem Computer, da die Datenmenge wahrscheinlich entweder die Leistung beeinträchtigt oder dazu führen kann, dass der Computer nicht mehr reagiert.
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt datei keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -52,13 +52,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... Datei umbenennen, ohne eine Fehlermeldung zu erhalten?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/cim-datafile"><strong>CIM_Datafile</strong></a> -Klasse. Stellen Sie sicher, dass Sie den gesamten Pfadnamen übergeben, wenn Sie die <a href="/windows/desktop/CIMWin32Prov/rename-method-in-class-cim-datafile"><strong>Rename</strong></a> -Methode aufrufen, z &quot; . b &quot; .C:\Scripts\Test.txtstatt &quot;Text.txt&quot; . Bei PowerShell ist die Verwendung von <strong>CIM_Datafile</strong> möglicherweise ineffizient. Daher können Sie einfach das Rename-Item-Cmdlet verwenden.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... Eine Datei umbenennen, ohne eine Fehlermeldung zu erhalten?</td>
+<td>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/cim-datafile"><strong>die CIM_DataFile-Klasse.</strong></a> Stellen Sie sicher, dass Sie beim Aufrufen der <a href="/windows/desktop/CIMWin32Prov/rename-method-in-class-cim-datafile"><strong>Rename-Methode</strong></a> den gesamten Pfadnamen übergeben, z. B.C:\Scripts\Test.txt&quot; anstelle &quot; &quot; &quot;Text.txt. Für PowerShell ist die Verwendung <strong>CIM_DataFile</strong> möglicherweise ineffizient. Daher können Sie einfach das Cmdlet Rename-Item verwenden.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -98,8 +98,8 @@ Next</code></pre></td>
 </td>
 </tr>
 <tr class="even">
-<td>... bestimmen Sie, ob Benutzer über verfügen. Auf dem Computer gespeicherte MP3-Dateien?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/cim-datafile"><strong>CIM_Datafile</strong></a> -Klasse, und wählen Sie mithilfe der folgenden <a href="querying-with-wql.md">WQL</a> - <strong>Where</strong> -Klausel Dateien aus: Where Extension = &quot; MP3 &quot; .</p>
+<td>... bestimmen, ob Benutzer .MP3 auf ihrem Computer gespeicherte Dateien gespeichert haben?</td>
+<td><p>Verwenden <a href="/windows/desktop/CIMWin32Prov/cim-datafile"><strong></strong></a> Sie die CIM_DataFile-Klasse, und wählen Sie Dateien mithilfe der <a href="querying-with-wql.md">folgenden WQL</a> <strong>WHERE-Klausel</strong> aus: Where Extension = &quot; MP3 &quot; .</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -144,8 +144,8 @@ Next</code></pre></td>
 </div></td>
 </tr>
 <tr class="odd">
-<td>... Erstellen Sie freigegebene Ordner auf einem Computer?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-share"><strong>Win32_Share</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-share"><strong>Create</strong></a> -Methode.</p>
+<td>... Freigegebene Ordner auf einem Computer erstellen?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-share"><strong>Win32_Share</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-share"><strong>Create-Methode.</strong></a></p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -193,8 +193,8 @@ $Shares= [WMICLASS]&quot;Win32_Share&quot;
 </div></td>
 </tr>
 <tr class="even">
-<td>... Ordner kopieren?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-directory"><strong>Win32_Directory</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/copy-method-in-class-win32-directory"><strong>Copy</strong></a> -Methode. Für PowerShell können Sie einfach das Copy-Item-Cmdlet verwenden.</p>
+<td>... Einen Ordner kopieren?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-directory"><strong>Win32_Directory</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/copy-method-in-class-win32-directory"><strong>Copy-Methode.</strong></a> Für PowerShell können Sie einfach das Cmdlet Copy-Item verwenden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -239,8 +239,8 @@ Next </code></pre></td>
 </div></td>
 </tr>
 <tr class="odd">
-<td>... einen Ordner verschieben?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-directory"><strong>Win32_Directory</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/rename-method-in-class-win32-directory"><strong>Rename</strong></a> -Methode. Für PowerShell können Sie einfach das Move-Item-Cmdlet verwenden.</p>
+<td>... Ordner verschieben?</td>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-directory"><strong>Win32_Directory</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/rename-method-in-class-win32-directory"><strong>Rename-Methode.</strong></a> Für PowerShell können Sie einfach das Cmdlet Move-Item verwenden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -297,13 +297,13 @@ Next</code></pre></td>
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 
  

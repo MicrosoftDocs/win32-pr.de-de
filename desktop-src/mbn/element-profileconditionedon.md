@@ -7,12 +7,12 @@ MSHAttr:
 title: ProfileConditionedOn
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 44257377400ec8877b07b6aa29766552b72e28e6
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: 01a3ead4edb14cc7d9164ca834d154c2623c03b4
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122882892"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477076"
 ---
 # <a name="span-idwwan_profile_v4element_profileconditionedonspanprofileconditionedon"></a><span id="WWAN_profile_v4.element_ProfileConditionedOn"></span>ProfileConditionedOn
 
@@ -22,8 +22,8 @@ Dieses Element ist neu für v4. Sie ermöglicht es Ihnen, mehrere Profile anzuge
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
-**&lt;ProfileConditionedOn&gt;**
+[<MBNProfileExt>](element-mbnprofileext.md)  
+**<ProfileConditionedOn>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,14 +67,14 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | Beschreibung | 
+| Übergeordnetes Element | BESCHREIBUNG | 
 |----------------|-------------|
 | <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein mobiles Breitbandprofil mit einem umfangreicheren Satz von Optionen als das MBNProfile-Element.</p><p>Ein Profil kann mehrere MbnProfileExt-Elemente enthalten, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 | | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 

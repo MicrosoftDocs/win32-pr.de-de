@@ -1,11 +1,11 @@
 ---
 title: Win32_RDAllowListFileAssociation-Klasse
-description: Beschreibt eine veröffentlichte Dateityp Zuordnung zu einer RemoteApp.
+description: Beschreibt eine veröffentlichte Dateitypzuordnung mit einer RemoteApp.
 ms.assetid: 80cc8f5e-a7f0-458c-b05b-7822306f839a
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDAllowListFileAssociation-Klasse Remotedesktopdienste
-- Win32_RDAllowListFileAssociation Klasse Remotedesktopdienste, beschrieben
+- Win32_RDAllowListFileAssociation-Klassen-Remotedesktopdienste
+- Win32_RDAllowListFileAssociation-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4acbc74b5b0dab228a5c625863b4fcd0574b5f96
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: db555e2a6945a7442830bd72c6dc8ddd27b0d49cdb70852ec10a1a67dec6baea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118850199"
 ---
-# <a name="win32_rdallowlistfileassociation-class"></a>Win32 \_ rdallowlistfileassociation-Klasse
+# <a name="win32_rdallowlistfileassociation-class"></a>Win32 \_ RDAllowListFileAssociation-Klasse
 
-Beschreibt eine veröffentlichte Dateityp Zuordnung zu einer RemoteApp.
+Beschreibt eine veröffentlichte Dateitypzuordnung mit einer RemoteApp.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -45,20 +45,20 @@ class Win32_RDAllowListFileAssociation
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdallowlistfileassociation** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDAllowListFileAssociation-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdallowlistfileassociation** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDAllowListFileAssociation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Appalias**
+**AppAlias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -68,10 +68,10 @@ Alias der RemoteApp, die der Erweiterung zugeordnet ist.
 
 </dd> <dt>
 
-**Extname**
+**ExtName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -80,20 +80,20 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Name der Erweiterung, z. b. ". txt".
+Name der Erweiterung, z. B. .txt.
 
 </dd> <dt>
 
-**Progidhint**
+**ProgIdHint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Hinweis zum Öffnen von Dokumenten mit dieser Datei Zuordnung
+Hinweis zum Öffnen von Dokumenten mit dieser Dateizuordnung
 
 </dd> </dl>
 
@@ -105,8 +105,8 @@ Hinweis zum Öffnen von Dokumenten mit dieser Datei Zuordnung
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tsallow. MOF</dt> </dl>  |
+| Namespace<br/>                | Root \\ cimv2 \\ TerminalServices<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TsAllow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 
 

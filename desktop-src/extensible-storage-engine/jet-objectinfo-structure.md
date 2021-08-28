@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_OBJECTINFO Struktur'
+description: 'Weitere Informationen zu: JET_OBJECTINFO-Struktur'
 title: JET_OBJECTINFO-Struktur
 TOCTitle: JET_OBJECTINFO Structure
 ms:assetid: 9d348ab3-d453-4316-9233-681f165e8ef1
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: af21d3f885a979ac81fef502a64281ea5445046983f652033566c689991a70ac
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: d61c42897da6d55dc96f2e59847fcf727424d60e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119720310"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986123"
 ---
 # <a name="jet_objectinfo-structure"></a>JET_OBJECTINFO-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_objectinfo-structure"></a>JET_OBJECTINFO-Struktur
 
-Die **JET_OBJECTINFO-Struktur** enthält Informationen zu einem -Objekt. Tabellen sind die einzigen Objekttypen, die derzeit unterstützt werden.
+Die **JET_OBJECTINFO-Struktur** enthält Informationen zu einem Objekt. Tabellen sind die einzigen Objekttypen, die derzeit unterstützt werden.
 
 ```cpp
     typedef struct {
@@ -48,11 +48,11 @@ Die **JET_OBJECTINFO-Struktur** enthält Informationen zu einem -Objekt. Tabelle
 
 **cbStruct**
 
-Die Größe der -Struktur in **Bytes JET_OBJECTINFO** Struktur.
+Die Größe der **JET_OBJECTINFO** -Struktur in Bytes.
 
 **objtyp**
 
-Enthält die [JET_OBJTYP](./jet-objtyp.md) der -Struktur. Derzeit werden nur Tabellen zurückgegeben (d. h. JET_objtypTable).
+Enthält die [JET_OBJTYP](./jet-objtyp.md) der -Struktur. Derzeit werden nur Tabellen zurückgegeben (d. JET_objtypTable).
 
 **dtCreate**
 
@@ -66,115 +66,57 @@ Veraltet. Darf nicht verwendet werden.
 
 Eine Gruppe von Bits, die die für diesen Aufruf verfügbaren Optionen enthalten, die null oder mehr der folgenden Elemente enthalten.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitTableInfoBookmark</p></td>
-<td><p>Die Tabelle kann Lesezeichen haben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitTableInfoRollback</p></td>
-<td><p>Für die Tabelle kann ein Rollback verwendet werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitTableInfoUpdatable</p></td>
-<td><p>Die Tabelle kann aktualisiert werden.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitTableInfoBookmark</p> | <p>Die Tabelle kann Lesezeichen enthalten.</p> | 
+| <p>JET_bitTableInfoRollback</p> | <p>Für die Tabelle kann ein Rollback ausgeführt werden.</p> | 
+| <p>JET_bitTableInfoUpdatable</p> | <p>Die Tabelle kann aktualisiert werden.</p> | 
+
 
 
 **flags**
 
 Ein Bitfeld, das null oder mehr der folgenden Flags enthält.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitObjectSystem</p></td>
-<td><p>Die Tabelle ist eine Systemtabelle und nur zur internen Verwendung.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitObjectTableDerived</p></td>
-<td><p>Die Tabelle hat DDL von einer Vorlagentabelle geerbt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitObjectTableFixedDDL</p></td>
-<td><p>Die DDL für die Tabelle kann nicht geändert werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitObjectTableNoFixedVarColumnsInDerivedTables</p></td>
-<td><p>Wird in Verbindung mit JET_bitObjectTableTemplate verwendet, um feste oder variable Spalten in abgeleiteten Tabellen zu vermeiden (sodass der Vorlage in Zukunft feste oder variable Spalten hinzugefügt werden können).</p>
-<p><strong>Windows XP:</strong> Dieser Wert wird in xp Windows eingeführt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitObjectTableTemplate</p></td>
-<td><p>Die Tabelle ist eine Vorlagentabelle.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitObjectSystem</p> | <p>Die Tabelle ist eine Systemtabelle und nur zur internen Verwendung vorgesehen.</p> | 
+| <p>JET_bitObjectTableDerived</p> | <p>Die von einer Vorlagentabelle geerbte DDL.</p> | 
+| <p>JET_bitObjectTableFixedDDL</p> | <p>Die DDL für die Tabelle kann nicht geändert werden.</p> | 
+| <p>JET_bitObjectTableNoFixedVarColumnsInDerivedTables</p> | <p>Wird in Verbindung mit JET_bitObjectTableTemplate verwendet, um feste oder variable Spalten in abgeleiteten Tabellen nicht zu lassen (damit feste oder variable Spalten der Vorlage in Zukunft hinzugefügt werden können).</p><p><strong>Windows XP:</strong> Dieser Wert wird in Windows XP eingeführt.</p> | 
+| <p>JET_bitObjectTableTemplate</p> | <p>Die Tabelle ist eine Vorlagentabelle.</p> | 
+
 
 
 **cRecord**
 
 Die Anzahl der Datensätze in der Tabelle.
 
-Dieser Wert wird nur abgerufen, wenn **JET_OBJECTINFO** An [JetGetObjectInfo übergeben wurde.](./jetgetobjectinfo-function.md)
+Dieser Wert wird nur abgerufen, wenn **JET_OBJECTINFO** an [JetGetObjectInfo](./jetgetobjectinfo-function.md)übergeben wurde.
 
 **cPage**
 
 Die Anzahl der Seiten, die von der Tabelle verwendet werden.
 
-Dieser Wert wird nur abgerufen, wenn **JET_OBJECTINFO** An [JetGetObjectInfo übergeben wurde.](./jetgetobjectinfo-function.md)
+Dieser Wert wird nur abgerufen, wenn **JET_OBJECTINFO** an [JetGetObjectInfo](./jetgetobjectinfo-function.md)übergeben wurde.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Eine **JET_OBJECTINFO-Struktur** wird durch einen Aufruf von [JetGetObjectInfo](./jetgetobjectinfo-function.md) oder [JetGetTableInfo aufgefüllt.](./jetgettableinfo-function.md) Wenn der API-Aufruf nicht erfolgreich ist, ist der Inhalt der Struktur nicht definiert.
+Eine **JET_OBJECTINFO-Struktur** wird durch einen Aufruf von [JetGetObjectInfo](./jetgetobjectinfo-function.md) oder [JetGetTableInfo](./jetgettableinfo-function.md)aufgefüllt. Wenn der API-Aufruf nicht erfolgreich ist, ist der Inhalt der -Struktur nicht definiert.
 
-Falls zutreffend, enthalten die Tabellenstatistiken die Anzahl der Datensätze und die Anzahl der Seiten im gruppierten Index (d. h. den Index, der die Datensatzdaten enthält). Auf die Indexstatistiken wird separat über den Namen zugegriffen, indem [JetGetIndexInfo](./jetgetindexinfo-function.md) oder [JetGetTableIndexInfo verwendet wird.](./jetgettableindexinfo-function.md)
+Falls zutreffend, enthalten die Tabellenstatistiken die Anzahl der Datensätze und die Anzahl der Seiten, die sich im gruppierten Index befinden (d. amp;n.b. der Index, der die Datensatzdaten enthält). Auf die Indexstatistiken wird mit [jetGetIndexInfo](./jetgetindexinfo-function.md) oder [JetGetTableIndexInfo](./jetgettableindexinfo-function.md)separat anhand des Namens zugegriffen.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

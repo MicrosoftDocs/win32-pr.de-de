@@ -16,12 +16,12 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 7171d30cfe02509619a56d7d986487adab5b5cae
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: e57e8127a4de492ba4644505237cf6d8975b89db
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122478206"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986293"
 ---
 # <a name="description-mobile-broadband"></a>Beschreibung (Mobiles Breitband)
 
@@ -29,8 +29,8 @@ Eine Beschreibung des Profils.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[<MBNProfileExt>](element-mbnprofileext.md)  
-**<Description>**
+[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
+**&lt;BESCHREIBUNG&gt;**
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,9 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

@@ -1,88 +1,88 @@
 ---
-description: Empfohlene 8-Bit-YUV-Formate für Video Rendering
+description: Empfohlene 8-Bit-YUV-Formate für video rendering
 ms.assetid: 675d4c60-4c58-4f15-9bae-ffb0c389c608
-title: Empfohlene 8-Bit-YUV-Formate für Video Rendering
+title: Empfohlene 8-Bit-YUV-Formate für video rendering
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4505eb17f833040e0148ac98912f16af860b55b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc6e30f33c59bedf9a2e842d2d33328bd97d8078d21bda90ae84af9af00ec113
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722077"
 ---
-# <a name="recommended-8-bit-yuv-formats-for-video-rendering"></a>Empfohlene 8-Bit-YUV-Formate für Video Rendering
+# <a name="recommended-8-bit-yuv-formats-for-video-rendering"></a>Empfohlene 8-Bit-YUV-Formate für video rendering
 
-Gary Sullivan und Stephen estrop
+Gary Soll und Stephen Estrop
 
 Microsoft Corporation
 
-2002. April, aktualisiert: 2008. November
+April 2002, aktualisiert november 2008
 
-In diesem Thema werden die 8-Bit-YUV-Farb Formate beschrieben, die für Video Rendering im Windows-Betriebssystem empfohlen werden. In diesem Artikel werden die Verfahren für die Typumwandlung zwischen YUV-und RGB-Formaten und Techniken zum Upsampling von YUV-Formaten beschrieben. Dieser Artikel richtet sich an jeden Benutzer, der mit dem Entschlüsseln oder Rendern von YUV-Videos in Windows arbeitet.
+In diesem Thema werden die 8-Bit-YUV-Farbformate beschrieben, die für das Rendern von Videos im Windows empfohlen werden. In diesem Artikel werden Techniken zum Konvertieren zwischen YUV- und RGB-Formaten sowie Verfahren zum Upsampling von YUV-Formaten beschrieben. Dieser Artikel richtet sich an alle Personen, die mit YUV-Videodecodierung oder -rendering in Windows.
 
 ## <a name="introduction"></a>Einführung
 
-Viele YUV-Formate werden in der gesamten Videobranche definiert. In diesem Artikel werden die 8-Bit-YUV-Formate beschrieben, die für Video Rendering in Windows empfohlen werden. Decoder-und Anzeige Hersteller werden empfohlen, die in diesem Artikel beschriebenen Formate zu unterstützen. In diesem Artikel werden keine anderen Verwendungsmöglichkeiten von YUV-Farben behandelt, wie z. b. immer noch Fotos.
+Zahlreiche YUV-Formate sind in der gesamten Videobranche definiert. In diesem Artikel werden die 8-Bit-YUV-Formate beschrieben, die für das Rendern von Videos in der Windows. Decoderanbietern und Anzeigeanbietern wird empfohlen, die in diesem Artikel beschriebenen Formate zu unterstützen. In diesem Artikel werden keine anderen Verwendungsmöglichkeiten der YUV-Farbe behandelt, wie z. B. noch Immer-Färbung.
 
-Die in diesem Artikel beschriebenen Formate verwenden alle 8 Bits pro Pixel-Speicherort, um den Y-Kanal (auch als "Luma Channel" bezeichnet) zu codieren, und verwenden 8 Bits pro Stichprobe, um jedes U-oder V Chroma-Beispiel zu codieren. In den meisten YUV-Formaten werden im Durchschnitt weniger als 24 Bits pro Pixel verwendet, da Sie weniger Stichproben von Ihnen und V als von Y enthalten. In diesem Artikel werden keine YUV-Formate mit 10-Bit-oder höheren Y-Kanälen behandelt.
+Die in diesem Artikel beschriebenen Formate verwenden jeweils 8 Bits pro Pixelposition, um den Y-Kanal (auch als Lumakanal bezeichnet) zu codieren, und verwenden 8 Bits pro Stichprobe, um jedes U- oder V-Beispiel zu codieren. Die meisten YUV-Formate verwenden jedoch im Durchschnitt weniger als 24 Bits pro Pixel, da sie weniger Stichproben von Ihnen und V als Y enthalten. In diesem Artikel werden keine YUV-Formate mit 10-Bit- oder höheren Y-Kanälen behandelt.
 
 > [!Note]  
-> Für den Zweck dieses Artikels entspricht der Begriff "U" dem Wert von "CB", und der Begriff "V" entspricht CR.
+> Für die Zwecke dieses Artikels entspricht der Begriff U Cb, und der Begriff V entspricht Cr.
 
  
 
 In diesem Artikel werden die folgenden Themen behandelt:
 
--   [YUV-Stichprobenentnahme](#yuv-sampling). Beschreibt die gängigsten YUV-Stichproben Techniken.
--   [Oberflächen Definitionen](#surface-definitions). Beschreibt die empfohlenen YUV-Formate.
--   [Farb Raum-und Chroma-Samplingrate](#color-space-and-chroma-sampling-rate-conversions). Hier finden Sie einige Richtlinien für die Typumwandlung zwischen YUV-und RGB-Formaten sowie für die zwischen unterschiedlichen YUV
--   [Erkennen von YUV-Formaten in Media Foundation](#identifying-yuv-formats-in-media-foundation). Erläutert das Beschreiben von YUV-Format Typen in Media Foundation.
+-   [YUV Sampling](#yuv-sampling). Beschreibt die gängigsten YUV-Stichprobenverfahren.
+-   [Oberflächendefinitionen](#surface-definitions). Beschreibt die empfohlenen YUV-Formate.
+-   [Farbraum- und Samplingratenkonvertierungen](#color-space-and-chroma-sampling-rate-conversions). Enthält einige Richtlinien für die Konvertierung zwischen YUV- und RGB-Formaten sowie für die Konvertierung zwischen verschiedenen YUV-Formaten.
+-   [Identifizieren von YUV-Formaten in Media Foundation](#identifying-yuv-formats-in-media-foundation). Erläutert das Beschreiben von YUV-Formattypen in Media Foundation.
 
-## <a name="yuv-sampling"></a>YUV-Stichprobe
+## <a name="yuv-sampling"></a>YUV-Stichprobenentnahme
 
-Chroma-Kanäle können eine niedrigere Samplingrate als der Luma-Kanal aufweisen, ohne dass ein dramatischer Verlust der perzeptive Qualität auftritt. Eine Notation mit der Bezeichnung "a:b: C" wird verwendet, um zu beschreiben, wie oft Sie und V in Relation zu Y als Stichprobe verwendet werden:
+Kanalkanäle können eine niedrigere Samplingrate als der Lumakanal haben, ohne dass die wahrnehmliche Qualität drastisch verloren geht. Eine Notation namens "A:B:C" wird verwendet, um zu beschreiben, wie oft sie und V relativ zu Y stichprobeniert werden:
 
--   4:4:4 bedeutet, dass die Chroma-Kanäle nicht herabgestuft werden.
--   4:2:2 bedeutet 2:1 horizontale Downsampling ohne vertikale Downsampling. Jede Scanzeile enthält vier Y-Beispiele für alle zwei U-oder V-Beispiele.
--   4:2:0 bedeutet 2:1 horizontale Downsampling mit 2:1 vertikaler Downsampling.
--   4:1:1 bedeutet 4:1 horizontale Downsampling ohne vertikale Downsampling. Jede Scanzeile enthält vier Y-Beispiele für jedes Sie und jede V-Stichprobe. 4:1:1 die Stichprobenentnahme ist weniger häufig als andere Formate und wird in diesem Artikel nicht ausführlich erläutert.
+-   4:4:4 bedeutet kein Downsampling der Senderkanäle.
+-   4:2:2 bedeutet 2:1 horizontales Downsampling ohne vertikales Downsampling. Jede Scanzeile enthält vier Y-Stichproben für alle zwei U- oder V-Beispiele.
+-   4:2:0 bedeutet 2:1 horizontales Downsampling, mit 2:1 vertikalem Downsampling.
+-   4:1:1 bedeutet 4:1 horizontales Downsampling ohne vertikales Downsampling. Jede Scanzeile enthält vier Y-Stichproben für jedes Ihrer und jedes V-Beispiel. 4:1:1 Sampling ist weniger üblich als andere Formate und wird in diesem Artikel nicht ausführlich erläutert.
 
-Die folgenden Diagramme zeigen, wie Chroma für jede der Verkleinerung-Raten Stichproben erstellt wird. Luma-Beispiele werden durch ein Kreuz dargestellt, und Chroma-Beispiele werden durch einen Kreis dargestellt.
+Die folgenden Diagramme zeigen, wie für jede der Downsamplingraten Stichproben entnommen werden. Luma-Beispiele werden durch ein Kreuz dargestellt, und Musterbeispiele werden durch einen Kreis dargestellt.
 
-![Abbildung 1. Chroma-Sampling](images/yuv-sampling-grids.png)
+![Abbildung 1: - Sampling](images/yuv-sampling-grids.png)
 
-Die vorherrschende Form der 4:2:2-Stichprobenentnahme wird in der ITU-R-Empfehlung BT BT. 601. Es gibt zwei häufige Varianten der 4:2:0-Stichprobenentnahme. Eines dieser werden in MPEG-2-Video und das andere in MPEG-1 und in den ITU-T-Empfehlungen H. 261 und h. 263 verwendet.
+Die dominante Form der 4:2:2-Stichprobenentnahme ist in der ITU-R-Empfehlung BT.601 definiert. Es gibt zwei gängige Varianten der 4:2:0-Stichprobenentnahme. Eine davon wird im MPEG-2-Video und die andere in MPEG-1 und in ITU-T Empfehlungen H.261 und H.263 verwendet.
 
-Im Vergleich zum MPEG-1-Schema ist es einfacher, zwischen dem MPEG-2-Schema und den für 4:2:2-und 4:4:4-Formaten definierten Samplings zu konvertieren. Aus diesem Grund wird das MPEG-2-Schema in Windows bevorzugt und sollte als Standardinterpretation von 4:2:0-Formaten angesehen werden.
+Im Vergleich zum MPEG-1-Schema ist es einfacher, zwischen dem MPEG-2-Schema und den Samplingrastern zu konvertieren, die für die Formate 4:2:2 und 4:4:4 definiert sind. Aus diesem Grund wird das MPEG-2-Schema in Windows bevorzugt und sollte als Standardinterpretation von 4:2:0-Formaten betrachtet werden.
 
-## <a name="surface-definitions"></a>Oberflächen Definitionen
+## <a name="surface-definitions"></a>Oberflächendefinitionen
 
-In diesem Abschnitt werden die 8-Bit-YUV-Formate beschrieben, die für Video Rendering empfohlen werden. Diese sind in verschiedene Kategorien unterteilt:
+In diesem Abschnitt werden die 8-Bit-YUV-Formate beschrieben, die für das Videorendering empfohlen werden. Diese lassen sich in verschiedene Kategorien unterteilen:
 
 -   [4:4:4 Formate, 32 Bits pro Pixel](#444-formats-32-bits-per-pixel)
 -   [4:2:2 Formate, 16 Bits pro Pixel](#422-formats-16-bits-per-pixel)
 -   [4:2:0 Formate, 16 Bits pro Pixel](#420-formats-16-bits-per-pixel)
 -   [4:2:0 Formate, 12 Bits pro Pixel](#420-formats-12-bits-per-pixel)
 
-Zuerst sollten Sie die folgenden Konzepte kennen, um zu verstehen, was folgt:
+Zunächst sollten Sie die folgenden Konzepte kennen, um zu verstehen, was folgt:
 
--   *Oberflächen Ursprung*. Bei den in diesem Artikel beschriebenen YUV-Formaten steht der Ursprung (0,0) immer in der oberen linken Ecke der Oberfläche.
--   *Stride*. Der Stride einer Oberfläche (manchmal auch als "Tonhöhe" bezeichnet) ist die Breite der Oberfläche (in Bytes). Wenn ein Oberflächen Ursprung in der oberen linken Ecke liegt, ist der Stride immer positiv.
--   *Ausrichtung*. Die Ausrichtung einer Oberfläche liegt im Ermessen des Grafik Anzeige Treibers. Die Oberfläche muss immer DWORD-bündig sein. Das heißt, dass einzelne Zeilen innerhalb der Oberfläche von einer 32-Bit-Grenze (DWORD) ausgehen. Die Ausrichtung kann jedoch je nach den Anforderungen der Hardware größer als 32 Bits sein.
--   Gepacktes Format im Vergleich zum planaren Format. YUV-Formate sind in *gepackte* Formate und *planare* Formate unterteilt. In einem gepackten Format werden die Y-, U-und V-Komponenten in einem einzelnen Array gespeichert. Pixel sind in Gruppen von macropixels organisiert, deren Layout vom Format abhängt. In einem planaren Format werden die Y-, U-und V-Komponenten als drei separate Ebenen gespeichert.
+-   *Surface Origin*. Für die in diesem Artikel beschriebenen YUV-Formate ist der Ursprung (0,0) immer die obere linke Ecke der Oberfläche.
+-   *Stride*. Der Strich einer Oberfläche, manchmal auch als Tonhöhe bezeichnet, ist die Breite der Oberfläche in Bytes. Bei einem Oberflächenhersprung in der oberen linken Ecke ist der Schritt immer positiv.
+-   *Ausrichtung*. Die Ausrichtung einer Oberfläche liegt im Ermessen des Grafikanzeigetreibers. Die Oberfläche muss immer DWORD-ausgerichtet sein. Das heißt, dass einzelne Linien innerhalb der Oberfläche garantiert von einer 32-Bit-Grenze (DWORD) stammen. Die Ausrichtung kann jedoch je nach Hardwareanforderungen größer als 32 Bit sein.
+-   Gepacktes Format im Vergleich zum planaren Format. YUV-Formate sind in *gepackte Formate* und *planare Formate* unterteilt. In einem gepackten Format werden die Komponenten Y, U und V in einem einzelnen Array gespeichert. Pixel sind in Gruppen von Makropixeln organisiert, deren Layout vom Format abhängt. In einem planaren Format werden die Komponenten Y, U und V als drei separate Ebenen gespeichert.
 
-Jedes in diesem Artikel beschriebene YUV-Format verfügt über einen zugewiesenen FourCC-Code. Bei einem FourCC-Code handelt es sich um eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verkettung von vier ASCII-Zeichen erstellt wird.
+Jedem der in diesem Artikel beschriebenen YUV-Formate ist ein FOURCC-Code zugewiesen. Ein FOURCC-Code ist eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verkettung von vier ASCII-Zeichen erstellt wird.
 
 -   4:4:4 (32 bpp)
-    -   [Ayuv](#ayuv)
+    -   [AYUV](#ayuv)
 -   4:2:2 (16 bpp)
-    -   [Im YUY2](#yuy2)
-    -   [UYVY](#uyvy)
+    -   [YUY2](#yuy2)
+    -   [UYVIG](#uyvy)
 -   4:2:0 (16 bpp)
     -   [IMC1](#imc1)
     -   [IMC3](#imc3)
--   4:2:0 (12 BPP)
+-   4:2:0 (12 bpp)
     -   [IMC2](#imc2)
     -   [IMC4](#imc4)
     -   [YV12](#yv12)
@@ -90,123 +90,123 @@ Jedes in diesem Artikel beschriebene YUV-Format verfügt über einen zugewiesene
 
 ## <a name="444-formats-32-bits-per-pixel"></a>4:4:4 Formate, 32 Bits pro Pixel
 
-### <a name="ayuv"></a>Ayuv
+### <a name="ayuv"></a>AYUV
 
-Ein einzelnes 4:4:4-Format wird mit dem FourCC-Code ayuv empfohlen. Dabei handelt es sich um ein gepacktes Format, bei dem jedes Pixel in der in der folgenden Abbildung gezeigten Reihenfolge als vier aufeinanderfolgende Bytes codiert wird.
+Es wird ein einzelnes 4:4:4-Format mit dem FOURCC-Code AYUV empfohlen. Dies ist ein gepacktes Format, bei dem jedes Pixel als vier aufeinander folgende Bytes codiert wird, die in der in der folgenden Abbildung dargestellten Sequenz angeordnet sind.
 
-![Abbildung 2. Arbeitsspeicher Layout von ayuv](images/yuvformats01.gif)
+![Abbildung 2: ayuv-Speicherlayout](images/yuvformats01.gif)
 
-Die markierten Bytes enthalten Werte für Alpha.
+Die als A markierten Bytes enthalten Werte für alpha.
 
 ## <a name="422-formats-16-bits-per-pixel"></a>4:2:2 Formate, 16 Bits pro Pixel
 
 Es werden zwei 4:2:2-Formate mit den folgenden FOURCC-Codes empfohlen:
 
--   Im YUY2
--   UYVY
+-   YUY2
+-   UYAFFINITÄT
 
-Beide sind gepackte Formate, wobei jedes Makro Pixel zwei Pixel als vier aufeinanderfolgende Bytes codiert ist. Dies führt zu einem horizontalen Verkleinerung des Chroma mit einem Faktor von zwei.
+Beide sind gepackte Formate, bei denen jedes Makropixel aus zwei Pixeln besteht, die als vier aufeinander folgende Bytes codiert sind. Dies führt zu einem horizontalen Downsampling der Brille um den Faktor 2.
 
-### <a name="yuy2"></a>Im YUY2
+### <a name="yuy2"></a>YUY2
 
-Im im YUY2-Format können die Daten als Array nicht signierter **char** -Werte behandelt werden, wobei das erste Byte das erste y-Beispiel enthält, das zweite Byte das erste U (CB)-Beispiel, das dritte Byte das zweite y-Beispiel und das vierte Byte das erste V-Beispiel (CR), wie im folgenden Diagramm dargestellt.
+Im YUY2-Format können die Daten als Array  von char-Werten ohne Vorzeichen behandelt werden, wobei das erste Byte das erste Y-Beispiel enthält, das zweite Byte das erste U(Cb)-Beispiel, das dritte Byte das zweite Y-Beispiel und das vierte Byte das erste V -Beispiel (Cr), wie im folgenden Diagramm dargestellt.
 
-![Abbildung 3. im YUY2-Arbeitsspeicher Layout](images/yuvformats02.gif)
+![Abbildung 3: yuy2-Speicherlayout](images/yuvformats02.gif)
 
-Wenn das Bild als Array von Little-enumdian- **Wort** Werten adressiert wird, enthält das erste **Wort** das erste Y-Beispiel in der unwichtigsten Bits (LSB) und das erste U (CB)-Beispiel in den signifikantesten Bits (MSB). Das zweite **Wort** enthält das zweite Y-Beispiel im lssb und das erste V (CR)-Beispiel in MSSB.
+Wenn das Bild als Array von Little-Endian-WORD-Werten adressiert wird, enthält das erste **WORD** das erste Y-Beispiel in den am wenigsten signifikanten Bits (LSBs) und das erste U -Beispiel (Cb) in den wichtigsten Bits (MSBs).  Das zweite **WORD** enthält das zweite Y-Beispiel in den LSBs und das erste V-Beispiel (Cr) in den MSBs.
 
-Im YUY2 ist das bevorzugte 4:2:2-Pixel-Format für die Microsoft DirectX-Video Beschleunigung (DirectX VA). Es wird erwartet, dass es sich um eine langfristige Anforderung für DirectX VA Accelerators handelt, die 4:2:2-Video unterstützen.
+YUY2 ist das bevorzugte 4:2:2-Pixelformat für die Microsoft DirectX-Videobeschleunigung (DirectX VA). Es wird erwartet, dass es sich um eine kurzfristige Anforderung für DirectX VA-Accelerators handelt, die 4:2:2-Videos unterstützen.
 
-### <a name="uyvy"></a>UYVY
+### <a name="uyvy"></a>UYAFFINITÄT
 
-Dieses Format ist mit dem im YUY2-Format identisch, mit dem Unterschied, dass die Byte Reihenfolge umgekehrt ist – d. h., die Chroma-und Luma-Bytes werden gekippt (Abbildung 4). Wenn das Bild als ein Array von zwei Little-enumdian- **Wort** Werten adressiert wird, enthält das erste **Wort** U in den lssb und y0 in den MSSB, und das zweite **Wort** enthält V in den lssb und Y1 in den MSSB.
+Dieses Format ist mit dem YUY2-Format identisch, mit der Ausnahme, dass die Byte reihenfolge umgekehrt wird, d. h., die Bytes "yu" und "luma" werden gekippt (Abbildung 4). Wenn das Bild als Array von zwei Little-Endian **WORD-Werten** adressiert wird, enthält das erste **WORD** U in den LSBs und Y0 in den MSBs, und das zweite **WORD** enthält V in den LSBs und Y1 in den MSBs.
 
-![Abbildung 4. UYVY-Speicher Layout](images/yuvformats03.gif)
+![Abbildung 4: uyy arbeitsspeicherlayout](images/yuvformats03.gif)
 
 ## <a name="420-formats-16-bits-per-pixel"></a>4:2:0 Formate, 16 Bits pro Pixel
 
-Es werden zwei 4:2:0 16-Bits pro Pixel-Format (BPP) mit den folgenden FOURCC-Codes empfohlen:
+Es werden zwei bpp-Formate (4:2:0, 16 Bit pro Pixel) mit den folgenden FOURCC-Codes empfohlen:
 
 -   IMC1
 -   IMC3
 
-Beide YUV-Formate sind Planare Formate. Die Chroma-Kanäle werden von einem Faktor von zwei in den horizontalen und vertikalen Dimensionen Subsampling.
+Beide YUV-Formate sind planare Formate. Die Farbkanäle werden sowohl in der horizontalen als auch in der vertikalen Dimension um den Faktor 2 subsampelt.
 
 ### <a name="imc1"></a>IMC1
 
-Alle Y-Beispiele werden als erstes im Arbeitsspeicher als Array nicht signierter **char** -Werte angezeigt. Anschließend werden alle V-Beispiele (CR) und dann alle U (CB)-Beispiele angezeigt. Die Flächen "V" und "U" haben den gleichen Schritt wie die Y-Ebene, was zu nicht verwendeten Speicherbereichen führt, wie in Abbildung 5 dargestellt. Die Ebenen "You" und "V" müssen an Speicher Begrenzungen beginnen, die ein Vielfaches von 16 Zeilen sind. Abbildung 5 zeigt den Ursprung von Ihnen und V für einen Video Frame mit 352 x 240. Die Startadresse der Ebenen "You" und "V" wird wie folgt berechnet:
+Alle Y-Beispiele werden zuerst im Arbeitsspeicher als Array von char-Werten ohne **Vorzeichen** angezeigt. Darauf folgen alle V-Beispiele (Cr) und dann alle U-Beispiele (Cb). Die Ebenen V und U haben denselben Schritt wie die Y-Ebene, was zu nicht verwendeten Speicherbereichen führt, wie in Abbildung 5 dargestellt. Die Du- und V-Ebenen müssen an Speichergrenzen beginnen, die ein Vielfaches von 16 Zeilen sind. Abbildung 5 zeigt den Ursprung von Ihnen und V für einen 352 x 240-Videoframe. Die Startadresse der Sie- und V-Ebenen wird wie folgt berechnet:
 
 ``` syntax
 BYTE* pV = pY + (((Height + 15) & ~15) * Stride);
 BYTE* pU = pY + (((((Height * 3) / 2) + 15) & ~15) * Stride);
 ```
 
-Dabei ist *pY* ein Byte Zeiger auf den Anfang des Speicherarrays, wie im folgenden Diagramm dargestellt.
+Dabei *ist pY* ein Bytezeiger auf den Anfang des Speicherarrays, wie im folgenden Diagramm dargestellt.
 
-![Abbildung 5. imc1-Arbeitsspeicher Layout (Beispiel)](images/yuvformats04.gif)
+![Abbildung 5. imc1-Speicherlayout (Beispiel)](images/yuvformats04.gif)
 
 ### <a name="imc3"></a>IMC3
 
-Dieses Format ist mit IMC1 identisch, mit dem Unterschied, dass Sie und die V-Ebenen ausgetauscht werden, wie im folgenden Diagramm dargestellt.
+Dieses Format ist mit IMC1 identisch, mit der Ausnahme, dass die Sie- und die V-Ebene ausgetauscht werden, wie im folgenden Diagramm dargestellt.
 
-![Abbildung 6. imc3-Arbeitsspeicher Layout](images/yuvformats05.gif)
+![Abbildung 6: imc3-Speicherlayout](images/yuvformats05.gif)
 
 ## <a name="420-formats-12-bits-per-pixel"></a>4:2:0 Formate, 12 Bits pro Pixel
 
-Vier 4:2:0 12-bpp-Formate werden mit den folgenden FOURCC-Codes empfohlen:
+Es werden vier 4:2:0 12-bpp-Formate mit den folgenden FOURCC-Codes empfohlen:
 
 -   IMC2
 -   IMC4
 -   YV12
 -   NV12
 
-In allen diesen Formaten werden die Chroma-Kanäle in den horizontalen und vertikalen Dimensionen durch einen Faktor von zwei Subsampling.
+In all diesen Formaten werden die Kanalkanäle in horizontalen und vertikalen Dimensionen um den Faktor 2 subsampelt.
 
 ### <a name="imc2"></a>IMC2
 
-Dieses Format ist identisch mit IMC1, mit Ausnahme des folgenden Unterschieds: die Zeilen V (CR) und U (CB) sind über Schneidevorgänge mit halber Stride-Grenze. Mit anderen Worten, jede vollständige Zeile im Bereich Chroma beginnt mit einer Reihe von V-Beispielen, gefolgt von einer Reihe von U-Beispielen, die an der nächsten Hälfte der nächsten Grenze beginnen (Abbildung 7). Mit diesem Layout wird der Adressraum effizienter genutzt als IMC1. Er schneidet den Chroma-Adressraum in der Hälfte ab und somit den gesamten Adressraum um 25 Prozent. Bei 4:2:0-Formaten ist IMC2 das zweitbeliebteste Format nach NV12. Dieses Verfahren wird in der folgenden Abbildung veranschaulicht.
+Dieses Format ist mit IMC1 identisch, mit Ausnahme des folgenden Unterschieds: Die Linien V (Cr) und U (Cb) sind an Halbschrittgrenzen verwebt. Anders ausgedrückt: Jede linie mit voller Stride im Bereich "Lf" beginnt mit einer Zeile mit V-Stichproben, gefolgt von einer Zeile mit U-Stichproben, die an der nächsten Halbschrittgrenze beginnt (Abbildung 7). Dieses Layout nutzt den Adressraum effizienter als IMC1. Sie schneidet den Adressraum der Brille um die Hälfte und somit den gesamten Adressraum um 25 Prozent ab. Unter den Formaten 4:2:0 ist IMC2 nach NV12 das zweit bevorzugte Format. Die folgende Abbildung veranschaulicht diesen Prozess.
 
-![Abbildung 7: imc2-Arbeitsspeicher Layout](images/yuvformats07.gif)
+![Abbildung 7: imc2-Speicherlayout](images/yuvformats07.gif)
 
 ### <a name="imc4"></a>IMC4
 
-Dieses Format ist mit IMC2 identisch, mit der Ausnahme, dass die Zeilen U (CB) und V (CR) ausgetauscht werden, wie in der folgenden Abbildung dargestellt.
+Dieses Format ist mit IMC2 identisch, mit der Ausnahme, dass die Linien U (Cb) und V (Cr) ausgetauscht werden, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung 8. IMC4-Arbeitsspeicher Layout](images/yuvformats06.gif)
+![Abbildung 8. imc4-Speicherlayout](images/yuvformats06.gif)
 
 ### <a name="yv12"></a>YV12
 
-Alle Y-Beispiele werden als erstes im Arbeitsspeicher als Array nicht signierter **char** -Werte angezeigt. Auf dieses Array folgt sofort alle V-Beispiele (CR). Der Schritt der V-Ebene liegt bei der Hälfte des Schrittes der Y-Ebene. und die Ebene "V" enthält die Hälfte der Zeilen in der Y-Ebene. Auf die v-Ebene folgt sofort alle U (CB)-Beispiele mit dem gleichen Schritt und der Anzahl von Zeilen wie die Ebene "v", wie in der folgenden Abbildung dargestellt.
+Alle Y-Beispiele werden zuerst im Arbeitsspeicher als Array von char-Werten ohne **Vorzeichen** angezeigt. Auf dieses Array folgen sofort alle V-Beispiele (Cr). Der Schritt der V-Ebene ist halb so lang wie die Y-Ebene. und die V-Ebene enthält halb so viele Linien wie die Y-Ebene. Auf die V-Ebene folgen sofort alle U-Beispiele (Cb) mit dem gleichen Schritt und der gleichen Anzahl von Linien wie die V-Ebene, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung 9. YV12-Arbeitsspeicher Layout](images/yuvformats08.gif)
+![Abbildung 9: yv12-Speicherlayout](images/yuvformats08.gif)
 
 ### <a name="nv12"></a>NV12
 
-Alle Y-Beispiele werden als erstes im Arbeitsspeicher als Array von **char** -Werten ohne Vorzeichen mit einer geraden Anzahl von Zeilen angezeigt. Auf die Y-Ebene folgt unmittelbar ein Array nicht signierter **char** -Werte, das gepackte U (CB)-und V (CR)-Beispiele enthält. Wenn das kombinierte U-V-Array als Array von Little-enumdian- **Wort** Werten adressiert wird, enthalten die lssb die U-Werte, und die MSSB enthalten die V-Werte. NV12 ist das bevorzugte 4:2:0-Pixel-Format für DirectX VA. Es wird erwartet, dass es sich um eine langfristige Anforderung für DirectX VA Accelerators handelt, die 4:2:0-Video unterstützen. In der folgenden Abbildung sind die Y-Ebene und das-Array dargestellt, das gepackte Sie und V-Beispiele enthält.
+Alle Y-Beispiele werden zuerst im Arbeitsspeicher als  Array von char-Werten ohne Vorzeichen mit einer gleichmäßigen Anzahl von Zeilen angezeigt. Auf die Y-Ebene folgt sofort ein  Array von char-Werten ohne Vorzeichen, das gepackte U-Beispiele (Cb) und V-Stichproben (Cr) enthält. Wenn das kombinierte U-V-Array als Array von  Little-Endian-WORD-Werten adressiert wird, enthalten die LSBs die U-Werte und die MSBs die V-Werte. NV12 ist das bevorzugte 4:2:0-Pixelformat für DirectX VA. Es wird erwartet, dass es sich um eine kurzfristige Anforderung für DirectX VA-Accelerators handelt, die 4:2:0-Videos unterstützen. Die folgende Abbildung zeigt die Y-Ebene und das Array, das gepackte Sie- und V-Beispiele enthält.
 
-![Abbildung 10. nv12-Arbeitsspeicher Layout](images/yuvformats09.gif)
+![Abbildung 10. nv12-Speicherlayout](images/yuvformats09.gif)
 
-## <a name="color-space-and-chroma-sampling-rate-conversions"></a>Farb Raum-und Chroma-Sampling-Raten Konvertierungen
+## <a name="color-space-and-chroma-sampling-rate-conversions"></a>Farbraum- und Samplingratenkonvertierungen
 
-Dieser Abschnitt enthält Richtlinien für die Typumwandlung zwischen YUV und RGB sowie für die Umstellung zwischen einigen unterschiedlichen YUV-Formaten. In diesem Abschnitt werden zwei RGB-Codierungs Schemas in Erwägung gezogen: *8-Bit-Computer RGB*, auch als sRGB oder "vollständig skalierbar" (RGB) und *Studio-Video RGB* oder "RGB mit headraum und Zehen Raum" bezeichnet. Diese werden wie folgt definiert:
+Dieser Abschnitt enthält Richtlinien für die Konvertierung zwischen YUV und RGB sowie für die Konvertierung zwischen verschiedenen YUV-Formaten. Wir betrachten in diesem Abschnitt zwei RGB-Codierungsschemas: *8-Bit-Computer RGB*, auch bekannt als sRGB oder "Full-Scale" RGB, und Studiovideo *RGB* oder "RGB mit Hauptraum und Toe-Room". Diese sind wie folgt definiert:
 
--   Computer RGB verwendet 8 Bits für jedes rot, grün und blau. Schwarz wird durch r = g = b = 0 und weiß durch r = g = b = 255 dargestellt.
--   In der Studio-Grafik RGB wird eine beliebige Anzahl von Bits N für jede Stichprobe von rot, grün und Blau verwendet, wobei N 8 oder mehr ist. Studio-Video RGB verwendet einen anderen Skalierungsfaktor als Computer RGB und einen Offset. Schwarz wird durch r = g = b = 16 \* 2 ^ (n-8) und weiß durch r = g = b = 235 \* 2 ^ (n-8) dargestellt. Tatsächliche Werte können jedoch außerhalb dieses Bereichs liegen.
+-   Computer RGB verwendet 8 Bits für jede Stichprobe aus Rot, Grün und Blau. Schwarz wird durch R = G = B = 0 und Weiß durch R = G = B = 255 dargestellt.
+-   Studio Video RGB verwendet einige Bits N für jede Stichprobe von Rot, Grün und Blau, wobei N 8 oder mehr ist. Studio Video RGB verwendet einen anderen Skalierungsfaktor als Computer RGB und verfügt über einen Offset. Schwarz wird durch R = G = B = 16 \* 2^(N-8) dargestellt, und Weiß wird durch R = G = B = 235 \* 2^(N-8) dargestellt. Tatsächliche Werte können jedoch außerhalb dieses Bereichs liegen.
 
-Studio-Video RGB ist die bevorzugte RGB-Definition für Videos in Windows, während Computer RGB die bevorzugte RGB-Definition für nicht-Video-Anwendungen ist. In beiden Formen von RGB werden die Chromaticity-Koordinaten in "ITU-R BT. 709" für die Definition der RGB-Farb Primärwerte angegeben. Die (x, y)-Koordinaten von R, G und B sind (0,64, 0,33), (0,30, 0,60) und (0,15, 0,06) bzw. Der Verweis weiß ist D65 mit Koordinaten (0,3127, 0,3290). Das nominale Gamma ist 1/0.45 (ca. 2,2), wobei präziser Gamma ausführlich in "ITU-R BT. 709" definiert ist.
+Studio-Video RGB ist die bevorzugte RGB-Definition für Videos in Windows, während Computer-RGB die bevorzugte RGB-Definition für Nicht-Videoanwendungen ist. In beiden Formen von RGB sind die Koordinaten für dieTicity wie in ITU-R BT.709 für die Definition der RGB-Farbprimitäten angegeben. Die (x,y)-Koordinaten von R, G und B sind (0,64, 0,33), (0,30, 0,60) bzw. (0,15, 0,06). Verweis weiß ist D65 mit Koordinaten (0,3127, 0,3290). Nominale Gammawerte sind 1/0,45 (ca. 2,2), und genaue Gammawerte sind in ITU-R BT.709 ausführlich definiert.
 
 **Konvertierung zwischen RGB und 4:4:4 YUV**
 
-Zuerst wird die Konvertierung zwischen RGB und 4:4:4 YUV beschrieben. Zum Konvertieren von 4:2:0 oder 4:2:2 YUV in RGB empfiehlt es sich, die YUV-Daten in 4:4:4 YUV zu konvertieren und dann von 4:4:4 YUV in RGB zu konvertieren. Das Format "ayuv", bei dem es sich um ein 4:4:4-Format handelt, verwendet jeweils 8 Bits für die Y-, U-und V-Beispiele. YUV kann auch mit mehr als 8 Bits pro Stichprobe für einige Anwendungen definiert werden.
+Zunächst wird die Konvertierung zwischen RGB und 4:4:4 YUV beschrieben. Um 4:2:0 oder 4:2:2 YUV in RGB zu konvertieren, empfehlen wir, die YUV-Daten in 4:4:4 YUV und dann von 4:4:4 YUV in RGB zu konvertieren. Das AYUV-Format, das ein 4:4:4-Format ist, verwendet jeweils 8 Bits für die Beispiele Y, U und V. YUV kann auch mit mehr als 8 Bits pro Stichprobe für einige Anwendungen definiert werden.
 
-Zwei vorherrschende YUV-Konvertierungen von RGB wurden für digitales Video definiert. Beide basieren auf der Spezifikation, die als "ITU-R-Empfehlung BT. 709" bezeichnet wird. Die erste Konvertierung ist das ältere YUV-Formular, das für die Verwendung von 50-Hz in BT. 709 definiert ist. Sie ist identisch mit der in der ITU-R-Empfehlung "BT. 601" angegebenen Beziehung, die auch mit dem älteren Namen "CCIR 601" bekannt ist. Er sollte als bevorzugtes YUV-Format für die Standard-Definition-TV-Auflösung (720 x 576) und ein Video mit niedrigerer Auflösung angesehen werden. Dies ist durch die Werte der beiden Konstanten *KR* und *KB* gekennzeichnet:
+Zwei dominante YUV-Konvertierungen von RGB wurden für digitale Videos definiert. Beide basieren auf der Spezifikation, die als ITU-R Recommendation BT.709 bezeichnet wird. Die erste Konvertierung ist das ältere YUV-Formular, das für die Verwendung mit 50 Hz in BT.709 definiert ist. Sie ist identisch mit der In itu-R-Empfehlung BT.601 angegebenen Beziehung, die auch unter dem älteren Namen CCIR 601 bekannt ist. Es sollte als bevorzugtes YUV-Format für standardbasierte TV-Auflösung (720 x 576) und Video mit niedrigerer Auflösung betrachtet werden. Sie wird durch die Werte der beiden Konstanten *Kr* und *Kb gekennzeichnet:*
 
 ``` syntax
 Kr = 0.299
 Kb = 0.114
 ```
 
-Die zweite Konvertierung ist das neuere YUV-Formular, das für die Verwendung von 60-Hz in BT. 709 definiert ist, und sollte als bevorzugtes Format für Videoauflösungen oberhalb von SDTV angesehen werden. Sie ist durch unterschiedliche Werte für diese beiden Konstanten gekennzeichnet:
+Die zweite Konvertierung ist das neuere YUV-Formular, das für die Verwendung mit 60 Hz in BT.709 definiert ist und als bevorzugtes Format für Videoauflösungen über SDTV betrachtet werden sollte. Sie wird durch unterschiedliche Werte für diese beiden Konstanten gekennzeichnet:
 
 ``` syntax
 Kr = 0.2126
@@ -219,7 +219,7 @@ Die Konvertierung von RGB in YUV wird wie folgt definiert:
 L = Kr * R + Kb * B + (1 - Kr - Kb) * G
 ```
 
-Die YUV-Werte werden dann wie folgt abgerufen:
+Die YUV-Werte werden dann wie folgt ermittelt:
 
 ``` syntax
 Y =                   floor(2^(M-8) * (219*(L-Z)/S + 16) + 0.5)
@@ -229,36 +229,36 @@ V = clip3(0, (2^M)-1, floor(2^(M-8) * (112*(R-L) / ((1-Kr)*S) + 128) + 0.5))
 
 where
 
--   M ist die Anzahl von Bits pro YUV-Beispiel (m >= 8).
--   Z ist die Variable auf schwarzer Ebene. Für Computer RGB ist Z auf 0 (null). Für Studio-Video RGB entspricht Z dem Wert 16 \* 2 ^ (n-8), wobei N für die Anzahl der Bits pro RGB-Stichprobe (n >= 8) steht.
--   S ist die Skalierungs Variable. Für Computer RGB ist "S" 255. Für Studio-Video RGB ist S auf 219 \* 2 ^ (N-8).
+-   M ist die Anzahl der Bits pro YUV-Stichprobe (M >= 8).
+-   Z ist die Variable auf schwarzer Ebene. Für Computer RGB ist Z gleich 0. Für Studiovideo RGB entspricht Z 16 2^(N-8), wobei N die Anzahl der Bits pro \* RGB-Stichprobe ist (N >= 8).
+-   S ist die Skalierungsvariable. Für Computer RGB ist S gleich 255. Für Studio-Video RGB entspricht S 219 \* 2^(N-8).
 
-Die Funktionsfläche (x) gibt die größte ganze Zahl zurück, die kleiner oder gleich x ist. Die Clip3-Funktion (x, y, z) ist wie folgt definiert:
+Die Funktion floor(x) gibt die größte ganze Zahl kleiner oder gleich x zurück. Die Funktion clip3(x, y, z) wird wie folgt definiert:
 
 ``` syntax
 clip3(x, y, z) = ((z < x) ? x : ((z > y) ? y : z))
 ```
 
 > [!Note]  
-> Clip3 sollte nicht als Präprozessormakro, sondern als Funktion implementiert werden. Andernfalls werden mehrere Auswertungen der Argumente durchzuführen.
+> clip3 sollte als Funktion und nicht als Präprozessormakro implementiert werden. andernfalls werden mehrere Auswertungen der Argumente durchgeführt.
 
  
 
-Das Y-Beispiel stellt die Helligkeit dar, und die Beispiele für Sie und V stellen die Farbabweichungen in Richtung blau bzw. rot dar. Der nominale Bereich für Y ist 16 \* 2 ^ (m-8) bis 235 \* 2 ^ (m-8). Schwarz wird als 16 \* 2 ^ (m-8) und weiß als 235 \* 2 ^ (m-8) dargestellt. Der nominale Bereich für Sie und V beträgt 16 \* 2 ^ (m-8) bis 240 \* 2 ^ (m-8) mit dem Wert 128 \* 2 ^ (m-8), der neutrales Chroma darstellt. Tatsächliche Werte können jedoch außerhalb dieser Bereiche liegen.
+Die Y-Stichprobe stellt die Helligkeit dar, und die Beispiele you und V stellen die Farbabweichungen in Richtung Blau bzw. Rot dar. Der nominale Bereich für Y beträgt 16 \* 2^(M-8) bis 235 \* 2^(M-8). Schwarz wird als 16 \* 2^(M-8) und weiß als 235 \* 2^(M-8) dargestellt. Der nominale Bereich für Sie und V liegt bei 16 \* 2^(M-8) bis 240 \* 2^(M-8), wobei der Wert 128 \* 2^(M-8) neutrales Farbmaß darstellt. Tatsächliche Werte können jedoch außerhalb dieser Bereiche liegen.
 
-Für Eingabedaten in Form von Studio-Video RGB ist der Clip-Vorgang erforderlich, um die Werte für "You" und "V" im Bereich von 0 bis (2 ^ M)-1 beizubehalten. Wenn es sich bei der Eingabe um Computer RGB handelt, ist der Clip Vorgang nicht erforderlich, da die Konvertierungs Formel keine Werte außerhalb dieses Bereichs verursachen kann.
+Für Eingabedaten in Form von Studio Video RGB ist der Clipvorgang erforderlich, um die Werte you und V im Bereich von 0 bis (2^M)-1 zu halten. Wenn es sich bei der Eingabe um computer RGB handelt, ist der Clipvorgang nicht erforderlich, da die Konvertierungsformel keine Werte außerhalb dieses Bereichs erzeugen kann.
 
-Dabei handelt es sich um die genauen Formeln ohne Näherungs. Alles, was in diesem Dokument folgt, wird von diesen Formeln abgeleitet. In diesem Abschnitt werden die folgenden Konvertierungen beschrieben:
+Dies sind die genauen Formeln ohne Näherung. Alles, was in diesem Dokument folgt, wird von diesen Formeln abgeleitet. In diesem Abschnitt werden die folgenden Konvertierungen beschrieben:
 
--   [Wandeln von RGB888 in YUV 4:4:4](#converting-rgb888-to-yuv-444)
--   [Umstellen von 8-Bit-YUV in RGB888](#converting-8-bit-yuv-to-rgb888)
--   [4:2:0 YUV wird in 4:2:2 YUV umgerechnet](#converting-420-yuv-to-422-yuv)
--   [4:2:2 YUV wird in 4:4:4 YUV umgerechnet](#converting-422-yuv-to-444-yuv)
--   [4:2:0 YUV wird in 4:4:4 YUV umgerechnet](#converting-420-yuv-to-444-yuv)
+-   [Konvertieren von RGB888 in YUV 4:4:4](#converting-rgb888-to-yuv-444)
+-   [Konvertieren von 8-Bit-YUV in RGB888](#converting-8-bit-yuv-to-rgb888)
+-   [Konvertieren von 4:2:0 YUV in 4:2:2 YUV](#converting-420-yuv-to-422-yuv)
+-   [Konvertieren von 4:2:2 YUV in 4:4:4 YUV](#converting-422-yuv-to-444-yuv)
+-   [Konvertieren von 4:2:0 YUV in 4:4:4 YUV](#converting-420-yuv-to-444-yuv)
 
-## <a name="converting-rgb888-to-yuv-444"></a>Wandeln von RGB888 in YUV 4:4:4
+## <a name="converting-rgb888-to-yuv-444"></a>Konvertieren von RGB888 in YUV 4:4:4
 
-Im Fall von "Computer RGB Input" und der 8-Bit-Ausgabe "BT. 601 YUV" sind wir der Meinung, dass die im vorherigen Abschnitt angegebenen Formeln in gewisser Weise den folgenden Werten zugewiesen werden können:
+Im Fall der RGB-Eingabe des Computers und der 8-Bit-AUSGABE von BT.601 YUV sind wir der Meinung, dass die im vorherigen Abschnitt angegebenen Formeln durch Folgendes relativ geschätzt werden können:
 
 ``` syntax
 Y = ( (  66 * R + 129 * G +  25 * B + 128) >> 8) +  16
@@ -266,11 +266,11 @@ U = ( ( -38 * R -  74 * G + 112 * B + 128) >> 8) + 128
 V = ( ( 112 * R -  94 * G -  18 * B + 128) >> 8) + 128
 ```
 
-Diese Formeln liefern 8-Bit-Ergebnisse mithilfe von Koeffizienten, die nicht mehr als 8 Bits der (unsignierten) Genauigkeit erfordern. Zwischenergebnisse erfordern bis zu 16 Bits an Genauigkeit.
+Diese Formeln erzeugen 8-Bit-Ergebnisse mithilfe von Koeffizienten, die nicht mehr als 8 Bits (ohne Vorzeichen) erfordern. Zwischenergebnisse erfordern bis zu 16 Bit Genauigkeit.
 
-## <a name="converting-8-bit-yuv-to-rgb888"></a>Umstellen von 8-Bit-YUV in RGB888
+## <a name="converting-8-bit-yuv-to-rgb888"></a>Konvertieren von 8-Bit-YUV in RGB888
 
-Aus den ursprünglichen RGB-zu-YUV-Formeln kann eine der folgenden Beziehungen für BT. 601 abgeleitet werden.
+Aus den ursprünglichen RGB-zu-YUV-Formeln können die folgenden Beziehungen für BT.601 abgeleitet werden.
 
 ``` syntax
 Y = round( 0.256788 * R + 0.504129 * G + 0.097906 * B) +  16 
@@ -278,7 +278,7 @@ U = round(-0.148223 * R - 0.290993 * G + 0.439216 * B) + 128
 V = round( 0.439216 * R - 0.367788 * G - 0.071427 * B) + 128
 ```
 
-Daher gilt Folgendes:
+Aus diesem Grund gibt es:
 
 ``` syntax
 C = Y - 16
@@ -286,7 +286,7 @@ D = U - 128
 E = V - 128
 ```
 
-die Formeln zum Konvertieren von YUV in RGB können wie folgt abgeleitet werden:
+Die Formeln zum Konvertieren von YUV in RGB können wie folgt abgeleitet werden:
 
 ``` syntax
 R = clip( round( 1.164383 * C                   + 1.596027 * E  ) )
@@ -294,7 +294,7 @@ G = clip( round( 1.164383 * C - (0.391762 * D) - (0.812968 * E) ) )
 B = clip( round( 1.164383 * C +  2.017232 * D                   ) )
 ```
 
-wobei das `clip()` Clipping auf einen Bereich von \[ 0.. 255 bezeichnet \] . Wir sind der Meinung, dass diese Formeln in gewisser Weise den folgenden folgen:
+, wobei `clip()` clipping auf einen Bereich von \[ 0,.255 \] anschließt. Wir sind der Meinung, dass diese Formeln durch Folgendes relativ geschätzt werden können:
 
 ``` syntax
 R = clip(( 298 * C           + 409 * E + 128) >> 8)
@@ -302,20 +302,20 @@ G = clip(( 298 * C - 100 * D - 208 * E + 128) >> 8)
 B = clip(( 298 * C + 516 * D           + 128) >> 8)
 ```
 
-Diese Formeln verwenden einige Koeffizienten, bei denen mehr als 8 Bits Genauigkeit erforderlich sind, um jedes 8-Bit-Ergebnis zu erzielen, und Zwischenergebnisse erfordern mehr als 16 Bits an Genauigkeit.
+Diese Formeln verwenden einige Koeffizienten, die mehr als 8 Bit Genauigkeit erfordern, um jedes 8-Bit-Ergebnis zu erzeugen, und Zwischenergebnisse erfordern mehr als 16 Bit Genauigkeit.
 
-Zum Konvertieren von 4:2:0 oder 4:2:2 YUV in RGB empfiehlt es sich, die YUV-Daten in 4:4:4 YUV zu konvertieren und dann von 4:4:4 YUV in RGB zu konvertieren. Die folgenden Abschnitte enthalten einige Methoden zum Umrechnen von 4:2:0-und 4:2:2-Formaten in 4:4:4.
+Um 4:2:0 oder 4:2:2 YUV in RGB zu konvertieren, empfehlen wir, die YUV-Daten in 4:4:4 YUV und dann von 4:4:4 YUV in RGB zu konvertieren. Die folgenden Abschnitte enthalten einige Methoden zum Konvertieren der Formate 4:2:0 und 4:2:2 in 4:4:4.
 
-## <a name="converting-420-yuv-to-422-yuv"></a>4:2:0 YUV wird in 4:2:2 YUV umgerechnet
+## <a name="converting-420-yuv-to-422-yuv"></a>Konvertieren von 4:2:0 YUV in 4:2:2 YUV
 
-Die Konvertierung von 4:2:0 YUV in 4:2:2 YUV erfordert eine vertikale upkonvertierung mit einem Faktor von zwei. In diesem Abschnitt wird eine Beispiel Methode zum Ausführen der Upconversion beschrieben. Bei der-Methode wird davon ausgegangen, dass die Videobilder Progressive Scan werden.
+Die Konvertierung von 4:2:0 YUV in 4:2:2 YUV erfordert eine vertikale Upconversion um den Faktor 2. In diesem Abschnitt wird eine Beispielmethode zum Ausführen der Upconversion beschrieben. Bei der -Methode wird davon ausgegangen, dass es sich bei den Videobildern um progressive Scans handelt.
 
 > [!Note]  
-> Der Konvertierungs Vorgang "4:2:0 bis 4:2:2 Interlacing Scan" stellt atypische Probleme dar und ist schwierig zu implementieren. In diesem Artikel wird das Problem der Umstellung der Zeilen Sprung Überprüfung von 4:2:0 in 4:2:2 nicht behandelt.
+> Der Prozess für die Konvertierung von 4:2:0 bis 4:2:2 mit Zeilensprung stellt atypische Probleme dar und ist schwer zu implementieren. In diesem Artikel wird das Problem der Konvertierung des Interlacingscans von 4:2:0 in 4:2:2 nicht behandelt.
 
  
 
-Jede vertikale Zeile von Eingabe-Chroma-Beispielen ist ein Array `Cin[]` , das zwischen 0 und N-1 liegt. Die entsprechende vertikale Linie des Ausgabe Bilds ist ein Array `Cout[]` , das zwischen 0 und 2n-1 liegt. Um jede vertikale Linie zu konvertieren, führen Sie den folgenden Prozess aus:
+Lassen Sie jede vertikale Linie der Eingabemuster ein Array von `Cin[]` 0 bis N bis 1 sein. Die entsprechende vertikale Linie im Ausgabebild ist ein Array `Cout[]` zwischen 0 und 2N bis 1. Führen Sie den folgenden Prozess aus, um jede vertikale Linie zu konvertieren:
 
 ``` syntax
 Cout[0]     = Cin[0];
@@ -333,81 +333,81 @@ Cout[2*N-2] = Cin[N-1];
 Cout[2*N-1] = clip((9 * (Cin[N-1] + Cin[N-1]) - (Cin[N-2] + Cin[N-1]) + 8) >> 4);
 ```
 
-Where Clip () bezeichnet Clipping auf einen Bereich von \[ 0.. 255 \] .
+dabei steht clip() für clipping für einen Bereich von \[ 0,.255 \] .
 
 > [!Note]  
-> Die Gleichungen zum Behandeln der Kanten können mathematisch vereinfacht werden. Sie werden in dieser Form angezeigt, um den Spann Effekt an den Rändern des Bilds zu veranschaulichen.
+> Die Gleichungen für die Behandlung der Kanten können mathematisch vereinfacht werden. Sie werden in dieser Form angezeigt, um den klammernden Effekt an den Rändern des Bilds zu veranschaulichen.
 
  
 
-Tatsächlich berechnet diese Methode jeden fehlenden Wert durch Interpolation der Kurve über die vier angrenzenden Pixel, die auf die Werte der beiden nächsten Pixel gewichtet werden (Abbildung 11). Die in diesem Beispiel verwendete spezielle Interpolationsmethode generiert fehlende Stichproben an der Hälfte der ganzzahligen Positionen mithilfe einer bekannten Methode namens Catmull-Rom Interpolationsmethode, die auch als kubische intervolution-Interpolationsmethode bezeichnet wird.
+Tatsächlich berechnet diese Methode jeden fehlenden Wert, indem die Kurve über die vier angrenzenden Pixel interpoliert wird, gewichtet auf die Werte der beiden nächsten Pixel (Abbildung 11). Die spezifische Interpolationsmethode, die in diesem Beispiel verwendet wird, generiert fehlende Stichproben an halbzahligen Positionen mithilfe einer bekannten Methode namens Catmull-Rom Interpolation, die auch als kubische Konvolutionsinterpolation bezeichnet wird.
 
-![Abbildung 11. Diagramm mit 4:2:0 bis 4:2:2 Upsampling](images/yuvformats14.gif)
+![Abbildung 11. Diagramm: Upsampling von 4:2:0 bis 4:2:2](images/yuvformats14.gif)
 
-In Signal Verarbeitungs Begriffen sollte die vertikale upkonvertierung idealerweise eine Phasen Verschiebungs Kompensation enthalten, um den vertikalen halb Pixel Offset (relativ zum samplingraster der Ausgabe 4:2:2) zwischen den Speicherorten der 4:2:0-Beispiel Zeilen und dem Speicherort jeder anderen 4:2:2-Beispiel Zeile zu berücksichtigen. Durch die Einführung dieses Offsets wird jedoch der Verarbeitungsaufwand für das Generieren der Beispiele erhöht, und es ist nicht möglich, die ursprünglichen 4:2:0-Beispiele aus dem Upsampling-Image 4:2:2 zu rekonstruieren. Außerdem wäre es nicht möglich, Videos direkt in 4:2:2-Oberflächen zu decodieren und diese Oberflächen dann als Referenzbilder für das Decodieren der nachfolgenden Bilder im Stream zu verwenden. Daher berücksichtigt die hier angegebene Methode nicht die präzise vertikale Ausrichtung der Beispiele. Dies ist wahrscheinlich nicht visuell schädlich bei einer relativ großen Bildauflösung.
+Bei der Signalverarbeitung sollte die vertikale Upconversion idealerweise eine Phasenverschiebungskompensierung enthalten, um den vertikalen Halbpixeloffset (relativ zum Ausgabe-4:2:2-Stichprobenraster) zwischen den Positionen der 4:2:0-Stichprobenlinien und der Position jeder anderen 4:2:2-Stichprobenlinie zu berücksichtigen. Die Einführung dieses Offsets würde jedoch die Verarbeitungsmenge erhöhen, die zum Generieren der Stichproben erforderlich ist, und es unmöglich machen, die ursprünglichen 4:2:0-Stichproben aus dem upsampled 4:2:2-Bild zu rekonstruieren. Es wäre auch unmöglich, Videos direkt in 4:2:2-Oberflächen zu decodieren und diese Oberflächen dann als Referenzbilder zum Decodieren nachfolgender Bilder im Stream zu verwenden. Daher berücksichtigt die hier bereitgestellte Methode die genaue vertikale Ausrichtung der Stichproben nicht. Dies ist bei relativ hohen Bildauflösungen wahrscheinlich nicht visuell schädlich.
 
-Wenn Sie mit einem 4:2:0-Video beginnen, das das im h. 261-, h. 263-oder MPEG-1-Video definierte Stichproben Raster verwendet, wird auch die Phase der Ausgabe 4:2:2 Chroma-Beispiele in Relation zum Abstand in der Luma-Samplings-Stichproben 4:2:2 Entnahme um einen horizontalen Halbpixel-Offset verschoben. Die MPEG-2-Form von 4:2:0-Video wird jedoch wahrscheinlich häufiger auf PCs verwendet und wird von diesem Problem nicht beeinträchtigt. Außerdem ist die Unterscheidung wahrscheinlich nicht visuell schädlich, wenn es um eine relativ hohe Bildauflösung geht. Der Versuch, dieses Problem zu beheben, würde die gleiche Art von Problemen erzeugen, die für den vertikalen Phasen Offset erläutert werden.
+Wenn Sie mit einem 4:2:0-Video beginnen, das das in H.261- oder H.263- oder MPEG-1-Video definierte Samplingraster verwendet, wird die Phase der Ausgabestichproben für 4:2:2-Stichproben auch um einen horizontalen Halbpixeloffset relativ zum Abstand auf dem Luma-Samplingraster verschoben (ein Viertelpixeloffset relativ zum Abstand des 4:2:2-Rasters für die Stichprobenentnahme). Die MPEG-2-Form von 4:2:0-Videos wird jedoch wahrscheinlich häufiger auf PCs verwendet und unter diesem Problem nicht beeinträchtigt. Darüber hinaus ist die Unterscheidung bei relativ hohen Bildauflösungen wahrscheinlich nicht visuell schädlich. Der Versuch, dieses Problem zu beheben, würde die gleiche Art von Problemen verursachen, die für den vertikalen Phasenoffset erläutert werden.
 
-## <a name="converting-422-yuv-to-444-yuv"></a>4:2:2 YUV wird in 4:4:4 YUV umgerechnet
+## <a name="converting-422-yuv-to-444-yuv"></a>Konvertieren von 4:2:2 YUV in 4:4:4 YUV
 
-Die Konvertierung von 4:2:2 YUV in 4:4:4 YUV erfordert eine horizontale upkonvertierung mit einem Faktor von zwei. Die zuvor beschriebene Methode für die vertikale upkonvertierung kann auch auf die horizontale upkonvertierung angewendet werden. Für MPEG-2-und ITU-R BT. 601-Video erstellt diese Methode Beispiele mit der korrekten Phasen Ausrichtung.
+Die Konvertierung von 4:2:2 YUV in 4:4:4 YUV erfordert eine horizontale Upconversion um den Faktor 2. Die zuvor für vertikale Upconversion beschriebene Methode kann auch auf horizontale Upconversion angewendet werden. Für MPEG-2- und ITU-R BT.601-Videos erzeugt diese Methode Stichproben mit der richtigen Phasenausrichtung.
 
-## <a name="converting-420-yuv-to-444-yuv"></a>4:2:0 YUV wird in 4:4:4 YUV umgerechnet
+## <a name="converting-420-yuv-to-444-yuv"></a>Konvertieren von 4:2:0 YUV in 4:4:4 YUV
 
-Wenn Sie 4:2:0 YUV in 4:4:4 YUV konvertieren möchten, können Sie einfach den oben beschriebenen Methoden folgen. Konvertieren Sie das 4:2:0-Abbild in 4:2:2, und konvertieren Sie dann das 4:2:2-Image in 4:4:4. Sie können auch die Reihenfolge der beiden upkonvertierungsprozesse ändern, da die Reihenfolge der Vorgänge für die visuelle Qualität des Ergebnisses nicht wirklich von Bedeutung ist.
+Zum Konvertieren von 4:2:0 YUV in 4:4:4 YUV können Sie einfach die beiden zuvor beschriebenen Methoden befolgen. Konvertieren Sie das 4:2:0-Image in 4:2:2 und dann das 4:2:2-Image in 4:4:4. Sie können auch die Reihenfolge der beiden Upconversionsprozesse ändern, da die Reihenfolge des Vorgangs nicht wirklich von der visuellen Qualität des Ergebnisses abweicht.
 
 ## <a name="other-yuv-formats"></a>Andere YUV-Formate
 
 Einige andere, weniger gängige YUV-Formate umfassen Folgendes:
 
--   AI44 ist ein im plettisierten YUV-Format mit 8 Bits pro Stichprobe. Jedes Beispiel enthält einen Index in den 4 signifikantesten Bits (MSSB) und einen Alpha-Wert in den 4 geringsten Bits (lssb). Der Index verweist auf ein Array von YUV-paletteneinträgen, die im Medientyp für das Format definiert werden müssen. Dieses Format wird hauptsächlich für Bild Bilder verwendet.
--   NV11 ist ein 4:1:1-planare-Format mit 12 Bits pro Pixel. Die Y-Beispiele werden zuerst im Arbeitsspeicher angezeigt. Auf die Y-Ebene folgt ein Array von gepackten U (CB)-und V-Beispielen (CR). Wenn das kombinierte u-V-Array als Array von Little-enumdian- **Wort** Werten adressiert wird, sind die U-Beispiele in den lssb der einzelnen **Word** enthalten, und die V-Beispiele sind in den MSSB enthalten. (Dieses Speicher Layout ähnelt NV12, obwohl die Chroma-Stichprobe anders ist.)
--   Im y41p ist ein 4:1:1-gepacktes Format, bei dem Sie und V jedes vierte Pixel horizontal abgepackt haben. Jedes Makro Pixel enthält 8 Pixel in drei Bytes mit dem folgenden bytelayout: `U0 Y0 V0 Y1    U4 Y2 V4 Y3    Y4 Y5 Y6 Y7`
--   Y41T ist mit im y41p identisch, mit dem Unterschied, dass das unwichtigste Bit jedes Y-Beispiels den Chroma-Schlüssel angibt (0 = transparent, 1 = nicht transparent).
--   Y42T ist mit UYVY identisch, mit dem Unterschied, dass das unwichtigste Bit jedes Y-Beispiels den Chroma-Schlüssel angibt (0 = transparent, 1 = nicht transparent).
--   Yvyu entspricht yuyv, mit dem Unterschied, dass die Beispiele für Sie und V ausgetauscht werden.
+-   AI44 ist ein palettisiertes YUV-Format mit 8 Bits pro Stichprobe. Jedes Beispiel enthält einen Index in den vier signifikantesten Bits (MSBs) und einen Alphawert in den 4 LSBs (Least Significant Bits). Der Index bezieht sich auf ein Array von YUV-Paletteneinträgen, die im Medientyp für das Format definiert werden müssen. Dieses Format wird hauptsächlich für Bildunterdrückung verwendet.
+-   NV11 ist ein Planarformat von 4:1:1 mit 12 Bits pro Pixel. Die Y-Beispiele werden zuerst im Arbeitsspeicher angezeigt. Auf die Y-Ebene folgt ein Array von gepackten U-Stichproben (Cb) und V -Stichproben (Cr). Wenn das kombinierte U-V-Array als Array von **Little-Endian-WORD-Werten** adressiert wird, sind die U-Stichproben in den LSBs der einzelnen **WORD-Dateien** enthalten, und die V-Beispiele sind in den MSBs enthalten. (Dieses Speicherlayout ähnelt NV12, obwohl sich die Stichprobenentnahme unterscheidet.)
+-   Y41P ist ein gepacktes 4:1:1-Format, bei dem Sie und V jedes vierte Pixel horizontal entnommen werden. Jedes Makropixel enthält 8 Pixel in drei Bytes mit dem folgenden Bytelayout: `U0 Y0 V0 Y1    U4 Y2 V4 Y3    Y4 Y5 Y6 Y7`
+-   Y41T ist identisch mit Y41P, mit der Ausnahme, dass das am wenigsten signifikante Bit jeder Y-Stichprobe den Schlüssel für die Füllung angibt (0 = transparent, 1 = nicht transparent).
+-   Y42T ist identisch mit UYVY, mit dem Unterschied, dass das am wenigsten signifikante Bit jeder Y-Stichprobe den Farbschlüssel angibt (0 = transparent, 1 = nicht transparent).
+-   YV CSV entspricht YUYV, mit der Ausnahme, dass die Beispiele "You" und "V" ausgetauscht werden.
 
-## <a name="identifying-yuv-formats-in-media-foundation"></a>Erkennen von YUV-Formaten in Media Foundation
+## <a name="identifying-yuv-formats-in-media-foundation"></a>Identifizieren von YUV-Formaten in Media Foundation
 
-Jedes in diesem Artikel beschriebene YUV-Format verfügt über einen zugewiesenen FourCC-Code. Bei einem FourCC-Code handelt es sich um eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verkettung von vier ASCII-Zeichen erstellt wird.
+Jedem der in diesem Artikel beschriebenen YUV-Formate ist FOURCC-Code zugewiesen. Ein FOURCC-Code ist eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verketten von vier ASCII-Zeichen erstellt wird.
 
-Es gibt verschiedene C/C++-Makros, die das Deklarieren von FourCC-Werten im Quellcode vereinfachen. Beispielsweise wird das **makefourcc** -Makro in MMSYSTEM. h deklariert, und das **FCC** -Makro wird in aviriff. h deklariert. Verwenden Sie diese wie folgt:
+Es gibt verschiedene C/C++-Makros, die das Deklarieren von FOURCC-Werten im Quellcode vereinfachen. Beispielsweise wird das **MAKEFOURCC-Makro** in "Mmsystem.h" und das **FCC-Makro** in "Aviriff.h" deklariert. Verwenden Sie sie wie folgt:
 
 ``` syntax
 DWORD fccYUY2 = MAKEFOURCC('Y','U','Y','2');
 DWORD fccYUY2 = FCC('YUY2');
 ```
 
-Sie können einen FourCC-Code auch direkt als Zeichenfolgenliterale deklarieren, indem Sie einfach die Reihenfolge der Zeichen umkehren. Beispiel:
+Sie können einen FOURCC-Code auch direkt als Zeichenfolgenliteral deklarieren, indem Sie einfach die Reihenfolge der Zeichen umkehren. Beispiel:
 
 ``` syntax
 DWORD fccYUY2 = '2YUY';  // Declares the FOURCC 'YUY2'
 ```
 
-Das Umkehren der Reihenfolge ist erforderlich, da das Windows-Betriebssystem eine Little-Endian-Architektur verwendet. ' Y ' = 0x59, ' U ' = 0x55 und ' 2 ' = 0x32, daher ist ' 2yuy ' 0x32595559.
+Das Umkehren der Reihenfolge ist erforderlich, da das Windows Betriebssystem eine Little-Endian-Architektur verwendet. "Y" = 0x59, "U" = 0x55 und "2" = 0x32, sodass "2REAY" 0x32595559 ist.
 
-In Media Foundation werden Formate durch eine GUID des Haupt Typs und eine Untertyp-GUID identifiziert. Der Haupttyp für Computer Videoformate ist immer MF MediaType \_ Video. Der Untertyp kann erstellt werden, indem Sie den FourCC-Code einer GUID wie folgt zuordnet:
+In Media Foundation werden Formate durch eine Haupttyp-GUID und eine Untertyp-GUID identifiziert. Der Haupttyp für Computervideoformate ist immer MFMediaType \_ Video . Der Untertyp kann wie folgt erstellt werden, indem der FOURCC-Code einer GUID zugeordnet wird:
 
 ``` syntax
 XXXXXXXX-0000-0010-8000-00AA00389B71 
 ```
 
-dabei `XXXXXXXX` ist der FourCC-Code. Folglich lautet die Untertyp-GUID für im YUY2 wie folgt:
+dabei `XXXXXXXX` ist der FOURCC-Code. Daher lautet der Untertyp GUID für YUY2:
 
 ``` syntax
 32595559-0000-0010-8000-00AA00389B71 
 ```
 
-Konstanten für die gängigsten GUIDs des YUV-Formats werden in der Header Datei "mfapi. h" definiert. Eine Liste dieser Konstanten finden Sie [unter Video Untertyp-GUIDs](video-subtype-guids.md).
+Konstanten für die gängigsten GUIDs im YUV-Format werden in der Headerdatei mfapi.h definiert. Eine Liste dieser Konstanten finden Sie unter [Video-Untertyp-GUIDs.](video-subtype-guids.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zu YUV-Videos](about-yuv-video.md)
+[Informationen zu YUV-Video](about-yuv-video.md)
 </dt> <dt>
 
-[Video Medientypen](video-media-types.md)
+[Videomedientypen](video-media-types.md)
 </dt> </dl>
 
  

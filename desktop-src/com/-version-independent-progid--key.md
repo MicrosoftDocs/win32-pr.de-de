@@ -4,12 +4,12 @@ description: Ordnet eine ProgID einer CLSID zu. Dieser Schlüssel wird verwendet
 ms.assetid: fb43c8d0-d923-487f-afdf-14fc29a71e0b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88dec371f87ff3aba98bd642537e4de893df20682cc9bd84eda8829f24d241b9
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: ad09f9d86c2f34d93757e940c5262cd294485ad5
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119567970"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883149"
 ---
 # <a name="version-independent-progid-key"></a>Versionsunabhängiger ProgID-Schlüssel
 
@@ -31,7 +31,7 @@ Das Format für <*versionsunabhängige ProgID->* ist <*Programm*>.<*Komponente*>
 
 *ProgID* ist die ProgID der neuesten installierten Version der -Klasse.
 
-Anwendungen müssen einen versionsunabhängigen programmgesteuerten Bezeichner unter dem *versionsunabhängigen ProgID-Schlüssel* registrieren. Die versionsunabhängige ProgID bezieht sich auf die -Klasse der Anwendung und ändert sich nicht von Version zu Version, sondern bleibt für alle Versionen konstant– z.B. Microsoft Word-Dokument. Sie wird mit Makrosprachen verwendet und bezieht sich auf die derzeit installierte Version der -Klasse der Anwendung. Die versionsunabhängige ProgID muss dem Namen der neuesten Version der Objektanwendung entsprechen.
+Anwendungen müssen einen versionsunabhängigen programmgesteuerten Bezeichner unter dem *versionsunabhängigen ProgID-Schlüssel* registrieren. Die versionsunabhängige ProgID bezieht sich auf die -Klasse der Anwendung und ändert sich nicht von Version zu Version, sondern bleibt in allen Versionen konstant– z.B. Microsoft Word-Dokument. Sie wird mit Makrosprachen verwendet und bezieht sich auf die derzeit installierte Version der -Klasse der Anwendung. Die versionsunabhängige ProgID muss dem Namen der neuesten Version der Objektanwendung entsprechen.
 
 Beispielsweise wird die versionsunabhängige ProgID verwendet, wenn eine Containeranwendung ein Diagramm oder eine Tabelle mit einer Symbolleistenschaltfläche erstellt. In diesem Fall kann die Anwendung die versionsunabhängige ProgID verwenden, um die neueste Version der erforderlichen Objektanwendung zu ermitteln.
 
@@ -58,7 +58,7 @@ HKEY_CLASSES_ROOT\CLSID\{00000402-0000-0000-C000-000000000046}
 [**ProgIDFromCLSID**](/windows/desktop/api/combaseapi/nf-combaseapi-progidfromclsid)
 </dt> <dt>
 
-[<ProgID> Schlüssel](-progid--key.md)
+[&lt;&gt;ProgID-Schlüssel](-progid--key.md)
 </dt> </dl>
 
  

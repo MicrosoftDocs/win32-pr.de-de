@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e8c34c7677a100488dfbc533aed3ca07f5b3af4c
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: a8e5cfe4fadf0dead2e11787255089d251a98f67
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122988093"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479306"
 ---
 # <a name="jet_userdefineddefault-structure"></a>JET_USERDEFINEDDEFAULT Struktur
 
@@ -31,7 +31,7 @@ _**Gilt für:** Windows | Windows Server_
 
 Die **JET_USERDEFINEDDEFAULT-Struktur** wird in Verbindung mit JET_bitColumnUserDefinedDefault angegeben, um einer neuen Spalte einen Standardwert zu geben, der mithilfe eines Rückrufs bestimmt wird. Diese Technik kann verwendet werden, um berechnete Spalten zu implementieren.
 
-**Windows XP:** Die **JET_USERDEFINEDDEFAULT-Struktur** wird in xp Windows eingeführt.
+**Windows XP:** Die **JET_USERDEFINEDDEFAULT-Struktur** wird in Windows XP eingeführt.
 
 ```cpp
     typedef struct tag_JET_USERDEFINEDDEFAULT {
@@ -52,7 +52,7 @@ Der Rückruf wird als Teil des Spaltenschemas beibehalten. Die tatsächliche aus
 
 Der Modulname ist der Name der Hostbinärdatei, die die Funktion enthält. Der Funktionsname ist der Name des Exports für diese Funktion. Diese beiden Informationen werden von der Datenbank-Engine zur Laufzeit verwendet, um die echte Adresse des Rückrufs zu ermitteln, indem ein [LoadLibrary-Aufruf](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) für den Modulnamen gefolgt von einem [GetProcAddress-Aufruf](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) für den Funktionsnamen ausgeführt wird.
 
-Wenn der Rückruf beispielsweise in einer DLL namens MyCallback.DLL implementiert und diese DLL in C: MyApplication gespeichert wurde und die Funktion, die den Rückruf implementiert, aus der DLL als UserDefinedDefaultCallback exportiert wurde, wäre die erforderliche Zeichenfolge \\ "C: \\ MyApplication \\MyCallback.DLL\! UserDefinedDefaultCallback".
+Wenn der Rückruf beispielsweise in einer DLL namens MyCallback.DLL implementiert wurde und diese DLL in C: MyApplication gespeichert wurde und die Funktion, die den Rückruf implementiert, aus der DLL als UserDefinedDefaultCallback exportiert wurde, wäre die erforderliche Zeichenfolge \\ "C: \\ MyApplication \\MyCallback.DLL\! UserDefinedDefaultCallback".
 
 **Hinweis:**  Embedded " \! " " -Zeichen im Modulteil des Rückrufnamens werden nicht unterstützt.
 
@@ -81,12 +81,7 @@ Dieser Member sollte immer auf NULL festgelegt werden.
 ### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_ USERDEFINEDDEFAULT_W</strong> (Unicode) und JET_ USERDEFINEDDEFAULT_A (ANSI) implementiert. <strong></strong></p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_ USERDEFINEDDEFAULT_W</strong> (Unicode) <strong>und</strong> JET_ USERDEFINEDDEFAULT_A (ANSI) implementiert.</p> | 
 
 
 

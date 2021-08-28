@@ -1,21 +1,21 @@
 ---
-description: In diesem Abschnitt wird erläutert, wie ein benutzerdefiniertes Wörterbuch für die Handschrifterkennung erstellt
+description: In diesem Abschnitt wird erläutert, wie Sie ein benutzerdefiniertes Wörterbuch für die Handschrifterkennung erstellen.
 ms.assetid: 83abf534-740c-44a3-bbd4-babb54f2930e
-title: Erstellen von benutzerdefinierten Wörterbüchern für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
+title: Erstellen benutzerdefinierter Wörterbücher für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80b9b7b5a1d9dfadddd83825aea7d6f676439999
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8fe391125b21bfe35a9e1a69be6258e1643b424e
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345649"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883888"
 ---
-# <a name="creating-custom-dictionaries-for-handwriting-recognition-in-windows-7-and-windows-server-2008-r2"></a>Erstellen von benutzerdefinierten Wörterbüchern für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
+# <a name="creating-custom-dictionaries-for-handwriting-recognition-in-windows-7-and-windows-server-2008-r2"></a>Erstellen benutzerdefinierter Wörterbücher für die Handschrifterkennung in Windows 7 und Windows Server 2008 R2
 
-In diesem Abschnitt wird erläutert, wie ein benutzerdefiniertes Wörterbuch für die Handschrifterkennung erstellt
+In diesem Abschnitt wird erläutert, wie Sie ein benutzerdefiniertes Wörterbuch für die Handschrifterkennung erstellen.
 
-Im Betriebssystem Windows 7 und unter dem Betriebssystem Windows Server 2008 R2 kann die Genauigkeit der Handschrifterkennung durch die Verwendung von benutzerdefinierten Wörterbüchern erheblich verbessert werden. Diese Wörterbücher ergänzen oder ersetzen System Wörterbücher für die Handschrift. Die Unterstützung für die Handschrifterkennung wird über das Freihand-und Handschriftdienste Feature bereitgestellt, das über Server-Manager aktiviert werden muss.
+Im Windows 7- und Windows Server 2008 R2-Betriebssystem kann die Genauigkeit der Handschrifterkennung durch die Verwendung benutzerdefinierter Wörterbücher erheblich verbessert werden. Diese Wörterbücher ergänzen oder ersetzen Systemwörterbücher, die für die Handschrift verwendet werden. Unterstützung für die Handschrifterkennung wird über das Freihand- und Handschriftdienste bereitgestellt, das über die Server-Manager.
 
 > [!Note]  
 > Benutzerdefinierte Wörterbücher können nur für eine Sprache installiert werden, wenn die Handschrifterkennung für diese Sprache installiert ist.
@@ -24,16 +24,16 @@ Im Betriebssystem Windows 7 und unter dem Betriebssystem Windows Server 2008 R2 
 
 Es gibt zwei grundlegende Schritte zum Einrichten eines benutzerdefinierten Wörterbuchs für die Handschrift:
 
--   Kompilieren Sie eine Wort Liste. Die Kompilierung erstellt eine kompilierte benutzerdefinierte Wörterbuchdatei (. hwrdict).
--   Installieren Sie das kompilierte Benutzerwörterbuch.
+-   Kompilieren Sie eine Wortliste. Die Kompilierung erstellt eine kompilierte benutzerdefinierte Wörterbuchdatei (.hwrdict).
+-   Installieren Sie das kompilierte benutzerdefinierte Wörterbuch.
 
-## <a name="compiling-a-word-list"></a>Kompilieren einer Word-Liste
+## <a name="compiling-a-word-list"></a>Kompilieren einer Wortliste
 
-Die zu kompilierende Wort Liste muss im nur-Text-Format vorliegen und muss mit einer Unicode-Codierung gespeichert werden. Andere Codierungen können nicht verwendet werden. Jede Zeile der Textdatei wird als einzelner Eintrag im Wörterbuch verwendet. Multiword-Einheiten Einträge, die ein oder mehrere Leerzeichen enthalten, sind zulässig. Leerzeichen am Anfang oder Ende einer Zeile werden ignoriert.
+Die zu kompilierende Wortliste muss im Nur-Text-Format vorliegen und sollte mithilfe einer Unicode-Codierung gespeichert werden. Andere Codierungen funktionieren nicht. Jede Zeile der Textdatei wird als einzelner Eintrag im Wörterbuch verwendet. Einträge für Multiwordeinheiten, die einen oder mehrere Leerzeichen enthalten, sind zulässig. Leerzeichen am Anfang oder Ende einer Zeile werden ignoriert.
 
-Ein benutzerdefiniertes Wörterbuch wird von einer Befehlszeile aus kompiliert. Öffnen Sie zum Kompilieren eines Wörterbuchs ein Befehlsfenster, navigieren Sie zu dem Ordner, der die Wort Liste enthält, und führen Sie HwrComp.exe mit den Befehlszeilenoptionen aus, die Sie verwenden möchten.
+Ein benutzerdefiniertes Wörterbuch wird über eine Befehlszeile kompiliert. Öffnen Sie zum Kompilieren eines Wörterbuchs ein Befehlsfenster, navigieren Sie zu dem Ordner, der die Wortliste enthält, und führen Sie dann HwrComp.exe mit den Befehlszeilenoptionen aus, die Sie verwenden möchten.
 
-Das folgende Beispiel zeigt die Verwendungs Syntax für die Befehlszeilenoptionen.
+Das folgende Beispiel zeigt die Verwendungssyntax für die Befehlszeilenoptionen.
 
 ``` syntax
 Usage: hwrcomp       [-lang <localename>] [-type <type>]
@@ -43,64 +43,64 @@ Usage: hwrcomp       [-lang <localename>] [-type <type>]
      
 ```
 
-### <a name="explanation-of-options"></a>Erklärung der Optionen
+### <a name="explanation-of-options"></a>Erläuterung der Optionen
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Parameter</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>-lang <localename></td>
-<td>Der angegebene Gebiets Schema Name, der der kompilierten benutzerdefinierten Wörterbuchdatei zugewiesen ist. Das <localename> -Argument hat die Form Language-Region. Ein Beispiel hierfür ist "en-US", das die englische Sprache in der USA Region angibt. Beispiele für dieses Formular finden Sie unter [sprach Bezeichner-Konstanten und-](/windows/desktop/Intl/language-identifier-constants-and-strings)Zeichen folgen. Die folgenden Sprachen werden für Windows 7 und Windows Server 2008 R2 durch dieses Feature unterstützt: en-US, en-GB, en-ca, en-au, de-de, de-ch, fr-FR, es-es, es-MX, es-ar, IT-IT, nl-nl, NL-BE, pt-br, pt-pt, da-DK, SV-SE, nb-no, nn-no, fi-fi, PL-PL, CS-CZ, ru-ru, RO-RO, SR-LATN-CS, SR-Cyrl-CS, ca-es und HR-HR.<br/></td>
+<td>-lang &lt; localename&gt;</td>
+<td>Der angegebene Name des der kompilierten benutzerdefinierten Wörterbuchdatei zugewiesenen Locale. Das Argument &lt; localename &gt; hat das Formular language-REGION. Ein Beispiel hierfür ist en-US, das die englische Sprache in der region USA bezeichnet. Beispiele für dieses Formular finden Sie unter [Sprachbezeichnerkonst konstanten und Zeichenfolgen](/windows/desktop/Intl/language-identifier-constants-and-strings). Die folgenden Sprachen werden für Windows 7 und Windows Server 2008 R2 von diesem Feature unterstützt: en-US, en-GB, en-CA, en-AU, de-DE, de-CH, fr-FR, es-ES, es-MX, es-AR, it-IT, nl-NL, nl-BE, pt-BR, pt-PT, da-DK, sv-SE, nb-NO, nn-NO, fi-FI, pl-PL, cs-PT, ru-RU, ro-RO, sr-Latn-CS, sr-Cyrl-CS, ca-ES und hr-HR.<br/></td>
 </tr>
 <tr class="even">
-<td>-Typ <type></td>
-<td>Das Option-Argument <type> ist eine Verkettung einer einzelnen Zeichenfolge für die Verwendung der Ressource als Haupt Wort Liste (primär) oder als Ergänzung zur Haupt Wort Liste (sekundär), gefolgt von dem Namen der eigentlichen Wort Liste, auf die die Ressource angewendet wird (z. b. Wörterbuch oder Nachname). Folgende Werte sind möglich:
+<td>-type &lt; type&gt;</td>
+<td>Der Optionsargumenttyp ist eine einzelne Zeichenfolgenverkettung der Verwendung der Ressource als Hauptwortliste (PRIMARY) oder als Ergänzung zur Hauptwortliste (SECONDARY), gefolgt vom tatsächlichen Namen der Wortliste, auf die die Ressource angewendet wird (z. B. DICTIONARY oder &lt; &gt; SURNAME). Folgende Werte sind möglich:
 <ul>
-<li>Primary-CityName-List</li>
-<li>Primary-CountryName-List</li>
-<li>Primary-countryshortname-List</li>
-<li>primär-Wörterbuch</li>
-<li>primär-givenName-List</li>
-<li>Primary-StateOrProvince-List</li>
-<li>Primary-streetname-List</li>
-<li>primär-Nachname-Liste</li>
-<li>Sekundär-CityName-List</li>
-<li>Sekundär-CountryName-List</li>
-<li>Sekundär-countryshortname-List</li>
-<li>Sekundär Wörterbuch</li>
-<li>Sekundär-emailsmtp-Liste</li>
-<li>Sekundär-emailusername-List</li>
-<li>Sekundär-givenName-List</li>
-<li>Sekundär-StateOrProvince-List</li>
-<li>Sekundär-streetname-List</li>
-<li>Sekundär-Nachname-Liste</li>
-<li>Sekundär-URL-Liste</li>
+<li>PRIMARY-CITYNAME-LIST</li>
+<li>PRIMARY-COUNTRYNAME-LIST</li>
+<li>PRIMARY-COUNTRYSHORTNAME-LIST</li>
+<li>PRIMARY-DICTIONARY</li>
+<li>PRIMARY-GIVENNAME-LIST</li>
+<li>PRIMARY-STATEORPROVINCE-LIST</li>
+<li>PRIMARY-STREETNAME-LIST</li>
+<li>PRIMARY-SURNAME-LIST</li>
+<li>SECONDARY-CITYNAME-LIST</li>
+<li>SECONDARY-COUNTRYNAME-LIST</li>
+<li>SECONDARY-COUNTRYSHORTNAME-LIST</li>
+<li>SECONDARY-DICTIONARY</li>
+<li>SECONDARY-EMAILSMTP-LIST</li>
+<li>SECONDARY-EMAILUSERNAME-LIST</li>
+<li>SECONDARY-GIVENNAME-LIST</li>
+<li>SECONDARY-STATEORPROVINCE-LIST</li>
+<li>SECONDARY-STREETNAME-LIST</li>
+<li>SECONDARY-SURNAME-LIST</li>
+<li>SECONDARY-URL-LIST</li>
 </ul>
-Wenn ein Typwert mit dem Präfix Primary beginnt, wird das kompilierte Wörterbuch nach der Installation durch das System Wörterbuch für diese Sprache ersetzt. Der Wert Primary-Dictionary stellt das Hauptsystem Wörterbuch für eine Sprache dar.
+Wenn ein Typwert mit dem Präfix PRIMARY beginnt, ersetzt das kompilierte Wörterbuch nach seiner Installation das Systemwörterbuch für diese Sprache. Der Wert PRIMARY-DICTIONARY stellt das Hauptsystemwörterbuch für eine Sprache dar.
 <blockquote>
 [!Note]<br />
-Das Ersetzen eines System Wörterbuchs führt nicht zum ursprünglichen Inhalt des System Wörterbuchs, da der Austausch nur wirksam ist, bis das benutzerdefinierte Wörterbuch entfernt wurde.
+Das Ersetzen eines Systemwörterbuchs hat keine Auswirkungen auf den ursprünglichen Systemwörterbuchinhalt, da die Ersetzung nur wirksam ist, bis das benutzerdefinierte Wörterbuch entfernt wurde.
 </blockquote>
-<br/> Wenn ein Typwert mit dem Präfix Sekundär beginnt, ergänzt das kompilierte Wörterbuch Das System Wörterbuch, ohne es zu ersetzen.</td>
+<br/> Wenn ein Typwert mit dem Präfix SECONDARY beginnt, ergänzt das kompilierte Wörterbuch das Systemwörterbuch, ohne es zu ersetzen.</td>
 </tr>
 <tr class="odd">
-<td>-Kommentar <comment></td>
-<td>Der angegebene Kommentar wird in die Wörterbuchdatei kompiliert. Der Kommentar muss eine einzelne Zeichenfolge und nicht länger als 64 Zeichen sein.</td>
+<td>-comment <comment></td>
+<td>Der angegebene Kommentar wird in die Wörterbuchdatei kompiliert. Der Kommentar muss eine einzelne Zeichenfolge sein und darf nicht länger als 64 Zeichen sein.</td>
 </tr>
 <tr class="even">
 <td>-o <dictfile.hwrdict></td>
-<td>Die Ausgabe wird in den Dateinamen geschrieben, der durch angegeben wird <dictfile.hwrdict> .<br/> Wenn diese Option fehlt, wird der Name der Ausgabedatei vom ursprünglichen Eingabe Dateinamen abgeleitet, wobei die Eingabedatei Erweiterung durch. hwrdict ersetzt wurde.<br/></td>
+<td>Die Ausgabe wird in den durch angegebenen Dateinamen <dictfile.hwrdict> geschrieben.<br/> Wenn diese Option fehlt, wird der Name der Ausgabedatei vom ursprünglichen Eingabedateinamen abgeleitet, und die Eingabedateierweiterung wird durch .hwrdict ersetzt.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -111,33 +111,33 @@ Das Ersetzen eines System Wörterbuchs führt nicht zum ursprünglichen Inhalt d
 
 ### <a name="defaults"></a>Standardeinstellungen
 
-Wenn keine Parameter angegeben werden, lauten die Standard Optionswerte
+Wenn keine Parameter angegeben werden, sind die Standardoptionswerte
 
--lang <current input language> -Typ Sekundär-Wörterbuch
+-lang <current input language> -type SECONDARY-DICTIONARY
 
 ### <a name="examples"></a>Beispiele
 
-Im folgenden wird die Eingabedatei mylist1.txt kompiliert, die Standard Optionswerte angewendet und die Ausgabedatei mylist1. hwrdict erstellt.
+Im Folgenden wird die Eingabedatei mylist1.txt kompiliert, die Standardwerte der Option angewendet und die Ausgabedatei mylist1.hwrdict erstellt.
 
 ``` syntax
 hwrcomp mylist1.txt
 ```
 
-Im Gegensatz dazu kompiliert der folgende mylist1.txt in myrsrc1. hwrdict, weist jedoch "English (US)" (en-US) als Sprache und das sekundäre Wörterbuch als Typ zu.
+Im Gegensatz dazu kompiliert der folgende mylist1.txt in myrsrc1.hwrdict, weist jedoch "English (US)" (en-US) als Sprache und SECONDARY-DICTIONARY als Typ zu.
 
 ``` syntax
 hwrcomp -lang en-US -type SECONDARY-DICTIONARY -o myrsrc1 mylist1.txt 
 ```
 
-## <a name="installing-a-compiled-custom-dictionary"></a>Installieren eines kompilierten Benutzer Wörterbuchs
+## <a name="installing-a-compiled-custom-dictionary"></a>Installieren eines kompilierten benutzerdefinierten Wörterbuchs
 
-HwrComp.exe erstellt eine hwrdict-Datei, die in einem Binärformat vorliegt, das von einer Handschrifterkennung verwendet werden kann. Diese Datei kann auf jedem Computer installiert werden, auf dem Windows 7 oder Windows Server 2008 R2 ausgeführt wird und der die Handschrifterkennung unterstützt. Ein Wörterbuch wird entweder nur für den aktuellen Benutzer oder für alle Benutzer auf einem Computer installiert.
+HwrComp.exe erstellt eine HWRDICT-Datei in einem Binärformat, das von einer Handschrifterkennung verwendet werden kann. Diese Datei kann auf jedem Computer mit Windows 7 oder Windows Server 2008 R2 installiert werden, der die Handschrifterkennung unterstützt. Ein Wörterbuch wird entweder nur für den aktuellen Benutzer oder für alle Benutzer auf einem Computer installiert.
 
-Eine kompilierte benutzerdefinierte Wörterbuchdatei kann über die Befehlszeile mit dem Tool HwrReg.exe installiert werden. Dieses Tool ist nützlich, wenn Sie einige der Konfigurationswerte außer Kraft setzen möchten, die in die Datei kompiliert werden, oder die Standardwerte sind. Es gibt zwei Möglichkeiten, HwrReg.exe auszuführen: im Modus "überprüfen/installieren" und im Listen-/Entfernungs Modus.
+Eine kompilierte benutzerdefinierte Wörterbuchdatei kann über die Befehlszeile mithilfe des Tools installiert HwrReg.exe. Dieses Tool ist nützlich, wenn Sie einige der Konfigurationswerte überschreiben möchten, die entweder in die Datei kompiliert werden oder die Standardwerte sind. Es gibt zwei Möglichkeiten zum Ausführen von HwrReg.exe: im Check/Install-Modus und im Listen-/Entfernungsmodus.
 
-### <a name="running-hwrregexe-in-checkinstall-mode"></a>Ausführen von HwrReg.exe im Modus "überprüfen/installieren"
+### <a name="running-hwrregexe-in-checkinstall-mode"></a>Ausführen HwrReg.exe im Check/Install-Modus
 
-Dieser Modus ist für benutzerdefinierte Wörterbuchdateien vorgesehen, die noch nicht installiert wurden. Das folgende Beispiel zeigt die Verwendungs Syntax für die Befehlszeilenoptionen.
+Dieser Modus gilt für benutzerdefinierte Wörterbuchdateien, die noch nicht installiert wurden. Im Folgenden wird die Verwendungssyntax für die Befehlszeilenoptionen veranschaulicht.
 
 ``` syntax
 Usage: hwrreg        [-check]
@@ -147,30 +147,30 @@ Usage: hwrreg        [-check]
     <dictfile.hwrdict>
 ```
 
-### <a name="explanation-of-options"></a>Erklärung der Optionen
+### <a name="explanation-of-options"></a>Erläuterung der Optionen
 
 
 
-| Parameter                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                        |
+| Parameter                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                        |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -Überprüfen                   | Die Wörterbuchdatei wird überprüft, ohne installiert zu werden. Die Option "Check" zeigt den Kommentar der Datei sowie die Registrierungsinformationen an, die zum Installieren der Datei verwendet werden. Diese Option ist nützlich, um Registrierungsinformationen vor der Installation zu überprüfen. <br/> Wenn diese Option fehlt, installiert HwrReg.exe das benutzerdefinierte Wörterbuch.<br/>  |
-|  Wochen <localename> | Die Wörterbuchdatei wird überprüft, ohne installiert zu werden. Die Option "Check" zeigt den Kommentar der Datei sowie die Registrierungsinformationen an, die zum Installieren der Datei verwendet werden. Diese Option ist nützlich, um Registrierungsinformationen vor der Installation zu überprüfen. <br/> Wenn diese Option fehlt, installiert HwrReg.exe das benutzerdefinierte Wörterbuch. <br/> |
-|  Bereich "{All \| Me}"         | Das benutzerdefinierte Wörterbuch wird entweder für alle Benutzer (Bereich alle) oder nur für den aktuellen Benutzer (Bereich "Me") installiert. Die Installation mit dem Bereich "All" erfordert, dass der Befehl an einer Eingabeaufforderung mit erhöhten Rechten ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben. <br/> Wenn diese Option fehlt, wird die Installation nur auf den aktuellen Benutzer beschränkt.<br/>                          |
-|  noprompt                | HwrReg.exe wird nicht zur Bestätigung aufgefordert. Dies kann nützlich sein, wenn hwrReg.exe aus einem Skript ausgeführt wird. <br/>                                                                                                                                                                                                                                                                 |
+| -check                   | Die Wörterbuchdatei wird überprüft, ohne installiert zu werden. Die Option "Überprüfen" zeigt den Kommentar der Datei sowie die Registrierungsinformationen an, die zum Installieren der Datei verwendet werden. Diese Option ist nützlich, um Registrierungsinformationen zu überprüfen, bevor die Installation ausgeführt wird. <br/> Wenn diese Option fehlt, HwrReg.exe das benutzerdefinierte Wörterbuch installiert.<br/>  |
+|  lang &lt; localename&gt; | Die Wörterbuchdatei wird überprüft, ohne installiert zu werden. Die Option "Überprüfen" zeigt den Kommentar der Datei sowie die Registrierungsinformationen an, die zum Installieren der Datei verwendet werden. Diese Option ist nützlich, um Registrierungsinformationen zu überprüfen, bevor die Installation ausgeführt wird. <br/> Wenn diese Option fehlt, HwrReg.exe das benutzerdefinierte Wörterbuch installiert. <br/> |
+|  scope {all \| me}         | Das benutzerdefinierte Wörterbuch wird entweder für alle Benutzer (Bereich alle) oder nur für den aktuellen Benutzer (bereich mich) installiert. Für die Installation mit scope all muss der Befehl in einer Eingabeaufforderung mit erhöhten Rechten ausgeführt werden. Andernfalls wird ein Fehlercode zurückgegeben. <br/> Wenn diese Option fehlt, wird die Installation nur auf den aktuellen Benutzer ausdingt.<br/>                          |
+|  noprompt                | HwrReg.exe aufforderungt nicht zur Bestätigung. Dies kann nützlich sein, wenn sie hwrReg.exe Skript ausführen. <br/>                                                                                                                                                                                                                                                                 |
 
 
 
  
 
-Im folgenden Beispiel wird das benutzerdefinierte Wörterbuch myrsrc1. hwrdict für die Sprache "Danish (Dänemark)" (da DK) mit dem Standardbereich nur des aktuellen Benutzers installiert.
+Im folgenden Beispiel wird das benutzerdefinierte Wörterbuch myrsrc1.hwrdict für die Sprache "Dänisch (Spanien)" (da DK) mit dem Standardbereich nur des aktuellen Benutzers installiert.
 
 ``` syntax
 hwrreg -lang da-DK myrsrc1.hwrdict 
 ```
 
-### <a name="running-hwrregexe-in-listremove-mode"></a>Ausführen von HwrReg.exe im Listen-/Entfernungs Modus
+### <a name="running-hwrregexe-in-listremove-mode"></a>Ausführen HwrReg.exe im Listen-/Entfernungsmodus
 
-In diesem Modus werden installierte benutzerdefinierte Wörterbücher aufgelistet oder entfernt. Das folgende Beispiel zeigt die Verwendungs Syntax für die Befehlszeilenoptionen.
+In diesem Modus werden installierte benutzerdefinierte Wörterbücher entweder aufgelistet oder entfernt. Im Folgenden wird die Verwendungssyntax für die Befehlszeilenoptionen veranschaulicht.
 
 ``` syntax
 Usage: hwrreg        [-lang <localename>] 
@@ -179,17 +179,17 @@ Usage: hwrreg        [-lang <localename>]
     -list | -remove
 ```
 
-### <a name="explanation-of-options"></a>Erklärung der Optionen
+### <a name="explanation-of-options"></a>Erläuterung der Optionen
 
 
 
-| Parameter                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                    |
+| Parameter                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                    |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  Wochen <localename> | Die Wörterbücher, die nur für diesen Gebiets Schema Namen registriert sind, werden aufgelistet oder entfernt. Das-Argument <localename> hat den Formular Sprachbereich. Beispiele für dieses Formular finden Sie unter [sprach Bezeichner-Konstanten und-](/windows/desktop/Intl/language-identifier-constants-and-strings)Zeichen folgen. <br/> Wenn diese Option fehlt, werden Wörterbücher für alle Sprachen aufgelistet oder entfernt.<br/> |
-|  Bereich "{All \| Me}"         | Das benutzerdefinierte Wörterbuch wird entweder für alle Benutzer (Bereich alle) oder nur für den aktuellen Benutzer (Bereich "Me") installiert. Die Installation mit dem Bereich "All" erfordert, dass der Befehl an einer Eingabeaufforderung mit erhöhten Rechten ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben. <br/> Wenn diese Option fehlt, wird die Installation nur auf den aktuellen Benutzer beschränkt.<br/>                      |
-|  Sorte <type>       | Listet oder entfernt nur Wörterbücher, die mit dem angegebenen Typ registriert sind.<br/> Wenn diese Option fehlt, werden alle Wörterbuchtypen aufgelistet oder entfernt. Das Installieren oder Entfernen eines Benutzer Wörterbuchs eines anderen Typs (z. b. Primary-CountryName-List) kann die Handschrifterkennung in anderen Kontexten beeinträchtigen. <br/>                                              |
+|  lang &lt; localename&gt; | Die Wörterbücher, die nur für diesen Gebietsschemanamen registriert sind, werden aufgelistet oder entfernt. Das Argument &lt; localename &gt; weist die Formatsprache REGION auf. Beispiele für dieses Formular finden Sie unter [Sprachbezeichnerkonstanten und Zeichenfolgen.](/windows/desktop/Intl/language-identifier-constants-and-strings) <br/> Wenn diese Option fehlt, werden Wörterbücher für alle Sprachen aufgelistet oder entfernt.<br/> |
+|  scope {all \| me}         | Das benutzerdefinierte Wörterbuch wird entweder für alle Benutzer (Bereich alle) oder nur für den aktuellen Benutzer ( Bereich me) installiert. Die Installation mit dem Bereich erfordert, dass der Befehl an einer Eingabeaufforderung mit erhöhten Rechten ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben. <br/> Wenn diese Option fehlt, wird der Bereich der Installation nur auf den aktuellen Benutzer verschoben.<br/>                      |
+|  &lt;Typtyp&gt;       | Listet nur Wörterbücher auf, die mit dem angegebenen Typ registriert sind, oder entfernt sie.<br/> Wenn diese Option fehlt, werden alle Wörterbuchtypen aufgelistet oder entfernt. Das Installieren oder Entfernen eines benutzerdefinierten Wörterbuchs eines anderen Typs (z. B. PRIMARY-COUNTRYNAME-LIST) kann sich auf die Handschrifterkennung in anderen Kontexten auswirken. <br/>                                              |
 |  list                    | Listet alle installierten Wörterbücher auf, die den anderen Optionen entsprechen.<br/> Wenn diese Option fehlt, muss die Option remove angegeben werden.<br/>                                                                                                                                                                                                                          |
-|  remove                  | Fordert zum Entfernen eines beliebigen Wörterbuchs auf, das mit den anderen Optionen übereinstimmt.<br/> Wenn diese Option fehlt, muss die Optionsliste angegeben werden.<br/>                                                                                                                                                                                                                     |
+|  remove                  | Fordert zur Entfernung eines Wörterbuchs auf, das den anderen Optionen entspricht.<br/> Wenn diese Option fehlt, muss die Optionsliste angegeben werden.<br/>                                                                                                                                                                                                                     |
 
 
 
@@ -197,14 +197,14 @@ Usage: hwrreg        [-lang <localename>]
 
 ### <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie Wörterbücher mit der Sprache "English (US)" (en US) und dem primären Wörterbuch "Typ", die nur für den aktuellen Benutzer installiert werden.
+Im Folgenden werden Wörterbücher aufgelistet, die die Sprache "Englisch (US)" (en US) aufweisen und PRIMARY DICTIONARY eingeben und nur für den aktuellen Benutzer installiert sind.
 
 ``` syntax
 hwrreg -list -lang en-US -type PRIMARY-DICTIONARY
                   
 ```
 
-Ebenso werden mit dem folgenden Wörterbücher entfernt, die denselben Kriterien entsprechen.
+Auf ähnliche Weise werden im folgenden Beispiel Wörterbücher entfernt, die denselben Kriterien entsprechen.
 
 ``` syntax
 hwrreg -remove -lang en-US -type PRIMARY-DICTIONARY
@@ -213,8 +213,8 @@ hwrreg -remove -lang en-US -type PRIMARY-DICTIONARY
 
 ## <a name="general-notes-on-custom-dictionaries"></a>Allgemeine Hinweise zu benutzerdefinierten Wörterbüchern
 
--   Wenn Sie zwei benutzerdefinierte Wörterbücher mit dem gleichen Typ, der gleichen Sprache und dem gleichen Gültigkeitsbereich installieren, wird die erste Installation durch die zweite Installation überschrieben.
--   Wenn Sie zwei benutzerdefinierte Wörterbücher mit demselben Typ und derselben Sprache installieren, aber mit unterschiedlichen Bereichen (eines für alle Benutzer und eines für den aktuellen Benutzer), hat das für den aktuellen Benutzer installierte Wörterbuch Vorrang, und das für alle Benutzer installierte Wörterbuch wird ignoriert.
+-   Wenn Sie zwei benutzerdefinierte Wörterbücher mit demselben Typ, derselben Sprache und demselben Bereich installieren, wird die erste bei der zweiten Installation überschrieben.
+-   Wenn Sie zwei benutzerdefinierte Wörterbücher mit demselben Typ und derselben Sprache installieren, aber über unterschiedliche Bereiche (einen für alle Benutzer und einen für den aktuellen Benutzer), hat das für den aktuellen Benutzer installierte Wörterbuch Vorrang, und das für alle Benutzer installierte Wörterbuch wird ignoriert.
 
  
 

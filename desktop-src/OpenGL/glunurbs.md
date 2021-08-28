@@ -1,9 +1,9 @@
 ---
-title: glunurbscallback-Funktion (glu. h)
-description: Die Funktion "glunurbscallback" definiert einen Rückruf für ein nicht einheitliches Rational B-Spline-Objekt (NURBS).
+title: gluNurbsCallback-Funktion (Glu.h)
+description: Die funktion gluNurbsCallback definiert einen Rückruf für ein NURBS-Objekt (Non-Uniform Rational B-Spline).
 ms.assetid: 1e9afc00-57c6-459e-a9fc-463f45df2084
 keywords:
-- glunurbscallback-Funktion OpenGL
+- gluNurbsCallback-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40a716724546ef0df4300bedb9aba44f7a23f530
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d1da7ebc999d44911cb345b051213a12865e608db7b7fe66e33eb1bb567ef7a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119519500"
 ---
-# <a name="glunurbscallback-function"></a>glunurbscallback-Funktion
+# <a name="glunurbscallback-function"></a>gluNurbsCallback-Funktion
 
-Die Funktion " **glunurbscallback** " definiert einen Rückruf für ein nicht einheitliches Rational B-Spline-Objekt ([NURBS](using-nurbs-curves-and-surfaces.md)).
+Die **gluNurbsCallback-Funktion** definiert einen Rückruf für ein nicht einheitliches rationales B-Spline-Objekt [(NURBS).](using-nurbs-curves-and-surfaces.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ void WINAPI gluNurbsCallback(
 *nobj* 
 </dt> <dd>
 
-Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt).
+Das NURBS-Objekt (erstellt mit [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)).
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Der Rückruf, der definiert wird. Der einzige gültige Wert ist "glu \_ Error". Die Bedeutung von "glu \_ Error" bedeutet, dass die Fehlerfunktion aufgerufen wird, wenn ein Fehler auftritt. Das einzige Argument ist vom Typ " **GLenum**" und gibt den spezifischen Fehler an, der aufgetreten ist. Es gibt 37-Fehler, die für nursb eindeutig sind, mit dem Namen "glu \_ nursb \_ ERROR1 through glu \_ nursb \_ ERROR37". Zeichen folgen, die diese Fehler beschreiben, können mit " [**gluerrorstring**](gluerrorstring.md)" abgerufen werden.
+Der rückruf, der definiert wird. Der einzige gültige Wert ist GLU \_ ERROR. Die Bedeutung von GLU \_ ERROR bedeutet, dass die Fehlerfunktion aufgerufen wird, wenn ein Fehler auftritt. Das einzelne Argument ist vom Typ **GLenum** und gibt den spezifischen Fehler an, der aufgetreten ist. Es gibt 37 Fehler, die nur für NURBS gelten. Diese werden glu \_ nurbs \_ error1 bis GLU \_ NURBS \_ ERROR37 genannt. Zeichenfolgen, die diese Fehler beschreiben, können mit [**gluErrorString**](gluerrorstring.md)abgerufen werden.
 
 </dd> <dt>
 
@@ -67,9 +67,9 @@ Ein Zeiger auf die Rückruffunktion.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **glunurbscallback** , um einen Rückruf zu definieren, der von einem nurb-Objekt verwendet werden soll. Wenn der angegebene Rückruf bereits definiert ist, wird er ersetzt. Wenn *FN* **null** ist, wird ein beliebiger vorhandener Rückruf gelöscht.
+Verwenden Sie **gluNurbsCallback,** um einen Rückruf zu definieren, der von einem NURBS-Objekt verwendet werden soll. Wenn der angegebene Rückruf bereits definiert ist, wird er ersetzt. Wenn *fn* **NULL** ist, wird jeder vorhandene Rückruf gelöscht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Verwenden Sie **glunurbscallback** , um einen Rückruf zu definieren, der von ei
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -89,10 +89,10 @@ Verwenden Sie **glunurbscallback** , um einen Rückruf zu definieren, der von ei
 
 <dl> <dt>
 
-[**gluerrorstring**](gluerrorstring.md)
+[**gluErrorString**](gluerrorstring.md)
 </dt> <dt>
 
-[**glunewnurbsrenderer**](glunewnurbsrenderer.md)
+[**gluNewNurbsRenderer**](glunewnurbsrenderer.md)
 </dt> </dl>
 
  

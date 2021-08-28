@@ -1,6 +1,6 @@
 ---
 title: Proxyattribut
-description: Das \proxy\-Attribut verhindert, dass Automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
+description: Das \proxy\-Attribut verhindert, dass automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
 ms.assetid: 88e59938-83c9-436a-931c-f4396fdcf653
 keywords:
 - Proxyattribut MIDL
@@ -21,7 +21,7 @@ ms.locfileid: "118641419"
 ---
 # <a name="proxy-attribute"></a>Proxyattribut
 
-Das **\[ \] Proxyattribut** verhindert, dass Automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
+Das **\[ \] Proxyattribut** verhindert, dass automation sich als Proxy-/Stubhandler für eine duale Schnittstelle registriert.
 
 ``` syntax
 [ 
@@ -42,14 +42,14 @@ interface interface-name <> : base-interface <>
 *string-uuid* 
 </dt> <dd>
 
-Gibt eine Zeichenfolge an, die aus acht Hexadezimalziffern gefolgt von einem Bindestrich, dann drei Gruppen von vier Hexadezimalziffern gefolgt von einem Bindestrich und dann 12 Hexadezimalziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen setzen, außer wenn Sie den MIDL-Compilerschalter [**/osf verwenden.**](-osf.md)
+Gibt eine Zeichenfolge an, die aus acht Hexadezimalziffern gefolgt von einem Bindestrich und dann aus drei Gruppen von jeweils vier Hexadezimalziffern gefolgt von einem Bindestrich und dann 12 Hexadezimalziffern besteht. Sie können die UUID-Zeichenfolge in Anführungszeichen einschließen, außer wenn Sie den MIDL-Compilerschalter [**/osf**](-osf.md)verwenden.
 
 </dd> <dt>
 
 *interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von null oder mehr IDL-Attributen an, die für die Schnittstelle als Ganzes gelten. Wenn mindestens zwei Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
+Gibt eine Liste von null oder mehr IDL-Attributen an, die für die gesamte Schnittstelle gelten. Wenn zwei oder mehr Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
@@ -63,26 +63,26 @@ Name der Schnittstelle.
 *Basisschnittstelle* 
 </dt> <dd>
 
-Gibt den Namen einer Schnittstelle an, von der diese abgeleitete Schnittstelle Memberfunktionen, Statuscodes und Schnittstellenattribute erbt. Die abgeleitete Schnittstelle erbt keine Typdefinitionen. Verwenden Sie hierzu das Schlüsselwort [**import,**](import.md) um die IDL-Datei der Basisschnittstelle zu importieren.
+Gibt den Namen einer Schnittstelle an, von der diese abgeleitete Schnittstelle Memberfunktionen, Statuscodes und Schnittstellenattribute erbt. Die abgeleitete Schnittstelle erbt keine Typdefinitionen. Verwenden Sie hierzu [](import.md) das Importschlüsselwort, um die IDL-Datei der Basisschnittstelle zu importieren.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Verwendung \[ **des Proxyattributs** für eine duale Schnittstelle \] verhindert, dass der TLB generierte Stubs übernimmt. Wenn dieses Attribut angegeben wird, sollte die Registrierung des typelib-Proxys nicht aufgehoben werden, wenn die Registrierung von typelib aufgehoben wird.
+Die Verwendung des \[  \] Proxyattributs für eine duale Schnittstelle verhindert, dass der TLB generierte Stubs übernimmt. Wenn dieses Attribut angegeben wird, sollte die Registrierung des typelib-Proxys nicht aufgehoben werden, wenn die Registrierung der TypeLib aufgehoben wird.
 
 ### <a name="flags"></a>Flags
 
 <dl> <dt>
 
-<span id="TYPEFLAG_PROXY"></span><span id="typeflag_proxy"></span>TYPEFLAG-PROXY \_
+<span id="TYPEFLAG_PROXY"></span><span id="typeflag_proxy"></span>\_TYPEFLAG-PROXY
 </dt> <dd>
 
-Schnittstellen können mit dem TYPEFLAG-PROXY-Flag markiert werden, um anzugeben, dass sie eine \_ Proxy-/Stub-Dynamic Link Library verwenden. Dieses Flag gibt an, dass die Registrierung des typelib-Proxys nicht aufgehoben werden soll, wenn die Registrierung der typelib aufgehoben wird.
+Schnittstellen können mit dem \_ TYPEFLAG-PROXYflag gekennzeichnet werden, um anzugeben, dass sie eine Proxy-/Stub-Dynamic Link-Bibliothek verwenden. Dieses Flag gibt an, dass die Registrierung des typelib-Proxys nicht aufgehoben werden soll, wenn die Registrierung der TypeLib aufgehoben wird.
 
 </dd> </dl>
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

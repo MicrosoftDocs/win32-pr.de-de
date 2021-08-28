@@ -1,47 +1,47 @@
 ---
-description: 'Cryptography API: Next Generation (CNG) stellt Funktionen bereit, mit denen die Verschlüsselungs Sammlungen, die von einem Anbieter unterstützt werden, abgefragt, hinzugefügt, entfernt und priorisiert werden. Mit diesen Funktionen vorgenommene Änderungen werden sofort wirksam, und es ist nicht erforderlich, einen aktiven Server neu zu starten.'
+description: 'Kryptografie-API: Next Generation (CNG) stellt Funktionen bereit, die die von einem Anbieter unterstützten Verschlüsselungssammlungen abfragen, hinzufügen, entfernen und priorisieren. Änderungen, die mit diesen Funktionen vorgenommen werden, werden sofort wirksam und erfordern keinen Neustart eines aktiven Servers.'
 ms.assetid: e919be5c-ac2c-446c-a422-971805b1f672
-title: Priorisieren von SChannel-Verschlüsselungs Sammlungen
+title: Priorisieren von Schannel-Verschlüsselungssammlungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f885c4d51006233be252a02c7cc3bebd26a4e6c3
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 4436d2f72ebaa1f8d551d935ea9f16d2c03cd7c75fc7d40a73f1a27c7406ad6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104219071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118920769"
 ---
-# <a name="prioritizing-schannel-cipher-suites"></a>Priorisieren von SChannel-Verschlüsselungs Sammlungen
+# <a name="prioritizing-schannel-cipher-suites"></a>Priorisieren von Schannel-Verschlüsselungssammlungen
 
-[Cryptography API: Next Generation](../seccng/cng-portal.md) (CNG) stellt Funktionen bereit, mit denen die Verschlüsselungs Sammlungen, die von einem Anbieter unterstützt werden, abgefragt, hinzugefügt, entfernt und priorisiert werden. Mit diesen Funktionen vorgenommene Änderungen werden sofort wirksam, und es ist nicht erforderlich, einen aktiven Server neu zu starten.
+[Kryptografie-API: Next Generation](../seccng/cng-portal.md) (CNG) stellt Funktionen bereit, die die von einem Anbieter unterstützten Verschlüsselungssammlungen abfragen, hinzufügen, entfernen und priorisieren. Änderungen, die mit diesen Funktionen vorgenommen werden, werden sofort wirksam und erfordern keinen Neustart eines aktiven Servers.
 
 > [!Note]
-> Sie können auch die Liste der Verschlüsselungs Sammlungen ändern, indem Sie die Gruppenrichtlinien Einstellungen für die Verschlüsselung der SSL-Verschlüsselungs **Sammlung** mithilfe des Snap-Ins "Gruppenrichtlinie-Objekt" in der Microsoft Management Console konfigurieren.
+> Sie können die Liste der Verschlüsselungssammlungen auch ändern, indem Sie die Gruppenrichtlinieneinstellungen der **SSL Cipher Suite Order** mithilfe des Gruppenrichtlinie Object-Snap-Ins in Microsoft Management Console konfigurieren.
 > 
-> **So konfigurieren Sie die Gruppenrichtlinien Einstellung "SSL-Verschlüsselungs **Sammlung** "**
+> **So konfigurieren Sie die Gruppenrichtlinieneinstellung **SSL Cipher Suite Order****
 > 
-> 1.  Geben Sie an einer Eingabeaufforderung **gpeer dit. msc** ein. Der **Gruppenrichtlinienobjekt-Editor** wird angezeigt.
-> 2.  Erweitern Sie **Computer Konfiguration**, **Administrative Vorlagen** und **Netzwerk**, und klicken Sie dann auf **SSL-Konfigurationseinstellungen**.
-> 3.  Klicken Sie unter **SSL-Konfigurationseinstellungen** auf die Einstellung für die **Reihenfolge der SSL** -Verschlüsselungs Sammlungen.
-> 4.  Scrollen Sie im Bereich für die **Reihenfolge der SSL** -Verschlüsselungs Sammlungen zum unteren Rand des Bereichs.
-> 5.  Befolgen Sie die Anweisungen **zum Ändern dieser Einstellung**.
+> 1.  Geben Sie an einer Eingabeaufforderung **gpedit.msc** ein. Die **Gruppenrichtlinienobjekt-Editor** wird angezeigt.
+> 2.  Erweitern Sie **Computerkonfiguration**, **Administrative Vorlagen**, **Netzwerk**, und klicken Sie dann auf **SSL-Konfiguration Einstellungen**.
+> 3.  Klicken Sie **unter SSL-Konfiguration Einstellungen** auf die Einstellung **SSL Cipher Suite Order** .
+> 4.  Scrollen Sie im Bereich **SSL Cipher Suite Order (SSL Cipher Suite-Reihenfolge)** zum unteren Rand des Bereichs.
+> 5.  Befolgen Sie die Anweisungen mit der Bezeichnung **Ändern dieser Einstellung.**
 > 
-> Sie müssen den Computer neu starten, nachdem Sie diese Einstellung geändert haben, damit die Änderungen wirksam werden.
+> Es ist erforderlich, den Computer neu zu starten, nachdem Sie diese Einstellung geändert haben, damit die Änderungen wirksam werden.
 
  
 
-Die Liste der Verschlüsselungs Sammlungen ist auf 1023 Zeichen beschränkt.
+Die Liste der Verschlüsselungssammlungen ist auf 1023 Zeichen beschränkt.
 
-Informationen zum Priorisieren von SChannel-Verschlüsselungs Sammlungen finden Sie in den folgenden Beispielen.
+Informationen zum Priorisieren von Schannel-Verschlüsselungssammlungen finden Sie in den folgenden Beispielen.
 
--   [Auflisten unterstützter Verschlüsselungs Sammlungen](#listing-supported-cipher-suites)
--   [Hinzufügen, entfernen und Priorisieren von Verschlüsselungs Sammlungen](#adding-removing-and-prioritizing-cipher-suites)
+-   [Auflisten unterstützter Verschlüsselungssammlungen](#listing-supported-cipher-suites)
+-   [Hinzufügen, Entfernen und Priorisieren von Verschlüsselungssammlungen](#adding-removing-and-prioritizing-cipher-suites)
 
-## <a name="listing-supported-cipher-suites"></a>Auflisten unterstützter Verschlüsselungs Sammlungen
+## <a name="listing-supported-cipher-suites"></a>Auflisten unterstützter Verschlüsselungssammlungen
 
-Aufrufen der Funktion " [**bcryptenumschlag**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptenumcontextfunctions) " zum Auflisten der Verschlüsselungs Sammlungen, die von einem Anbieter in der Reihenfolge ihrer Priorität unterstützt werden.
+Rufen Sie die [**BCryptEnumContextFunctions-Funktion**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptenumcontextfunctions) auf, um die Verschlüsselungssammlungen aufzulisten, die ein Anbieter nach Priorität unterstützt.
 
-Im folgenden Beispiel wird veranschaulicht, wie mit der Funktion " [**bcryptenumschlag**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptenumcontextfunctions) " unterstützte Verschlüsselungs Sammlungen aufgelistet werden.
+Im folgenden Beispiel wird veranschaulicht, wie die [**BCryptEnumContextFunctions-Funktion**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptenumcontextfunctions) verwendet wird, um unterstützte Verschlüsselungssammlungen aufzulisten.
 
 
 ```C++
@@ -93,15 +93,15 @@ Cleanup:
 
 
 
-## <a name="adding-removing-and-prioritizing-cipher-suites"></a>Hinzufügen, entfernen und Priorisieren von Verschlüsselungs Sammlungen
+## <a name="adding-removing-and-prioritizing-cipher-suites"></a>Hinzufügen, Entfernen und Priorisieren von Verschlüsselungssammlungen
 
-Aufrufen der Funktionen [**bcryptaddcontextfunction**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptaddcontextfunction) und [**bcryptremuvecontextfunction**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptremovecontextfunction) zum Hinzufügen und Entfernen von Verschlüsselungs Sammlungen aus der Liste der unterstützten Verschlüsselungs Sammlungen.
+Rufen Sie die Funktionen [**BCryptAddContextFunction**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptaddcontextfunction) und [**BCryptRemoveContextFunction**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptremovecontextfunction) auf, um Verschlüsselungssammlungen aus der Liste der unterstützten Verschlüsselungssammlungen hinzuzufügen und zu entfernen.
 
-Legen Sie beim Hinzufügen einer Verschlüsselungs Sammlung den Wert des *dwposition* -Parameters der Funktion " [**bcryptaddcontextfunction**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptaddcontextfunction) " auf " **crypt \_ Priorität \_ oben** " fest, um ihn am Anfang der priorisierten Liste hinzuzufügen, oder auf die nach-oben- **\_ \_ Seite** , um ihn am Ende der Liste hinzuzufügen.
+Legen Sie beim Hinzufügen einer Verschlüsselungssammlung den Wert des *dwPosition-Parameters* der [**BCryptAddContextFunction-Funktion**](/windows/win32/api/bcrypt/nf-bcrypt-bcryptaddcontextfunction) auf **CRYPT \_ PRIORITY \_ TOP** fest, um ihn am Anfang der priorisierten Liste hinzuzufügen, oder auf **CRYPT \_ PRIORITY \_ BOTTOM,** um ihn am Ende der Liste hinzuzufügen.
 
-Um die Liste der Verschlüsselungs Sammlungen zu priorisieren, entfernen Sie alle Verschlüsselungs Sammlungen aus der Liste, und fügen Sie der Liste anschließend Verschlüsselungs Sammlungen in der gewünschten Reihenfolge hinzu.
+Um die Liste der Verschlüsselungssammlungen zu priorisieren, entfernen Sie alle Verschlüsselungssammlungen aus der Liste, und fügen Sie der Liste dann Verschlüsselungssammlungen in der gewünschten Reihenfolge hinzu.
 
-Im folgenden Beispiel wird gezeigt, wie eine Verschlüsselungs Sammlung am Anfang der priorisierten Liste für den standardmäßigen Microsoft SChannel-Anbieter hinzugefügt wird.
+Das folgende Beispiel zeigt, wie Sie eine Verschlüsselungssammlung am Anfang der priorisierten Liste für den Microsoft Schannel-Standardanbieter hinzufügen.
 
 
 ```C++
@@ -129,7 +129,7 @@ void main()
 
 
 
-Im folgenden Beispiel wird gezeigt, wie eine Verschlüsselungs Sammlung aus der priorisierten Liste für den standardmäßigen Microsoft SChannel-Anbieter entfernt wird.
+Das folgende Beispiel zeigt, wie Sie eine Verschlüsselungssammlung aus der priorisierten Liste für den Microsoft Schannel-Standardanbieter entfernen.
 
 
 ```C++

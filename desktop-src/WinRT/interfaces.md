@@ -4,18 +4,18 @@ ms.assetid: CB05B5F8-BE15-4BE0-A651-F6E8912D649D
 title: Schnittstellen (Windows Runtime)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 468944bcd2437309d953fe53e64e36366ca0cd7ac6ad4d8c32aa9c8d71f91ca7
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d7e813bce21e44a7fe7a3b5f2feffbc31b78a4f8
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117741644"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884689"
 ---
 # <a name="interfaces"></a>Schnittstellen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Schnittstelle | BESCHREIBUNG |
+| Schnittstelle | Beschreibung |
 |-|-|
 | [**IActivatableClassRegistration**](/windows/win32/api/activationregistration/nn-activationregistration-iactivatableclassregistration) | Ermöglicht das Abrufen der Registrierungsinformationen für eine Klasse. |
 | [**IActivationFactory**](/windows/win32/api/activation/nn-activation-iactivationfactory) | Ermöglicht die Aktivierung von Klassen durch die Windows-Runtime. |
@@ -23,12 +23,12 @@ ms.locfileid: "117741644"
 | [**IApartmentShutdown**](/windows/desktop/api/objidl/nn-objidl-iapartmentshutdown) | Aktiviert die Registrierung eines Benachrichtigungshandlers für das Herunterfahren eines Apartment. |
 | [**AsyncActionCompletedHandler**](asyncactioncompletedhandler.md) | Stellt die Methode dar, die aufgerufen wird, wenn eine asynchrone Aktion abgeschlossen wird. |
 | [**IAsyncAction**](/windows/win32/api/windows.foundation/nn-windows-foundation-iasyncaction) | Stellt eine asynchrone Aktion dar. |
-| [**IAsyncActionProgressHandler<TProgress>**](/previous-versions//br205782(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn eine asynchrone Aktion den Fortschritt meldet. |
-| [**IAsyncActionWithProgress<TProgress>**](/previous-versions//br205784(v=vs.85)) | Stellt eine asynchrone Aktion für Statusbenachrichtigungen dar. |
-| [**IAsyncActionWithProgressCompletedHandler<TProgress>**](/previous-versions//br205785(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn eine asynchrone Aktion, die den Status meldet, abgeschlossen wird. |
+| [**IAsyncActionProgressHandler &lt; TProgress&gt;**](/previous-versions//br205782(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn eine asynchrone Aktion den Fortschritt meldet. |
+| [**IAsyncActionWithProgress &lt; TProgress&gt;**](/previous-versions//br205784(v=vs.85)) | Stellt eine asynchrone Aktion für Statusbenachrichtigungen dar. |
+| [**IAsyncActionWithProgressCompletedHandler &lt; TProgress&gt;**](/previous-versions//br205785(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn eine asynchrone Aktion, die den Status meldet, abgeschlossen wird. |
 | [**IAsyncInfo**](/windows/win32/api/asyncinfo/nn-asyncinfo-iasyncinfo) | Bietet Unterstützung für asynchrone Vorgänge. |
-| [**IAsyncOperation<TResult>**](/previous-versions//br205802(v=vs.85)) | Stellt einen asynchronen Vorgang dar, der ein Ergebnis zurückgibt. |
-| [**IAsyncOperationCompletedHandler<TResult>**](/previous-versions//br205803(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn ein asynchroner Vorgang abgeschlossen wird. |
+| [**IAsyncOperation &lt; TResult&gt;**](/previous-versions//br205802(v=vs.85)) | Stellt einen asynchronen Vorgang dar, der ein Ergebnis zurückgibt. |
+| [**IAsyncOperationCompletedHandler &lt; TResult&gt;**](/previous-versions//br205803(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn ein asynchroner Vorgang abgeschlossen wird. |
 | [**IAsyncOperationProgressHandler**](/previous-versions//br205805(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn ein asynchroner Vorgang den Status meldet. |
 | [**IAsyncOperationWithProgress**](/previous-versions//br205807(v=vs.85)) | Stellt einen asynchronen Vorgang dar, der ein Ergebnis zurückgibt und den Status meldet. |
 | [**IAsyncOperationWithProgressCompletedHandler<TResult, TProgress>**](/previous-versions//br205808(v=vs.85)) | Stellt die Methode dar, die aufgerufen wird, wenn ein asynchroner Vorgang, der den Status meldet, abgeschlossen wird. |
@@ -49,23 +49,23 @@ ms.locfileid: "117741644"
 | [**ICoreInputInterop**](/windows/desktop/api/corewindow/nn-corewindow-icoreinputinterop) | Aktiviert eine Eingabequelle für Windows Store [**CoreInput-Objekt einer**](https://www.bing.com/search?q=**CoreInput**) App. |
 | [**ICoreWindowInterop**](/windows/desktop/api/corewindow/nn-corewindow-icorewindowinterop) | Ermöglicht Apps das Abrufen des Fensterhandls des Fensters ([**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow?view=winrt-19041)), das dieser Schnittstelle zugeordnet ist. |
 | [**IDllServerActivatableClassRegistration**](/windows/win32/api/activationregistration/nn-activationregistration-idllserveractivatableclassregistration) | Ermöglicht das Abrufen der Registrierungsinformationen für einen Prozessserver. |
-| [**IErrorReportingSettings**](/previous-versions//br205818(v=vs.85)) | Stellt Debuggerintegration für Windows Runtime-Anwendungen zur Verfügung. |
-| [**IEventHandler<T>**](/previous-versions//hh438385(v=vs.85)) | Stellt die Methode dar, die ein Ereignis behandelt, das über Ereignisdaten des Typs **T verfügt.** |
+| [**IErrorReportingSettings**](/previous-versions//br205818(v=vs.85)) | Bietet Debuggerintegration für Windows Runtime-Anwendungen. |
+| [**IEventHandler &lt; T&gt;**](/previous-versions//hh438385(v=vs.85)) | Stellt die Methode dar, die ein Ereignis behandelt, das über Ereignisdaten des Typs **T verfügt.** |
 | [**IExeServerActivatableClassRegistration**](/windows/win32/api/activationregistration/nn-activationregistration-iexeserveractivatableclassregistration) | Ermöglicht das Abrufen der Registrierungsinformationen für einen Out-of-Process-Server. |
 | [**IExeServerRegistration**](/windows/win32/api/activationregistration/nn-activationregistration-iexeserverregistration) | Stellt einen registrierten Out-of-Process-Server dar. |
 | [**IFindReferenceTargetsCallback**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ifindreferencetargetscallback) | Definiert die Schnittstelle für Rückrufe von [**IReferenceTracker::FindTrackerTargets**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nf-windows-ui-xaml-hosting-referencetracker-ireferencetracker-findtrackertargets). Die Implementierung dieser Schnittstelle muss alle [**gefundenen IReferenceTrackerTarget-Instanzen**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackertarget) an die **FoundTrackerTarget-Methode** übergeben. |
 | [**IInputPaneInterop**](/windows/desktop/api/inputpaneinterop/nn-inputpaneinterop-iinputpaneinterop) | Ermöglicht den Zugriff auf die Member der [**InputPane-Klasse**](/uwp/api/Windows.UI.ViewManagement.InputPane?view=winrt-19041) in einer Desktop-App. |
 | [**IInputStream**](/previous-versions//hh438387(v=vs.85)) | Ermöglicht das Abrufen eines asynchronen Reader-Vorgangs für einen sequenziellen Bytestream. |
 | [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable) | Stellt Funktionen zur Verfügung, die für alle Windows Runtime-Klassen erforderlich sind. |
-| [**IIterable<T>**](/previous-versions//br205825(v=vs.85)) | Macht den Iterator verfügbar, der eine einfache Iteration über eine Auflistung eines angegebenen Typs unterstützt. |
-| [**IIterator<T>**](/previous-versions//br205827(v=vs.85)) | Unterstützt die Iteration über eine Auflistung. |
+| [**IIterable &lt; T&gt;**](/previous-versions//br205825(v=vs.85)) | Macht den Iterator verfügbar, der eine einfache Iteration über eine Auflistung eines angegebenen Typs unterstützt. |
+| [**IIterator &lt; T&gt;**](/previous-versions//br205827(v=vs.85)) | Unterstützt die Iteration über eine Auflistung. |
 | [**IKeyValuePair<K, V>**](/previous-versions//br205831(v=vs.85)) | Stellt ein Schlüssel-Wert-Paar dar. |
 | [**ILanguageExceptionErrorInfo**](/windows/desktop/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionerrorinfo) | Ermöglicht das Abrufen des in den Fehlerinformationen gespeicherten [**IUnknown-Zeigers**](/windows/win32/api/unknwn/nn-unknwn-iunknown) mit dem Aufruf von RoOriginateLanguageException. |
 | [**ILanguageExceptionErrorInfo2**](/windows/desktop/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionerrorinfo2) | Ermöglicht Sprachprojektionen das Bereitstellen und Abrufen von Fehlerinformationen wie [**bei ILanguageExceptionErrorInfo**](/windows/desktop/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionerrorinfo)mit dem zusätzlichen Vorteil der Sprachgrenzenübergreifenden Arbeit. |
 | [**ILanguageExceptionTransform**](/windows/desktop/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptiontransform) | Ermöglicht Sprachprojektionen, dem System jeglichen Kontext aus einer Ausnahme zur Verfügung zu stellen, die aus dem Kontext eines Catch-Handlers ausgelöst wird, der eine andere Ausnahme abfängt. |
 | [**ILanguageExceptionStackBackTrace**](/windows/desktop/api/restrictederrorinfo/nn-restrictederrorinfo-ilanguageexceptionstackbacktrace) | Ermöglicht Projektionen die Bereitstellung einer benutzerdefinierten Stapelüberwachung für diese Ausnahme. |
 | [**IMap<K, V>**](/previous-versions//br205834(v=vs.85)) | Stellt eine assoziative Auflistung dar. |
-| [**IMapChangedEventArgs<K>**](/previous-versions//br205835(v=vs.85)) | Stellt Daten für ein [**MapChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablemap-2?view=winrt-19041) bereit. |
+| [**IMapChangedEventArgs &lt; K&gt;**](/previous-versions//br205835(v=vs.85)) | Stellt Daten für ein [**MapChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablemap-2?view=winrt-19041) bereit. |
 | [**IMapView<K, V>**](/previous-versions//br205838(v=vs.85)) | Stellt eine unveränderliche Ansicht in einem [**IMap(K,V)**](/previous-versions//br205834(v=vs.85))dar. |
 | [**IMemoryBufferByteAccess**](/previous-versions//mt297505(v=vs.85)) | Ermöglicht den Zugriff auf einen [**IMemoryBuffer**](/uwp/api/Windows.Foundation.IMemoryBuffer?view=winrt-19041) als Bytearray. |
 | [**Imetadataassemblyimport**](/windows/win32/api/rometadataapi/nn-rometadataapi-imetadataassemblyimport) | Stellt Methoden zum Zugreifen auf und Untersuchen der Inhalte eines Assemblymanifests bereit. |
@@ -76,7 +76,7 @@ ms.locfileid: "117741644"
 | [**IMetaDataTables**](/windows/win32/api/rometadataapi/nn-rometadataapi-imetadatatables) | Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen bereit. |
 | [**IMetaDataTables2**](/windows/win32/api/rometadataapi/nn-rometadataapi-imetadatatables2) | Erweitert [**IMetaDataTables**](/windows/win32/api/rometadataapi/nn-rometadataapi-imetadatatables) um Methoden zum Arbeiten mit Metadatenstreams. |
 | [**IObservableMap<K, V>**](/previous-versions//br205851(v=vs.85)) | Benachrichtigt Ereignishandler über dynamische Änderungen an einer Zuordnung, z. B. wenn Elemente hinzugefügt oder entfernt werden. |
-| [**IObservableVector<T>**](/previous-versions//br205854(v=vs.85)) | Benachrichtigt Ereignishandler über Änderungen am Vektor. |
+| [**IObservableVector &lt; T&gt;**](/previous-versions//br205854(v=vs.85)) | Benachrichtigt Ereignishandler über Änderungen am Vektor. |
 | [**IOplockBreakingHandler**](/windows/desktop/api/windowsstoragecom/nn-windowsstoragecom-ioplockbreakinghandler) | Diese Schnittstelle ist derzeit nicht implementiert. |
 | [**IOutputStream**](/previous-versions//hh438390(v=vs.85)) | Ermöglicht das Abrufen eines asynchronen Writer-Vorgangs für einen sequenziellen Bytestream. |
 | [**IPdfRendererNative**](/windows/desktop/api/windows.data.pdf.interop/nn-windows-data-pdf-interop-ipdfrenderernative) | Stellt eine leistungsstarke API zum Anzeigen einer einzelnen Seite einer PDF-Datei (Portable Document Format) dar. |
@@ -87,8 +87,8 @@ ms.locfileid: "117741644"
 | [**IPropertyValueStatics**](/windows/win32/api/windows.foundation/nn-windows-foundation-ipropertyvaluestatics) | Erstellt [**IPropertyValue-Objekte,**](/windows/win32/api/windows.foundation/nn-windows-foundation-ipropertyvalue) die Sie in einem Eigenschaftenspeicher speichern können. |
 | [**IRandomAccessStream**](/previous-versions//hh438400(v=vs.85)) | Ermöglicht das Abrufen eines asynchronen Bytereaders oder Bytewriters, der an der angegebenen Position in einem Bytestream mit zufälligen Zugriff positioniert ist. |
 | [**IRandomAccessStreamFileAccessMode**](/windows/desktop/api/windowsstoragecom/nn-windowsstoragecom-irandomaccessstreamfileaccessmode) | Ermöglicht den Zugriff auf den Dateizugriffsmodus, der verwendet wurde, als die [**StorageFile.OpenAsync-Methode**](/uwp/api/Windows.Storage.StorageFile?view=winrt-19041) aufgerufen wurde, um den Bytestream mit zufälligen Zugriffen zu öffnen. |
-| [**IReference<T>**](/previous-versions//br224583(v=vs.85)) | Ermöglicht das Erweitern des Windows Runtime-Eigenschaftensystems für benutzerdefinierte Enumerationen, Strukturen und Delegattypen. |
-| [**IReferenceArray<T>**](/previous-versions//br224584(v=vs.85)) | Ermöglicht das Erweitern des Windows Runtime-Eigenschaftensystems für Arrays benutzerdefinierter Enumerationen, Strukturen und Delegattypen. |
+| [**IReference &lt; T&gt;**](/previous-versions//br224583(v=vs.85)) | Ermöglicht das Erweitern des Windows Runtime-Eigenschaftensystems für benutzerdefinierte Enumerationen, Strukturen und Delegattypen. |
+| [**IReferenceArray &lt; T&gt;**](/previous-versions//br224584(v=vs.85)) | Ermöglicht das Erweitern des Windows Runtime-Eigenschaftensystems für Arrays benutzerdefinierter Enumerationen, Strukturen und Delegattypen. |
 | [**IReferenceTracker**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetracker) | Definiert die Schnittstelle, die vom XAML-Framework zum Verwalten von XAML-Objektverweisen implementiert wird. |
 | [**IReferenceTrackerHost**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackerhost) | Definiert eine Schnittstelle, die die globalen Dienste bereitstellt, die vom Garbage Collection-System (GC) verwendet werden, das vom XAML-Framework verwendet wird. |
 | [**IReferenceTrackerManager**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetrackermanager) | Definiert die Schnittstelle für einen XAML-Objektverweis-Manager. Implementieren Sie diese Schnittstelle, um Instanzen von [**IReferenceTracker**](/windows/win32/api/windows.ui.xaml.hosting.referencetracker/nn-windows-ui-xaml-hosting-referencetracker-ireferencetracker) für XAML-Objekte zu verwalten. |
@@ -111,16 +111,16 @@ ms.locfileid: "117741644"
 | [**ITypedEventHandler<TSender, TArgs>**](/previous-versions//hh438424(v=vs.85)) | Stellt die Methode dar, die ein Ereignis von einem Absender des Typs **TSender** und Ereignisdaten vom Typ **T** behandelt. |
 | [**IUnbufferedFileHandleOplockCallback**](/windows/desktop/api/windowsstoragecom/nn-windowsstoragecom-iunbufferedfilehandleoplockcallback) | Definiert eine Rückrufmethode, die ausgeführt werden soll, wenn die opportunistische Sperre für ein Handle, das Sie erhalten, durch Aufrufen der [**IUnbufferedFileHandleProvider::OpenUnbufferedFileHandle-Methode**](/windows/desktop/api/windowsstoragecom/nf-windowsstoragecom-iunbufferedfilehandleprovider-openunbufferedfilehandle) unterbrochen wird. |
 | [**IUnbufferedFileHandleProvider**](/windows/desktop/api/windowsstoragecom/nn-windowsstoragecom-iunbufferedfilehandleprovider) | Ermöglicht den Zugriff auf Handles aus einem Bytestream mit wahlfreiem Zugriff, den die [**StorageFile.OpenAsync-Methode**](/uwp/api/Windows.Storage.StorageFile?view=winrt-19041) erstellt hat. |
-| [**IVector<T>**](/previous-versions//br224590(v=vs.85)) | Stellt eine Auflistung von Elementen mit wahlfreiem Zugriff dar. |
-| [**IVectorChangedEventArgs**](ivectorchangedeventargs.md) | Stellt Daten für ein [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) zur |
-| [**IVectorView<T>**](/previous-versions//br224594(v=vs.85)) | Stellt eine unveränderliche Ansicht in einem [**IVector(T) dar.**](/uwp/api/windows.foundation.collections.ivector-1?view=winrt-19041) |
+| [**IVector &lt; T&gt;**](/previous-versions//br224590(v=vs.85)) | Stellt eine Auflistung von Elementen mit wahlfreiem Zugriff dar. |
+| [**IVectorChangedEventArgs**](ivectorchangedeventargs.md) | Stellt Daten für ein [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) bereit. |
+| [**IVectorView &lt; T&gt;**](/previous-versions//br224594(v=vs.85)) | Stellt eine unveränderliche Ansicht in einem [**IVector(T)**](/uwp/api/windows.foundation.collections.ivector-1?view=winrt-19041)dar. |
 | [**IVideoFrameNative**](/windows/desktop/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenative) | Stellt einen Frame von Videodaten dar. |
 | [**IVideoFrameNativeFactory**](/windows/desktop/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenativefactory) | Erstellt Instanzen von [**IVideoFrameNative**](/windows/desktop/api/windows.media.core.interop/nn-windows-media-core-interop-ivideoframenative). |
 | [**IViewProvider**](/previous-versions//hh438426(v=vs.85)) | Stellt eine Sicht in einer Anwendung dar. |
 | [**IViewProviderFactory**](/previous-versions//hh438427(v=vs.85)) | Erstellt eine Instanz von Ansichten, die die [**IViewProvider-Schnittstelle**](/previous-versions//hh438426(v=vs.85)) implementieren. |
-| [**IVirtualSurfaceImageSourceNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) | Stellt die Implementierung einer großen (größer als die Bildschirmgröße) freigegebenen Oberfläche für DirectX-Zeichnungen zur Auswahl. |
-| [**IVirtualSurfaceUpdatesCallbackNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative) | Stellt eine Schnittstelle für die Implementierung von Zeichnungsverhalten bereit, wenn [**virtualSurfaceImageSource**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) ein Update an fordert. |
-| [**IWeakReference**](/windows/win32/api/weakreference/nn-weakreference-iweakreference) | Stellt einen schwachen Verweis auf ein -Objekt dar. |
+| [**IVirtualSurfaceImageSourceNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) | Stellt die Implementierung einer großen freigegebenen Oberfläche (größer als die Bildschirmgröße) für DirectX-Zeichnungen bereit. |
+| [**IVirtualSurfaceUpdatesCallbackNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative) | Stellt eine Schnittstelle für die Implementierung von Zeichnungsverhalten bereit, wenn [**virtualSurfaceImageSource**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) ein Update anfordert. |
+| [**IWeakReference**](/windows/win32/api/weakreference/nn-weakreference-iweakreference) | Stellt einen schwachen Verweis auf ein Objekt dar. |
 | [**IWeakReferenceSource**](/windows/win32/api/weakreference/nn-weakreference-iweakreferencesource) | Stellt ein Quellobjekt dar, auf das ein schwacher Verweis abgerufen werden kann. |
-| [**MapChangedEventHandler<K, V>**](/previous-versions//br224612(v=vs.85)) | Stellt die Methode dar, die das [**MapChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablemap-2?view=winrt-19041) einer beobachtbaren Karte behandelt. |
-| [**VectorChangedEventHandler<T>**](/previous-versions//br224626(v=vs.85)) | Stellt die Methode dar, die das [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) eines beobachtbaren Vektors behandelt. |
+| [**MapChangedEventHandler<K, V>**](/previous-versions//br224612(v=vs.85)) | Stellt die Methode dar, die das [**MapChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablemap-2?view=winrt-19041) einer beobachtbaren Zuordnung behandelt. |
+| [**VectorChangedEventHandler &lt; T&gt;**](/previous-versions//br224626(v=vs.85)) | Stellt die Methode dar, die das [**VectorChanged-Ereignis**](/uwp/api/windows.foundation.collections.iobservablevector-1?view=winrt-19041) eines beobachtbaren Vektors behandelt. |

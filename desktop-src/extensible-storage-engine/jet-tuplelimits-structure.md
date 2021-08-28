@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_TUPLELIMITS-Struktur'
-title: JET_TUPLELIMITS-Struktur
+description: 'Weitere Informationen finden Sie unter: JET_TUPLELIMITS Struktur'
+title: JET_TUPLELIMITS Struktur
 TOCTitle: JET_TUPLELIMITS Structure
 ms:assetid: 2610e2e5-5883-4aec-bc66-e6160b76c264
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269207(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dc5a71328681e1ce415b1a34e9c8f718b460e7f0
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 7155763f68a74333fc71db1054fb0ecffcca862e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122471776"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983763"
 ---
-# <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS-Struktur
+# <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS-Struktur
+## <a name="jet_tuplelimits-structure"></a>JET_TUPLELIMITS Struktur
 
-Die **JET_TUPLELIMITS-Struktur** ermöglicht die Anpassung der Tupelindexmerkmale auf Indexbasis und nicht auf Instanzbasis mithilfe von [JetSetSystemParameter.](./jetsetsystemparameter-function.md)
+Die **JET_TUPLELIMITS-Struktur** ermöglicht die Anpassung der Tupelindexmerkmale pro Index und nicht auf Instanzbasis mithilfe von [JetSetSystemParameter](./jetsetsystemparameter-function.md).
 
 **Windows Server 2003:** Die **JET_TUPLELIMITS-Struktur** wird in Windows Server 2003 eingeführt.
 
@@ -55,50 +55,54 @@ Die maximale Länge eines Tupels. Der Standardwert ist 10.
 
 **chToIndexMax**
 
-Die maximale Länge einer zeichenfolge, die indiziert werden soll. Wenn eine Spalte beispielsweise 100 Zeichen lang und **chToIndexMax** auf 60 festgelegt ist, werden nur die ersten 60 Zeichen der Spalte indiziert. Der Standardwert ist 32767.
+Die maximale Länge einer zu indizierenden Zeichenfolge. Wenn eine Spalte beispielsweise 100 Zeichen lang ist und **chToIndexMax** auf 60 festgelegt ist, werden nur die ersten 60 Zeichen der Spalte indiziert. Der Standardwert ist 32767.
 
 **cchIncrement**
 
 Dadurch kann der Schritt pro Index konfiguriert werden.
 
-**Windows Vista:** Das **cchIncrement-Element** wird in Windows Vista eingeführt. Vor Windows Vista war der Betrag zum Verschieben des Fensters (der "Schritt") immer 1, wie im Beispiel im Abschnitt "Hinweise" gezeigt.
+**Windows Vista:** Das **cchIncrement-Member** wird in Windows Vista eingeführt. Vor Windows Vista war der Betrag zum Verschieben des Fensters (der "Stride") immer 1, wie im Beispiel im Abschnitt "Hinweise" gezeigt.
 
 **ichStart**
 
 Der Offset in den Wert, um mit dem Abrufen von Tupeln aus dem Wert zu beginnen.
 
-**Windows Vista:** Das **ichStart-Element** wird in Windows Vista eingeführt.
+**Windows Vista:** Das **ichStart-Mitglied** wird in Windows Vista eingeführt.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Ein Tupelindex durchläuft eine Zeichenfolge und indiziert alle möglichen Teilzeichenfolgen von **chLengthMax.** Am Ende der Zeichenfolge (oder an der Position **chToIndexMax**, je nachdem, was zuerst auftritt), werden die Teilzeichenfolgen von mindestens **chLengthMin** indiziert.
+Ein Tupelindex durchgibt eine Zeichenfolge und indiziert alle möglichen Teilzeichenfolgen von **chLengthMax.** Am Ende der Zeichenfolge (oder an der Position **chToIndexMax**, je nachdem, was zuerst eintritt), werden die Teilzeichenfolgen von **mindestens chLengthMin** indiziert.
 
-Ein Tupelindex kann zum Suchen von Zeichenfolgen mit führenden und nachgestellten Platzhaltern verwendet werden.
+Ein Tupelindex kann zum Durchsuchen von Zeichenfolgen mit führenden und nachdenkenden Platzhaltern verwendet werden.
 
-Angenommen, eine Zeile mit dem Textfeld "RAIN IN \! SPAIN" gibt an, dass die folgenden Einträge im Index erstellt werden, wenn ein Tupelindex mit den **Parametern chLengthMin**=2 und **chLengthMax**=3 erstellt wird:
+Angenommen, eine Zeile mit dem Textfeld "RAIN IN SPANIEN" wird, wenn ein Tupelindex mit den Parametern \! **chLengthMin**=2 und **chLengthMax**=3 erstellt wird, werden die folgenden Einträge im Index erstellt:
 
 "RAI"  
 "AIN"  
-"IN "  
-"N I"  
 "IN"  
-"IN "  
+"N I"  
+" IN"  
+"IN"  
 "N S"  
-"SP"  
+" SP"  
 "SPA"  
 "PAI"  
 "AIN"  
-"IN \! "  
+\!"IN"  
 \!"N"
 
-Beachten Sie, dass "IN" zweimal auftritt und dass der letzte Eintrag ("N") \! kürzer als 3 (**chLengthMax**) ist. Beachten Sie auch, dass der Teilungsalgorithmus Keine Leerzeichen oder Wörter erkennt und alle Zeichen identisch behandelt.
+Beachten Sie, dass "IN" zweimal auftritt und dass der letzte Eintrag ("N ") kürzer \! als 3 (**chLengthMax**) ist. Beachten Sie auch, dass der Aufteilungsalgorithmus Leerzeichen oder Wörter nicht kennt und alle Zeichen identisch behandelt.
 
-**Windows XP:** Windows XP unterstützt Tupelindizes, verfügt jedoch nicht **über JET_TUPLELIMITS**. Die Datenbank-Engine verwendet die Standardwerte (**chLengthMin**=3, **chLengthMax**=10, **chToIndexMax**=32767). Es ist weiterhin möglich, diese Werte zu ändern, aber sie werden mithilfe von [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit [JET_paramIndexTuplesLengthMin](./index-parameters.md), [JET_paramIndexTuplesLengthMax](./index-parameters.md)und [JET_paramIndexTuplesToIndexMax](./index-parameters.md)instanzbezogen festgelegt.
+**Windows XP:** Windows XP unterstützt Tupelindizes, verfügt jedoch nicht über **JET_TUPLELIMITS.** Die Datenbank-Engine verwendet die Standardwerte (**chLengthMin**=3, **chLengthMax**=10, **chToIndexMax**=32767). Es ist weiterhin [möglich,](./index-parameters.md)diese Werte zu ändern, aber sie werden auf Instanzbasis mit [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit JET_paramIndexTuplesLengthMin , [JET_paramIndexTuplesLengthMax](./index-parameters.md)und JET_paramIndexTuplesToIndexMax [.](./index-parameters.md)
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

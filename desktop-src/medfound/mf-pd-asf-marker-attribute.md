@@ -1,17 +1,17 @@
 ---
 description: Gibt die Marker in einer ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Markerobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 ms.assetid: 6458eb5f-72a2-4723-b26b-b63516aa2df3
-title: MF_PD_ASF_MARKER-Attribut (wmcontainer. h)
+title: MF_PD_ASF_MARKER -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2ae9c5a6cfd79924b95a3b15a7146539d630aad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89210324b8cde1952fdee137723024f2f6911d6b295b213a4959cc113e01b8ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117691932"
 ---
-# <a name="mf_pd_asf_marker-attribute"></a>MF-und- \_ \_ ASF- \_ Attribut Attribut
+# <a name="mf_pd_asf_marker-attribute"></a>MF \_ PD \_ ASF \_ MARKER-Attribut
 
 Gibt die Marker in einer ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Markerobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 
@@ -19,34 +19,34 @@ Gibt die Marker in einer ASF-Datei (Advanced Systems Format) an. Dieses Attribut
 
 Bytearray
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode erstellt den Präsentations Deskriptor und generiert dieses Attribut aus dem Markerobjekt. In der folgenden Tabelle wird das Format des BLOBs angezeigt:
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode erstellt den Präsentationsdeskriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) und generiert dieses Attribut aus dem Markerobjekt. Die folgende Tabelle zeigt das Format des Blobs:
 
 
 
-| Markerobjektfeld | Datentyp    | Size    | BESCHREIBUNG       |
+| Markerobjektfeld | Datentyp    | Size    | Beschreibung       |
 |---------------------|--------------|---------|-------------------|
-| Markeranzahl       | **DWORD**    | 4 Bytes | Anzahl der Marker |
-| Marker             | **Hobby**\[\] | Varies  | Array von Markern  |
+| Markeranzahl       | **DWORD**    | 4 Bytes | Anzahl von Markern |
+| Marker             | **Byte**\[\] | Varies  | Array von Markern  |
 
 
 
  
 
-Der erste **DWORD** -Wert ist die Anzahl der Marker, gefolgt von einem Array von Markern. Jeder Marker weist das folgende Format auf:
+Das erste **DWORD** ist die Anzahl der Marker, gefolgt von einem Array von Markern. Jeder Marker hat das folgende Format:
 
 
 
-| Markerobjektfeld       | Datentyp     | Size    | BESCHREIBUNG                                                                       |
+| Markerobjektfeld       | Datentyp     | Size    | Beschreibung                                                                       |
 |---------------------------|---------------|---------|-----------------------------------------------------------------------------------|
-| Markerbeschreibungs Länge | **DWORD**     | 4 Bytes | Größe der Beschreibungs Zeichenfolge in Bytes, einschließlich des NULL-Zeichens.           |
-| Markerbeschreibung        | **WCHAR**\[\] | Varies  | Eine mit NULL beendete Zeichenfolge, die den Marker beschreibt.                                 |
-| Präsentationszeit         | **LONGLONG**  | 8 Bytes | Präsentationszeit des Markers in 100-Nanosecond-Einheiten.                         |
-| Sendezeit                 | **LONGLONG**  | 8 Bytes | Sende Zeit des markereintrags in Millisekunden.                                   |
-| Offset                    | **UINT64**    | 8 Bytes | Offset (in Bytes) in das Datenobjekt, das die Position des Markts angibt. |
+| Markerbeschreibungslänge | **DWORD**     | 4 Bytes | Größe der Beschreibungszeichenfolge in Bytes, einschließlich des NULL-Zeichens.           |
+| Markerbeschreibung        | **Wchar**\[\] | Varies  | Auf NULL beendete Zeichenfolge, die den Marker beschreibt.                                 |
+| Präsentationszeit         | **LONGLONG**  | 8 Bytes | Präsentationszeit des Markers in Einheiten von 100 Nanosekunden.                         |
+| Sendezeit                 | **LONGLONG**  | 8 Bytes | Sendezeit des Markereintrags in Millisekunden.                                   |
+| Offset                    | **UINT64**    | 8 Bytes | Offset in Bytes in das Datenobjekt, das die Position des Markts angibt. |
 
 
 
@@ -58,9 +58,9 @@ Der erste **DWORD** -Wert ist die Anzahl der Marker, gefolgt von einem Array von
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
@@ -68,25 +68,25 @@ Der erste **DWORD** -Wert ist die Anzahl der Marker, gefolgt von einem Array von
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEs::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**Imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEs::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-title: Informationen zum Text Dienst-Framework
-description: Microsoft Windows Text Services Framework (TSF) ist eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API), die erweiterte, Quell unabhängige Text Eingaben ermöglicht. TSF macht das Framework für Anwendungen und Text Dienste über einen Satz von COM-Schnittstellen verfügbar.
+title: Informationen Textdienstframework
+description: Microsoft Windows Textdienstframework (TSF) ist eine Api (Application Programming Interface), die erweiterte, quellenunabhängige Texteingaben ermöglicht. TSF macht sein Framework über eine Reihe von COM-Schnittstellen für Anwendungen und Textdienste verfügbar.
 ms.assetid: 33bfb6c3-4809-4972-b370-5e9b3bf60074
 keywords:
-- Text Dienste-Framework (TSF), Informationen zu
-- TSF (Text Dienst-Framework), Informationen zu
-- Text Dienste, Info
-- TSF-aktivierte Anwendungen, Informationen zu
+- Textdienstframework (TSF), Informationen
+- TSF (Textdienstframework),Informationen
+- Textdienste, Informationen
+- TSF-fähige Anwendungen, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bcfe58474c5f2a7e104f3e96626fffc685e68021
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5d49a7e25988ac4c0b01e86cbdea38ea7870e60e9070df71b7f6ebdfd55c8db8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118880124"
 ---
-# <a name="about-text-services-framework"></a>Informationen zum Text Dienst-Framework
+# <a name="about-text-services-framework"></a>Informationen Textdienstframework
 
-Microsoft Windows Text Services Framework (TSF) ist eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API), die erweiterte, Quell unabhängige Text Eingaben ermöglicht. TSF macht das Framework für Anwendungen und Text Dienste über einen Satz von COM-Schnittstellen verfügbar.
+Microsoft Windows Textdienstframework (TSF) ist eine Api (Application Programming Interface), die erweiterte, quellenunabhängige Texteingaben ermöglicht. TSF macht sein Framework über eine Reihe von COM-Schnittstellen für Anwendungen und Textdienste verfügbar.
 
-In den folgenden Themen werden TSF-Funktionen zusammengefasst.
+In den folgenden Themen werden die TSF-Features zusammengefasst.
 
--   [Was ist das Text Services-Framework?](what-is-text-services-framework.md)
--   [Gründe für die Verwendung des Text Dienste-Frameworks](why-use-text-services-framework.md)
+-   [Was ist Textdienstframework?](what-is-text-services-framework.md)
+-   [Gründe für die Verwendung von Textdienstframework](why-use-text-services-framework.md)
 -   [Architektur](architecture.md)
--   [Einrichten des Text Dienst-Frameworks](how-to-set-up-tsf.md)
+-   [Einrichten von Textdienstframework](how-to-set-up-tsf.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 618552b01a4702790fca0d234ee40aff0de39f45
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: dba0b8094187f3a59f05f4b1a1fae1b95dbab66e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122481366"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122989033"
 ---
 # <a name="jetenablemultiinstance-function"></a>JetEnableMultiInstance-Funktion
 
@@ -54,7 +54,7 @@ Ein Array globaler Systemparameter, das nur dann festgelegt werden soll, wenn di
 
 *csetsysparam*
 
-Die Anzahl der Elemente für das Array von globalen Parametern, die nur dann festgelegt werden sollen, wenn die Engine aufgrund dieses Aufrufs in den Modus mit mehreren Instanzen wechselt. Wenn *csetsysparam 0* (null) ist, wird *psetsysparam* ignoriert.
+Die Anzahl der Elemente für das Array globaler Parameter, die nur dann festgelegt werden sollen, wenn die Engine aufgrund dieses Aufrufs in den Modus mit mehreren Instanzen wechselt. Wenn *csetsysparam 0* (null) ist, wird *psetsysparam* ignoriert.
 
 *pcsetsucceed*
 
@@ -79,14 +79,21 @@ Wenn diese Funktion erfolgreich ausgeführt wird, wird die Datenbank-Engine für
 
 Wenn diese Funktion fehlschlägt, verbleibt die Datenbank-Engine im aktuellen Modus. Wenn *pcsetsucceed* ungleich 0 (null) ist, bleibt diese Anzahl von Systemparametern festgelegt.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Diese Funktion sollte nur verwendet werden, wenn die Anwendung einen bestimmten Satz von Systemparametern atomisch konfigurieren muss, wenn die Datenbank-Engine für die Verwendung in einem Szenario mit mehreren Benutzern im gleichen Prozess eingerichtet wird. Wenn eine andere Synchronisierungsmethode verfügbar ist, ist es besser, [JetCreateInstance](./jetcreateinstance-function.md) und [JetSetSystemParameter](./jetsetsystemparameter-function.md) separat aufzurufen.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetEnableMultiInstanceW</strong> (Unicode) und <strong>JetEnableMultiInstanceA</strong> (ANSI).</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetEnableMultiInstanceW</strong> (Unicode) und <strong>JetEnableMultiInstanceA</strong> (ANSI) implementiert.</p> | 
 
 
 

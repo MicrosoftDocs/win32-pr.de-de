@@ -4,12 +4,12 @@ ms.assetid: cb00edc9-2c8a-446d-989b-a4429ee8f544
 title: ParameterDef
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4d7a0c8b86a8fef2d71cae1135eadca2c361e2062555d80a3a19f862f94ad7e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7a657350c11f56dca032df6aff6b530f304aaa3a
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119033978"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883700"
 ---
 # <a name="parameterdef"></a>ParameterDef
 
@@ -19,7 +19,7 @@ Ein ParameterDef-Element definiert die gültigen Merkmale der Parametereingabe. 
 
 ## <a name="element-tag"></a>Elementtag
 
-<ParameterDef>
+&lt;ParameterDef&gt;
 
 ## <a name="xml-attributes"></a>XML-Attribute
 
@@ -43,41 +43,13 @@ In der folgenden Tabelle sind die Elemente aufgeführt, die möglicherweise die 
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Übergeordnete Elemente<br/></td>
-<td>PrintCapabilities <br/></td>
-</tr>
-<tr class="even">
-<td>Untergeordnete Elemente<br/></td>
-<td>Eigenschaft (ein oder mehrere Elemente)<br/> Die folgenden Standardeigenschaftenelemente müssen als Inhalt eines ParameterDef-Elements angezeigt werden. <br/>
-<ul>
-<li>DataType <br/></li>
-<li>DefaultValue <br/></li>
-<li>Obligatorisch. <br/></li>
-<li>MaxLength oder MaxValue<br/></li>
-<li>MinLength oder MinValue<br/></li>
-<li>Mehrere* <br/></li>
-<li>Unittype <br/></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Dieses Element<br/></td>
-<td>Es sind keine Zeichendaten zulässig.<br/> Doppelte untergeordnete gleichgeordnete Elemente sind nicht zulässig.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Category | Details | 
+|----------|---------|
+| Übergeordnete Elemente<br /> | PrintCapabilities <br /> | 
+| Untergeordnete Elemente<br /> | Eigenschaft (ein oder mehrere Elemente)<br /> Die folgenden Standardeigenschaftenelemente müssen als Inhalt eines ParameterDef-Elements angezeigt werden. <br /><ul><li>DataType <br /></li><li>DefaultValue <br /></li><li>Obligatorisch. <br /></li><li>MaxLength oder MaxValue<br /></li><li>MinLength oder MinValue<br /></li><li>Mehrere* <br /></li><li>Unittype <br /></li></ul> | 
+| Dieses Element<br /> | Es sind keine Zeichendaten zulässig.<br /> Doppelte untergeordnete gleichgeordnete Elemente sind nicht zulässig.<br /> | 
+
 
 
 
