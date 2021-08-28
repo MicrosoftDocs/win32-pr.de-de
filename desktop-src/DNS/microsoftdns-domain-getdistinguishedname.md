@@ -1,11 +1,11 @@
 ---
-title: Geterkennbar shedname-Methode der MicrosoftDNS_Domain-Klasse
-description: Die getdistinguished shedname-Methode ruft den DS-Distinguished Name für die Zone ab. | Geterkennbar shedname-Methode der MicrosoftDNS_Domain-Klasse
+title: GetDistinguishedName-Methode der MicrosoftDNS_Domain-Klasse
+description: Die GetDistinguishedName-Methode ruft den DS-Distinguished Name für die Zone ab. | GetDistinguishedName-Methode der MicrosoftDNS_Domain-Klasse
 ms.assetid: f1ca2f31-704f-48d7-b3cb-115512f2a990
 keywords:
-- Getscheiden shedname-Methode (DNS)
-- Geterkennbar shedname-Methode, DNS, MicrosoftDNS_Domain-Klasse
-- DNS-MicrosoftDNS_Domain Klasse, getchilshedname-Methode
+- GetDistinguishedName-Methode DNS
+- GetDistinguishedName-Methode DNS, MicrosoftDNS_Domain-Klasse
+- MicrosoftDNS_Domain-Klasse DNS, GetDistinguishedName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 351a3059290316662064089d81e4fddf6366aa40
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e9c7400b19fec6f0caf3e531928abf674677e1e883a4cddc0a1b2b6d1801dbf3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077080"
 ---
-# <a name="getdistinguishedname-method-of-the-microsoftdns_domain-class"></a>Geterkennbar shedname-Methode der MicrosoftDNS- \_ Domänen Klasse
+# <a name="getdistinguishedname-method-of-the-microsoftdns_domain-class"></a>GetDistinguishedName-Methode der MicrosoftDNS \_ Domain-Klasse
 
-Die **getdistinguished shedname** -Methode ruft den DS-Distinguished Name für die Zone ab.
+Die **GetDistinguishedName-Methode** ruft den DS-Distinguished Name für die Zone ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,9 +42,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Distinguished Name des DS für die Zone zurück.
+Gibt den DS-Distinguished Name für die Zone zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -52,8 +52,8 @@ Gibt den Distinguished Name des DS für die Zone zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -61,7 +61,7 @@ Gibt den Distinguished Name des DS für die Zone zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md)
+[**\_MicrosoftDNS-Domäne**](microsoftdns-domain.md)
 </dt> </dl>
 
  

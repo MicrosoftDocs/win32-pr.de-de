@@ -4,16 +4,16 @@ ms.assetid: 233b3644-f2a5-4166-bac0-30bf2f54e957
 title: MakeCat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 980c58530c55006d28ecd7589b0313844e9dbe46
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: 6b3b9d8698e3c3694368813b19bd3be692c6c8f3
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122886252"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623145"
 ---
 # <a name="makecat"></a>MakeCat
 
-Das MakeCat-Tool ist ein CryptoAPI-Tool, das eine Katalogdatei erstellt. MakeCat ist als Teil des Microsoft Windows Software Development Kit (SDK) für Windows 7 und .NET Framework 4.0 verfügbar und wird standardmäßig im \\ Ordner Bin des SDK-Installationspfads installiert.
+Das MakeCat-Tool ist ein CryptoAPI-Tool, das eine Katalogdatei erstellt. MakeCat ist als Teil des Microsoft Windows Software Development Kit (SDK) für Windows 7 und .NET Framework 4.0 verfügbar und wird standardmäßig im Ordner Bin des SDK-Installationspfads \\ installiert.
 
 Das MakeCat-Tool verwendet die folgende Befehlssyntax:
 
@@ -26,7 +26,7 @@ Das MakeCat-Tool verwendet die folgende Befehlssyntax:
 | Parameter             | Beschreibung                                                                                                                                                              |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **-n**<br/>     | Beenden Sie nicht bei einem wiederherstellbaren Fehler.<br/>                                                                                                                           |
-| **-r**<br/>     | Erzwingt das Beenden von MakeCat, wenn wiederherstellbare Fehler auftreten. Insbesondere wird sie beendet, wenn die Einträge im Abschnitt "Katalogdateien" einer CDF-Datei verarbeitet werden.<br/> |
+| **-r**<br/>     | Erzwingt, dass MakeCat beendet wird, wenn wiederherstellbare Fehler auftreten. Insbesondere endet sie, wenn die Einträge im Katalogdateiabschnitt einer CDF-Datei verarbeitet werden.<br/> |
 | **-v**<br/>     | Ausführlich. Zeigt alle Status- und Fehlermeldungen an.<br/>                                                                                                            |
 | *FileName*<br/> | Name der zu analysierenden CDF-Datei. Informationen zu erforderlichen Strukturen und Inhalten finden Sie unter Hinweise.<br/>                                                                         |
 
@@ -60,7 +60,7 @@ CATATTR2={type}:{oid}:{value} (optional)
 ```
 
 > [!Note]  
-> Der letzte Eintrag in der CDF-Datei muss immer ein explizites Zeilenzeilenzeichen am Ende der Zeile aufweisen.
+> Der letzte Eintrag in der CDF-Datei muss immer ein explizites Zeilenumzeilenzeichen am Ende der Zeile enthalten.
 
  
 
@@ -70,19 +70,19 @@ Im \[ Abschnitt CatalogHeader \] werden Informationen zur gesamten Katalogdatei 
 
 | Option                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name<br/>           | Name der Katalogdatei, einschließlich ihrer Erweiterung.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ResultDir<br/>      | Verzeichnis, in dem die erstellte CAT-Datei platziert wird. Wenn keine Angabe erfolgt, wird das aktuelle Standardverzeichnis verwendet. Wenn das Verzeichnis nicht vorhanden ist, wird es erstellt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| PublicVersion<br/>  | Diese Option wird nicht unterstützt. <br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Katalogversion. Wenn das Feld leer gelassen wird, wird der Standardwert 1 verwendet.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| CatalogVersion<br/> | Katalogversion. Wenn die Version nicht vorhanden oder auf 1 festgelegt ist, wird "0x100" an den *dwPublicVersion-Parameter* der [**CryptCATOpen-Funktion**](/windows/desktop/api/Mscat/nf-mscat-cryptcatopen) übergeben, und eine Katalogdatei der Version 1 wird erstellt. Die HashAlgorithms-Option muss leer sein oder SHA1 enthalten.<br/> Wenn die Version auf 2 festgelegt ist, wird "0x200" an den *dwPublicVersion-Parameter* der [**CryptCATOpen-Funktion**](/windows/desktop/api/Mscat/nf-mscat-cryptcatopen) übergeben, und eine Katalogdatei der Version 2 wird erstellt. Die HashAlgorithms-Option muss SHA256 enthalten.<br/> Wenn diese Option vorhanden ist, aber einen anderen Wert als 1 oder 2 enthält, tritt beim MakeCat-Tool ein Fehler auf.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Diese Option wird nicht unterstützt.<br/> <br/> |
-| HashAlgorithms<br/> | Name des verwendeten Hashalgorithmus. Weitere Informationen finden Sie unter catalogVersion.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Diese Option wird nicht unterstützt.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| PageHashes<br/>     | Gibt an, ob die in der &lt; &gt; HASH-Option im \[ Abschnitt CatalogFiles aufgeführten Dateien mit einem Hash versehen werden sollen. \]<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Diese Option wird nicht unterstützt.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| EncodingType<br/>   | Typ der verwendeten Nachrichtencodierung. Wenn das Feld leer gelassen wird, lautet der Standardcodierungstyp PKCS \_ 7 \_ ASN \_ ENCODING \| X509 \_ ASN \_ ENCODING, 0x00010001. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Name<br/>           | Name der Katalogdatei, einschließlich der Erweiterung.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ResultDir<br/>      | Verzeichnis, in dem die erstellte CAT-Datei platziert wird. Wenn nicht angegeben, wird das aktuelle Standardverzeichnis verwendet. Wenn das Verzeichnis nicht vorhanden ist, wird es erstellt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| PublicVersion<br/>  | Diese Option wird nicht unterstützt. <br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Katalogversion. Wenn dieses Feld leer gelassen wird, wird der Standardwert 1 verwendet.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| CatalogVersion<br/> | Katalogversion. Wenn die Version nicht vorhanden oder auf 1 festgelegt ist, wird "0x100" an den *dwPublicVersion-Parameter* der [**CryptCATOpen-Funktion**](/windows/desktop/api/Mscat/nf-mscat-cryptcatopen) übergeben, und eine Katalogdatei der Version 1 wird erstellt. Die HashAlgorithms-Option muss leer sein oder SHA1 enthalten.<br/> Wenn die Version auf 2 festgelegt ist, wird "0x200" an den *dwPublicVersion-Parameter* der [**CryptCATOpen-Funktion**](/windows/desktop/api/Mscat/nf-mscat-cryptcatopen) übergeben, und eine Katalogdatei der Version 2 wird erstellt. Die HashAlgorithms-Option muss SHA256 enthalten.<br/> Wenn diese Option vorhanden ist, aber einen anderen Wert als 1 oder 2 enthält, tritt beim MakeCat-Tool ein Fehler auf.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Diese Option wird nicht unterstützt.<br/> <br/> |
+| HashAlgorithms<br/> | Name des verwendeten Hashalgorithmus. Weitere Informationen finden Sie unter der CatalogVersion-Option.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Diese Option wird nicht unterstützt.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| PageHashes<br/>     | Gibt an, ob für die in der Option im Abschnitt CatalogFiles aufgeführten Dateien <HASH> ein \[ Hashwert erstellt werden \] soll.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Diese Option wird nicht unterstützt.<br/> <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| EncodingType<br/>   | Typ der verwendeten Nachrichtencodierung. Wenn sie leer gelassen wird, lautet der Standardwert EncodingType PKCS \_ 7 \_ ASN \_ ENCODING \| X509 \_ ASN \_ ENCODING, 0x00010001. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
 
  
 
-Im \[ Abschnitt CatalogFiles \] werden die einzelnen Member der Katalogdatei mit Dateien verschiedener Typen und Attribute verschiedener Typen in separaten Gruppen definiert.
+Der Abschnitt CatalogFiles definiert jedes Mitglied der Katalogdatei mit Dateien verschiedener Typen und Attribute verschiedener Typen \[ \] in separaten Gruppen.
 
 
 
@@ -100,7 +100,7 @@ Im \[ Abschnitt CatalogFiles \] werden die einzelnen Member der Katalogdatei mit
 <tbody>
 <tr class="odd">
 <td>Verweistag<br/></td>
-<td>Textverweis auf die Datei. Dies kann alle ASCII-Textzeichen außer dem Gleichheitszeichen (=) enthalten. Das System muss in der Lage sein, dieses Tag nach der Installation zu reproduzieren. <br/> Verwenden Sie &lt; HASH &gt; als Präfix des Dateinamens. Dies führt dazu, dass das Tag der Hash der Datei in ASCII-Zeichenfolgenform ist. <br/></td>
+<td>Textverweis auf die Datei. Dies kann beliebige ASCII-Textzeichen mit Ausnahme des Gleichheitszeichens (=) enthalten. Das System muss dieses Tag nach der Installation reproduzieren können. <br/> Verwenden <HASH> Sie als Präfix des Dateinamens. Dies führt dazu, dass das Tag der Hash der Datei in ASCII-Zeichenfolgenform ist. <br/></td>
 </tr>
 <tr class="even">
 <td>Dateipfad und -name<br/></td>
@@ -108,7 +108,7 @@ Im \[ Abschnitt CatalogFiles \] werden die einzelnen Member der Katalogdatei mit
 </tr>
 <tr class="odd">
 <td>ALTSIPID<br/></td>
-<td>DIE SIP-GUID, die für hashing anstelle des standardmäßigen SIP basierend auf dem Dateityp verwendet werden soll. Dieser Eintrag ist optional. Wenn dieser Eintrag ausgelassen wird, wird der Member mit dem STANDARDMÄßIGEN SIP-Hashwert versehen. Wenn kein standardmäßig installiertes SIP gefunden wird, wird flat SIP verwendet.<br/></td>
+<td>DIE SIP-GUID, die für hashbasiertes Hashing anstelle des standardmäßigen SIP basierend auf dem Dateityp verwendet werden soll. Dieser Eintrag ist optional. Wenn dieser Eintrag ausgelassen wird, wird für das Mitglied ein Hash mit dem Standard-SIP verwendet. Wenn kein standardmäßig installierter SIP gefunden wird, wird Flat SIP verwendet.<br/></td>
 </tr>
 <tr class="even">
 <td>guid<br/></td>
@@ -116,32 +116,32 @@ Im \[ Abschnitt CatalogFiles \] werden die einzelnen Member der Katalogdatei mit
 </tr>
 <tr class="odd">
 <td>ATTRx<br/></td>
-<td>Optional. Attribut oder Anweisung über die Datei oder den Inhalt. Es kann eine beliebige Anzahl von Attributen geben, einschließlich keiner.<br/></td>
+<td>Optional. Attribut oder Anweisung zur Datei oder zum Inhalt. Es kann eine beliebige Anzahl von Attributen geben, einschließlich keiner.<br/></td>
 </tr>
 <tr class="even">
 <td>Typ<br/></td>
-<td>Definiert, welcher Attributtyp im Format 0x00000000 (Text) hinzugefügt wird. Diese Option kann eine bitweise<strong>OR-Kombination</strong> aus 0 (null) oder mehr der folgenden Werte sein:<br/>
+<td>Definiert, welcher Attributtyp im Format 0x00000000 (Text) hinzugefügt wird. Diese Option kann eine bitweise<strong>OR-Kombination</strong> von 0 (null) oder mehr der folgenden Werte sein:<br/>
 <ul>
-<li>0x10000000 Authentifiziertes Attribut (signiert, im Hash enthalten).</li>
-<li>0x20000000 Nicht authentifizierte Attribut (nicht signiert, nicht im Hash enthalten, nicht überprüfbar).</li>
-<li>0x01000000 Attribut wird nicht in SHA1-Einträge in einem CatalogVersion 2-Katalog repliziert.</li>
-<li>0x00010000 Attribut wird als Klartext dargestellt. Es erfolgt keine Konvertierung.</li>
-<li>0x00020000 Attribut wird in Base64-Codierung dargestellt. Dies wird verwendet, um Binärdaten darzustellen.</li>
-<li>0x00000001 Attribut ist ein Name-Wert-Paar. Verwenden Sie die oid-Option für den Namen. Dieses Attribut ist langsam. Verwenden Sie diese Option daher nur selten.</li>
-<li>0x00000002 Attribut wird von einem <a href="/windows/desktop/SecGloss/o-gly"><em>Objektbezeichner</em></a> (Object Identifier, OID) referenziert.</li>
+<li>0x10000000 Authenticated-Attribut (signiert, im Hash enthalten).</li>
+<li>0x20000000 nicht authentifizierte Attribut (ohne Vorzeichen, nicht im Hash enthalten, nicht überprüfbar).</li>
+<li>0x01000000 Attribute wird nicht in SHA1-Einträge in einem CatalogVersion 2-Katalog repliziert.</li>
+<li>0x00010000 Attribute wird als Klartext dargestellt. Es wird keine Konvertierung durchgeführt.</li>
+<li>0x00020000 Attribute wird in Base64-Codierung dargestellt. Dies wird verwendet, um Binärdaten zu darstellen.</li>
+<li>0x00000001 Attribut ist ein Name-Wert-Paar. Verwenden Sie die oid-Option für den Namen. Dieses Attribut ist langsam. Verwenden Sie diese Option daher nur wenig.</li>
+<li>0x00000002 Attribute wird von einem <a href="/windows/desktop/SecGloss/o-gly"><em>Objektbezeichner (OID)</em></a> referenziert.</li>
 </ul>
 <br/></td>
 </tr>
 <tr class="odd">
 <td>oid<br/></td>
-<td>Die Textdarstellung des Verweisschlüssels des Attributs. Es handelt sich um eine OID in Form einer Textzeichenfolge in gepunkteter Quad-Notation (z.B. a.b.c.d) oder einem Textnamen.<br/></td>
+<td>Die Textdarstellung des Verweisschlüssels des Attributs. Es handelt sich um eine OID in Form einer Textzeichenfolge in gepunkteter Quad-Notation (z.B. a.b.c.d) oder einen Textnamen.<br/></td>
 </tr>
 <tr class="even">
 <td>value<br/></td>
 <td>Die Textdarstellung des Werts des Attributs. Der Typ der verwendeten Textdarstellung hängt vom Wert der Typoption ab. Die Länge wird durch die EOL-Zeichen bestimmt.<br/></td>
 </tr>
 <tr class="odd">
-<td>&lt;HASH&gt;<br/></td>
+<td><HASH><br/></td>
 <td>Hashing der angegebenen Datei.<br/></td>
 </tr>
 </tbody>

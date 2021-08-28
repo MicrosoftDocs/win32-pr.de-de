@@ -1,11 +1,11 @@
 ---
 title: DMD-Name-Attribut
-description: Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht von AD verwendet.
+description: Ein Name, der zum Identifizieren der Schemapartition verwendet wird. Nicht von AD verwendet.
 ms.assetid: 0ee35c32-add7-4b20-8d83-59b4b91df6ad
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für DMD-Name-Attribut
-- dmdname-Attribut, AD-Schema
+- DMD-Name AD-Schema
+- dmdName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b25684af133748ca73c8ace31b0471a5d1e0a787
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 43650fdf846a605e3751ef16729295574321bacf9e67bc26c5a4c51d2e9a8da7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085970"
 ---
 # <a name="dmd-name-attribute"></a>DMD-Name-Attribut
 
-Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht von AD verwendet.
+Ein Name, der zum Identifizieren der Schemapartition verwendet wird. Nicht von AD verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | DMD-Name                                    |
-| LDAP-Display-Name | dmdname                                     |
+| Ldap-Anzeigename | dmdName                                     |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.598                      |
-| System-ID-GUID    | 167757b9-47F 3-11d1-a9c3-0000b C1        |
+| System-Id-Guid    | 167757b9-47f3-11d1-a9c3-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -57,38 +57,38 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -99,17 +99,17 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -120,17 +120,17 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -141,17 +141,17 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -162,17 +162,17 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 
@@ -183,17 +183,17 @@ Ein Name, der zum Identifizieren der Schema Partition verwendet wird. Wird nicht
 | Eingabe | Wert |
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
-| MAPI-Id                | 0x8c56                          |
-| System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| MAPI-Id                | 0x8C56                          |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Richtig                            |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | 1                               |
 | Range-Upper            | 1024                            |
 | Search-Flags           | 0x00000000                      |
 | System-Flags           | 0x00000010                      |
-| In verwendete Klassen        | [**DMD**](c-dmd.md)<br/> |
+| In verwendete Klassen        | [**Dmd**](c-dmd.md)<br/> |
 
 
 

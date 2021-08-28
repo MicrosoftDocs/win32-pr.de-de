@@ -1,35 +1,35 @@
 ---
-title: Erstellen eines Header Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein Header Steuerelement erstellt und im Client Bereich des übergeordneten Fensters positioniert wird.
+title: Erstellen eines Header-Steuerelements
+description: In diesem Thema wird veranschaulicht, wie ein Headersteuersatz erstellt und im Clientbereich des übergeordneten Fensters positioniert wird.
 ms.assetid: 094AF70C-2761-439E-A1E3-0FD04212FE87
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bce9bf9d7b117f5f61766ca326b91b0d19a2c903
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 6ae5bb3ae9c323d30384f5d058a61393bf6425c2a27dfe67faa9cbedd4b3289e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063200"
 ---
-# <a name="how-to-create-a-header-control"></a>Erstellen eines Header Steuer Elements
+# <a name="how-to-create-a-header-control"></a>Erstellen eines Header-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie ein Header Steuerelement erstellt und im Client Bereich des übergeordneten Fensters positioniert wird. Sie können ein Header Steuerelement erstellen, indem Sie die Funktion " [**roatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " verwenden und die Fenster Klasse " [**WC- \_ Header**](common-control-window-classes.md) " und die entsprechenden [Header Steuerelement Stile](header-control-styles.md)angeben. Diese Fenster Klasse wird beim Laden der allgemeinen Steuerelement-DLL registriert. Um sicherzustellen, dass diese DLL geladen wird, verwenden Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion.
+In diesem Thema wird veranschaulicht, wie ein Headersteuersatz erstellt und im Clientbereich des übergeordneten Fensters positioniert wird. Sie können ein Header-Steuerelement erstellen, indem Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden und die [**WC \_ HEADER-Fensterklasse**](common-control-window-classes.md) und die entsprechenden [Headersteuerstile angeben.](header-control-styles.md) Diese Fensterklasse wird registriert, wenn die allgemeine Steuerelement-DLL geladen wird. Um sicherzustellen, dass diese DLL geladen wird, verwenden Sie die [**InitCommonControlsEx-Funktion.**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Im folgenden C++-Codebeispiel wird zuerst die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufgerufen, um die allgemeine Steuerelement-DLL zu laden. Anschließend wird die Funktion "up- [**windowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " aufgerufen, um ein Header Steuerelement zu erstellen. Das-Steuerelement ist anfänglich ausgeblendet. Die [**HDM- \_ layoutnachricht**](hdm-layout.md) wird zum Berechnen der Größe und Position des Steuer Elements im übergeordneten Fenster verwendet. Das Steuerelement wird dann neu positioniert und sichtbar gemacht.
+Im folgenden C++-Codebeispiel wird zuerst die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) zum Laden der allgemeinen Steuerelement-DLL aufruft. Anschließend wird die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) zum Erstellen eines Header-Steuerelements aufruft. Das Steuerelement ist anfänglich ausgeblendet. Die [**HDM \_ LAYOUT-Meldung**](hdm-layout.md) wird verwendet, um die Größe und Position des Steuerelements im übergeordneten Fenster zu berechnen. Das Steuerelement wird dann neu positioniert und sichtbar gemacht.
 
 
 
@@ -91,13 +91,13 @@ HWND DoCreateHeader(HWND hwndParent)
 
 <dl> <dt>
 
-[Informationen über Header Steuerelemente](header-controls.md)
+[Informationen zu Headersteuerelementen](header-controls.md)
 </dt> <dt>
 
-[Header Steuerelement Verweis](bumper-header-control-header-control-reference.md)
+[Header-Steuerelementreferenz](bumper-header-control-header-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Header Steuerelementen](using-header-controls.md)
+[Verwenden von Headersteuerelementen](using-header-controls.md)
 </dt> </dl>
 
  

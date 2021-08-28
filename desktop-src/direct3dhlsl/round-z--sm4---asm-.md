@@ -4,12 +4,12 @@ description: Gleitkommagerundet auf ganzzahligen Gleitkommawert. | round_z (sm4 
 ms.assetid: 97C0E0F2-2571-4A94-BB04-B0CDBA0B5C0C
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc874c6d0a1f26902086af300784c55950b71569
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 08a95d0cb1e8432b0b5bf0ea73bf2619c8a221754775fc0d64c3649d69086295
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095310"
 ---
 # <a name="round_z-sm4---asm"></a>round \_ z (sm4 - asm)
 
@@ -41,7 +41,7 @@ Diese Anweisung führt eine komponentenweise Gleitkommarunde der Werte in *src0*
 
 **round \_ z** rundet auf 0 (null).
 
-Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden.
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen erzielt werden.
 
 
 
@@ -53,7 +53,7 @@ Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit
 
  
 
-F bedeutet endliche reale Zahl.
+F bedeutet endliche reelle Zahl.
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -67,7 +67,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -75,12 +75,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -90,7 +90,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

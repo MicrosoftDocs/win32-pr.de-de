@@ -12,12 +12,12 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 9147dbdfe53aa21c5fa77849e3599ded69c8f243
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: c5d2b6ad86a63f584254fda20061179558653300a0d883f27477dd2b8ea2c2f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076890"
 ---
 # <a name="id2d1rendertargetcreatesolidcolorbrush-methods"></a>ID2D1RenderTarget::CreateSolidColorBrush-Methoden
 
@@ -27,7 +27,7 @@ Erstellt einen neuen [**ID2D1SolidColorBrush,**](/windows/win32/api/d2d1/nf-d2d1
 
 
 
-| Methode                                                                                                                                                                                                           | Beschreibung                                                                                                                             |
+| Methode                                                                                                                                                                                                           | BESCHREIBUNG                                                                                                                             |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
 | [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,ID2D1SolidColorBrush \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush))                                                      | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und einer Basisdurchlässigkeit von 1,0f. <br/> |
 | [**CreateSolidColorBrush(D2D1 \_ COLOR \_ F&,D2D1 \_ BRUSH PROPERTIES \_&,ID2D1SolidColorBrush \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush))   | Erstellt eine neue [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__constd2d1_brush_properties__id2d1solidcolorbrush)) mit der angegebenen Farbe und Deckkraft. <br/>                |
@@ -39,7 +39,7 @@ Erstellt einen neuen [**ID2D1SolidColorBrush,**](/windows/win32/api/d2d1/nf-d2d1
 
 Ein Beispiel finden Sie unter [Erstellen eines Volltonfarbpinsels.](how-to-create-a-solid-color-brush.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

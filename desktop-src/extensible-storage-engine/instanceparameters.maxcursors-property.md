@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Eigenschaft instanceparameters. maxcursors.
-title: Instanceparameters. maxcursors (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: InstanceParameters.MaxCursors-Eigenschaft'
+title: InstanceParameters.MaxCursors(Eigenschaft)
 TOCTitle: 'MaxCursors property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.MaxCursors
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.maxcursors(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 029ff7c41916e668f532be60f018870f30e487ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08418b7f15c538c20e04ce4ce42c2bb2996f37f31c7198ff8ba840c21268f5c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116360"
 ---
-# <a name="instanceparametersmaxcursors-property"></a>Instanceparameters. maxcursors (Eigenschaft)
+# <a name="instanceparametersmaxcursors-property"></a>InstanceParameters.MaxCursors(Eigenschaft)
 
-Ruft die Anzahl der für diese Instanz reservierten Cursor Ressourcen ab oder legt Sie fest. Eine Cursor Ressource entspricht direkt einer JET_TABLEID.
+Ruft die Anzahl der für diese Instanz reservierten Cursorressourcen ab oder legt diese fest. Eine Cursorressource entspricht direkt einem JET_TABLEID.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int MaxCursors { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

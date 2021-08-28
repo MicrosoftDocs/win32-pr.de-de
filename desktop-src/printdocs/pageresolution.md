@@ -4,12 +4,12 @@ ms.assetid: 88f9a9a3-520e-4044-9ab2-961de03878fa
 title: Pageresolution
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 760384ff900e7b35e37105fdb19e3635a434aa5a
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 8c7f8768c7edbdb650e068734302add4dfa843b8b16db404bea5fbc50cb37e9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112290"
 ---
 # <a name="pageresolution"></a>Pageresolution
 
@@ -19,7 +19,7 @@ Definiert die Seitenauflösung der Druckerausgabe durch einen qualitativen Wert,
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Definiert die Seitenauflösung der Druckerausgabe durch einen qualitativen Wert,
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Seite<br/>    |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -69,9 +69,9 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                                      | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                                                          |
 |-------------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>                 | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                               |
+| \_Optionname\_<br/>                 | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                               |
 | \_IdentityOptionValue\_<br/>        | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                                                     |
-| \_ResolutionXValue\_<br/>           | integer<br/> | DPI<br/>        | Größer 0<br/>                                                                                                                                                            | Gibt die x-Komponente der Auflösung relativ zum PageImageableSize in DPI (relativ zur PageMediaSize- und Feedrichtung des Mediums) an.<br/> |
+| \_ResolutionXValue\_<br/>           | integer<br/> | DPI<br/>        | Größer 0<br/>                                                                                                                                                            | Gibt die x-Komponente der Auflösung relativ zu PageImageableSize in DPI (relativ zur PageMediaSize- und Feedrichtung des Mediums) an.<br/> |
 | \_ResolutionYValue\_<br/>           | integer<br/> | DPI<br/>        | Größer 0<br/>                                                                                                                                                            | Gibt die y-Komponente der Auflösung relativ zum PageImageableSize in DPI (relativ zur PageMediaSize- und Feedrichtung des Mediums) an.<br/> |
 | \_QualitativeResolutionValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Default, Draft, High, Normal, Other.<br/>                                                                                                                                       | Gibt eine Qualitätsbezeichnung für die Auflösung an.<br/>                                                                                                         |
 
@@ -79,7 +79,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

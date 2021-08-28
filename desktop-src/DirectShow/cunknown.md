@@ -1,7 +1,7 @@
 ---
-description: Die cunknown-Klasse implementiert die IUnknown-Schnittstelle. Die meisten Component Object Model (com)-Objekte in DirectShow werden von cunknown abgeleitet.
+description: Die CUnknown-Klasse implementiert die IUnknown-Schnittstelle. Die meisten Component Object Model -Objekte (COM) in DirectShow werden von CUnknown abgeleitet.
 ms.assetid: 9711d36b-6987-4fb0-a8df-eba94348dc7b
-title: Cunknown-Klasse (ComBase. h)
+title: CUnknown-Klasse (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,53 +16,53 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4818a088119f7cba25ce8a470f63cab722998c45
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 06b6089f7f1c108a9b99ad4f1b16f4638b84d8d687a3590353c32841ccfff499
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075995"
 ---
-# <a name="cunknown-class"></a>Cunknown-Klasse
+# <a name="cunknown-class"></a>CUnknown-Klasse
 
 ![cunknown-Klassenhierarchie](images/cbase01.png)
 
-Die **cunknown** -Klasse implementiert die **IUnknown** -Schnittstelle. Die meisten Component Object Model (com)-Objekte in DirectShow werden von **cunknown** abgeleitet.
+Die **CUnknown-Klasse** implementiert die **IUnknown-Schnittstelle.** Die meisten Component Object Model -Objekte (COM) in DirectShow werden von **CUnknown** abgeleitet.
 
-Wenn Sie ein COM-Objekt implementieren, sollten Sie es ggf. von **cunknown** ableiten. Die Ableitung von **cunknown** bietet eine Thread sichere Implementierung und erspart Ihnen das Implementieren von **IUnknown**.
+Wenn Sie ein COM-Objekt implementieren, sollten Sie es von **CUnknown** ableiten. Die Ableitung von **CUnknown** bietet eine threadsichere Implementierung und spart Ihnen das Implementieren von **IUnknown.**
 
-Ausführliche Informationen zur Verwendung dieser Basisklasse finden Sie unter Gewusst wie: [Implementieren von IUnknown](how-to-implement-iunknown.md). Im folgenden finden Sie eine kurze Zusammenfassung:
+Eine ausführliche Erläuterung der Verwendung dieser Basisklasse finden Sie unter [Implementieren von IUnknown.](how-to-implement-iunknown.md) Es folgt eine kurze Zusammenfassung:
 
--   Fügen Sie das Makro [**Declare \_ IUnknown**](declare-iunknown.md) in den Abschnitt Public der Klassendefinition ein. Dieses Makro deklariert die drei Methoden der **IUnknown** -Schnittstelle.
--   Überschreiben Sie die [**nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) -Methode, um andere Schnittstellen als **IUnknown** zu unterstützen. Rufen Sie in dieser Methode die [**GetInterface**](getinterface.md) -Funktion zum Abrufen von Schnittstellen Zeigern auf.
--   Rufen Sie in Ihrem Klassenkonstruktor die **cunknown** -Konstruktormethode auf.
+-   Schließen Sie das [**DECLARE \_ IUNKNOWN-Makro**](declare-iunknown.md) in den öffentlichen Abschnitt Ihrer Klassendefinition ein. Dieses Makro deklariert die drei Methoden der **IUnknown-Schnittstelle.**
+-   Überschreiben Sie die [**NonDelegatingQueryInterface-Methode,**](cunknown-nondelegatingqueryinterface.md) um andere Schnittstellen als **IUnknown** zu unterstützen. Rufen Sie innerhalb dieser Methode die [**GetInterface-Funktion**](getinterface.md) auf, um Schnittstellenzeiger abzurufen.
+-   Rufen Sie in Ihrem Klassenkonstruktor die **CUnknown-Konstruktormethode** auf.
 
 
 
-| Geschützte Member-Variablen                                                  | BESCHREIBUNG                                                        |
+| Geschützte Membervariablen                                                  | BESCHREIBUNG                                                        |
 |-----------------------------------------------------------------------------|--------------------------------------------------------------------|
-| [**m- \_ kref**](cunknown-m-cref.md)                                          | Verweis Zähler.                                                   |
+| [**m \_ cRef**](cunknown-m-cref.md)                                          | Verweisanzahl.                                                   |
 | Öffentliche Methoden                                                              | BESCHREIBUNG                                                        |
-| [**Cunknown**](cunknown-cunknown.md)                                       | Konstruktormethode.                                                |
-| [**~ Cunknown**](cunknown--cunknown.md)                                    | Dekonstruktormethode. Virtu.                                        |
-| [**GetOwner**](cunknown-getowner.md)                                       | Ruft einen Zeiger auf das steuernde **IUnknown**-Element ab.                    |
-| Inondelegatingunknown-Methoden                                               | BESCHREIBUNG                                                        |
-| [**Nondelegatingadressf**](cunknown-nondelegatingaddref.md)                 | Erhöht den Verweis Zähler.                                    |
-| [**Nondelegatingqueryinterface**](cunknown-nondelegatingqueryinterface.md) | Ruft einen Schnittstellen Zeiger ab und erhöht den Verweis Zähler. |
-| [**Nondelegatingrelease**](cunknown-nondelegatingrelease.md)               | Verringert den Verweis Zähler.                                    |
+| [**CUnknown**](cunknown-cunknown.md)                                       | Konstruktormethode.                                                |
+| [**~ CUnknown**](cunknown--cunknown.md)                                    | Destruktormethode. Virtuellen.                                        |
+| [**GetOwner**](cunknown-getowner.md)                                       | Ruft einen Zeiger auf die steuernde **IUnknown** ab.                    |
+| INonDelegatingUnknown-Methoden                                               | BESCHREIBUNG                                                        |
+| [**NonDelegatingAddRef**](cunknown-nondelegatingaddref.md)                 | Erhöht den Verweiszähler.                                    |
+| [**NonDelegatingQueryInterface**](cunknown-nondelegatingqueryinterface.md) | Ruft einen Schnittstellenzeiger ab und erhöht den Verweiszähler. |
+| [**NonDelegatingRelease**](cunknown-nondelegatingrelease.md)               | Dekrement wird der Verweiszähler.                                    |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

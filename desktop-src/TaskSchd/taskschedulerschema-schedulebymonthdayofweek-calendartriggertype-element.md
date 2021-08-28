@@ -1,9 +1,9 @@
 ---
-title: Schedulebymonthdayoatweek (calendartriggertype)-Element
-description: Gibt einen monatlichen Zeitplan an Wochentagen an.
+title: ScheduleByMonthDayOfWeek (calendarTriggerType)-Element
+description: Gibt einen monatlichen Zeitplan für den Wochentag an.
 ms.assetid: 7ff17bea-fa26-40c4-90fa-d94a3690e464
 keywords:
-- Schedulebymonthdayomaweek-Element Taskplaner
+- ScheduleByMonthDayOfWeek-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3e92d6ad530466a2238c8239c9e262f85ae361d2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 185608ea5a8805511de8430c82e6eecabd9cc5b9622fed85d71e26dd39f20cc4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099880"
 ---
-# <a name="schedulebymonthdayofweek-calendartriggertype-element"></a>Schedulebymonthdayoatweek (calendartriggertype)-Element
+# <a name="schedulebymonthdayofweek-calendartriggertype-element"></a>ScheduleByMonthDayOfWeek (calendarTriggerType)-Element
 
-Gibt einen monatlichen Zeitplan an Wochentagen an. Beispielsweise wird die Aufgabe an bestimmten Wochentagen, Wochen des Monats und Monaten des Jahres gestartet.
+Gibt einen monatlichen Zeitplan für den Wochentag an. Die Aufgabe wird beispielsweise an bestimmten Wochentagen, Wochen des Monats und Monaten des Jahres gestartet.
 
 ``` syntax
 <xs:element name="ScheduleByMonthDayOfWeek"
@@ -30,7 +30,7 @@ Gibt einen monatlichen Zeitplan an Wochentagen an. Beispielsweise wird die Aufga
  />
 ```
 
-Das **schedulebymonthdayosweek** -Element wird durch den komplexen [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) -Typ definiert.
+Das **ScheduleByMonthDayOfWeek-Element** wird durch den komplexen [**Typ monthlyDayOfWeekScheduleType**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,7 +38,7 @@ Das **schedulebymonthdayosweek** -Element wird durch den komplexen [**monthlyday
 
 | Element                                                                             | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/> |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/> |
 
 
 
@@ -48,25 +48,25 @@ Das **schedulebymonthdayosweek** -Element wird durch den komplexen [**monthlyday
 
 | Element                                                                                   | type                                                                     | BESCHREIBUNG                                                             |
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| [**DaysOfWeek**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task ausgeführt wird.<br/>       |
-| [**Monate**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md)         | [**monthstype**](taskschedulerschema-monthstype-complextype.md)         | Gibt die Monate des Jahres an, in dem die Aufgabe ausgeführt wird.<br/> |
+| [**DaysOfWeek**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task ausgeführt wird.<br/>       |
+| [**Monate**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md)         | [**monthsType**](taskschedulerschema-monthstype-complextype.md)         | Gibt die Monate des Jahres an, in dem der Task ausgeführt wird.<br/> |
 | [**Wochen**](taskschedulerschema-weeks-monthlydayofweekscheduletype-element.md)           | unsignedByte                                                             | Gibt das Intervall zwischen den Wochen im Zeitplan an.<br/>    |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Uhrzeit, zu der die Aufgabe gestartet wird, wird durch das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element festgelegt.
+Die Tageszeit, zu der der Task gestartet wird, wird vom [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) festgelegt.
 
-Bei der Skripterstellung wird ein monatlicher Tag-of-week-Wert mit dem [**monthlydowauslöserobjekt**](monthlydowtrigger.md) angegeben.
+Für die Skriptentwicklung wird ein monatlicher Wochentagstrigger mithilfe des [**MonthlyDOWTrigger-Objekts**](monthlydowtrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein monatlicher Wochentag mithilfe der [**imonthlydow-auslöserschnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-imonthlydowtrigger) angegeben.
+Für die C++-Entwicklung wird ein monatlicher Wochentagstrigger mithilfe der [**IMonthlyDOWTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-imonthlydowtrigger) angegeben.
 
-Die oben aufgeführten untergeordneten Elemente werden von den komplexen Elementtypen [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
+Die oben aufgeführten untergeordneten Elemente werden durch die komplexen [**Elementtypen monthlyDayOfWeekScheduleType**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein monatlicher Tag of week-Kalender-Auslösers definiert, mit dem eine Aufgabe (um 8:00 Uhr) am Montag der ersten Woche für jeden Monat des Jahres gestartet wird.
+Der folgende XML-Code definiert einen monatlichen Kalendertrigger für den Wochentag, der eine Aufgabe ( um 8:00 Uhr) am Montag der ersten Woche für jeden Monat des Jahres startet.
 
 
 ```XML
@@ -106,8 +106,8 @@ Im folgenden XML-Code wird ein monatlicher Tag of week-Kalender-Auslösers defin
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -115,7 +115,7 @@ Im folgenden XML-Code wird ein monatlicher Tag of week-Kalender-Auslösers defin
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

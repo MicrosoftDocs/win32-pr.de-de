@@ -1,11 +1,11 @@
 ---
-title: Emailaction. ReplyTo-Eigenschaft
-description: Ruft bei der Skripterstellung die e-Mail-Adresse ab, der Sie antworten möchten, oder legt diese fest.
+title: EmailAction.ReplyTo(Eigenschaft)
+description: Für die Skripterstellung ruft die E-Mail-Adresse ab, auf die Sie antworten möchten, oder legt sie fest.
 ms.assetid: 2b267e6e-c0c9-42ca-bc4a-cc18af5bcb9c
 keywords:
-- ReplyTo-Eigenschaft Taskplaner
-- ReplyTo-Eigenschaft Taskplaner, emailaction-Objekt
-- Emailaction-Objekt Taskplaner, ReplyTo-Eigenschaft
+- ReplyTo-Taskplaner
+- ReplyTo-Eigenschaft Taskplaner , EmailAction-Objekt
+- EmailAction-Taskplaner , ReplyTo-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc7ed1fd84245e4d938d329f0e9773271efec45b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b7b3d59d2708736519cd7623f7aeb7c2519d29b4a396d7f6e9503e9174e1274f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100290"
 ---
-# <a name="emailactionreplyto-property"></a>Emailaction. ReplyTo-Eigenschaft
+# <a name="emailactionreplyto-property"></a>EmailAction.ReplyTo(Eigenschaft)
 
-\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie "IExecAction" mit dem PowerShell-Cmdlet " [**Send-Mail Message**](/powershell/module/microsoft.powershell.utility/send-mailmessage) " als Problem Umgehung.\]
+\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie IExecAction mit dem [**PowerShell-Cmdlet Send-MailMessage**](/powershell/module/microsoft.powershell.utility/send-mailmessage) als Problemumgehung.\]
 
-Ruft bei der Skripterstellung die e-Mail-Adresse ab, der Sie antworten möchten, oder legt diese fest.
+Für die Skripterstellung ruft die E-Mail-Adresse ab, auf die Sie antworten möchten, oder legt sie fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -42,7 +42,7 @@ EmailAction.ReplyTo As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die e-Mail-Adresse, der Sie antworten möchten.
+Die E-Mail-Adresse, auf die Sie antworten möchten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,11 +50,11 @@ Die e-Mail-Adresse, der Sie antworten möchten.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                    |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                       |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -63,7 +63,7 @@ Die e-Mail-Adresse, der Sie antworten möchten.
 
 <dl> <dt>
 
-[**Emailaction**](emailaction.md)
+[**EmailAction**](emailaction.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,35 +1,35 @@
 ---
-title: "\"Aria Container Role\" (ohne aktiven Nachfolger) Tastatur Zugriffsfehler"
-description: "\"Aria Container Role\" (ohne aktiven Nachfolger) Tastatur Zugriffsfehler"
+title: ARIA-Containerrolle (ohne aktive Nachfolger) Tastaturzugriffsfehler
+description: ARIA-Containerrolle (ohne aktive Nachfolger) Tastaturzugriffsfehler
 ms.assetid: 15EDD3CC-FC2A-42FC-95DD-B04D9AF3515E
 keywords:
-- Ariacontainerwithoutactivedescendantkeyboardaccessiblityid
+- AriaContainerWithoutActiveDescendantKeyboardAccessiblityId
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d9e30e0194f156426e2b61aa774ac1f3e0f5b91
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 30b653ac3bf2dc8254b25c52a89cdb3503b89b9f05997a3ea9fb4f4ef3a77cb7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071880"
 ---
-# <a name="aria-container-role-without-active-descendant-keyboard-accessibility-error"></a>"Aria Container Role" (ohne aktiven Nachfolger) Tastatur Zugriffsfehler
+# <a name="aria-container-role-without-active-descendant-keyboard-accessibility-error"></a>ARIA-Containerrolle (ohne aktive Nachfolger) Tastaturzugriffsfehler
 
 ## <a name="text"></a>Text
 
-Das-Element ist ein Fokus nutzbarer Container ohne aktiven Nachfolger und ohne **OnKeyDown**- / **OnKeyPress**- /  Ereignishandler (weder im Container noch in einem der untergeordneten Elemente).
+Das Element ist ein fokussierbarer Container ohne definierten aktiven Nachfolger und ohne **OnKeyDown** / **OnKeyPress OnKeyUp-Ereignishandler**(weder im Container noch in einem /  untergeordneten Element).
 
 ## <a name="type"></a>type
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieser Fehler gilt für Elemente, die über eine Container Rolle verfügen, nicht über ein **Aria-activenachfolger** -Attribut verfügen und nicht deaktiviert sind. Diese Elemente implementieren die Tastaturnavigation zwischen untergeordneten Elementen mithilfe des Konzepts, das als *mobilen Index* bezeichnet wird. In diesem Konzept werden die **TabIndex** -Attribute untergeordneter Elemente dynamisch verwaltet, sodass immer nur ein untergeordnetes Element in der Aktivier Reihenfolge ist.
+Dieser Fehler gilt für Elemente, die über eine Containerrolle verfügen, kein **aria-activedescendant-Attribut** haben und nicht deaktiviert sind. Diese Elemente implementieren die Tastaturnavigation zwischen untergeordneten Elementen mithilfe des Konzepts, das als *Genehmigungsindex bezeichnet wird.* In diesem Konzept werden die **tabindex-Attribute** untergeordneter Elemente dynamisch verwaltet, um sicherzustellen, dass immer nur ein untergeordnetes Element in der Reihenfolge der Registerkarten angezeigt wird.
 
-Dieser Fehler gibt an, dass Tastatur Benutzer nicht auf ein Containerelement zugreifen können, das nicht über das Attribut " **Aria-activenachfolger** " verfügt und nicht deaktiviert ist. Das Problem ist aufgetreten, weil der Container nicht über die benötigten Tastaturereignis Handler (**KeyDown**, **KeyUp** oder **KeyPress**) verfügt und keines der untergeordneten Elemente des Containers vorliegt.
+Dieser Fehler weist darauf hin, dass Tastaturbenutzer nicht auf ein Containerelement ohne das **Attribut aria-activedescendant** und das nicht deaktiviert ist. Das Problem liegt vor, da der Container nicht über die erforderlichen Tastaturereignishandler **(Keydown,** **Keyup** oder **Keypress)** verfügt und keines der untergeordneten Elemente des Containers verwendet.
 
-Um diesen Fehler zu beheben, definieren Sie einen **KeyDown**-, **KeyUp**-oder **KeyPress** -Ereignishandler für den Container oder eines seiner untergeordneten Elemente.
+Um diesen Fehler zu beheben, definieren Sie einen **Keydown-,** **Keyup-** oder **Keypress-Ereignishandler** für den Container oder eines seiner untergeordneten Elemente.
 
 ## <a name="example"></a>Beispiel
 
@@ -75,12 +75,12 @@ Um diesen Fehler zu beheben, definieren Sie einen **KeyDown**-, **KeyUp**-oder *
 
 <dl> <dt>
 
-[Zugriffsfehler bei der Rolle "Aria Container Role"](aria-container-keyboard-events.md)
+[ARIA-Containerrolle: Tastaturzugriffsfehler](aria-container-keyboard-events.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

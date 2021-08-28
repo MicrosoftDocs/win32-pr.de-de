@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9a4f38a6897443763f676951f193fab5606ad2a8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 593ce39dbba6ccf90838b4847bb0a548b67e4785bb21d3f299882e1eecdf8394
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083910"
 ---
 # <a name="ctransformfilterendflush-method"></a>CTransformFilter.EndFlush-Methode
 
@@ -44,24 +44,24 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Am Ende eines Leerungsvorgang ruft die [**CTransformInputPin::EndFlush-Methode**](ctransforminputpin-endflush.md) des Eingabepins diese Methode auf. Diese Methode übergibt den `EndFlush` Aufruf downstream.
 
-Wenn die abgeleitete Klasse einen Arbeitsthread zum Senden von Beispielen verwendet, muss sie alle Daten in der Warteschlange verwerfen, bevor der Aufruf `EndFlush` nachgeschaltet wird. Weitere Informationen finden Sie unter [Datenfluss für Filterentwickler.](data-flow-for-filter-developers.md)
+Wenn die abgeleitete Klasse einen Arbeitsthread zum Senden von Beispielen verwendet, muss sie alle Daten in der Warteschlange verwerfen, bevor der Aufruf `EndFlush` nachgeschaltet wird. Weitere Informationen finden Sie unter [Data Flow for Filter Developers](data-flow-for-filter-developers.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

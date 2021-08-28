@@ -1,23 +1,23 @@
 ---
-description: Gibt die Anzahl der Frames nach dem aktuellen Frame an, den der Codec vor dem Codieren des aktuellen Frames auswerten soll.
+description: Gibt die Anzahl der Frames nach dem aktuellen Frame an, die der Codec vor dem Codieren des aktuellen Frames auswertet.
 ms.assetid: e5cdd066-e25a-4107-9523-5611bd792372
-title: MFPKEY_LOOKAHEAD-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_LOOKAHEAD-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1a024c4d0be6ef7ab16c4bf51f290b01de3282b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa5b11abbacc19a4a66dda785d628b1f5d67f636a0f02c7392402ad64a7c3926
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113330"
 ---
-# <a name="mfpkey_lookahead-property"></a>Mfpkey- \_ Lookahead-Eigenschaft
+# <a name="mfpkey_lookahead-property"></a>MFPKEY \_ LOOKAHEAD-Eigenschaft
 
-Gibt die Anzahl der Frames nach dem aktuellen Frame an, den der Codec vor dem Codieren des aktuellen Frames auswerten soll.
+Gibt die Anzahl der Frames nach dem aktuellen Frame an, die der Codec vor dem Codieren des aktuellen Frames auswertet.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvclookahead
+g \_ wszWMVCLookAhead
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,13 +27,13 @@ VT \_ I4
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der Codec Lookahead verwendet, kann er das Video effizienter codieren.
 
-Das Writer-Objekt des Windows Media Format SDK erwartet, dass der Codec die einzelnen Stichproben sofort codiert. Dies hat zur Folge, dass diese Funktion in Software, die das Writer-Objekt verwendet (einschließlich Windows Media Encoder und Windows Media Player), nicht ordnungsgemäß funktioniert. Alle Dateneinheiten Erweiterungen, die Video Frames zugeordnet sind, werden an den falschen Ausgabe Rahmen angefügt. Die Anzahl der Frames, nach denen die Dateneinheiten Erweiterungen falsch platziert werden, entspricht der Anzahl der verwendeten Frames von Lookahead.
+Das Writer-Objekt des Windows Media Format SDK erwartet, dass der Codec jedes Beispiel sofort codiert. Daher funktioniert dieses Feature nicht ordnungsgemäß in Software, die das Writer-Objekt verwendet (einschließlich Windows Media Encoder und Windows Media Player). Alle Dateneinheitserweiterungen, die Videoframes zugeordnet sind, werden an den falschen Ausgabeframe angefügt. Die Anzahl der Frames, in denen die Dateneinheitserweiterungen falsch platziert werden, entspricht der Anzahl der verwendeten Lookaheadframes.
 
-Gültige Lookahead-Werte reichen von 0 bis 16 Frames. Der empfohlene Wert ist 16.
+Gültige Lookaheadwerte liegen zwischen 0 und 16 Frames. Der empfohlene Wert ist 16.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Gültige Lookahead-Werte reichen von 0 bis 16 Frames. Der empfohlene Wert ist 16
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Gültige Lookahead-Werte reichen von 0 bis 16 Frames. Der empfohlene Wert ist 16
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

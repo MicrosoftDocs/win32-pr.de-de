@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Eigenschaft instanceparameters. dbscanintervalminsec.
-title: Instanceparameters. dbscanintervalminsec (Eigenschaft)
+description: Weitere Informationen finden Sie unter InstanceParameters.DbScanIntervalMinSec (Eigenschaft).
+title: InstanceParameters.DbScanIntervalMinSec (Eigenschaft)
 TOCTitle: 'DbScanIntervalMinSec property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.DbScanIntervalMinSec
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.dbscanintervalminsec(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6630f106675ac7ae7d5c82039d8321c0a78bee62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6681b891e2e70c0f4e2f335a039819df2a5f109b5baa99e6ea33bf12110a7d97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063780"
 ---
-# <a name="instanceparametersdbscanintervalminsec-property"></a>Instanceparameters. dbscanintervalminsec (Eigenschaft)
+# <a name="instanceparametersdbscanintervalminsec-property"></a>InstanceParameters.DbScanIntervalMinSec (Eigenschaft)
 
-Ruft das Mindestintervall zum Wiederholen des Daten Bank Scans in Sekunden ab oder legt es fest.
+Ruft das minimale Intervall zum Wiederholen des Datenbankscans in Sekunden ab oder legt dieses fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int DbScanIntervalMinSec { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

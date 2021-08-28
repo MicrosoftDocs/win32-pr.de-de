@@ -1,7 +1,7 @@
 ---
-description: Gibt eine OIDs-Auflistung zurück, die die zum Erstellen des Ketten Objekts verwendeten Zertifikat Richtlinien darstellt.
+description: Gibt eine OIDs-Auflistung zurück, die die Zertifikatrichtlinien darstellt, die zum Erstellen des Chain-Objekts verwendet werden.
 ms.assetid: 7fe7d3ea-28fc-4c0a-9b43-a97518ac65db
-title: CertificateStatus. certificatepolicies-Methode
+title: CertificateStatus.CertificatePolicies-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 98c9e22c0cad40252cc9eebebf9aa32dc4d89b65
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e4d6507446bf15d00d8e388699ee0c0892c8755b94913d18657634311db57ec1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126710"
 ---
-# <a name="certificatestatuscertificatepolicies-method"></a>CertificateStatus. certificatepolicies-Methode
+# <a name="certificatestatuscertificatepolicies-method"></a>CertificateStatus.CertificatePolicies-Methode
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **certificatepolicies** -Methode gibt eine [**OIDs**](oids.md) -Auflistung zurück, die die Zertifikat Richtlinien darstellt, die zum Erstellen des [**Ketten**](chain.md) Objekts verwendet wurden.
+Die **CertificatePolicies-Methode** gibt eine [**OIDs-Auflistung zurück,**](oids.md) die die Zertifikatrichtlinien darstellt, die zum Erstellen des [**Chain-Objekts verwendet**](chain.md) werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine [**OIDs**](oids.md) -Auflistung. Jedes [**OID**](oid.md) -Objekt in der Auflistung stellt eine Zertifikat Richtlinien-OID dar.
+Eine [**OIDs-Auflistung.**](oids.md) Jedes [**OID-Objekt**](oid.md) in der Auflistung stellt eine Zertifikatrichtlinien-OID dar.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Fügen Sie der Sammlung Zertifikats Richtlinie hinzu, um die Zertifikat Richtlinien anzugeben, die zum Erstellen der Zertifikats Vertrauenskette verwendet werden sollen.
+Fügen Sie der Sammlung Zertifikatrichtlinien-OIDs hinzu, um die Zertifikatrichtlinien anzugeben, die zum Erstellen der Zertifikatvertrauenskette verwendet werden sollen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Fügen Sie der Sammlung Zertifikats Richtlinie hinzu, um die Zertifikat Richtlin
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

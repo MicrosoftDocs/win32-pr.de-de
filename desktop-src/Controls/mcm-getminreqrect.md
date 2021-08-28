@@ -1,9 +1,9 @@
 ---
-title: MCM_GETMINREQRECT Meldung (kommstrg. h)
-description: Ruft die Mindestgröße ab, die erforderlich ist, um einen vollen Monat in einem Monatskalender-Steuerelement anzuzeigen. Sie können diese Nachricht explizit oder mit dem monthcal \_ getminreqrect-Makro senden.
+title: MCM_GETMINREQRECT Nachricht (Commctrl.h)
+description: Ruft die mindest erforderliche Größe ab, um einen vollständigen Monat in einem Monatskalender-Steuerelement anzuzeigen. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetMinReqRect-Makros senden.
 ms.assetid: f0378338-4809-48e9-9387-ed8b79356f95
 keywords:
-- Windows-Steuerelemente für MCM_GETMINREQRECT Meldung
+- MCM_GETMINREQRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac6b2e2b16a70841836a277ffe55e030a6d6a241
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 575636837b1485de62dd5e603a0dea38455c4c99926c13f3bd05101fe2a27eca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062050"
 ---
-# <a name="mcm_getminreqrect-message"></a>MCM \_ getminreqrect-Meldung
+# <a name="mcm_getminreqrect-message"></a>MCM \_ GETMINREQRECT-Nachricht
 
-Ruft die Mindestgröße ab, die erforderlich ist, um einen vollen Monat in einem Monatskalender-Steuerelement anzuzeigen. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getminreqrect**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getminreqrect) -Makro senden.
+Ruft die mindest erforderliche Größe ab, um einen vollständigen Monat in einem Monatskalender-Steuerelement anzuzeigen. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetMinReqRect-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getminreqrect) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,24 +35,24 @@ Ruft die Mindestgröße ab, die erforderlich ist, um einen vollen Monat in einem
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die Informationen zu umschließenden Rechtecks empfängt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **null** sein.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die umgebende Rechteckinformationen empfängt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, und *LPARAM* empfängt bei erfolgreicher Ausführung die entsprechenden umgebenden Informationen. Andernfalls gibt die Meldung 0 (null) zurück.
+Gibt einen Wert ungleich 0 (null) zurück, und *lParam* empfängt bei Erfolg die entsprechenden Begrenzungsinformationen. Andernfalls gibt die Nachricht 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mindestens erforderliche Fenstergröße für ein Monatskalender-Steuerelement hängt von der aktuell ausgewählten Schriftart, den Steuerelement Stilen, den Systemmetriken und den regionalen Einstellungen ab. Wenn eine Anwendung etwas ändert, das sich auf die minimale Fenstergröße auswirkt, oder eine [**WM- \_ settingchange**](/windows/desktop/winmsg/wm-settingchange) -Nachricht verarbeitet, sollte Sie **MCM \_ getminreqrect** senden, um die neue Mindestgröße zu ermitteln.
+Die mindestens erforderliche Fenstergröße für ein Monatskalender-Steuerelement hängt von der aktuell ausgewählten Schriftart, den steuerelementstilen, Systemmetriken und regionalen Einstellungen ab. Wenn eine Anwendung änderungen, die sich auf die minimale Fenstergröße auswirken, oder eine [**WM \_ SETTINGCHANGE-Nachricht**](/windows/desktop/winmsg/wm-settingchange) verarbeitet, sollte **MCM \_ GETMINREQRECT** gesendet werden, um die neue Mindestgröße zu bestimmen.
 
 > [!Note]  
-> Das von **MCM \_ getminreqrect** zurückgegebene Rechteck enthält nicht die Breite der "Today"-Zeichenfolge, wenn es vorhanden ist. Wenn der [**MCS- \_ notoday**](month-calendar-control-styles.md) -Stil nicht festgelegt ist, sollte Ihre Anwendung auch das Rechteck abrufen, das die Zeichen folgen Breite "Today" definiert, indem eine [**MCM \_ getmaxchanwidth**](mcm-getmaxtodaywidth.md) -Nachricht gesendet wird. Verwenden Sie die größere der beiden Rechtecke, um sicherzustellen, dass die "Today"-Zeichenfolge nicht abgeschnitten wird.
+> Das von **MCM \_ GETMINREQRECT** zurückgegebene Rechteck enthält nicht die Breite der Zeichenfolge "Today", sofern vorhanden. Wenn der [**\_ MCS-FORMATVORLAGENSTIL**](month-calendar-control-styles.md) nicht festgelegt ist, sollte Ihre Anwendung auch das Rechteck abrufen, das die Zeichenfolgenbreite "Today" definiert, indem eine [**MCM \_ GETMAXTODAYWIDTH-Nachricht**](mcm-getmaxtodaywidth.md) gesendet wird. Verwenden Sie das größere der beiden Rechtecke, um sicherzustellen, dass die Zeichenfolge "Today" nicht abgeschnitten wird.
 
  
 
-Die **oberen** und **linken** Member der Struktur, auf die von *LPARAM* verwiesen wird, sind immer 0 (null). Die **Rechte** und **untersten** Elemente stellen den minimalen *CX* -und *CY* -Member dar, der für das Steuerelement erforderlich ist
+Die **oberen** und **linken** Elemente der Struktur, auf die *von lParam* gezeigt wird, sind immer 0 (null). Die **rechten** und **unteren** Member stellen die minimalen *cx-* und *cy-Elemente* dar, die für das Steuerelement erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Die **oberen** und **linken** Member der Struktur, auf die von *LPARAM* verwiese
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

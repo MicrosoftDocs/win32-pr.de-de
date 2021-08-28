@@ -1,35 +1,35 @@
 ---
-description: Die SetRect-Funktion erstellt ein Rechteck, die copyrect-Funktion erstellt eine Kopie eines angegebenen Rechtecks, und die Funktion setrectempty erstellt ein leeres Rechteck.
+description: Die SetRect-Funktion erstellt ein Rechteck, die CopyRect-Funktion erstellt eine Kopie eines bestimmten Rechtecks, und die SetRectEmpty-Funktion erstellt ein leeres Rechteck.
 ms.assetid: 982d6283-673b-41a1-abc7-10ef87ff3c6f
-title: Rechteck Vorgänge
+title: Rechteckvorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3117fda697000e92258c99cf90af470e8815e237
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 161df56d3534f85cd37701956db0330be59236e3cbbeeed81ef390edd17656bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092760"
 ---
-# <a name="rectangle-operations"></a>Rechteck Vorgänge
+# <a name="rectangle-operations"></a>Rechteckvorgänge
 
-Die [**SetRect**](/windows/desktop/api/Winuser/nf-winuser-setrect) -Funktion erstellt ein Rechteck, die [**copyrect**](/windows/desktop/api/Winuser/nf-winuser-copyrect) -Funktion erstellt eine Kopie eines angegebenen Rechtecks, und die Funktion [**setrectempty**](/windows/desktop/api/Winuser/nf-winuser-setrectempty) erstellt ein leeres Rechteck. Ein leeres Rechteck ist ein beliebiges Rechteck, das eine Breite, eine Höhe von 0 (null) oder beides aufweist. Die [**isrectempty**](/windows/desktop/api/Winuser/nf-winuser-isrectempty) -Funktion bestimmt, ob ein bestimmtes Rechteck leer ist. Die [**equalrect**](/windows/desktop/api/Winuser/nf-winuser-equalrect) -Funktion bestimmt, ob zwei Rechtecke identisch sind, d. h., ob Sie die gleichen Koordinaten aufweisen.
+Die [**SetRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setrect) erstellt ein Rechteck, die [**CopyRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-copyrect) erstellt eine Kopie eines bestimmten Rechtecks, und die [**SetRectEmpty-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setrectempty) erstellt ein leeres Rechteck. Ein leeres Rechteck ist ein beliebiges Rechteck mit einer Breite von null, einer Höhe von null oder beidem. Die [**IsRectEmpty-Funktion**](/windows/desktop/api/Winuser/nf-winuser-isrectempty) bestimmt, ob ein angegebenes Rechteck leer ist. Die [**EqualRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-equalrect) bestimmt, ob zwei Rechtecke identisch sind, d. h. ob sie die gleichen Koordinaten aufweisen.
 
-Die [**inflaterect**](/windows/desktop/api/Winuser/nf-winuser-inflaterect) -Funktion vergrößert oder verringert die Breite oder Höhe eines Rechtecks oder beides. Sie kann die Breite von beiden Enden des Rechtecks hinzufügen oder entfernen. die Höhe kann dem oberen und unteren Rand des Rechtecks hinzugefügt oder daraus entfernt werden.
+Die [**Funktion InflateRect**](/windows/desktop/api/Winuser/nf-winuser-inflaterect) erhöht oder verringert die Breite oder Höhe eines Rechtecks oder beides. Die Breite kann an beiden Enden des Rechtecks hinzugefügt oder entfernt werden. Sie kann die Höhe sowohl am oberen als auch am unteren Rand des Rechtecks hinzufügen oder entfernen.
 
-Die [**offsetrect**](/windows/desktop/api/Winuser/nf-winuser-offsetrect) -Funktion verschiebt ein Rechteck um einen angegebenen Betrag. Er verschiebt das Rechteck durch Hinzufügen der angegebenen x-Amount-, y-Amount-oder x-und y-Beträge zu den Eckkoordinaten.
+Die [**OffsetRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-offsetrect) verschiebt ein Rechteck um einen bestimmten Betrag. Sie verschiebt das Rechteck, indem den angegebenen x-Betrag, y-Betrag oder x- und y-Betrag den Eckkoordinaten hinzugefügt wird.
 
-Die [**PtInRect**](/windows/desktop/api/Winuser/nf-winuser-ptinrect) -Funktion bestimmt, ob ein angegebener Punkt innerhalb eines angegebenen Rechtecks liegt. Der Punkt befindet sich im Rechteck, wenn er auf der linken oder oberen Seite liegt oder sich vollständig innerhalb des Rechtecks befindet. Der Punkt befindet sich nicht im Rechteck, wenn er sich auf der rechten oder unteren Seite befindet.
+Die [**PtInRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-ptinrect) bestimmt, ob ein angegebener Punkt innerhalb eines bestimmten Rechtecks liegt. Der Punkt befindet sich im Rechteck, wenn er links oder oben liegt oder sich vollständig innerhalb des Rechtecks befindet. Der Punkt befindet sich nicht im Rechteck, wenn er sich auf der rechten oder unteren Seite befindet.
 
-Die [**intersectRect**](/windows/desktop/api/Winuser/nf-winuser-intersectrect) -Funktion erstellt ein neues Rechteck, bei dem es sich um die Schnittmenge zweier bestehender Rechtecke handelt, wie in der folgenden Abbildung dargestellt.
+Die [**IntersectRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-intersectrect) erstellt ein neues Rechteck, das die Schnittmenge zweier vorhandener Rechtecke darstellt, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung mit zwei überlappenden Rechtecke, mit dunkler Schattierung zum Angeben der Schnittmenge ](images/csrec-01.png)
+![Abbildung, die zwei überlappende Rechtecke mit dunklerer Schattierung zeigt, um die Schnittmenge anzugeben ](images/csrec-01.png)
 
-Die [**unionrect**](/windows/desktop/api/Winuser/nf-winuser-unionrect) -Funktion erstellt ein neues Rechteck, das die Union zweier bestehender Rechtecke darstellt, wie in der folgenden Abbildung dargestellt.
+Die [**UnionRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-unionrect) erstellt ein neues Rechteck, das die Vereinigung zweier vorhandener Rechtecke darstellt, wie in der folgenden Abbildung dargestellt.
 
-![Abbildung von zwei überlappenden Rechtecke mit dunkler Schattierung, die Bereiche innerhalb der Union, aber nicht innerhalb eines der beiden Rechtecks anzeigt](images/csrec-02.png)
+![Abbildung von zwei überlappenden Rechtecke mit dunklerer Schattierung, die Bereiche innerhalb der Union angibt, jedoch nicht innerhalb eines rechteckigen Rechtecks](images/csrec-02.png)
 
-Informationen zu Funktionen, die Ellipsen und Polygone zeichnen, finden Sie unter [gefüllte Formen](filled-shapes.md).
+Informationen zu Funktionen, die Ellipsen und Polygone zeichnen, finden Sie unter [Gefüllte Formen.](filled-shapes.md)
 
  
 

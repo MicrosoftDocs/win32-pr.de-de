@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasealleseryupgradedexception-Eigenschaften'
-title: Esentdatabasealleseryupgradedexception-Eigenschaften
+description: 'Weitere Informationen zu: EsentDatabaseAlreadyUpgradedException-Eigenschaften'
+title: EsentDatabaseAlreadyUpgradedException-Eigenschaften
 TOCTitle: EsentDatabaseAlreadyUpgradedException properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.EsentDatabaseAlreadyUpgradedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasealreadyupgradedexception_properties(v=EXCHG.10)
 ms:contentKeyID: 55101324
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: aca5c3d5df7627aa5ad94f437ffdc964be40567f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28a5e47e327159ca93dcf44f0f048692a16e4d6a17ef5c50196a864faef76f21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094200"
 ---
-# <a name="esentdatabasealreadyupgradedexception-properties"></a>Esentdatabasealleseryupgradedexception-Eigenschaften
+# <a name="esentdatabasealreadyupgradedexception-properties"></a>EsentDatabaseAlreadyUpgradedException-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [esentdatabasealleseryupgradedexception](./esentdatabasealreadyupgradedexception-class.md) -Typ macht die folgenden Member verfügbar.
+Der [EsentDatabaseAlreadyUpgradedException-Typ](./esentdatabasealreadyupgradedexception-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,47 +35,47 @@ Der [esentdatabasealleseryupgradedexception](./esentdatabasealreadyupgradedexcep
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn274313(v=exchg.10).md">Fehler</a></td>
-<td>Ruft den zugrunde liegenden ESENT-Fehler für diese Ausnahme ab. (Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</td>
+<td>Ruft den zugrunde liegenden Esent-Fehler für diese Ausnahme ab. (Geerbt von <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
-<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HRESULT</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">Hresult</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -83,10 +83,10 @@ Der [esentdatabasealleseryupgradedexception](./esentdatabasealreadyupgradedexcep
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasealleseryupgradedexception-Klasse](./esentdatabasealreadyupgradedexception-class.md)
+[EsentDatabaseAlreadyUpgradedException-Klasse](./esentdatabasealreadyupgradedexception-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

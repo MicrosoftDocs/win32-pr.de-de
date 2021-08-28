@@ -1,11 +1,11 @@
 ---
 title: IMsRdpWorkspace2-Schnittstelle
-description: Macht eine Methode verfügbar, die RemoteApp-und Desktopverbindung Anmelde Informationen mit einer Verbindung verknüpft.
+description: Macht eine Methode verfügbar, die RemoteApp- und Desktopverbindung Anmeldeinformationen einer Verbindung zugeordnet.
 ms.assetid: 7E09AF14-2D6C-4D6E-8033-C691D9DC8057
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpworkspace-Schnittstelle Remotedesktopdienste
-- Imsrdpworkspace-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpWorkspace-Schnittstelle Remotedesktopdienste
+- IMsRdpWorkspace-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,32 +16,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d6b5ff193eec393b67029d355a0f0c1bc67c0ad
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 38b869d3ffc83d9a4b8f3d51df0b7b14658ec3f1c561797a62dee3a574bf2803
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125520"
 ---
 # <a name="imsrdpworkspace2-interface"></a>IMsRdpWorkspace2-Schnittstelle
 
-Macht eine Methode verfügbar, die RemoteApp-und Desktopverbindung Anmelde Informationen mit einer Verbindung verknüpft. Diese Schnittstelle wird von der Remotedesktopdienste Webzugriff-Steuerelement implementiert. Dieses Steuerelement ist ein Wrapper um den Remotedesktopverbindung Client (MsTscAx.dll) und den Lauf Zeit Proxy für RemoteApp-und Desktop Verbindungen (Tswbprxy.exe).
+Macht eine Methode verfügbar, die RemoteApp- und Desktopverbindung Anmeldeinformationen einer Verbindung zugeordnet. Diese Schnittstelle wird vom Remotedesktopdienste Webzugriff-Steuerelement implementiert. Dieses Steuerelement ist ein Wrapper um den Remotedesktopverbindung-Client (MsTscAx.dll) und den RemoteApp- und Desktopverbindungs-Laufzeitproxy (Tswbprxy.exe).
 
 ## <a name="members"></a>Member
 
-Die **imsrdpworkspace** -Schnittstelle erbt von [**imsrdpworkspace**](imsrdpworkspace.md). **IMsRdpWorkspace2** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpWorkspace-Schnittstelle** erbt von [**IMsRdpWorkspace.**](imsrdpworkspace.md) **IMsRdpWorkspace2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **imsrdpworkspace** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpWorkspace-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                                    |
+| Methode                                                        | Beschreibung                                                                    |
 |:--------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| [**Startworkspaceex**](/previous-versions/windows/desktop/legacy/dn123459(v=vs.85)) | Ordnet Benutzer Anmelde Informationen und Zertifikate einer Verbindungs-ID zu. <br/> |
+| [**StartWorkspaceEx**](/previous-versions/windows/desktop/legacy/dn123459(v=vs.85)) | Ordnet Benutzeranmeldeinformationen und Zertifikate einer Verbindungs-ID zu. <br/> |
 
 
 
@@ -56,7 +56,7 @@ Die **imsrdpworkspace** -Schnittstelle verfügt über diese Methoden.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                |
 | DLL<br/>                      | <dl> <dt>MsRdpWebAccess.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpWorkspace2 ist als 145d0622-04cf-4FC3-a776-a82a9169cdf8 definiert.<br/>           |
+| IID<br/>                      | \_IID-IMsRdpWorkspace2 ist als 145D0622-04CF-4FC3-A776-A82A9169CDF8 definiert.<br/>           |
 
 
 
@@ -67,7 +67,7 @@ Die **imsrdpworkspace** -Schnittstelle verfügt über diese Methoden.
 [**IMsRdpClientShell2**](imsrdpclientshell2.md)
 </dt> <dt>
 
-[**Imsrdpworkspace**](imsrdpworkspace.md)
+[**IMsRdpWorkspace**](imsrdpworkspace.md)
 </dt> </dl>
 
  

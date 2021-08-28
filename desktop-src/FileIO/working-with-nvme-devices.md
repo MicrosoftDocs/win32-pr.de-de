@@ -4,12 +4,12 @@ ms.assetid: 037AF841-C2C9-4551-9CCB-F2A2F199083A
 title: Arbeiten mit NVMe-Laufwerken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 425516946d1e76e5c01f6ae5d11f104244f85ce0
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 22a749764aa0874aef618558199ca418582d0d36
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436275"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812865"
 ---
 # <a name="working-with-nvme-drives"></a>Arbeiten mit NVMe-Laufwerken
 
@@ -18,20 +18,20 @@ ms.locfileid: "114436275"
 -   Windows 10
 -   Windows Server 2016
 
-Erfahren Sie, wie Sie mit NVMe-Hochgeschwindigkeitsgeräten aus Ihrer Windows arbeiten. Der Gerätezugriff wird über **StorNVMe.sys** aktiviert. Dabei handelt es sich um den in Windows Server 2012 R2 eingeführten Windows 8.1. Es ist auch für 7 Windows über einen KB-Hotfix verfügbar. In Windows 10 wurden mehrere neue Features eingeführt, einschließlich eines Pass-Through-Mechanismus für herstellerspezifische NVMe-Befehle und Updates vorhandener IOCTLs.
+Erfahren Sie, wie Sie mit NVMe-Hochgeschwindigkeitsgeräten aus Ihrer Windows arbeiten. Der Gerätezugriff wird über **StorNVMe.sys** aktiviert. Dabei handelt es sich um den in Windows Server 2012 R2 und Windows 8.1. Es ist auch für 7 Windows über einen KB-Hotfix verfügbar. In Windows 10 wurden mehrere neue Features eingeführt, einschließlich eines Pass-Through-Mechanismus für herstellerspezifische NVMe-Befehle und Updates vorhandener IOCTLs.
 
 Dieses Thema bietet eine Übersicht über allgemeine APIs, die Sie für den Zugriff auf NVMe-Laufwerke in Windows 10. Außerdem wird Beschrieben:
 
 -   Senden eines anbieterspezifischen NVMe-Befehls mit [Pass-Through](#pass-through-mechanism)
 -   Senden eines [Befehls "Identify", "Get Features" oder "Get Log Pages"](#protocol-specific-queries) an das NVMe-Laufwerk
 -   Abrufen von [Temperaturinformationen von](#temperature-queries) einem NVMe-Laufwerk
--   Ausführen von Befehlen zum Ändern des Verhaltens, z. B. [festlegen von Temperaturschwellenwerte](#behavior-changing-commands)
+-   Ausführen von Befehlen zum Ändern des Verhaltens, z. B. [Festlegen von Temperaturschwellenwerte](#behavior-changing-commands)
 
 ## <a name="apis-for-working-with-nvme-drives"></a>APIs für die Arbeit mit NVMe-Laufwerken
 
 Sie können die folgenden allgemeinen APIs verwenden, um auf NVMe-Laufwerke in Windows 10. Diese APIs finden Sie in **winioctl.h** für Benutzermodusanwendungen und **ntddstor.h** für Kernelmodustreiber. Weitere Informationen zu Headerdateien finden Sie unter [Headerdateien.](#header-files)
 
--   [**IOCTL \_ \_ \_ SPEICHERPROTOKOLLBEFEHL:**](/windows/desktop/api/winioctl/ni-winioctl-ioctl_storage_protocol_command) Verwenden Sie diese IOCTL mit der **\_ SPEICHERPROTOKOLL-BEFEHLsstruktur, \_** um NVMe-Befehle aus auszuführen. Diese IOCTL ermöglicht nvme-Pass-Through und unterstützt das Command Effects-Protokoll in NVMe. Sie können es mit herstellerspezifischen Befehlen verwenden. Weitere Informationen finden Sie unter [Pass-Through-Mechanismus](#pass-through-mechanism).
+-   [**IOCTL \_ \_ \_ SPEICHERPROTOKOLLBEFEHL:**](/windows/desktop/api/winioctl/ni-winioctl-ioctl_storage_protocol_command) Verwenden Sie diese IOCTL mit der **SPEICHERPROTOKOLL-BEFEHLsstruktur, \_ \_** um NVMe-Befehle aus auszuführen. Diese IOCTL ermöglicht nvme-Pass-Through und unterstützt das Command Effects-Protokoll in NVMe. Sie können sie mit herstellerspezifischen Befehlen verwenden. Weitere Informationen finden Sie unter [Pass-Through-Mechanismus](#pass-through-mechanism).
 
 -   [**STORAGE \_ \_PROTOKOLLBEFEHL:**](/windows/desktop/api/winioctl/ns-winioctl-storage_protocol_command) Diese Eingabepufferstruktur enthält ein **ReturnStatus-Feld,** das verwendet werden kann, um die folgenden Statuswerte zu melden.
     -   **\_ \_ SPEICHERPROTOKOLLSTATUS \_ AUSSTEHEND**
@@ -48,7 +48,7 @@ Sie können die folgenden allgemeinen APIs verwenden, um auf NVMe-Laufwerke in W
 -   [**STORAGE \_ PROPERTY \_ QUERY:**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) Diese Struktur enthält die **Felder PropertyId** und **AdditionalParameters,** um die daten anzugeben, die abgefragt werden sollen. Verwenden Sie **im Feld PropertyId** die **STORAGE PROPERTY \_ \_ ID-Enumeration,** um den Datentyp anzugeben. Verwenden Sie **das Feld AdditionalParameters,** um je nach Datentyp weitere Details anzugeben. Verwenden Sie für protokollspezifische Daten die **STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA-Struktur** im **Feld AdditionalParameters.** Verwenden Sie für Temperaturdaten die **STORAGE \_ TEMPERATURE \_ INFO-Struktur** im **Feld AdditionalParameters.**
 -   [**STORAGE \_ PROPERTY \_ ID**](/windows/win32/api/winioctl/ne-winioctl-storage_property_id) : Diese Enumeration enthält neue Werte, mit denen **IOCTL \_ STORAGE QUERY \_ \_ PROPERTY** protokollspezifische und Temperaturinformationen abrufen kann.
 
-    -   **StorageAdapterProtocolSpecificProperty**
+    -   **StorageAdapterProtocolSpecificProperty**: Wenn ProtocolType = ProtocolTypeNvme und DataType = NVMeDataTypeLogPage, sollten Aufrufer 512 Byte-Dateninkunks anfordern.
     -   **StorageDeviceProtocolSpecificProperty**
 
     Verwenden Sie eine dieser protokollspezifischen Eigenschaften-IDs in Kombination mit **STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA,** um protokollspezifische Daten in der [**STORAGE PROTOCOL DATA \_ \_ \_ DESCRIPTOR-Struktur abzurufen.**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_data_descriptor)
@@ -56,17 +56,17 @@ Sie können die folgenden allgemeinen APIs verwenden, um auf NVMe-Laufwerke in W
     -   **StorageAdapterTemperatureProperty**
     -   **StorageDeviceTemperatureProperty**
 
-    Verwenden Sie eine dieser Temperatureigenschafts-IDs, um Temperaturdaten in der [**\_ \_ \_ SPEICHERTEMPERATURDATEN-DESKRIPTORstruktur abzurufen.**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_data_descriptor)
+    Verwenden Sie eine dieser Temperatureigenschafts-IDs, um Temperaturdaten in der [**\_ \_ \_ SPEICHERTEMPERATURDATEN-DESKRIPTORstruktur**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_data_descriptor) abzurufen.
 
 -   [**STORAGE \_ PROTOKOLLSPEZIFISCHE \_ \_ DATEN:**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) Rufen Sie NVMe-spezifische Daten ab, wenn diese Struktur für das **Feld AdditionalParameters** von **STORAGE PROPERTY \_ \_ QUERY** verwendet wird und ein [**STORAGE PROTOCOL \_ \_ NVME DATA \_ TYPE-Aufzählwert \_**](/windows/desktop/api/WinIoCtl/ne-winioctl-storage_protocol_nvme_data_type) angegeben wird. Verwenden Sie einen der folgenden **STORAGE \_ PROTOCOL \_ NVME DATA \_ \_ TYPE-Werte** im **Feld DataType** der **STORAGE PROTOCOL SPECIFIC \_ \_ \_ DATA-Struktur:**
 
-    -   Verwenden **Sie NVMeDataTypeIdentify zum** Ermitteln von Controllerdaten oder Identifizieren von Namespacedaten.
+    -   Verwenden **Sie NVMeDataTypeIdentify,** um Controllerdaten zu identifizieren oder Namespacedaten zu identifizieren.
     -   Verwenden **Sie NVMeDataTypeLogPage,** um Protokollseiten (einschließlich SMART-/Integritätsdaten) zu erhalten.
     -   Verwenden **Sie NVMeDataTypeFeature,** um Features des NVMe-Laufwerks zu erhalten.
 
--   [**STORAGE \_ TEMPERATURE \_ INFO**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) : Diese Struktur wird verwendet, um bestimmte Temperaturdaten zu halten. Sie wird im **\_ SPEICHER-TEMERATURE-DATENDESKRIPTOR \_ \_** verwendet, um die Ergebnisse einer Temperaturabfrage zurück zu geben.
+-   [**STORAGE \_ TEMPERATURE \_ INFO**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) : Diese Struktur wird verwendet, um bestimmte Temperaturdaten zu halten. Er wird im **\_ SPEICHER-TEMERATURE-DATENDESKRIPTOR \_ \_** verwendet, um die Ergebnisse einer Temperaturabfrage zurück zu geben.
 
--   [**IOCTL \_ STORAGE \_ SET \_ TEMPERATURE \_ THRESHOLD**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_set_temperature_threshold) : Verwenden Sie diese IOCTL mit der **\_ \_ Speichertemperaturschwellenwert-Struktur,** um Temperaturschwellenwerte zu setzen. Weitere Informationen finden Sie unter [Befehle zum Ändern des Verhaltens.](#behavior-changing-commands)
+-   [**IOCTL \_ STORAGE \_ SET \_ TEMPERATURE \_ THRESHOLD**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_set_temperature_threshold) : Verwenden Sie diese IOCTL mit der **\_ \_ SPEICHERTEMPERATURSCHWELLENstruktur,** um Temperaturschwellenwerte zu setzen. Weitere Informationen finden Sie unter [Befehle zum Ändern des Verhaltens.](#behavior-changing-commands)
 
 -   [**STORAGE \_ \_TEMPERATURSCHWELLENWERT:**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_threshold) Diese Struktur wird als Eingabepuffer verwendet, um den Temperaturschwellenwert anzugeben. Das **OverThreshold-Feld** (boolesch)  gibt an, ob das Schwellenwertfeld der Über-Schwellenwert ist oder nicht (andernfalls ist es der unter dem Schwellenwert).
 
@@ -74,7 +74,7 @@ Sie können die folgenden allgemeinen APIs verwenden, um auf NVMe-Laufwerke in W
 
 Befehle, die nicht in der NVMe-Spezifikation definiert sind, sind für das Hostbetriebssystem am schwersten zu verarbeiten. Der Host hat keinen Einblick in die Auswirkungen, die die Befehle auf das Zielgerät haben können, die verfügbar gemachte Infrastruktur (Namespaces/Blockgrößen) und ihr Verhalten.
 
-Um solche gerätespezifischen Befehle besser über den Windows-Speicherstapel zu übertragen, ermöglicht ein neuer Pass-Through-Mechanismus das Übergeben anbieterspezifischer Befehle. Diese Pass-Through-Pipe wird auch bei der Entwicklung von Verwaltungs- und Testtools helfen. Dieser Pass-Through-Mechanismus erfordert jedoch die Verwendung des Befehlseffektprotokolls. Darüber hinaus StoreNVMe.sys alle Befehle, nicht nur Pass-Through-Befehle, im Command Effects Log beschrieben werden.
+Um solche gerätespezifischen Befehle besser über den Windows-Speicherstapel zu übertragen, ermöglicht ein neuer Pass-Through-Mechanismus das Übergeben anbieterspezifischer Befehle. Diese Pass-Through-Pipe wird auch bei der Entwicklung von Verwaltungs- und Testtools helfen. Dieser Pass-Through-Mechanismus erfordert jedoch die Verwendung des Command Effects-Protokolls. Darüber hinaus StoreNVMe.sys alle Befehle, nicht nur Pass-Through-Befehle, im Befehlseffektprotokoll beschrieben werden.
 
 > [!IMPORTANT]
 > StorNVMe.sys und Storport.sys blockiert jeden Befehl auf einem Gerät, wenn er nicht im Befehlseffektprotokoll beschrieben wird.
@@ -83,7 +83,7 @@ Um solche gerätespezifischen Befehle besser über den Windows-Speicherstapel zu
 
 ### <a name="supporting-the-command-effects-log"></a>Unterstützen des Befehlseffektprotokolls
 
-Das Command Effects-Protokoll (wie unter Unterstützte Befehle und Effekte, Abschnitt 5.10.1.5 der [NVMe-Spezifikation 1.2](https://nvmexpress.org/specifications)beschrieben) ermöglicht die Beschreibung der Auswirkungen herstellerspezifischer Befehle zusammen mit spezifikationsdefinierten Befehlen. Dies erleichtert sowohl die Validierung der Befehlsunterstützung als auch die Optimierung des Befehlsverhaltens und sollte daher für den gesamten Satz von Befehlen implementiert werden, die das Gerät unterstützt. Die folgenden Bedingungen beschreiben das Ergebnis, wie der Befehl basierend auf seinem Command Effects Log-Eintrag gesendet wird.
+Das Befehlseffektprotokoll (wie unter Unterstützte Befehle und Effekte, Abschnitt 5.10.1.5 der [NVMe-Spezifikation 1.2](https://nvmexpress.org/specifications)beschrieben) ermöglicht die Beschreibung der Auswirkungen herstellerspezifischer Befehle zusammen mit spezifikationsdefinierten Befehlen. Dies erleichtert sowohl die Validierung der Befehlsunterstützung als auch die Optimierung des Befehlsverhaltens und sollte daher für den gesamten Satz von Befehlen implementiert werden, die das Gerät unterstützt. Die folgenden Bedingungen beschreiben das Ergebnis, wie der Befehl basierend auf seinem Command Effects Log-Eintrag gesendet wird.
 
 Für jeden bestimmten Befehl, der im Befehlseffektprotokoll... beschrieben wird.
 
@@ -104,17 +104,17 @@ Für jeden bestimmten Befehl, der im Befehlseffektprotokoll... beschrieben wird.
 
 -   Die Namespacefunktionsänderung (NCC) ist auf "1" festgelegt, was bedeutet, dass der Befehl die Funktionen eines einzelnen Namespace ändern kann (Bit 02).
 
--   Die Befehlsübermittlung und -ausführung (Command Submission and Execution, CSE) ist auf 001b oder 010b festgelegt. Dies bedeutet, dass der Befehl übermittelt werden kann, wenn kein anderer ausstehender Befehl für denselben oder einen namespace verfügbar ist, und dass ein anderer Befehl nicht an denselben oder einen namespace übermittelt werden soll, bis dieser Befehl abgeschlossen ist (Bits 18:16).
+-   Die Befehlsübermittlung und -ausführung (Command Submission and Execution, CSE) ist auf 001b oder 010b festgelegt. Dies bedeutet, dass der Befehl übermittelt werden kann, wenn kein anderer ausstehender Befehl für denselben oder einen namespace verfügbar ist, und dass ein anderer Befehl erst dann an denselben oder einen namespace übermittelt werden soll, wenn dieser Befehl abgeschlossen ist (Bits 18:16).
 
 **Anschließend wird** der Befehl als einziger ausstehender Befehl an den Adapter gesendet.
 
 **Ander denn, wenn**:
 
--   Die Befehlsübermittlung und -ausführung (Command Submission and Execution, CSE) ist auf 001b festgelegt. Dies bedeutet, dass der Befehl übermittelt werden kann, wenn kein anderer ausstehender Befehl für denselben Namespace verfügbar ist, und dass ein anderer Befehl nicht an denselben Namespace übermittelt werden sollte, bis dieser Befehl abgeschlossen ist (Bits 18:16).
+-   Die Befehlsübermittlung und -ausführung (Command Submission and Execution, CSE) ist auf 001b festgelegt. Dies bedeutet, dass der Befehl übermittelt werden kann, wenn kein anderer ausstehender Befehl für denselben Namespace verfügbar ist, und dass ein anderer Befehl erst dann an denselben Namespace übermittelt werden sollte, wenn dieser Befehl abgeschlossen ist (Bits 18:16).
 
-**Anschließend wird** der Befehl als einziger ausstehender Befehl an das Logical Unit Number-Objekt (LUN) gesendet.
+**Anschließend wird** der Befehl als einziger ausstehender Befehl für das Logical Unit Number-Objekt (LUN) gesendet.
 
-**Andernfalls** wird der Befehl mit anderen befehlslos ausstehenden Befehlen gesendet. Wenn beispielsweise ein herstellerspezifischer Befehl an das Gerät gesendet wird, um statistische Informationen abzurufen, die nicht spezifikationsdefiniert sind, sollte es kein Risiko geben, das Verhalten oder die Fähigkeit des Geräts zum Ausführen von E/A-Befehlen zu ändern. Solche Anforderungen können parallel zu E/A-Anforderungen ausgeführt werden, und es ist kein Anhalten und Fortsetzen erforderlich.
+**Andernfalls** wird der Befehl mit anderen befehlslos ausstehenden Befehlen gesendet. Wenn beispielsweise ein herstellerspezifischer Befehl an das Gerät gesendet wird, um statistische Informationen abzurufen, die nicht spezifikationsdefiniert sind, sollte es kein Risiko geben, das Verhalten oder die Fähigkeit des Geräts zum Ausführen von E/A-Befehlen zu ändern. Solche Anforderungen könnten parallel zu E/A-Anforderungen ausgeführt werden, und es wäre kein Anhalten und Fortsetzen erforderlich.
 
 ### <a name="using-ioctl_storage_protocol_command-to-send-commands"></a>Verwenden des IOCTL \_ STORAGE \_ \_ PROTOCOL-BEFEHLs zum Senden von Befehlen
 
@@ -164,39 +164,39 @@ typedef struct _STORAGE_PROTOCOL_COMMAND {
 
 
 
-Der anbieterspezifische Befehl, der gesendet werden soll, sollte im oben hervorgehobenen Feld aufgefüllt werden. Beachten Sie erneut, dass das Befehlseffektprotokoll für Pass-Through-Befehle implementiert werden muss. Insbesondere müssen diese Befehle als unterstützt im Befehlseffektprotokoll gemeldet werden (weitere Informationen finden Sie im vorherigen Abschnitt). Beachten Sie auch, dass PRP-Felder treiberspezifisch sind, daher können Anwendungen, die Befehle senden, diese als 0 (0) beenden.
+Der anbieterspezifische Befehl, der gesendet werden soll, sollte im oben hervorgehobenen Feld aufgefüllt werden. Beachten Sie erneut, dass das Befehlseffektprotokoll für Pass-Through-Befehle implementiert werden muss. Insbesondere müssen diese Befehle im Befehlseffektprotokoll als unterstützt gemeldet werden (weitere Informationen finden Sie im vorherigen Abschnitt). Beachten Sie auch, dass PRP-Felder treiberspezifisch sind, daher können Anwendungen, die Befehle senden, diese als 0 (0) beenden.
 
-Schließlich ist diese Pass-Through-IOCTL für das Senden herstellerspezifischer Befehle vorgesehen. Diese Pass-Through-IOCTL sollte nicht verwendet werden, um andere administrator- oder anbieterspezifische NVMe-Befehle wie Identify zu senden. Beispielsweise sollte **IOCTL \_ STORAGE QUERY \_ \_ PROPERTY** zum Identifizieren oder Abrufen von Protokollseiten verwendet werden. Weitere Informationen finden Sie im nächsten Abschnitt [Protokollspezifische Abfragen.](/windows)
+Schließlich ist diese Pass-Through-IOCTL für das Senden anbieterspezifischer Befehle vorgesehen. Diese Pass-Through-IOCTL sollte nicht verwendet werden, um andere administrator- oder herstellerspezifische NVMe-Befehle wie z. B. Identify zu senden. Beispielsweise sollte **IOCTL \_ STORAGE QUERY \_ \_ PROPERTY** zum Identifizieren oder Abfragen von Protokollseiten verwendet werden. Weitere Informationen finden Sie im nächsten Abschnitt [Protokollspezifische Abfragen.](/windows)
 
-### <a name="dont-update-firmware-through-the-pass-through-mechanism"></a>Aktualisieren Sie die Firmware nicht über den Pass-Through-Mechanismus.
+### <a name="dont-update-firmware-through-the-pass-through-mechanism"></a>Firmware nicht über den Pass-Through-Mechanismus aktualisieren
 
 Firmwaredownload- und Aktivierungsbefehle sollten nicht per Pass-Through gesendet werden. **IOCTL \_ STORAGE \_ PROTOCOL \_ COMMAND** sollte nur für anbieterspezifische Befehle verwendet werden.
 
-Verwenden Sie stattdessen die folgenden allgemeinen Speicher-IOCTLs (eingeführt in Windows 10), um Anwendungen zu vermeiden, die direkt die \_ SCSI-Miniportversion der Firmware-IOCTL verwenden. Storage Treiber übersetzen die IOCTL entweder in einen SCSI-Befehl oder die \_ SCSI-Miniportversion von IOCTL in den Miniport.
+Verwenden Sie stattdessen die folgenden allgemeinen Speicher-IOCTLs (eingeführt in Windows 10), um zu vermeiden, dass Anwendungen direkt die SCSI-Miniportversion der \_ Firmware-IOCTL verwenden. Storage-Treiber übersetzt die IOCTL entweder in einen SCSI-Befehl oder die SCSI-Miniportversion von \_ IOCTL in den Miniport.
 
-Diese IOCTLs werden für die Entwicklung von Firmwareupgradetools in Windows 10 und Windows Server 2016 empfohlen:
+Diese IOCTLs werden für die Entwicklung von Firmwareupgradetools in Windows 10 und Windows Server 2016:
 
--   [**\_IOCTL-SPEICHERFIRMWARE \_ \_ – ABRUFEN VON \_ INFORMATIONEN**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
--   [**HERUNTERLADEN DER \_ IOCTL-SPEICHERFIRMWARE \_ \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
--   [**AKTIVIEREN DER \_ IOCTL-SPEICHERFIRMWARE \_ \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
+-   [**\_IOCTL-SPEICHERFIRMWARE \_ \_ – \_ GET-INFORMATIONEN**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
+-   [**HERUNTERLADEN DER \_ \_ IOCTL-SPEICHERFIRMWARE \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
+-   [**IOCTL \_ STORAGE \_ FIRMWARE \_ ACTIVATE**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
 
-Zum Abrufen von Speicherinformationen und Aktualisieren der Firmware unterstützt Windows auch PowerShell-Cmdlets, um dies schnell zu tun:
+Zum Abrufen von Speicherinformationen und Aktualisieren der Firmware unterstützt Windows auch PowerShell-Cmdlets, um dies schnell zu erreichen:
 
 -   `Get-StorageFirmwareInfo`
 -   `Update-StorageFirmware `
 
 > [!Note]  
-> Um die Firmware auf NVMe in Windows 8.1 zu aktualisieren, verwenden Sie IOCTL \_ SCSI \_ MINIPORT \_ FIRMWARE. Diese IOCTL wurde nicht auf Windows 7 zurückportiert. Weitere Informationen finden Sie unter [Aktualisieren der Firmware für ein NVMe-Gerät in Windows 8.1](/windows-hardware/drivers/storage/upgrading-firmware-for-an-nvme-device).
+> Verwenden Sie IOCTL SCSI MINIPORT FIRMWARE, um die Firmware auf NVMe in Windows 8.1 \_ \_ \_ aktualisieren. Diese IOCTL wurde nicht auf Windows 7 zurückportiert. Weitere Informationen finden Sie unter [Aktualisieren der Firmware für ein NVMe-Gerät in Windows 8.1](/windows-hardware/drivers/storage/upgrading-firmware-for-an-nvme-device).
 
  
 
 ### <a name="returning-errors-through-the-pass-through-mechanism"></a>Zurückgeben von Fehlern über den Pass-Through-Mechanismus
 
-Ähnlich wie bei SCSI- und ATA-Pass-Through-IOCTLs gibt die IOCTL zurück, wenn ein Befehl/eine Anforderung an den Miniport oder das Gerät gesendet wird, wenn sie erfolgreich war oder nicht. In der [**STORAGE \_ PROTOCOL \_ COMMAND-Struktur**](/windows/desktop/api/winioctl/ns-winioctl-storage_protocol_command) gibt die IOCTL den Status über das Feld **ReturnStatus** zurück.
+Ähnlich wie bei SCSI- und ATA-Pass-Through-IOCTLs gibt IOCTL zurück, wenn ein Befehl/eine Anforderung an den Miniport oder das Gerät gesendet wird, wenn er erfolgreich war oder nicht. In der [**STORAGE \_ PROTOCOL \_ COMMAND-Struktur**](/windows/desktop/api/winioctl/ns-winioctl-storage_protocol_command) gibt die IOCTL den Status über das **Feld ReturnStatus** zurück.
 
-### <a name="example-sending-a-vendor-specific-command"></a>Beispiel: Senden eines herstellerspezifischen Befehls
+### <a name="example-sending-a-vendor-specific-command"></a>Beispiel: Senden eines anbieterspezifischen Befehls
 
-In diesem Beispiel wird ein beliebiger herstellerspezifischer Befehl (0xFF) per Pass-Through an ein NVMe-Laufwerk gesendet. Der folgende Code ordnet einen Puffer zu, initialisiert eine Abfrage und sendet dann den Befehl über DeviceIoControl an das Gerät.
+In diesem Beispiel wird ein beliebiger anbieterspezifischer Befehl (0xFF) per Pass-Through an ein NVMe-Laufwerk gesendet. Der folgende Code weist einen Puffer zu, initialisiert eine Abfrage und sendet den Befehl dann über DeviceIoControl an das Gerät.
 
 
 ```C++
@@ -239,13 +239,13 @@ In diesem Beispiel wird ein beliebiger herstellerspezifischer Befehl (0xFF) per 
 
 
 
-In diesem Beispiel wird erwartet, `protocolCommand->ReturnStatus == STORAGE_PROTOCOL_STATUS_SUCCESS` ob der Befehl auf dem Gerät erfolgreich ausgeführt wurde.
+In diesem Beispiel wird erwartet, `protocolCommand->ReturnStatus == STORAGE_PROTOCOL_STATUS_SUCCESS` dass der Befehl erfolgreich auf dem Gerät ausgeführt wurde.
 
 ## <a name="protocol-specific-queries"></a>Protokollspezifische Abfragen
 
-Windows 8.1 [**IOCTL STORAGE \_ \_ QUERY \_ PROPERTY**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) für den Datenabruf eingeführt. In Windows 10 wurde die IOCTL erweitert, um häufig angeforderte NVMe-Features wie **Get Log Pages,** **Get Features** und **Identify** zu unterstützen. Dies ermöglicht das Abrufen von NVMe-spezifischen Informationen zu Überwachungs- und Inventurzwecken.
+Windows 8.1 [**IOCTL STORAGE \_ \_ QUERY \_ PROPERTY für**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) den Datenabruf eingeführt. In Windows 10 wurde IOCTL erweitert, um häufig angeforderte NVMe-Features wie **Get Log Pages**, Get **Features** und Identify zu **unterstützen.** Dies ermöglicht das Abrufen von NVMe-spezifischen Informationen zu Überwachungs- und Inventurzwecken.
 
-Der Eingabepuffer für IOCTL, [**STORAGE \_ PROPERTY \_ QUERY**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) (aus Windows 10) ist hier dargestellt.
+Der Eingabepuffer für IOCTL, [**STORAGE \_ PROPERTY \_ QUERY**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) (von Windows 10) wird hier gezeigt.
 
 
 ```C++
@@ -258,15 +258,15 @@ typedef struct _STORAGE_PROPERTY_QUERY {
 
 
 
-Wenn Sie [**IOCTL \_ STORAGE QUERY \_ \_ PROPERTY**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) verwenden, um NVMe-protokollspezifische Informationen im [**STORAGE PROTOCOL DATA \_ \_ \_ DESCRIPTOR**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_data_descriptor)abzurufen, konfigurieren Sie die [**STORAGE PROPERTY \_ \_ QUERY-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) wie folgt:
+Wenn Sie [**IOCTL \_ STORAGE QUERY \_ \_ PROPERTY**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) verwenden, um protokollspezifische NVMe-Informationen im [**SPEICHERPROTOKOLL-DATENDESKRIPTOR \_ \_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_data_descriptor)abzurufen, konfigurieren Sie die [**STORAGE PROPERTY \_ \_ QUERY-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) wie folgt:
 
--   Zuordnen eines Puffers, der sowohl eine [**STORAGE \_ PROPERTY \_ QUERY-**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) als auch eine [**STORAGE PROTOCOL SPECIFIC \_ \_ \_ DATA-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) enthalten kann.
+-   Ordnen Sie einen Puffer zu, der sowohl eine [**STORAGE \_ PROPERTY \_ QUERY- als**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) auch eine STORAGE PROTOCOL SPECIFIC [**\_ \_ \_ DATA-Struktur enthalten**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) kann.
 
--   Legen Sie das **Feld PropertyID** für einen Controller bzw. eine Geräte-/Namespaceanforderung auf **StorageAdapterProtocolSpecificProperty** oder **StorageDeviceProtocolSpecificProperty** fest.
+-   Legen Sie **das Feld PropertyID** auf **StorageAdapterProtocolSpecificProperty** bzw. **StorageDeviceProtocolSpecificProperty** für eine Controller- bzw. Geräte-/Namespaceanforderung fest.
 
--   Legen Sie das Feld **QueryType** auf **PropertyStandardQuery** fest.
+-   Legen Sie **das Feld QueryType** auf **PropertyStandardQuery fest.**
 
--   Füllen Sie die [**\_ \_ SPEICHERPROTOKOLLSPEZIFISCHE \_ DATENstruktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) mit den gewünschten Werten aus. Der Anfang der **\_ \_ SPEICHERPROTOKOLLSPEZIFISCHEN \_ DATEN** ist das Feld **AdditionalParameters** von [**STORAGE PROPERTY \_ \_ QUERY**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query).
+-   Füllen Sie [**die \_ \_ SPEICHERPROTOKOLLSPEZIFISCHE \_ DATENstruktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) mit den gewünschten Werten aus. Der Anfang von **STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA** ist das **Feld AdditionalParameters** der [**STORAGE PROPERTY \_ \_ QUERY.**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query)
 
 Die [**\_ \_ SPEICHERPROTOKOLLSPEZIFISCHE \_ DATENstruktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) (aus Windows 10) ist hier dargestellt.
 
@@ -291,25 +291,25 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA {
 
 
 
-Um einen Typ von NVMe-protokollspezifischen Informationen anzugeben, konfigurieren Sie die [**STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) wie folgt:
+Um einen Typ von protokollspezifischen NVMe-Informationen anzugeben, konfigurieren Sie die [**\_ SPEICHERPROTOKOLLSPEZIFISCHE \_ \_ DATENstruktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_protocol_specific_data) wie folgt:
 
--   Legen Sie das **Feld ProtocolType** auf **ProtocolTypeNVMe** fest.
+-   Legen Sie **das Feld ProtocolType** auf **ProtocolTypeNVMe fest.**
 
--   Legen Sie das **Feld DataType** auf einen Enumerationswert fest, der durch [**STORAGE PROTOCOL \_ \_ NVME DATA \_ \_ TYPE**](/windows/desktop/api/WinIoCtl/ne-winioctl-storage_protocol_nvme_data_type)definiert wird:
+-   Legen Sie **das Feld DataType** auf einen Enumerationswert fest, der durch [**STORAGE PROTOCOL \_ \_ NVME DATA TYPE definiert \_ \_ wird:**](/windows/desktop/api/WinIoCtl/ne-winioctl-storage_protocol_nvme_data_type)
 
-    -   Verwenden Sie **NVMeDataTypeIdentify,** um Identify Controller-Daten oder Identify Namespace-Daten abzurufen.
-    -   Verwenden Sie **NVMeDataTypeLogPage,** um Protokollseiten (einschließlich SMART-/Integritätsdaten) abzurufen.
-    -   Verwenden Sie **NVMeDataTypeFeature,** um Features des NVMe-Laufwerks abzurufen.
+    -   Verwenden **Sie NVMeDataTypeIdentify,** um Controllerdaten zu identifizieren oder Namespacedaten zu identifizieren.
+    -   Verwenden **Sie NVMeDataTypeLogPage,** um Protokollseiten (einschließlich SMART-/Integritätsdaten) zu erhalten.
+    -   Verwenden **Sie NVMeDataTypeFeature,** um Features des NVMe-Laufwerks zu erhalten.
 
-Wenn **ProtocolTypeNVMe** als **ProtocolType** verwendet wird, können Abfragen protokollspezifischer Informationen parallel zu anderen E/A-Abfragen auf dem NVMe-Laufwerk abgerufen werden.
+Wenn **ProtocolTypeNVMe** als **ProtocolType** verwendet wird, können Abfragen für protokollspezifische Informationen parallel zu anderen E/A-Daten auf dem NVMe-Laufwerk abgerufen werden.
 
 > [!IMPORTANT]
-> Legen Sie für eine [**IOCTL_STORAGE_QUERY_PROPERTY,**](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property) die eine **STORAGE_PROPERTY_ID** von [**StorageAdapterProtocolSpecificProperty**](/windows/win32/api/winioctl/ne-winioctl-storage_property_id)verwendet und deren [**STORAGE_PROTOCOL_SPECIFIC_DATA-**](/windows/win32/api/winioctl/ns-winioctl-storage_protocol_specific_data) oder [**STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur**](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-storage_protocol_specific_data_ext) auf und festgelegt `ProtocolType=ProtocolTypeNvme` `DataType=NVMeDataTypeLogPage` ist, den ProtocolDataLength-Member dieser Struktur auf einen Mindestwert von 512 (Bytes) fest.
+> Legen [](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property) Sie für einen IOCTL_STORAGE_QUERY_PROPERTY, der eine **STORAGE_PROPERTY_ID** von [**StorageAdapterProtocolSpecificProperty**](/windows/win32/api/winioctl/ne-winioctl-storage_property_id)verwendet und dessen [**STORAGE_PROTOCOL_SPECIFIC_DATA-**](/windows/win32/api/winioctl/ns-winioctl-storage_protocol_specific_data) oder [**STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur**](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-storage_protocol_specific_data_ext) auf und festgelegt ist, den ProtocolDataLength-Member derselben Struktur auf einen Mindestwert von `ProtocolType=ProtocolTypeNvme` `DataType=NVMeDataTypeLogPage` 512 (Bytes) fest.
 
 
-Die folgenden Beispiele veranschaulichen NVMe-protokollspezifische Abfragen.
+In den folgenden Beispielen werden NVMe-protokollspezifische Abfragen veranschaulicht.
 
-### <a name="example-nvme-identify-query"></a>Beispiel: NVMe-Identifizierungsabfrage
+### <a name="example-nvme-identify-query"></a>Beispiel: NVMe-Abfrage "Identify"
 
 In diesem Beispiel wird die **Identify-Anforderung** an ein NVMe-Laufwerk gesendet. Der folgende Code initialisiert die Abfragedatenstruktur und sendet dann den Befehl über DeviceIoControl an das Gerät.
 
@@ -431,14 +431,14 @@ In diesem Beispiel wird die **Identify-Anforderung** an ein NVMe-Laufwerk gesend
 ```
 
 > [!IMPORTANT]
-> Legen Sie für eine [**IOCTL_STORAGE_QUERY_PROPERTY,**](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property) die eine **STORAGE_PROPERTY_ID** von [**StorageAdapterProtocolSpecificProperty**](/windows/win32/api/winioctl/ne-winioctl-storage_property_id)verwendet und deren [**STORAGE_PROTOCOL_SPECIFIC_DATA-**](/windows/win32/api/winioctl/ns-winioctl-storage_protocol_specific_data) oder [**STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur**](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-storage_protocol_specific_data_ext) auf und festgelegt `ProtocolType=ProtocolTypeNvme` `DataType=NVMeDataTypeLogPage` ist, den ProtocolDataLength-Member dieser Struktur auf einen Mindestwert von 512 (Bytes) fest.
+> Legen [](/windows/win32/api/winioctl/ni-winioctl-ioctl_storage_query_property) Sie für einen IOCTL_STORAGE_QUERY_PROPERTY, der eine **STORAGE_PROPERTY_ID** von [**StorageAdapterProtocolSpecificProperty**](/windows/win32/api/winioctl/ne-winioctl-storage_property_id)verwendet und dessen [**STORAGE_PROTOCOL_SPECIFIC_DATA-**](/windows/win32/api/winioctl/ns-winioctl-storage_protocol_specific_data) oder [**STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur**](/windows-hardware/drivers/ddi/ntddstor/ns-ntddstor-storage_protocol_specific_data_ext) auf und festgelegt ist, den ProtocolDataLength-Member derselben Struktur auf einen Mindestwert von `ProtocolType=ProtocolTypeNvme` `DataType=NVMeDataTypeLogPage` 512 (Bytes) fest.
 
 
-Beachten Sie, dass der Aufrufer einen einzelnen Puffer zuordnen muss, der STORAGE \_ PROPERTY QUERY und die Größe der \_ \_ \_ SPEICHERPROTOKOLLSPEZIFISCHEN DATEN \_ enthält. In diesem Beispiel wird der gleiche Puffer für die Eingabe und Ausgabe der Eigenschaftenabfrage verwendet. Aus diesem Grund hat der zugeordnete Puffer die Größe "FIELD \_ OFFSET(STORAGE \_ PROPERTY \_ QUERY, AdditionalParameters) + sizeof(STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA) + NVME \_ MAX LOG \_ \_ SIZE". Obwohl separate Puffer sowohl für die Eingabe als auch für die Ausgabe zugeordnet werden können, empfehlen wir die Verwendung eines einzelnen Puffers, um NVMe-bezogene Informationen abzufragen.
+Beachten Sie, dass der Aufrufer einen einzelnen Puffer zuordnen muss, der STORAGE PROPERTY QUERY und die Größe der \_ \_ \_ \_ SPEICHERPROTOKOLLSPEZIFISCHEN \_ DATEN enthält. In diesem Beispiel wird der gleiche Puffer für die Eingabe und Ausgabe der Eigenschaftenabfrage verwendet. Aus diesem Grund hat der zugeordnete Puffer die Größe "FIELD \_ OFFSET(STORAGE \_ PROPERTY \_ QUERY, AdditionalParameters) + sizeof(STORAGE \_ PROTOCOL SPECIFIC \_ \_ DATA) + NVME \_ MAX LOG \_ \_ SIZE". Obwohl separate Puffer sowohl für die Eingabe als auch für die Ausgabe zugeordnet werden könnten, wird empfohlen, einen einzelnen Puffer zum Abfragen von NVMe-bezogenen Informationen zu verwenden.
 
-### <a name="example-nvme-get-log-pages-query"></a>Beispiel: NVMe-Abfrage "Protokollseiten abrufen"
+### <a name="example-nvme-get-log-pages-query"></a>Beispiel: NVMe Get Log Pages-Abfrage
 
-In diesem Beispiel wird die Anforderung **Protokollseiten abrufen** basierend auf dem vorherigen an ein NVMe-Laufwerk gesendet. Der folgende Code bereitet die Abfragedatenstruktur vor und sendet dann den Befehl über DeviceIoControl an das Gerät.
+In diesem Beispiel wird basierend auf dem vorherigen die **Anforderung Protokollseiten** erhalten an ein NVMe-Laufwerk gesendet. Der folgende Code bereitet die Abfragedatenstruktur vor und sendet den Befehl dann über DeviceIoControl an das Gerät.
 
 
 ```C++
@@ -512,9 +512,9 @@ In diesem Beispiel wird die Anforderung **Protokollseiten abrufen** basierend au
 
 
 
-### <a name="example-nvme-get-features-query"></a>Beispiel: NVMe-Abfrage "Get Features"
+### <a name="example-nvme-get-features-query"></a>Beispiel: NVMe-Abfrage "Features erhalten"
 
-In diesem Beispiel wird die Anforderung **Features abrufen** basierend auf dem vorherigen an ein NVMe-Laufwerk gesendet. Der folgende Code bereitet die Abfragedatenstruktur vor und sendet dann den Befehl über DeviceIoControl an das Gerät.
+In diesem Beispiel wird basierend auf dem vorherigen die Anforderung **"Features** erhalten" an ein NVMe-Laufwerk gesendet. Der folgende Code bereitet die Abfragedatenstruktur vor und sendet den Befehl dann über DeviceIoControl an das Gerät.
 
 
 ```C++
@@ -607,13 +607,13 @@ typedef struct _STORAGE_PROPERTY_SET {
 } STORAGE_PROPERTY_SET, *PSTORAGE_PROPERTY_SET;
 ```
 
-Wenn Sie IOCTL_STORAGE_SET_PROPERTY zum Festlegen des NVMe-Features verwenden, konfigurieren Sie die STORAGE_PROPERTY_SET-Struktur wie folgt:
+Wenn Sie IOCTL_STORAGE_SET_PROPERTY NVMe-Feature verwenden, konfigurieren Sie die STORAGE_PROPERTY_SET wie folgt:
 
--   Zuordnen eines Puffers, der sowohl eine STORAGE_PROPERTY_SET als auch eine STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur enthalten kann.
--   Legen Sie das Feld PropertyID für einen Controller bzw. eine Geräte-/Namespaceanforderung auf StorageAdapterProtocolSpecificProperty oder StorageDeviceProtocolSpecificProperty fest.
--   Füllen Sie die STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur mit den gewünschten Werten aus. Der Anfang des STORAGE_PROTOCOL_SPECIFIC_DATA_EXT ist das Feld AdditionalParameters von STORAGE_PROPERTY_SET.
+-   Ordnen Sie einen Puffer zu, der sowohl eine STORAGE_PROPERTY_SET als auch eine STORAGE_PROTOCOL_SPECIFIC_DATA_EXT enthält.
+-   Legen Sie das Feld PropertyID auf StorageAdapterProtocolSpecificProperty bzw. StorageDeviceProtocolSpecificProperty für eine Controller- bzw. Geräte-/Namespaceanforderung fest.
+-   Füllen Sie STORAGE_PROTOCOL_SPECIFIC_DATA_EXT struktur mit den gewünschten Werten aus. Der Anfang des STORAGE_PROTOCOL_SPECIFIC_DATA_EXT ist das Feld AdditionalParameters der STORAGE_PROPERTY_SET.
 
-Die STORAGE_PROTOCOL_SPECIFIC_DATA_EXT Struktur ist hier dargestellt.
+Die STORAGE_PROTOCOL_SPECIFIC_DATA_EXT ist hier dargestellt.
 
 ```C++
 typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA_EXT {
@@ -638,13 +638,13 @@ typedef struct _STORAGE_PROTOCOL_SPECIFIC_DATA_EXT {
 } STORAGE_PROTOCOL_SPECIFIC_DATA_EXT, *PSTORAGE_PROTOCOL_SPECIFIC_DATA_EXT;
 ```
 
-Um einen typisierten NVMe-Featuretyp anzugeben, konfigurieren Sie die STORAGE_PROTOCOL_SPECIFIC_DATA_EXT-Struktur wie folgt:
+Um einen festzulegenden NVMe-Featuretyp anzugeben, konfigurieren Sie die STORAGE_PROTOCOL_SPECIFIC_DATA_EXT wie folgt:
 -   Legen Sie das Feld ProtocolType auf ProtocolTypeNvme fest.
--   Legen Sie das Feld DataType auf den Enumerationswert NVMeDataTypeFeature fest, der durch STORAGE_PROTOCOL_NVME_DATA_TYPE definiert wird.
+-   Legen Sie das Feld DataType auf den Enumerationswert NVMeDataTypeFeature fest, der von STORAGE_PROTOCOL_NVME_DATA_TYPE;
 
 In den folgenden Beispielen wird der NVMe-Featuresatz veranschaulicht.
 
-### <a name="example-nvme-set-features"></a>Beispiel: NVMe-Set-Features
+### <a name="example-nvme-set-features"></a>Beispiel: NVMe-Satzfeatures
 
 In diesem Beispiel wird die Anforderung Features festlegen an ein NVMe-Laufwerk gesendet. Der folgende Code bereitet die Set-Datenstruktur vor und sendet dann den Befehl über DeviceIoControl an das Gerät.
 
@@ -702,17 +702,17 @@ In diesem Beispiel wird die Anforderung Features festlegen an ein NVMe-Laufwerk 
 
 ## <a name="temperature-queries"></a>Temperaturabfragen
 
-In Windows 10 kann [**IOCTL \_ STORAGE \_ QUERY \_ PROPERTY**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) auch zum Abfragen von Temperaturdaten von NVMe-Geräten verwendet werden.
+In Windows 10 [**kann IOCTL \_ STORAGE QUERY \_ \_ PROPERTY**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_query_property) auch zum Abfragen von Temperaturdaten von NVMe-Geräten verwendet werden.
 
-Um Temperaturinformationen von einem NVMe-Laufwerk im [**\_ \_ \_ SPEICHERTEMPERATURDATENDESKRIPTOR**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_data_descriptor)abzurufen, konfigurieren Sie die [**STORAGE \_ PROPERTY \_ QUERY-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) wie folgt:
+Um Temperaturinformationen von einem NVMe-Laufwerk im [**\_ \_ SPEICHERTEMPERATURDATEN-DESKRIPTOR \_**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_data_descriptor)abzurufen, konfigurieren Sie die [**STORAGE \_ PROPERTY \_ QUERY-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) wie folgt:
 
--   Zuordnen eines Puffers, der eine [**STORAGE \_ PROPERTY \_ QUERY-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) enthalten kann.
+-   Ordnen Sie einen Puffer zu, der eine [**STORAGE \_ PROPERTY \_ QUERY-Struktur enthalten**](/windows/desktop/api/WinIoCtl/ns-winioctl-storage_property_query) kann.
 
--   Legen Sie das **Feld PropertyID** für einen Controller bzw. eine Geräte-/Namespaceanforderung auf **StorageAdapterTemperatureProperty** oder **StorageDeviceTemperatureProperty** fest.
+-   Legen Sie **das Feld PropertyID** auf **StorageAdapterTemperatureProperty** bzw. **StorageDeviceTemperatureProperty** für eine Controller- bzw. Geräte-/Namespaceanforderung fest.
 
--   Legen Sie das Feld **QueryType** auf **PropertyStandardQuery** fest.
+-   Legen Sie **das Feld QueryType** auf **PropertyStandardQuery fest.**
 
-Die [**STORAGE \_ TEMPERATURE \_ INFO-Struktur**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) (aus Windows 10) ist hier dargestellt.
+Die [**\_ \_ SPEICHERTEMPERATUR-INFO-Struktur**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) (von Windows 10) wird hier gezeigt.
 
 
 ```C++
@@ -738,13 +738,13 @@ typedef struct _STORAGE_TEMPERATURE_INFO {
 
 Befehle, die Geräteattribute bearbeiten oder sich potenziell auf das Geräteverhalten auswirken, sind für das Betriebssystem schwieriger zu behandeln. Wenn sich Geräteattribute zur Laufzeit ändern, während E/A verarbeitet wird, können Synchronisierungs- oder Datenintegritätsprobleme auftreten, wenn sie nicht ordnungsgemäß behandelt werden.
 
-Der **NVMe-Befehl Set-Features** ist ein gutes Beispiel für einen Befehl zum Ändern des Verhaltens. Sie ermöglicht die Änderung des Vermittlungsmechanismus und die Festlegung von Temperaturschwellenwerten. Um sicherzustellen, dass während des Flugs keine Daten gefährdet sind, wenn verhaltensbezogene Set-Befehle gesendet werden, halten Windows alle E/A-Datenübertragungen an das NVMe-Gerät an, leeren Warteschlangen und Leeren von Puffern. Sobald der Set-Befehl erfolgreich ausgeführt wurde, wird die E/A fortgesetzt (sofern möglich). Wenn E/A nicht fortgesetzt werden kann, ist möglicherweise eine Geräterücksetzung erforderlich.
+Der **NVMe-Befehl Set-Features** ist ein gutes Beispiel für einen Befehl zum Ändern des Verhaltens. Sie ermöglicht die Änderung des Vermittlungsmechanismus und die Festlegung von Temperaturschwellenwerte. Um sicherzustellen, dass während des Flugs ausgeführte Daten nicht gefährdet sind, wenn befehle, die sich auf das Verhalten beeinflussen, gesendet werden, hält Windows alle E/A-Daten auf dem NVMe-Gerät an, entleert Warteschlangen und leert Puffer. Nachdem der set-Befehl erfolgreich ausgeführt wurde, wird die E/A (sofern möglich) fortgesetzt. Wenn E/A nicht fortgesetzt werden kann, ist möglicherweise eine Gerätezurücksetzung erforderlich.
 
-### <a name="setting-temperature-thresholds"></a>Festlegen von Temperaturschwellenwerten
+### <a name="setting-temperature-thresholds"></a>Festlegen von Temperaturschwellenwert
 
-Windows 10 [**IOCTL STORAGE \_ \_ SET \_ TEMPERATURE \_ THRESHOLD**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_set_temperature_threshold)eingeführt, eine IOCTL zum Abrufen und Festlegen von Temperaturschwellenwerten. Sie können es auch verwenden, um die aktuelle Temperatur des Geräts abzurufen. Der Eingabe-/Ausgabepuffer für diese IOCTL ist die [**STORAGE \_ TEMPERATURE \_ INFO-Struktur**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) aus dem vorherigen Codeabschnitt.
+Windows 10 [**IOCTL \_ STORAGE \_ SET TEMPERATURE \_ \_ THRESHOLD**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_set_temperature_threshold), eine IOCTL zum Abrufen und Festlegen von Temperaturschwellenwerte. Sie können sie auch verwenden, um die aktuelle Temperatur des Geräts zu erhalten. Der Eingabe-/Ausgabepuffer für diese IOCTL ist die [**STORAGE \_ TEMPERATURE \_ INFO-Struktur**](/windows/desktop/api/WinIoctl/ns-winioctl-storage_temperature_info) aus dem vorherigen Codeabschnitt.
 
-### <a name="example-setting-over-threshold-temperature"></a>Beispiel: Festlegen der Überschwellentemperatur
+### <a name="example-setting-over-threshold-temperature"></a>Beispiel: Festlegen der Temperatur über dem Schwellenwert
 
 In diesem Beispiel wird die Überschwellentemperatur eines NVMe-Laufwerks festgelegt. Der folgende Code bereitet den Befehl vor und sendet ihn dann über DeviceIoControl an das Gerät.
 
@@ -782,7 +782,7 @@ In diesem Beispiel wird die Überschwellentemperatur eines NVMe-Laufwerks festge
 
 ### <a name="setting-vendor-specific-features"></a>Festlegen herstellerspezifischer Features
 
-Ohne das Befehlseffektprotokoll hat der Treiber keine Kenntnis der Auswirkungen des Befehls. Aus diesem Grund ist das Befehlseffektprotokoll erforderlich. Damit kann das Betriebssystem ermitteln, ob ein Befehl eine hohe Auswirkung hat und parallel zu anderen Befehlen an das Laufwerk gesendet werden kann.
+Ohne das Befehlseffektprotokoll hat der Treiber keine Kenntnis über die Auswirkungen des Befehls. Aus diesem Grund ist das Command Effects-Protokoll erforderlich. Damit kann das Betriebssystem ermitteln, ob ein Befehl eine hohe Auswirkung hat und parallel zu anderen Befehlen an das Laufwerk gesendet werden kann.
 
 Das Befehlseffektprotokoll ist noch nicht präzise genug, um anbieterspezifische **Set-Features-Befehle zu** umfassen. Aus diesem Grund ist es noch nicht möglich, anbieterspezifische **Set-Features-Befehle zu** senden. Es ist jedoch möglich, den weiter oben erläuterten Pass-Through-Mechanismus zu verwenden, um anbieterspezifische Befehle zu senden. Weitere Informationen finden Sie unter [Pass-Through-Mechanismus](#pass-through-mechanism).
 
@@ -792,7 +792,7 @@ Die folgenden Dateien sind für die NVMe-Entwicklung relevant. Diese Dateien sin
 
 
 
-| Headerdatei    | BESCHREIBUNG                                                                             |
+| Headerdatei    | Beschreibung                                                                             |
 |----------------|-----------------------------------------------------------------------------------------|
 | **ntddstor.h** | Definiert Konstanten und Typen für den Zugriff auf die Speicherklassentreiber aus dem Kernelmodus.   |
 | **nvme.h**     | Für andere NVMe-bezogene Datenstrukturen.                                                 |

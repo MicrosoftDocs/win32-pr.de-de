@@ -1,28 +1,28 @@
 ---
-title: "\"Write texmlsimpleexample\""
+title: WriteXmlSimpleExample
 description: In diesem Beispiel wird ein einfaches XML-Dokument geschrieben.
 ms.assetid: 9af95856-cd17-414a-aa4c-6a9927acf81e
 keywords:
-- "\"Write texmlsimpleexample\"-Webdienste für Windows"
-- Wwsapi
+- WriteXmlSimpleExample-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5456d9a8d571e0ae669ec8f910c14dc9a417911
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 66d2bebc9f4b6600af3a6131afef7f2f5c76c72856a102cbaee9c79d366c6b93
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109730"
 ---
-# <a name="writexmlsimpleexample"></a>"Write texmlsimpleexample"
+# <a name="writexmlsimpleexample"></a>WriteXmlSimpleExample
 
 In diesem Beispiel wird ein einfaches XML-Dokument geschrieben.
 
--   ["Schreib texmlsimple. cpp"](#writexmlsimplecpp)
+-   [WriteXmlSimple.cpp](#writexmlsimplecpp)
 -   [Makefile](#makefile)
 
-## <a name="writexmlsimplecpp"></a>"Schreib texmlsimple. cpp"
+## <a name="writexmlsimplecpp"></a>WriteXmlSimple.cpp
 
 
 ```C++
@@ -235,9 +235,9 @@ clean:
 
 ```
 
- 
+ 
 
- 
+ 
 
 
 

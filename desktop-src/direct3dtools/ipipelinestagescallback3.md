@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 211b6c35ef0333dfd6c4ad1f8ef04f1997db4ef1
-ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
+ms.openlocfilehash: 041123f8b7d8bbffec3aaddcf81184dc48171097
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122787096"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622926"
 ---
 # <a name="span-idvspixengineipipelinestagescallback3spanipipelinestagescallback3-interface"></a><span id="vspixengine.ipipelinestagescallback3"></span>IPipeLineStagesCallback3-Schnittstelle
 
 Rückruf für Pipelinestufendaten.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 Die **IPipeLineStagesCallback3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPipeLineStagesCallback3** verfügt auch über diese Membertypen:
 
@@ -38,11 +38,11 @@ Die **IPipeLineStagesCallback3-Schnittstelle** erbt von der [**IUnknown-Schnitts
 
 Die **IPipeLineStagesCallback3-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipipelinestagescallback3-meshfilereadycallback-bstr"><strong>MeshFileReadyCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Mesh-Informationen benachrichtigt, die von der zugeordneten Anforderung geschrieben wurden.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipipelinestagescallback3-meshfilereadycallback-bstr"><strong>MeshFileReadyCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von Mesh-Informationen benachrichtigt, die von der zugeordneten Anforderung geschrieben wurden.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

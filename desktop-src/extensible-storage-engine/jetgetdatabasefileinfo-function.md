@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetgetdatabasefileingefo-Funktion'
-title: Jetgetdatabasefilinput Info-Funktion
+description: Weitere Informationen finden Sie unter JetGetDatabaseFileInfo-Funktion.
+title: JetGetDatabaseFileInfo-Funktion
 TOCTitle: JetGetDatabaseFileInfo Function
 ms:assetid: 457079d9-46c9-4da0-a35b-0c11fca7ed5b
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269239(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2ac94dd6f088a82c932aaca5b60ec16f49644f92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b19d783480a8d82485bce32689b8d49e046b0285
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362778"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623506"
 ---
-# <a name="jetgetdatabasefileinfo-function"></a>Jetgetdatabasefilinput Info-Funktion
+# <a name="jetgetdatabasefileinfo-function"></a>JetGetDatabaseFileInfo-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgetdatabasefileinfo-function"></a>Jetgetdatabasefilinput Info-Funktion
+## <a name="jetgetdatabasefileinfo-function"></a>JetGetDatabaseFileInfo-Funktion
 
-Die **jetgetdatabasefileinfo** -Funktion Ruft verschiedene Arten von Informationen über die Datenbank ab. Diese API kann aufgerufen werden, während eine Datenbank angefügt oder Online ist (mit [jetgetdatabaseinfo](./jetgetdatabaseinfo-function.md)) oder wenn die Datenbank oder Datenbank-Engine offline ist (mit **jetgetdatabasefileinfo**).
+Die **JetGetDatabaseFileInfo-Funktion** ruft verschiedene Arten von Informationen über die Datenbank ab. Diese API kann aufgerufen werden, während eine Datenbank angefügt oder online ist (mit [JetGetDatabaseInfo)](./jetgetdatabaseinfo-function.md)oder während die Datenbank oder Datenbank-Engine offline ist (mit **JetGetDatabaseFileInfo**).
 
 ```cpp
     JET_ERR JET_API JetGetDatabaseFileInfo(
@@ -47,32 +47,32 @@ Die **jetgetdatabasefileinfo** -Funktion Ruft verschiedene Arten von Information
 
 ### <a name="parameters"></a>Parameter
 
-*szdatabasename*
+*szDatabaseName*
 
 Der Pfad der Datenbank, aus der die Informationen abgerufen werden sollen.
 
-*pvresult*
+*pvResult*
 
-Zeiger auf einen Puffer, der die angegebenen Informationen empfängt. Die Größe des Puffers in Bytes wird in *cbmax* übermittelt.
+Zeiger auf einen Puffer, der die angegebenen Informationen empfängt. Die Größe des Puffers in Bytes wird in *cbMax* übergeben.
 
-Wenn diese Funktion fehlschlägt, ist der Inhalt von *pvresult* nicht definiert.
+Wenn diese Funktion fehlschlägt, ist der Inhalt von *pvResult* nicht definiert.
 
-Die in *pvresult* gespeicherten Informationen hängen von *infolevel* ab.
+Die in *pvResult* gespeicherten Informationen hängen von *InfoLevel ab.*
 
-*cbmax*
+*cbMax*
 
-Die Größe (in Bytes) des Puffers, der in *pvresult* übergeben wird.
+Die Größe des in *pvResult* übergebenen Puffers in Bytes.
 
-*Infolevel*
+*InfoLevel*
 
-*Infolevel* gibt an, welche Art von Informationen über die angegebene Datenbank abgerufen werden sollen. Dies wirkt sich darauf aus, wie *pvresult* interpretiert wird. Einige *infolevel* -Objekte sind nur in der Offline Version (**jetgetdatabasefileinfo**) oder Online ([jetgetdatabaseinfo](./jetgetdatabaseinfo-function.md)) der API verfügbar.
+*InfoLevel* gibt an, welcher Informationstyp über die angegebene Datenbank abgerufen werden soll. Dies wirkt sich darauf aus, wie *pvResult* interpretiert wird. Einige *InfoLevel-Objekte* sind nur in der Offlineversion **(JetGetDatabaseFileInfo)** oder online ([JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md)) der API verfügbar.
 
-Wenn der bereitgestellte *pvresult* -Puffer zu klein ist, werden je nach *infolevel* entweder JET_errInvalidBufferSize oder JET_errBufferTooSmall zurückgegeben.
+Wenn der *bereitgestellte pvResult-Puffer* zu klein ist, werden je nach *InfoLevel* entweder JET_errInvalidBufferSize oder JET_errBufferTooSmall zurückgegeben.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -83,55 +83,55 @@ Wenn der bereitgestellte *pvresult* -Puffer zu klein ist, werden je nach *infole
 <tbody>
 <tr class="odd">
 <td><p>JET_DbInfoFilesize</p></td>
-<td><p><em>pvresult</em> wird als QWORD (8 Bytes) interpretiert. Gibt die Größe der Datenbank in Bytes zurück.</p></td>
+<td><p><em>pvResult</em> wird als QWORD (8 Bytes) interpretiert. Gibt die Größe der Datenbank in Bytes zurück.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_DbInfoUpgrade</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg294114(v=exchg.10).md">JET_DBINFOUPGRADE</a>interpretiert. Die <a href="gg294114(v=exchg.10).md">JET_DBINFOUPGRADE</a> Struktur wird mit Informationen aufgefüllt, die sich auf die angegebene Datenbank beziehen.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg294114(v=exchg.10).md">JET_DBINFOUPGRADE</a>interpretiert. Die <a href="gg294114(v=exchg.10).md">JET_DBINFOUPGRADE-Struktur</a> wird mit Informationen zur angegebenen Datenbank aufgefüllt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_DbInfoMisc</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg294147(v=exchg.10).md">JET_DBINFOMISC</a>interpretiert. Die <a href="gg294147(v=exchg.10).md">JET_DBINFOMISC</a> Struktur wird mit Informationen aufgefüllt, die sich auf die angegebene Datenbank beziehen.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg294147(v=exchg.10).md">JET_DBINFOMISC</a>interpretiert. Die <a href="gg294147(v=exchg.10).md">JET_DBINFOMISC-Struktur</a> wird mit Informationen zur angegebenen Datenbank aufgefüllt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_DbInfoDBInUse</p></td>
-<td><p><em>pvresult</em> wird als bool (4 Bytes) interpretiert. Dadurch wird zurückgegeben, ob die Datenbank-Engine zurzeit über geöffnete oder angefügte Datenbanken verfügt.</p>
-<p><strong>Windows XP:  </strong> Dieser Wert wird in Windows XP eingeführt.</p></td>
+<td><p><em>pvResult</em> wird als BOOL (4 Bytes) interpretiert. Dadurch wird zurückgegeben, ob die Datenbank-Engine derzeit über geöffnete oder angefügte Datenbanken verfügt.</p>
+<p><strong>Windows XP:</strong> Dieser Wert wird in Windows XP eingeführt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_DbInfoPageSize</p></td>
-<td><p><em>pvresult</em> wird als Ganzzahl ohne Vorzeichen long interpretiert. Dadurch wird die Seitengröße der Datenbank in Bytes zurückgegeben.</p>
-<p><strong>Windows XP:  </strong> Dieser Wert wird in Windows XP eingeführt.</p></td>
+<td><p><em>pvResult</em> wird als unsigned long interpretiert. Dadurch wird die Seitengröße der Datenbank in Bytes zurückgegeben.</p>
+<p><strong>Windows XP:</strong> Dieser Wert wird in Windows XP eingeführt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_DbInfoCp</p></td>
-<td><p>Diese <em>infolevels</em> werden noch nicht unterstützt, und es werden Standardwerte zurückgegeben. Verwenden Sie diese <em>infolevels</em>nicht.</p></td>
+<td><p>Diese <em>InfoLevels</em> werden noch nicht unterstützt und geben Standardwerte zurück. Verwenden Sie diese <em>InfoLevels</em>nicht.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_DbInfoCountry</p></td>
-<td><p>Diese <em>infolevels</em> werden noch nicht unterstützt, und es werden Standardwerte zurückgegeben. Verwenden Sie diese <em>infolevels</em>nicht.</p></td>
+<td><p>Diese <em>InfoLevels</em> werden noch nicht unterstützt und geben Standardwerte zurück. Verwenden Sie diese <em>InfoLevels</em>nicht.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_DbInfoCollate</p></td>
-<td><p>Identisch mit JET_DbInfoCp.</p></td>
+<td><p>Entspricht JET_DbInfoCp.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_DbInfoIsam</p></td>
-<td><p>Diese <em>infolevels</em> sind veraltet und werden zurzeit nicht unterstützt. Verwenden Sie diese <em>infolevels</em>nicht.</p></td>
+<td><p>Diese <em>InfoLevels</em> sind veraltet und werden derzeit nicht unterstützt. Verwenden Sie diese <em>InfoLevels</em>nicht.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_DbInfoConnect</p></td>
-<td><p>Identisch mit JET_DbInfoIsam.</p></td>
+<td><p>Entspricht JET_DbInfoIsam.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_DbInfoFileType</p></td>
-<td><p><strong>Windows Vista:  </strong> Dieser <em>infolevel</em> -Wert wird in Windows Vista eingeführt.</p>
-<p><em>pvresult</em> wird als Zeiger auf ein DWORD behandelt. Gibt einen Enumerationswert zurück, der angibt, welche Art von Datei das Modul als ist. Dateitypen sind in der folgenden Tabelle aufgeführt. Weitere Informationen zu diesen Dateitypen und deren Verwendung für die-Engine finden Sie unter <a href="gg294069(v=exchg.10).md">Extensible Storage Engine Files</a>.</p>
+<td><p><strong>Windows Vista:</strong> Dieser <em>InfoLevel-Wert</em> wird in Windows Vista eingeführt.</p>
+<p><em>pvResult</em> wird als Zeiger auf ein DWORD behandelt. Gibt einen Enumerationswert zurück, der angibt, welche Art von Datei die Engine als solche ansieht. Dateitypen sind in der folgenden Tabelle aufgeführt. Weitere Informationen zu diesen Dateitypen und deren Verwendung für die Engine finden Sie unter <a href="gg294069(v=exchg.10).md">Extensible Storage Engine Files</a>.</p>
 <div class="tableSection">
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -142,19 +142,19 @@ Wenn der bereitgestellte *pvresult* -Puffer zu klein ist, werden je nach *infole
 <tbody>
 <tr class="odd">
 <td><p>JET_filetypeUnknown</p></td>
-<td><p>Der Dateityp ist unbekannt, oder es handelt sich nicht um einen ESE-Dateityp.</p></td>
+<td><p>Der Dateityp ist unbekannt oder kein ESE-Dateityp.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_filetypeDatabase</p></td>
-<td><p>Bei der Datei handelt es sich um eine Datenbankdatei.</p></td>
+<td><p>Die Datei ist eine Datenbankdatei.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_filetypeLog</p></td>
-<td><p>Bei der Datei handelt es sich um eine Transaktionsprotokoll Datei.</p></td>
+<td><p>Die Datei ist eine Transaktionsprotokolldatei.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_filetypeCheckpoint</p></td>
-<td><p>Die Datei ist eine Prüf Punkt Datei.</p></td>
+<td><p>Die Datei ist eine Prüfpunktdatei.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_filetypeTempDatabase</p></td>
@@ -171,12 +171,12 @@ Wenn der bereitgestellte *pvresult* -Puffer zu klein ist, werden je nach *infole
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -191,19 +191,19 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errFeatureNotAvailable</p></td>
-<td><p>Die angeforderte <em>infolevel</em> wurde JET_DbInfoIsam. Dieser Vorgang wird nicht unterstützt.</p></td>
+<td><p>Das angeforderte <em>InfoLevel</em> wurde JET_DbInfoIsam. Dieser Vorgang wird nicht unterstützt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errBufferTooSmall</p></td>
-<td><p>Der in <em>cbmax</em> angegebene Puffer ist zu klein für die gewünschten Informationen.</p></td>
+<td><p>Der in <em>cbMax</em> angegebene Puffer ist für die gewünschten Informationen zu klein.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidBufferSize</p></td>
-<td><p>Der in <em>cbmax</em> angegebene Puffer weist nicht die richtige Größe für die gewünschten Informationen auf.</p></td>
+<td><p>Der in <em>cbMax</em> angegebene Puffer ist nicht die richtige Größe für die gewünschten Informationen.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der Parameter, die bereitgestellt wurden, enthielt einen unerwarteten Wert, oder die Kombination mehrerer Parameterwerte hat ein unerwartetes Ergebnis zurückgegeben. Dieser Fehler wird von <a href="gg294076(v=exchg.10).md">jetgetdatabaseinfo</a> zurückgegeben, wenn es sich bei der bereitgestellten DBID nicht um eine gültige (angefügte) Datenbank handelt. Dieser Fehler wird von <strong>jetgetdatabasefileinfo</strong> und <a href="gg294076(v=exchg.10).md">jetgetdatabaseinfo</a> zurückgegeben, wenn ein angefordertes <em>infolevel</em> von dieser Version der Funktion nicht unterstützt wird.</p></td>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert, oder die Kombination mehrerer Parameterwerte führte zu einem unerwarteten Ergebnis. Dieser Fehler wird von <a href="gg294076(v=exchg.10).md">JetGetDatabaseInfo</a> zurückgegeben, wenn die bereitgestellte DBID-Datenbank keine gültige (angefügte) Datenbank ist. Dieser Fehler wird von <strong>JetGetDatabaseFileInfo</strong> und <a href="gg294076(v=exchg.10).md">JetGetDatabaseInfo</a> zurückgegeben, wenn ein angefordertes <em>InfoLevel</em> von dieser Version der Funktion nicht unterstützt wird.</p></td>
 </tr>
 </tbody>
 </table>
@@ -213,12 +213,12 @@ Wenn diese Funktion erfolgreich ausgeführt wird, werden die angeforderten Daten
 
 Wenn diese Funktion fehlschlägt, befindet sich der Ausgabepuffer in einem nicht definierten Zustand.
 
-#### <a name="requirements"></a>Anforderungen
+#### <a name="requirements"></a>Requirements (Anforderungen)
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -231,11 +231,11 @@ Wenn diese Funktion fehlschlägt, befindet sich der Ausgabepuffer in einem nicht
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>DLL</strong></p></td>
@@ -243,7 +243,7 @@ Wenn diese Funktion fehlschlägt, befindet sich der Ausgabepuffer in einem nicht
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetgetdatabasefileingefow</strong> (Unicode) und <strong>jetgetdatabasefileingefoa</strong> (ANSI).</p></td>
+<td><p>Wird als <strong>JetGetDatabaseFileInfoW</strong> (Unicode) und <strong>JetGetDatabaseFileInfoA</strong> (ANSI) implementiert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -254,4 +254,4 @@ Wenn diese Funktion fehlschlägt, befindet sich der Ausgabepuffer in einem nicht
 [JET_ERR](./jet-err.md)  
 [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)  
 [JET_DBINFOUPGRADE](./jet-dbinfoupgrade-structure.md)  
-[Jetgetdatabaseingefo](./jetgetdatabaseinfo-function.md)
+[JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md)

@@ -1,31 +1,31 @@
 ---
-description: Einige Bilddateien enthalten Metadaten, die Sie lesen können, um Die Features des Bilds zu bestimmen.
+description: Einige Bilddateien enthalten Metadaten, die Sie lesen können, um die Features des Bilds zu bestimmen.
 ms.assetid: 2febea35-3fea-4a2d-baaf-7a4f935fc81f
 title: Lesen und Schreiben von Metadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e4ea0a8f389f31870b31a0b15480815bdd7cf1f
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: f4b965285e2d8a4666ef86b78cdc5dbb9ed38c55ee7c84b4a93f1dbe80141efa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114930"
 ---
 # <a name="reading-and-writing-metadata"></a>Lesen und Schreiben von Metadaten
 
-Einige Bilddateien enthalten Metadaten, die Sie lesen können, um Die Features des Bilds zu bestimmen. Beispielsweise kann ein digitales Foto Metadaten enthalten, die Sie lesen können, um den Make und das Modell der Kamera zu bestimmen, die zum Erfassen des Bilds verwendet wird. Mit Windows GDI+ können Sie vorhandene Metadaten lesen und auch neue Metadaten in Bilddateien schreiben.
+Einige Bilddateien enthalten Metadaten, die Sie lesen können, um die Features des Bilds zu bestimmen. Beispielsweise kann ein digitales Foto Metadaten enthalten, die Sie lesen können, um die Marke und das Modell der Kamera zu bestimmen, die zum Erfassen des Bilds verwendet wird. Mit Windows GDI+ können Sie vorhandene Metadaten lesen und auch neue Metadaten in Bilddateien schreiben.
 
-GDI+ bietet eine einheitliche Möglichkeit zum Speichern und Abrufen von Metadaten aus Bilddateien in verschiedenen Formaten. In GDI+ wird ein Metadatenelement als *Eigenschaftenelement bezeichnet.* Sie können Metadaten speichern und abrufen, indem Sie die **Methoden SetPropertyItem** und **GetPropertyItem** der [**Image-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) aufrufen, und Sie müssen sich keine Sorgen darüber machen, wie diese Metadaten in einem bestimmten Dateiformat gespeichert werden.
+GDI+ bietet eine einheitliche Möglichkeit zum Speichern und Abrufen von Metadaten aus Bilddateien in verschiedenen Formaten. In GDI+ wird ein Metadatenelement als *Eigenschaftselement* bezeichnet. Sie können Metadaten speichern und abrufen, indem Sie die **Methoden SetPropertyItem** und **GetPropertyItem** der [**Image-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) aufrufen, und Sie müssen sich keine Gedanken darüber machen, wie ein bestimmtes Dateiformat diese Metadaten speichert.
 
-GDI+ unterstützt derzeit Metadaten für die Dateiformate TIFF, JPEG, Exif und PNG. Das Exif-Format, das angibt, wie von digitalen Kameras erfasste Bilder gespeichert werden, baut auf den TIFF- und JPEG-Formaten auf. Exif verwendet das TIFF-Format für unkomprimierte Pixeldaten und das JPEG-Format für komprimierte Pixeldaten.
+GDI+ unterstützt derzeit Metadaten für die Dateiformate TIFF, JPEG, Exif und PNG. Das Exif-Format, das angibt, wie Bilder gespeichert werden, die von digitalen Standbildkameras erfasst werden, basiert auf den TIFF- und JPEG-Formaten. Exif verwendet das TIFF-Format für unkomprimierte Pixeldaten und das JPEG-Format für komprimierte Pixeldaten.
 
-GDI+ definiert einen Satz von Eigenschaftstags, die Eigenschaftenelemente identifizieren. Bestimmte Tags sind allgemein. Das heißt, sie werden von allen Dateiformaten unterstützt, die im vorherigen Absatz erwähnt werden. Andere Tags sind speziell und gelten nur für bestimmte Formate. Wenn Sie versuchen, ein Eigenschaftenelement in einer Datei zu speichern, die dieses Eigenschaftenelement nicht unterstützt, ignoriert GDI+ die Anforderung. Genauer gesagt gibt die [**Image::SetPropertyItem-Methode**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-setpropertyitem) PropertyNotSupported zurück.
+GDI+ definiert einen Satz von Eigenschaftentags, die Eigenschaftselemente identifizieren. Bestimmte Tags sind allgemein einsetzbar. Das heißt, sie werden von allen dateiformaten unterstützt, die im vorherigen Absatz erwähnt wurden. Andere Tags sind speziell und gelten nur für bestimmte Formate. Wenn Sie versuchen, ein Eigenschaftenelement in einer Datei zu speichern, die dieses Eigenschaftselement nicht unterstützt, ignoriert GDI+ die Anforderung. Genauer gesagt gibt die [**Image::SetPropertyItem-Methode**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-setpropertyitem) PropertyNotSupported zurück.
 
-Sie können die Eigenschaftenelemente bestimmen, die in einer Bilddatei gespeichert sind, indem Sie [**Image::GetPropertyIdList aufrufen.**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-getpropertyidlist) Wenn Sie versuchen, ein Eigenschaftenelement abzurufen, das sich nicht in der Datei befindet, ignoriert GDI+ die Anforderung. Genauer gesagt gibt die [**Image::GetPropertyItem-Methode**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-getpropertyitem) PropertyNotFound zurück.
+Sie können die in einer Bilddatei gespeicherten Eigenschaftenelemente ermitteln, indem [**Sie Image::GetPropertyIdList**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-getpropertyidlist)aufrufen. Wenn Sie versuchen, ein Eigenschaftenelement abzurufen, das sich nicht in der Datei befindet, ignoriert GDI+ die Anforderung. Genauer gesagt gibt die [**Image::GetPropertyItem-Methode**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-getpropertyitem) PropertyNotFound zurück.
 
 ## <a name="reading-metadata-from-a-file"></a>Lesen von Metadaten aus einer Datei
 
-Die folgende Konsolenanwendung ruft die **GetPropertySize-Methode** eines [**Image-Objekts**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) auf, um zu bestimmen, wie viele Metadaten in der Datei enthalten FakePhoto.jpg.
+Die folgende Konsolenanwendung ruft die **GetPropertySize-Methode** eines [**Image-Objekts**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) auf, um zu bestimmen, wie viele Metadaten in der Datei FakePhoto.jpg sind.
 
 
 ```
@@ -54,7 +54,7 @@ INT main()
 
 
 
-Der vorangehende Code hat zusammen mit einer bestimmten Datei, FakePhoto.jpg, die folgende Ausgabe erzeugt:
+Der vorangehende Code erzeugt zusammen mit einer bestimmten Datei FakePhoto.jpg die folgende Ausgabe:
 
 
 ```
@@ -64,7 +64,7 @@ The total size of the metadata is 436 bytes.
 
 
 
-GDI+ speichert einzelne Metadaten in einem [**PropertyItem-Objekt.**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-propertyitem) Sie können die **GetAllPropertyItems-Methode** der [**Image-Klasse aufrufen,**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) um alle Metadaten aus einer Datei abzurufen. Die **GetAllPropertyItems-Methode** gibt ein Array von **PropertyItem-Objekten** zurück. Bevor Sie **GetAllPropertyItems** aufrufen, müssen Sie einen Puffer zuordnen, der groß genug ist, um dieses Array zu empfangen. Sie können die **GetPropertySize-Methode** der **Image-Klasse** aufrufen, um die Größe (in Bytes) des erforderlichen Puffers zu erhalten.
+GDI+ speichert einzelne Metadaten in einem [**PropertyItem-Objekt.**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-propertyitem) Sie können die **GetAllPropertyItems-Methode** der [**Image-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) aufrufen, um alle Metadaten aus einer Datei abzurufen. Die **GetAllPropertyItems-Methode** gibt ein Array von **PropertyItem-Objekten** zurück. Bevor Sie **GetAllPropertyItems** aufrufen, müssen Sie einen Puffer zuordnen, der groß genug ist, um dieses Array zu empfangen. Sie können die **GetPropertySize-Methode** der **Image-Klasse** aufrufen, um die Größe (in Bytes) des erforderlichen Puffers abzurufen.
 
 Ein [**PropertyItem-Objekt**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-propertyitem) verfügt über die folgenden vier öffentlichen Member:
 
@@ -72,16 +72,16 @@ Ein [**PropertyItem-Objekt**](/windows/win32/api/gdiplusimaging/nl-gdiplusimagin
 
 |            | BESCHREIBUNG                                                                                                                                                                                                                                                                                                       |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **id**     | Ein Tag, das das Metadatenelement identifiziert. Die Werte, die der **ID** (PropertyTagImageTitle, PropertyTagEquipMake, PropertyTagExifExposureTime und derEntität) zugewiesen werden können, werden in "Gdiplusimaging.h" definiert.                                                                                           |
-| **length** | Die Länge des Arrays von Werten in Bytes, auf das der Wertdaten **member** zeigt. Beachten Sie:  Wenn der Typdaten member auf PropertyTagTypeASCII festgelegt  ist, ist der Längendaten member die Länge einer auf NULL endbaren Zeichenfolge, einschließlich des NULL-Abschlusszeichens.                        |
-| **type**   | Der Datentyp der Werte im Array, auf die der Wertdaten member zeigt. Konstanten (PropertyTagTypeByte, PropertyTagTypeASCII und deren Art), die verschiedene Datentypen darstellen, werden unter [**Image Property Tag Type Constants beschrieben.**](-gdiplus-constant-image-property-tag-type-constants.md) |
+| **id**     | Ein Tag, das das Metadatenelement identifiziert. Die Werte, die **id** zugewiesen werden können (PropertyTagImageTitle, PropertyTagEquipMake, PropertyTagExifExposureTime usw.), werden in Gdiplusimaging.h definiert.                                                                                           |
+| **length** | Die Länge des Arrays von Werten in Bytes, auf die der **Wertdatenmember** zeigt. Beachten Sie Folgendes: Wenn der **Typdatenmember** auf PropertyTagTypeASCII festgelegt ist, entspricht der Length-Datenmember der **Länge** einer auf NULL endenden Zeichenfolge, einschließlich des NULL-Abschlusszeichens.                        |
+| **type**   | Der Datentyp der Werte im Array, auf das der Wertdatenmember zeigt. Konstanten (PropertyTagTypeByte, PropertyTagTypeASCII und ähnliche), die verschiedene Datentypen darstellen, werden unter [**Image Property Tag Type Constants**](-gdiplus-constant-image-property-tag-type-constants.md)beschrieben. |
 | **value**  | Ein Zeiger auf ein Array von Werten.                                                                                                                                                                                                                                                                       |
 
 
 
  
 
-Die folgende Konsolenanwendung liest die sieben Metadaten in der Datei und zeigt sie FakePhoto.jpg. Die main-Funktion basiert auf der Hilfsfunktion PropertyTypeFromWORD, die nach der main-Funktion angezeigt wird.
+Die folgende Konsolenanwendung liest und zeigt die sieben Metadaten in der Datei FakePhoto.jpg an. Die main-Funktion basiert auf der Hilfsfunktion PropertyTypeFromWORD, die nach der Main-Funktion angezeigt wird.
 
 
 ```
@@ -159,7 +159,7 @@ HRESULT PropertyTypeFromWORD(WORD index, WCHAR* string, UINT maxChars)
 
 
 
-Die obige Konsolenanwendung erzeugt die folgende Ausgabe:
+Die vorherige Konsolenanwendung erzeugt die folgende Ausgabe:
 
 
 ```
@@ -195,19 +195,19 @@ Property Item 6
 
 
 
-In der obigen Ausgabe wird eine hexadezimale ID-Nummer für jedes Eigenschaftenelement angezeigt. Sie können diese ID-Nummern in [Image Property Tag Constants](-gdiplus-constant-image-property-tag-constants.md) nachschlagen und feststellen, dass sie die folgenden Eigenschaftstags darstellen.
+Die vorherige Ausgabe zeigt eine hexadezimale ID-Nummer für jedes Eigenschaftselement. Sie können diese ID-Nummern in [Tagkonstanten](-gdiplus-constant-image-property-tag-constants.md) für Bildeigenschaften nachschlagen und feststellen, dass sie die folgenden Eigenschaftstags darstellen.
 
 
 
 | Hexadezimalwert                                                                                                       | Eigenschaftentag                                                                                                                                                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0x0320 0x010f<br/>  0x0110<br/>  0x9003<br/>  0x829a<br/>  0x5090<br/>  0x5091<br/> | PropertyTagImageTitle-EigenschaftTagEquipMake<br/>  PropertyTagEquipModel<br/>  PropertyTagExifDTOriginal<br/>  PropertyTagExifExposureTime<br/>  PropertyTagLuminanceTable<br/>  PropertyTagChrominanceTable<br/> |
+| 0x0320 0x010f<br/>  0x0110<br/>  0x9003<br/>  0x829a<br/>  0x5090<br/>  0x5091<br/> | PropertyTagImageTitle PropertyTagEquipMake<br/>  PropertyTagEquipModel<br/>  PropertyTagExifDTOriginal<br/>  PropertyTagExifExposureTime<br/>  PropertyTagLuminanceTable<br/>  PropertyTagColorinanceTable<br/> |
 
 
 
  
 
-Das zweite Eigenschaftenelement (Index 1) in der Liste hat **die ID** PropertyTagEquipMake und **den** Typ PropertyTagTypeASCII. Im folgenden Beispiel, bei dem es sich um eine Fortsetzung der vorherigen Konsolenanwendung handelt, wird der Wert dieses Eigenschaftenelements angezeigt:
+Das zweite Eigenschaftselement (Index 1) in der Liste hat die **ID** PropertyTagEquipMake und **den Typ** PropertyTagTypeASCII. Im folgenden Beispiel, bei dem es sich um eine Fortsetzung der vorherigen Konsolenanwendung handelt, wird der Wert dieses Eigenschaftselements angezeigt:
 
 
 ```
@@ -225,7 +225,7 @@ The equipment make is Northwind Traders.
 
 
 
-Das fünfte Eigenschaftenelement (Index 4) in der Liste hat **die ID** PropertyTagExifExposureTime und **den** Typ PropertyTagTypeRational. Dieser Datentyp (PropertyTagTypeRational) ist ein Paar **von LONG-s.** Im folgenden Beispiel, bei dem es sich um eine Fortsetzung der vorherigen Konsolenanwendung handelt, werden diese beiden **LONG-Werte** als Bruch angezeigt. Dieser Bruchteil (1/125) ist die in Sekunden gemessene Belichtungszeit.
+Das fünfte Eigenschaftselement (Index 4) in der Liste hat die **ID** PropertyTagExifExposureTime und **den Typ** PropertyTagTypeRational. Dieser Datentyp (PropertyTagTypeRational) ist ein Paar von **LONG** s. Im folgenden Beispiel, bei dem es sich um eine Fortsetzung der vorherigen Konsolenanwendung handelt, werden diese beiden **LONG-Werte** als Bruch angezeigt. Dieser Bruchteil (1/125) ist die in Sekunden gemessene Belichtungszeit.
 
 
 ```
@@ -246,9 +246,9 @@ The exposure time is 1/125.
 
 ## <a name="writing-metadata-to-a-file"></a>Schreiben von Metadaten in eine Datei
 
-Initialisieren Sie zum Schreiben eines Metadatenelements in ein [**Image-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) ein [**PropertyItem-Objekt,**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-propertyitem) und übergeben Sie dann die Adresse dieses **PropertyItem-Objekts** an die **SetPropertyItem-Methode** des **Image-Objekts.**
+Um ein Element mit Metadaten in ein [**Image-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) zu schreiben, initialisieren Sie ein [**PropertyItem-Objekt**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-propertyitem) und übergeben dann die Adresse dieses **PropertyItem-Objekts** an die **SetPropertyItem-Methode** des **Image-Objekts.**
 
-Die folgende Konsolenanwendung schreibt ein Element (den Bildtitel) der Metadaten in ein [**Image-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) und speichert das Image dann in der Datenträgerdatei FakePhoto2.jpg. Die main-Funktion basiert auf der Hilfsfunktion GetEncoderClsid, die im Thema Abrufen des Klassenbezeichners für einen [Encoder gezeigt wird.](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)
+Die folgende Konsolenanwendung schreibt ein Element (den Imagetitel) von Metadaten in ein [**Imageobjekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) und speichert das Image dann in der Datenträgerdatei FakePhoto2.jpg. Die main-Funktion basiert auf der Hilfsfunktion GetEncoderClsid, die im Thema [Abrufen des Klassenbezeichners für einen Encoder](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)gezeigt wird.
 
 
 ```

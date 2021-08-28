@@ -1,28 +1,28 @@
 ---
-title: Itsgaccountingengine-Methoden
-description: Die itsgaccountingengine-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: ITSGAccountingEngine-Methoden
+description: Die ITSGAccountingEngine-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: EB4DE851-D466-49A4-83AA-19934B885DF1
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb0bbf4c205cf9fd5cb909081fa1c472ee3ab66a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eaa9dc2c0b24a3831d3fd112e0acf2fae48500cb6360998823cd65842e9b0874
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124840"
 ---
-# <a name="itsgaccountingengine-methods"></a>Itsgaccountingengine-Methoden
+# <a name="itsgaccountingengine-methods"></a>ITSGAccountingEngine-Methoden
 
-Die [**itsgaccountingengine**](/windows/desktop/api/TSGPolicyEngine/nn-tsgpolicyengine-itsgaccountingengine) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ITSGAccountingEngine-Schnittstelle**](/windows/desktop/api/TSGPolicyEngine/nn-tsgpolicyengine-itsgaccountingengine) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Doaccounting-Methode**](/windows/desktop/api/TSGPolicyEngine/nf-tsgpolicyengine-itsgaccountingengine-doaccounting)
+-   [**DoAccounting-Methode**](/windows/desktop/api/TSGPolicyEngine/nf-tsgpolicyengine-itsgaccountingengine-doaccounting)
 
- 
+ 
 
- 
+ 
 
 
 

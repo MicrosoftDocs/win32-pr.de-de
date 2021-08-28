@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_AboveLock02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ AboveLock02-Klasse stellt Richtlinien dar, die Aktionen bestimmen, die über dem Geräte Sperrbildschirm zulässig sind.
+description: Die MDM \_ Policy \_ Config01 \_ AboveLock02-Klasse stellt Richtlinien dar, die Aktionen bestimmen, die über dem Gerätesperrbildschirm zulässig sind.
 ms.assetid: ad76e424-e5b6-46ba-a6a7-5dc00f983918
 keywords:
 - MDM_Policy_Config01_AboveLock02-Klasse
-- MDM_Policy_Config01_AboveLock02-Klasse, beschrieben
+- MDM_Policy_Config01_AboveLock02-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 703971a10fe927c391831a9db65d270291b56e7e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 70a9fd30f523774c270be6550860cfeb4d4a8fbc4012b689a9a7a4ecbc3f24c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109430"
 ---
-# <a name="mdm_policy_config01_abovelock02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ AboveLock02-Klasse
+# <a name="mdm_policy_config01_abovelock02-class"></a>MDM \_ Policy \_ Config01 \_ AboveLock02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ AboveLock02** -Klasse stellt Richtlinien dar, die Aktionen bestimmen, die über dem Geräte Sperrbildschirm zulässig sind.
+Die **MDM \_ Policy \_ Config01 \_ AboveLock02-Klasse** stellt Richtlinien dar, die Aktionen bestimmen, die über dem Gerätesperrbildschirm zulässig sind.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,17 +47,17 @@ class MDM_Policy_Config01_AboveLock02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ AboveLock02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ AboveLock02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ AboveLock02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ AboveLock02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowcortanaabovelock](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
+[AllowCoroveAboveLock](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -68,7 +68,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allow-UPS](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
+[AllowToasts](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -82,32 +82,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "abovelock".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "AboveLock".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -117,10 +117,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -129,7 +129,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

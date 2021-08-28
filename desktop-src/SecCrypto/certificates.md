@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 8efb9221f39b8544eabe8f6c00d21f6cfdf20c14
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4ccd66085f96ac7f3567ca3bf993d7d31c9bc70437199701fe88165adf52d03e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126720"
 ---
 # <a name="certificates-object"></a>Certificates-Objekt
 
@@ -55,14 +55,14 @@ Das **Certificates-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                | BESCHREIBUNG                                                                                                                                                           |
+| Methode                                | Beschreibung                                                                                                                                                           |
 |:--------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Hinzufügen**](certificates-add.md)       | Fügt der Auflistung ein [**Certificate-Objekt**](certificate.md) hinzu.<br/> (Geerbt von **ZertifikatenICertificates2**)                                        |
-| [**Löschen**](certificates-clear.md)   | Entfernt alle [**Certificate-Objekte**](certificate.md) aus der Auflistung.<br/> (Geerbt von **ZertifikatenICertificates2**)                                |
-| [**Suchen**](certificates-find.md)     | Gibt ein **Certificates-Objekt** zurück, das alle Zertifikate enthält, die den angegebenen Suchkriterien entsprechen.<br/> (Geerbt von **ZertifikatenICertificates2**) |
-| [**Entfernen**](certificates-remove.md) | Entfernt ein einzelnes [**Certificate-Objekt**](certificate.md) aus der Auflistung.<br/> (Geerbt von **ZertifikatenICertificates2**)                            |
-| [**Speichern**](certificates-save.md)     | Speichert die Zertifikate in einer angegebenen Datei.<br/> (Geerbt von **ZertifikatenICertificates2**)                                                                |
-| [**Select**](certificates-select.md) | Zeigt ein Dialogfeld zum Auswählen von Zertifikaten an und gibt eine Sammlung dieser ausgewählten Zertifikate zurück.<br/> (Geerbt von **ZertifikatenICertificates2**)  |
+| [**Hinzufügen**](certificates-add.md)       | Fügt der Auflistung ein [**Certificate-Objekt**](certificate.md) hinzu.<br/> (Geerbt von **CertificatesICertificates2**)                                        |
+| [**Klar**](certificates-clear.md)   | Entfernt alle [**Certificate-Objekte**](certificate.md) aus der Auflistung.<br/> (Geerbt von **CertificatesICertificates2**)                                |
+| [**Suchen**](certificates-find.md)     | Gibt ein **Certificates-Objekt** zurück, das alle Zertifikate enthält, die den angegebenen Suchkriterien entsprechen.<br/> (Geerbt von **CertificatesICertificates2**) |
+| [**Entfernen**](certificates-remove.md) | Entfernt ein einzelnes [**Certificate-Objekt**](certificate.md) aus der Auflistung.<br/> (Geerbt von **CertificatesICertificates2**)                            |
+| [**Speichern**](certificates-save.md)     | Speichert die Zertifikate in einer angegebenen Datei.<br/> (Geerbt von **CertificatesICertificates2**)                                                                |
+| [**Select**](certificates-select.md) | Zeigt ein Dialogfeld zum Auswählen von Zertifikaten an und gibt eine Sammlung dieser ausgewählten Zertifikate zurück.<br/> (Geerbt von **CertificatesICertificates2**)  |
 
 
 
@@ -74,17 +74,17 @@ Das **Certificates-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                             | Zugriffstyp          | BESCHREIBUNG                                                                                                                                                                                                                     |
+| Eigenschaft                                             | Zugriffstyp          | Beschreibung                                                                                                                                                                                                                     |
 |:-----------------------------------------------------|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**\_NewEnum**](certificates-newenum.md)<br/> | Schreibgeschützt<br/> | Ruft eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) für ein Objekt ab, das zum Aufzählen der Auflistung verwendet werden kann. Diese Eigenschaft wird in Visual Basic Scripting Edition (VBScript) ausgeblendet.<br/> |
 | [**Anzahl**](certificates-count.md)<br/>       | Schreibgeschützt<br/> | Ruft die Anzahl der [**Certificate-Objekte**](certificate.md) in der Auflistung ab.<br/>                                                                                                                                |
-| [**Element**](certificates-item.md)<br/>         | Schreibgeschützt<br/> | Ruft ein [**Certificate-Objekt**](certificate.md) ab, das das indizierte Zertifikat der Auflistung darstellt. Dies ist die Standardeigenschaft.<br/> (Geerbt von **ZertifikatenICertificates2ICertificates**)          |
+| [**Element**](certificates-item.md)<br/>         | Schreibgeschützt<br/> | Ruft ein [**Certificate-Objekt**](certificate.md) ab, das das indizierte Zertifikat der Auflistung darstellt. Dies ist die Standardeigenschaft.<br/> (Geerbt von **CertificatesICertificates2ICertificates**)          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das **Certificates-Objekt** kann erstellt werden und ist sicher für Skripts. Die ProgID für das **Certificates-Objekt** ist "CAPICOM. Certificates.2".
 
@@ -94,16 +94,16 @@ Das **Certificates-Objekt** kann erstellt werden und ist sicher für Skripts. Di
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

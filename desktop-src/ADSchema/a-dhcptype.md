@@ -1,11 +1,11 @@
 ---
-title: DHCP-Type-Attribut
-description: Der Typ des DHCP-Servers.
+title: dhcp-Type-Attribut
+description: Der Dhcp-Servertyp.
 ms.assetid: 46ab7db7-a752-45aa-a10b-1195b5cf6f80
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für DHCP-Type-Attribut
-- dhcptype-Attribut, AD-Schema
+- DHCP-Type-Attribut AD-Schema
+- DHCPType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b5a5a331ff7298854f4ca070799a05e2a3497f2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8f4cc64a05db9b88d13a1e7dfb3ce0976391b9d2514388ae9045eb11d97a5b2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049650"
 ---
-# <a name="dhcp-type-attribute"></a>DHCP-Type-Attribut
+# <a name="dhcp-type-attribute"></a>dhcp-Type-Attribut
 
-Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass [**dhcpclass**](c-dhcpclass.md)festgelegt. Der zugehörige Wert definiert den Objekttyp:
+Der Dhcp-Servertyp. Dieses Attribut wird für alle Objekte von objectClass [**dHCPClass**](c-dhcpclass.md)festgelegt. Sein Wert definiert den Typ des Objekts:
 
 ``` syntax
   0 - DHCP Root Object
@@ -34,13 +34,13 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------------|
-| CN                | DHCP-Typ                                              |
-| LDAP-Display-Name | dhcptype                                               |
+| CN                | dhcp-Type                                              |
+| Ldap-Anzeigename | dhcpType                                               |
 | Size              | 4 Bytes                                                |
-| Berechtigung aktualisieren  | Domänen Administrator.                                  |
-| Aktualisierungshäufigkeit  | Wenn ein neuer Server der Gesamtstruktur hinzugefügt oder daraus entfernt wird. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator.                                  |
+| Updatehäufigkeit  | Wenn der Gesamtstruktur ein neuer Server hinzugefügt oder daraus entfernt wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.699                                 |
-| System-ID-GUID    | 963d273b-48be-11d1-a9c3-0000b80367c1                   |
+| System-ID-GUID    | 963d273b-48be-11d1-a9c3-0000f80367c1                   |
 | Syntax            | [**Enumeration**](s-enumeration.md)                   |
 
 
@@ -48,7 +48,7 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -62,11 +62,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |
@@ -75,7 +75,7 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -83,11 +83,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |
@@ -104,11 +104,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |
@@ -125,11 +125,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |
@@ -146,11 +146,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |
@@ -167,11 +167,11 @@ Der Typ des DHCP-Servers. Dieses Attribut wird für alle Objekte von objectClass
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000001                                   |

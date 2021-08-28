@@ -1,11 +1,11 @@
 ---
-title: Imediarendereraktioninformation issetnextsourceavailable-Methode
-description: Ruft einen Wert ab, der angibt, ob der DMR derzeit die setnextsourcefromuriasync-Methode, die setnextsourcefromstreamasync-Methode oder die setnextsourcefrommediasourceasync-Methode annimmt.
+title: IMediaRendererActionInformation IsSetNextSourceAvailable-Methode
+description: Ruft einen Wert ab, der angibt, ob die DMR derzeit die SetNextSourceFromUriAsync-Methode, die SetNextSourceFromStreamAsync-Methode oder die SetNextSourceFromMediaSourceAsync-Methode akzeptiert.
 ms.assetid: 7588E992-4070-4E0F-8C4B-7DFC097A5076
 keywords:
-- Issetnextsourceavailable-Methode Medien Streaming-API
-- Issetnextsourceavailable-Methode Medien Streaming-API, imediarendereraktioninformation-Schnittstelle
-- Imediarendereraktioninformation-Schnittstelle Medien Streaming-API, issetnextsourceavailable-Methode
+- IsSetNextSourceAvailable-Methode Medienstreaming-API
+- IsSetNextSourceAvailable-Methode Media Streaming API , IMediaRendererActionInformation-Schnittstelle
+- IMediaRendererActionInformation-Schnittstelle Medienstreaming-API , IsSetNextSourceAvailable-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 265a9a96d5229e47008c60813fd6c0e3bc567800
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ee18eadbc535dd2cd4b48ec6f77adb1d3dec2f5a0c1f5065cee009e27635eda9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092300"
 ---
-# <a name="imediarendereractioninformationissetnextsourceavailable-method"></a>Imediarendereraktioninformation:: issetnextsourceavailable-Methode
+# <a name="imediarendereractioninformationissetnextsourceavailable-method"></a>IMediaRendererActionInformation::IsSetNextSourceAvailable-Methode
 
-Ruft einen Wert ab, der angibt, ob der DMR derzeit die [**setnextsourcefromuriasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromuriasync) -Methode, die [**setnextsourcefromstreamasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromstreamasync) -Methode oder die [**setnextsourcefrommediasourceasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefrommediasourceasync) -Methode annimmt.
+Ruft einen Wert ab, der angibt, ob die DMR derzeit die [**SetNextSourceFromUriAsync-Methode,**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromuriasync) die [**SetNextSourceFromStreamAsync-Methode**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromstreamasync) oder die [**SetNextSourceFromMediaSourceAsync-Methode**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefrommediasourceasync) akzeptiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT IsSetNextSourceAvailable(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **true** ist, wenn der DMR derzeit die [**setnextsourcefromuriasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromuriasync) -Methode, die [**setnextsourcefromstreamasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromstreamasync) -Methode oder die [**setnextsourcefrommediasourceasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefrommediasourceasync) -Methode akzeptiert, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR derzeit die [**SetNextSourceFromUriAsync-Methode,**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromuriasync) die [**SetNextSourceFromStreamAsync-Methode**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefromstreamasync) oder die [**SetNextSourceFromMediaSourceAsync-Methode**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-setnextsourcefrommediasourceasync) akzeptiert, **andernfalls FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
+[**IMediaRendererActionInformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
 </dt> </dl>
 
  

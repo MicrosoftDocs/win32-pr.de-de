@@ -1,38 +1,38 @@
 ---
-title: Rahmen für Windows-Media Player (veraltet)
-description: Rahmen für Windows-Media Player (veraltet)
+title: Rahmen für Windows Media Player (veraltet)
+description: Rahmen für Windows Media Player (veraltet)
 ms.assetid: defa461b-ffa5-4fee-bed4-aba3e733b8c4
 keywords:
-- Windows-Media Player, Rahmen
+- Windows Media Player, Rahmen
 - Windows Media Player Skins, Rahmen
 - Skins, Rahmen
 - Rahmen im Vergleich zu Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a48ff3ec17230002e9c6b4a1eb17e3024375a58
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c32e16fa6e334c5c47f24feadc777b82cee1a12477211bc4e613d22e8fdc4521
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123850"
 ---
-# <a name="borders-for-windows-media-player-deprecated"></a>Rahmen für Windows-Media Player (veraltet)
+# <a name="borders-for-windows-media-player-deprecated"></a>Rahmen für Windows Media Player (veraltet)
 
-Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
 
-Ein Rahmen ähnelt einem Skin, aber anstatt die Benutzeroberfläche für den Compact-Modus von Windows Media Player zu ersetzen, wird ein Rahmen in den Bereich "jetzt wiedergegeben" der Windows-Media Player im Vollmodus eingebettet.
+Ein Rahmen ähnelt einer Skin, aber anstatt die Benutzeroberfläche für den kompakten Modus von Windows Media Player zu ersetzen, wird ein Rahmen im Bereich Jetzt wiedergeben des vollständigen Modus Windows Media Player eingebettet.
 
-Mithilfe eines Windows Media-Download Pakets können Sie Inhalte mit einem Rahmen einschließen, um Multimedia-Anwendungen zu nutzen.
+Mithilfe eines Windows Media Download-Pakets können Sie Inhalte mit einem Rahmen einschließen und so den Weg zu Multimediaanwendungen ebnen.
 
-Ein Beispiel für ein Windows-Medien Download Paket, das einen Rahmen und eingebetteten Inhalt enthält, ist im Verzeichnis "Samples" dieses SDK enthalten.
+Ein Beispiel Windows Mediendownloadpakets, das einen Rahmen und eingebetteten Inhalt enthält, ist im Beispielverzeichnis dieses SDK enthalten.
 
 ## <a name="creating-a-border"></a>Erstellen eines Rahmens
 
-Ein Rahmen wird auf die gleiche Weise wie ein Skin erstellt. Der einzige Unterschied besteht darin, dass die Skin in den Bereich für die wieder **Gabe** eingebettet ist. Dies bedeutet, dass die Skin-Größe nicht berechnet werden kann und dass alle Skin-Elemente relativ sein müssen. Wenn der Benutzer die Größe des Windows-Media Player ändert, sind Teile des Rahmens möglicherweise abgeschnitten und werden nicht angezeigt.
+Ein Rahmen wird auf die gleiche Weise wie eine Skin erstellt. Der einzige Unterschied besteht darin, dass die Skin in den Bereich **Jetzt wiedergegeben** eingebettet ist. Dies bedeutet, dass die Skingröße nicht berechnet werden kann und dass alle Skinelemente relativ sein müssen. Wenn die Größe des Benutzers Windows Media Player geändert wird, können Teile des Rahmens abgeschnitten und nicht sichtbar sein.
 
 ## <a name="loading-a-border"></a>Laden eines Rahmens
 
-Ein Rahmen wird geladen, wenn eine Windows Media-Metadatendatei geladen wird, die das **Skin** -Element verwendet. Das **href** -Attribut des **Skin** -Elements muss auf ein Skin verweisen. Ein typisches **Skin** -Element würde wie folgt aussehen:
+Ein Rahmen wird geladen, wenn eine Windows Media-Metadatei geladen wird, die das **SKIN-Element** verwendet. Das **HREF-Attribut** des **SKIN-Elements** muss auf eine Skin verweisen. Ein typisches **SKIN-Element** würde wie folgt aussehen:
 
 
 ```C++
@@ -42,21 +42,21 @@ Ein Rahmen wird geladen, wenn eine Windows Media-Metadatendatei geladen wird, di
 
 
 
-Weitere Informationen finden Sie unter [Skin-Element (veraltet)](skin-element--deprecated.md).
+Weitere Informationen finden Sie unter [SKIN-Element (veraltet)](skin-element--deprecated.md).
 
 ## <a name="including-content-with-a-border"></a>Einschließen von Inhalten mit einem Rahmen
 
-Sie können Inhalte mit einem Rahmen mithilfe einer Windows Media-Download Datei (mit der Dateinamenerweiterung ". WMD") einschließen. Führen Sie die folgenden Schritte aus:
+Sie können Inhalte mit einem Rahmen einschließen, indem Sie eine Windows Mediendownloaddatei (mit der Dateinamenerweiterung WMD) verwenden. Folgen Sie diesen Schritten:
 
-1.  Erstellen Sie den Rahmen. Achten Sie darauf, dass Sie diese so erstellen, dass die Größe des Rahmens durch die Größe der Größe nicht ruiniert wird. Fügen Sie z. b. keine Hintergrund Datei ein. machen Sie den Hintergrund transparent, damit eine Visualisierung dahinter ausgeführt werden kann.
-2.  Komprimieren Sie den Inhalt der Skin (Kunst, JScript-Dateien und Skin-Definitionsdatei) in eine Datei mit der Dateinamenerweiterung. WMZ.
-3.  Erstellen Sie eine Windows Media-Metadatendatei (mit der Dateinamenerweiterung ". asx"), die auf die komprimierte Rahmen Datei (mit der Dateinamenerweiterung ". WMZ") verweist. Die Metadatei kann Wiedergabelisten Informationen mit Metadaten für Kunst und URLs für bestimmten Inhalt enthalten.
-4.  Assemblieren Sie den Inhalt der digitalen Medien.
-5.  Komprimieren Sie den Rahmen, die Metadatendatei und den Inhalt in einer Datei, und versehen Sie Sie mit der Dateinamenerweiterung ". WMD".
+1.  Erstellen Sie den Rahmen. Achten Sie darauf, sie so zu erstellen, dass die Größenänderung die Zusammensetzung des Rahmens nicht überrollt. Schließen Sie z. B. keine Hintergrunddatei ein. Machen Sie den Hintergrund transparent, sodass eine Visualisierung dahinter ausgeführt werden kann.
+2.  Komprimieren Sie den Skininhalt (Art, JScript dateien und Skindefinitionsdatei) in eine Datei mit der Dateinamenerweiterung .wmz.
+3.  Erstellen Sie eine Windows Media-Metadatei (mit der Dateinamenerweiterung ASX), die auf die komprimierte Rahmendatei verweist (mit der Dateinamenerweiterung .wmz). Die Metadatei kann Wiedergabelisteninformationen mit Metadaten für Art und URLs für bestimmte Inhalte enthalten.
+4.  Stellen Sie die Inhalte digitaler Medien zusammen.
+5.  Komprimieren Sie Rahmen, Metadatei und Inhalt in einer Datei, und geben Sie ihr eine WMD-Dateinamenerweiterung.
 
 ## <a name="using-a-border"></a>Verwenden eines Rahmens
 
-Nachdem Sie die Windows Media-Download Datei erstellt haben, muss der Benutzer lediglich darauf doppelklicken. Die Datei wird auf den Computer des Benutzers heruntergeladen. Die Dateien im Paket werden entpackt, die Wiedergabeliste wird den Wiedergabelisten hinzugefügt, der Rahmen wird im Fenster " **jetzt** wiedergegeben" des Windows-Media Player für den vollständigen Modus angezeigt, und das erste Element in der neuen Wiedergabeliste wird wiedergegeben.
+Nachdem Sie die Windows Mediendownloaddatei erstellt haben, muss der Benutzer nur noch darauf doppelklicken. Die Datei wird auf den Computer des Benutzers heruntergeladen. Die Dateien im Paket werden entpackt, die Wiedergabeliste wird den Wiedergabelisten hinzugefügt, der Rahmen wird im Bereich **Jetzt wiedergegeben** des vollständigen Modus Windows Media Player angezeigt, und das erste Element in der neuen Wiedergabeliste beginnt mit der Wiedergabe.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -68,12 +68,12 @@ Nachdem Sie die Windows Media-Download Datei erstellt haben, muss der Benutzer l
 [**Beispiele**](samples.md)
 </dt> <dt>
 
-[**Windows Media-Download Pakete (veraltet)**](windows-media-download-packages--deprecated.md)
+[**Windows Mediendownloadpakete (veraltet)**](windows-media-download-packages--deprecated.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

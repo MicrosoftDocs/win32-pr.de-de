@@ -1,9 +1,9 @@
 ---
-title: Aktiviertes (triggerbasetype)-Element
-description: Gibt an, dass der-Wert aktiviert ist.
+title: Enabled-Element (triggerBaseType)
+description: Gibt an, dass der Trigger aktiviert ist.
 ms.assetid: 14c98f40-0ec5-4dc1-978e-b02c08ee2384
 keywords:
-- Aktiviertes Element Taskplaner
+- Enabled-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 42b495ba1af5f3b9b99034b0d6ca9d02040460c4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dc7ecfb58425533234637708e6c5610f3a84cdaf8e2058d088a68e3c0c707384
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104041001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072500"
 ---
-# <a name="enabled-triggerbasetype-element"></a>Aktiviertes (triggerbasetype)-Element
+# <a name="enabled-triggerbasetype-element"></a>Enabled-Element (triggerBaseType)
 
-Gibt an, dass der-Wert aktiviert ist.
+Gibt an, dass der Trigger aktiviert ist.
 
 ``` syntax
 <xs:element name="Enabled"
@@ -30,7 +30,7 @@ Gibt an, dass der-Wert aktiviert ist.
  />
 ```
 
-Das **aktivierte** Element wird durch den komplexen Typ [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) definiert.
+Das **Enabled-Element** wird durch den komplexen [**triggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,30 +38,30 @@ Das **aktivierte** Element wird durch den komplexen Typ [**triggerbasetype**](ta
 
 | Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                  |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen-Fehler an, mit dem eine Aufgabe gestartet wird, wenn das System gestartet wird.<br/>                 |
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/>   |
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/>                |
-| [**Idle-Auslösung**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idletriggertype**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der Computer in den Leerlauf wechselt.<br/> |
-| [**Logonauslöst**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen-Vorgang an, der einen Task startet, wenn sich ein Benutzer anmeldet.<br/>                       |
-| [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.<br/>               |
-| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timetriggertype**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird<br/>             |
+| [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/>                 |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/>   |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/>                |
+| [**IdleTrigger**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idleTriggerType**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Computer in den Leerlauf wechselt.<br/> |
+| [**LogonTrigger**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich ein Benutzer anmeldet.<br/>                       |
+| [**RegistrationTrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Task registriert wird.<br/>               |
+| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timeTriggerType**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.<br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung erfolgt der Zugriff auf diese Informationen über die Eigenschaft "" des ""- [**Auslösers.**](trigger-enabled.md)
+Für die Skriptentwicklung erfolgt der Zugriff auf diese Informationen über die [**Trigger.Enabled-Eigenschaft,**](trigger-enabled.md) die von allen Triggerobjekten geerbt wird.
 
-Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**i-Funktion:: aktivierte**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_enabled) Eigenschaft, die von den all-auslöserschnittstellen geerbt wird.
+Für die C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**ITrigger::Enabled-Eigenschaft,**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_enabled) die von allen Triggerschnittstellen geerbt wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -69,7 +69,7 @@ Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [*
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

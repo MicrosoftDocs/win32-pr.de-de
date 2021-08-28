@@ -1,9 +1,9 @@
 ---
-title: Event. srcelements
+title: event.srcElement
 description: Das srcElement-Attribut ruft das Element ab, das das Ereignis ausgelöst hat.
 ms.assetid: b2975ed8-d61a-446b-8e72-313cdf322995
 keywords:
-- Event. srcelements-Fenster Media Player
+- event.srcElement Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dabb37c5656eb7f811f467ac70a1dcd1f3eb7883
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df33d17edfc558dc282f6d56fc2b95d745d100902a97d8c73dbabe071a314108
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123580"
 ---
-# <a name="eventsrcelement"></a>Event. srcelements
+# <a name="eventsrcelement"></a>event.srcElement
 
-Das **srcElement** -Attribut ruft das Element ab, das das Ereignis ausgelöst hat.
+Das **srcElement-Attribut** ruft das Element ab, das das Ereignis ausgelöst hat.
 
 ``` syntax
 event.srcElement
@@ -29,7 +29,7 @@ event.srcElement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschütztes-Objekt.
+Dieses Attribut ist ein schreibgeschütztes Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist ein Schreib geschütztes-Objekt.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist ein Schreib geschütztes-Objekt.
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> </dl>
 
  

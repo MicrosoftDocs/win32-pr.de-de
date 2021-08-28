@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXRANGE. TableID-Eigenschaft'
-title: JET_INDEXRANGE. TableID-Eigenschaft
+description: 'Weitere Informationen zu: JET_INDEXRANGE.tableid-Eigenschaft'
+title: JET_INDEXRANGE.tableid-Eigenschaft
 TOCTitle: 'tableid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXRANGE.tableid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexrange.tableid(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: afd5c9401b3b0284f463aa1dbd6676440fd64b1c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f1b9352d8d80b2e30ccba5110a1c1f979923cf4f707a863c07bd7adef3ed56c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116030"
 ---
-# <a name="jet_indexrangetableid-property"></a>JET_INDEXRANGE. TableID-Eigenschaft
+# <a name="jet_indexrangetableid-property"></a>JET_INDEXRANGE.tableid-Eigenschaft
 
-Ruft den Cursor ab oder legt ihn fest, der den Index Bereich enthält. Der Cursor muss über einen Index Bereich verfügen, der mit jetsetindexrange festgelegt ist.
+Ruft den Cursor ab, der den Indexbereich enthält, oder legt den Cursor fest. Für den Cursor sollte ein Indexbereich mit JetSetIndexRange festgelegt sein.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_TABLEID tableid { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXRANGE-Klasse](./jet-indexrange-class.md)
 
-[Mitglieder JET_INDEXRANGE](./jet-indexrange-members.md)
+[JET_INDEXRANGE-Member](./jet-indexrange-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

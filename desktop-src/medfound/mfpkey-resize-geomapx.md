@@ -1,17 +1,17 @@
 ---
 description: Gibt die x-Koordinate der oberen linken Ecke der geometrischen Öffnung an.
 ms.assetid: b2c71e16-abd5-465c-a420-5b7675382025
-title: MFPKEY_RESIZE_GEOMAPX-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_RESIZE_GEOMAPX-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 439e99c2b3f0f0774e2a45087f04a0a7ceba76e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f35bc58f9d7cf63fb30b7d5a50aae35f71d013a01dc14f1be14cd69f29d1eaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113240"
 ---
-# <a name="mfpkey_resize_geomapx-property"></a>Eigenschaft "mfpkey \_ Resize \_ geomapx"
+# <a name="mfpkey_resize_geomapx-property"></a>MFPKEY \_ RESIZE \_ GEOMAPX-Eigenschaft
 
 Gibt die x-Koordinate der oberen linken Ecke der geometrischen Öffnung an.
 
@@ -27,9 +27,9 @@ VT \_ I4
 
 -   [Video Resizer DSP](videoresizer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert ist eine reelle reelle Zahl. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes gespeichert, und der Bruch Teil wird in den unteren 2 Bytes gespeichert.
+Der Wert ist eine reelle Zahl mit festem Punkt. Der ganzzahlige Teil der Zahl wird in den höheren 2 Bytes und der Bruchteil in den unteren 2 Bytes gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Der Wert ist eine reelle reelle Zahl. Der ganzzahlige Teil der Zahl wird in den 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Der Wert ist eine reelle reelle Zahl. Der ganzzahlige Teil der Zahl wird in den 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

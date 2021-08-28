@@ -1,9 +1,9 @@
 ---
 title: DRM_LASignatureLicSrvCert
-description: Das DRM- \_ lasignaturelicsrvcert-Attribut enthält das Zertifikat, das das in DRM \_ lasignaturecert enthaltene Zertifikat überprüft.
+description: Das DRM LASignatureLicSrvCert-Attribut enthält das Zertifikat, das das \_ in DRM \_ LASignatureCert enthaltene Zertifikat überprüft.
 ms.assetid: 1c22c010-f344-4dcf-a3d1-f852a65bd772
 keywords:
-- DRM_LASignatureLicSrvCert Windows Media-Format
+- DRM_LASignatureLicSrvCert windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b06b79b396d0d81c71d124961491edd491486e7c
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 1b70536ff838ae54404e37db28a5ff894c400240fd2b89436f0e0315652e4df9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110500"
 ---
-# <a name="drm_lasignaturelicsrvcert"></a>DRM \_ lasignaturelicsrvcert
+# <a name="drm_lasignaturelicsrvcert"></a>DRM \_ LASignatureLicSrvCert
 
-Das **DRM- \_ lasignaturelicsrvcert** -Attribut enthält das Zertifikat, das das in [**DRM \_ lasignaturecert**](drm-lasignaturecert.md)enthaltene Zertifikat überprüft.
+Das **DRM \_ LASignatureLicSrvCert-Attribut** enthält das Zertifikat, das das in [**DRM \_ LASignatureCert enthaltene Zertifikat überprüft.**](drm-lasignaturecert.md)
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ lasignaturelicsrvcert
+g \_ wszWMDRM \_ LASignatureLicSrvCert
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann mit der [**iwmdrmwriter:: setdrmattribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) -Methode festgelegt werden. Das Reader-Objekt ist nicht verfügbar.
+Diese Eigenschaft kann mit der [**IWMDRMWriter::SetDRMAttribute-Methode festgelegt**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) werden. Es ist für das Readerobjekt nicht zugänglich.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -42,9 +42,9 @@ Diese Eigenschaft kann mit der [**iwmdrmwriter:: setdrmattribute**](/previous-ve
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

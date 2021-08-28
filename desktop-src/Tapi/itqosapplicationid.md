@@ -1,39 +1,39 @@
 ---
-description: Die itqosapplicationid-Schnittstelle macht eine Methode verfügbar, die es einer Anwendung ermöglicht, den QoS-Bezeichner für den aktuellen Aufruf abzurufen.
+description: Die ITQOSApplicationID-Schnittstelle macht eine Methode verfügbar, die es einer Anwendung ermöglicht, den QOS-Bezeichner für den aktuellen Aufruf zu erhalten.
 ms.assetid: 1df50b3a-bd16-4e9b-afca-b025bfe537a4
-title: Itqosapplicationid-Schnittstelle (ipmsp. h)
+title: ITQOSApplicationID-Schnittstelle (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23df8da80798cc52ecd73b4f29288812f3774d9f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d4067d7a476e2a402c278b22dcee21b6542919396178350e73017d56ba92258
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126280"
 ---
-# <a name="itqosapplicationid-interface"></a>Itqosapplicationid-Schnittstelle
+# <a name="itqosapplicationid-interface"></a>ITQOSApplicationID-Schnittstelle
 
-\[ Diese Schnittstelle ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Schnittstelle ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **itqosapplicationid** -Schnittstelle macht eine Methode verfügbar, die es einer Anwendung ermöglicht, den QoS-Bezeichner für den aktuellen Aufruf abzurufen.
+Die **ITQOSApplicationID-Schnittstelle** macht eine Methode verfügbar, die es einer Anwendung ermöglicht, den QOS-Bezeichner für den aktuellen Aufruf zu erhalten.
 
-Diese Schnittstelle wird vom [ipconf-MSP](ipconf-msp.md) implementiert und wird nur verfügbar gemacht, wenn ein-Rückruf IP-Konferenzen verwendet.
+Diese Schnittstelle wird vom [IPConf-MSP](ipconf-msp.md) implementiert und nur verfügbar gemacht, wenn ein Aufruf IP-Konferenzdienste verwendet.
 
 ## <a name="members"></a>Member
 
-Die **itqosapplicationid** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Itqosapplicationid** verfügt auch über die folgenden Typen von Membern:
+Die **ITQOSApplicationID-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ITQOSApplicationID** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itqosapplicationid** -Schnittstelle verfügt über diese Methoden.
+Die **ITQOSApplicationID-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                         |
+| Methode                                                                | Beschreibung                         |
 |:----------------------------------------------------------------------|:------------------------------------|
-| [**Setqosapplicationid**](itqosapplicationid-setqosapplicationid.md) | Legt den QoS-Bezeichner fest.<br/> |
+| [**SetQOSApplicationID**](itqosapplicationid-setqosapplicationid.md) | Legt den QOS-Bezeichner fest.<br/> |
 
 
 
@@ -45,9 +45,9 @@ Die **itqosapplicationid** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 

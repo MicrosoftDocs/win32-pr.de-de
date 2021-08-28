@@ -1,9 +1,9 @@
 ---
-title: CB_GETEXTENDEDUI Meldung (Winuser. h)
-description: Bestimmt, ob ein Kombinations Feld über die Standardbenutzer Oberfläche oder die erweiterte Benutzeroberfläche verfügt.
+title: CB_GETEXTENDEDUI Meldung (Winuser.h)
+description: Bestimmt, ob ein Kombinationsfeld über die Standardbenutzerschnittstelle oder die erweiterte Benutzeroberfläche verfügt.
 ms.assetid: 4f5580e0-68b1-4584-bf79-561fb8222fe0
 keywords:
-- Windows-Steuerelemente für CB_GETEXTENDEDUI Meldung
+- CB_GETEXTENDEDUI Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94d90550bf341fc8586174c7ec57eb77fad08c59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05201b0986b114e97523716edacc6fe391908d3ed2841d36bf7578a6455f42a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089220"
 ---
-# <a name="cb_getextendedui-message"></a>CB \_ getextendedui-Nachricht
+# <a name="cb_getextendedui-message"></a>CB \_ GETEXTENDEDUI-Nachricht
 
-Bestimmt, ob ein Kombinations Feld über die Standardbenutzer Oberfläche oder die erweiterte Benutzeroberfläche verfügt.
+Bestimmt, ob ein Kombinationsfeld über die Standardbenutzerschnittstelle oder die erweiterte Benutzeroberfläche verfügt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,11 +45,11 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn das Kombinations Feld über die erweiterte Benutzeroberfläche verfügt, ist der Rückgabewert " **true**". Andernfalls ist Sie **false**.
+Wenn das Kombinationsfeld über die erweiterte Benutzeroberfläche verfügt, ist der Rückgabewert **TRUE.** Andernfalls ist es **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig wird die Liste mit dem F4-Schlüssel geöffnet oder geschlossen, und der nach-unten-Pfeil ändert die aktuelle Auswahl. In einem Kombinations Feld mit der erweiterten Benutzeroberfläche ist die F4-Taste deaktiviert. durch Drücken der nach-unten-Taste wird die Dropdown Liste geöffnet.
+Standardmäßig wird die Liste mit der Taste F4 geöffnet oder geschlossen, und der NACH-UNTEN-PFEIL ändert die aktuelle Auswahl. In einem Kombinationsfeld mit der erweiterten Benutzeroberfläche ist die F4-Taste deaktiviert, und durch Drücken der NACH-UNTEN-TASTE wird die Dropdownliste geöffnet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Standardmäßig wird die Liste mit dem F4-Schlüssel geöffnet oder geschlossen,
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,16 +67,16 @@ Standardmäßig wird die Liste mit dem F4-Schlüssel geöffnet oder geschlossen,
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB- \_ textendedui**](cb-setextendedui.md)
+[**CB \_ SETEXTENDEDUI**](cb-setextendedui.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Kombinations Feld-Features](combo-box-features.md)
+[Kombinationsfeldfeatures](combo-box-features.md)
 </dt> </dl>
 
  

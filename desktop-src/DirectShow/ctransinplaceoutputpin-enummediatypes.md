@@ -1,5 +1,5 @@
 ---
-description: 'CTransInPlaceOutputPin.EnumMediaTypes-Methode: Die EnumMediaTypes-Methode aufzählt die bevorzugten Medientypen des Pins. Diese Methode implementiert die IPin::EnumMediaTypes-Methode.'
+description: 'CTransInPlaceOutputPin.EnumMediaTypes-Methode: Die EnumMediaTypes-Methode listet die bevorzugten Medientypen des Pins auf. Diese Methode implementiert die IPin::EnumMediaTypes-Methode.'
 ms.assetid: 942c6594-3053-484a-a0f7-286dcd3f7550
 title: CTransInPlaceOutputPin.EnumMediaTypes-Methode (Transip.h)
 ms.topic: reference
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 26dd58f23dc18a086c6c59f6f8a6a098e3449fea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e7a351f947b0526b8daf77b0b15ea0d2a2894ef6ff90390be484b5d0ce4b7fa3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076170"
 ---
 # <a name="ctransinplaceoutputpinenummediatypes-method"></a>CTransInPlaceOutputPin.EnumMediaTypes-Methode
 
-Die `EnumMediaTypes` -Methode aufzählt die bevorzugten Medientypen des Pins. Diese Methode implementiert die [**IPin::EnumMediaTypes-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes)
+Die `EnumMediaTypes` -Methode listet die bevorzugten Medientypen des Pins auf. Diese Methode implementiert die [**IPin::EnumMediaTypes-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Empfängt einen Zeiger auf die [**IEnumMediaTypes-Schnittstelle.**](/windows/des
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
@@ -59,29 +59,29 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 |-------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                                 |
 | <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>         | Nicht genügend Arbeitsspeicher.<br/>                     |
-| <dl> <dt>**\_E-ZEIGER**</dt> </dl>             | **NULL-Zeiger.**<br/>                        |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>             | **NULL-Zeiger.**<br/>                        |
 | <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Eingabepin des Filters ist nicht verbunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode gibt die **IEnumMediaTypes-Schnittstelle** vom Upstreamausgabepin zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

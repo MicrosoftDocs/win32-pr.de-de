@@ -1,9 +1,9 @@
 ---
-title: Restartonfailure (settingstype)-Element
-description: Gibt an, dass der Taskplaner den Task neu starten soll, wenn die Aufgabe aus irgendeinem Grund fehlschlägt.
+title: RestartOnFailure (settingsType)-Element
+description: Gibt an, dass der Taskplaner versucht, den Task neu zu starten, wenn der Task aus irgendeinem Grund fehlschlägt.
 ms.assetid: c90d8c62-dd97-4ea6-bd87-37b0915e0b38
 keywords:
-- Restartonfailure-Element Taskplaner
+- RestartOnFailure-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4239d21362d589cae84252c728387b2a2b6159e1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bfe29be7dd329def41e8a6726f141a850eb2daecd05e05d6b5988f543f64864c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072440"
 ---
-# <a name="restartonfailure-settingstype-element"></a>Restartonfailure (settingstype)-Element
+# <a name="restartonfailure-settingstype-element"></a>RestartOnFailure (settingsType)-Element
 
-Gibt an, dass der Taskplaner den Task neu starten soll, wenn die Aufgabe aus irgendeinem Grund fehlschlägt.
+Gibt an, dass der Taskplaner versucht, den Task neu zu starten, wenn der Task aus irgendeinem Grund fehlschlägt.
 
 ``` syntax
 <xs:element name="RestartOnFailure"
@@ -31,7 +31,7 @@ Gibt an, dass der Taskplaner den Task neu starten soll, wenn die Aufgabe aus irg
  />
 ```
 
-Das **restartonfailure** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **RestartOnFailure-Element** wird durch den komplexen [**settingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,7 +39,7 @@ Das **restartonfailure** -Element wird durch den komplexen [**settingstype**](ta
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
@@ -49,25 +49,25 @@ Das **restartonfailure** -Element wird durch den komplexen [**settingstype**](ta
 
 | Element                                                              | type         | BESCHREIBUNG                                                                                        |
 |----------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------|
-| [**Countdown**](taskschedulerschema-count-restarttype-element.md)       | unsignedByte | Gibt an, wie oft das Taskplaner versucht, den Task neu zu starten.<br/> |
+| [**Anzahl**](taskschedulerschema-count-restarttype-element.md)       | unsignedByte | Gibt an, wie oft der Taskplaner versucht, den Task neu zu starten.<br/> |
 | [**Intervall**](taskschedulerschema-interval-restarttype-element.md) | duration     | Gibt an, wie lange der Taskplaner versucht, den Task neu zu starten.<br/>                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung Task Einstellungen angibt, erfolgt der Zugriff auf diese Informationen über die Eigenschaften [**restartcount**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartcount) und [**restartinterval**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartinterval) der [**itasksettings**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) -Schnittstelle. Bei der Skripterstellung erfolgt der Zugriff auf diese Informationen über die Eigenschaften " [**tasksettings. restartcount**](tasksettings-restartcount.md) " und " [**tasksettings. restartinterval**](tasksettings-restartinterval.md) ".
+Wenn eine Anwendung Aufgabeneinstellungen angibt, wird über die [**Eigenschaften RestartCount**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartcount) und [**RestartInterval**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_restartinterval) der [**ITaskSettings-Schnittstelle auf diese Informationen**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings) zugegriffen. Für die Skripterstellung wird über die [**Eigenschaften TaskSettings.RestartCount**](tasksettings-restartcount.md) und [**TaskSettings.RestartInterval auf diese Informationen**](tasksettings-restartinterval.md) zugegriffen.
 
-Beide untergeordneten Elemente müssen festgelegt werden, um anzugeben, wie die Taskplaner den Task neu startet.
+Beide untergeordneten Elemente müssen festgelegt werden, um anzugeben, wie Taskplaner Aufgabe neu startet.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -75,7 +75,7 @@ Beide untergeordneten Elemente müssen festgelegt werden, um anzugeben, wie die 
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

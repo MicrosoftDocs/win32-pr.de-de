@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvrootstillopenexception-Klasse'
-title: Esentslvrootstillopenexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentSLVRootRootOpenException-Klasse'
+title: EsentSLVRootRootOpenException-Klasse
 TOCTitle: EsentSLVRootStillOpenException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSLVRootStillOpenException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvrootstillopenexception(v=EXCHG.10)
@@ -24,27 +24,27 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: be550265380b6de6ddd7f917ca58001f43b88dcc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a9d9cc7628af7eb20b36783a8ef51d83ddfcf44bea2feef42dd68b37abbf2b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120093991"
 ---
-# <a name="esentslvrootstillopenexception-class"></a>Esentslvrootstillopenexception-Klasse
+# <a name="esentslvrootstillopenexception-class"></a>EsentSLVRootRootOpenException-Klasse
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentslvrootstillopenexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSLVRootRootOpenException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,10 +66,10 @@ public sealed class EsentSLVRootStillOpenException : EsentObsoleteException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvrootstillopenexception-Member](./esentslvrootstillopenexception-members.md)
+[EsentSLVRootRootOpenException-Member](./esentslvrootstillopenexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

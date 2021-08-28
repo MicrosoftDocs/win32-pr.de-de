@@ -1,29 +1,29 @@
 ---
-title: Verweis (UI-Automatisierung)
-description: Dieser Abschnitt enthält Referenzinformationen zur Microsoft UI Automation \ 32; Found.
+title: Referenz (Benutzeroberflächenautomatisierung)
+description: Dieser Abschnitt enthält Referenzinformationen zum Microsoft Benutzeroberflächenautomatisierung \ 32; Api.
 ms.assetid: d17e6a95-a923-4e27-aad1-4d95d0b0808d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ade82e67e0e69e288bf115f79ac61fbed407db30
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: cf007a188a6719b1318d01c826a82ad52f1fb414318bffa08667f4861fd0f7b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103739409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071820"
 ---
-# <a name="reference-ui-automation"></a>Verweis (UI-Automatisierung)
+# <a name="reference-ui-automation"></a>Referenz (Benutzeroberflächenautomatisierung)
 
-Dieser Abschnitt enthält Referenzinformationen zur Microsoft UI Automation-API. Es enthält die folgenden Themen.
+Dieser Abschnitt enthält Referenzinformationen zur Microsoft Benutzeroberflächenautomatisierung-API. Sie enthält die folgenden Themen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Benutzeroberflächen-Automatisierungsanbieter](uiauto-entry-uiautoprovidersforwin32apps.md)
--   [UI-Automatisierungs Clients](uiauto-entry-uiautoclientsforwin32apps.md)
--   [UI-Automatisierungs Objekte](uiauto-entry-objects.md)
--   [UI-Automatisierungs Strukturen](uiauto-entry-structures.md)
+-   [Benutzeroberflächenautomatisierung-Anbieter](uiauto-entry-uiautoprovidersforwin32apps.md)
+-   [Benutzeroberflächenautomatisierung Clients](uiauto-entry-uiautoclientsforwin32apps.md)
+-   [Benutzeroberflächenautomatisierung-Objekte](uiauto-entry-objects.md)
+-   [Benutzeroberflächenautomatisierung Strukturen](uiauto-entry-structures.md)
 -   [Veraltete Strukturen](uiauto-entry-deprecated-structures.md)
--   [Benutzeroberflächenautomatisierungs-Enumerationen](uiauto-entry-enumerations.md)
--   [Benutzeroberflächen-Automatisierungs Konstanten](uiauto-entry-constants.md)
+-   [Benutzeroberflächenautomatisierung Enumerationen](uiauto-entry-enumerations.md)
+-   [Benutzeroberflächenautomatisierung Konstanten](uiauto-entry-constants.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

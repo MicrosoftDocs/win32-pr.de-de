@@ -1,5 +1,5 @@
 ---
-description: Das Win32- \_ powermanagementevent-&\# 32; Die WMI-Klasse stellt Energie Verwaltungs Ereignisse dar, die sich aus Energie Zustandsänderungen ergeben.
+description: Win32 \_ PowerManagementEvent &\# 32; Die WMI-Klasse stellt Energieverwaltungsereignisse dar, die sich aus Energiezustandsänderungen ergeben.
 ms.assetid: b5781805-87c7-4eaf-afbb-a1770fcff41c
 ms.tgt_platform: multiple
 title: Win32_PowerManagementEvent-Klasse
@@ -18,18 +18,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e0e7dfa68646dbefb6d6b70218fe99830b44a0c1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 536963be51d665b03af77bb81c7592b44d2a6eb5ddc449bfa82896dd7f7da9b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064420"
 ---
-# <a name="win32_powermanagementevent-class"></a>Win32- \_ Klasse "powermanagementevent"
+# <a name="win32_powermanagementevent-class"></a>Win32 \_ PowerManagementEvent-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ powermanagementevent** " stellt Energie Verwaltungs Ereignisse dar, die sich aus Energie Zustandsänderungen ergeben. Diese Zustandsänderungen sind entweder mit der Advanced Power Management (APM)-oder der Advanced Configuration and Power Interface (ACPI)-System Verwaltungs Protokolle verknüpft.
+Die **WMI-Klasse \_ Win32 PowerManagementEvent** stellt Energieverwaltungsereignisse dar, die sich aus Energiezustandsänderungen ergeben. [](../wmisdk/retrieving-a-class.md) Diese Zustandsänderungen sind entweder den Systemverwaltungsprotokollen Advanced Power Management (APM) oder Advanced Configuration and Power Interface (ACPI) zugeordnet.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,62 +46,62 @@ class Win32_PowerManagementEvent : __ExtrinsicEvent
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ powermanagementevent** " verfügt über diese Typen von Membern:
+Die **Win32 \_ PowerManagementEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ powermanagementevent** " verfügt über diese Eigenschaften.
+Die **Win32 \_ PowerManagementEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **EventType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Energie Verwaltungs Ereignisse")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Energieverwaltungsereignisse") \|
 </dt> </dl>
 
-Der Typ der Änderung im System Energiezustand.
+Typ der Änderung des Systemleistungszustands.
 
 <dt>
 
 <span id="Entering_Suspend"></span><span id="entering_suspend"></span><span id="ENTERING_SUSPEND"></span>
 
-<span id="Entering_Suspend"></span><span id="entering_suspend"></span><span id="ENTERING_SUSPEND"></span>Wechseln **in Suspend** (4)
+<span id="Entering_Suspend"></span><span id="entering_suspend"></span><span id="ENTERING_SUSPEND"></span>**Eingabe von "Suspend"** (4)
 
 
 </dt> <dd>
 
-Der Computer ist zwar angehalten, scheint aber deaktiviert zu sein. Allerdings kann Sie als Reaktion auf verschiedene Ereignisse wie Benutzereingaben (z. b. bewegen der Maus oder Drücken einer Taste auf der Tastatur) als "erwacht" angezeigt werden. Während der Computer angehalten wird, wird der Stromverbrauch auf eine von mehreren Ebenen reduziert, je nachdem, wie das System verwendet werden soll. Je niedriger die Stromverbrauchs Ebene, desto länger dauert es, bis das System wieder in den Arbeitszustand wechselt. Wenn der Computer in den anhaltezustand wechselt, wird der Desktop gesperrt, und Sie müssen STRG + ALT + ENTF drücken und einen gültigen Benutzernamen und ein gültiges Kennwort angeben, um den Vorgang fortzusetzen.
+Wenn der Computer angehalten ist, scheint er ausgeschaltet zu sein. Sie kann jedoch als Reaktion auf verschiedene Ereignisse "erweckt" werden, einschließlich Benutzereingaben (z. B. Bewegen der Maus oder Drücken einer Taste auf der Tastatur). Während der Computer angehalten ist, wird der Stromverbrauch je nach Verwendung des Systems auf eine von mehreren Ebenen reduziert. Desto geringer der Stromverbrauch, desto mehr Zeit benötigt das System, um in den Betriebszustand zurückzukehren. Wenn der Computer in den Zustand "Angehalten" eintritt, ist der Desktop gesperrt, und Sie müssen STRG+ALT+DELETE drücken und einen gültigen Benutzernamen und ein Kennwort angeben, um Vorgänge fortsetzen zu können.
 
 </dd> <dt>
 
 <span id="Resume_from_Suspend"></span><span id="resume_from_suspend"></span><span id="RESUME_FROM_SUSPEND"></span>
 
-<span id="Resume_from_Suspend"></span><span id="resume_from_suspend"></span><span id="RESUME_FROM_SUSPEND"></span>Fortsetzen **von Suspend** (7)
+<span id="Resume_from_Suspend"></span><span id="resume_from_suspend"></span><span id="RESUME_FROM_SUSPEND"></span>**Fortsetzen von "Suspend"** (7)
 
 
 </dt> <dd>
 
-Gibt an, dass eine Nachricht zum Fortsetzen des Anhaltevorgangs gesendet wurde, sodass der Computer seinen regulären Energiezustand wiederherstellen kann.
+Gibt an, dass eine Nachricht Vom Angehalten fortsetzen gesendet wurde, sodass der Computer wieder in den normalen Energiezustand zurückkehren kann.
 
 </dd> <dt>
 
 <span id="Power_Status_Change"></span><span id="power_status_change"></span><span id="POWER_STATUS_CHANGE"></span>
 
-<span id="Power_Status_Change"></span><span id="power_status_change"></span><span id="POWER_STATUS_CHANGE"></span>**Energie Status Änderung** (10)
+<span id="Power_Status_Change"></span><span id="power_status_change"></span><span id="POWER_STATUS_CHANGE"></span>**Energiestatusänderung** (10)
 
 
 </dt> <dd>
 
-Gibt an, dass der Energiestatus des Computers geändert wird, z. b. ein Wechsel von Akku Strom in die Stromversorgung oder von einem Wechsel zu einer unterbrechungsfreien Stromversorgung. Das System leitet dieses Ereignis auch dann weiter, wenn die verbleibende Akkuleistung unter einen vom Benutzer festgelegten Wert sinkt oder sich um einen angegebenen Prozentsatz ändert.
+Gibt eine Änderung des Energiestatus des Computers an, z. B. einen Wechsel vom Akkustrom zum Wechselstrom oder vom Wechselstrom in eine unterbrechungsfreie Stromversorgung. Das System leitet dieses Ereignis auch dann weiter, wenn die verbleibende Akkuleistung unter einen vom Benutzer festgelegten Wert sinkt oder sich um einen angegebenen Prozentsatz ändert.
 
 </dd> <dt>
 
@@ -112,86 +112,86 @@ Gibt an, dass der Energiestatus des Computers geändert wird, z. b. ein Wechsel 
 
 </dt> <dd>
 
-Gibt an, dass ein APM-BIOS (Advanced Power Management) ein OEM-Ereignis gesendet hat. Der Wert des Ereignisses wird in der Eigenschaft " **OEMEventCode** " aufgezeichnet. Da einige APM-BIOS-Implementierungen keine OEM-Ereignis Benachrichtigungen bereitstellen, wird dieses Ereignis möglicherweise nie auf einigen Computern übertragen. APM ist ein Legacy-Energie Verwaltungs Schema. Apm wird zwar weiterhin unterstützt, ist jedoch größtenteils durch ACPI abgelöst (Erweiterte Konfiguration und Energie Schnittstelle).
+Gibt an, dass Advanced Power Management -BIOS (APM) ein OEM-Ereignis gesendet hat. Der Wert des Ereignisses wird in der **OEMEventCode-Eigenschaft** erfasst. Da einige APM-BIOS-Implementierungen keine OEM-Ereignisbenachrichtigungen bereitstellen, wird dieses Ereignis möglicherweise nie auf einigen Computern übertragen. APM ist ein älteres Energieverwaltungsschema. APM wird zwar weiterhin unterstützt, wurde jedoch größtenteils durch ACPI (Advanced Configuration and Power Interface) ersetzt.
 
 </dd> <dt>
 
 <span id="Resume_Automatic"></span><span id="resume_automatic"></span><span id="RESUME_AUTOMATIC"></span>
 
-<span id="Resume_Automatic"></span><span id="resume_automatic"></span><span id="RESUME_AUTOMATIC"></span>**Automatisch** fortsetzen (18)
+<span id="Resume_Automatic"></span><span id="resume_automatic"></span><span id="RESUME_AUTOMATIC"></span>**Automatisch fortsetzen** (18)
 
 
 </dt> <dd>
 
-Gibt an, dass der Computer als Reaktion auf ein Ereignis erwacht ist. Wenn das Systembenutzer Aktivitäten erkennt (z. b. einen Mausklick), wird die resumesuspend-Nachricht gesendet, sodass die Anwendungen wissen, dass Sie die vollständige Interaktivität mit dem Benutzer fortsetzen können.
+Gibt an, dass der Computer als Reaktion auf ein Ereignis wiedererweckt wurde. Wenn das System Benutzeraktivitäten erkennt (z. B. einen Mausklick), wird die ResumeSuspend-Nachricht übertragen, damit Anwendungen wissen, dass sie die vollständige Interaktivität mit dem Benutzer fortsetzen können.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**"OEMEventCode"**
+**OEMEventCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Energie Verwaltungs Ereignisse")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Energieverwaltungsereignisse") \|
 </dt> </dl>
 
-Der vom Originalgerätehersteller (OEM) definierte System Energiezustand, wenn die **eventType** -Eigenschaft dieser Klasse auf 11 (OEM-Ereignis) festgelegt ist. Andernfalls wird diese Eigenschaft auf **null** festgelegt. OEM-Ereignisse werden generiert, wenn ein APM-BIOS ein APM-OEM-Ereignis signalisiert. OEM-Ereignis Codes liegen im Bereich 0x0200h-0x02ffh.
+Vom Originalgerätehersteller (Original Equipment Manufacturer, OEM) definierter Systemleistungszustand, wenn die **EventType-Eigenschaft** dieser Klasse auf 11 (OEM-Ereignis) festgelegt ist; Andernfalls wird diese Eigenschaft auf **NULL festgelegt.** OEM-Ereignisse werden generiert, wenn ein APM-BIOS ein APM-OEM-Ereignis signalisiert. OEM-Ereigniscodes liegen im Bereich von 0x0200h bis 0x02FFH.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](../wmisdk/--event.md)geerbt. Weitere Informationen zu Konstanten, die verwendet werden, um diese Sicherheits Beschreibung festzulegen, finden Sie unter [WMI-Sicherheits Konstanten](../wmisdk/wmi-security-constants.md).
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](../wmisdk/--event.md) Weitere Informationen zu Konstanten, die zum Festlegen dieses Sicherheitsdeskriptors verwendet werden, finden Sie unter [WMI-Sicherheitskonst constants](../wmisdk/wmi-security-constants.md).
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Coordinated Universal Times) angegeben.
 
-Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](../wmisdk/--event.md)geerbt.
+Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](../wmisdk/--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](../wmisdk/creating-a-wmi-script.md).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](../wmisdk/creating-a-wmi-script.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ powermanagementevent** " ist von " [**\_ \_ ExtrinsicEvent**](../wmisdk/--extrinsicevent.md)" abgeleitet.
+Die **Win32 \_ PowerManagementEvent-Klasse** wird von [**\_ \_ ExtrinsicEvent abgeleitet.**](../wmisdk/--extrinsicevent.md)
 
-Änderungen am Energiestatus weisen häufig darauf hin, dass ein Problem mit einem Computer oder mit einem anderen verwalteten Gerät aufgetreten ist. Wenn ein Server plötzlich von der Stromversorgung zu einer unterbrechungsfreien Stromversorgung wechselt, kann diese Änderung darauf hindeuten, dass ein elektrisches Problem aufgetreten ist, entweder mit dem Computer selbst oder mit dem elektrischen System in dem Raum, in dem der Computer aufbewahrt wird.
+Änderungen am Energiestatus deuten häufig darauf hin, dass ein Problem mit einem Computer oder einem anderen verwalteten Gerät aufgetreten ist. Wenn ein Server plötzlich von der Stromversorgung zu einer unterbrechungsfreie Stromversorgung wechselt, kann diese Änderung darauf hindeuten, dass ein elektrisches Problem aufgetreten ist, entweder mit dem Computer selbst oder mit dem elektrischen System in dem Raum, in dem sich der Computer befindet.
 
-Administratoren müssen diese Änderungen im Energiestatus überwachen und sofort über solche Änderungen benachrichtigt werden. Dadurch können Sie Maßnahmen ergreifen, bevor das Gerät die Stromversorgung vollständig verliert. (Unterbrechungsfreie Stromversorgungssysteme können z. b. nur für 15 Minuten oder vor dem Herunterfahren ausgeführt werden.)
+Administratoren müssen diese Änderungen im Energiestatus überwachen und sofort über solche Änderungen benachrichtigt werden. Dies ermöglicht es ihnen, Maßnahmen zu ergreifen, bevor das Gerät die Stromversorgung vollständig verliert. (Unterbrechungsfreie Stromversorgungssysteme können z. B. nur 15 Minuten lang ausgeführt werden, bevor sie heruntergefahren werden.)
 
-Die Win32-Klasse " **\_ powermanagementevent** " kann verwendet werden, um Änderungen des Energiestatus auf einem Computer zu überwachen. Diese Änderungen können einen Wechsel von einer Stromquelle zu einer anderen und eine Änderung des Energie Zustands des Computers (z. b. Eingabe oder Beenden des anhaltemodus) einschließen.
+Die **Win32 \_ PowerManagementEvent-Klasse** kann verwendet werden, um Änderungen am Energiestatus auf einem Computer zu überwachen. Diese Änderungen können einen Wechsel von einer Stromquelle zu einer anderen sowie eine Änderung des Computerbetriebszustands (z. B. das Starten oder Beenden des Modus "Aussetzen") umfassen.
 
-Die Win32-Klasse " **\_ powermanagementevent** " hat nur zwei Eigenschaften: EventType, mit dem der Typ des aufgetretenen Energie Änderungs Ereignisses angegeben wird, und "oemeventtype", der von einigen Originalgeräte Herstellern verwendet wird, um zusätzliche Energie Änderungs Ereignisse zu definieren.
+Die **Win32 \_ PowerManagementEvent-Klasse** verfügt nur über zwei Eigenschaften: EventType, der verwendet wird, um den Typ des aufgetretenen Stromänderungsereignisses anzugeben, und OEMEventType, der von einigen Originalgeräteherstellern verwendet wird, um zusätzliche Stromänderungsereignisse zu definieren.
 
-Weitere Informationen zum reagieren auf Windows-Energie Ereignisse finden Sie im Artikel [überwachen und reagieren auf Windows powerevents mit PowerShell](https://blogs.technet.com/b/heyscriptingguy/archive/2011/08/16/monitor-and-respond-to-windows-power-events-with-powershell.aspx) auf der Scripting Guy! .
+Weitere Informationen zum Reagieren auf Windows Power Events finden Sie im Artikel Überwachen und Reagieren auf Windows [Power Events mit PowerShell](https://blogs.technet.com/b/heyscriptingguy/archive/2011/08/16/monitor-and-respond-to-windows-power-events-with-powershell.aspx) unter Hey! Scripting Guy! .
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript überwacht die Änderungen des Energiestatus auf einem Computer.
+Das folgende VBScript überwacht Änderungen am Energiestatus auf einem Computer.
 
 
 ```VB
@@ -213,8 +213,8 @@ Loop
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -226,10 +226,10 @@ Loop
 [**\_\_ExtrinsicEvent**](../wmisdk/--extrinsicevent.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[Überwachen von Änderungen im Energie Status des Computers](/previous-versions/tn-archive/ee176537(v=technet.10))
+[Überwachen von Änderungen am Computerleistungsstatus](/previous-versions/tn-archive/ee176537(v=technet.10))
 </dt> </dl>
 
  

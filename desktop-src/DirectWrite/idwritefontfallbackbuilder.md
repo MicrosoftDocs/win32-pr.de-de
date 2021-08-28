@@ -1,10 +1,10 @@
 ---
-title: Idschreitefontfallbackbuilder-Schnittstelle
-description: Ermöglicht das Erstellen von Unicode-Schriftart-Fall Back-Zuordnungen und das Erstellen eines Schriftart-Fall Back-Objekts aus diesen Zuordnungen.
+title: IDWriteFontFallbackBuilder-Schnittstelle
+description: Ermöglicht ihnen das Erstellen von Unicode-Fallbackzuordnungen für Schriftarten und das Erstellen eines Schriftartfallbackobjekts aus diesen Zuordnungen.
 ms.assetid: 462AC12E-C856-4D8F-83AF-FAC3221425C2
 keywords:
-- Idwrite-fontfallbackbuilder-Schnittstelle direkt schreiben
-- Direkter Schreibvorgang für idschreitefontfallbackbuilder-Schnittstelle, beschrieben
+- IDWriteFontFallbackBuilder-Schnittstelle Direct Write
+- IDWriteFontFallbackBuilder-Schnittstelle Direct Write , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,34 +15,34 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38cd1770bdd9617f53bb48d725b55c466b12c263
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3f42bc9882c238bb1167c76e941c4f183eef05e12d5d8dc70305b0c01e048797
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051391"
 ---
-# <a name="idwritefontfallbackbuilder-interface"></a>Idschreitefontfallbackbuilder-Schnittstelle
+# <a name="idwritefontfallbackbuilder-interface"></a>IDWriteFontFallbackBuilder-Schnittstelle
 
-Ermöglicht das Erstellen von Unicode-Schriftart-Fall Back-Zuordnungen und das Erstellen eines Schriftart-Fall Back-Objekts aus diesen Zuordnungen.
+Ermöglicht ihnen das Erstellen von Unicode-Fallbackzuordnungen für Schriftarten und das Erstellen eines Schriftartfallbackobjekts aus diesen Zuordnungen.
 
 ## <a name="members"></a>Member
 
-Die **idschreitefontfallbackbuilder** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Idschreitefontfallbackbuilder** verfügt auch über die folgenden Typen von Membern:
+Die **IDWriteFontFallbackBuilder-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IDWriteFontFallbackBuilder** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idschreitefontfallbackbuilder** -Schnittstelle verfügt über diese Methoden.
+Die **IDWriteFontFallbackBuilder-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                      | BESCHREIBUNG                                                                                  |
 |:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**AddMapping**](idwritefontfallbackbuilder-addmapping.md)                 | Fügt eine einzelne Zuordnung an die Liste an. Dies wird einmal für jede weitere Zuordnung aufgerufen.<br/> |
-| [**Addmappings**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefontfallbackbuilder-addmappings)               | Fügen Sie alle Zuordnungen von einem vorhandenen Schriftart Fall Back Objekt hinzu.<br/>                       |
-| [**"Kreatefontfallback"**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefontfallbackbuilder-createfontfallback) | Erstellt das fertige Fall Back Objekt aus den hinzugefügten Zuordnungen.<br/>                    |
+| [**HinzufügenMapping**](idwritefontfallbackbuilder-addmapping.md)                 | Fügt eine einzelne Zuordnung an die Liste an. Rufen Sie dies einmal für jede zusätzliche Zuordnung auf.<br/> |
+| [**AddMappings**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefontfallbackbuilder-addmappings)               | Fügen Sie alle Zuordnungen aus einem vorhandenen Schriftartfallbackobjekt hinzu.<br/>                       |
+| [**CreateFontFallback**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefontfallbackbuilder-createfontfallback) | Erstellt das endgültige Fallbackobjekt aus den hinzugefügten Zuordnungen.<br/>                    |
 
 
 
@@ -54,10 +54,10 @@ Die **idschreitefontfallbackbuilder** -Schnittstelle verfügt über diese Method
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 

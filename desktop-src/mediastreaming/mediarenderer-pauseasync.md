@@ -1,11 +1,11 @@
 ---
-title: MediaRenderer. pautsasync-Methode
-description: Weist den DMR asynchron an, die Wiedergabe des aktuellen Inhalts anzuhalten. | MediaRenderer. pautsasync-Methode
+title: MediaRenderer.PauseAsync-Methode
+description: Weist die DMR asynchron an, die Wiedergabe des aktuellen Inhalts anzuhalten. | MediaRenderer.PauseAsync-Methode
 ms.assetid: 1bd36349-0551-44e8-9550-3fd80900de9a
 keywords:
-- Methode für die Medien Streaming-API
-- Pautsasync-Methode Medien Streaming-API, MediaRenderer-Schnittstelle
-- MediaRenderer Interface Media Streaming API, pautsasync-Methode
+- Medienstreaming-API der PauseAsync-Methode
+- 'PauseAsync-Methode: Medienstreaming-API, MediaRenderer-Schnittstelle'
+- MediaRenderer-Schnittstelle Medienstreaming-API , PauseAsync-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2bbbc55931c7cc7fc5e2e5ec39ba63fe7a064478
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5dcb4474f7a7843f2812cf64e0119912eca8ae320b29b9acb0131a65bbbffa19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060250"
 ---
-# <a name="mediarendererpauseasync-method"></a>MediaRenderer. pautsasync-Methode
+# <a name="mediarendererpauseasync-method"></a>MediaRenderer.PauseAsync-Methode
 
-Weist den DMR asynchron an, die Wiedergabe des aktuellen Inhalts anzuhalten.
+Weist die DMR asynchron an, die Wiedergabe des aktuellen Inhalts anzuhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT PauseAsync(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Empfängt einen Verweis auf ein [**playbackoperation**](playbackoperation.md) -Objekt, das verwendet wird, um Ergebnisse aus dem asynchronen Vorgang zu erhalten.
+Empfängt einen Verweis auf ein [**PlaybackOperation-Objekt,**](playbackoperation.md) das zum Abrufen der Ergebnisse des asynchronen Vorgangs verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 

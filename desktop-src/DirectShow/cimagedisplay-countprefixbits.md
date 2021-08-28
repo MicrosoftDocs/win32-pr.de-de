@@ -1,7 +1,7 @@
 ---
-description: Die Methode "count prefixbits" berechnet die Anzahl der Bits (0) am Anfang eines angegebenen Bitfelds.
+description: Die CountPrefixBits-Methode berechnet die Anzahl der Nullbits am Anfang eines angegebenen Bitfelds.
 ms.assetid: 36fc5c5f-dc64-4588-9130-1b0740d03be1
-title: Cimagedisplay. countrytprefixbits-Methode (winutil. h)
+title: CImageDisplay.CountPrefixBits-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4333e1b0826b4fac7bfff463531b5d2e10704418
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 510ac01baab55fbf45e3441296018426335a8f50061f06400872fd7275d3e273
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108480"
 ---
-# <a name="cimagedisplaycountprefixbits-method"></a>Cimagedisplay. countrytprefixbits-Methode
+# <a name="cimagedisplaycountprefixbits-method"></a>CImageDisplay.CountPrefixBits-Methode
 
-Die- `CountPrefixBits` Methode berechnet die Anzahl der Bits (0) am Anfang eines angegebenen Bitfelds.
+Die `CountPrefixBits` -Methode berechnet die Anzahl der Nullbits am Anfang eines angegebenen Bitfelds.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ DWORD CountPrefixBits(
 *Feld* 
 </dt> <dd>
 
-Gibt ein Bitfeld als **DWORD** -Wert an.
+Gibt ein Bitfeld als **DWORD-Wert** an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl von Null Bits zurück, die vor dem ersten 1 Bit auftreten, oder 0x80000000, wenn alle Bits 0 (null) sind.
+Gibt die Anzahl der Nullbits zurück, die vor dem ersten 1 Bit auftreten, oder 0x80000000, wenn alle Bits 0 (null) sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode eignet sich für die Arbeit mit Farb Masken in [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Strukturen.
+Diese Methode ist nützlich für die Arbeit mit Farbmasken in [**VIDEOINFO-Strukturen.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode eignet sich für die Arbeit mit Farb Masken in [**videoinfo**](/pr
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode eignet sich für die Arbeit mit Farb Masken in [**videoinfo**](/pr
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

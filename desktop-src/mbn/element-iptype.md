@@ -7,25 +7,25 @@ MSHAttr:
 title: IPType
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a7823fc62bea228ec2a1f7e50629d74ce29dde3
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 78e839178cbd37b0172c093dba3cdf276420e2f2
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122988753"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469667"
 ---
 # <a name="span-idwwan_profile_v4element_iptypespanmbnprofileextiptype-v4"></a><span id="WWAN_profile_v4.element_IPType"></span>MBNProfileExt \/ ... \/ IPType (v4)
 
 Gibt den IP-Typ an, der für diese Datenverbindung verwendet werden soll.
 
-Dieses Element ist neu in Version 4 des Schemas. Das -Element kann einen der folgenden Werte aufweisen.
+Dieses Element ist neu in v4 des Schemas. Das -Element kann einen der folgenden Werte haben.
 
 | Wert   | Bedeutung                                       |
 |---------|-----------------------------------------------|
-| Standard | IP-Typ muss von niedrigeren Ebenen ausgewählt werden     |
+| Standard | Der IP-Typ muss von einer niedrigeren Ebene(n)     |
 | IPv4    | Verwenden von IPv4                                      |
 | IPv6    | IPv6 verwenden                                      |
-| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6, sofern verfügbar.           |
+| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6, wie verfügbar.           |
 | XLAT    | Verwenden von 464XLAT zum Tunneln von IPv4 über IPv6-Netzwerke |
 
  
@@ -73,9 +73,7 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

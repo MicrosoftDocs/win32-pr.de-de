@@ -1,7 +1,7 @@
 ---
-description: Übergibt eine an \_ \_ \_ den Filter Diagramm-Manager geänderte Meldung mit einer gewechselten EC-Video Größe.
+description: Übergibt eine \_ EC VIDEO \_ SIZE \_ CHANGED-Meldung an den Filtergraph-Manager.
 ms.assetid: 39cb4f30-c12d-49bd-8d8a-70bf686b680d
-title: Cbasecontrolvideo. onvideosizechange-Methode (ctlutil. h)
+title: CBaseControlVideo.OnVideoSizeChange-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 37caa05d164c23484c749730796d6a5f10d67d57
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 689f6f14426d88270136d6cc3687f9e214b72d6e42e2af44f3d189510d61f327
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076690"
 ---
-# <a name="cbasecontrolvideoonvideosizechange-method"></a>Cbasecontrolvideo. onvideosizechange-Methode
+# <a name="cbasecontrolvideoonvideosizechange-method"></a>CBaseControlVideo.OnVideoSizeChange-Methode
 
-Übergibt eine an \_ \_ \_ den Filter Diagramm-Manager geänderte Meldung mit einer gewechselten EC-Video Größe.
+Übergibt eine \_ EC VIDEO \_ SIZE \_ CHANGED-Meldung an den Filtergraph-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte sein, oder andere Werte, die nicht aufgeführt sind.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung               |
 |-----------------------------------------------------------------------------------------------|---------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Fehler.<br/>       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Fehler.<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Videorenderer sollte diese Member-Funktion jedes Mal, wenn die Videogröße geändert wird, abrufen. Dies wird in der Regel einmal nach der anfänglichen Verbindung aufgerufen. Wenn der Renderer dynamische Formatänderungen unterstützen kann (von 320 x 240 bis 160 x 120), sollte er nach jeder Änderung auch aufgerufen werden.
+Ein Videorenderer sollte diese Memberfunktion jedes Mal aufrufen, wenn die Videogröße geändert wird. dieser wird in der Regel einmal nach der ersten Verbindung aufgerufen. Wenn der Renderer dynamische Formatänderungen unterstützen kann (von 320 x 240 auf 160 x 120), sollte er es auch nach jeder Änderung aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Ein Videorenderer sollte diese Member-Funktion jedes Mal, wenn die Videogröße 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Ein Videorenderer sollte diese Member-Funktion jedes Mal, wenn die Videogröße 
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

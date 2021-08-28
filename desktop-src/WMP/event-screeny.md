@@ -1,9 +1,9 @@
 ---
-title: Event. Screeny
-description: Das Screeny-Attribut ruft die absolute y-Koordinate des Mauszeigers in Bezug auf den Bildschirm ab.
+title: event.screenY
+description: Das screenY-Attribut ruft die absolute y-Koordinate des Mauszeigers in Bezug auf den Bildschirm ab.
 ms.assetid: a689a621-ebfd-4ff9-8412-59db339f8c1a
 keywords:
-- Event. Screeny-Windows-Media Player
+- event.screenY Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7199c60d56b59dc5eed0c8f1d726b8e11525693
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ce4b93a0caf4dee70e8d0b7025153b28f9ea6ddc1630587fc873550807dc30b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123630"
 ---
-# <a name="eventscreeny"></a>Event. Screeny
+# <a name="eventscreeny"></a>event.screenY
 
-Das **Screeny** -Attribut ruft die absolute y-Koordinate des Mauszeigers in Bezug auf den Bildschirm ab.
+Das **screenY-Attribut** ruft die absolute y-Koordinate des Mauszeigers in Bezug auf den Bildschirm ab.
 
 ``` syntax
 event.screenY
@@ -29,7 +29,7 @@ event.screenY
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Event. screenX**](event-screenx.md)
+[**event.screenX**](event-screenx.md)
 </dt> </dl>
 
  

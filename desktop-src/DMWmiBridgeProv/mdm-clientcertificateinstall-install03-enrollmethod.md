@@ -1,11 +1,11 @@
 ---
-title: Methode der Registrierungsmethode der MDM_ClientCertificateInstall_Install03-Klasse
-description: Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierung zu starten.
+title: EnrollMethod-Methode der MDM_ClientCertificateInstall_Install03-Klasse
+description: Löst das Gerät aus, um die Zertifikatregistrierung zu starten.
 ms.assetid: 21a31574-0b19-44bf-90db-4bb9e2611364
 keywords:
-- Methode der Registrierungsmethode
-- Methode der Registrierungsmethode, MDM_ClientCertificateInstall_Install03-Klasse
-- MDM_ClientCertificateInstall_Install03-Klasse, Methode der Registrierungsmethode
+- EnrollMethod-Methode
+- EnrollMethod-Methode, MDM_ClientCertificateInstall_Install03-Klasse
+- MDM_ClientCertificateInstall_Install03-Klasse, EnrollMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7903407d5a97f056835e529eb21408bdcbe800ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ddeca621f58015aa3806212c1250aeb43554a51cbb28e15414e779571b9c102
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109400"
 ---
-# <a name="enrollmethod-method-of-the-mdm_clientcertificateinstall_install03-class"></a>Methode der Registrierungsmethode der MDM \_ \_ clientcertifiInstall03-Klasse
+# <a name="enrollmethod-method-of-the-mdm_clientcertificateinstall_install03-class"></a>EnrollMethod-Methode der \_ MDM-Klasse "ClientCertificateInstall \_ Install03"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierung zu starten. Das Gerät benachrichtigt den MDM-Server nicht, nachdem die Zertifikat Registrierung durchgeführt wurde. Der MDM-Server könnte das Gerät später Abfragen, um herauszufinden, ob ein neues Zertifikat hinzugefügt wird. Siehe auch, [**registrieren**](/windows/client-management/mdm/clientcertificateinstall-csp).
+Löst das Gerät aus, um die Zertifikatregistrierung zu starten. Das Gerät benachrichtigt den MDM-Server nicht, nachdem die Zertifikatregistrierung abgeschlossen ist. Der MDM-Server kann das Gerät später abfragen, um herauszufinden, ob ein neues Zertifikat hinzugefügt wird. Weitere Informationen finden Sie unter [**Registrieren von**](/windows/client-management/mdm/clientcertificateinstall-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Erforderlich. Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierung zu starten. Das Gerät benachrichtigt den MDM-Server nicht, nachdem die Zertifikat Registrierung durchgeführt wurde. Der MDM-Server könnte das Gerät später Abfragen, um herauszufinden, ob ein neues Zertifikat hinzugefügt wird.
+Erforderlich. Löst das Gerät aus, um die Zertifikatregistrierung zu starten. Das Gerät benachrichtigt den MDM-Server nicht, nachdem die Zertifikatregistrierung abgeschlossen ist. Der MDM-Server kann das Gerät später abfragen, um herauszufinden, ob ein neues Zertifikat hinzugefügt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,10 +52,10 @@ Erforderlich. Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierun
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -64,10 +64,10 @@ Erforderlich. Hiermit wird das Gerät ausgelöst, um die Zertifikat Registrierun
 
 <dl> <dt>
 
-[**MDM \_ clientcertifi-einstall \_ Install03**](mdm-clientcertificateinstall-install03.md)
+[**MDM \_ ClientCertificateInstall \_ Install03**](mdm-clientcertificateinstall-install03.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

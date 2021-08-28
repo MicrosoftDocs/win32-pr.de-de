@@ -1,24 +1,24 @@
 ---
-description: 'Erstellen einer Zeitachse: Beispiel Code'
+description: 'Erstellen einer Zeitachse: Beispielcode'
 ms.assetid: efe6e8d7-2465-4374-8c99-a410091f8d46
-title: 'Erstellen einer Zeitachse: Beispiel Code'
+title: 'Erstellen einer Zeitachse: Beispielcode'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 877bd79b055171dfa5bd12cff0ae257d60e76a16
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 614d6e2dfa676b09bac2cc9c81fd67c795d73f61df2df4b603307943ac0ada71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108230"
 ---
-# <a name="creating-a-timeline-example-code"></a>Erstellen einer Zeitachse: Beispiel Code
+# <a name="creating-a-timeline-example-code"></a>Erstellen einer Zeitachse: Beispielcode
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Im folgenden Codebeispiel wird veranschaulicht, wie eine Zeitachse in [DirectShow-Bearbeitungs Diensten](directshow-editing-services.md)erstellt und in der Vorschau angezeigt wird.
+Das folgende Codebeispiel zeigt, wie Sie eine Zeitachse in [DirectShow Editing Services](directshow-editing-services.md)erstellen und eine Vorschau anzeigen.
 
 > [!Note]  
-> Aus Gründen der Übersichtlichkeit führt der Beispielcode keine Fehlerüberprüfung durch. In einer realen Anwendung sollten Sie die Rückgabewerte von Methoden aufrufen überprüfen, um sicherzustellen, dass kein Fehler aufgetreten ist.
+> Aus Gründen der Kürze führt der Beispielcode keine Fehlerüberprüfung durch. In einer echten Anwendung sollten Sie die Rückgabewerte von Methodenaufrufen überprüfen, um sicherzustellen, dass kein Fehler aufgetreten ist.
 
  
 

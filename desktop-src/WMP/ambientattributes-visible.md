@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. Visible
-description: Das Visible-Attribut gibt die Sichtbarkeit für das Steuerelement an oder ruft Sie ab.
+title: AmbientAttributes.visible
+description: Das sichtbare Attribut gibt die Sichtbarkeit für das Steuerelement an oder ruft sie ab.
 ms.assetid: 8347d42a-4af1-4ea1-b968-a2ae58278430
 keywords:
-- Ambientattribute. Visible Windows-Media Player
+- AmbientAttributes.visible-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72794b7bbba0237a687dc70bda761c505b839e59
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6136bbdba7fe222c16e6185bc2ddfa243c5387443122fb93eb1d6564ad01c956
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124050"
 ---
-# <a name="ambientattributesvisible"></a>Ambientattribute. Visible
+# <a name="ambientattributesvisible"></a>AmbientAttributes.visible
 
-Das **Visible** -Attribut gibt die Sichtbarkeit für das Steuerelement an oder ruft Sie ab.
+Das **sichtbare** Attribut gibt die Sichtbarkeit für das Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.visible
@@ -29,7 +29,7 @@ Das **Visible** -Attribut gibt die Sichtbarkeit für das Steuerelement an oder r
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
@@ -42,13 +42,13 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nützlich zum Ausblenden von Steuerelementen, z. b. beim Austauschen einer Pause-Schaltfläche für eine Wiedergabe Schaltfläche.
+Dieses Attribut eignet sich zum Ausblenden von Steuerelementen, z. B. beim Austauschen einer Pausenschaltfläche für eine Wiedergabeschaltfläche.
 
-Wenn der Wert false ist, ist das Steuerelement nicht sichtbar, und die Click-Ereignisse werden an das dahinter liegende Steuerelement übermittelt. Wenn der Wert true ist, ist das Steuerelement sichtbar und empfängt das Click-Ereignis selbst.
+Wenn der Wert FALSE ist, ist das Steuerelement nicht sichtbar, und Klickereignisse werden an das steuerelement hinter ihm übergeben. Wenn der Wert TRUE ist, ist das Steuerelement sichtbar und empfängt das Klickereignis selbst.
 
-Der Standardwert für das **automenu** -Element ist false.
+Der Standardwert für das **AUTOMENU-Element** ist false.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Der Standardwert für das **automenu** -Element ist false.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 

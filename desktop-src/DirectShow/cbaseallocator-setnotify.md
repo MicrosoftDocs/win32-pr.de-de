@@ -1,7 +1,7 @@
 ---
-description: 'Die setnotify-Methode legt einen Rückruf für die Zuweisung fest oder entfernt ihn. Die Zuweisung Ruft die Rückruf Methode auf, wenn die imemzuzuordcator:: ReleaseBuffer-Methode der Zuweisung aufgerufen wird.'
+description: Die SetNotify-Methode legt einen Rückruf für die Zuweisung fest oder entfernt ihn. Die Zuweisung ruft die Rückrufmethode auf, wenn die IMemAllocator::ReleaseBuffer-Methode der Zuweisung aufgerufen wird.
 ms.assetid: ef9a6c66-d392-4130-b4fc-9eb6aecb6cbf
-title: Cbasezucator. setnotify-Methode (amfilter. h)
+title: CBaseAllocator.SetNotify-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2d8269112325d470cae59cff6e615f04fbdfab91
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 16e836be1610e8c2399a263120d847f3fada4b638332ee81914031f7a8e3ffb7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108650"
 ---
-# <a name="cbaseallocatorsetnotify-method"></a>Cbasezucator. setnotify-Methode
+# <a name="cbaseallocatorsetnotify-method"></a>CBaseAllocator.SetNotify-Methode
 
-\[[**Setnotify**](/previous-versions/windows/desktop/api/Dshowasf/nf-dshowasf-iamwmbufferpass-setnotify) kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
+\[[**SetNotify**](/previous-versions/windows/desktop/api/Dshowasf/nf-dshowasf-iamwmbufferpass-setnotify) kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
 
-Die- `SetNotify` Methode legt einen Rückruf für die Zuweisung fest oder entfernt ihn. Die Zuweisung Ruft die Rückruf Methode auf, wenn die [**imemzuzuordcator:: ReleaseBuffer**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer) -Methode der Zuweisung aufgerufen wird.
+Die `SetNotify` -Methode legt einen Rückruf für die Zuweisung fest oder entfernt ihn. Die Zuweisung ruft die Rückrufmethode auf, wenn die [**IMemAllocator::ReleaseBuffer-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-releasebuffer) der Zuweisung aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT SetNotify(
 
 <dl> <dt>
 
-*pnotify* 
+*pNotify* 
 </dt> <dd>
 
-Ein Zeiger auf die Schnittstelle [**imemzucallbacktemp**](/windows/desktop/api/Strmif/nn-strmif-imemallocatornotifycallbacktemp) , die für den Rückruf verwendet wird. Der Aufrufer muss die-Schnittstelle implementieren. Verwenden Sie den Wert **null** , um den Rückruf zu entfernen.
+Zeiger auf die [**IMemAllocatorNotifyCallbackTemp-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-imemallocatornotifycallbacktemp) die für den Rückruf verwendet wird. Der Aufrufer muss die -Schnittstelle implementieren. Verwenden Sie den Wert **NULL,** um den Rückruf zu entfernen.
 
 </dd> </dl>
 
@@ -55,11 +55,11 @@ Ein Zeiger auf die Schnittstelle [**imemzucallbacktemp**](/windows/desktop/api/S
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode implementiert die [**imemzuzucallorcallbacktemp:: setnotify**](/windows/desktop/api/Strmif/nf-strmif-imemallocatorcallbacktemp-setnotify) -Methode. [**Die Zuweisung**](/windows/desktop/api/Strmif/nn-strmif-imemallocatorcallbacktemp) wird von der Zuweisung nicht verfügbar gemacht, es sei denn, das *fenablereleasecallback* -Flag ist im [**cbasezucator**](cbaseallocator.md) -Konstruktor auf **true** festgelegt.
+Diese Methode implementiert die [**IMemAllocatorCallbackTemp::SetNotify-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocatorcallbacktemp-setnotify) Die Zuweisung macht die [**IMemAllocatorCallbackTemp-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocatorcallbacktemp) nur verfügbar, wenn das *fEnableReleaseCallback-Flag* im [**CBaseAllocator-Konstruktor**](cbaseallocator.md) auf **TRUE** festgelegt ist.
 
-Diese Methode legt die [**cbasezucator:: m \_ pnotify**](cbaseallocator-m-pnotify.md) -Member-Variable auf *pnotify* fest und erhöht den Verweis Zähler für die Schnittstelle. Wenn *m \_ pnotify* nicht **null** ist, ruft die **ReleaseBuffer** -Methode des zuordcators [**imemzucatornotifycallbacktemp:: notifyrelease**](/windows/desktop/api/Strmif/nf-strmif-imemallocatornotifycallbacktemp-notifyrelease)auf. Weitere Informationen zum Implementieren des Rückrufs finden Sie im Abschnitt "Hinweise" in dieser Methode.
+Diese Methode legt die [**CBaseAllocator::m \_ pNotify-Membervariable**](cbaseallocator-m-pnotify.md) auf *pNotify* fest und erhöht die Verweisanzahl auf der Schnittstelle. Wenn *m \_ pNotify* nicht **NULL** ist, ruft die **ReleaseBuffer-Methode** der Zuweisung [**IMemAllocatorNotifyCallbackTemp::NotifyRelease auf.**](/windows/desktop/api/Strmif/nf-strmif-imemallocatornotifycallbacktemp-notifyrelease) Informationen zum Implementieren des Rückrufs finden Sie im Abschnitt "Hinweise" in dieser Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Diese Methode legt die [**cbasezucator:: m \_ pnotify**](cbaseallocator-m-pnotif
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Diese Methode legt die [**cbasezucator:: m \_ pnotify**](cbaseallocator-m-pnotif
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Imsrdpdrivecollection-Schnittstelle
-description: Stellt eine Auflistung von Laufwerk Objekten dar.
+title: IMsRdpDriveCollection-Schnittstelle
+description: Stellt eine Auflistung von Laufwerksobjekten dar.
 ms.assetid: 26926b85-021d-4678-845f-93ba62b2b4a3
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpdrivecollection-Schnittstelle Remotedesktopdienste
-- Imsrdpdrivecollection-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpDriveCollection-Schnittstelle Remotedesktopdienste
+- IMsRdpDriveCollection-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,33 +16,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7b2588ddb0945ba1fcab8fbb4c5b9b078a1af9a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d9f85a491da97fe0093d9b02e8ceda59c3562f237d8678323078e2613250f28
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125630"
 ---
-# <a name="imsrdpdrivecollection-interface"></a>Imsrdpdrivecollection-Schnittstelle
+# <a name="imsrdpdrivecollection-interface"></a>IMsRdpDriveCollection-Schnittstelle
 
-Stellt eine Auflistung von Laufwerk Objekten dar.
+Stellt eine Auflistung von Laufwerksobjekten dar.
 
 ## <a name="members"></a>Member
 
-Die **imsrdpdrivecollection** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Imsrdpdrivecollection** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpDriveCollection-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IMsRdpDriveCollection** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **imsrdpdrivecollection** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpDriveCollection-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                     | BESCHREIBUNG                                                 |
+| Methode                                                     | Beschreibung                                                 |
 |:-----------------------------------------------------------|:------------------------------------------------------------|
-| [**Neu eingängig**](imsrdpdrivecollection-rescandrives.md) | Aktualisiert die Liste der-Objekte in der Auflistung.<br/> |
+| [**RescanDrives**](imsrdpdrivecollection-rescandrives.md) | Aktualisiert die Liste der Objekte in der Auflistung.<br/> |
 
 
 
@@ -50,14 +50,14 @@ Die **imsrdpdrivecollection** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **imsrdpdrivecollection** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpDriveCollection-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                              | Zugriffstyp          | BESCHREIBUNG                                                  |
+| Eigenschaft                                                              | Zugriffstyp          | Beschreibung                                                  |
 |:----------------------------------------------------------------------|:---------------------|:-------------------------------------------------------------|
-| [**Drivebyindex**](imsrdpdrivecollection-drivebyindex.md)<br/> | Schreibgeschützt<br/> | Ruft das Laufwerk am angegebenen Index ab.<br/>       |
-| [**Drivecount**](imsrdpdrivecollection-drivecount.md)<br/>     | Schreibgeschützt<br/> | Ruft die Anzahl der-Objekte in der-Auflistung ab.<br/> |
+| [**DriveByIndex**](imsrdpdrivecollection-drivebyindex.md)<br/> | Schreibgeschützt<br/> | Ruft das Laufwerk am angegebenen Index ab.<br/>       |
+| [**DriveCount**](imsrdpdrivecollection-drivecount.md)<br/>     | Schreibgeschützt<br/> | Ruft die Anzahl der Objekte in der Auflistung ab.<br/> |
 
 
 
@@ -73,7 +73,7 @@ Die **imsrdpdrivecollection** -Schnittstelle verfügt über diese Eigenschaften.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>   |
-| IID<br/>                      | IID \_ imsrdpdrivecollection ist als 7ff17599-da2c-4677-ad35-f60c04fe1585 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpDriveCollection ist als 7ff17599-da2c-4677-ad35-f60c04fe1585 definiert.<br/> |
 
 
 
@@ -81,10 +81,10 @@ Die **imsrdpdrivecollection** -Schnittstelle verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
+[Remotedesktop-Webverbindung-Referenz](remote-desktop-web-connection-reference.md)
 </dt> <dt>
 
-[**Imsrdpdrive**](imsrdpdrive.md)
+[**IMsRdpDrive**](imsrdpdrive.md)
 </dt> </dl>
 
  
