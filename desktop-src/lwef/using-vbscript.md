@@ -4,12 +4,12 @@ description: Verwenden von VBScript
 ms.assetid: a078eb60-aa12-42ea-850c-7b845fc8037c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7afa94bd5b3576e80cf8a0c17857bbb0902bd254e95113d87ae9d1d1fca1e38b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f0bc64419af4d8dc47de5a2393fcf5cb259374ed
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118975500"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881016"
 ---
 # <a name="using-vbscript"></a>Verwenden von VBScript
 
@@ -17,7 +17,7 @@ ms.locfileid: "118975500"
 
 VBScript ist eine Programmiersprache, die in Microsoft Internet Explorer. Wenden Sie sich bei anderen Browsern an Ihren Anbieter, um Support zu erhalten. VBScript 2.0 (oder höher) wird für die Verwendung mit dem -Agent empfohlen. Obwohl frühere Versionen von VBScript möglicherweise mit dem -Agent funktionieren, fehlen ihnen bestimmte Funktionen, die Sie möglicherweise verwenden möchten. Sie können VBScript 2.0 herunterladen und weitere Informationen zu VBScript auf der Microsoft Downloads-Website und auf der Microsoft VBScript-Website abrufen.
 
-Verwenden Sie zum Programmieren von Microsoft Agent aus VBScript den HTML-Code. <SCRIPT> tags. To access the programming interface, use the name of control you assign in the <OBJECT> tag, followed by the subobject (if any), the name of the method or property, and any parameters or values supported by the method or property:
+Verwenden Sie zum Programmieren von Microsoft Agent aus VBScript die HTML &lt; &gt; SCRIPT-Tags. Verwenden Sie für den Zugriff auf die Programmierschnittstelle den Namen des Steuerelements, das Sie im OBJECT-Tag zuweisen, gefolgt vom Unterobjekt (falls verfügbar), dem Namen der Methode oder Eigenschaft sowie allen Parametern oder Werten, die von der Methode oder Eigenschaft unterstützt &lt; &gt; werden:
 
 ``` syntax
 agent[.object].Method parameter, [parameter]
@@ -32,7 +32,7 @@ statements
 End Sub
 ```
 
-Sie können auch einen Ereignishandler mithilfe von angeben. <SCRIPT> tag's **For...Event** syntax:
+Sie können auch einen Ereignishandler angeben, indem Sie die &lt; &gt; For... des **SCRIPT-Tags verwenden.** Ereignissyntax:
 
 ``` syntax
 <SCRIPT LANGUAGE=VBScript For=agent Event=event[(parameter[,parameter])]>
@@ -40,9 +40,9 @@ statements
 </SCRIPT>
 ```
 
-Obwohl Microsoft Internet Explorer diese zweite Syntax unterstützt, ist dies nicht in allen Browsern der Fall. Verwenden Sie zur Kompatibilität nur die frühere Syntax für Ereignisse.
+Obwohl Microsoft Internet Explorer diese zweite Syntax unterstützt, ist dies nicht bei allen Browsern der Fall. Verwenden Sie zur Kompatibilität nur die frühere Syntax für Ereignisse.
 
-Mit VBScript (2.0 oder höher) können Sie überprüfen, ob Microsoft Agent installiert ist, indem Sie versuchen, das Objekt zu erstellen und zu überprüfen, ob es vorhanden ist. Im folgenden Beispiel wird veranschaulicht, wie Sie das -Steuerelement auf das -Agent-Steuerelement überprüfen, ohne einen automatischen Download des Steuerelements auszulösen (wie dies der Fall wäre, wenn Sie ein Tag für das Steuerelement auf der <OBJECT> Seite enthalten würden):
+Mit VBScript (2.0 oder höher) können Sie überprüfen, ob Microsoft Agent installiert ist, indem Sie versuchen, das Objekt zu erstellen und zu überprüfen, ob es vorhanden ist. Im folgenden Beispiel wird veranschaulicht, wie Sie das -Steuerelement auf das -Agent-Steuerelement überprüfen, ohne einen automatischen Download des Steuerelements auszulösen (wie dies der Fall wäre, wenn Sie ein OBJECT-Tag für das Steuerelement auf der &lt; &gt; Seite enthalten würden):
 
 ``` syntax
 <!-- WARNING - This code requires VBScript 2.0.

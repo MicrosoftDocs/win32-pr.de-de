@@ -1,19 +1,19 @@
 ---
-description: Das- <url> Element gibt eine URL an, die den Gültigkeitsbereich des Suchconnector darstellt. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+description: Das &lt; &gt; URL-Element gibt eine URL an, die den Bereich des Suchconnectors darstellt. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 ms.assetid: 5afd84aa-98e3-4118-845a-d4efad19a488
-title: scopeitem-URL-Element (Suchconnector-Schema)
+title: scopeItem url-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c573308fe406fe4500f6bb8e88b3762fa0bbac05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63a1db669f7365f04bed49c769ab695ab674b20b
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862143"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886707"
 ---
-# <a name="scopeitem-url-element-search-connector-schema"></a>scopeitem-URL-Element (Suchconnector-Schema)
+# <a name="scopeitem-url-element-search-connector-schema"></a>scopeItem url-Element (Connectorschema suchen)
 
-Das- <url> Element gibt eine URL an, die den Gültigkeitsbereich des Suchconnector darstellt. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das &lt; &gt; URL-Element gibt eine URL an, die den Bereich des Suchconnectors darstellt. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,19 +52,19 @@ Das- <url> Element gibt eine URL an, die den Gültigkeitsbereich des Suchconnect
 
 | Übergeordnetes Element                                                                   | Untergeordnete Elemente |
 |----------------------------------------------------------------------------------|----------------|
-| [scopeitem-Element (Suchconnector-Schema)](search-schema-sconn-scopeitem.md) |                |
+| [scopeItem-Element (Search Connector Schema)](search-schema-sconn-scopeitem.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert kann ein Pfad des lokalen Dateisystems oder eine URL sein.
+Der Wert kann ein lokaler Dateisystempfad oder eine URL sein.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt einen Suchbereich, der c: \\ examplefolder und alle seine untergeordneten Ordner mit Ausnahme von c: \\ examplefolder \\ excludebug enthält.
+Das folgende Beispiel zeigt einen Suchbereich, der C: \\ ExampleFolder und alle seine untergeordneten Ordner mit Ausnahme von C: \\ ExampleFolder \\ ExcludeMe enthält.
 
 
 ```

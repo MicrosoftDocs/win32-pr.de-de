@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc09639d48fe4cea93b115c9243587653ad70f44
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 7cebf23486505cd0381bd8cd62024ad0bc767633
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122465047"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987423"
 ---
 # <a name="jetcreateinstance2-function"></a>JetCreateInstance2-Funktion
 
@@ -86,7 +86,7 @@ Bei Erfolg wird eine neue Instanz zugeordnet, und der Bezeichner dafür wird zur
 
 Bei einem Fehler wird ein Fehler zurückgegeben, der die Fehlerursache darstellt, und es wird keine Instanz zugeordnet.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Eine -Instanz muss mit einem Aufruf von [JetInit](./jetinit-function.md) initialisiert werden, bevor sie von etwas anderem als [JetSetSystemParameter verwendet werden kann.](./jetsetsystemparameter-function.md)
 
@@ -104,12 +104,19 @@ Die typische Startsequenz für einen Prozess, der möglicherweise mehrere Jet-In
 
   - Starten Sie die Instanz mit [JetInit](./jetinit-function.md) oder [JetInit2.](./jetinit2-function.md) Um eine Instanz zu beenden und/oder frei zu geben, verwenden Sie [JetTerm](./jetterm-function.md) oder [JetTerm2](./jetterm2-function.md).
 
-Wenn dies die erste Instanz ist, die gestartet werden soll, gibt es eine Reihe zusätzlicher Schritte, die während dieses Aufrufs ausgeführt werden, um grundlegende Systemin initialisierung und Konfiguration auszuführen. Eine Reihe dieser Schritte kann zu bestimmten Fehlern führen, die mit JET_errOutOfMemory, aber auch anderen führen (weitere Informationen finden Sie unter Rückgabewerte).
+Wenn dies die erste Instanz ist, die gestartet werden soll, gibt es eine Reihe zusätzlicher Schritte, die während dieses Aufrufs ausgeführt werden, um grundlegende Systemin initialisierung und Konfiguration auszuführen. Eine Reihe dieser Schritte kann zu bestimmten Fehlern führen, die mit JET_errOutOfMemory, aber auch anderen (weitere Informationen finden Sie unter Rückgabewerte).
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetCreateInstance2W</strong> (Unicode) und <strong>JetCreateInstance2A</strong> (ANSI).</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetCreateInstance2W</strong> (Unicode) und <strong>JetCreateInstance2A</strong> (ANSI).</p> | 
 
 
 

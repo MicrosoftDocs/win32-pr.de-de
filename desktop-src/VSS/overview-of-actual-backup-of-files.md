@@ -1,123 +1,82 @@
 ---
-description: VSS ermöglicht einem Anforderer den Zugriff auf die Schatten Kopie von Volumes, die Daten für die Sicherung enthalten, und das Kopieren von Daten auf das Sicherungsmedium.
+description: VSS ermöglicht einem Anfordernden den Zugriff auf die Schattenkopie von Volumes, die Daten für die Sicherung enthalten, und das Kopieren von Daten auf Sicherungsmedien.
 ms.assetid: 187f26f2-f191-4703-9bde-3357f1ceef0c
 title: Übersicht über die tatsächliche Sicherung von Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98a504ff5a41725e33a2eb27792a3c6c89d00276
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2413111467014b666d219a7a1e92efad26302e5c
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356910"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475696"
 ---
 # <a name="overview-of-actual-backup-of-files"></a>Übersicht über die tatsächliche Sicherung von Dateien
 
-VSS ermöglicht einem Anforderer den Zugriff auf die Schatten Kopie von Volumes, die Daten für die Sicherung enthalten, und das Kopieren von Daten auf das Sicherungsmedium. Writer setzen in der Regel während dieses Prozesses den normalen Betrieb fort. Weitere Informationen finden Sie [unter Übersicht über die Verarbeitung einer Sicherung unter VSS](overview-of-processing-a-backup-under-vss.md).
+VSS ermöglicht einem Anfordernden den Zugriff auf die Schattenkopie von Volumes, die Daten für die Sicherung enthalten, und das Kopieren von Daten auf Sicherungsmedien. Writer fahren während dieses Prozesses im Allgemeinen mit dem normalen Betrieb fort. Weitere Informationen finden Sie unter [Übersicht über die Verarbeitung einer Sicherung unter VSS.](overview-of-processing-a-backup-under-vss.md)
 
-In der folgenden Tabelle wird die Abfolge der Aktionen und Ereignisse aufgeführt, die für die Sicherung der zu sichernden Dateien erforderlich sind.
+Die folgende Tabelle zeigt die Abfolge der Aktionen und Ereignisse, die zum Sichern von Dateien erforderlich sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Requestaktion</th>
-<th>Ereignis</th>
-<th>Writer-Aktion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Zugreifen auf Dateien auf dem schattenkopierten Volume (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties"><strong>IVssBackupComponents:: getsnapshotproperties</strong></a>, <a href="/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop"><strong>VSS_SNAPSHOT_PROP</strong></a>)</td>
-<td>Keine</td>
-<td>Keine</td>
-</tr>
-<tr class="even">
-<td>Generieren Sie die Liste der zu sichernden Dateien, und kopieren Sie die Datei Daten auf das Sicherungsmedium.</td>
-<td>Keine</td>
-<td>Keine</td>
-</tr>
-<tr class="odd">
-<td>Geben Sie den Erfolg oder das Fehlschlagen der Sicherung mit <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded"><strong>IVssBackupComponents:: setbackupsuccess</strong></a>an.</td>
-<td>Keine</td>
-<td>Keine</td>
-</tr>
-<tr class="even">
-<td>Der Anforderer gibt an, dass die Sicherung abgeschlossen wurde, indem <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete"><strong>IVssBackupComponents:: BackupComplete</strong></a>aufgerufen wird.</td>
-<td><a href="vssgloss-b.md"><em>BackupComplete</em></a></td>
-<td>Ausführen einer Bereinigung nach der Sicherung (siehe <a href="/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete"><strong>CVssWriter:: OnBackupComplete</strong></a>, <a href="/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents"><strong>ivssschreitercomponents</strong></a>, <a href="/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent"><strong>IVssComponent</strong></a>).</td>
-</tr>
-<tr class="odd">
-<td>Der Anforderer wartet darauf, dass alle Writer den Empfang des <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete"><strong>IVssBackupComponents:: BackupComplete</strong></a> -Ereignisses mithilfe von <a href="/windows/desktop/api/Vss/nn-vss-ivssasync"><strong>IVssAsync</strong></a>bestätigen. Außerdem sollte der Writer-Status überprüft werden (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus"><strong>IVssBackupComponents:: gatherschreiterstatus</strong></a>, <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus"><strong>IVssBackupComponents:: getschreiterstatus</strong></a>). Der Anforderer muss zu diesem Zeitpunkt <strong>gatherschreibstatus</strong> auslösen, damit die Writer-Sitzung auf den Status abgeschlossen festgelegt wird.
-<blockquote>
-[!Note]<br />
-Dies ist nur auf Windows Server 2008 mit Service Pack 2 (SP2) und früher erforderlich.
-</blockquote>
-<br/></td>
-<td>Keine</td>
-<td>Keine</td>
-</tr>
-<tr class="even">
-<td>Speichern Sie das Dokument mit den Sicherungs Komponenten und die einzelnen Writer-Metadatendokumente in XML-Dokumenten, die auf die Sicherungsmedien geschrieben werden können (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-saveasxml"><strong>IVssBackupComponents:: SaveAsXml</strong></a> und <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-saveasxml"><strong>ivssexaminewrite Metadata:: SaveAsXml</strong></a>).</td>
-<td>Keine</td>
-<td>Keine</td>
-</tr>
-</tbody>
-</table>
+
+| Aktion des Anfordernden | Ereignis | Writer-Aktion | 
+|------------------|-------|---------------|
+| Zugreifen auf Dateien auf dem schattenkopieren Volume (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties"><strong>IVssBackupComponents::GetSnapshotProperties</strong></a>, <a href="/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop"><strong>VSS_SNAPSHOT_PROP</strong></a>) | Keine | Keine | 
+| Generieren Sie die Liste der zu sichernden Dateien, und kopieren Sie Dateidaten auf Sicherungsmedien. | Keine | Keine | 
+| Geben Sie den Erfolg oder Fehler der Sicherung mit <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded"><strong>IVssBackupComponents::SetBackupSucceeded an.</strong></a> | Keine | Keine | 
+| Der Anfordernde gibt an, dass die Sicherung abgeschlossen wurde, indem <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete"><strong>er IVssBackupComponents::BackupComplete aufruft.</strong></a> | <a href="vssgloss-b.md"><em>BackupComplete</em></a> | Führen Sie alle Bereinigungen nach der Sicherung durch (siehe <a href="/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete"><strong>CVssWriter::OnBackupComplete</strong></a>, <a href="/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents"><strong>IVssWriterComponents</strong></a>, <a href="/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent"><strong>IVssComponent</strong></a>). | 
+| Der Anfordernde wartet darauf, dass alle Writer den Empfang des <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete"><strong>IVssBackupComponents::BackupComplete-Ereignisses</strong></a> mithilfe von <a href="/windows/desktop/api/Vss/nn-vss-ivssasync"><strong>IVssAsync bestätigen.</strong></a> Außerdem sollte der Writerstatus überprüft werden (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus"><strong>IVssBackupComponents::GatherWriterStatus</strong></a>, <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus"><strong>IVssBackupComponents::GetWriterStatus</strong></a>). Der Anfordernde muss <strong>gatherWriterStatus</strong> zu diesem Zeitpunkt aufrufen, damit die Writersitzung in einen abgeschlossenen Zustand gesetzt wird.<blockquote>[!Note]<br />Dies ist nur auf Windows Server 2008 mit Service Pack 2 (SP2) und früher erforderlich.</blockquote><br /> | Keine | Keine | 
+| Speichern Sie das Sicherungskomponentendokument und jedes Writer-Metadatendokument in XML-Dokumenten, die auf das Sicherungsmedium geschrieben werden können (siehe <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-saveasxml"><strong>IVssBackupComponents::SaveAsXML</strong></a> und <a href="/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-saveasxml"><strong>IVssExwriterMetadata::SaveAsXML</strong></a>). | Keine | Keine | 
+
 
 
 
  
 
-## <a name="writer-actions-during-backup-of-files"></a>Writer-Aktionen während der Sicherung von Dateien
+## <a name="writer-actions-during-backup-of-files"></a>Writeraktionen während der Sicherung von Dateien
 
-Nachdem die Schatten Kopie abgeschlossen wurde, sollten alle e/a-Vorgänge auf dem System, das gesichert wird, fortgesetzt werden können, ohne die Integrität der Sicherung zu unterbrechen. Dies ist eine der wichtigsten Gründe für die Verwendung der Schattenkopiefunktion.
+Nachdem die Schattenkopie abgeschlossen wurde, sollten alle E/A-Vorgänge auf dem System, das gesichert wird, fortgesetzt werden können, ohne die Integrität der Sicherung zu unterbrechen. Dies ist einer der Hauptgründe für die Schattenkopiefunktion.
 
-Daher gibt es wie in der Ermittlungsphase (siehe [Übersicht über die Sicherungs Ermittlungsphase](overview-of-the-backup-discovery-phase.md)) nur wenige Anforderungen an die Writer, während Dateien tatsächlich gesichert werden.
+Daher gibt es wie in [](overview-of-the-backup-discovery-phase.md)der Ermittlungsphase (siehe Übersicht über die Sicherungsermittlungsphase) einige Anforderungen an die Writer, während Dateien tatsächlich gesichert werden.
 
-Nachdem eine Sicherung abgeschlossen wurde und ein Anforderer ein [*BackupComplete*](vssgloss-b.md) -Ereignis generiert hat, ruft VSS die [**CVssWriter:: OnBackupComplete**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete) -Methode jedes Writers auf, eine virtuelle Methode, die standardmäßig einfach **true** zurückgibt. Writer können jedoch die Standard Implementierung überschreiben und solche Aktionen ausführen, indem Sie die verbleibenden temporären Dateien entfernen, oder die mit aufgerufene [**ivsswritercomponents**](/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents) -Schnittstelle verwenden, um den Zustand der Sicherung der einzelnen [*enthaltenen expliziten*](vssgloss-e.md) Komponenten (und sämtlicher [*Komponenten Sätze*](vssgloss-c.md) , die Sie definieren können) zu überprüfen, indem Sie das entsprechende [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Objekt abrufen. Der Writer kann dann den Erfolg oder das Fehlschlagen der Sicherung durch Aufrufen von [**IVssComponent: getbackupsuccess**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)ermitteln und darauf reagieren. Der von **IVssComponent: getbackuperfolgreiches** zurückgegebene Wert ist nur dann **true** , wenn alle explizit enthaltenen Dateien in der Komponente und alle implizit in eine der zugehörigen [*unter Komponenten*](vssgloss-s.md) [*eingeschlossen*](vssgloss-i.md) wurden.
+Nachdem eine Sicherung abgeschlossen wurde und ein Ansucher ein [*BackupComplete-Ereignis*](vssgloss-b.md) generiert hat, aufruft VSS die [**CVssWriter::OnBackupComplete-Methode**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete) jedes Writers, eine virtuelle Methode, die standardmäßig einfach **TRUE** zurückgibt. Writer können jedoch die Standardimplementierung außer Kraft setzen und Aktionen wie das Entfernen verbleibender temporärer Dateien ausführen oder die [**IVssWriterComponents-Schnittstelle**](/windows/desktop/api/VsWriter/nl-vswriter-ivsswritercomponents) verwenden, mit der sie aufgerufen werden, um den Status der Sicherung jeder enthaltenen enthaltenen Komponenten (und aller Komponenten, die sie definieren können) durch Abrufen des entsprechenden [**IVssComponent-Objekts**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) zu überprüfen. [](vssgloss-e.md) [](vssgloss-c.md) Der Writer kann dann den Erfolg oder Fehler der Sicherung durch Aufrufen von [**IVssComponent:GetBackupSucceeded bestimmen**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupsucceeded)und entsprechend agieren. Der von **IVssComponent:GetBackupSucceeded** zurückgegebene Wert ist nur **TRUE,** wenn [](vssgloss-i.md) alle explizit in die [](vssgloss-s.md) Komponente eingeschlossenen Dateien und alle implizit eingeschlossenen Unterkomponenten erfolgreich sichern wurden.
 
-Wenn der Aufruf von [**CVssWriter:: OnBackupComplete**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete) abgeschlossen ist, sollte der Anforderer ein letztes Mal [**IVssBackupComponents:: gatherschreiterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) und [**IVssBackupComponents:: getschreiterstatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) (für jeden Writer) aufrufen. Der Schreib Sitzungs Zustands Speicher ist eine begrenzte Ressource, und Writer müssen die Sitzungs Zustände schließlich wieder verwenden. Durch diesen Schritt wird der Status der Sicherungs Sitzung des Writers als abgeschlossen markiert und VSS benachrichtigt, dass dieser Sicherungs Sitzungs Slot von einem nachfolgenden Sicherungs Vorgang wieder verwendet werden kann.
+Wenn der Aufruf von [**CVssWriter::OnBackupComplete**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onbackupcomplete) abgeschlossen ist, sollte der Anfordernde ein letztes Mal [**IVssBackupComponents::GatherWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwriterstatus) und [**IVssBackupComponents::GetWriterStatus**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwriterstatus) (für jeden Writer) aufrufen. Der Sitzungszustandsspeicher des Writers ist eine begrenzte Ressource, und Writer müssen schließlich Sitzungszustände wiederverwenden. Dieser Schritt markiert den Sicherungssitzungsstatus des Writers als abgeschlossen und benachrichtigt VSS, dass dieser Sicherungssitzungsslot von einem nachfolgenden Sicherungsvorgang wiederverwendet werden kann.
 
-## <a name="requester-actions-during-backup-of-files"></a>Requestaktionen während der Sicherung von Dateien
+## <a name="requester-actions-during-backup-of-files"></a>Aktionen des Anfordernden während der Sicherung von Dateien
 
-Wie in [der Übersicht über die Sicherungs Ermittlungs Phase](overview-of-the-backup-discovery-phase.md)erwähnt, sollten Sie die tatsächliche Liste der zu sichernden Dateien erst generieren, wenn die Schatten Kopie abgeschlossen ist.
+Wie unter [Übersicht über die Sicherungsermittlungsphase](overview-of-the-backup-discovery-phase.md)erwähnt, sollten Sie die tatsächliche Liste der zu sichernden Dateien erst generieren, wenn die Schattenkopie abgeschlossen ist.
 
-Das [*Geräte Objekt*](vssgloss-d.md) , das der Schatten Kopie eines bestimmten Volumes entspricht, wird verwendet, um Zugriff auf Dateien auf dem schattenkopierten Volume zu erhalten, nachdem die Schatten Kopie abgeschlossen wurde. Das Device-Objekt wird vom [**VSS \_ Snapshot \_**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) -Replikation-Objekt abgerufen, das von [**IVssBackupComponents:: getinapshotproperties**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties)zurückgegeben wurde. Jede Schatten Kopie eines schattenkopiesatzes verfügt über ein eigenes Geräte Objekt.
+Das [*Geräteobjekt,*](vssgloss-d.md) das der Schattenkopie eines bestimmten Volumes entspricht, wird verwendet, um zugriff auf Dateien auf dem kopierten Schattenvolumen zu erhalten, nachdem die Schattenkopie abgeschlossen wurde. Das Geräteobjekt wird aus dem [**VSS \_ SNAPSHOT \_ PROP-Objekt**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) erhalten, das von [**IVssBackupComponents::GetSnapshotProperties zurückgegeben wird.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties) Jede Schattenkopie eines Schattenkopiesets hat ein eigenes Geräteobjekt.
 
-Mit dem Geräte Objekt und den Pfaden, die von den Dokument Spezifikationen des Writer-Metadatendokuments abgerufen werden, werden dann Dateien für die Sicherung ausgewählt. Weitere Informationen finden [Sie unter Anforderer Zugriff auf Schatten](requestor-access-to-shadow-copied-data.md) Kopien von Daten.
+Das Geräteobjekt und die Pfade, die aus den Spezifikationen des Writer-Metadatendokuments der Komponenten ermittelt wurden, werden dann verwendet, um Dateien für die Sicherung auszuwählen. Weitere [Informationen finden Sie unter Requester Access to Shadow Copied Data](requestor-access-to-shadow-copied-data.md) (Zugriff des Anfordernden auf schattenkopierte Daten).
 
-Welche Dateien in der Sicherungsliste enthalten sein werden, hängt von der Art der Sicherung, von der Komponenten [*Auswahl für die Sicherung*](vssgloss-s.md)und der logischen Pfad Struktur des Writers ab (Weitere Informationen finden Sie unter [Arbeiten mit selectlichkeit für die Sicherung](working-with-selectability-for-backup.md)).
+Welche Dateien in der Sicherungsliste enthalten sein werden, hängt [](vssgloss-s.md)von der Art der jeweiligen Sicherung, der Komponentenauswahl für die Sicherung und der logischen Pfadstruktur des Writers ab (siehe [Working with Selectability for Backup](working-with-selectability-for-backup.md)).
 
-Zusätzlich zu den in den-Komponenten angegebenen Dateien können von einem bestimmten Writer auch explizit Dateien ausgeschlossen werden. Der Datei Ausschluss muss immer beachtet werden, unabhängig davon, welche Komponenten ausgewählt werden.
+Zusätzlich zu den dateien, die in den Komponenten angegeben sind, kann ein angegebener Writer auch Explizit ausgeschlossene Dateien haben. Der Dateiausschluss muss immer beachtet werden, unabhängig davon, welche Komponenten ausgewählt sind.
 
-Auch in [der Übersicht über die Sicherungs Ermittlungs Phase](overview-of-the-backup-discovery-phase.md)kann ein bereitgestellter Ordner oder Analyse Punkt in einer Schatten Kopie angezeigt werden und gesichert werden. Ein bereitgestellter Ordner oder Analyse Punkt kann jedoch nicht auf dem schattenkopierten Volume durchsucht werden (siehe [Arbeiten mit bereitgestellten Ordnern und Analyse Punkten](working-with-reparse-and-mount-points.md)).
+Wie unter Übersicht [über](overview-of-the-backup-discovery-phase.md)die Sicherungsermittlungsphase erwähnt, kann ein bereitgestellter Ordner oder Einparpunkt in einer Schattenkopie angezeigt und gesichert werden. Ein bereitgestellter Ordner oder Einparpunkt kann jedoch nicht auf dem schattenkopierten Volume durchlaufen werden (siehe Arbeiten mit bereitgestellten Ordnern und [Parsepunkten](working-with-reparse-and-mount-points.md)).
 
-Die Sorgfalt sollte auch während eines Sicherungs Vorgangs erfolgen, wenn der von [**ivsswmfiledesc:: getalternateloation**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation) zurückgegebene [*Alternative Pfad*](vssgloss-a.md) nicht leer ist. Ein alternativer Pfad unterscheidet sich von einer [*alternativen Speicherort Zuordnung*](vssgloss-a.md) darin, dass er nur während der Sicherungen verwendet wird, während eine Alternative Speicherort Zuordnung nur während der Wiederherstellung verwendet wird.
+Wenn der alternative Pfad, der von [](vssgloss-a.md) [**IVssWMFiledesc::GetAlternateLocation**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation) zurückgegeben wird, nicht leer ist, sollten Sie auch während eines Sicherungsvorgang mit Vorsicht darauf achten. Ein alternativer Pfad [](vssgloss-a.md) unterscheidet sich von einer alternativen Speicherortzuordnung, da er nur während Sicherungen verwendet wird, während eine alternative Speicherortzuordnung nur bei Wiederherstellungen verwendet wird.
 
-In diesem Fall werden die Daten nicht von Ihrem normalen Speicherort (angegeben durch [**ivsswmfiledesc:: getpath**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getpath)) gesichert, sondern von dem Speicherort, der von [**ivsswmfiledesc:: getalternateloation**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation)zurückgegeben wird. Bei der Wiederherstellung muss die Datei an Ihren normalen Speicherort zurückgegeben werden. Weitere Informationen finden Sie unter [nicht standardmäßige Sicherungs-und Wiederherstellungs Speicherorte](non-default-backup-and-restore-locations.md) .
+In diesem Fall müssen die Daten nicht von ihrem normalen Speicherort (angegeben durch [**IVssWMFiledesc::GetPath),**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getpath)sondern von dem speicherort, der von [**IVssWMFiledesc::GetAlternateLocation**](/windows/desktop/api/VsWriter/nf-vswriter-ivsswmfiledesc-getalternatelocation)zurückgegeben wird, sichern. Bei der Wiederherstellung sollte die Datei an ihren normalen Speicherort zurückgegeben werden. Weitere Informationen finden Sie unter Nicht [standardmäßige Sicherungs- und](non-default-backup-and-restore-locations.md) Wiederherstellungsspeicherorte.
 
-VSS gibt keine Einschränkungen für den eigentlichen Mechanismus der Sicherung von Daten auf einem Speichermedium oder der Wahl des Mediums an. Es wird jedoch empfohlen, dass die Dateien der einzelnen Komponenten jeder [*Writer-Instanz*](vssgloss-w.md) als Einheit verarbeitet werden. Eine Erläuterung bewährter Methoden zum Erstellen der Sicherungsdatei Liste finden Sie unter [Erstellen eines Sicherungs Satzes](generating-a-backup-set.md) .
+VSS legt keine Einschränkungen hinsichtlich des tatsächlichen Mechanismus zum Sichern von Daten auf einem Speichermedium oder der Auswahl dieses Mediums fest. Es wird jedoch empfohlen, die Dateien jeder Komponente jeder [*Writerinstanz*](vssgloss-w.md) als Einheit zu verarbeiten. Unter [Generieren eines Sicherungssets](generating-a-backup-set.md) finden Sie eine Erörterung der bewährten Methoden zum Generieren der Sicherungsdateiliste.
 
-Der Erfolg oder das Fehlschlagen der Sicherung von Dateien, die von einer bestimmten Komponente verwaltet werden, und (wenn ein [*Komponenten Satz*](vssgloss-c.md)definiert wird), sollte die [*unter Komponenten*](vssgloss-s.md) für eine bestimmte Writer-Instanz im Dokument mit den Sicherungs Komponenten beibehalten werden, indem [**IVssBackupComponents:: setbackupsuccess**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded)aufgerufen wird. Wenn eine von einer Komponente oder einem Komponenten Satz verwaltete Datei nicht gesichert werden kann, wird die gesamte Komponente als fehlerhaft bezeichnet. Genaue Informationen darüber, welche Datei nicht gesichert werden konnte, sollten immer protokolliert werden.
+Der Erfolg oder Fehler beim Sichern von Dateien, die von einer bestimmten Komponente [](vssgloss-s.md) verwaltet werden, und (wenn sie einen Komponentensatz [*definiert),*](vssgloss-c.md)sollten ihre Unterkomponenten für eine bestimmte Writerinstanz im Sicherungskomponentendokument beibehalten werden, indem [**IVssBackupComponents::SetBackupSucceededaufgerufen wird.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setbackupsucceeded) Wenn eine Datei, die von einer Komponente oder einem Komponentensatz verwaltet wird, nicht sichern kann, wird für die gesamte Komponente ein Fehler bezeichnet. Genaue Informationen darüber, welche Datei nicht sichern konnte, sollten immer protokolliert werden.
 
-Entwickler finden es möglicherweise hilfreich, einen Datensatz auf dem Sicherungsmedium zu speichern, von dem die Dateien gesichert werden, die Komponenten und Komponenten, in denen Sie Mitglied sind, ihre Spezifikation und deren ursprüngliche Pfade. Es kann auch hilfreich sein, Informationen wie die Komponenten Definition jedes Writers zu speichern. Dies kann den Abruf Vorgang vereinfachen. Diese Details werden jedoch dem Anforderer-Entwickler überlassen.
+Entwickler können es hilfreich finden, einen Datensatz auf dem Sicherungsmedium zu speichern, auf dem dateien gesichert werden, in welchen Komponenten und Komponentensatz sie Mitglied waren, welche Spezifikationen sie hatten und wie ihre ursprünglichen Pfade waren. Es kann auch nützlich sein, Informationen wie die Komponentendefinition jedes Writers zu speichern. Dies kann den Abrufvorgang vereinfachen. Diese Details bleiben jedoch dem Entwickler der anfordernden Seite erhalten.
 
-Da Writer das Dokument mit den Sicherungs Komponenten ändern können, während das [**PostSnapshot**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot) -Ereignis verarbeitet wird, das durch den Anforderer-Befehl von [**IVssBackupComponents::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)generiert wurde, sollte das Dokument mit den Sicherungs Komponenten erst gespeichert werden, nachdem der asynchrone Vorgang abgeschlossen wurde.
+Da Writer das Sicherungskomponentendokument beim Behandeln des [**PostSnapshot-Ereignisses**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot) ändern können, das durch den Aufruf von [**IVssBackupComponents::D oSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)generiert wurde, sollte das Sicherungskomponentendokument erst nach Abschluss dieses asynchronen Aufrufs gespeichert werden.
 
-Obwohl es möglicherweise schon früher stattfindet, ist dies auch ein bequemer Zeitpunkt, das Writer-Metadatendokument zu speichern.
+Obwohl dies bereits früher der Fall sein kann, ist dies auch ein praktischer Zeitpunkt zum Speichern des Writer-Metadatendokuments.
 
-Es ist sehr wichtig, dass das Dokument mit den Sicherungs Komponenten und die Writer-Metadatendokumente mithilfe von [**IVssBackupComponents:: SaveAsXml**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-saveasxml) und [**ivssexamineschreitermetadata:: SaveAsXml**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-saveasxml)beibehalten werden. Wenn dies nicht der Fall ist, kann VSS beim Wiederherstellen der Datei nicht verwendet werden.
+Es ist sehr wichtig, dass sowohl das Sicherungskomponentendokument als auch die Writer-Metadatendokumente mithilfe von [**IVssBackupComponents::SaveAsXML**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-saveasxml) und [**IVssExerklärWriterMetadata::SaveAsXML**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssexaminewritermetadata-saveasxml)beibehalten werden. Wenn nicht, ist es nicht möglich, VSS während der Dateiwiederherstellung zu verwenden.
 
-Zusätzlich zum Speichern der ursprünglichen Metadaten ist es für einige Sicherungs Anwendungen möglicherweise hilfreich, eine Kopie Ihrer eigenen Liste der Dateien (in Ihrem eigenen optimierten Format) – und deren zugeordneten Writer, Komponenten, Wiederherstellungs Prozeduren und Standortinformationen – auf den Sicherungsmedien zu speichern, damit Sie später abgerufen werden können. Eine solche Liste kann verwendet werden, um die Verarbeitung und den Vergleich von Writer-Metadatendokumenten und den Dokumenten der Sicherungs Komponente während der Wiederherstellung zu vermeiden.
+Zusätzlich zum Speichern der ursprünglichen Metadaten kann es für einige Sicherungsanwendungen nützlich sein, eine Kopie ihrer eigenen Liste der Dateien (in ihrem eigenen optimierten Format) und der zugehörigen Writer-, Komponenten-, Wiederherstellungsprozedur- und Speicherortinformationen zum späteren Abrufen auf dem Sicherungsmedium zu speichern. Eine solche Liste kann verwendet werden, um einige der Analyse und den Vergleich von Writer-Metadatendokumenten und sicherungskomponentendokumenten während der Wiederherstellung zu vermeiden.
 
-Volumes, die gesichert werden, verfügen möglicherweise über Daten, die nicht von VSS-Writern verwaltet werden. Diese Daten können und aus dem Schatten kopierten Volume gesichert werden, wo Sie sich in einem [*Absturz konsistenten Zustand*](vssgloss-c.md)befinden. Weitere Informationen finden Sie unter [Sicherungen ohne Writer-Teilnahme](backups-without-writer-participation.md) .
+Zu sichernde Volumes verfügen möglicherweise über Daten, die nicht von VSS Writer verwaltet werden. Diese Daten können und sollten aus dem kopierten Schattenvolumen in einem absturzeinheitlichen [*Zustand gespeichert werden.*](vssgloss-c.md) Weitere Informationen finden Sie unter Sicherungen ohne [Writer-Beteiligung.](backups-without-writer-participation.md)
 
  
 

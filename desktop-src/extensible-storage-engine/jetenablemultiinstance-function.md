@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetenablemultiinstance-Funktion'
-title: Jetenablemultiinstance-Funktion
+description: 'Weitere Informationen zu: JetEnableMultiInstance-Funktion'
+title: JetEnableMultiInstance-Funktion
 TOCTitle: JetEnableMultiInstance Function
 ms:assetid: d88a7b2a-c0d1-47de-9239-3631150d92da
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294107(v=EXCHG.10)
@@ -20,23 +20,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 61fb058b14d9a8abeb282d4227b110ba50304a7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 618552b01a4702790fca0d234ee40aff0de39f45
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373377"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481366"
 ---
-# <a name="jetenablemultiinstance-function"></a>Jetenablemultiinstance-Funktion
+# <a name="jetenablemultiinstance-function"></a>JetEnableMultiInstance-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetenablemultiinstance-function"></a>Jetenablemultiinstance-Funktion
+## <a name="jetenablemultiinstance-function"></a>JetEnableMultiInstance-Funktion
 
-Die **jetenablemultiinstance** -Funktion konfiguriert die Datenbank-Engine für die Verwendung mit mehreren Instanzen im gleichen Prozess. Ein optionales Array globaler Systemparameter ist für den ersten Aufrufer verfügbar, der die Änderung des Modus für mehrere Instanzen ermöglicht.
+Die **JetEnableMultiInstance-Funktion** konfiguriert die Datenbank-Engine für die Verwendung mit mehreren Instanzen im gleichen Prozess. Dem ersten Aufrufer steht ein optionales Array globaler Systemparameter zur Verfügung, das die Umstellung auf den Modus mit mehreren Instanzen ermöglicht.
 
-**Windows XP: jetenablemultiinstance** wird in Windows XP eingeführt.
+**Windows XP: JetEnableMultiInstance** wird in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetEnableMultiInstance(
@@ -50,106 +50,50 @@ Die **jetenablemultiinstance** -Funktion konfiguriert die Datenbank-Engine für 
 
 *psetsysparam*
 
-Ein Array von globalen Systemparametern, das nur dann festgelegt werden soll, wenn die Engine als Ergebnis dieses Aufrufes in den multiinstanzmodus wechselt. Wenn *csetsysparam* gleich 0 (null) ist, wird *psetsysparam* ignoriert.
+Ein Array globaler Systemparameter, das nur dann festgelegt werden soll, wenn die Engine aufgrund dieses Aufrufs in den Modus mit mehreren Instanzen wechselt. Wenn *csetsysparam 0* (null) ist, wird *psetsysparam* ignoriert.
 
 *csetsysparam*
 
-Die Anzahl der Elemente für das Array von globalen Parametern, die nur dann festgelegt werden sollen, wenn die Engine als Ergebnis dieses Aufrufes den Modus für mehrere Instanzen eingibt. Wenn *csetsysparam* gleich 0 (null) ist, wird *psetsysparam* ignoriert.
+Die Anzahl der Elemente für das Array von globalen Parametern, die nur dann festgelegt werden sollen, wenn die Engine aufgrund dieses Aufrufs in den Modus mit mehreren Instanzen wechselt. Wenn *csetsysparam 0* (null) ist, wird *psetsysparam* ignoriert.
 
-*pcseterfolg*
+*pcsetsucceed*
 
-Ein Zeiger auf die Anzahl der globalen Systemparameter, die als Ergebnis dieses Aufrufes erfolgreich konfiguriert wurden.
+Ein Zeiger auf die Anzahl der globalen Systemparameter, die als Ergebnis dieses Aufrufs erfolgreich konfiguriert wurden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexTuplesInvalidLimits</p></td>
-<td><p>Die angegebenen tupelindexparameter waren nicht zulässig. Dieser Fehler kann von <strong>jetenablemultiinstance</strong> nur zurückgegeben werden, wenn <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesLengthMin</a>, <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesLengthMax</a>oder <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesToIndexMax</a> auf einen ungültigen Wert festgelegt wird.</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidPath</p></td>
-<td><p>Der angegebene Dateisystempfad war ungültig. Dieser Fehler kann von <strong>jetenablemultiinstance</strong> nur beim Festlegen von Systemparametern zurückgegeben werden, die Dateisystem Pfade darstellen. Beispielsweise kann <a href="gg269235(v=exchg.10).md">JET_paramSystemPath</a> diesen Fehler zurückgeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da er unzulässig ist, wenn die Datenbank-Engine im einzelinstanzmodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errSystemParamsAlreadySet</p></td>
-<td><p>Fehler bei <strong>jetenablemultiinstance</strong> , weil sich die Engine bereits im Modus für mehrere Instanzen befindet.</p>
-<p><strong>Hinweis  </strong> Dies geschieht auch, wenn keine Systemparameter angegeben werden.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird die Datenbank-Engine so konfiguriert, dass Sie im Modus mit mehreren Instanzen ausgeführt wird. Die Engine wurde auch erfolgreich mit der optionalen Liste der globalen Systemparameter konfiguriert.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errIndexTuplesInvalidLimits</p> | <p>Die angegebenen Tupelindexparameter waren nicht zulässig. Dieser Fehler kann von <strong>JetEnableMultiInstance</strong> nur zurückgegeben werden, wenn <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesLengthMin</a>, <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesLengthMax</a>oder <a href="gg294119(v=exchg.10).md">JET_paramIndexTuplesToIndexMax</a> auf einen ungültigen Wert festgelegt wird.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
+| <p>JET_errInvalidPath</p> | <p>Der angegebene Dateisystempfad war ungültig. Dieser Fehler kann von <strong>JetEnableMultiInstance</strong> nur zurückgegeben werden, wenn Systemparameter festgelegt werden, die Dateisystempfade darstellen. Beispielsweise kann <a href="gg269235(v=exchg.10).md">JET_paramSystemPath</a> diesen Fehler zurückgeben.</p> | 
+| <p>JET_errRunningInOneInstanceMode</p> | <p>Fehler beim Vorgang, weil er ungültig ist, wenn die Datenbank-Engine im Einzelinstanzmodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird.</p> | 
+| <p>JET_errSystemParamsAlreadySet</p> | <p>Fehler bei <strong>JetEnableMultiInstance,</strong> weil sich die Engine bereits im Modus mit mehreren Instanzen befindet.</p><p><strong>Hinweis  </strong> Dies geschieht auch, wenn keine Systemparameter angegeben werden.</p> | 
 
-Wenn diese Funktion fehlschlägt, verbleibt die Datenbank-Engine im aktuellen Modus. Wenn *pcseterfolg* ungleich 0 (null) ist, bleibt diese Anzahl von Systemparametern festgelegt.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion sollte nur verwendet werden, wenn die Anwendung einen bestimmten Satz von Systemparametern atomarisch konfigurieren muss, wenn die Datenbank-Engine für die Verwendung in einem Szenario mit mehreren Benutzern in demselben Prozess eingerichtet wird. Wenn eine andere Synchronisierungsmethode verfügbar ist, ist es vorzuziehen, [jetkreateinstance](./jetcreateinstance-function.md) und [jetsetsystemparameter](./jetsetsystemparameter-function.md) separat aufzurufen.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird die Datenbank-Engine für die Ausführung im Modus mit mehreren Instanzen konfiguriert. Die Engine wurde auch erfolgreich mit der optionalen Liste der globalen Systemparameter konfiguriert.
+
+Wenn diese Funktion fehlschlägt, verbleibt die Datenbank-Engine im aktuellen Modus. Wenn *pcsetsucceed* ungleich 0 (null) ist, bleibt diese Anzahl von Systemparametern festgelegt.
+
+#### <a name="remarks"></a>Hinweise
+
+Diese Funktion sollte nur verwendet werden, wenn die Anwendung einen bestimmten Satz von Systemparametern atomisch konfigurieren muss, wenn die Datenbank-Engine für die Verwendung in einem Szenario mit mehreren Benutzern im gleichen Prozess eingerichtet wird. Wenn eine andere Synchronisierungsmethode verfügbar ist, ist es besser, [JetCreateInstance](./jetcreateinstance-function.md) und [JetSetSystemParameter](./jetsetsystemparameter-function.md) separat aufzurufen.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetenablemultiinstancew</strong> (Unicode) und <strong>jetenablemultiinstancea</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetEnableMultiInstanceW</strong> (Unicode) und <strong>JetEnableMultiInstanceA</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_SETSYSPARAM](./jet-setsysparam-structure.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)

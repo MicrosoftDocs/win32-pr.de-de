@@ -1,259 +1,198 @@
 ---
-description: Plug-Ins für die RealTimeStylus-Klasse müssen die IStylusSyncPlugin-oder IStylusAsyncPlugin-Schnittstelle implementieren oder beides.
+description: Plug-Ins für die RealTimeStylus-Klasse müssen die Schnittstelle IStylusSyncPlugin oder IStylusAsyncPlugin oder beides implementieren.
 ms.assetid: 827ac817-e0e6-4750-9d48-b939ccd5e679
 title: Plug-In-Daten und die RealTimeStylus-Klasse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 372b3d297edbad6d339285f45e92118184fa2cfc
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: dac0540d90f291acfef27a09df08ffff645c280d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "104554183"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480966"
 ---
 # <a name="plug-in-data-and-the-realtimestylus-class"></a>Plug-In-Daten und die RealTimeStylus-Klasse
 
-Plug-Ins für die [**RealTimeStylus**](realtimestylus-class.md) -Klasse müssen die [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -oder [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) -Schnittstelle implementieren oder beides. Obwohl Sie alle Plug-in-Schnittstellen Methoden implementieren müssen, empfängt Ihr Plug-in nur Aufrufe von Methoden, die in den Plug-ins " [Microsoft. StylusInput. IStylusSyncPlugin. DataInterest](/previous-versions/ms574887(v=vs.100)) " oder " [Microsoft. StylusInput. IStylusAsyncPlugin. DataInterest](/previous-versions/ms574886(v=vs.100)) " gekennzeichnet sind.
+Plug-Ins für die [**RealTimeStylus-Klasse**](realtimestylus-class.md) müssen die [**Schnittstelle IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) oder [**IStylusAsyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylusasyncplugin) oder beides implementieren. Sie müssen zwar alle Plug-In-Schnittstellenmethoden implementieren, ihr Plug-In empfängt jedoch nur Aufrufe von Methoden, die in der [Microsoft.StylusInput.IStylusSyncPlugin.DataInterest-](/previous-versions/ms574887(v=vs.100)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.DataInterest-Eigenschaft](/previous-versions/ms574886(v=vs.100)) gekennzeichnet sind.
 
-Die Methoden, die für die Schnittstellen definiert sind, verwenden Objekte im [Microsoft. StylusInput. PluginData](/previous-versions/ms823992(v=msdn.10)) -Namespace, um die Stift Daten an die Plug-ins zu übergeben. In der folgenden Tabelle werden die Datenobjekte beschrieben, die in den Benachrichtigungs Methoden Parameter sind, und der [datainteressanmask](/previous-versions/ms824787(v=msdn.10)) -Wert, der der Benachrichtigung zugeordnet ist, aufgeführt.
+Die für die Schnittstellen definierten Methoden verwenden Objekte im [Namespace Microsoft.StylusInput.PluginData,](/previous-versions/ms823992(v=msdn.10)) um die Stiftdaten an die Plug-Ins zu übergeben. Die folgende Tabelle beschreibt die Datenobjekte, die Parameter in den Benachrichtigungsmethoden sind, und listet den [DataInterestMask-Wert](/previous-versions/ms824787(v=msdn.10)) auf, der der Benachrichtigung zugeordnet ist.
 
 
 
-| Plug-in-Daten                                                                                          | Datainteressanmask-Wert     | BESCHREIBUNG                                                                                                                                                                                                                                             |
+| Plug-In-Daten                                                                                          | DataInterestMask-Wert     | BESCHREIBUNG                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [CustomStylusData](/previous-versions/ms824747(v=msdn.10))                     | **CustomStylusDataAdded**  | Benutzerdefinierte Anwendungsdaten, die von einem Plug-in hinzugefügt werden.<br/>                                                                                                                                                                                                 |
-| [ErrorData](/previous-versions/ms824740(v=msdn.10))                                   | **Fehler**                  | Fehlerinformationen, die vom [**RealTimeStylus**](realtimestylus-class.md) -Objekt als Reaktion auf eine nicht behandelte Ausnahme in einem seiner Plug-Ins hinzugefügt werden.<br/>                                                                                          |
-| [Inairpackeundata](/previous-versions/ms824592(v=msdn.10))                     | **Inairpakete**           | Paketinformationen für Stift Bewegung, während sich der Tablettstift über dem Digitalisierer befindet.<br/>                                                                                                                                                         |
-| [Packeestdata](/previous-versions/ms824590(v=msdn.10))                               | **Pakete**                | Paketinformationen für Stift Bewegung, während der Tablettstift den Digitalisierer berührt.<br/>                                                                                                                                                             |
-| [RealTimeStylusDisabledData](/previous-versions/ms824576(v=msdn.10)) | **Realtimestylusdeaktiviert** | Informationen, die das [**RealTimeStylus**](realtimestylus-class.md) -Objekt hinzufügt, wenn es deaktiviert wird.<br/>                                                                                                                                        |
-| [Realtimestylusenableddata](/previous-versions/ms824229(v=msdn.10))   | **RealTimeStylusEnabled**  | Informationen, die das [**RealTimeStylus**](realtimestylus-class.md) -Objekt hinzufügt, wenn es aktiviert wird.<br/>                                                                                                                                         |
-| [StylusButtonDownData](/previous-versions/ms824181(v=msdn.10))             | **StylusButtonDown**       | Informationen über die jeweilige Tablettstiftschaltfläche, auf die geklickt wird.<br/>                                                                                                                                                                        |
-| [StylusButtonUpData](/previous-versions/ms824172(v=msdn.10))                 | **StylusButtonUp**         | Informationen über die jeweilige Tablettstiftschaltfläche, die freigegeben wird.<br/>                                                                                                                                                                       |
-| [StylusDownData](/previous-versions/ms585582(v=vs.100))                                   | **StylusDown**             | Paketinformationen für einen Tablettstift, der als Tablettstift dient, werden mit dem Digitalisierer kontaktiert.<br/>                                                                                                                                                      |
-| [StylusInRangeData](/previous-versions/ms824090(v=msdn.10))                   | **StylusInRange**          | Informationen über den speziellen Tablettstift, der in den Eingabebereich des [**RealTimeStylus**](realtimestylus-class.md) -Objekts wechselt, oder den Erkennungsbereich des Digitalisierungsprogramms über dem Eingabebereich des **RealTimeStylus** -Objekts eingeben.<br/> |
-| [Stylusouyfrangedata](/previous-versions/ms824072(v=msdn.10))             | **Stylusouyfrange**       | Informationen über den speziellen Tablettstift, der den Eingabebereich des [**RealTimeStylus**](realtimestylus-class.md) -Objekts verlässt oder den Erkennungsbereich des Digitalisierungsprogramms über dem Eingabebereich des **RealTimeStylus** -Objekts verlässt.<br/>   |
-| [StylusUpData](/previous-versions/ms824057(v=msdn.10))                             | **StylusUp**               | Paketinformationen für einen Tablettstift, wenn der Tablettstift vom Digitalisierer entfernt wird.<br/>                                                                                                                                                                  |
-| [SystemGestureData](/previous-versions/ms824019(v=msdn.10))                   | **System Bewegung**          | Informationen, die das [**RealTimeStylus**](realtimestylus-class.md) -Objekt hinzufügt, wenn eine System Bewegung erkannt wird.<br/>                                                                                                                                 |
-| [Tabletaddecoddata](/previous-versions/ms824010(v=msdn.10))                       | **TabletAdded**            | Informationen über das [Tablet](/previous-versions/ms827783(v=msdn.10)) -Objekt, das hinzugefügt wird.<br/>                                                                                                                                                |
-| [Tabletremuveddata](/previous-versions/ms823997(v=msdn.10))                   | **Tabletreverschohe**          | Informationen zum [Tablet](/previous-versions/ms827783(v=msdn.10)) -Objekt, das entfernt wird.<br/>                                                                                                                                              |
+| [Customstylusdata](/previous-versions/ms824747(v=msdn.10))                     | **CustomStylusDataAdded**  | Benutzerdefinierte Anwendungsdaten, die ein Plug-In hinzufügt.<br/>                                                                                                                                                                                                 |
+| [Errordata](/previous-versions/ms824740(v=msdn.10))                                   | **Fehler**                  | Fehlerinformationen, die das [**RealTimeStylus-Objekt**](realtimestylus-class.md) als Reaktion auf eine nicht behandelte Ausnahme in einem seiner Plug-Ins hinzufügt.<br/>                                                                                          |
+| [Inairpacketsdata](/previous-versions/ms824592(v=msdn.10))                     | **InAirPackets**           | Paketinformationen für die Stiftbewegung, während sich der Stift in der Luft über dem Digitizer befindet.<br/>                                                                                                                                                         |
+| [Packetsdata](/previous-versions/ms824590(v=msdn.10))                               | **Pakete**                | Paketinformationen für die Stiftbewegung, während der Stift den Digitizer berührt.<br/>                                                                                                                                                             |
+| [Realtimestylusdisableddata](/previous-versions/ms824576(v=msdn.10)) | **RealTimeStylusDisabled** | Informationen, die das [**RealTimeStylus-Objekt**](realtimestylus-class.md) hinzufügt, wenn es deaktiviert wird.<br/>                                                                                                                                        |
+| [RealTimeStylusEnabledData](/previous-versions/ms824229(v=msdn.10))   | **RealTimeStylusEnabled**  | Informationen, die das [**RealTimeStylus-Objekt**](realtimestylus-class.md) hinzufügt, wenn es aktiviert wird.<br/>                                                                                                                                         |
+| [Stylusbuttondowndata](/previous-versions/ms824181(v=msdn.10))             | **Stylusbuttondown**       | Informationen zur jeweiligen Stiftschaltfläche, die gedrückt wird.<br/>                                                                                                                                                                        |
+| [Stylusbuttonupdata](/previous-versions/ms824172(v=msdn.10))                 | **StylusButtonUp**         | Informationen zur jeweiligen Stiftschaltfläche, die freigegeben wird.<br/>                                                                                                                                                                       |
+| [Stylusdowndata](/previous-versions/ms585582(v=vs.100))                                   | **StylusDown**             | Paketinformationen für einen Stift, während der Stift in Kontakt mit dem Digitizer gebracht wird.<br/>                                                                                                                                                      |
+| [Stylusinrangedata](/previous-versions/ms824090(v=msdn.10))                   | **StylusInRange**          | Informationen zum jeweiligen Stift, der in den Eingabebereich des [**RealTimeStylus-Objekts**](realtimestylus-class.md) oder in den Erkennungsbereich des Digitizers über dem Eingabebereich des **RealTimeStylus-Objekts** eintritt.<br/> |
+| [Stylusoutofrangedata](/previous-versions/ms824072(v=msdn.10))             | **StylusOutOfRange**       | Informationen zum jeweiligen Stift, der den Eingabebereich des [**RealTimeStylus-Objekts**](realtimestylus-class.md) verlässt oder den Erkennungsbereich des Digitizers über dem Eingabebereich des **RealTimeStylus-Objekts** verlässt.<br/>   |
+| [Stylusupdata](/previous-versions/ms824057(v=msdn.10))                             | **StylusUp**               | Paketinformationen für einen Stift, wenn der Stift aus dem Digitizer entfernt wird.<br/>                                                                                                                                                                  |
+| [Systemgesturedata](/previous-versions/ms824019(v=msdn.10))                   | **Systemgesture**          | Informationen, die das [**RealTimeStylus-Objekt**](realtimestylus-class.md) hinzufügt, wenn es eine Systemgeste erkennt.<br/>                                                                                                                                 |
+| [TabletAddedData](/previous-versions/ms824010(v=msdn.10))                       | **Tabletadded**            | Informationen zum [](/previous-versions/ms827783(v=msdn.10)) Tablet-Objekt, das hinzugefügt wird.<br/>                                                                                                                                                |
+| [Tabletremoveddata](/previous-versions/ms823997(v=msdn.10))                   | **Tabletremoved**          | Informationen zum [](/previous-versions/ms827783(v=msdn.10)) Tablet-Objekt, das entfernt wird.<br/>                                                                                                                                              |
 
 
 
  
 
-Informationen dazu, wie das [**RealTimeStylus**](realtimestylus-class.md) -Objekt den Tablet Pen-Datenstrom verarbeitet, finden Sie unter [Arbeiten mit der RealTimeStylus-Klasse](working-with-the-realtimestylus-class.md).
+Informationen dazu, wie das [**RealTimeStylus-Objekt**](realtimestylus-class.md) den Tablettstiftdatenstrom behandelt, finden Sie unter [Working with the RealTimeStylus Class (Arbeiten mit der RealTimeStylus-Klasse).](working-with-the-realtimestylus-class.md)
 
-## <a name="data-interest"></a>Daten Interesse
+## <a name="data-interest"></a>Daten von Interesse
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt überprüft die Eigenschaft [Microsoft. StylusInput. IStylusSyncPlugin. DataInterest](/previous-versions/ms574887(v=vs.100)) oder [Microsoft. StylusInput. IStylusAsyncPlugin. DataInterest](/previous-versions/ms574886(v=vs.100)) eines Plug-ins, wenn das Plug-in zur synchronen oder asynchronen Plug-in-Auflistung des **RealTimeStylus** -Objekts hinzugefügt wird. Daher sollten Sie die DataInterest-Eigenschaft verwenden, um alle Benachrichtigungen zu abonnieren, die von dieser Instanz des Plug-ins verwendet werden, jedoch nur selten, aber nicht für eine der Benachrichtigungen, die von dieser Instanz des Plug-ins niemals verwendet werden. Bei Benachrichtigungen, die von Ihrem Plug-in nur gelegentlich verwendet werden, wird der Status des Plug-ins zuerst in der Benachrichtigungs Methode überprüft, und es wird zurückgegeben, wenn die Benachrichtigung von Ihrem Plug-in im aktuellen Zustand nicht verwendet wird.
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) überprüft die [Microsoft.StylusInput.IStylusSyncPlugin.DataInterest-](/previous-versions/ms574887(v=vs.100)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.DataInterest-Eigenschaft](/previous-versions/ms574886(v=vs.100)) eines Plug-Ins, wenn das Plug-In der synchronen oder asynchronen Plug-In-Auflistung des **RealTimeStylus-Objekts** hinzugefügt wird. Aus diesem Grund sollten Sie die DataInterest-Eigenschaft verwenden, um alle Benachrichtigungen zu abonnieren, die von dieser Instanz Ihres Plug-Ins verwendet werden, jedoch selten, aber nicht für Benachrichtigungen, die diese Instanz Ihres Plug-Ins nie verwendet. Bei Benachrichtigungen, die ihr Plug-In nur gelegentlich verwendet, überprüfen Sie zuerst den Zustand Ihres Plug-Ins in der Benachrichtigungsmethode und geben zurück, wenn die Benachrichtigung nicht vom Plug-In im aktuellen Zustand verwendet wird.
 
-Ein Plug-in empfängt nur Aufrufe von Methoden, die in der [Microsoft. StylusInput. IStylusSyncPlugin. DataInterest](/previous-versions/ms574887(v=vs.100)) -oder [Microsoft. StylusInput. IStylusAsyncPlugin. DataInterest](/previous-versions/ms574886(v=vs.100)) -Eigenschaft des Plug-ins gekennzeichnet sind. Weitere Informationen zu den möglichen Werten für die **DataInterest** -Eigenschaft eines Plug-Ins finden Sie in der [datainteressanmask](/previous-versions/ms824787(v=msdn.10)) -Enumeration.
+Ein Plug-In empfängt nur Aufrufe von Methoden, die in der [Microsoft.StylusInput.IStylusSyncPlugin.DataInterest-](/previous-versions/ms574887(v=vs.100)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.DataInterest-Eigenschaft](/previous-versions/ms574886(v=vs.100)) des Plug-Ins gekennzeichnet sind. Weitere Informationen zu den möglichen Werten der **DataInterest-Eigenschaft** eines Plug-Ins finden Sie unter [DataInterestMask-Enumeration.](/previous-versions/ms824787(v=msdn.10))
 
 ## <a name="timing"></a>Zeitliche Steuerung
 
-Die Daten werden im [**RealTimeStylus**](realtimestylus-class.md) -Objekt in die Warteschlange eingereiht, bevor Sie an die Plug-ins in der asynchronen Plug-in-Auflistung übermittelt werden. In der folgenden Liste werden einige Situationen beschrieben, die beim Entwerfen eines asynchronen Plug-ins möglicherweise berücksichtigt werden müssen.
+Daten werden im [**RealTimeStylus-Objekt**](realtimestylus-class.md) in die Warteschlange eingereiht, bevor sie an die Plug-Ins in der asynchronen Plug-In-Sammlung übergeben werden. In der folgenden Liste werden einige Situationen beschrieben, die Sie beim Entwerfen eines asynchronen Plug-Ins berücksichtigen müssen.
 
--   Wenn das [**RealTimeStylus**](realtimestylus-class.md) -Objekt deaktiviert ist, empfängt das asynchrone Plug-in möglicherweise andere Benachrichtigungen in der Warteschlange, bevor die zugehörige [realtimestylusdeaktiviert](/previous-versions/ms824774(v=msdn.10)) -Methode aufgerufen wird. In dieser Situation lösen Aufrufe vom Plug-in für einige der Methoden und Eigenschaften des **RealTimeStylus** -Objekts eine Ausnahme aus. Die für das Plug-in relevanten Informationen sollten zwischengespeichert werden, wenn das **RealTimeStylus** -Objekt aktiviert ist.
--   Die [ClearStylusQueues](/previous-versions/ms825781(v=msdn.10)) -Methode des [**RealTimeStylus**](realtimestylus-class.md) -Objekts kann Informationen aus der Ausgabe Warteschlange entfernen. Daher können sich asynchrone Plug-ins nicht darauf verlassen, dass alle relevanten Benachrichtigungen empfangen werden.
--   Wenn ein [Tablet](/previous-versions/ms827783(v=msdn.10)) -Objekt entfernt wird, das für das [**RealTimeStylus**](realtimestylus-class.md) -Objekt verfügbar ist, empfängt das asynchrone Plug-in möglicherweise eine Warteschlangen Benachrichtigung für das Tablet, bevor die [tabletreverschote](/previous-versions/bb361092(v=vs.100)) -Methode aufgerufen wird. In dieser Situation funktioniert das Aufrufen der [GetTabletPropertyDescriptionCollection](/previous-versions/ms825935(v=msdn.10)) -Methode des **RealTimeStylus** -Objekts nicht. Die für das Plug-in relevanten Informationen sollten zwischengespeichert werden, wenn das **RealTimeStylus** -Objekt aktiviert ist, oder wenn ein neues Tablet hinzugefügt wird.
+-   Wenn das [**RealTimeStylus-Objekt**](realtimestylus-class.md) deaktiviert ist, empfängt das asynchrone Plug-In möglicherweise andere Benachrichtigungen in der Warteschlange, bevor die [RealTimeStylusDisabled-Methode](/previous-versions/ms824774(v=msdn.10)) aufgerufen wird. In diesem Fall auslösen Aufrufe des Plug-Ins an einige Methoden und Eigenschaften des **RealTimeStylus-Objekts** eine Ausnahme. Informationen, die für Ihr Plug-In relevant sind, sollten zwischengespeichert werden, wenn das **RealTimeStylus-Objekt** aktiviert ist.
+-   Die [ClearStylusQueues-Methode](/previous-versions/ms825781(v=msdn.10)) des [**RealTimeStylus-Objekts**](realtimestylus-class.md) entfernt möglicherweise Informationen aus der Ausgabewarteschlange. Daher können asynchrone Plug-Ins nicht alle relevanten Benachrichtigungen empfangen.
+-   Wenn ein [Tablet-Objekt](/previous-versions/ms827783(v=msdn.10)) entfernt wird, das für das [**RealTimeStylus-Objekt**](realtimestylus-class.md) verfügbar ist, empfängt das asynchrone Plug-In möglicherweise eine Tablettstiftbenachrichtigung in der Warteschlange für das Tablet, bevor die [TabletRemoved-Methode](/previous-versions/bb361092(v=vs.100)) aufgerufen wird. In diesem Fall funktioniert der Aufruf der [GetTabletPropertyDescriptionCollection-Methode](/previous-versions/ms825935(v=msdn.10)) des **RealTimeStylus-Objekts** nicht. Informationen, die für Ihr Plug-In relevant sind, sollten zwischengespeichert werden, wenn das **RealTimeStylus-Objekt** aktiviert ist oder wenn ein neues Tablet hinzugefügt wird.
 
-Abhängig von Ihrer Anwendung können Sie die Leistung bei der Deaktivierung eines [**RealTimeStylus**](realtimestylus-class.md) -Objekts verbessern. Wenn die [aktivierte](/previous-versions/ms824832(v=msdn.10)) Eigenschaft des **RealTimeStylus** -Objekts auf **false** festgelegt ist, werden Daten in den Eingabe-und Ausgabe Warteschlangen so lange verarbeitet, bis die Warteschlangen leer sind. Sie können die [ClearStylusQueues](/previous-versions/ms825781(v=msdn.10)) -Methode des **RealTimeStylus** -Objekts aufrufen, um die Warteschlangen vor der Deaktivierung des **RealTimeStylus** -Objekts zu löschen.
+Je nach Anwendung können Sie die Leistung verbessern, wenn Sie ein [**RealTimeStylus-Objekt**](realtimestylus-class.md) deaktivieren. Wenn die [Enabled-Eigenschaft](/previous-versions/ms824832(v=msdn.10)) des **RealTimeStylus-Objekts** auf **FALSE** festgelegt ist, werden Daten in den Eingabe- und Ausgabewarteschlangen verarbeitet, bis die Warteschlangen leer sind. Sie können die [ClearStylusQueues-Methode](/previous-versions/ms825781(v=msdn.10)) des **RealTimeStylus-Objekts** aufrufen, um die Warteschlangen zu löschen, bevor Sie das **RealTimeStylus-Objekt** deaktivieren.
 
 ## <a name="enabled-and-disabled-data"></a>Aktivierte und deaktivierte Daten
 
-Wenn das [**RealTimeStylus**](realtimestylus-class.md) -Objekt aktiviert ist, empfängt jedes Plug-in einen Aufrufen der [Microsoft. StylusInput. IStylusSyncPlugin. RealTimeStylusEnabled](/previous-versions/ms824758(v=msdn.10)) -Methode oder der [Microsoft. StylusInput. IStylusAsyncPlugin. RealTimeStylusEnabled](/previous-versions/ms824775(v=msdn.10)) -Methode. Das in der Benachrichtigung weiter gegebene **realtimestylusenableddata** -Objekt enthält eine Sammlung der Kontext Bezeichner für die verfügbaren Tablets zum Zeitpunkt der Aktivierung des **RealTimeStylus** -Objekts.
+Wenn das [**RealTimeStylus-Objekt**](realtimestylus-class.md) aktiviert ist, empfängt jedes Plug-In einen Aufruf der [Microsoft.StylusInput.IStylusSyncPlugin.RealTimeStylusEnabled-](/previous-versions/ms824758(v=msdn.10)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.RealTimeStylusEnabled-Methode.](/previous-versions/ms824775(v=msdn.10)) Das in der Benachrichtigung **übergebene RealTimeStylusEnabledData-Objekt** enthält eine Auflistung der Kontextbezeichner für die verfügbaren Tablets zum Zeitpunkt der Aktivierung des **RealTimeStylus-Objekts.**
 
 > [!Note]  
-> Da die Plug-in-Daten für die asynchrone Plug-in-Auflistung des [**RealTimeStylus**](realtimestylus-class.md) -Objekts in die Warteschlange eingereiht werden, empfangen asynchrone Plug-ins möglicherweise Daten, bevor Sie einen Aufrufe **an die** zugehörige [realtimestylusdeaktivierte](/previous-versions/ms824774(v=msdn.10)) Methode erhalten. Beachten Sie, dass einige der Methoden und Eigenschaften des **RealTimeStylus** -Objekts eine Ausnahme auslösen, wenn das **RealTimeStylus** -Objekt deaktiviert ist.
+> Da die Plug-In-Daten für die asynchrone Plug-In-Sammlung des [**RealTimeStylus-Objekts**](realtimestylus-class.md) in die Warteschlange eingereiht werden, empfangen asynchrone Plug-Ins möglicherweise Daten, bevor sie einen Aufruf der [RealTimeStylusDisabled-Methode](/previous-versions/ms824774(v=msdn.10)) empfangen, aber nachdem das **RealTimeStylus-Objekt** deaktiviert wurde. Beachten Sie, dass einige der Methoden und Eigenschaften des **RealTimeStylus-Objekts** eine Ausnahme auslösen, wenn das **RealTimeStylus-Objekt** deaktiviert ist.
 
  
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt ruft die Methoden [Microsoft. StylusInput. IStylusSyncPlugin. RealTimeStylusEnabled](/previous-versions/ms824758(v=msdn.10)) und [Microsoft. StylusInput. IStylusSyncPlugin. realtimestylusdeaktiviert](/previous-versions/ms824757(v=msdn.10)) für den Thread auf, von dem das **RealTimeStylus** -Objekt aktiviert wird oder das synchrone Plug-in hinzugefügt wird
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) ruft die Methoden [Microsoft.StylusInput.IStylusSyncPlugin.RealTimeStylusEnabled](/previous-versions/ms824758(v=msdn.10)) und [Microsoft.StylusInput.IStylusSyncPlugin.RealTimeStylusDisabled](/previous-versions/ms824757(v=msdn.10)) für den Thread auf, aus dem das **RealTimeStylus-Objekt** aktiviert ist oder aus dem das synchrone Plug-In hinzugefügt wird.
 
-Im Allgemeinen können Sie Plug-Ins hinzufügen oder entfernen, während das [**RealTimeStylus**](realtimestylus-class.md) -Objekt deaktiviert ist. Weitere Informationen zum Hinzufügen und Entfernen von Plug-Ins für das **RealTimeStylus** -Objekt finden Sie unter [Plug-ins und RealTimeStylus-Klasse](plug-ins-and-the-realtimestylus-class.md).
+Fügen Sie Plug-Ins im Allgemeinen hinzu, oder entfernen Sie sie, während das [**RealTimeStylus-Objekt**](realtimestylus-class.md) deaktiviert ist. Weitere Informationen zum Hinzufügen und Entfernen von Plug-Ins zum **RealTimeStylus-Objekt** finden Sie unter [Plug-Ins und die RealTimeStylus-Klasse.](plug-ins-and-the-realtimestylus-class.md)
 
 ## <a name="tablet-data"></a>Tablet-Daten
 
-Wenn ein Tablet, das vom [**RealTimeStylus**](realtimestylus-class.md) -Objekt verwendet werden kann, zum Tablet PC hinzugefügt oder daraus entfernt wird, während das **RealTimeStylus** -Objekt aktiviert ist, benachrichtigt das **RealTimeStylus** -Objekt die Plug-ins, dass ein [Tablet](/previous-versions/ms827783(v=msdn.10)) -Objekt hinzugefügt oder entfernt wurde. Jedes **RealTimeStylus** -Objekt verwaltet eine Liste eindeutiger Bezeichner für die Tablet-Objekte, mit denen er interagieren kann. Das **RealTimeStylus** -Objekt verfügt über zwei Methoden für die Übersetzung zwischen dem eindeutigen Bezeichner und dem Tablet-Objekt, der [GetTabletContextIdFromTablet](/previous-versions/ms825922(v=msdn.10)) -Methode und der [GetTabletFromTabletContextId](/previous-versions/ms825929(v=msdn.10)) -Methode.
+Wenn ein Tablet, das vom [**RealTimeStylus-Objekt**](realtimestylus-class.md) verwendet werden kann, dem Tablet-PC hinzugefügt oder daraus entfernt wird, während das **RealTimeStylus-Objekt** aktiviert ist, benachrichtigt das **RealTimeStylus-Objekt** seine Plug-Ins, dass ein [Tablet-Objekt](/previous-versions/ms827783(v=msdn.10)) hinzugefügt oder entfernt wurde. Jedes **RealTimeStylus-Objekt** verwaltet eine Liste eindeutiger Bezeichner für die Tablet-Objekte, mit denen es interagieren kann. Das **RealTimeStylus-Objekt** verfügt über zwei Methoden zum Übersetzen zwischen dem eindeutigen Bezeichner und dem Tablet-Objekt, den [Methoden GetTabletContextIdFromTablet](/previous-versions/ms825922(v=msdn.10)) und [GetTabletFromTabletContextId.](/previous-versions/ms825929(v=msdn.10))
 
 > [!Note]  
-> Informationen zu einem Tablet sind nicht mehr über das [**RealTimeStylus**](realtimestylus-class.md) -Objekt verfügbar, nachdem das Tablet vom Tablet PC entfernt wurde.
+> Informationen zu einem Tablet sind im [**RealTimeStylus-Objekt**](realtimestylus-class.md) nicht mehr verfügbar, nachdem das Tablet vom Tablet-PC entfernt wurde.
 
  
 
-## <a name="tablet-pen-data"></a>Tablettstift Daten
+## <a name="tablet-pen-data"></a>Tablettstiftdaten
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt übergibt Informationen über den Tablettstift an seine Plug-ins in einer Reihe von Benachrichtigungs Methoden. Informationen über den [Tablettstift](/previous-versions/ms824824(v=msdn.10)) werden durch ein tablettstiftobjekt dargestellt. Bei diesem Objekt handelt es sich um eine Momentaufnahme des Zustands des Tablettstifts zum Zeitpunkt, zu dem die Daten gesammelt wurden. Da Plug-ins die Tablet Pen-Daten als Teil des Tablet Pen-Datenstroms empfangen, sollten die Plug-ins die Informationen im tablettstiftobjekt verwenden, anstatt den aktuellen Zustand eines bestimmten Tablet Stifts durch die [Cursor](/previous-versions/ms839521(v=msdn.10)) Klasse zu überprüfen.
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) übergibt Informationen über den Tablettstift an seine Plug-Ins in einer Reihe von Benachrichtigungsmethoden. Informationen zum Tablettstift werden durch ein [Tablettstiftobjekt](/previous-versions/ms824824(v=msdn.10)) dargestellt. Dieses Objekt ist eine Momentaufnahme des Zustands des Tablettstifts zum Zeitpunkt der Datensammelung. Da Plug-Ins die Tablettstiftdaten als Teil des Tablettstiftdatenstroms empfangen, sollten die Plug-Ins die Informationen im Tablettstiftobjekt verwenden, anstatt den aktuellen Zustand eines bestimmten Tablettstifts über die [Cursor-Klasse](/previous-versions/ms839521(v=msdn.10)) zu überprüfen.
 
-Jedes [](/previous-versions/ms824824(v=msdn.10)) tablettstiftobjekt enthält den Tablet-Kontext Bezeichner für das Tablet, von dem die Daten generiert wurden.
+Jedes [Tablettstiftobjekt](/previous-versions/ms824824(v=msdn.10)) enthält den Tablet-Kontextbezeichner für das Tablet, das die Daten generiert hat.
 
-## <a name="system-gesture-data"></a>System Gesten Daten
+## <a name="system-gesture-data"></a>Systemgestendaten
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt empfängt Daten über System Gesten, da diese vom Tablet PC erkannt werden. In der folgenden Tabelle wird die Reihenfolge beschrieben, in der die [SystemGestureData](/previous-versions/ms824019(v=msdn.10)) -Objekte im Datenstrom des Tablet-Stifts in Bezug auf andere Tablet Pen-Daten vorkommen.
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) empfängt Daten zu Systemgesten, wenn sie vom Tablet PC erkannt werden. In der folgenden Tabelle wird die Reihenfolge beschrieben, in der die [SystemGestureData-Objekte](/previous-versions/ms824019(v=msdn.10)) im Datenstrom des Tablettstifts im Verhältnis zu anderen Tablettstiftdaten auftreten.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><a href="/previous-versions/ms827134(v=msdn.10)">System Bewegung</a></th>
-<th>Objekte, die dem <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData</a> -Objekt vorangestellt sind</th>
-<th>Objekte, die nach dem <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData</a> -Objekt stehen</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Tippen</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt.<br/></td>
-<td>Das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Double Tap</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt, das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData</a> -Objekt für die <strong>Tap</strong> -System Geste und die [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekte.<br/></td>
-<td>Das zweite <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>RightTap</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt und das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData</a> -Objekt für den zurück <strong>Haltungs Member</strong> der <a href="/previous-versions/ms827134(v=msdn.10)">systemgesure</a> -Enumeration.<br/></td>
-<td>Das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Hinein</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt.<br/></td>
-<td>Das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>RightDrag</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt.<br/></td>
-<td>Das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Holdenter</strong></td>
-<td>Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData</a> -Objekt.<br/></td>
-<td>Das [StylusUpData](/previous-versions/ms824057(v=msdn.10)) -Objekt.<br/>
-<blockquote>
-[!Note]<br />
-Diese System Geste wird nicht erkannt, wenn der Benutzer eine <strong>Drag</strong> -oder <strong>RightDrag</strong> -System Bewegung startet.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Holdleave</strong></td>
-<td>Nicht implementiert.<br/></td>
-<td>Nicht implementiert.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>HoverEnter</strong></td>
-<td>Mehrere <a href="/previous-versions/ms824592(v=msdn.10)">inairpackezdata</a> -Objekte mit niedriger durchschnittlicher Geschwindigkeit.<br/></td>
-<td><blockquote>
-[!Note]<br />
-Möglicherweise gibt es eine merkliche Verzögerung, bevor die <strong>HoverEnter</strong> -System Geste empfangen wird. Das <a href="realtimestylus-class.md"><strong>RealTimeStylus</strong></a> -Objekt empfängt diese Daten nur, wenn das <strong>RealTimeStylus</strong> -Objekt an das Fenster oder Steuerelement angefügt ist, das zum Zeitpunkt der System Bewegung direkt unter dem Stift liegt.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>HoverLeave</strong></td>
-<td>Das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData</a> -Objekt für die <strong>HoverEnter</strong> -System Bewegung und mehrere <a href="/previous-versions/ms824592(v=msdn.10)">inairpackezdata</a> -Objekte mit ausreichender durchschnittlicher Geschwindigkeit.<br/></td>
-<td><blockquote>
-[!Note]<br />
-Möglicherweise gibt es eine merkliche Verzögerung, bevor die <strong>HoverLeave</strong> -System Geste empfangen wird. Das <a href="realtimestylus-class.md"><strong>RealTimeStylus</strong></a> -Objekt empfängt diese Daten nur, wenn das <strong>RealTimeStylus</strong> -Objekt an das Fenster oder Steuerelement angefügt ist, das zum Zeitpunkt der System Bewegung direkt unter dem Stift liegt.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| <a href="/previous-versions/ms827134(v=msdn.10)">Systemgesture</a> | Objekte vor dem <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData-Objekt</a> | Objekte, die nach dem <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData-Objekt</a> stammen | 
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| <strong>Tippen</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt.</a><br /> | Das [StylusUpData-Objekt.](/previous-versions/ms824057(v=msdn.10))<br /> | 
+| <strong>DoubleTap</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt,</a> das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData-Objekt</a> für die Tap-Systemgeste und die <strong></strong> [StylusUpData-Objekte.](/previous-versions/ms824057(v=msdn.10))<br /> | Das zweite <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt.</a><br /> | 
+| <strong>RightTap</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt</a> und das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData-Objekt</a> für den <strong>HoldEnter-Member</strong> der <a href="/previous-versions/ms827134(v=msdn.10)">SystemGesure-Enumeration.</a><br /> | Das [StylusUpData-Objekt.](/previous-versions/ms824057(v=msdn.10))<br /> | 
+| <strong>Ziehen</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt.</a><br /> | Das [StylusUpData-Objekt.](/previous-versions/ms824057(v=msdn.10))<br /> | 
+| <strong>RightDrag</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt.</a><br /> | Das [StylusUpData-Objekt.](/previous-versions/ms824057(v=msdn.10))<br /> | 
+| <strong>HoldEnter</strong> | Das <a href="/previous-versions/ms824107(v=msdn.10)">StylusDownData-Objekt.</a><br /> | Das [StylusUpData-Objekt.](/previous-versions/ms824057(v=msdn.10))<br /><blockquote>[!Note]<br />Diese Systemgeste wird nicht erkannt, wenn der Benutzer eine <strong>Drag-</strong> oder <strong>RightDrag-Systemgeste</strong> startet.</blockquote><br /> | 
+| <strong>HoldLeave</strong> | Nicht implementiert.<br /> | Nicht implementiert.<br /> | 
+| <strong>HoverEnter</strong> | Mehrere <a href="/previous-versions/ms824592(v=msdn.10)">InAirPacketsData-Objekte</a> mit niedriger durchschnittlicher Geschwindigkeit.<br /> | <blockquote>[!Note]<br />Es kann zu einer spürbaren Verzögerung kommen, bevor die <strong>HoverEnter-Systemgeste</strong> empfangen wird. Das <a href="realtimestylus-class.md"><strong>RealTimeStylus-Objekt</strong></a> empfängt diese Daten nur, wenn das <strong>RealTimeStylus-Objekt</strong> an das Fenster oder Steuerelement angefügt ist, das sich zum Zeitpunkt der Systemgeste direkt unter dem Stift befindet.</blockquote><br /> | 
+| <strong>HoverLeave</strong> | Das <a href="/previous-versions/ms824019(v=msdn.10)">SystemGestureData-Objekt</a> für die <strong>HoverEnter-Systemgeste</strong> und mehrere <a href="/previous-versions/ms824592(v=msdn.10)">InAirPacketsData-Objekte</a> mit ausreichender durchschnittlicher Geschwindigkeit.<br /> | <blockquote>[!Note]<br />Es kann zu einer spürbaren Verzögerung kommen, bevor die Systemgeste <strong>HoverLeave</strong> empfangen wird. Das <a href="realtimestylus-class.md"><strong>RealTimeStylus-Objekt</strong></a> empfängt diese Daten nur, wenn das <strong>RealTimeStylus-Objekt</strong> an das Fenster oder Steuerelement angefügt ist, das sich zum Zeitpunkt der Systemgeste direkt unter dem Stift befindet.</blockquote><br /> | 
+
 
 
 
  
 
-## <a name="custom-stylus-data"></a>Benutzerdefinierte Tablettstiftdaten
+## <a name="custom-stylus-data"></a>Benutzerdefinierte Stiftdaten
 
-Benutzerdefinierte Tablettstiftdaten können dem [**RealTimeStylus**](realtimestylus-class.md) -Objekt hinzugefügt werden, indem die [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode aufgerufen wird. Benutzerdefinierte Tablettstiftdaten können den Warteschlangen des **RealTimeStylus** -Objekts an einem von drei Stellen hinzugefügt werden.
+Benutzerdefinierte Stiftdaten können dem [**RealTimeStylus-Objekt**](realtimestylus-class.md) durch Aufrufen der [AddCustomStylusDataToQueue-Methode](/previous-versions/ms825761(v=msdn.10)) hinzugefügt werden. Benutzerdefinierte Stiftdaten können den Warteschlangen des **RealTimeStylus-Objekts** an einem von drei Stellen hinzugefügt werden.
 
--   Wenn der *Queue* -Parameter auf **Output** festgelegt ist, werden die benutzerdefinierten Daten der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt, nachdem die Daten derzeit von der synchronen Plug-in-Auflistung verarbeitet wurden.
--   Wenn der *Queue* -Parameter auf **outputimvermittler** festgelegt ist, werden die benutzerdefinierten Daten der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt, bevor die Daten verarbeitet werden, die derzeit von der synchronen Plug-in-Auflistung verarbeitet werden.
--   Wenn der *Queue* -Parameter auf **Input** festgelegt ist, werden die benutzerdefinierten Daten der Eingabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt und an die synchrone Plug-in-Auflistung gesendet, bevor neue Daten aus dem Datenstrom des Tablettstifts eingegeben werden.
+-   Wenn der *Queue-Parameter* auf **Output** festgelegt ist, werden die benutzerdefinierten Daten der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) hinzugefügt, nachdem die Daten derzeit von der synchronen Plug-In-Sammlung verarbeitet werden.
+-   Wenn der *queue-Parameter* auf **OutputImmediate** festgelegt ist, werden die benutzerdefinierten Daten der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) hinzugefügt, bevor die Daten derzeit von der synchronen Plug-In-Sammlung verarbeitet werden.
+-   Wenn der *Queue-Parameter* auf **Eingabe** festgelegt ist, werden die benutzerdefinierten Daten der Eingabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) hinzugefügt und an die synchrone Plug-In-Sammlung gesendet, bevor neue Daten aus dem Datenstrom des Tablettstifts stammen.
 
-In jedem der vorangegangenen Fälle werden Daten, die von nachfolgenden Plug-ins in der synchronen Plug-in-Sammlung hinzugefügt wurden, nach den durch vorangehenden Plug-Ins hinzugefügten Daten hinzugefügt.
+In jedem der vorherigen Fälle werden Daten, die von nachfolgenden Plug-Ins in der synchronen Plug-In-Sammlung hinzugefügt werden, nach den Daten hinzugefügt, die von vorherigen Plug-Ins hinzugefügt wurden.
 
 > [!Note]  
-> Wenn der Aufrufe der [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode von einem synchronen Plug-in als Reaktion auf einen-Rückruf einer der [**IStylusSyncPlugin**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) -Methoden durchgeführt wird, werden die benutzerdefinierten Tablettstiftdaten in einer vorhersagbaren Weise dem Tablet Pen-Datenstrom hinzugefügt. Andernfalls wird Sie der Warteschlange in Bezug auf die aktuellen Stift Daten hinzugefügt, die das [**RealTimeStylus**](realtimestylus-class.md) -Objekt verarbeitet, und nicht in Bezug auf die Daten, die das asynchrone Plug-in verarbeitet. Die AddCustomStylusDataToQueue-Methode löst eine Ausnahme aus, wenn das **RealTimeStylus** -Objekt deaktiviert ist.
+> Wenn der Aufruf der [AddCustomStylusDataToQueue-Methode](/previous-versions/ms825761(v=msdn.10)) von einem synchronen Plug-In als Reaktion auf einen Aufruf einer ihrer [**IStylusSyncPlugin-Methoden**](/windows/win32/api/rtscom/nn-rtscom-istylussyncplugin) erfolgt, werden die benutzerdefinierten Stiftdaten dem Tablettstiftdatenstrom auf vorhersagbare Weise hinzugefügt. Andernfalls wird sie der Warteschlange in Bezug auf die aktuellen Stiftdaten hinzugefügt, die das [**RealTimeStylus-Objekt**](realtimestylus-class.md) verarbeitet, und nicht in Bezug auf die Daten, die das asynchrone Plug-In verarbeitet. Die AddCustomStylusDataToQueue-Methode löst eine Ausnahme aus, wenn das **RealTimeStylus-Objekt** deaktiviert ist.
 
  
 
-Benutzerdefinierte Tablettstiftdaten werden der Warteschlange als [CustomStylusData](/previous-versions/ms824747(v=msdn.10)) -Objekt hinzugefügt, und Plug-ins empfangen diese Daten über die [Microsoft. StylusInput. IStylusSyncPlugin. CustomStylusDataAdded](/previous-versions/ms824753(v=msdn.10)) -oder [Microsoft. StylusInput. IStylusAsyncPlugin. CustomStylusDataAdded](/previous-versions/ms824770(v=msdn.10)) -Methode.
+Benutzerdefinierte Stiftdaten werden der Warteschlange als [CustomStylusData-Objekt](/previous-versions/ms824747(v=msdn.10)) hinzugefügt, und Plug-Ins empfangen diese Daten über ihre [Microsoft.StylusInput.IStylusSyncPlugin.CustomStylusDataAdded-](/previous-versions/ms824753(v=msdn.10)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.CustomStylusDataAdded-Methode.](/previous-versions/ms824770(v=msdn.10))
 
-Der [**DynamicRenderer**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) und die [**GestureRecognizer**](gesturerecognizer-class.md) -Objekte können der Warteschlange benutzerdefinierte Tablettstiftdaten hinzufügen. Weitere Informationen zu **DynamicRenderer** und den **GestureRecognizer** -Objekten finden Sie unter [Dynamic-Renderer-Plug-ins](dynamic-renderer-plug-ins.md) und [Erkennungs-Plug-ins](recognizer-plug-ins.md).
+Die [**Objekte DynamicRenderer**](/previous-versions/windows/desktop/legacy/ms701168(v=vs.85)) und [**GestureRecognizer**](gesturerecognizer-class.md) können der Warteschlange benutzerdefinierte Stiftdaten hinzufügen. Weitere Informationen zu **dynamicRenderer-** und **GestureRecognizer-Objekten** finden Sie unter [Dynamic-Renderer-Plug-Ins](dynamic-renderer-plug-ins.md) und [Erkennungs-Plug-Ins.](recognizer-plug-ins.md)
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt ruft die [Microsoft. StylusInput. IStylusSyncPlugin. CustomStylusDataAdded](/previous-versions/ms824753(v=msdn.10)) -Methode für den Thread auf, von dem der Aufruf der [AddCustomStylusDataToQueue](/previous-versions/ms825761(v=msdn.10)) -Methode empfangen wird.
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) ruft die [Microsoft.StylusInput.IStylusSyncPlugin.CustomStylusDataAdded-Methode](/previous-versions/ms824753(v=msdn.10)) für den Thread auf, von dem der Aufruf der [AddCustomStylusDataToQueue-Methode](/previous-versions/ms825761(v=msdn.10)) empfangen wird.
 
-Im folgenden Diagramm wird veranschaulicht, wie benutzerdefinierte Tablettstiftdaten der Ausgabe Warteschlange hinzugefügt werden, wobei der Parameter *Queue* auf **Output** festgelegt ist.
+Das folgende Diagramm veranschaulicht das Hinzufügen von benutzerdefinierten Stiftdaten zur Ausgabewarteschlange, wobei der *Warteschlangenparameter* auf **Ausgabe** festgelegt ist.
 
-![Darstellung des benutzerdefinierten Tablettstiftdaten Flusses in der Ausgabe Warteschlange ](images/27bc3672-41bc-432e-bf41-18e4ccec78f5.gif)
+![Abbildung, die den Datenfluss benutzerdefinierter Stifte in die Ausgabewarteschlange zeigt ](images/27bc3672-41bc-432e-bf41-18e4ccec78f5.gif)
 
-In diesem Diagramm stellen die Kreise "A" und "B" Tablet Pen-Daten dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus** -Objekt gerade verarbeitet. Sie wird an die synchrone Plug-in-Auflistung gesendet und in der Ausgabe Warteschlange abgelegt. Die mit "1", "2" und "3" nummerierten Kreise stellen benutzerdefinierte Tablettstiftdaten dar, die der Ausgabe Warteschlange jeweils durch das erste, zweite und dritte synchrone Plug-in hinzugefügt wurden, und zwar als Antwort auf die Tablet Pen-Daten, die durch "C" dargestellt werden. Die Plug-ins haben die benutzerdefinierten Tablettstiftdaten hinzugefügt, wobei der *Queue* -Parameter auf **StylusQueues** festgelegt wurde. Der leere Kreis stellt die Position in der Ausgabe Warteschlange dar, an der zukünftige Tablet Pen-Daten hinzugefügt werden.
+In diesem Diagramm stellen die Kreise mit den Buchstaben "A" und "B" Tablettstiftdaten dar, die der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) bereits hinzugefügt und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus-Objekt** gerade verarbeitet. Sie wird an die synchrone Plug-In-Sammlung gesendet und in der Ausgabewarteschlange platziert. Die Kreise mit der Nummer "1", "2" und "3" stellen benutzerdefinierte Tablettstiftdaten dar, die der Ausgabewarteschlange durch die ersten, zweiten und dritten synchronen Plug-Ins als Reaktion auf die Tablettstiftdaten hinzugefügt wurden, die durch "C" dargestellt werden. Die Plug-Ins haben die benutzerdefinierten Stiftdaten hinzugefügt, wobei der *Warteschlangenparameter* auf **StylusQueues** festgelegt ist. Der leere Kreis stellt die Position in der Ausgabewarteschlange dar, an der zukünftige Tablettstiftdaten hinzugefügt werden.
 
-Das folgende Diagramm veranschaulicht das Hinzufügen von benutzerdefinierten Tablettstiftdaten zur Ausgabe Warteschlange, wobei der *Queue* -Parameter auf **outputimvermittler** festgelegt ist.
+Das folgende Diagramm veranschaulicht das Hinzufügen von benutzerdefinierten Stiftdaten zur Ausgabewarteschlange, wobei der *queue-Parameter* auf **OutputImmediate** festgelegt ist.
 
-![Diagramm, das den benutzerdefinierten Tablettstiftdaten Fluss in der Ausgabe Warteschlange anzeigt.](images/bcf45325-5557-47a2-af43-142c7684e482.gif)
+![Diagramm, das den datenfluss des benutzerdefinierten Stifts an die Ausgabewarteschlange zeigt.](images/bcf45325-5557-47a2-af43-142c7684e482.gif)
 
-In diesem Diagramm stellen die Kreise "A" und "B" Tablet Pen-Daten dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus** -Objekt gerade verarbeitet. Sie wird an die synchrone Plug-in-Auflistung gesendet und in der Ausgabe Warteschlange abgelegt. Die mit "1", "2" und "3" nummerierten Kreise stellen benutzerdefinierte Tablettstiftdaten dar, die der Ausgabe Warteschlange jeweils durch das erste, zweite und dritte synchrone Plug-in hinzugefügt wurden, und zwar als Antwort auf die Tablet Pen-Daten, die durch "C" dargestellt werden. Die Plug-ins haben die benutzerdefinierten Tablettstiftdaten hinzugefügt, wobei der *Queue* -Parameter auf **outputimvermittler** festgelegt wurde. Der leere Kreis stellt die Position in der Ausgabe Warteschlange dar, an der zukünftige Tablet Pen-Daten hinzugefügt werden.
+In diesem Diagramm stellen die Kreise mit den Buchstaben "A" und "B" Tablettstiftdaten dar, die der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) bereits hinzugefügt und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus-Objekt** gerade verarbeitet. Sie wird an die synchrone Plug-In-Sammlung gesendet und in der Ausgabewarteschlange platziert. Die Kreise mit der Nummer "1", "2" und "3" stellen benutzerdefinierte Tablettstiftdaten dar, die der Ausgabewarteschlange durch die ersten, zweiten und dritten synchronen Plug-Ins als Reaktion auf die Tablettstiftdaten hinzugefügt wurden, die durch "C" dargestellt werden. Die Plug-Ins haben die benutzerdefinierten Stiftdaten hinzugefügt, wobei der *Warteschlangenparameter* auf **OutputImmediate** festgelegt ist. Der leere Kreis stellt die Position in der Ausgabewarteschlange dar, an der zukünftige Tablettstiftdaten hinzugefügt werden.
 
-Das folgende Diagramm veranschaulicht das Hinzufügen von benutzerdefinierten Tablettstiftdaten zur Eingabe Warteschlange.
+Das folgende Diagramm veranschaulicht das Hinzufügen von benutzerdefinierten Stiftdaten zur Eingabewarteschlange.
 
-![Darstellung des benutzerdefinierten Tablettstiftdaten Flusses in der Ausgabe Warteschlange](images/5dd2cfcc-1086-49b0-a0d5-9276c13c7f61.gif)
+![Abbildung, die den Datenfluss benutzerdefinierter Stifte in die Ausgabewarteschlange zeigt](images/5dd2cfcc-1086-49b0-a0d5-9276c13c7f61.gif)
 
-In diesem Diagramm stellen die Kreise "A" und "B" Tablet Pen-Daten dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus** -Objekt gerade verarbeitet. Sie wird an die synchrone Plug-in-Auflistung gesendet und in der Ausgabe Warteschlange abgelegt. Die mit "1", "2" und "3" nummerierten Kreise stellen benutzerdefinierte Tablettstiftdaten dar, die der Eingabe Warteschlange jeweils durch das erste, zweite und dritte synchrone Plug-in hinzugefügt wurden, und zwar als Antwort auf die Tablet Pen-Daten, die durch "C" dargestellt werden. Die Plug-ins haben die benutzerdefinierten Tablettstiftdaten hinzugefügt, wobei der *Queue* -Parameter auf **Input** festgelegt wurde. Die mit "1" nummerierten benutzerdefinierten Tablettstiftdaten werden dann an die synchronen Plug-ins und dann an die Ausgabe Warteschlange weitergeleitet, bevor die benutzerdefinierten Tablettstiftdaten "2" und "3" nummeriert werden, die beide vor der Verarbeitung der nächsten Tablet Pen-Daten verarbeitet werden. Der leere Kreis stellt die Position in der Ausgabe Warteschlange dar, an der zukünftige Tablet Pen-Daten hinzugefügt werden.
+In diesem Diagramm stellen die Kreise mit den Buchstaben "A" und "B" Tablettstiftdaten dar, die der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) bereits hinzugefügt und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus-Objekt** gerade verarbeitet. Sie wird an die synchrone Plug-In-Sammlung gesendet und in der Ausgabewarteschlange platziert. Die Kreise mit der Nummer "1", "2" und "3" stellen benutzerdefinierte Tablettstiftdaten dar, die der Eingabewarteschlange durch die ersten, zweiten und dritten synchronen Plug-Ins als Reaktion auf die Tablettstiftdaten hinzugefügt wurden, die durch "C" dargestellt werden. Die Plug-Ins haben die benutzerdefinierten Stiftdaten hinzugefügt, wobei der *Warteschlangenparameter* auf **Eingabe** festgelegt ist. Die benutzerdefinierten Tablettstiftdaten mit der Nummer "1" werden dann an die synchronen Plug-Ins und dann an die Ausgabewarteschlange vor den benutzerdefinierten Tablettstiftdaten mit der Nummer "2" und "3" übergeben, die beide vor der Verarbeitung der nächsten Tablettstiftdaten verarbeitet werden. Der leere Kreis stellt die Position in der Ausgabewarteschlange dar, an der zukünftige Tablettstiftdaten hinzugefügt werden.
 
-## <a name="error-data"></a>Fehler Daten
+## <a name="error-data"></a>Fehlerdaten
 
-Wenn ein Plug-in eine Ausnahme auslöst, wird der normale Datenfluss unterbrochen. Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt generiert ein [ErrorData](/previous-versions/ms824740(v=msdn.10)) -Objekt und ruft Folgendes auf:
+Wenn ein Plug-In eine Ausnahme auslöst, wird der normale Datenfluss unterbrochen. Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) generiert ein [ErrorData-Objekt](/previous-versions/ms824740(v=msdn.10)) und ruft Folgendes auf:
 
--   Die [Microsoft. StylusInput. IStylusSyncPlugin. Error](/previous-versions/ms824754(v=msdn.10)) -oder [Microsoft. StylusInput. IStylusAsyncPlugin. Error](/previous-versions/ms824771(v=msdn.10)) -Methode des Plug-ins, das die Ausnahme ausgelöst hat.
--   Die [Microsoft. StylusInput. IStylusSyncPlugin. Error](/previous-versions/ms824754(v=msdn.10)) -oder [Microsoft. StylusInput. IStylusAsyncPlugin. Error](/previous-versions/ms824771(v=msdn.10)) -Methode der restlichen Plug-ins in dieser Auflistung.
+-   Die [Microsoft.StylusInput.IStylusSyncPlugin.Error-](/previous-versions/ms824754(v=msdn.10)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.Error-Methode](/previous-versions/ms824771(v=msdn.10)) des Plug-Ins, das die Ausnahme ausgelöst hat.
+-   Die [Microsoft.StylusInput.IStylusSyncPlugin.Error-](/previous-versions/ms824754(v=msdn.10)) oder [Microsoft.StylusInput.IStylusAsyncPlugin.Error-Methode](/previous-versions/ms824771(v=msdn.10)) der verbleibenden Plug-Ins in dieser Sammlung.
 
-Wenn das Plug-in, das die Ausnahme ausgelöst hat, ein synchrones Plug-in ist, wird das [ErrorData](/previous-versions/ms824740(v=msdn.10)) -Objekt der Ausgabe Warteschlange hinzugefügt. Anschließend nimmt das [**RealTimeStylus**](realtimestylus-class.md) -Objekt die normale Verarbeitung der ursprünglichen Daten wieder auf.
+Wenn das Plug-In, das die Ausnahme ausgelöst hat, ein synchrones Plug-In ist, wird das [ErrorData-Objekt](/previous-versions/ms824740(v=msdn.10)) der Ausgabewarteschlange hinzugefügt. Anschließend setzt das [**RealTimeStylus-Objekt**](realtimestylus-class.md) die normale Verarbeitung der ursprünglichen Daten fort.
 
-Das folgende Diagramm veranschaulicht das Hinzufügen von Fehler Daten zu den Tablettstift-Daten.
+Das folgende Diagramm veranschaulicht das Hinzufügen von Fehlerdaten zu den Tablettstiftdaten.
 
-![benutzerdefinierter Tablettstiftdaten Fluss in die Ausgabe Warteschlange mit dem Hinzufügen von Fehler Daten](images/c2f79abe-aeb5-498f-b389-1fad9bf01a13.gif)
+![Benutzerdefinierter Stiftdatenfluss in die Ausgabewarteschlange mit dem Hinzufügen von Fehlerdaten](images/c2f79abe-aeb5-498f-b389-1fad9bf01a13.gif)
 
-In diesem Diagramm stellen die Kreise "A" und "B" Tablet Pen-Daten dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus** -Objekt gerade verarbeitet. Der Kreis mit dem Wert "e" stellt ein [ErrorData](/previous-versions/ms824740(v=msdn.10)) -Objekt dar, das vom **RealTimeStylus** -Objekt generiert wird, wenn das zweite synchrone Plug-in (synchrones Plug-in 2) eine Ausnahme auslöst, während es "C" verarbeitet. Das **RealTimeStylus** -Objekt hält seine Verarbeitung von "C" an und übergibt "e" an das Plug-in, das die Ausnahme und alle nachfolgenden Plug-ins generiert hat. Das **RealTimeStylus** -Objekt fügt dann "e" in die Ausgabe Warteschlange ein und setzt die Verarbeitung von "C" fort, das an die restlichen Plug-ins in der synchronen Plug-in-Auflistung und in der Ausgabe Warteschlange nach "e" platziert wird. Der leere Kreis stellt die Position in der Ausgabe Warteschlange dar, an der zukünftige Tablet Pen-Daten hinzugefügt werden.
+In diesem Diagramm stellen die Kreise mit den Buchstaben "A" und "B" Tablettstiftdaten dar, die der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) bereits hinzugefügt und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus-Objekt** gerade verarbeitet. Der Kreis mit dem Buchstaben "e" stellt ein Vom **RealTimeStylus-Objekt** generiertes [ErrorData-Objekt](/previous-versions/ms824740(v=msdn.10)) dar, wenn das zweite synchrone Plug-In, synchrones Plug-In 2, eine Ausnahme auslöst, während "C" verarbeitet wird. Das **RealTimeStylus-Objekt** hält dann die Verarbeitung von "C" an und übergibt "e" an das Plug-In, das die Ausnahme und alle nachfolgenden Plug-Ins generiert hat. Das **RealTimeStylus-Objekt** fügt dann "e" in die Ausgabewarteschlange ein und setzt die Verarbeitung von "C" fort, das an die verbleibenden Plug-Ins in der synchronen Plug-In-Sammlung übergeben und nach "e" in der Ausgabewarteschlange platziert wird. Der leere Kreis stellt die Position in der Ausgabewarteschlange dar, an der zukünftige Tablettstiftdaten hinzugefügt werden.
 
-Wenn ein Plug-in eine Ausnahme von der Fehler Methode auslöst, fängt das [**RealTimeStylus**](realtimestylus-class.md) -Objekt die Ausnahme ab, generiert jedoch kein neues [ErrorData](/previous-versions/ms824740(v=msdn.10)) -Objekt. Dadurch wird die Rekursion verhindert.
+Wenn ein Plug-In eine Ausnahme von seiner Error-Methode auslöst, fängt das [**RealTimeStylus-Objekt**](realtimestylus-class.md) die Ausnahme ab, generiert jedoch kein neues [ErrorData-Objekt.](/previous-versions/ms824740(v=msdn.10)) Dadurch soll eine Rekursion verhindert werden.
 
-Die Fehler Daten werden der Ausgabe Warteschlange hinzugefügt, nachdem alle benutzerdefinierten Tablettstiftdaten, die an der **outputimvermittler** -Position vor der Ausnahme, die die Fehler Daten erstellt hat, und vor benutzerdefinierten Tablettstiftdaten, die an der **outputimvermittler** -Position hinzugefügt wurden, von nachfolgenden Plug-ins in der synchronen Plug-in-Auflistung
+Die Fehlerdaten werden der Ausgabewarteschlange nach benutzerdefinierten Stiftdaten hinzugefügt, die an der **Position OutputImmediate** vor der Ausnahme hinzugefügt werden, die die Fehlerdaten erstellt hat, und vor benutzerdefinierten Stiftdaten, die durch nachfolgende Plug-Ins in der synchronen Plug-In-Sammlung an der **Position OutputImmediate** hinzugefügt werden.
 
-Im folgenden Diagramm wird veranschaulicht, wie die Fehler Daten der Ausgabe Warteschlange in Bezug auf benutzerdefinierte Daten, die der **outputimvermittler** -Warteschlange hinzugefügt werden, hinzugefügt werden.
+Das folgende Diagramm veranschaulicht, wie die Fehlerdaten der Ausgabewarteschlange in Bezug auf benutzerdefinierte Daten hinzugefügt werden, die der **OutputImmediate-Warteschlange** hinzugefügt werden.
 
-![der Ausgabe Warteschlange hinzugefügte Fehler Daten in Bezug auf benutzerdefinierte Daten, die der outputimvermittler-Warteschlange hinzugefügt werden](images/b00320c4-6fe7-439d-9855-e5f131feeb69.gif)
+![Fehlerdaten, die der Ausgabewarteschlange in Bezug auf benutzerdefinierte Daten hinzugefügt wurden, die der outputimmediate-Warteschlange hinzugefügt wurden.](images/b00320c4-6fe7-439d-9855-e5f131feeb69.gif)
 
-In diesem Diagramm stellen die Kreise "A" und "B" Tablet Pen-Daten dar, die bereits der Ausgabe Warteschlange des [**RealTimeStylus**](realtimestylus-class.md) -Objekts hinzugefügt wurden und noch nicht an die asynchrone Plug-in-Auflistung gesendet wurden. Der Kreis mit dem Titel "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus** -Objekt gerade verarbeitet. Die mit "1", "2" und "3" nummerierten Kreise werden durch das erste, zweite und dritte synchrone Plug-ins der **outputimvermittler** -Warteschlange als Reaktion auf die Daten hinzugefügt, die durch den Kreis mit dem Wert "C" dargestellt werden. Der Kreis "e" stellt Fehler Daten dar, die als Reaktion auf eine Ausnahme generiert werden, die durch das zweite Plug-in ausgelöst wurde, nachdem das zweite Plug-in der Ausgabe Warteschlange an der Position " **outputimvermittlung** " benutzerdefinierte Daten hinzugefügt hat.
+In diesem Diagramm stellen die Kreise mit den Buchstaben "A" und "B" Tablettstiftdaten dar, die der Ausgabewarteschlange des [**RealTimeStylus-Objekts**](realtimestylus-class.md) bereits hinzugefügt und noch nicht an die asynchrone Plug-In-Sammlung gesendet wurden. Der Kreis mit dem Buchstaben "C" stellt die Tablettstiftdaten dar, die das **RealTimeStylus-Objekt** gerade verarbeitet. Die Kreise mit der Nummer "1", "2" und "3" werden durch die ersten, zweiten und dritten synchronen Plug-Ins der **OutputImmediate-Warteschlange** als Reaktion auf die Daten hinzugefügt, die durch den Kreis mit dem Buchstaben "C" dargestellt werden. Der Kreis mit dem Buchstaben "e" stellt Fehlerdaten dar, die als Reaktion auf eine Ausnahme generiert wurden, die vom zweiten Plug-In ausgelöst wurde, nachdem das zweite Plug-In der Ausgabewarteschlange an der Position **OutputImmediate** benutzerdefinierte Daten hinzugefügt hat.
 
-Wenn ein beliebiges synchrones Plug-in der Eingabe Warteschlange benutzerdefinierte Tablettstiftdaten als Antwort auf die Fehler Daten hinzufügt, werden die Daten unmittelbar vor den Fehler Daten hinzugefügt. Wenn ein beliebiges synchrones Plug-in der Ausgabe Warteschlange an der **Ausgabe** Position als Antwort auf die Fehler Daten benutzerdefinierte Tablettstiftdaten hinzufügt, werden die Daten unmittelbar nach den Fehler Daten hinzugefügt.
+Wenn ein synchrones Plug-In der Eingabewarteschlange als Reaktion auf die Fehlerdaten benutzerdefinierte Stiftdaten hinzufügt, werden die Daten unmittelbar vor den Fehlerdaten hinzugefügt. Wenn eines der synchronen Plug-Ins der Ausgabewarteschlange als Reaktion auf die Fehlerdaten benutzerdefinierte Stiftdaten an der **Ausgabeposition** hinzufügt, werden die Daten unmittelbar nach den Fehlerdaten hinzugefügt.
 
-Das [**RealTimeStylus**](realtimestylus-class.md) -Objekt ruft die [Microsoft. StylusInput. IStylusSyncPlugin. Error](/previous-versions/ms824754(v=msdn.10)) -Methode für den Thread auf, von dem die Ausnahme ausgelöst wird.
+Das [**RealTimeStylus-Objekt**](realtimestylus-class.md) ruft die [Microsoft.StylusInput.IStylusSyncPlugin.Error-Methode](/previous-versions/ms824754(v=msdn.10)) für den Thread auf, von dem die Ausnahme ausgelöst wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Microsoft. Ink. Tablet](/previous-versions/ms827783(v=msdn.10))
+[Microsoft.Ink.Tablet](/previous-versions/ms827783(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. PluginData](/previous-versions/ms823992(v=msdn.10))
+[Microsoft.stylusinput.plugindata](/previous-versions/ms823992(v=msdn.10))
 </dt> <dt>
 
-[Microsoft. StylusInput. datainteressanmask](/previous-versions/ms575174(v=vs.100))
+[Microsoft.StylusInput.DataInterestMask](/previous-versions/ms575174(v=vs.100))
 </dt> <dt>
 
-[Microsoft. StylusInput. RealTimeStylus](/previous-versions/ms824830(v=msdn.10))
+[Microsoft.StylusInput.RealTimeStylus](/previous-versions/ms824830(v=msdn.10))
 </dt> <dt>
 
 [Arbeiten mit der RealTimeStylus-Klasse](working-with-the-realtimestylus-class.md)

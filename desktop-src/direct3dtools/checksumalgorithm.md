@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b47232fe54b17c61ab9df90997e6ac63c48aee0caa31508f47dc43afc14270f2
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 102b2819f496c6091c799b777f5601550dad876d
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120095140"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627286"
 ---
 # <a name="span-idvspixenginechecksumalgorithmspanchecksumalgorithm-enumeration"></a><span id="vspixengine.checksumalgorithm"></span>CHECKSUMALGORITHM-Enumeration
 
@@ -37,7 +37,7 @@ Eine -Enum, mit der der zu verwendende Prüfsummenalgorithmus angegeben wird.
 
 ## <a name="constants"></a>Konstanten
 
-<span id="None"></span><span id="none"></span><span id="NONE"></span>**nichts**  
+<span id="None"></span><span id="none"></span><span id="NONE"></span>**Nichts**  
 Ein -Wert, der angibt, dass keine Prüfsumme verwendet werden soll.
 
 <span id="MD5"></span><span id="md5"></span>**MD5**  
@@ -46,9 +46,9 @@ Ein -Wert, der angibt, dass MD5-Prüfsummen verwendet werden sollen.
 <span id="SHA1"></span><span id="sha1"></span>**SHA1**  
 Ein -Wert, der angibt, dass SHA1-Prüfsummen verwendet werden sollen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

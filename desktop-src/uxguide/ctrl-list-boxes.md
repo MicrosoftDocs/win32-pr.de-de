@@ -4,17 +4,17 @@ description: Mit einem Listenfeld können Benutzer aus einer Gruppe von Werten a
 ms.assetid: 620e9ff9-b367-446b-9e97-9c9d6d14f4bb
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 8d4f30394e9704ba01832c60e7b41e3453a5c7abe1715678ca84405e73724c7c
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 0476b53590cc6e8dcc691faf95be1a851889936e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118218100"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481746"
 ---
 # <a name="list-boxes"></a>Listenfelder
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
 Mit einem Listenfeld können Benutzer aus einer Gruppe von Werten auswählen, die in einer Liste angezeigt werden, die immer sichtbar ist. Mit einem Listenfeld mit nur einer Auswahl wählen Benutzer ein Element aus einer Liste von sich gegenseitig ausschließenden Werten aus. Mit einem Listenfeld mit mehrfacher Auswahl wählen Benutzer 0 (null) oder mehr Elemente aus einer Liste von Werten aus.
 
@@ -39,7 +39,7 @@ Orientieren Sie sich an folgenden Fragen:
 **Einzelauswahllisten**
 
 -   **Wird das Steuerelement verwendet, um eine Option aus einer Liste von sich gegenseitig ausschließenden Werten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Um mehrere Optionen auszuwählen, verwenden Sie stattdessen eine Standard-Mehrfachauswahlliste, eine Kontrollkästchenliste, einen Listen-Generator oder eine Liste hinzufügen/entfernen.
--   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option zu sehen, als die Alternativen zu sehen? Wenn dies der Fall ist, sollten Sie eine [Dropdownliste](/windows/desktop/uxguide/ctrl-drop) verwenden, wenn Sie die Benutzer nicht dazu ermutigen möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden.
+-   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option als die Alternativen zu sehen? Wenn dies der Fall ist, sollten Sie eine [Dropdownliste](/windows/desktop/uxguide/ctrl-drop) verwenden, wenn Sie die Benutzer nicht dazu auffordern möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden.
 
 ![Screenshot der höchsten Qualität als Standardschaltfläche ](images/ctrl-list-boxes-image2.png)
 
@@ -70,7 +70,7 @@ In diesem Beispiel ändern Benutzer ständig das ausgewählte Element in der Lis
 -   **Wird das Steuerelement verwendet, um 0 (null) oder mehr Elemente aus einer Liste von Werten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie für die Auswahl eines Elements stattdessen eine Einzelauswahlliste.
 -   **Spielt die Reihenfolge der ausgewählten Elemente eine Rolle?** Wenn ja, unterstützen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern die Reihenfolge, die anderen Muster für die Mehrfachauswahl hingegen nicht.
 -   **Ist es für Benutzer wichtig, eine Zusammenfassung aller ausgewählten Elemente anzuzeigen?** Wenn ja, zeigen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern nur die ausgewählten Elemente an, während die anderen Muster für die Mehrfachauswahl nicht angezeigt werden.
--   **Sind die möglichen Optionen uneingeschränkt?** Wenn ja, verwenden Sie eine Liste zum Hinzufügen/Entfernen, damit Benutzer Werte auswählen können, die derzeit nicht in der Liste enthalten sind.
+-   **Sind die möglichen Optionen uneingeschränkt?** Verwenden Sie in diesem Falle eine Liste zum Hinzufügen/Entfernen, damit Benutzer Werte auswählen können, die derzeit nicht in der Liste enthalten sind.
 -   **Ist für das Hinzufügen eines Werts zur Liste ein spezielles Dialogfeld zum Auswählen von Objekten erforderlich?** Verwenden Sie in diesem Falle eine Liste zum Hinzufügen/Entfernen, und zeigen Sie das Dialogfeld an, wenn Benutzer auf Hinzufügen klicken.
 -   **Ist der Bildschirmspeicherplatz premium?** Wenn ja, verwenden Sie stattdessen eine Add-/Remove-Liste, da weniger Bildschirmbereich verwendet wird, da nicht immer der Satz von Optionen angezeigt wird.
 
@@ -84,48 +84,9 @@ Listenfelder weisen mehrere Verwendungsmuster auf:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Einzelauswahllisten</strong> Benutzern erlauben, jeweils ein Element auszuwählen. <br/></td>
-<td><img src="images/ctrl-list-boxes-image4.png" alt="Screen shot of list box with one item selected " /><br/> In diesem Beispiel können Benutzer nur ein Anzeigeelement auswählen.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Standardlisten für mehrfache Auswahl</strong> Benutzern das Auswählen einer beliebigen Anzahl von Elementen gestatten, einschließlich keines.<br/></td>
-<td>Standardlisten mit mehrfacher Auswahl weisen genau die gleiche Darstellung wie Einzelauswahllisten auf, sodass es keinen visuellen Hinweis darauf gibt, dass ein Listenfeld die Mehrfachauswahl unterstützt. Da Benutzer diese Fähigkeit ermitteln müssen, eignet sich dieses Listenmuster am besten für Aufgaben, bei denen die Mehrfachauswahl nicht wichtig ist und selten verwendet wird. <br/> Es gibt zwei verschiedene Modi für die Mehrfachauswahl: <a href="glossary.md">mehrere</a> und <a href="glossary.md">erweiterte</a>. <strong>Der erweiterte Auswahlmodus</strong> ist weitaus häufiger, wobei die Auswahl durch Ziehen oder mit UMSCHALT+KLICK und STRG+KLICK erweitert werden kann, um Gruppen zusammenhängender bzw. nicht benachbarter Werte auszuwählen. Wenn Sie im <strong>Mehrfachauswahlmodus</strong>auf ein element klicken, wird der Auswahlstatus unabhängig von der UMSCHALTTASTE und DER STRG-TASTE umgeschaltet. Aufgrund dieses ungewöhnlichen Verhaltens ist der Mehrfachauswahlmodus veraltet, und Sie sollten stattdessen Kontrollkästchenlisten verwenden.<br/> <img src="images/ctrl-list-boxes-image5.png" alt="Screen shot of list box with several items selected " /><br/> In diesem Beispiel können Benutzer eine beliebige Anzahl von Elementen im Mehrfachauswahlmodus auswählen.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Kontrollkästchenlisten</strong> Wie standard-Listenfelder mit mehrfacher Auswahl können Benutzer mit Kontrollkästchen eine beliebige Anzahl von Elementen auswählen, einschließlich keiner.<br/></td>
-<td>Im Gegensatz zu standardbasierten Mehrfachauswahllisten weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist. Verwenden Sie dieses Listenmuster für Aufgaben, bei denen die Mehrfachauswahl wichtig ist oder häufig verwendet wird. <br/> <img src="images/ctrl-list-boxes-image6.png" alt="Screen shot of Toolbars check-box list " /><br/> In diesem Beispiel wählen Benutzer in der Regel mehrere Elemente aus, sodass eine Kontrollkästchenliste verwendet wird.<br/> Angesichts dieses eindeutigen Hinweises auf die Mehrfachauswahl können Sie davon ausgehen, dass Kontrollkästchenlisten standard-Mehrfachauswahllisten vorzuziehen sind. In der Praxis erfordern einige Aufgaben eine Mehrfachauswahl oder verwenden sie stark. die Verwendung einer Kontrollkästchenliste in solchen Fällen macht der Auswahl zu viel Aufmerksamkeit. Folglich <strong>sind standardbasierte Mehrfachauswahllisten weitaus häufiger.</strong><br/></td>
-</tr>
-<tr class="even">
-<td><strong>Vorschaulisten</strong> Kann eine einzelne oder mehrfache Auswahl sein, aber sie zeigen eine Vorschau der Auswirkungen der Auswahl anstelle von Nur-Text an.<br/></td>
-<td><img src="images/ctrl-list-boxes-image7.png" alt="Screen shot of Window Color options preview " /><br/> In diesem Beispiel zeigt eine Vorschau der einzelnen Optionen die Auswirkungen der Auswahl deutlich an, die effektiver als die Verwendung von Text allein ist.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Auflisten von Generatoren</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie jeweils ein Element hinzufügen und optional die Listenreihenfolge festlegen.<br/></td>
-<td>Ein Listen-Generator besteht aus zwei Einzelauswahllisten: Die Liste auf der linken Seite ist ein fester Satz von Optionen, und die Liste auf der rechten Seite ist die Liste, die erstellt wird. Es gibt zwei Befehlsschaltflächen zwischen den Listen: <br/>
-<ul>
-<li>Eine Schaltfläche <strong>Hinzufügen,</strong> die die aktuell ausgewählte Option in die Liste verschiebt, die vor dem ausgewählten Element eingefügt wird. (Doppelklicken auf ein Optionselement hat die gleiche Auswirkung.)</li>
-<li>Eine <strong>Schaltfläche Entfernen,</strong> die das ausgewählte Element aus der erstellten Liste entfernt und an die Optionsliste zurückgibt. (Doppelklicken auf ein Element in der erstellten Liste hat die gleiche Auswirkung.) Die integrierte Liste kann optional über die <strong>Befehle Nach oben</strong> und Nach unten <strong>verfügen,</strong> um die Listenelemente zu bestellen.</li>
-</ul>
-<img src="images/ctrl-list-boxes-image8.png" alt="Screen shot of Toolbar buttons list builder " /><br/> In diesem Beispiel wird ein Listen-Generator verwendet, um eine Symbolleiste zu erstellen, indem Elemente aus einer Reihe verfügbarer Optionen ausgewählt und deren Reihenfolge festgelegt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>Hinzufügen/Entfernen von Listen</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie ein oder mehrere Elemente gleichzeitig hinzufügen und optional die Listen reihenfolge festlegen (z. B. Listen-Generatoren).<br/></td>
-<td>Im Gegensatz zu einem Listen-Generator wird durch Klicken <strong>auf</strong> Hinzufügen ein Dialogfeld angezeigt, in dem Elemente ausgewählt werden, die der Liste hinzugefügt werden. Die Verwendung eines separaten Dialogfelds ermöglicht eine erhebliche Flexibilität bei der Auswahl von Elementen, die Sie mit einer speziellen Objektauswahl oder sogar einem allgemeinen Dialog auswählen können. Im Vergleich zum Listen-Generator ist diese Variante kompakter, erfordert jedoch etwas mehr Aufwand, um Elemente hinzuzufügen. <br/> <img src="images/ctrl-list-boxes-image9.png" alt="Screen shot of Menu contents list " /><br/> In diesem Beispiel können Benutzer Tools zu einem Menü hinzufügen oder daraus entfernen sowie die Reihenfolge festlegen.<br/> Der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern sind zwar deutlich größer als die anderen Mehrfachauswahllisten, bieten jedoch zwei besondere Vorteile:<br/>
-<ul>
-<li>Benutzer haben die Kontrolle über die Reihenfolge der Listen, sowohl beim Erstellen der Liste als auch danach.</li>
-<li>Benutzer können eine Zusammenfassung der ausgewählten Elemente überprüfen. Dies kann ein großer Vorteil sein, wenn die Anzahl der Auswahlmöglichkeiten groß ist.</li>
-</ul>
-Ihre Nachteile sind, dass sie viel mehr Platz auf dem Bildschirm benötigen und schwierig zu verwenden sein können, wenn sie eine große Liste von Elementen von Grund auf neu erstellen. Daher werden sie am besten verwendet, um bereits vorhandene Kurzlisten zu erstellen oder Listen zu ändern.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| | | <strong>Einzelauswahllisten</strong> Benutzern erlauben, jeweils ein Element auszuwählen. <br /> | <img src="images/ctrl-list-boxes-image4.png" alt="Screen shot of list box with one item selected " /><br /> In diesem Beispiel können Benutzer nur ein Anzeigeelement auswählen.<br /> | | <strong>Standardlisten für mehrfache Auswahl</strong> Benutzern das Auswählen einer beliebigen Anzahl von Elementen gestatten, einschließlich keines.<br /> | Standard-Mehrfachauswahllisten weisen genau die gleiche Darstellung wie Einzelauswahllisten auf, sodass es keinen visuellen Hinweis gibt, dass ein Listenfeld die Mehrfachauswahl unterstützt. Da Benutzer diese Fähigkeit ermitteln müssen, wird dieses Listenmuster am besten für Aufgaben verwendet, bei denen die Mehrfachauswahl nicht wichtig ist und selten verwendet wird. <br /> Es gibt zwei verschiedene Modi für die Mehrfachauswahl: <a href="glossary.md">mehrere</a> und <a href="glossary.md">erweiterte</a>. <strong>Der erweiterte Auswahlmodus</strong> ist weitaus häufiger, wobei die Auswahl durch Ziehen oder mit UMSCHALT+KLICK und STRG+KLICK erweitert werden kann, um Gruppen zusammenhängender bzw. nicht benachbarter Werte auszuwählen. Wenn Sie im <strong>Mehrfachauswahlmodus</strong>auf ein element klicken, wird der Auswahlstatus unabhängig von der UMSCHALTTASTE und DER STRG-TASTE umgeschaltet. Aufgrund dieses ungewöhnlichen Verhaltens ist der Mehrfachauswahlmodus veraltet, und Sie sollten stattdessen Kontrollkästchenlisten verwenden.<br /><img src="images/ctrl-list-boxes-image5.png" alt="Screen shot of list box with several items selected " /><br /> In diesem Beispiel können Benutzer eine beliebige Anzahl von Elementen im Mehrfachauswahlmodus auswählen.<br /> | | <strong>Kontrollkästchenlisten</strong> Wie standardmäßige Mehrfachauswahllisten können Benutzer mit Kontrollkästchen eine beliebige Anzahl von Elementen auswählen, einschließlich keiner.<br /> | Im Gegensatz zu standardbasierten Mehrfachauswahllisten weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist. Verwenden Sie dieses Listenmuster für Aufgaben, bei denen die Mehrfachauswahl wichtig ist oder häufig verwendet wird. <br /><img src="images/ctrl-list-boxes-image6.png" alt="Screen shot of Toolbars check-box list " /><br /> In diesem Beispiel wählen Benutzer in der Regel mehrere Elemente aus, sodass eine Kontrollkästchenliste verwendet wird.<br /> Angesichts dieses eindeutigen Hinweises auf die Mehrfachauswahl können Sie davon ausgehen, dass Kontrollkästchenlisten standard-Mehrfachauswahllisten vorzuziehen sind. In der Praxis erfordern einige Aufgaben eine Mehrfachauswahl oder verwenden sie stark. Die Verwendung einer Kontrollkästchenliste in solchen Fällen macht der Auswahl zu viel Aufmerksamkeit. Folglich sind Standardlisten für <strong>die Mehrfachauswahl weitaus häufiger.</strong><br /> | | <strong>Vorschaulisten</strong> Kann eine einzelne oder mehrfache Auswahl sein, aber sie zeigen eine Vorschau der Auswirkungen der Auswahl anstelle von Nur-Text an.<br /> | <img src="images/ctrl-list-boxes-image7.png" alt="Screen shot of Window Color options preview " /><br /> In diesem Beispiel zeigt eine Vorschau der einzelnen Optionen die Auswirkungen der Auswahl deutlich an, die effektiver als die Verwendung von Text allein ist.<br /> | | <strong>Auflisten von Generatoren</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie jeweils ein Element hinzufügen und optional die Listenreihenfolge festlegen.<br /> | Ein Listen-Generator besteht aus zwei Einzelauswahllisten: Die Liste auf der linken Seite ist ein fester Satz von Optionen, und die Liste auf der rechten Seite ist die Liste, die erstellt wird. Es gibt zwei Befehlsschaltflächen zwischen den Listen: <br /><ul><li>Eine Schaltfläche <strong>Hinzufügen,</strong> die die aktuell ausgewählte Option in die Liste verschiebt, die vor dem ausgewählten Element eingefügt wird. (Doppelklicken auf ein Optionselement hat die gleiche Auswirkung.)</li><li>Eine <strong>Schaltfläche Entfernen,</strong> die das ausgewählte Element aus der erstellten Liste entfernt und an die Optionsliste zurückgibt. (Doppelklicken auf ein Element in der erstellten Liste hat die gleiche Auswirkung.) Die integrierte Liste kann optional über die <strong>Befehle Nach oben</strong> und Nach unten <strong>verfügen,</strong> um die Listenelemente zu bestellen.</li></ul><img src="images/ctrl-list-boxes-image8.png" alt="Screen shot of Toolbar buttons list builder " /><br /> In diesem Beispiel wird ein Listen-Generator verwendet, um eine Symbolleiste zu erstellen, indem Elemente aus einer Reihe verfügbarer Optionen ausgewählt und deren Reihenfolge festgelegt wird.<br /> | | <strong>Hinzufügen/Entfernen von Listen</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie ein oder mehrere Elemente gleichzeitig hinzufügen und optional die Listen reihenfolge festlegen (z. B. Listen-Generatoren).<br /> | Im Gegensatz zu einem Listen-Generator zeigt das Klicken <strong>auf</strong> Hinzufügen ein Dialogfeld an, in dem Elemente ausgewählt werden, die der Liste hinzugefügt werden. Die Verwendung eines separaten Dialogfelds ermöglicht eine erhebliche Flexibilität bei der Auswahl von Elementen, die Sie mit einer speziellen Objektauswahl oder sogar einem allgemeinen Dialog auswählen können. Im Vergleich zum Listen-Generator ist diese Variante kompakter, erfordert jedoch etwas mehr Aufwand, um Elemente hinzuzufügen. <br /><img src="images/ctrl-list-boxes-image9.png" alt="Screen shot of Menu contents list " /><br /> In diesem Beispiel können Benutzer Tools zu einem Menü hinzufügen oder daraus entfernen sowie die Reihenfolge festlegen.<br /> Der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern sind zwar deutlich größer als die anderen Mehrfachauswahllisten, bieten jedoch zwei besondere Vorteile:<br /><ul><li>Benutzer haben die Kontrolle über die Reihenfolge der Listen, sowohl beim Erstellen der Liste als auch danach.</li><li>Benutzer können eine Zusammenfassung der ausgewählten Elemente überprüfen. Dies kann ein großer Vorteil sein, wenn die Anzahl der Auswahlmöglichkeiten groß ist.</li></ul>Ihre Nachteile sind, dass sie viel mehr Platz auf dem Bildschirm benötigen und schwierig zu verwenden sein können, wenn sie eine große Liste von Elementen von Grund auf neu erstellen. Daher werden sie am besten verwendet, um bereits vorhandene Kurzlisten zu erstellen oder Listen zu ändern.<br /> | 
+
 
 
 
@@ -250,48 +211,48 @@ In diesem Beispiel wird die redundante Bezeichnung entfernt, sodass die main-Anw
 In diesem Beispiel ist das Listenfeld einem Optionsfeld untergeordnet und teilt seine Bezeichnung.
 
 -   Weisen Sie einen [eindeutigen Zugriffsschlüssel zu.](glossary.md) Richtlinien finden Sie unter [Tastatur](inter-keyboard.md).
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
--   Positionieren Sie die Bezeichnung entweder links vom Steuerelement oder oberhalb des Steuerelements, und richten Sie die Bezeichnung am linken Rand des Steuerelements aus.
-    -   Wenn sich die Bezeichnung auf der linken Seite befindet, richten Sie den Bezeichnungstext vertikal an der ersten Textzeile im Steuerelement aus.
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
+-   Positionieren Sie die Bezeichnung entweder links vom Steuerelement oder über dem Steuerelement, und richten Sie die Bezeichnung am linken Rand des Steuerelements aus.
+    -   Wenn sich die Bezeichnung links befindet, richten Sie den Bezeichnungstext vertikal an der ersten Textzeile im Steuerelement aus.
 
-**Richtig:** ![ Screenshot der Liste mit linksbündig ausgerichteter Bezeichnung über ](images/ctrl-list-boxes-image23.png)![ dem Screenshot der Liste mit nach links ausgerichteter Beschriftung ](images/ctrl-list-boxes-image24.png)
+**Richtig:** ![ Screenshot der Liste mit linksbündiger Bezeichnung oberhalb des Screenshots der Liste ](images/ctrl-list-boxes-image23.png)![ mit textbündiger Bezeichnung auf der linken Seite ](images/ctrl-list-boxes-image24.png)
 
-In diesen Beispielen wird die Bezeichnung oben am linken Rand des Listenfelds und die Bezeichnung links am Text im Listenfeld ausgerichtet.
+In diesen Beispielen wird die Bezeichnung oben am linken Rand des Listenfelds ausgerichtet, und die Bezeichnung auf der linken Seite wird am Text im Listenfeld ausgerichtet.
 
-**Falsch:** ![ Screenshot der Liste mit textbündiger Bezeichnung oberhalb ](images/ctrl-list-boxes-image25.png)![ des Screenshots der Liste mit der am oberen Rand ausgerichteten Bezeichnung auf der linken Seite ](images/ctrl-list-boxes-image26.png)
+**Falsch:** ![ Screenshot der Liste mit textbündiger Bezeichnung oberhalb des Screenshots der Liste mit oben ](images/ctrl-list-boxes-image25.png)![ ausgerichteter Bezeichnung auf der linken Seite ](images/ctrl-list-boxes-image26.png)
 
-In diesen falschen Beispielen wird die Bezeichnung oben am Text im Listenfeld ausgerichtet, und die Bezeichnung links am oberen Rand des Listenfelds.
+In diesen falschen Beispielen wird die Bezeichnung oben am Text im Listenfeld ausgerichtet, und die Bezeichnung auf der linken Seite wird am oberen Ende des Listenfelds ausgerichtet.
 
--   Verwenden Sie für Listenfelder mit mehrfacher Auswahl eine Bezeichnung, die eindeutig angibt, dass mehrere Auswahlmöglichkeiten möglich sind. Kontrollkästchenlistenbezeichnungen können weniger explizit sein.
+-   Verwenden Sie für Listenfelder mit mehrfacher Auswahl eine Bezeichnung, die deutlich angibt, dass eine Mehrfachauswahl möglich ist. Kontrollkästchenlistenbezeichnungen können weniger explizit sein.
 
-**Richtig:** ![ Screenshot der Liste mit einer oder mehreren Bezeichnungen auswählen ](images/ctrl-list-boxes-image27.png)
+**Richtig:** ![ Screenshot der Liste mit auswahl einer oder mehrere Bezeichnungen ](images/ctrl-list-boxes-image27.png)
 
-In diesem Beispiel gibt die Bezeichnung deutlich an, dass eine Mehrfachauswahl möglich ist.
+In diesem Beispiel gibt die Bezeichnung eindeutig an, dass eine Mehrfachauswahl möglich ist.
 
-**Falsch:** ![ Screenshot des Listenfelds mit der Bezeichnung "Add-Ons" ](images/ctrl-list-boxes-image28.png)
+**Falsch:** ![ Screenshot des Listenfelds mit Add-On-Bezeichnung ](images/ctrl-list-boxes-image28.png)
 
-In diesem Beispiel stellt die Bezeichnung keine offensichtlichen Informationen zur Mehrfachauswahl bereit.
+In diesem Beispiel stellt die Bezeichnung keine offensichtlichen Informationen zur Mehrfachauswahl zur Verfügung.
 
-**Am besten geeignet:** ![ Screenshot der Kontrollkästchenliste mit der Bezeichnung "Add-Ons" ](images/ctrl-list-boxes-image29.png)
+**Am besten:** ![ Screenshot der Kontrollkästchenliste mit Add-On-Bezeichnung ](images/ctrl-list-boxes-image29.png)
 
-In diesem Beispiel weisen die Kontrollkästchen deutlich darauf hin, dass mehrere Auswahlmöglichkeiten möglich sind, sodass die Bezeichnung nicht explizit sein muss.
+In diesem Beispiel weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist, sodass die Bezeichnung nicht explizit sein muss.
 
--   Sie können Einheiten (Sekunden, Verbindungen usw.) in Klammern nach der Bezeichnung angeben.
+-   Sie können Einheiten (Sekunden, Verbindungen und so weiter) in Klammern nach der Bezeichnung angeben.
 
 **Optionstext**
 
 -   Weisen Sie jeder Option einen eindeutigen Namen zu.
--   Verwenden Sie [großgeschriebene Sätze,](glossary.md)es sei denn, ein Element ist ein richtiges Nomen.
--   Schreiben Sie die Bezeichnung als Wort oder Ausdruck, nicht als Satz, und verwenden Sie keine Endpunktion.
--   Verwenden Sie parallele Ausdrücke, und versuchen Sie, die Länge für alle Optionen ungefähr gleich zu halten.
+-   Verwenden [Sie Die Groß-/Groß-/Formatvorlage,](glossary.md)es sei denn, ein Element ist ein richtiges Nomen.
+-   Schreiben Sie die Bezeichnung als Wort oder Ausdruck, nicht als Satz, und verwenden Sie keine endende Interpunktion.
+-   Verwenden Sie parallele Formulierungen, und versuchen Sie, die Länge für alle Optionen ungefähr gleich zu halten.
 
-**Anweisungs- und Ergänzender Text**
+**Anweisungstext und ergänzender Text**
 
--   Wenn Sie Anweisungstext zu einem Listenfeld hinzufügen müssen, fügen Sie es über der Bezeichnung hinzu. Verwenden Sie vollständige Sätze mit endender Interpunktion.
--   Verwenden Sie [die Groß-/Großschreibung im Satzformat.](glossary.md)
--   Zusätzliche Informationen, die hilfreich, aber nicht notwendig sind, sollten kurz gehalten werden. Platzieren Sie diesen Text entweder in Klammern zwischen der Bezeichnung und dem Doppelpunkt oder ohne Klammern unterhalb des Steuerelements.
+-   Wenn Sie Anweisungstext zu einem Listenfeld hinzufügen müssen, fügen Sie ihn über der Bezeichnung hinzu. Verwenden Sie vollständige Sätze mit endender Interpunktion.
+-   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
+-   Zusätzliche Informationen, die hilfreich, aber nicht erforderlich sind, sollten kurz gehalten werden. Platzieren Sie diesen Text entweder in Klammern zwischen der Bezeichnung und dem Doppelpunkt oder ohne Klammern unterhalb des Steuerelements.
 
-![Screenshot der Kontrollkästchenliste und des beschreibenden Texts ](images/ctrl-list-boxes-image30.png)
+![Screenshot der Kontrollkästchenliste und beschreibender Text ](images/ctrl-list-boxes-image30.png)
 
 In diesem Beispiel wird ergänzender Text unterhalb der Liste platziert.
 
@@ -299,11 +260,11 @@ In diesem Beispiel wird ergänzender Text unterhalb der Liste platziert.
 
 Beim Verweisen auf Listenfelder:
 
--   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels. Schließen Sie die Wortliste ein. Verweisen Sie nicht auf ein Listenfeld als Listenfeld oder Feld.
--   Verwenden Sie für Listenelemente den genauen Elementtext, einschließlich der Groß-/Großschreibung.
--   In der Programmierung und anderen technischen Dokumentationen werden Listenfelder als Listenfelder bezeichnet. Verwenden Sie überall sonst list.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels ein. Schließen Sie die Wortliste ein. Verweisen Sie nicht auf ein Listenfeld als Listenfeld oder Feld.
+-   Verwenden Sie für Listenelemente den genauen Elementtext, einschließlich der Groß-/Groß-/Groß-//Unterform.
+-   Verweisen Sie in der Programmierung und anderen technischen Dokumentationen auf Listenfelder als Listenfelder. Verwenden Sie überall sonst list.
 -   Verwenden Sie select, um die Benutzerinteraktion zu beschreiben.
--   Formatieren Sie nach Möglichkeit die Bezeichnung und Listenelemente mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Elemente nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Formatieren Sie nach Möglichkeit die Bezeichnung und Listenelemente mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Elemente nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
-Beispiel: Wählen Sie in der Liste **Gehe zu was** die Option **Lesezeichen** aus.
+Beispiel: Wählen Sie in **der Liste Zu was wechseln** die Option **Lesezeichen aus.**
 

@@ -1,5 +1,5 @@
 ---
-description: Name des Namens "Name" \/ (v4)
+description: ModemDMConfigProfile-Name \/ (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_Name
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -16,16 +16,16 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 40fc710649d5e1cb87f69d8358ba5706492b6c5f
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: cdd3ee05fe75b5b94a63bce80d3722a337083363
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388763"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481126"
 ---
-# <a name="span-idwwan_profile_v4element_1_namespanmodemdmconfigprofilename-v4"></a><span id="WWAN_profile_v4.element_1_Name"></span>Name des Namens "Name" \/ (v4)
+# <a name="span-idwwan_profile_v4element_1_namespanmodemdmconfigprofilename-v4"></a><span id="WWAN_profile_v4.element_1_Name"></span>ModemDMConfigProfile-Name \/ (v4)
 
-Der Name des Profils. Weitere Informationen finden Sie in der Dokumentation für das v1- [**namens**](./schema-name-mbnprofile-element.md) Element.
+Der Name des Profils. Weitere Informationen finden Sie in der Dokumentation zum [**v1-Element Name.**](./schema-name-mbnprofile-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -57,46 +57,20 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
-</tr>
-<tr class="even">
-<td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
+| <a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a> | <p>Modem-DM-Konfigurationsprofil.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

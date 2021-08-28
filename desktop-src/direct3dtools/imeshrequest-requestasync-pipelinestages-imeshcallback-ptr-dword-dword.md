@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 48e994634277b0d7cfd9807db2795eb1cf84c03ec64dfbb7cb6ab1a537639740
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6c052be4537c3d3a13fed13aec8ad8f2238d9a97
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118283573"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627046"
 ---
 # <a name="span-idvspixengineimeshrequest_requestasync_pipelinestages_imeshcallback_ptr_dword_dwordspanimeshrequestrequestasync-method"></a><span id="vspixengine.imeshrequest_requestasync_pipelinestages_imeshcallback_ptr_dword_dword"></span>IMeshRequest::RequestAsync-Methode
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ HRESULT ResultCallback(
 ## <a name="parameters"></a>Parameter
 
 *Bühne*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 *requestCallback*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 *requestCookie*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

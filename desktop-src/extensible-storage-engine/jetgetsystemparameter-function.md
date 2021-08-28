@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: jetgetsystemparameter-Funktion'
-title: Jetgetsystemparameter-Funktion
+description: 'Weitere Informationen finden Sie unter: JetGetSystemParameter-Funktion'
+title: JetGetSystemParameter-Funktion
 TOCTitle: JetGetSystemParameter Function
 ms:assetid: 6e6ddb49-702c-4c45-ac9f-35ae817696dd
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269291(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 80005be47037bade1f22e8125d4633c5dac45f8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 608a9c464ca645668483934a28a3f79945cd443d
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217852"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984743"
 ---
-# <a name="jetgetsystemparameter-function"></a>Jetgetsystemparameter-Funktion
+# <a name="jetgetsystemparameter-function"></a>JetGetSystemParameter-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgetsystemparameter-function"></a>Jetgetsystemparameter-Funktion
+## <a name="jetgetsystemparameter-function"></a>JetGetSystemParameter-Funktion
 
-Die **jetgetsystemparameter** -Funktion liest die zahlreichen Konfigurationseinstellungen der Datenbank-Engine.
+Die **JetGetSystemParameter-Funktion** liest die zahlreichen Konfigurationseinstellungen der Datenbank-Engine.
 
 ```cpp
     JET_ERR JET_API JetGetSystemParameter(
@@ -49,165 +49,80 @@ Die **jetgetsystemparameter** -Funktion liest die zahlreichen Konfigurationseins
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die-Instanz, die für diesen Befehl verwendet werden soll.
+Die -Instanz, die für diesen Aufruf verwendet werden soll.
 
-Für Windows 2000 wird dieser Parameter ignoriert und sollte immer **null** sein.
+Für Windows 2000 wird dieser Parameter ignoriert und sollte immer **NULL sein.**
 
-Für Windows XP und spätere Versionen ist dieser Parameter etwas überladen. Wenn die Engine im Legacy Modus betrieben wird (Windows 2000-Kompatibilitätsmodus), in dem nur eine Instanz unterstützt wird, kann dieser Parameter **null** sein oder die tatsächliche Instanz enthalten, die von [jetinit](./jetinit-function.md)zurückgegeben wird. In beiden Fällen werden alle Systemparameter Einstellungen aus dieser eine Instanz gelesen. Wenn die Engine im Modus für mehrere Instanzen ausgeführt wird, kann dieser Parameter **null** sein, oder es handelt sich um einen Zeiger auf eine Instanz, die mit [jetinit](./jetinit-function.md) oder [jetkreateinstance](./jetcreateinstance-function.md)erstellt wurde. Wenn dieser Parameter **null** ist, wird die Parametereinstellung des globalen Systems (oder der Standardwert) gelesen. Wenn dieser Parameter eine Instanz ist, wird die Systemparameter Einstellung für diese Instanz gelesen.
+Für Windows XP und spätere Versionen ist dieser Parameter etwas überladen. Wenn die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter **NULL** sein oder die tatsächliche Instanz enthalten, die von [JetInit](./jetinit-function.md)zurückgegeben wird. In beiden Fällen werden alle Systemparametereinstellungen aus dieser einen Instanz gelesen. Wenn die Engine im Modus mit mehreren Instanzen ausgeführt wird, kann dieser Parameter **NULL** oder ein Zeiger auf eine Instanz sein, die mit [JetInit](./jetinit-function.md) oder [JetCreateInstance erstellt wurde.](./jetcreateinstance-function.md) Wenn dieser Parameter **NULL ist,** wird die globale Systemparametereinstellung (oder der Standardwert) gelesen. Wenn dieser Parameter eine -Instanz ist, wird die Systemparametereinstellung für diese Instanz gelesen.
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-Wenn angegeben, wird die angegebene-Instanz ignoriert, und die-Instanz, die der Sitzung zugeordnet ist, wird verwendet.
+Wenn angegeben, wird die angegebene -Instanz ignoriert, und die der Sitzung zugeordnete -Instanz wird verwendet.
 
 *paramid*
 
-Die ID des System Parameters, der gelesen wird.
+Die ID des Systemparameters, der gelesen wird.
 
-Eine komplette Liste der Systemparameter und deren Eigenschaften finden Sie unter [Systemparameter](./extensible-storage-engine-system-parameters.md) .
+Eine [vollständige Liste der](./extensible-storage-engine-system-parameters.md) Systemparameter und deren Eigenschaften finden Sie unter Systemparameter.
 
-*plparam*
+*plParam*
 
-Der Ausgabepuffer, der den Wert des ausgewählten System Parameters empfängt, wenn dieser Systemparameter einen ganzzahligen Typ hat.
+Der Ausgabepuffer, der den Wert des ausgewählten Systemparameters empfängt, wenn dieser Systemparameter einen ganzzahligen Typ auf hat.
 
-*szparam*
+*szParam*
 
-Der Ausgabepuffer, der den Wert des ausgewählten System Parameters empfängt, wenn dieser Systemparameter vom Typ String ist.
+Der Ausgabepuffer, der den Wert des ausgewählten Systemparameters empfängt, wenn dieser Systemparameter einen Zeichenfolgentyp auf hat.
 
-*cbmax*
+*cbMax*
 
-Die maximale Größe des Zeichen folgen-Ausgabepuffers in Bytes.
+Die maximale Größe des Zeichenfolgenausgabepuffers in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInitInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, initialisiert wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde.</p>
-<p>Dies kann für <strong>jetgetsystemparameter</strong> auftreten, wenn:</p>
-<ul>
-<li><p>Die angegebene Systemparameter-ID ist ungültig oder wird nicht unterstützt.</p></li>
-<li><p>Der angegebene Systemparameter erfordert, dass der ganzzahlige Ausgabepuffer bereitgestellt wird und dass der Ausgabepuffer Zeiger <strong>null</strong>war.</p></li>
-<li><p>Der angegebene Systemparameter erfordert, dass ein Zeichen folgen-Ausgabepuffer angegeben wird und dass der Ausgabepuffer Zeiger <strong>null</strong>war.</p>
-<p><strong>Windows Vista:  </strong> Dies kann nur in Windows Vista und höheren Versionen vorkommen.</p></li>
-<li><p>Der angegebene Systemparameter erfordert, dass ein Zeichen folgen-Ausgabepuffer angegeben wird, und die Größe dieses Ausgabepuffers ist zu klein, um eine NULL-terminierte Zeichenfolge zu akzeptieren.</p>
-<p><strong>Windows Vista:  </strong> Dies kann nur in Windows Vista und höheren Versionen vorkommen.</p></li>
-<li><p>Der angegebene Systemparameter kann nicht gelesen werden, da er schreibgeschützt ist.</p></li>
-<li><p>Der angegebene Systemparameter ist nur global und es wurde versucht, einen instanzspezifischen Wert für diesen Systemparameter zu lesen. Dies kann nur unter Windows XP und höheren Versionen vorkommen.</p></li>
-<li><p>Der angegebene Systemparameter ist nur pro Instanz und es wurde versucht, den globalen Wert für diesen Systemparameter zu lesen. Dies kann nur unter Windows XP und höheren Versionen vorkommen.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidSesid</p></td>
-<td><p>Das Sitzungs Handle ist ungültig oder verweist auf eine geschlossene Sitzung. Dieser Fehler wird unter allen Umständen nicht zurückgegeben. Handles werden nur auf Grundlage der bestmöglichen Leistung überprüft.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidInstance</p></td>
-<td><p>Der Instanzhandle ist ungültig oder verweist auf eine Instanz, die heruntergefahren wurde. Dieser Fehler wird unter allen Umständen nicht zurückgegeben. Handles werden nur auf Grundlage der bestmöglichen Leistung überprüft.</p>
-<p><strong>Windows Vista:  </strong> Dieser Fehler wird nur von Windows Vista und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_wrnBufferTruncated</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen, aber der Ausgabepuffer war zu klein, um die gesamte Systemparameter Einstellung zu erhalten.</p>
-<p>Der Ausgabepuffer wurde mit dem Umfang der Systemparameter Einstellung aufgefüllt, wie er passt. Wenn der Ausgabepuffer mindestens ein Zeichen lang ist, wird die Zeichenfolge in diesem Ausgabepuffer Null beendet.</p>
-<p><strong>Hinweis  </strong> Dieser Fehler wird nicht von allen Releases zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errBufferTooSmall</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, weil der Ausgabepuffer zu klein war, um die gesamte Systemparameter Einstellung zu erhalten.</p>
-<p><strong>Hinweis  </strong> Dieser Fehler wird in einigen Fällen nicht zurückgegeben, um die Anwendungs Kompatibilität zu erhalten. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p>
-<p><strong>Windows Vista:  </strong> Dieser Fehler wird nur von Windows Vista und höheren Versionen zurückgegeben.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wird der für den angeforderten Systemparameter geeignete Ausgabepuffer auf den Wert dieses System Parameters festgelegt.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errInitInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz initialisiert wird.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war.</p><p>Dies kann für <strong>JetGetSystemParameter passieren, wenn:</strong></p><ul><li><p>Die angegebene Systemparameter-ID ist ungültig oder wird nicht unterstützt.</p></li><li><p>Für den angegebenen Systemparameter muss der ganzzahlige Ausgabepuffer bereitgestellt werden, und der Ausgabepufferzeiger war <strong>NULL.</strong></p></li><li><p>Für den angegebenen Systemparameter muss ein Zeichenfolgenausgabepuffer bereitgestellt werden, und der Ausgabepufferzeiger war <strong>NULL.</strong></p><p><strong>Windows Vista:</strong> Dies kann nur in Windows Vista und späteren Versionen geschehen.</p></li><li><p>Für den angegebenen Systemparameter muss ein Zeichenfolgenausgabepuffer bereitgestellt werden, und die Größe dieses Ausgabepuffers ist zu klein, um eine mit NULL beendete Zeichenfolge zu akzeptieren.</p><p><strong>Windows Vista:</strong> Dies kann nur in Windows Vista und späteren Versionen geschehen.</p></li><li><p>Der angegebene Systemparameter kann nicht gelesen werden, da er schreibgeschützt ist.</p></li><li><p>Der angegebene Systemparameter ist nur global, und es wurde versucht, einen instanzspezifischen Wert für diesen Systemparameter zu lesen. Dies kann nur bei Windows XP und späteren Versionen passieren.</p></li><li><p>Der angegebene Systemparameter gilt nur pro Instanz, und es wurde versucht, den globalen Wert für diesen Systemparameter zu lesen. Dies kann nur bei Windows XP und späteren Versionen passieren.</p></li></ul> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errInvalidSesid</p> | <p>Das Sitzungshandy ist ungültig oder verweist auf eine geschlossene Sitzung. Dieser Fehler wird nicht unter allen Umständen zurückgegeben. Handles werden nur nach bestem Aufwand überprüft.</p> | 
+| <p>JET_errInvalidInstance</p> | <p>Das Instanzhand handle ist ungültig oder verweist auf eine Instanz, die heruntergefahren wurde. Dieser Fehler wird nicht unter allen Umständen zurückgegeben. Handles werden nur nach bestem Aufwand überprüft.</p><p><strong>Windows Vista:</strong> Dieser Fehler wird nur von Windows Vista und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_wrnBufferTruncated</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen, aber der Ausgabepuffer war zu klein, um die gesamte Systemparametereinstellung zu empfangen.</p><p>Der Ausgabepuffer wurde mit einem so großen Teil der Systemparametereinstellung gefüllt, wie es passen würde. Wenn der Ausgabepuffer mindestens ein Zeichen lang ist, wird die Zeichenfolge in diesem Ausgabepuffer auf NULL beendet.</p><p><strong>Hinweis:  </strong> Dieser Fehler wird nicht von allen Releases zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p> | 
+| <p>JET_errBufferTooSmall</p> | <p>Fehler beim Vorgang, weil der Ausgabepuffer zu klein war, um die gesamte Systemparametereinstellung zu empfangen.</p><p><strong>Hinweis:  </strong> Dieser Fehler wird in einigen Fällen nicht zurückgegeben, um die Anwendungskompatibilität zu gewährleisten. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p><p><strong>Windows Vista:</strong> Dieser Fehler wird nur von Windows Vista und späteren Versionen zurückgegeben.</p> | 
 
-Bei einem Fehler wird der Status der Ausgabepuffer nicht definiert.
+
+
+Bei Erfolg wird der für den angeforderten Systemparameter geeignete Ausgabepuffer auf den Wert dieses Systemparameters festgelegt.
+
+Bei einem Fehler ist der Status der Ausgabepuffer nicht definiert.
 
 #### <a name="remarks"></a>Bemerkungen
 
-In dieser API gibt es ein wichtiges Problem, das in allen Releases vorhanden ist. Wenn ein Systemparameter mit einem Zeichen folgen Wert angefordert wird und der Ausgabepuffer zu klein ist, um die gesamte Systemparameter Einstellung zu erhalten, werden keine JET_wrnBufferTruncated zurückgegeben. Stattdessen wird JET_errSuccess zurückgegeben. Wenn die Länge der zurückgegebenen Zeichenfolge der Größe des Ausgabepuffers abzüglich des **null** -Terminator entspricht, sollte der Aufrufer so reagieren, als ob JET_wrnBufferTruncated zurückgegeben würden. Wenn ein Ausgabepuffer der Größe 0 (null) angegeben wird, sollte der Aufrufer so reagieren, als ob JET_errInvalidParameter zurückgegeben werden.
+Es gibt ein wichtiges Problem in dieser API, das in allen Releases vorhanden ist. Wenn ein Systemparameter mit einem Zeichenfolgenwert angefordert wird und der Ausgabepuffer zu klein ist, um die gesamte Systemparametereinstellung zu empfangen, JET_wrnBufferTruncated NICHT zurückgegeben. JET_errSuccess wird stattdessen zurückgegeben. Wenn die Länge der zurückgegebenen Zeichenfolge gleich der  Größe des Ausgabepuffers kleiner als das NULL-Abschlusszeichen ist, sollte der Aufrufer so reagieren, als JET_wrnBufferTruncated zurückgegeben würden. Wenn ein Zeichenfolgenausgabepuffer der Größe 0 (null) angegeben wird, sollte der Aufrufer so reagieren, als JET_errInvalidParameter zurückgegeben.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetgetsystemparameterw</strong> (Unicode) und <strong>jetgetsystemparametera</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetGetSystemParameterW</strong> (Unicode) und <strong>JetGetSystemParameterA</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -216,8 +131,8 @@ In dieser API gibt es ein wichtiges Problem, das in allen Releases vorhanden ist
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[Jetstopservice](./jetstopservice-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[JetStopService](./jetstopservice-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

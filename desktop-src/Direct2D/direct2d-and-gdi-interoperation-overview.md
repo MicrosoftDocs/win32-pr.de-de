@@ -13,22 +13,22 @@ keywords:
 - Direct3D,Direct2D-Interoperation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 951bebc9ea7ca63496a9cdc93fa33ddb74817661e7f5bc072b55d207bfcbdeb7
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 6a1f3be132aba742eb1df4b8a893dad245f851a0
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119918240"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631562"
 ---
 # <a name="direct2d-and-gdi-interoperability-overview"></a>Übersicht über die Interoperabilität von Direct2D und GDI
 
-In diesem Thema wird beschrieben, wie Direct2D und [GDI](/windows/desktop/gdi/windows-gdi) zusammen verwendet werden. Es gibt zwei Möglichkeiten, Direct2D mit GDI zu kombinieren: Sie können GDI-Inhalte in ein Direct2D GDI-kompatibles Renderziel schreiben oder Direct2D-Inhalte in einen [GDI-Gerätekontext (DC)](/windows/desktop/gdi/device-contexts)schreiben.
+In diesem Thema wird beschrieben, wie Direct2D und [GDI](/windows/desktop/gdi/windows-gdi) zusammen verwendet werden. Es gibt zwei Möglichkeiten, Direct2D mit GDI zu kombinieren: Sie können GDI-Inhalt in ein Direct2D GDI-kompatibles Renderziel schreiben oder Direct2D-Inhalt in einen [GDI-Gerätekontext (DC)](/windows/desktop/gdi/device-contexts)schreiben.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Voraussetzungen](#prerequisites)
 -   [Zeichnen von Direct2D-Inhalten in einen GDI-Gerätekontext](#draw-direct2d-content-to-a-gdi-device-context)
--   [ID2D1DCRenderTargets, GDI-Transformationen und Sprachbuilds von rechts nach links Windows](#id2d1dcrendertargets-gdi-transforms-and-right-to-left-language-builds-of-windows)
+-   [ID2D1DCRenderTargets, GDI-Transformationen und Sprachbuilds von rechts nach links von Windows](#id2d1dcrendertargets-gdi-transforms-and-right-to-left-language-builds-of-windows)
 -   [Zeichnen von GDI-Inhalten in ein Direct2D-GDI-Compatible-Renderziel](#draw-gdi-content-to-a-direct2d-gdi-compatible-render-target)
 -   [Zugehörige Themen](#related-topics)
 
@@ -38,7 +38,7 @@ In dieser Übersicht wird davon ausgegangen, dass Sie mit grundlegenden Direct2D
 
 ## <a name="draw-direct2d-content-to-a-gdi-device-context"></a>Zeichnen von Direct2D-Inhalten in einen GDI-Gerätekontext
 
-Um Direct2D-Inhalte auf einen GDI-DC zu zeichnen, verwenden Sie [**id2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) Um ein DC-Renderziel zu erstellen, verwenden Sie die [**ID2D1Factory::CreateDCRenderTarget-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdcrendertarget) Diese Methode nimmt zwei Parameter an.
+Um Direct2D-Inhalt auf einen GDI-DC zu zeichnen, verwenden Sie eine [**ID2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) Um ein DC-Renderziel zu erstellen, verwenden Sie die [**ID2D1Factory::CreateDCRenderTarget-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdcrendertarget) Diese Methode nimmt zwei Parameter an.
 
 Der erste Parameter, eine [**D2D1 \_ RENDER \_ TARGET \_ PROPERTIES-Struktur,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) gibt Rendering-, Remoting-, DPI-, Pixelformat- und Nutzungsinformationen an. Damit das DC-Renderziel mit GDI funktioniert, legen Sie das DXGI-Format auf [DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) und den Alphamodus auf [**D2D1 \_ ALPHA MODE \_ \_ PREMULTIPLIED**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) oder **D2D1 \_ ALPHA MODE \_ \_ IGNORE** fest.
 
@@ -67,7 +67,7 @@ hr = m_pD2DFactory->CreateDCRenderTarget(&props, &m_pDCRT);
 
 Im vorangehenden Code ist *m \_ pD2DFactory* ein Zeiger auf eine [**ID2D1Factory,**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory)und *m \_ pDCRT* ist ein Zeiger auf eine [**ID2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget)
 
-Bevor Sie mit dem DC-Renderziel rendern können, müssen Sie die [**BindDC-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1dcrendertarget-binddc) verwenden, um es einem GDI-DC zuzuordnen. Dies geschieht jedes Mal, wenn Sie einen anderen Domänencontroller verwenden, oder die Größe des Bereichs, den Sie zeichnen möchten, ändert sich.
+Bevor Sie mit dem DC-Renderziel rendern können, müssen Sie dessen [**BindDC-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1dcrendertarget-binddc) verwenden, um es einem GDI-DC zuzuordnen. Dies geschieht jedes Mal, wenn Sie einen anderen Domänencontroller verwenden, oder die Größe des Bereichs, den Sie zeichnen möchten, ändert sich.
 
 Die [**BindDC-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1dcrendertarget-binddc) verwendet zwei Parameter: *hDC* und *pSubRect.* Der *hDC-Parameter* stellt ein Handle für den Gerätekontext bereit, der die Ausgabe des Renderziels empfängt. Der *pSubRect-Parameter* ist ein Rechteck, das den Teil des Gerätekontexts beschreibt, in den Inhalt gerendert wird. Das DC-Renderziel aktualisiert seine Größe entsprechend dem von *pSubRect* beschriebenen Gerätekontextbereich, falls die Größe geändert wird.
 
@@ -89,7 +89,7 @@ GetClientRect(m_hwnd, &rc);
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -292,7 +292,7 @@ Beachten Sie, dass das Flag [**D2D1 \_ RENDER TARGET USAGE \_ \_ \_ GDI \_ COMPA
 
 Beachten Sie, dass die [**QueryInterface-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) immer erfolgreich ist. Um zu testen, ob die Methoden der [**ID2D1GdiInteropRenderTarget-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1gdiinteroprendertarget) für ein bestimmtes Renderziel funktionieren, erstellen Sie eine [**D2D1-RENDERZIELEIGENSCHAFTEN, \_ \_ \_**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) die GDI-Kompatibilität und das entsprechende Pixelformat angibt, und rufen Sie dann die [**IsSupported-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-issupported(constd2d1_render_target_properties)) des Renderziels auf, um festzustellen, ob das Renderziel GDI-kompatibel ist.
 
-Das folgende Beispiel zeigt, wie ein Kreisdiagramm (GDI-Inhalt) auf das Hwnd GDI-kompatible Renderziel gezeichnet wird.
+Das folgende Beispiel zeigt, wie ein Kreisdiagramm (GDI-Inhalt) auf das Hwnd-GDI-kompatible Renderziel gezeichnet wird.
 
 
 ```C++

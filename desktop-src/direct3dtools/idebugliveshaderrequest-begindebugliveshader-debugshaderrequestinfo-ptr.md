@@ -1,10 +1,10 @@
 ---
-description: Anforderungen zum Debuggen eines Shaders auf der GPU (Live Debugging) vs CPU (Ablauf Verfolgungs basiertes Debuggen).
+description: Anforderungen zum Debuggen eines Shaders auf der GPU (Livedebuggen) im Vergleich zu CPU (ablaufverfolgungsbasiertes Debuggen).
 MS-HAID: vspixengine.IDebugLiveShaderRequest\_BeginDebugLiveShader\_DebugShaderRequestInfo\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Idebugliveshaderrequest:: begindebugliveshader-Methode'
+title: IDebugLiveShaderRequest::BeginDebugLiveShader-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 805B2B68-C251-4192-85A3-F857B3F204C7
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 2b09bff6a414df620e06263e13d94c2f39e36903
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3d78260dd35e5ca0aed2b8e89f1fc37f76ecba3a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746752"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627146"
 ---
-# <a name="span-idvspixengineidebugliveshaderrequest_begindebugliveshader_debugshaderrequestinfo_ptrspanidebugliveshaderrequestbegindebugliveshader-method"></a><span id="vspixengine.idebugliveshaderrequest_begindebugliveshader_debugshaderrequestinfo_ptr"></span>Idebugliveshaderrequest:: begindebugliveshader-Methode
+# <a name="span-idvspixengineidebugliveshaderrequest_begindebugliveshader_debugshaderrequestinfo_ptrspanidebugliveshaderrequestbegindebugliveshader-method"></a><span id="vspixengine.idebugliveshaderrequest_begindebugliveshader_debugshaderrequestinfo_ptr"></span>IDebugLiveShaderRequest::BeginDebugLiveShader-Methode
 
-Anforderungen zum Debuggen eines Shaders auf der GPU (Live Debugging) vs CPU (Ablauf Verfolgungs basiertes Debuggen).
+Anforderungen zum Debuggen eines Shaders auf der GPU (Livedebuggen) im Vergleich zu CPU (ablaufverfolgungsbasiertes Debuggen).
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ HRESULT BeginDebugLiveShader(
 
 ## <a name="parameters"></a>Parameter
 
-*RequestInfo*   
-Die Adresse einer debugshaderrequestinfo-Struktur, die das angeforderte Ereignis/Scheitelpunkt/Pixel beschreibt.
+*requestInfo*   
+Die Adresse einer DebugShaderRequestInfo-Struktur, die das angeforderte Ereignis/den angeforderten Scheitelpunkt/Pixel beschreibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Idebugliveshaderrequest**](/windows/desktop/direct3dtools/idebugliveshaderrequest)
+[**IDebugLiveShaderRequest**](/windows/desktop/direct3dtools/idebugliveshaderrequest)
 
  
 

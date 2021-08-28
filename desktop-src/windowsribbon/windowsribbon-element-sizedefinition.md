@@ -1,6 +1,6 @@
 ---
 title: SizeDefinition-Element
-description: Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
+description: Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 ms.assetid: f90bb469-aee2-4bba-9efe-142a39a8c1ae
 keywords:
 - SizeDefinition-Element Windows Menüband
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 982825649afb7640f87cb7032b000d837915c4bc9d970444da3c5cd3a5a98375
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 212cd7267db87b3892daad2868afab1358cec4c1
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118439535"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122629911"
 ---
 # <a name="sizedefinition-element"></a>SizeDefinition-Element
 
-Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
+Stellt eine benutzerdefinierte Layoutvorlage von Menüband-Steuerelementen dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <SizeDefinition
@@ -39,17 +39,17 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -57,8 +57,8 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 <td><strong>Name</strong><br/></td>
 <td>xs:positiveInteger oder xs:string oder xs:token<br/></td>
 <td>Ja<br/></td>
-<td>Wenn <a href="windowsribbon-element-ribbon-sizedefinitions.md"><strong>Ribbon.SizeDefinitions</strong></a> das übergeordnete Element ist, andernfalls optional.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string oder xs:token)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f in Hexadezimal, einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Wenn <a href="windowsribbon-element-ribbon-sizedefinitions.md"><strong>Ribbon.SizeDefinitions das</strong></a> übergeordnete Element ist, andernfalls optional.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string oder xs:token)<br/> </dt> <dd> Eine Zeichenfolge oder ein ganzzahliger Wert zwischen 2 und 59999, einschließlich oder 0x2 und 0xea5f hexadezimal, einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -69,10 +69,10 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 
 
 
-| Element                                                                             | BESCHREIBUNG                                     |
+| Element                                                                             | Beschreibung                                     |
 |-------------------------------------------------------------------------------------|-------------------------------------------------|
-| [**ControlNameMap**](windowsribbon-element-controlnamemap.md)<br/>           | Kann höchstens einmal auftreten.<br/> <br/>   |
-| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
+| [**ControlNameMap**](windowsribbon-element-controlnamemap.md)<br/>           | Kann nur einmal auftreten.<br/> <br/>   |
+| [**GroupSizeDefinition**](windowsribbon-element-groupsizedefinition.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -91,13 +91,13 @@ Stellt eine benutzerdefinierte Layoutvorlage von Menübandsteuerelementen dar.
 
 Optional.
 
-Kann höchstens einmal für jedes [**Group-Element**](windowsribbon-element-group.md) auftreten.
+Kann für jedes Group-Element [**mindestens einmal**](windowsribbon-element-group.md) auftreten.
 
 Kann ein oder mehrere Male für jedes [**Ribbon.SizeDefinitions-Element**](windowsribbon-element-ribbon-sizedefinitions.md) auftreten.
 
-Vordefinierte [Menüband-Frameworklayoutvorlagen](windowsribbon-templates.md) werden mit dem *SizeDefinition-Attribut* des [**Group-Elements**](windowsribbon-element-group.md) angegeben.
+Vordefinierte Layoutvorlagen für das [Menübandframework](windowsribbon-templates.md) werden mit dem *SizeDefinition-Attribut* des [**Group-Elements**](windowsribbon-element-group.md) angegeben.
 
-Wenn ein [**entsprechendes ScalingPolicy.IdealSizes-Element**](windowsribbon-element-scalingpolicy-idealsizes.md) nicht für jedes [**Group-Element**](windowsribbon-element-group.md) in einem [**Tab-Element**](windowsribbon-element-tab.md) deklariert wird, tritt ein Validierungsfehler auf.
+Wenn ein [**entsprechendes ScalingPolicy.IdealSizes-Element**](windowsribbon-element-scalingpolicy-idealsizes.md) nicht für jedes [**Group-Element**](windowsribbon-element-group.md) in einem [**Tab-Element**](windowsribbon-element-tab.md) deklariert ist, tritt ein Validierungsfehler auf.
 
 ## <a name="examples"></a>Beispiele
 

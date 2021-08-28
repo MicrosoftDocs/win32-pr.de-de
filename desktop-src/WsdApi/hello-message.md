@@ -1,24 +1,24 @@
 ---
-description: Eine WS-Discovery Meldung, mit der das Vorhandensein eines Geräts oder Diensts im Netzwerk angekündigt wird.
+description: Eine WS-Discovery, die verwendet wird, um das Vorhandensein eines Geräts oder Diensts im Netzwerk ankündigen.
 ms.assetid: a7402e02-9bdc-49ec-ba93-8a32f55b9dd8
 title: Hello Message
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49562d212bb113bba2c1fca0a352b0f1a81cea76
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: a3fe850c4df51fba75c33e202a0bd742226cfb38
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122627586"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882571"
 ---
 # <a name="hello-message"></a>Hello Message
 
-Eine Hello-Nachricht ist eine WS-Discovery Nachricht, mit der das Vorhandensein eines Geräts oder Diensts im Netzwerk angekündigt wird. Hello-Nachrichten werden auch in anderen Szenarien gesendet. Weitere Informationen zu Hello-Nachrichten finden Sie in Abschnitt 4.1 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
+Eine Hello-Nachricht ist eine WS-Discovery, die verwendet wird, um das Vorhandensein eines Geräts oder Diensts im Netzwerk ankündigen. Hello-Nachrichten werden auch in anderen Szenarien gesendet. Weitere Informationen zu Hello-Nachrichten finden Sie in Abschnitt 4.1 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
-Eine Hello-Nachricht wird von UDP Multicast an Port 3702 gesendet. Diese Nachricht wird nicht angefordert.
+Eine Hello-Nachricht wird von UDP-Multicast an Port 3702 gesendet. Diese Meldung ist nicht angefordert.
 
 > [!Note]  
-> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
+> Dieses Thema zeigt eine DPWS-Beispielmeldung, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-konforme Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie [stattdessen das WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
@@ -59,7 +59,7 @@ Die folgende SOAP-Nachricht zeigt eine Hello-Beispielnachricht.
 </soap:Body>
 ```
 
-Eine Hello-Nachricht hat die folgenden Fokuspunkte.
+Eine Hello-Nachricht weist die folgenden Fokuspunkte auf.
 
 
 
@@ -79,9 +79,9 @@ Eine Hello-Nachricht hat die folgenden Fokuspunkte.
 <tbody>
 <tr class="odd">
 <td>Hallo</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:Action>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:Action&gt;
     https://schemas.xmlsoap.org/ws/2005/04/discovery/Hello
-</wsa:Action></code></pre></td>
+&lt;/wsa:Action&gt;</code></pre></td>
 <td>Die Hello SOAP-Aktion identifiziert die Nachricht als Hello-Nachricht.</td>
 </tr>
 <tr class="even">
@@ -89,20 +89,20 @@ Eine Hello-Nachricht hat die folgenden Fokuspunkte.
 <td><pre class="syntax" data-space="preserve"><code><wsd:AppSequence InstanceId=&quot;2&quot;
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;14&quot;>
-</wsd:AppSequence></code></pre></td>
-<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann beibehalten werden kann, wenn sie nicht in der angegebenen Reihenfolge empfangen werden. Die AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln)</a>beschrieben überprüft.</td>
+&lt;/wsd:AppSequence&gt;</code></pre></td>
+<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann verwaltet werden kann, wenn sie nicht in der reihenfolgenfolgenden Reihenfolge empfangen werden. AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln) beschrieben überprüft.</a></td>
 </tr>
 <tr class="odd">
 <td>Adresse</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:Address>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:Address&gt;
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
-</wsa:Address></code></pre></td>
-<td>Enthält die Endpunktadresse. Auf diese Adresse kann in einer <a href="resolve-message.md">Resolve-Meldung</a> verwiesen werden.</td>
+&lt;/wsa:Address&gt;</code></pre></td>
+<td>Enthält die Endpunktadresse. Auf dieses Problem kann in einer <a href="resolve-message.md">Auflösungsmeldung verwiesen</a> werden.</td>
 </tr>
 <tr class="even">
 <td>Typen</td>
-<td><pre class="syntax" data-space="preserve"><code><wsd:Types>wsdp:Device</wsd:Types></code></pre></td>
-<td>Enthält die vom Host angekündigten WS-Discovery Typen.</td>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsd:Types&gt;wsdp:Device</wsd:Types></code></pre></td>
+<td>Enthält die WS-Discovery typen, die vom Host angekündigt werden.</td>
 </tr>
 </tbody>
 </table>
@@ -115,7 +115,7 @@ Eine Hello-Nachricht hat die folgenden Fokuspunkte.
 
 <dl> <dt>
 
-[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
+[Discovery and Metadata Exchange Messages](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
 [Bye-Nachricht](bye-message.md)

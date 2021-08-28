@@ -1,19 +1,19 @@
 ---
-description: Die Richtlinie für Fotometadaten für die System.Copyright-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Copyright-Eigenschaft.
 ms.assetid: 84d2f55b-5ca4-4912-b038-c18a72e6fc34
-title: System.Copyright Photo Metadata Policy
+title: Richtlinie für System.Copyright-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b00b57bc3523feaa29da9008340bd34c32401879a8fc4e872082bbdcddd1fdf8
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d3e17190205b3df5c2ede9b1a7db231d0fdbbe21
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118710813"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882692"
 ---
-# <a name="systemcopyright-photo-metadata-policy"></a>System.Copyright Photo Metadata Policy
+# <a name="systemcopyright-photo-metadata-policy"></a>Richtlinie für System.Copyright-Fotometadaten
 
-Die Richtlinie für Fotometadaten für die [System.Copyright-Eigenschaft.](../properties/props-system-copyright.md)
+Die Fotometadatenrichtlinie für die [System.Copyright-Eigenschaft.](../properties/props-system-copyright.md)
 
 ### <a name="pkey"></a>PKEY
 
@@ -31,13 +31,13 @@ Nein
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
+### <a name="input-propvariant-type"></a>Propvariant-Eingabetyp
 
 String
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus verschiedenen Schemas werden abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
@@ -45,11 +45,11 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                      | Datenträgerformat |
+| Order | Pfad                                      | Datenträgerformat |
 |-------|-------------------------------------------|-------------|
 |       | /app1/ifd/{ushort=33432}                  | ascii       |
 |       | /app13/irb/8bimiptc/iptc/copyright notice |             |
-|       | /xmp/ <xmpalt> dc:rights              | Unicode     |
+|       | /xmp/ &lt; xmpalt &gt; dc:rights              | Unicode     |
 |       | /xmp/dc:rights                            | Unicode     |
 |       | /app13/irb/8bimiptc/iptc/copyright notice |             |
 
@@ -61,10 +61,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                      | Datenträgerformat |
+| Order | Pfad                                      | Datenträgerformat |
 |-------|-------------------------------------------|-------------|
 |       | /xmp/dc:rights                            | Unicode     |
-|       | /xmp/ <xmpalt> dc:rights              | Unicode     |
+|       | /xmp/ &lt; xmpalt &gt; dc:rights              | Unicode     |
 |       | /app13/irb/8bimiptc/iptc/copyright notice |             |
 |       | /app1/ifd/{ushort=33432}                  | ascii       |
 
@@ -76,7 +76,7 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                      |
+| Order | Pfad                                      |
 |-------|-------------------------------------------|
 |       | /xmp/dc:rights                            |
 |       | /app13/irb/8bimiptc/iptc/copyright notice |
@@ -92,13 +92,13 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    | Datenträgerformat |
+| Order | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
 |       | /ifd/{ushort=33432}                     | ascii       |
-|       | /ifd/iptc/copyright notice              |             |
-|       | /ifd/xmp/ <xmpalt> dc:rights        | Unicode     |
+|       | /ifd/iptc/Copyrighthinweis              |             |
+|       | /ifd/xmp/ &lt; xmpalt &gt; dc:rights        | Unicode     |
 |       | /ifd/xmp/dc:rights                      | Unicode     |
-|       | /ifd/iptc/copyright notice              |             |
+|       | /ifd/iptc/Copyrighthinweis              |             |
 |       | /ifd/irb/8bimiptc/iptc/copyright notice |             |
 
 
@@ -109,11 +109,11 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    | Datenträgerformat |
+| Order | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
 |       | /ifd/xmp/dc:rights                      | Unicode     |
-|       | /ifd/xmp/ <xmpalt> dc:rights        | Unicode     |
-|       | /ifd/iptc/copyright notice              |             |
+|       | /ifd/xmp/ &lt; xmpalt &gt; dc:rights        | Unicode     |
+|       | /ifd/iptc/Copyrighthinweis              |             |
 |       | /ifd/irb/8bimiptc/iptc/copyright notice |             |
 |       | /ifd/{ushort=33432}                     | ascii       |
 
@@ -125,10 +125,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    |
+| Order | Pfad                                    |
 |-------|-----------------------------------------|
 |       | /ifd/xmp/dc:rights                      |
-|       | /ifd/iptc/copyright notice              |
+|       | /ifd/iptc/Copyrighthinweis              |
 |       | /ifd/irb/8bimiptc/iptc/copyright notice |
 |       | /ifd/{ushort=33432}                     |
 

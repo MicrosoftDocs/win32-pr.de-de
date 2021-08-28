@@ -4,12 +4,12 @@ ms.assetid: 5ffa0a69-b53d-4be3-b802-deaaa743e6bd
 title: Übersicht über die Metadatenabfragesprache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c69effefd288f13c72239a41c5ace1a518775337cc496a2defa864d179cd6cc
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 41e141c543cae90ff99d8c0509a0f5802dba1139
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117668232"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885221"
 ---
 # <a name="metadata-query-language-overview"></a>Übersicht über die Metadatenabfragesprache
 
@@ -34,7 +34,7 @@ Um dieses Thema zu verstehen, sollten Sie mit dem WIC-Metadatensystem wie in der
 
 ## <a name="introduction"></a>Einführung
 
-Sie interagieren mit der Metadatenplattform hauptsächlich über zwei Component Object Model -Komponenten (COM): einen Abfrageleser, der durch die [**IWICMetadataQueryReader-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) dargestellt wird, und einen Abfragewriter, der durch die [**IWICMetadataQueryWriter-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter) dargestellt wird. Mit diesen Komponenten können Sie Metadaten mithilfe der Metadatenabfragesprache lesen oder schreiben. Die Abfragesprache beschreibt die Syntax eines Pfadausdrucks, und die Abfragekomponenten verwenden diesen Pfadausdruck, um auf die gewünschten Metadaten zuzugreifen. Dieser Pfadausdruck beschreibt den Speicherort eines Metadatenblocks oder -elements.
+Sie interagieren mit der Metadatenplattform hauptsächlich über zwei Component Object Model-Komponenten (COM): einen Abfrageleser, der durch die [**IWICMetadataQueryReader-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) dargestellt wird, und einen Abfragewriter, der durch die [**IWICMetadataQueryWriter-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter) dargestellt wird. Mit diesen Komponenten können Sie Metadaten mithilfe der Metadatenabfragesprache lesen oder schreiben. Die Abfragesprache beschreibt die Syntax eines Pfadausdrucks, und die Abfragekomponenten verwenden diesen Pfadausdruck, um auf die gewünschten Metadaten zuzugreifen. Dieser Pfadausdruck beschreibt den Speicherort eines Metadatenblocks oder -elements.
 
 Ein Metadatenblock ist eine benannte Gruppe von Metadaten in einem bestimmten Format. Ein Metadatenblock kann einzelne Metadatenelemente wie einen Erstellungszeitpunkt oder zusätzliche Metadatenblöcke enthalten. Der Name eines Metadatenblocks wird durch sein Format bestimmt. Beispielsweise würde ein Metadatenblock, der App1-Metadaten enthält, "app1" heißen. Zu den gängigen Metadatenformaten gehören App1, Exif, IFD und XMP.
 
@@ -153,7 +153,7 @@ Die folgende Tabelle enthält einige Beispielausdrücke und Beschreibungen ihrer
 
 | Ausdruck                     | Beschreibung                                                                                                                                                                                                                                                                                                                                                      |
 |--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ifd/xmp/exif:Author            | Entspricht dem folgenden Navigationspfad: IFD-Block -> XMP-Block -> "Author"-Eigenschaft im Exif-Schema.                                                                                                                                                                                                                                            |
+| ifd/xmp/exif:Author            | Entspricht dem folgenden Navigationspfad: IFD-Block -> XMP-Block -> "Author"-Eigenschaft im "Exif"-Schema.                                                                                                                                                                                                                                            |
 | /\[1 \] \[ ifd/0 \] xmp/exif:Author | Identisch mit dem ersten Element in dieser Tabelle, mit dem Unterschied, dass das \[ \# \] Präfix beschreibt, welches Element bei einem Namenskonflikt navigiert werden soll.                                                                                                                                                                                                                                |
 | /ifd/{ushort=700}/Author       | Identisch mit dem ersten Element in dieser Tabelle, mit dem Unterschied, dass ein Datenausdruck verwendet wird, um auf den XMP-Block anstelle des Blocknamens "xmp" zu verweisen (XMP-Block ist unter dem unsignierten Kurztagbezeichner 700 eingebettet). Außerdem gibt die Eigenschaft "Author" kein Schema an. Der Abfrageparser versucht, die -Eigenschaft für alle Schemas abzugleichen und die erste Übereinstimmung zurückzugeben. |
 | /ifd/xmp                       | Stellt einen Navigationspfad zu einem Metadatenblock bereit. Wenn der -Block gefunden wird, wird ein neuer Metadatenleser/Writer zurückgegeben.                                                                                                                                                                                                                                                 |
@@ -210,12 +210,12 @@ Die folgende Tabelle ist eine formale Definition der WIC-Metadatenabfragesprache
 | \<property path>    | \<metadata item> \| \<property path> '/' \<property path>                                                                                                    |
 | \<metadata item>    | \<index name> \| \<item name> \| \<schema name> ':' \<item name>                                                                                        |
 | \<schema name>      | \<item name>                                                                                                                                                           |
-| \<item name>        | \<metadata item> \| <indexed item><index>                                                                                                                  |
+| \<item name>        | \<metadata item>\| <indexed item>&lt; Index&gt;                                                                                                                  |
 | \<indexed item>     | \<item> \| \<implied metadata>\<item>                                                                                                                        |
 | \<implied metadata> | "<" \<name> ">"                                                                                                                                                    |
-| \<item>             | \<name> \| \<index> \<data> \| \<data>                                                                                                                  |
+| \<item>             | \<name>\| \& &gt; \<data> lt;index \|\<data>                                                                                                                  |
 | \<data>             | '{' \<data type> '=' \<value> '}'                                                                                                                                 |
-| \<index>            | '\[' \<number> \| \<star> '\]'                                                                                                                                    |
+| \&lt;index&gt;            | '\[' \<number> \| \<star> '\]'                                                                                                                                    |
 | \<data type>        | 'char' \| 'uchar' \| 'short' \| 'ushort' \| \| 'long' 'ulong' \| 'int' \| 'uint' \| 'longlong' \| 'ulonglong' \| 'float' \| 'double' \| 'str' \| 'wstr' \| 'guid' \| 'bool' |
 | \<data value>       | \<number> \| \<name> \| \<guid>                                                                                                                              |
 | \<star>             | '\*'                                                                                                                                                                        |

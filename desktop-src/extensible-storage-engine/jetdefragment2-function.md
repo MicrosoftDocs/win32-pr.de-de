@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3d31b6203de9feb9301b3c08c01bee84c666a9e9
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 08e6cf618be4f3bf7f6eee1b903559db579973c0
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122465837"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984983"
 ---
 # <a name="jetdefragment2-function"></a>JetDefragment2-Funktion
 
@@ -42,7 +42,7 @@ Die **JetDefragment2-Funktion** startet und beendet Datenbankdefragmentierungsau
 
 Die Datenbankdefragmentierung ist ein Onlinevorgang und unterbricht keine regulären Datenbankaktivitäten wie Abfragevorgänge oder Datenaktualisierungen. **JetDefragment2** erstellt auch keine Kopie aller vorhandenen Daten. Stattdessen wird eine Datenbank an Ort und Stelle defragmentiert. Schließlich stellt **JetDefragment2** den internen Datenbankspeicherplatz für die Wiederverwendung wieder her, gibt jedoch keinen zusätzlichen Speicherplatz für das Betriebssystemdateisystem frei.
 
-Das resultierende Format der Daten kann viel effizienter sein, ist aber im Allgemeinen nicht optimal. Die Defragmentierung ist auf die Freigabe von Datenbankseiten zur erneuten Verwendung beschränkt, die Daten enthalten, die bereits logisch gelöscht wurden. Durch die Defragmentierung können Datenbankseiten auch in einigen Fällen wiederverwendet werden, indem Daten von zwei Seiten kombiniert werden, wenn sie auf eine einzelne Seite passen.
+Das resultierende Format der Daten kann viel effizienter sein, ist aber im Allgemeinen nicht optimal. Die Defragmentierung ist auf die Freigabe von Datenbankseiten zur erneuten Verwendung beschränkt, die Daten enthalten, die bereits logisch gelöscht wurden. Durch die Defragmentierung können Datenbankseiten in einigen Fällen auch wiederverwendet werden, indem Daten von zwei Seiten kombiniert werden, wenn sie auf eine einzelne Seite passen.
 
 Dieser Vorgang unterscheidet sich von [JetCompact,](./jetcompact-function.md) bei dem eine Kopie einer schreibgeschützten Datenbank in eine äußerst optimale Form umgewandelt wird.
 
@@ -127,9 +127,9 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 |--------------------|--------------------|
 | <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
 | <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
-| <p>JET_errDatabaseFileReadOnly</p> | <p>Die für die Defragmentierung ausgewählte Datenbank ist schreibgeschützte Datenbank und kann nicht aktualisiert werden, einschließlich Defragmentierung.</p> | 
+| <p>JET_errDatabaseFileReadOnly</p> | <p>Die für die Defragmentierung ausgewählte Datenbank ist schreibgeschützte Datenbank und kann nicht aktualisiert werden, einschließlich der Defragmentierung.</p> | 
 | <p>JET_errDistributedTransactionAlreadyPreparedToCommit</p> | <p>Die angegebene Sitzung befindet sich im Zustand bereit für den Commit und kann keine neuen Updates starten, bis für die aktuelle Transaktion ein Commit oder Rollback ausgeführt wurde.</p> | 
-| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errInvalidDatabaseId</p> | <p>Die angegebene Datenbank-ID stimmt nicht mit einer bekannten Datenbank in der -Instanz überein.</p> | 
 | <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
 | <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
@@ -137,7 +137,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
 | <p>JET_errTransReadOnly</p> | <p>Die angegebene Sitzung verfügt nur über schreibgeschützte Berechtigungen und kann keine Aufgabe starten, die möglicherweise ein Update ausführt, einschließlich Defragmentierung.</p> | 
 | <p>JET_errVersionStoreOutOfMemory</p> | <p>Dieser Fehler tritt auf, wenn die konfigurierte Größe des Versionsspeichers nicht ausreicht, um alle ausstehenden Updates zu speichern.</p> | 
-| <p>JET_wrnDefragAlreadyRunning</p> | <p>Die option JET_bitDefragmentBatchStart wurde übergeben, aber eine Defragmentierungsaufgabe führt bereits eine Defragmentierung für die angegebene Datenbank aus.</p> | 
+| <p>JET_wrnDefragAlreadyRunning</p> | <p>Die option JET_bitDefragmentBatchStart wurde übergeben, aber eine Defragmentierungsaufgabe führt bereits die Defragmentierung für die angegebene Datenbank aus.</p> | 
 | <p>JET_wrnDefragNotRunning</p> | <p>Die option JET_bitDefragmentBatchStop wurde übergeben, aber derzeit wird keine Defragmentierungsaufgabe ausgeführt.</p> | 
 
 
@@ -146,7 +146,7 @@ Bei Erfolg wird die angeforderte Aktion ausgeführt, entweder eine Defragmentier
 
 Bei einem Fehler wird die angeforderte Aktion zum Starten oder Beenden eines Onlinedefragmentierungsauftrags nicht ausgeführt. Es treten keine weiteren Nebeneffekte auf.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Die Onlinedefragmentierung wird sowohl durch eine Parametereinstellung als auch durch diese API gesteuert. Der Standardwert des Systemparameters ist JET_OnlineDefragAll. Dies bedeutet, dass die Defragmentierung für alle unterstützten Datenstrukturen aktiviert ist. Bei Verwendung von [JetSetSystemParameter](./jetsetsystemparameter-function.md)ist es jedoch möglich, die Onlinedefragmentierung zu deaktivieren oder sie selektiv nur für Datenbankspeicherplatzstrukturen, nur Datenbanken, nur Streamingdateien oder eine beliebige Kombination dieser Optionen zu aktivieren. Wenn die Systemeinstellung für die Onlinedefragmentierung auf eine veraltete Einstellung festgelegt ist, behandelt **JetDefragment2** die Einstellung als JET_OnlineDefragAll.
 
@@ -157,7 +157,14 @@ Die Sitzung, die zum Starten des Onlinedefragmentierungstasks verwendet wird, ka
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetDefragment2W</strong> (Unicode) und <strong>JetDefragment2A</strong> (ANSI) implementiert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetDefragment2W</strong> (Unicode) und <strong>JetDefragment2A</strong> (ANSI) implementiert.</p> | 
 
 
 

@@ -4,12 +4,12 @@ ms.assetid: 22b5552c-41b1-4090-a827-b920dcbba5e9
 title: System.Photo.ISOSpeed-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c01cb8c3e8e4c80c63985b49e8eda49ebe16d47982dde4cd051f555b8c93d68
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6612bffdeaafb69ea1b1122a1d75c00214d366e9
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118964801"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881639"
 ---
 # <a name="systemphotoisospeed-photo-metadata-policy"></a>System.Photo.ISOSpeed-Richtlinie für Fotometadaten
 
@@ -45,10 +45,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    | Datenträgerformat |
+| Order | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=34855}           | ushort      |
-| 2     | /xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 2     | /xmp/ &lt; xmpseq &gt; exif:ISOSpeedRatings | Unicode     |
 | 3     | /xmp/exif:ISOSpeed                      | Unicode     |
 
 
@@ -59,10 +59,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    | Datenträgerformat |
+| Order | Pfad                                    | Datenträgerformat |
 |-------|-----------------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=34855}           | ushort      |
-| 2     | /xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 2     | /xmp/ &lt; xmpseq &gt; exif:ISOSpeedRatings | Unicode     |
 | 3     | /xmp/exif:ISOSpeed                      | Unicode     |
 
 
@@ -73,10 +73,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    |
+| Order | Pfad                                    |
 |-------|-----------------------------------------|
 | 1     | /app1/ifd/exif/{ushort=34855}           |
-| 2     | /xmp/ <xmpseq> exif:isospeedratings |
+| 2     | /xmp/ &lt; xmpseq &gt; exif:isospeedratings |
 | 3     | /xmp/exif:isospeed                      |
 
 
@@ -89,10 +89,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                        | Datenträgerformat |
+| Order | Pfad                                        | Datenträgerformat |
 |-------|---------------------------------------------|-------------|
 | 1     | /ifd/exif/{ushort=34855}                    | ushort      |
-| 2     | /ifd/xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 2     | /ifd/xmp/ &lt; xmpseq &gt; exif:ISOSpeedRatings | Unicode     |
 | 3     | /ifd/xmp/exif:ISOSpeed                      | Unicode     |
 
 
@@ -103,10 +103,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                        | Datenträgerformat |
+| Order | Pfad                                        | Datenträgerformat |
 |-------|---------------------------------------------|-------------|
 | 1     | /ifd/exif/{ushort=34855}                    | ushort      |
-| 2     | /ifd/xmp/ <xmpseq> exif:ISOSpeedRatings | Unicode     |
+| 2     | /ifd/xmp/ &lt; xmpseq &gt; exif:ISOSpeedRatings | Unicode     |
 | 3     | /ifd/xmp/exif:ISOSpeed                      | Unicode     |
 
 
@@ -117,10 +117,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                        |
+| Order | Pfad                                        |
 |-------|---------------------------------------------|
 | 1     | /ifd/exif/{ushort=34855}                    |
-| 2     | /ifd/xmp/ <xmpseq> exif:isospeedratings |
+| 2     | /ifd/xmp/ &lt; xmpseq &gt; exif:isospeedratings |
 | 3     | /ifd/xmp/exif:isospeed                      |
 
 

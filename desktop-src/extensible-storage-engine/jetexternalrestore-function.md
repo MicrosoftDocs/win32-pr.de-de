@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4844c14d6b60e5825b3b09f58b0d756e83b0f41c4e743684a29607a814d4f16f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 480a3411152f1388bee0115ecbcffc88f6ded09b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118072823"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984853"
 ---
 # <a name="jetexternalrestore-function"></a>JetExternalRestore-Funktion
 
@@ -61,7 +61,7 @@ Der Pfad oder das Verzeichnis für die Protokolle für die letzte Phase (Rückg�
 
 *rgrstmap*
 
-Dies ist ein Array [JET_RSTMAP](./jet-rstmap-structure.md) Strukturen. Dies ist eine Zuordnung alter und neuer Datenbankpfade oder Dateinamen. Dies wird verwendet, da die Datenbanken möglicherweise an einem anderen Speicherort als dem Speicherort wiederhergestellt werden müssen, von dem sie gespeichert wurden. Wenn mehrere Datenbanken an einen einzelnen Protokollierungssatz angefügt sind, kann die Wiederherstellungszuordnung eine Teilmenge der wiederherzustellenden Datenbanken angeben.
+Dies ist ein Array von [JET_RSTMAP](./jet-rstmap-structure.md) Strukturen. Dies ist eine Zuordnung alter und neuer Datenbankpfade oder Dateinamen. Dies wird verwendet, da die Datenbanken möglicherweise an einem anderen Speicherort als dem Speicherort wiederhergestellt werden müssen, von dem sie gespeichert wurden. Wenn mehrere Datenbanken an einen einzelnen Protokollierungssatz angefügt sind, kann die Wiederherstellungszuordnung eine Teilmenge der wiederherzustellenden Datenbanken angeben.
 
 *crstfilemap*
 
@@ -73,11 +73,11 @@ Der Pfad zu dem Verzeichnis, in dem die Protokolldateien wiederhergestellt werde
 
 *genLow*
 
-Die niedrigste Protokolldateinummer, die von *szBackupLogPath wiedergegeben werden soll.* Die vollständige Genauigkeit eines long-Werts ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die niedrigste Protokolldateinummer, die von *szBackupLogPath wiedergegeben werden soll.* Die vollständige Genauigkeit eines unsignierten long-Werts sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
 *genHigh*
 
-Die höchste Protokolldateinummer, die von *szBackupLogPath* wiedergegeben werden soll. Die vollständige Genauigkeit eines long-Werts ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die höchste Protokolldateinummer, die von *szBackupLogPath* wiedergegeben werden soll. Die vollständige Genauigkeit eines unsignierten long-Werts sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
 *pfn*
 
@@ -85,73 +85,30 @@ Der Statusrückruf, um den Fortschritt der Wiederherstellung zu melden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errOutOfMemory</p></td>
-<td><p>Fehler beim Vorgang, da nicht genügend Arbeitsspeicher zugeordnet werden konnte, um ihn abschließen zu können.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetExternalRestore</strong>und so weiter geschehen, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben sind oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch beide nicht angegeben sein.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errDatabaseCorrupted</p></td>
-<td><p>Dies weist darauf hin, dass die Datenbank beschädigt oder eine unbekannte Datei war.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errFileNotFound</p></td>
-<td><p>Fehler beim Vorgang, da die angeforderte Datei nicht geöffnet werden konnte, weil sie unter dem angegebenen Pfad nicht gefunden wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidPath</p></td>
-<td><p>Fehler beim Vorgang, weil der angegebene Pfad nicht gefunden werden konnte.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreOfNonBackupDatabase</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn die während der Wiederherstellung angegebene Datenbankdatei keine Datenbank ist, die mit einer externen Sicherung gesichert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errStartingRestoreLogTooHigh</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung unter der von <em>genLow</em> oder <em>pLogInfo.ulGenLow</em>angegebenen hat.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errEndingRestoreLogTooLow</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine für die Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung über der in <em>genHigh</em> oder <em>pLogInfo.ulGenHigh angegebenen hat.</em></p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errBadRestoreTargetInstance</p></td>
-<td><p>Der <em>angegebene szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Die Datenbank-Engine kann keine externe Wiederherstellung oder harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errOutOfMemory</p> | <p>Fehler beim Vorgang, da nicht genügend Arbeitsspeicher zugeordnet werden konnte, um ihn abschließen zu können.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetExternalRestore</strong>und so weiter geschehen, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben sind oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch beide nicht angegeben sein.</p> | 
+| <p>JET_errDatabaseCorrupted</p> | <p>Dies weist darauf hin, dass die Datenbank beschädigt oder eine unbekannte Datei war.</p> | 
+| <p>JET_errFileNotFound</p> | <p>Fehler beim Vorgang, da die angeforderte Datei nicht geöffnet werden konnte, weil sie unter dem angegebenen Pfad nicht gefunden wurde.</p> | 
+| <p>JET_errInvalidPath</p> | <p>Fehler beim Vorgang, weil der angegebene Pfad nicht gefunden werden konnte.</p> | 
+| <p>JET_errRestoreOfNonBackupDatabase</p> | <p>Dieser Fehler wird zurückgegeben, wenn die während der Wiederherstellung angegebene Datenbankdatei keine Datenbank ist, die mit einer externen Sicherung gesichert wurde.</p> | 
+| <p>JET_errStartingRestoreLogTooHigh</p> | <p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung unter der von <em>genLow</em> oder <em>pLogInfo.ulGenLow</em>angegebenen hat.</p> | 
+| <p>JET_errEndingRestoreLogTooLow</p> | <p>Dieser Fehler wird zurückgegeben, wenn eine für die Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung über der in <em>genHigh</em> oder <em>pLogInfo.ulGenHigh angegebenen hat.</em></p> | 
+| <p>JET_errBadRestoreTargetInstance</p> | <p>Der <em>angegebene szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p> | 
+| <p>JET_errRunningInOneInstanceMode</p> | <p>Die Datenbank-Engine kann keine externe Wiederherstellung oder harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in xp Windows und höher zurückgegeben.</p> | 
+
 
 
 Bei Erfolg werden alle Datenbanken aus *der rgrstmap* vollständig wiederhergestellt und befinden sich in einem sauberen oder konsistenten Zustand. An diesem Punkt kann die Datenbank erneut in eine vorhandene Instanz bereitgestellt werden.
 
 Bei einem Fehler konnte die Engine die Datenbank nicht wiederherstellen. Die Datenbank befindet sich in einem ungültigen Zustand, und um die wiederherzustellende Wiederherstellung zu wiederholen, muss die gesamte Datenbank erneut wiederhergestellt werden. In der Regel ist die Ursache einer solchen Situation eine Beschädigung des Datenträgers oder Protokolls, eine andere Form der Protokollfehlverwaltung oder ein nicht kontinuierlicher Protokollsatz.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Um zu verstehen, wie eine "harte" Wiederherstellung funktioniert, müssen Sie verstehen, dass es drei Phasen der Wiederherstellung gibt und die zweite Phase aus zwei Teilen besteht. In Phase I sind Protokolle erforderlich, um eine datenbanksicherungskonsistente Datenbank zu gewährleisten (oder ein erster Satz inkrementeller Protokolle kann verwendet werden). In Phase II werden alle verfügbaren zusätzlichen Roll forward-Protokolle verwendet, um die Datenbank konsistent zu machen. Es gibt auch eine Wiedergabe der zusätzlichen Roll forward-Protokolle. Phase III ist die Rückgängig-Phase der Wiederherstellung.
 
@@ -167,38 +124,16 @@ Verwenden Sie dieses Flussdiagramm, um zu verstehen, wie die Pfade funktionieren
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JetExternalRestoreW</strong> (Unicode) und <strong>JetExternalRestoreA</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetExternalRestoreW</strong> (Unicode) und <strong>JetExternalRestoreA</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

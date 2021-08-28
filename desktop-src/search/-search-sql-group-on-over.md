@@ -1,34 +1,34 @@
 ---
-description: Die Gruppe in...
+description: Die GROUP ON...
 ms.assetid: 37f027c1-c2af-4d62-8b5f-918499fc2d7c
-title: Gruppieren nach... Über... An
+title: GROUP ON ... ÜBER... Anweisung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94d7087305f0a5a86f0288ed92ec4bda5b8c882c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df21bb53babd25ae3e407032c6cf9d3774323e85
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128541"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882015"
 ---
-# <a name="group-on--over--statement"></a>Gruppieren nach... Über... An
+# <a name="group-on--over--statement"></a>GROUP ON ... ÜBER... Anweisung
 
-Die Gruppe in... Über... die-Anweisung gibt ein hierarchisches Rowset zurück, in dem Suchergebnisse auf der Grundlage einer angegebenen Spalte und optionaler Gruppierungs Bereiche in Gruppen aufgeteilt werden. Wenn Sie in der Spalte [System. Kind](../properties/props-system-kind.md) gruppieren, ist das Resultset in mehrere Gruppen unterteilt: eine für Dokumente, eine für die Kommunikation usw. Wenn Sie [System. Size](../properties/props-system-size.md) und den Gruppenbereich 100 KB gruppieren, ist das Resultset in drei Gruppen unterteilt: Elemente der Größe < 100 KB, Elemente der Größe >= 100 KB und Elemente ohne Größen Wert. Sie können auch Gruppierungen mit Funktionen aggregieren.
+Die GROUP ON... ÜBER... -Anweisung gibt ein hierarchisches Rowset zurück, in dem Suchergebnisse basierend auf einer angegebenen Spalte und optionalen Gruppierungsbereichen in Gruppen unterteilt werden. Wenn Sie nach der [Spalte System.Kind](../properties/props-system-kind.md) gruppieren, wird das Ergebnisset in mehrere Gruppen unterteilt: eine für Dokumente, eine für die Kommunikation und so weiter. Wenn Sie [system.size und](../properties/props-system-size.md) den Gruppenbereich 100 KB gruppiert haben, wird das Ergebnisset in drei Gruppen unterteilt: Elemente der Größe < 100 KB, Elemente der Größe >= 100 KB und Elemente ohne Größenwert. Sie können Auch Gruppierungen mit Funktionen aggregieren.
 
 In diesem Thema werden die folgenden Themen behandelt:
 
 -   [Syntax](#syntax)
--   [Gruppen Bereiche](#group-ranges)
--   [Bezeichnen von Gruppen](#labeling-groups)
--   [Anordnen von Gruppen](#ordering-groups)
+-   [Gruppenbereiche](#group-ranges)
+-   [Bezeichnungsgruppen](#labeling-groups)
+-   [Reihenfolge von Gruppen](#ordering-groups)
 -   [Schachteln von Gruppen](#nesting-groups)
--   [Gruppieren von Vektor Eigenschaften](#grouping-on-vector-properties)
+-   [Gruppieren nach Vektoreigenschaften](#grouping-on-vector-properties)
 -   [Weitere Beispiele](#more-examples)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="syntax"></a>Syntax
 
-Die Gruppe in... Über... die-Anweisung weist die folgende Syntax auf:
+Die GROUP ON ... ÜBER... -Anweisung hat die folgende Syntax:
 
 
 ```
@@ -40,7 +40,7 @@ GROUP ON <column> ['['<group ranges>']']]
 
 
 
-Dabei werden Gruppierungs Bereiche wie folgt definiert:
+Dabei werden Gruppierungsbereiche wie folgt definiert:
 
 
 ```
@@ -50,28 +50,28 @@ Dabei werden Gruppierungs Bereiche wie folgt definiert:
 
 
 
-Die Gruppe in <column> kann ein regulärer oder Begrenzungs [Bezeichner](-search-sql-identifiers.md) für eine Eigenschaft im Eigenschaften Speicher sein.
+Die GROUP ON-Spalte kann ein regulärer oder durch Trennzeichen getrennter &lt; &gt; [Bezeichner](-search-sql-identifiers.md) für eine Eigenschaft im Eigenschaftenspeicher sein.
 
-Der optionale <group ranges> ist eine Liste mit einem oder mehreren Werten (Anzahl, Datum oder Zeichenfolge), die zum Aufteilen der Ergebnisse in Gruppen verwendet werden. Der <range limit> identifiziert einen Divisions Punkt im zurückgegebenen Resultset, und der <label> identifiziert eine benutzerfreundliche Bezeichnung für eine Gruppe. Sie können das Resultset in beliebig viele Gruppen aufteilen.
+Optional ist eine Liste mit einem oder mehreren Werten (Zahl, Datum oder Zeichenfolge), die zum Aufteilen der Ergebnisse <group ranges> in Gruppen verwendet werden. Identifiziert einen Divisionspunkt im zurückgegebenen Resultset, und identifiziert eine <range limit> <label> benutzerfreundliche Bezeichnung für eine Gruppe. Sie können das Ergebnisset in so viele Gruppen unterteilen, wie Sie benötigen.
 
-Die erste Gruppe der Ergebnisse umfasst Elemente mit dem minimal möglichen Wert für die angegebene Eigenschaft bis zum ersten Bereichs Limit. Auf diese Gruppe kann mit dem MinValue-Schlüsselwort verwiesen werden. Auf die zweite Gruppe kann mit dem bereichsbeschränkungsspezifizierer selbst verwiesen werden. Sie enthält Elemente, deren Wert für die angegebene Eigenschaft größer oder gleich dem Bereichs Limit ist. Alle Elemente, die nicht über einen Wert für die angegebene Eigenschaft verfügen, werden zuletzt zurückgegeben, und auf Sie kann mit dem **null** -Schlüsselwort verwiesen werden.
+Die erste Gruppe von Ergebnissen enthält Elemente mit dem minimal möglichen Wert für die angegebene Eigenschaft bis einschließlich des grenzwerts für den ersten Bereich. Auf diese Gruppe kann mit dem MINVALUE-Schlüsselwort verwiesen werden. Auf die zweite Gruppe kann mit dem Bereichsbegrenzungsspezifizierer selbst verwiesen werden und enthält Elemente, deren Wert für die angegebene Eigenschaft gleich oder größer als der Bereichsgrenzwert ist. Alle Elemente, die keinen Wert für die angegebene Eigenschaft haben, werden zuletzt zurückgegeben und können mit dem **NULL-Schlüsselwort darauf verwiesen** werden.
 
-Beispielsweise dividiert eine Bereichs Beschränkung von "2006-01-01" für die [System. DateCreated](../properties/props-system-datecreated.md) -Eigenschaft das Resultset in Elemente mit Datumsangaben vor 2006-01-01 (MinValue-Gruppe), Elementen mit Datumsangaben auf oder nach 2006-01-01 (2006-01-01-Gruppe) und Elementen ohne Datum (**null** -Gruppe).
+Ein Bereichslimit von "2006-01-01" für die [System.DateCreated-Eigenschaft](../properties/props-system-datecreated.md) unterteilt das Ergebnisset beispielsweise in Elemente mit Datumsangaben vor dem 01.01.2006 (MINVALUE-Gruppe), Elementen mit Datumsangaben am oder nach dem 01.01.2006 (Gruppe 2006-01-01) und Elementen ohne Datum (**NULL-Gruppe).**
 
-In jeder Gruppe werden die Ergebnisse standardmäßig nach den Werten in der Spalte Gruppieren nach sortiert. Die optionale [Order by](-search-sql-orderby.md) -Klausel kann einen Zugriffsspezifizierer von ASC für aufsteigend (niedrig zu hoch) oder für absteigend (hoch bis niedrig) enthalten, und die [Reihenfolge in der Group by](-search-sql-orderingroup.md) -Klausel kann jede Gruppe mit unterschiedlichen Regeln sortieren. Weitere Informationen finden Sie im nachfolgenden Abschnitt [Bestell Gruppen](#ordering-groups) .
+Innerhalb jeder Gruppe werden die Ergebnisse standardmäßig nach den Werten in der GROUP ON-Spalte sortiert. Die [optionale ORDER BY-Klausel](-search-sql-orderby.md) kann einen Richtungsspezifizierer von ASC für aufsteigend (niedrig bis hoch) oder DESC für absteigend (hoch bis niedrig) enthalten, und die [ORDER IN GROUP BY-Klausel](-search-sql-orderingroup.md) kann jede Gruppe mit unterschiedlichen Regeln reihenfolgen. Weitere Informationen [finden Sie weiter](#ordering-groups) unten im Abschnitt Bestellgruppen.
 
-## <a name="group-ranges"></a>Gruppen Bereiche
+## <a name="group-ranges"></a>Gruppenbereiche
 
-In der folgenden Tabelle wird veranschaulicht, wie die Ergebnisse in Gruppen unterteilt werden, basierend auf den Bereichs Limits:
+In der folgenden Tabelle wird veranschaulicht, wie Die Ergebnisse basierend auf den Bereichsgrenzwerten in Gruppen unterteilt werden:
 
 
 
-| Beispiel ( <column> \[ Gruppen Bereiche \] )        | Ergebnis                                                                                                                                                                                                                                                                         |
+| Beispiel ( &lt; &gt; \[ Spaltengruppenbereiche \] )        | Ergebnis                                                                                                                                                                                                                                                                         |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| System. size \[ 1000, 5000\]                       | Die Ergebnisse werden in vier Bucket gruppiert: **MinValue**: Size < 1000<br/> **1000:** 1000 <= Größe < 5000<br/> **5000:** Größe >= 5000<br/> **Null:** Kein Wert für Größe<br/>                                                                      |
-| System. Author \[ vor ('m '), After (' r ')\]         | Die Ergebnisse werden in vier Bucket gruppiert: **MinValue:** "Autor < Zeichen" vor "m"<br/> **m:** Zeichen vor "m" <= Autor < Zeichen nach "r"<br/> **r:** Zeichen nach "r" <= Autor<br/> **Null:** Kein Wert für Autor<br/>      |
-| System. Author \[ MinValue/"a to l", "m"/be to z "\] | Die Ergebnisse werden in drei Bucket gruppiert: **a bis l:** Author < "m"<br/> **m bis z:** "m" <= Autor <br/> **Null:** Kein Wert für Autor<br/>                                                                                                               |
-| System. DateCreated \[ "2005-1-01", "2006-6-01"\]   | Die Ergebnisse werden in vier Bucket gruppiert:<br/> **MinValue:** DateCreated-< 2005-1-01<br/> **2005-1-01:** 2005-1-01 <= DateCreated < 2006-6-01<br/> **2006-1-01:** DateCreated->= 2006-6-01<br/> **Null:** Kein Wert für DateCreated<br/> |
+| System.Size \[ 1000, 5000\]                       | Die Ergebnisse werden in vier Buckets eingekreist: **MINVALUE**: < 1000<br/> **1000:** 1000 <= Größe < 5000<br/> **5000:** Größe >= 5000<br/> **NULL:** Kein Wert für Größe<br/>                                                                      |
+| System.Author \[ BEFORE('m'),AFTER('r')\]         | Die Ergebnisse werden in vier Buckets eingekreist: **MINVALUE:** Author < character before "m"<br/> **m:** Zeichen vor "m" <= < Zeichen nach "r" erstellen<br/> **r: Zeichen** nach "r" <= Author<br/> **NULL:** Kein Wert für Autor<br/>      |
+| System.Author \[ MINVALUE/'a to l',"m"/'m to z'\] | Die Ergebnisse werden in drei Buckets eingekreist: **a bis l:** Author < "m"<br/> **m bis z:** "m" <= Author <br/> **NULL:** Kein Wert für Autor<br/>                                                                                                               |
+| System.DateCreated \[ '2005-1-01','2006-6-01'\]   | Die Ergebnisse werden in vier Buckets eingekreist:<br/> **MINVALUE:** DateCreated < 01.05.2005<br/> **2005-1-01:** 2005-1-01 <= DateCreated < 2006-6-01<br/> **2006-1-01:** DateCreated >= 2006-6-01<br/> **NULL:** Kein Wert für DateCreated<br/> |
 
 
 
@@ -81,7 +81,7 @@ In der folgenden Tabelle wird veranschaulicht, wie die Ergebnisse in Gruppen unt
 
 > [!IMPORTANT]
 >
-> Korre `GROUP ON System.Author['m','z','a']`
+> Falsche: `GROUP ON System.Author['m','z','a']`
 >
 > Richtig: `GROUP ON System.Author['a','m','z']`
 
@@ -89,9 +89,9 @@ In der folgenden Tabelle wird veranschaulicht, wie die Ergebnisse in Gruppen unt
 
  
 
-## <a name="labeling-groups"></a>Bezeichnen von Gruppen
+## <a name="labeling-groups"></a>Bezeichnungsgruppen
 
-Um die Lesbarkeit zu verbessern, können Sie Gruppen mit der folgenden Syntax bezeichnen:
+Um die Lesbarkeit zu verbessern, können Sie Gruppen mit der folgenden Syntax beschriften:
 
 
 ```
@@ -100,9 +100,9 @@ GROUP ON <column> [<range limit>/'<label>',<range limit>/'<label>']
 
 
 
-Die Bezeichnung ist von der Bereichs Beschränkung mit einem Schrägstrich getrennt und in einfache Anführungszeichen eingeschlossen. Wenn Sie keine Bezeichnung angeben, ist der Gruppenname die Zeichenfolge für das Bereichs Limit.
+Die Bezeichnung ist durch einen Schrägstrich vom Bereichsgrenzwert getrennt und in einfache Anführungszeichen eingeschlossen. Wenn Sie keine Bezeichnung angeben, ist der Gruppenname die Bereichsbegrenzungszeichenfolge.
 
-Im folgenden finden Sie ein Beispiel für die Bezeichnung von Gruppen:
+Im Folgenden finden Sie ein Beispiel für Bezeichnungsgruppen:
 
 
 ```
@@ -112,9 +112,9 @@ GROUP ON System.Size [(MINVALUE/'Small','100')/'Medium','50000'/'Large']
 
 
 
-In Windows 7 oder höher können Sie auch eine generische \[ andere Bezeichnung verwenden, \] um mehrere Gruppierungs Bereiche zu kombinieren. Ergebnisse aus allen Gruppen, die mit dieser Bezeichnung identifiziert werden, werden mit dieser Bezeichnung zu einer Gruppe zusammengefasst. Diese Ergebnis Gruppe wird nach allen anderen Gruppen außer der **null** -Gruppe zurückgegeben. Die Gruppe **null** enthält Ergebnisse für Elemente, die nicht über einen Wert für die angegebene Eigenschaft verfügen. Vor Windows 7 wird die \[ andere \] Bezeichnung wie jede andere Gruppen Bezeichnung behandelt.
+In Windows 7 oder höher können Sie auch eine generische OTHER-Bezeichnung verwenden, um \[ \] mehrere Gruppierungsbereiche zu kombinieren. Ergebnisse aus allen Gruppen, die mit dieser Bezeichnung identifiziert werden, werden in einer Gruppe mit dieser Bezeichnung kombiniert. Diese Gruppe von Ergebnissen wird nach allen anderen Gruppen mit Ausnahme der **NULL-Gruppe** zurückgegeben. Die **NULL-Gruppe** enthält Ergebnisse für Elemente, die keinen Wert für die angegebene Eigenschaft haben. Vor Windows 7 wird die \[ Bezeichnung OTHER wie jede andere \] Gruppenbezeichnung behandelt.
 
-Der folgende Code ist ein Beispiel für die Verwendung der \[ anderen \] Bezeichnung für Gruppen, die in Windows 7 oder höher erstellt werden:
+Der folgende Code ist ein Beispiel für die Verwendung der Bezeichnung OTHER für Gruppen, die in Windows 7 oder \[ \] höher erstellt werden:
 
 
 ```
@@ -124,18 +124,18 @@ GROUP ON System.Author ['0', 'A'/'[OTHER]', 'I', 'Q', 'W'/'[OTHER]', 'Y']
 
 
 
-In der folgenden Tabelle sind die Gruppen aufgeführt, die durch den vorangehenden Gruppierungs Code in Windows 7 oder höher erstellt werden.
+In der folgenden Tabelle sind die Gruppen aufgeführt, die durch den vorangehenden Gruppierungscode in Windows 7 oder höher erstellt werden.
 
 
 
-| Gruppieren     | System.Author | System. filename |
+| Group     | System.Author | System.FileName |
 |-----------|---------------|-----------------|
-| 0         | 1 Rechnung         | Lorem.docx      |
-| Q         | Queen         | Ipsum.docx      |
+| 0         | 1Bill         | Lorem.docx      |
+| Q         | Königin         | Ipsum.docx      |
 |           | Robin         | dolor.docx      |
-| J         | Kette          | amet.docx       |
-| \[Außer\] | Abner         | nonummy.docx    |
-|           | Bernd           | laoreet.docx    |
+| J         | Zara          | amet.docx       |
+| \[ANDERE\] | Abner         | nonummy.docx    |
+|           | Bob           | laoreet.docx    |
 |           | Xaria         | magna.docx      |
 | **NULL**  |               | aliquam.docx    |
 
@@ -143,19 +143,19 @@ In der folgenden Tabelle sind die Gruppen aufgeführt, die durch den vorangehend
 
  
 
-## <a name="ordering-groups"></a>Anordnen von Gruppen
+## <a name="ordering-groups"></a>Reihenfolge von Gruppen
 
-Es gibt drei Möglichkeiten, um Elemente in Gruppen zu sortieren:
+Es gibt drei Möglichkeiten, Elemente in Gruppen zu bestellen:
 
--   Standardsortierung: Wenn Sie nichts anderes angeben, werden die Ergebnisse nach den Werten in der Spalte Gruppieren in aufsteigender Reihenfolge sortiert.
--   Order by: Sie können eine absteigende Reihenfolge in einer ORDER BY-Klausel angeben. Sie müssen die Ergebnisse nach der Spalte Gruppieren in sortieren.
--   Order in Group by: Sie können für jede Gruppe eine andere Reihenfolge angeben. Wenn Sie [System. Kind](../properties/props-system-kind.md)gruppieren, können Sie Dokumente nach System [. Author](../properties/props-system-author.md) und Musik von [System. Music.](../properties/props-system-music-artist.md)Author anordnen.
+-   Standard reihenfolge: Wenn Sie andernfalls nicht angeben, werden die Ergebnisse nach den Werten in der GROUP ON -Spalte in aufsteigender Reihenfolge geordnet.
+-   ORDER BY: Sie können eine absteigende Reihenfolge in einer ORDER BY-Klausel angeben. Sie müssen die Ergebnisse nach der GROUP ON-Spalte sortieren.
+-   ORDER IN GROUP BY: Sie können für jede Gruppe eine andere Reihenfolge angeben. Wenn Sie nach [System.Kind](../properties/props-system-kind.md)gruppieren, können Sie Dokumente nach [System.Author und](../properties/props-system-author.md) music nach [System.Musik. Interpret](../properties/props-system-music-artist.md).
 
-Weitere Informationen zum Sortieren von Ergebnissen finden Sie in den Referenzseiten [Order By-Klausel](-search-sql-orderby.md) und [Order in Group-Klausel](-search-sql-orderingroup.md) .
+Weitere Informationen zum Reihenfolgen von Ergebnissen finden Sie auf den Referenzseiten [zur ORDER BY-Klausel](-search-sql-orderby.md) und [zur ORDER IN GROUP-Klausel.](-search-sql-orderingroup.md)
 
 ## <a name="nesting-groups"></a>Schachteln von Gruppen
 
-Gruppen können mit mehreren Group on-Klauseln geschachtelt werden. Die in der Abfrage angegebene Reihenfolge wird direkt in der Ausgabe Gruppen Hierarchie reflektiert, wie im folgenden Beispiel gezeigt.
+Sie können Gruppen mit mehreren GROUP ON-Klauseln schachteln. Die in der Abfrage angegebene Reihenfolge wird direkt in der Ausgabegruppenhierarchie widergespiegelt, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -168,16 +168,16 @@ GROUP ON <System.Kind>
 
 
 
-| System. Kind    | System.Author | System. DateCreated |
+| System.Kind    | System.Author | System.DateCreated |
 |----------------|---------------|--------------------|
 | Dokumente      | Willa         | 2006-01-02         |
 |                |               | 2006-01-05         |
-|                | Kette          | 2007-06-02         |
+|                | Zara          | 2007-06-02         |
 |                |               | 2007-09-10         |
 | Kommunikation | Abner         | 2006-04-16         |
 |                | Jean          | 2007-02-20         |
 |                | Willa         | 2006-10-15         |
-|                | Kette          | 2008-01-02         |
+|                | Zara          | 2008-01-02         |
 
 
 
@@ -185,9 +185,9 @@ GROUP ON <System.Kind>
 
  
 
-## <a name="grouping-on-vector-properties"></a>Gruppieren von Vektor Eigenschaften
+## <a name="grouping-on-vector-properties"></a>Gruppieren nach Vektoreigenschaften
 
-Gruppieren von Vektor Eigenschaften, Eigenschaften, die einen oder mehrere Werte gleichzeitig enthalten können, vergleicht die Vektor Werte standardmäßig einzeln. Wenn beispielsweise ein Dokument, Lorem.docx, mit der System. Author-Eigenschaft "Theresa;" vorhanden ist. Zara "und ein anderes Dokument, Ipsum.docx, mit der System. Author-Eigenschaft als" Zara ", gibt die Abfrage das Resultset in zwei Gruppen zurück, wie hier gezeigt:
+Die Gruppierung nach Vektoreigenschaften, Eigenschaften, die einen oder mehrere Werte gleichzeitig enthalten können, vergleicht die Vektorwerte standardmäßig einzeln. Wenn es z. B. ein Dokument gibt, Lorem.docx, mit der System.Author-Eigenschaft "Theresa; Zara" und ein weiteres Dokument, Ipsum.docx, mit der System.Author-Eigenschaft "Zara", gibt die Abfrage das Ergebnisset in zwei Gruppen zurück, wie hier gezeigt:
 
 
 ```
@@ -199,17 +199,17 @@ GROUP ON <System.Author>
 
 
 
-| System.Author | System. filename |
+| System.Author | System.FileName |
 |---------------|-----------------|
-| SIAs       | Lorem.docx      |
-| Kette          | Lorem.docx      |
+| Theresa       | Lorem.docx      |
+| Zara          | Lorem.docx      |
 |               | Ipsum.docx      |
 
 
 
  
 
-Wie Sie sehen können, gibt die Gruppierung von Vektor Eigenschaften doppelte Zeilen zurück. Lorem.docx wird zweimal angezeigt, weil es zwei Autoren hat.
+Wie Sie sehen können, gibt die Gruppierung nach Vektoreigenschaften doppelte Zeilen zurück. Lorem.docx wird zweimal angezeigt, da sie über zwei Autoren verfügt.
 
  
 
@@ -252,10 +252,10 @@ GROUP ON System.Size[1,2]
 [Aggregatfunktionen](-search-sql-aggregates.md)
 </dt> <dt>
 
-[Order By-Klausel](-search-sql-orderby.md)
+[ORDER BY-Klausel](-search-sql-orderby.md)
 </dt> <dt>
 
-[Order in Group-Klausel](-search-sql-orderingroup.md)
+[ORDER IN GROUP-Klausel](-search-sql-orderingroup.md)
 </dt> </dl>
 
  

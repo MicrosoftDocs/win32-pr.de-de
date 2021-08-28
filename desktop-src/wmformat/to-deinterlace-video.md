@@ -17,12 +17,12 @@ keywords:
 - telecine,about
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4d327ba19ea471f1594410913ebb58f3ac1cfebe048ac418abc7141c1fbee3e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 1ef1d1a6fcee3bf43d2fb4451d4ef129e595471e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118699957"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475766"
 ---
 # <a name="to-deinterlace-video"></a>So deinterlace video
 
@@ -34,63 +34,16 @@ Um das Codec-Deinterlace-Eingabevideo zu erhalten, rufen Sie [**die IWMWriterAdv
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>WM_DM_NOTINTERLACED</td>
-<td>Die Eingabe ist progressiv. Verwenden Sie diese Einstellung, um das Deinterlacing zu beenden, wenn Sie zuvor den Deinterlacingmodus auf einen anderen Wert festgelegt haben.</td>
-</tr>
-<tr class="even">
-<td>WM_DM_DEINTERLACE_NORMAL</td>
-<td>Wählen Sie diesen Modus aus, um die gleichmäßigen und ungeraden Felder eines Verschachtelungsrahmens (mithilfe eines Mechanismus zur Bewegungskompensation) zu mischen. Vorteile:<br/>
-<ul>
-<li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
-<li>Der Windows Media Video-Codec erzeugt komprimiertes Video mit höherer Qualität.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>WM_DM_DEINTERLACE_HALFSIZE</td>
-<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel beträgt und die Auflösung des Ausgabevideos 320 x 240 Pixel beträgt. Vorteile:<br/>
-<ul>
-<li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>WM_DM_DEINTERLACE_HALFSIZEDOUBLERATE</td>
-<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel bei 30 Interlaced Frames/s beträgt und die Ausgabevideoauflösung 320 x 240 Pixel bei 60 Frames/s beträgt. Vorteile:<br/>
-<ul>
-<li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li>
-<li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>WM_DM_DEINTERLACE_INVERSETELECINE</td>
-<td>Wählen Sie diesen Modus aus, um telered 30 Frames/Sek. Video in die 24 Frames/Sek. des ursprünglichen Videos zu konvertieren. Vorteile:<br/>
-<ul>
-<li>Die Komprimierungsqualität verbessert sich erheblich, da nur 24 Frames/s anstelle von 30 Frames/s codiert werden müssen.</li>
-<li>Da das Ergebnis progressiv ist, werden die gleichen Komprimierungs- und Anzeigevorteile des Deinterlacings realisiert.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>WM_DM_DEINTERLACE_VERTICALHALFSIZEDOUBLERATE</td>
-<td>Wählen Sie diesen Modus aus, wenn die vertikale Ausgabeauflösung halb oder kleiner als die vertikale Auflösung der Eingabe ist und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Die vertikale Videoauflösung der Eingabe beträgt z. B. 640 x 480 Pixel bei 30 Interlacingframes/s, und die vertikale Ausgabevideoauflösung beträgt 320 x 240 Pixel bei 60 Frames/s. Vorteile:<br/>
-<ul>
-<li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li>
-<li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | BESCHREIBUNG | 
+|-------|-------------|
+| WM_DM_NOTINTERLACED | Die Eingabe ist progressiv. Verwenden Sie diese Einstellung, um das Deinterlacing zu beenden, wenn Sie zuvor den Deinterlacingmodus auf einen anderen Wert festgelegt haben. | 
+| WM_DM_DEINTERLACE_NORMAL | Wählen Sie diesen Modus aus, um die gleichmäßigen und ungeraden Felder eines Verschachtelungsrahmens (mithilfe eines Mechanismus zur Bewegungskompensation) zu mischen. Vorteile:<br /><ul><li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li><li>Der Windows Media Video-Codec erzeugt komprimiertes Video mit höherer Qualität.</li></ul> | 
+| WM_DM_DEINTERLACE_HALFSIZE | Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel beträgt und die Auflösung des Ausgabevideos 320 x 240 Pixel beträgt. Vorteile:<br /><ul><li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li></ul> | 
+| WM_DM_DEINTERLACE_HALFSIZEDOUBLERATE | Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel bei 30 Interlaced Frames/s beträgt und die Ausgabevideoauflösung 320 x 240 Pixel bei 60 Frames/s beträgt. Vorteile:<br /><ul><li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li><li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li></ul> | 
+| WM_DM_DEINTERLACE_INVERSETELECINE | Wählen Sie diesen Modus aus, um telered 30 Frames/Sek. Video in die 24 Frames/Sek. des ursprünglichen Videos zu konvertieren. Vorteile:<br /><ul><li>Die Komprimierungsqualität verbessert sich erheblich, da nur 24 Frames/s anstelle von 30 Frames/s codiert werden müssen.</li><li>Da das Ergebnis progressiv ist, werden die gleichen Komprimierungs- und Anzeigevorteile des Deinterlacings realisiert.</li></ul> | 
+| WM_DM_DEINTERLACE_VERTICALHALFSIZEDOUBLERATE | Wählen Sie diesen Modus aus, wenn die vertikale Ausgabeauflösung halb oder kleiner als die vertikale Auflösung der Eingabe ist und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Die vertikale Videoauflösung der Eingabe beträgt z. B. 640 x 480 Pixel bei 30 Interlacingframes/s, und die vertikale Ausgabevideoauflösung beträgt 320 x 240 Pixel bei 60 Frames/s. Vorteile:<br /><ul><li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li><li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li></ul> | 
+
 
 
 
@@ -106,7 +59,7 @@ Wenn Sie den Deinterlacingmodus auf WM DM DEINTERLACE INVERSETELECINE festlegen,
 
 
 
-| Wert                                              | Beschreibung                                                                                                                                                                                                                                                                                                   |
+| Wert                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                   |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | WM \_ DM DEAKTIVIERT DEN \_ \_ \_ EINHEITLICHEN \_ MODUS                | Gibt an, dass das Eingabemedium den Telecine-Prozess durchgegangen ist, die Frames jedoch nicht mehr in einem vorhersagbaren Muster liegen. Dies gibt in der Regel an, dass die Medien nach der Telecineverarbeitung bearbeitet wurden. Wenn Sie diese Einstellung verwenden, versucht der Codec, die ursprünglichen Frames selbst zu rekonstruieren. |
 | WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ AA \_ TOP    | Gibt an, dass das oberste Feld des AA-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |

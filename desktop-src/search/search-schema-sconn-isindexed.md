@@ -1,19 +1,19 @@
 ---
-description: Das optionale boolesche <isIndexed> Element gibt an, ob der vom Suchconnector beschriebene Speicherort indiziert wird (lokal oder remote mit Windows Search 4 oder höher).
+description: Das optionale boolesche &lt; isIndexed-Element &gt; gibt an, ob der vom Suchconnector beschriebene Speicherort (lokal oder remote mit Windows Search 4 oder höher) indiziert wird.
 ms.assetid: e72b5614-454c-481f-bc31-897d2dea8042
 title: isIndexed-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2afcd1a95ec14b3bbea80374d8925a88231feb0110a421c2c850a297672d0c1b
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 3588d451631ab8d0bb8313092b5b1ee7bb5c9dc4
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119711050"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881845"
 ---
 # <a name="isindexed-element-search-connector-schema"></a>isIndexed-Element (Search Connector Schema)
 
-Das optionale boolesche <isIndexed> Element gibt an, ob der vom Suchconnector beschriebene Speicherort indiziert wird (lokal oder remote mit Windows Search 4 oder höher). Der Standardwert ist true für lokale Ordner. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das optionale boolesche &lt; isIndexed-Element &gt; gibt an, ob der vom Suchconnector beschriebene Speicherort (lokal oder remote mit Windows Search 4 oder höher) indiziert wird. Der Standardwert ist true für lokale Ordner. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 

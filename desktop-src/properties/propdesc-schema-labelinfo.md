@@ -1,21 +1,21 @@
 ---
 description: Gibt an, wie die Bezeichnungen der Eigenschaft angezeigt werden.
 ms.assetid: 9317aff9-abdd-46c2-aaff-62861925713b
-title: Labelinfo
+title: labelInfo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1cc0cfc417fae49527bcee50ac5043b1f07f309
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d2d358270bfdf231f990feee54d90f6f39f16fa
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349134"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475096"
 ---
-# <a name="labelinfo"></a>Labelinfo
+# <a name="labelinfo"></a>labelInfo
 
-Gibt an, wie die Bezeichnungen der Eigenschaft angezeigt werden. Es darf nur ein [Labelinfo]() -Element für jedes [propertydescription](./propdesc-schema-propertydescription.md) -Element vorhanden sein.
+Gibt an, wie die Bezeichnungen der Eigenschaft angezeigt werden. Es sollte nur ein [labelInfo-Element]() für jedes [propertyDescription-Element geben.](./propdesc-schema-propertydescription.md)
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Labelinfo]() -Element angegeben wird, wird die Bezeichnung der Eigenschaft nicht angezeigt. Dies wäre in der Regel jedoch ein Fehler.
+Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [labelInfo-Element]() angegeben wird, wird die Bezeichnung der Eigenschaft nicht angezeigt. Dies wäre jedoch in der Regel ein Fehler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Labe
 
 | Übergeordnetes Element                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------|----------------|
-| [propertydescription](./propdesc-schema-propertydescription.md) | Keine           |
+| [propertyDescription](./propdesc-schema-propertydescription.md) | Keine           |
 
 
 
@@ -60,43 +60,14 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Labe
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>label</td>
-<td>Öffentlich. Dies ist optional. Die Bezeichnung, wie Sie in der Benutzeroberfläche angezeigt wird (z. b. die Bezeichnung "Details" oder "Vorschau"). Die Syntax ermöglicht eine direkte Anzeige Zeichenfolge oder einen indirekten Verweis auf eine Anzeige Zeichenfolge. Verwenden Sie die indirekte Anzeige Zeichenfolge, da Sie lokalisiert werden kann. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getdisplayname"><strong>Ipropertydescription:: GetDisplayName</strong></a> gibt den aufgelösten anzeigen Amen zurück.</td>
-</tr>
-<tr class="even">
-<td>SortDescription</td>
-<td>Dies ist optional. Gibt die als Sortieroptionen angebotenen Zeichen folgen an. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getsortdescription"><strong>Ipropertydescription:: getsortdescription</strong></a> gibt diese Sortier Beschreibung zurück. Die folgenden Werte stellen die entsprechenden UI-Zeichen folgen bereit.
-<ul>
-<li>Allgemein: &quot; Sortieren nach oben &quot;  /  &quot; Sortieren&quot;</li>
-<li>Atoz: &quot; A in Top &quot;  /  &quot; Z on Top&quot;</li>
-<li>Lowesthighest: &quot; niedrigste am oberen &quot; oberen Rand  /  &quot;&quot;</li>
-<li>Oldestlatest: &quot; älteste oben nach oben &quot;  /  &quot;&quot;</li>
-<li>Smallestmost: &quot; kleinste am oberen &quot; oberen Rand  /  &quot;&quot;</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>invitationtext</td>
-<td>Dies ist optional. Der Text der Hilfe Zeichenfolge, der dem Benutzer als Anweisung für das Steuerelement oder die QuickInfo angezeigt wird (z.b. &quot; Name des Autors &quot; ). Die Syntax ermöglicht eine direkte Anzeige Zeichenfolge oder einen indirekten Verweis auf eine Anzeige Zeichenfolge. Verwenden Sie die indirekte Anzeige Zeichenfolge, da Sie lokalisiert werden kann. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-geteditinvitation"><strong>Ipropertydescription:: geteditinvitation</strong></a> gibt den aufgelösten Einladungstext zurück.</td>
-</tr>
-<tr class="even">
-<td>hidelta Label</td>
-<td>Dies ist optional. Die Standardeinstellung ist &quot;false&quot;. Gibt an, ob die Bezeichnung ausgeblendet ist.</td>
-</tr>
-</tbody>
-</table>
+
+| Attribut | BESCHREIBUNG | 
+|-----------|-------------|
+| label | Öffentlich. Optional. Die Bezeichnung, wie sie auf der Benutzeroberfläche angezeigt wird (z. B. die Detailspaltenbezeichnung oder der Vorschaubereich). Die Syntax ermöglicht eine direkte Anzeigezeichenfolge oder einen indirekten Anzeigezeichenfolgenverweis. Verwenden Sie die indirekte Anzeigezeichenfolge, da sie lokalisiert werden kann. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getdisplayname"><strong>IPropertyDescription::GetDisplayName gibt</strong></a> den aufgelösten Anzeigenamen zurück. | 
+| Sortdescription | Optional. Gibt die als Sortieroptionen angebotenen Zeichenfolgen an. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getsortdescription"><strong>IPropertyDescription::GetSortDescription</strong></a> gibt diese Sortierbeschreibung zurück. Die folgenden Werte stellen die entsprechenden Benutzeroberflächenzeichenfolgen zur Verfügung.<ul><li>Allgemein: "Sort going up" /"Sort going down"</li><li>AToZ: "A on top" /"Z on top"</li><li>LowestHighest: "Lowest on top" /"Highest on top"</li><li>OldestNewest: "Oldest on top" /"Newest on top"</li><li>SmallestLargest: "Smallest on top" /"Largest on top"</li></ul> | 
+| invitationText | Optional. Der Hilfezeichenfolgentext, der dem Benutzer als Anweisung für das Steuerelement oder die QuickInfo angezeigt wird (z.B. "Enter author name."). Die Syntax ermöglicht eine direkte Anzeigezeichenfolge oder einen indirekten Anzeigezeichenfolgenverweis. Verwenden Sie die indirekte Anzeigezeichenfolge, da sie lokalisiert werden kann. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-geteditinvitation"><strong>IPropertyDescription::GetEditInvitation gibt</strong></a> den aufgelösten Einladungstext zurück. | 
+| hideLabel | Optional. Der Standardwert lautet "false". Gibt an, ob die Bezeichnung ausgeblendet ist. | 
+
 
 
 

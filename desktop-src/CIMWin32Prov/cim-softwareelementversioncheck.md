@@ -28,23 +28,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 135d0c2f6c98f3a8c9961ae2a1f2172feb0b8aea1cb3641442c270f5c4705bde
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2aaceef2e4c72d88e2fbafb40012bb3d7b9a7a2c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119919210"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882860"
 ---
 # <a name="cim_softwareelementversioncheck-class"></a>CIM \_ SoftwareElementVersionCheck-Klasse
 
-Die **CIM \_ SoftwareElementVersionCheck-Klasse** stellt einen Typ von Softwareelement dar, das in der Umgebung vorhanden sein muss. Diese Überprüfung kann für einen bestimmten, minimalen, maximalen oder einen Bereich von Versionen gelten. Um eine bestimmte Version anzugeben, müssen die untere und die obere Version identisch sein. Um eine Mindestversion anzugeben, geben Sie nur die niedrigere Version an. Um eine maximale Version anzugeben, geben Sie nur die obere Version an. Um einen Bereich anzugeben, müssen sowohl die obere als auch die niedrigere Version angegeben werden. Details der Überprüfungen werden mit den entsprechenden Details in einem [**CIM \_ SoftwareElement-Objekt**](cim-softwareelement.md) verglichen, auf das von einer [**CIM \_ InstalledSoftwareElement-Zuordnung**](cim-installedsoftwareelement.md) für das [**CIM \_ ComputerSystem-Objekt**](cim-computersystem.md) verwiesen wird. Mindestens ein **CIM \_ SoftwareElement** muss die Details der Bedingung erfüllen, damit die Überprüfung erfüllt ist.
+Die **CIM \_ SoftwareElementVersionCheck-Klasse** stellt einen Typ von Softwareelement dar, das in der Umgebung vorhanden sein muss. Diese Überprüfung kann für einen bestimmten, minimalen, maximalen oder einen Bereich von Versionen sein. Um eine bestimmte Version anzugeben, müssen die untere und die obere Version identisch sein. Um eine Mindestversion anzugeben, geben Sie nur die niedrigere Version an. Um eine maximale Version anzugeben, geben Sie nur die obere Version an. Um einen Bereich anzugeben, müssen sowohl die obere als auch die niedrigere Version angegeben werden. Details der Überprüfungen werden mit den entsprechenden Details verglichen, die in einem [**CIM \_ SoftwareElement-Objekt**](cim-softwareelement.md) gefunden werden, auf das durch eine [**CIM \_ InstalledSoftwareElement-Zuordnung**](cim-installedsoftwareelement.md) für das [**CIM \_ ComputerSystem-Objekt verwiesen**](cim-computersystem.md) wird. Mindestens ein **CIM \_ SoftwareElement** muss die Details der Bedingung erfüllen, damit die Überprüfung erfüllt ist.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force, verteilte Verwaltungsaufgabe) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ class CIM_SoftwareElementVersionCheck : CIM_Check
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SoftwareElementVersionCheck-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ SoftwareElementVersionCheck-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -82,7 +82,7 @@ Die **CIM \_ SoftwareElementVersionCheck-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                   | BESCHREIBUNG                                                   |
+| Methode                                                                   | Beschreibung                                                   |
 |:-------------------------------------------------------------------------|:--------------------------------------------------------------|
 | [**Invoke**](invoke-method-in-class-cim-softwareelementversioncheck.md) | Führt eine bestimmte Aktion aus. Nicht von WMI implementiert.<br/> |
 
@@ -99,7 +99,7 @@ Die **CIM \_ SoftwareElementVersionCheck-Klasse** verfügt über diese Eigenscha
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -110,25 +110,25 @@ Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 
 Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
 **CheckID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Bezeichner, der in Verbindung mit anderen Schlüsseln verwendet wird, um die Überprüfung eindeutig zu identifizieren.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
@@ -141,16 +141,16 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True gibt an, dass die Bedingung in der Umgebung vorhanden ist (wenn sich beispielsweise eine Datei auf einem System befindet, sollte die [**Invoke-Methode**](invoke-method-in-class-cim-softwareelementversioncheck.md) **TRUE** zurückgeben). False gibt an, dass die Bedingung nicht vorhanden sein sollte (wenn sich z. B. eine Datei nicht auf einem System befindet, sollte die **Invoke-Methode** **FALSE** zurückgeben).
+True **gibt** an, dass die Bedingung in der Umgebung vorhanden ist (wenn sich z. B. eine Datei auf einem System befindet, sollte die [**Invoke-Methode**](invoke-method-in-class-cim-softwareelementversioncheck.md) **TRUE zurückgeben).** False **gibt** an, dass die Bedingung nicht vorhanden sein sollte (wenn sich beispielsweise eine Datei nicht auf einem System befindet, sollte die **Invoke-Methode** **FALSE zurückgeben).**
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -158,14 +158,14 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
 **LowerSoftwareElementVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -174,50 +174,50 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**")
 </dt> </dl>
 
-Mindestversion eines Softwareelements, das überprüft wird.
+Mindestversion einer Softwareelemente, die überprüft wird.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name, der zum Identifizieren des Softwareelements verwendet wird.
+Name, der zum Identifizieren des Softwareelements verwendet wird.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Bezeichner für das Softwareelement.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> <dt>
 
 **SoftwareElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -226,7 +226,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**")
 </dt> </dl>
 
-Name des software-Elements, das überprüft wird.
+Name des Softwareelements, das überprüft wird.
 
 </dd> <dt>
 
@@ -239,23 +239,23 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Status eines Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 <dt>
 
 <span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>
 
-<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellbar** (0)
+<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellungsfähig** (0)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installationsfähigen Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installierbaren Zustand (d. h. dem nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
@@ -266,18 +266,18 @@ Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind,
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, sowie die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d. h. im nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>
 
-<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare Datei** (2)
+<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare** Datei (2)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im Ausführungszustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Ausführungszustand (d. h. im nächsten Zustand) zu erstellen.
 
 </dd> <dt>
 
@@ -306,18 +306,18 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**")
 </dt> </dl>
 
-Status des software-Elements, das überprüft wird.
+Status des softwareelements, das überprüft wird.
 
 <dt>
 
 <span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>
 
-<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellbar** (0)
+<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellungsfähig** (0)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installationsfähigen Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installierbaren Zustand (d. h. dem nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
@@ -328,18 +328,18 @@ Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind,
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, sowie die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d. h. im nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>
 
-<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare Datei** (2)
+<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare** Datei (2)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im Ausführungszustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Ausführungszustand (d. h. im nächsten Zustand) zu erstellen.
 
 </dd> <dt>
 
@@ -406,7 +406,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT-UNIX
+ATT UNIX
 
 </dd> <dt>
 
@@ -930,7 +930,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT-UNIX
+ATT UNIX
 
 </dd> <dt>
 
@@ -950,7 +950,7 @@ ATT-UNIX
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digitales Unix** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -962,7 +962,7 @@ ATT-UNIX
 
 </dt> <dd>
 
-Öffnen von VMS
+Öffnen von VMs
 
 </dd> <dt>
 
@@ -1184,7 +1184,7 @@ A-Serie
 
 </dt> <dd>
 
-Tandem NSK
+Verbund-NSK
 
 </dd> <dt>
 
@@ -1195,7 +1195,7 @@ Tandem NSK
 
 </dt> <dd>
 
-Tandem NT
+Nt-Verbund
 
 </dd> <dt>
 
@@ -1233,7 +1233,7 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
 
 
 </dt> <dd></dd> <dt>
@@ -1252,7 +1252,7 @@ BS2000/OSD
 
 </dt> <dd>
 
-BSD-UNIX
+BSD UNIX
 
 </dd> <dt>
 
@@ -1272,7 +1272,7 @@ BSD-UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU** Gnu(44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Gnud** (44)
 
 
 </dt> <dd></dd> <dt>
@@ -1311,7 +1311,7 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**OBC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**ESAC** (49)
 
 
 </dt> <dd></dd> <dt>
@@ -1385,7 +1385,7 @@ Handflächenbetriebssystem
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedizierend** (59)
 
 
 </dt> <dd></dd> <dt>
@@ -1431,17 +1431,17 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte in einer der folgenden Formen sein:
+Die Version des Vorgangs sollte eine der folgenden Formen haben:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; nebenversion &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; Revision von &gt; &lt; Nebenbuchstaben &gt; &lt;&gt;
 
-Diese Eigenschaft wird von der [**CIM \_ Check-Klasse geerbt.**](cim-check.md)
+Diese Eigenschaft wird von der [**CIM \_ Check-Klasse**](cim-check.md) geerbt.
 
 </dd> </dl>
 
@@ -1449,9 +1449,9 @@ Diese Eigenschaft wird von der [**CIM \_ Check-Klasse geerbt.**](cim-check.md)
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -1465,7 +1465,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

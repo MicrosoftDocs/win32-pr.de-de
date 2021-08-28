@@ -1,34 +1,34 @@
 ---
 title: Anwenden von Animationen
-description: In diesem Thema wird veranschaulicht, wie die Eigenschaften eines visuellen Elements mithilfe von Microsoft directcomposition animiert werden.
+description: In diesem Thema wird veranschaulicht, wie die Eigenschaften eines Visuals mithilfe von Microsoft DirectComposition animiert werden.
 ms.assetid: 932A3BCD-C290-47AE-80FB-94EE3E34837F
 keywords:
-- Animieren einer directcomposition-Visualisierung
-- Anwenden von directcomposition-Animationen
-- Anwenden von directcomposition-Animationen
+- Animieren eines DirectComposition-Visuals
+- Anwenden von DirectComposition-Animationen
+- Anwenden von DirectComposition-Animationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d83f01ba00e750b6a06aa13246ef1616635f415a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ecba1bde3c430acbb49f640dc7611452f0967746
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039373"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474226"
 ---
 # <a name="how-to-apply-animations"></a>Anwenden von Animationen
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
-In diesem Thema wird veranschaulicht, wie die Eigenschaften eines visuellen Elements mithilfe von Microsoft directcomposition animiert werden. Im Beispiel in diesem Thema wird die Effect-Eigenschaft eines visuellen Elements animiert, wodurch die Deckkraft des visuellen Elements über einen Zeitraum von zwei Sekunden von NULL (transparent) in eins geändert wird.
+In diesem Thema wird veranschaulicht, wie die Eigenschaften eines Visuals mithilfe von Microsoft DirectComposition animiert werden. Im Beispiel in diesem Thema wird die Effect-Eigenschaft eines Visuals animiert, sodass sich die Deckkraft des Visuals über einen Zeitraum von zwei Sekunden von 0 (transparent) in eins (vollständig deckend) ändert.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -38,16 +38,16 @@ In diesem Thema wird veranschaulicht, wie die Eigenschaften eines visuellen Elem
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von directcomposition-Objekten
+### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von DirectComposition-Objekten
 
-1.  Erstellen Sie das Geräte Objekt und das Kompositions Zielobjekt.
-2.  Erstellen Sie ein visuelles Element, legen Sie seinen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
+1.  Erstellen Sie das Geräteobjekt und das Kompositionszielobjekt.
+2.  Erstellen Sie ein Visual, legen Sie dessen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
 
-Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
-### <a name="step-2-create-an-animation-object"></a>Schritt 2: Erstellen eines Animations Objekts
+### <a name="step-2-create-an-animation-object"></a>Schritt 2: Erstellen eines Animationsobjekts
 
-Verwenden Sie die Methode " [**kreateanimation**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) ", um ein Animations Objekt zu erstellen.
+Verwenden Sie die [**CreateAnimation-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) um ein Animationsobjekt zu erstellen.
 
 
 ```C++
@@ -68,9 +68,9 @@ hr = m_pDevice->CreateAnimation(&m_pFadeInAnimation);
 
 
 
-### <a name="step-3-define-the-animation-function"></a>Schritt 3: Definieren der Animations Funktion
+### <a name="step-3-define-the-animation-function"></a>Schritt 3: Definieren der Animationsfunktion
 
-Verwenden Sie die Methoden des [**idcompositionanimation**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) -Objekts, um die Animations Funktion zu definieren. Im folgenden Code wird eine einfache Animations Funktion definiert. Wenn Sie auf eine Objekt Eigenschaft angewendet wird, ändert die Animations Funktion den Eigenschafts Wert inkrementell im Verlauf von 2 Sekunden von 0 auf 1.
+Verwenden Sie die Methoden des [**IDCompositionAnimation-Objekts,**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) um die Animationsfunktion zu definieren. Der folgende Code definiert eine einfache Animationsfunktion. Bei Anwendung auf eine Objekteigenschaft ändert die Animationsfunktion den Eigenschaftswert im Verlauf von 2 Sekunden inkrementell von 0 in 1.
 
 
 ```C++
@@ -80,9 +80,9 @@ m_pFadeInAnimation->End(2.0f, 1.0f);
 
 
 
-### <a name="step-4-apply-the-animation-object-to-a-visual-property-or-to-a-property-of-a-directcomposition-object"></a>Schritt 4: Anwenden des Animations Objekts auf eine visuelle Eigenschaft oder auf eine Eigenschaft eines directcomposition-Objekts
+### <a name="step-4-apply-the-animation-object-to-a-visual-property-or-to-a-property-of-a-directcomposition-object"></a>Schritt 4: Anwenden des Animationsobjekts auf eine visuelle Eigenschaft oder eine Eigenschaft eines DirectComposition-Objekts
 
-In Microsoft directcomposition kann jede Objekt Eigenschaft, die einen skalaren Wert annimmt, animiert werden, indem ein Animations Objekt als Eigenschafts Wert festgelegt wird. Im folgenden Beispiel wird ein Animations Objekt auf die Opacity-Eigenschaft eines Effekts-Gruppen Objekts angewendet. Anschließend wird das Effect-Gruppen Objekt auf die Effect-Eigenschaft eines visuellen Elements angewendet.
+In Microsoft DirectComposition kann jede Objekteigenschaft, die einen Skalarwert annimmt, durch Festlegen eines Animationsobjekts als Eigenschaftswert animiert werden. Im folgenden Beispiel wird ein Animationsobjekt auf die Opacity-Eigenschaft eines Effektgruppenobjekts angewendet. Anschließend wird das Effektgruppenobjekt auf die Effect-Eigenschaft eines Visuals angewendet.
 
 
 ```C++
@@ -96,48 +96,25 @@ hr = m_pDevice->CreateEffectGroup(&m_pEffectGroup);
 
 <span codelanguage="ManagedCPlusPlus"></span>
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><pre><code>if (SUCCEEDED(hr))
-{
-    hr = m_pEffectGroup->SetOpacity(m_pFadeInAnimation);
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+| C++ | 
+|-----|
+| <pre><code>if (SUCCEEDED(hr)){    hr = m_pEffectGroup-&gt;SetOpacity(m_pFadeInAnimation);}</code></pre> | 
+
 
 <span codelanguage="ManagedCPlusPlus"></span>
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>C++</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><pre><code>hr = m_pVisual->SetEffect(m_pEffectGroup);</code></pre></td>
-</tr>
-</tbody>
-</table>
+
+| C++ | 
+|-----|
+| <pre><code>hr = m_pVisual-&gt;SetEffect(m_pEffectGroup);</code></pre> | 
 
 
 
-### <a name="step-5-commit-the-composition"></a>Schritt 5: Commit der Komposition ausführen
 
-Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode auf, um das visuelle Element auf directcomposition zum Rendern im Zielfenster zu committen. Wenn das visuelle Element gerendert wird, bewirkt die Animation, dass die Deckkraft der Visualisierung über einen Zeitraum von zwei Sekunden von transparent in vollständig undurchsichtig wechselt.
+### <a name="step-5-commit-the-composition"></a>Schritt 5: Committen der Komposition
+
+Rufen Sie die [**IDCompositionDevice::Commit-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) auf, um das Visual zum Rendern im Zielfenster an DirectComposition zu committen. Wenn das Visual gerendert wird, bewirkt die Animation, dass sich die Deckkraft des Visuals über einen Zeitraum von zwei Sekunden von transparent in vollständig deckend ändert.
 
 
 ```C++
@@ -146,9 +123,9 @@ hr = m_pDevice->Commit();
 
 
 
-### <a name="step-6-free-the-directcomposition-objects"></a>Schritt 6: Freigeben der directcomposition-Objekte
+### <a name="step-6-free-the-directcomposition-objects"></a>Schritt 6: Freigeben der DirectComposition-Objekte
 
-Stellen Sie sicher, dass Sie das Animations Objekt freigeben, wenn Sie es nicht mehr benötigen.
+Stellen Sie sicher, dass Sie das Animationsobjekt freigeben, wenn Sie es nicht mehr benötigen.
 
 
 ```C++
@@ -157,7 +134,7 @@ SafeRelease(&m_pFadeInAnimation);
 
 
 
-Denken Sie auch daran, die anderen directcomposition-Objekte freizugeben, bevor die Anwendung beendet wird, einschließlich des Geräte Objekts, des Kompositions Zielobjekts und des visuellen Elements. Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Denken Sie auch daran, die anderen DirectComposition-Objekte freizustellen, bevor Die Anwendung beendet wird, einschließlich des Geräteobjekts, des Kompositionszielobjekts und des Visuals. Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -1011,6 +988,6 @@ HRESULT DemoApp::GetImageFilenames(TCHAR szDir[MAX_PATH])
 [Animation](animation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

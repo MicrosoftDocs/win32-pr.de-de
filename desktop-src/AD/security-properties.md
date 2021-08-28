@@ -8,12 +8,12 @@ keywords:
 - Benutzersicherheitsattribute AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5dfe23252002f2ffbbba3f8e8a8faf5a2d36ce348bdbd7503c0d99a816a81902
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: dbd5dfdbe84234f15b76ceb1799c69cdc0a5bafb
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119024888"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881221"
 ---
 # <a name="user-security-attributes"></a>Benutzersicherheitsattribute
 
@@ -33,7 +33,7 @@ Das [**accountExpires-Attribut**](/windows/desktop/ADSchema/a-accountexpires) gi
 
 Das [**altSecurityIdentities-Attribut**](/windows/desktop/ADSchema/a-altsecurityidentities) ist ein mehrwertiges Attribut, das Zuordnungen für X.509-Zertifikate oder externe Kerberos-Benutzerkonten zu diesem Benutzer für die Authentifizierung enthält. Verschiedene Sicherheitspakete, einschließlich des Authentifizierungspakets für öffentliche Schlüssel und Kerberos, verwenden diese Daten, um Benutzer zu authentifizieren, wenn sie die alternative Form der Identifizierung wie Zertifikat, UNIX Kerberos-Ticket und so weiter präsentieren. Erstellen Sie Windows 2000-Token basierend auf dem entsprechenden Benutzerkonto, damit sie auf Systemressourcen zugreifen können.
 
-Bei X.509-Zertifikaten sollten die Werte die Aussteller- und Betreffnamen in 509v3-Zertifikaten sein, die von einer externen öffentlichen Zertifizierungsstelle ausgestellt wurden und dem Benutzerkonto zugeordnet werden, das zum Suchen eines Kontos für die Authentifizierung verwendet wird. Das SSL-Paket (Schannel) verwendet die folgende Syntax: X509: <somecertinfotype> somecertinfo. Der folgende Wert gibt beispielsweise den Aussteller-DN " " mit dem \<I\> DN "C=US,O=InternetCA,CN=APublicCertificateAuthority" und dem Betreff DN " " mit dem \<S\> DN "C=US,O=Fabrikam,OU=Sales,CN=Jeff Smith" an.
+Bei X.509-Zertifikaten sollten die Werte die Aussteller- und Betreffnamen in 509v3-Zertifikaten sein, die von einer externen öffentlichen Zertifizierungsstelle ausgestellt wurden und dem Benutzerkonto zugeordnet werden, das zum Suchen eines Kontos für die Authentifizierung verwendet wird. Das SSL-Paket (Schannel) verwendet die folgende Syntax: X509: &lt; somecertinfotype &gt; somecertinfo. Der folgende Wert gibt beispielsweise den Aussteller-DN " " mit dem \<I\> DN "C=US,O=InternetCA,CN=APublicCertificateAuthority" und dem Betreff DN " " mit dem \<S\> DN "C=US,O=Fabrikam,OU=Sales,CN=Jeff Smith" an.
 
 
 ```C++
@@ -259,7 +259,7 @@ Die folgenden Flags sind in Lmaccess.h definiert.
 
 | Flag                     | Beschreibung                                                                                                                                                      |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_UF-SKRIPT               | Das ausgeführte Anmeldeskript. Dieser Wert muss für LAN Manager 2.0 oder Windows NT festgelegt werden.                                                                             |
+| \_UF-SKRIPT               | Das ausgeführte Anmeldeskript. Dieser Wert muss für LAN Manager 2.0 oder für Windows NT festgelegt werden.                                                                             |
 | UF \_ ACCOUNTDISABLE       | Das Benutzerkonto ist deaktiviert.                                                                                                                                    |
 | UF \_ HOMEDIR \_ ERFORDERLICH    | Das Startverzeichnis ist erforderlich. Dieser Wert wird in den Windows NT und Windows 2000 ignoriert.                                                                            |
 | UF \_ PASSWD \_ NOTREQD      | Es ist kein Kennwort erforderlich.                                                                                                                                         |
@@ -279,7 +279,7 @@ Die folgenden Flags beschreiben den Kontotyp. Es kann nur ein Wert festgelegt we
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | NORMALES \_ \_ UF-KONTO             | Dies ist ein Standardkontotyp, der einen typischen Benutzer darstellt.                                                                                                                                                                                  |
 | TEMPORÄRES \_ DOPPELTES \_ UF-KONTO \_    | Dies ist ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto bietet Benutzerzugriff auf diese Domäne, aber nicht auf eine Domäne, die dieser Domäne vertraut. Der Benutzer-Manager bezieht sich auf diesen Kontotyp als lokales Benutzerkonto. |
-| UF \_ WORKSTATION \_ TRUST \_ ACCOUNT | Dies ist ein Computerkonto für eine Windows NT-Arbeitsstation/Windows 2000 Professional oder einen Windows NT Server/Windows 2000-Server, der Mitglied dieser Domäne ist.                                                                                     |
+| UF \_ WORKSTATION \_ TRUST \_ ACCOUNT | Dies ist ein Computerkonto für Windows NT Workstation/Windows 2000 Professional oder Windows NT Server/Windows 2000 Server, das Mitglied dieser Domäne ist.                                                                                     |
 | UF \_ SERVER \_ TRUST \_ ACCOUNT      | Dies ist ein Computerkonto für einen Windows NT Backup-Domänencontroller, der Mitglied dieser Domäne ist.                                                                                                                                           |
 | UF \_ INTERDOMAIN \_ TRUST \_ ACCOUNT | Dies ist eine Genehmigung zum Vertrauenswürdigkeitskonto für eine Windows NT-Domäne, die anderen Domänen vertraut.                                                                                                                                                            |
 

@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6f785c8fafadf62a874d6be1d4c3ab2092f9cdaf8b49cc40f826b42fb69ce3b1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: c55c2e6f5ef304b031565148359bf96adeea248d
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118283235"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631378"
 ---
 # <a name="span-idvspixengineiobjecttablecallback_getsupportedcolumns_dword_objecttablecolumnid_arr_bstr_arrspaniobjecttablecallbackgetsupportedcolumns-method"></a><span id="vspixengine.iobjecttablecallback_getsupportedcolumns_dword_objecttablecolumnid_arr_bstr_arr"></span>IObjectTableCallback::GetSupportedColumns-Methode
 
@@ -42,7 +42,7 @@ HRESULT GetSupportedColumns(
 ## <a name="parameters"></a>Parameter
 
 *numColumns*   
-Die Anzahl von Spalten, die von der Objekttabelle unterstützt werden.
+Die Anzahl der spalten, die von der Objekttabelle unterstützt werden.
 
 *count0_pIDs*   
 Die IDs der einzelnen Spalten, die von der Objekttabelle unterstützt werden.
@@ -52,11 +52,11 @@ Die Namen der einzelnen Spalten als COM-Zeichenfolge, die von der Objekttabelle 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S_OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

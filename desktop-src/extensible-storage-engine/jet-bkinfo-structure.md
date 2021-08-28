@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 477c84ee0b466fb43ee0bb06ef14a2a1be6dd00e
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: e859d34a610ddcff0431b7395d11c72b01fb8bb7
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122472186"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985283"
 ---
 # <a name="jet_bkinfo-structure"></a>JET_BKINFO-Struktur
 
@@ -67,14 +67,18 @@ Die niedrige Protokollgenerierungsnummer, die diesem Sicherungsereignis zugeordn
 
 Die hohe Protokollgenerierungsnummer, die diesem Sicherungsereignis zugeordnet ist.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Diese Struktur wird innerhalb der [JET_DBINFOMISC](./jet-dbinfomisc-structure.md) Struktur verwendet, um Daten über das Datenbanksicherungsereignis darzustellen.
+Diese Struktur wird innerhalb der [JET_DBINFOMISC-Struktur](./jet-dbinfomisc-structure.md) verwendet, um Daten zum Datenbanksicherungsereignis darzustellen.
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
 
 
 

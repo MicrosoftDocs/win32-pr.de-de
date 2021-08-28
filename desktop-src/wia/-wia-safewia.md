@@ -1,7 +1,7 @@
 ---
-description: Das safewia-Objekt ist ein &\# 0034; Safe for Scripting&\# 0034; der Einstiegspunkt für alle Funktionen zur WIA-Skripterstellung (Windows Image Acquisition).
+description: Das SafeWia-Objekt ist ein &\# 0034;sicher für die Skripterstellung&\# 0034; Einstiegspunkt für alle WIA-Skriptfunktionen (Windows Image Acquisition).
 ms.assetid: 6b10bb8e-8500-4f2c-ae18-5db78ef75f74
-title: Safewia-Objekt
+title: SafeWia-Objekt
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,33 +13,33 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 1f227180b7420f5c70ef64d7d1d3feb0f13ae164
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef324934abee38e2581b6e05c0fdac92145e4f43
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345075"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473846"
 ---
-# <a name="safewia-object"></a>Safewia-Objekt
+# <a name="safewia-object"></a>SafeWia-Objekt
 
-Das **safewia** -Objekt ist der Einstiegspunkt "sicher für Skripting" für alle Skriptfunktionen für die Windows-Abbild Erfassung (WIA). Jede Anwendung, die das WIA-Skript Modell verwendet, muss ein **safewia** -oder [**WIA**](-wia-wia.md) -Objekt erstellen. Verwenden Sie dieses Objekt zum Auflisten und Erstellen von Geräten sowie zum Empfangen von Benachrichtigungen über Hardware Ereignisse.
+Das **SafeWia-Objekt** ist ein "sicherer Einstiegspunkt für die Skripterstellung" für alle WIA-Skriptfunktionen (Windows Image Acquisition). Jede Anwendung, die das WIA-Skriptmodell verwendet, muss ein **SafeWia-** oder [**Wia-Objekt**](-wia-wia.md) erstellen. Verwenden Sie dieses Objekt, um Geräte aufzuzählen und zu erstellen und Benachrichtigungen über Hardwareereignisse zu empfangen.
 
 ## <a name="members"></a>Member
 
-Das **safewia** -Objekt verfügt über diese Typen von Membern:
+Das **SafeWia-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **safewia** -Objekt verfügt über diese Methoden.
+Das **SafeWia-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                             | BESCHREIBUNG                                                                                                                                                                                                                |
 |:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stelle**](-wia-iwia-create.md) | Die [**Create**](-wia-iwia-create.md) -Methode des [**WIA**](-wia-wia.md) -Objekts stellt eine Verbindung mit dem angegebenen WIA-Gerät her und gibt ein [**Element**](-wia-item.md) Objekt zurück, das das Gerät darstellt.<br/> |
+| [**Erstellen**](-wia-iwia-create.md) | Die [**Create-Methode**](-wia-iwia-create.md) des [**Wia-Objekts**](-wia-wia.md) stellt eine Verbindung mit dem angegebenen WIA-Gerät her und gibt ein [**Item-Objekt**](-wia-item.md) zurück, das das Gerät darstellt.<br/> |
 
 
 
@@ -47,36 +47,15 @@ Das **safewia** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **safewia** -Objekt verfügt über diese Eigenschaften.
+Das **SafeWia-Objekt** verfügt über diese Eigenschaften.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Eigenschaft</th>
-<th style="text-align: left;">Zugriffstyp</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="-wia-iwia-devices.md"><strong>Geräte</strong></a><br/></td>
-<td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Sammlung von " <a href="-wia-deviceinfo.md"><strong>de viceinfo</strong></a> "-Objekten, die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt. <br/>
-<blockquote>
-[!Note]<br />
-Diese Auflistung ist 0-basiert.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Eigenschaft | Zugriffstyp | BESCHREIBUNG | 
+|----------|-------------|-------------|
+| <a href="-wia-iwia-devices.md"><strong>Geräte</strong></a><br /> | Schreibgeschützt<br /> | Sammlung von <a href="-wia-deviceinfo.md"><strong>DeviceInfo-Objekten,</strong></a> die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt. <br /><blockquote>[!Note]<br />Diese Auflistung basiert auf 0.</blockquote><br /> | 
+
 
 
 
@@ -88,18 +67,18 @@ Diese Auflistung ist 0-basiert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
-| IID<br/>                      | CLSID \_ safewia<br/>                                                                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
+| IID<br/>                      | CLSID \_ SafeWia<br/>                                                                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WIA**](-wia-wia.md)
+[**Wia**](-wia-wia.md)
 </dt> </dl>
 
  

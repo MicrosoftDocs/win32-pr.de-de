@@ -7,12 +7,12 @@ MSHAttr:
 title: CellularClass
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c442208c40dcfa42a7c603bc20fda94422794ef
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 850635853a3545fc82707acb48914ca190cefe7c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/26/2021
-ms.locfileid: "122988843"
+ms.locfileid: "122883947"
 ---
 # <a name="span-idwwan_profile_v4element_cellularclassspancellularclass"></a><span id="WWAN_profile_v4.element_CellularClass"></span>CellularClass
 
@@ -47,19 +47,17 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | BESCHREIBUNG | 
+| Übergeordnetes Element | Beschreibung | 
 |----------------|-------------|
 | <a href="element-profileconditionedon.md">ProfileConditionedOn</a> | <p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p><p>Dieses Element ist neu für v4. Sie ermöglicht es Ihnen, mehrere Profile anzugeben, die unter verschiedenen Bedingungen gelten, und damit das richtige Profil automatisch verwendet wird, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie sie nicht angeben, gilt das Profil immer in Bezug auf die aufgeführten Bedingungen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

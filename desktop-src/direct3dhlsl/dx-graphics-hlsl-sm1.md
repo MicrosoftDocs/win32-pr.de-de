@@ -1,6 +1,6 @@
 ---
-title: Shader-Modell 1
-description: Shadermodell 1 war das erste Shader-Modell, das in DirectX erstellt wurde. Es wurden Vertex-und Pixel-Shader in die erste Implementierung der programmierbaren Pipeline eingeführt.
+title: Shadermodell 1
+description: ShaderModell 1 war das erste Shadermodell, das in DirectX erstellt wurde. Es wurden Scheitelpunkt- und Pixel-Shader in die erste Implementierung der programmierbaren Pipeline eingeführt.
 ms.assetid: 565ee7b5-1266-4e2f-8c22-c0e60b8c4619
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,58 +9,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4ebbc28c1c10ef112bf7be3b500be7f4ecaa6481
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: 09d318e23782b28740ee811c10544de104987d49
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104039759"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986023"
 ---
-# <a name="shader-model-1"></a>Shader-Modell 1
+# <a name="shader-model-1"></a>Shadermodell 1
 
-Shadermodell 1 war das erste Shader-Modell, das in DirectX erstellt wurde. Es wurden Vertex-und Pixel-Shader in die erste Implementierung der programmierbaren Pipeline eingeführt.
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Feature</td>
-<td>Funktion</td>
-</tr>
-<tr class="even">
-<td>Instruktionssatz</td>
-<td><ul>
-<li><a href="dx-graphics-hlsl-intrinsic-functions.md"><strong>HLSL-Funktionen</strong></a></li>
-<li>Anweisungen zur Vertex-shaderassembly (siehe <a href="dx9-graphics-reference-asm-vs-instructions-vs-1-1.md">instructions-vs_1_1</a>). Die Unterstützung für Pixel-Shader-Anweisungen (ps_1_x) ist veraltet. Informationen zum Kompilieren von ps_1_x Shadern als PS_2_0 Shader finden Sie unter <a href="/windows/desktop/direct3dtools/dx-graphics-tools-fxc-using">Kompilieren von Shadermodell 1</a>.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Register Satz</td>
-<td><ul>
-<li><a href="dx9-graphics-reference-asm-vs-registers-vs-1-1.md">Vertex-Shader-Register</a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Vertex-Shader Max</td>
-<td>128-Anweisungen</td>
-</tr>
-<tr class="odd">
-<td>Shaderprofile</td>
-<td>vs_1_1</td>
-</tr>
-</tbody>
-</table>
+ShaderModell 1 war das erste Shadermodell, das in DirectX erstellt wurde. Es wurden Scheitelpunkt- und Pixel-Shader in die erste Implementierung der programmierbaren Pipeline eingeführt.
 
 
 
- 
 
-Weitere Informationen zum Shader-Modell 1 finden Sie unter:
+
+|--------|-------| | Feature-| Funktions-| | Anweisungssatz-| <ul><li><a href="dx-graphics-hlsl-intrinsic-functions.md"><strong>HLSL-Funktionen</strong></a></li><li>Anweisungen zur Vertex-Shader-Assembly (siehe <a href="dx9-graphics-reference-asm-vs-instructions-vs-1-1.md">Anweisungen – vs_1_1</a>). Die Unterstützung für Anweisungen für Pixel-Shader (ps_1_x) ist veraltet. Informationen zum Kompilieren ps_1_x Shader als ps_2_0 Shader finden Sie unter <a href="/windows/desktop/direct3dtools/dx-graphics-tools-fxc-using">Kompilieren des Shadermodells 1.</a></li></ul> | | Register Set | <ul><li><a href="dx9-graphics-reference-asm-vs-registers-vs-1-1.md">Vertex-Shaderregister</a></li></ul> | | Vertex-Shader max | 128 Anweisungen | | Shaderprofile | vs_1_1 | 
+
+
+
+
+ 
+
+Weitere Informationen zu Shadermodell 1 finden Sie unter:
 
 -   [Vertex-Shader](dx9-graphics-reference-asm-vs-1-1.md)
 
@@ -68,9 +39,9 @@ Weitere Informationen zum Shader-Modell 1 finden Sie unter:
 
 <dl> <dt>
 
-[Shader-Modelle vs shaderprofile](dx-graphics-hlsl-models.md)
+[Shadermodelle im Vergleich zu Shaderprofilen](dx-graphics-hlsl-models.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

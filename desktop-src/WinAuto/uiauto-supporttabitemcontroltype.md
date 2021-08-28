@@ -1,160 +1,129 @@
 ---
-title: TabItem-Steuer Elementtyp
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den TabItem-Steuer Elementtyp.
+title: TabItem-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den TabItem-Steuerelementtyp.
 ms.assetid: 97b8c043-1ac5-4e14-be80-8687300a10a2
 keywords:
-- Benutzeroberflächen Automatisierung, Unterstützung für TabItem-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, TabItem-Steuer Elementtyp
-- UI-Automatisierung, Baumstruktur für TabItem-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den TabItem-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für TabItem-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Ereignisse für TabItem-Steuer Elementtyp
-- Baumstrukturen, TabItem-Steuer Elementtyp
-- Eigenschaften, TabItem-Steuer Elementtyp
-- Steuerelement Muster, TabItem-Steuer Elementtyp
-- Ereignisse, TabItem-Steuer Elementtyp
-- Unterstützung für den TabItem-Steuer Elementtyp
-- TabItem-Steuer Elementtyp
-- Steuerelement Typen, Baumstruktur für TabItem-Steuer Elementtyp
-- Steuerelement Typen, Steuerelement Muster für den TabItem-Steuer Elementtyp
-- Steuerelement Typen, Unterstützung für TabItem
-- Steuerelement Typen, TabItem
+- Benutzeroberflächenautomatisierung,Unterstützung für den TabItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,TabItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für tabitem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den TabItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den TabItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für den TabItem-Steuerelementtyp
+- Strukturstrukturen, TabItem-Steuerelementtyp
+- Properties, TabItem-Steuerelementtyp
+- Steuerelementmuster, TabItem-Steuerelementtyp
+- Events, TabItem-Steuerelementtyp
+- Unterstützung für den TabItem-Steuerelementtyp
+- TabItem-Steuerelementtyp
+- Steuerelementtypen, Struktur für TabItem-Steuerelementtyp
+- Steuerelementtypen, Steuerelementmuster für den TabItem-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für TabItem
+- Steuerelementtypen, TabItem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1e8f9f900240318de8629048f242cd755994c78
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f82b96f5ae64b4cb22d650d6d349f18cb68619d5
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207192"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469107"
 ---
-# <a name="tabitem-control-type"></a>TabItem-Steuer Elementtyp
+# <a name="tabitem-control-type"></a>TabItem-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **TabItem** -Steuer Elementtyp.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **TabItem-Steuerelementtyp.**
 
 Ein Registerkartenelement-Steuerelement (TabItem) wird in einem Registerkarten-Steuerelement (Tab) als das Steuerelement verwendet, über das eine bestimmte Seite ausgewählt wird, die in einem Fenster angezeigt werden soll.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **TabItem** -Steuer Elementtyp definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Registerkarten Element-Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Unterstützung der Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **TabItem-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung Anforderungen gelten für alle Steuerelemente für Registerkartenelemente, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Struktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Struktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Registerkarten Element-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>TabItem
-<ul>
-<li>Bild (0 oder 1)</li>
-<li>Text</li>
-<li>Bereich
-<ul>
-<li>Verschiedene Steuerelemente (0 oder mehr)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>TabItem
-<ul>
-<li>Bereich
-<ul>
-<li>Verschiedene Steuerelemente (0 oder mehr)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Steuerelemente für Registerkartenelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
- 
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>TabItem<ul><li>Bild (0 oder 1)</li><li>Text</li><li>Bereich<ul><li>Verschiedene Steuerelemente (0 oder mehr)</li></ul></li></ul></li></ul> | <ul><li>TabItem<ul><li>Bereich<ul><li>Verschiedene Steuerelemente (0 oder mehr)</li></ul></li></ul></li></ul> | 
+
+
+
+
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für den **TabItem** -Steuer Elementtyp besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für den **TabItem-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert       | Notizen                                                                                                                                       |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert       | Hinweise                                                                                                                                       |
 |---------------------------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.  | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.  | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                    |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.  | Das Registerkartenelement-Steuerelement muss einen klickbaren Punkt haben, über den veranlasst wird, dass das Element ausgewählt ist.                                                   |
-| [**UIA \_ controllerforpropertyid**](uiauto-automation-element-propids.md)               | Siehe Hinweise.  | Diese Eigenschaft kann als Zeiger auf den zugeordneten Registerkartenbereich verwendet werden. Dies ist nützlich, wenn der Bereich keinen Bereich als untergeordnetes Element des Registerkartenelement-Objekts hosten kann. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **TabItem** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                               |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE        | Das Registerkarten Element-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                      |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE        | Das Registerkarten Element-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                      |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                   |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Null        | Das Registerkartenelement-Steuerelement hat keine statische Beschriftung.                                                                                     |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.  | Lokalisierte Zeichenfolge für den Steuer Elementtyp " **TabItem** ". Der Standardwert ist "Registerkarten Element" für en-US oder Englisch (USA).       |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.  | Das Registerkarten Element-Steuerelement ist selbst beschriftet.                                                                                                          |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.  | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.  | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                    |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.  | Das Registerkartenelement-Steuerelement muss einen klickbaren Punkt haben, über den veranlasst wird, dass das Element ausgewählt ist.                                                   |
+| [**UIA \_ ControllerForPropertyId**](uiauto-automation-element-propids.md)               | Siehe Hinweise.  | Diese Eigenschaft kann als Zeiger auf den zugeordneten Registerkartenbereich verwendet werden. Dies ist nützlich, wenn der Bereich keinen Bereich als untergeordnetes Element des Registerkartenelement-Objekts hosten kann. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **TabItem** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                               |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE        | Das Registerkartenelement-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                      |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE        | Das Registerkartenelement-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                      |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                   |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Null        | Das Registerkartenelement-Steuerelement hat keine statische Beschriftung.                                                                                     |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.  | Lokalisierte Zeichenfolge, die dem **TabItem-Steuerelementtyp entspricht.** Der Standardwert ist "Tabstoppelement" für en-US oder Englisch (USA).       |
+| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.  | Das Selbstbeschriftungssteuerelement des Registerkartenelements.                                                                                                          |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von allen Registerkarten-Steuerelementen unterstützt werden Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die von allen Registerkartenelement-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                                                 | Support  | Notizen                                                                                                                    |
 |-----------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------|
-| [**ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider) | Erforderlich | Das Registerkarten Element-Steuerelement muss [**iuiautomationselectionitempattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationselectionitempattern)unterstützen. |
-| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)               | Nie    | Das Registerkarten Element-Steuerelement unterstützt niemals [**iuiautomationinvokepattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationinvokepattern).             |
+| [**ISelectionItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionitemprovider) | Erforderlich | Das Registerkartenelement-Steuerelement muss [**IUIAutomationSelectionItemPattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationselectionitempattern)unterstützen. |
+| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)               | Nie    | Das Registerkartenelement-Steuerelement unterstützt [**IUIAutomationInvokePattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationinvokepattern)nie.             |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die Registerkarten Element-Steuerelemente zur Unterstützung Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die von Registerkartenelement-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                     | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                     | Hinweise                                                                                                                      |
 |-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                        |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.   |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                   | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.               | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ SelectionItem \_ elementremovedfromselectioneventid**](uiauto-event-ids.md) |                                                                                                                            |
-| [**UIA \_ SelectionItem \_ elementselectedebug**](uiauto-event-ids.md)                         |                                                                                                                            |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                    |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                        |                                                                                                                            |
+| [**UIA \_ Das BoundingRectanglePropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)   |                                                                                                                            |
+| [**UIA \_ Das IsEnabledPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                   | Wenn das Steuerelement die [**IsEnabled-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)               | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen. |
+| [**UIA \_ \_ SelectionItem-ElementRemovedFromSelectionEventId**](uiauto-event-ids.md) |                                                                                                                            |
+| [**UIA \_ \_ SelectionItem-ElementSelectedEventId**](uiauto-event-ids.md)                         |                                                                                                                            |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                    |                                                                                                                            |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -163,9 +132,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

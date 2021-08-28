@@ -7,12 +7,12 @@ MSHAttr:
 title: IwlanApplicability
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86419075e3ad39411efc5534a9dfb5b016a88317
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: a7dca01d0f37d3c2643864e23d6dd34b9e9bf817
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122982763"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473956"
 ---
 # <a name="span-idwwan_profile_v4element_iwlanapplicabilityspaniwlanapplicability"></a><span id="WWAN_profile_v4.element_IwlanApplicability"></span>IwlanApplicability
 
@@ -20,9 +20,9 @@ Gibt an, dass dieses Profil nur aktiv ist, wenn es mit einem IWLAN-Netzwerk verb
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
-[&lt;ProfileConditionedOn&gt;](element-profileconditionedon.md)  
-**&lt;IwlanApplicability&gt;**
+[<MBNProfileExt>](element-mbnprofileext.md)  
+[<ProfileConditionedOn>](element-profileconditionedon.md)  
+**<IwlanApplicability>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,7 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

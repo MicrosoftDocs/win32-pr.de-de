@@ -4,12 +4,12 @@ ms.assetid: 0eaa4348-968e-4b45-9509-8b15476edaa1
 title: ResolveMatches-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42f2604859d39530377883179ec104dd078e9b6f
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 140d279a5e66835b7754e3f501732263dff430f2
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122627756"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883632"
 ---
 # <a name="resolvematches-message"></a>ResolveMatches-Nachricht
 
@@ -90,16 +90,16 @@ Eine ResolveMatches-Nachricht weist die folgenden Fokuspunkte auf.
 <tbody>
 <tr class="odd">
 <td>ResolveMatches</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:Action>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:Action&gt;
     https://schemas.xmlsoap.org/ws/2005/04/discovery/ResolveMatches
-</wsa:Action></code></pre></td>
+&lt;/wsa:Action&gt;</code></pre></td>
 <td>Die SOAP-Aktion ResolveMatches identifiziert die Nachricht als ResolveMatches-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>RelatesTo</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:RelatesTo>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:RelatesTo&gt;
     urn:uuid:38d1c3d9-8d73-4424-8861-6b7ee2af24d3
-</wsa:RelatesTo></code></pre></td>
+&lt;/wsa:RelatesTo&gt;</code></pre></td>
 <td>Der Bezeichner der Nachricht, auf die der Dienst antwortet. Dieser Header entspricht der MessageId in der <a href="resolve-message.md">Resolve-Nachricht.</a></td>
 </tr>
 <tr class="odd">
@@ -107,21 +107,21 @@ Eine ResolveMatches-Nachricht weist die folgenden Fokuspunkte auf.
 <td><pre class="syntax" data-space="preserve"><code><wsd:AppSequence InstanceId=&quot;1&quot;
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;6&quot;>
-</wsd:AppSequence></code></pre></td>
+&lt;/wsd:AppSequence&gt;</code></pre></td>
 <td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann beibehalten werden kann, wenn sie nicht in der angegebenen Reihenfolge empfangen werden. Die AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln)</a>beschrieben überprüft.</td>
 </tr>
 <tr class="even">
 <td>Adresse</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:Address>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:Address&gt;
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
-</wsa:Address></code></pre></td>
+&lt;/wsa:Address&gt;</code></pre></td>
 <td>Enthält die Adresse des Endpunkts, der aufgelöst wird.</td>
 </tr>
 <tr class="odd">
 <td>XAddrs</td>
-<td><pre class="syntax" data-space="preserve"><code><wsd:XAddrs>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsd:XAddrs&gt;
     https://192.168.0.2:5357/37f86d35-e6ac-4241-964f-1d9ae46fb366
-</wsd:XAddrs></code></pre></td>
+&lt;/wsd:XAddrs&gt;</code></pre></td>
 <td>XAddrs sind Transportadressen, die für die Kommunikation zwischen Client und Dienst verwendet werden können. Addr werden wie unter <a href="xaddr-validation-rules.md">XAddr-Validierungsregeln</a>beschrieben überprüft.</td>
 </tr>
 </tbody>
