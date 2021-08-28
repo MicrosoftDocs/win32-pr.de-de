@@ -1,9 +1,9 @@
 ---
-title: EN_HSCROLL Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer auf die horizontale Schiebe Leiste eines Bearbeitungs Steuer Elements klickt. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine WM- \_ Befehls Meldung. Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
+title: EN_HSCROLL Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer auf die horizontale Scrollleiste eines Bearbeitungssteuerelements klickt. Das übergeordnete Fenster des Bearbeitungssteuerelements empfängt diesen Benachrichtigungscode über eine WM \_ COMMAND-Meldung. Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
 ms.assetid: beaaa80c-4108-4a8e-aed8-04c9a3a08f3e
 keywords:
-- Windows-Steuerelemente für EN_HSCROLL Benachrichtigungs
+- EN_HSCROLL Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d6f90f6e781409419e39390e64251506b4cc915a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b4e5b0f42d08977f7a1be68a5010aa7403b10fc2e5a126aa542bb25a644a7b70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436770"
 ---
-# <a name="en_hscroll-notification-code"></a>EN \_ HScroll-Benachrichtigungs Code
+# <a name="en_hscroll-notification-code"></a>EN \_ HSCROLL-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer auf die horizontale Schiebe Leiste eines Bearbeitungs Steuer Elements klickt. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung. Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
+Wird gesendet, wenn der Benutzer auf die horizontale Scrollleiste eines Bearbeitungssteuerelements klickt. Das übergeordnete Fenster des Bearbeitungssteuerelements empfängt diesen Benachrichtigungscode über eine [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command) Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
 
 
 ```C++
@@ -42,22 +42,22 @@ EN_HSCROLL
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungs Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungssteuerelements. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement.
+Ein Handle für das Bearbeitungssteuerelement.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungs Code wird für die folgenden Mausereignisse auf der horizontalen Schiebe Leiste gesendet: Klicken Sie auf die Pfeil Schaltfläche, oder klicken Sie auf die Pfeil Schaltfläche und den Ziehpunkt. Der Benachrichtigungs Code wird jedoch nicht gesendet, wenn Sie auf den Ziehpunkt der Bild Lauf Leiste selbst klicken. Der Benachrichtigungs Code wird auch gesendet, wenn ein Tastaturereignis eine Änderung im Ansichts Bereich des Bearbeitungs Steuer Elements bewirkt, z. b. durch Drücken von Start, Ende, Pfeil nach links oder nach rechts.
+Dieser Benachrichtigungscode wird für die folgenden Mausereignisse auf der horizontalen Bildlaufleiste gesendet: Klicken sie entweder auf die Pfeilschaltfläche oder zwischen der Pfeilschaltfläche und dem Daumen. Der Benachrichtigungscode wird jedoch nicht gesendet, wenn Sie auf den Schiebeleistenfinger selbst klicken. Der Benachrichtigungscode wird auch gesendet, wenn ein Tastaturereignis eine Änderung im Ansichtsbereich des Bearbeitungssteuerelements verursacht, z. B. durch Drücken von HOME, END, LEFT ARROW oder RIGHT ARROW.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Geben Sie zum Empfangen von **en \_ HScroll** -Benachrichtigungs Codes [**ENM- \_ Scroll**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der Nachricht [**EM \_**](em-seteventmask.md) -Abmeldung gesendet wird. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Um **EN \_ HSCROLL-Benachrichtigungscodes** zu empfangen, geben Sie [**ENM \_ SCROLL**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht**](em-seteventmask.md) gesendet wird. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,26 +65,26 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[EN \_ VScroll](en-vscroll.md)
+[EN \_ VSCROLL](en-vscroll.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

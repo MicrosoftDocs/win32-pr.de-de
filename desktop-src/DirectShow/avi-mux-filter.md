@@ -4,12 +4,12 @@ ms.assetid: 31d30c91-fc6a-45ec-a2e0-34e6a1e902a4
 title: AVI Mux-Filter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f923ed944781bbaa36179b02db9022f38fc98ff6
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: d3250746a65aaaf075c28700c3531bf97b1faf23
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122478636"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986263"
 ---
 # <a name="avi-mux-filter"></a>AVI Mux-Filter
 
@@ -20,14 +20,25 @@ Videoerfassungs- oder -erstellungsanwendungen können diesen Filter verwenden, u
 
 
 
-| | | Filterschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iconfigavimux"><strong>IConfigAviMux</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iconfiginterleaving"><strong>IConfigInterleaving</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipersistmediapropertybag"><strong>IPersistMediaPropertyBag</strong></a>, ISpecifyPropertyPages | | Eingabepin-Medientypen | Jeder Haupttyp, der einem FOURCC-Format im alten Stil entspricht, oder MEDIATYPE_AUXLine21Data. (Weitere Informationen finden Sie unter <a href="fourccmap.md"><strong>FOURCCMap-Klasse</strong></a>.)<ul><li>Wenn der Haupttyp MEDIATYPE_Audio ist, muss das Format FORMAT_WaveFormatEx.</li><li>Wenn der Haupttyp MEDIATYPE_Video ist, muss das Format FORMAT_VideoInfo oder FORMAT_DvInfo.</li><li>Wenn der Haupttyp MEDIATYPE_Interleaved ist, muss das Format FORMAT_DvInfo.</li></ul> | | Eingabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol"><strong>IAMStreamControl</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, IPropertyBag, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl | |</strong></a> Ausgabepin-Medientypen | MEDIATYPE_Stream, MEDIASUBTYPE_Avi | | Ausgabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a> | | Filtern von CLSID-| CLSID_AviDest | | CLSID-Eigenschaftsseite | CLSID_AviMuxProptyPage, CLSID_AviMuxProptyPage1 | | Ausführbare | qcap.dll | | <a href="merit.md">Leistungs-|</a> MERIT_DO_NOT_USE | | <a href="filter-categories.md">Filterkategorie-|</a> CLSID_LegacyAmFilterCategory | 
+| Bezeichnung | Wert |
+|--------|-------|
+| Filterschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iconfigavimux"><strong>IConfigAviMux</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iconfiginterleaving"><strong>IConfigInterleaving</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipersistmediapropertybag"><strong>IPersistMediaPropertyBag</strong></a>, ISpecifyPropertyPages | 
+| Eingabepin-Medientypen | Alle Haupttypen, die einem FOURCC-Format im alten Stil entsprechen, oder MEDIATYPE_AUXLine21Data. (Weitere Informationen finden Sie unter <a href="fourccmap.md"><strong>FOURCCMap-Klasse</strong></a>.)<ul><li>Wenn der Haupttyp MEDIATYPE_Audio ist, muss das Format FORMAT_WaveFormatEx.</li><li>Wenn der Haupttyp MEDIATYPE_Video ist, muss das Format FORMAT_VideoInfo oder FORMAT_DvInfo.</li><li>Wenn der Haupttyp MEDIATYPE_Interleaved ist, muss das Format FORMAT_DvInfo.</li></ul> | 
+| Eingabepinschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-iamstreamcontrol"><strong>IAMStreamControl</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, IPropertyBag, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a> | 
+| Ausgabepin-Medientypen | MEDIATYPE_Stream, MEDIASUBTYPE_Avi | 
+| Ausgabe-PIN-Schnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"> <strong>IQualityControl</strong></a> | 
+| Filtern der CLSID | CLSID_AviDest | 
+| Eigenschaftenseite CLSID | CLSID_AviMuxProptyPage, CLSID_AviMuxProptyPage1 | 
+| Ausführbare Datei | qcap.dll | 
+| <a href="merit.md">Verdienst</a> | MERIT_DO_NOT_USE | 
+| <a href="filter-categories.md">Filterkategorie</a> | CLSID_LegacyAmFilterCategory | 
 
 
 
 
  
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 In den folgenden Anmerkungen werden verschiedene Aspekte der Funktionalität des AVI Mux-Filters beschrieben.
 

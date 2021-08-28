@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: ColumnInfo.Name-Eigenschaft'
+description: 'Weitere Informationen zu: ColumnInfo.Name-Eigenschaft'
 title: ColumnInfo.Name-Eigenschaft
 TOCTitle: 'Name property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnInfo.Name
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 68572d1bf14e079c79ccee109c714fe2fcfbb053
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 77f6abfddf0a16611033fd9396909e6f2e94f1ca0c6744bba1bb354eb24872f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066960"
 ---
 # <a name="columninfoname-property"></a>ColumnInfo.Name-Eigenschaft
 
 Ruft den Namen der Spalte ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public string Name { get; private set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnInfo-Klasse](./columninfo-class.md)
 
-[ColumnInfo-Member](./columninfo-members.md)
+[ColumnInfo-Elemente](./columninfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

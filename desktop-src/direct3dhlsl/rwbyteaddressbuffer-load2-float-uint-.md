@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: Load2 (uint, uint)-Funktion'
+title: RWByteAddressBuffer::Load2(uint,uint)-Funktion
 description: Ruft zwei Werte ab und gibt den Status des Vorgangs zurück.
 ms.assetid: E6BBA8A7-D53F-4718-B007-EBDE50FADB06
 keywords:
-- Load2-Funktion (HLSL)
+- Load2-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 92fc492fddb6ad024a4507829e81dab4886af590
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8e3a6f9283d8714d513dad63c6057f9c30c24dcc5ace601ddbc764a1f8b207a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981650"
 ---
-# <a name="load2uintuint-function"></a>Load2 (uint, uint)-Funktion
+# <a name="load2uintuint-function"></a>Load2(uint,uint)-Funktion
 
 Ruft zwei Werte ab und gibt den Status des Vorgangs zurück.
 
@@ -29,8 +29,8 @@ Ruft zwei Werte ab und gibt den Status des Vorgangs zurück.
 
 ``` syntax
 uint2 Load2(
-  in  uint Location,
-  out uint Status
+  in  uint Location,
+  out uint Status
 );
 ```
 
@@ -40,21 +40,21 @@ uint2 Load2(
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Speicherort des Puffers.
+Die Position des Puffers.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
@@ -62,21 +62,21 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ: **uint2**
 
-Zwei-Werte.
+Zwei Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -85,6 +85,6 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Load2-Methoden](rwbyteaddressbuffer-load2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

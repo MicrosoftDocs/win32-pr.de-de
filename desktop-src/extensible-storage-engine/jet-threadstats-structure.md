@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9dcf88afc4b0f01a1691f9fb287491e9adfe71521e394a0e6b278c556fb5741f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7f94c9911fb7ab974f87cfed41e92b53ac0a66cb
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119832860"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983563"
 ---
 # <a name="jet_threadstats-structure"></a>JET_THREADSTATS Struktur
 
@@ -50,7 +50,7 @@ Die **JET_THREADSTATS-Struktur** enthält kumulative Statistiken zur Arbeit, die
 
 **cbStruct**
 
-Die Größe der zurückgegebenen **JET_THREADSTATS-Struktur** in Bytes.
+Die Größe der zurückgegebenen **JET_THREADSTATS** -Struktur in Bytes.
 
 **Hinweis:**  Die **JET_THREADSTATS-Struktur** wird in Zukunft erweitert, um weitere Statistiken zu enthalten. Neue Statistiken werden am Ende der Struktur hinzugefügt und können mit einer erhöhten Ausgabepuffergröße abgerufen werden. Das Vorhandensein zusätzlicher Statistiken kann durch einen größeren **cbStruct-Wert abgeleitet** werden.
 
@@ -84,26 +84,13 @@ Die Gesamtgröße von Transaktionsprotokolldatensätzen in Bytes, die von der Da
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

@@ -1,5 +1,5 @@
 ---
-description: <span id="vspixengine.imeshcallback_resultcallback_dword_byte_arr"></span>IMeshCallback::ResultCallback-Methode– Nicht verwendet.
+description: '<span id="vspixengine.imeshcallback_resultcallback_dword_byte_arr"></span>IMeshCallback::ResultCallback-Methode: Nicht verwendet.'
 MS-HAID: vspixengine.IMeshCallback\_ResultCallback\_DWORD\_BYTE\_arr
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 644890f0ba28f48407d6557184bd24f2aaf3501b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 699a1d1e60cc4bfda97faf77d8f1138f5998b202
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114908"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630154"
 ---
 # <a name="span-idvspixengineimeshcallback_resultcallback_dword_byte_arrspanimeshcallbackresultcallback-method"></a><span id="vspixengine.imeshcallback_resultcallback_dword_byte_arr"></span>IMeshCallback::ResultCallback-Methode
 
@@ -48,11 +48,11 @@ Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

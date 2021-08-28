@@ -1,9 +1,9 @@
 ---
-title: EM_SETTOUCHOPTIONS Meldung (RichEdit. h)
-description: Legt die einem Rich-Edit-Steuerelement zugeordneten Berührungs Optionen fest.
+title: EM_SETTOUCHOPTIONS-Nachricht (Richedit.h)
+description: Legt die touch-Optionen fest, die einem Rich-Edit-Steuerelement zugeordnet sind.
 ms.assetid: C15036D6-B74F-414D-B731-F1587B616644
 keywords:
-- Windows-Steuerelemente für EM_SETTOUCHOPTIONS Meldung
+- EM_SETTOUCHOPTIONS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7613679a574955ef726da9fa10e8d919c8fe53b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ea2f372d1e59a76ea13667e994534df1088fe1c78c51c30ac54db1b4dfeed2d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048010"
 ---
-# <a name="em_settouchoptions-message"></a>EM \_ settouchoptions-Meldung
+# <a name="em_settouchoptions-message"></a>EM \_ SETTOUCHOPTIONS-Meldung
 
-Legt die einem Rich-Edit-Steuerelement zugeordneten Berührungs Optionen fest.
+Legt die touch-Optionen fest, die einem Rich-Edit-Steuerelement zugeordnet sind.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt die einem Rich-Edit-Steuerelement zugeordneten Berührungs Optionen fest.
 *wParam* 
 </dt> <dd>
 
-Die festzulegende Berührungs Option. Dieser Parameter kann einen der folgenden Werte annehmen.
+Die festzulegende Touchoption. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                        | Bedeutung                                                                                                                                                                                                                                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RTO_SHOWHANDLES"></span><span id="rto_showhandles"></span><dl> <dt>**RTO- \_ showhandles**</dt> </dl>          | Ein-oder Ausblenden der Berührungs Zieh Punkte, abhängig vom Wert von *LPARAM*.<br/>                                                                                                                                                       |
-| <span id="RTO_DISABLEHANDLES"></span><span id="rto_disablehandles"></span><dl> <dt>**RTO- \_ disablehandles**</dt> </dl> | Aktiviert oder deaktiviert die Berührungs Zieh Punkte, abhängig vom Wert von *LPARAM*. Wenn Handles deaktiviert sind, werden Sie ausgeblendet, wenn Sie sichtbar sind und ausgeblendet bleiben, bis eine **EM \_ settouchoptions** -Nachricht ihren Status ändert. <br/> |
+| <span id="RTO_SHOWHANDLES"></span><span id="rto_showhandles"></span><dl> <dt>**RTO \_ SHOWHANDLES**</dt> </dl>          | Ein- oder Ausblenden der Touchhandles, abhängig vom Wert von *lParam.*<br/>                                                                                                                                                       |
+| <span id="RTO_DISABLEHANDLES"></span><span id="rto_disablehandles"></span><dl> <dt>**RTO \_ DISABLEHANDLES**</dt> </dl> | Aktivieren oder deaktivieren Sie die Touchhandles abhängig vom Wert von *lParam.* Wenn Handles deaktiviert sind, werden sie ausgeblendet, wenn sie sichtbar sind und ausgeblendet bleiben, bis eine **EM \_ SETTOUCHOPTIONS-Nachricht** ihren Status ändert. <br/> |
 
 
 
@@ -50,13 +50,13 @@ Die festzulegende Berührungs Option. Dieser Parameter kann einen der folgenden 
 *lParam* 
 </dt> <dd>
 
-Auf **true** festgelegt, um die Berührungs Auswahl Handles anzuzeigen bzw. zu aktivieren, oder **false** , um die Berührungs Auswahl Handles auszublenden bzw. zu deaktivieren.
+Legen Sie diese Einstellung auf **TRUE** fest, um die Touchauswahlhandles anzuzeigen/zu aktivieren, oder **FALSE,** um die Touchauswahlhandles auszublenden/zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung gibt NULL zurück.
+Diese Meldung gibt 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Diese Meldung gibt NULL zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Diese Meldung gibt NULL zurück.
 
 <dl> <dt>
 
-[**EM \_ gettouchoptions**](em-settouchoptions.md)
+[**EM \_ GETTOUCHOPTIONS**](em-settouchoptions.md)
 </dt> </dl>
 
  

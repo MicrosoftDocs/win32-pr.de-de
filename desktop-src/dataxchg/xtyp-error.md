@@ -1,9 +1,9 @@
 ---
-title: XTYP_ERROR Transaktion (Ddeml. h)
-description: Eine dynamischer Datenaustausch (DDE)-Rückruffunktion (DDE Callback) empfängt die xD- \_ Fehler Transaktion, wenn ein kritischer Fehler auftritt.
+title: XTYP_ERROR Transaktion (Ddeml.h)
+description: Eine DDE-Rückruffunktion (dynamische Daten Exchange, DdeCallback) empfängt die XTYP \_ ERROR-Transaktion, wenn ein kritischer Fehler auftritt.
 ms.assetid: 710daa04-ed83-42e3-a55e-6ccf891a3d52
 keywords:
-- XTYP_ERROR Transaktionsdaten Austausch
+- XTYP_ERROR transaktion Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebbad80cb23a37881e8954dee4a80a87f253e499
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ce59800723758201b4857b5a3ae0844675347b2d4fd403c77650b36d9275bfb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755980"
 ---
-# <a name="xtyp_error-transaction"></a>XYP- \_ Fehler Transaktion
+# <a name="xtyp_error-transaction"></a>XTYP \_ ERROR-Transaktion
 
-Eine dynamischer Datenaustausch (DDE)-Rückruffunktion ( [*DDE Callback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt die **xD- \_ Fehler** Transaktion, wenn ein kritischer Fehler auftritt.
+Eine dynamische Daten Exchange-Rückruffunktion [*(DDE), DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt die **XTYP \_ ERROR-Transaktion,** wenn ein kritischer Fehler auftritt.
 
 
 ```C++
@@ -45,51 +45,51 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
-Ein Handle für die Konversation, die dem Fehler zugeordnet ist. Dieser Parameter ist **null** , wenn der Fehler nicht mit einer Konversation verknüpft ist.
+Ein Handle für die Konversation, die dem Fehler zugeordnet ist. Dieser Parameter ist **NULL,** wenn der Fehler keiner Konversation zugeordnet ist.
 
 </dd> <dt>
 
 *hsz1* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *hsz2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *hdata* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Der Fehlercode im nieder wertigen Wort. Derzeit wird nur der folgende Fehlercode unterstützt.
+Der Fehlercode im Wort mit niedriger Reihenfolge. Derzeit wird nur der folgende Fehlercode unterstützt.
 
 
 
 | Wert                                                                                                                                                                      | Bedeutung                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| <span id="DMLERR_LOW_MEMORY"></span><span id="dmlerr_low_memory"></span><dl> <dt>**dmlerr \_ wenig Arbeits \_ Speicher**</dt> </dl> | Der Arbeitsspeicher ist niedrig. Daten vom Typ "Empfehlung", "Poke" oder "ausführen" können verloren gehen, oder das System schlägt fehl.<br/> |
+| <span id="DMLERR_LOW_MEMORY"></span><span id="dmlerr_low_memory"></span><dl> <dt>**DMLERR \_ LOW \_ MEMORY**</dt> </dl> | Der Arbeitsspeicher ist gering. Daten zum Raten, Verwerten oder Ausführen können verloren gegangen sein, oder das System schlägt fehl.<br/> |
 
 
 
@@ -100,13 +100,13 @@ Der Fehlercode im nieder wertigen Wort. Derzeit wird nur der folgende Fehlercode
 *dwData2* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Transaktionstyp kann von einer Anwendung nicht blockiert werden. der Rückgabecode des **CBR- \_ Blocks** wird ignoriert. Die Ddeml (dynamischer Datenaustausch Management Library) versucht, Arbeitsspeicher freizugeben, indem nicht kritische Ressourcen entfernt werden. Eine Anwendung, die blockierte Konversationen hat, sollte Sie entsperren.
+Eine Anwendung kann diesen Transaktionstyp nicht blockieren. der **CBR \_ BLOCK-Rückgabecode** wird ignoriert. Die dynamische Daten Exchange Management Library (DDEML) versucht, Arbeitsspeicher freizugeben, indem nicht kritische Ressourcen entfernt werden. Eine Anwendung, die Konversationen blockiert hat, sollte die Blockierung aufheben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,7 +116,7 @@ Der Transaktionstyp kann von einer Anwendung nicht blockiert werden. der Rückga
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -124,7 +124,7 @@ Der Transaktionstyp kann von einer Anwendung nicht blockiert werden. der Rückga
 
 <dl> <dt>
 
-[Übersicht über die dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[Übersicht über dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

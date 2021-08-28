@@ -1,5 +1,5 @@
 ---
-description: Meldet, wenn ein Ereignis aufgrund eines Überlaufs der Übermittlungs Warteschlange gelöscht wird.
+description: Meldet, wenn ein Ereignis als Folge eines Überlaufs der Übermittlungswarteschlange gelöscht wird.
 ms.assetid: 7cb1ef3b-3b0a-4f72-96de-862022fd6db8
 ms.tgt_platform: multiple
 title: __EventQueueOverflowEvent-Klasse
@@ -19,18 +19,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 058b03b8a3311aad805f47a04d20e9f1fa8c2477
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fd31df9f84883c8b677ea4fef0431ed762b4cec2155cb3d600893a40e3e1d9f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612630"
 ---
-# <a name="__eventqueueoverflowevent-class"></a>\_\_Eventqueueoverflowevent-Klasse
+# <a name="__eventqueueoverflowevent-class"></a>\_\_EventQueueOverflowEvent-Klasse
 
-Die **\_ \_ eventqueueoverflowevent** -System Klasse meldet, wenn ein Ereignis aufgrund eines Überlaufs der Übermittlungs Warteschlange gelöscht wird.
+Die **\_ \_ Systemklasse EventQueueOverflowEvent** meldet, wenn ein Ereignis als Folge eines Überlaufs der Übermittlungswarteschlange gelöscht wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,88 +47,88 @@ class __EventQueueOverflowEvent : __EventDroppedEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ eventqueueoverflowevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ EventQueueOverflowEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ eventqueueoverflowevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ EventQueueOverflowEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Currentqueuesize**
+**CurrentQueueSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktuelle Warteschlangen Größe in Bytes. Diese Eigenschaft ist standardmäßig auf 10 MB für alle Warteschlangen zusammengefasst.
+Aktuelle Warteschlangengröße in Bytes. Diese Eigenschaft beträgt standardmäßig 10 MB für alle kombinierten Warteschlangen.
 
 </dd> <dt>
 
 **Event**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Interessantes Ereignis. Diese Eigenschaft wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)geerbt.
+Ereignis von Interesse. Diese Eigenschaft wird von [**\_ \_ EventDroppedEvent geerbt.**](--eventdroppedevent.md)
 
 </dd> <dt>
 
-**Intendidconsumer**
+**IntendedConsumer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **\_ \_ eventconsumer**
+Datentyp: **\_ \_ EventConsumer**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf den gewünschten Consumer. Diese Eigenschaft wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)geerbt.
+Verweis auf den beabsichtigten Consumer. Diese Eigenschaft wird von [**\_ \_ EventDroppedEvent geerbt.**](--eventdroppedevent.md)
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur Benutzer mit Administratorrechten können dieses Ereignis empfangen. Die **\_ \_ eventqueueoverflowevent** -Klasse wird von [**\_ \_ eventdroppedevent**](--eventdroppedevent.md)abgeleitet.
+Nur Benutzer mit Administratorrechten können dieses Ereignis empfangen. Die **\_ \_ EventQueueOverflowEvent-Klasse** wird von [**\_ \_ EventDroppedEvent abgeleitet.**](--eventdroppedevent.md)
 
-Weitere Informationen finden Sie in der Eigenschaft " [**MaximumQueueSize**](--eventconsumer.md) " in der [**\_ \_ eventconsumer**](--eventconsumer.md) -Klasse und in der Eigenschaft " [**highprocessoldonevents**](/windows/desktop/CIMWin32Prov/win32-wmisetting) " in der **Win32- \_ wmisetting** -Klasse.
+Weitere Informationen finden Sie unter [**der MaximumQueueSize-Eigenschaft**](--eventconsumer.md) in der [**\_ \_ EventConsumer-Klasse**](--eventconsumer.md) und der [**HighThresholdOnEvents-Eigenschaft**](/windows/desktop/CIMWin32Prov/win32-wmisetting) in der **Win32 \_ WMISetting-Klasse.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -146,10 +146,10 @@ Weitere Informationen finden Sie in der Eigenschaft " [**MaximumQueueSize**](--e
 
 <dl> <dt>
 
-[**\_\_Eventdroppedevent**](/windows/desktop/WmiSdk/--eventdroppedevent)
+[**\_\_EventDroppedEvent**](/windows/desktop/WmiSdk/--eventdroppedevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

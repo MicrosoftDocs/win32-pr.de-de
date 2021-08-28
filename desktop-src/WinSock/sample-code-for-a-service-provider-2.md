@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält ein Quell Codebeispiel, das veranschaulicht, wie die getxbyy-Funktionen mithilfe der neuen, Protokoll unabhängigen RNR-Funktionen implementiert werden.
+description: Dieser Abschnitt enthält ein Quellcodebeispiel, das veranschaulicht, wie die GetXbyY-Funktionen mithilfe der neuen, protokollunabhängigen RNR-Funktionen implementiert werden.
 ms.assetid: d6246d47-11c2-4e4b-8a2b-17fd9cb041fc
-title: Beispiel Code für einen Dienstanbieter
+title: Beispielcode für einen Dienstanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74f9eab89667e37d2583f5582e86af6620de71c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 402550a1e4eddfef51c5a30a7838e2bad7b8d96898354a206130ab95073381db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119794690"
 ---
-# <a name="sample-code-for-a-service-provider"></a>Beispiel Code für einen Dienstanbieter
+# <a name="sample-code-for-a-service-provider"></a>Beispielcode für einen Dienstanbieter
 
-Dieser Abschnitt enthält ein Quell Codebeispiel, das veranschaulicht, wie die **getxbyy** -Funktionen mithilfe der neuen, Protokoll unabhängigen RNR-Funktionen implementiert werden. Ein Entwickler sollte diese Funktionen als Ausgangspunkt implementieren. Um die Windows Sockets-Spezifikation einzuhalten, werden viele weitere Funktionen benötigt.
+Dieser Abschnitt enthält ein Quellcodebeispiel, das veranschaulicht, wie die **GetXbyY-Funktionen** mithilfe der neuen, protokollunabhängigen RNR-Funktionen implementiert werden. Ein Entwickler sollte diese Funktionen als Ausgangspunkt implementieren. Zur Einhaltung der Windows Sockets-Spezifikation sind viele weitere Funktionen erforderlich.
 
 > [!IMPORTANT]
 > Die Kompilierung des folgenden Codes ist nicht garantiert.

@@ -1,21 +1,21 @@
 ---
-description: Direct3D unterstützt sowohl Flat-als auch Gouraud-Schattierung. Der Standardwert ist Gouraud-Schattierung. Um den aktuellen Schattierungs Modus zu steuern, gibt Ihre C++-Anwendung einen Member des D3DSHADEMODE-Enumerationstyps für den D3DRS \_ shdemode-renderzustand an.
+description: Direct3D unterstützt sowohl flache als auch Gouraud-Schattierung. Der Standardwert ist Gouraud shading. Um den aktuellen Schattierungsmodus zu steuern, gibt Ihre C++-Anwendung einen Member des D3DSHADEMODE-Enumerationstyps für den D3DRS \_ SHADEMODE-Renderzustand an.
 ms.assetid: 0019b1b7-65f2-4009-8d0f-5a99cf32a410
-title: Schattierungs Zustand (Direct3D 9)
+title: Schattierungsstatus (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ebac826704fee0e1903c1aa2a2348bff4a089c2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9f28514fefbf39e75bd84a0ae56324fd859f0fd85fa4a25449e349ce592ab3b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119727600"
 ---
-# <a name="shading-state-direct3d-9"></a>Schattierungs Zustand (Direct3D 9)
+# <a name="shading-state-direct3d-9"></a>Schattierungsstatus (Direct3D 9)
 
-Direct3D unterstützt sowohl Flat-als auch Gouraud-Schattierung. Der Standardwert ist Gouraud-Schattierung. Um den aktuellen Schattierungs Modus zu steuern, gibt Ihre C++-Anwendung einen Member des [**D3DSHADEMODE**](./d3dshademode.md) -Enumerationstyps für den D3DRS \_ shdemode-renderzustand an.
+Direct3D unterstützt sowohl flache als auch Gouraud-Schattierung. Der Standardwert ist Gouraud shading. Um den aktuellen Schattierungsmodus zu steuern, gibt Ihre C++-Anwendung einen Member des [**D3DSHADEMODE-Enumerationstyps**](./d3dshademode.md) für den D3DRS \_ SHADEMODE-Renderzustand an.
 
-Im folgenden C++-Codebeispiel wird veranschaulicht, wie der Schattierungs Zustand auf den flachen Schattierungs Modus festgelegt wird.
+Im folgenden C++-Codebeispiel wird das Festlegen des Schattierungszustands auf den Flachschattierungsmodus veranschaulicht.
 
 
 ```
@@ -31,7 +31,7 @@ d3dDevice->SetRenderState(D3DRS_SHADEMODE, D3DSHADE_FLAT);
 
 <dl> <dt>
 
-[Rendering-Zustände](render-states.md)
+[Renderzustände](render-states.md)
 </dt> </dl>
 
  

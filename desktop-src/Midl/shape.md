@@ -1,9 +1,9 @@
 ---
-title: Shape-Attribut
-description: Die Form des DCE-IDL-Schlüssel Worts wird in Microsoft RPC nicht unterstützt.
+title: shape-Attribut
+description: Die Form des DCE-IDL-Schlüsselworts wird in Microsoft RPC nicht unterstützt.
 ms.assetid: 7d64889f-37f4-4ca3-81ea-97db697a046a
 keywords:
-- Form Attribut-Mittel l
+- Shape-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,27 +12,27 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 568623c62d1228b56ee76f3514653d78e60c3838
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0fc4abee45f884112d194d6986d685810d738a7b4184f9d52cacefe5b09f4023
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119559930"
 ---
-# <a name="shape-attribute"></a>Shape-Attribut
+# <a name="shape-attribute"></a>shape-Attribut
 
-Die **Form** des DCE-IDL-Schlüssel Worts wird in Microsoft RPC nicht unterstützt.
+Die Form des **DCE-IDL-Schlüsselworts** wird in Microsoft RPC nicht unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

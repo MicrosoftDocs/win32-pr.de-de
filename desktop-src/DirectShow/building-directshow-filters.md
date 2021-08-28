@@ -4,12 +4,12 @@ ms.assetid: fb907263-e7f3-42d6-80f9-a9f16fc21033
 title: Erstellen von DirectShow-Filtern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7090eed702b1abe8ee863d5fa3ac9c1fd413690e
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: d87d1983d3bfd42d1a1582ef696b6793acdd0856dde2bd2d589e809acc614314
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119794321"
 ---
 # <a name="building-directshow-filters"></a>Erstellen von DirectShow-Filtern
 
@@ -19,7 +19,7 @@ Die DirectShow-Basisklassen werden für die Implementierung von DirectShow-Filte
 -   Schließen Sie die Headerdatei Streams.h ein.
 -   Verwenden Sie die \_ \_ Stdcall-Aufrufkonvention.
 -   Verwenden Sie die Multithread-C-Laufzeitbibliothek (debuggen oder retail, je nach Bedarf).
--   Schließen Sie eine Definitionsdatei (DEF-Datei) ein, die die DLL-Funktionen exportiert. Im Folgenden wird ein Beispiel für eine Definitionsdatei beschrieben. Es wird davon ausgegangen, dass die Ausgabedatei MyFilter.dll heißt.
+-   Schließen Sie eine Definitionsdatei (DEF-Datei) ein, die die DLL-Funktionen exportiert. Im Folgenden wird ein Beispiel für eine Definitionsdatei beschrieben. Es wird davon ausgegangen, dass die Ausgabedatei MyFilter.dll benannt wird.
     ```C++
     LIBRARY MYFILTER.DLL
     EXPORTS 
@@ -55,9 +55,9 @@ Die DirectShow-Basisklassen werden für die Implementierung von DirectShow-Filte
 
     
 
-Frühere Versionen
+Vorherige Versionen
 
-Für Versionen der Basisklassenbibliothek vor DirectShow 9.0 müssen Sie auch folgende Schritte unternehmen:
+Für Versionen der Basisklassenbibliothek vor DirectShow 9.0 müssen Sie auch folgende Schritte ausführen:
 
 -   Definieren Sie für Debugbuilds das Präprozessorflag DEBUG.
 

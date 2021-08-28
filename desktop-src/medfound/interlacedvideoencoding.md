@@ -1,58 +1,58 @@
 ---
-description: Video Codierung mit Zeilen Sprung
+description: Interlaced Video Encoding
 ms.assetid: 7695d4e3-4a75-4972-ab02-bc532d6a4dce
-title: Video Codierung mit Zeilen Sprung (Microsoft Media Foundation)
+title: Interlaced Video Encoding (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fafacb56f29964e81b040c59cdb75d8ebb35830b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15269aca3f2878504fef56c62b1a1d70ecd89295c237164ba864b15aaae371d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119724390"
 ---
-# <a name="interlaced-video-encoding-microsoft-media-foundation"></a>Video Codierung mit Zeilen Sprung (Microsoft Media Foundation)
+# <a name="interlaced-video-encoding-microsoft-media-foundation"></a>Interlaced Video Encoding (Microsoft Media Foundation)
 
-Video Daten, die für die Verwendung mit Computern vorgesehen sind, sind in der Regel *progressiv*, was bedeutet, dass jeder Frame als einzelnes Bild codiert Einige Geräte, wie z. b. Fernsehgeräte, zeigen einen Frame nicht gleichzeitig an, sondern als zwei Bilder. Eines der Bilder oder Felder enthält alle geraden Zeilen. Das andere Feld enthält die Daten für alle ungeraden nummerierten Zeilen. Videos, die mit mehr als einem Feld pro Frame codiert sind, werden mit Zeilen Sprung bezeichnet, da es durchwechseln zwischen dem geraden Feld und dem ungeraden Feld gerendert wird.
+Videodaten, die für die Verwendung mit Computern vorgesehen sind, sind in der Regel *progressiv.* Das bedeutet, dass jeder Frame als einzelnes Bild codiert ist. Einige Geräte, z. B. Fernsehgeräte, zeigen keinen Rahmen auf einmal an, sondern als zwei Bilder. Eines der Bilder oder Felder enthält alle gerade nummerierten Zeilen. Das andere Feld enthält die Daten für alle ungeraden nummerierten Zeilen. Video, das mit mehr als einem Feld pro Frame codiert ist, wird als interlaced bezeichnet, da es durch Wechseln zwischen dem geraden Feld und dem ungeraden Feld gerendert wird.
 
-In der Vergangenheit war der Zeilen Sprung Videoinhalt vor der Codierung mit dem Windows Media Video Codec immer deaktiviert. Ab der Windows Media 9-Serie unterstützt der Video Encoder die Komprimierung von Zeilen Sprung Inhalten, ohne Sie zuvor in progressiv umzuwandeln. Die Beibehaltung von Zeilen Sprung in einer codierten Datei ist wichtig, wenn der Inhalt jemals auf einer Zeilen Sprung Anzeige, z. b. einem Fernsehen, gerendert wird. Diese Funktion ist von größerer Bedeutung, da die Unterstützung von Windows Media-basierten Inhalten auf DVD-Player, Set-Top-Boxes und andere Home-Elektronik aufsetzt.
+In der Vergangenheit wurden Interlacingvideoinhalte vor der Codierung mit dem Windows Media Video-Codec immer deinterlaced. Ab Windows Media 9-Serie unterstützt der Videoencoder jedoch die Komprimierung von interlaced-Inhalten, ohne sie zuerst in progressiv zu konvertieren. Das Beibehalten des Interlacings in einer codierten Datei ist wichtig, wenn der Inhalt jemals auf einer Interlacinganzeige gerendert wird, z. B. einem Fernsehgerät. Dieses Feature ist von zunehmender Bedeutung, da die Unterstützung für Windows medienbasierte Inhalte auf DVD-Player, Set-Top-Boxs und andere Heimgeräte verteilt wird.
 
-Die einfachste Methode zum Codieren und bereitzustellen von Zeilen Sprung Videos besteht darin, Ihre Anwendung mit dem Windows Media-Format-SDK zu entwickeln und den Inhalt in ASF-Dateien zu speichern. Die Zeilen Sprung Informationen zu Frames werden mithilfe von dateneinheits-Erweiterungen an den Codec übermittelt, die für den ASF-Inhalt gut geeignet sind, aber in anderen Containern unterstützt werden. Weitere Informationen zu Dateneinheiten Erweiterungen finden Sie unter [Verwenden von Dateneinheiten Erweiterungen](usingdataunitextensions.md).
+Die einfachste Möglichkeit zum Codieren und Übermitteln von videoverschachtelten Videos besteht darin, Ihre Anwendung mit dem Windows Media Format SDK zu entwickeln und den Inhalt in ASF-Dateien zu speichern. Die interlaced-Informationen zu Frames werden mithilfe von Dateneinheitenerweiterungen an den Codec übergeben, die für ASF-Inhalte gut geeignet sind, aber in anderen Containern etwas schwieriger zu unterstützen sind. Weitere Informationen zu Dateneinheitenerweiterungen finden Sie unter [Verwenden von Dateneinheitenerweiterungen.](usingdataunitextensions.md)
 
-Zur Unterstützung der interplizierung sind zwei Hauptschritte erforderlich: die Frame-Informationen werden dem Encoder und die Informationen an die renderinganwendung geliefert. Diese Schritte werden in den folgenden Abschnitten beschrieben.
+Die Unterstützung der Interlacingcodierung umfasst zwei Hauptschritte: das Abrufen der Frameinformationen an den Encoder und das Bereitstellen der Informationen an die Renderinganwendung. Diese Schritte werden in den folgenden Abschnitten beschrieben.
 
-## <a name="interlaced-video-and-the-encoder"></a>Zeilen Sprung Video und der Encoder
+## <a name="interlaced-video-and-the-encoder"></a>Interlaced Video und der Encoder
 
-Der erste Schritt beim Codieren von Videos mit geprüfter Zeilen Sprung besteht darin, den Encoder zum Codieren von Zeilen Sprung Feldern zu konfigurieren. Legen Sie dazu die Eigenschaft " [mfpkey \_ interlacedcodingenabled](mfpkey-interlacedcodingenabledproperty.md) " auf " **true**" fest. Dadurch wird der Encoder vorbereitet, um Zeilen Sprung Beispiele zu erhalten. Jedes Eingabe Beispiel muss beide Felder enthalten.
+Der erste Schritt beim Codieren von Videos mit beibehaltener Interlacing besteht darin, den Encoder für die Codierung von Feldern mit Zeilensprung zu konfigurieren. Legen Sie hierzu die [MFPKEY \_ INTERLACEDCODINGENABLED-Eigenschaft](mfpkey-interlacedcodingenabledproperty.md) auf **TRUE** fest. Dadurch wird der Encoder auf den Empfang von Interlacingbeispielen vorbereitet. Jedes Eingabebeispiel muss beide Felder enthalten.
 
-Für jedes Beispiel, das Sie nach dem Aktivieren der Zeilen Sprung Codierung mit dem Encoder verarbeiten, sollte eine dateneinheits Erweiterung angefügt werden. Beispiele ohne die erwartete Dateneinheiten Erweiterung werden als progressiv angenommen. Die GUID, die die Erweiterung identifiziert, ist D590DC20-07BC-436C-9CF7-F3BBFBF1A4DC. Die Werte, die von den-Objekten des Windows Media Format SDK übermittelt werden, werden in der folgenden Tabelle definiert.
+An jedes Beispiel, das Sie nach dem Aktivieren der Interlacingcodierung mit dem Encoder verarbeiten, sollte eine Dateneinheitenerweiterung angefügt sein. Stichproben ohne die erwartete Dateneinheitenerweiterung werden als progressiv angenommen. Die GUID, die die Erweiterung identifiziert, ist D590DC20-07BC-436C-9CF7-F3BBFBF1A4DC. Die werte, die von den Objekten des Windows Media Format SDK übergeben werden, werden in der folgenden Tabelle definiert.
 
 
 
-| Wert      | BESCHREIBUNG                                                                                                                              |
+| Wert      | Beschreibung                                                                                                                              |
 |------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| 0x00000020 | Gibt an, dass das Beispiel zuerst mit dem untersten Feld codiert wird. Dieser Wert ist nur in Kombination mit dem Zeilen Sprung Wert sinnvoll. |
-| 0x00000040 | Gibt an, dass das Beispiel zuerst mit dem obersten Feld codiert wird. Dieser Wert ist nur in Kombination mit dem Zeilen Sprung Wert sinnvoll.    |
-| 0x00000080 | Gibt an, dass das Beispiel mit Zeilen Sprung dargestellt wird. Dies ist der einzige Wert, der für die Codec-DMOS von Bedeutung ist.                                    |
+| 0x00000020 | Gibt an, dass das Beispiel zuerst mit dem unteren Feld codiert wird. Dieser Wert ist nur sinnvoll, wenn er mit dem interlaced-Wert kombiniert wird. |
+| 0x00000040 | Gibt an, dass das Beispiel zuerst mit dem oberen Feld codiert wird. Dieser Wert ist nur sinnvoll, wenn er mit dem interlaced-Wert kombiniert wird.    |
+| 0x00000080 | Gibt an, dass das Beispiel mit einem Zeilensprung verknüpft ist. Dies ist der einzige Wert, der für die Codec-DMOs von Bedeutung ist.                                    |
 
 
 
  
 
-Einer der ersten beiden Werte wird immer mit 0x80 kombiniert, indem ein bitweises **or** verwendet wird, bevor er für das Beispiel festgelegt wird. Der Encoder prüft jedoch nur 0x80 und ignoriert den Rest der Erweiterung. Wenn die Erweiterung das Beispiel als Zeilen Sprung bezeichnet, behält der Encoder das Sample-Zeilen Sprung im komprimierten Stream bei und bettet ein Kennzeichen im Stream ein, sodass der Decoder Zeilen Sprung Frames identifizieren kann. Jedes Zeilen Sprung Beispiel ist als markiert, sodass Quell Inhalte, die eine Mischung aus progressivem und Zeilen Sprung sind, zusammen in einen Stream codiert werden können.
+Einer der ersten beiden Werte wird immer mit 0x80 kombiniert, wobei ein bitweises **OR** verwendet wird, bevor er für das Beispiel festgelegt wird. Der Encoder überprüft jedoch nur 0x80 und ignoriert den Rest der Erweiterung. Wenn die Erweiterung das Beispiel als Interlacing identifiziert, behält der Encoder das Sample-Interlacing im komprimierten Stream bei und bettet ein Anzeigeflag in den Stream ein, damit der Decoder Interlacingframes identifizieren kann. Jedes Interlacingbeispiel ist markiert, sodass Quellinhalt, der eine Mischung aus progressivem und interlaced-Muster ist, zusammen in einen Stream codiert werden kann.
 
-Das Windows Media Format SDK Writer-Objekt enthält die Inhaltstyp-Dateneinheiten Erweiterungen in den Beispielen, die beim Rendern in den Daten Abschnitt des ASF-Containers geschrieben werden.
+Das Windows Media Format SDK Writer-Objekt enthält die Inhaltstyp-Dateneinheitserweiterungen in den Beispielen, die in den Datenabschnitt des ASF-Containers geschrieben werden, damit sie zum Zeitpunkt des Renderings verwendet werden können.
 
-## <a name="reading-and-rendering-interlaced-video"></a>Lesen und Rendern von Video Dateien
+## <a name="reading-and-rendering-interlaced-video"></a>Lesen und Rendern von videoverschachtelten Videos
 
-Der Decoder identifiziert Zeilen Sprung Proben basierend auf dem im Stream festgelegten Flag durch den Encoder. Standardmäßig deinstalübergibt der Decoder die Beispiele und stellt Progressive Ausgaben bereit. Die Player Anwendung kann den Decoder so konfigurieren, dass Ausgaben mit Zeilen Sprung verarbeitet werden, indem die Eigenschaft [debuglacing des mfpkey- \_ Decoders \_ ](mfpkey-decoder-deinterlacingproperty.md) festgelegt wird.
+Der Decoder identifiziert Verschachtelungsbeispiele basierend auf dem Flag, das vom Encoder im Stream festgelegt wurde. Standardmäßig deinterniert der Decoder die Stichproben und liefert progressive Ausgaben. Die Playeranwendung kann den Decoder so konfigurieren, dass Ausgaben mit Interlacing verarbeitet werden, indem die [ \_ \_ DEINTERLACING-Eigenschaft des MFPKEY-DECODERs](mfpkey-decoder-deinterlacingproperty.md) festgelegt wird.
 
-Die Schwierigkeit bei der Zeilen Sprung Videowiedergabe tritt auf, nachdem der Decoder die Beispiele bereitstellt. Der Renderer (Grafikkarte oder Chip in einem Gerät) kann den Videoinhalt nicht ordnungsgemäß anzeigen, ohne zu wissen, welches Feld zu welchem Feld gehört. In Anwendungen, die das SDK für den Windows Media-Format verwenden, wird der Inhaltstyp für die Dateneinheiten Erweiterung aus den nicht komprimierten Beispielen abgerufen und kann an das Gerät übermittelt werden.
+Die Schwierigkeiten bei der Videowiedergabe mit Zeilensprung treten auf, nachdem der Decoder die Beispiele übermittelt hat. Der Renderer (Grafikkarte oder Chip auf einem Gerät) kann den Videoinhalt nicht ordnungsgemäß anzeigen, ohne zu wissen, welches Feld das ist. In Anwendungen, die das Windows Media Format SDK verwenden, wird die Inhaltstyp-Dateneinheiterweiterung aus den nicht komprimierten Beispielen abgerufen und kann an das Gerät übergeben werden.
 
-Wenn Sie die Codec-Objekte direkt verwenden, erfolgt keine automatische Datenübertragung. Sie müssen Unterstützung für Daten-Einheiten Erweiterungen sowohl in den Puffer Objekten als auch in dem Container implementieren, den Sie für den codierten Inhalt verwenden. Die meisten gängigen Typen von Medien Containern (wie AVI) unterstützen keine Metadaten auf Stichproben Ebene. Sie können ein eigenes System implementieren, um die Daten in der Datei zu speichern und Sie einzelnen Beispielen zuzuordnen, aber nur ein benutzerdefinierter Reader kann Sie abrufen.
+Bei direkter Verwendung der Codecobjekte erfolgt keine dieser Datenübertragungen automatisch. Sie müssen unterstützung für Dateneinheitenerweiterungen sowohl in Ihren Pufferobjekten als auch in dem Container implementieren, den Sie für Ihren codierten Inhalt verwenden. Die meisten gängigen Mediencontainertypen (z. B. AVI) unterstützen keine Metadaten auf Beispielebene. Sie können Ihr eigenes System implementieren, um die Daten in der Datei zu speichern und sie einzelnen Beispielen zuzuordnen, aber nur ein benutzerdefinierter Reader kann sie abrufen.
 
 > [!Note]  
-> Wenn Sie die Eigenschaft " [mfpkey \_ interlacedcodingenabled](mfpkey-interlacedcodingenabledproperty.md) " auf " **true**" festlegen und dann keine Stichproben mit der angefügten dateneinheits Erweiterung "Content-Type" senden, kann der Encoder abstürzen. Legen Sie den Encoder für die Zeilen Sprung Codierung nur dann fest, wenn Sie über Sprung Proben zur Bereitstellung verfügen.
+> Das Festlegen der [MFPKEY \_ INTERLACEDCODINGENABLED-Eigenschaft](mfpkey-interlacedcodingenabledproperty.md) auf **TRUE** und das anschließende Senden von Beispielen mit angefügter Inhaltstyp-Dateneinheitserweiterung kann dazu führen, dass der Encoder abstürzt. Legen Sie den Encoder für die Interlacingcodierung nur fest, wenn Sie Überlingbeispiele bereitstellen müssen.
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Mbnprofileext \/ ... \/ Userlogonkred (v4)
+description: MBNProfileExt \/ ... \/ UserLogonCred (v4)
 MS-HAID: WWAN\_profile\_v4.element\_UserLogonCred
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -16,16 +16,16 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 3f6999763e82051fa30af6109c3a04ae8dc65f77
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d28c0d275b722dbba6ebc1be3363cfa3e2f6d300
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343322"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985393"
 ---
-# <a name="span-idwwan_profile_v4element_userlogoncredspanmbnprofileextuserlogoncred-v4"></a><span id="WWAN_profile_v4.element_UserLogonCred"></span>Mbnprofileext \/ ... \/ Userlogonkred (v4)
+# <a name="span-idwwan_profile_v4element_userlogoncredspanmbnprofileextuserlogoncred-v4"></a><span id="WWAN_profile_v4.element_UserLogonCred"></span>MBNProfileExt \/ ... \/ UserLogonCred (v4)
 
-Anmelde Informationen für eine Verbindung.
+Anmeldeinformationen für eine Verbindung.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -54,7 +54,7 @@ Anmelde Informationen für eine Verbindung.
 
 ### <a name="key"></a>Schlüssel
 
-`?`   optional (0 (null) oder eins)
+`?`   optional (null oder eins)
 
 ## <a name="span-idattributes_and_elementsspanspan-idattributes_and_elementsspanspan-idattributes_and_elementsspanattributes-and-elements"></a><span id="Attributes_and_Elements"></span><span id="attributes_and_elements"></span><span id="ATTRIBUTES_AND_ELEMENTS"></span>Attribute und Elemente
 
@@ -64,76 +64,33 @@ Keine.
 
 ### <a name="span-idchild_elementsspanspan-idchild_elementsspanspan-idchild_elementsspanchild-elements"></a><span id="Child_Elements"></span><span id="child_elements"></span><span id="CHILD_ELEMENTS"></span>Untergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Untergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-ignorepassword.md">Ignorepassword</a></td>
-<td><p>Gibt an, wie Kenn Wörter beim Aktualisieren von Profilen behandelt werden.</p>
-<p>Wenn diese Einstellung auf " <strong>true</strong> " festgelegt ist und zum Zeitpunkt des Aktualisierungs Vorgangs ein Profil mit demselben Namen vorhanden ist, wird das Kennwort aus diesem Profil übernommen und im neuen Profil gespeichert.</p>
-<p>Weitere Informationen finden Sie in der Dokumentation für das v1 <a href="../mbn/schema-ignorepassword-userlogoncred-element.md"><strong>ignorepassword</strong></a> -Element.</p></td>
-</tr>
-<tr class="even">
-<td><a href="element-password.md">Kennwort</a></td>
-<td><p>Gibt das Kennwort an, das zum Authentifizieren eines Benutzers verwendet wird.</p>
-<p>Weitere Informationen finden Sie in der Dokumentation für das v1-Kenn <a href="../mbn/schema-password-userlogoncred-element.md"><strong>Wort</strong></a> Element.</p></td>
-</tr>
-<tr class="odd">
-<td><a href="element-username.md">UserName</a></td>
-<td><p>Der Benutzername, der für die Anmeldung verwendet werden soll.</p>
-<p>Weitere Informationen finden Sie in der Dokumentation für das v1 <a href="../mbn/schema-username-userlogoncred-element.md"><strong>username</strong></a> -Element.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Untergeordnetes Element | BESCHREIBUNG | 
+|---------------|-------------|
+| <a href="element-ignorepassword.md">IgnorePassword</a> | <p>Gibt an, wie Kennwörter beim Aktualisieren von Profilen behandelt werden.</p><p>Wenn auf <strong>TRUE</strong> festgelegt ist und zum Zeitpunkt des Updatevorgangs ein Profil mit dem gleichen Namen vorhanden ist, wird das Kennwort aus diesem Profil verwendet und im neuen Profil gespeichert.</p><p>Weitere Informationen finden Sie in der Dokumentation für das <a href="../mbn/schema-ignorepassword-userlogoncred-element.md"><strong>IgnorePassword-Element</strong></a> von v1.</p> | 
+| <a href="element-password.md">Kennwort</a> | <p>Gibt das Kennwort an, das zum Authentifizieren eines Benutzers verwendet wird.</p><p>Weitere Informationen finden Sie in der Dokumentation für das <a href="../mbn/schema-password-userlogoncred-element.md"><strong>v1 Password-Element.</strong></a></p> | 
+| <a href="element-username.md">UserName</a> | <p>Der Benutzername, der für die Anmeldung verwendet werden soll.</p><p>Weitere Informationen finden Sie in der Dokumentation für das <a href="../mbn/schema-username-userlogoncred-element.md"><strong>UserName-Element</strong></a> v1.</p> | 
+
 
  
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-context.md">Context</a></td>
-<td><p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-context.md">Context</a> | <p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

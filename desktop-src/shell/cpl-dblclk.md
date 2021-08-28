@@ -1,6 +1,6 @@
 ---
-description: Wird an die CPlApplet-Funktion einer System Steuerungsanwendung gesendet, wenn der Benutzer auf das Symbol eines Dialog Felds doppelklickt, das von der Anwendung unterstützt wird.
-title: CPL_DBLCLK Meldung (cpl. h)
+description: Wird an die CPlApplet-Funktion einer Systemsteuerung gesendet, wenn der Benutzer auf das Symbol eines dialogfelds doppelklickt, das von der Anwendung unterstützt wird.
+title: CPL_DBLCLK (Cpl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 68d74372-2fc2-45ed-8f77-574b943d28fa
@@ -13,60 +13,60 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d6c67204c7b4fae5275e50d428a0371af4cf2e2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9faf3f589e9e3e69c3b8df82bbb6eb2c075d6fba2836b9d8e773b392ad9385c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119351350"
 ---
-# <a name="cpl_dblclk-message"></a>CPL- \_ dblclk-Meldung
+# <a name="cpl_dblclk-message"></a>\_CPL-DBLCLK-Nachricht
 
-Wird an die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion einer System Steuerungsanwendung gesendet, wenn der Benutzer auf das Symbol eines Dialog Felds doppelklickt, das von der Anwendung unterstützt wird.
+Wird an die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) einer Systemsteuerung gesendet, wenn der Benutzer auf das Symbol eines dialogfelds doppelklickt, das von der Anwendung unterstützt wird.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*uappnum* 
+*uAppNum* 
 </dt> <dd>
 
-Die Dialogfeld Nummer. Diese Zahl muss zwischen null und einem Wert liegen, der als Antwort auf die [**cpl- \_ GetCount**](cpl-getcount.md) -Nachricht (CPL \_ GetCount – 1) zurückgegeben wird.
+Die Nummer des Dialogfelds. Diese Zahl muss im Bereich 0 bis 1 kleiner als der Wert liegen, der als Antwort auf die [**CPL \_ GETCOUNT-Nachricht**](cpl-getcount.md) (CPL \_ GETCOUNT – 1) zurückgegeben wird.
 
 </dd> <dt>
 
-*ldata* 
+*lData* 
 </dt> <dd>
 
-Der Wert, der von der System Steuerungsanwendung in den **lpdata** -Member der [**cplinfo**](/windows/win32/api/cpl/ns-cpl-cplinfo) -oder [**newcplinfo**](/windows/win32/api/cpl/ns-cpl-newcplinfoa) -Struktur für das Dialogfeld geladen wurde. Die Anwendung lädt den **lpdata** -Member als Antwort auf die CPL-Nachrichten-oder- [**cpl \_**](cpl-newinquire.md) -Nachricht. [**\_**](cpl-inquire.md)
+Der Wert, Systemsteuerung die Anwendung in den **lpData-Member** der [**CPLINFO-**](/windows/win32/api/cpl/ns-cpl-cplinfo) oder [**NEWCPLINFO-Struktur**](/windows/win32/api/cpl/ns-cpl-newcplinfoa) für das Dialogfeld geladen hat. Die Anwendung lädt **den lpData-Member** als Antwort auf die [**\_ CPL-Nachricht BZW. CPL**](cpl-inquire.md) [**\_ NEWINQUIRE.**](cpl-newinquire.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion diese Nachricht erfolgreich verarbeitet, ist der Rückgabewert 0 (null). Andernfalls ist der Wert ungleich 0 (null).
+Wenn die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) diese Nachricht erfolgreich verarbeitet, ist der Rückgabewert 0 (null). Andernfalls ist er ungleich 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Als Antwort auf diese Nachricht muss eine System Steuerungsanwendung das entsprechende Dialogfeld anzeigen.
+Als Reaktion auf diese Meldung muss Systemsteuerung Anwendung das entsprechende Dialogfeld anzeigen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>CPL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Cpl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**CPL- \_ Auswahl**](cpl-select.md)
+[**CPL \_ SELECT**](cpl-select.md)
 </dt> </dl>
 
  

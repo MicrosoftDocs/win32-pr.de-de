@@ -1,9 +1,9 @@
 ---
-title: LB_SETTOPINDEX Meldung (Winuser. h)
+title: LB_SETTOPINDEX Meldung (Winuser.h)
 description: Stellt sicher, dass das angegebene Element in einem Listenfeld sichtbar ist.
 ms.assetid: vs|controls|~\controls\listboxes\listboxreference\listboxmessages\lb_settopindex.htm
 keywords:
-- Windows-Steuerelemente für LB_SETTOPINDEX Meldung
+- LB_SETTOPINDEX Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b415c2369ccc7963a5139ab001159bdba7d6326
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f4b640b55ed2c6e3e38eea0b8bd23eb4f99d770dd49b4499f054f5ec38b71873
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435460"
 ---
-# <a name="lb_settopindex-message"></a>LB- \_ settopindex-Meldung
+# <a name="lb_settopindex-message"></a>LB \_ SETTOPINDEX-Nachricht
 
 Stellt sicher, dass das angegebene Element in einem Listenfeld sichtbar ist.
 
@@ -32,9 +32,9 @@ Stellt sicher, dass das angegebene Element in einem Listenfeld sichtbar ist.
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des Elements im Listenfeld.
+Der nullbasierte Index des Elements im Listenfeld.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/Windows 98/Windows Edition (Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt. Das bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld in Byte nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 </dd> <dt>
 
@@ -47,11 +47,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein Fehler auftritt, ist der Rückgabewert lb \_ Err.
+Wenn ein Fehler auftritt, lautet der Rückgabewert LB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das System führt einen Bildlauf im Listenfeld Inhalt durch, sodass entweder das angegebene Element oben im Listenfeld angezeigt wird oder der maximale Bild Laufbereich erreicht wurde.
+Das System führt einen Bildlauf durch den Inhalt des Listenfelds durch, sodass entweder das angegebene Element oben im Listenfeld angezeigt wird oder der maximale Bildlaufbereich erreicht wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,17 +59,17 @@ Das System führt einen Bildlauf im Listenfeld Inhalt durch, sodass entweder das
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**LB- \_ gettopindex**](lb-gettopindex.md)
+[**LB \_ GETTOPINDEX**](lb-gettopindex.md)
 </dt> </dl>
 
  

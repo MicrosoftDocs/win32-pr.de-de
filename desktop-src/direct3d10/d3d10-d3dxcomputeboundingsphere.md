@@ -1,5 +1,5 @@
 ---
-description: 'D3DXComputeBoundingSphere-Funktion (D3DX10math.h): Berechnet eine umgebende Kugel für das Netz.'
+description: 'D3DXComputeBoundingSphere-Funktion (D3DX10math.h): Berechnet eine Begrenzungskugel für das Gitternetz.'
 ms.assetid: 54f486d2-45e9-4fc1-90a3-97488ed4d900
 title: D3DXComputeBoundingSphere-Funktion (D3DX10math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0041d775b21d1af37bc51d6ec2f432e616b2abd6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 88a738c880bcf338e0afafdb40f1d215a8c3aa48712b47180515d36cc24d4c47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119730040"
 ---
 # <a name="d3dxcomputeboundingsphere-function-d3dx10mathh"></a>D3DXComputeBoundingSphere-Funktion (D3DX10math.h)
 
-Berechnet eine umschließende Kugel für das Gitternetz.
+Berechnet eine Begrenzungskugel für das Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Zeiger auf die erste Position.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelpunkte.
+Anzahl der Scheitelzeichen.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Anzahl der Scheitelpunkte.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Bytes zwischen Positionsvektoren.
+Anzahl von Bytes zwischen Positionsvektoren.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Anzahl der Bytes zwischen Positionsvektoren.
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-[**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die den Koordinatenmittelpunkt der zurückgegebenen umgebenden Kugel definiert.
+[**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die den Koordinatenmittelbereich der zurückgegebenen Begrenzungskugel definiert.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Radius der zurückgegebenen umgebenden Kugel.
+Radius der zurückgegebenen Begrenzungskugel.
 
 </dd> </dl>
 
@@ -99,14 +99,14 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Fun
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,40 +1,40 @@
 ---
-description: Spezifikation des ExFat-Dateisystems.
+description: Spezifikation des exFat-Dateisystems.
 title: exFAT-Dateisystemspezifikation
 ms.topic: article
 ms.date: 08/27/2019
-ms.openlocfilehash: 94b5bcdc69201573bc92290c148a7d3ce8304868
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 62c51daff1aba3c9416cd5368e1b92570a377c208256b57ef5154d5e24433e4c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050990"
 ---
 # <a name="exfat-file-system-specification"></a>exFAT-Dateisystemspezifikation
 
 ## <a name="1-introduction"></a>1 Einführung
 
-Das ExFAT-Dateisystem ist der Nachfolger von FAT32 in der FAT-Familie der Dateisysteme. Diese Spezifikation beschreibt das ExFAT-Dateisystem und stellt alle Informationen zur Verfügung, die für die Implementierung des exFAT-Dateisystems erforderlich sind.
+Das exFAT-Dateisystem ist der Nachfolger von FAT32 in der FAT-Dateisystemfamilie. Diese Spezifikation beschreibt das exFAT-Dateisystem und stellt alle Informationen bereit, die für die Implementierung des exFAT-Dateisystems erforderlich sind.
 
 ### <a name="11-design-goals"></a>1.1 Entwurfsziele
 
 Das exFAT-Dateisystem hat drei zentrale Entwurfsziele (siehe Liste unten).
 
-1. *Behalten Sie die Einfachheit von FAT-basierten Dateisystemen bei.*
+1. *Behalten Sie die Einfachheit fat-basierter Dateisysteme bei.*
 
-   > Zwei der Stärken von FAT-basierten Dateisystemen sind ihre relative Einfachheit und einfache Implementierung. In der Geschichte seiner Vorgänger sollten Implementierer exFAT relativ einfach und einfach zu implementieren finden.
+   > Zwei der Stärken von FAT-basierten Dateisystemen sind ihre relative Einfachheit und einfache Implementierung. Im Rahmen seiner Vorgänger sollten Implementierer exFAT relativ einfach und einfach zu implementieren finden.
 
-2. *Aktivieren Sie sehr große Dateien und Speichergeräte.*
+2. *Aktivieren sie sehr große Dateien und Speichergeräte.*
 
-   > Das exFAT-Dateisystem verwendet 64 Bits, um die Dateigröße zu beschreiben, wodurch Anwendungen ermöglicht werden, die von sehr großen Dateien abhängig sind. Das ExFAT-Dateisystem ermöglicht auch Cluster mit einer Datengröße von bis zu 32 MB, wodurch sehr große Speichergeräte effektiv ermöglicht werden.
+   > Das exFAT-Dateisystem verwendet 64 Bits, um die Dateigröße zu beschreiben, wodurch Anwendungen ermöglicht werden, die von sehr großen Dateien abhängen. Das exFAT-Dateisystem ermöglicht auch Cluster mit einer Breite von bis zu 32 MB, sodass sehr große Speichergeräte effektiv aktiviert werden können.
 
-3. *Integrieren sie Erweiterbarkeit für zukünftige Innovationen.*
+3. *Integrieren Sie Erweiterbarkeit für zukünftige Innovationen.*
 
-   > Das ExFAT-Dateisystem integriert Erweiterbarkeit in seinen Entwurf, sodass das Dateisystem mit Innovationen im Speicher und Änderungen in der Nutzung Schritt halten kann.
+   > Das exFAT-Dateisystem integriert Erweiterbarkeit in seinen Entwurf, sodass das Dateisystem mit Innovationen im Speicher und Nutzungsänderungen Schritt halten kann.
 
 ### <a name="12-specific-terminology"></a>1.2 Spezifische Terminologie
 
-Im Kontext dieser Spezifikation haben bestimmte Begriffe (siehe [Tabelle 1](#table-1-definition-of-terms-which-carry-very-specific-meaning)) eine bestimmte Bedeutung für den Entwurf und die Implementierung des exFAT-Dateisystems.
+Im Kontext dieser Spezifikation haben bestimmte Begriffe (siehe [Tabelle 1)](#table-1-definition-of-terms-which-carry-very-specific-meaning)eine spezifische Bedeutung für den Entwurf und die Implementierung des exFAT-Dateisystems.
 
 <div id="table-1-definition-of-terms-which-carry-very-specific-meaning" />
 
@@ -50,47 +50,47 @@ Im Kontext dieser Spezifikation haben bestimmte Begriffe (siehe [Tabelle 1](#tab
 <tbody>
 <tr class="odd">
 <td>Soll</td>
-<td>Diese Spezifikation verwendet den Begriff "soll", um ein Verhalten zu beschreiben, das obligatorisch ist.</td>
+<td>In dieser Spezifikation wird der Begriff "soll" verwendet, um ein erforderliches Verhalten zu beschreiben.</td>
 </tr>
 <tr class="even">
 <td>Optional</td>
-<td>In dieser Spezifikation wird der Begriff "sollte" verwendet, um ein Verhalten zu beschreiben, das dringend empfohlen wird, aber nicht zwingend erforderlich ist.</td>
+<td>In dieser Spezifikation wird der Begriff "should" verwendet, um ein Verhalten zu beschreiben, das dringend empfohlen wird, aber nicht obligatorisch ist.</td>
 </tr>
 <tr class="odd">
 <td>May</td>
-<td>Diese Spezifikation verwendet den Begriff "may", um ein Verhalten zu beschreiben, das optional ist.</td>
+<td>In dieser Spezifikation wird der Begriff "may" verwendet, um ein optionales Verhalten zu beschreiben.</td>
 </tr>
 <tr class="even">
 <td>Obligatorisch.</td>
-<td>Dieser Begriff beschreibt ein Feld oder eine Struktur, das von einer Implementierung geändert und wie in dieser Spezifikation beschrieben interpretiert werden soll.</td>
+<td>Dieser Begriff beschreibt ein Feld oder eine Struktur, das bzw. die eine Implementierung ändern soll und wie in dieser Spezifikation beschrieben interpretiert werden soll.</td>
 </tr>
 <tr class="odd">
 <td>Optional</td>
-<td>Dieser Begriff beschreibt ein Feld oder eine Struktur, das von einer Implementierung unterstützt werden kann oder nicht. Wenn eine Implementierung ein bestimmtes optionales Feld oder eine bestimmte Optionalstruktur unterstützt, muss sie das Feld oder die Struktur ändern und interpretieren, wie in dieser Spezifikation beschrieben.</td>
+<td>Dieser Begriff beschreibt ein Feld oder eine Struktur, die von einer Implementierung unterstützt werden kann oder nicht. Wenn eine Implementierung ein bestimmtes optionales Feld oder eine bestimmte Struktur unterstützt, muss sie das Feld oder die Struktur wie in dieser Spezifikation beschrieben ändern und interpretieren.</td>
 </tr>
 <tr class="even">
 <td>Nicht definiert</td>
-<td>Dieser Begriff beschreibt Feld- oder Strukturinhalte, die von einer Implementierung nach Bedarf geändert werden können (d. h. beim Festlegen von umgebenden Feldern oder Strukturen auf 0 (null) gesetzt werden) und dürfen nicht interpretiert werden, um eine bestimmte Bedeutung zu haben.</td>
+<td>Dieser Begriff beschreibt Feld- oder Strukturinhalte, die eine Implementierung bei Bedarf ändern kann (d. h. beim Festlegen von umgebenden Feldern oder Strukturen auf 0 (null) und darf nicht interpretieren, um eine bestimmte Bedeutung zu haben.</td>
 </tr>
 <tr class="odd">
 <td>Reserviert</td>
-<td><p>Dieser Begriff beschreibt Feld- oder Strukturinhalte, die implementierungen:</p>
+<td><p>Dieser Begriff beschreibt Feld- oder Strukturinhalte, die Implementierungen:</p>
 <ol type="1">
-<li><p>Soll auf 0 (null) initialisieren und sollte für keinen Zweck verwenden.</p></li>
+<li><p>Initialisiert mit 0 (null) und sollte für keinen Zweck verwendet werden.</p></li>
 <li><p>Sollte nicht interpretiert werden, außer beim Berechnen von Prüfsummen</p></li>
-<li><p>Beibehalten über Vorgänge hinweg, die umgebende Felder oder Strukturen ändern</p></li>
+<li><p>Soll vorgängeübergreifend beibehalten werden, die umgebende Felder oder Strukturen ändern</p></li>
 </ol></td>
 </tr>
 </tbody>
 </table>
 
-### <a name="13-full-text-of-common-acronyms"></a>1.3 Vollständiger Text gängiger Akronyme
+### <a name="13-full-text-of-common-acronyms"></a>1.3 Volltext allgemeiner Akronyme
 
-Diese Spezifikation verwendet Akronyme, die in der Personalcomputerbranche häufig verwendet werden (siehe [Tabelle 2](#table-2-full-text-of-common-acronyms)).
+In dieser Spezifikation werden Akronyme verwendet, die in der Pc-Branche häufig verwendet werden (siehe [Tabelle 2).](#table-2-full-text-of-common-acronyms)
 
 <div id="table-2-full-text-of-common-acronyms" />
 
-**Tabelle 2: Vollständiger Text gängiger Akronyme**
+**Tabelle 2: Vollständiger Text allgemeiner Akronyme**
 
 | **Akronym** | **Volltext**                                      |
 |-------------|----------------------------------------------------|
@@ -103,36 +103,36 @@ Diese Spezifikation verwendet Akronyme, die in der Personalcomputerbranche häuf
 | FAT16       | Dateizuordnungstabelle, 16-Bit-Clusterindizes      |
 | FAT32       | Dateizuordnungstabelle, 32-Bit-Clusterindizes      |
 | GPT         | GUID-Partitionstabelle                               |
-| GUID        | Globally Unique Identifier (global eindeutiger [Bezeichner) (siehe Abschnitt 10.1](#101-globally-unique-identifiers-guids))      |
+| GUID        | Global eindeutiger Bezeichner (siehe [Abschnitt 10.1)](#101-globally-unique-identifiers-guids)      |
 | INT         | Interrupt                                          |
 | MBR         | Master Boot Record                                 |
-| texFAT      | Transaktionssicherer ExFAT-Vorgang                             |
+| texFAT      | Transaktionssicher exFAT                             |
 | UTC         | Koordinierte Weltzeit (UTC)                         |
 
 ### <a name="14-default-field-and-structure-qualifiers"></a>1.4 Standardqualifizierer für Feld und Struktur
 
-Felder und Strukturen in dieser Spezifikation verfügen über die folgenden Qualifizierer (siehe Liste unten), sofern in den Spezifikationshinweisen nichts anderes angegeben ist.
+Felder und Strukturen in dieser Spezifikation verfügen über die folgenden Qualifizierer (siehe Liste unten), sofern in der Spezifikation nichts anderes angegeben ist.
 
 1. Sind nicht signiert
 
-2. Verwenden Sie dezimale Notation, um Werte zu beschreiben, sofern nicht anders angegeben. Diese Spezifikation verwendet den Nachkorrekturbuchstaben "h", um Hexadezimalzahlen zu bezeichnen, und schließt GUIDs in geschweifte Klammern ein.
+2. Verwenden Sie die Dezimalschreibweise, um Werte zu beschreiben, sofern nicht anders angegeben. In dieser Spezifikation wird der Postfixbuchstabe "h" verwendet, um Hexadezimalzahlen zu kennzeichnen und GUIDs in geschweifte Klammern einzuschließen.
 
 3. Im Little-Endian-Format
 
-4. Kein Nullabschlusszeichen für Zeichenfolgen erforderlich
+4. Kein Zeichen mit NULL-Terminierung für Zeichenfolgen erforderlich
 
 ### <a name="15-windows-ce-and-texfat"></a>1.5 Windows CE und TexFAT
 
-TexFAT ist eine Erweiterung von exFAT, die zusätzlich zum Basisdateisystem transaktionssichere Betriebssemantik hinzufügt. TexFAT wird von Windows CE.
-TexFAT erfordert die Verwendung der beiden FATs und Zuordnungsbitmaps für die Verwendung in Transaktionen. Außerdem werden mehrere zusätzliche Strukturen definiert, einschließlich Auf padding-Deskriptoren und Sicherheitsdeskriptoren.
+TexFAT ist eine Erweiterung für exFAT, die transaktionssichere Betriebssemantik über dem Basisdateisystem hinzufügt. TexFAT wird von Windows CE verwendet.
+TexFAT erfordert die Verwendung der beiden FATs und Zuordnungsbitmaps für die Verwendung in Transaktionen. Außerdem werden mehrere zusätzliche Strukturen definiert, einschließlich Auffüllungsdeskriptoren und Sicherheitsdeskriptoren.
 
 ## <a name="2-volume-structure"></a>2 Volumestruktur
 
-Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes, die zum Speichern und Abrufen von Benutzerdaten erforderlich sind. Alle exFAT-Volumes enthalten vier Regionen (siehe [Tabelle 3](#table-3-volume-structure)).
+Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeichers, die zum Speichern und Abrufen von Benutzerdaten erforderlich sind. Alle exFAT-Volumes enthalten vier Regionen (siehe [Tabelle 3).](#table-3-volume-structure)
 
 <div id="table-3-volume-structure" />
 
-**Volumestruktur in Tabelle 3**
+**Tabelle 3 Volumestruktur**
 
 <table>
 <thead>
@@ -156,10 +156,10 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td>Hauptstartbranche</td>
 <td>0</td>
 <td>1</td>
-<td>Diese Unterregion ist obligatorisch, und <a href="#31-main-and-backup-boot-sector-sub-regions">in Abschnitt 3.1 wird</a> ihr Inhalt definiert.</td>
+<td>Diese Unterregion ist obligatorisch, und <a href="#31-main-and-backup-boot-sector-sub-regions">Abschnitt 3.1</a> definiert ihren Inhalt.</td>
 </tr>
 <tr class="odd">
-<td>Wichtigste erweiterte Startsektoren</td>
+<td>Hauptbranches für den erweiterten Start</td>
 <td>1</td>
 <td>8</td>
 <td>Diese Unterregion ist obligatorisch, und <a href="#32-main-and-backup-extended-boot-sectors-sub-regions">Abschnitt 3.2</a>) definiert ihren Inhalt.</td>
@@ -168,7 +168,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td>OEM-Hauptparameter</td>
 <td>9</td>
 <td>1</td>
-<td>Diese Unterregion ist obligatorisch, und <a href="#33-main-and-backup-oem-parameters-sub-regions">Abschnitt 3.3</a> definiert ihren Inhalt.</td>
+<td>Diese Unterregion ist obligatorisch, und <a href="#33-main-and-backup-oem-parameters-sub-regions">in Abschnitt 3.3</a> wird ihr Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>Reservierter Hauptteil</td>
@@ -189,7 +189,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td></td>
 </tr>
 <tr class="even">
-<td>Backup Boot-Sektor</td>
+<td>Backup Boot Sector</td>
 <td>12</td>
 <td>1</td>
 <td>Diese Unterregion ist obligatorisch, und <a href="#31-main-and-backup-boot-sector-sub-regions">Abschnitt 3.1</a> definiert ihren Inhalt.</td>
@@ -204,7 +204,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td>OEM-Parameter sichern</td>
 <td>21</td>
 <td>1</td>
-<td>Diese Unterregion ist obligatorisch, und <a href="#33-main-and-backup-oem-parameters-sub-regions">Abschnitt 3.3</a> definiert ihren Inhalt.</td>
+<td>Diese Unterregion ist obligatorisch, und <a href="#33-main-and-backup-oem-parameters-sub-regions">in Abschnitt 3.3</a> wird ihr Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>Reservierte Sicherung</td>
@@ -239,7 +239,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <p>Hinweis: Der Haupt- und der Sicherungsstartsektor enthalten beide die Felder FatOffset und FatLength.</p></td>
 </tr>
 <tr class="even">
-<td>Zweites FAT</td>
+<td>Zweite FAT</td>
 <td>FatOffset + FatLength</td>
 <td>FatLength * (NumberOfFats – 1)</td>
 <td><p>Diese Unterregion ist obligatorisch, und <a href="#41-first-and-second-fat-sub-regions">Abschnitt 4.1</a> definiert ggf. ihren Inhalt.</p>
@@ -256,7 +256,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td>FatOffset + FatLength * NumberOfFats</td>
 <td>ClusterHeapOffset – (FatOffset + FatLength * NumberOfFats)</td>
 <td><p>Diese Unterregion ist obligatorisch, und ihre Inhalte sind ggf. nicht definiert.</p>
-<p>Hinweis: Der Haupt- und der Sicherungsstartsektor enthalten beide die Felder FatOffset, FatLength, NumberOfFats und ClusterHeapOffset. Die gültigen Werte des Felds NumberOfFats sind 1 und 2.</p></td>
+<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide die Felder FatOffset, FatLength, NumberOfFats und ClusterHeapOffset. Die gültigen Werte des Felds NumberOfFats sind 1 und 2.</p></td>
 </tr>
 <tr class="odd">
 <td>Clusterheap</td>
@@ -270,7 +270,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 <td>ClusterHeapOffset + ClusterCount * 2<sup>SectorsPerClusterShift</sup></td>
 <td>VolumeLength – (ClusterHeapOffset + ClusterCount * 2<sup>SectorsPerClusterShift</sup>)</td>
 <td><p>Diese Unterregion ist obligatorisch, und ihre Inhalte sind ggf. nicht definiert.</p>
-<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten die Felder ClusterHeapOffset, ClusterCount, SectorsPerClusterShift und VolumeLength.</p></td>
+<p>Hinweis: Die Felder Haupt- und Sicherungsstartsektor enthalten die Felder ClusterHeapOffset, ClusterCount, SectorsPerClusterShift und VolumeLength.</p></td>
 </tr>
 </tbody>
 </table>
@@ -279,7 +279,7 @@ Ein Volume ist der Satz aller Dateisystemstrukturen und des Datenspeicherplatzes
 
 Die Hauptstartregion enthält alle erforderlichen Startanweisungen, Informationen zur Identifizierung und Dateisystemparameter, damit eine Implementierung Folgendes ausführen kann:
 
-1. Starten sie ein Computersystem von einem exFAT-Volume.
+1. Starten Sie ein Computersystem von einem exFAT-Volume.
 
 2. Identifizieren Sie das Dateisystem auf dem Volume als exFAT.
 
@@ -289,7 +289,7 @@ Die Region "Sicherungsstart" ist eine Sicherung der Hauptstartregion. Sie unters
 
 ### <a name="31-main-and-backup-boot-sector-sub-regions"></a>3.1 Unterregionen des Haupt- und Sicherungsstartbranches
 
-Der Hauptstartsektor enthält Code zum Starten von einem exFAT-Volume und grundlegende exFAT-Parameter, die die Volumestruktur beschreiben (siehe [Tabelle 4).](#table-4-main-and-backup-boot-sector-structure) BIOS, MBR oder andere Bootumreifungs-Agents können diesen Sektor untersuchen und alle darin enthaltenen Startanweisungen laden und ausführen.
+Der Hauptstartsektor enthält Code zum Starten von einem exFAT-Volume und grundlegende exFAT-Parameter, die die Volumestruktur beschreiben (siehe [Tabelle 4).](#table-4-main-and-backup-boot-sector-structure) BIOS, MBR oder andere Bootumreifungs-Agents können diesen Sektor untersuchen und alle darin enthaltenen Startanleitungen laden und ausführen.
 
 Der Sicherungsstart-Sektor ist eine Sicherung des Hauptstartbranches und weist die gleiche Struktur auf (siehe [Tabelle 4).](#table-4-main-and-backup-boot-sector-structure) Der Sicherungsstart-Sektor kann Wiederherstellungsvorgänge unterstützen. Implementierungen müssen jedoch den Inhalt der Felder VolumeFlags und PercentInUse als veraltet behandeln.
 
@@ -299,7 +299,7 @@ Während der anfängliche Formatvorgang den Inhalt des Haupt- und des Sicherungs
 
 <div id="table-4-main-and-backup-boot-sector-structure" />
 
-**Tabelle 4: Struktur des Haupt- und Sicherungsstarts**
+**Tabelle 4: Struktur des Haupt- und Sicherungsstartbranches**
 
 <table>
 <thead>
@@ -329,97 +329,97 @@ Während der anfängliche Formatvorgang den Inhalt des Haupt- und des Sicherungs
 <td>MustBeZero</td>
 <td>11</td>
 <td>53</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#313-mustbezero-field">in Abschnitt 3.1.3 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#313-mustbezero-field">Abschnitt 3.1.3</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>PartitionOffset</td>
 <td>64</td>
 <td>8</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#314-partitionoffset-field">in Abschnitt 3.1.4 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#314-partitionoffset-field">Abschnitt 3.1.4</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>VolumeLength</td>
 <td>72</td>
 <td>8</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#315-volumelength-field">in Abschnitt 3.1.5 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#315-volumelength-field">Abschnitt 3.1.5</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>FatOffset</td>
 <td>80</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#316-fatoffset-field">in Abschnitt 3.1.6 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#316-fatoffset-field">Abschnitt 3.1.6</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>FatLength</td>
 <td>84</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#317-fatlength-field">in Abschnitt 3.1.7 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#317-fatlength-field">Abschnitt 3.1.7</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>ClusterHeapOffset</td>
 <td>88</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#318-clusterheapoffset-field">in Abschnitt 3.1.8</a> wird der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#318-clusterheapoffset-field">Abschnitt 3.1.8</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>ClusterCount</td>
 <td>92</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#319-clustercount-field">in Abschnitt 3.1.9 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#319-clustercount-field">Abschnitt 3.1.9</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>FirstClusterOfRootDirectory</td>
 <td>96</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3110-firstclusterofrootdirectory-field">in Abschnitt 3.1.10 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3110-firstclusterofrootdirectory-field">Abschnitt 3.1.10</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>VolumeSerialNumber</td>
 <td>100</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3111-volumeserialnumber-field">in Abschnitt 3.1.11 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3111-volumeserialnumber-field">Abschnitt 3.1.11</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>FileSystemRevision</td>
 <td>104</td>
 <td>2</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3112-filesystemrevision-field">in Abschnitt 3.1.12 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3112-filesystemrevision-field">Abschnitt 3.1.12</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>VolumeFlags</td>
 <td>106</td>
 <td>2</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3113-volumeflags-field">in Abschnitt 3.1.13 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3113-volumeflags-field">Abschnitt 3.1.13</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>BytesPerSectorShift</td>
 <td>108</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3114-bytespersectorshift-field">in Abschnitt 3.1.14 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3114-bytespersectorshift-field">Abschnitt 3.1.14</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>SectorsPerClusterShift</td>
 <td>109</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3115-sectorsperclustershift-field">in Abschnitt 3.1.15 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3115-sectorsperclustershift-field">Abschnitt 3.1.15</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>NumberOfFats</td>
 <td>110</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3116-numberoffats-field">in Abschnitt 3.1.16 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3116-numberoffats-field">Abschnitt 3.1.16</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>DriveSelect</td>
 <td>111</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3117-driveselect-field">in Abschnitt 3.1.17 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3117-driveselect-field">Abschnitt 3.1.17</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>PercentInUse</td>
 <td>112</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3118-percentinuse-field">in Abschnitt 3.1.18</a> wird der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3118-percentinuse-field">Abschnitt 3.1.18</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>Reserviert</td>
@@ -431,59 +431,59 @@ Während der anfängliche Formatvorgang den Inhalt des Haupt- und des Sicherungs
 <td>BootCode</td>
 <td>120</td>
 <td>390</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3119-bootcode-field">in Abschnitt 3.1.19 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3119-bootcode-field">Abschnitt 3.1.19</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>BootSignature</td>
 <td>510</td>
 <td>2</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#3120-bootsignature-field">in Abschnitt 3.1.20</a> wird der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#3120-bootsignature-field">Abschnitt 3.1.20</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>ExcessSpace</td>
 <td>512</td>
 <td>2<sup>BytesPerSectorShift</sup> – 512</td>
-<td><p>Dieses Feld ist obligatorisch, und sein Inhalt ist ( falls erforderlich) nicht definiert.</p>
-<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide das Feld BytesPerSectorShift.</p></td>
+<td><p>Dieses Feld ist obligatorisch, und sein Inhalt ist ggf. nicht definiert.</p>
+<p>Hinweis: Der Haupt- und der Sicherungsstartsektor enthalten beide das Feld BytesPerSectorShift.</p></td>
 </tr>
 </tbody>
 </table>
 
-#### <a name="311-jumpboot-field"></a>3.1.1 JumpBoot-Feld
+#### <a name="311-jumpboot-field"></a>3.1.1 JumpBoot Field
 
-Das Feld JumpBoot muss die Sprunganweisung für CPUs enthalten, die auf PCs üblich sind, die bei der Ausführung die CPU "springen", um die Anweisungen zum Abschnappen des Startvorgangs im Feld BootCode auszuführen.
+Das Feld JumpBoot muss die Sprunganweisung für CPUs enthalten, die auf PCs üblich sind. Bei der Ausführung "springt" die CPU, um die Startanweisungen im Feld BootCode auszuführen.
 
-Der gültige Wert für dieses Feld ist (in der Reihenfolge von low-order byte bis high-order byte) EBh 76h 90h.
+Der gültige Wert für dieses Feld ist EBh 76h 90h (in der Reihenfolge von Byte mit niedriger bis hoher Bytereihenfolge).
 
-#### <a name="312-filesystemname-field"></a>3.1.2 FileSystemName-Feld
+#### <a name="312-filesystemname-field"></a>3.1.2 Feld "FileSystemName"
 
 Das Feld FileSystemName muss den Namen des Dateisystems auf dem Volume enthalten.
 
-Der gültige Wert für dieses Feld ist in ASCII-Zeichen "EXFAT", der drei nachstellende Leerzeichen enthält.
+Der gültige Wert für dieses Feld ist in ASCII-Zeichen "EXFAT", der drei nachfolgende Leerzeichen enthält.
 
 #### <a name="313-mustbezero-field"></a>3.1.3 MustBeZero-Feld
 
 Das MustBeZero-Feld muss direkt dem Bytebereich entsprechen, den der gepackte BIOS-Parameterblock auf FAT12/16/32-Volumes verbraucht.
 
-Der gültige Wert für dieses Feld ist 0, wodurch verhindert wird, dass FAT12/16/32-Implementierungen fälschlicherweise ein exFAT-Volume einbinden.
+Der gültige Wert für dieses Feld ist 0, wodurch verhindert wird, dass FAT12/16/32-Implementierungen versehentlich ein exFAT-Volume einbinden.
 
 #### <a name="314-partitionoffset-field"></a>3.1.4 PartitionOffset-Feld
 
-Das Feld PartitionOffset muss den medien relativen Sektoroffset der Partition beschreiben, die das gegebene exFAT-Volume hostet. Dieses Feld unterstützt das Starten des Volumes mit erweiterten INT-13-Stunden auf Personalcomputern.
+Das Feld PartitionOffset muss den medienbezogenen Sektoroffset der Partition beschreiben, die das angegebene exFAT-Volume hostet. Dieses Feld unterstützt das Starten des Volumes mithilfe von erweitertem INT 13h auf PCs.
 
 Alle möglichen Werte für dieses Feld sind gültig. Der Wert 0 gibt jedoch an, dass Implementierungen dieses Feld ignorieren sollen.
 
 #### <a name="315-volumelength-field"></a>3.1.5 VolumeLength-Feld
 
-Das VolumeLength-Feld muss die Größe des angegebenen exFAT-Volumes in Sektoren beschreiben.
+Das Feld VolumeLength muss die Größe des angegebenen exFAT-Volumens in Sektoren beschreiben.
 
-Der gültige Wertebereich für dieses Feld ist:
+Der gültige Wertebereich für dieses Feld muss:
 
-- Mindestens 2<sup>20/2</sup><sup>BytesPerSectorShift,</sup>wodurch sichergestellt wird, dass das kleinste Volume nicht kleiner als 1 MB ist
+- Mindestens<sup>2 20/2</sup><sup>BytesPerSectorShift,</sup>wodurch sichergestellt wird, dass das kleinste Volume nicht kleiner als 1 MB ist
 
-- Mindestens 2<sup>64</sup>bis 1, der größte Wert, den dieses Feld beschreiben kann
+- Höchstens 2<sup>64</sup>bis 1 ist der größte Wert, den dieses Feld beschreiben kann.
 
-Wenn die Größe des Unterbereichs "Excess Space" jedoch 0 ist, ist der Wert dieses Felds ClusterHeapOffset + (2<sup>32</sup>- 11) \* 2<sup>SectorsPerClusterShift</sup>.
+Wenn die Größe des Unterbereichs "Übermäßiger Speicherplatz" jedoch 0 ist, lautet der Wert dieses Felds ClusterHeapOffset + (2<sup>32</sup>- 11) \* 2<sup>SectorsPerClusterShift</sup>.
 
 #### <a name="316-fatoffset-field"></a>3.1.6 FatOffset-Feld
 
@@ -491,9 +491,9 @@ Das Feld FatOffset muss den volumebezogenen Sektoroffset des ersten FAT beschrei
 
 Der gültige Wertebereich für dieses Feld muss:
 
-- Mindestens 24, was die Sektoren der Hauptstart- und Sicherungsstartregionen einnimmt
+- Mindestens 24, was den Sektoren rechnungt, die die Hauptstart- und Sicherungsstartregionen nutzen
 
-- Höchstens ClusterHeapOffset (FatLength \* NumberOfFats), der die vom Clusterheap verbrauchten Sektoren darstellt
+- Höchstens ClusterHeapOffset (FatLength \* NumberOfFats), der die vom Clusterheap verbrauchten Sektoren einbezeichnet
 
 #### <a name="317-fatlength-field"></a>3.1.7 FatLength-Feld
 
@@ -503,9 +503,9 @@ Der gültige Wertebereich für dieses Feld muss:
 
 - Mindestens (ClusterCount + 2) \* 2<sup>2/2</sup><sup>BytesPerSectorShift</sup>auf die nächste ganze Zahl aufgerundet, wodurch sichergestellt wird, dass jedes FAT über ausreichend Platz zum Beschreiben aller Cluster im Clusterheap verfügt.
 
-- Höchstens (ClusterHeapOffset – FatOffset) /NumberOfFats auf die nächste ganze Zahl gerundet, wodurch sichergestellt wird, dass die FATs vor dem Clusterheap vorhanden sind.
+- Höchstens (ClusterHeapOffset – FatOffset) /NumberOfFats auf die nächste ganze Zahl gerundet, wodurch sichergestellt wird, dass die FATs vor dem Clusterheap vorhanden sind
 
-Dieses Feld kann einen Wert enthalten, der über der unteren Grenze liegt (wie oben beschrieben), damit das zweite FAT(sofern vorhanden) auch an den Merkmalen des zugrunde liegenden Speichermediums ausgerichtet werden kann. Der Inhalt des Speicherplatzes, der das von FAT selbst geforderte Maß überschreitet, ist ggf. nicht definiert.
+Dieses Feld kann einen Wert enthalten, der über die untere Grenze hinaus liegt (wie oben beschrieben), damit die zweite FAT(sofern vorhanden) auch an den Merkmalen des zugrunde liegenden Speichermediums ausgerichtet werden kann. Der Inhalt des Speicherplatzes, der über das hinausgeht, was das FAT selbst erfordert( falls vorhanden), ist nicht definiert.
 
 #### <a name="318-clusterheapoffset-field"></a>3.1.8 ClusterHeapOffset-Feld
 
@@ -521,7 +521,7 @@ Der gültige Wertebereich für dieses Feld muss:
 
 Das Feld ClusterCount muss die Anzahl der Cluster beschreiben, die der Clusterheap enthält.
 
-Der gültige Wert für dieses Feld muss kleiner als der folgende sein:
+Der gültige Wert für dieses Feld muss der kleinere der folgenden Werte sein:
 
 - (VolumeLength – ClusterHeapOffset) / 2<sup>SectorsPerClusterShift</sup>wird auf die nächste ganze Zahl aufgerundet. Dies ist genau die Anzahl von Clustern, die zwischen dem Anfang des Clusterheaps und dem Ende des Volumes passen können.
 
@@ -546,21 +546,21 @@ Implementierungen sollten die Seriennummer generieren, indem das Datum und die U
 
 Alle möglichen Werte für dieses Feld sind gültig.
 
-#### <a name="3112-filesystemrevision-field"></a>3.1.12 FileSystemRevision-Feld
+#### <a name="3112-filesystemrevision-field"></a>3.1.12 FileSystemRevision Field
 
 Das Feld FileSystemRevision muss die Haupt- und Nebenrevisionsnummern der exFAT-Strukturen auf dem angegebenen Volume beschreiben.
 
-Das High-Order-Byte ist die Hauptrevisionsnummer, und das Low-Order-Byte ist die Nebenrevisionsnummer. Wenn das hochwertige Byte beispielsweise den Wert 01h und das Low-Order-Byte den Wert 05h enthält, beschreibt das Feld FileSystemRevision die Revisionsnummer 1.05.
+Das High-Order-Byte ist die Hauptrevisionsnummer, und das Low-Order-Byte ist die Nebenrevisionsnummer. Wenn z. B. das hochwertige Byte den Wert 01h und das Low-Order-Byte den Wert 05h enthält, beschreibt das Feld FileSystemRevision die Revisionsnummer 1.05.
 Wenn das Hochreihenfolge-Byte den Wert 0Ah und das Low-Order-Byte den Wert 0Fh enthält, beschreibt das Feld FileSystemRevision die Revisionsnummer 10.15.
 
 Der gültige Wertebereich für dieses Feld muss:
 
-- Mindestens 0 für das Low-Order-Byte und 1 für das High-Order-Byte
+- Mindestens 0 für das Low-Order-Byte und 1 für das höherwertige Byte
 
 - Höchstens 99 für das Low-Order-Byte und 99 für das höherwertige Byte
 
 Die Revisionsnummer von exFAT, die in dieser Spezifikation beschrieben wird, ist 1,00.
-Implementierungen dieser Spezifikation sollten alle exFAT-Volumes mit der Hauptrevisionsnummer 1 einbinden und dürfen kein exFAT-Volume mit einer anderen Hauptrevisionsnummer einbinden. Implementierungen müssen die Kleinere Revisionsnummer einhalten und dürfen keine Vorgänge ausführen oder Dateisystemstrukturen erstellen, die in der entsprechenden Spezifikation der angegebenen Nebenrevisionsnummer nicht beschrieben sind.
+Implementierungen dieser Spezifikation sollten ein beliebiges exFAT-Volume mit der Hauptrevisionsnummer 1 einbinden und dürfen kein exFAT-Volume mit einer anderen Hauptrevisionsnummer einbinden. Implementierungen müssen die Kleinere Revisionsnummer einhalten und dürfen keine Vorgänge ausführen oder Dateisystemstrukturen erstellen, die in der entsprechenden Spezifikation der angegebenen Nebenrevisionsnummer nicht beschrieben sind.
 
 #### <a name="3113-volumeflags-field"></a>3.1.13 VolumeFlags-Feld
 
@@ -623,9 +623,9 @@ Das Feld ActiveFat muss wie folgt beschreiben, welche FAT- und Zuordnungsbitmap 
 
 - 0, was bedeutet, dass die erste FAT- und die erste Zuordnungsbitmap aktiv sind.
 
-- 1 bedeutet, dass die zweite FAT- und zweite Zuordnungsbitmap aktiv sind und nur möglich ist, wenn das Feld NumberOfFats den Wert 2 enthält.
+- 1. Das bedeutet, dass die zweite FAT- und zweite Zuordnungsbitmap aktiv sind und nur möglich ist, wenn das Feld NumberOfFats den Wert 2 enthält.
 
-Implementierungen sollten das inaktive FAT und die Zuordnungsbitmap als veraltet betrachten. Nur TexFAT-fähige Implementierungen dürfen die aktiven FAT- und Zuordnungsbitmaps wechseln (siehe [Abschnitt 7.1).](#71-allocation-bitmap-directory-entry)
+Implementierungen sollten das inaktive FAT und die Zuordnungsbitmap als veraltet betrachten. Nur TexFAT-fähige Implementierungen müssen die aktiven FAT- und Allocation Bitmaps wechseln (siehe [Abschnitt 7.1](#71-allocation-bitmap-directory-entry)).
 
 ##### <a name="31132-volumedirty-field"></a>3.1.13.2 VolumeDirty-Feld
 
@@ -635,7 +635,7 @@ Das Feld VolumeDirty muss wie folgt beschreiben, ob das Volume geändert wurde o
 
 - 1, was bedeutet, dass sich das Volume wahrscheinlich in einem inkonsistenten Zustand befindet.
 
-Implementierungen sollten den Wert dieses Felds auf 1 festlegen, wenn Dateisystemmetadateninkonsistenzen auftreten, die sie nicht auflösen. Wenn beim Einbinden eines Volumes der Wert dieses Felds 1 ist, können nur Implementierungen, die Dateisystemmetadateninkonsistenzen auflösen, den Wert dieses Felds auf 0 (0) setzen. Solche Implementierungen müssen den Wert dieses Felds erst auf 0 (0) setzen, nachdem sichergestellt wurde, dass sich das Dateisystem in einem konsistenten Zustand befindet.
+Implementierungen sollten den Wert dieses Felds auf 1 festlegen, wenn Dateisystemmetadateninkonsistenzen auftreten, die sie nicht auflösen. Wenn beim Einbinden eines Volumes der Wert dieses Felds 1 ist, können nur Implementierungen, die Dateisystemmetadateninkonsistenzen auflösen, den Wert dieses Felds auf 0 setzen. Solche Implementierungen müssen den Wert dieses Felds erst auf 0 (0) setzen, nachdem sichergestellt wurde, dass sich das Dateisystem in einem konsistenten Zustand befindet.
 
 Wenn beim Einbinden eines Volumes der Wert dieses Felds 0 ist, sollten Implementierungen dieses Feld vor dem Aktualisieren der Dateisystemmetadaten auf 1 festlegen und dieses Feld anschließend auf 0 löschen, ähnlich wie in [Abschnitt 8.1](#81-recommended-write-ordering)beschrieben.
 
@@ -649,96 +649,96 @@ Das Feld MediaFailure muss wie folgt beschreiben, ob eine Implementierung Medien
 
 Eine Implementierung sollte dieses Feld auf 1 festlegen, wenn:
 
-1. Das Hostingmedium schlägt bei Zugriffsversuchen auf eine beliebige Region auf dem Volume fehl.
+1. Das Hostmedium schlägt beim Zugriff auf eine beliebige Region im Volume fehl.
 
-2. Die Implementierung hat die Wiederholungsalgorithmen für den Zugriff erschöpft, falls vorhanden.
+2. Die Implementierung hat die Wiederholungsalgorithmen für den Zugriff ausgeschöpft, falls dies der Fall ist.
 
-Wenn beim Einbinden eines Volumes der Wert dieses Felds 1 ist, können Implementierungen, die das gesamte Volume auf Medienfehler überprüfen und alle Fehler als "ungültige" Cluster im FAT aufzeichnen (oder anderweitig Medienfehler beheben), den Wert dieses Felds auf 0 setzen.
+Wenn beim Einbinden eines Volumes der Wert dieses Felds 1 ist, können Implementierungen, die das gesamte Volume auf Medienfehler überprüfen und alle Fehler als "fehlerhafte" Cluster im FAT aufzeichnen (oder medienfehler anderweitig beheben), den Wert dieses Felds auf 0 (0) löschen.
 
 ##### <a name="31134-cleartozero-field"></a>3.1.13.4 ClearToZero-Feld
 
-Das Feld ClearToZero hat in dieser Spezifikation keine signifikante Bedeutung.
+Das ClearToZero-Feld hat in dieser Spezifikation keine signifikante Bedeutung.
 
 Die gültigen Werte für dieses Feld sind:
 
 - 0, das keine besondere Bedeutung hat
 
-- 1 bedeutet, dass Implementierungen dieses Feld vor dem Ändern von Dateisystemstrukturen, Verzeichnissen oder Dateien auf 0 löschen müssen.
+- 1. Dies bedeutet, dass Implementierungen dieses Feld vor dem Ändern von Dateisystemstrukturen, Verzeichnissen oder Dateien auf 0 löschen müssen.
 
 #### <a name="3114-bytespersectorshift-field"></a>3.1.14 BytesPerSectorShift-Feld
 
-Das Feld BytesPerSectorShift muss die Bytes pro Sektor beschreiben, ausgedrückt als Protokoll<sub>2</sub>(N), wobei N die Anzahl der Bytes pro Sektor ist. Für 512 Bytes pro Sektor ist der Wert dieses Felds beispielsweise 9.
+Das Feld BytesPerSectorShift muss die Bytes pro Sektor beschreiben, die als Protokoll<sub>2</sub>(N) ausgedrückt werden, wobei N die Anzahl der Bytes pro Sektor ist. Für 512 Bytes pro Sektor beträgt der Wert dieses Felds beispielsweise 9.
 
-Der gültige Wertebereich für dieses Feld muss:
+Der gültige Wertebereich für dieses Feld ist:
 
-- Mindestens 9 (Sektorgröße 512 Byte), dies ist der kleinstmögliche Sektor für ein exFAT-Volume.
+- Mindestens 9 (Sektorgröße von 512 Byte), was dem kleinsten Sektor entspricht, der für ein exFAT-Volume möglich ist.
 
-- Höchstens 12 (Sektorgröße von 4.096 Byte), was der Arbeitsspeicherseitengröße von CPUs entspricht, die auf PCs üblich sind.
+- Mindestens 12 (Sektorgröße von 4.096 Bytes), was der Arbeitsspeicherseitengröße von CPUs entspricht, die auf PCs üblich sind.
 
-#### <a name="3115-sectorsperclustershift-field"></a>3.1.15 SectorsPerClusterShift Field
+#### <a name="3115-sectorsperclustershift-field"></a>3.1.15 SectorsPerClusterShift-Feld
 
-Das Feld SectorsPerClusterShift muss die Sektoren pro Cluster beschreiben, ausgedrückt als Protokoll<sub>2</sub>(N), wobei N für die Anzahl der Sektoren pro Cluster steht. Für 8 Sektoren pro Cluster ist der Wert dieses Felds beispielsweise 3.
+Das Feld "SectorsPerClusterShift" muss die Sektoren pro Cluster beschreiben, ausgedrückt als Protokoll<sub>2</sub>(N), wobei N für die Anzahl der Sektoren pro Cluster steht. Für 8 Sektoren pro Cluster beträgt der Wert dieses Felds beispielsweise 3.
 
-Der gültige Wertebereich für dieses Feld muss:
+Der gültige Wertebereich für dieses Feld ist:
 
-- Mindestens 0 (1 Sektor pro Cluster), der kleinstmögliche Cluster
+- Mindestens 0 (1 Sektor pro Cluster), was dem kleinsten Cluster möglich ist.
 
-- Höchstens 25 : BytesPerSectorShift, das zu einer Clustergröße von 32 MB ausgewertet wird
+- Mindestens 25 BytesPerSectorShift, was zu einer Clustergröße von 32 MB ausgewertet wird
 
 #### <a name="3116-numberoffats-field"></a>3.1.16 NumberOfFats-Feld
 
 Das Feld NumberOfFats muss die Anzahl der FATs und Zuordnungsbitmaps beschreiben, die das Volume enthält.
 
-Der gültige Wertebereich für dieses Feld muss:
+Der gültige Wertebereich für dieses Feld ist:
 
-- 1, das angibt, dass das Volume nur die erste FAT- und erste Zuordnungsbitmap enthält.
+- 1, was angibt, dass das Volume nur die erste FAT- und First Allocation Bitmap enthält.
 
-- 2, das angibt, dass das Volume die erste FAT-, zweite FAT-, Erste Zuordnungsbitmap und zweite Zuordnungsbitmap enthält. Dieser Wert ist nur für TexFAT-Volumes gültig.
+- 2: Gibt an, dass das Volume die Erste FAT-, zweite FAT-, Erste Zuordnungsbitmap und zweite Zuordnungsbitmap enthält. Dieser Wert ist nur für TexFAT-Volumes gültig.
 
 #### <a name="3117-driveselect-field"></a>3.1.17 LaufwerkFeld auswählen
 
-Das Feld DriveSelect muss die erweiterte INT 13h-Laufwerksnummer enthalten, die das Starten dieses Volumes mithilfe von erweitertem INT 13h auf PCs unterstützt.
+Das Feld DriveSelect muss die erweiterte 13-Stunden-Laufwerknummer von INT enthalten, die das Starten von diesem Volume mit erweiterten INT 13h-Daten auf Personalcomputern unterstützt.
 
 Alle möglichen Werte für dieses Feld sind gültig. Ähnliche Felder in früheren FAT-basierten Dateisystemen enthielten häufig den Wert 80h.
 
 #### <a name="3118-percentinuse-field"></a>3.1.18 PercentInUse-Feld
 
-Das Feld PercentInUse muss den Prozentsatz der Cluster im Clusterheap beschreiben, die zugeordnet sind.
+Das Feld PercentInUse muss den Prozentsatz der zugeordneten Cluster im Cluster heap beschreiben.
 
-Der gültige Wertebereich für dieses Feld muss:
+Der gültige Wertebereich für dieses Feld ist:
 
-- Zwischen 0 und einschließlich 100, d. h. dem Prozentsatz der zugeordneten Cluster im Clusterheap, gerundet auf die nächste ganze Zahl
+- Zwischen 0 und 100 einschließlich. Dies ist der Prozentsatz der zugeordneten Cluster im Cluster heap, aufgerundet auf die nächste ganze Zahl.
 
-- Genau FFh, was angibt, dass der Prozentsatz der zugeordneten Cluster im Clusterheap nicht verfügbar ist
+- Genau FFh, was angibt, dass der Prozentsatz der zugeordneten Cluster im Cluster heap nicht verfügbar ist.
 
-Implementierungen müssen den Wert dieses Felds ändern, um Änderungen bei der Zuordnung von Clustern im Clusterheap widerzuspiegeln, oder sie müssen ihn in FFh ändern.
+Implementierungen müssen den Wert dieses Felds ändern, um Änderungen bei der Zuordnung von Clustern im Cluster heap widerzu spiegeln, oder sie müssen ihn in FFh ändern.
 
-Implementierungen dürfen dieses Feld nicht enthalten, wenn sie die jeweilige Prüfsumme für den Hauptstart oder die Sicherungsstartregion berechnen. Beim Verweisen auf den Sicherungsstart-Sektor müssen Implementierungen dieses Feld als veraltet behandeln.
+Implementierungen dürfen dieses Feld nicht enthalten, wenn die jeweilige Hauptstart- oder Sicherungsstartbereichs-Prüfsumme abrechnt. Beim Verweis auf den Sicherungsstartsektor müssen Implementierungen dieses Feld als veraltet behandeln.
 
 #### <a name="3119-bootcode-field"></a>3.1.19 BootCode-Feld
 
-Das Feld BootCode muss Anweisungen zum Starten enthalten.
-Implementierungen füllen dieses Feld möglicherweise mit den CPU-Anweisungen auf, die zum Starten eines Computersystems erforderlich sind. Implementierungen, die keine Startanleitungen bereitstellen, müssen jedes Byte in diesem Feld im Rahmen des Formatvorgangs mit F4h initialisieren (die Stoppanweisung für CPUs, die auf PCs üblich sind).
+Das Feld "BootCode" muss Startverschnappungsanweisungen enthalten.
+Implementierungen können dieses Feld mit den CPU-Anweisungen auffüllen, die für das Starten eines Computersystems erforderlich sind. Implementierungen, die keine Boot-Strapping-Anweisungen bereitstellen, müssen jedes Byte in diesem Feld im Rahmen ihres Formatvorgangs auf F4h (die Halteanweisung für CPUs, die auf Personalcomputern üblich sind) initialisieren.
 
 #### <a name="3120-bootsignature-field"></a>3.1.20 BootSignature-Feld
 
-Das Feld BootSignature muss beschreiben, ob die Absicht eines bestimmten Sektor darin besteht, ein Boot-Sektor zu sein oder nicht.
+Das BootSignature-Feld muss beschreiben, ob die Absicht eines bestimmten Sektor ist, dass er ein Startsektor ist oder nicht.
 
-Der gültige Wert für dieses Feld ist AA55h. Jeder andere Wert in diesem Feld macht den jeweiligen Startsektor ungültig. Implementierungen sollten den Inhalt dieses Felds vor je nach einem anderen Feld im jeweiligen Startsektor überprüfen.
+Der gültige Wert für dieses Feld ist AA55h. Jeder andere Wert in diesem Feld macht den entsprechenden Startsektor ungültig. Implementierungen sollten den Inhalt dieses Felds überprüfen, bevor sie abhängig von einem anderen Feld im jeweiligen Startbereich sind.
 
 ### <a name="32-main-and-backup-extended-boot-sectors-sub-regions"></a>3.2 Haupt- und Sicherungsregionen für erweiterte Startsektoren
 
-Jeder Sektor der Hauptbranches für erweiterte Starte weist die gleiche Struktur auf. Jeder Sektor kann jedoch unterschiedliche Startanweisungen enthalten (siehe Tabelle 6). Bootumschnall-Agents, z. B. die Startanleitungen im Hauptstartsektor, alternative BIOS-Implementierungen oder die Firmware eines eingebetteten Systems, können diese Sektoren laden und die darin enthaltenen Anweisungen ausführen.
+Jeder Sektor der wichtigsten erweiterten Startsektoren hat die gleiche Struktur. jeder Sektor kann jedoch unterschiedliche Boot-Strapping-Anweisungen enthalten (siehe Tabelle 6). Startverschnappungs-Agents, z. B. die Boot-Strapping-Anweisungen im Main Boot Sector, alternative BIOS-Implementierungen oder die Firmware eines eingebetteten Systems, können diese Sektoren laden und die darin enthaltene Anleitung ausführen.
 
-Der Erweiterte Startsektoren sichern ist eine Sicherung der Hauptbranches für erweiterte Starte und weist die gleiche Struktur auf (siehe [Tabelle 6).](#table-6-extended-boot-sector-structure)
+Die Erweiterten Startsektoren für Sicherungen sind eine Sicherung der wichtigsten erweiterten Startsektoren und haben die gleiche Struktur (siehe [Tabelle 6](#table-6-extended-boot-sector-structure)).
 
-Vor der Ausführung der Anweisungen des Haupt- oder Sicherungsbranches für erweiterte Starte sollten Implementierungen ihren Inhalt überprüfen, indem sie sicherstellen, dass das Feld ExtendedBootSignature jedes Sektor seinen vorgeschriebenen Wert enthält.
+Vor dem Ausführen der Anweisungen der Haupt- oder Backup Extended Boot-Sektoren sollten Implementierungen ihren Inhalt überprüfen, indem sie sicherstellen, dass das Feld ExtendedBootSignature jedes Sektor den vorgeschriebenen Wert enthält.
 
-Während der anfängliche Formatvorgang den Inhalt sowohl des Haupt- als auch des erweiterten Startsektors für Sicherungen initialisiert, können Implementierungen diese Sektoren nach Bedarf aktualisieren (und auch ihre jeweilige Startprüfsumme aktualisieren).
+Während der anfängliche Formatvorgang den Inhalt des Haupt- und des erweiterten Sicherungsstartsektors initialisiert, können Implementierungen diese Sektoren aktualisieren (und müssen auch ihre jeweilige Startüberprüfungssumme aktualisieren).
 
 <div id="table-6-extended-boot-sector-structure" />
 
-**Tabelle 6: Struktur des erweiterten Startbranches**
+**Tabelle 6: Struktur des erweiterten Startsektors**
 
 <table>
 <thead>
@@ -756,46 +756,46 @@ Während der anfängliche Formatvorgang den Inhalt sowohl des Haupt- als auch de
 <td>ExtendedBootCode</td>
 <td>0</td>
 <td>2<sup>BytesPerSectorShift</sup> – 4</td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#321-extendedbootcode-field">Abschnitt 3.2.1</a> definiert seinen Inhalt.</p>
-<p>Hinweis: Sowohl der Haupt- als auch der Sicherungsstartsektor enthalten das Feld BytesPerSectorShift.</p></td>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#321-extendedbootcode-field">in Abschnitt 3.2.1 wird</a> der Inhalt definiert.</p>
+<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide das Feld BytesPerSectorShift.</p></td>
 </tr>
 <tr class="even">
 <td>ExtendedBootSignature</td>
 <td>2<sup>BytesPerSectorShift</sup> – 4</td>
 <td>4</td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#322-extendedbootsignature-field">Abschnitt 3.2.2</a> definiert seinen Inhalt.</p>
-<p>Hinweis: Sowohl der Haupt- als auch der Sicherungsstartsektor enthalten das Feld BytesPerSectorShift.</p></td>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#322-extendedbootsignature-field">in Abschnitt 3.2.2 wird</a> der Inhalt definiert.</p>
+<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide das Feld BytesPerSectorShift.</p></td>
 </tr>
 </tbody>
 </table>
 
-#### <a name="321-extendedbootcode-field"></a>3.2.1 Feld "ExtendedBootCode"
+#### <a name="321-extendedbootcode-field"></a>3.2.1 ExtendedBootCode-Feld
 
-Das Feld ExtendedBootCode muss Anweisungen zum Starten enthalten.
-Implementierungen füllen dieses Feld möglicherweise mit den CPU-Anweisungen auf, die zum Starten eines Computersystems erforderlich sind. Implementierungen, die keine Startanweisungen bereitstellen, müssen jedes Byte in diesem Feld im Rahmen des Formatvorgangs mit 00h initialisieren.
+Das Feld ExtendedBootCode muss Startverschnappungsanweisungen enthalten.
+Implementierungen können dieses Feld mit den CPU-Anweisungen auffüllen, die für das Starten eines Computersystems erforderlich sind. Implementierungen, die keine Boot-Strapping-Anweisungen bereitstellen, müssen jedes Byte in diesem Feld im Rahmen ihres Formatvorgangs auf 00h initialisieren.
 
-#### <a name="322-extendedbootsignature-field"></a>3.2.2 Feld "ExtendedBootSignature"
+#### <a name="322-extendedbootsignature-field"></a>3.2.2 ExtendedBootSignature-Feld
 
-Das Feld ExtendedBootSignature muss beschreiben, ob die Absicht eines bestimmten Sektor darin besteht, ein erweiterter Startsektor zu sein oder nicht.
+Im Feld ExtendedBootSignature muss beschrieben werden, ob es sich bei dem angegebenen Sektor um einen erweiterten Startbereich handelt oder nicht.
 
 Der gültige Wert für dieses Feld ist AA550000h. Jeder andere Wert in diesem Feld macht den jeweiligen Main- oder Backup Extended Boot Sector ungültig.
-Implementierungen sollten den Inhalt dieses Felds vor je nach einem anderen Feld im jeweiligen erweiterten Startbereich überprüfen.
+Implementierungen sollten den Inhalt dieses Felds überprüfen, bevor sie abhängig von einem anderen Feld im jeweiligen erweiterten Startbereich sind.
 
-### <a name="33-main-and-backup-oem-parameters-sub-regions"></a>3.3 Oem-Parameter-Unterregionen für Haupt- und Sicherungsdaten
+### <a name="33-main-and-backup-oem-parameters-sub-regions"></a>3.3 Haupt- und Sicherungs-OEM-Parameter Unterregionen
 
-Die Unterregion OEM-Hauptparameter enthält zehn Parameterstrukturen, die herstellerspezifische Informationen enthalten können (siehe [Tabelle 7).](#table-7-oem-parameters-structure) Jede der zehn Parameterstrukturen wird von der Vorlage für generische Parameter abgeleitet (siehe [Abschnitt 3.3.2).](#332-generic-parameters-template) Hersteller können ihre eigenen benutzerdefinierten Parameterstrukturen aus der Vorlage generische Parameter ableiten. Diese Spezifikation selbst definiert zwei Parameterstrukturen: NULL-Parameter (siehe [Abschnitt 3.3.3)](#333-null-parameters)und Flashparameter (siehe [Abschnitt 3.3.4](#334-flash-parameters)).
+Die Unterregion Main OEM Parameters enthält zehn Parameterstrukturen, die herstellerspezifische Informationen enthalten können (siehe [Tabelle 7](#table-7-oem-parameters-structure)). Jede der zehn Parameterstrukturen wird von der Vorlage Generische Parameter (siehe [Abschnitt 3.3.2 ) bestimmt.](#332-generic-parameters-template) Hersteller können ihre eigenen benutzerdefinierten Parameterstrukturen von der Vorlage Generische Parameter ableiten. Diese Spezifikation selbst definiert zwei Parameterstrukturen: NULL-Parameter (siehe [Abschnitt 3.3.3](#333-null-parameters)) und Flashparameter (siehe [Abschnitt 3.3.4](#334-flash-parameters)).
 
-Die OEM-Sicherungsparameter sind eine Sicherung der OEM-Hauptparameter und haben die gleiche Struktur (siehe [Tabelle 7).](#table-7-oem-parameters-structure)
+Die OEM-Parameter für die Sicherung sind eine Sicherung der OEM-Hauptparameter und haben die gleiche Struktur (siehe [Tabelle 7](#table-7-oem-parameters-structure)).
 
-Vor der Verwendung der Inhalte der OEM-Parameter Main oder Backup müssen Implementierungen ihren Inhalt überprüfen, indem sie ihre jeweilige Startprüfsumme überprüfen.
+Vor der Verwendung des Inhalts der OEM-Parameter Main oder Backup müssen Implementierungen ihren Inhalt überprüfen, indem sie ihre jeweilige Startprüfsumme überprüfen.
 
-Hersteller sollten die OEM-Haupt- und Sicherungsparameter mit ihren eigenen benutzerdefinierten Parameterstrukturen (falls vorhanden) und beliebigen anderen Parameterstrukturen auffüllen. Bei nachfolgenden Formatvorgängen muss der Inhalt der OEM-Parameter Main und Backup beibehalten werden.
+Hersteller sollten die OEM-Parameter Main und Backup mit ihren eigenen benutzerdefinierten Parameterstrukturen (sofern welche) und anderen Parameterstrukturen auffüllen. Nachfolgende Formatvorgänge müssen den Inhalt der OEM-Parameter Main und Backup beibehalten.
 
-Implementierungen können die OEM-Parameter Main und Backup nach Bedarf aktualisieren (und müssen auch ihre jeweilige Startprüfsumme aktualisieren).
+Implementierungen können die OEM-Parameter Main und Backup bei Bedarf aktualisieren (und müssen auch die jeweilige Startüberprüfungssumme aktualisieren).
 
 <div id="table-7-oem-parameters-structure" />
 
-**Struktur der OEM-Parameter in Tabelle 7**
+**Tabelle 7: OEM-Parameterstruktur**
 
 <table>
 <thead>
@@ -813,7 +813,7 @@ Implementierungen können die OEM-Parameter Main und Backup nach Bedarf aktualis
 <td>Parameter[0]</td>
 <td>0</td>
 <td>48</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#331-parameters0--parameters9">Abschnitt 3.3.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#331-parameters0--parameters9">in Abschnitt 3.3.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td><p>.</p>
@@ -840,7 +840,7 @@ Implementierungen können die OEM-Parameter Main und Backup nach Bedarf aktualis
 <td>480</td>
 <td>2<sup>BytesPerSectorShift</sup> – 480</td>
 <td><p>Dieses Feld ist obligatorisch, und sein Inhalt ist reserviert.</p>
-<p>Hinweis: Sowohl der Haupt- als auch der Sicherungsstartsektor enthalten das Feld BytesPerSectorShift.</p></td>
+<p>Hinweis: Der Haupt- und der Sicherungsstartsektor enthalten beide das Feld BytesPerSectorShift.</p></td>
 </tr>
 </tbody>
 </table>
@@ -936,7 +936,7 @@ Der gültige Wert für dieses Feld in GUID-Notation ist {00000000-0000-0000-0000
 
 #### <a name="334-flash-parameters"></a>3.3.4 Flashparameter
 
-Die Flash-Parameterstruktur wird von der Vorlage für generische Parameter abgeleitet (siehe [Abschnitt 3.3.2)](#332-generic-parameters-template)und enthält Parameter für Flashmedien (siehe [Tabelle 10).](#table-10-flash-parameters-structure) Hersteller flashbasierter Speichergeräte können ein Parameterfeld (vorzugsweise das Feld Parameter \[ \] 0) mit dieser Parameterstruktur auffüllen. Implementierungen können die Informationen in der Struktur "Flashparameter" verwenden, um Zugriffsvorgänge während Lese-/Schreibvorgängen zu optimieren und die Formatierung der Medien durch Dateisystemstrukturen zu optimieren.
+Die Flash-Parameterstruktur wird von der Vorlage generische Parameter abgeleitet (siehe [Abschnitt 3.3.2)](#332-generic-parameters-template)und enthält Parameter für Flashmedien (siehe [Tabelle 10).](#table-10-flash-parameters-structure) Hersteller flashbasierter Speichergeräte können ein Parameterfeld (vorzugsweise das Feld Parameter \[ \] 0) mit dieser Parameterstruktur auffüllen. Implementierungen können die Informationen in der Struktur "Flashparameter" verwenden, um Zugriffsvorgänge während Lese-/Schreibvorgängen zu optimieren und die Formatierung der Medien durch Dateisystemstrukturen zu optimieren.
 
 Die Unterstützung für die Flashparameterstruktur ist optional.
 
@@ -1015,9 +1015,9 @@ Die Unterstützung für die Flashparameterstruktur ist optional.
 
 Alle möglichen Werte für alle Flashparameterfelder, mit Ausnahme des ParametersGuid-Felds, sind gültig. Der Wert 0 gibt jedoch an, dass das Feld tatsächlich bedeutungslos ist (Implementierungen sollten das gegebene Feld ignorieren).
 
-##### <a name="3341-parametersguid-field"></a>3.3.4.1 ParameterGuid-Feld
+##### <a name="3341-parametersguid-field"></a>3.3.4.1 ParametersGuid-Feld
 
-Das Feld ParametersGuid muss der Definition entsprechen, die in der Vorlage Generische Parameter angegeben ist (siehe [Abschnitt 3.3.2.1](#3321-parametersguid-field)).
+Das Feld ParametersGuid muss der Definition entsprechen, die in der Vorlage Für generische Parameter angegeben ist (siehe [Abschnitt 3.3.2.1](#3321-parametersguid-field)).
 
 Der gültige Wert für dieses Feld in GUID-Notation ist {0A0C7E46-3399-4021-90C8-FA6D389C4BA2}.
 
@@ -1090,7 +1090,7 @@ UInt32 BootChecksum
 Die Fat-Region (File Allocation Table) kann bis zu zwei FATs enthalten, eine in der ersten FAT-Unterregion und eine in der zweiten FAT-Unterregion.
 Im Feld NumberOfFats wird beschrieben, wie viele FATs in dieser Region enthalten sind. Die gültigen Werte für das NumberOfFats-Feld sind 1 und 2. Daher enthält die erste FAT-Unterregion immer eine FAT-Datei. Wenn das NumberOfFats-Feld zwei ist, enthält die zweite FAT-Unterregion ebenfalls eine FAT-Datei.
 
-Das Feld ActiveFat des Felds VolumeFlags beschreibt, welche FAT aktiv ist. Nur das VolumeFlags-Feld im Main Boot Sector ist aktuell.
+Das Feld ActiveFat des Felds VolumeFlags beschreibt, welches FAT aktiv ist. Nur das VolumeFlags-Feld im Main Boot Sector ist aktuell.
 Implementierungen müssen fat, das nicht aktiv ist, als veraltet behandeln. Die Verwendung des inaktiven FAT und der Wechsel zwischen FATs ist implementierungsspezifisch.
 
 ### <a name="41-first-and-second-fat-sub-regions"></a>4.1 Erste und zweite FAT-Unterregionen
@@ -1182,7 +1182,7 @@ Jedes FatEntry-Feld in diesem Array muss einen Cluster im Cluster heap darstelle
 
 Der gültige Wertebereich für diese Felder muss sein:
 
-- Zwischen 2 und ClusterCount + 1, einschließlich, was auf die nächste FatEntry in der angegebenen Clusterkette verweist; Die gegebene FatEntry darf nicht auf fatEntry verweisen, die ihr in der angegebenen Clusterkette vorangegangen ist.
+- Zwischen 2 und ClusterCount + 1, einschließlich, was auf die nächste FatEntry in der angegebenen Clusterkette verweist. Die gegebene FatEntry darf nicht auf fatEntry verweisen, die ihr in der angegebenen Clusterkette vorangegangen ist.
 
 - Genau FFFFFFF7h, wodurch der entsprechende Cluster von FatEntry als "schlecht" markiert wird
 
@@ -1196,7 +1196,7 @@ Der Datenbereich enthält den Cluster heap, der verwalteten Speicherplatz für D
 
 Die Struktur des Cluster heap ist sehr einfach (siehe [Tabelle 12](#table-12-cluster-heap-structure)); Jede aufeinander folgende Reihe von Sektoren beschreibt einen Cluster, wie im Feld "SectorsPerClusterShift" definiert. Wichtig ist, dass der erste Cluster des Cluster heap über Index 2 verfügt, der direkt dem Index von FatEntry \[ 2 \] entspricht.
 
-In einem exFAT-Volume verwaltet eine Zuordnungsbitmap (siehe Abschnitt [7.1.5](#715-allocation-bitmap)) den Datensatz des Zuordnungsstatus aller Cluster. Dies ist ein signifikanter Unterschied zu den Vorgängern von exFAT (FAT12, FAT16 und FAT32), bei denen ein FAT einen Datensatz des Zuordnungsstatus aller Cluster im Cluster heap verwaltet hat.
+In einem exFAT-Volume verwaltet eine Zuordnungsbitmap (siehe [Abschnitt 7.1.5](#715-allocation-bitmap)) den Datensatz des Zuordnungsstatus aller Cluster. Dies ist ein signifikanter Unterschied zu den Vorgängern von exFAT (FAT12, FAT16 und FAT32), bei denen ein FAT einen Datensatz des Zuordnungsstatus aller Cluster im Cluster heap verwaltet hat.
 
 <div id="table-12-cluster-heap-structure" />
 
@@ -1217,9 +1217,9 @@ In einem exFAT-Volume verwaltet eine Zuordnungsbitmap (siehe Abschnitt [7.1.5](#
 <tr class="odd">
 <td>Cluster[2]</td>
 <td>ClusterHeapOffset</td>
-<td>2<sup>SectorsPerClusterShift</sup></td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#511-cluster2--clusterclustercount1-fields">Abschnitt 5.1.1</a> definiert seinen Inhalt.</p>
-<p>Hinweis: Die Felder Haupt- und Sicherungsstartsektoren enthalten die Felder ClusterHeapOffset und SectorsPerClusterShift.</p></td>
+<td>2<sup>SektorPerClusterShift</sup></td>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#511-cluster2--clusterclustercount1-fields">in Abschnitt 5.1.1 wird</a> der Inhalt definiert.</p>
+<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide die Felder ClusterHeapOffset und SectorsPerClusterShift.</p></td>
 </tr>
 <tr class="even">
 <td><p>.</p>
@@ -1238,30 +1238,30 @@ In einem exFAT-Volume verwaltet eine Zuordnungsbitmap (siehe Abschnitt [7.1.5](#
 <tr class="odd">
 <td>Cluster[ClusterCount+1]</td>
 <td>ClusterHeapOffset + (ClusterCount – 1) * 2<sup>SectorsPerClusterShift</sup></td>
-<td>2<sup>SectorsPerClusterShift</sup></td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#511-cluster2--clusterclustercount1-fields">Abschnitt 5.1.1</a> definiert seinen Inhalt.</p>
-<p>Hinweis: Die Felder Haupt- und Sicherungsstartsektoren enthalten die Felder ClusterCount, ClusterHeapOffset und SectorsPerClusterShift.</p></td>
+<td>2<sup>SektorPerClusterShift</sup></td>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#511-cluster2--clusterclustercount1-fields">in Abschnitt 5.1.1 wird</a> der Inhalt definiert.</p>
+<p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide die Felder ClusterCount, ClusterHeapOffset und SectorsPerClusterShift.</p></td>
 </tr>
 </tbody>
 </table>
 
-#### <a name="511-cluster2--clusterclustercount1-fields"></a>5.1.1 Cluster \[ 2 \] ... \[ClusterclusterAnzahl+1 \] Felder
+#### <a name="511-cluster2--clusterclustercount1-fields"></a>5.1.1 Cluster \[ 2 \] ... \[ClusterclusterCount+1-Felder \]
 
-Jedes Clusterfeld in diesem Array ist eine Reihe zusammenhängender Sektoren, deren Größe durch das Feld SectorsPerClusterShift definiert wird.
+Jedes Clusterfeld in diesem Array ist eine Reihe zusammenhängender Sektoren, deren Größe durch das Feld "SectorsPerClusterShift" definiert wird.
 
 ## <a name="6-directory-structure"></a>6 Verzeichnisstruktur
 
-Das exFAT-Dateisystem verwendet einen Verzeichnisstrukturansatz, um die Dateisystemstrukturen und -dateien zu verwalten, die im Clusterheap vorhanden sind. Verzeichnisse weisen eine 1:n-Beziehung zwischen übergeordnetem und untergeordnetem Element in der Verzeichnisstruktur auf.
+Das ExFAT-Dateisystem verwendet einen Verzeichnisstrukturansatz, um die Dateisystemstrukturen und -dateien zu verwalten, die im Cluster heap vorhanden sind. Verzeichnisse verfügen in der Verzeichnisstruktur über eine 1:n-Beziehung zwischen übergeordnetem und untergeordnetem Element.
 
-Das Verzeichnis, auf das das Feld FirstClusterOfRootDirectory verweist, ist der Stamm der Verzeichnisstruktur. Alle anderen Verzeichnisse werden auf singly-verknüpfte Weise aus dem Stammverzeichnis abgeleitet.
+Das Verzeichnis, auf das das Feld FirstClusterOfRootDirectory verweist, ist der Stamm der Verzeichnisstruktur. Alle anderen Verzeichnisse stammen aus dem Stammverzeichnis auf eine singly-linked-Weise ab.
 
-Jedes Verzeichnis besteht aus einer Reihe von Verzeichniseinträgen (siehe [Tabelle 13).](#table-13-directory-structure)
+Jedes Verzeichnis besteht aus einer Reihe von Verzeichniseinträgen (siehe [Tabelle 13](#table-13-directory-structure)).
 
-Ein oder mehrere Verzeichniseinträge werden zu einem Verzeichniseintragssatz kombiniert, der etwas Interessantes beschreibt, z. B. eine Dateisystemstruktur, ein Unterverzeichnis oder eine Datei.
+Mindestens ein Verzeichniseintrag wird zu einem Verzeichniseintragssatz kombiniert, der etwas von Interesse beschreibt, z. B. eine Dateisystemstruktur, ein Unterverzeichnis oder eine Datei.
 
 <div id="table-13-directory-structure" />
 
-**Tabellen-13-Verzeichnisstruktur**
+**Tabelle 13: Verzeichnisstruktur**
 
 <table>
 <thead>
@@ -1279,7 +1279,7 @@ Ein oder mehrere Verzeichniseinträge werden zu einem Verzeichniseintragssatz ko
 <td>DirectoryEntry[0]</td>
 <td>0</td>
 <td>32</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#61-directoryentry0--directoryentryn--1">Abschnitt 6.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#61-directoryentry0--directoryentryn--1">in Abschnitt 6.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td><p>.</p>
@@ -1299,23 +1299,23 @@ Ein oder mehrere Verzeichniseinträge werden zu einem Verzeichniseintragssatz ko
 <td>DirectoryEntry[N-1]</td>
 <td>(N – 1) * 32</td>
 <td>32</td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#61-directoryentry0--directoryentryn--1">Abschnitt 6.1</a> definiert seinen Inhalt.</p>
-<p>N, die Anzahl der DirectoryEntry-Felder, ist die Größe der Clusterkette in Byte, die das angegebene Verzeichnis enthält, dividiert durch die Größe eines DirectoryEntry-Felds, 32 Bytes.</p></td>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#61-directoryentry0--directoryentryn--1">in Abschnitt 6.1 wird</a> der Inhalt definiert.</p>
+<p>N, die Anzahl der DirectoryEntry-Felder, ist die Größe der Clusterkette in Bytes, die das gegebene Verzeichnis enthält, dividiert durch die Größe eines DirectoryEntry-Felds, 32 Byte.</p></td>
 </tr>
 </tbody>
 </table>
 
 ### <a name="61-directoryentry0--directoryentryn--1"></a>6.1 DirectoryEntry \[ 0 \] ... DirectoryEntry \[ N--1\]
 
-Jedes DirectoryEntry-Feld in diesem Array wird von der generischen DirectoryEntry-Vorlage abgeleitet (siehe [Abschnitt 6.2](#62-generic-directoryentry-template)).
+Jedes DirectoryEntry-Feld in diesem Array wird von der Generischen DirectoryEntry-Vorlage (siehe [Abschnitt 6.2 ) ableiten.](#62-generic-directoryentry-template)
 
-### <a name="62-generic-directoryentry-template"></a>6.2 Generisches VerzeichnisVersuchsvorlage
+### <a name="62-generic-directoryentry-template"></a>6.2 Generische DirectoryEntry-Vorlage
 
-Die Vorlage Generic DirectoryEntry stellt die Basisdefinition für Verzeichniseinträge bereit (siehe [Tabelle 14](#table-14-generic-directoryentry-template)). Alle Verzeichniseintragsstrukturen leiten sich von dieser Vorlage ab, und nur von Microsoft definierte Verzeichniseintragsstrukturen sind gültig (exFAT verfügt nicht über Bestimmungen für vom Hersteller definierte Verzeichniseintragsstrukturen, außer wie in [Abschnitt 7.8](#78-vendor-extension-directory-entry) und [Abschnitt 7.9](#79-vendor-allocation-directory-entry)definiert). Die Möglichkeit, die Vorlage Generic DirectoryEntry zu interpretieren, ist obligatorisch.
+Die Vorlage "Generic DirectoryEntry" stellt die Basisdefinition für Verzeichniseinträge (siehe [Tabelle 14) zur](#table-14-generic-directoryentry-template) Alle Verzeichniseintragsstrukturen leiten sich von dieser Vorlage ab, und nur von Microsoft definierte Verzeichniseintragsstrukturen sind gültig (exFAT verfügt nicht über Bestimmungen für vom Hersteller definierte Verzeichniseintragsstrukturen, außer wie in Abschnitt [7.8](#78-vendor-extension-directory-entry) und [Abschnitt 7.9 definiert).](#79-vendor-allocation-directory-entry) Die Interpretation der Vorlage "Generic DirectoryEntry" ist obligatorisch.
 
 <div id="table-14-generic-directoryentry-template" />
 
-**Tabelle 14: Generisches VerzeichnisEntry-Vorlage**
+**Tabelle 14: Generische DirectoryEntry-Vorlage**
 
 <table>
 <thead>
@@ -1333,34 +1333,34 @@ Die Vorlage Generic DirectoryEntry stellt die Basisdefinition für Verzeichnisei
 <td>EntryType</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#621-entrytype-field">Abschnitt 6.2.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#621-entrytype-field">in Abschnitt 6.2.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>CustomDefined</td>
 <td>1</td>
 <td>19</td>
-<td>Dieses Feld ist obligatorisch, und Strukturen, die von dieser Vorlage abgeleitet werden, können ihren Inhalt definieren.</td>
+<td>Dieses Feld ist obligatorisch, und Strukturen, die von dieser Vorlage ableiten, können ihren Inhalt definieren.</td>
 </tr>
 <tr class="odd">
 <td>FirstCluster</td>
 <td>20</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#622-firstcluster-field">Abschnitt 6.2.2</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#622-firstcluster-field">in Abschnitt 6.2.2 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>DataLength</td>
 <td>24</td>
 <td>8</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#623-datalength-field">Abschnitt 6.2.3</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#623-datalength-field">in Abschnitt 6.2.3 wird</a> der Inhalt definiert.</td>
 </tr>
 </tbody>
 </table>
 
 #### <a name="621-entrytype-field"></a>6.2.1 EntryType-Feld
 
-Das Feld EntryType verfügt über drei Verwendungsmodi, die der Wert des Felds definiert (siehe Liste unten).
+Das Feld EntryType verfügt über drei Verwendungsmodi, die durch den Wert des Felds definiert werden (siehe Liste unten).
 
-- 00h ist ein Marker für das Ende des Verzeichnisses, und es gelten die folgenden Bedingungen:
+- 00h, eine End-of-Directory-Markierung, und die folgenden Bedingungen gelten:
 
   - Alle anderen Felder in der angegebenen DirectoryEntry sind tatsächlich reserviert.
 
@@ -1368,38 +1368,38 @@ Das Feld EntryType verfügt über drei Verwendungsmodi, die der Wert des Felds d
 
   - End-of-Directory-Marker sind nur außerhalb von Verzeichniseintragssätzen gültig.
 
-  - Implementierungen können Bei Bedarf End-of-Directory-Marker überschreiben.
+  - Implementierungen können End-of-Directory-Marker nach Bedarf überschreiben.
 
-- Zwischen 01h und einschließlich 7Fh, was ein nicht verwendeter Verzeichniseintragsmarker ist und die folgenden Bedingungen gelten:
+- Zwischen 01h und 7Fh einschließlich . Dies ist ein nicht verwendeter Verzeichniseintragsmarker, und die folgenden Bedingungen gelten:
 
   - Alle anderen Felder in der angegebenen DirectoryEntry sind tatsächlich nicht definiert.
 
   - Nicht verwendete Verzeichniseinträge sind nur außerhalb von Verzeichniseintragssätzen gültig.
 
-  - Implementierungen können nicht verwendeten Verzeichniseinträge nach Bedarf überschreiben.
+  - Implementierungen können bei Bedarf nicht verwendete Verzeichniseinträge überschreiben.
 
   - Dieser Wertebereich entspricht dem Feld InUse (siehe [Abschnitt 6.2.1.4),](#6214-inuse-field)das den Wert 0 enthält.
 
-- Zwischen 81h und einschließlich FFh, was ein regulärer Verzeichniseintrag ist und die folgenden Bedingungen gelten:
+- Zwischen 81h und FFh einschließlich . Dies ist ein regulärer Verzeichniseintrag, und die folgenden Bedingungen gelten:
 
-  - Der Inhalt des EntryType-Felds (siehe [Tabelle 15)](#table-15-generic-entrytype-field-structure)bestimmt das Layout des Rests der DirectoryEntry-Struktur.
+  - Der Inhalt des EntryType-Felds (siehe [Tabelle 15](#table-15-generic-entrytype-field-structure)) bestimmt das Layout des Rests der DirectoryEntry-Struktur.
 
-  - Dieser Wertebereich und nur dieser Wertebereich sind innerhalb eines Verzeichniseintragssatzes gültig.
+  - Dieser Wertebereich und nur dieser Wertebereich sind innerhalb eines Verzeichniseintragssets gültig.
 
-  - Dieser Wertebereich entspricht direkt dem Feld InUse (siehe [Abschnitt 6.2.1.4),](#6214-inuse-field)das den Wert 1 enthält.
+  - Dieser Wertebereich entspricht direkt dem Feld InUse (siehe [Abschnitt 6.2.1.4](#6214-inuse-field)), das den Wert 1 enthält.
 
-Um Änderungen am Feld InUse (siehe [Abschnitt 6.2.1.4)](#6214-inuse-field)zu verhindern, die fälschlicherweise zu einem Verzeichnisendemarker führen, ist der Wert 80h ungültig.
+Um Änderungen am Feld "InUse" (siehe Abschnitt [6.2.1.4)](#6214-inuse-field)zu verhindern, die fälschlicherweise zu einem End-of-Directory-Marker führen, ist der Wert 80h ungültig.
 
 <div id="table-15-generic-entrytype-field-structure" />
 
-**Table 15 Generic EntryType Field Structure**
+**Tabelle 15: Generische EntryType-Feldstruktur**
 
 <table>
 <thead>
 <tr class="header">
 <th><strong>Feldname</strong></th>
 <th><p><strong>Offset</strong></p>
-<p><strong>(Bit)</strong></p></th>
+<p><strong>(bit)</strong></p></th>
 <th><p><strong>Größe</strong></p>
 <p><strong>(Bits)</strong></p></th>
 <th><strong>Kommentare</strong></th>
@@ -1410,7 +1410,7 @@ Um Änderungen am Feld InUse (siehe [Abschnitt 6.2.1.4)](#6214-inuse-field)zu ve
 <td>TypeCode</td>
 <td>0</td>
 <td>5</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#6211-typecode-field">Abschnitt 6.2.1.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#6211-typecode-field">in Abschnitt 6.2.1.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>TypeImportance</td>
@@ -1439,13 +1439,13 @@ Das Feld TypeCode beschreibt teilweise den spezifischen Typ des angegebenen Verz
 
 Alle möglichen Werte dieses Felds sind gültig, es sei denn, die Felder TypeImportance und TypeCategory enthalten jeweils den Wert 0. In diesem Fall ist der Wert 0 für dieses Feld ungültig.
 
-##### <a name="6212-typeimportance-field"></a>6.2.1.2 TypeImportance-Feld
+##### <a name="6212-typeimportance-field"></a>6.2.1.2 TypImportancefeld
 
 Das Feld TypeImportance muss die Wichtigkeit des angegebenen Verzeichniseintrags beschreiben.
 
 Die gültigen Werte für dieses Feld müssen:
 
-- 0, was bedeutet, dass der angegebene Verzeichniseintrag kritisch ist (siehe [Abschnitt 6.3.1.2.1](#63121-critical-primary-directory-entries) und [Abschnitt 6.4.1.2.1](#64121-critical-secondary-directory-entries) für kritische primäre bzw. kritische sekundäre Verzeichniseinträge)
+- 0 bedeutet, dass der angegebene Verzeichniseintrag kritisch ist (siehe [Abschnitt 6.3.1.2.1](#63121-critical-primary-directory-entries) und [Abschnitt 6.4.1.2.1](#64121-critical-secondary-directory-entries) für kritische primäre bzw. kritische sekundäre Verzeichniseinträge)
 
 - 1, was bedeutet, dass der angegebene Verzeichniseintrag unbedenklich ist (siehe [Abschnitt 6.3.1.2.2](#63122-benign-primary-directory-entries) und [Abschnitt 6.4.1.2.2](#64122-benign-secondary-directory-entries) für unbedenkliche primäre bzw. unbedenkliche sekundäre Verzeichniseinträge)
 
@@ -1467,7 +1467,7 @@ Die gültigen Werte für dieses Feld müssen:
 
 - 0 bedeutet, dass der angegebene Verzeichniseintrag nicht verwendet wird. Dies bedeutet, dass die angegebene Struktur tatsächlich ein nicht verwendeter Verzeichniseintrag ist.
 
-- 1, d. h. der angegebene Verzeichniseintrag wird verwendet. Dies bedeutet, dass die angegebene Struktur ein regulärer Verzeichniseintrag ist.
+- 1, was bedeutet, dass der angegebene Verzeichniseintrag verwendet wird. Dies bedeutet, dass die angegebene Struktur ein regulärer Verzeichniseintrag ist.
 
 #### <a name="622-firstcluster-field"></a>6.2.2 FirstCluster-Feld
 
@@ -1479,7 +1479,7 @@ Der gültige Wertebereich für dieses Feld muss:
 
 - Zwischen 2 und ClusterCount + 1, der Bereich gültiger Clusterindizes
 
-Strukturen, die von dieser Vorlage abgeleitet werden, können sowohl die Felder FirstCluster als auch DataLength neu definieren, wenn eine Clusterzuordnung nicht mit der abgeleiteten Struktur kompatibel ist.
+Strukturen, die von dieser Vorlage abgeleitet werden, können die Felder FirstCluster und DataLength neu definieren, wenn eine Clusterzuordnung nicht mit der abgeleiteten Struktur kompatibel ist.
 
 #### <a name="623-datalength-field"></a>6.2.3 DataLength-Feld
 
@@ -1497,9 +1497,9 @@ Strukturen, die von dieser Vorlage abgeleitet werden, können die Felder FirstCl
 
 Der erste Verzeichniseintrag in einem Verzeichniseintragssatz muss ein primärer Verzeichniseintrag sein. Alle nachfolgenden Verzeichniseinträge im Verzeichniseintragssatz müssen ggf. sekundäre Verzeichniseinträge sein (siehe [Abschnitt 6.4](#64-generic-secondary-directoryentry-template)).
 
-Die Fähigkeit zum Interpretieren der Generischen primären DirectoryEntry-Vorlage ist obligatorisch.
+Die Fähigkeit zum Interpretieren der Vorlage Generic Primary DirectoryEntry ist obligatorisch.
 
-Alle Primären Verzeichniseintragsstrukturen werden von der Generischen primären DirectoryEntry-Vorlage abgeleitet (siehe [Tabelle 16](#table-16-generic-primary-directoryentry-template)), die von der Generischen DirectoryEntry-Vorlage abgeleitet ist (siehe [Abschnitt 6.2](#62-generic-directoryentry-template)).
+Alle Primären Verzeichniseintragsstrukturen werden von der generischen Primären DirectoryEntry-Vorlage abgeleitet (siehe [Tabelle 16](#table-16-generic-primary-directoryentry-template)), die von der Generischen DirectoryEntry-Vorlage abgeleitet wird (siehe [Abschnitt 6.2](#62-generic-directoryentry-template)).
 
 <div id="table-16-generic-primary-directoryentry-template" />
 
@@ -1564,15 +1564,15 @@ Alle Primären Verzeichniseintragsstrukturen werden von der Generischen primäre
 
 #### <a name="631-entrytype-field"></a>6.3.1 EntryType-Feld
 
-Das EntryType-Feld muss der Definition entsprechen, die in der Generischen DirectoryEntry-Vorlage angegeben ist (siehe [Abschnitt 6.2.1](#621-entrytype-field)).
+Das Feld EntryType muss der Definition entsprechen, die in der Generischen DirectoryEntry-Vorlage bereitgestellt wird (siehe [Abschnitt 6.2.1).](#621-entrytype-field)
 
 ##### <a name="6311-typecode-field"></a>6.3.1.1 TypCodefeld
 
-Das TypeCode-Feld muss der Definition in der Vorlage Generic DirectoryEntry entsprechen (siehe [Abschnitt 6.2.1.1](#6211-typecode-field)).
+Das TypeCode-Feld muss der Definition entsprechen, die in der Generischen DirectoryEntry-Vorlage angegeben ist (siehe [Abschnitt 6.2.1.1](#6211-typecode-field)).
 
 ##### <a name="6312-typeimportance-field"></a>6.3.1.2 TypeImportance Field
 
-Das Feld TypeImportance muss der Definition in der Vorlage Generic DirectoryEntry entsprechen (siehe [Abschnitt 6.2.1.2](#6212-typeimportance-field)).
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic DirectoryEntry (siehe [Abschnitt 6.2.1.2)](#6212-typeimportance-field)angegeben ist.
 
 ###### <a name="63121-critical-primary-directory-entries"></a>6.3.1.2.1 Kritische primäre Verzeichniseinträge
 
@@ -1588,7 +1588,7 @@ Die Definition von unbedenklichen primären Verzeichniseinträgen korreliert mit
 
 ##### <a name="6313-typecategory-field"></a>6.3.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition in der Vorlage Generic DirectoryEntry entsprechen (siehe [Abschnitt 6.2.1.3).](#6213-typecategory-field)
+Das TypeCategory-Feld muss der Definition in der Generischen DirectoryEntry-Vorlage entsprechen (siehe [Abschnitt 6.2.1.3](#6213-typecategory-field)).
 
 Für diese Vorlage muss der gültige Wert für dieses Feld 0 sein.
 
@@ -1602,7 +1602,7 @@ Das Feld SecondaryCount muss die Anzahl der sekundären Verzeichniseinträge bes
 
 Der gültige Wertebereich für dieses Feld muss:
 
-- Mindestens 0. Dies bedeutet, dass dieser eintrag des primären Verzeichnisses der einzige Eintrag im Verzeichniseintragssatz ist.
+- Mindestens 0, was bedeutet, dass dieser eintrag des primären Verzeichnisses der einzige Eintrag im Verzeichniseintragssatz ist.
 
 - Höchstens 255, was bedeutet, dass die nächsten 255 Verzeichniseinträge und dieser primäre Verzeichniseintrag den Verzeichniseintragssatz umfassen.
 
@@ -1702,9 +1702,9 @@ Die gültigen Werte für dieses Feld müssen:
 
 - 0, d. h. die entsprechenden FAT-Einträge für die Clusterkette der Zuordnung sind gültig, und Implementierungen müssen sie interpretieren. Wenn das Feld AllocationPossible den Wert 0 enthält oder das Feld AllocationPossible den Wert 1 und das Feld FirstCluster den Wert 0 enthält, ist der einzige gültige Wert dieses Felds 0.
 
-- 1, was bedeutet, dass die zugeordnete Zuordnung eine zusammenhängende Reihe von Clustern ist. die entsprechenden FAT-Einträge für die Cluster sind ungültig, und Implementierungen dürfen sie nicht interpretieren. -Implementierungen können die folgende Gleichung verwenden, um die Größe der zugeordneten Zuordnung zu berechnen: DataLength / (2<sup>SectorsPerClusterShift</sup> \* 2<sup>BytesPerSectorShift</sup>), aufgerundet auf die nächste ganze Zahl
+- 1, was bedeutet, dass die zugeordnete Zuordnung eine zusammenhängende Reihe von Clustern ist. die entsprechenden FAT-Einträge für die Cluster sind ungültig, und Implementierungen dürfen sie nicht interpretieren. -Implementierungen können die folgende Gleichung verwenden, um die Größe der zugeordneten Zuordnung zu berechnen: DataLength / (2<sup>SectorsPerClusterShift</sup> \* 2<sup>BytesPerSectorShift</sup>) auf die nächste ganze Zahl aufgerundet
 
-Wenn kritische primäre Verzeichniseintragsstrukturen, die von dieser Vorlage abgeleitet werden, das Feld GeneralPrimaryFlags neu definieren, sind die entsprechenden FAT-Einträge für die Clusterkette einer zugeordneten Zuordnung gültig.
+Wenn wichtige primäre Verzeichniseintragsstrukturen, die von dieser Vorlage abgeleitet werden, das Feld GeneralPrimaryFlags neu definieren, sind die entsprechenden FAT-Einträge für die Clusterkette einer zugeordneten Zuordnung gültig.
 
 #### <a name="635-firstcluster-field"></a>6.3.5 FirstCluster-Feld
 
@@ -1728,7 +1728,7 @@ Der zentrale Zweck sekundärer Verzeichniseinträge besteht darin, zusätzliche 
 
 Die Definition von kritischen und unbedenklichen sekundären Verzeichniseinträgen korreliert mit der kleineren ExFAT-Revisionsnummer. Die Unterstützung für alle kritischen oder unbedenklichen sekundären Verzeichniseinträge, die diese Spezifikation oder nachfolgende Spezifikationen definiert, ist optional.
 
-Alle sekundären Verzeichniseintragsstrukturen werden von der generischen sekundären DirectoryEntry-Vorlage abgeleitet (siehe [Tabelle 18](#table-18-generic-secondary-directoryentry-template)), die von der Generischen DirectoryEntry-Vorlage abgeleitet ist (siehe [Abschnitt 6.2](#62-generic-directoryentry-template)).
+Alle sekundären Verzeichniseintragsstrukturen werden von der generischen sekundären DirectoryEntry-Vorlage abgeleitet (siehe [Tabelle 18](#table-18-generic-secondary-directoryentry-template)), die von der generischen DirectoryEntry-Vorlage abgeleitet wird (siehe [Abschnitt 6.2](#62-generic-directoryentry-template)).
 
 <div id="table-18-generic-secondary-directoryentry-template" />
 
@@ -1787,33 +1787,33 @@ Das EntryType-Feld muss der Definition in der Generischen DirectoryEntry-Vorlage
 
 Das TypeCode-Feld muss der Definition entsprechen, die in der Generischen DirectoryEntry-Vorlage angegeben ist (siehe [Abschnitt 6.2.1.1](#6211-typecode-field)).
 
-##### <a name="6412-typeimportance-field"></a>6.4.1.2 TypeImportance-Feld
+##### <a name="6412-typeimportance-field"></a>6.4.1.2 TypeImportance Field
 
-Das Feld TypeImportance muss der Definition in der Vorlage Generic DirectoryEntry entsprechen (siehe [Abschnitt 6.2.1.2](#6212-typeimportance-field)).
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic DirectoryEntry (siehe [Abschnitt 6.2.1.2)](#6212-typeimportance-field)angegeben ist.
 
 ###### <a name="64121-critical-secondary-directory-entries"></a>6.4.1.2.1 Kritische sekundäre Verzeichniseinträge
 
 Kritische sekundäre Verzeichniseinträge enthalten Informationen, die für die ordnungsgemäße Verwaltung des enthaltenden Verzeichniseintragssatzes von entscheidender Bedeutung sind.
-Obwohl die Unterstützung für einen bestimmten kritischen sekundären Verzeichniseintrag optional ist, rendert ein unbekannter kritischer Verzeichniseintrag den gesamten Verzeichniseintragssatz als nicht unbekannt (über die Definition der entsprechenden Verzeichniseintragsvorlagen hinaus).
+Obwohl die Unterstützung für einen bestimmten kritischen sekundären Verzeichniseintrag optional ist, rendert ein nicht erkannter eintragskritischer Verzeichniseintrag den gesamten Verzeichniseintragssatz als nicht erkannt (über die Definition der entsprechenden Verzeichniseintragsvorlagen hinaus).
 
-Wenn ein Verzeichniseintragssatz jedoch mindestens einen kritischen sekundären Verzeichniseintrag enthält, den eine Implementierung nicht erkennt, dann sollte die Implementierung die Vorlagen der Verzeichniseinträge im Verzeichniseintragssatz und nicht die Daten interpretieren, die jede Zuordnung zu einem Verzeichniseintrag im Verzeichniseintragssatz enthält (Dateiverzeichniseinträge sind eine Ausnahme, siehe [Abschnitt 7.4](#74-file-directory-entry)).
+Wenn ein Verzeichniseintragssatz jedoch mindestens einen kritischen sekundären Verzeichniseintrag enthält, den eine Implementierung nicht erkennt, sollte die Implementierung höchstens die Vorlagen der Verzeichniseinträge im Verzeichniseintragssatz interpretieren und nicht die Daten, die einer Zuordnung eines Verzeichniseintrags im Verzeichniseintragssatz zugeordnet sind ( Dateiverzeichniseinträge stellen eine Ausnahme dar, siehe [Abschnitt 7.4](#74-file-directory-entry)).
 
 ###### <a name="64122-benign-secondary-directory-entries"></a>6.4.1.2.2 Unbedenkliche sekundäre Verzeichniseinträge
 
-Unbedenkliche sekundäre Verzeichniseinträge enthalten zusätzliche Informationen, die für die Verwaltung des enthaltenden Verzeichniseintragssets nützlich sein können. Die Unterstützung für jeden spezifischen unschädlichen sekundären Verzeichniseintrag ist optional.
-Unbekannte unschädliche sekundäre Verzeichniseinträge rendern nicht den gesamten Verzeichniseintragssatz als nicht unbekannt.
+Gutartige sekundäre Verzeichniseinträge enthalten zusätzliche Informationen, die für die Verwaltung des enthaltenden Verzeichniseintragssatzes nützlich sein können. Die Unterstützung für einen bestimmten unbedenklichen sekundären Verzeichniseintrag ist optional.
+Nicht erkannte unbedenkliche sekundäre Verzeichniseinträge rendern nicht den gesamten Verzeichniseintragssatz als nicht erkannt.
 
-Implementierungen ignorieren möglicherweise alle unbedenklichen sekundären Eintrags, die nicht erkannt werden.
+Implementierungen ignorieren möglicherweise alle nicht erkannten unbedenklichen sekundären Einträge.
 
 ##### <a name="6413-typecategory-field"></a>6.4.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.2.1.3](#6213-typecategory-field)).
+Das TypeCategory-Feld muss der Definition in der Generischen DirectoryEntry-Vorlage entsprechen (siehe [Abschnitt 6.2.1.3](#6213-typecategory-field)).
 
 Für diese Vorlage ist der gültige Wert für dieses Feld 1.
 
-##### <a name="6414-inuse-field"></a>6.4.1.4 InUse-Feld
+##### <a name="6414-inuse-field"></a>6.4.1.4 Feld "InUse"
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage "Generic DirectoryEntry" angegeben ist (siehe [Abschnitt 6.2.1.4](#6214-inuse-field)).
+Das Feld InUse muss der Definition entsprechen, die in der Generischen DirectoryEntry-Vorlage angegeben ist (siehe [Abschnitt 6.2.1.4](#6214-inuse-field)).
 
 #### <a name="642-generalsecondaryflags-field"></a>6.4.2 GeneralSecondaryFlags-Feld
 
@@ -1821,14 +1821,14 @@ Das Feld GeneralSecondaryFlags enthält Flags (siehe [Tabelle 19](#table-19-gene
 
 <div id="table-19-generic-generalsecondaryflags-field-structure" />
 
-**Tabelle 19: Generische GeneralSecondaryFlags-Feldstruktur**
+**Tabelle 19 Generische GeneralSecondaryFlags-Feldstruktur**
 
 <table>
 <thead>
 <tr class="header">
 <th><strong>Feldname</strong></th>
 <th><p><strong>Offset</strong></p>
-<p><strong>(bit)</strong></p></th>
+<p><strong>(Bit)</strong></p></th>
 <th><p><strong>Größe</strong></p>
 <p><strong>(Bits)</strong></p></th>
 <th><strong>Kommentare</strong></th>
@@ -1839,40 +1839,40 @@ Das Feld GeneralSecondaryFlags enthält Flags (siehe [Tabelle 19](#table-19-gene
 <td>AllocationPossible</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#6421-allocationpossible-field">in Abschnitt 6.4.2.1 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#6421-allocationpossible-field">Abschnitt 6.4.2.1</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>NoFatChain</td>
 <td>1</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#6422-nofatchain-field">in Abschnitt 6.4.2.2 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#6422-nofatchain-field">Abschnitt 6.4.2.2</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>CustomDefined</td>
 <td>2</td>
 <td>6</td>
-<td>Dieses Feld ist obligatorisch, und Strukturen, die von dieser Vorlage ableiten, können dieses Feld definieren.</td>
+<td>Dieses Feld ist obligatorisch, und Strukturen, die von dieser Vorlage abgeleitet werden, können dieses Feld definieren.</td>
 </tr>
 </tbody>
 </table>
 
-##### <a name="6421-allocationpossible-field"></a>6.4.2.1 ZuordnungPossible-Feld
+##### <a name="6421-allocationpossible-field"></a>6.4.2.1 AllocationPossible Field
 
-Das Feld AllocationPossible muss die gleiche Definition wie das feld mit dem gleichen Namen in der Vorlage Generic Primary DirectoryEntry haben (siehe [Abschnitt 6.3.4.1](#6341-allocationpossible-field)).
+Das Feld AllocationPossible muss die gleiche Definition wie das gleiche benannte Feld in der generischen primären DirectoryEntry-Vorlage aufweisen (siehe [Abschnitt 6.3.4.1](#6341-allocationpossible-field)).
 
 ##### <a name="6422-nofatchain-field"></a>6.4.2.2 NoFatChain-Feld
 
-Das Feld NoFatChain muss die gleiche Definition wie das feld mit dem gleichen Namen in der Vorlage Generic Primary DirectoryEntry haben (siehe [Abschnitt 6.3.4.2](#6342-nofatchain-field)).
+Das NoFatChain-Feld muss die gleiche Definition wie das gleiche benannte Feld in der generischen primären DirectoryEntry-Vorlage aufweisen (siehe [Abschnitt 6.3.4.2](#6342-nofatchain-field)).
 
 #### <a name="643-firstcluster-field"></a>6.4.3 FirstCluster-Feld
 
-Das FirstCluster-Feld muss der Definition entsprechen, die in der Vorlage "Generic DirectoryEntry" angegeben ist (siehe [Abschnitt 6.2.2](#622-firstcluster-field)).
+Das Feld FirstCluster muss der Definition in der Vorlage Generic DirectoryEntry entsprechen (siehe [Abschnitt 6.2.2](#622-firstcluster-field)).
 
-Wenn das NoFatChain-Bit 1 ist, muss FirstCluster auf einen gültigen Cluster im Clusterhap verweisen.
+Wenn das NoFatChain-Bit 1 ist, muss FirstCluster auf einen gültigen Cluster im Clusterheap verweisen.
 
 #### <a name="644-datalength-field"></a>6.4.4 DataLength-Feld
 
-Das DataLength-Feld muss der Definition entsprechen, die in der Vorlage "Generic DirectoryEntry" angegeben ist (siehe [Abschnitt 6.2.3](#623-datalength-field)).
+Das DataLength-Feld muss der Definition in der Generischen DirectoryEntry-Vorlage entsprechen (siehe [Abschnitt 6.2.3](#623-datalength-field)).
 
 Wenn das NoFatChain-Bit 1 ist, darf DataLength nicht 0 (null) sein. Wenn das FirstCluster-Feld 0 (null) ist, muss DataLength ebenfalls 0 (null) sein.
 
@@ -1880,7 +1880,7 @@ Wenn das NoFatChain-Bit 1 ist, darf DataLength nicht 0 (null) sein. Wenn das Fir
 
 Revision 1.00 des exFAT-Dateisystems definiert die folgenden Verzeichniseinträge:
 
-- Kritisches primäres
+- Kritische primäre
 
   - Zuordnungsbitmap ([Abschnitt 7.1](#71-allocation-bitmap-directory-entry))
 
@@ -1890,21 +1890,21 @@ Revision 1.00 des exFAT-Dateisystems definiert die folgenden Verzeichniseinträg
 
   - Datei ([Abschnitt 7.4](#74-file-directory-entry))
 
-- Unbedenkliches primäres
+- Gutartige primäre
 
   - Volume-GUID ([Abschnitt 7.5](#75-volume-guid-directory-entry))
 
-  - TexFAT Padding ([Abschnitt 7.10](#710-texfat-padding-directory-entry))
+  - TexFAT-Auffüllung ([Abschnitt 7.10](#710-texfat-padding-directory-entry))
 
 <!-- -->
 
-- Kritische sekundäre Replikate
+- Kritische sekundäre
 
-  - Streamerweiterung ([Abschnitt 7.6](#76-stream-extension-directory-entry))
+  - Stream-Erweiterung ([Abschnitt 7.6](#76-stream-extension-directory-entry))
 
   - Dateiname ([Abschnitt 7.7](#77-file-name-directory-entry))
 
-- Unbedenkliche sekundäre Replikate
+- Gutartige sekundäre
 
   - Anbietererweiterung ([Abschnitt 7.8](#78-vendor-extension-directory-entry))
 
@@ -1912,10 +1912,10 @@ Revision 1.00 des exFAT-Dateisystems definiert die folgenden Verzeichniseinträg
 
 ### <a name="71-allocation-bitmap-directory-entry"></a>7.1 Zuordnungsbitmap-Verzeichniseintrag
 
-Im exFAT-Dateisystem beschreibt eine FAT-Datei nicht den Zuordnungsstatus von Clustern. stattdessen funktioniert eine Zuordnungsbitmap. Zuordnungsbitmaps sind im Cluster heap vorhanden (siehe Abschnitt [7.1.5](#715-allocation-bitmap)) und verfügen über entsprechende kritische primäre Verzeichniseinträge im Stammverzeichnis (siehe [Tabelle 20](#table-20-allocation-bitmap-directoryentry-structure)).
+Im exFAT-Dateisystem beschreibt ein FAT nicht den Zuordnungsstatus von Clustern. stattdessen eine Zuordnungsbitmap. Zuordnungsbitmaps sind im Clusterheap vorhanden (siehe [Abschnitt 7.1.5)](#715-allocation-bitmap)und weisen entsprechende kritische primäre Verzeichniseinträge im Stammverzeichnis auf (siehe [Tabelle 20).](#table-20-allocation-bitmap-directoryentry-structure)
 
-Das NumberOfFats-Feld bestimmt die Anzahl gültiger Zuordnungsbitmap-Verzeichniseinträge im Stammverzeichnis. Wenn das NumberOfFats-Feld den Wert 1 enthält, ist die einzige gültige Anzahl von Zuordnungsbitmap-Verzeichniseinträgen 1. Darüber hinaus ist der einzige Zuordnungsbitmap-Verzeichniseintrag nur gültig, wenn er die erste Zuordnungsbitmap beschreibt (siehe [Abschnitt 7.1.2.1](#7121-bitmapidentifier-field)). Wenn das Feld NumberOfFats den Wert 2 enthält, ist die einzige gültige Anzahl von Zuordnungsbitmap-Verzeichniseinträgen 2.
-Darüber hinaus sind die beiden Zuordnungsbitmap-Verzeichniseinträge nur gültig, wenn eine die erste Zuordnungsbitmap und die andere die zweite Zuordnungsbitmap beschreibt.
+Das Feld NumberOfFats bestimmt die Anzahl gültiger Zuordnungsbitmap-Verzeichniseinträge im Stammverzeichnis. Wenn das Feld NumberOfFats den Wert 1 enthält, ist die einzige gültige Anzahl von Allocation Bitmap-Verzeichniseinträgen 1. Darüber hinaus ist der ein Eintrag für das Zuordnungsbitmap-Verzeichnis nur gültig, wenn er die erste Zuordnungsbitmap beschreibt (siehe [Abschnitt 7.1.2.1](#7121-bitmapidentifier-field)). Wenn das Feld NumberOfFats den Wert 2 enthält, ist die einzige gültige Anzahl von Allocation Bitmap-Verzeichniseinträgen 2.
+Darüber hinaus sind die beiden Zuordnungsbitmap-Verzeichniseinträge nur gültig, wenn einer die erste Zuordnungsbitmap und der andere die zweite Zuordnungsbitmap beschreibt.
 
 <div id="table-20-allocation-bitmap-directoryentry-structure" />
 
@@ -1937,13 +1937,13 @@ Darüber hinaus sind die beiden Zuordnungsbitmap-Verzeichniseinträge nur gülti
 <td>EntryType</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#711-entrytype-field">in Abschnitt 7.1.1 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#711-entrytype-field">Abschnitt 7.1.1</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>BitmapFlags</td>
 <td>1</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#712-bitmapflags-field">in Abschnitt 7.1.2 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#712-bitmapflags-field">Abschnitt 7.1.2</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>Reserviert</td>
@@ -1955,44 +1955,44 @@ Darüber hinaus sind die beiden Zuordnungsbitmap-Verzeichniseinträge nur gülti
 <td>FirstCluster</td>
 <td>20</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#713-firstcluster-field">in Abschnitt 7.1.3 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#713-firstcluster-field">Abschnitt 7.1.3</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>DataLength</td>
 <td>24</td>
 <td>8</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#714-datalength-field">in Abschnitt 7.1.4 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#714-datalength-field">Abschnitt 7.1.4</a> definiert seinen Inhalt.</td>
 </tr>
 </tbody>
 </table>
 
 #### <a name="711-entrytype-field"></a>7.1.1 EntryType-Feld
 
-Das Feld EntryType muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
+Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1)](#631-entrytype-field)angegeben ist.
 
-##### <a name="7111-typecode-field"></a>7.1.1.1 TypeCode-Feld
+##### <a name="7111-typecode-field"></a>7.1.1.1 TypCodefeld
 
-Das Feld TypeCode muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.1](#6311-typecode-field)).
+Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.1)](#6311-typecode-field)angegeben ist.
 
 Für einen Zuordnungsbitmap-Verzeichniseintrag ist der gültige Wert für dieses Feld 1.
 
-##### <a name="7112-typeimportance-field"></a>7.1.1.2 TypeImportance Field
+##### <a name="7112-typeimportance-field"></a>7.1.1.2 TypeImportance-Feld
 
-Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.2).](#6312-typeimportance-field)
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
 
 Für einen Zuordnungsbitmap-Verzeichniseintrag ist der gültige Wert für dieses Feld 0.
 
-##### <a name="7113-typecategory-field"></a>7.1.1.3 TypeCategory Field
+##### <a name="7113-typecategory-field"></a>7.1.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.3)](#6313-typecategory-field)angegeben ist.
+Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.3](#6313-typecategory-field)).
 
-##### <a name="7114-inuse-field"></a>7.1.1.4 Feld "InUse"
+##### <a name="7114-inuse-field"></a>7.1.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.4)](#6314-inuse-field)angegeben ist.
+Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.4](#6314-inuse-field)).
 
 #### <a name="712-bitmapflags-field"></a>7.1.2 BitmapFlags-Feld
 
-Das Feld BitmapFlags enthält Flags (siehe [Tabelle 21).](#table-21-bitmapflags-field-structure)
+Das Feld BitmapFlags enthält Flags (siehe [Tabelle 21](#table-21-bitmapflags-field-structure)).
 
 <div id="table-21-bitmapflags-field-structure" />
 
@@ -2003,7 +2003,7 @@ Das Feld BitmapFlags enthält Flags (siehe [Tabelle 21).](#table-21-bitmapflags-
 <tr class="header">
 <th><strong>Feldname</strong></th>
 <th><p><strong>Offset</strong></p>
-<p><strong>(Bit)</strong></p></th>
+<p><strong>(bit)</strong></p></th>
 <th><p><strong>Größe</strong></p>
 <p><strong>(Bits)</strong></p></th>
 <th><strong>Kommentare</strong></th>
@@ -2014,7 +2014,7 @@ Das Feld BitmapFlags enthält Flags (siehe [Tabelle 21).](#table-21-bitmapflags-
 <td>BitmapIdentifier</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7121-bitmapidentifier-field">Abschnitt 7.1.2.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7121-bitmapidentifier-field">in Abschnitt 7.1.2.1</a> wird der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>Reserviert</td>
@@ -2027,41 +2027,41 @@ Das Feld BitmapFlags enthält Flags (siehe [Tabelle 21).](#table-21-bitmapflags-
 
 ##### <a name="7121-bitmapidentifier-field"></a>7.1.2.1 BitmapIdentifier-Feld
 
-Das Feld BitmapIdentifier muss angeben, welche Zuordnungsbitmap vom angegebenen Verzeichniseintrag beschrieben wird. Implementierungen müssen die erste Zuordnungsbitmap in Verbindung mit dem ersten FAT und die zweite Zuordnungsbitmap in Verbindung mit dem zweiten FAT verwenden. Das Feld ActiveFat beschreibt, welche FAT- und Allocation Bitmap-Dateien aktiv sind.
+Das Feld BitmapIdentifier muss angeben, welche Zuordnungsbitmap der angegebenen Verzeichniseintrag beschreibt. Implementierungen müssen die erste Zuordnungsbitmap in Verbindung mit dem ersten FAT verwenden und die zweite Zuordnungsbitmap in Verbindung mit der zweiten FAT verwenden. Das Feld ActiveFat beschreibt, welche FAT- und Zuordnungsbitmap aktiv sind.
 
-Die gültigen Werte für dieses Feld müssen:
+Die gültigen Werte für dieses Feld sind:
 
-- 0, was bedeutet, dass der angegebene Verzeichniseintrag die erste Zuordnungsbitmap beschreibt.
+- 0, was bedeutet, dass der gegebene Verzeichniseintrag die erste Zuordnungsbitmap beschreibt.
 
-- 1, d. h. der angegebene Verzeichniseintrag beschreibt die zweite Zuordnungsbitmap und ist nur möglich, wenn NumberOfFats den Wert 2 enthält.
+- 1, was bedeutet, dass der gegebene Verzeichniseintrag die zweite Zuordnungsbitmap beschreibt und nur möglich ist, wenn NumberOfFats den Wert 2 enthält.
 
 #### <a name="713-firstcluster-field"></a>7.1.3 FirstCluster-Feld
 
-Das Feld FirstCluster muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.5).](#635-firstcluster-field)
+Das FirstCluster-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.5](#635-firstcluster-field)).
 
-Dieses Feld enthält den Index des ersten Clusters der Clusterkette, wie im FAT beschrieben, der die Zuordnungsbitmap hostet.
+Dieses Feld enthält den Index des ersten Clusters der Clusterkette, wie fat beschreibt, der die Zuordnungsbitmap hostet.
 
 #### <a name="714-datalength-field"></a>7.1.4 DataLength-Feld
 
-Das DataCluster-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.6)](#636-datalength-field)angegeben ist.
+Das DataCluster-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.6](#636-datalength-field)).
 
 #### <a name="715-allocation-bitmap"></a>7.1.5 Zuordnungsbitmap
 
-Eine Zuordnungsbitmap zeichnet den Zuordnungsstatus der Cluster im Clusterheap auf. Jedes Bit in einer Zuordnungsbitmap gibt an, ob der entsprechende Cluster für die Zuordnung verfügbar ist.
+Eine Zuordnungsbitmap zeichnet den Zuordnungsstatus der Cluster im Cluster heap auf. Jedes Bit in einer Zuordnungsbitmap gibt an, ob der entsprechende Cluster für die Zuordnung verfügbar ist.
 
-Eine Zuordnungsbitmap stellt Cluster vom niedrigsten zum höchsten Index dar (siehe [Tabelle 22).](#table-22-allocation-bitmap-structure) Aus historischen Gründen weist der erste Cluster den Index 2 auf.
-Hinweis: Das erste Bit in der Bitmap ist das Bit der niedrigsten Reihenfolge des ersten Byte.
+Eine Zuordnungsbitmap stellt Cluster vom niedrigsten bis zum höchsten Index dar (siehe [Tabelle 22](#table-22-allocation-bitmap-structure)). Aus historischen Gründen verfügt der erste Cluster über Index 2.
+Hinweis: Das erste Bit in der Bitmap ist das niedrigste Bit des ersten Byte.
 
 <div id="table-22-allocation-bitmap-structure" />
 
-**Table 22 Allocation Bitmap Structure**
+**Tabelle 22: Zuordnungsbitmapstruktur**
 
 <table>
 <thead>
 <tr class="header">
 <th><strong>Feldname</strong></th>
 <th><p><strong>Offset</strong></p>
-<p><strong>(Bit)</strong></p></th>
+<p><strong>(bit)</strong></p></th>
 <th><p><strong>Größe</strong></p>
 <p><strong>(Bits)</strong></p></th>
 <th><strong>Kommentare</strong></th>
@@ -2072,7 +2072,7 @@ Hinweis: Das erste Bit in der Bitmap ist das Bit der niedrigsten Reihenfolge des
 <td>BitmapEntry[2]</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7151-bitmapentry2--bitmapentryclustercount1-fields">Abschnitt 7.1.5.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7151-bitmapentry2--bitmapentryclustercount1-fields">abschnitt 7.1.5.1</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td><p>.</p>
@@ -2090,40 +2090,40 @@ Hinweis: Das erste Bit in der Bitmap ist das Bit der niedrigsten Reihenfolge des
 </tr>
 <tr class="odd">
 <td>BitmapEntry[ClusterCount+1]</td>
-<td>ClusterCount – 1</td>
+<td>ClusterCount : 1</td>
 <td>1</td>
-<td><p>Dieses Feld ist obligatorisch, und <a href="#7151-bitmapentry2--bitmapentryclustercount1-fields">Abschnitt 7.1.5.1</a> definiert seinen Inhalt.</p>
+<td><p>Dieses Feld ist obligatorisch, und <a href="#7151-bitmapentry2--bitmapentryclustercount1-fields">in Abschnitt 7.1.5.1 wird</a> der Inhalt definiert.</p>
 <p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide das Feld ClusterCount.</p></td>
 </tr>
 <tr class="even">
 <td>Reserviert</td>
 <td>ClusterCount</td>
 <td>(DataLength * 8) – ClusterCount</td>
-<td><p>Dieses Feld ist obligatorisch, und sein Inhalt, falls vorhanden, ist reserviert.</p>
+<td><p>Dieses Feld ist obligatorisch, und sein Inhalt (falls erforderlich) ist reserviert.</p>
 <p>Hinweis: Die Haupt- und Sicherungsstartsektoren enthalten beide das Feld ClusterCount.</p></td>
 </tr>
 </tbody>
 </table>
 
-##### <a name="7151-bitmapentry2--bitmapentryclustercount1-fields"></a>7.1.5.1 BitmapEntry \[ 2 \] ... BitmapEntry \[ ClusterCount+1 \] Fields
+##### <a name="7151-bitmapentry2--bitmapentryclustercount1-fields"></a>7.1.5.1 BitmapEntry \[ 2 \] ... BitmapEntry \[ ClusterCount+1-Felder \]
 
-Jedes BitmapEntry-Feld in diesem Array stellt einen Cluster im Clusterheap dar. BitmapEntry \[ 2 \] stellt den ersten Cluster im Clusterheap und BitmapEntry \[ ClusterCount+1 \] den letzten Cluster im Clusterheap dar.
+Jedes BitmapEntry-Feld in diesem Array stellt einen Cluster im Cluster heap dar. BitmapEntry 2 stellt den ersten Cluster \[ \] im Cluster heap dar, und BitmapEntry ClusterCount+1 stellt den letzten Cluster \[ \] im Cluster heap dar.
 
-Die gültigen Werte für diese Felder müssen:
+Die gültigen Werte für diese Felder sind:
 
-- 0, der den entsprechenden Cluster als verfügbar für die Zuordnung beschreibt
+- 0, der den entsprechenden Cluster als für die Zuordnung verfügbar beschreibt.
 
-- 1: Beschreibt den entsprechenden Cluster als nicht für die Zuordnung verfügbar (eine Clusterzuordnung belegt möglicherweise bereits den entsprechenden Cluster, oder das aktive FAT kann den entsprechenden Cluster als fehlerhaft beschreiben).
+- 1, in dem der entsprechende Cluster als nicht für die Zuordnung verfügbar beschrieben wird (eine Clusterzuordnung kann den entsprechenden Cluster möglicherweise bereits nutzen, oder die aktive FAT-Datei beschreibt den entsprechenden Cluster möglicherweise als schlecht)
 
 ### <a name="72-up-case-table-directory-entry"></a>7.2 Up-case Table Directory Entry
 
-Die Up-Case-Tabelle definiert die Konvertierung von Kleinbuchstaben in Großbuchstaben. Dies ist wichtig, da der Verzeichniseintrag Dateiname (siehe Abschnitt 7.7) Unicode-Zeichen verwendet und das exFAT-Dateisystem die Groß-/Kleinschreibung nicht beachtet und die Groß-/Kleinschreibung beibehalten wird. Die Up-Case-Tabelle ist im Clusterheap vorhanden (siehe [Abschnitt 7.2.5](#725-up-case-table)) und verfügt über einen entsprechenden kritischen primären Verzeichniseintrag im Stammverzeichnis (siehe [Tabelle 23).](#table-23-up-case-table-directoryentry-structure) Die gültige Anzahl von Einträgen im Up-Case-Tabellenverzeichnis ist 1.
+Die Up-Case-Tabelle definiert die Konvertierung von Klein- in Groß-/Kleinzeichen. Dies ist wichtig, da beim Verzeichniseintrag Dateiname (siehe Abschnitt 7.7) Unicode-Zeichen verwendet werden und beim ExFAT-Dateisystem die Groß-/Kleinschreibung nicht beachtet und die Groß-/Kleinschreibung beibehalten wird. Die Up-Case-Tabelle ist im Cluster heap vorhanden (siehe Abschnitt [7.2.5](#725-up-case-table)) und verfügt über einen entsprechenden kritischen primären Verzeichniseintrag im Stammverzeichnis (siehe [Tabelle 23](#table-23-up-case-table-directoryentry-structure)). Die gültige Anzahl von Tabellenverzeichniseinträgen mit up-case beträgt 1.
 
-Aufgrund der Beziehung zwischen der Up-Case-Tabelle und dateinamen sollten Implementierungen die Up-Case-Tabelle nur aufgrund von Formatvorgängen ändern.
+Aufgrund der Beziehung zwischen der Up-Case-Tabelle und dateinamen sollten Implementierungen die Up-case-Tabelle nur aufgrund von Formatvorgängen ändern.
 
 <div id="table-23-up-case-table-directoryentry-structure" />
 
-**Table 23 Up-case Table DirectoryEntry Structure**
+**Tabelle 23: TabellenverzeichnisIntry-Struktur mit Up-Case-Fall**
 
 <table>
 <thead>
@@ -2141,7 +2141,7 @@ Aufgrund der Beziehung zwischen der Up-Case-Tabelle und dateinamen sollten Imple
 <td>EntryType</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#721-entrytype-field">Abschnitt 7.2.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#721-entrytype-field">in Abschnitt 7.2.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>Reserved1</td>
@@ -2153,7 +2153,7 @@ Aufgrund der Beziehung zwischen der Up-Case-Tabelle und dateinamen sollten Imple
 <td>TableChecksum</td>
 <td>4</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#722-tablechecksum-field">Abschnitt 7.2.2</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#722-tablechecksum-field">in Abschnitt 7.2.2 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>Reserved2</td>
@@ -2178,7 +2178,7 @@ Aufgrund der Beziehung zwischen der Up-Case-Tabelle und dateinamen sollten Imple
 
 #### <a name="721-entrytype-field"></a>7.2.1 EntryType-Feld
 
-Das Feld EntryType muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
+Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
 
 ##### <a name="7211-typecode-field"></a>7.2.1.1 TypeCode-Feld
 
@@ -2189,7 +2189,7 @@ Für den Verzeichniseintrag Up-case Table ist der gültige Wert für dieses Feld
 
 ##### <a name="7212-typeimportance-field"></a>7.2.1.2 TypeImportance-Feld
 
-Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
 
 Für den Verzeichniseintrag Up-case Table ist der gültige Wert für dieses Feld.
 0.
@@ -2246,7 +2246,7 @@ Eine Up-Case-Tabelle ist eine Reihe von Unicode-Zeichenzuordnungen. Eine Zeichen
 Die ersten 128 Unicode-Zeichen verfügen über obligatorische Zuordnungen (siehe [Tabelle 24](#table-24-mandatory-first-128-up-case-table-entries)).
 Eine Up-Case-Tabelle mit einer anderen Zeichenzuordnung für eines der ersten 128 Unicode-Zeichen ist ungültig.
 
-Implementierungen, die nur Zeichen aus dem obligatorischen Zuordnungsbereich unterstützen, ignorieren möglicherweise die Zuordnungen der restlichen Up-Case-Tabelle. Solche Implementierungen dürfen beim Erstellen oder Umbenennen von Dateien nur Zeichen aus dem obligatorischen Zuordnungsbereich verwenden (siehe Abschnitt [7.7](#77-file-name-directory-entry)). Wenn sie vorhandene Dateinamen in eine neue Schreib schreibe, dürfen solche Implementierungen keine Zeichen aus dem nicht obligatorischen Zuordnungsbereich verwenden, sondern sie im resultierenden Dateinamen mit vorgeänderten Schreibfehlern intakt lassen (dies ist eine partielle Auf-Schreib-/Schreibmaschierung). Beim Vergleichen von Dateinamen müssen solche Implementierungen Dateinamen, die sich vom verglichenen Namen unterscheiden, nur durch Unicode-Zeichen aus dem nicht obligatorischen Zuordnungsbereich als gleichwertig behandeln. Obwohl solche Dateinamen nur potenziell äquivalent sind, können solche Implementierungen nicht sicherstellen, dass der Dateiname mit der vollständigen Hochsentsprechung nicht mit dem zu vergleichenden Namen in Zusammenhang steht.
+Implementierungen, die nur Zeichen aus dem obligatorischen Zuordnungsbereich unterstützen, ignorieren möglicherweise die Zuordnungen des Rests der Up-Case-Tabelle. Solche Implementierungen dürfen beim Erstellen oder Umbenennen von Dateien nur Zeichen aus dem obligatorischen Zuordnungsbereich verwenden (siehe Abschnitt [7.7](#77-file-name-directory-entry)). Wenn sie vorhandene Dateinamen in eine neue Schreib schreibe, dürfen solche Implementierungen keine Zeichen aus dem nicht obligatorischen Zuordnungsbereich verwenden, sondern sie im resultierenden Dateinamen mit vorgeänderten Schreibfehlern intakt lassen (dies ist eine partielle Auf-Schreib-/Schreibmaschierung). Beim Vergleichen von Dateinamen müssen solche Implementierungen Dateinamen, die sich vom verglichenen Namen unterscheiden, nur durch Unicode-Zeichen aus dem nicht obligatorischen Zuordnungsbereich als gleichwertig behandeln. Obwohl solche Dateinamen nur potenziell äquivalent sind, können solche Implementierungen nicht sicherstellen, dass der Dateiname mit der vollständigen Hochsentsprechung nicht mit dem im Vergleich zu sehenden Namen in Zusammenhang steht.
 
 <div id="table-24-mandatory-first-128-up-case-table-entries" />
 
@@ -2273,7 +2273,7 @@ Implementierungen, die nur Zeichen aus dem obligatorischen Zuordnungsbereich unt
 
 **(Hinweis: Einträge mit Up-Case-Zuordnungen ohne Identität sind fett formatiert.)**
 
-Beim Formatieren eines Volumes können Implementierungen eine Up-Case-Tabelle in einem komprimierten Format mithilfe der Komprimierung der Identitätszuordnung generieren, da ein großer Teil des Unicode-Zeichenraums kein Konzept der Groß-/Klein-Groß-/Klein formatiert hat (was bedeutet, dass die Zeichen "klein" und "groß" gleichwertig sind).
+Beim Formatieren eines Volumes können Implementierungen eine Up-Case-Tabelle in einem komprimierten Format mithilfe der Identitätszuordnungskomprimierung generieren, da ein großer Teil des Unicode-Zeichenraums kein Case-Konzept hat (was bedeutet, dass die Zeichen "klein" und "groß" gleichwertig sind).
 Implementierungen komprimieren eine Up-Case-Tabelle, indem sie eine Reihe von Identitätszuordnungen mit dem Wert FFFFh gefolgt von der Anzahl der Identitätszuordnungen darstellen.
 
 Beispielsweise kann eine Implementierung die ersten 100 (64h) Zeichenzuordnungen mit den folgenden acht Einträgen einer komprimierten Up-Case-Tabelle darstellen:
@@ -2288,7 +2288,7 @@ Die Möglichkeit, beim Formatieren eines Volumes eine komprimierte Up-Case-Tabel
 
 Beim Formatieren eines Volumes sollten Implementierungen die empfohlene Up-Case-Tabelle im komprimierten Format aufzeichnen (siehe Tabelle [25](#table-25-recommended-up-case-table-in-compressed-format)), für die der Wert des TableChecksum-Felds E619D30Dh ist.
 
-Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder komprimiert oder unkomprimiert, dann muss diese Tabelle den gesamten Unicode-Zeichenbereich abdecken (von Zeichencodes 0000h bis einschließlich FFFFh).
+Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder komprimiert oder unkomprimiert, muss diese Tabelle den gesamten Unicode-Zeichenbereich abdecken (von Zeichencodes 0000h bis einschließlich FFFFh).
 
 <div id="table-25-recommended-up-case-table-in-compressed-format" />
 
@@ -2383,7 +2383,7 @@ Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder kompr
 | **02A0h**      | 02A0h                        | 02A1h   | 02A2h   | 02A3h   | 02A4h   | 02A5h   | 02A6h   | 02A7h   |
 | **02A8h**      | 02A8h                        | 02A9h   | 02AAh   | 02ABh   | 02ACh   | 02ADh   | 02AEh   | 02AFh   |
 | **02B0h**      | 02B0h                        | 02B1h   | 02B2h   | 02B3h   | 02B4h   | 02B5h   | 02B6h   | 02B7h   |
-| **02B8h**      | 02B8h                        | 02B9h   | 02BAh   | 02BBh   | 02BCh   | 02BDh   | 02BEh   | 02BFh   |
+| **02B8h**      | 02B8h                        | 02B9h   | 02BAh   | 02BH   | 02BCh   | 02BDh   | 02BEh   | 02BFh   |
 | **02C0h**      | 02C0h                        | 02C1h   | 02C2h   | 02C3h   | 02C4h   | 02C5h   | 02C6h   | 02C7h   |
 | **02C8h**      | 02C8h                        | 02C9h   | 02CAh   | 02CBh   | 02CCh   | 02CDh   | 02CEh   | 02CFh   |
 | **02D0h**      | 02D0h                        | 02D1h   | 02D2h   | 02D3h   | 02D4h   | 02D5h   | 02D6h   | 02D7h   |
@@ -2570,7 +2570,7 @@ Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder kompr
 | **0878h**      | 206Ch                        | 206Dh   | 206Eh   | 206Fh   | 2070h   | 2071h   | 2072h   | 2073h   |
 | **0880h**      | 2074h                        | 2075h   | 2076h   | 2077h   | 2078h   | 2079h   | 207Ah   | 207Bh   |
 | **0888h**      | 207Ch                        | 207Dh   | 207Eh   | 207Fh   | 2080h   | 2081h   | 2082h   | 2083h   |
-| **0890h**      | 2084h                        | 2085h   | 2086h   | 2087h   | 2088h   | 2089h   | 208Ah   | 208Bh   |
+| **0890h**      | 2084h                        | 2085h   | 2086h   | 2087h   | 2088 Stunden   | 2089h   | 208Ah   | 208Bh   |
 | **0898h**      | 208Ch                        | 208Dh   | 208Eh   | 208Fh   | 2090h   | 2091h   | 2092h   | 2093h   |
 | **08A0h**      | 2094h                        | 2095h   | 2096h   | 2097h   | 2098h   | 2099h   | 209Ah   | 209Bh   |
 | **08A8h**      | 209Ch                        | 209Dh   | 209Eh   | 209Fh   | 20A0h   | 20A1h   | 20A2h   | 20A3h   |
@@ -2586,7 +2586,7 @@ Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder kompr
 | **08F8h**      | 20ECh                        | 20EDh   | 20EEh   | 20EFh   | 20F0h   | 20F1h   | 20F2h   | 20F3h   |
 | **0900h**      | 20F4h                        | 20F5h   | 20F6h   | 20F7h   | 20F8h   | 20F9h   | 20FAh   | 20FBh   |
 | **0908h**      | 20FCh                        | 20FDh   | 20FEh   | 20FFh   | 2100h   | 2101h   | 2102h   | 2103h   |
-| **0910h**      | 2104 Stunden                        | 2105h   | 2106h   | 2107h   | 2108h   | 2109h   | 210Ah   | 210Bh   |
+| **0910h**      | 2104h                        | 2105h   | 2106h   | 2107h   | 2108h   | 2109h   | 210Ah   | 210Bh   |
 | **0918h**      | 210Ch                        | 210Dh   | 210Eh   | 210Fh   | 2110h   | 2111h   | 2112h   | 2113h   |
 | **0920h**      | 2114h                        | 2115h   | 2116h   | 2117h   | 2118h   | 2119h   | 211Ah   | 211Bh   |
 | **0928h**      | 211Ch                        | 211Dh   | 211Eh   | 211Fh   | 2120h   | 2121h   | 2122h   | 2123h   |
@@ -2664,11 +2664,11 @@ Wenn eine Implementierung eine eigene Up-Case-Tabelle definiert , entweder kompr
 
 ### <a name="73-volume-label-directory-entry"></a>7.3 VolumeBezeichnungsverzeichniseintrag
 
-Die Volumebezeichnung ist eine Unicode-Zeichenfolge, mit der Endbenutzer ihre Speichervolumes unterscheiden können. Im exFAT-Dateisystem ist die Volumebezeichnung als kritischer primärer Verzeichniseintrag im Stammverzeichnis vorhanden (siehe [Tabelle 26).](#table-26-volume-label-directoryentry-structure) Die gültige Anzahl von Volume Label-Verzeichniseinträgen liegt zwischen 0 und 1.
+Die Volumebezeichnung ist eine Unicode-Zeichenfolge, mit der Endbenutzer ihre Speichervolumes unterscheiden können. Im exFAT-Dateisystem ist die Volumebezeichnung als kritischer primärer Verzeichniseintrag im Stammverzeichnis vorhanden (siehe [Tabelle 26).](#table-26-volume-label-directoryentry-structure) Die gültige Anzahl von Volumebezeichnungsverzeichniseinträgen liegt zwischen 0 und 1.
 
 <div id="table-26-volume-label-directoryentry-structure" />
 
-**Tabelle 26 Volume label DirectoryEntry Structure**
+**Tabelle 26 VolumebezeichnungsverzeichnisEntry-Struktur**
 
 <table>
 <thead>
@@ -2686,19 +2686,19 @@ Die Volumebezeichnung ist eine Unicode-Zeichenfolge, mit der Endbenutzer ihre Sp
 <td>EntryType</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#731-entrytype-field">Abschnitt 7.3.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#731-entrytype-field">in Abschnitt 7.3.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>CharacterCount</td>
 <td>1</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#732-charactercount-field">Abschnitt 7.3.2</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#732-charactercount-field">in Abschnitt 7.3.2 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>VolumeLabel</td>
 <td>2</td>
 <td>22</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#733-volumelabel-field">Abschnitt 7.3.3</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#733-volumelabel-field">in Abschnitt 7.3.3 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>Reserviert</td>
@@ -2711,51 +2711,51 @@ Die Volumebezeichnung ist eine Unicode-Zeichenfolge, mit der Endbenutzer ihre Sp
 
 #### <a name="731-entrytype-field"></a>7.3.1 EntryType-Feld
 
-Das Feld EntryType muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1)](#631-entrytype-field)angegeben ist.
+Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
 
-##### <a name="7311-typecode-field"></a>7.3.1.1 TypCodefeld
+##### <a name="7311-typecode-field"></a>7.3.1.1 TypeCode-Feld
 
-Das TypeCode-Feld muss der Definition entsprechen, die in der Generischen primären DirectoryEntry-Vorlage angegeben ist (siehe [Abschnitt 6.3.1.1](#6311-typecode-field)).
+Das Feld TypeCode muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.1](#6311-typecode-field)).
 
-Für den Verzeichniseintrag Volume Label ist der gültige Wert für dieses Feld.
+Für den Verzeichniseintrag Volumebezeichnung ist der gültige Wert für dieses Feld.
 3.
 
-##### <a name="7312-typeimportance-field"></a>7.3.1.2 TypeImportance Field
+##### <a name="7312-typeimportance-field"></a>7.3.1.2 TypeImportance-Feld
 
-Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.2).](#6312-typeimportance-field)
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
 
-Für den Verzeichniseintrag Volume Label ist der gültige Wert für dieses Feld.
+Für den Verzeichniseintrag Volumebezeichnung ist der gültige Wert für dieses Feld.
 0.
 
 ##### <a name="7313-typecategory-field"></a>7.3.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.3)](#6313-typecategory-field)angegeben ist.
+Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.3](#6313-typecategory-field)).
 
-##### <a name="7314-inuse-field"></a>7.3.1.4 Feld "InUse"
+##### <a name="7314-inuse-field"></a>7.3.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.4)](#6314-inuse-field)angegeben ist.
+Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.4](#6314-inuse-field)).
 
 #### <a name="732-charactercount-field"></a>7.3.2 CharacterCount-Feld
 
 Das Feld CharacterCount muss die Länge der Unicode-Zeichenfolge enthalten, die das VolumeLabel-Feld enthält.
 
-Der gültige Wertebereich für dieses Feld muss:
+Der gültige Wertebereich für dieses Feld ist:
 
-- Mindestens 0, d.h. die Unicode-Zeichenfolge ist 0 Zeichen lang (entspricht keiner Volumebezeichnung).
+- Mindestens 0, d. h. die Unicode-Zeichenfolge ist 0 Zeichen lang (entspricht keiner Volumebezeichnung).
 
-- Höchstens 11, was bedeutet, dass die Unicode-Zeichenfolge 11 Zeichen lang ist
+- Mindestens 11, was bedeutet, dass die Unicode-Zeichenfolge 11 Zeichen lang ist.
 
 #### <a name="733-volumelabel-field"></a>7.3.3 VolumeLabel-Feld
 
-Das Feld VolumeLabel muss eine Unicode-Zeichenfolge enthalten, bei der es sich um den benutzerfreundlichen Namen des Volumes handelt. Das VolumeLabel-Feld weist den gleichen Satz ungültiger Zeichen auf wie das FileName-Feld des Dateinamen-Verzeichniseintrags (siehe [Abschnitt 7.7.3).](#773-filename-field)
+Das VolumeLabel-Feld muss eine Unicode-Zeichenfolge enthalten, bei der es sich um den benutzerfreundlichen Namen des Volumes handelt. Das Feld VolumeLabel enthält denselben Satz ungültiger Zeichen wie das Feld FileName des Verzeichniseintrags Dateiname (siehe [Abschnitt 7.7.3](#773-filename-field)).
 
 ### <a name="74-file-directory-entry"></a>7.4 Dateiverzeichniseintrag
 
-Dateiverzeichniseinträge beschreiben Dateien und Verzeichnisse. Dabei handelt es sich um wichtige primäre Verzeichniseinträge, und jedes Verzeichnis kann null oder mehr Dateiverzeichniseinträge enthalten (siehe [Tabelle 27).](#table-27-file-directoryentry) Damit ein Dateiverzeichniseintrag gültig ist, muss genau ein Eintrag für das Stream Extension-Verzeichnis und mindestens ein Dateinamen-Verzeichniseintrag unmittelbar auf den Eintrag Dateiverzeichnis folgen (siehe [Abschnitt 7.6](#76-stream-extension-directory-entry) bzw. [Abschnitt 7.7).](#77-file-name-directory-entry)
+Dateiverzeichniseinträge beschreiben Dateien und Verzeichnisse. Sie sind wichtige primäre Verzeichniseinträge, und jedes Verzeichnis kann null oder mehr Dateiverzeichniseinträge enthalten (siehe [Tabelle 27](#table-27-file-directoryentry)). Damit ein Dateiverzeichniseintrag gültig ist, müssen genau ein Verzeichniseintrag für die Stream-Erweiterung und mindestens ein Dateiname-Verzeichniseintrag unmittelbar auf den Dateiverzeichniseintrag folgen (siehe Abschnitt [7.6](#76-stream-extension-directory-entry) [bzw. Abschnitt 7.7).](#77-file-name-directory-entry)
 
 <div id="table-27-file-directoryentry" />
 
-**Tabelle 27: DateiverzeichnisEntry**
+**Table 27 File DirectoryEntry**
 
 <table>
 <thead>
@@ -2773,25 +2773,25 @@ Dateiverzeichniseinträge beschreiben Dateien und Verzeichnisse. Dabei handelt e
 <td>EntryType</td>
 <td>0</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#741-entrytype-field">Abschnitt 7.4.1</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#741-entrytype-field">in Abschnitt 7.4.1 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>SecondaryCount</td>
 <td>1</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#742-secondarycount-field">Abschnitt 7.4.2</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#742-secondarycount-field">in Abschnitt 7.4.2 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>SetChecksum</td>
 <td>2</td>
 <td>2</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#743-setchecksum-field">Abschnitt 7.4.3</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#743-setchecksum-field">in Abschnitt 7.4.3 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>FileAttributes</td>
 <td>4</td>
 <td>2</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#744-fileattributes-field">Abschnitt 7.4.4</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#744-fileattributes-field">in Abschnitt 7.4.4 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>Reserved1</td>
@@ -2803,52 +2803,52 @@ Dateiverzeichniseinträge beschreiben Dateien und Verzeichnisse. Dabei handelt e
 <td>CreateTimestamp</td>
 <td>8</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> Abschnitt 7.4.5 </
-a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> in Abschnitt 7.4.5 </
+a> wird der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>LastModifiedTimestamp</td>
 <td>12</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">Abschnitt 7.4.6</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">in Abschnitt 7.4.6 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>LastAccessedTimestamp</td>
 <td>16</td>
 <td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields">Abschnitt 7.4.7</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields">in Abschnitt 7.4.7 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>Create10msIncrement</td>
 <td>20</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> Abschnitt 7.4.5 </
-a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> in Abschnitt 7.4.5 </
+a> wird der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>LastModified10msIncrement</td>
 <td>21</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">Abschnitt 7.4.6</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">in Abschnitt 7.4.6 wird</a> der Inhalt definiert.</td>
 </tr>
 <tr class="odd">
 <td>CreateUtcOffset</td>
 <td>22</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> Abschnitt 7.4.5 </
-a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#745-createtimestamp-create10msincrement-and-createutcoffset-fields"> in Abschnitt 7.4.5 </
+a> wird der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>LastModifiedUtcOffset</td>
 <td>23</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">in Abschnitt 7.4.6 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields">Abschnitt 7.4.6</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="odd">
 <td>LastAccessedUtcOffset</td>
 <td>24</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields">in Abschnitt 7.4.7 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields">Abschnitt 7.4.7</a> definiert seinen Inhalt.</td>
 </tr>
 <tr class="even">
 <td>Reserved2</td>
@@ -2861,35 +2861,35 @@ a> definiert seinen Inhalt.</td>
 
 #### <a name="741-entrytype-field"></a>7.4.1 EntryType-Feld
 
-Das Feld EntryType muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
+Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1)](#631-entrytype-field)angegeben ist.
 
-##### <a name="7411-typecode-field"></a>7.4.1.1 TypeCode-Feld
+##### <a name="7411-typecode-field"></a>7.4.1.1 TypCodefeld
 
-Das Feld TypeCode muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.1](#6311-typecode-field)).
+Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.1)](#6311-typecode-field)angegeben ist.
 
 Für einen Dateiverzeichniseintrag ist der gültige Wert für dieses Feld 5.
 
-##### <a name="7412-typeimportance-field"></a>7.4.1.2 TypeImportance-Feld
+##### <a name="7412-typeimportance-field"></a>7.4.1.2 TypeImportance Field
 
-Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.2)](#6312-typeimportance-field)angegeben ist.
 
 Für einen Dateiverzeichniseintrag ist der gültige Wert für dieses Feld 0.
 
 ##### <a name="7413-typecategory-field"></a>7.4.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.3](#6313-typecategory-field)).
+Das Feld TypeCategory muss der Definition in der Vorlage Generic Primary DirectoryEntry entsprechen (siehe [Abschnitt 6.3.1.3](#6313-typecategory-field)).
 
 ##### <a name="7414-inuse-field"></a>7.4.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.4](#6314-inuse-field)).
+Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.1.4)](#6314-inuse-field)angegeben ist.
 
 #### <a name="742-secondarycount-field"></a>7.4.2 SecondaryCount-Feld
 
-Das Feld SecondaryCount muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.2](#632-secondarycount-field)).
+Das Feld SecondaryCount muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (siehe [Abschnitt 6.3.2)](#632-secondarycount-field)angegeben ist.
 
 #### <a name="743-setchecksum-field"></a>7.4.3 SetChecksum-Feld
 
-Das Feld SetChecksum muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.3](#633-setchecksum-field)).
+Das SetChecksum-Feld muss der Definition in der Vorlage Generic Primary DirectoryEntry entsprechen (siehe [Abschnitt 6.3.3](#633-setchecksum-field)).
 
 #### <a name="744-fileattributes-field"></a>7.4.4 FileAttributes-Feld
 
@@ -2897,14 +2897,14 @@ Das Feld FileAttributes enthält Flags (siehe [Tabelle 28](#table-28-fileattribu
 
 <div id="table-28-fileattributes-field-structure" />
 
-**FileAttributes-Feldstruktur in Tabelle 28**
+**Table 28 FileAttributes Field Structure**
 
 <table>
 <thead>
 <tr class="header">
 <th><strong>Feldname</strong></th>
 <th><p><strong>Offset</strong></p>
-<p><strong>(bit)</strong></p></th>
+<p><strong>(Bit)</strong></p></th>
 <th><p><strong>Größe</strong></p>
 <p><strong>(Bits)</strong></p></th>
 <th><strong>Kommentare</strong></th>
@@ -2942,7 +2942,7 @@ Das Feld FileAttributes enthält Flags (siehe [Tabelle 28](#table-28-fileattribu
 <td>Dieses Feld ist obligatorisch und entspricht der MS-DOS-Definition.</td>
 </tr>
 <tr class="even">
-<td>Archive (Archiv)</td>
+<td>Archivieren</td>
 <td>5</td>
 <td>1</td>
 <td>Dieses Feld ist obligatorisch und entspricht der MS-DOS-Definition.</td>
@@ -2956,167 +2956,42 @@ Das Feld FileAttributes enthält Flags (siehe [Tabelle 28](#table-28-fileattribu
 </tbody>
 </table>
 
-#### <a name="745-createtimestamp-create10msincrement-and-createutcoffset-fields"></a>7.4.5 CreateTimestamp, Create10msIncrement und CreateUtcOffset Fields
+#### <a name="745-createtimestamp-create10msincrement-and-createutcoffset-fields"></a>7.4.5 Felder "CreateTimestamp", "Create10msIncrement" und "CreateUtcOffset"
 
-In Kombination müssen die Felder CreateTimestamp und CreateTime10msIncrement das lokale Datum und die Uhrzeit der Erstellung der angegebenen Datei bzw. des angegebenen Verzeichnisses beschreiben. Das Feld CreateUtcOffset beschreibt den Offset des lokalen Datums und der Uhrzeit von UTC. Implementierungen müssen diese Felder bei der Erstellung des angegebenen Verzeichniseintragssets festlegen.
+In Kombination müssen die Felder CreateTimestamp und CreateTime10msIncrement das lokale Datum und die Uhrzeit der Erstellung der angegebenen Datei/des angegebenen Verzeichnisses beschreiben. Das Feld CreateUtcOffset beschreibt den Offset des lokalen Datums und der lokalen Uhrzeit von UTC. Implementierungen müssen diese Felder beim Erstellen des angegebenen Verzeichniseintragssatzes festlegen.
 
-Diese Felder müssen den Definitionen der Felder Timestamp, 10msIncrement und UtcOffset entsprechen (siehe [Abschnitt 7.4.8,](#748-timestamp-fields) [Abschnitt 7.4.9](#749-10msincrement-fields)und [Abschnitt 7.4.10).](#7410-utcoffset-fields)
+Diese Felder müssen den Definitionen der Felder Timestamp, 10msIncrement und UtcOffset entsprechen (siehe [Abschnitt 7.4.8](#748-timestamp-fields), [Abschnitt 7.4.9](#749-10msincrement-fields)und [Abschnitt 7.4.10).](#7410-utcoffset-fields)
 
-#### <a name="746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields"></a>7.4.6 LastModifiedTimestamp, LastModified10msIncrement und LastModifiedUtcOffset Fields
+#### <a name="746-lastmodifiedtimestamp-lastmodified10msincrement-and-lastmodifiedutcoffset-fields"></a>7.4.6 Felder "LastModifiedTimestamp", "LastModified10msIncrement" und "LastModifiedUtcOffset"
 
-In Kombination müssen die Felder LastModifiedTimestamp und LastModifiedTime10msIncrement das lokale Datum und die Uhrzeit beschreiben, zu der der Inhalt eines der Cluster, die dem angegebenen Verzeichniseintrag der Stream-Erweiterung zugeordnet sind, zuletzt geändert wurde. Das Feld LastModifiedUtcOffset beschreibt den Offset des lokalen Datums und der Uhrzeit von UTC. Implementierungen müssen diese Felder aktualisieren:
+In Kombination beschreiben die Felder LastModifiedTimestamp und LastModifiedTime10msIncrement das lokale Datum und die Uhrzeit der letzten Änderung des Inhalts eines der Cluster, die dem angegebenen Stream Extension-Verzeichniseintrag zugeordnet sind. Das Feld LastModifiedUtcOffset beschreibt den Offset des lokalen Datums und der lokalen Uhrzeit von UTC. Implementierungen müssen diese Felder aktualisieren:
 
-1. Nach dem Ändern des Inhalts eines der Cluster, die dem angegebenen Verzeichniseintrag der Stream-Erweiterung zugeordnet sind (mit Ausnahme von Inhalten, die über den Punkt hinausgehen, den das Feld ValidDataLength beschreibt)
+1. Nach dem Ändern des Inhalts eines der Cluster, die dem angegebenen Stream Extension-Verzeichniseintrag zugeordnet sind (mit Ausnahme von Inhalten, die über den Punkt hinaus vorhanden sind, den das Feld ValidDataLength beschreibt)
 
 2. Beim Ändern der Werte der Felder ValidDataLength oder DataLength
 
-Diese Felder müssen den Definitionen der Felder Timestamp, 10msIncrement und UtcOffset entsprechen (siehe [Abschnitt 7.4.8,](#748-timestamp-fields) [Abschnitt 7.4.9](#749-10msincrement-fields)und [Abschnitt 7.4.10).](#7410-utcoffset-fields)
+Diese Felder müssen den Definitionen der Felder Timestamp, 10msIncrement und UtcOffset entsprechen (siehe [Abschnitt 7.4.8](#748-timestamp-fields), [Abschnitt 7.4.9](#749-10msincrement-fields)und [Abschnitt 7.4.10).](#7410-utcoffset-fields)
 
-#### <a name="747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields"></a>7.4.7 LastAccessedTimestamp- und LastAccessedUtcOffset-Felder
+#### <a name="747-lastaccessedtimestamp-and-lastaccessedutcoffset-fields"></a>7.4.7 Felder LastAccessedTimestamp und LastAccessedUtcOffset
 
-Das Feld LastAccessedTimestamp muss das lokale Datum und die Uhrzeit des letzten Zugriffes auf den Inhalt eines der Cluster beschreiben, die dem angegebenen Verzeichniseintrag für die Streamerweiterung zugeordnet sind. Das Feld LastAccessedUtcOffset beschreibt den Offset des lokalen Datums und der Uhrzeit von UTC.
+Das Feld LastAccessedTimestamp muss das lokale Datum und die Uhrzeit des letzten Zugriffs auf den Inhalt eines der Cluster beschreiben, die dem angegebenen Stream Extension-Verzeichniseintrag zugeordnet sind. Das Feld LastAccessedUtcOffset beschreibt den Offset des lokalen Datums und der lokalen Uhrzeit von UTC.
 Implementierungen müssen diese Felder aktualisieren:
 
-1. Nach dem Ändern des Inhalts eines der Cluster, die dem angegebenen Verzeichniseintrag der Stream-Erweiterung zugeordnet sind (mit Ausnahme von Inhalten, die außerhalb von ValidDataLength vorhanden sind)
+1. Nach dem Ändern des Inhalts eines der Cluster, die dem angegebenen Stream Extension-Verzeichniseintrag zugeordnet sind (mit Ausnahme von Inhalten, die außerhalb von ValidDataLength vorhanden sind)
 
 2. Beim Ändern der Werte der Felder ValidDataLength oder DataLength
 
-Implementierungen sollten diese Felder aktualisieren, nachdem sie den Inhalt eines der Cluster gelesen haben, die dem angegebenen Verzeichniseintrag für die Stream-Erweiterung zugeordnet sind.
+Implementierungen sollten diese Felder aktualisieren, nachdem sie den Inhalt eines der Cluster gelesen haben, die dem angegebenen Eintrag des Stream Extension-Verzeichnisses zugeordnet sind.
 
-Diese Felder müssen den Definitionen der Felder Timestamp und UtcOffset entsprechen (siehe [Abschnitt 7.4.8](#748-timestamp-fields) [bzw. Abschnitt 7.4.10).](#7410-utcoffset-fields)
+Diese Felder müssen den Definitionen der Felder Timestamp und UtcOffset entsprechen (siehe [Abschnitt 7.4.8](#748-timestamp-fields) bzw. [Abschnitt 7.4.10).](#7410-utcoffset-fields)
 
 #### <a name="748-timestamp-fields"></a>7.4.8 Zeitstempelfelder
 
-Zeitstempelfelder beschreiben sowohl lokale Datums- als auch Uhrzeit bis zu einer Auflösung von zwei Sekunden (siehe [Tabelle 29](#table-29-timestamp-field-structure)).
+Zeitstempelfelder beschreiben sowohl das lokale Datum als auch die Lokale Uhrzeit bis zu einer Auflösung von zwei Sekunden (siehe [Tabelle 29).](#table-29-timestamp-field-structure)
 
 <div id="table-29-timestamp-field-structure" />
 
-**Tabelle 29: Zeitstempelfeldstruktur**
-
-<table>
-<thead>
-<tr class="header">
-<th><strong>Feldname</strong></th>
-<th><p><strong>Offset</strong></p>
-<p><strong>(bit)</strong></p></th>
-<th><p><strong>Größe</strong></p>
-<p><strong>(Bits)</strong></p></th>
-<th><strong>Kommentare</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>DoubleSeconds</td>
-<td>0</td>
-<td>5</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7481-doubleseconds-field">in Abschnitt 7.4.8.1 wird</a> der Inhalt definiert.</td>
-</tr>
-<tr class="even">
-<td>Minute</td>
-<td>5</td>
-<td>6</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7482-minute-field">Abschnitt 7.4.8.2</a> definiert seinen Inhalt.</td>
-</tr>
-<tr class="odd">
-<td>Stunde</td>
-<td>11</td>
-<td>5</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7483-hour-field">Abschnitt 7.4.8.3</a> definiert seinen Inhalt.</td>
-</tr>
-<tr class="even">
-<td>Tag</td>
-<td>16</td>
-<td>5</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7484-day-field">Abschnitt 7.4.8.4</a> definiert seinen Inhalt.</td>
-</tr>
-<tr class="odd">
-<td>Month</td>
-<td>21</td>
-<td>4</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7485-month-field">Abschnitt 7.4.8.5</a> definiert seinen Inhalt.</td>
-</tr>
-<tr class="even">
-<td>Year</td>
-<td>25</td>
-<td>7</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#7486-year-field">Abschnitt 7.4.8.6</a> definiert seinen Inhalt.</td>
-</tr>
-</tbody>
-</table>
-
-##### <a name="7481-doubleseconds-field"></a>7.4.8.1 DoubleSeconds-Feld
-
-Das Feld DoubleSeconds muss den Sekundenteil des Timestamp-Felds in Zwei-Sekunden-Vielfachen beschreiben.
-
-Der gültige Wertebereich für dieses Feld muss:
-
-- 0, was 0 Sekunden darstellt
-
-- 29, was 58 Sekunden darstellt
-
-##### <a name="7482-minute-field"></a>7,4,8,2-Minuten-Feld
-
-Das Feld Minute muss den Minutenbereich des Felds Zeitstempel beschreiben.
-
-Der gültige Wertebereich für dieses Feld muss:
-
-- 0, was 0 Minuten darstellt
-
-- 59, was 59 Minuten entspricht
-
-##### <a name="7483-hour-field"></a>7.4.8.3 Stundenfeld
-
-Das Feld Stunde muss den Stundenteil des Felds Zeitstempel beschreiben.
-
-Der gültige Wertebereich für dieses Feld muss:
-
-- 0, was 00:00 Stunden darstellt
-
-- 23, was 23:00 Stunden darstellt
-
-##### <a name="7484-day-field"></a>7.4.8.4 Tagfeld
-
-Das Feld Tag muss den Tagesteil des Felds Zeitstempel beschreiben.
-
-Der gültige Wertebereich für dieses Feld muss:
-
-- 1, der erste Tag des angegebenen Monats
-
-- Der letzte Tag des angegebenen Monats (der angegebene Monat definiert die Anzahl gültiger Tage)
-
-##### <a name="7485-month-field"></a>Feld "7.4.8.5 Monat"
-
-Das Feld Monat muss den Monatsteil des Felds Zeitstempel beschreiben.
-
-Der gültige Wertebereich für dieses Feld muss:
-
-- Mindestens 1, das Den Januar darstellt
-
-- Höchstens 12, was Dezember darstellt
-
-##### <a name="7486-year-field"></a>Feld "7.4.8.6 Jahr"
-
-Das Feld Jahr muss den Jahresteil des Felds Zeitstempel relativ zum Jahr 1980 beschreiben. Dieses Feld stellt das Jahr 1980 mit dem Wert 0 und das Jahr 2107 mit dem Wert 127 dar.
-
-Alle möglichen Werte für dieses Feld sind gültig.
-
-#### <a name="749-10msincrement-fields"></a>7.4.9 10msIncrement Fields
-
-10msIncrement-Felder müssen eine zusätzliche Zeitauflösung für die entsprechenden Zeitstempelfelder in 10-Millisekunden-Vielfachen bereitstellen.
-
-Der gültige Wertebereich für diese Felder muss folgendermaßen sein:
-
-- Mindestens 0, was 0 Millisekunden darstellt
-
-- Höchstens 199, was 1990 Millisekunden entspricht
-
-#### <a name="7410-utcoffset-fields"></a>7.4.10 UtcOffset-Felder
-
-UtcOffset-Felder (siehe [Tabelle 30)](#table-30-utcoffset-field-structure)müssen den Offset von UTC zum lokalen Datum und zur lokalen Uhrzeit beschreiben, die in den entsprechenden Zeitstempel- und 10 msIncrement-Feldern beschrieben werden. Der Offset von UTC zum lokalen Datum und zur lokalen Uhrzeit umfasst die Auswirkungen von Zeitzonen und anderen Datums-/Uhrzeitanpassungen, z. B. Sommerzeit und regionale Sommerzeitänderungen.
-
-<div id="table-30-utcoffset-field-structure" />
-
-**Tabellen-30 UtcOffset-Feldstruktur**
+**Tabellen-29-Zeitstempelfeldstruktur**
 
 <table>
 <thead>
@@ -3131,34 +3006,159 @@ UtcOffset-Felder (siehe [Tabelle 30)](#table-30-utcoffset-field-structure)müsse
 </thead>
 <tbody>
 <tr class="odd">
+<td>DoubleSeconds</td>
+<td>0</td>
+<td>5</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7481-doubleseconds-field">Abschnitt 7.4.8.1</a> definiert seinen Inhalt.</td>
+</tr>
+<tr class="even">
+<td>Minute</td>
+<td>5</td>
+<td>6</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7482-minute-field">in Abschnitt 7.4.8.2 wird</a> der Inhalt definiert.</td>
+</tr>
+<tr class="odd">
+<td>Stunde</td>
+<td>11</td>
+<td>5</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7483-hour-field">in Abschnitt 7.4.8.3 wird</a> der Inhalt definiert.</td>
+</tr>
+<tr class="even">
+<td>Tag</td>
+<td>16</td>
+<td>5</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7484-day-field">in Abschnitt 7.4.8.4 wird</a> der Inhalt definiert.</td>
+</tr>
+<tr class="odd">
+<td>Month (Monat)</td>
+<td>21</td>
+<td>4</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7485-month-field">in Abschnitt 7.4.8.5</a> wird der Inhalt definiert.</td>
+</tr>
+<tr class="even">
+<td>Jahr</td>
+<td>25</td>
+<td>7</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#7486-year-field">in Abschnitt 7.4.8.6 wird</a> der Inhalt definiert.</td>
+</tr>
+</tbody>
+</table>
+
+##### <a name="7481-doubleseconds-field"></a>7.4.8.1 DoubleSeconds-Feld
+
+Das Feld DoubleSeconds muss den Sekundenteil des Zeitstempelfelds in Zweisekunden-Vielfachen beschreiben.
+
+Der gültige Wertebereich für dieses Feld ist:
+
+- 0, was 0 Sekunden darstellt
+
+- 29, was 58 Sekunden darstellt.
+
+##### <a name="7482-minute-field"></a>Feld "7.4.8.2 Minute"
+
+Das Feld Minute muss den Minutenteil des Felds Zeitstempel beschreiben.
+
+Der gültige Wertebereich für dieses Feld ist:
+
+- 0, was 0 Minuten darstellt
+
+- 59, was 59 Minuten entspricht
+
+##### <a name="7483-hour-field"></a>7.4.8.3 Stundenfeld
+
+Das Feld Stunde muss den Stundenteil des Felds Zeitstempel beschreiben.
+
+Der gültige Wertebereich für dieses Feld ist:
+
+- 0, was 00:00 Stunden darstellt.
+
+- 23, was 23:00 Stunden darstellt
+
+##### <a name="7484-day-field"></a>Feld "7.4.8.4 Day"
+
+Das Feld Tag muss den Tagesteil des Felds Zeitstempel beschreiben.
+
+Der gültige Wertebereich für dieses Feld ist:
+
+- 1, der erste Tag des angegebenen Monats
+
+- Der letzte Tag des angegebenen Monats (der gegebene Monat definiert die Anzahl der gültigen Tage)
+
+##### <a name="7485-month-field"></a>7.4.8.5 Monatsfeld
+
+Das Feld Monat muss den Monatsteil des Felds Zeitstempel beschreiben.
+
+Der gültige Wertebereich für dieses Feld ist:
+
+- Mindestens 1, was Januar darstellt.
+
+- Mindestens 12, was Dezember darstellt.
+
+##### <a name="7486-year-field"></a>7.4.8.6 Year Field
+
+Im Feld Jahr muss der Jahresteil des Felds Zeitstempel relativ zum Jahr 1980 beschrieben werden. Dieses Feld stellt das Jahr 1980 mit dem Wert 0 und das Jahr 2107 mit dem Wert 127 dar.
+
+Alle möglichen Werte für dieses Feld sind gültig.
+
+#### <a name="749-10msincrement-fields"></a>7.4.9 10msIncrement Fields
+
+10msIncrement-Felder müssen zusätzliche Zeitauflösung für ihre entsprechenden Timestamp-Felder in Vielfachen von zehn Millisekunden bereitstellen.
+
+Der gültige Wertebereich für diese Felder muss sein:
+
+- Mindestens 0, was 0 Millisekunden entspricht.
+
+- Mindestens 199, was 1.990 Millisekunden entspricht
+
+#### <a name="7410-utcoffset-fields"></a>7.4.10 UtcOffset-Felder
+
+UtcOffset-Felder (siehe [Tabelle 30](#table-30-utcoffset-field-structure)) müssen den Offset von UTC zum lokalen Datum und zur lokalen Uhrzeit beschreiben, die die entsprechenden Felder Timestamp und 10msIncrement beschreiben. Der Offset von UTC zum lokalen Datum und zur lokalen Uhrzeit umfasst die Auswirkungen von Zeitzonen und anderen Datums-/Uhrzeitanpassungen, z. B. Sommerzeit und regionale Sommerzeitänderungen.
+
+<div id="table-30-utcoffset-field-structure" />
+
+**Tabelle 30 UtcOffset-Feldstruktur**
+
+<table>
+<thead>
+<tr class="header">
+<th><strong>Feldname</strong></th>
+<th><p><strong>Offset</strong></p>
+<p><strong>(bit)</strong></p></th>
+<th><p><strong>Größe</strong></p>
+<p><strong>(Bits)</strong></p></th>
+<th><strong>Kommentare</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td>OffsetFromUtc</td>
 <td>0</td>
 <td>7</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#74101-offsetfromutc-field">Abschnitt 7.4.10.1</a>definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#74101-offsetfromutc-field">in Abschnitt 7.4.10.1</a>wird der Inhalt definiert.</td>
 </tr>
 <tr class="even">
 <td>OffsetValid</td>
 <td>7</td>
 <td>1</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#74102-offsetvalid-field">Abschnitt 7.4.10.2</a> definiert seinen Inhalt.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#74102-offsetvalid-field">in Abschnitt 7.4.10.2 wird</a> der Inhalt definiert.</td>
 </tr>
 </tbody>
 </table>
 
 ##### <a name="74101-offsetfromutc-field"></a>7.4.10.1 OffsetFromUtc-Feld
 
-Das Feld OffsetFromUtc muss den Offset von UTC des lokalen Datums und der Uhrzeit beschreiben, die die zugehörigen Felder Timestamp und 10msIncrement enthalten.
-In diesem Feld wird der Offset von UTC in Intervallen von 15 Minuten beschrieben (siehe Tabelle 31).
+Das Feld OffsetFromUtc muss den Offset von UTC des lokalen Datums und der Lokalen Uhrzeit beschreiben, die die zugehörigen Felder Timestamp und 10msIncrement enthalten.
+Dieses Feld beschreibt den Offset von UTC in Intervallen von 15 Minuten (siehe Tabelle 31).
 
 <div id="table-31-meaning-of-the-values-of-the-offsetfromutc-field" />
 
-**Tabelle 31 Bedeutung der Werte des OffsetFromUtc-Felds**
+**Tabelle 31 Bedeutung der Werte des Felds OffsetFromUtc**
 
 <table>
 <thead>
 <tr class="header">
 <th><strong>Wert</strong></th>
-<th><strong>Dezimale Entsprechung mit Vorzeichen</strong></th>
+<th><strong>Äquivalente dezimale Dezimalstellen mit Vorzeichen</strong></th>
 <th><strong>Beschreibung</strong></th>
 </tr>
 </thead>
@@ -3187,16 +3187,16 @@ In diesem Feld wird der Offset von UTC in Intervallen von 15 Minuten beschrieben
 <tr class="even">
 <td>01h</td>
 <td>1</td>
-<td>Lokales Datum und Lokale Uhrzeit ist UTC + 00:15</td>
+<td>Ortsdatum und -uhrzeit ist UTC + 00:15</td>
 </tr>
 <tr class="odd">
 <td>00h</td>
 <td>0</td>
-<td>Lokales Datum und Lokale Uhrzeit ist UTC</td>
+<td>Lokale Datums- und Uhrzeitzeit ist UTC</td>
 </tr>
 <tr class="even">
 <td>7Fh</td>
-<td>-1</td>
+<td>–1</td>
 <td>Ortsdatum und -uhrzeit ist UTC – 00:15</td>
 </tr>
 <tr class="odd">
@@ -3223,15 +3223,15 @@ In diesem Feld wird der Offset von UTC in Intervallen von 15 Minuten beschrieben
 </tbody>
 </table>
 
-Wie in der obigen Tabelle angegeben, sind alle möglichen Werte für dieses Feld gültig. Implementierungen sollten jedoch nur dann den Wert 00h für dieses Feld aufzeichnen, wenn:
+Wie in der obigen Tabelle angegeben, sind alle möglichen Werte für dieses Feld gültig. Implementierungen sollten jedoch nur den Wert 00h für dieses Feld aufzeichnen, wenn:
 
-1. Das lokale Datum und die lokale Uhrzeit sind tatsächlich identisch mit UTC. In diesem Fall muss der Wert des Felds OffsetValid 1 sein.
+1. Lokale Datums- und Uhrzeitwerte sind tatsächlich identisch mit UTC. In diesem Fall muss der Wert des Felds OffsetValid 1 sein.
 
 2. Lokale Datums- und Uhrzeitwerte sind nicht bekannt. In diesem Fall muss der Wert des Felds OffsetValid 1 sein, und implementierungen sollten UTC als lokales Datum und lokale Uhrzeit betrachten.
 
 3. UTC ist nicht bekannt. In diesem Fall muss der Wert des Felds OffsetValid 0 sein.
 
-Wenn der lokale Datums- und Uhrzeitoffset von UTC kein Vielfaches von 15-Minuten-Intervallen ist, müssen Implementierungen 00 Stunden im Feld OffsetFromUtc aufzeichnen und UTC als lokales Datum und lokale Uhrzeit betrachten.
+Wenn der lokale Datums- und Uhrzeitoffset von UTC kein Vielfaches von 15-Minuten-Intervallen ist, müssen Implementierungen 00h im Feld OffsetFromUtc aufzeichnen und UTC als lokales Datum und lokale Uhrzeit betrachten.
 
 ##### <a name="74102-offsetvalid-field"></a>7.4.10.2 OffsetValid-Feld
 
@@ -3306,7 +3306,7 @@ Die Volume-GUID ist als unbedenklicher primärer Verzeichniseintrag im Stammverz
 
 #### <a name="751-entrytype-field"></a>7.5.1 EntryType-Feld
 
-Das Feld EntryType muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
+Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1](#631-entrytype-field)).
 
 ##### <a name="7511-typecode-field"></a>7.5.1.1 TypeCode-Feld
 
@@ -3317,7 +3317,7 @@ Für den Verzeichniseintrag Volume-GUID ist der gültige Wert für dieses Feld.
 
 ##### <a name="7512-typeimportance-field"></a>7.5.1.2 TypeImportance-Feld
 
-Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
+Das Feld TypeImportance muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.3.1.2](#6312-typeimportance-field)).
 
 Für den Verzeichniseintrag Volume-GUID ist der gültige Wert für dieses Feld.
 1.
@@ -3339,7 +3339,7 @@ Für den Verzeichniseintrag Volume-GUID ist der gültige Wert für dieses Feld.
 
 #### <a name="753-setchecksum-field"></a>7.5.3 SetChecksum-Feld
 
-Das Feld SetChecksum muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.3](#633-setchecksum-field)).
+Das SetChecksum-Feld muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.3](#633-setchecksum-field)).
 
 #### <a name="754-generalprimaryflags-field"></a>7.5.4 GeneralPrimaryFlags-Feld
 
@@ -3347,7 +3347,7 @@ Das Feld GeneralPrimaryFlags muss der Definition entsprechen, die in der Vorlage
 
 ##### <a name="7541-allocationpossible-field"></a>7.5.4.1 ZuordnungPossible-Feld
 
-Das Feld AllocationPossible muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry (Generisches primäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.3.4.1](#6341-allocationpossible-field)).
+Das Feld AllocationPossible muss der Definition entsprechen, die in der Vorlage Generic Primary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.3.4.1](#6341-allocationpossible-field)).
 
 Für den Verzeichniseintrag Volume-GUID ist der gültige Wert für dieses Feld.
 0.
@@ -3464,7 +3464,7 @@ Für den Eintrag stream extension directory ist der gültige Wert für dieses Fe
 
 ##### <a name="7613-typecategory-field"></a>7.6.1.3 TypeCategory-Feld
 
-Das Feld TypeCategory muss der Definition in der Vorlage Generic Secondary DirectoryEntry entsprechen (siehe [Abschnitt 6.4.1.3).](#6413-typecategory-field)
+Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (siehe [Abschnitt 6.4.1.3)](#6413-typecategory-field)angegeben ist.
 
 ##### <a name="7614-inuse-field"></a>7.6.1.4 Feld "InUse"
 
@@ -3494,11 +3494,11 @@ Der gültige Wertebereich für dieses Feld muss:
 
 - Höchstens 255. Dies ist der längste mögliche Dateiname.
 
-Der Wert des Felds NameLength wirkt sich auch auf die Anzahl der Dateinamenverzeichniseinträge aus (siehe [Abschnitt 7.7](#77-file-name-directory-entry)).
+Der Wert des Felds NameLength wirkt sich auch auf die Zahl Dateinamenverzeichniseinträge aus (siehe [Abschnitt 7.7](#77-file-name-directory-entry)).
 
 #### <a name="764-namehash-field"></a>7.6.4 NameHashfeld
 
-Das Feld NameHash muss einen 2-Byte-Hash (siehe [Abbildung 4)](#figure-4-namehash-computation)des Dateinamens enthalten, für den die Hochschreibung gilt. Dadurch können Implementierungen einen schnellen Vergleich durchführen, wenn nach einer Datei anhand des Namens gesucht wird. Wichtig: NameHash stellt eine sichere Überprüfung eines Konflikts bereit. Implementierungen müssen überprüfen, ob alle NameHash-Übereinstimmungen mit einem Vergleich des Dateinamens in der Hochschreibung vorliegen.
+Das Feld NameHash muss einen 2-Byte-Hash (siehe [Abbildung 4)](#figure-4-namehash-computation)des Dateinamens enthalten, für den die Hochschreibung gilt. Dadurch können Implementierungen einen schnellen Vergleich durchführen, wenn nach einer Datei anhand des Namens gesucht wird. Wichtig: NameHash stellt eine sichere Überprüfung eines Konflikts bereit. Implementierungen müssen überprüfen, ob alle NameHash-Übereinstimmungen mit einem Vergleich des Dateinamens in der Hochschreibung übereinstimmen.
 
 <div id="figure-4-namehash-computation" />
 
@@ -3526,7 +3526,7 @@ UInt16 NameHash
 
 #### <a name="765-validdatalength-field"></a>7.6.5 ValidDataLength-Feld
 
-Das Feld ValidDataLength soll beschreiben, wie weit benutzerdaten in den Datenstrom geschrieben wurden. Implementierungen müssen dieses Feld aktualisieren, wenn sie Daten weiter in den Datenstrom schreiben. Auf den Speichermedien sind die Daten zwischen der gültigen Datenlänge und der Datenlänge des Datenstroms nicht definiert. Implementierungen müssen Nullen für Lesevorgänge zurückgeben, die über die gültige Datenlänge hinausgehen.
+Das Feld ValidDataLength soll beschreiben, wie weit benutzerdaten in den Datenstrom geschrieben wurden. Implementierungen müssen dieses Feld aktualisieren, wenn sie Daten weiter in den Datenstrom schreiben. Auf dem Speichermedium sind die Daten zwischen der gültigen Datenlänge und der Datenlänge des Datenstroms nicht definiert. Implementierungen müssen Nullen für Lesevorgänge zurückgeben, die über die gültige Datenlänge hinausgehen.
 
 Wenn der entsprechende Dateiverzeichniseintrag ein Verzeichnis beschreibt, ist der einzige gültige Wert für dieses Feld gleich dem Wert des DataLength-Felds. Andernfalls muss der Bereich der gültigen Werte für dieses Feld wie hier angegeben sein:
 
@@ -3542,15 +3542,15 @@ Dieses Feld muss den Index des ersten Clusters des Datenstroms enthalten, der di
 
 #### <a name="767-datalength-field"></a>7.6.7 DataLength-Feld
 
-Das DataLength-Feld muss der Definition in der Vorlage Generic Secondary DirectoryEntry (siehe [Abschnitt 6.4.4)](#644-datalength-field)entsprechen.
+Das DataLength-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (siehe [Abschnitt 6.4.4)](#644-datalength-field)angegeben ist.
 
 Wenn der entsprechende Dateiverzeichniseintrag ein Verzeichnis beschreibt, ist der gültige Wert für dieses Feld die gesamte Größe der zugeordneten Zuordnung in Bytes, die 0 sein kann. Darüber hinaus beträgt der Höchstwert für dieses Feld für Verzeichnisse 256 MB.
 
 ### <a name="77-file-name-directory-entry"></a>7.7 Dateiname Verzeichniseintrag
 
-Dateinamen-Verzeichniseinträge sind wichtige sekundäre Verzeichniseinträge in Dateiverzeichniseintragssätzen (siehe [Tabelle 34).](#table-34-file-name-directoryentry) Die gültige Anzahl von Dateinamen-Verzeichniseinträgen in einem Dateiverzeichniseintragssatz ist NameLength/15, aufgerundet auf die nächste ganze Zahl. Darüber hinaus sind Dateinamen-Verzeichniseinträge nur gültig, wenn sie unmittelbar auf den Eintrag des Verzeichnisses der Streamerweiterung als aufeinanderfolgende Reihe folgen. Dateinamen-Verzeichniseinträge werden kombiniert, um den Dateinamen für den Dateiverzeichniseintragssatz zu bilden.
+Dateinamen-Verzeichniseinträge sind wichtige sekundäre Verzeichniseinträge in Dateiverzeichniseintragssätzen (siehe [Tabelle 34).](#table-34-file-name-directoryentry) Die gültige Anzahl von Dateinamen-Verzeichniseinträgen in einem Dateiverzeichniseintragssatz ist NameLength/15, aufgerundet auf die nächste ganze Zahl. Darüber hinaus sind Dateinamen-Verzeichniseinträge nur gültig, wenn sie unmittelbar auf den Eintrag stream extension directory als aufeinanderfolgende Reihe folgen. Dateinamen-Verzeichniseinträge werden kombiniert, um den Dateinamen für den Dateiverzeichniseintragssatz zu bilden.
 
-Alle untergeordneten Elemente eines bestimmten Verzeichniseintrags müssen eindeutige Dateinamen-Verzeichniseintragssätze aufweisen. Das heißt, dass nach der Groß-/Kleinschreibung innerhalb eines Verzeichnisses keine doppelten Datei- oder Verzeichnisnamen vorhanden sein dürfen.
+Alle untergeordneten Elemente eines bestimmten Verzeichniseintrags müssen eindeutige Dateinamen-Verzeichniseintragssätze aufweisen. Das heißt, nach der Groß-/Kleinschreibung innerhalb eines Verzeichnisses dürfen keine doppelten Datei- oder Verzeichnisnamen vorhanden sein.
 
 <div id="table-34-file-name-directoryentry" />
 
@@ -3611,7 +3611,7 @@ Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generi
 
 ##### <a name="7714-inuse-field"></a>7.7.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis)(siehe [Abschnitt 6.4.1.4) angegeben ist.](#6414-inuse-field)
+Das Feld "InUse" muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.4](#6414-inuse-field)).
 
 #### <a name="772-generalsecondaryflags-field"></a>7.7.2 GeneralSecondaryFlags-Feld
 
@@ -3625,7 +3625,7 @@ Für den Verzeichniseintrag Streamerweiterung ist der gültige Wert für dieses 
 
 ##### <a name="7722-nofatchain-field"></a>7.7.2.2 NoFatChain-Feld
 
-Das NoFatChain-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
+Das Feld NoFatChain muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generische sekundäre DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
 
 #### <a name="773-filename-field"></a>7.7.3 FileName-Feld
 
@@ -3717,7 +3717,7 @@ Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic S
 
 ##### <a name="7811-typecode-field"></a>7.8.1.1 TypeCode-Feld
 
-Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.1](#6411-typecode-field)).
+Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.4.1.1](#6411-typecode-field)).
 
 Für den Verzeichniseintrag Anbietererweiterung ist der gültige Wert für dieses Feld 0.
 
@@ -3725,7 +3725,7 @@ Für den Verzeichniseintrag Anbietererweiterung ist der gültige Wert für diese
 
 Das TypeImportance-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.2](#6412-typeimportance-field)).
 
-Für den Verzeichniseintrag Anbietererweiterung ist der gültige Wert für dieses Feld 1.
+Für den Verzeichniseintrag Vendor Extension ist der gültige Wert für dieses Feld 1.
 
 ##### <a name="7813-typecategory-field"></a>7.8.1.3 TypeCategory-Feld
 
@@ -3733,7 +3733,7 @@ Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generi
 
 ##### <a name="7814-inuse-field"></a>7.8.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis)(siehe [Abschnitt 6.4.1.4) angegeben ist.](#6414-inuse-field)
+Das Feld "InUse" muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.4](#6414-inuse-field)).
 
 #### <a name="782-generalsecondaryflags-field"></a>7.8.2 GeneralSecondaryFlags-Feld
 
@@ -3747,7 +3747,7 @@ Für den Verzeichniseintrag Anbietererweiterung ist der gültige Wert für diese
 
 ##### <a name="7822-nofatchain-field"></a>7.8.2.2 NoFatChain-Feld
 
-Das NoFatChain-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
+Das Feld NoFatChain muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generische sekundäre DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
 
 #### <a name="783-vendorguid-field"></a>7.8.3 VendorGuid-Feld
 
@@ -3759,9 +3759,9 @@ Der Wert dieses Felds bestimmt die herstellerspezifische Struktur des VendorDefi
 
 ### <a name="79-vendor-allocation-directory-entry"></a>7.9 Eintrag des Anbieterzuordnungsverzeichnisses
 
-Der Verzeichniseintrag Vendor Allocation ist ein unbedenklicher sekundärer Verzeichniseintrag in Dateiverzeichniseintragssätzen (siehe [Tabelle 37](#table-37-vendor-allocation-directoryentry)). Ein Dateiverzeichniseintragssatz kann eine beliebige Anzahl von Verzeichniseinträgen für die Anbieterzuordnung bis zum Grenzwert sekundärer Verzeichniseinträge enthalten, weniger als die Anzahl der anderen sekundären Verzeichniseinträge. Darüber hinaus sind Verzeichniseinträge für die Anbieterzuordnung nur gültig, wenn sie nicht den erforderlichen Verzeichniseinträgen stream extension und file name voran stehen.
+Der Verzeichniseintrag Vendor Allocation ist ein unbedenklicher sekundärer Verzeichniseintrag in Dateiverzeichniseintragssätzen (siehe [Tabelle 37](#table-37-vendor-allocation-directoryentry)). Ein Dateiverzeichniseintragssatz kann eine beliebige Anzahl von Vendor Allocation-Verzeichniseinträgen enthalten, bis zum Grenzwert der sekundären Verzeichniseinträge, weniger die Anzahl der anderen sekundären Verzeichniseinträge. Darüber hinaus sind Verzeichniseinträge für die Anbieterzuordnung nur gültig, wenn sie nicht den erforderlichen Verzeichniseinträgen stream extension und file name voran stehen.
 
-Anbieterzuordnungsverzeichniseinträge ermöglichen Es Anbietern, über das Feld VendorGuid eindeutige, herstellerspezifische Verzeichniseinträge in einzelnen Dateiverzeichniseintragssätzen zu erhalten (siehe [Tabelle 37](#table-37-vendor-allocation-directoryentry)). Eindeutige Verzeichniseinträge ermöglichen es Anbietern effektiv, das ExFAT-Dateisystem zu erweitern. Anbieter können den Inhalt der zugeordneten Cluster definieren, sofern vorhanden. Anbieterimplementierungen können den Inhalt der zugeordneten Cluster (sofern erforderlich) verwalten und anbieterspezifische Funktionen bereitstellen.
+Anbieterzuordnungsverzeichniseinträge ermöglichen Es Anbietern, eindeutige, herstellerspezifische Verzeichniseinträge in einzelnen Dateiverzeichniseintragssätzen über das Feld VendorGuid zu erhalten (siehe [Tabelle 37](#table-37-vendor-allocation-directoryentry)). Eindeutige Verzeichniseinträge ermöglichen es Anbietern effektiv, das ExFAT-Dateisystem zu erweitern. Anbieter können den Inhalt der zugeordneten Cluster definieren, sofern vorhanden. Anbieterimplementierungen können den Inhalt der zugeordneten Cluster (sofern erforderlich) verwalten und anbieterspezifische Funktionen bereitstellen.
 
 Implementierungen, die die GUID eines Verzeichniseintrags "Vendor Allocation" nicht erkennen, müssen den Verzeichniseintrag genauso behandeln wie alle anderen nicht erkannten unschädlichen sekundären Verzeichniseintrage (siehe [Abschnitt 8.2](#82-implications-of-unrecognized-directory-entries)).
 
@@ -3815,7 +3815,7 @@ Implementierungen, die die GUID eines Verzeichniseintrags "Vendor Allocation" ni
 <td>DataLength</td>
 <td>24</td>
 <td>8</td>
-<td>Dieses Feld ist obligatorisch, und <a href="#795-datalength-field">in Abschnitt 7.9.5 wird</a> der Inhalt definiert.</td>
+<td>Dieses Feld ist obligatorisch, und <a href="#795-datalength-field">in Abschnitt 7.9.5</a> wird der Inhalt definiert.</td>
 </tr>
 </tbody>
 </table>
@@ -3826,7 +3826,7 @@ Das EntryType-Feld muss der Definition entsprechen, die in der Vorlage Generic S
 
 ##### <a name="7911-typecode-field"></a>7.9.1.1 TypeCode-Feld
 
-Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.1](#6411-typecode-field)).
+Das TypeCode-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry bereitgestellt wird (siehe [Abschnitt 6.4.1.1](#6411-typecode-field)).
 
 Für den Verzeichniseintrag Vendor Allocation ist der gültige Wert für dieses Feld 1.
 
@@ -3842,7 +3842,7 @@ Das Feld TypeCategory muss der Definition entsprechen, die in der Vorlage Generi
 
 ##### <a name="7914-inuse-field"></a>7.9.1.4 InUse-Feld
 
-Das Feld InUse muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis)(siehe [Abschnitt 6.4.1.4) angegeben ist.](#6414-inuse-field)
+Das Feld "InUse" muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres Verzeichnis) angegeben ist (siehe [Abschnitt 6.4.1.4](#6414-inuse-field)).
 
 #### <a name="792-generalsecondaryflags-field"></a>7.9.2 GeneralSecondaryFlags-Feld
 
@@ -3856,7 +3856,7 @@ Für den Verzeichniseintrag Vendor Allocation ist der gültige Wert für dieses 
 
 ##### <a name="7922-nofatchain-field"></a>7.9.2.2 NoFatChain-Feld
 
-Das NoFatChain-Feld muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generisches sekundäres DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
+Das Feld NoFatChain muss der Definition entsprechen, die in der Vorlage Generic Secondary DirectoryEntry (Generische sekundäre DirectoryEntry) angegeben ist (siehe [Abschnitt 6.4.2.2](#6422-nofatchain-field)).
 
 #### <a name="793-vendorguid-field"></a>7.9.3 VendorGuid-Feld
 
@@ -3908,7 +3908,7 @@ Beim Löschen von Verzeichniseinträgen oder dem Freischreiben von Clusterzuordn
 
 ### <a name="82-implications-of-unrecognized-directory-entries"></a>8.2 Auswirkungen unbekannter Verzeichniseinträge
 
-Zukünftige exFAT-Spezifikationen mit der gleichen Hauptrevisionsnummer 1 und einer kleineren Revisionsnummer, die höher als 0 sind, können neue unbedenkliche primäre, kritische sekundäre und unbedenkliche sekundäre Verzeichniseinträge definieren. Nur exFAT-Spezifikationen einer höheren Hauptrevisionsnummer können neue kritische primäre Verzeichniseinträge definieren. Implementierungen dieser Spezifikation, exFAT Revision 1.00 File System Basic Specification, sollten in der Lage sein, ein beliebiges ExFAT-Volume der Hauptrevisionsnummer 1 und eine kleinere Revisionsnummer ein- und darauf zu zugreifen. Dies stellt Szenarien vor, in denen eine Implementierung auf Verzeichniseinträge stoßen kann, die sie nicht erkennt. Im Folgenden werden die Auswirkungen dieser Szenarien beschrieben:
+Zukünftige exFAT-Spezifikationen mit der gleichen Hauptrevisionsnummer 1 und einer kleineren Revisionsnummer, die höher als 0 ist, können neue unbedenkliche primäre, kritische sekundäre und unbedenkliche sekundäre Verzeichniseinträge definieren. Nur exFAT-Spezifikationen einer höheren Hauptrevisionsnummer können neue kritische primäre Verzeichniseinträge definieren. Implementierungen dieser Spezifikation, exFAT Revision 1.00 File System Basic Specification, sollten in der Lage sein, ein beliebiges ExFAT-Volume der Hauptrevisionsnummer 1 und eine kleinere Revisionsnummer ein- und darauf zu zugreifen. Dies stellt Szenarien vor, in denen eine Implementierung auf Verzeichniseinträge stoßen kann, die sie nicht erkennt. Im Folgenden werden die Auswirkungen dieser Szenarien beschrieben:
 
 1. Wenn im Stammverzeichnis nicht unbekannte kritische primäre Verzeichniseinträge vorhanden sind, wird das Volume ungültig. Wenn ein kritischer primärer Verzeichniseintrag vorhanden ist, mit Ausnahme von Dateiverzeichniseinträgen, wird das Hostverzeichnis ungültig.
 
@@ -3931,7 +3931,7 @@ Zukünftige exFAT-Spezifikationen mit der gleichen Hauptrevisionsnummer 1 und ei
 
    - Erstellen neuer eigenständiger Verzeichniseinträge
 
-   - Öffnen Sie enthaltene Verzeichniseinträge, mit Ausnahme von traverse und enumerate, wie bereits erwähnt.
+   - Öffnen Sie enthaltene Verzeichniseinträge, mit Ausnahme von "traverse" und "enumerate", wie bereits erwähnt.
 
 4. Implementierungen dürfen nicht unbekannte, unbedenkliche sekundäre Verzeichniseinträge oder ihre zugeordneten Clusterzuordnungen nicht ändern.
    Implementierungen sollten unbekannte, unbedenkliche sekundäre Verzeichniseinträge ignorieren. Beim Löschen eines Verzeichniseintragssets müssen Implementierungen alle Clusterzuordnungen(sofern vorhanden) freistellen, die nicht unbekannten, unbedenklichen sekundären Verzeichniseinträgen zugeordnet sind.
@@ -3956,17 +3956,17 @@ Die Obergröße des Cluster heaps ist eine einfache Funktion der maximal möglic
 
 ### <a name="94-volume-size-limits"></a>9.4 Volumegrößenlimits
 
-Das VolumeLength-Feld definiert die unteren und oberen Volumegrößenlimits (Untergrenze: **<sup>2 20</sup>/2 <sup>BytesPerSectorShift-Sektoren,</sup>** die zu 1 MB ausgewertet werden; **Obergrenze: 2 <sup>64</sup>bis 1** Sektoren, die bei einer möglichst großen Sektorgröße ungefähr 64 GRAD beträgt. Diese Spezifikation empfiehlt jedoch nicht mehr als 2<sup>24</sup>bis 2 Cluster im Cluster heap (siehe [Abschnitt 3.1.9](#319-clustercount-field)). Daher ist die empfohlene Obergrenze für ein Volume: ClusterHeapOffset + (2<sup>24</sup>- 2) \* 2<sup>SectorsPerClusterShift</sup>. Bei der größten möglichen Clustergröße von 32 MB und der Annahme, dass ClusterHeapOffset 96 MB beträgt (ausreichend Speicherplatz für die Haupt- und Sicherungsstartregionen und nur die erste FAT-Datei), wird die empfohlene Obergrenze eines Volumes auf ungefähr 512 TB ausgewertet.
+Das VolumeLength-Feld definiert die unteren und oberen Volumegrößenlimits (untere Grenze: **<sup>2 20/2</sup><sup>BytesPerSectorShift-Sektoren,</sup>** die zu 1 MB ausgewertet werden; **Obergrenze: 2 <sup>64</sup>bis 1** Sektoren, die bei einer möglichst großen Sektorgröße ungefähr 64 GRAD beträgt. Diese Spezifikation empfiehlt jedoch nicht mehr als 2<sup>24</sup>bis 2 Cluster im Cluster heap (siehe [Abschnitt 3.1.9](#319-clustercount-field)). Daher ist die empfohlene Obergrenze für ein Volume: ClusterHeapOffset + (2<sup>24</sup>- 2) \* 2<sup>SectorsPerClusterShift</sup>. Bei der größten möglichen Clustergröße von 32 MB und der Annahme, dass ClusterHeapOffset 96 MB beträgt (ausreichend Speicherplatz für die Haupt- und Sicherungsstartregionen und nur die erste FAT-Größe), wird die empfohlene Obergrenze eines Volumes auf ungefähr 512 TB ausgewertet.
 
 ### <a name="95-directory-size-limits"></a>9.5 Grenzwerte für die Verzeichnisgröße
 
-Das Feld DataLength des Verzeichniseintrags Stream-Erweiterung definiert die Größenbeschränkungen für untere und obere Verzeichnisse ( untere **Grenze: 0 Bytes; Obergrenze: 256 MB**). Dies bedeutet, dass ein Verzeichnis bis zu 8.388.608 Verzeichniseinträge hosten kann (jeder Verzeichniseintrag verbraucht 32 Bytes). Bei dem kleinsten möglichen Dateiverzeichniseintragssatz, drei Verzeichniseinträgen, kann ein Verzeichnis bis zu 2.796.202 Dateien hosten.
+Das Feld DataLength des Verzeichniseintrags Stream-Erweiterung definiert die Größenbeschränkungen für untere und obere Verzeichnisse ( untere **Grenze: 0 Bytes; Obergrenze: 256 MB**). Dies bedeutet, dass ein Verzeichnis bis zu 8.388.608 Verzeichniseinträge hosten kann (jeder Verzeichniseintrag verbraucht 32 Bytes). Bei dem klein möglichen Dateiverzeichniseintragssatz , drei Verzeichniseinträgen, kann ein Verzeichnis bis zu 2.796.202 Dateien hosten.
 
 ## <a name="10-appendix"></a>10 Anhang
 
 ### <a name="101-globally-unique-identifiers-guids"></a>10.1 Globally Unique Identifiers (GUIDs)
 
-Eine GUID ist die Microsoft-Implementierung eines universell eindeutigen Bezeichners. Eine GUID ist ein 128-Bit-Wert, der aus einer Gruppe von acht Hexadezimalziffern gefolgt von drei Gruppen von jeweils vier Hexadezimalziffern gefolgt von einer Gruppe von 12 Hexadezimalziffern besteht, z. B. {6B29FC40-CA47-1067-B31D-00DD010662DA}, (siehe [Tabelle 38](#table-38-guid-structure)).
+Eine GUID ist die Microsoft-Implementierung eines universell eindeutigen Bezeichners. Eine GUID ist ein 128-Bit-Wert, der aus einer Gruppe von acht Hexadezimalziffern gefolgt von drei Gruppen mit jeweils vier Hexadezimalziffern gefolgt von einer Gruppe von 12 Hexadezimalziffern besteht, z. B. {6B29FC40-CA47-1067-B31D-00DD010662DA}, (siehe [Tabelle 38](#table-38-guid-structure)).
 
 <div id="table-38-guid-structure" />
 
@@ -4055,7 +4055,7 @@ Eine GUID ist die Microsoft-Implementierung eines universell eindeutigen Bezeich
 
 ### <a name="102-partition-tables"></a>10.2 Partitionstabellen
 
-Um die Interoperabilität von exFAT-Volumes in einer Vielzahl von Verwendungsszenarien sicherzustellen, sollten Implementierungen den Partitionstyp 07h für den partitionierten MBR-Speicher und die Partitions-GUID {EBD0A0A2-B9E5-4433-87C0-68B6B72699C7} für partitionierten GPT-Speicher verwenden.
+Um die Interoperabilität von exFAT-Volumes in einer Vielzahl von Verwendungsszenarien sicherzustellen, sollten Implementierungen den Partitionstyp 07h für den partitionierten MBR-Speicher und die Partitions-GUID {EBD0A0A2-B9E5-4433-87C0-68B6B72699C7} für gpt partitionierten Speicher verwenden.
 
 ## <a name="11-documentation-change-history"></a>11 Dokumentation Änderungsverlauf
 
@@ -4116,44 +4116,44 @@ Volumestruktur</p>
 <p>Addition von SHOULD, SHOULD und MAY zu Felderklärungen</p>
 <p>Addition der UTC-Definition in Tabelle 2 Abschnitt 1.3</p>
 <p>Die Abschnitte 1.5 wurden geändert, um die Übereinstimmung mit dem Dokument zur TexFAT-Spezifikation sicherzustellen.</p>
-<p>Es wurde die Einschränkung verdeutlicht, dass nur Microsoft das Layout von Verzeichniseinträgen in Abschnitt 6.2 definieren darf.</p>
-<p>Es wurde erläutert, dass FirstCluster Field null sein soll, wenn DataLength 0 (null) und NoFatChain auf Abschnitt 6.3.5 und Abschnitt 6.4.3 festgelegt ist.</p>
-<p>In Abschnitt 7.4 wurden die Anforderungen für gültige Dateiverzeichniseinträge erläutert.</p>
+<p>Die Einschränkung wurde verdeutlicht, dass nur Microsoft das Layout von Verzeichniseinträgen in Abschnitt 6.2 definieren darf.</p>
+<p>Es wurde eine Erläuterung hinzugefügt, dass das FirstCluster-Feld 0 (null) sein soll, wenn DataLength 0 (null) und NoFatChain auf Section 6.3.5 und Section 6.4.3 festgelegt ist.</p>
+<p>Erläuterte Anforderungen für gültige Dateiverzeichniseinträge in Abschnitt 7.4</p>
 <p>Anforderung für eindeutige Datei- und Verzeichnisnamen zu Abschnitt 7.7 hinzugefügt</p>
 <p>Implementierungshinweis für ASCII am Ende von Abschnitt 7.7.3 hinzugefügt</p>
 </blockquote></td>
 </tr>
 <tr class="even">
 <td>01-Jan-2009</td>
-<td><p>Vierte Version der Basisspezifikation, die die folgenden Änderungen umfasst:</p>
+<td><p>Viertes Release der Basic-Spezifikation, die die folgenden Änderungen enthält:</p>
 <blockquote>
-<p>Verweise auf Windows CE Access Control wurden entfernt.</p>
-<p>Erläuterung zu Abschnitt 7.2.5.1 hinzugefügt, um explizit eine vollständige Up-Case-Tabelle zu erfordern</p>
+<p>Verweise auf Windows CE Access Control Einträge entfernt</p>
+<p>In Abschnitt 7.2.5.1 wurde eine Erläuterung hinzugefügt, um explizit eine vollständige Up-Case-Tabelle erforderlich zu machen.</p>
 </blockquote></td>
 </tr>
 <tr class="odd">
-<td>02.09.2009</td>
-<td><p>Fünfte Version der Basisspezifikation, die die folgenden Änderungen umfasst:</p>
+<td>02-Sep-2009</td>
+<td><p>Fünfte Version der Basic-Spezifikation, die die folgenden Änderungen enthält:</p>
 <blockquote>
-<p>Dokumentformatierungsänderungen, um eine bessere PDF-Konvertierung zu ermöglichen</p>
+<p>Änderungen an der Dokumentformatierung, um eine bessere PDF-Konvertierung zu ermöglichen</p>
 </blockquote></td>
 </tr>
 <tr class="even">
 <td>24-Feb-2010</td>
-<td><p>Sechste Version der Basisspezifikation, die die folgenden Änderungen umfasst:</p>
+<td><p>Sechste Version der Basic-Spezifikation, die die folgenden Änderungen enthält:</p>
 <blockquote>
-<p>Falsche Anweisung geändert: "FirstCluster Field must be zero if the DataLength is 0 and NoFatChain is set" in Section 6.3.5 and Section 6.4.3 to "If the NoFatChain bit is 1 the FirstCluster must point to a valid cluster in the cluster heap" (FirstCluster-Feld muss null sein, wenn das DataLength-Bit 0 (null) und NoFatChain festgelegt ist) in Abschnitt 6.3.5 und Section 6.4.3 auf "If the NoFatChain bit is 1 the FirstCluster must point to a valid cluster in the cluster heap" (Wenn das NoFatChain-Bit 1 ist, muss FirstCluster auf einen gültigen Cluster im Clusterheap verweisen), um zu verdeutlichen, dass eine gültige Zuordnung möglich sein muss, wenn das NoFatChain-Bit festgelegt ist.</p>
-<p>Hinzugefügt: "Wenn das NoFatChain-Bit 1 ist, darf DataLength nicht 0 (null) sein. Wenn das FirstCluster-Feld 0 (null) ist, muss DataLength auch 0 (null) für Abschnitt 6.3.6 und Abschnitt 6.4.4 sein, um zu verdeutlichen, dass es eine gültige Zuordnung geben muss, wenn das NoFatChain-Bit festgelegt ist.</p>
+<p>Geänderte falsche Anweisung: "FirstCluster Field must be zero if the DataLength is zero and NoFatChain is set" in Section 6.3.5 and Section 6.4.3 to "If the NoFatChain bit is 1 the FirstCluster must point to a valid cluster in the cluster heap", um zu verdeutlichen, dass eine gültige Zuordnung vorhanden sein muss, wenn das NoFatChain-Bit festgelegt ist.</p>
+<p>Hinzugefügt: "Wenn das NoFatChain-Bit 1 ist, darf DataLength nicht 0 (null) sein. Wenn das FirstCluster-Feld 0 (null) ist, muss DataLength auch 0 (null) lauten, bis Abschnitt 6.3.6 und Abschnitt 6.4.4, um zu verdeutlichen, dass eine gültige Zuordnung vorhanden sein muss, wenn das NoFatChain-Bit festgelegt ist.</p>
 <p>Copyrighthinweis auf 2010 aktualisiert</p>
 </blockquote></td>
 </tr>
 <tr class="odd">
 <td>26-Aug-2019</td>
-<td><p>Das siebten Release der Basisspezifikation, das die folgenden Änderungen umfasst:</p>
+<td><p>Dies ist die siebente Version der Basic-Spezifikation, die die folgenden Änderungen enthält:</p>
 <blockquote>
-<p>Aktualisierte rechtliche Bestimmungen in Bezug auf die Spezifikation, einschließlich:</p>
-<p>Entfernen des vertraulichen Microsoft-Hinweises</p>
-<p>Entfernen des Microsoft Corporation Abschnitts "Lizenzvereinbarung für die technische Dokumentation"</p>
+<p>Die rechtlichen Bedingungen für die Spezifikation wurden aktualisiert, einschließlich:</p>
+<p>Entfernen eines vertraulichen Microsoft-Hinweises</p>
+<p>Entfernen von Microsoft Corporation Abschnitt "Lizenzvertrag für technische Dokumentation"</p>
 <p>Copyrighthinweis auf 2019 aktualisiert</p>
 </blockquote></td>
 </tr>

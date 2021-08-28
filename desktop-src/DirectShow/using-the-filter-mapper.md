@@ -1,23 +1,23 @@
 ---
-description: Verwenden des Filter Mappers
+description: Verwenden der Filterzuordnung
 ms.assetid: 3f774350-4508-437f-98d1-cca91220f339
-title: Verwenden des Filter Mappers
+title: Verwenden der Filterzuordnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c2d7acf85a7b415fc161cd21e17d069b46c3f40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 48758c40b97477200b4fab1215eaccac53823771add86d6a8b915370776495a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049611"
 ---
-# <a name="using-the-filter-mapper"></a>Verwenden des Filter Mappers
+# <a name="using-the-filter-mapper"></a>Verwenden der Filterzuordnung
 
-Der [Filter Mapper](filter-mapper.md) ist ein COM-Objekt, das DirectShow-Filter auf der Grundlage verschiedener Suchkriterien auflistet. Der Filter Mapper kann weniger effizient sein als der Enumerator des System Geräts. Wenn Sie also Filter aus einer bestimmten Kategorie benötigen, sollten Sie den Enumerator des System Geräts verwenden. Wenn Sie jedoch einen Filter suchen müssen, der eine bestimmte Kombination von Medientypen unterstützt, aber nicht in eine Kategorie mit klarer Ausschneiden fällt, müssen Sie möglicherweise den Filter Mapper verwenden. (Ein Beispiel wäre ein rendererfilter oder ein Decoderfilter.)
+Die [Filterzuordnung ist](filter-mapper.md) ein COM-Objekt, das DirectShow-Filter basierend auf verschiedenen Suchkriterien auflistet. Der Filterzuordnungs-Enumerator kann weniger effizient sein als der Systemgeräte-Enumerator. Wenn Sie also Filter aus einer bestimmten Kategorie benötigen, sollten Sie den Systemgeräte-Enumerator verwenden. Wenn Sie jedoch einen Filter suchen müssen, der eine bestimmte Kombination von Medientypen unterstützt, aber nicht in eine Kategorie mit eindeutigen Ausschnitten fällt, müssen Sie möglicherweise die Filterzuordnung verwenden. (Ein Beispiel wäre ein Rendererfilter oder ein Decoderfilter.)
 
-Der Filter Mapper macht die [**IFilterMapper2**](/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2) -Schnittstelle verfügbar. Um nach einem Filter zu suchen, wird die [**IFilterMapper2:: enummatchingfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) -Methode aufgerufen. Diese Methode nimmt mehrere Parameter an, die die Suchkriterien definieren, und gibt einen Enumerator für die übereinstimmenden Filter zurück. Der Enumerator unterstützt die [**IEnumMoniker**](/windows/win32/api/objidl/nn-objidl-ienummoniker) -Schnittstelle und stellt einen eindeutigen Moniker für jeden übereinstimmenden Filter bereit.
+Der Filter-Mapper macht die [**IFilterMapper2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2) verfügbar. Um nach einem Filter zu suchen, rufen Sie die [**IFilterMapper2::EnumMatchingFilters-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) auf. Diese Methode verwendet mehrere Parameter, die die Suchkriterien definieren, und gibt einen Enumerator für die übereinstimmenden Filter zurück. Der Enumerator unterstützt die [**IEnumMoniker-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ienummoniker) und stellt für jeden übereinstimmenden Filter einen eindeutigen Moniker bereit.
 
-Im folgenden Beispiel werden Filter aufgelistet, die die Eingabe von digitalen Videos (DV) akzeptieren und mindestens eine Ausgabe-PIN eines beliebigen Medientyps aufweisen. (Der [DV-Video Decoder](dv-video-decoder-filter.md) -Filter entspricht diesen Kriterien.)
+Im folgenden Beispiel werden Filter aufzählt, die Digitale Videoeingaben (DV) akzeptieren und mindestens einen Ausgabepin eines beliebigen Medientyps haben. (Der [DV-Videodecoder-Filter](dv-video-decoder-filter.md) entspricht diesen Kriterien.)
 
 
 ```C++
@@ -93,20 +93,20 @@ pEnum->Release();
 
 
 
-Die [**enummatchingfilters**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) -Methode verfügt über eine relativ große Anzahl von Parametern, die im Beispiel kommentiert werden. Die wichtigsten für dieses Beispiel sind:
+Die [**EnumMatchingFilters-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-enummatchingfilters) verfügt über eine relativ große Anzahl von Parametern, die im Beispiel kommentiert werden. Die wichtigsten für dieses Beispiel sind:
 
--   Minimalwert: der Filter muss über einen Wert verfügen, der über einen Wert verfügt, der \_ \_ nicht \_ verwendet wird.
--   Eingabetypen: der Aufrufer übergibt ein Array mit Paaren von Haupttypen und Untertypen. Nur Filter, die mindestens eines dieser Paare unterstützen, stimmen zu.
--   Exakte Entsprechung: bei einem Filter können **null** -Werte für den Haupttyp, den Untertyp, die PIN-Kategorie oder das Medium registriert werden. Wenn Sie keine genaue Übereinstimmung angeben, fungiert ein **null** -Wert als Platzhalter, der mit jedem von Ihnen angegebenen Wert übereinstimmt. Mit der exakten Übereinstimmung muss der Filter genau mit Ihren Kriterien übereinstimmen. Wenn Sie jedoch einen **null** -Parameter in den Suchkriterien angeben, fungiert er immer als Platzhalter-oder "kein Pflege"-Wert, der mit einem beliebigen Filter übereinstimmt.
+-   Mindestwert: Der Filter muss einen Wert haben, der höher ist als DER WERT FÜR NICHT \_ \_ ZU \_ VERWENDEN.
+-   Eingabetypen: Der Aufrufer übergibt ein Array, das Paare von Haupttypen und Untertypen enthält. Nur Filter, die mindestens eines dieser Paare unterstützen, werden übereinstimmen.
+-   Genaue Übereinstimmung: Ein Filter kann **NULL-Werte** für Haupttyp, Untertyp, Pinkategorie oder Mittel registrieren. Sofern Sie keinen genauen Abgleich angeben, fungiert ein **NULL-Wert** als Platzhalter, der mit jedem von Ihnen angegebenen Wert abgleicht. Bei genauem Abgleich muss der Filter genau Ihren Kriterien entsprechen. Wenn Sie jedoch einen **NULL-Parameter** in den Suchkriterien angeben, fungiert er immer als Platzhalter- oder "nicht so wichtig"-Wert, der mit jedem Filter abgleicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Auflisten von Geräten und Filtern](enumerating-devices-and-filters.md)
+[Aufzählen von Geräten und Filtern](enumerating-devices-and-filters.md)
 </dt> <dt>
 
-[Intelligent Connect](intelligent-connect.md)
+[Intelligente Verbinden](intelligent-connect.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM_UNDO Meldung (Winuser. h)
-description: Eine Anwendung sendet eine WM- \_ Rückgängig Meldung an ein Bearbeitungs Steuerelement, um den letzten Vorgang rückgängig zu machen. Wenn diese Nachricht an ein Bearbeitungs Steuerelement gesendet wird, wird der zuvor gelöschte Text wieder hergestellt oder der zuvor hinzugefügte Text gelöscht.
+title: WM_UNDO (Winuser.h)
+description: Eine Anwendung sendet eine WM \_ UNDO-Nachricht an ein Bearbeitungssteuerteil, um den letzten Vorgang rückgängig zu machen. Wenn diese Meldung an ein Bearbeitungssteuerfeld gesendet wird, wird der zuvor gelöschte Text wiederhergestellt oder der zuvor hinzugefügte Text gelöscht.
 ms.assetid: bb5a3425-bf99-4a08-8747-82c24c5889ad
 keywords:
-- Windows-Steuerelemente für WM_UNDO Meldung
+- WM_UNDO message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c5eb9182b6d8d3fc1360565f6661e989f3b6d0d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b6e4bd0715b7eeb5f99f34f5142ac3198c5c1eae53cf4486c3efce9dace19a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119311340"
 ---
-# <a name="wm_undo-message"></a>WM- \_ Rückgängig Meldung
+# <a name="wm_undo-message"></a>WM \_ UNDO-Meldung
 
-Eine Anwendung sendet eine **WM- \_ Rückgängig** Meldung an ein Bearbeitungs Steuerelement, um den letzten Vorgang rückgängig zu machen. Wenn diese Nachricht an ein Bearbeitungs Steuerelement gesendet wird, wird der zuvor gelöschte Text wieder hergestellt oder der zuvor hinzugefügte Text gelöscht.
+Eine Anwendung sendet eine **WM \_ UNDO-Nachricht** an ein Bearbeitungssteuerteil, um den letzten Vorgang rückgängig zu machen. Wenn diese Meldung an ein Bearbeitungssteuerfeld gesendet wird, wird der zuvor gelöschte Text wiederhergestellt oder der zuvor hinzugefügte Text gelöscht.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert " **true**".
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert **TRUE.**
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert **false**.
+Wenn die Meldung fehlschlägt, ist der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Umfassende **Bearbeitung:** Es wird empfohlen, [**EM \_ Undo**](em-undo.md) anstelle von **WM \_ Undo** zu verwenden.
+**Umfangreiche Bearbeitung:** Es wird empfohlen, [**EM \_ UNDO**](em-undo.md) anstelle von **WM \_ UNDO zu verwenden.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,29 +59,29 @@ Umfassende **Bearbeitung:** Es wird empfohlen, [**EM \_ Undo**](em-undo.md) anst
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM \_ Clear**](/windows/desktop/dataxchg/wm-clear)
+[**WM \_ CLEAR**](/windows/desktop/dataxchg/wm-clear)
 </dt> <dt>
 
-[**WM- \_ Kopie**](/windows/desktop/dataxchg/wm-copy)
+[**WM \_ COPY**](/windows/desktop/dataxchg/wm-copy)
 </dt> <dt>
 
-[**WM \_ Ausschneiden**](/windows/desktop/dataxchg/wm-cut)
+[**WM \_ CUT**](/windows/desktop/dataxchg/wm-cut)
 </dt> <dt>
 
-[**WM \_ Einfügen**](/windows/desktop/dataxchg/wm-paste)
+[**WM \_ PASTE**](/windows/desktop/dataxchg/wm-paste)
 </dt> </dl>
 
  

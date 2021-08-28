@@ -1,21 +1,21 @@
 ---
-title: Verwenden benutzerdefinierter zeichnen
+title: Verwenden von benutzerdefiniertem Zeichnen
 description: Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie benutzerdefiniertes Zeichnen implementiert wird.
 ms.assetid: ab2a8930-1ee1-4b9f-bd3e-4b34df84957b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f0b8a2585103aa27a27f0138a49885cc726d3b1
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: e90cff5fd4d692d31b69c85980f872f3aca4504cad81a3439d0c4d31a4c73d90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104038614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655870"
 ---
-# <a name="using-custom-draw"></a>Verwenden benutzerdefinierter zeichnen
+# <a name="using-custom-draw"></a>Verwenden von benutzerdefiniertem Zeichnen
 
 Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie benutzerdefiniertes Zeichnen implementiert wird.
 
-Das folgende Code Fragment ist ein Teil eines [**WM- \_ Benachrichtigungs**](wm-notify.md) Handlers, der veranschaulicht, wie benutzerdefinierte Draw-Benachrichtigungen behandelt werden, die an ein Listenansicht-Steuerelement gesendet werden.
+Das folgende Codefragment ist ein Teil eines [**WM NOTIFY-Handlers, \_**](wm-notify.md) der veranschaulicht, wie benutzerdefinierte Zeichnen-Benachrichtigungen behandelt werden, die an ein Listenansicht-Steuerelement gesendet werden.
 
 
 ```C++
@@ -77,34 +77,34 @@ subitem and return CDRF_NEWFONT.*/
 
 
 
-In der ersten [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigung ist der **dwdrawstage** -Member der [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur auf **CDDs \_ PrePaint** festgelegt. Der Handler gibt [**cdrf \_ notifyitemdraw**](cdrf-constants.md) zurück, um anzugeben, dass er ein oder mehrere Elemente einzeln ändern möchte.
+Bei der ersten [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) ist **das dwDrawStage-Member** der [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) auf **CDDS \_ PREPAINT festgelegt.** Der Handler gibt [**CDRF \_ NOTIFYITEMDRAW zurück,**](cdrf-constants.md) um anzugeben, dass ein oder mehrere Elemente einzeln geändert werden sollen.
 
-Wenn [**cdrf \_ notifyitemdraw**](cdrf-constants.md) im vorherigen Schritt zurückgegeben wurde, wurde für die nächste [nm- \_ customdraw](nm-customdraw.md) -Benachrichtigung **dwdrawstage** auf **CDDs \_ itemprepaint** festgelegt. Der Handler Ruft die aktuellen Farb-und Schriftart Werte ab. An diesem Punkt können Sie neue Werte für die Modi "Small Icon", "Large Icon" und "List" angeben. Wenn sich das Steuerelement im Berichtsmodus befindet, können Sie auch neue Werte angeben, die auf alle unter Elemente des Elements angewendet werden. Wenn Sie etwas geändert haben, geben Sie [**cdrf \_ newFont**](cdrf-constants.md)zurück. Wenn sich das Steuerelement im Berichtsmodus befindet und Sie die unter Elemente einzeln verarbeiten möchten, geben Sie **cdrf \_ notifysubitemdraw** zurück.
+Wenn [**CDRF \_ NOTIFYITEMDRAW**](cdrf-constants.md) im vorherigen Schritt zurückgegeben wurde, ist für die nächste [NM \_ CUSTOMDRAW-Benachrichtigung](nm-customdraw.md) **dwDrawStage** auf **CDDS \_ ITEMPREPAINT festgelegt.** Der Handler ruft die aktuelle Farbe und die aktuellen Schriftartwerte ab. An diesem Punkt können Sie neue Werte für kleine Symbole, große Symbole und Listenmodi angeben. Wenn sich das Steuerelement im Berichtsmodus befindet, können Sie auch neue Werte angeben, die für alle Unteritems des Elements gelten. Wenn Sie etwas geändert haben, geben Sie [**CDRF \_ NEWFONT zurück.**](cdrf-constants.md) Wenn sich das Steuerelement im Berichtsmodus befindet und Sie die Unteritems einzeln behandeln möchten, geben Sie **CDRF \_ NOTIFYSUBITEMDRAW zurück.**
 
-Die letzte Benachrichtigung wird nur gesendet, wenn sich das Steuerelement im Berichtsmodus befindet und Sie **cdrf \_ notifysubitemdraw** im vorherigen Schritt zurückgegeben haben. Das Verfahren zum Ändern von Schriftarten und Farben ist mit diesem Schritt identisch, aber es gilt nur für ein einzelnes Unterelement. Gibt [**cdrf \_ newFont**](cdrf-constants.md) zurück, um das Steuerelement zu benachrichtigen, wenn die Farbe oder Schriftart geändert wurde.
+Die endgültige Benachrichtigung wird nur gesendet, wenn sich das Steuerelement im Berichtsmodus befindet und Sie im vorherigen Schritt **CDRF \_ NOTIFYSUBITEMDRAW** zurückgegeben haben. Das Verfahren zum Ändern von Schriftarten und Farben ist mit diesem Schritt identisch, gilt aber nur für ein einzelnes Unterem. Geben [**Sie CDRF \_ NEWFONT zurück,**](cdrf-constants.md) um das Steuerelement zu benachrichtigen, wenn die Farbe oder Schriftart geändert wurde.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Informationen zum benutzerdefinierten Zeichnen](about-custom-draw.md)
 </dt> <dt>
 
-[Benutzerdefinierter Zeichnungs Verweis](custom-draw-reference.md)
+[Benutzerdefinierter Draw-Verweis](custom-draw-reference.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[Beispiel: custdtv veranschaulicht benutzerdefiniertes Zeichnen in einer TreeView (Q248496)](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
+[BEISPIEL: CustDTv veranschaulicht benutzerdefiniertes Zeichnen in einer TreeView (Q248496)](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

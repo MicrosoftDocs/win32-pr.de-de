@@ -1,9 +1,9 @@
 ---
-title: PGM_FORWARDMOUSE Meldung (kommstrg. h)
-description: Aktiviert oder deaktiviert die Maus Weiterleitung für das Pager-Steuerelement. Wenn die Maus Weiterleitung aktiviert ist, leitet das Pager-Steuerelement WM- \_ MouseMove-Nachrichten an das enthaltene Fenster weiter. Sie können diese Nachricht explizit senden oder das Pager- \_ forwardmouse-Makro verwenden.
+title: PGM_FORWARDMOUSE Nachricht (Commctrl.h)
+description: Aktiviert oder deaktiviert die Mausweiterleitung für das Pagersteuerelement. Wenn die Mausweiterleitung aktiviert ist, leitet das Pager-Steuerelement WM \_ MOUSEMOVE-Meldungen an das enthaltene Fenster weiter. Sie können diese Nachricht explizit senden oder das Pager \_ ForwardMouse-Makro verwenden.
 ms.assetid: 269972fe-50b3-4c9f-b5ac-65e768b30684
 keywords:
-- Windows-Steuerelemente für PGM_FORWARDMOUSE Meldung
+- PGM_FORWARDMOUSE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: addc1c6bf762f540e9d7d785a5af2ba3fb7da93c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 705b63ad39faea86e1f38a5b59dc73c6fc12f1e19fc17d0619c9a4b3dd5c6d26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046970"
 ---
-# <a name="pgm_forwardmouse-message"></a>PGM \_ forwardmouse-Nachricht
+# <a name="pgm_forwardmouse-message"></a>PGM \_ FORWARDMOUSE-Nachricht
 
-Aktiviert oder deaktiviert die Maus Weiterleitung für das Pager-Steuerelement. Wenn die Maus Weiterleitung aktiviert ist, leitet das Pager-Steuerelement [**WM- \_ MouseMove**](/windows/desktop/inputdev/wm-mousemove) -Nachrichten an das enthaltene Fenster weiter. Sie können diese Nachricht explizit senden oder das [**Pager- \_ forwardmouse**](/windows/desktop/api/Commctrl/nf-commctrl-pager_forwardmouse) -Makro verwenden.
+Aktiviert oder deaktiviert die Mausweiterleitung für das Pagersteuerelement. Wenn die Mausweiterleitung aktiviert ist, leitet das Pager-Steuerelement [**WM \_ MOUSEMOVE-Meldungen**](/windows/desktop/inputdev/wm-mousemove) an das enthaltene Fenster weiter. Sie können diese Nachricht explizit senden oder das [**Pager \_ ForwardMouse-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-pager_forwardmouse) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Aktiviert oder deaktiviert die Maus Weiterleitung für das Pager-Steuerelement. 
 *wParam* 
 </dt> <dd>
 
-**Boolescher** Wert, der bestimmt, ob die Maus Weiterleitung aktiviert oder deaktiviert ist. Wenn dieser Wert ungleich 0 (null) ist, wird die Maus Weiterleitung aktiviert. Wenn dieser Wert 0 (null) ist, wird die Maus Weiterleitung deaktiviert.
+**BOOL-Wert,** der bestimmt, ob die Mausweiterleitung aktiviert oder deaktiviert ist. Wenn dieser Wert ungleich 0 (null) ist, ist die Mausweiterleitung aktiviert. Wenn dieser Wert 0 (null) ist, ist die Mausweiterleitung deaktiviert.
 
 </dd> <dt>
 
@@ -49,9 +49,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

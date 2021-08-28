@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidcolumnexception-Konstruktor (SerializationInfo, StreamingContext)'
-title: Esentinvalidcolumnexception-Konstruktor (SerializationInfo, StreamingContext)
+description: 'Weitere Informationen zu: EsentInvalidColumnException-Konstruktor (SerializationInfo, StreamingContext)'
+title: EsentInvalidColumnException-Konstruktor (SerializationInfo, StreamingContext)
 TOCTitle: EsentInvalidColumnException constructor (SerializationInfo, StreamingContext)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidColumnException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcolumnexception.esentinvalidcolumnexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f439edeb0dad09f4c7f1bdd9521bb2410ca68be6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c042708140a5492e79aaa994226b10d9d2fc78ffddeaf82ce76e0532eabf0a22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723950"
 ---
-# <a name="esentinvalidcolumnexception-constructor-serializationinfo-streamingcontext"></a>Esentinvalidcolumnexception-Konstruktor (SerializationInfo, StreamingContext)
+# <a name="esentinvalidcolumnexception-constructor-serializationinfo-streamingcontext"></a>EsentInvalidColumnException-Konstruktor (SerializationInfo, StreamingContext)
 
-Initialisiert eine neue Instanz der esentinvalidcolumnexception-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.
+Initialisiert eine neue Instanz der EsentInvalidColumnException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,25 +59,25 @@ protected EsentInvalidColumnException(
 #### <a name="parameters"></a>Parameter
 
   - info  
-    Typ: [System. Runtime. Serialization. SerializationInfo](/dotnet/api/system.runtime.serialization.serializationinfo)  
+    Typ: [System.Runtime.Serialization.SerializationInfo](/dotnet/api/system.runtime.serialization.serializationinfo)  
     
-    Die Daten, die zum Deserialisieren des-Objekts benötigt werden.
+    Die Daten, die zum Deserialisieren des Objekts erforderlich sind.
 
 <!-- end list -->
 
   - context  
-    Typ: [System. Runtime. Serialization. StreamingContext](/dotnet/api/system.runtime.serialization.streamingcontext)  
+    Typ: [System.Runtime.Serialization.StreamingContext](/dotnet/api/system.runtime.serialization.streamingcontext)  
     
     Der Deserialisierungskontext.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcolumnexception-Klasse](./esentinvalidcolumnexception-class.md)
+[EsentInvalidColumnException-Klasse](./esentinvalidcolumnexception-class.md)
 
-[Esentinvalidcolumnexception-Elemente](./esentinvalidcolumnexception-members.md)
+[EsentInvalidColumnException-Member](./esentinvalidcolumnexception-members.md)
 
-[Esentinvalidcolumnexception-Überladung](./esentinvalidcolumnexception-constructor2.md)
+[EsentInvalidColumnException-Überladung](./esentinvalidcolumnexception-constructor2.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

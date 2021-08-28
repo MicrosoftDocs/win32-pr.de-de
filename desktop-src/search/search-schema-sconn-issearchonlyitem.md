@@ -1,19 +1,19 @@
 ---
-description: Das boolesche <isSearchOnlyItem> Element gibt an, ob der Suchanbieter zusätzlich zum Suchmodus den Durchsuchenmodus unterstützt. Dieses Element ist optional und verfügt über keine untergeordneten Elemente und keine Attribute.
+description: Das boolesche &lt; isSearchOnlyItem-Element &gt; gibt an, ob der Suchanbieter den Suchmodus zusätzlich zum Suchmodus unterstützt. Dieses Element ist optional und hat keine untergeordneten Elemente und keine Attribute.
 ms.assetid: eec1b735-ae78-48ef-8ebf-05b9fd038963
-title: issearchonlyitem-Element (Suchconnector-Schema)
+title: isSearchOnlyItem-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ded7b62cde5cf813603d5cc87c41fe2c443b42d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 524a69198a650e0cb995d2ff8b4fc942ebfdaddc
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525454"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883420"
 ---
-# <a name="issearchonlyitem-element-search-connector-schema"></a>issearchonlyitem-Element (Suchconnector-Schema)
+# <a name="issearchonlyitem-element-search-connector-schema"></a>isSearchOnlyItem-Element (Connectorschema suchen)
 
-Das boolesche <isSearchOnlyItem> Element gibt an, ob der Suchanbieter zusätzlich zum Suchmodus den Durchsuchenmodus unterstützt. Dieses Element ist optional und verfügt über keine untergeordneten Elemente und keine Attribute.
+Das boolesche &lt; isSearchOnlyItem-Element &gt; gibt an, ob der Suchanbieter den Suchmodus zusätzlich zum Suchmodus unterstützt. Dieses Element ist optional und hat keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +38,15 @@ Das boolesche <isSearchOnlyItem> Element gibt an, ob der Suchanbieter zusätzlic
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert `true` gibt an, dass der Suchconnector-Speicherort von Benutzern nicht durchsucht werden kann. Der Wert `false` gibt an, dass Benutzer den Suchconnector-Speicherort durchsuchen können.
+Der Wert `true` gibt an, dass der Speicherort des Suchconnectors nicht von Benutzern durchsucht werden kann. Der Wert `false` gibt an, dass Benutzer den Speicherort des Suchconnectors durchsuchen können.
 
 ## <a name="example"></a>Beispiel
 

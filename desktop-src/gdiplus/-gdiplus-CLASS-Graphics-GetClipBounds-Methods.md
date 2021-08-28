@@ -1,38 +1,38 @@
 ---
-description: In diesem Thema werden die getClipBounds-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die GetClipBounds-Methoden der Graphics-Klasse aufgeführt. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: b46ce1d3-c2b5-4dbf-86b7-2e6f52ab2787
-title: Graphics. getClipBounds-Methode (gdiplportgraphics. h)
+title: Graphics.GetClipBounds-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 87227a51df1aa263603e79385ad8d4889608e60d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c385df0b32604d44cdadbad049c5829a06cc58ac86d3177de13cdf7c7954181e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104983100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119613240"
 ---
-# <a name="graphicsgetclipbounds-methods"></a>Graphics. getClipBounds-Methoden
+# <a name="graphicsgetclipbounds-methods"></a>Graphics.GetClipBounds-Methoden
 
-In diesem Thema werden die getClipBounds-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die GetClipBounds-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgeführt. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Graphics**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                              | BESCHREIBUNG                                                                                                                                                                                                                    |
+| Methode                                                                              | Beschreibung                                                                                                                                                                                                                    |
 |:------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetClipBounds (Rect \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-getclipbounds(outrect))   | Die [**Graphics:: getClipBounds**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-getclipbounds(outrect)) -Methode ruft ein Rechteck ab, das den Ausschneide Bereich dieses [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts einschließt.<br/> |
-| [**GetClipBounds (RectF \* )**](/previous-versions//ms535949(v=vs.85)) | Das Graphics [**:: getClipBounds**](/previous-versions//ms535949(v=vs.85))-[**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt.<br/>                                                                   |
+| [**GetClipBounds(Rect \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-getclipbounds(outrect))   | Die [**Graphics::GetClipBounds-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-getclipbounds(outrect)) ruft ein Rechteck ab, das den Ausschneidebereich dieses [**Grafikobjekts**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) umschließt.<br/> |
+| [**GetClipBounds(RectF \* )**](/previous-versions//ms535949(v=vs.85)) | Das [**Graphics::GetClipBounds-Grafikobjekt.**](/previous-versions//ms535949(v=vs.85))[](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)<br/>                                                                   |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

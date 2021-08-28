@@ -1,47 +1,47 @@
 ---
-description: 'Mit Direct3D 10 wird der Effekt Zustand für bestimmte Pipeline Stufen nach den folgenden Strukturen organisiert:'
+description: 'Mit Direct3D 10 wird der Effektzustand für bestimmte Pipelinephasen nach den folgenden Strukturen organisiert:'
 ms.assetid: 674ed278-102c-43da-a6bf-58e084df151e
 title: Organisieren des Zustands in einem Effekt (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79cbea90c4d42d0a24ec7e35815616bf6698f72f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ac0fdd4389ce4db34a64e4bc5e39f21998c90481d4a43a06244be2b231cca999
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753750"
 ---
 # <a name="organizing-state-in-an-effect-direct3d-10"></a>Organisieren des Zustands in einem Effekt (Direct3D 10)
 
-Mit Direct3D 10 wird der Effekt Zustand für bestimmte Pipeline Stufen nach den folgenden Strukturen organisiert:
+Mit Direct3D 10 wird der Effektzustand für bestimmte Pipelinephasen nach den folgenden Strukturen organisiert:
 
 
 
-| Pipeline Status  | Struktur                                                                                                          |
+| Pipelinestatus  | Struktur                                                                                                          |
 |-----------------|--------------------------------------------------------------------------------------------------------------------|
-| Eingabe-Assembler | [**D3d10 \_ Eingabe \_ Element-Element \_**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc)                                                    |
-| Rasterung   | [**D3d10 \_ Rasterizer- \_ Abteilung**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_rasterizer_desc)                                                           |
-| Ausgabezusammenführung   | [**D3d10 \_ Blend \_**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_blend_desc) -Debug-und [ **d3d10- \_ tiefen \_ Schablone \_**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_depth_stencil_desc) |
+| Eingabe-Assembler | [**D3D10 \_ INPUT \_ ELEMENT \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc)                                                    |
+| Rasterung   | [**D3D10 \_ RASTERIZER \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_rasterizer_desc)                                                           |
+| Ausgabezusammenführung   | [**D3D10 \_ BLEND \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_blend_desc) und [ **D3D10 \_ DEPTH \_ STENCIL \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_depth_stencil_desc) |
 
 
 
  
 
-In den Shader-Phasen, in denen die Anzahl der Zustandsänderungen von einer Anwendung stärker gesteuert werden muss, wurde der Zustand in den konstanten Puffer Status, den samplerstatus und den Shader-Ressourcen Zustand aufgeteilt. Dadurch wird eine Anwendung ermöglicht, die sorgfältig entworfen wurde, um nur den geänderten Zustand zu aktualisieren. Dadurch wird die Leistung verbessert, da die Datenmenge reduziert wird, die an die GPU übermittelt werden muss.
+Für die Shaderstufen, in denen die Anzahl der Zustandsänderungen von einer Anwendung gesteuert werden muss, wurde der Zustand in einen konstanten Pufferzustand, einen sampler-Zustand und einen Shaderressourcenzustand unterteilt. Dadurch kann eine Anwendung, die sorgfältig darauf ausgelegt ist, nur den zustandsverändernden Zustand zu aktualisieren, wodurch die Leistung verbessert wird, indem die Datenmenge reduziert wird, die an die GPU übergeben werden muss.
 
-Wie organisieren Sie also den Pipeline Status in einem Effekt?
+Wie organisieren Sie den Pipelinezustand also in einem Effekt?
 
-Die Antwort ist, dass die Reihenfolge keine Rolle spielt. Globale Variablen müssen sich nicht im oberen Bereich befinden. Allerdings wird für alle Beispiele im SDK dieselbe Reihenfolge befolgt, da es eine bewährte Methode ist, die Daten auf die gleiche Weise zu organisieren. Dies ist eine kurze Beschreibung der Datenreihen Folge in den DirectX SDK-Beispielen.
+Die Antwort ist, dass die Reihenfolge keine Rolle spielt. Globale Variablen müssen sich nicht oben befinden. Alle Beispiele im SDK folgen jedoch derselben Reihenfolge, da es eine bewährte Methode ist, die Daten auf die gleiche Weise zu organisieren. Dies ist also eine kurze Beschreibung der Datenreihenfolge in den DirectX SDK-Beispielen.
 
 -   [Globale Variablen](#global-variables)
 -   [Shader](#shaders)
--   [Techniken und Durchgänge](#techniques-and-passes)
+-   [Techniken und Durchläufe](#techniques-and-passes)
 
 ## <a name="global-variables"></a>Globale Variablen
 
-Ebenso wie die Standard-C-Übung werden globale Variablen zuerst am Anfang der Datei deklariert. In den meisten Fällen handelt es sich hierbei um Variablen, die von einer Anwendung initialisiert und dann in einem Effekt verwendet werden. Manchmal werden Sie initialisiert und nie geändert, in anderen Fällen, in denen Sie jedes Frame aktualisiert werden. Ebenso wie Regeln des C-Funktions Bereichs sind Effekte, die außerhalb des Gültigkeits Bereichs von Effekten deklariert wurden, während des Effekts sichtbar. jede Variable, die innerhalb einer Effekt Funktion deklariert wird, ist nur innerhalb dieser Funktion sichtbar.
+Wie bei C standard werden globale Variablen zuerst am Anfang der Datei deklariert. In den meisten Fällen handelt es sich hierbei um Variablen, die von einer Anwendung initialisiert und dann in einem Effekt verwendet werden. Manchmal werden sie initialisiert und nie geändert, andernfalls werden sie bei jedem Frame aktualisiert. Genau wie C-Funktionsbereichsregeln sind Effektvariablen, die außerhalb des Gültigkeitsbereichs von Effektfunktionen deklariert sind, während des gesamten Effekts sichtbar. Jede Variable, die innerhalb einer Effect-Funktion deklariert ist, ist nur innerhalb dieser Funktion sichtbar.
 
-Im folgenden finden Sie ein Beispiel für die Variablen, die in BasicHLSL10. FX deklariert werden.
+Hier sehen Sie ein Beispiel für die In BasicHLSL10.fx deklarierten Variablen.
 
 
 ```
@@ -66,19 +66,19 @@ SamplerState MeshTextureSampler
 
 
 
-Die Syntax für Effekt Variablen wird in der [Variablen Syntax von Effect (Direct3D 10)](d3d10-effect-variable-syntax.md)ausführlicher beschrieben. Die Syntax für Effekt Textur-Samplern ist ausführlicher im [Samplingtyp (DirectX HLSL)](../direct3dhlsl/dx-graphics-hlsl-sampler.md)ausführlich beschrieben.
+Die Syntax für Effektvariablen wird unter [Effect Variable Syntax (Direct3D 10)](d3d10-effect-variable-syntax.md)ausführlicher beschrieben. Die Syntax für Effekttextur-Sampler wird unter [Samplertyp (DirectX HLSL)](../direct3dhlsl/dx-graphics-hlsl-sampler.md)ausführlicher beschrieben.
 
 ## <a name="shaders"></a>Shader
 
-Shader sind kleine ausführbare Programme. Sie können sich Shader als kapselnde shaderzustand vorstellen, da der HLSL-Code die shaderfunktionalität implementiert. Die Pipeline verwendet drei verschiedene Arten von Shadern.
+Shader sind kleine ausführbare Programme. Sie können sich Shader als das Kapseln des Shaderzustands vorstellen, da der HLSL-Code die Shaderfunktionalität implementiert. Die Pipeline verwendet drei verschiedene Arten von Shadern.
 
--   Vertex-Shader: Arbeiten mit Vertex-Daten. Ein Scheitelpunkt in ergibt einen Scheitelpunkt aus.
--   Geometry-Shader: Arbeiten mit primitiven Daten. Ein primitiver in kann 0, 1 oder viele primitive ergeben.
--   Pixel-Shader: Arbeiten mit Pixeldaten. Ein Pixel in ergibt 1 Pixel, es sei denn, das Pixel ist aus einem Rendering herausgefiltert.
+-   Vertex-Shader: Arbeiten mit Scheitelpunktdaten. Ein Scheitelpunkt in ergibt einen Scheitelpunkt.
+-   Geometrie-Shader: Arbeiten mit primitiven Daten. Ein Primitiver in kann 0, 1 oder viele Primitive ergeben.
+-   Pixel-Shader: Arbeiten mit Pixeldaten. Ein Pixel in ergibt 1 Pixel (es sei denn, das Pixel wird aus einem Renderr herausgekäuelt).
 
-Shader sind lokale Funktionen und folgen Regeln für C-Stil Funktionen. Wenn ein Effekt kompiliert wird, wird jeder Shader kompiliert, und ein Zeiger auf jede Shader-Funktion wird intern gespeichert. Bei erfolgreicher Kompilierung wird eine ID3D10Effect-Schnittstelle zurückgegeben. An diesem Punkt liegt der kompilierte Effekt in einem zwischen Format vor.
+Shader sind lokale Funktionen und folgen den Funktionsregeln im C-Stil. Wenn ein Effekt kompiliert wird, wird jeder Shader kompiliert, und ein Zeiger auf jede Shaderfunktion wird intern gespeichert. Eine ID3D10Effect-Schnittstelle wird zurückgegeben, wenn die Kompilierung erfolgreich ist. An diesem Punkt befindet sich der kompilierte Effekt in einem Zwischenformat.
 
-Um weitere Informationen zu den kompilierten Shadern zu erhalten, müssen Sie die Shader-Reflektion verwenden. Dies entspricht im Wesentlichen dem Anfordern der Laufzeit, die Shader zu dekompilieren, und gibt Informationen über den Shader-Code zurück.
+Um weitere Informationen zu den kompilierten Shadern zu erhalten, müssen Sie Shaderreflektion verwenden. Dies ist im Wesentlichen so, als ob die Runtime aufgefordert wird, die Shader zu dekompilieren und Informationen zum Shadercode an Sie zurückzugeben.
 
 
 ```
@@ -125,13 +125,13 @@ PS_OUTPUT RenderScenePS( VS_OUTPUT In,
 
 
 
-Die Syntax für Effekte-Shader ist in der [Funktions Syntax von "Effect" (Direct3D 10)](d3d10-effect-function-syntax.md)ausführlicher beschrieben.
+Die Syntax für Effekt-Shader wird unter [Effect Function Syntax (Direct3D 10)](d3d10-effect-function-syntax.md)ausführlicher beschrieben.
 
-## <a name="techniques-and-passes"></a>Techniken und Durchgänge
+## <a name="techniques-and-passes"></a>Techniken und Durchläufe
 
-Eine Technik ist eine Sammlung von Renderingdurchläufen (es muss mindestens ein Durchlauf vorhanden sein). Jeder Effekt Durchlauf (ähnlich dem Bereich zu einem einzelnen Durchlauf in einer Renderschleife) definiert den Shader-Zustand und alle anderen Pipeline Zustände, die zum Rendern von Geometrie erforderlich sind.
+Eine Technik ist eine Auflistung von Renderingdurchläufen (es muss mindestens ein Durchlauf vorhanden sein). Jeder Effektdurchlauf (der im Gültigkeitsbereich einem einzelnen Durchlauf in einer Renderschleife ähnelt) definiert den Shaderzustand und jeden anderen Pipelinezustand, der zum Rendern der Geometrie erforderlich ist.
 
-Im folgenden finden Sie ein Beispiel für eine Technik (die einen Durchlauf umfasst) aus BasicHLSL10. fx.
+Hier sehen Sie ein Beispiel für eine Technik (die einen Durchlauf enthält) von BasicHLSL10.fx.
 
 
 ```
@@ -148,7 +148,7 @@ technique10 RenderSceneWithTexture1Light
 
 
 
-Die Syntax für Effekte-Shader ist ausführlicher in der [Effekt Techniken-Syntax (Direct3D 10)](d3d10-effect-technique-syntax.md).
+Die Syntax für Effekt-Shader wird ausführlicher unter [Effect Technique Syntax (Direct3D 10) (Effekttechniksyntax (Direct3D 10))](d3d10-effect-technique-syntax.md)beschrieben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_CALLBACK Rückruffunktion'
-title: JET_CALLBACK Rückruffunktion
+description: 'Weitere Informationen finden Sie unter: JET_CALLBACK-Rückruffunktion'
+title: JET_CALLBACK-Rückruffunktion
 TOCTitle: JET_CALLBACK Callback Function
 ms:assetid: d15d4f84-8378-4b4b-9b8b-e89a56be5ead
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294098(v=EXCHG.10)
@@ -15,23 +15,23 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 08d992d1e8b6ca7c6a987a57f44b48d6ba291328
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 8a49c63a948cd25abe97dfc58e10a97720eae248
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122471168"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986163"
 ---
-# <a name="jet_callback-callback-function"></a>JET_CALLBACK Rückruffunktion
+# <a name="jet_callback-callback-function"></a>JET_CALLBACK-Rückruffunktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_callback-callback-function"></a>JET_CALLBACK Rückruffunktion
+## <a name="jet_callback-callback-function"></a>JET_CALLBACK-Rückruffunktion
 
-Die **JET_CALLBACK-Funktion** ist eine mehrzweckbasierte Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung über ein Ereignis zu informieren, das Onlinedefragmentierung und Cursorzustandsbenachrichtigungen umfasst.
+Die **JET_CALLBACK-Funktion** ist eine mehrzweckige Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung über ein Ereignis zu informieren, das Onlinedefragmentierung und Cursorzustandsbenachrichtigungen enthält.
 
-Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie spezifische Einstellungen, die für die Parameter dieser Funktion verwendet werden sollen, da sich diese Einstellungen abhängig von der **JET_CBTYP** Option unterscheiden, die für die Verwendung im *cbtyp-Parameter* ausgewählt ist.
+Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie spezifische Einstellungen, die für die Parameter dieser Funktion verwendet werden sollen, da sich diese Einstellungen je nach der **JET_CBTYP-Option** unterscheiden, die für die Verwendung im *cbtyp-Parameter ausgewählt ist.*
 
 ```cpp
     JET_ERR JET_API* JET_CALLBACK(
@@ -58,37 +58,37 @@ Die Datenbank, für die der Rückruf erfolgt.
 
 *tableid*
 
-Der Cursor, für den der Rückruf ausgeführt wird.
+Der Cursor, für den der Rückruf erfolgt.
 
 *cbtyp*
 
-Der Punkt im Vorgang, an dem der Rückruf erfolgt. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie eine Liste der Werte und in jedem Fall die Bedeutung der folgenden Parameter.
+Der Punkt im Vorgang, an dem der Rückruf erfolgt. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie eine Liste der Werte und die Bedeutung der folgenden Parameter in jedem Fall.
 
 *pvArg1*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird.
 
 *pvArg2*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird.
 
 *pvContext*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird.
 
 *ulUnused*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Die Funktion gibt einen der [Extensible Storage Engine-Fehlercodes](./extensible-storage-engine-error-codes.md)zurück. Informationen zum Zurückgeben dieser Codes als HRESULTs finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md). Bei Erfolg kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden. In einigen Fällen gibt der Rückruf möglicherweise eine Warnung zurück, die diesen Vorgang beeinflusst. Informationen zur Verwendung dieser Warnungen durch den Vorgang finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Die Funktion gibt einen der Extensible Storage [Engine-Fehlercodes zurück.](./extensible-storage-engine-error-codes.md) Informationen zum Zurückgeben dieser Codes als HRESULTs finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md). Bei Erfolg kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden. In einigen Fällen gibt der Rückruf möglicherweise eine Warnung zurück, die diesen Vorgang beeinflusst. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieser Warnungen durch den Vorgang.
 
-Bei einem Fehler kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden oder fehlschlagen. Informationen zur Verwendung des Fehlercodes durch den Vorgang finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
+Bei einem Fehler kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden oder fehlschlagen. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung des Fehlercodes durch den Vorgang.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wissen, dass dieser Cursor absichtlich auf einen kleineren Satz von Funktionen beschränkt ist, um Rekursion und andere Hässlichkeiten zu vermeiden. Die folgenden Vorgänge sind zulässig:
+Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wissen, dass dieser Cursor absichtlich auf einen kleineren Satz von Funktionen beschränkt ist, um Rekursion und andere Hässigkeiten zu vermeiden. Die folgenden Vorgänge sind zulässig:
 
   - [JetDupCursor](./jetdupcursor-function.md)
 
@@ -118,7 +118,7 @@ Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wis
 
   - [JetRetrieveColumns](./jetretrievecolumns-function.md)
 
-  - [JetRetrieveKey](./jetretrievekey-function.md)
+  - [JetRetrikey](./jetretrievekey-function.md)
 
   - [JetSetColumn](./jetsetcolumn-function.md)
 
@@ -128,12 +128,16 @@ Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wis
 
   - [JetUnregisterCallback](./jetunregistercallback-function.md)
 
-Berücksichtigen Sie beim Entwerfen des Rückrufs, dass der Rückruf auch bei diesen Einschränkungen weiterhin fehlschlägt.
+Berücksichtigen Sie beim Entwerfen ihres Rückrufs, dass auch bei diesen Einschränkungen weiterhin ein Fehler beim Rückruf möglich ist.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

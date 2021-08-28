@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Audioeigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden Audioeigenschaften.
 ms.assetid: 5d6c6a95-abb7-4191-a961-bcb30ca96bb6
-title: Audioeigenschaften (portabledevice. h)
+title: Audioeigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,26 +13,26 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 1bdab201fc987d5bc1aff3638fbb57358115fdce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93ddbee0eb078c1b9d5a1e7c64288e95b47e2bdb0363bf8b7b19cb773129d0ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119590410"
 ---
 # <a name="audio-properties"></a>Audioeigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Audioeigenschaften.
+Windows Portable Geräte unterstützen die folgenden Audioeigenschaften.
 
 
 
-| Eigenschaft                         | VarType     | BESCHREIBUNG                                                                                                                                                                                                        |
+| Eigenschaft                         | VarType     | Beschreibung                                                                                                                                                                                                        |
 |----------------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD \_ - \_ \_ audiobittiefe**       | **VT \_ UI4** | Die Bittiefe der Audiodatei.                                                                                                                                                                                        |
-| **WPD \_ - \_ Audiobitrate**          | **VT \_ UI4** | Die Bitrate der Audiodaten (in Bits pro Sekunde).                                                                                                                                                                     |
-| **WPD \_ - \_ Audioblock \_ Ausrichtung** | **VT \_ UI4** | Die Block Ausrichtung der Audiodatei in Bytes.                                                                                                                                                                   |
-| **Anzahl von WPD \_ - \_ Audiokanälen \_**   | **VT \_ R4**  | Die Anzahl der Kanäle in dieser Audiodatei, z. b. 1, 2 oder 5,1.                                                                                                                                              |
-| **WPD \_ - \_ \_ audioformatcode**     | **VT \_ UI4** | Die registrierte Wave-Format-Codenummer. Eine Auflistung registrierter Wellen Formate finden Sie im Artikel [registrierte FOURCC Codes und Wave Formats](https://msdn2.microsoft.com/library/ms867195.aspx) auf der MSDN-Website. |
+| **\_ \_ WPD-AUDIOBITTIEFE \_**       | **VT \_ UI4** | Die Bittiefe des Audios.                                                                                                                                                                                        |
+| **WPD \_ AUDIO \_ BITRATE**          | **VT \_ UI4** | Die Bitrate des Audios in Bits pro Sekunde.                                                                                                                                                                     |
+| **\_ \_ WPD-AUDIOBLOCKAUSRICHTUNG \_** | **VT \_ UI4** | Die Blockausrichtung der Audiodatei in Bytes.                                                                                                                                                                   |
+| **\_ \_ \_ WPD-AUDIOKANALANZAHL**   | **VT \_ R4**  | Die Anzahl der Kanäle in dieser Audiodatei, z. B. 1, 2 oder 5.1.                                                                                                                                              |
+| **\_ \_ WPD-AUDIOFORMATCODE \_**     | **VT \_ UI4** | Die registrierte WAVE-Formatcodenummer. Eine Liste der registrierten WAVE-Formate finden Sie im Artikel [Registrierte FOURCC-Codes und WAVE-Formate](https://msdn2.microsoft.com/library/ms867195.aspx) auf der MSDN-Website. |
 
 
 
@@ -44,7 +44,7 @@ Tragbare Windows-Geräte unterstützen die folgenden Audioeigenschaften.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
@@ -52,7 +52,7 @@ Tragbare Windows-Geräte unterstützen die folgenden Audioeigenschaften.
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

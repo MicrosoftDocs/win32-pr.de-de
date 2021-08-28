@@ -1,19 +1,19 @@
 ---
-title: Erstellen der globalen Schnittstellen Tabelle
-description: Erstellen der globalen Schnittstellen Tabelle
+title: Erstellen der globalen Schnittstellentabelle
+description: Erstellen der globalen Schnittstellentabelle
 ms.assetid: e8e46642-ef41-4322-97d0-8dd5b7c72992
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f792f9664da554f6522086796f94a00ccdf0dc07
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 836cc5507ac9b8e7cccd6e9dc8fd8c2d71e1a23419945ecc01d35b3978940124
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793770"
 ---
-# <a name="creating-the-global-interface-table"></a>Erstellen der globalen Schnittstellen Tabelle
+# <a name="creating-the-global-interface-table"></a>Erstellen der globalen Schnittstellentabelle
 
-Verwenden Sie den folgenden Aufruf, um das globale Schnittstellen Tabellenobjekt zu erstellen, und rufen Sie einen Zeiger auf [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable)ab:
+Verwenden Sie den folgenden Aufruf, um das globale Schnittstellentabellenobjekt zu erstellen und einen Zeiger auf [**IGlobalInterfaceTable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable)abzurufen:
 
 ``` syntax
 HRESULT hr;
@@ -28,29 +28,29 @@ if (hr != S_OK) {
 ```
 
 > [!Note]  
-> Beim Erstellen des globalen Schnittstellen Tabellenobjekts mit dem vorhergehenden-Befehl ist es erforderlich, eine Verknüpfung mit der Bibliothek UUID. lib herzustellen. Hierdurch werden die externen Symbole CLSID \_ stdglobalinterfaketable und IID \_ iglobalinterfaketable aufgelöst.
+> Beim Erstellen des globalen Schnittstellentabellenobjekts mithilfe des vorherigen Aufrufs muss eine Verknüpfung mit der Bibliothek "uuid.lib" hergestellt werden. Dadurch werden die externen Symbole CLSID \_ StdGlobalInterfaceTable und IID \_ IGlobalInterfaceTable aufgelöst.
 
- 
+ 
 
-Es gibt eine einzelne Instanz der globalen Schnittstellen Tabelle pro Prozess, sodass alle Aufrufe dieser Funktion in einem Prozess dieselbe Instanz zurückgeben.
+Es gibt eine einzelne Instanz der globalen Schnittstellentabelle pro Prozess, sodass alle Aufrufe dieser Funktion in einem Prozess dieselbe Instanz zurückgeben.
 
-Nachdem Sie die [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufgerufen haben, registrieren Sie die-Schnittstelle aus dem Apartment, in dem Sie sich befindet, mit einem Aufrufen der [**registerinterfaceinglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-registerinterfaceinglobal) -Methode. Diese Methode stellt ein Cookie bereit, das die-Schnittstelle und deren Position identifiziert. Ein Apartment, das einen Zeiger auf diese Schnittstelle sucht, ruft dann die [**getinterfacefromglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-getinterfacefromglobal) -Methode mit diesem Cookie auf, und die Implementierung stellt dann einen Schnittstellen Zeiger auf das aufrufende Apartment bereit. Um die globale Registrierung der Schnittstelle aufzuheben, kann jedes Apartment die [**revokeinterfacefromglobal**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-revokeinterfacefromglobal) -Methode aufzurufen.
+Registrieren Sie nach dem Aufruf der [**CoCreateInstance-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) die -Schnittstelle aus dem Apartment, in dem sie sich befindet, mit einem Aufruf der [**RegisterInterfaceInGlobal-Methode.**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-registerinterfaceinglobal) Diese Methode stellt ein Cookie zur Verfügung, das die Schnittstelle und deren Position identifiziert. Ein Apartment, das einen Zeiger auf diese Schnittstelle sucht, ruft dann die [**GetInterfaceFromGlobal-Methode**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-getinterfacefromglobal) mit diesem Cookie auf, und die Implementierung stellt dann einen Schnittstellenzeiger auf das aufrufende Apartment bereit. Um die globale Registrierung der Schnittstelle zu widerrufen, kann jedes Apartment die [**RevokeInterfaceFromGlobal-Methode**](/windows/win32/api/objidl/nf-objidl-iglobalinterfacetable-revokeinterfacefromglobal) aufrufen.
 
-Ein einfaches Beispiel für die Verwendung von [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) wäre, wenn Sie einen Schnittstellen Zeiger für ein Objekt in einem Single Thread-Apartment (STA) an einen Arbeits Thread in einem anderen Apartment übergeben möchten. Anstatt Sie in einen Datenstrom zu Mars Hallen und den Datenstrom als Thread Parameter an den Arbeits Thread zu übergeben, ermöglicht **iglobalinterfaketable** lediglich das Übergeben eines Cookies.
+Ein einfaches Beispiel für die Verwendung von [**IGlobalInterfaceTable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) wäre, wenn Sie einen Schnittstellenzeiger für ein Objekt in einem Singlethread-Apartment (STA) an einen Arbeitsthread in einem anderen Apartment übergeben möchten. Anstatt ihn in einen Stream zu marshallen und den Stream als Threadparameter an den Arbeitsthread zu übergeben, ermöglicht **IGlobalInterfaceTable** ihnen einfach das Übergeben eines Cookies.
 
-Wenn Sie die Schnittstelle in der globalen Schnittstellen Tabelle registrieren, wird ein Cookie angezeigt, das Sie verwenden können, anstatt den tatsächlichen Zeiger zu übergeben (wenn Sie den Zeiger übergeben müssen), entweder an einen nicht-Methoden Parameter, der zu einem anderen Apartment (als Parameter für [*ThreadProc*](/previous-versions/windows/desktop/legacy/ms686736(v=vs.85)) durch " [**kreatethread**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)") oder zu einem Prozess internen Speicher außerhalb des Apartment.
+Wenn Sie die Schnittstelle in der globalen Schnittstellentabelle registrieren, erhalten Sie ein Cookie, das Sie verwenden können, anstatt den tatsächlichen Zeiger zu übergeben (wenn Sie den Zeiger übergeben müssen), entweder an einen Nichtmethodparameter, der in ein anderes Apartment (als Parameter für [*ThreadProc*](/previous-versions/windows/desktop/legacy/ms686736(v=vs.85)) über [**CreateThread)**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)oder an den Prozessspeicher außerhalb Ihres Apartments geht.
 
-Vorsicht ist erforderlich, da durch die Verwendung von globalen Schnittstellen der Programmierer für das Verwalten von Problemen wie Racebedingungen und gegenseitiger Ausschluss, die mit dem gleichzeitigen Zugriff auf den globalen Zustand mehrerer Threads verknüpft sind, zusätzliche Belastung entstehen kann.
+Vorsicht ist erforderlich, da die Verwendung von globalen Schnittstellen dem Programmierer die zusätzliche Belastung für die Verwaltung von Problemen wie Racebedingungen und gegenseitigem Ausschluss mit sich bringt, die mit dem gleichzeitigen Zugriff auf den globalen Zustand von mehreren Threads verbunden sind.
 
-COM stellt eine Standard Implementierung der [**iglobalinterfaketable**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) -Schnittstelle bereit. Es wird dringend empfohlen, diese Standard Implementierung zu verwenden, da Sie eine komplette Thread sichere Funktionalität bereitstellt.
+COM stellt eine Standardimplementierungen der [**IGlobalInterfaceTable-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-iglobalinterfacetable) bereit. Es wird dringend empfohlen, diese Standardimplementierungen zu verwenden, da sie vollständige threadsichere Funktionen bietet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwendungszwecke der globalen Schnittstellen Tabelle](when-to-use-the-global-interface-table.md)
+[Verwendung der globalen Schnittstellentabelle](when-to-use-the-global-interface-table.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

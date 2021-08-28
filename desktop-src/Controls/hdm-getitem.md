@@ -1,9 +1,9 @@
 ---
-title: HDM_GETITEM Meldung (kommstrg. h)
-description: Ruft Informationen zu einem Element in einem Header Steuerelement ab. Sie können diese Nachricht explizit senden oder das-Header \_ GetItem-Makro verwenden.
+title: HDM_GETITEM Meldung (Commctrl.h)
+description: Ruft Informationen zu einem Element in einem Headersteuerelement ab. Sie können diese Nachricht explizit senden oder das \_ Header-GetItem-Makro verwenden.
 ms.assetid: fb1330d3-fd28-490c-9caa-4b2b5ff86ba0
 keywords:
-- Windows-Steuerelemente für HDM_GETITEM Meldung
+- HDM_GETITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2073602121480930e0f7d9d2e5a904c0dea77ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 566f8b8e3bdf4e92abfb1fdd5874b8514814792e1d7aae169cc2aca4b2e8d101
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119436190"
 ---
-# <a name="hdm_getitem-message"></a>HDM- \_ GetItem-Nachricht
+# <a name="hdm_getitem-message"></a>HDM \_ GETITEM-Nachricht
 
-Ruft Informationen zu einem Element in einem Header Steuerelement ab. Sie können diese Nachricht explizit senden oder das- [**Header \_ GetItem**](/windows/desktop/api/Commctrl/nf-commctrl-header_getitem) -Makro verwenden.
+Ruft Informationen zu einem Element in einem Headersteuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ Header-GetItem-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-header_getitem) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,17 +41,17 @@ Der Index des Elements, für das Informationen abgerufen werden sollen.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**HDITEM**](/windows/win32/api/commctrl/ns-commctrl-hditema) -Struktur. Wenn die Nachricht gesendet wird, gibt das **Masken** Element den Typ der angeforderten Informationen an. Wenn die Meldung zurückgegeben wird, erhalten die anderen Member die angeforderten Informationen. Wenn das **Masken** Element NULL angibt, gibt die Meldung **true** zurück, kopiert jedoch keine Informationen in die Struktur.
+Ein Zeiger auf eine [**HDITEM-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-hditema) Wenn die Nachricht gesendet wird, gibt der **Maskenmember** den Typ der angeforderten Informationen an. Wenn die Nachricht zurückgegeben wird, erhalten die anderen Member die angeforderten Informationen. Wenn der **Maskenmember** 0 (null) angibt, gibt die Nachricht **TRUE** zurück, kopiert jedoch keine Informationen in die Struktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das HDI- \_ textflag im **Mask** -Member der [**HDITEM**](/windows/win32/api/commctrl/ns-commctrl-hditema) -Struktur festgelegt ist, kann das Steuerelement den **pszText** -Member der Struktur so ändern, dass er auf den neuen Text verweist, anstatt den Puffer mit dem angeforderten Text zu füllen. Anwendungen sollten nicht davon ausgehen, dass der Text immer in den angeforderten Puffer eingefügt wird.
+Wenn das HDI \_ TEXT-Flag im **Maskenmember** der [**HDITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-hditema) festgelegt ist, kann das Steuerelement den **pszText-Member** der -Struktur so ändern, dass er auf den neuen Text verweist, anstatt den Puffer mit dem angeforderten Text aufzufüllen. Anwendungen sollten nicht davon ausgehen, dass der Text immer im angeforderten Puffer platziert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Wenn das HDI- \_ textflag im **Mask** -Member der [**HDITEM**](/windows/win32/ap
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **HDM \_ Getitemw** (Unicode) und **HDM \_ getitema** (ANSI)<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HDM \_ GETITEMW** (Unicode) und **HDM \_ GETITEMA** (ANSI)<br/>                   |
 
 
 

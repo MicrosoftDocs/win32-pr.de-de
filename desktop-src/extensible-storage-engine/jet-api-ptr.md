@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 401c490c667cd8f9842a7ab0429e10a510e3b06e
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: ddf50b5bb5e65ca60677f5578170b84f744016e9
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122466397"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985303"
 ---
 # <a name="jet_api_ptr"></a>JET_API_PTR
 
@@ -47,7 +47,7 @@ JET_API_PTR
 
 Wie ein **DWORD_PTR** Datentyp wird der **JET_API_PTR** Datentyp auf einem 32-Bit-Computer als 4 Bytes und auf einem 64-Bit-Computer als 8 Bytes definiert.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Der **JET_API_PTR** Datentyp wird verwendet, um die folgenden Datentypen zu definieren:
 
@@ -64,5 +64,9 @@ Der **JET_API_PTR** Datentyp wird verwendet, um die folgenden Datentypen zu defi
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
 

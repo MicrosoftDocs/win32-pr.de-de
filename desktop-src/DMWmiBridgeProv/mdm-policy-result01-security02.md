@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Security02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ Security02-Klasse stellt die verfügbaren Sicherheitsrichtlinien dar.
+description: Die MDM \_ Policy \_ Result01 \_ Security02-Klasse stellt die verfügbaren Sicherheitsrichtlinien dar.
 ms.assetid: e4f9bbeb-b542-454d-930b-0b4ac88fe189
 keywords:
 - MDM_Policy_Result01_Security02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 959d5cbc9382b4bef0899f5b44d8ee2d171bd704
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7695ad419de30e9b5bdfbd5083876005263776e66df1d606aeb679917aa0ce6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433279"
 ---
-# <a name="mdm_policy_result01_security02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Security02-Klasse
+# <a name="mdm_policy_result01_security02-class"></a>MDM \_ Policy \_ Result01 \_ Security02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Security02** -Klasse stellt die verfügbaren Sicherheitsrichtlinien dar.
+Die **MDM \_ Policy \_ Result01 \_ Security02-Klasse** stellt die verfügbaren Sicherheitsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -52,17 +52,17 @@ class MDM_Policy_Result01_Security02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Security02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ Security02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Security02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ Security02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowaddprovisioningpackage](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
+[AllowAddProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -73,7 +73,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowremoveprovisioningpackage](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage)
+[AllowRemoveProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -84,7 +84,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Cleartpmibernotready](/windows/client-management/mdm/policy-csp-security#security-cleartpmifnotready)
+[ClearTPMIfNotReady](/windows/client-management/mdm/policy-csp-security#security-cleartpmifnotready)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -98,7 +98,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -107,14 +107,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Security".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Security".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -123,11 +123,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
-[Preventautomaticdeviceverschlüsseltionforazuread joineddevices](/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+[PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -138,7 +138,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements deviceencryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption)
+[RequireDeviceEncryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -149,7 +149,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements provisioningpackagesignature](/windows/client-management/mdm/policy-csp-security#security-requireprovisioningpackagesignature)
+[RequireProvisioningPackageSignature](/windows/client-management/mdm/policy-csp-security#security-requireprovisioningpackagesignature)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -160,7 +160,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requuneregsevehealthcertificateonboot](/windows/client-management/mdm/policy-csp-security#security-requireretrievehealthcertificateonboot)
+[RequireRetrihealthCertificateOnBoot](/windows/client-management/mdm/policy-csp-security#security-requireretrievehealthcertificateonboot)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -177,19 +177,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ Stamm-CIMv2-MDM-DMMap \\<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

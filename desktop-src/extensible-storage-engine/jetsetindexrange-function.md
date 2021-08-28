@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 918d1c7f70f4f02158473ad4b97a510058787a6b
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 330adc9b4d18a7bfa66ced0c9cb5776f31162be5
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122477466"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988453"
 ---
 # <a name="jetsetindexrange-function"></a>JetSetIndexRange-Funktion
 
@@ -61,8 +61,8 @@ Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthal
 |--------------|----------------|
 | <p>JET_bitRangeInclusive</p> | <p>Dieses Vorhandensein oder Fehlen dieser Option gibt die Begrenzungskriterien des Indexbereichs an. Wenn diese Option vorhanden ist, gibt diese Option an, dass der Indexbereich inklusiv ist. Wenn diese Option nicht vorhanden ist, gibt diese Option an, dass der Indexbereich exklusiv ist. Wenn das Limit des Indexbereichs inklusiv ist, werden alle Indexeinträge, die genau mit den Suchkriterien übereinstimmen, in den Bereich aufgenommen.</p> | 
 | <p>JET_bitRangeInstantDuration</p> | <p>Diese Option fordert an, dass der Indexbereich entfernt wird, sobald er eingerichtet wurde. Alle anderen Aspekte des Vorgangs bleiben unverändert. Dies ist nützlich, um zu testen, ob Indexeinträge vorliegen, die den Suchkriterien entsprechen.</p> | 
-| <p>JET_bitRangeRemove</p> | <p>Diese Option fordert an, dass ein vorhandener Indexbereich auf dem Cursor abgebrochen wird. Nachdem der Indexbereich abgebrochen wurde, ist es möglich, mit JetMove über das Ende des <a href="gg294117(v=exchg.10).md">Indexbereichs hinaus zu wechseln.</a> Wenn ein Indexbereich noch nicht wirksam ist, tritt bei <strong>JetSetIndexRange</strong> ein Fehler auf, JET_errInvalidOperation.</p><p>Wenn diese Option angegeben wird, werden alle anderen Optionen ignoriert.</p> | 
-| <p>JET_bitRangeUpperLimit</p> | <p>Wenn diese Option verwendet wird, stellt der Suchschlüssel im Cursor die Suchkriterien für den Indexeintrag dar, der dem Ende des Indexes am nächsten ist, der dem Indexbereich entspricht. Der Indexbereich wird zwischen der aktuellen Position des Cursors und diesem Indexeintrag festgelegt, sodass alle Übereinstimmungen gefunden werden können, indem sie im Index mit <a href="gg294117(v=exchg.10).md">JetMove</a> mit JET_MoveNext oder einem positiven Offset vorwärts gehen.</p><p>Es ist nicht sinnvoll, diese Option mit einem Suchschlüssel zu verwenden, der mit <a href="gg269329(v=exchg.10).md">JetMakeKey</a> mithilfe einer Platzhalteroption erstellt wurde, um Indexeinträge zu finden, die dem Indexanfang am nächsten sind.</p><p>Wenn diese Option weggelassen wird, stellt der Suchschlüssel im Cursor die Suchkriterien für den Indexeintrag dar, der dem Anfang des Indexes am nächsten ist, der dem Indexbereich entspricht. Der Indexbereich wird zwischen der aktuellen Position des Cursors und diesem Indexeintrag festgelegt, sodass alle Übereinstimmungen gefunden werden können, indem sie im Index mit <a href="gg294117(v=exchg.10).md">JetMove</a> mit JET_MovePrevious oder einem negativen Offset rückwärts gehen.</p><p>Es ist nicht sinnvoll, diese Option mit einem Suchschlüssel auslassen, der mit <a href="gg269329(v=exchg.10).md">JetMakeKey</a> mithilfe einer Platzhalteroption erstellt wurde, um Indexeinträge zu finden, die dem Ende des Indexes am nächsten sind.</p> | 
+| <p>JET_bitRangeRemove</p> | <p>Diese Option fordert an, dass ein vorhandener Indexbereich auf dem Cursor abgebrochen wird. Nachdem der Indexbereich abgebrochen wurde, ist es möglich, mit JetMove über das Ende des <a href="gg294117(v=exchg.10).md">Indexbereichs hinaus zu wechseln.</a> Wenn ein Indexbereich noch nicht in Kraft ist, tritt bei <strong>JetSetIndexRange</strong> ein Fehler mit JET_errInvalidOperation.</p><p>Wenn diese Option angegeben wird, werden alle anderen Optionen ignoriert.</p> | 
+| <p>JET_bitRangeUpperLimit</p> | <p>Wenn diese Option verwendet wird, stellt der Suchschlüssel im Cursor die Suchkriterien für den Indexeintrag dar, der dem Ende des Indexes am nächsten ist, der dem Indexbereich entspricht. Der Indexbereich wird zwischen der aktuellen Position des Cursors und diesem Indexeintrag festgelegt, sodass alle Übereinstimmungen gefunden werden können, indem Sie den Index mit <a href="gg294117(v=exchg.10).md">JetMove</a> mit JET_MoveNext oder einem positiven Offset vorwärts bewegen.</p><p>Es ist nicht sinnvoll, diese Option mit einem Suchschlüssel zu verwenden, der mit <a href="gg269329(v=exchg.10).md">JetMakeKey</a> mithilfe einer Platzhalteroption erstellt wurde, um Indexeinträge zu finden, die dem Indexanfang am nächsten sind.</p><p>Wenn diese Option weggelassen wird, stellt der Suchschlüssel im Cursor die Suchkriterien für den Indexeintrag dar, der dem Anfang des Indexes am nächsten ist, der dem Indexbereich entspricht. Der Indexbereich wird zwischen der aktuellen Position des Cursors und diesem Indexeintrag festgelegt, sodass alle Übereinstimmungen gefunden werden können, indem sie im Index mit <a href="gg294117(v=exchg.10).md">JetMove</a> mit JET_MovePrevious oder einem negativen Offset rückwärts gehen.</p><p>Es ist nicht sinnvoll, diese Option mit einem Suchschlüssel auslassen, der mit <a href="gg269329(v=exchg.10).md">JetMakeKey</a> mithilfe einer Platzhalteroption erstellt wurde, um Indexeinträge zu finden, die dem Ende des Indexes am nächsten sind.</p> | 
 
 
 
@@ -89,9 +89,9 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 
 Bei Erfolg wird JET_bitRangeRemove index range, der derzeit in Kraft ist, abgebrochen. Wenn JET_bitRangeRemove nicht angegeben und JET_bitRangeInstantDuration angegeben wird, ist kein Indexbereich wirksam. Wenn weder JET_bitRangeRemove noch JET_bitRangeInstantDuration ist, ist ein neuer Indexbereich wirksam. Dieser Indexbereich schränkt vorübergehend den Satz von Indexeinträgen ein, die der Cursor mit [JetMove](./jetmove-function.md) auf diejenigen einschränkt, die vom aktuellen Indexeintrag bis zum Indexeintrag beginnen, der den Suchkriterien entspricht. Die Position des Cursors bleibt unverändert. Wenn ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es erfolgt keine Änderung des Datenbankstatus.
 
-Wenn bei einem Fehler JET_errNoCurrentRecord zurückgegeben wird, ist kein Indexbereich wirksam. Wenn JET_errNoCurrentRecord zurückgegeben wird, ist ein neuer Indexbereich wirksam. Dieser Indexbereich schränkt vorübergehend den Satz von Indexeinträgen ein, die der Cursor mit [JetMove](./jetmove-function.md) auf diejenigen einschränkt, die vom aktuellen Indexeintrag bis zum Indexeintrag beginnen, der den Suchkriterien entspricht. Die Position des Cursors bleibt unverändert. Wenn JET_errNoCurrentRecord zurückgegeben wurde und ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es erfolgt keine Änderung des Datenbankstatus.
+Wenn bei einem Fehler JET_errNoCurrentRecord nicht zurückgegeben wird, ist kein Indexbereich wirksam. Wenn JET_errNoCurrentRecord zurückgegeben wird, ist ein neuer Indexbereich wirksam. Dieser Indexbereich schränkt vorübergehend den Satz von Indexeinträgen ein, die der Cursor mit [JetMove](./jetmove-function.md) auf diejenigen einschränkt, die vom aktuellen Indexeintrag bis zum Indexeintrag beginnen, der den Suchkriterien entspricht. Die Position des Cursors bleibt unverändert. Wenn JET_errNoCurrentRecord zurückgegeben wurde und ein Suchschlüssel für den Cursor erstellt wurde, wird dieser Suchschlüssel gelöscht. Es erfolgt keine Änderung des Datenbankstatus.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Ein Indexbereich ist flüchtig und wird automatisch abgebrochen, wenn eine andere Navigation als [JetMove](./jetmove-function.md) auf dem Cursor ausgeführt wird.
 
@@ -100,7 +100,13 @@ Indexbereiche funktionieren nur in einer Richtung. Wenn eine Obergrenze festgele
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

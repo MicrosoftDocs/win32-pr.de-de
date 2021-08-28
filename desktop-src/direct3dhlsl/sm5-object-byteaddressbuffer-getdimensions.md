@@ -1,6 +1,6 @@
 ---
-title: 'Byteaddressbuffer:: GetDimensions-Funktion'
-description: 'Ruft die Länge des Puffers ab. | Byteaddressbuffer:: GetDimensions-Funktion'
+title: ByteAddressBuffer::GetDimensions-Funktion
+description: Ruft die Länge des Puffers ab. | ByteAddressBuffer::GetDimensions-Funktion
 ms.assetid: 32099118-8d8a-440e-96ba-2580d905f068
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1cbb705789e444a6fa54aeb87190912996f65621
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 398b5a6dba995a11dcf4ce8a78fecee9bb185ce98ec285453bdd52c1180a4eb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067720"
 ---
-# <a name="byteaddressbuffergetdimensions-function"></a>Byteaddressbuffer:: GetDimensions-Funktion
+# <a name="byteaddressbuffergetdimensions-function"></a>ByteAddressBuffer::GetDimensions-Funktion
 
 Ruft die Länge des Puffers ab.
 
@@ -36,7 +36,7 @@ void GetDimensions(
 
 <dl> <dt>
 
- \[ Abblenden\]
+*Dim* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,13 +49,13 @@ Die Länge des Puffers in Bytes.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -63,14 +63,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Byteaddressbuffer](sm5-object-byteaddressbuffer.md)
+[ByteAddressBuffer](sm5-object-byteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

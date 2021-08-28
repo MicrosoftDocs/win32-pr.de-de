@@ -3,16 +3,16 @@
   items:
     - name: Voraussetzungen für die Entwicklung mit DirectX
       href: pre-requisites-for-developing-a-tailored-c---with-directx-app.md
-    - name: Einstieg in DirectX für Windows
+    - name: Erste Schritte mit DirectX für Windows
       href: getting-started-with-a-directx-game.md
       items:
-        - name: Arbeiten mit DirectX-Geräte Ressourcen
+        - name: Arbeiten mit DirectX-Geräteressourcen
           href: work-with-dxgi.md
-        - name: Grundlegendes zur Direct3D 11-Renderingpipeline
+        - name: Verstehen der Direct3D 11-Renderingpipeline
           href: understand-the-directx-11-2-graphics-pipeline.md
-        - name: Arbeiten mit Shader und Shaderressourcen
+        - name: Arbeiten mit Shadern und Shaderressourcen
           href: work-with-shaders-and-shader-resources.md
-        - name: Vervollständigen von Code für ein DirectX-Framework
+        - name: Vollständiger Code für ein DirectX-Framework
           href: complete-code-sample-for-using-a-corewindow-with-directx.md
     - name: Roadmap für DirectX-Desktop-Apps
       href: roadmap-for-metro-style-apps-using-directx.md

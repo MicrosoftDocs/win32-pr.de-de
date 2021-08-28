@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_RPType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen verantwortlichen Person-Datensatz (RP) darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Datensatz der verantwortlichen Person (Responsible Person, RP) darstellt.
 ms.assetid: 2b1c1bbc-a69f-4480-a7f2-6420240d4ad8
 keywords:
-- DNS-MicrosoftDNS_RPType Klasse
-- DNS-MicrosoftDNS_RPType Klasse, beschrieben
+- dns der MicrosoftDNS_RPType-Klasse
+- MicrosoftDNS_RPType Dns-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,18 +19,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9aae8686016d26cb9007b21a06c125d56ed5207f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2088420acc7a8d0e58cfa23ed95458c797dbe9f930651bc02f083fcc81f5342d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655370"
 ---
-# <a name="microsoftdns_rptype-class"></a>MicrosoftDNS \_ rptype-Klasse
+# <a name="microsoftdns_rptype-class"></a>MicrosoftDNS \_ RPType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen verantwortlichen Person-Datensatz (RP) darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Datensatz der verantwortlichen Person (Responsible Person, RP) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ class MicrosoftDNS_RPType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ rptype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ RPType-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ rptype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ RPType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                         |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                         |
 |:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen RP-Typ von RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: DNS-Server Name des Datensatzes, Container Name, Besitzer/verantwortlicher Personen Name, Klasse (Standardwert = in), Gültigkeitsdauer und die Domänen Namen für das Postfach der Person und die txt-RR-Speicherorte. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Diese Methode aktualisiert die TTL-, RP-und txt-Domänen Namen auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>                                  |
+| **CreateInstanceFromPropertyData** | Instanziiert einen Rp-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Name der Besitzer/verantwortlichen Person, Klasse (Standard = IN), Wert für die Lebensdauer und die Domänennamen für das Postfach der Person und txt RR-Speicherorte. Es gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Diese Methode aktualisiert TTL, RP-Postfach und TXT-Domänenname auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                                  |
 
 
 
@@ -66,33 +66,33 @@ Die **MicrosoftDNS- \_ rptype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ rptype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ RPType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Rpmailbox**
+**RPMailbox**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vollständiger vollständiger vollständiger Name des Postfachs.
+FQDN, der das Postfach für die verantwortliche Person angibt.
 
 </dd> <dt>
 
-**TxtDomainName**
+**TXTDomainName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der voll qualifizierte Daten Satz, für den txt-Ressourcen Einträge vorhanden sind.
+FQDN, für den TXT-Ressourceneinträge vorhanden sind.
 
 </dd> </dl>
 
@@ -104,8 +104,8 @@ Der voll qualifizierte Daten Satz, für den txt-Ressourcen Einträge vorhanden s
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -113,13 +113,13 @@ Der voll qualifizierte Daten Satz, für den txt-Ressourcen Einträge vorhanden s
 
 <dl> <dt>
 
-[**Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ rptype-Klasse**](microsoftdns-rptype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RPType-Klasse**](microsoftdns-rptype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ rptype-Klasse**](microsoftdns-rptype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ RPType-Klasse**](microsoftdns-rptype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

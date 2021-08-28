@@ -1,9 +1,9 @@
 ---
-title: Idcompositionshadoweffect setgreen-Methoden (Dcomp. h)
+title: IDCompositionShadowEffect SetGreen-Methoden (Dcomp.h)
 description: Legt den grünen Wert für die Farbe des Schattens fest.
 ms.assetid: 55566eb3-939e-c61f-dae8-5bd8da1c9f5b
 keywords:
-- V-Methoden directcomposition
+- V-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 24f3da34cfdff3ab845079a4993f02c36e2620e1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93f03d283715784a22a4a5aed4bd01ccf6b65c567896347aec65e531cb8ffb34
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067470"
 ---
-# <a name="idcompositionshadoweffectsetgreen-methods"></a>Idcompositionshadoweffect:: setgreen-Methoden
+# <a name="idcompositionshadoweffectsetgreen-methods"></a>IDCompositionShadowEffect::SetGreen-Methoden
 
 Legt den grünen Wert für die Farbe des Schattens fest.
 
@@ -29,8 +29,8 @@ Legt den grünen Wert für die Farbe des Schattens fest.
 
 | Methode                                                                               | BESCHREIBUNG                                                  |
 |:-------------------------------------------------------------------------------------|:-------------------------------------------------------------|
-| [**Setgreen (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setgreen(idcompositionanimation)) | Legt den grünen Wert für die Farbe des Schattens fest.<br/> |
-| [**Setgrün**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setgreen(float))                               | Legt den grünen Wert für die Farbe des Schattens fest.<br/> |
+| [**SetGreen (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setgreen(idcompositionanimation)) | Legt den grünen Wert für die Farbe des Schattens fest.<br/> |
+| [**SetGreen**](/windows/win32/api/dcomp/nf-dcomp-idcompositionshadoweffect-setgreen(float))                               | Legt den grünen Wert für die Farbe des Schattens fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den grünen Wert für die Farbe des Schattens fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den grünen Wert für die Farbe des Schattens fest.
 
 <dl> <dt>
 
-[**Idcompositionshadoweffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
+[**IDCompositionShadowEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionshadoweffect)
 </dt> </dl>
 
 �
