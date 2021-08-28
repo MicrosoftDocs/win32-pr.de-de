@@ -24,19 +24,19 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1f867f82ad96cb639e0fbe54955647989876b3a61be4792901ecb47b43b72deb
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 558475078ab28dfdc455bb03d2586348d14fa235
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119921470"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884652"
 ---
 # <a name="cim_memorycheck-class"></a>CIM \_ MemoryCheck-Klasse
 
 Die **CIM \_ MemoryCheck-Klasse** gibt eine Bedingung für die Mindestmenge an Arbeitsspeicher an, die auf einem System verfügbar sein muss. Der Betrag wird in der **MemorySize-Eigenschaft** angegeben. Details der Überprüfungen werden mit dem Wert der **FreePhysicalMemory-Eigenschaft** des [**\_ CIM-OperatingSystem-Objekts**](cim-operatingsystem.md) verglichen, auf das durch eine [**CIM \_ InstalledOS-Zuordnung**](cim-installedos.md) für das [**\_ CIM-ComputerSystem-Objekt**](cim-computersystem.md) verwiesen wird, das die Umgebung beschreibt. Wenn der Wert der **FreePhysicalMemory-Eigenschaft** größer oder gleich dem in **MemorySize** angegebenen Wert ist, wird die Bedingung erfüllt.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force, verteilte Verwaltungsaufgabe) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -74,7 +74,7 @@ Die **CIM \_ MemoryCheck-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                   |
+| Methode                                                   | Beschreibung                                                   |
 |:---------------------------------------------------------|:--------------------------------------------------------------|
 | [**Invoke**](invoke-method-in-class-cim-memorycheck.md) | Führt eine bestimmte Aktion aus. Nicht von WMI implementiert.<br/> |
 
@@ -91,7 +91,7 @@ Die **CIM \_ MemoryCheck-Klasse** verfügt über diese Eigenschaften.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -109,7 +109,7 @@ Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 **CheckID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -144,7 +144,7 @@ Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -177,7 +177,7 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -195,7 +195,7 @@ Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -816,8 +816,8 @@ Version des Vorgangs.
 
 Die Version des Vorgangs sollte in einer der folgenden Formen sein:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; neben &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; &gt; &lt; &gt; &lt; Nebenbuchstabenrevision&gt;
 
 Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
@@ -831,7 +831,7 @@ Die **CIM \_ MemoryCheck-Klasse** wird von [**CIM Check \_ geerbt.**](cim-check.
 
 Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -845,7 +845,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

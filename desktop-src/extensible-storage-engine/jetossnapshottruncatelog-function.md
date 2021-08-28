@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: adda7e97fd9a8e1a65740f4fb82c22b52cfad979
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 4da8e76b1c735f6249f1d7e3893acd1db1743b65
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122472506"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985863"
 ---
 # <a name="jetossnapshottruncatelog-function"></a>JetOSSnapshotTruncateLog-Funktion
 
@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 Die **JetOSSnapshotTruncateLog-Funktion** ermöglicht die Protokollkürzung für alle Instanzen, die Teil der Momentaufnahmesitzung sind.
 
-**Windows Vista:****JetOSSnapshotTruncateLog** wird in Windows Vista eingeführt.  
+**Windows Vista:****JetOSSnapshotTruncateLog** wurde in Windows Vista eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotTruncateLog(
@@ -76,21 +76,27 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 
 Bei Erfolg werden die Protokolldateien für eine oder alle Instanzen, die Teil der Momentaufnahmesitzung sind, nach Möglichkeit abgeschnitten.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Diese Funktion sollte nur aufgerufen werden, wenn die Momentaufnahme mit der Option JET_bitContinueAfterThaw erstellt wurde. Andernfalls wäre die Momentaufnahmesitzung nach dem [JetOSSnapshotThaw-Aufruf](./jetossnapshotthaw-function.md) beendet worden.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [Fehlerbehandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Storage-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Extensible Storage Engine Errors (Erweiterbare Storage-Engine-Fehler)](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
 [JetOSSnapshotEnd](./jetossnapshotend-function.md)  
 [JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  

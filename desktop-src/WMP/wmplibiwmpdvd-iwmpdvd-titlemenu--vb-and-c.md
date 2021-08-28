@@ -1,11 +1,11 @@
 ---
-title: Iwmpdvd-titlemenu-Methode
-description: Die titlemenu-Methode beendet die Wiedergabe und zeigt das Titelmenü an.
+title: IWMPDVD titleMenu-Methode
+description: Die titleMenu-Methode beendet die Wiedergabe und zeigt das Titelmenü an.
 ms.assetid: 28714644-12c4-46eb-95fc-70091624f6dd
 keywords:
-- titlemenu-Methode, Windows-Media Player
-- titlemenu-Methode, Windows Media Player, iwmpdvd-Schnittstelle
-- Iwmpdvd Interface, Windows Media Player, titlemenu-Methode
+- titleMenu-Methode Windows Media Player
+- titleMenu-Methode Windows Media Player , IWMPDVD-Schnittstelle
+- IWMPDVD-Schnittstelle Windows Media Player , titleMenu-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0889a3f65ccefe4e09bb5ff47a66867681dcc801
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ff485cd09915ec9acb076d2c06a8aa28c3549bf6527495e5e32d4a01d483285a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000460"
 ---
-# <a name="iwmpdvdtitlemenu-method"></a>Iwmpdvd:: titlemenu-Methode
+# <a name="iwmpdvdtitlemenu-method"></a>IWMPDVD::titleMenu-Methode
 
-Die **titlemenu** -Methode beendet die Wiedergabe und zeigt das Titelmenü an.
+Die **titleMenu-Methode** beendet die Wiedergabe und zeigt das Titelmenü an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,9 +53,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede DVD wird unterschiedlich verfasst. Die DVD muss ein Menü enthalten, damit diese Methode funktioniert. Einige DVDs werden so erstellt, dass die **iwmpdvd. topmenu** -Methode und die **titlemenu** -Methode dasselbe Menü öffnen. Die **titlemenu** -Methode ruft in der Regel das Titelmenü auf, aber Sie kann das oberste Menü aufrufen, wenn kein Titel Menü verfügbar ist.
+Jede DVD wird anders erstellt. Die DVD muss ein Menü enthalten, damit diese Methode funktioniert. Einige DVDs werden so erstellt, dass die Methoden **IWMPDVD.topMenu** und **titleMenu** das gleiche Menü öffnen. Die **titleMenu-Methode** ruft normalerweise das Titelmenü auf, kann jedoch das obere Menü aufrufen, wenn kein Titelmenü verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,20 +63,20 @@ Jede DVD wird unterschiedlich verfasst. Die DVD muss ein Menü enthalten, damit 
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpdvd. topmenu (VB und c#)**](wmplibiwmpdvd-iwmpdvd-topmenu--vb-and-c.md)
+[**IWMPDVD.topMenu (VB und C#)**](wmplibiwmpdvd-iwmpdvd-topmenu--vb-and-c.md)
 </dt> </dl>
 
  

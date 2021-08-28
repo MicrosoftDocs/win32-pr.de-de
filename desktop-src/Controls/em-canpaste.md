@@ -1,9 +1,9 @@
 ---
-title: EM_CANPASTE Meldung (RichEdit. h)
-description: Bestimmt, ob ein Rich Edit-Steuerelement ein angegebenes Zwischenablage Format einfügen kann.
+title: EM_CANPASTE (Richedit.h)
+description: Bestimmt, ob ein Rich-Edit-Steuerelement ein angegebenes Zwischenablageformat einfügen kann.
 ms.assetid: 1b858ad8-1312-407b-b12a-c63668ba9f72
 keywords:
-- Windows-Steuerelemente für EM_CANPASTE Meldung
+- EM_CANPASTE der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aad400b610a033b6f67177da99876a892d294ec8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 24f2d831cd3b3d04fcb7859d2b5936b7354fbb6b638558d605c9f8c5a6ee6333
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916060"
 ---
-# <a name="em_canpaste-message"></a>EM \_ CanPaste-Nachricht
+# <a name="em_canpaste-message"></a>EM \_ CANPASTE-Nachricht
 
-Bestimmt, ob ein Rich Edit-Steuerelement ein angegebenes Zwischenablage Format einfügen kann.
+Bestimmt, ob ein Rich-Edit-Steuerelement ein angegebenes Zwischenablageformat einfügen kann.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,22 +32,22 @@ Bestimmt, ob ein Rich Edit-Steuerelement ein angegebenes Zwischenablage Format e
 *wParam* 
 </dt> <dd>
 
-Gibt die zu Try- [Zwischenablage Formate](/windows/desktop/dataxchg/clipboard-formats) an. Wenn Sie ein beliebiges Format in der Zwischenablage ausprobieren möchten, legen Sie diesen Parameter auf NULL fest.
+Gibt die [auszuprobierenden Zwischenablageformate](/windows/desktop/dataxchg/clipboard-formats) an. Legen Sie diesen Parameter auf 0 (null) fest, um ein beliebiges Format zu testen, das sich derzeit in der Zwischenablage befindet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn das Zwischenablage Format eingefügt werden kann, ist der Rückgabewert ein Wert ungleich 0 (null).
+Wenn das Zwischenablageformat eingefügt werden kann, ist der Rückgabewert ein Wert ungleich 0 (null).
 
-Wenn das Zwischenablage Format nicht eingefügt werden kann, ist der Rückgabewert 0 (null).
+Wenn das Format der Zwischenablage nicht eingefügt werden kann, ist der Rückgabewert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn das Zwischenablage Format nicht eingefügt werden kann, ist der Rückgabewe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

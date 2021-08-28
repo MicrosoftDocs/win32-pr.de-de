@@ -6,12 +6,12 @@ keywords:
 - D2D1-Namespace, Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cdf0be0561cc1804da5174dc715a1e65a8e34d7c8c9b11fc55f7bc384b9e852
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 5d70b2b449a1fefb1ea929b3b64849b39453b09e
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120044460"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883868"
 ---
 # <a name="direct2d-helper-structures"></a>Direct2D-Hilfsstrukturen
 
@@ -19,9 +19,9 @@ Der D2D1-Namespace definiert die folgenden Strukturen.
 
 
 
-| Name                                            | BESCHREIBUNG                                                                                                   |
+| Name                                            | Beschreibung                                                                                                   |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [**TypeTraits<Type>**](/windows/win32/api/d2d1_1helper/ns-d2d1_1helper-typetraits) | Enthält Implementierungen von **Point,** **Size** und **Rect,** die ihre Daten mit dem angegebenen Typ speichern. |
+| [**&lt;TypeTraits-Typ&gt;**](/windows/win32/api/d2d1_1helper/ns-d2d1_1helper-typetraits) | Enthält Implementierungen von **Point,** **Size** und **Rect,** die ihre Daten mit dem angegebenen Typ speichern. |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Instrumentation-Element (instrumentationmanifest)
-description: Definiert die Instrumentierungs Typen, die das Manifest enthält (z. b. Ereignis-oder Counter-Instrumentation).
+title: instrumentation (instrumentationManifest)-Element
+description: Definiert die Instrumentierungstypen, die das Manifest enthält (z. B. Ereignis- oder Indikatorinstrumentierung).
 ms.assetid: a1737af5-2bf2-4841-bd37-450809e59b8e
 keywords:
-- Instrumentierungs Element-Ereignisprotokoll
+- Instrumentationselement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 061fbd327bac8fc6512fda90c0176cd8a20c83d0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 58dd3d5ffdeb0e8d6b028718191165c19271e0fa321ddf2b81c3a3877273b723
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863470"
 ---
-# <a name="instrumentation-instrumentationmanifest-element"></a>Instrumentation-Element (instrumentationmanifest)
+# <a name="instrumentation-instrumentationmanifest-element"></a>instrumentation (instrumentationManifest)-Element
 
-Definiert die Instrumentierungs Typen, die das Manifest enthält (z. b. Ereignis-oder Counter-Instrumentation).
+Definiert die Instrumentierungstypen, die das Manifest enthält (z. B. Ereignis- oder Indikatorinstrumentierung).
 
 ``` syntax
 <xs:element name="instrumentation"
@@ -30,7 +30,7 @@ Definiert die Instrumentierungs Typen, die das Manifest enthält (z. b. Ereignis
  />
 ```
 
-Das Instrumentations Element wird durch das [**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md) **-Element definiert** .
+Das  Instrumentierungselement wird durch das [**instrumentationManifest-Element**](eventmanifestschema-instrumentationmanifest-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das Instrumentations Element wird durch das [**instrumentationmanifest**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das Instrumentations Element wird durch das [**instrumentationmanifest**](eventm
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md)
+[**instrumentationManifest**](eventmanifestschema-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

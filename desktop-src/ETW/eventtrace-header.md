@@ -1,5 +1,5 @@
 ---
-description: Die Ereignistyp Klasse für das Header Ereignis der Protokolldatei. Diese Klasse enthält Informationen über die Ereignis Ablauf Verfolgungs Sitzung.
+description: Die Ereignistypklasse für das Protokolldateiheaderereignis. Diese Klasse enthält Informationen zur Ereignisablaufverfolgungssitzung.
 ms.assetid: 3d0c4044-da06-4850-95c4-99b4ea28fcd9
 title: EventTrace_Header-Klasse
 ms.topic: reference
@@ -33,18 +33,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: dea803849d6aa15c2a3a14deb850d85ade569116
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5d0515b9d7d720409e0a72aec7aad5dc54561637563976a35d03b3e0dec79f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829990"
 ---
-# <a name="eventtrace_header-class"></a>EventTrace- \_ Header Klasse
+# <a name="eventtrace_header-class"></a>EventTrace \_ Header-Klasse
 
-Die Ereignistyp Klasse für das Header Ereignis der Protokolldatei. Diese Klasse enthält Informationen über die Ereignis Ablauf Verfolgungs Sitzung.
+Die Ereignistypklasse für das Protokolldateiheaderereignis. Diese Klasse enthält Informationen zur Ereignisablaufverfolgungssitzung.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,204 +78,204 @@ class EventTrace_Header : EventTraceEvent
 
 ## <a name="members"></a>Member
 
-Die **EventTrace- \_ Header** Klasse verfügt über diese Typen von Membern:
+Die **EventTrace \_ Header-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **EventTrace- \_ Header** Klasse verfügt über diese Eigenschaften.
+Die **EventTrace \_ Header-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **BootTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (17)
+Qualifizierer: **WmiDataId** (17)
 </dt> </dl>
 
-Der Zeitpunkt, zu dem das System gestartet wurde, in 100-Nanosekunden-Intervallen seit Mitternacht, 1. Januar 1601.
+Zeitpunkt des Systemstarts in Intervallen von 100 Nanosekunden seit Mitternacht, 1. Januar 1601.
 
 </dd> <dt>
 
 **BufferSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
-Größe der Puffer der Ereignis Ablauf Verfolgungs Sitzung in Kilobyte.
+Größe der Puffer der Ereignisablaufverfolgungssitzung in Kilobyte.
 
 </dd> <dt>
 
-**Bufferslost**
+**BuffersLost**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (21)
+Qualifizierer: **WmiDataId** (21)
 </dt> </dl>
 
-Gesamtanzahl verlorener Puffer.
+Gesamtanzahl der verloren gegangenen Puffer.
 
 </dd> <dt>
 
-**Bufferswritten**
+**BuffersWritten**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9)
+Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-Die Gesamtanzahl der Puffer, die von der Ereignis Ablauf Verfolgungs Sitzung geschrieben wurden.
+Gesamtanzahl von Puffern, die von der Ereignisablaufverfolgungssitzung geschrieben wurden.
 
 </dd> <dt>
 
-**Cpuspeed**
+**CPUSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13)
+Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
 CPU-Geschwindigkeit in Megahertz.
 
-**Windows 2000:** Nicht unterstützt.
+**Windows 2000:** Wird nicht unterstützt.
 
 </dd> <dt>
 
 **EndTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die Ereignis Ablauf Verfolgungs Sitzung beendet wurde (in 100-Nanosekunden-Intervallen seit Mitternacht, 1. Januar 1601). Dieser Wert kann 0 sein, wenn Sie Ereignisse in Echtzeit oder über eine Protokolldatei, für die die Bereitstellung weiterhin Ereignisse protokolliert, verbrauchen.
+Zeitpunkt, zu dem die Ereignisablaufverfolgungssitzung beendet wurde, in Intervallen von 100 Nanosekunden seit Mitternacht, 1. Januar 1601. Dieser Wert kann 0 sein, wenn Sie Ereignisse in Echtzeit oder aus einer Protokolldatei nutzen, in der die Bereitstellung weiterhin Ereignisse protokolliert.
 
 </dd> <dt>
 
-**Eventslost**
+**EventsLost**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12)
+Qualifizierer: **WmiDataId** (12)
 </dt> </dl>
 
-Anzahl von Ereignissen, die während der Ereignis Ablauf Verfolgungs Sitzung verloren gehen.
+Anzahl der während der Ereignisablaufverfolgungssitzung verloren gegangenen Ereignisse.
 
 </dd> <dt>
 
-**Logfilemode**
+**LogFileMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **Format ("x")**
+Qualifizierer: **WmiDataId** (8), **Format("x")**
 </dt> </dl>
 
-Aktueller Protokollierungs Modus für die Ereignis Ablauf Verfolgungs Sitzung. Eine Liste der Werte finden Sie unter Protokollierungs Modus-Konstanten.
+Aktueller Protokollierungsmodus für die Ereignisablaufverfolgungssitzung. Eine Liste der Werte finden Sie unter Protokollierungsmoduskonstanten.
 
 </dd> <dt>
 
-**Protokoll Dateiname**
+**LogFileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15), **Zeiger**
+Qualifizierer: **WmiDataId** (15), **Zeiger**
 </dt> </dl>
 
-Der Name der Ereignis Ablauf Verfolgungs Protokoll-Datei, die die Ereignisse enthält.
+Name der Protokolldatei für die Ereignisablaufverfolgung, die die Ereignisse enthält.
 
 </dd> <dt>
 
-**Loggername**
+**LoggerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **Zeiger**
+Qualifizierer: **WmiDataId** (14), **Zeiger**
 </dt> </dl>
 
-Name der Ereignis Ablauf Verfolgungs Sitzung.
+Name der Ereignisablaufverfolgungssitzung.
 
 </dd> <dt>
 
 **MaxFileSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7)
+Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
-Maximale Größe der Protokolldatei in Megabytes.
+Maximale Größe der Protokolldatei in Megabyte.
 
 </dd> <dt>
 
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
 Anzahl der Prozessoren im System.
@@ -285,77 +285,77 @@ Anzahl der Prozessoren im System.
 **PerfFreq**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (18)
+Qualifizierer: **WmiDataId** (18)
 </dt> </dl>
 
-Häufigkeit des hochauflösenden Leistungs Zählers, falls vorhanden.
+Häufigkeit des Leistungsindikators mit hoher Auflösung, sofern vorhanden.
 
 </dd> <dt>
 
-**Pointersize**
+**PointerSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11)
+Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
-Größe eines Zeiger Datentyps in Bytes.
+Größe eines Zeigerdatentyps in Bytes.
 
 </dd> <dt>
 
 **ProviderVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
 Buildnummer des Betriebssystems.
 
 </dd> <dt>
 
-**Reservedflags**
+**ReservedFlags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (20)
+Qualifizierer: **WmiDataId** (20)
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-**Startbuffers**
+**StartBuffers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10)
+Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
 Reserviert.
@@ -365,76 +365,76 @@ Reserviert.
 **StartTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (19)
+Qualifizierer: **WmiDataId** (19)
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die Ereignis Ablauf Verfolgungs Sitzung in 100-Nanosekunden-Intervallen seit Mitternacht, 1. Januar 1601, gestartet wurde.
+Zeitpunkt, zu dem die Ereignisablaufverfolgungssitzung gestartet wurde, in Intervallen von 100 Nanosekunden seit Mitternacht, 1. Januar 1601.
 
 </dd> <dt>
 
 **TimerResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6)
+Qualifizierer: **WmiDataId** (6)
 </dt> </dl>
 
-Auflösung des Hardware Zeit Gebers in Einheiten von 100 Nanosekunden.
+Auflösung des Hardwarezeiters in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
 **TimeZoneInformation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (16), **Extension ("noprint")**, **Max** (176)
+Qualifizierer: **WmiDataId** (16), **Extension("NoPrint")**, **Max** (176)
 </dt> </dl>
 
-Eine [**Zeit \_ Zonen \_ Informations**](/windows/win32/api/timezoneapi/ns-timezoneapi-time_zone_information) Struktur, die die Zeitzone für die Member " **Boottime**", " **EndTime** " und " **StartTime** " enthält.
+Eine [**TIME \_ ZONE \_ INFORMATION-Struktur,**](/windows/win32/api/timezoneapi/ns-timezoneapi-time_zone_information) die die Zeitzone für die **Elemente BootTime,** **EndTime** und **StartTime** enthält.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
-Versionsnummer des Betriebssystems. Beginnend mit den nieder wertigen Bytes enthalten die ersten zwei Bytes die Hauptversion, die nächsten zwei Bytes enthalten eine neben Version, die nächsten zwei Bytes enthalten Service Pack Hauptversion, und die letzten zwei Bytes enthalten Service Pack neben Version.
+Versionsnummer des Betriebssystems. Beginnend mit den niedrigen Bytes enthalten die ersten beiden Bytes die Hauptversion, die nächsten zwei Bytes eine Nebenversion, die nächsten zwei Bytes enthalten die Service Pack-Hauptversion und die letzten beiden Bytes die Service Pack-Nebenversion.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Normalerweise möchten Sie die Werte für die folgenden Eigenschaften speichern, damit Sie später bei der Verarbeitung von Ereignissen aus der Protokolldatei verwendet werden können.
+In der Regel möchten Sie die Werte für die folgenden Eigenschaften zur späteren Verwendung bei der Verarbeitung von Ereignissen aus der Protokolldatei speichern.
 
--   **Timerresolution**– verwenden Sie diese mit den **kerneltime** -und **usertime** -Membern der [**Ereignis Ablauf \_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur, um die CPU-Kosten für eine Reihe von Anweisungen zu ermitteln. Weitere Informationen finden Sie im Abschnitt "Hinweise" im [**Ereignis Ablauf \_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header).
--   **Pointersize**– verwenden Sie diesen Wert für Eigenschaften, die den **Zeiger** Qualifizierer enthalten, um die Größe des Zeigers zu bestimmen. Beachten Sie, dass dieser Wert möglicherweise nicht korrekt ist. Auf einem 64-Bit-Computer protokolliert z. b. eine 32-Bit-Anwendung 4-Byte-Zeiger. in der Sitzung wird jedoch " **pointersize** " auf 8 festgelegt.
--   **Logfilemode**– verwenden Sie, um zu bestimmen, ob diese Sitzung eine private Protokollierungs Sitzung ist. Es gibt einige Eigenschaften, die keine Daten für private Protokollierungs Sitzungen enthalten. Beispielsweise die **kerneltime** -und **usertime** -Member der [**Ereignis-Ablauf \_ Verfolgungs \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur.
+-   **TimerResolution :** Verwenden Sie mit den **KernelTime-** und **UserTime-Membern** der [**EVENT TRACE \_ \_ HEADER-Struktur,**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) um die CPU-Kosten für eine Reihe von Anweisungen zu bestimmen. Weitere Informationen finden Sie im Abschnitt "Hinweise" von [**EVENT \_ TRACE \_ HEADER.**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header)
+-   **PointerSize :** Verwenden Sie diesen Wert für Eigenschaften, die den **Zeigerqualifizierer** enthalten, um die Größe des Zeigers zu bestimmen. Beachten Sie, dass dieser Wert möglicherweise nicht genau ist. Beispielsweise protokolliert eine 32-Bit-Anwendung auf einem 64-Bit-Computer 4-Byte-Zeiger. Die Sitzung setzt jedoch **PointerSize auf** 8.
+-   **LogFileMode :** Verwenden Sie , um zu bestimmen, ob es sich bei dieser Sitzung um eine private Protokollierungssitzung handelt. Es gibt einige Eigenschaften, die keine Daten für private Protokollierungssitzungen enthalten. Beispielsweise die **KernelTime- und** **UserTime-Member** der [**EVENT TRACE \_ \_ HEADER-Struktur.**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -449,10 +449,10 @@ Normalerweise möchten Sie die Werte für die folgenden Eigenschaften speichern,
 
 <dl> <dt>
 
-[**Eventtraceevent**](eventtraceevent.md)
+[**EventTraceEvent**](eventtraceevent.md)
 </dt> <dt>
 
-[**\_logfile-Header der Ablauf Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header)
+[**TRACE \_ LOGFILE \_ HEADER**](/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header)
 </dt> </dl>
 
  

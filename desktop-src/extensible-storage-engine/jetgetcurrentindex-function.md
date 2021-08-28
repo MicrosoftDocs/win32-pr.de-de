@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 82f24afb4d8e36d95d6e3be480f32358c1c5dba2
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 6f41114c74643d7165bc16363af3d1777828003b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122468307"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987683"
 ---
 # <a name="jetgetcurrentindex-function"></a>JetGetCurrentIndex-Funktion
 
@@ -85,7 +85,7 @@ Bei Erfolg wird der Name des aktuellen Indexes des angegebenen Cursors im Ausgab
 
 Bei einem Fehler ist der Status des Ausgabepuffers nicht definiert. Es wird keine Änderung am Datenbankzustand vorgenommen.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Wenn kein aktueller Index für den Cursor vorhanden ist, wird eine leere Zeichenfolge zurückgegeben. Dies kann passieren, wenn sich der Cursor auf dem gruppierten Index der Tabelle befindet und kein primärer Index definiert wurde. Dieser Index wird als sequenzieller Index der Tabelle bezeichnet und weist keine Definition auf. Wenn Sie den aktuellen Index mit [JetSetCurrentIndex](./jetsetcurrentindex-function.md) auf eine leere Zeichenfolge festlegen, wird der gruppierte Index unabhängig vom Vorhandensein einer primären Indexdefinition ausgewählt.
 
@@ -94,7 +94,14 @@ Es gibt einen wichtigen Fehler in dieser Funktion, der in allen Releases vorhand
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetGetCurrentIndexW</strong> (Unicode) und <strong>JetGetCurrentIndexA</strong> (ANSI) implementiert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetGetCurrentIndexW</strong> (Unicode) und <strong>JetGetCurrentIndexA</strong> (ANSI) implementiert.</p> | 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork BufferingTime (Eigenschaft)
-description: Die BufferingTime-Eigenschaft ruft die Zeitspanne in Millisekunden ab, die zum Puffern eingehender Daten vor Beginn der Wiedergabe reserviert wird, oder legt Sie fest.
+title: IWMPNetwork bufferingTime-Eigenschaft
+description: Die bufferingTime-Eigenschaft ruft die Zeitspanne in Millisekunden ab, die zum Puffern eingehender Daten vor Beginn der Wiedergabe zugeordnet ist, oder legt sie fest.
 ms.assetid: b5936b21-a17b-4801-a5fc-c6d6521e05aa
 keywords:
-- BufferingTime-Eigenschaft, Windows-Media Player
-- BufferingTime-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, BufferingTime (Eigenschaft)
+- bufferingTime-Eigenschaft Windows Media Player
+- bufferingTime-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , bufferingTime-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8594d53797b028dd74a8ef11cb8f2fa64b3654cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d224e35dd9c87dad627e71f2ae07d3d0b9e24ee1b094cfa5dea549e86c69a65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999990"
 ---
-# <a name="iwmpnetworkbufferingtime-property"></a>Iwmpnetwork:: BufferingTime (Eigenschaft)
+# <a name="iwmpnetworkbufferingtime-property"></a>IWMPNetwork::bufferingTime-Eigenschaft
 
-Die **BufferingTime** -Eigenschaft ruft die Zeitspanne in Millisekunden ab, die zum Puffern eingehender Daten vor Beginn der Wiedergabe reserviert wird, oder legt Sie fest.
+Die **bufferingTime-Eigenschaft** ruft die Zeitspanne in Millisekunden ab, die zum Puffern eingehender Daten vor Beginn der Wiedergabe zugeordnet ist, oder legt sie fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public Property bufferingTime As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Pufferzeit in Millisekunden angibt, die zwischen 0 und 60.000 und dem Standardwert 5.000 liegt.
+Eine **System.Int32-Datei,** bei der es sich um die Pufferzeit in Millisekunden handelt, die zwischen 0 und 60.000 mit einem Standardwert von 5.000 liegt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **BufferingTime** verwendet, um die Anzahl der Sekunden anzugeben, die für die Pufferung eingehender Daten reserviert werden. Ein Textfeld ermöglicht dem Benutzer, einen neuen Wert für **BufferingTime** einzugeben, und die-Eigenschaft wird als Reaktion auf das Click-Ereignis einer Schaltfläche aktualisiert. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **bufferingTime** verwendet, um die Anzahl der Sekunden anzugeben, die für das Puffern eingehender Daten zugeordnet sind. Mit einem Textfeld kann der Benutzer einen neuen Wert für **bufferingTime** eingeben, und die -Eigenschaft wird als Reaktion auf das Click-Ereignis einer Schaltfläche aktualisiert. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -105,7 +105,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -115,7 +115,7 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

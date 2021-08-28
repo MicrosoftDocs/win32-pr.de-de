@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetrenametable-Funktion'
-title: Jetrenametable-Funktion
+description: Weitere Informationen finden Sie unter JetRenameTable-Funktion.
+title: JetRenameTable-Funktion
 TOCTitle: JetRenameTable Function
 ms:assetid: face9341-58e3-450b-980d-08eb1dc3e9d2
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294142(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 624b194a1cad836b8927e6e7e4b8490fcad250b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d91f7af4896e5cb3145321de087a2803aaddd09
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348768"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985743"
 ---
-# <a name="jetrenametable-function"></a>Jetrenametable-Funktion
+# <a name="jetrenametable-function"></a>JetRenameTable-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetrenametable-function"></a>Jetrenametable-Funktion
+## <a name="jetrenametable-function"></a>JetRenameTable-Funktion
 
-Die **jetrenametable** -Funktion kann verwendet werden, um den Namen einer vorhandenen Tabelle zu ändern.
+Die **JetRenameTable-Funktion** kann verwendet werden, um den Namen einer vorhandenen Tabelle zu ändern.
 
 ```cpp
     JET_ERR JET_API JetRenameTable(
@@ -47,146 +47,61 @@ Die **jetrenametable** -Funktion kann verwendet werden, um den Namen einer vorha
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*DBID*
+*Dbid*
 
-Die Datenbank, die für diesen-Befehl verwendet werden soll.
+Die Datenbank, die für diesen Aufruf verwendet werden soll.
 
-*szName*
+*Szname*
 
 Der aktuelle Name der Tabelle, die umbenannt wird.
 
-*sznamenew*
+*szNameNew*
 
 Der neue Name für die Tabelle, die umbenannt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidDatabase</p></td>
-<td><p>Die angegebene Datenbank war ungültig.</p>
-<p>Dieser Fehler wird nur in Windows 2000 zurückgegeben, wenn versucht wird, einen Tabellen Umbenennungs Vorgang für die temporäre Datenbank auszuführen. JET_errInvalidDatabaseId wird in späteren Versionen für diesen Fall zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidDatabaseId</p></td>
-<td><p>Die angegebene Datenbank-ID war ungültig.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidName</p></td>
-<td><p>Einer der angegebenen Objektnamen war ungültig. Alle Objektnamen müssen mit demselben Regelsatz übereinstimmen. Nachfolgend sind diese Regeln aufgeführt:</p>
-<ul>
-<li><p>Objektnamen müssen aus ASCII-Zeichen bestehen.</p></li>
-<li><p>Objektnamen müssen mindestens ein Zeichen lang sein.</p></li>
-<li><p>Objektnamen dürfen nicht mehr als JET_cbNameMost (64) Zeichen lang sein.</p></li>
-<li><p>Objektnamen dürfen nicht mit einem Leerzeichen beginnen.</p></li>
-<li><p>Objektnamen dürfen keine ASCII-Steuerzeichen (0x00 bis 0x1F) enthalten.</p></li>
-<li><p>Objektnamen dürfen keine Ausrufezeichen (!), Punkte (.), linke eckige Klammer ([) oder rechte eckige Klammer (]) enthalten. nach der Validierung wird nur der Teil der Zeichenfolge bis zum ersten Leerzeichen (sofern vorhanden) für den Objektnamen verwendet. Dies bedeutet, dass Objektnamen keine Leerzeichen enthalten dürfen.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann bei <strong>jetrenametable</strong> vorkommen, wenn:</p>
-<ul>
-<li><p><em>szName</em> ist NULL.</p></li>
-<li><p><em>sznamenew</em> ist NULL.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errObjectNotFound</p></td>
-<td><p>Diese angegebene Tabelle ist für diese Datenbank nicht vorhanden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Ein Update kann nicht innerhalb des Gültigkeits Bereichs einer schreibgeschützten Transaktion durchgeführt werden. Eine schreibgeschützte Transaktion ist eine Transaktion, die mit einem <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> -Aufrufvorgang mit JET_bitTransactionReadOnly gestartet wurde.</p>
-<p>Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidDatabase</p> | <p>Die angegebene Datenbank war ungültig.</p><p>Dieser Fehler wird nur im Windows 2000 zurückgegeben, wenn ein Tabellenbenennungsvorgang für die temporäre Datenbank versucht wird. JET_errInvalidDatabaseId wird in späteren Versionen für diesen Fall zurückgegeben.</p> | 
+| <p>JET_errInvalidDatabaseId</p> | <p>Die angegebene Datenbank-ID war ungültig.</p> | 
+| <p>JET_errInvalidName</p> | <p>Einer der angegebenen Objektnamen war ungültig. Alle Objektnamen müssen demselben Satz von Regeln entsprechen. Nachfolgend sind diese Regeln aufgeführt:</p><ul><li><p>Objektnamen müssen aus ASCII-Zeichen bestehen.</p></li><li><p>Objektnamen müssen mindestens ein Zeichen lang sein.</p></li><li><p>Objektnamen dürfen die Länge JET_cbNameMost (64) Zeichen nicht überschreiten.</p></li><li><p>Objektnamen beginnen möglicherweise nicht mit einem Leerzeichen.</p></li><li><p>Objektnamen dürfen keine ASCII-Steuerzeichen enthalten (0x00 bis 0x1F).</p></li><li><p>Objektnamen dürfen kein Ausrufezeichen (!), Punkt (.), linke Klammer ([) oder rechte Klammer (]) enthalten. Nach der Überprüfung wird nur der Teil der Zeichenfolge bis zum ersten Leerzeichen (sofern möglich) für den Objektnamen verwendet. Dies bedeutet, dass Objektnamen möglicherweise auch kein Leerzeichen enthalten.</p></li></ul> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetRenameTable der Fall sein,</strong> wenn:</p><ul><li><p><em>szName</em> ist NULL.</p></li><li><p><em>szNameNew</em> ist NULL.</p></li></ul> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errObjectNotFound</p> | <p>Diese angegebene Tabelle ist für diese Datenbank nicht vorhanden.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Ein Update kann nicht innerhalb des Bereichs einer schreibgeschützten Transaktion ausgeführt werden. Eine schreibgeschützte Transaktion ist eine Transaktion, die mit einem Aufruf von <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> mit JET_bitTransactionReadOnly.</p><p>Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+
 
 
 Bei Erfolg wird der Name der angegebenen Tabelle in der angegebenen Datenbank dauerhaft in den neuen Namen geändert.
 
-Bei einem Fehler tritt keine Änderung am Daten Bank Status auf.
+Bei einem Fehler erfolgt keine Änderung des Datenbankstatus.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetrenametablew</strong> (Unicode) und <strong>jetrenametablea</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetRenameTableW</strong> (Unicode) und <strong>JetRenameTableA</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

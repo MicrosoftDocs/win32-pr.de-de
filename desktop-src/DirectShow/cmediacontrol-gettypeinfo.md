@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 857dbdeee9a2add9ab77cae0ff97d69699d2dd2e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6355876c2237ec62813366c0a4fa32ffaff3d3c745a11ffde83fca81356edb00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055176"
 ---
 # <a name="cmediacontrolgettypeinfo-method"></a>CMediaControl.GetTypeInfo-Methode
 
@@ -73,14 +73,14 @@ Gibt einen \_ E-ZEIGER zurück, *wenn pptinfo* ungültig ist. Gibt TYPE \_ E \_ 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

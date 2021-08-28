@@ -10,31 +10,31 @@ keywords:
 - FileList-Region
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73ebe106bdada4da55eef8891a3c93ee82aba3cc4da9194e1fcd4c7e71bcd4e3
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ac85478bd42737f0a240b356bb6b3b73e838a8ee
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118745685"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884528"
 ---
 # <a name="customizing-a-folders-web-view"></a>Anpassen der Webansicht eines Ordners
 
-\[Dieses Feature wird nur unter xp Windows oder früher unterstützt. \]
+\[Dieses Feature wird nur unter Windows XP oder früher unterstützt. \]
 
 Eine Webansicht ist eine leistungsstarke und flexible Möglichkeit, den Windows-Explorer zum Anzeigen von Informationen zum Inhalt eines Shellordners zu verwenden.
 
 -   [Introduction (Einführung)](#introduction)
 -   [Verwenden der Webansichtsvorlage](#using-the-web-view-template)
-    -   [Der Vorlagenkörper](#the-template-body)
+    -   [Der Vorlagentext](#the-template-body)
     -   [Der Vorlagenkopf](#the-template-head)
 -   [Zusammenfassung](#summary)
 
 ## <a name="introduction"></a>Einführung
 
-Windows bietet Benutzern zwei primäre Möglichkeiten zum Anzeigen und Navigieren im Shellnamespace. Die vertrautste dieser , der klassische Stil, ähnelt dem vertrauten Windows Datei-Manager. Im rechten Bereich wird der Inhalt des aktuell ausgewählten Ordners in einem von fünf Formaten aufgelistet: Großes Symbol, kleines Symbol, Liste, Details und Miniaturansicht. Der Hauptunterschied zum datei Windows-Manager ist der linke Bereich, der der Explorer-Leiste des Windows Internet Explorer. Die Größe kann geändert oder entfernt werden, und neben der vertrauten Dateisystemstruktur können mehrere Bereiche angezeigt werden, z. B. ein Suchbereich.
+Windows bietet Benutzern zwei primäre Möglichkeiten zum Anzeigen und Navigieren im Shellnamespace. Die vertrautesten davon, der klassische Stil, ähneln dem vertrauten Windows Datei-Manager. Im rechten Bereich werden die Inhalte des aktuell ausgewählten Ordners in einem von fünf Formaten aufgelistet: Großes Symbol, Kleines Symbol, Liste, Details und Miniaturansicht. Der hauptunterschied zu Windows Datei-Manager ist der linke Bereich, der der Explorer-Leiste von Windows Internet Explorer sehr ähnlich aussieht. Die Größe kann geändert oder entfernt werden, und es können neben der vertrauten Dateisystemstruktur mehrere Bereiche angezeigt werden, z. B. ein Suchbereich.
 
 > [!Note]  
-> Die Informationen in diesem Dokument gelten nicht für Windows XP. Die erläuterten Verfahren gelten nur für frühere Versionen Windows.
+> Die Informationen in diesem Dokument gelten nicht für Windows XP. Die beschriebenen Techniken gelten nur für frühere Versionen von Windows.
 
  
 
@@ -42,33 +42,33 @@ Die folgende Abbildung zeigt den Ordner Drucker im klassischen Stil.
 
 ![klassischer Stil des Druckerordners.](images/webview1.png)
 
-Der klassische Stil funktioniert einigermaßen gut für normale Dateisystemordner und -dateien. Mit der Einführung von Windows 95 hat sich das Dateisystem jedoch in den Namespace entwickelt. Der -Namespace ermöglicht die Erstellung *von* virtuellen Ordnern wie Druckern oder Netzwerkumgebungen, die sehr unterschiedliche Arten von Informationen darstellen können als ein normaler Dateisystemordner.
+Der klassische Stil funktioniert relativ gut für normale Dateisystemordner und -dateien. Mit der Einführung von Windows 95 hat sich das Dateisystem jedoch in den Namespace weiterentwickelt. Der -Namespace ermöglicht die Erstellung *von virtuellen Ordnern* wie Druckern oder Netzwerkumgebungen, die sehr unterschiedliche Informationstypen als ein normaler Dateisystemordner darstellen können.
 
-Der Webstil, auch als Webansicht bezeichnet, bietet eine flexiblere und leistungsfähigere Möglichkeit zur Präsentation von Informationen als der klassische Stil. In einer Webansicht zeigt der Benutzer im Grunde den Namespace an und navigiert durch Internet Explorer. Das grundlegende Layout einer Webansicht ähnelt dem klassischen Stil. Die Explorer-Leiste ist unverändert. Die Von der Dateiliste belegte Region wird jedoch zu einem allgemeinen Anzeigebereich, bei dem es sich tatsächlich um eine Webseite handelt. Eine Webansicht wird weiterhin verwendet, um Informationen zum Inhalt eines Ordners anzuzeigen, aber es gibt einige Einschränkungen, welche Informationen angezeigt werden oder wie. Jeder Ordner kann über eine eigene Webansicht verfügen, die an seine speziellen Features angepasst ist.
+Der Webstil, auch als Webansicht bezeichnet, bietet eine flexiblere und leistungsfähigere Möglichkeit zur Darstellung von Informationen als der klassische Stil. In einer Webansicht zeigt der Benutzer mithilfe von Internet Explorer im Grunde den Namespace an und navigiert durch den Namespace. Das grundlegende Layout einer Webansicht ähnelt dem klassischen Stil. Die Explorer-Leiste ist unverändert. Die Von der Dateiliste belegte Region wird jedoch zu einem allgemeinen Anzeigebereich, bei dem es sich effektiv um eine Webseite handelt. Eine Webansicht wird weiterhin verwendet, um Informationen über den Inhalt eines Ordners anzuzeigen, aber es gibt einige Einschränkungen hinsichtlich der anzeige- oder wie-Informationen. Jeder Ordner kann über eine eigene Webansicht verfügen, die an die jeweiligen Features angepasst ist.
 
-Die folgende Abbildung zeigt eine Webansicht des Ordners Drucker (zuvor im klassischen Stil gezeigt).
+Die folgende Abbildung zeigt eine Webansicht des Ordners Drucker (zuvor im klassischen Stil dargestellt).
 
 ![Standardwebansicht des Druckerordners.](images/webview2.png)
 
-Ähnlich wie herkömmliche Webseiten werden Webansichten durch eine HTML-basierte Vorlage gesteuert. Das Erstellen einer Webansichtsvorlage ist nahezu identisch mit dem Erstellen einer Webseite und bietet das gleiche Maß an Flexibilität beim Inhalt und Layout von Informationen. Webansichtsvorlagen können dynamisches HTML (DHTML) und Skripts verwenden, um auf Ereignisse zu reagieren, z. B. wenn ein Benutzer auf ein Element klickt. Sie können auch Objekte hosten, die es ihnen ermöglichen, Informationen aus dem Ordner oder dessen Inhalt zu erhalten und anzuzeigen.
+Ähnlich wie herkömmliche Webseiten werden Webansichten durch eine HTML-basierte Vorlage gesteuert. Das Erstellen einer Webansichtsvorlage ist nahezu identisch mit der Erstellung einer Webseite und bietet das gleiche Maß an Flexibilität in Inhalt und Layout von Informationen. Webansichtsvorlagen können dynamic HTML (DHTML) und Skripts verwenden, um auf Ereignisse zu reagieren, z. B. ein Benutzer, der auf ein Element klickt. Sie können auch Objekte hosten, mit denen sie Informationen aus dem Ordner oder dessen Inhalt abrufen und anzeigen können.
 
-Der Benutzer kann eine Webansicht auswählen, indem  er Windows  Explorer startet, im Menü Ansicht auf Ordneroptionen klickt und diese Option auswählt: **Webinhalt in** Ordnern aktivieren. Der Benutzer kann jedoch auch Internet Explorer starten und den Browser auf  das Dateisystem verweisen, indem er auf das Menü Ansicht klickt, auf die **Explorer-Leiste** zeigt und auf Ordner **klickt.** In einer Webansicht gibt es praktisch keinen Unterschied zwischen Internet Explorer und Windows Explorer.
+Der Benutzer kann eine Webansicht auswählen, indem er Windows Explorer startet, im Menü **Ansicht** auf **Ordneroptionen** klickt und diese Option auswählt: **Webinhalt in Ordnern aktivieren.** Der Benutzer kann jedoch auch Internet Explorer starten und den Browser auf das Dateisystem verweisen, indem er auf das Menü **Ansicht** klickt, auf die **Explorer-Leiste** zeigt und auf **Ordner klickt.** In einer Webansicht gibt es praktisch keinen Unterschied zwischen Internet Explorer und Windows Explorer.
 
 Auf der linken Seite des rechten Bereichs zeigt die Druckerwebansicht ein Banner mit dem Namen und Symbol des Ordners an, gefolgt von einem Informationsblock zum Ordner. Die übliche Dateiliste befindet sich auf der rechten Seite der Seite.
 
-Wenn ein Benutzer auf ein Element klickt, werden ausführliche Informationen zum Element im Informationsblock angezeigt. Die Druckerwebansicht zeigt tatsächlich die gleichen Informationen an, die im klassischen Stil verfügbar sind, aber dies in einem besser nutzbaren Format. Eine Webansicht ist jedoch nicht einfach eine andere Möglichkeit, informationen zum klassischen Stil anzuzeigen. Beispielsweise kann unter dem Informationsblock ein Link zu einer nützlichen Website angezeigt werden, ein Feature, das im klassischen Stil nicht verfügbar ist. Wenn der Benutzer auf den Link klickt, wird die Website angezeigt.
+Wenn ein Benutzer auf ein Element klickt, werden ausführliche Informationen zum Element im Informationsblock angezeigt. Die Drucker-Webansicht zeigt tatsächlich die gleichen Informationen an, die im klassischen Stil verfügbar sind, jedoch in einem besser verwendbaren Format. Eine Webansicht ist jedoch nicht einfach eine andere Möglichkeit, Informationen im klassischen Stil anzuzeigen. Beispielsweise kann ein Link zu einer nützlichen Website unterhalb des Informationsblocks angezeigt werden, einem Feature, das im klassischen Stil nicht verfügbar ist. Wenn der Benutzer auf den Link klickt, wird die Website angezeigt.
 
-Die in der obigen Abbildung gezeigte Druckerwebansicht ähnelt dem klassischen Stil, da die zugrunde liegende Webansichtsvorlage (eine HTT-Datei) auf diese Weise geschrieben wurde. Die Liste der Dateien wird beispielsweise nicht direkt von der Webansichtsvorlage generiert. Sie wird von einem [**WebViewFolderContents-Objekt**](webviewfoldercontents.md) erstellt und angezeigt, das von der Webansichtsvorlage gehostet wird. Mit den Methoden und Eigenschaften des Objekts kann die Webansicht ihr Layout steuern und Informationen zu bestimmten Elementen abrufen. Inhalt und Layout des Banner- und Informationsblocks werden in der Webansichtsvorlage angegeben.
+Die in der obigen Abbildung gezeigte Druckerwebansicht ähnelt dem klassischen Stil, da die zugrunde liegende Webansichtsvorlage (eine HTT-Datei) auf diese Weise geschrieben wurde. Die Liste der Dateien wird beispielsweise nicht direkt von der Webansichtsvorlage generiert. Sie wird von einem [**WebViewFolderContents-Objekt**](webviewfoldercontents.md) erstellt und angezeigt, das von der Webansichtsvorlage gehostet wird. Die Methoden und Eigenschaften des Objekts ermöglichen es der Webansicht, ihr Layout zu steuern und Informationen zu bestimmten Elementen abzurufen. Inhalt und Layout des Banners und informationsblocks werden in der Webansichtsvorlage angegeben.
 
-Da eine Webansicht DHTML unterstützt, kann die Vorlage auch zur Behandlung von Benutzerinteraktion verwendet werden. Wenn ein Benutzer beispielsweise auf eines der Druckersymbole klickt, wird vom **WebViewFolderIcon-Objekt** ein [**SelectionChanged-Ereignis**](/windows/desktop/shell/application-support-bumper) angezeigt. Die Vorlage verwendet einen im Skript geschriebenen DHTML-Ereignishandler, um die angeforderten Informationen abzurufen und im Informationsblock anzuzeigen.
+Da eine Webansicht DHTML unterstützt, kann die Vorlage auch zum Verarbeiten der Benutzerinteraktion verwendet werden. Wenn ein Benutzer beispielsweise auf eines der Druckersymbole klickt, löst das **WebViewFolderIcon-Objekt** ein [**SelectionChanged-Ereignis**](/windows/desktop/shell/application-support-bumper) aus. Die Vorlage verwendet einen im Skript geschriebenen DHTML-Ereignishandler, um die angeforderten Informationen abzurufen und im Informationsblock anzuzeigen.
 
-Dieses einfache Beispiel für den Ordner Drucker ist nicht die einzige Möglichkeit, eine Webansicht zu verwenden. Indem Sie Ihre eigene Vorlage und bei Bedarf Objekte schreiben, können Sie eine Webansicht verwenden, um Informationen anzuzeigen und mit dem Benutzer auf die weise zu interagieren, die Sie am effektivsten finden. Beachten Sie, dass Webansichtsvorlagen derzeit nur systemdefinierte virtuelle Ordner anzeigen. Obwohl Entwickler einen virtuellen Ordner erstellen können, indem sie eine Namespaceerweiterung implementieren, müssen sie die unter [Namespaceerweiterungen](/windows/desktop/shell/nse-works) beschriebenen Verfahren verwenden, um ihn anzuzeigen.
+Dieses einfache Beispiel für den Ordner Drucker ist keinesfalls die einzige Möglichkeit, eine Webansicht zu verwenden. Indem Sie Ihre eigene Vorlage und ggf. Objekte schreiben, können Sie eine Webansicht verwenden, um Informationen anzuzeigen und mit dem Benutzer auf die effektivste Weise zu interagieren. Beachten Sie, dass Webansichtsvorlagen derzeit nur systemdefinierte virtuelle Ordner anzeigen. Obwohl Entwickler einen virtuellen Ordner erstellen können, indem sie eine Namespaceerweiterung implementieren, müssen sie die unter [Namespaceerweiterungen beschriebenen](/windows/desktop/shell/nse-works) Verfahren verwenden, um ihn anzuzeigen.
 
 ## <a name="using-the-web-view-template"></a>Verwenden der Webansichtsvorlage
 
-Die Art und Weise, wie Daten in einer Webansicht angezeigt werden, kann auf eingeschränkte Weise angepasst werden, indem die Datei eines Ordners Desktop.ini wird. Weitere [Informationen finden Sie unter Anpassen Desktop.ini](/windows/desktop/shell/how-to-customize-folders-with-desktop-ini) Ordnern mit der Synchronisierung. Eine wesentlich flexiblere und leistungsfähigere Möglichkeit zum Anpassen einer Webansicht ist das Erstellen einer benutzerdefinierten Webansichtsvorlage.
+Die Art und Weise, wie Daten in einer Webansicht angezeigt werden, kann eingeschränkt angepasst werden, indem die Desktop.ini-Datei eines Ordners geändert wird. Weitere Informationen finden Sie unter [Anpassen von Ordnern mit Desktop.ini.](/windows/desktop/shell/how-to-customize-folders-with-desktop-ini) Eine viel flexiblere und leistungsfähigere Möglichkeit zum Anpassen einer Webansicht ist das Erstellen einer benutzerdefinierten Webansichtsvorlage.
 
-Die Webansichtsvorlage steuert, was und wie in einer Webansicht angezeigt wird. Es verwendet standardmäßige HTML-, DHTML- und Skripttechniken, um Informationen zu erhalten und anzuzeigen und mit dem Benutzer zu interagieren. In diesem Abschnitt wird erläutert, wie Sie eine Webansicht erstellen, indem Sie eine einfache Vorlage untersuchen: Generic.htt.
+Die Webansichtsvorlage steuert, was in einer Webansicht angezeigt wird und wie. Es werden standardmäßige HTML-, DHTML- und Skriptverfahren verwendet, um Informationen abzurufen und anzuzeigen und mit dem Benutzer zu interagieren. In diesem Abschnitt wird erläutert, wie Sie eine Webansicht erstellen, indem Sie eine einfache Vorlage – Generic.htt – untersuchen.
 
 
 ```
@@ -240,21 +240,21 @@ Die Webansichtsvorlage steuert, was und wie in einer Webansicht angezeigt wird. 
 
 
 
-Eine einfache Möglichkeit zum Erstellen einer eigenen Webansichtsvorlage besteht in der Verwendung von Generic.htt und deren Änderung. Da dies eher begrenzt ist, sollten Sie sich auch andere, komplexere Beispiele für zusätzliche Ideen genauer betrachten. Sie finden sie, indem Sie in Ihrem System nach der .htt-Erweiterung suchen, die von allen Webansichtsvorlagen verwendet wird. Wenn Sie eine benutzerdefinierte Vorlage für einen Ordner erstellen möchten, sollten Sie mit der Standardvorlage Folder.htt beginnen, die in der Regel entweder in C: \\ Winnt Web oder \\ C: \\ Windows Web gespeichert \\ wird. Beachten Sie, dass diese Dateien als ausgeblendet definiert sind, sodass Sie möglicherweise die Einstellungen Windows Explorer ändern müssen, um sie anzeigen zu können. Sobald eine HTT-Datei erstellt wurde, sollte sie als schreibgeschützt und ausgeblendet markiert werden.
+Eine einfache Möglichkeit zum Erstellen einer eigenen Webansichtsvorlage besteht darin, Generic.htt zu verwenden und zu ändern. Da sie eher begrenzt ist, sollten Sie sich auch andere, komplexere Beispiele für weitere Ideen ansehen. Sie finden sie, indem Sie in Ihrem System nach der .htt-Erweiterung suchen, die von allen Webansichtsvorlagen verwendet wird. Wenn Sie eine benutzerdefinierte Vorlage für einen Ordner erstellen möchten, sollten Sie mit der Standardvorlage Folder.htt beginnen, die normalerweise entweder in C: \\ Winnt Web oder C: Windows Web gespeichert \\ \\ \\ wird. Beachten Sie, dass diese Dateien als ausgeblendet definiert sind, sodass Sie möglicherweise Ihre Windows Explorer-Einstellungen ändern müssen, um sie anzuzeigen. Nachdem eine HTT-Datei erstellt wurde, sollte sie als schreibgeschützt und ausgeblendet markiert werden.
 
-Webansichtsvorlagen verwenden die .htt-Erweiterung, da sie sich geringfügig von herkömmlichen .htm unterscheiden. Der Hauptunterschied besteht in mehreren speziellen Variablen in HTT-Dateien, die das System durch die aktuellen Namespacewerte ersetzt. Die Variablen %THISDIR% und %THISDIRPATH% stellen den Namen und Pfad des aktuell ausgewählten Ordners dar. Die Variable %TEMPLATEDIR% stellt den Ordner dar, in dem die Stylesheets der Webansicht gespeichert werden.
+Webansichtsvorlagen verwenden die .htt-Erweiterung, da sie sich geringfügig von herkömmlichen .htm Dokumenten unterscheiden. Der Hauptunterschied besteht in mehreren speziellen Variablen in HTT-Dateien, die das System durch die aktuellen Namespacewerte ersetzt. Die Variablen %THISDIR% und %THISDIRPATH% stellen den Namen und Pfad des aktuell ausgewählten Ordners dar. Die %TEMPLATEDIR%-Variable stellt den Ordner dar, in dem die Webansichts-Stylesheets gespeichert werden.
 
-Wie die meisten HTML-Vorlagen haben HTT-Dateien zwei grundlegende Teile: einen Text und einen Kopf. Der Vorlagentext steuert das grundlegende Layout der Webansicht und lädt die Objekte, die verwendet werden, um mit dem Namespace zu kommunizieren und Informationen anzuzeigen. Der Hauptordner enthält Skripts und Funktionen, die Aufgaben ausführen, z. B. das Ändern der Größe und das Abrufen von Informationen aus dem Ordner. Die meisten Vorlagen, einschließlich Generic.htt, enthalten auch ein Stylesheet. Im Allgemeinen ist es besser, die Stylesheetinformationen in Ihre Vorlage ein include. Separate Stylesheets funktionieren möglicherweise nicht ordnungsgemäß, wenn eine Webansicht mit Remotenamespaces verwendet wird.
+Wie die meisten HTML-Vorlagen bestehen HTT-Dateien aus zwei grundlegenden Teilen: einem Text und einem Kopf. Der Vorlagentext steuert das grundlegende Layout der Webansicht und lädt die Objekte, die für die Kommunikation mit dem Namespace und Anzeigeinformationen verwendet werden. Der Hauptordner enthält Skripts und Funktionen, die Aufgaben wie das Ändern der Größe und das Abrufen von Informationen aus dem Ordner ausführen. Die meisten Vorlagen, einschließlich Generic.htt, enthalten auch ein Stylesheet. Im Allgemeinen ist es besser, die Stylesheetinformationen in Ihre Vorlage einzufügen. Separate Stylesheets funktionieren möglicherweise nicht ordnungsgemäß, wenn eine Webansicht mit Remotenamespaces verwendet wird.
 
-### <a name="the-template-body"></a>Der Vorlagenkörper
+### <a name="the-template-body"></a>Der Vorlagentext
 
-Der Text der Vorlage gibt an, was von einer Webansicht dargestellt wird. Dort werden auch die Objekte geladen, die zum Anzeigen von Informationen und zum Kommunizieren mit Namespaceordnern verwendet werden. Das von Generic.htt definierte Layout ähnelt dem In der Abbildung im vorherigen Abschnitt. Es gibt drei Anzeigeregionen: das Banner und den Informationsblock auf der linken Seite der Ansicht und die Dateiliste auf der rechten Seite.
+Der Text der Vorlage gibt an, was von einer Webansicht dargestellt wird. Dort werden auch die Objekte geladen, die zum Anzeigen von Informationen und zum Kommunizieren mit Namespaceordnern verwendet werden. Das von Generic.htt definierte Layout ähnelt dem in der Abbildung im vorherigen Abschnitt gezeigten Layout. Es gibt drei Anzeigebereiche: das Banner und den Informationsblock auf der linken Seite der Ansicht und die Dateiliste auf der rechten Seite.
 
-Die Bereiche sind alle zugewiesenen Bezeichner, die vom Stylesheet und DHTML verwendet werden sollen. Wie im nächsten Abschnitt erläutert, gibt es zwei mögliche Banner mit bezeichnern "Banner" und "MiniBanner". Der Bezeichner des Informationsblockbereichs ist "Info". Der Bezeichner des Dateilistenobjekts ist "FileList". Die Details des Layouts der Region werden vom Stylesheet und der Microsoft JScript-Funktion [FixSize](#adjusting-the-layout-by-using-the-fixsize-function)verarbeitet, die später in diesem Kapitel erläutert wird. [](#controlling-the-web-view-layout)
+Alle Bereiche sind zugewiesene Bezeichner, die vom Stylesheet und DHTML verwendet werden sollen. Wie im nächsten Abschnitt erläutert, gibt es zwei mögliche Banner mit den Bezeichnern "Banner" und "MiniBanner". Der Bezeichner des Bereichs des Informationsblocks ist "Info". Der Bezeichner des Dateilistenobjekts ist "FileList". Die Details des [Layouts](#controlling-the-web-view-layout) der Region werden vom Stylesheet und der Microsoft JScript-Funktion [FixSize](#adjusting-the-layout-by-using-the-fixsize-function)behandelt, die weiter unten in diesem Kapitel erläutert wird.
 
 ### <a name="the-banner-region"></a>Der Bannerbereich
 
-Das Banner befindet sich am oberen Bildschirmanfang in der linken oberen Ecke der Webansicht. Das normale Banner zeigt den Namen und das Symbol des Ordners an, dessen Inhalt in der Dateiliste auf der rechten Seite angezeigt wird. Wenn das Fenster jedoch zu kurz wird, ist unter dem Symbol möglicherweise kein Platz zum Anzeigen von Informationen. Aus diesem Grund definiert Generic.htt auch einen Minibanner, der nur den Ordnernamen anzeigt. Beide Banner werden anfänglich als ausgeblendet definiert. [FixSize wählt](#adjusting-the-layout-by-using-the-fixsize-function) aus, welches angezeigt werden soll, und legt es auf "sichtbar" fest.
+Das Banner befindet sich oben auf der Anzeige in der oberen linken Ecke der Webansicht. Das normale Banner zeigt den Namen und das Symbol des Ordners an, dessen Inhalt in der Dateiliste auf der rechten Seite angezeigt wird. Wenn das Fenster jedoch zu kurz wird, ist unter dem Symbol möglicherweise kein Platz zum Anzeigen von Informationen vorhanden. Aus diesem Grund definiert Generic.htt auch einen Minibanner, der nur den Ordnernamen anzeigt. Beide Banner werden anfänglich als ausgeblendet definiert. [FixSize wählt](#adjusting-the-layout-by-using-the-fixsize-function) aus, welches angezeigt werden soll, und legt es auf "sichtbar" fest.
 
 Das normale Banner für Generic.htt wird definiert durch:
 
@@ -350,7 +350,7 @@ Der Hauptkopf der Webansichtsvorlage enthält die Skripts und Funktionen, die de
 
 ### <a name="controlling-the-web-view-layout"></a>Steuern des Webansichtslayouts
 
-Der für eine Webansicht verfügbare Bereich hängt von der Größe des Webansichtsfensters und davon ab, wie viel davon von der Leiste des Windows wird. Dieser Bereich ändert sich immer dann, wenn die Größe des Fensters oder Windows Explorer-Leiste geändert wird. Daher muss das Layout mit dem verfügbaren Bereich übereinstimmen, wenn eine Webansicht geladen wird, und sich entsprechend ändern, wenn die Größe geändert wird. Ein Teil des Layouts wird im Stylesheet angegeben. Der Infobereich wird z. B. so definiert, dass er die 30 Prozent der Webansicht ganz links ein belegt.
+Der für eine Webansicht verfügbare Bereich hängt von der Größe des Webansichtsfensters ab und davon, wie viel davon von der Leiste des Windows wird. Dieser Bereich ändert sich immer dann, wenn die Größe des Fensters oder Windows Explorer-Leiste geändert wird. Daher muss das Layout mit dem verfügbaren Bereich übereinstimmen, wenn eine Webansicht geladen wird, und sich entsprechend ändern, wenn die Größe geändert wird. Ein Teil des Layouts wird im Stylesheet angegeben. Der Infobereich wird z. B. so definiert, dass er die 30 Prozent der Webansicht ganz links ein belegt.
 
 
 ```
@@ -365,7 +365,7 @@ Wenn die Größe einer Webansicht geändert wird, ändert sich die Breite des In
 
 ### <a name="loading-and-initializing-the-web-view"></a>Laden und Initialisieren der Webansicht
 
-Wenn eine Webansicht geladen wird, muss das Layout an den verfügbaren Anzeigebereich angepasst werden. Da noch kein Element ausgewählt wurde, zeigen Webansichten normalerweise einige Standardinformationen an, die für den gesamten Ordner gelten. Um die Initialisierung zu verarbeiten, <BODY> Tag für Generic.htt erkennt das [onload-Ereignis](/previous-versions//ms531409(v=vs.85)) und ruft die **Init-Funktion** auf.
+Wenn eine Webansicht geladen wird, muss das Layout an den verfügbaren Anzeigebereich angepasst werden. Da noch kein Element ausgewählt wurde, zeigen Webansichten normalerweise einige Standardinformationen an, die für den gesamten Ordner gelten. Um die Initialisierung zu verarbeiten, erkennt &lt; das BODY-Tag &gt; für Generic.htt das [onload-Ereignis](/previous-versions//ms531409(v=vs.85)) und ruft die **Init-Funktion** auf.
 
 
 ```
@@ -509,13 +509,13 @@ Wenn ein Benutzer ein Element auswählt, gibt das FileList-Objekt ein [Selection
 
 
 
-Das Skript verwendet die beiden FileList-Eigenschaften [**FileList.FocusedItem**](/windows/desktop/shell/shellfolderview-focuseditem)und [**FileList.Folder,**](/windows/desktop/shell/shellfolderview-folder) um Informationen zum Element zu erhalten. **FileList.FocusedItem** identifiziert das ausgewählte Element mit dem Namen des Elements, der von angegeben **FileList.FocusedItem.Name.** **FileList.Folder** ist tatsächlich ein Zeiger auf ein [**Folder-Objekt.**](../shell/folder.md) Die [**GetDetailsOf-Methode**](/windows/desktop/shell/folder-getdetailsof) des Folder-Objekts wird verwendet, um die verbleibenden Informationen über das Element abzurufen.
+Das Skript verwendet die beiden FileList-Eigenschaften [**FileList.FocusedItem**](/windows/desktop/shell/shellfolderview-focuseditem)und [**FileList.Folder,**](/windows/desktop/shell/shellfolderview-folder) um Informationen zum Element zu erhalten. **FileList.FocusedItem** identifiziert das ausgewählte Element mit dem Namen des Elements, der von **FileList.FocusedItem.Name.** **FileList.Folder** ist tatsächlich ein Zeiger auf ein [**Folder-Objekt.**](../shell/folder.md) Die [**GetDetailsOf-Methode**](/windows/desktop/shell/folder-getdetailsof) des Folder-Objekts wird verwendet, um die verbleibenden Informationen über das Element abzurufen.
 
 Alle Informationen werden in einer einzelnen Textzeichenfolge verkettet, getrennt durch <BR> -Tags zur Lesbarkeit. Der Text wird dann angezeigt, indem er [TextBlock.innerHTML zugewiesen wird.](https://msdn.microsoft.com/library/ms533897(VS.85).aspx)
 
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Kapitel werden einige der Techniken beschrieben, mit denen Sie die Art und Weise anpassen können, wie der Windows Explorer Informationen zu Shellordnern anzeigt. Wenn Sie Desktop.ini erstellen, können Sie einige einfache Anpassungen vornehmen, z. B. das Anzeigen eines benutzerdefinierten Symbols statt des Standardordnersymbols. Wenn ein Ordner in einer Webansicht angezeigt wird, werden layout und display durch eine HTML-basierte Vorlage gesteuert, die bestimmt, welche Informationen wie angezeigt werden. Sie können ein hohes Maß an Kontrolle über die Webansicht eines Ordners mithilfe von STANDARD-HTML-, DHTML- und Skripttechniken zum Erstellen einer benutzerdefinierten Vorlage verwenden.
+In diesem Kapitel werden einige der Techniken beschrieben, mit denen Sie anpassen können, wie der Windows Explorer Informationen zu Shellordnern anzeigt. Wenn Sie Desktop.ini erstellen, können Sie einige einfache Anpassungen vornehmen, z. B. das Anzeigen eines benutzerdefinierten Symbols statt des Standardordnersymbols. Wenn ein Ordner in einer Webansicht angezeigt wird, werden layout und display durch eine HTML-basierte Vorlage gesteuert, die bestimmt, welche Informationen wie angezeigt werden. Sie können ein hohes Maß an Kontrolle über die Webansicht eines Ordners mithilfe von STANDARD-HTML-, DHTML- und Skripttechniken zum Erstellen einer benutzerdefinierten Vorlage verwenden.
 
  
 

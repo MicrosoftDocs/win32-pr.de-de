@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 67877cfc07a247d6b5e3309270d145bc64fbb814416fa4288c6e85ff2ad2e986
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9ba975b9b35cd000844b3956e141c86b1be52531
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118315136"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884998"
 ---
 # <a name="standard-qualifiers"></a>Standardqualifizierer
 
-Alle CIM-kompatiblen Implementierungen müssen einen Standardsatz von Qualifizierern verarbeiten. In einem bestimmten Objekt sind nicht alle Qualifizierer aufgeführt. In der Regel geben Erweiterungsklassen zusätzliche Qualifizierer an, um die Bereitstellung von Klasseninstanzen und anderen Vorgängen für die Klasse zu erleichtern.
+Alle CIM-kompatiblen Implementierungen müssen einen Standardsatz von Qualifizierern verarbeiten. Für ein bestimmtes Objekt sind nicht alle Qualifizierer aufgeführt. In der Regel stellen Erweiterungsklassen zusätzliche Qualifizierer bereit, um die Bereitstellung von Klasseninstanzen und anderen Vorgängen für die Klasse zu vereinfachen.
 
-Es liegt in der Verantwortung des Anbieters, die Qualifizierer zu erzwingen. WMI erzwingt keine Qualifizierer, sondern verwendet sie nur, um den Benutzer über die Verwendung der Eigenschaft zu informieren.
+Es liegt in der Verantwortung des Anbieters, die Qualifizierer zu erzwingen. WMI erzwingt keine Qualifizierer, sondern verwendet sie nur, um den Benutzer darüber zu informieren, wie die Eigenschaft verwendet wird.
 
 > [!Note]  
 > WMI ist mit der CIM 2.5-Spezifikation kompatibel.
@@ -35,10 +35,10 @@ Für Qualifizierer gelten die folgenden Einschränkungen:
 
 -   Nicht alle Standardqualifizierer können zusammen verwendet werden.
 -   Nicht alle Qualifizierer können auf alle Konstrukte angewendet werden, z. B. Zuordnung oder Verweis. Diese Einschränkungen sind in der Liste Gilt für aufgeführt.
--   Für ein bestimmtes Konstrukt, z. B. Zuordnung oder Verweis, kann die Verwendung der rechtlichen Qualifizierer weiter eingeschränkt werden, da sich einige Qualifizierer gegenseitig ausschließen, kann die Verwendung eines Qualifizierers einige Einschränkungen für den Wert eines anderen beinhalten und so weiter. Diese Verwendungsregeln sind dokumentiert.
+-   Für ein bestimmtes Konstrukt, z. B. Zuordnung oder Verweis, kann die Verwendung der rechtlichen Qualifizierer weiter eingeschränkt werden, da sich einige Qualifizierer gegenseitig ausschließen, die Verwendung eines Qualifizierers einige Einschränkungen für den Wert eines anderen impliziert usw. Diese Verwendungsregeln sind dokumentiert.
 -   Rechtliche Qualifizierer werden nur von Entitäten wie Eigenschaften, Methoden, Instanzen oder Unterklassen geerbt, nicht von Zuordnungen oder Verweisen. Beispielsweise wird  der MaxLen-Qualifizierer, der für Eigenschaften gilt, nicht von Verweisen geerbt.
 
-Im Folgenden werden die WMI-Standardqualifizierer aufgeführt.
+Im Folgenden werden WMI-Standardqualifizierer aufgeführt.
 
 <dt>
 
@@ -49,7 +49,7 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Klassen, Zuordnungen, Hinweise
 
-Gibt an, ob die Klasse abstrakt ist und nur als Basis für neue Klassen dient. Der Standardwert ist **FALSE.** Sie können keine Instanzen von abstrakten Klassen erstellen. Das Fehlen dieses Qualifizierers gibt an, dass die Klasse nicht abstrakt ist. Daher ist dieser Qualifizierer für alle abstrakten Klassen erforderlich.
+Gibt an, ob die Klasse abstrakt ist und nur als Basis für neue Klassen dient. Der Standardwert ist **FALSE.** Sie können keine Instanzen von abstrakten Klassen erstellen. Das Fehlen dieses Qualifizierers gibt an, dass die Klasse nicht abstrakt ist. daher ist dieser Qualifizierer für alle abstrakten Klassen erforderlich.
 
 </dd> <dt>
 
@@ -60,9 +60,9 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Verweise
 
-Gibt an, ob der Verweis die übergeordnete Komponente einer Aggregations zuordnung ist. Der Standardwert ist **FALSE.**
+Gibt an, ob der Verweis die übergeordnete Komponente einer Aggregationszuordnung ist. Der Standardwert ist **FALSE.**
 
-Verwendung: Die **Aggregations-** und Aggregatqualifizierer werden zusammen  **verwendet. Aggregation** qualifiziert die Zuordnung, und **Aggregate** gibt den übergeordneten Verweis an.
+Verwendung: Die **Aggregations-** und **Aggregatqualifizierer** werden zusammen verwendet   **Aggregation** qualifiziert die Zuordnung, und **Aggregate** gibt den übergeordneten Verweis an.
 
 </dd> <dt>
 
@@ -73,14 +73,14 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Zuordnungen
 
-Gibt an, ob die Zuordnung eine Aggregation ist. Der Standardwert ist **FALSE.** Wird mit dem **Aggregat verwendet.** Dieser Qualifizierer ist für alle Aggregationszuordnungen erforderlich.
+Gibt an, ob die Zuordnung eine Aggregation ist. Der Standardwert ist **FALSE.** Wird mit **Aggregate** verwendet. Dieser Qualifizierer ist für alle Aggregationszuordnungen erforderlich.
 
 </dd> <dt>
 
 <span id="Alias"></span><span id="alias"></span><span id="ALIAS"></span>**Alias**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Eigenschaften, Verweise, Methoden
 
@@ -91,7 +91,7 @@ Alternativer Name für eine Eigenschaft oder Methode im Schema. Der Standardwert
 <span id="ArrayType"></span><span id="arraytype"></span><span id="ARRAYTYPE"></span>**ArrayType**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Eigenschaften, Parameter
 
@@ -103,7 +103,7 @@ Gültige Werte sind:
 -   Indiziert
 -   geordnete
 
-Verwendung: Wenden Sie diesen Typ von Qualifizierer nur auf Eigenschaften und Parameter an, die Arrays sind (definiert mithilfe der Klammernsyntax).
+Verwendung: Wenden Sie diesen Typ von Qualifizierer nur auf Eigenschaften und Parameter an, bei denen es sich um Arrays handelt (definiert mithilfe der Klammersyntax).
 
 </dd> <dt>
 
@@ -114,7 +114,7 @@ Datentyp: **Zeichenfolgenarray**
 
 Gilt für: Eigenschaften, Methoden, Parameter
 
-Karte mit signifikanten Bitpositionen, bei denen jede signifikante Position "on" oder "off" sein kann. Jedes "on"-Bit wird einem entsprechenden Wert im **BitValues-Array** entspricht. Wenn mehrere Bits "on" vorhanden sind, werden mehrere gleichzeitige Werte im **BitValues-Array** angegeben. Der Standardwert ist **NULL.**
+Zuordnung signifikanter Bitpositionen, bei denen jede signifikante Position "on" oder "off" sein kann. Jedes "on"-Bit wird einem entsprechenden Wert im **BitValues-Array** zugeordnet. Wenn mehrere Bits "on" vorliegen, werden mehrere gleichzeitige Werte im **BitValues-Array** angegeben. Der Standardwert ist **NULL.**
 
 Weitere Informationen finden Sie unter [BitMap und BitValues.](bitmap-and-bitvalues.md)
 
@@ -127,7 +127,7 @@ Datentyp: **Zeichenfolgenarray**
 
 Gilt für: Eigenschaften, Methoden, Parameter
 
-Übersetzung eines Bitpositionswerts in eine zugeordnete **Zeichenfolge.** Der Standardwert ist **NULL.**
+Übersetzung eines Bitpositionswerts in eine zugeordnete **Zeichenfolge**. Der Standardwert ist **NULL.**
 
 Weitere Informationen finden Sie unter [BitMap und BitValues.](bitmap-and-bitvalues.md)
 
@@ -140,16 +140,16 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Methoden
 
-Gibt an, ob die Methode Instanzen erstellt. Diese Methoden sind nicht darauf beschränkt, auf eine einzelne Instanz oder eine einzelne Klasse zu agieren. Beispielsweise kann ein Konstruktor Zuordnungsinstanzen sowie Instanzen der Klasse erstellen, die den Konstruktor definiert.
+Gibt an, ob die Methode -Instanzen erstellt. Diese Methoden sind nicht darauf beschränkt, auf eine einzelne Instanz oder eine einzelne Klasse zu agieren. Beispielsweise kann ein Konstruktor Zuordnungsinstanzen sowie Instanzen der Klasse erstellen, die den Konstruktor definiert.
 
-Der  Konstruktorqualifizierer ist nur für Informationen vorgesehen, und es wird nicht erwartet, dass er vom Objekt-Manager ausgeführt wird. Der Objekt-Manager muss beim Erstellen eines Objekts keine Konstruktormethoden aufrufen. Auch wenn ein Konstruktor aufgerufen wird, muss der Objekt-Manager keine Konstruktormethoden aufrufen, die für eine übergeordnete Klasse der ursprünglichen Klasse definiert sind. Der Standardwert ist **FALSE.**
+Der **Konstruktorqualifizierer** ist nur für Informationen vorgesehen, und es wird nicht erwartet, dass er vom Objekt-Manager angewendet wird. Der Objekt-Manager muss keine Konstruktormethoden aufrufen, wenn ein Objekt erstellt wird. Wenn ein Konstruktor aufgerufen wird, muss der Objekt-Manager auch keine Konstruktormethoden aufrufen, die für eine übergeordnete Klasse der ursprünglichen Klasse definiert sind. Der Standardwert ist **FALSE.**
 
 </dd> <dt>
 
 <span id="CreateBy"></span><span id="createby"></span><span id="CREATEBY"></span>**CreateBy**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Klassen
 
@@ -162,7 +162,7 @@ Verwendung: Dieser Qualifizierer kann nur verwendet werden, wenn der **SupportsC
 <span id="DeleteBy"></span><span id="deleteby"></span><span id="DELETEBY"></span>**DeleteBy**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Klassen
 
@@ -175,9 +175,9 @@ Verwendung: Dieser Qualifizierer kann nur verwendet werden, wenn der **SupportsD
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
-Gilt für: alle
+Gilt für: beliebige
 
 Beschreibung eines benannten Elements. Der Standardwert ist **NULL.**
 
@@ -190,31 +190,31 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Methoden
 
-Gibt an, ob die Methode Instanzen löscht. Methoden, die **den Destruktorqualifizierer** verwenden, löschen die Instanzen, auf die der Destruktor angewendet wird, und sind nicht darauf beschränkt, auf eine einzelne Instanz oder Klasse zu agieren. Beispielsweise kann ein Destruktor Zuordnungsinstanzen sowie Instanzen der Klasse löschen, die den Destruktor definiert.
+Gibt an, ob die -Methode -Instanzen löscht. Methoden, die den **Destruktorqualifizierer** verwenden, löschen die Instanzen, auf die der Destruktor angewendet wird, und sind nicht darauf beschränkt, auf eine einzelne Instanz oder Klasse zu agieren. Beispielsweise kann ein Destruktor Zuordnungsinstanzen sowie Instanzen der Klasse löschen, die den Destruktor definiert.
 
-Der **Destruktorqualifizierer** ist nur für Informationen vorgesehen, und es wird nicht erwartet, dass er vom Objekt-Manager umgesetzt wird. Der Objekt-Manager muss keine Methode aufrufen, die den **Destruktorqualifizierer** auf abruft, wenn eine Instanz gelöscht wird. Wenn ein Destruktor aufgerufen wird, muss der Objekt-Manager außerdem keine Destruktormethoden aufrufen, die für eine übergeordnete Klasse der ursprünglichen Klasse definiert sind. Der Standardwert ist **FALSE.**
+Der **Destruktorqualifizierer** ist nur für Informationen vorgesehen, und es wird nicht erwartet, dass er vom Objekt-Manager angewendet wird. Der Objekt-Manager muss keine Methode aufrufen, die über den **Destruktorqualifizierer** verfügt, wenn eine Instanz gelöscht wird. Wenn ein Destruktor aufgerufen wird, muss der Objekt-Manager außerdem keine Destruktormethoden aufrufen, die für eine übergeordnete Klasse der ursprünglichen Klasse definiert sind. Der Standardwert ist **FALSE.**
 
 </dd> <dt>
 
 <span id="DisplayName"></span><span id="displayname"></span><span id="DISPLAYNAME"></span>**Displayname**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
-Gilt für: alle
+Gilt für: beliebige
 
-Der In der Benutzeroberfläche anstelle des tatsächlichen Namens des Elements angezeigte Name. Der Standardwert ist **NULL.**
+Name, der auf der Benutzeroberfläche anstelle des tatsächlichen Namens des Elements angezeigt wird. Der Standardwert ist **NULL.**
 
 </dd> <dt>
 
 <span id="EmbeddedInstance"></span><span id="embeddedinstance"></span><span id="EMBEDDEDINSTANCE"></span>**EmbeddedInstance**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
-Gilt für: alle
+Gilt für: beliebige
 
-Das qualifizierte Zeichenfolgentypelement enthält eine eingebettete Instanz. Der Qualifiziererwert gibt den Namen einer CIM-Klasse im gleichen Namespace an wie die Klasse, die das qualifizierte Element besitzt. Die eingebettete Instanz ist eine Instanz der angegebenen Klasse, einschließlich Instanzen ihrer Unterklassen. Der Standardwert ist **NULL.**
+Das qualifizierte Zeichenfolgentypelement enthält eine eingebettete Instanz. Der Qualifiziererwert gibt den Namen einer CIM-Klasse im selben Namespace wie die Klasse an, die das qualifizierte Element besitzt. Die eingebettete Instanz ist eine Instanz der angegebenen Klasse, einschließlich Instanzen ihrer Unterklassen. Der Standardwert ist **NULL.**
 
 </dd> <dt>
 
@@ -223,11 +223,11 @@ Das qualifizierte Zeichenfolgentypelement enthält eine eingebettete Instanz. De
 
 Datentyp: **boolescher Wert**
 
-Gilt für: alle
+Gilt für: beliebige
 
-Gibt an, ob die -Eigenschaft eine nicht negative ganze Zahl darstellt, die einen Höchstwert erhöhen oder verringern, aber nie überschreiten kann. Der Standardwert ist **FALSE.**
+Gibt an, ob die -Eigenschaft eine nicht negative ganze Zahl darstellt, die sich erhöhen oder verringern kann, aber nie einen Höchstwert überschreitet. Der Standardwert ist **FALSE.**
 
-Der Höchstwert der -Eigenschaft darf nicht größer als 2^*n* - 1 sein. *N* kann je nach Datentyp der Eigenschaft, auf die dieser Qualifizierer angewendet wird, 8, 16, 32 oder 64 sein. Der Wert eines Messgeräts hat seinen maximalen Wert, wenn die modellierten Informationen größer oder gleich diesem Höchstwert sind. Wenn die informationen, die anschließend modelliert werden, unter den Maximalwert verringert werden, verringert sich auch das Messgerät. Dieser Qualifizierer gilt nur für Eigenschaften mit einem ganzzahligen Datentyp ohne Vorzeichen.
+Der maximale Wert der Eigenschaft darf nicht größer als 2^*n* - 1 sein. *N* kann je nach Datentyp der Eigenschaft, auf die dieser Qualifizierer angewendet wird, 8, 16, 32 oder 64 sein. Der Wert eines Messgeräts hat seinen Maximalwert, wenn die zu modellierten Informationen größer oder gleich diesem Maximalwert sind. Wenn die modellierten Informationen anschließend unter den Maximalwert fallen, nimmt auch das Messgerät ab. Dieser Qualifizierer gilt nur für Eigenschaften mit einem ganzzahligen Datentyp ohne Vorzeichen.
 
 </dd> <dt>
 
@@ -260,7 +260,7 @@ Datentyp: **boolescher Wert**
 
 Gilt für: Eigenschaften, Verweise
 
-Gibt an, ob die Eigenschaft Teil des Namespacehandpunkts ist. Wenn mehr als eine [](key-qualifier.md) Eigenschaft über den Schlüsselqualifizierer verfügt, bilden alle diese Eigenschaften zusammen den Schlüssel (einen Verbundschlüssel). Zusammen müssen die Schlüsseleigenschaften einen eindeutigen Verweis für jede Klasseninstanz liefern. Wenn dieser Qualifizierer für eine Eigenschaft platziert wird, ist nur der **Wert TRUE** zulässig.
+Gibt an, ob die Eigenschaft Teil des Namespacehandle ist. Wenn mehr als eine Eigenschaft über den [**Schlüsselqualifizierer**](key-qualifier.md) verfügt, bilden alle diese Eigenschaften zusammen den Schlüssel (einen zusammengesetzten Schlüssel). Zusammen müssen die Schlüsseleigenschaften einen eindeutigen Verweis für jede Klasseninstanz bereitstellen. Wenn dieser Qualifizierer für eine Eigenschaft platziert wird, ist nur der Wert **TRUE** zulässig.
 
 </dd> <dt>
 
@@ -269,7 +269,7 @@ Gibt an, ob die Eigenschaft Teil des Namespacehandpunkts ist. Wenn mehr als eine
 
 Gilt für: Eigenschaften
 
-Gibt an, dass die Rückgabe der Eigenschaft ressourcenintensiv ist und viel Prozessorzeit und Arbeitsspeicher erfordert. WMI verbessert die Leistung von Abfragen, indem nicht versucht wird, die mit dem **Lazy-Qualifizierer** markierten Eigenschaften zurück zu geben.
+Gibt an, dass die -Eigenschaft ressourcenintensiv für die Rückgabe ist und viel Prozessorzeit und Arbeitsspeicher erfordert. WMI verbessert die Leistung von Abfragen, indem nicht versucht wird, die mit dem **verzögerten** Qualifizierer markierten Eigenschaften zurückzugeben.
 
 </dd> <dt>
 
@@ -280,7 +280,7 @@ Datentyp: **Zeichenfolgenarray**
 
 Gilt für: Klassen, Eigenschaften, Zuordnungen, Hinweise, Verweise
 
-Eine Gruppe von Werten, die einen Pfad zu einem Speicherort angeben, an dem Sie weitere Informationen zum Ursprung einer Eigenschaft, Klasse, Zuordnung, Angabe oder eines Verweises finden können. Die Zuordnungszeichenfolge kann ein Verzeichnispfad, eine URL, ein Registrierungsschlüssel, eine Includedatei, ein Verweis auf eine CIM-Klasse oder ein anderes Format sein. Der Standardwert ist **NULL.**
+Ein Satz von Werten, die einen Pfad zu einem Speicherort angeben, an dem Sie weitere Informationen zum Ursprung einer Eigenschaft, Klasse, Zuordnung, Angabe oder eines Verweises finden. Die Zuordnungszeichenfolge kann ein Verzeichnispfad, eine URL, ein Registrierungsschlüssel, eine Includedatei, ein Verweis auf eine CIM-Klasse oder ein anderes Format sein. Der Standardwert ist **NULL.**
 
 </dd> <dt>
 
@@ -291,7 +291,7 @@ Datentyp: **int**
 
 Gilt für: Verweise
 
-Maximale Anzahl von Werten, die ein angegebener Verweis für jeden Satz anderer Verweiswerte in der Zuordnung haben kann. Der Standardwert ist **NULL.** Wenn z. B. eine Zuordnung A-Instanzen mit B-Instanzen verbindet und für jede B-Instanz höchstens eine A-Instanz zulässig sein muss, sollte der Verweis auf A maximal einen Qualifizierer haben.
+Die maximale Anzahl von Werten, die ein angegebener Verweis für jeden Satz anderer Verweiswerte in der Zuordnung aufweisen kann. Der Standardwert ist **NULL.** Wenn beispielsweise eine Zuordnung A-Instanzen mit B-Instanzen verknüpft und für jede B-Instanz höchstens eine A-Instanz vorhanden sein muss, sollte der Verweis auf A maximal einen Qualifizierer aufweisen.
 
 </dd> <dt>
 
@@ -302,9 +302,9 @@ Datentyp: **int**
 
 Gilt für: Eigenschaften, Methoden, Parameter
 
-Maximale Länge (in Zeichen) eines **Zeichenfolgendatenelements** und gibt die Unterstützung von Arrays fester Länge an.
+Maximale Länge (in Zeichen) eines Zeichenfolgendatenelements und Gibt die Unterstützung von Arrays fester Länge an. 
 
-Wenn ein Array mit fester  Länge gefunden wird, enthält der MaxLen-Qualifizierer die feste Länge, die während der Analyse gefunden wurde. Wenn ein Array variabler Länge gefunden wird, wird dieser Qualifizierer nicht verwendet. **MaxLen** wird verwendet, um die maximale Anzahl von Elementen vorschlagen, die in einem Array gespeichert werden sollen. Beim Überschreiben des Standardwerts kann jeder ganzzahlige Wert ohne Vorzeichen (**uint32**) angegeben werden. Der Wert **NULL** (Standard) impliziert eine unbegrenzte Länge.
+Wenn ein Array fester Länge gefunden  wird, enthält der MaxLen-Qualifizierer die feste Länge, die während der Analyse gefunden wurde. Wenn ein Array variabler Länge gefunden wird, wird dieser Qualifizierer nicht verwendet. **MaxLen** wird verwendet, um die maximale Anzahl von Elementen vorzuschlagen, die in einem Array gespeichert werden sollen. Beim Überschreiben des Standardwerts kann jeder ganzzahlige Wert ohne Vorzeichen (**uint32**) angegeben werden. Der Wert **NULL** (Standard) impliziert eine unbegrenzte Länge.
 
 </dd> <dt>
 
@@ -315,7 +315,7 @@ Datentyp: **int**
 
 Gilt für: Eigenschaften, Methoden, Parameter
 
-Maximalwert des -Objekts. Der Standardwert ist **NULL.**
+Maximalwert des Objekts. Der Standardwert ist **NULL.**
 
 </dd> <dt>
 
@@ -326,9 +326,9 @@ Datentyp: **int**
 
 Gilt für: Verweise
 
-Minimale Kardinalität des Verweises (die Mindestanzahl von Werten, die ein angegebener Verweis für jeden Satz anderer Verweiswerte in der Zuordnung haben kann). Die Standardeinstellung ist 0.
+Minimale Kardinalität des Verweises (die Mindestanzahl von Werten, die ein bestimmter Verweis für jeden Satz anderer Verweiswerte in der Zuordnung aufweisen kann). Die Standardeinstellung ist 0.
 
-Wenn z. B. eine Zuordnung A-Instanzen mit B-Instanzen verbindet und mindestens eine A-Instanz für jede B-Instanz verwendet werden muss, sollte der Verweis auf A mindestens einen Qualifizierer haben.
+Wenn beispielsweise eine Zuordnung A-Instanzen mit B-Instanzen verknüpft und für jede B-Instanz mindestens eine A-Instanz vorhanden sein muss, sollte der Verweis auf A mindestens einen Qualifizierer aufweisen.
 
 </dd> <dt>
 
@@ -339,7 +339,7 @@ Datentyp: **int**
 
 Gilt für: Eigenschaften, Methoden, Parameter
 
-Gibt den Minimalwert des -Objekts an. Der Standardwert ist **NULL.**
+Gibt den Minimalwert des Objekts an. Der Standardwert ist **NULL.**
 
 </dd> <dt>
 
@@ -350,7 +350,7 @@ Datentyp: **Zeichenfolgenarray**
 
 Gilt für: Eigenschaften
 
-Eine Gruppe von Werten, die die Entsprechung zwischen der -Eigenschaft eines Objekts und anderen Eigenschaften im CIM-Schema angeben. Der Standardwert ist **NULL.**
+Ein Satz von Werten, die eine Entsprechung zwischen der -Eigenschaft eines Objekts und anderen Eigenschaften im CIM-Schema angeben. Der Standardwert ist **NULL.**
 
 Objekteigenschaften werden mithilfe der folgenden Syntax identifiziert.
 
@@ -361,11 +361,11 @@ Objekteigenschaften werden mithilfe der folgenden Syntax identifiziert.
 <span id="Nonlocal"></span><span id="nonlocal"></span><span id="NONLOCAL"></span>**Nichtlokale**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Verweise
 
-Speicherort einer Instanz, deren Wert <*namespacetype>://<* *namespacehandle*> Der Standardwert **ist NULL.**
+Speicherort einer Instanz, deren Wert <*Namespacetyp*>://<*namespacehandle*> Der Standardwert ist **NULL.**
 
 Verwendung: Dieser Qualifizierer kann nicht mit dem **NonlocalType-Qualifizierer** verwendet werden.
 
@@ -374,11 +374,11 @@ Verwendung: Dieser Qualifizierer kann nicht mit dem **NonlocalType-Qualifizierer
 <span id="NonlocalType"></span><span id="nonlocaltype"></span><span id="NONLOCALTYPE"></span>**NonlocalType**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
 Gilt für: Verweise
 
-Typ des Speicherorts einer Instanz. Der Wert ist <namespacetype> . Der Standardwert ist **NULL.**
+Typ des Speicherorts einer Instanz. Der Wert ist &lt; &gt; namespacetype. Der Standardwert ist **NULL.**
 
 Verwendung: Dieser Qualifizierer kann nicht mit dem **nicht lokalen** Qualifizierer verwendet werden.
 
@@ -679,7 +679,7 @@ Gibt an, ob die Eigenschaft beim Instanzupdate schreibbar ist. Dieser Qualifizie
 
 Weitere Informationen zum Abrufen von Qualifizierern finden Sie im [PowerShell-Codebeispiel Get-WmiClassMethodsAndWritableWmiProperties](https://Gallery.TechNet.Microsoft.Com/10670e14-4cf1-4ce5-99d0-fc4ca80dac2c) im TechNet-Katalog.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

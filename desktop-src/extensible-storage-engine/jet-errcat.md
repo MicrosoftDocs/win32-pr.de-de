@@ -7,12 +7,12 @@ ms:mtpsurl: https://msdn.microsoft.com/library/Hh475860(v=EXCHG.10)
 ms:contentKeyID: 37033566
 ms.date: 04/11/2016
 ms.topic: article
-ms.openlocfilehash: 951c26d0b1576d565b90f3bceeef9eb835e4be45
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: dee8dc7850cf69957c360253b942117739fe405b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122476846"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987553"
 ---
 # <a name="jet_errcat"></a>JET_ERRCAT
 
@@ -25,11 +25,11 @@ Die **JET_ERRCAT** Gruppe von Konstanten beschreibt Klassifizierungen auf höher
 
 Hinweis: Diese Dokumentation basiert auf einer vorläufigen Version der Extensible Storage Engine. Diese Informationen können geändert werden.
 
-Die **JET_ERRCAT** konstanten werden wie folgt in einer bestimmten Hierarchie von Bedingungen und Unterbedingungen angeordnet:
+Die **JET_ERRCAT** konstanten Werden wie folgt in einer bestimmten Hierarchie von Bedingungen und Unterbedingungen angeordnet:
 
 |--- Error |--- Operation(al) | |--- Fatal | |--- IO | |--- Resource | |--- Memory | |--- Quota | |--- Disk | |--- Data | |--- Corruption | |--- Inconsistent | |--- Fragmentation | |--- API |--- Usage |--- State
 
-Die folgende Tabelle enthält **die** JET_ERRCAT konstanten Und enthält eine Beschreibung und Wiederherstellungsinformationen, falls zutreffend.
+In der folgenden Tabelle sind die **JET_ERRCAT** konstanten Konstanten und ggf. eine Beschreibung und Wiederherstellungsinformationen aufgeführt.
 
 
 | <p>Konstante/Wert</p> | <p>BESCHREIBUNG</p> | <p>Wiederherstellung</p> | 
@@ -44,8 +44,8 @@ Die folgende Tabelle enthält **die** JET_ERRCAT konstanten Und enthält eine Be
 | <p>JET_errcatQuota 7</p> | <p>Bestimmte "spezielle" Ressourcen befinden sich in Pools einer bestimmten Größe, wodurch es einfacher ist, Lecks dieser Ressourcen zu erkennen.</p> | <p>Die Anwendung sollte <strong>Assert() verwenden,</strong> um diese Probleme während der Entwicklung zu erkennen. Im Einzelhandelscode sollte die Anwendung dies jedoch als Speicherfehler behandeln.</p> | 
 | <p>JET_errcatDisk 8</p> | <p>Stellt einen Fehler dar, der durch fehlenden Speicherplatz auf dem Datenträger verursacht wird.</p> | <p>Versuchen Sie es später erneut, um zu ermitteln, ob mehr Speicherplatz verfügbar ist, oder bitten Sie den Operator, Speicherplatz frei zu geben.</p> | 
 | <p>JET_errcatData 9</p> | <p>Stellt eine Kategorie der obersten Ebene für Datenfehler dar.</p> | <p>Siehe Unterkategorien.</p> | 
-| <p>JET_errcatCorruption 10</p> | <p>Stellt ein Beschädigungsproblem dar, das oft dauerhaft ohne Korrekturmaßnahmen ist.</p> | <p>Wiederherstellen aus einer Sicherung mithilfe des Reparaturvorganges der ESE-Hilfsprogramme (bei diesem Vorgang werden nur die Daten wiederhergestellt, die links oder verlustig sind). Auch wenn die Recovery(JetInit)-Methode verwendet wird, kann die Wiederherstellung durchgeführt werden, indem Datenverluste ermöglicht werden (weitere Informationen finden Sie <a href="gg269296(v=exchg.10).md">unter JET_bitReplayIgnoreLostLogs.</a></p> | 
-| <p>JET_errcatInconsistent 11</p> | <p>Stellt einen Fehler dar, bei dem sich die Datenbank- und/oder Protokolldateien in einem inkonsistenten Zustand befinden und nicht abgeglichen werden können. Dieser Fehler kann durch eine fehlgeleitete Anwendungs-/Administratorbehandlung verursacht werden.</p> | <p>Wiederherstellen aus einer Sicherung mithilfe des Reparaturvorgang für ESE-Hilfsprogramme (bei dem nur die Daten wiederhergestellt werden, die links oder verlustig sind). Im Fall des <strong>Wiederherstellungsvorgang (JetInit)</strong> kann die Wiederherstellung auch durchgeführt werden, indem Datenverluste möglich sind (weitere Informationen finden Sie <a href="gg269296(v=exchg.10).md">unter JET_bitReplayIgnoreLostLogs.</a></p> | 
+| <p>JET_errcatCorruption 10</p> | <p>Stellt ein Beschädigungsproblem dar, das oft dauerhaft ohne Korrekturmaßnahmen ist.</p> | <p>Wiederherstellen aus einer Sicherung mithilfe des Reparaturvorganges der ESE-Hilfsprogramme (bei diesem Vorgang werden nur die Daten wiederhergestellt, die links oder verlustig sind). Wenn die Recovery(JetInit)-Methode verwendet wird, kann die Wiederherstellung auch durchgeführt werden, indem Datenverluste ermöglicht <a href="gg269296(v=exchg.10).md">werden (weitere</a>Informationen finden Sie unter JET_bitReplayIgnoreLostLogs .</p> | 
+| <p>JET_errcatInconsistent 11</p> | <p>Stellt einen Fehler dar, bei dem sich die Datenbank- und/oder Protokolldateien in einem inkonsistenten Zustand befinden und nicht abgeglichen werden können. Dieser Fehler kann durch eine fehlgeleitete Anwendungs-/Administratorbehandlung verursacht werden.</p> | <p>Wiederherstellen aus einer Sicherung mithilfe des Reparaturvorgang für ESE-Hilfsprogramme (bei dem nur die Daten wiederhergestellt werden, die links oder verlustig sind). Im Fall des <strong>Wiederherstellungsvorgang (JetInit)</strong> kann die Wiederherstellung auch durchgeführt werden, indem Datenverluste ermöglicht <a href="gg269296(v=exchg.10).md">werden (weitere</a>Informationen finden Sie unter JET_bitReplayIgnoreLostLogs .</p> | 
 | <p>JET_errcatFragmentation 12</p> | <p>Stellt eine Klasse von Fehlern dar, bei der einige persistente interne Ressourcen nicht mehr verwendet werden.</p> | <p>Bei Datenbankfehlern wird das Problem durch die Offlinedefragmentierung behoben. Stellen Sie für die Protokolldateien zunächst alle angefügten Datenbanken nach einem bereinigten Herunterfahren wieder wieder auf, und löschen Sie dann alle Protokolldateien und den Prüfpunkt.</p> | 
 | <p>JET_errcatApi 13</p> | <p>Siehe Unterkategorien.</p> | <p>Siehe Unterkategorien.</p> | 
 | <p>JET_errcatUsage 14</p> | <p>Stellt einen Verwendungsfehler dar. Der Clientcode hat nicht die richtigen Argumente an die <strong>JET-API</strong> übergeben. Dieser Fehler wird bei einem Wiederholungsversuch beibehalten.</p> | <p>Clientcode sollte die <strong>Assert()-Methode</strong> verwenden, um sicherzustellen, dass diese Fehlerklasse nicht zurückgegeben wird, sodass Probleme während der Entwicklung erfasst werden können. Im Einzelhandel sollte die Anwendung den Operator über den Fehler benachrichtigen.</p> | 
@@ -58,6 +58,10 @@ Die folgende Tabelle enthält **die** JET_ERRCAT konstanten Und enthält eine Be
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows 8 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows 8 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 

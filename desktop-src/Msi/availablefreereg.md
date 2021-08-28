@@ -1,31 +1,31 @@
 ---
-description: Die availablefreereg-Eigenschaft gibt in Kilobyte den gesamten freien Speicherplatz an, der in der Registrierung nach dem Aufrufen der Aktion "depjeeregistryspace" verfügbar ist. Der maximale Wert der availablefreereg-Eigenschaft beträgt 2 Millionen Kilobyte. Diese Eigenschaft wird nur unter Windows 2000 festgelegt.
+description: Die AVAILABLEFREEREG-Eigenschaft gibt den gesamten freien Speicherplatz in kilobytes an, der in der Registrierung nach dem Aufruf der Aktion AllocateRegistrySpace verfügbar ist. Der Höchstwert der AVAILABLEFREEREG-Eigenschaft beträgt 200.000 KB. Diese Eigenschaft wird nur auf Windows 2000 festgelegt.
 ms.assetid: 95afc397-2f28-4ab9-8d95-d071c2f1f498
-title: Availablefreereg (Eigenschaft)
+title: AVAILABLEFREEREG-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 517073748195c47ee27b68adbe70d6c69f3f585b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b45508494f9ba87ec8261b38ea18f83d0b3ad9796f7390b70349211cbf244df3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650070"
 ---
-# <a name="availablefreereg-property"></a>Availablefreereg (Eigenschaft)
+# <a name="availablefreereg-property"></a>AVAILABLEFREEREG-Eigenschaft
 
-Die **availablefreereg** -Eigenschaft gibt in Kilobyte den gesamten freien Speicherplatz an, der in der Registrierung nach dem Aufrufen der [Aktion "depjeeregistryspace](allocateregistryspace-action.md)" verfügbar ist.
+Die **AVAILABLEFREEREG-Eigenschaft** gibt den gesamten freien Speicherplatz in kilobytes an, der in der Registrierung nach dem Aufruf der [Aktion AllocateRegistrySpace verfügbar ist.](allocateregistryspace-action.md)
 
-Der maximale Wert der **availablefreereg** -Eigenschaft beträgt 2 Millionen Kilobyte.
+Der Höchstwert der **AVAILABLEFREEREG-Eigenschaft** beträgt 200.000 KB.
 
-Diese Eigenschaft wird nur unter Windows 2000 festgelegt.
+Diese Eigenschaft wird nur auf Windows 2000 festgelegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **availablefreereg** -Eigenschaft muss auf einen Wert festgelegt werden, der groß genug ist, um für alle von der Installation hinzugefügten Registrierungsinformationen ausreichenden Speicherplatz in der Registrierung sicherzustellen. Der Mindestwert, der erforderlich ist, um ausreichend Speicherplatz sicherzustellen, hängt davon ab, wo sich die [Zuweisung "depasseregistryspace](allocateregistryspace-action.md) " in der Aktions Sequenz befindet, da der Installer beim Registrieren von Informationen in den Tabellen [Registry](registry-table.md), [Class](class-table.md), [selfreg](selfreg-table.md), [Extension](extension-table.md), [MIME](mime-table.md)und [Verb](verb-table.md) automatisch den Speicherplatz vergrößert. Das Installationsprogramm erhöht den gesamten Registrierungsbereich nicht auf den durch **availablefreereg** angegebenen Betrag, bis "zustellereregistryspace" in der Aktions Sequenz erreicht ist.
+Die **AVAILABLEFREEREG-Eigenschaft** muss auf einen Wert festgelegt werden, der groß genug ist, um sicherzustellen, dass in der Registrierung genügend Speicherplatz für alle Registrierungsinformationen vorhanden ist, die von der Installation hinzugefügt werden. Der Mindestwert, der erforderlich ist, um ausreichend Speicherplatz sicherzustellen, hängt davon ab, wo sich die [Aktion AllocateRegistrySpace](allocateregistryspace-action.md) in der Aktionssequenz befindet, da das Installationsprogramm den Speicherplatz bei Bedarf automatisch vergrößert, wenn Informationen in den Tabellen [Registrierung,](registry-table.md) [Klasse,](class-table.md) [SelfReg,](selfreg-table.md) [Erweiterung,](extension-table.md) [MIME](mime-table.md)und [Verb](verb-table.md) registriert werden. Das Installationsprogramm erhöht den gesamten Registrierungsspeicherplatz erst auf den von **AVAILABLEFREEREG** angegebenen Wert, wenn allocateRegistrySpace in der Aktionssequenz erreicht wurde.
 
-Wenn ' zugeregistryspace ' einer der ersten Aktionen in der Aktions Sequenz ist, sollte **availablefreereg** auf den gesamten Speicherplatz festgelegt werden, der für die Registrierungsinformationen in der Registrierungs Tabelle, der Klassen Tabelle, der TypeLib-Tabelle, der selfreg-Tabelle, der Erweiterungs Tabelle, der MIME-Tabelle, der Verb Tabelle, der Registrierung von [benutzerdefinierten Aktionen](custom-actions.md) Der Wert von **availablefreereg** ist die Gesamtmenge der von der Installation hinzugefügten Informationen und stellt in allen Fällen ausreichend Speicherplatz zur Verfügung. Dies ist auch der häufigste Fall.
+Wenn AllocateRegistrySpace eine der ersten Aktionen in der Aktionssequenz ist, sollte **AVAILABLEFREEREG** auf den Gesamtspeicherplatz festgelegt werden, der von den Registrierungsinformationen in [](custom-actions.md) der Registrierungstabelle, der Klassentabelle, der TypeLib-Tabelle, der SelfReg-Tabelle, der Erweiterungstabelle, der MIME-Tabelle, der Verbtabelle, der Registrierung benutzerdefinierter Aktionen, der Selbstregistrierung und allen anderen Registrierungsinformationen benötigt wird, die während der Installation geschrieben wurden. Der Wert von **AVAILABLEFREEREG** ist die Gesamtmenge der von der Installation hinzugefügten Informationen und stellt in allen Fällen ausreichend Speicherplatz sicher. Dies ist auch der häufigste Fall.
 
-Wenn die Aktion "zuordnet zuregistrieren" in der Aktions Sequenz nach allen [Standard Aktionen](standard-actions.md) erstellt werden kann, die Registrierungsdaten schreiben, z. b. " [schreiteregistryvalues](writeregistryvalues-action.md) " und " [RegisterClassInfo](registerclassinfo-action.md)", muss der Wert von " **availablefreereg** " nur auf den Speicherplatz festgelegt werden, der zum Registrieren von benutzerdefinierten Aktionen benötigt wird.
+Wenn die Aktion AllocateRegistrySpace in der Aktionssequenz nach allen Standardaktionen erstellt werden kann, die Registrierungsdaten schreiben, z. B. [WriteRegistryValues](writeregistryvalues-action.md) und [RegisterClassInfo,](registerclassinfo-action.md)muss der Wert von **AVAILABLEFREEREG** nur auf den Speicherplatz festgelegt werden, der zum Registrieren von benutzerdefinierten Aktionen, Registrieren von Typbibliotheken und anderen Informationen erforderlich ist, die noch nicht über die Tabellen registriert wurden. [](standard-actions.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,7 +33,7 @@ Wenn die Aktion "zuordnet zuregistrieren" in der Aktions Sequenz nach allen [Sta
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

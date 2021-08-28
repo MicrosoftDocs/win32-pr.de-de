@@ -5,29 +5,29 @@ ms.assetid: d3fd8af6-8d7e-43b8-88fd-a59cf0cef609
 keywords:
 - Windows Media Player Skins, externe Ereignisse
 - Skins, externe Ereignisse
-- Ereignisse, extern
+- events,external
 - Schreiben von Code für Skins, externe Ereignisse
-- externe Ereignisse
+- Externe Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfa09a01b709f0da51d09fc2bec70cba0a1b07d0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ac91232447e37bc3970ea8dd0ec727fb9b5daae65e647809b129df3e0347c496
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649190"
 ---
 # <a name="external-events"></a>Externe Ereignisse
 
-Wenn Benutzer auf eine Schaltfläche klicken oder eine Taste drücken, können Sie auf Ihre Eingabe mit Ereignis Handlern reagieren. Ein Ereignishandler ist ein Code Abschnitt, der immer dann ausgeführt wird, wenn das Ereignis ausgelöst wird.
+Wenn Benutzer auf eine Schaltfläche klicken oder eine Taste drücken, können Sie mit Ereignishandlern auf ihre Eingabe reagieren. Ein Ereignishandler ist ein Codeabschnitt, der immer dann ausgeführt wird, wenn das Ereignis ausgelöst wird.
 
-Die folgenden Ereignisse werden von Skin-Elementen unterstützt:
+Die folgenden Ereignisse werden von Skinelementen unterstützt:
 
 -   **Laden**
 -   **close**
 -   **Größe**
--   **Messer**
--   **Sie**
+-   **Timer**
+-   **klicken**
 -   **dblclick**
 -   **error**
 -   **mousedown**
@@ -39,9 +39,9 @@ Die folgenden Ereignisse werden von Skin-Elementen unterstützt:
 -   **keydown**
 -   **keyup**
 
-Weitere Informationen zu bestimmten Ereignissen finden Sie in der Design- [Programmier Referenz](skin-programming-reference.md) .
+Weitere Informationen zu bestimmten Ereignissen finden Sie in der [Skin-Programmierreferenz.](skin-programming-reference.md)
 
-Ein typischer externer Ereignishandler würde das Ereignis benennen und den Code definieren, der ausgeführt wird. Wenn Sie z. b. Code zum Starten von Windows Media Player erstellen möchten, wenn der Benutzer auf eine Schaltfläche klickt, würden Sie die folgende Zeile in den Schaltflächen Code einfügen.
+Ein typischer externer Ereignishandler würde das Ereignis benennen und den code definieren, der ausgeführt wird. Wenn Sie z. B. Code erstellen möchten, um Windows Media Player zu starten, wenn der Benutzer auf eine Schaltfläche klickt, würden Sie die folgende Zeile in Ihren Schaltflächencode setzen.
 
 
 ```C++
@@ -51,7 +51,7 @@ onclick = "JScript: player.URL = 'https://proseware.com/laure.wma' ; "
 
 
 
-Dadurch wird die Datei mit dem Namen "Laure. wma" wiedergegeben. Beachten Sie, dass Sie das Wort "on" bestimmten Ereignissen hinzufügen.
+Dadurch wird die Datei mit dem Namen laure.wma wiedergegeben. Beachten Sie, dass Sie das Wort "on" zu bestimmten Ereignissen hinzufügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -60,9 +60,9 @@ Dadurch wird die Datei mit dem Namen "Laure. wma" wiedergegeben. Beachten Sie, d
 [**Behandeln von Ereignissen**](handling-events.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

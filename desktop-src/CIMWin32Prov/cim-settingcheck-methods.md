@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ settingcheck-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ SettingCheck-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 6E6F170A-A5D1-49FA-B258-5D05EA3777C1
 ms.tgt_platform: multiple
-title: CIM_SettingCheck Methoden
+title: CIM_SettingCheck-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c447938946b1b63ba8272159d37cb52be5c3d196
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ccf2f6120c0567f19e76ce3c55e6e8f9d5556715d67fe3a6eaf7b17937878a7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919560"
 ---
-# <a name="cim_settingcheck-methods"></a>CIM \_ settingcheck-Methoden
+# <a name="cim_settingcheck-methods"></a>CIM \_ SettingCheck-Methoden
 
-Die [**CIM \_ settingcheck**](cim-settingcheck.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ SettingCheck-Klasse**](cim-settingcheck.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

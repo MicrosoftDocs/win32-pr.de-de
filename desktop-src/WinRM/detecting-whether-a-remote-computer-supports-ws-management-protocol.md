@@ -1,22 +1,22 @@
 ---
-title: Erkennen, ob ein Remote Computer WS-Management Protokoll unterstützt
-description: Sie können die Methoden Session. identifioder iwsmansession. identifiverwenden, um zu bestimmen, ob der Remote Computer über einen Dienst verfügt, der das WS-Management Protokoll unterstützt.
+title: Erkennen, ob ein Remotecomputer das WS-Management unterstützt
+description: Sie können die Methoden Session.Identify oder IWSManSession.Identify verwenden, um zu bestimmen, ob der Remotecomputer über einen Dienst verfügt, der das WS-Management unterstützt.
 ms.assetid: 4d11ac02-fa8b-45d7-bceb-a18f561bc928
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af82284b38b2a101c767766d44eb975ff7e1dadc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 49a7ebeb25f7f3af69a03c55499dd53a890e540c1a1ed677e7d48e5b11b82b1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119643230"
 ---
-# <a name="detecting-whether-a-remote-computer-supports-ws-management-protocol"></a>Erkennen, ob ein Remote Computer WS-Management Protokoll unterstützt
+# <a name="detecting-whether-a-remote-computer-supports-ws-management-protocol"></a>Erkennen, ob ein Remotecomputer das WS-Management unterstützt
 
-Sie können die Methoden [**Session. identifioder**](session-identify.md) [**iwsmansession. identifiverwenden**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmansession-identify) , um zu bestimmen, ob der Remote Computer über einen Dienst verfügt, der das WS-Management Protokoll unterstützt.
+Sie können die [**Methoden Session.Identify**](session-identify.md) oder [**IWSManSession.Identify**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmansession-identify) verwenden, um zu bestimmen, ob der Remotecomputer über einen Dienst verfügt, der das WS-Management unterstützt.
 
-Wenn ein WS-Management Protokolldienst auf dem Remote Computer konfiguriert ist und auf Anforderungen lauscht, kann der Dienst eine Erkennungs Anforderung mit dem folgenden XML-Code in der Kopfzeile erkennen.
+Wenn ein WS-Management-Protokolldienst auf dem Remotecomputer konfiguriert ist und auf Anforderungen lausiert, kann der Dienst eine Identify-Anforderung durch den folgenden XML-Code im Header erkennen.
 
 
 ```XML
@@ -25,17 +25,17 @@ xmlns:wsmid="https://schemas.dmtf.org/wbem/wsman/identity/1/wsmanidentity"
 
 
 
-Der WS-Management Protokolldienst, der die Anforderung empfängt, gibt die Informationen, die in der folgenden Liste enthalten sind, im Nachrichtentext zurück:
+Der WS-Management Protokolldienst, der die Anforderung empfängt, gibt die In der folgenden Liste enthaltenen Informationen im Nachrichtentext zurück:
 
 -   Die WS-Management Protokollversion. Beispiel: „https://schemas.dmtf.org/wbem/wsman/1/wsman“.
--   Der Produkthersteller, z. b. "Microsoft Corporation".
--   Die Produktversion. Wenn die Anforderung mit **wsmanflagusenoauthentication** im *Flags* -Parameter gesendet wird, werden keine Produkt Versionsinformationen zurückgegeben. Wenn die Anforderung entweder mit der Standard Authentifizierung oder mit einem anderen angegebenen Authentifizierungsmodus gesendet wird, können die Produkt Versionsinformationen zurückgegeben werden.
+-   Der Produkthersteller, z. B. "Microsoft Corporation".
+-   Die Produktversion. Wenn die Anforderung mit **WSManFlagUseNoAuthentication** im *flags-Parameter* gesendet wird, werden keine Produktversionsinformationen zurückgegeben. Wenn die Anforderung entweder mit der standardbasierten Authentifizierung oder mit einem anderen angegebenen Authentifizierungsmodus gesendet wird, können die Produktversionsinformationen zurückgegeben werden.
 
-Die Anforderung, zu ermitteln, ob der Remote Computer über einen konfigurierten und lauschenden WS-Management Protokolldienst am Anfang eines Skripts mit anderen Vorgängen ausgeführt werden kann. Dadurch wird überprüft, ob der Bereitstellungs Zielcomputer auf Weitere WS-Management Protokoll Anforderungen reagieren kann. Die Überprüfung kann auch in einem separaten Skript durchgeführt werden.
+Die Anforderung zur Erkennung, ob der Remotecomputer über einen konfigurierten und lauschenden Protokolldienst verfügtWS-Management kann am Anfang eines Skripts mit anderen Vorgängen ausgeführt werden. Dadurch wird überprüft, ob die Zielcomputer auf weitere Protokollanforderungen WS-Management können. Die Überprüfung kann auch in einem separaten Skript erfolgen.
 
-**So erkennen Sie einen WS-Management Protokolldienst**
+**So erkennen Sie WS-Management Protokolldienst**
 
-1.  Erstellen Sie ein [**WSMAN**](wsman.md) -Objekt.
+1.  Erstellen Sie ein [**WSMan-Objekt.**](wsman.md)
 
     ```VB
     Set objWsman = CreateObject("Wsman.Automation")
@@ -43,7 +43,7 @@ Die Anforderung, zu ermitteln, ob der Remote Computer über einen konfigurierten
 
     
 
-2.  Legen Sie fest, ob die Anforderung authentifiziert oder nicht authentifiziert gesendet werden soll, und legen Sie den *Flags* -Parameter entsprechend im [**WSMAN. kreatesession**](wsman-createsession.md)-aufrufen fest.
+2.  Bestimmen Sie, ob die Anforderung authentifiziert oder nicht authentifiziert gesendet werden soll, und legen Sie den *flags-Parameter* im Aufruf von [**WSMan.CreateSession entsprechend fest.**](wsman-createsession.md)
 
     ```VB
     set objSession = objWsman.CreateSession("Remote1", _
@@ -52,7 +52,7 @@ Die Anforderung, zu ermitteln, ob der Remote Computer über einen konfigurierten
 
     
 
-3.  " [**Session. Identifi"**](session-identify.md)aufzurufen.
+3.  Rufen Sie [**Session.Identify auf.**](session-identify.md)
 
     ```VB
     objSession.Identify
@@ -62,7 +62,7 @@ Die Anforderung, zu ermitteln, ob der Remote Computer über einen konfigurierten
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript-Codebeispiel sendet eine nicht authentifizierte Identifizierungs Anforderung an den Remote Computer mit dem Namen "remote1" in derselben Domäne.
+Im folgenden VBScript-Codebeispiel wird eine nicht authentifizierte Identify-Anforderung an den Remotecomputer mit dem Namen "Remote1" in derselben Domäne sendet.
 
 
 ```VB
@@ -74,7 +74,7 @@ WScript.Echo objSession.Identify
 
 
 
-Die folgende Antwort zeigt den XML-Code, der vom Remote Computer zurückgegeben wurde. Die WS-Management-Protokollversion (" https://schemas.dmtf.org/wbem/wsman/1/wsman.xsd ") und der Betriebssystemhersteller ("Microsoft Corporation") werden in der zurückgegebenen XML-Datei angegeben. Da die Nachricht nicht authentifiziert gesendet wird, wird die Produktversion nicht vom Windows-Remoteverwaltung-Dienst zurückgegeben.
+Die folgende Antwort zeigt den vom Remotecomputer zurückgegebenen XML-Code. Die WS-Management Protokollversion (" ") und der Betriebssystemanbieter https://schemas.dmtf.org/wbem/wsman/1/wsman.xsd ("Microsoft Corporation") werden im zurückgegebenen XML-Code angegeben. Da die Nachricht nicht authentifiziert gesendet wird, wird die Produktversion nicht vom Remoteverwaltungsdienst Windows zurückgegeben.
 
 
 ```XML
@@ -89,7 +89,7 @@ Die folgende Antwort zeigt den XML-Code, der vom Remote Computer zurückgegeben 
 
 
 
-Im folgenden VBScript-Codebeispiel wird eine authentifizierte Identifizierungs Anforderung an den Remote Computer gesendet.
+Im folgenden VBScript-Codebeispiel wird eine authentifizierte Identify-Anforderung an den Remotecomputer sendet.
 
 
 ```VB
@@ -101,7 +101,7 @@ WScript.Echo objSession.Identify
 
 
 
-Da die Anforderung mit der Authentifizierung gesendet wurde, werden die Versionsinformationen zurückgegeben.
+Da die Anforderung mit Authentifizierung gesendet wurde, werden die Versionsinformationen zurückgegeben.
 
 
 ```XML
@@ -120,18 +120,18 @@ Da die Anforderung mit der Authentifizierung gesendet wurde, werden die Versions
 
 <dl> <dt>
 
-[Informationen zu Windows-Remoteverwaltung](about-windows-remote-management.md)
+[Informationen Windows Remoteverwaltung](about-windows-remote-management.md)
 </dt> <dt>
 
-[Verwenden von Windows-Remoteverwaltung](using-windows-remote-management.md)
+[Verwenden Windows Remoteverwaltung](using-windows-remote-management.md)
 </dt> <dt>
 
-[Windows-Remoteverwaltung Referenz](windows-remote-management-reference.md)
+[Windows Remoteverwaltungsreferenz](windows-remote-management-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

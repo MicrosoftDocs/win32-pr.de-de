@@ -1,7 +1,7 @@
 ---
-description: Ruft Flags ab, die Steuern, wie iinkanalyzer eine Handschrift Analyse ausführt.
+description: Ruft Flags ab, die steuern, wie der IInkAnalyzer die Ink-Analyse durchführt.
 ms.assetid: 982cb9cd-2d73-4064-9a6e-fe123adf0fb6
-title: 'Iinkanalyzer:: getanalysismodes-Methode (iacom. h)'
+title: IInkAnalyzer::GetAnalysisModes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: d03ec255b10dd607889768795b00f5b2aff4dc11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4fd83c0991c0740b1341c490e08b19d143eb110f2714bfbbe82aa3a962106bc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118043680"
 ---
-# <a name="iinkanalyzergetanalysismodes-method"></a>Iinkanalyzer:: getanalysismodes-Methode
+# <a name="iinkanalyzergetanalysismodes-method"></a>IInkAnalyzer::GetAnalysisModes-Methode
 
-Ruft Flags ab, die Steuern, wie [**iinkanalyzer**](iinkanalyzer.md) eine Handschrift Analyse ausführt.
+Ruft Flags ab, die steuern, wie [**der IInkAnalyzer**](iinkanalyzer.md) die Ink-Analyse durchführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT GetAnalysisModes(
 
 <dl> <dt>
 
-*panalysismode* \[ vorgenommen\]
+*pAnalysisMode* \[ out\]
 </dt> <dd>
 
-Eine bitweise Kombination der [**AnalysisModes**](analysismodes.md) -Enumerationswerte.
+Eine bitweise Kombination der [**AnalysisModes-Enumerationswerte.**](analysismodes.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -67,22 +67,22 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**AnalysisModes**](analysismodes.md)
+[**Analysismodes**](analysismodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: abtanalysismodes-Methode**](iinkanalyzer-setanalysismodes.md)
+[**IInkAnalyzer::SetAnalysisModes-Methode**](iinkanalyzer-setanalysismodes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

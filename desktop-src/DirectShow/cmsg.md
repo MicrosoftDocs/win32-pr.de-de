@@ -1,7 +1,7 @@
 ---
-description: Die cmsgthread-Klasse bietet Unterstützung für einen Arbeits Thread, an den Anforderungen asynchron gesendet werden können, anstatt direkt gesendet zu werden.
+description: Die CMsgThread-Klasse bietet Unterstützung für einen Arbeitsthread, an den Anforderungen asynchron anstatt direkt gesendet werden können.
 ms.assetid: 1cf159c9-80d0-4e3b-88d8-2ba4cd18e768
-title: CMSG-Klasse
+title: CMsg-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,27 +12,27 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: a57a841b9c36a21895099c931acbf18a1e01ea0f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 36d5110cbeda8cbf19c97c3f83ca1431a2cd28c5a07fa70c09e51877e0906a0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016248"
 ---
-# <a name="cmsg-class"></a>CMSG-Klasse
+# <a name="cmsg-class"></a>CMsg-Klasse
 
-Die [**cmsgthread**](cmsgthread.md) -Klasse bietet Unterstützung für einen Arbeits Thread, an den Anforderungen asynchron gesendet werden können, anstatt direkt gesendet zu werden. Die [**camthread**](camthread.md) -Klasse stellt einen Arbeits Thread bereit, an den einzelne Anforderungen gesendet werden können. Nur ein Client kann eine Anforderung gleichzeitig ausführen, und der Client wird blockiert, bis der Arbeits Thread die Anforderung abgeschlossen hat. Im Gegensatz dazu stellt die **cmsgthread** -Klasse einen Arbeits Thread bereit, an den eine beliebige Anzahl von Anforderungen gesendet werden kann. Die Anforderungen (in Form eines- `CMsg` Objekts) werden in der Reihenfolge asynchron in die Warteschlange eingereiht und ausgeführt. Es wird keine Antwort oder kein Rückgabewert empfangen.
+Die [**CMsgThread-Klasse**](cmsgthread.md) bietet Unterstützung für einen Arbeitsthread, an den Anforderungen asynchron anstatt direkt gesendet werden können. Die [**KLASSECAMThread**](camthread.md) stellt einen Arbeitsthread zur Verfügung, an den einzelne Anforderungen gesendet werden können. Nur ein Client kann gleichzeitig eine Anforderung senden, und der Client wird blockiert, bis der Arbeitsthread die Anforderung abgeschlossen hat. Im Gegensatz dazu stellt die **CMsgThread-Klasse** einen Arbeitsthread zur Verfügung, an den eine beliebige Anzahl von Anforderungen gesendet werden kann. Die Anforderungen (in Form eines -Objekts) werden asynchron in die Warteschlange gestellt `CMsg` und ausgeführt. Es wird kein Antwort- oder Rückgabewert empfangen.
 
 
 
-| Datenelemente              | BESCHREIBUNG                                                                                                                                                                       |
+| Datenelemente              | Beschreibung                                                                                                                                                                       |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dwFlags                   | Markieren Sie den Parameter für den Anforderungs Code.                                                                                                                                               |
-| lpparam                   | Daten, die vom Arbeits Thread als Parameter oder Rückgabewerte benötigt werden. Diese Daten sollten nicht Stapel basiert sein, da nach Abschluss des Warteschlangen Vorgangs einige Zeit darauf verwiesen wird. |
-| Peer Event                    | Ereignis Objekt, das ein Arbeits Thread signalisieren kann, um den Abschluss des Vorgangs anzugeben.                                                                                         |
-| Umschlag                      | Anforderungs Code, der vom Client der Thread Klasse definiert und von der überschriebenen Arbeits Thread Funktion verstanden wird.                                                           |
-| Elementfunktionen          | BESCHREIBUNG                                                                                                                                                                       |
-| [**CMSG**](cmsg-cmsg.md) | Erstellt ein [**CMSG**](cmsg-cmsg.md) -Objekt.                                                                                                                                    |
+| dwFlags                   | Flagparameter für den Anforderungscode.                                                                                                                                               |
+| lpParam                   | Daten, die vom Arbeitsthread als Parameter oder Rückgabewerte benötigt werden. Diese Daten sollten nicht stapelbasierte Daten sein, da nach Abschluss des Warteschlangenvorgang einige Zeit darauf verwiesen wird. |
+| pEvent                    | Ereignisobjekt, das ein Arbeitsthread signalisieren kann, um den Abschluss des Vorgangs anzugeben.                                                                                         |
+| uMsg                      | Anforderungscode, der vom Client der Threadklasse definiert und von der überschriebenen Workerthreadfunktion verstanden wird.                                                           |
+| Elementfunktionen          | Beschreibung                                                                                                                                                                       |
+| [**CMsg**](cmsg-cmsg.md) | Erstellt ein [**CMsg-Objekt.**](cmsg-cmsg.md)                                                                                                                                    |
 
 
 

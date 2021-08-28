@@ -4,10 +4,10 @@
     - name: Informationen zu WMI
       href: about-wmi.md
       items:
-        - name: Neues in WMI
+        - name: Neuerungen in WMI
           href: what-s-new-in-wmi.md
           items:
-            - name: Neues in Windows 7
+            - name: Neuerungen in Windows 7
               href: what-s-new-in-windows-7.md
             - name: Neuerungen in Windows Vista
               href: what-s-new-in-windows-vista.md
@@ -23,7 +23,7 @@
           items:
             - name: CIM-Schemakompatibilität
               href: cim-schema-compatibility.md
-        - name: Namespaceübergreifende Zuordnungsdurchlauf
+        - name: Namespaceübergreifender Zuordnungsdurchlauf
           href: cross-namespace-association-traversal.md
         - name: MOF-Datei (Managed Object Format)
           href: managed-object-format--mof-.md
@@ -45,7 +45,7 @@
               href: cim-datetime.md
             - name: Intervallformat
               href: interval-format.md
-        - name: Skripterstellung für den Zugriff auf WMI
+        - name: Skriptzugriff auf WMI
           href: scripting-access-to-wmi.md
         - name: Weitere Informationen
           href: further-information.md
@@ -62,7 +62,7 @@
                   href: connecting-to-wmi-remotely-starting-with-vista.md
                 - name: Sichern einer WMI-Remoteverbindung
                   href: securing-a-remote-wmi-connection.md
-                - name: Problembehandlung bei einer WMI-Remoteverbindung
+                - name: Problembehandlung für eine Remote-WMI-Verbindung
                   href: troubleshooting-a-remote-wmi-connection.md
                 - name: Einrichten eines festen Ports für WMI
                   href: setting-up-a-fixed-port-for-wmi.md
@@ -70,11 +70,11 @@
                   href: connecting-to-a-3rd-computer-delegation.md
                 - name: Herstellen einer Remoteverbindung mit WMI mit VBScript
                   href: connecting-to-wmi-remotely-with-vbscript.md
-                - name: Herstellen einer Remoteverbindung mit WMI mitHilfe von PowerShell
+                - name: Herstellen einer Remoteverbindung mit WMI mit PowerShell
                   href: connecting-to-wmi-on-a-remote-computer-by-using-powershell.md
                 - name: 'Herstellen einer Remoteverbindung mit WMI mit C #'
                   href: connecting-to-wmi-remotely-with-c-.md
-                - name: Remote erstellen von Prozessen mithilfe von WMI
+                - name: Remoteerstellung von Prozessen mithilfe von WMI
                   href: creating-processes-remotely.md
             - name: WMI-Aufgaben für Skripts und Anwendungen
               href: wmi-tasks-for-scripts-and-applications.md
@@ -83,11 +83,11 @@
                   href: wmi-tasks--accounts-and-domains.md
                 - name: 'WMI-Aufgaben: Computerhardware'
                   href: wmi-tasks--computer-hardware.md
-                - name: 'WMI-Aufgaben: Computersoftware'
+                - name: 'WMI Tasks: Computersoftware'
                   href: wmi-tasks--computer-software.md
                 - name: 'WMI-Aufgaben: Herstellen einer Verbindung mit dem WMI-Dienst'
                   href: wmi-tasks--connecting-to-the-wmi-service.md
-                - name: 'WMI-Aufgaben: Datums- und Zeitangaben'
+                - name: 'WMI-Aufgaben: Datums- und Uhrzeitangaben'
                   href: wmi-tasks--dates-and-times.md
                 - name: 'WMI-Tasks: Desktopverwaltung '
                   href: wmi-tasks--desktop-management.md
@@ -109,11 +109,11 @@
                   href: wmi-tasks--processes.md
                 - name: 'WMI-Aufgaben: Registrierung'
                   href: wmi-tasks--registry.md
-                - name: 'WMI-Tasks: Geplante Aufgaben'
+                - name: 'WMI-Aufgaben: Geplante Aufgaben'
                   href: wmi-tasks--scheduled-tasks.md
                 - name: 'WMI-Aufgaben: Dienste'
                   href: wmi-tasks--services.md
-            - name: Erstellen einer WMI-Anwendung oder eines Skripts
+            - name: Erstellen einer WMI-Anwendung oder eines WMI-Skripts
               href: creating-a-wmi-application-or-script.md
               items:
                 - name: Erstellen einer WMI-Anwendung mit C++
@@ -127,7 +127,7 @@
                       href: setting-the-security-levels-on-a-wmi-connection.md
                     - name: Bereinigen und Herunterfahren einer WMI-Anwendung
                       href: cleaning-up-and-shutting-down-a-wmi-application.md
-                - name: Beispiele für WMI-C++-Anwendungen
+                - name: WMI C++-Anwendungsbeispiele
                   href: wmi-c---application-examples.md
                   items:
                     - name: 'Beispiel: Aufrufen einer Anbietermethode'
@@ -177,31 +177,31 @@
             - name: Empfangen eines WMI-Ereignisses
               href: receiving-a-wmi-event.md
               items:
-                - name: Bestimmen des Zu empfangenden Ereignistyps
+                - name: Bestimmen des Typs des zu empfangenden Ereignisses
                   href: determining-the-type-of-event-to-receive.md
                 - name: Empfangen von Ereignissen für die Dauer Ihrer Anwendung
                   href: receiving-events-for-the-duration-of-your-application.md
                   items:
-                    - name: Empfangen von asynchronen Ereignisbenachrichtigungen
+                    - name: Empfangen asynchroner Ereignisbenachrichtigungen
                       href: receiving-asynchronous-event-notifications.md
-                    - name: Empfangen synchroner und halbsynchroner Ereignisbenachrichtigungen
+                    - name: Empfangen von synchronen und semisynchronen Ereignisbenachrichtigungen
                       href: receiving-synchronous-and-semisynchronous-event-notifications.md
-                - name: Jederzeites Empfangen von Ereignissen
+                - name: Empfangen von Ereignissen zu jedem Zeitpunkt
                   href: receiving-events-at-all-times.md
                   items:
                     - name: Implementieren eines physischen Consumers
                       href: implementing-a-physical-consumer.md
-                    - name: Erstellen einer neuen permanenten Ereignisverbraucherklasse
+                    - name: Creating a New Permanent Event Consumer Class
                       href: creating-a-new-permanent-event-consumer-class.md
                     - name: Erstellen eines logischen Consumers
                       href: creating-a-logical-consumer.md
                     - name: Erstellen eines Ereignisfilters
                       href: creating-an-event-filter.md
-                    - name: Binden eines Ereignisfilters mit einem logischen Consumer
+                    - name: Binden eines Ereignisfilters an einen logischen Consumer
                       href: binding-an-event-filter-with-a-logical-consumer.md
-                    - name: Implementieren namespaceübergreifender permanenter Ereignisabonnements
+                    - name: Implementieren namespaceübergreifender Abonnements für permanente Ereignisse
                       href: implementing-cross-namespace-permanent-event-subscriptions.md
-                - name: Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern
+                - name: Überwachen und Reagieren auf Ereignisse mit Standard-Consumern
                   href: monitoring-and-responding-to-events-with-standard-consumers.md
                   items:
                     - name: Ausführen eines Skripts basierend auf einem Ereignis
@@ -216,12 +216,12 @@
                       href: running-a-program-from-the-command-line-based-on-an-event.md
                     - name: Verwenden von Standardzeichenfolgenvorlagen
                       href: using-standard-string-templates.md
-                - name: Empfangen eines Zeit- oder Wiederholungsereignis
+                - name: Empfangen eines Zeit- oder Wiederholungsereignisses
                   href: receiving-a-timed-or-repeating-event.md
                   items:
-                    - name: Erstellen eines Timer-Ereignisses mit Win32_LocalTime oder Win32_UTCTime
+                    - name: Erstellen eines Timerereignisses mit Win32_LocalTime oder Win32_UTCTime
                       href: creating-a-timer-event-with-win32-localtime-or-win32-utctime.md
-                    - name: Erstellen eines Timer-Ereignisses mit __TimerInstruction
+                    - name: Erstellen eines Timerereignisses mit __TimerInstruction
                       href: creating-a-timer-event-with---timerinstruction.md
                 - name: 'Beispiel: Gleichzeitiges Überwachen mehrerer Ereignisabfragen'
                   href: example-monitoring-multiple-event-queries-simultaneously.md
@@ -274,7 +274,7 @@
             - name: Zugreifen auf andere Betriebssystemfeatures mit WMI
               href: accessing-other-operating-system-features-with-wmi.md
               items:
-                - name: Zugreifen auf Daten von Gerätetreibern
+                - name: Zugreifen auf Daten über Gerätetreiber
                   href: accessing-data-from-device-drivers.md
                 - name: Zugreifen auf Active Directory
                   href: accessing-active-directory.md
@@ -300,7 +300,7 @@
                   items:
                     - name: Einrichten der WMI-SNMP-Umgebung
                       href: setting-up-the-wmi-snmp-environment.md
-                    - name: Lesen von und Schreiben auf SNMP-Geräten
+                    - name: Lesen von und Schreiben auf SNMP-Geräte
                       href: reading-from-and-writing-to-snmp-devices.md
                       items:
                         - name: WMI-SNMP-Klassenkorrelation
@@ -312,7 +312,7 @@
                           href: choosing-between-snmp-event-providers.md
                         - name: Empfangen von SNMP-Ereignissen
                           href: receiving-snmp-events.md
-                - name: Erstellen Active Server Pages für WMI
+                - name: Erstellen von Active Server Pages für WMI
                   href: creating-active-server-pages-for-wmi.md
             - name: Zugreifen auf Daten im Interop-Namespace
               href: accessing-data-in-the-interop-namespace.md
@@ -358,11 +358,11 @@
                 - name: Aufrufen einer WMI-Methode
                   href: calling-a-method.md
                   items:
-                    - name: Semisynchroner Aufruf mit C++
+                    - name: Erstellen eines semisynchronen Aufrufs mit C++
                       href: making-a-semisynchronous-call-with-c--.md
-                    - name: Semisynchroner Aufruf mit VBScript
+                    - name: Erstellen eines semisynchronen Aufrufs mit VBScript
                       href: making-a-semisynchronous-call-with-vbscript.md
-                    - name: Ausführen eines asynchronen Aufrufs mit C++
+                    - name: Erstellen eines asynchronen Aufrufs mit C++
                       href: making-an-asynchronous-call-with-c--.md
                     - name: Ausführen eines asynchronen WMI-Skriptaufrufs
                       href: making-an-asynchronous-call-with-vbscript.md
@@ -372,19 +372,19 @@
                       href: calling-a-provider-method.md
                     - name: Erstellen von Parameterobjekten in C++
                       href: creating-parameters-objects-in-c--.md
-                    - name: Erstellen von InParameters-Objekten und Analyse von OutParameters-Objekten
+                    - name: Erstellen von InParameters-Objekten und Analysieren von OutParameters-Objekten
                       href: constructing-inparameters-objects-and-parsing-outparameters-objects.md
                       items:
                         - name: Erstellen von InParameters-Objekten
                           href: constructing-inparameters-objects.md
-                        - name: Analyse von OutParameters-Objekten
+                        - name: Analysieren von OutParameters-Objekten
                           href: parsing-outparameters-objects.md
                 - name: Zugreifen auf eine WMI-Sammlung
                   href: accessing-a-collection.md
                   items:
-                    - name: Entfernen eines einzelnen Elements aus einer WMI-Sammlung
+                    - name: Entfernen eines einzelnen Elements aus einer WMI-Auflistung
                       href: removing-a-single-item-from-a-collection.md
-                    - name: Entfernen mehrerer Elemente aus einer WMI-Sammlung
+                    - name: Entfernen mehrerer Elemente aus einer WMI-Auflistung
                       href: removing-multiple-items-from-a-collection.md
             - name: Verknüpfen von Klassen
               href: linking-classes-together.md
@@ -440,10 +440,10 @@
             - name: Entwickeln eines WMI-Anbieters
               href: developing-a-wmi-provider.md
               items:
-                - name: Entwerfen Managed Object Format -Klassen (MOF)
+                - name: Entwerfen von MOF-Klassen (Managed Object Format)
                   href: designing-managed-object-format--mof--classes.md
                   items:
-                    - name: Erstellen von Hierarchien in WMI
+                    - name: Erstellen von Hierarchien innerhalb von WMI
                       href: creating-hierarchies-within-wmi.md
                       items:
                         - name: Erstellen eines untergeordneten Namespace mit MOF-Code
@@ -907,7 +907,7 @@
         - name: WMI-Anbieter
           href: wmi-providers.md
           items:
-            - name: Formatierte Leistung Datenanbieter
+            - name: Formatierte Datenanbieter
               href: formatted-performance-data-provider.md
               items:
                 - name: Abrufen der Dokumentation für Unformatierte und formatierte Leistungsdatenobjekte
@@ -925,6 +925,14 @@
               href: wmiperfclass-provider.md
             - name: WmiPerfInst-Anbieter
               href: wmiperfinst-provider.md
+            - name: Anwendungsinventurklassen
+              href: applicationanddeviceinventory-portal.md
+            - name: Win32_InstalledWin32Program-Klasse
+              href: win32-installedwin32program.md
+            - name: Win32_InstalledStoreProgram-Klasse
+              href: win32-installedstoreprogram.md
+            - name: Win32_InstalledProgramFramework-Klasse
+              href: win32-installedprogramframework.md
         - name: C++-Klassen des WMI-Anbieterframeworks
           href: wmi-c-classes.md
           items:
@@ -1052,7 +1060,7 @@
                           items:
                             - name: 'SetWBEMINT64(LPCWSTR, constLONGLONG&)-Methode'
                               href: /windows/desktop/api/instance/nf-instance-cinstance-setwbemint64(lpcwstr_constlonglong)
-                            - name: 'SetWBEMINT64(LPCWSTR, constWBEMINT64&)-Methode'
+                            - name: 'SetWBEMINT64(LPCWSTR, constWBEMINT64&)'
                               href: /windows/desktop/api/instance/nf-instance-cinstance-setwbemint64(lpcwstr_constulonglong)
                             - name: 'SetWBEMINT64(LPCWSTR, constULONGLONG&)-Methode'
                               href: /windows/desktop/api/instance/nf-instance-cinstance-setwbemint64(lpcwstr_constulonglong)
@@ -1234,7 +1242,7 @@
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-comparenocase
                         - name: Leere Methode
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-empty
-                        - name: Suchen von Methoden
+                        - name: Suchen nach Methoden
                           href: chstring-find.md
                           items:
                             - name: Find(LPCWSTR)-Methode
@@ -1243,7 +1251,7 @@
                               href: /windows/desktop/api/chstring/nf-chstring-chstring-find(lpcwstr)
                         - name: FindOneOf-Methode
                           href: /windows/win32/api/chstring/nf-chstring-chstring-findoneof
-                        - name: Formatmethoden
+                        - name: Formatieren von Methoden
                           href: chstring-format.md
                           items:
                             - name: 'Format(LPCWSTR, ) -Methode'
@@ -1275,7 +1283,7 @@
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-getlength
                         - name: IsEmpty-Methode
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-isempty
-                        - name: Linke Methode
+                        - name: Left-Methode
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-left
                         - name: LoadStringW-Methode
                           href: /windows/desktop/api/ChString/nf-chstring-chstring-loadstringw(uint)
@@ -1304,27 +1312,27 @@
                           href: chstring--operator-equal.md
                         - name: 'operator==(constCHString&, constCHString&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385641(v=vs.85)
-                        - name: 'operator==(constCHString&, constLPCWSTR&) method'
+                        - name: 'operator==(constCHString&, constLPCWSTR&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385645(v=vs.85)
-                        - name: 'operator>(constCHString&, constCHString&) method'
+                        - name: 'operator>(constCHString&, constCHString&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385665(v=vs.85)
-                        - name: 'operator>(constCHString&, constLPCWSTR&) method'
+                        - name: 'operator>(constCHString&, constLPCWSTR&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385672(v=vs.85)
-                        - name: 'operator>=(constCHString&, constCHString&) method'
+                        - name: 'operator>=(constCHString&, constCHString&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385652(v=vs.85)
-                        - name: 'operator>=(constCHString&, constLPCWSTR&) method'
+                        - name: 'operator>=(constCHString&, constLPCWSTR&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385661(v=vs.85)
-                        - name: 'operator<(constCHString&, constCHString&) method'
+                        - name: 'operator<(constCHString&, constCHString&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385689(v=vs.85)
-                        - name: 'operator<(constCHString&, constLPCWSTR&) method'
+                        - name: 'operator<(constCHString&, constLPCWSTR&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385695(v=vs.85)
                         - name: 'operator<=(constCHString&, constCHString&) method'
                           href: /previous-versions/windows/desktop/legacy/aa385676(v=vs.85)
                         - name: 'operator<=(constCHString&, constLPCWSTR&) method'
                           href: /previous-versions/windows/desktop/legacy/aa385683(v=vs.85)
-                        - name: 'operator!=(constCHString&, constCHString&)-Methode'
+                        - name: 'operator!=(constCHString&, constCHString&) method'
                           href: /previous-versions/windows/desktop/legacy/aa385704(v=vs.85)
-                        - name: 'operator!=(constCHString&, constLPCWSTR&) method'
+                        - name: 'operator!=(constCHString&, constLPCWSTR&)-Methode'
                           href: /previous-versions/windows/desktop/legacy/aa385763(v=vs.85)
                         - name: Operator LPCWSTR-Methode
                           href: /windows/desktop/api/chstring/nf-chstring-chstring-operatorlpcwstr
@@ -1514,7 +1522,7 @@
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtime-operator-assign(constfiletime_)
                             - name: operator=(conststruct tm&)-Methode
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtime-operator-assign(consttm_)
-                            - name: operator=(constSYSTEMTIME&) -Methode
+                            - name: operator=(constSYSTEMTIME&)-Methode
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtime-operator-assign(constsystemtime_)
                             - name: operator=(consttime_t&)-Methode
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtime-operator-assign(consttime_t_)
@@ -1550,7 +1558,7 @@
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtimespan-wbemtimespan(constbstr)
                             - name: WBEMTimeSpan(BSTR)-Konstruktor
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtimespan-wbemtimespan(constbstr)
-                            - name: 'WBEMTimeSpan(int, int, int, int, int, int, int) -Konstruktor'
+                            - name: 'WBEMTimeSpan(int, int, int, int, int, int, int, int) constructor'
                               href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtimespan-wbemtimespan(int_int_int_int_int_int_int)
                         - name: Clear-Methode
                           href: /windows/desktop/api/WbemTime/nf-wbemtime-wbemtimespan-clear
@@ -1572,15 +1580,15 @@
                           href: /windows/win32/api/wbemtime/nf-wbemtime-wbemtimespan-operator-sub-assign
                         - name: operator == -Methode
                           href: /windows/win32/api/wbemtime/nf-wbemtime-wbemtimespan-operator-equal-equal-to
-                        - name: Operator !=-Methode
+                        - name: operator !=-Methode
                           href: /windows/win32/api/wbemtime/nf-wbemtime-wbemtimespan-operator-not-equal-to
                         - name: operator >-Methode
                           href: /windows/win32/api/wbemtime/nf-wbemtime-wbemtimespan-operator-greater-than
-                        - name: Operator >= Methode
+                        - name: operator >= method
                           href: /windows/win32/api/wbemtime/nf-wbemtime-wbemtimespan-operator-greater-than-equal-to
                         - name: operator <-Methode
                           href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtimespan-operator-less-than
-                        - name: Operator <= Methode
+                        - name: operator <= method
                           href: /windows/desktop/api/wbemtime/nf-wbemtime-wbemtimespan-operator-less-than-equal-to
         - name: COM-API für WMI
           href: com-api-for-wmi.md
@@ -1765,7 +1773,7 @@
                       href: /windows/desktop/api/WbemCli/nf-wbemcli-iwbemcontext-next
                     - name: SetValue-Methode
                       href: /windows/desktop/api/WbemCli/nf-wbemcli-iwbemcontext-setvalue
-            - name: IWbemDecoupledBasicEventProvider
+            - name: IWbemDeabapledBasicEventProvider
               href: /windows/desktop/api/Wbemprov/nn-wbemprov-iwbemdecoupledbasiceventprovider
               items:
                 - name: IWbemDepledBasicEventProvider-Methoden
@@ -2217,7 +2225,7 @@
               href: scripting-api-object-model.md
             - name: Dokumentkonventionen für die Skripterstellungs-API
               href: document-conventions-for-the-scripting-api.md
-            - name: Skripterstellungs-API-Konstanten
+            - name: Skripterstellung für API-Konstanten
               href: scripting-api-constants.md
               items:
                 - name: WbemAuthenticationLevelEnum
@@ -2313,7 +2321,7 @@
                     - name: SWbemEventSource-Eigenschaften
                       href: swbemeventsource-properties.md
                       items:
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemeventsource-security-.md
                 - name: SWbemLastError
                   href: swbemlasterror.md
@@ -2345,7 +2353,7 @@
                     - name: SWbemLocator-Eigenschaften
                       href: swbemlocator-properties.md
                       items:
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemlocator-security-.md
                 - name: SWbemMethod
                   href: swbemmethod.md
@@ -2454,7 +2462,7 @@
                     - name: SWbemObject-Eigenschaften
                       href: swbemobject-properties.md
                       items:
-                        - name: Derivation_-Eigenschaft
+                        - name: Derivation_ -Eigenschaft
                           href: swbemobject-derivation-.md
                         - name: Methods_-Eigenschaft
                           href: swbemobject-methods-.md
@@ -2464,7 +2472,7 @@
                           href: swbemobject-properties-.md
                         - name: Qualifiers_-Eigenschaft
                           href: swbemobject-qualifiers-.md
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemobject-security-.md
                 - name: SWbemObjectEx
                   href: swbemobjectex.md
@@ -2479,7 +2487,7 @@
                     - name: SWbemObjectEx-Eigenschaften
                       href: swbemobjectex-properties.md
                       items:
-                        - name: SystemProperties_ -Eigenschaft
+                        - name: SystemProperties_-Eigenschaft
                           href: swbemobjectex-systemproperties-.md
                 - name: SWbemObjectPath
                   href: swbemobjectpath.md
@@ -2514,7 +2522,7 @@
                           href: swbemobjectpath-path.md
                         - name: Relpath-Eigenschaft
                           href: swbemobjectpath-relpath.md
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemobjectpath-security-.md
                         - name: Server (Eigenschaft)
                           href: swbemobjectpath-server.md
@@ -2535,7 +2543,7 @@
                       items:
                         - name: Count-Eigenschaft
                           href: swbemobjectset-count.md
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemobjectset-security-.md
                 - name: SWbemPrivilege
                   href: swbemprivilege.md
@@ -2742,14 +2750,14 @@
                           href: swbemservices-referencesto.md
                         - name: ReferencesToAsync-Methode
                           href: swbemservices-referencestoasync.md
-                        - name: SubclassesOf-Methode
+                        - name: UnterklassenOf-Methode
                           href: swbemservices-subclassesof.md
-                        - name: SubclassesOfAsync-Methode
+                        - name: UnterklassenOfAsync-Methode
                           href: swbemservices-subclassesofasync.md
                     - name: SWbemServices-Eigenschaften
                       href: swbemservices-properties.md
                       items:
-                        - name: Security_-Eigenschaft
+                        - name: Security_ -Eigenschaft
                           href: swbemservices-security-.md
                 - name: SWbemServicesEx
                   href: swbemservicesex.md
@@ -2799,7 +2807,7 @@
                   href: cim-system-properties-for-mib-objects.md
                 - name: CIM-Klassenqualifizierer für MIB-Objekte
                   href: cim-class-qualifiers-for-mib-objects.md
-                - name: CIM-Eigenschaftsqualifizierer für MIB-Objekte
+                - name: CIM-Eigenschaftenqualifizierer für MIB-Objekte
                   href: cim-property-qualifiers-for-mib-objects.md
                 - name: SNMP-Sammlungen
                   href: snmp-collections.md
@@ -2866,7 +2874,7 @@
               items:
                 - name: ASSOCIATORS OF-Anweisung
                   href: associators-of-statement.md
-                - name: __CLASS-Bezeichner
+                - name: __CLASS Bezeichner
                   href: '--class-identifier.md'
                 - name: GROUP-Klausel
                   href: group-clause.md
@@ -2891,7 +2899,7 @@
         - name: WMI-Protokolldateien
           href: wmi-log-files.md
           items:
-            - name: WMI-Anbieterprotokolldateien
+            - name: Protokolldateien des WMI-Anbieters
               href: wmi-provider-log-files.md
         - name: WMI-Befehlszeilentools
           href: wmi-command-line-tools.md
@@ -2971,13 +2979,13 @@
                   href: numbers.md
                 - name: OBJECT
                   href: object.md
-                - name: Literatur
+                - name: Referenzen
                   href: references.md
                 - name: Zeichenfolgen
                   href: strings.md
                 - name: ValueMap- und Wertqualifizierer
                   href: value-map.md
-                - name: Leere
+                - name: LEERE
                   href: void.md
                 - name: Präprozessorbefehle
                   href: preprocessor-commands.md
@@ -3120,7 +3128,7 @@
     - name: WMI-Glossar
       href: wmi-glossary.md
       items:
-        - name: Ein
+        - name: A
           href: gloss-a.md
         - name: C
           href: gloss-c.md
@@ -3156,7 +3164,7 @@
           href: gloss-t.md
         - name: W
           href: gloss-w.md
-    - name: Verwaltete Verwaltungsinfrastruktur-API
+    - name: Verwaltete API der Verwaltungsinfrastruktur
       items:
         - name: CimInstance.SetCimSessionComputerName-Methode
           href: mi-managed-api\microsoft.management.infrastructure.ciminstance.setcimsessioncomputername.md
@@ -3180,7 +3188,7 @@
           href: mi-managed-api\microsoft.management.infrastructure.serialization.cimmofdeserializer.deserializeinstances_byte_uint2.md
         - name: 'CimMofDeserializer.DeserializeInstances-Methode (Byte[], UInt32, IEnumerable(CimClass), OnClassNeeded, GetIncludedFileContent)'
           href: mi-managed-api\microsoft.management.infrastructure.serialization.cimmofdeserializer.deserializeinstances_byte_uint3.md
-        - name: CimMofDeserializer.SchemaValidationOption (Eigenschaft)
+        - name: CimMofDeserializer.SchemaValidationOption-Eigenschaft
           href: mi-managed-api\microsoft.management.infrastructure.serialization.cimmofdeserializer.schemavalidationoption.md
         - name: CimMofDeserializer.GetIncludedFileContent-Delegat
           href: mi-managed-api\microsoft.management.infrastructure.serialization.cimmofdeserializer.getincludedfilecontent.md

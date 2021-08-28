@@ -1,31 +1,31 @@
 ---
-description: Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)
+description: Inhaltsverzeichnisparserreferenz
 ms.assetid: 90a8d690-e9be-4657-aa02-1a78400e3f83
-title: Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)
+title: Inhaltsverzeichnisparserreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 554f8af9f39a929dc5acf0db2a8cff266d17a4d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a708f19779cea4fc0549b508081dcf2ebf8fa3d8dffe387c704fdfa46a2efc74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713310"
 ---
-# <a name="table-of-contents-parser-reference"></a>Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)
+# <a name="table-of-contents-parser-reference"></a>Inhaltsverzeichnisparserreferenz
 
-Diese Referenz beschreibt die Programmierschnittstelle für den Inhaltsverzeichnis Inhalt und zugehörige Komponenten. Diese Referenz umfasst folgende Abschnitte:
+In diesem Verweis wird die Programmierschnittstelle für den Inhaltsverzeichnisparser und die zugehörigen Komponenten beschrieben. Diese Referenz umfasst folgende Abschnitte:
 
--   [Tabelle mit Inhalts parserobjekten](toc-parser-objects.md)
--   [Tabelle mit Inhalts parserschnittstellen](toc-parser-interfaces.md)
--   [Tabelle mit Inhalts Parserstrukturen](toc-parser-structures.md)
--   [Inhaltsverzeichnis-Enumerationen](toc-parser-enumerations.md)
--   [Inhaltsverzeichnis Funktionen (Inhaltsverzeichnis)](toc-parser-functions.md)
+-   [Inhaltsverzeichnisparserobjekte](toc-parser-objects.md)
+-   [Inhaltsverzeichnisparserschnittstellen](toc-parser-interfaces.md)
+-   [Inhaltsverzeichnisparserstrukturen](toc-parser-structures.md)
+-   [Inhaltsverzeichnisparserumeration](toc-parser-enumerations.md)
+-   [Inhaltsverzeichnisparserfunktionen](toc-parser-functions.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Inhaltsverzeichnis (Inhaltsverzeichnis)](toc-parser.md)
+[Inhaltsverzeichnisparser](toc-parser.md)
 </dt> </dl>
 
  

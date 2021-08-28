@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: cf203e0e6de08b6faff3d3b4a040018ec1122975
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: eb73345dd594f3583b4a6cfbc6e0462848d85de0e9470e6bc8177574a2fff20d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017708"
 ---
 # <a name="ienumpstoreproviders-interface"></a>IEnumPStoreProviders-Schnittstelle
 
-\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Es ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
 Stellt COM-Standard-Enumerationsmethoden für die [**IPStore-Schnittstelle**](ipstore.md) bereit.
 
@@ -42,7 +42,7 @@ Die **IEnumPStoreProviders-Schnittstelle** verfügt über diese Methoden.
 |:--------------------------------------------|:---------------------------------------------------------------------------------------------------|
 | [**Klon**](ienumpstoreproviders-clone.md) | Erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.<br/> |
 | [**Weiter**](ienumpstoreproviders-next.md)   | Ruft den nächsten angegebenen Anbieter in der Enumerationssequenz ab.<br/>                           |
-| [**Reset**](ienumpstoreproviders-reset.md) | Setzt auf den Anfang der Enumerationssequenz zurück.<br/>                                    |
+| [**Zurücksetzen**](ienumpstoreproviders-reset.md) | Setzt auf den Anfang der Enumerationssequenz zurück.<br/>                                    |
 | [**Überspringen**](ienumpstoreproviders-skip.md)   | Überspringt den angegebenen Anbieter in der Enumerationssequenz.<br/>                               |
 
 
@@ -53,7 +53,7 @@ Die **IEnumPStoreProviders-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |

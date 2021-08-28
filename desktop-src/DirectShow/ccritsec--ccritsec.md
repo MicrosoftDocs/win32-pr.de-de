@@ -1,5 +1,5 @@
 ---
-description: 'CCritSec.~CCritSec-Destruktor : Destruktormethode.'
+description: CCritSec.~CCritSec-Destruktor – Destruktormethode.
 ms.assetid: cade850c-391c-41dc-adfe-56de8b2bbfff
 title: CCritSec.~CCritSec-Destruktor (Wxutil.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6f282bfe6ea6bca8cb8553572c18cfbc85db6c77
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4d34665bb18a6ea9f6e76ad6332a5d7f344993067848c1b5e473893e702b62a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999610"
 ---
 # <a name="ccritsecccritsec-destructor"></a>CCritSec.~CCritSec-Destruktor
 
@@ -36,22 +36,22 @@ Destruktormethode.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**DeleteCriticalSection-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection) auf, um den kritischen Abschnitt zu löschen.
+Diese Methode ruft die [**DeleteCriticalSection-Funktion auf,**](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection) um den kritischen Abschnitt zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

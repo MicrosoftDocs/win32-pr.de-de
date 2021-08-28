@@ -6,12 +6,12 @@ keywords:
 - ProgID-Registrierungsschlüssel COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 486f7e30bb0caff72eca3ad68191aaf50ab70280
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: f2d56295db12bbf8a4d629112636814fa60df481
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262722"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884841"
 ---
 # <a name="progid"></a>ProgID
 
@@ -25,15 +25,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
       ProgID = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede insertable-Objektklasse verfügt über eine ProgID. Informationen zum Erstellen einer ProgID finden Sie unter dem [ <ProgID> Schlüssel](-progid--key.md).
+Jede insertable-Objektklasse verfügt über eine ProgID. Informationen zum Erstellen einer ProgID finden Sie unter [ &lt; ProgID-Schlüssel. &gt; ](-progid--key.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[<ProgID> Schlüssel](-progid--key.md)
+[&lt;ProgID-Schlüssel &gt;](-progid--key.md)
 </dt> <dt>
 
 [**VersionIndependentProgID**](versionindependentprogid.md)

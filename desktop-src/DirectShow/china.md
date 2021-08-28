@@ -4,20 +4,20 @@ ms.assetid: eff36db1-3920-4dd6-b786-c8db5c43e5ea
 title: China
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1640c71cff5d91dd34bf13ba05e0bbcb2c3f5d57
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b66fdd425dabd2f7fdbad09091cd2fccc4113cbba91ee15857af8f0d15b98069
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055540"
 ---
 # <a name="china"></a>China
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in den China-Tabellen sind für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen china eignen sich für die Verwendung als Kanalnummern.
 
-### <a name="china-broadcast-assignments"></a>China-Broadcast Zuweisungen
+### <a name="china-broadcast-assignments"></a>Broadcastzuweisungen in China
 
 
 ```C++
@@ -96,7 +96,7 @@ Die Häufigkeits Indizes in den China-Tabellen sind für die Verwendung als Kana
 
 
 
-### <a name="china-cable-assignments"></a>China-Kabel Zuweisungen
+### <a name="china-cable-assignments"></a>Kabelzuweisungen in China
 
 
 ```C++
@@ -221,7 +221,7 @@ Die Häufigkeits Indizes in den China-Tabellen sind für die Verwendung als Kana
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

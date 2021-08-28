@@ -1,7 +1,7 @@
 ---
 description: Stellt eine Änderung der Helligkeit eines Monitors dar.
 ms.assetid: c2eb5630-a52f-4ad4-aaee-1cc8afef8c9e
-title: Wmimonitorbrightnessvent-Klasse
+title: WmiMonitorBrightnessEvent-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 7e53f90627c959db0140b01cf3b3d385afcc6e73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4affedabdb7fde7cec93d3cf8eb675f343054635eb0b4a504d74d96dc3eb8d42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321408"
 ---
-# <a name="wmimonitorbrightnessevent-class"></a>Wmimonitorbrightnessvent-Klasse
+# <a name="wmimonitorbrightnessevent-class"></a>WmiMonitorBrightnessEvent-Klasse
 
-Die **wmimonitorbrightnesgvent** WMI-Ereignisklasse stellt eine Änderung der Helligkeit eines Monitors dar.
+Die **WMI-Ereignisklasse WmiMonitorBrightnessEvent** stellt eine Änderung der Helligkeit eines Monitors dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ class WmiMonitorBrightnessEvent : WMIEvent
 
 ## <a name="members"></a>Member
 
-Die **wmimonitorbrightnestarvent** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorBrightnessEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitorbrightnessvent** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorBrightnessEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -66,20 +66,20 @@ Gibt den aktiven Monitor an.
 **Helligkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktuelle Monitor Helligkeit als Prozentsatz.
+Aktuelle Monitor-Helligkeit als Prozentsatz.
 
 </dd> <dt>
 
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -88,7 +88,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Monitorinstanz.
 
 </dd> </dl>
 
@@ -100,20 +100,20 @@ Der Name der spezifischen Monitor Instanz.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**MSMonitorClass**](msmonitorclass.md)
 </dt> <dt>
 
-[**Wmimonitorhelligkeit**](wmimonitorbrightness.md)
+[**WmiMonitorBrightness**](wmimonitorbrightness.md)
 </dt> <dt>
 
 [Empfangen eines WMI-Ereignisses](/windows/desktop/WmiSdk/receiving-a-wmi-event)

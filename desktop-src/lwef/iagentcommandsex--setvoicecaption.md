@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandsex setvoicecaption
-description: Iagentcommandsex setvoicecaption
+title: IAgentCommandsEx SetVoiceCaption
+description: IAgentCommandsEx SetVoiceCaption
 ms.assetid: f13c9ca5-70c9-42d0-b53c-45dc8980a24c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19fcc0f3ce98ff0187b7ed2f01b7131cc8e101bd
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 85de69b4b594f93adfb0ff554819243c94986420a79c35e8d7a64a3c2eaccb6f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716140"
 ---
-# <a name="iagentcommandsexsetvoicecaption"></a>Iagentcommandsex:: setvoicecaption
+# <a name="iagentcommandsexsetvoicecaption"></a>IAgentCommandsEx::SetVoiceCaption
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetVoiceCaption(
@@ -21,26 +21,26 @@ HRESULT SetVoiceCaption(
 );
 ```
 
-Legt den für das [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt angezeigten [**voicecaption**](voicecaption-property.md) -Text fest.
+Legt den [**VoiceCaption-Text fest,**](voicecaption-property.md) der für das [**Command-Objekt**](/windows/desktop/lwef/the-command-object) angezeigt wird.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszVoiceCaption"></span><span id="bszvoicecaption"></span><span id="BSZVOICECAPTION"></span>*bszvoicecaption*
+<span id="bszVoiceCaption"></span><span id="bszvoicecaption"></span><span id="BSZVOICECAPTION"></span>*bszVoiceCaption*
 </dt> <dd>
 
-Ein BSTR, der den Text für die [**voicecaption**](voicecaption-property.md) -Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angibt.
+Ein BSTR, der den Text für die [**VoiceCaption-Eigenschaft**](voicecaption-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angibt.
 
 </dd> </dl>
 
-Wenn Sie ein [**Command**](/windows/desktop/lwef/the-command-object) -Objekt in einer [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung definieren und seine [**Voice**](voice-property.md) -Eigenschaft festlegen, legen Sie in der Regel auch seine [**voicecaption**](voicecaption-property.md) -Eigenschaft fest. Dieser Text wird im Fenster "Sprachbefehle" angezeigt, wenn die Client Anwendung aktiv ist und das Zeichen sichtbar ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die-Einstellung für die [**Caption**](caption-property.md) -Eigenschaft den angezeigten Text. Wenn weder die **voicecaption** -Eigenschaft noch die **Caption** -Eigenschaft festgelegt ist, wird der Befehl nicht im Fenster "Sprachbefehle" angezeigt.
+Wenn Sie ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) in einer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) definieren und dessen [**Voice-Eigenschaft**](voice-property.md) festlegen, legen Sie in der Regel auch die [**VoiceCaption-Eigenschaft**](voicecaption-property.md) fest. Dieser Text wird im Sprachbefehlsfenster angezeigt, wenn Ihre Clientanwendung eingabeaktiv ist und das Zeichen sichtbar ist. Wenn diese Eigenschaft nicht festgelegt ist, bestimmt die Einstellung für die [**Caption-Eigenschaft**](caption-property.md) den angezeigten Text. Wenn weder die **VoiceCaption-** noch die **Caption-Eigenschaft** festgelegt ist, wird der Befehl nicht im Fenster "Sprachbefehle" angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandsex:: getvoicecaption**](iagentcommandsex--getvoicecaption.md)
+[**IAgentCommandsEx::GetVoiceCaption**](iagentcommandsex--getvoicecaption.md)
 
 
- 
+ 
 
- 
+ 

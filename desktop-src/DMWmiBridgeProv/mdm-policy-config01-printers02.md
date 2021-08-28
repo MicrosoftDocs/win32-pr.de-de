@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_Printers02-Klasse
-description: Die Config01 Printers02-Klasse der MDM- \_ Richtlinie \_ \_ konfiguriert die Drucker Richtlinien.
+description: Die MDM \_ Policy \_ Config01 \_ Printer02-Klasse konfiguriert die Druckerrichtlinien.
 ms.assetid: c0e6dc53-5f84-4cef-a4c4-08db6486784a
 keywords:
 - MDM_Policy_Config01_Printers02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca2cfdc41cfb956d00a509ba499b22e2435d7973
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 04fd3a0070a11659b9a9549cf28b89463032c792b1cc4e01bbee1a9e9a5dfcc8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119834010"
 ---
-# <a name="mdm_policy_config01_printers02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ Printers02-Klasse
+# <a name="mdm_policy_config01_printers02-class"></a>MDM \_ Policy \_ Config01 \_ Printer02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Config01 Printers02-Klasse der MDM- \_ Richtlinie \_ \_ konfiguriert die Drucker Richtlinien.
+Die MDM \_ Policy \_ Config01 \_ Printer02-Klasse konfiguriert die Druckerrichtlinien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,48 +47,48 @@ class MDM_Policy_Config01_Printers02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Printers02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ Printer02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Printers02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ Printer02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Pointandprintrestrictions](/windows/client-management/mdm/policy-csp-printers#printers-pointandprintrestrictions)
+[PointAndPrintRestrictions](/windows/client-management/mdm/policy-csp-printers#printers-pointandprintrestrictions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,10 +96,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Publishprinter](/windows/client-management/mdm/policy-csp-printers#printers-publishprinters)
+[PublishPrinters](/windows/client-management/mdm/policy-csp-printers#printers-publishprinters)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -113,10 +113,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

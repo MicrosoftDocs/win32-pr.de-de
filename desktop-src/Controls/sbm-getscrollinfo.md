@@ -1,9 +1,9 @@
 ---
-title: SBM_GETSCROLLINFO Meldung (Winuser. h)
-description: Die SBM \_ getscrollinfo-Nachricht wird gesendet, um die Parameter einer Schiebe Leiste abzurufen.
+title: SBM_GETSCROLLINFO Meldung (Winuser.h)
+description: Die SBM \_ GETSCROLLINFO-Nachricht wird gesendet, um die Parameter einer Scrollleiste abzurufen.
 ms.assetid: 3b43430f-b55f-43ec-8558-baf5c953064f
 keywords:
-- Windows-Steuerelemente für SBM_GETSCROLLINFO Meldung
+- SBM_GETSCROLLINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4cb05b05ba2686d755c5fa34adcff0016433346
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b5fde18fe30e9d944e547305094e7ea69e6745d4e1e112d8697367cd82833588
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346766"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919470"
 ---
-# <a name="sbm_getscrollinfo-message"></a>SBM \_ getscrollinfo-Meldung
+# <a name="sbm_getscrollinfo-message"></a>SBM \_ GETSCROLLINFO-Nachricht
 
-Die **SBM \_ getscrollinfo** -Nachricht wird gesendet, um die Parameter einer Schiebe Leiste abzurufen.
+Die **SBM \_ GETSCROLLINFO-Nachricht** wird gesendet, um die Parameter einer Scrollleiste abzurufen.
 
-Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten Sie die [**getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo) -Funktion verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion. Anwendungen, die ein benutzerdefiniertes Bild Lauf leisten-Steuerelement implementieren, müssen auf diese Nachrichten reagieren, damit die Funktion **getscrollinfo** ordnungsgemäß funktioniert.
+Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten sie die [**GetScrollInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo) verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Anwendungen, die ein benutzerdefiniertes Scrollleisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **GetScrollInfo-Funktion** ordnungsgemäß funktioniert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,19 +41,19 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo) -Struktur. Legen Sie vor dem Aufrufen von [**getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)den **CBSIZE** -Member der-Struktur auf **sizeof**(**ScrollInfo**) fest, und legen Sie den fmask-Member fest, um die abzurufenden ScrollBar-Parameter anzugeben.  Vor der Rückgabe kopiert die Meldung die angegebenen Parameter in die entsprechenden Member der Struktur.
+Zeiger auf eine [**SCROLLINFO-Struktur.**](/windows/win32/api/winuser/ns-winuser-scrollinfo) Legen Sie vor dem Aufrufen von [**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)den **cbSize-Member** der -Struktur auf **sizeof****(SCROLLINFO)** fest, und legen Sie den **fMask-Member** fest, um die abzurufenden Scrollleistenparameter anzugeben. Vor der Rückgabe kopiert die Nachricht die angegebenen Parameter in die entsprechenden Member der -Struktur.
 
-Der **fmask** -Member kann einen oder mehrere der folgenden Werte aufweisen.
+Der **fMask-Member** kann einer oder mehrere der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| <span id="SIF_ALL"></span><span id="sif_all"></span><dl> <dt>**Alle SIF \_**</dt> </dl>                | Kombination aus SIF \_ -Seite, SIF \_ -POS, SIF \_ -Bereich und SIF- \_ trackpos.<br/>       |
-| <span id="SIF_PAGE"></span><span id="sif_page"></span><dl> <dt>**SIF- \_ Seite**</dt> </dl>             | Kopiert die scrollseite in den nPage-Member.<br/>                              |
-| <span id="SIF_POS"></span><span id="sif_pos"></span><dl> <dt>**SIF \_ Torys**</dt> </dl>                | Kopiert die Scrollposition in den NPOs-Member. <br/>                          |
-| <span id="SIF_RANGE"></span><span id="sif_range"></span><dl> <dt>**SIF- \_ Bereich**</dt> </dl>          | Kopiert den scrollbereich in die Member nmin und nmax. <br/>                   |
-| <span id="SIF_TRACKPOS"></span><span id="sif_trackpos"></span><dl> <dt>**SIF- \_ trackpos**</dt> </dl> | Kopiert die aktuelle nach Verfolgungs Position des Bild Lauf Felds in den ntrackpos-Member.<br/> |
+| <span id="SIF_ALL"></span><span id="sif_all"></span><dl> <dt>**SIF \_ ALL**</dt> </dl>                | Kombination aus SIF \_ PAGE, SIF \_ POS, SIF \_ RANGE und SIF \_ TRACKPOS.<br/>       |
+| <span id="SIF_PAGE"></span><span id="sif_page"></span><dl> <dt>**\_SIF-SEITE**</dt> </dl>             | Kopiert die Bildlaufseite in das nPage-Element.<br/>                              |
+| <span id="SIF_POS"></span><span id="sif_pos"></span><dl> <dt>**SIF \_ POS**</dt> </dl>                | Kopiert die Bildlaufposition in das nPos-Element. <br/>                          |
+| <span id="SIF_RANGE"></span><span id="sif_range"></span><dl> <dt>**\_SIF-BEREICH**</dt> </dl>          | Kopiert den Bildlaufbereich in die Member nMin und nMax. <br/>                   |
+| <span id="SIF_TRACKPOS"></span><span id="sif_trackpos"></span><dl> <dt>**SIF \_ TRACKPOS**</dt> </dl> | Kopiert die aktuelle Nachverfolgungsposition des Bildlauffelds in das Element nTrackPos.<br/> |
 
 
 
@@ -63,13 +63,13 @@ Der **fmask** -Member kann einen oder mehrere der folgenden Werte aufweisen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht Werte abgerufen hat, ist der Rückgabewert " **true**". Andernfalls ist Sie **false**.
+Wenn die Nachricht Werte abgerufen hat, ist der Rückgabewert **TRUE.** Andernfalls ist es **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Nachrichten, die die Position der Scrollleiste, [**WM \_ HScroll**](wm-hscroll.md) und [**WM \_ VScroll**](wm-vscroll.md)angeben, stellen nur 16 Bits an Positionsdaten bereit. Die [**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo) -Struktur, die von **SBM \_ getscrollinfo**, [**SBM \_ setScrollInfo**](sbm-setscrollinfo.md), [**getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)und [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) verwendet wird, stellt jedoch 32 Bits der Positions leisten Positionsdaten bereit. Sie können diese Nachrichten und Funktionen bei der Verarbeitung der " **WM \_ HScroll** "-oder " **WM \_ VScroll** "-Meldungen zum Abrufen von 32-Bit-Scrollleisten-Positionsdaten verwenden.
+Die Meldungen, die die Bildlaufleistenposition [**WM \_ HSCROLL**](wm-hscroll.md) und [**WM \_ VSCROLL**](wm-vscroll.md)angeben, stellen nur 16 Bits an Positionsdaten bereit. Die [**scrollinfo-Struktur,**](/windows/win32/api/winuser/ns-winuser-scrollinfo) die von **SBM \_ GETSCROLLINFO,** [**SBM \_ SETSCROLLINFO,**](sbm-setscrollinfo.md) [**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)und [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) verwendet wird, stellt jedoch 32 Bits an Bildlaufleistenpositionsdaten bereit. Sie können diese Nachrichten und Funktionen beim Verarbeiten der **WM \_ HSCROLL-** oder **WM \_ VSCROLL-Nachrichten** verwenden, um 32-Bit-Bildlaufleistenpositionsdaten zu erhalten.
 
-Um die 32-Bit-Position des Bild Lauf Felds (Ziehpunkt) während eines SB- \_ thumbrequest-Anforderungs Codes in einer [**WM \_ HScroll**](wm-hscroll.md) -oder [**WM \_ VScroll**](wm-vscroll.md) -Nachricht abzurufen, senden Sie **SBM \_ getscrollinfo** mit dem SIF \_ trackpos-Wert im **fmask** -Member der [**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo) -Struktur. Die Meldung gibt die nach Verfolgungs Position des Bild Lauf Felds im **ntrackpos** -Member der **ScrollInfo** -Struktur zurück. Dadurch können Sie die Position des Bild Lauf Felds beim Verschieben durch den Benutzer erhalten. Alternativ können Sie die [**getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo) -Funktion verwenden, um dieselben Informationen zu erhalten.
+Um die 32-Bit-Position des Bildlauffelds (Thumb) während eines SB \_ THUMBTRACK-Anforderungscodes in einer [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) abzurufen, senden Sie **SBM \_ GETSCROLLINFO** mit dem SIF \_ TRACKPOS-Wert im **fMask-Member** der [**SCROLLINFO-Struktur.**](/windows/win32/api/winuser/ns-winuser-scrollinfo) Die Meldung gibt die Nachverfolgungsposition des Bildlauffelds im **nTrackPos-Member** der **SCROLLINFO-Struktur** zurück. Dadurch können Sie die Position des Bildlauffelds abrufen, während der Benutzer es verschiebt. Alternativ können Sie die [**GetScrollInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo) verwenden, um die gleichen Informationen abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Um die 32-Bit-Position des Bild Lauf Felds (Ziehpunkt) während eines SB- \_ thu
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -87,16 +87,16 @@ Um die 32-Bit-Position des Bild Lauf Felds (Ziehpunkt) während eines SB- \_ thu
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
+[**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
 </dt> <dt>
 
-[**SBM \_ setScrollInfo**](sbm-setscrollinfo.md)
+[**SBM \_ SETSCROLLINFO**](sbm-setscrollinfo.md)
 </dt> <dt>
 
-[**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo)
+[**SCROLLINFO**](/windows/win32/api/winuser/ns-winuser-scrollinfo)
 </dt> <dt>
 
 [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo)

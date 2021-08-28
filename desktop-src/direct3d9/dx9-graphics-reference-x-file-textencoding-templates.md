@@ -1,25 +1,25 @@
 ---
-description: Vorlagen definieren, wie der Datenstrom interpretiert wird. die Daten werden von der Vorlagen Definition moduliert. In diesem Abschnitt werden die folgenden Aspekte einer Vorlage erläutert und eine Beispiel Vorlage bereitstellt.
+description: Vorlagen definieren, wie der Datenstrom interpretiert wird. Die Daten werden durch die Vorlagendefinition moduliert. In diesem Abschnitt werden die folgenden Aspekte einer Vorlage erläutert, und es wird eine Beispielvorlage angezeigt.
 ms.assetid: f84978a8-8315-4626-be68-f00f3a72e5ac
-title: Vorlagen (X-Dateiformat, Text Codierung)
+title: Vorlagen (X-Dateiformat, Textcodierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fccec46e72a73bb5ed4434fd252595e1b072ad4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e164b92c6c5738ad98b138941b1b2fda6c332068
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745392"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881025"
 ---
-# <a name="templates-x-file-format-text-encoding"></a>Vorlagen (X-Dateiformat, Text Codierung)
+# <a name="templates-x-file-format-text-encoding"></a>Vorlagen (X-Dateiformat, Textcodierung)
 
-Vorlagen definieren, wie der Datenstrom interpretiert wird. die Daten werden von der Vorlagen Definition moduliert. In diesem Abschnitt werden die folgenden Aspekte einer Vorlage erläutert und eine Beispiel Vorlage bereitstellt.
+Vorlagen definieren, wie der Datenstrom interpretiert wird. Die Daten werden durch die Vorlagendefinition moduliert. In diesem Abschnitt werden die folgenden Aspekte einer Vorlage erläutert, und es wird eine Beispielvorlage angezeigt.
 
-Es gibt eine besondere Vorlage (die Header Vorlage). Es wird empfohlen, dass jede Anwendung eine Header Vorlage definiert und Sie zum Definieren von anwendungsspezifischen Informationen verwendet, z. b. Versionsinformationen. Wenn dieser Header vorhanden ist, wird er von der. x-Dateiformat-API gelesen. Wenn ein Flags-Member verfügbar ist, wird er verwendet, um zu bestimmen, wie die folgenden Daten interpretiert werden. Der Flags-Member sollte, falls definiert, ein DWORD-Element sein. Zurzeit ist ein Bit definiert-Bit 0. Wenn dieses Bit eindeutig ist, sind die folgenden Daten in der Datei binär. Wenn festgelegt, sind die folgenden Daten Text. Sie können mehrere Header Datenobjekte verwenden, um zwischen Binärdateien und Text in der Datei zu wechseln.
+Es gibt eine spezielle Vorlage: die Headervorlage. Es wird empfohlen, dass jede Anwendung eine Headervorlage definiert und zum Definieren anwendungsspezifischer Informationen verwendet, z. B. Versionsinformationen. Falls vorhanden, wird dieser Header von der X-Dateiformat-API gelesen. Wenn ein Flags-Member verfügbar ist, wird er verwendet, um zu bestimmen, wie die folgenden Daten interpretiert werden. Der Flags-Member sollte ein DWORD sein, sofern dieser definiert ist. Derzeit ist ein Bit definiert: Bit 0. Wenn dieses Bit klar ist, sind die folgenden Daten in der Datei binär. Wenn diese Einstellung festgelegt ist, sind die folgenden Daten text. Sie können mehrere Headerdatenobjekte verwenden, um zwischen Binärdatei und Text in der Datei zu wechseln.
 
-## <a name="template-form-name-and-uuid"></a>Vorlagen Formular, Name und UUID
+## <a name="template-form-name-and-uuid"></a>Vorlagenformular, Name und UUID
 
-Eine Vorlage weist das folgende Format auf.
+Eine Vorlage hat das folgende Format.
 
 
 ```
@@ -34,11 +34,11 @@ template <template-name> {
 
 
 
-Der Vorlagen Name ist ein alphanumerischer Name, der den Unterstrich () enthalten kann \_ . Er darf nicht mit einer Ziffer beginnen. Die UUID ist ein universell eindeutiger Bezeichner, der für den Standard der verteilten Computing-Umgebung von Open Software Foundation formatiert und durch eckige Klammern (< >) eingeschlossen wird. Beispiel: <3d82ab43-62da-11CF-ab39-0020af71e433>.
+Der Vorlagenname ist ein alphanumerischer Name, der den Unterstrich ( ) enthalten \_ kann. Er darf nicht mit einer Ziffer beginnen. Die UUID ist ein universell eindeutiger Bezeichner, der im Distributed Computing Environment-Standard der Open Software Foundation formatiert und in spitzen Klammern (< >) eingeschlossen ist. Beispiel: <3D82AB43-62DA-11cf-AB39-0020AF71E433>.
 
-## <a name="template-members"></a>Vorlagen Mitglieder
+## <a name="template-members"></a>Vorlagenmember
 
-Vorlagen Elemente bestehen aus einem benannten Datentyp, gefolgt von einem optionalen Namen oder einem Array eines benannten Datentyps. Gültige primitive Datentypen sind in der folgenden Tabelle definiert.
+Vorlagenmember bestehen aus einem benannten Datentyp gefolgt von einem optionalen Namen oder einem Array eines benannten Datentyps. Gültige primitive Datentypen werden in der folgenden Tabelle definiert.
 
 
 
@@ -46,12 +46,12 @@ Vorlagen Elemente bestehen aus einem benannten Datentyp, gefolgt von einem optio
 |---------|------------------------------------|
 | WORD    | 16 Bit                            |
 | DWORD   | 32 Bit                            |
-| GLEITKOMMAZAHL   | IEEE Float                         |
+| GLEITKOMMAZAHL   | IEEE float                         |
 | Double  | 64 Bit                            |
 | CHAR    | 8 Bit                             |
 | UCHAR   | 8 Bit                             |
 | BYTE    | 8 Bit                             |
-| STRING  | NULL beendete Zeichenfolge             |
+| STRING  | NULL-terminierte Zeichenfolge             |
 | CSTRING | Formatierte C-Zeichenfolge (nicht unterstützt) |
 | UNICODE | Unicode-Zeichenfolge (nicht unterstützt)     |
 
@@ -59,9 +59,9 @@ Vorlagen Elemente bestehen aus einem benannten Datentyp, gefolgt von einem optio
 
  
 
-Auf zusätzliche Datentypen, die durch Vorlagen definiert werden, die zuvor im Datenstrom definiert wurden, kann auch innerhalb einer Vorlagen Definition referenziert werden. Es sind keine vorwärts Verweise zulässig.
+Auf zusätzliche Datentypen, die durch Vorlagen definiert werden, die zuvor im Datenstrom aufgetreten sind, kann auch innerhalb einer Vorlagendefinition verwiesen werden. Vorwärtsverweise sind nicht zulässig.
 
-Jeder gültige Datentyp kann als Array in der Vorlagen Definition ausgedrückt werden. Die grundlegende Syntax wird im folgenden Beispiel gezeigt.
+Jeder gültige Datentyp kann in der Vorlagendefinition als Array ausgedrückt werden. Die grundlegende Syntax wird im folgenden Beispiel gezeigt.
 
 
 ```
@@ -70,7 +70,7 @@ array <data-type> <name>[<dimension-size>];
 
 
 
-<Dimensions Größe> kann entweder eine ganze Zahl oder ein benannter Verweis auf einen anderen Vorlagen Member sein, dessen Wert dann ersetzt wird. Arrays können n-dimensional sein, wobei n durch die Anzahl der gekoppelten eckigen Klammern bestimmt wird, die der Anweisung folgen, wie im folgenden Beispiel gezeigt.
+&lt;dimension-size &gt; kann entweder eine ganze Zahl oder ein benannter Verweis auf ein anderes Vorlagenmember sein, dessen Wert dann ersetzt wird. Arrays können n-dimensional sein, wobei n durch die Anzahl von eckigen Klammern bestimmt wird, die der Anweisung nachgestellt sind, wie im folgenden Beispiel.
 
 
 ```
@@ -81,11 +81,11 @@ array FLOAT Matrix4x4[4][4];
 
 
 
-## <a name="template-restrictions"></a>Vorlagen Einschränkungen
+## <a name="template-restrictions"></a>Vorlageneinschränkungen
 
-Vorlagen können offen, geschlossen oder eingeschränkt sein. Diese Einschränkungen legen fest, welche Datentypen in der unmittelbaren Hierarchie eines von der Vorlage definierten Datenobjekts vorkommen können. Eine geöffnete Vorlage hat keine Einschränkungen, eine geschlossene Vorlage lehnt alle Datentypen ab, und eine eingeschränkte Vorlage lässt eine benannte Liste von Datentypen zu.
+Vorlagen können geöffnet, geschlossen oder eingeschränkt sein. Diese Einschränkungen bestimmen, welche Datentypen in der unmittelbaren Hierarchie eines von der Vorlage definierten Datenobjekts angezeigt werden können. Eine geöffnete Vorlage weist keine Einschränkungen auf, eine geschlossene Vorlage lehnt alle Datentypen ab, und eine eingeschränkte Vorlage lässt eine benannte Liste von Datentypen zu.
 
-Die Syntax zum Angeben einer geöffneten Vorlage besteht aus drei Punkten, die in eckigen Klammern eingeschlossen sind.
+Die Syntax zum Angeben einer geöffneten Vorlage besteht aus drei Perioden, die von eckigen Klammern eingeschlossen sind.
 
 
 ```
@@ -94,7 +94,7 @@ Die Syntax zum Angeben einer geöffneten Vorlage besteht aus drei Punkten, die i
 
 
 
-Eine durch Trennzeichen getrennte Liste benannter Datentypen, gefolgt von ihren UUIDs, die in eckigen Klammern eingeschlossen sind, deutet auf eine eingeschränkte Vorlage hin.
+Eine durch Trennzeichen getrennte Liste benannter Datentypen gefolgt von optionalen UUIDs in eckigen Klammern gibt eine eingeschränkte Vorlage an.
 
 
 ```
@@ -103,11 +103,11 @@ Eine durch Trennzeichen getrennte Liste benannter Datentypen, gefolgt von ihren 
 
 
 
-Das Fehlen einer der obigen Optionen deutet auf eine geschlossene Vorlage hin.
+Das Fehlen einer der oben genannten Angaben weist auf eine geschlossene Vorlage hin.
 
-## <a name="template-example"></a>Vorlagen Beispiel
+## <a name="template-example"></a>Vorlagenbeispiel
 
-Das folgende Beispiel zeigt eine Beispiel Vorlage.
+Im Folgenden finden Sie eine Beispielvorlage.
 
 
 ```
@@ -138,7 +138,7 @@ STRING name;
 
 <dl> <dt>
 
-[Text Codierung](text-encoding.md)
+[Textcodierung](text-encoding.md)
 </dt> </dl>
 
  

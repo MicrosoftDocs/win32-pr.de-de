@@ -1,5 +1,5 @@
 ---
-description: 'CBasePin.Inactive-Methode: Die Inaktive Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.'
+description: 'CBasePin.Inactive-Methode: Die Inactive-Methode benachrichtigt den Pin darüber, dass der Filter nicht mehr aktiv ist.'
 ms.assetid: 71847578-2271-4243-87c4-9f14b33f770c
 title: CBasePin.Inactive-Methode (Amfilter.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7c0d9ec403b53c3197c001e966ce7efd5eb8bed2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8307f3823758eee2f70368e41d3f2dc01333fd538fe2feed30d31b7db876f118
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052740"
 ---
 # <a name="cbasepininactive-method"></a>CBasePin.Inactive-Methode
 
@@ -44,26 +44,26 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der Filter beendet wird, ruft die [**CBaseFilter-Klasse**](cbasefilter.md) diese Methode für alle verbundenen Pins des Filters auf.
 
-Diese Methode führt in der Basisklasse nichts aus. Abgeleitete Klassen sollten diese Methode überschreiben, um alle Ressourcen frei zu lassen, die von der [**CBasePin::Active-Methode erhalten**](cbasepin-active.md) wurden. Zum Beispiel zum Decommit der Zuweisungen des Pins.
+Diese Methode führt in der Basisklasse nichts aus. Abgeleitete Klassen sollten diese Methode überschreiben, um alle Von der [**CBasePin::Active-Methode**](cbasepin-active.md) abgerufenen Ressourcen freizusetzen. z. B. , um die Zuweisungen des Pins zu decommitisieren.
 
-Der interne Zustand des Filterdiagramm-Managers wird erst aktualisiert, nachdem diese Methode zurückgegeben wurde. Testen Sie daher nicht den Zustand dieser Methode.
+Der interne Zustand des Filtergraph-Managers wird erst aktualisiert, nachdem diese Methode zurückgegeben wurde. Testen Sie daher nicht den Zustand dieser Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

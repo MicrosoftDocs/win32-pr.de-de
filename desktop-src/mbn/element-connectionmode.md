@@ -7,12 +7,12 @@ MSHAttr:
 title: ConnectionMode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d69d8b7118f5e46a5923dfdcf783471be2488e45
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 55af96a96bfae012e77093688cf8665c3763fb65
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122465017"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122879902"
 ---
 # <a name="span-idwwan_profile_v4element_connectionmodespanconnectionmode"></a><span id="WWAN_profile_v4.element_ConnectionMode"></span>ConnectionMode
 
@@ -22,8 +22,8 @@ Weitere Informationen finden Sie in der Dokumentation zum [**ConnectionMode-Elem
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[<MBNProfileExt>](element-mbnprofileext.md)  
-**<ConnectionMode>**
+[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
+**&lt;ConnectionMode&gt;**
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,14 +48,14 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | BESCHREIBUNG | 
+| Übergeordnetes Element | Beschreibung | 
 |----------------|-------------|
-| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
+| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein mobiles Breitbandprofil mit einem umfangreicheren Satz von Optionen als das MBNProfile-Element.</p><p>Ein Profil kann mehrere MbnProfileExt-Elemente enthalten, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 | | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 

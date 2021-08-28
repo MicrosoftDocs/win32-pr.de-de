@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8c9790da467b021a0a19812bc0b3a86b655141df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e52c636e3560ee551f3b7e616b92a4ac376655ae119f8e9363adca39c0e1d407
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118035194"
 ---
 # <a name="iwiaitem2diagnostic-method"></a>IWiaItem2::D iagnostic-Methode
 

@@ -1,9 +1,9 @@
 ---
-title: WM/wmshadowfilesourcefiletype (Windows Media Player SDK)
-description: WM/wmshadowfilesourcefiletype ist der Dateityp der Datei, die in der Schattendatei enthalten ist.
+title: WM/WMShadowFileSourceFileType (Windows Media Player SDK)
+description: WM/WMShadowFileSourceFileType ist der Dateityp der Datei, die in der Schattendatei enthalten ist.
 ms.assetid: 4c4b70b6-0e26-49f3-b7c1-f6e1fe791e48
 keywords:
-- WM/wmshadowfilesourcefiletype Windows Media Player
+- WM/WMShadowFileSourceFileType Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01fc2eb3d91cd05493f98c75d3b7ada3132816ed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5fecddc4ddaf1d28b464a2d120c5d7fea11779784ed6ec496cdddcb1a09a9ded
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000780"
 ---
-# <a name="wmwmshadowfilesourcefiletype-windows-media-player-sdk"></a>WM/wmshadowfilesourcefiletype (Windows Media Player SDK)
+# <a name="wmwmshadowfilesourcefiletype-windows-media-player-sdk"></a>WM/WMShadowFileSourceFileType (Windows Media Player SDK)
 
-**WM/wmshadowfilesourcefiletype** ist der Dateityp der Datei, die in der Schattendatei enthalten ist.
+**WM/WMShadowFileSourceFileType** ist der Dateityp der Datei, die in der Schattendatei enthalten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Schattendatei kann ein Wrapper für eine Quelldatei sein. Dieses Attribut ist eine Zeichenfolge, die die Dateinamenerweiterung (ohne das Punkt Trennzeichen) für die Quelldatei enthält. Wenn die Quelldatei z. b. eine AAC-Datei ist, enthält dieses Attribut die Zeichenfolge "AAC".
+Eine Schattendatei kann ein Wrapper für eine Quelldatei sein. Dieses Attribut ist eine Zeichenfolge, die die Dateinamenerweiterung (ohne Das Punkttrennzeichen) für die Quelldatei enthält. Wenn die Quelldatei beispielsweise eine AAC-Datei ist, enthält dieses Attribut die Zeichenfolge "aac".
 
-Die Schattendatei wird mithilfe des [shadowfilepath](shadowfilepath-attribute.md) -Attributs angegeben.
+Die Schattendatei wird mithilfe des [ShadowFilePath-Attributs](shadowfilepath-attribute.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,10 +43,10 @@ Die Schattendatei wird mithilfe des [shadowfilepath](shadowfilepath-attribute.md
 
 <dl> <dt>
 
-[**Informationen zu Konvertierungs-Plug-ins**](about-conversion-plug-ins.md)
+[**Informationen zu Konvertierungs-Plug-Ins**](about-conversion-plug-ins.md)
 </dt> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter JetGetCursorInfo-Funktion.
+description: 'Weitere Informationen zu: JetGetCursorInfo-Funktion'
 title: JetGetCursorInfo-Funktion
 TOCTitle: JetGetCursorInfo Function
 ms:assetid: e779fa5d-1d7e-46f1-80c9-f7c819279188
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c0b5d3410ddb7f4210317508739b4f7dd00dd592
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: e6c26aa69f1ac51cdd9d70ca93c4fc42df5356ee
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122470776"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987663"
 ---
 # <a name="jetgetcursorinfo-function"></a>JetGetCursorInfo-Funktion
 
@@ -75,7 +75,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 |--------------------|--------------------|
 | <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
 | <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
-| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errInvalidParameter</p> | <p>Entweder <em>ist cbMax</em> nicht 0 (null) oder <em>InfoLevel</em> ist nicht 0 (null).</p> | 
 | <p>JET_errNoCurrentRecord</p> | <p>Der Cursor befindet sich derzeit nicht in einem Datensatz, und Informationen zu einem logischen Datensatz können daher nicht zurückgegeben werden.</p> | 
 | <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
@@ -90,14 +90,20 @@ Bei Erfolg hat dieser Vorgang keine Auswirkungen auf die Position des Cursors, g
 
 Wenn bei einem Fehler ein negativer Fehlercode zurückgegeben wird, hat dies keine Auswirkungen auf den Cursor oder die Datenbank.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
-Dieser Vorgang wirkt sich nicht auf den Zustand des Cursors oder der Daten aus. Es wird nur ein Fehlercode zurückgegeben, der beschreibt, ob eine Aktualisierung des aktuellen Datensatzes durch die aufrufende Sitzung bekanntermaßen zu einer JET_errWriteConflict führt oder unbekannt ist, um JET_errWriteConflict zurückzugeben. Wenn dieser Datensatz bereits von einer anderen Sitzung zur Verwendung aktualisiert wurde, ist es sicher, dass eine Aktualisierung dieses Datensatzes durch diese Sitzung zu einem Schreibkonflikt führt. Dies gilt, bis für diese Sitzung ein Commit oder rollback der Transaktionen auf Die Transaktionsebene 0 (null) ausgeführt wird. Wenn **JetGetCursorInfo** jedoch JET_errSuccess zurückgibt, ist es immer noch möglich, dass eine andere Sitzung diesen Datensatz vor der aktuellen Sitzung aktualisiert. Daher ist es weiterhin möglich, dass eine Aktualisierung des aktuellen Datensatzes durch diese Sitzung in der aktuellen Transaktion zu einem Schreibkonflikt führt.
+Dieser Vorgang wirkt sich nicht auf den Zustand des Cursors oder der Daten aus. Es wird nur ein Fehlercode zurückgegeben, der beschreibt, ob ein Update des aktuellen Datensatzes durch die aufrufende Sitzung bekanntermaßen zu einem JET_errWriteConflict führt oder unbekannt ist, um JET_errWriteConflict zurückzugeben. Wenn dieser Datensatz bereits von einer anderen Sitzung zur Verwendung aktualisiert wurde, ist es sicher, dass eine Aktualisierung dieses Datensatzes durch diese Sitzung zu einem Schreibkonflikt führt. Dies gilt, bis für diese Sitzung ein Commit oder rollback der Transaktionen auf Die Transaktionsebene 0 (null) ausgeführt wird. Wenn **JetGetCursorInfo** jedoch JET_errSuccess zurückgibt, ist es immer noch möglich, dass eine andere Sitzung diesen Datensatz vor der aktuellen Sitzung aktualisiert. Daher ist es weiterhin möglich, dass eine Aktualisierung des aktuellen Datensatzes durch diese Sitzung in der aktuellen Transaktion zu einem Schreibkonflikt führt.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

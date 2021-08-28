@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 65925ce2425dcf717b7db94f5b83ca48a68c8f31
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 938cc8161326afaa9d0d5b3bf905bf976e850b40
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122466219"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985593"
 ---
 # <a name="jetretrievekey-function"></a>JetRetrieveKey-Funktion
 
@@ -98,15 +98,15 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 | <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
 | <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
-| <p>JET_wrnBufferTruncated</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen, aber der Ausgabepuffer war zu klein, um den gesamten Schlüssel zu empfangen. Der Ausgabepuffer wurde mit einem so großen Teil des Schlüssels gefüllt, wie er passt. Bei Bedarf wurde auch die tatsächliche Größe des Schlüssels zurückgegeben.</p><p><strong>Hinweis:</strong>   Dieser Fehler wird nicht zurückgegeben, wenn JET_bitRetrieveCopy angegeben wird. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p> | 
+| <p>JET_wrnBufferTruncated</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen, aber der Ausgabepuffer war zu klein, um den gesamten Schlüssel zu empfangen. Der Ausgabepuffer wurde mit einem so großen Teil des Schlüssels gefüllt, wie er passt. Bei Bedarf wurde auch die tatsächliche Größe des Schlüssels zurückgegeben.</p><p><strong>Hinweis:</strong>   Dieser Fehler wird nicht zurückgegeben, wenn JET_bitRetrieveCopy angegeben ist. Weitere Informationen finden Sie im Abschnitt "Hinweise".</p> | 
 
 
 
-Bei Erfolg wird der Schlüssel für den Indexeintrag an der aktuellen Position eines Cursors im Ausgabepuffer zurückgegeben. Wenn JET_wrnBufferTruncated zurückgegeben wird, enthält der Ausgabepuffer so viel Schlüssel wie in den bereitgestellten Speicherplatz passt, und die tatsächliche Größe des Schlüssels ist genau. Es erfolgt keine Änderung des Datenbankstatus.
+Bei Erfolg wird der Schlüssel für den Indexeintrag an der aktuellen Position eines Cursors im Ausgabepuffer zurückgegeben. Wenn JET_wrnBufferTruncated zurückgegeben wird, enthält der Ausgabepuffer so viel des Schlüssels, wie in den bereitgestellten Speicherplatz passt, und die tatsächliche Größe des Schlüssels ist genau. Es erfolgt keine Änderung des Datenbankstatus.
 
 Bei einem Fehler sind der Zustand des Ausgabepuffers und die tatsächliche Größe des Schlüssels nicht definiert. Es erfolgt keine Änderung des Datenbankstatus.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Schlüssel sollten in der Regel als nicht transparente Datenbrocken behandelt werden. Es sollte nicht versucht werden, die interne Struktur dieser Daten auszunutzen. Die folgenden Eigenschaften können jedoch für alle ESENT-Schlüssel bekannt sein:
 
@@ -118,12 +118,18 @@ Schlüssel sollten in der Regel als nicht transparente Datenbrocken behandelt we
 
 Zusätzlich zu den oben genannten Eigenschaften von ESENT-Schlüsseln im Allgemeinen ist es wichtig zu beachten, dass sich ein Suchschlüssel vom Schlüssel für einen Indexeintrag unterscheiden kann. Insbesondere kann ein Suchschlüssel länger als ein gewöhnlicher Schlüssel sein. Diese zusätzliche Länge tritt auf, wenn beim Erstellen des Suchschlüssels eine Platzhalteroption verwendet wird. Weitere Informationen finden Sie unter [JetMakeKey.](./jetmakekey-function.md)
 
-Es gibt einen wichtigen Fehler in dieser API, der in allen Releases vorhanden ist. Wenn der Suchschlüssel mithilfe von JET_bitRetrieveCopy angefordert wird und der Ausgabepuffer zu klein ist, um den gesamten Schlüssel zu empfangen, JET_wrnBufferTruncated NICHT zurückgegeben. JET_errSuccess wird stattdessen zurückgegeben. Es ist wichtig zu überprüfen, ob die tatsächliche Größe des Schlüssels, wie er mithilfe von *"actual"* zurückgegeben wird, kleiner oder gleich der Größe des Ausgabepuffers ist. Wenn die tatsächliche Größe größer als die Größe des Ausgabepuffers ist, sollte der Aufrufer von **JetRetrikey** so reagieren, als ob JET_wrnBufferTruncated zurückgegeben würden.
+Es gibt einen wichtigen Fehler in dieser API, der in allen Releases vorhanden ist. Wenn der Suchschlüssel mithilfe von JET_bitRetrieveCopy angefordert wird und der Ausgabepuffer zu klein ist, um den gesamten Schlüssel zu empfangen, wird JET_wrnBufferTruncated NICHT zurückgegeben. JET_errSuccess wird stattdessen zurückgegeben. Es ist wichtig zu überprüfen, ob die tatsächliche Größe des Schlüssels, wie er mithilfe von *"actual"* zurückgegeben wird, kleiner oder gleich der Größe des Ausgabepuffers ist. Wenn die tatsächliche Größe größer als die Größe des Ausgabepuffers ist, sollte der Aufrufer von **JetRetrikey** so reagieren, als ob JET_wrnBufferTruncated zurückgegeben würden.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

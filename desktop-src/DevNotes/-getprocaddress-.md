@@ -1,7 +1,7 @@
 ---
 description: Ruft die Adresse einer Funktion aus einer DLL ab.
 ms.assetid: e425948c-5588-4a4f-994c-4e608af18439
-title: _GetProcAddress_ -Funktion
+title: _GetProcAddress-Funktion_
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Msmdun80.dll
 - Sqlunirl.dll
-ms.openlocfilehash: 0d717036b92e79056fd3b1bf69f1fd17784db713
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d35d623ff7c7873534bd835c138dba490274e5caddf839fc71765cda59b9f00f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053200"
 ---
-# <a name="_getprocaddress_-function"></a>\_GetProcAddress- \_ Funktion
+# <a name="_getprocaddress_-function"></a>\_GetProcAddress-Funktion \_
 
-\[Diese Funktion ist ein Wrapper über die **GetProcAddress** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetProcAddress** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **GetProcAddress-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetProcAddress** direkt aufrufen.\]
 
 Ruft die Adresse einer Funktion aus einer DLL ab. Siehe [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 

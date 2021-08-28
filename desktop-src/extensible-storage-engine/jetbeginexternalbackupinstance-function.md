@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 53583a1d51de390b0c84143dcb59f3327b7c91bb
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 95d74873fabfe27bc9750f074cd656b17e04803e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122479296"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988078"
 ---
 # <a name="jetbeginexternalbackupinstance-function"></a>JetBeginExternalBackupInstance-Funktion
 
@@ -72,7 +72,7 @@ Das System kann als Ergebnis eines Aufrufs dieser Funktion Erfolgs- oder Fehlerc
 
 Weitere Informationen finden Sie unter [JetBeginExternalBackup.](./jetbeginexternalbackup-function.md)
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 **JetBeginExternalBackupInstance** ist die erste Funktion in einer Reihe von Funktionen, die aufgerufen werden müssen, um eine erfolgreiche Onlinesicherung (nicht VSS-basiert) auszuführen. Siehe auch [JetBeginExternalBackup](./jetbeginexternalbackup-function.md) und [JetStopBackupInstance](./jetstopbackupinstance-function.md).
 
@@ -83,7 +83,13 @@ Die Sicherung ist unscharf, da die Sicherung zu einem einzelnen Zeitpunkt im Tra
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

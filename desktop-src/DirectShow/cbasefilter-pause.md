@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ee91393a574d0135e66e5a9c1e1e6b0325a0b4de
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: daa6ba7a4c2effd1928a59281e299f6203e5dd2bcd1f7aca975efc10ab633a20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108120088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056410"
 ---
 # <a name="cbasefilterpause-method"></a>CBaseFilter.Pause-Methode
 
@@ -44,7 +44,7 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode ruft die [**CBasePin::Active-Methode**](cbasepin-active.md) für jeden verbundenen Pin des Filters auf.
 
@@ -52,14 +52,14 @@ Diese Methode ruft die [**CBasePin::Active-Methode**](cbasepin-active.md) für j
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

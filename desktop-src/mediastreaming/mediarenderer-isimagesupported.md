@@ -1,11 +1,11 @@
 ---
-title: MediaRenderer. isimagesupported-Eigenschaft
-description: Ruft einen Wert ab, der angibt, ob der DMR Bilder anzeigen kann.
+title: MediaRenderer.IsImageSupported-Eigenschaft
+description: Ruft einen Wert ab, der angibt, ob die DMR Bilder anzeigen kann.
 ms.assetid: 3e356ccc-1165-4eaa-9f6e-3332ea84a133
 keywords:
-- Isimagesupported-Eigenschaft Medien Streaming-API
-- Isimagesupported-Eigenschaft Medien Streaming-API, MediaRenderer-Schnittstelle
-- MediaRenderer Interface Media Streaming-API, isimagesupported-Eigenschaft
+- IsImageSupported-Eigenschaft Medienstreaming-API
+- IsImageSupported-Eigenschaft Media Streaming-API, MediaRenderer-Schnittstelle
+- MediaRenderer-Schnittstelle Medienstreaming-API , IsImageSupported-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e7e76f55747ab1ff13c0ba1dcb1c2b08bf3bd50c
-ms.sourcegitcommit: 4f5016b1fbfd703dbf769c508db464c2518c0fa5
+ms.openlocfilehash: 666dd41c823f91be581528691dc55fc937b6fc66362a8bd3744d3a597c50d8a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104038195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712750"
 ---
-# <a name="mediarendererisimagesupported-property"></a>MediaRenderer. isimagesupported-Eigenschaft
+# <a name="mediarendererisimagesupported-property"></a>MediaRenderer.IsImageSupported-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob der DMR Bilder anzeigen kann.
+Ruft einen Wert ab, der angibt, ob die DMR Bilder anzeigen kann.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_IsImageSupported(
-  [out] boolean *value
+  [out] boolean *value
 );
 ```
 
@@ -41,7 +41,7 @@ HRESULT get_IsImageSupported(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der **true** ist, wenn der DMR Bilder anzeigen kann, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR Bilder anzeigen kann, und **FALSE,** wenn dies nicht der Fall ist.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -50,9 +50,9 @@ Ein boolescher Wert, der **true** ist, wenn der DMR Bilder anzeigen kann, andern
 [**MediaRenderer**](mediarenderer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

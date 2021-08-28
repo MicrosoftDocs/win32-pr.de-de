@@ -3,34 +3,34 @@ title: Abrufen der Rippingschnittstelle
 description: Abrufen der Rippingschnittstelle
 ms.assetid: 760610eb-e356-4b50-b865-53557ba9b815
 keywords:
-- Windows Media Player, CD-einreißen
-- Windows Media Player-Objektmodell, CD-einreißen
-- Objektmodell, CD-einreißen
-- Windows Media Player ActiveX-Steuerelement, CD-einreißen
-- ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile, CD-einreißen
-- CD-Ripping, iwmpcdromrip-Schnittstelle
-- einreißen CDs, iwmpcdromrip-Schnittstelle
-- Iwmpcdromrip-Schnittstelle
+- Windows Media Player,CD-Lässing
+- Windows Media Player-Objektmodell,CD-Bebauung
+- Objektmodell,CD-Bebauung
+- Windows Media Player ActiveX,CD-Kontrolle
+- ActiveX,CD-Steuerung
+- Windows Media Player Mobile ActiveX,CD-Steuerung
+- Windows Media Player Mobil, CD-10
+- CD-Benutzeroberfläche, IWMPCiererRip-Schnittstelle
+- -CDs, IWMPCiererRip-Schnittstelle
+- IWMPCiererRip-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 903fa285404700e35363a94239c79706e7af0e34
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 2179e4f38eee121d7b8fefc028adf232eb724264362396c8cacedfcc55b162d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "103858076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002550"
 ---
 # <a name="retrieving-the-ripping-interface"></a>Abrufen der Rippingschnittstelle
 
-Um die CD-Laufwerke auf dem Computer des Benutzers aufzulisten, verwenden Sie die **iwmpcdromcollection** -Schnittstelle. Rufen Sie einen Zeiger auf diese Schnittstelle ab, indem [Sie iwmpcore:: get \_ cdromcollection](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection)aufrufen.
+Um die CD-Laufwerke auf dem Computer des Benutzers aufzählen zu können, verwenden Sie **die IWMPCcollection-Schnittstelle.** Rufen Sie einen Zeiger auf diese Schnittstelle ab, indem [Sie IWMPCore::get \_ ccollection aufrufen.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection)
 
-Mithilfe der [get \_ count](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromcollection-get_count) -und [Item](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromcollection-item) -Methoden können Sie die Auflistung durchlaufen, um eine [iwmpcdrom](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdrom) -Schnittstelle für jedes CD-Laufwerk auf dem Computer des Benutzers abzurufen.
+Mithilfe der [Methoden get \_ count](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromcollection-get_count) und [item](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromcollection-item) können Sie die Sammlung iterieren, um eine [IWMPCome-Schnittstelle](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdrom) für jedes CD-Laufwerk auf dem Computer des Benutzers abzurufen.
 
-Die **iwmpcdrom** -Schnittstelle stellt ein einzelnes CD-Laufwerk dar. Bevor Sie mit dem Einreißen einer CD beginnen, müssen Sie zuerst **QueryInterface** über einen **iwmpcdrom** -Zeiger aufrufen, um die [iwmpcdromrip](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromrip) -Schnittstelle abzurufen.
+Die **IWMPC cri-Schnittstelle** stellt ein einzelnes CD-Laufwerk dar. Bevor Sie mit dem Erstellen einer CD beginnen, müssen Sie **zunächst QueryInterface** über einen **IWMPCome-Zeiger** aufrufen, um die [IWMPCiusRip-Schnittstelle abzurufen.](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromrip)
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Schnittstelle zum einreißen einer CD von einem bestimmten Laufwerk abrufen:
+Im folgenden Codebeispiel wird veranschaulicht, wie sie eine Schnittstelle zum Beschriften einer CD von einem bestimmten Laufwerk abrufen:
 
 
 ```C++
@@ -73,24 +73,24 @@ HRESULT CMainDlg::GetCdromRipInterface (long lIndex)
 
 <dl> <dt>
 
-[**Ripping einer CD**](ripping-a-cd.md)
+[**Erstellen einer CD**](ripping-a-cd.md)
 </dt> <dt>
 
-[**Der RIP-Prozess wird gestartet.**](starting-the-rip-process.md)
+[**Starten des Reißprozesses**](starting-the-rip-process.md)
 </dt> <dt>
 
-[**Abrufen des Status "RIP"**](retrieving-the-rip-status.md)
+[**Abrufen des Reißstatus**](retrieving-the-rip-status.md)
 </dt> <dt>
 
-[**Auswählen von Elementen für das Ripping**](selecting-items-for-ripping.md)
+[**Auswählen von Elementen für "Besendung"**](selecting-items-for-ripping.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromcollection)
+[**IWMPCcollection-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromcollection)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

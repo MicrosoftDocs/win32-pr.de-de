@@ -1,52 +1,52 @@
 ---
-title: Registrieren des COM-Objekts der Eigenschaften Seite in einem Anzeigespezifizierer
-description: In diesem Thema wird gezeigt, wie Sie eine Erweiterungs-DLL registrieren, die eine Active Directory Eigenschaften Blatt mit der Windows-Registrierung und Active Directory enthält.
+title: Registrieren des COM-Objekts der Eigenschaftenseite in einem Anzeigespezifizierer
+description: In diesem Thema wird gezeigt, wie Sie eine Erweiterungs-DLL registrieren, die ein Active Directory-Eigenschaftenblatt bei der Windows Active Directory enthält.
 ms.assetid: e2d6142b-c2fe-4435-b4af-83f7cd45218b
 ms.tgt_platform: multiple
 keywords:
-- Das COM-Objekt der Eigenschaften Seite wird in einem Anzeige Spezifizierer registriert Active Directory
-- COM-Objekt Active Directory der Eigenschaften Seite, registrieren in einem Anzeigespezifizierer
-- Anzeige spezifiker Active Directory, Registrieren des COM-Objekts der Eigenschaften Seite in
+- Registrieren des COM-Objekts der Eigenschaftenseite in einem Active Directory-Anzeigespezifizierer
+- Eigenschaftenseite COM-Objekt Active Directory , Registrierung in einem Anzeigespezifizierer
+- Anzeigespezifizierer Active Directory , Registrieren des COM-Objekts der Eigenschaftenseite in
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c5b08ac0ea6329026a6d367e71064bde917b1a6
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 0f6685e406cb1bfdc16f73dd2fddd94a195fe74a
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104101427"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881238"
 ---
-# <a name="registering-the-property-page-com-object-in-a-display-specifier"></a>Registrieren des COM-Objekts der Eigenschaften Seite in einem Anzeigespezifizierer
+# <a name="registering-the-property-page-com-object-in-a-display-specifier"></a>Registrieren des COM-Objekts der Eigenschaftenseite in einem Anzeigespezifizierer
 
-Wenn Sie com verwenden, um eine Eigenschaften Blatt-Erweiterungs-DLL für Active Directory Domain Services zu erstellen, müssen Sie die Erweiterung auch bei der Windows-Registrierung und Active Directory Domain Services registrieren. Durch die Registrierung der Erweiterung können die Active Directory Verwaltungs-MMC-Snap-Ins und die Windows-Shell die Erweiterung erkennen.
+Wenn Sie COM verwenden, um eine Dll für eigenschaftenblatterweiterungen für Active Directory Domain Services zu erstellen, müssen Sie die Erweiterung auch bei der Windows registrieren und Active Directory Domain Services. Durch das Registrieren der Erweiterung können die MMC-Snap-Ins der Active Directory-Verwaltung und die Windows Shell die Erweiterung erkennen.
 
-## <a name="registering-in-the-windows-registry"></a>Registrieren in der Windows-Registrierung
+## <a name="registering-in-the-windows-registry"></a>Registrieren in der Windows Registrierung
 
-Wie alle com-Server muss eine Eigenschaften Blatt Erweiterung in der Windows-Registrierung registriert werden. Die Erweiterung wird unter dem folgenden Schlüssel registriert.
+Wie alle COM-Server muss auch eine Eigenschaftenblatterweiterung in der Windows werden. Die Erweiterung wird unter dem folgenden Schlüssel registriert.
 
 ```
 HKEY_CLASSES_ROOT
-   CLSID
-      <clsid>
+   CLSID
+      <clsid>
 ```
 
-*<clsid>* die Zeichen folgen Darstellung der CLSID, die von der [**stringfromclsid**](/windows/win32/api/combaseapi/nf-combaseapi-stringfromclsid) -Funktion erstellt wird. Unter dem *<clsid>* Schlüssel gibt es einen **InProcServer32** -Schlüssel, der das-Objekt als 32-Bit-in-proc-Server identifiziert. Unter der **InProcServer32** -Taste wird der Speicherort der dll im Standardwert angegeben, und das Threading Modell wird im **ThreadingModel** -Wert angegeben. Alle Eigenschaften Blatt Erweiterungen müssen das Threading Modell "Apartment" verwenden.
+*&lt; clsid &gt; ist* die Zeichenfolgendarstellung der CLSID, die von der [**StringFromCLSID-Funktion erzeugt**](/windows/win32/api/combaseapi/nf-combaseapi-stringfromclsid) wird. Unter dem *&lt; &gt; clsid-Schlüssel* befindet sich ein **InProcServer32-Schlüssel,** der das Objekt als 32-Bit-In-Proc-Server identifiziert. Unter dem **InProcServer32-Schlüssel** wird der Speicherort der DLL im Standardwert und das Threadingmodell im **ThreadingModel-Wert** angegeben. Alle Eigenschaftenblatterweiterungen müssen das Threadingmodell "Apartment" verwenden.
 
 ## <a name="registering-with-active-directory-domain-services"></a>Registrieren bei Active Directory Domain Services
 
-Die Registrierung der Eigenschaften Blatt Erweiterung ist spezifisch für ein Gebiets Schema. Wenn die Eigenschafts Blatt Erweiterung auf alle Gebiets Schemas angewendet wird, muss Sie in allen Gebiets Schema-subcontainern im Container "Display Specifiers" im Objektklasse " [**displaySpecifier**](/windows/desktop/ADSchema/c-displayspecifier) " registriert werden. Wenn die Eigenschaften Blatt Erweiterung für ein bestimmtes Gebiets Schema lokalisiert wird, registrieren Sie Sie im **Display specifier** -Objekt in diesem Gebiets Schema-unter Container. Weitere Informationen über die Anzeige spezifischere Container und Gebiets Schemas finden Sie unter [Anzeigen von Bezeichner](display-specifiers.md) und [displaySpecifier-Containern](displayspecifiers-container.md).
+Die Registrierung der Eigenschaftenblatterweiterung ist für ein einzelnes Locale spezifisch. Wenn die Eigenschaftenblatterweiterung für alle Locales gilt, muss sie in der Objektklasse [**displaySpecifier-Objekt**](/windows/desktop/ADSchema/c-displayspecifier) in allen Locale-Untercontainern im Container Anzeigespezifizierer registriert werden. Wenn die Eigenschaftenblatterweiterung für ein bestimmtes Locale lokalisiert ist, registrieren Sie sie im **displaySpecifier-Objekt** in diesem Untercontainer des Locale. Weitere Informationen zum Container "Display Specifiers" und zu den Lokalen finden Sie unter [Display Specifiers](display-specifiers.md) and DisplaySpecifiers Container (Anzeigespezifizierer und [DisplaySpecifiers-Container).](displayspecifiers-container.md)
 
-Es gibt drei anzeigespezifiziererattribute, unter denen eine Eigenschaften Blatt Erweiterung registriert werden kann. Dabei handelt es sich um [**adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages), [**shellpropertypages**](/windows/desktop/ADSchema/a-shellpropertypages)und [**adminmultiselectpropertypages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages).
+Es gibt drei Anzeigespezifiziererattribute, unter denen eine Eigenschaftenblatterweiterung registriert werden kann. Dies [**sind adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages), [**shellPropertyPages**](/windows/desktop/ADSchema/a-shellpropertypages)und [**adminMultiselectPropertyPages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages).
 
-Das [**adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages) -Attribut identifiziert Verwaltungs Eigenschaften Seiten, die in Active Directory administrativen Snap-Ins angezeigt werden sollen. Die Eigenschaften Seite wird angezeigt, wenn der Benutzereigenschaften für Objekte der entsprechenden Klasse in einem der Active Directory Verwaltungs-MMC-Snap-Ins anzeigt.
+Das [**attribut adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages) identifiziert Verwaltungseigenschaftenseiten, die in Active Directory-Administrator-Snap-Ins angezeigt werden. Die Eigenschaftenseite wird angezeigt, wenn der Benutzer Eigenschaften für Objekte der entsprechenden Klasse in einem der MMC-Snap-Ins der Active Directory-Verwaltung einsichtet.
 
-Das [**shellpropertypages**](/windows/desktop/ADSchema/a-shellpropertypages) -Attribut identifiziert die Eigenschaften Seiten der Endbenutzer, die in der Windows-Shell angezeigt werden. Die Eigenschaften Seite wird angezeigt, wenn der Benutzer die Eigenschaften für Objekte der entsprechenden Klasse im Windows-Explorer anzeigt. Ab den Windows Server 2003-Betriebssystemen werden von der Windows-Shell keine Objekte mehr aus Active Directory Domain Services angezeigt.
+Das [**shellPropertyPages-Attribut**](/windows/desktop/ADSchema/a-shellpropertypages) identifiziert Eigenschaftenseiten von Endbenutzern, die in der Windows angezeigt werden. Die Eigenschaftenseite wird angezeigt, wenn der Benutzer die Eigenschaften für Objekte der entsprechenden Klasse im Windows anzeigt. Ab den Betriebssystemen Windows Server 2003 zeigt die Windows-Shell keine Objekte mehr aus Active Directory Domain Services.
 
-[**Adminmultiselectpropertypages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) ist nur unter den Betriebssystemen Windows Server 2003 verfügbar. Die Eigenschaften Seite wird angezeigt, wenn der Benutzer in einem der Active Directory-Verwaltungs-MMC-Snap-Ins Eigenschaften für mehr als ein Objekt der entsprechenden Klasse anzeigt.
+[**AdminMultiselectPropertyPages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) ist nur auf den betriebssystemen Windows Server 2003 verfügbar. Die Eigenschaftenseite wird angezeigt, wenn der Benutzer Eigenschaften für mehr als ein Objekt der entsprechenden Klasse in einem der MMC-Snap-Ins der Active Directory-Verwaltung einsichtet.
 
-Alle diese Attribute sind mehr wertig.
+Alle diese Attribute sind mehrwertige Attribute.
 
-Die Werte für die Attribute " [**adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages) " und " [**shellpropertypages**](/windows/desktop/ADSchema/a-shellpropertypages) " erfordern das folgende Format.
+Die Werte für [**die Attribute adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages) und [**shellPropertyPages**](/windows/desktop/ADSchema/a-shellpropertypages) erfordern das folgende Format.
 
 
 ```C++
@@ -55,7 +55,7 @@ Die Werte für die Attribute " [**adminPropertyPages**](/windows/desktop/ADSchem
 
 
 
-Die Werte für das [**adminmultiselectpropertypages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) -Attribut erfordern das folgende Format.
+Die Werte für das [**adminMultiselectPropertyPages-Attribut**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) erfordern das folgende Format.
 
 
 ```C++
@@ -64,11 +64,11 @@ Die Werte für das [**adminmultiselectpropertypages**](/windows/desktop/ADSchema
 
 
 
-" &lt; Order Number &gt; " ist eine nicht signierte Zahl, die die Seitenposition im Blatt darstellt. Wenn ein Eigenschaften Blatt angezeigt wird, werden die Werte mithilfe eines Vergleichs der "Order Number"-Werte der einzelnen Werte sortiert &lt; &gt; . Wenn mehr als ein Wert dieselbe " &lt; Bestellnummer" aufweist &gt; , werden diese COM-Objekte der Eigenschaften Seite in der Reihenfolge geladen, in der Sie vom Active Directory Server gelesen werden. Wenn möglich, sollten Sie eine nicht vorhandene " &lt; Bestellnummer" verwenden, &gt; d. h. eine, die nicht von anderen Werten in der-Eigenschaft verwendet wird. Es gibt keine vorgeschriebene Anfangsposition, und Lücken sind in der Sequenz " &lt; Order Number &gt; " zulässig.
+Die &lt; "Bestellnummer" &gt; ist eine Zahl ohne Vorzeichen, die die Seitenposition auf dem Blatt darstellt. Wenn ein Eigenschaftenblatt angezeigt wird, werden die Werte anhand eines Vergleichs der Bestellnummer jedes &lt; Werts &gt; sortiert. Wenn mehr als ein Wert über die gleiche "Bestellnummer" verfügt, werden diese COM-Objekte der Eigenschaftenseite in der Reihenfolge geladen, in der sie vom &lt; &gt; Active Directory-Server gelesen werden. Wenn möglich, sollten Sie eine nicht vorhandene "Bestellnummer" verwenden, d.> eine, die nicht von anderen Werten &lt; &gt; in der -Eigenschaft verwendet wird. Es gibt keine vorgeschriebene Anfangsposition, und Lücken sind in der Sequenz " &lt; Bestellnummer &gt; " zulässig.
 
-Die " &lt; CLSID &gt; " ist die Zeichen folgen Darstellung der CLSID, die von der [**stringfromclsid**](/windows/win32/api/combaseapi/nf-combaseapi-stringfromclsid) -Funktion erstellt wird.
+&lt;"clsid" &gt; ist die Zeichenfolgendarstellung der CLSID, die von der [**StringFromCLSID-Funktion erzeugt**](/windows/win32/api/combaseapi/nf-combaseapi-stringfromclsid) wird.
 
-" &lt; Optionale Daten &gt; " ist ein Zeichen folgen Wert, der nicht erforderlich ist. Dieser Wert kann durch das COM-Objekt der Eigenschaften Seite abgerufen werden, indem der [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Zeiger an die zugehörige [**ishellextinit:: Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) -Methode weitergegeben wird. Das COM-Objekt der Eigenschaften Seite erhält diese Daten durch Aufrufen von [**IDataObject:: GetData**](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) mit dem Zwischenablage Format [**cfstr \_ dspropertypageinfo**](cfstr-dspropertypageinfo.md) . Dadurch wird ein **HGLOBAL** bereitstellt, das eine [**dspropertypageinfo**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo) -Struktur enthält. die **dspropertypageinfo** -Struktur enthält eine Unicode-Zeichenfolge, die die " &lt; optionalen Daten &gt; " enthält. Die " &lt; optionalen Daten &gt; " sind mit dem Attribut " [**adminmultiselectpropertypages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) " nicht zulässig. Im folgenden C/C++-Codebeispiel wird gezeigt, wie die " &lt; optionalen Daten" abgerufen werden &gt; .
+Der &lt; optionale &gt; Datenwert ist ein Zeichenfolgenwert, der nicht erforderlich ist. Dieser Wert kann vom COM-Objekt der Eigenschaftenseite mithilfe des [**IDataObject-Zeigers**](/windows/win32/api/objidl/nn-objidl-idataobject) abgerufen werden, der an die [**IShellExtInit::Initialize-Methode übergeben**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) wird. Das COM-Objekt der Eigenschaftenseite ruft diese Daten ab, indem [**es IDataObject::GetData mit**](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) dem [**CFSTR \_ DSPROPERTYPAGEINFO-Zwischenablageformat**](cfstr-dspropertypageinfo.md) aufruft. Dies stellt ein **HGLOBAL-Objekt** mit einer [**DSPROPERTYPAGEINFO-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dspropertypageinfo) zur Verfügung. Die **DSPROPERTYPAGEINFO-Struktur** enthält eine Unicode-Zeichenfolge, die die &lt; optionalen Daten &gt; enthält. Das &lt; optionale &gt; Datenattribut [**"adminMultiselectPropertyPages" ist nicht**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) zulässig. Das folgende C/C++-Codebeispiel zeigt, wie die optionalen &lt; Daten abgerufen &gt; werden.
 
 
 ```C++
@@ -99,9 +99,9 @@ if(SUCCEEDED(hr))
 
 
 
-Eine Eigenschaften Blatt Erweiterung kann mehr als eine Eigenschaften Seite implementieren. eine mögliche Verwendung der " &lt; optionalen Daten &gt; " besteht darin, die Seiten für die Anzeige zu benennen. Dies bietet die Flexibilität, mehrere COM-Objekte, eine für jede Seite oder ein einzelnes COM-Objekt zu implementieren, um mehrere Seiten zu verarbeiten.
+Eine Eigenschaftenblatterweiterung kann mehrere Eigenschaftenseiten implementieren. Eine mögliche Verwendung von &lt; "optional data" ist das &gt; Benennen der anzuzeigenden Seiten. Dies bietet die Flexibilität, mehrere COM-Objekte zu implementieren, eines für jede Seite oder ein einzelnes COM-Objekt, um mehrere Seiten zu verarbeiten.
 
-Das folgende Codebeispiel ist ein Beispiel Wert, der für die Attribute [**adminPropertyPages**](/windows/desktop/ADSchema/a-adminpropertypages), [**shellpropertypages**](/windows/desktop/ADSchema/a-shellpropertypages)oder [**adminmultiselectpropertypages**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) verwendet werden kann.
+Das folgende Codebeispiel ist ein Beispielwert, der für die [**Attribute adminPropertyPages,**](/windows/desktop/ADSchema/a-adminpropertypages) [**shellPropertyPages**](/windows/desktop/ADSchema/a-shellpropertypages)oder [**adminMultiselectPropertyPages verwendet**](/windows/desktop/ADSchema/a-adminmultiselectpropertypages) werden kann.
 
 
 ```C++
@@ -111,25 +111,25 @@ Das folgende Codebeispiel ist ein Beispiel Wert, der für die Attribute [**admin
 
 
 > [!IMPORTANT]
-> Bei der Windows-Shell werden Anzeige spezifiziererdaten bei der Benutzeranmeldung abgerufen und für die Benutzersitzung zwischengespeichert. Bei administrativen Snap-Ins werden die Anzeige spezifiziererdaten abgerufen, wenn das Snap-In geladen wird. Sie werden für die Lebensdauer des Prozesses zwischengespeichert. Bei der Windows-Shell bedeutet dies, dass Änderungen an Anzeige spezifiken wirksam werden, nachdem ein Benutzer sich abmeldet und sich dann erneut anmeldet. Bei den administrativen Snap-Ins werden die Änderungen wirksam, wenn das Snap-in oder die Konsolen Datei geladen wird.
+> Für die Windows-Shell werden Anzeigespezifiziererdaten bei der Benutzeranmeldung abgerufen und für die Benutzersitzung zwischengespeichert. Bei administrativen Snap-Ins werden die Anzeigespezifiziererdaten beim Laden des Snap-Ins abgerufen und für die Lebensdauer des Prozesses zwischengespeichert. Für die Windows Shell gibt dies an, dass Änderungen an Anzeigespezifizierern wirksam werden, nachdem sich ein Benutzer abgemelgt hat und sich dann erneut anmeldet. Für die administrativen Snap-Ins werden Änderungen wirksam, wenn das Snap-In oder die Konsolendatei geladen wird.
 
- 
+ 
 
-## <a name="adding-a-value-to-the-property-sheet-extension-attributes"></a>Hinzufügen eines Werts zu den Eigenschaften Blatt-Erweiterungs Attributen
+## <a name="adding-a-value-to-the-property-sheet-extension-attributes"></a>Hinzufügen eines Werts zu den Eigenschaftenblatterweiterungsattributen
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Eigenschaften Blatt Erweiterung unter einem der Eigenschaften Blatt-Erweiterungs Attribute registrieren.
+Im folgenden Verfahren wird beschrieben, wie Sie eine Eigenschaftenblatterweiterung unter einem der Eigenschaftenblatterweiterungsattribute registrieren.
 
-**Registrieren einer Eigenschaften Blatt Erweiterung unter einem der Eigenschaften Blatt-Erweiterungs Attribute**
+**Registrieren einer Eigenschaftenblatterweiterung unter einem der Eigenschaftenblatterweiterungsattribute**
 
 1.  Stellen Sie sicher, dass die Erweiterung nicht bereits in den Attributwerten vorhanden ist.
-2.  Fügen Sie den neuen Wert am Ende der Bestellliste der Eigenschaften Seite hinzu. Dies ist der " &lt; Order Number &gt; "-Teil des Attribut Werts auf den nächsten Wert nach der höchsten vorhandenen Bestellnummer festgelegt.
-3.  Die [**IADs::P utex**](/windows/desktop/api/iads/nf-iads-iads-putex) -Methode wird verwendet, um dem Attribut den neuen Wert hinzuzufügen. Der Parameter " *lncontrolcode* " muss auf die Anzeige **Eigenschaft " \_ \_ Append** " festgelegt werden, damit der neue Wert an die vorhandenen Werte angehängt wird und die vorhandenen Werte daher nicht überschreibt. Die [**IADs::**](/windows/desktop/api/iads/nf-iads-iads-setinfo) *-Methode muss nachträglich aufgerufen werden, um die Änderung in das Verzeichnis zu übertragen.
+2.  Fügen Sie den neuen Wert am Ende der Sortierungsliste der Eigenschaftenseite hinzu. Dies wird für den Teil " Bestellnummer " des Attributwerts auf den nächsten Wert nach &lt; &gt; der höchsten vorhandenen Bestellnummer festgelegt.
+3.  Die [**IADs::P utEx-Methode**](/windows/desktop/api/iads/nf-iads-iads-putex) wird verwendet, um dem Attribut den neuen Wert hinzuzufügen. Der *lnControlCode-Parameter* muss auf **ADS PROPERTY \_ \_ APPEND** festgelegt werden, damit der neue Wert an die vorhandenen Werte angefügt wird und daher die vorhandenen Werte nicht überschreibt. Die [**IADs::SetInfo-Methode**](/windows/desktop/api/iads/nf-iads-iads-setinfo) muss anschließend aufgerufen werden, um die Änderung im Verzeichnis zu commiten.
 
-Beachten Sie, dass die gleiche Eigenschaften Blatt Erweiterung für mehr als eine Objektklasse registriert werden kann.
+Beachten Sie, dass dieselbe Eigenschaftenblatterweiterung für mehrere Objektklassen registriert werden kann.
 
-Die [**IADs::P utex**](/windows/desktop/api/iads/nf-iads-iads-putex) -Methode wird verwendet, um dem Attribut den neuen Wert hinzuzufügen. Der Parameter " *lncontrolcode* " muss auf die **ADS-Eigenschaft " \_ \_ Append**" festgelegt werden, sodass der neue Wert an die vorhandenen Werte angehängt wird und die vorhandenen Werte daher nicht überschreibt. Die [**IADs::**](/windows/desktop/api/iads/nf-iads-iads-setinfo) *-Methode muss nach aufgerufen werden, um die Änderung in das Verzeichnis zu übertragen.
+Die [**IADs::P utEx-Methode**](/windows/desktop/api/iads/nf-iads-iads-putex) wird verwendet, um dem Attribut den neuen Wert hinzuzufügen. Der *lnControlCode-Parameter* muss auf **ADS PROPERTY \_ \_ APPEND** festgelegt werden, damit der neue Wert an die vorhandenen Werte angefügt wird und daher die vorhandenen Werte nicht überschreibt. Die [**IADs::SetInfo-Methode**](/windows/desktop/api/iads/nf-iads-iads-setinfo) muss nach aufgerufen werden, um die Änderung an das Verzeichnis zu commiten.
 
-Im folgenden Codebeispiel wird der Group-Klasse im Standard Gebiets Schema des Computers eine Eigenschaften Blatt Erweiterung hinzugefügt. Beachten Sie, dass die **addpropertypagededisplayspecifier** -Funktion die CLSID der Eigenschafts Blatt Erweiterung in den vorhandenen Werten überprüft, die höchste Bestellnummer abruft und den Wert für die Eigenschaften Seite mithilfe von [**IADs::P utex**](/windows/desktop/api/iads/nf-iads-iads-putex) mit der **ADS- \_ Eigenschaft \_ Append** -Steuerungs Code hinzufügt.
+Im folgenden Codebeispiel wird der Gruppenklasse im Standard-Locale des Computers eine Eigenschaftenblatterweiterung hinzufügt. Beachten Sie, dass die **AddPropertyPageToDisplaySpecifier-Funktion** die CLSID der Eigenschaftenblatterweiterung in den vorhandenen Werten überprüft, die höchste Reihenfolgennummer erhält und den Wert für die Eigenschaftenseite mithilfe von [**IADs::P utEx**](/windows/desktop/api/iads/nf-iads-iads-putex) mit dem **ADS PROPERTY \_ \_ APPEND-Steuerelementcode** hinzufügt.
 
 
 ```C++
@@ -434,6 +434,6 @@ HRESULT GetDisplaySpecifier(IADsContainer *pContainer, LPOLESTR szDispSpec, IADs
 
 
 
- 
+ 
 
- 
+ 

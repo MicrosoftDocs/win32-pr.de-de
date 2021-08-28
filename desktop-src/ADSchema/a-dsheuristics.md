@@ -4,8 +4,8 @@ description: Enthält globale Einstellungen für die gesamte Gesamtstruktur.
 ms.assetid: d5fd990b-7bbf-4ede-a3af-7f3f7ac959b3
 ms.tgt_platform: multiple
 keywords:
-- DS-Heuristics AD-Attributschema
-- dSHeuristics-Attribut AD-Schema
+- DS-Heuristics AD-Schema des Attributs
+- AD-Schema des dSHeuristics-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a5d501cd8b34a8d1c391a75d9caa8243db8e3a94088a898b0c2b7672b2d0aab
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 0c0c295f8343ad7bc5224800988b43d25e05133b
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119656630"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880676"
 ---
 # <a name="ds-heuristics-attribute"></a>DS-Heuristics-Attribut
 
 Enthält globale Einstellungen für die gesamte Gesamtstruktur.
 
-Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Support-Website in einer Artikelnummer [817433 verfügbar. Delegierte Berechtigungen sind nicht verfügbar, und die Vererbung wird automatisch deaktiviert.](https://support.microsoft.com/default.aspx?scid=kb;EN-US;817433)
+Informationen zu adminSDholder-Ausschlussbits, die auf der Microsoft-Website für Hilfe und Support verfügbar sind, finden Sie in der Artikelnummer 817433, Delegierte Berechtigungen sind nicht verfügbar, und die Vererbung wird [automatisch deaktiviert.](https://support.microsoft.com/default.aspx?scid=kb;EN-US;817433)
 
 
 
@@ -37,7 +37,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.212                      |
-| System-ID-GUID    | f0f8ff86-1191-11d0-a060-00aa006c33ed        |
+| System-Id-Guid    | f0f8ff86-1191-11d0-a060-00aa006c33ed        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -46,7 +46,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 
 -   [**Windows 2000 Server**](#windows-2000-server)
 -   [**Windows Server 2003**](#windows-server-2003)
--   [**Adam**](#adam)
+-   [**ADAM**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -61,7 +61,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
@@ -82,7 +82,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
@@ -94,7 +94,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 
 
 
-## <a name="adam"></a>Adam
+## <a name="adam"></a>ADAM
 
 
 
@@ -103,7 +103,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
@@ -201,7 +201,7 @@ Informationen zu AdminSDholder-Ausschlussbits sind auf der Microsoft Help and Su
 
 ## <a name="remarks"></a>Hinweise
 
-Jede Active Directory-Gesamtstruktur enthält ein DS-Heuristics Attribut, das Einstellungen für die gesamte Gesamtstruktur enthält. Das DS-Heuristics Attribut ist ein Attribut des Objekts "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,". <Domain>
+Jede Active Directory-Gesamtstruktur enthält ein DS-Heuristics Attribut, das Einstellungen für die gesamte Gesamtstruktur enthält. Das DS-Heuristics Attribut ist ein Attribut des Objekts "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration, &lt; &gt; Domain".
 
 DS-Heuristics ist eine Unicode-Zeichenfolge, in der jedes Zeichen einen Wert für eine einzelne domänenweite Einstellung enthält. Die DS-Heuristics Zeichenfolge hat das folgende Format.
 
@@ -211,21 +211,21 @@ DS-Heuristics ist eine Unicode-Zeichenfolge, in der jedes Zeichen einen Wert fü
 
 Zur Datenvalidierung wird jedes zehnte Zeichen auf die Zeichennummer dividiert durch zehn festgelegt. Das zehnte Zeichen ist z. B. "1". das Strichzeichen ist "2" usw.
 
-Jedes Zeichen, das nicht festgelegt ist, wird als "0" angenommen. Wenn das DS-Heuristics Attribut nicht festgelegt ist, wird davon ausgegangen, dass alle Werte "0" sind. Derzeit werden 25 Zeichen verwendet, und es ist nicht erforderlich, die Zeichenfolge aufzufüllen, um alle 25 Zeichen aufzufüllen. Wenn beispielsweise das höchste verwendete Zeichen 7 ist, ist die Zeichenfolge "0000002" akzeptabel.
+Jedes Zeichen, das nicht festgelegt ist, wird als "0" angenommen. Wenn das DS-Heuristics Attribut nicht festgelegt ist, wird davon ausgegangen, dass alle Werte "0" sind. Derzeit werden 25 Zeichen verwendet, und es ist nicht erforderlich, die Zeichenfolge auffüllen, um alle 25 Zeichen zu füllen. Wenn das höchste verwendete Zeichen beispielsweise 7 ist, ist die Zeichenfolge "0000002" akzeptabel.
 
-Ausführliche Informationen zu den einzelnen Zeichen finden Sie unter [dSHeuristics in der technischen Spezifikation von \[ MS-ADTS \] Active Directory.](/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5)
+Weitere Informationen zu den einzelnen Zeichen finden Sie unter [dSHeuristics in der technischen Spezifikation von \[ MS-ADTS \] Active Directory.](/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5)
 
 ### <a name="anr-search-filters"></a>ANR-Suchfilter
 
-Die Zeichen 1, 2 und 4 werden verwendet, um das Verhalten von ANR-Suchfiltern zu ändern. Wenn Zeichen 1 auf "1" festgelegt ist, ist die Erweiterung des ANR-Filters zum Einschließen von **GivenName**  -  **Surname** (wenn Leerzeichen gefunden werden) deaktiviert. Wenn Zeichen 2 auf "1" festgelegt ist, ist die Erweiterung des ANR-Filters zum Einschließen von **Surname**  -  **GivenName** deaktiviert. Wenn ein eingebettetes Leerzeichen in der Suchzeichenfolge vorhanden ist, wird die Suchzeichenfolge normalerweise in zwei Zeichenfolgen unterteilt, die paarweise mit den Attributen **GivenName** und **Surname** verglichen werden. Das Festlegen der Zeichen 1 und 2 auf "1" verhindert, dass diese Übereinstimmungen versucht werden. Dieser Abgleich kann deaktiviert werden, wenn der Administrator sicher ist, dass die Suche nach "Jeff Smith" immer als "jeff smith" und nicht als "smith, jeff" bereitgestellt wird. Normalerweise wird nur die eine oder andere Übereinstimmung gemäß der lokalen Konvention unterdrückt.
+Die Zeichen 1, 2 und 4 werden verwendet, um das Verhalten von ANR-Suchfiltern zu ändern. Wenn Zeichen 1 auf "1" festgelegt ist, wird die Erweiterung des ANR-Filters um **GivenName**  -  **Surname** (wenn Leerzeichen gefunden werden) deaktiviert. Wenn Zeichen 2 auf "1" festgelegt ist, ist die Erweiterung des ANR-Filters um **den Nachnamen**  -  **GivenName** deaktiviert. Wenn ein eingebettetes Leerzeichen in der Suchzeichenfolge vorhanden ist, wird die Suchzeichenfolge normalerweise in zwei Zeichenfolgen unterteilt, die paarweise mit den **Attributen GivenName** und **Surname verglichen** werden. Wenn Sie die Zeichen 1 und 2 auf "1" festlegen, wird verhindert, dass diese Übereinstimmungen versucht werden. Dieser Abgleich kann deaktiviert werden, wenn der Administrator sicher ist, dass die Suche nach "Jeff Smith" immer als "jeff smith" und nicht als "smith, jeff" bereitgestellt wird. Normalerweise wird nur die eine oder die andere Übereinstimmung gemäß der lokalen Konvention unterdrückt.
 
-Wenn das Zeichen 4 auf "1" festgelegt ist, führt Active Directory die "präemptive Spitznamenauflösung" aus. Das heißt, wenn die Suchzeichenfolge genau mit dem Spitznamen von genau einem Objekt im Suchbereich übereinstimmt, wird ein Objekt als Ergebnis der Suche zurückgegeben, und der Rest von ANR wird übersprungen. Beachten Sie, dass die restliche ANR-Suche zwar über LDAP verfügbar ist, die präemptive Spitznamenauflösung (auch als "Spitzname-Snap" bezeichnet) jedoch nur über MAPI verfügbar ist.
+Wenn das Zeichen 4 auf "1" festgelegt ist, führt Active Directory "präemptive Spitznamenauflösung" aus. Das heißt, wenn die Suchzeichenfolge genau dem Spitznamen genau eines Objekts im Suchbereich entspricht, wird dieses ein Objekt als Ergebnis der Suche zurückgegeben, und der Rest von ANR wird übersprungen. Beachten Sie, dass der Rest der ANR-Suche zwar über LDAP verfügbar ist, aber die präemptive Spitznamenauflösung (auch als "Spitznamen-Snap" bezeichnet) nur über MAPI verfügbar ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[dSHeuristics in \[ MS-ADTS \] Active Directory Technical Specification](/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5)
+[dSHeuristics in der technischen Spezifikation von \[ MS-ADTS \] Active Directory](/openspecs/windows_protocols/ms-adts/e5899be4-862e-496f-9a38-33950617d2c5)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-title: D2D_COLOR_F (D2DBaseTypes. h)
-description: Beschreibt die Komponenten rot, grün, blau und Alpha einer Farbe. | D2D_COLOR_F (D2DBaseTypes. h)
+title: D2D_COLOR_F (D2DBaseTypes.h)
+description: Beschreibt die Rot-, Grün-, Blau- und Alphakomponenten einer Farbe. | D2D_COLOR_F (D2DBaseTypes.h)
 ms.assetid: 706c6ba1-1685-4df7-9b40-279eb628df34
 keywords:
 - D2D_COLOR_F
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dc57a75b48f7938c9ecf53baeb3c4cc1894193f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: dc6e4f35de7e227831d472282f454d50c9db4255382606bade4eddd0a18a548f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106373448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833190"
 ---
-# <a name="d2d_color_f"></a>D2D- \_ Farbe \_ F
+# <a name="d2d_color_f"></a>\_D2D-FARBE \_ F
 
-Beschreibt die Komponenten rot, grün, blau und Alpha einer Farbe.
+Beschreibt die Rot-, Grün-, Blau- und Alphakomponenten einer Farbe.
 
 
 ```C++
@@ -24,7 +24,7 @@ typedef D3DCOLORVALUE D2D_COLOR_F;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen finden Sie unter [**D3DCOLORVALUE**](/previous-versions/windows/desktop/legacy/dd368193(v=vs.85)).
 
@@ -34,10 +34,10 @@ Weitere Informationen finden Sie unter [**D3DCOLORVALUE**](/previous-versions/wi
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista mit SP2 und Platt Form Update für Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Platt Form Update für Windows Server 2008 \[ Desktop Apps \| UWP-apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>D2DBaseTypes. h (Include D2d1. h)</dt> </dl>                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für Windows Vista-Desktop-Apps \[ \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server 2008-Desktop-Apps \[ \| UWP-Apps\]<br/> |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>D2DBaseTypes.h (include D2d1.h)</dt> </dl>                               |
 
 
 

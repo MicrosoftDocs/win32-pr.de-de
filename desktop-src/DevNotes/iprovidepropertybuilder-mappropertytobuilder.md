@@ -1,7 +1,7 @@
 ---
 description: Überprüft, ob ein Generator einer bestimmten Eigenschaft zugeordnet werden soll.
 ms.assetid: 8fab2dc2-3549-4559-b704-6783d929274e
-title: 'Iprovidepropertybuilder:: mappropertydebuilder-Methode'
+title: IProvidePropertyBuilder::MapPropertyToBuilder-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Vsp.dll
-ms.openlocfilehash: 5fa755449bfb97940235fe45f9e299aa828e6faa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 35ff9e82164251c4490355bbf0499b7fa690415d388b95f7f9c7fd0e6bd7dd3c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001690"
 ---
-# <a name="iprovidepropertybuildermappropertytobuilder-method"></a>Iprovidepropertybuilder:: mappropertydebuilder-Methode
+# <a name="iprovidepropertybuildermappropertytobuilder-method"></a>IProvidePropertyBuilder::MapPropertyToBuilder-Methode
 
 Überprüft, ob ein Generator einer bestimmten Eigenschaft zugeordnet werden soll.
 
@@ -42,25 +42,25 @@ void MapPropertyToBuilder(
 
 <dl> <dt>
 
-*DISPID* \[ in\]
+*dispid* \[ In\]
 </dt> <dd>
 
-Die DispID der fraglichen Eigenschaft.
+Die DISPID der in Frage gestellten Eigenschaft.
 
 </dd> <dt>
 
-*pdwctlbldtype* \[ vorgenommen\]
+*pdwCtlBldType* \[ out\]
 </dt> <dd>
 
-Der Generator, der zugeordnet werden soll. Dieser Parameter kann eine Kombination der folgenden Werte sein.
+Der generator, der zugeordnet werden soll. Dieser Parameter kann eine Kombination der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                                                                          | Bedeutung                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| <span id="CTLBLDTYPE_FSTDPROPBUILDER"></span><span id="ctlbldtype_fstdpropbuilder"></span><dl> <dt>**Ctlbldtype \_ "F**</dt> <dt></dt> ", "f" </dl>    | Aufrufen eines Standardsystem-Generators (wird in Visual Studio nicht unterstützt).<br/> |
-| <span id="CTLBLDTYPE_FINTERNALBUILDER"></span><span id="ctlbldtype_finternalbuilder"></span><dl> <dt>**Ctlbldtype \_ Finternalbuilder**</dt> <dt>2</dt> </dl> | Rufen Sie einen benutzerdefinierten Generator auf.<br/>                                           |
-| <span id="CTLBLDTYPE_EDITSOBJDIRECTLY"></span><span id="ctlbldtype_editsobjdirectly"></span><dl> <dt>**Ctlbldtype \_ Editsobjdirekt**</dt> <dt>4</dt> </dl> | Generator ändert das Objekt. Dies ist ein gewöhnliches Verhalten.<br/>              |
+| <span id="CTLBLDTYPE_FSTDPROPBUILDER"></span><span id="ctlbldtype_fstdpropbuilder"></span><dl> <dt>**CTLBLDTYPE \_ FSTDPROPBUILDER**</dt> <dt>1</dt> </dl>    | Rufen Sie einen Standardsystem-Generator auf (wird in diesem Visual Studio).<br/> |
+| <span id="CTLBLDTYPE_FINTERNALBUILDER"></span><span id="ctlbldtype_finternalbuilder"></span><dl> <dt>**CTLBLDTYPE \_ FINTERNALBUILDER**</dt> <dt>2</dt> </dl> | Rufen Sie einen benutzerdefinierten Generator auf.<br/>                                           |
+| <span id="CTLBLDTYPE_EDITSOBJDIRECTLY"></span><span id="ctlbldtype_editsobjdirectly"></span><dl> <dt>**CTLBLDTYPE \_ EDITSOBJDIRECTLY**</dt> <dt>4</dt> </dl> | Generator ändert das Objekt. Dies ist ein gewöhnliches Verhalten.<br/>              |
 
 
 
@@ -68,23 +68,23 @@ Der Generator, der zugeordnet werden soll. Dieser Parameter kann eine Kombinatio
 
 </dd> <dt>
 
-*pbstringuidbldr* \[ vorgenommen\]
+*pbstrGuidBldr* \[ out\]
 </dt> <dd>
 
 Die GUID, die den Generator für diese Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*builderavailable* \[ Out, retval\]
+*builderAvailable* \[ out, retval\]
 </dt> <dd>
 
-Dieser Parameter ist **true** , wenn diese Eigenschaft derzeit einen Generator unterstützt.
+Dieser Parameter ist **TRUE,** wenn diese Eigenschaft derzeit einen Generator unterstützt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,11 +96,11 @@ Gibt einen **HRESULT** -Wert zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iprovidäpropertybuilder**](iprovidepropertybuilder.md)
+[**IProvidePropertyBuilder**](iprovidepropertybuilder.md)
 </dt> </dl>
 
  

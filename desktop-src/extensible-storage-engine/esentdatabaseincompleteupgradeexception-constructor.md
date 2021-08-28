@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabaseingecompleteupgradeexception-Konstruktor'
-title: Esentdatabaseingecompleteupgradeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseIncompleteUpgradeException-Konstruktor'
+title: EsentDatabaseIncompleteUpgradeException-Konstruktor
 TOCTitle: 'EsentDatabaseIncompleteUpgradeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseIncompleteUpgradeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabaseincompleteupgradeexception.esentdatabaseincompleteupgradeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 41ef87df165b0336441827dfb2d1805247350a11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c99ab2fab4016ac68061f808a8ecac28396a5bfe2312eb6db00f94d6901ee15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621299"
 ---
-# <a name="esentdatabaseincompleteupgradeexception-constructor"></a>Esentdatabaseingecompleteupgradeexception-Konstruktor
+# <a name="esentdatabaseincompleteupgradeexception-constructor"></a>EsentDatabaseIncompleteUpgradeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabaseincompleteupgradeexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseIncompleteUpgradeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseIncompleteUpgradeException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabaseingecompleteupgradeexception-Klasse](./esentdatabaseincompleteupgradeexception-class.md)
+[EsentDatabaseIncompleteUpgradeException-Klasse](./esentdatabaseincompleteupgradeexception-class.md)
 
-[Esentdatabaseingecompleteupgrade Exception-Member](./esentdatabaseincompleteupgradeexception-members.md)
+[EsentDatabaseIncompleteUpgradeException-Member](./esentdatabaseincompleteupgradeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

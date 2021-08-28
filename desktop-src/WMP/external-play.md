@@ -1,11 +1,11 @@
 ---
-title: Extern. Play-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Play-Methode weist Windows Media Player an, einen Satz von Medien Elementen wiederzugeben.
+title: External.play-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Play-Methode weist Windows Media Player, einen Satz von Medienelementen wieder zu spielen.
 ms.assetid: 3e1f45db-9e7f-4a1b-aaa2-513a19c46f70
 keywords:
-- Wiedergabemethode Windows Media Player
-- Wiedergabemethode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, Wiedergabemethode
+- Play-Windows Media Player
+- play method Windows Media Player , External class
+- Externe Klasse Windows Media Player , Play-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94cfa40d96bbc67c7d41eb1a1a0188be68ec154e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90644b357e56f40bfbdb576908b99aa6941f8153dc339daa996152f63d77372c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648630"
 ---
-# <a name="externalplay-method"></a>Extern. Play-Methode
+# <a name="externalplay-method"></a>External.play-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **Play** -Methode weist Windows Media Player an, einen Satz von Medien Elementen wiederzugeben.
+Die **Play-Methode** weist Windows Media Player, einen Satz von Medienelementen wieder zu spielen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,17 +48,17 @@ External.play(
 
 <dl> <dt>
 
-*Librarylocationtype* \[ in\]
+*LibraryLocationType* \[ In\]
 </dt> <dd>
 
-Eine [Bibliotheks Speicherort Konstante](library-location-constants.md) , die den Typ der zu Wiedergabe enden Medienelemente angibt. Cpalbumid gibt beispielsweise an, dass ein oder mehrere Alben wiedergegeben werden sollen.
+Eine [Bibliotheksspeicherort-Konstante,](library-location-constants.md) die den Typ der Medienelemente angibt, die abgespielt werden sollen. Beispielsweise gibt CP CpuID an, dass ein oder mehrere Albums abgespielt werden sollen.
 
 </dd> <dt>
 
-*Librarylocationids* \[ in\]
+*LibraryLocationIDs* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** mit den Bezeichnerzeichen, die durch Semikolons getrennt sind, der zu Wiedergabe enden Medienelemente.
+**Eine** Zeichenfolge, die die durch Semikolons getrennten Bezeichner der medienelemente enthält, die abgespielt werden sollen.
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

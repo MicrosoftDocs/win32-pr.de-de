@@ -7,12 +7,12 @@ MSHAttr:
 title: IMSI
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5322ba1059a3c7ba4ae60f921cf4a33a3720b8fc
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: b2eadeb93f0bdddc6043d22469d5f7431a752a5b
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/26/2021
-ms.locfileid: "122988783"
+ms.locfileid: "122883688"
 ---
 # <a name="span-idwwan_profile_v4element_imsispanimsi"></a><span id="WWAN_profile_v4.element_IMSI"></span>IMSI
 
@@ -47,19 +47,17 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | BESCHREIBUNG | 
+| Übergeordnetes Element | Beschreibung | 
 |----------------|-------------|
 | <a href="element-profileconditionedon.md">ProfileConditionedOn</a> | <p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p><p>Dieses Element ist neu für v4. Sie ermöglicht es Ihnen, mehrere Profile anzugeben, die unter verschiedenen Bedingungen gelten, und damit das richtige Profil automatisch verwendet wird, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie sie nicht angeben, gilt das Profil immer in Bezug auf die aufgeführten Bedingungen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

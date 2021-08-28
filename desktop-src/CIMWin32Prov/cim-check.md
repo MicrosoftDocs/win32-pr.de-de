@@ -23,12 +23,12 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 079eded352c81bc7a066a02616cf314435e7c862b7a34b1b957a0a633f73c20e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 42852346af5e4f19038594627e9b7f567e2d3e86
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117835065"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885308"
 ---
 # <a name="cim_check-class"></a>CIM \_ Check-Klasse
 
@@ -546,7 +546,7 @@ A-Serie
 
 </dt> <dd>
 
-Verbund-NSK
+Tandem NSK
 
 </dd> <dt>
 
@@ -557,7 +557,7 @@ Verbund-NSK
 
 </dt> <dd>
 
-Nt-Verbund
+Tandem NT
 
 </dd> <dt>
 
@@ -595,7 +595,7 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
 
 
 </dt> <dd></dd> <dt>
@@ -614,7 +614,7 @@ BS2000/OSD
 
 </dt> <dd>
 
-BSD UNIX
+BSD-UNIX
 
 </dd> <dt>
 
@@ -634,7 +634,7 @@ BSD UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Gnud** (44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU** Gnu(44)
 
 
 </dt> <dd></dd> <dt>
@@ -673,7 +673,7 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**ESAC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**OBC** (49)
 
 
 </dt> <dd></dd> <dt>
@@ -747,7 +747,7 @@ Handflächenbetriebssystem
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedizierend** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (59)
 
 
 </dt> <dd></dd> <dt>
@@ -771,31 +771,31 @@ Handflächenbetriebssystem
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte eine der folgenden Formen haben:
+Die Version des Vorgangs sollte in einer der folgenden Formen sein:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; neben &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; &gt; &lt; &gt; &lt; Nebenbuchstabenrevision&gt;
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-WMI implementiert diese Klasse nicht. Weitere Informationen zu von **CIM \_ Check** abgeleiteten Klassen finden Sie unter [Win32-Klassen.](win32-provider.md)
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **CIM \_ Check abgeleitet wurden,** finden Sie unter [Win32-Klassen](win32-provider.md).
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

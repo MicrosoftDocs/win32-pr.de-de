@@ -1,7 +1,7 @@
 ---
-description: Die IsFixedSize-Methode bestimmt, ob die Stichproben eine festgelegte Größe oder eine Variable Größe aufweisen.
+description: Die IsFixedSize-Methode bestimmt, ob die Stichproben eine feste Größe oder eine variable Größe aufweisen.
 ms.assetid: bd49f01a-21bb-48a2-aa9e-94ea0d2dbab3
-title: Cmediatype. IsFixedSize-Methode (mtype. h)
+title: CMediaType.IsFixedSize-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5016b38139165cb3714bc9ad2630dcc0483545cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 87cc678b6d0ea6766e533e1fad0cebe422ffeaec6179b66c1ab522d50919be86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016328"
 ---
-# <a name="cmediatypeisfixedsize-method"></a>Cmediatype. IsFixedSize-Methode
+# <a name="cmediatypeisfixedsize-method"></a>CMediaType.IsFixedSize-Methode
 
-Die- `IsFixedSize` Methode bestimmt, ob die Stichproben eine festgelegte Größe oder eine Variable Größe aufweisen.
+Die `IsFixedSize` -Methode bestimmt, ob die Stichproben eine feste Größe oder eine variable Größe aufweisen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert des **bfixedsizesamples** -Members zurück.
+Gibt den Wert des **bFixedSizeSamples-Members** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den Wert des **bfixedsizesamples** -Members zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt den Wert des **bfixedsizesamples** -Members zurück.
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

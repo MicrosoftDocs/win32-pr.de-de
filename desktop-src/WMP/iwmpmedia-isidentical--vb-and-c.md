@@ -1,9 +1,9 @@
 ---
-title: Iwmpmedia. isidentical (VB und C)
-description: Mit der isidentical-Eigenschaft (der get \_ isidentical-Methode in C \) wird ein Wert abgerufen, der angibt, ob das angegebene Medien Element mit dem aktuellen übereinstimmt.
+title: IWMPMedia.isIdentical (VB und C )
+description: Die isIdentical-Eigenschaft (die get \_ isIdentical-Methode in C\) ruft einen Wert ab, der angibt, ob das angegebene Medienelement mit dem aktuellen Element identisch ist.
 ms.assetid: 1406a0ff-2dc8-4cde-8b71-4a39b8608fb1
 keywords:
-- Iwmpmedia. isidentical (VB und C) Windows Media Player
+- IWMPMedia.isIdentical (VB und C) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b3a488ad300362c1f8dccfd0fa6f6c7e4dee7676
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 24e8de133003bdddcf0438e5a13dc3fa74227ede7bf42350e2b7c3c96f2c197e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003580"
 ---
-# <a name="iwmpmediaisidentical-vb-and-c"></a>Iwmpmedia. isidentical (VB und c#)
+# <a name="iwmpmediaisidentical-vb-and-c"></a>IWMPMedia.isIdentical (VB und C#)
 
-Mit der **isidentical** -Eigenschaft (der **get \_ isidentical** -Methode in c#) wird ein Wert abgerufen, der angibt, ob das angegebene Medien Element mit dem aktuellen übereinstimmt.
+Die **isIdentical-Eigenschaft** (die **get \_ isIdentical-Methode** in C#) ruft einen Wert ab, der angibt, ob das angegebene Medienelement mit dem aktuellen Element identisch ist.
 
 
 ```
@@ -47,21 +47,21 @@ System.Boolean get_isIdentical (
 
 ## <a name="parameters"></a>Parameter
 
-*piwmpmedia*
+*pIWMPMedia*
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle für das Medien Element, das mit dem aktuellen Medien Element verglichen werden soll.
+Eine **WMPLib.IWMPMedia-Schnittstelle** zum Medienelement, das mit dem aktuellen Medienelement verglichen werden soll.
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Boolean** -Wert, der angibt, ob die beiden Medienelemente identisch sind.
+Ein **System.Boolean-Wert,** der angibt, ob die beiden Medienelemente identisch sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwmpmedia. isidentical** ist eine Eigenschaft in Visual Basic, die einen-Parameter annimmt. In c# wird dies als **iwmpmedia. get \_ isidentical** -Methode bezeichnet.
+**IWMPMedia.isIdentical** ist eine Eigenschaft in Visual Basic, die einen Parameter annimmt. In C# wird dies als **IWMPMedia.get \_ isIdentical-Methode** bezeichnet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die **isidentical** -Eigenschaft (die **get \_ isidentical** -Methode in c#) verwendet, um zu überprüfen, ob ein Medien Element mit dem Namen newmedia mit dem aktuellen Medien Element identisch ist. Wenn Sie nicht identisch sind, wird das neue Medien Element wiedergegeben. Andernfalls wird das aktuelle Medium weiterhin ununterbrochen abgespielt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die **isIdentical-Eigenschaft** (die **get \_ isIdentical-Methode** in C#) verwendet, um zu überprüfen, ob ein Medienelement namens newMedia mit dem aktuellen Medienelement identisch ist. Wenn sie nicht identisch sind, wird das neue Medienelement wiedergegeben. Andernfalls werden die aktuellen Medien weiterhin ununterbrochen wiedergegeben. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -99,7 +99,7 @@ End If
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -109,7 +109,7 @@ End If
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

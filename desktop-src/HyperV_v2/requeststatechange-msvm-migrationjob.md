@@ -1,7 +1,7 @@
 ---
-description: Fordert an, dass der Status des Migrations Auftrags in den angegebenen Zustand geändert wird.
+description: Fordert an, dass der Status des Migrationsauftrags in den angegebenen Zustand geändert wird.
 ms.assetid: f0be5ea8-7e21-407e-b84d-8bd4ca5a6a2c
-title: RequestStateChange-Methode der Msvm_MigrationJob-Klasse
+title: RequestStateChange-Methode der Msvm_MigrationJob Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 31011de619780ae36f390ee87038300a3b42fef2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7a5934049860e92aa9986a301fe3d75bed8022bda064653ee9e405ad16f6619
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014318"
 ---
-# <a name="requeststatechange-method-of-the-msvm_migrationjob-class"></a>RequestStateChange-Methode der MSVM \_ migrationjob-Klasse
+# <a name="requeststatechange-method-of-the-msvm_migrationjob-class"></a>RequestStateChange-Methode der Msvm \_ MigrationJob-Klasse
 
-Fordert an, dass der Status des Migrations Auftrags in den angegebenen Zustand geändert wird. Wenn Sie die **requestStateChange** -Methode mehrmals aufrufen, kann dies dazu führen, dass frühere Anforderungen überschrieben werden oder verloren gehen. Wenn 0 zurückgegeben wird, wurde der Task erfolgreich abgeschlossen. Jeder andere Rückgabecode weist auf eine Fehlerbedingung hin.
+Fordert an, dass der Status des Migrationsauftrags in den angegebenen Zustand geändert wird. Das mehrfache Aufrufen **der RequestStateChange-Methode** kann dazu führen, dass frühere Anforderungen überschrieben oder verloren gehen. Wenn 0 zurückgegeben wird, wurde die Aufgabe erfolgreich abgeschlossen. Jeder andere Rückgabecode gibt einen Fehlerzustand an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Status eines Auftrags.
+Der neue Zustand eines Auftrags.
 
 <dt>
 
@@ -54,29 +54,29 @@ Der neue Status eines Auftrags.
 
 </dt> <dd>
 
-Ändert den Zustand in "wird ausgeführt".
+Ändert den Status in "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>
 
-<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Aussetzen** (3)
+<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Suspend** (3)
 
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag mit "Start" neu zu starten. Möglicherweise ist es möglich, den Status "Dienst" in den Status "angehalten" einzugeben. (Dies ist Auftrags spezifisch.)
+Beendet den Auftrag vorübergehend. Anschließend soll der Auftrag mit "Start" neu gestartet werden. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
 
 </dd> <dt>
 
 <span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>
 
-<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Beenden** (4)
+<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Terminate** (4)
 
 
 </dt> <dd>
 
-Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei und schließt alle zugrunde liegenden Prozesse ordnungsgemäß herunter.
+Beendet den Auftrag sauber, wobei Daten gespeichert, der Zustand beibehalten und alle zugrunde liegenden Prozesse in einer geordneten Weise heruntergefahren werden.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei un
 
 </dt> <dd>
 
-Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern oder den Zustand beizubehalten.
+Beendet den Auftrag sofort, ohne dass Daten gespeichert oder der Zustand beibehalten werden muss.
 
 </dd> <dt>
 
@@ -98,13 +98,13 @@ Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern od
 
 </dt> <dd>
 
-Versetzt den Auftrag in einen herstellerspezifischen Dienst Zustand. Möglicherweise ist es möglich, den Auftrag neu zu starten.
+Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise ist es möglich, den Auftrag neu zu starten.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert**
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved**
 
 
 </dt> <dd>
@@ -115,7 +115,7 @@ Reserviert.
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert**
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter**
 
 
 </dt> <dd>
@@ -124,10 +124,10 @@ Reserviert.
 
 </dd> </dl> </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (Use of Timeout Parameter not supported) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (Use Of Timeout Parameter Not Supported) zurückgegeben werden.
 
 </dd> </dl>
 
@@ -177,19 +177,19 @@ Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für de
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ migrationjob**](msvm-migrationjob.md)
+[**Msvm \_ MigrationJob**](msvm-migrationjob.md)
 </dt> </dl>
 
  

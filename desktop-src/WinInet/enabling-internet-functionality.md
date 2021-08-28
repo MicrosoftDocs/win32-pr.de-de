@@ -4,12 +4,12 @@ description: Vor der Verwendung der WinINet-Funktionen sollte die Anwendung vers
 ms.assetid: 80747c0d-5a09-4ffa-a0ca-b051b82acbf8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 303567942bc94754c1f2a7735851501a4f53036dbd8059420a059a6b632576d0
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 23f4780b508059c088e2948829662171fd6df46f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119570200"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885498"
 ---
 # <a name="enabling-internet-functionality"></a>Aktivieren der Internetfunktionalität
 
@@ -23,7 +23,7 @@ Verwenden Sie die [**InternetConnect-Funktion,**](/windows/desktop/api/Wininet/n
 
 ## <a name="using-internetopen"></a>Verwenden von InternetOpen
 
-Um eine Verbindung mit dem Internet zu aktivieren, muss ein [**HINTERNET-Stammhand**](appendix-a-hinternet-handles.md) handle mit [**internetOpen erstellt werden.**](/windows/desktop/api/Wininet/nf-wininet-internetopena) Informationen über den Benutzer-Agent (die Anwendung, die die Internetfunktionen aufruft), die Art des Zugriffs auf das Internet, die Proxynamen, die Hosts und Adressen, die den Proxy umgehen, und das Verhalten werden [**an InternetOpen übergeben.**](/windows/desktop/api/Wininet/nf-wininet-internetopena)
+Um eine Verbindung mit dem Internet zu aktivieren, muss ein [**HINTERNET-Stammhand**](appendix-a-hinternet-handles.md) handle mit [**internetOpen erstellt werden.**](/windows/desktop/api/Wininet/nf-wininet-internetopena) Informationen zum Benutzer-Agent (die Anwendung, die die Internetfunktionen aufruft), die Art des Zugriffs auf das Internet, die Proxynamen, die Hosts und Adressen, die den Proxy umgehen, und das Verhalten werden [**an InternetOpen übergeben.**](/windows/desktop/api/Wininet/nf-wininet-internetopena)
 
 ### <a name="setting-the-user-agent"></a>Festlegen des Benutzer-Agents
 
@@ -45,15 +45,15 @@ Die WinINet-Funktionen unterstützen SOCKS-Typproxies nur, wenn Internet Explore
 
 ### <a name="listing-proxy-servers"></a>Auflisten von Proxyservern
 
-WinINet erkennt zwei Arten von Proxys: Proxys vom TYP CERN (nur HTTP) und FTP-Proxys (nur FTP). Wenn Internet Explorer installiert ist, unterstützt WinINet auch PROXYS vom Typ SOCKS. [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) geht standardmäßig davon aus, dass der angegebene Proxy ein CERN-Proxy ist. Wenn der Zugriffstyp auf INTERNET OPEN TYPE DIRECT oder INTERNET OPEN TYPE PRECONFIG festgelegt ist, sollte der \_ \_ \_ \_ \_ \_ *lpszProxyName-Parameter* von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) auf **NULL festgelegt werden.** Andernfalls muss der an *lpszProxyName* übergebene Wert die Proxys in einer durch Leerzeichen getrennten Zeichenfolge enthalten. Die Proxyauflistungen können die Portnummer enthalten, die für den Zugriff auf den Proxy verwendet wird.
+WinINet erkennt zwei Arten von Proxys: Proxys vom TYP CERN (nur HTTP) und FTP-Proxys (nur FTP). Wenn Internet Explorer installiert ist, unterstützt WinINet auch SOCKS-Proxys. [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) geht standardmäßig davon aus, dass der angegebene Proxy ein CERN-Proxy ist. Wenn der Zugriffstyp auf INTERNET OPEN TYPE DIRECT oder INTERNET OPEN TYPE PRECONFIG festgelegt ist, sollte der \_ \_ \_ \_ \_ \_ *lpszProxyName-Parameter* von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) auf **NULL festgelegt werden.** Andernfalls muss der an *lpszProxyName* übergebene Wert die Proxys in einer durch Leerzeichen getrennten Zeichenfolge enthalten. Die Proxyauflistungen können die Portnummer enthalten, die für den Zugriff auf den Proxy verwendet wird.
 
-Um einen Proxy für ein bestimmtes Protokoll auflisten zu können, muss die Zeichenfolge das Format "" <protocol> <protocol> ://<\_ Proxyname>"" haben. Die gültigen Protokolle sind HTTP, HTTPS und FTP. Um beispielsweise einen FTP-Proxy auflisten zu können, wäre eine gültige Zeichenfolge ""ftp=ftp://ftp://Proxyname:21", wobei ftp proxy name der Name des FTP-Proxys und \_ 21 die Portnummer ist, die für den Zugriff auf den Proxy verwendet werden \_ \_ \_ muss. Wenn der Proxy die Standardportnummer für dieses Protokoll verwendet, kann die Portnummer weggelassen werden. Wenn ein Proxyname selbst aufgeführt wird, wird er als Standardproxy für alle Protokolle verwendet, für die kein bestimmter Proxy angegeben ist. Beispielsweise würde "http= other"" den HTTP-Proxy für alle HTTP-Vorgänge verwenden, während alle anderen https://http\_proxy Protokolle andere Protokolle verwenden \_ würden.
+Um einen Proxy für ein bestimmtes Protokoll auflisten zu können, muss die Zeichenfolge dem Format protokollprotokoll &lt; &gt; &lt; &gt; ://<\_ Proxyname>"" folgen. Die gültigen Protokolle sind HTTP, HTTPS und FTP. Um beispielsweise einen FTP-Proxy auflisten zu können, wäre eine gültige Zeichenfolge ""ftp=ftp://ftp://Proxyname:21", wobei ftp proxy name der Name des FTP-Proxys und \_ 21 die Portnummer ist, die für den Zugriff auf den Proxy verwendet werden \_ \_ \_ muss. Wenn der Proxy die Standardportnummer für dieses Protokoll verwendet, kann die Portnummer weggelassen werden. Wenn ein Proxyname selbst aufgeführt wird, wird er als Standardproxy für alle Protokolle verwendet, für die kein bestimmter Proxy angegeben ist. Beispielsweise würde "http= other"" den HTTP-Proxy für alle HTTP-Vorgänge verwenden, während alle anderen https://http\_proxy Protokolle andere Protokolle verwenden \_ würden.
 
 Standardmäßig geht die Funktion davon aus, dass der von *lpszProxyName angegebene* Proxy ein CERN-Proxy ist. Eine Anwendung kann mehrere Proxys angeben, einschließlich verschiedener Proxys für die verschiedenen Protokolle. Wenn Sie beispielsweise ""ftp=ftp://ftp-gw HTTP= proxy"" angeben, werden FTP-Anforderungen über den ftp-gw-Proxy gesendet, der an Port 21 lausst, und HTTP-Anforderungen werden über einen CERN-Proxy mit dem Namen jericho gesendet, der an Port https://jericho:99 99 lausiert. Andernfalls würden HTTP-Anforderungen über den CERN-Proxy mit dem Namen proxy gesendet, der an Port 80 laussiert. Wenn die Anwendung beispielsweise nur FTP verwendet, muss sie ""ftp=ftp://ftp-gw:21" nicht angeben. Es könnte nur ""ftp-gw"" angegeben werden. Eine Anwendung muss nur dann die Protokollnamen angeben, wenn sie mehr als ein Protokoll pro Handle verwendet, das von [**InternetOpen zurückgegeben wird.**](/windows/desktop/api/Wininet/nf-wininet-internetopena)
 
 ### <a name="listing-the-proxy-bypass"></a>Auflisten der Proxyumgehung
 
-Hostnamen oder IP-Adressen, die nicht an den Proxy gesendet werden sollen, können in der Proxyumgehungsliste aufgeführt werden. Diese Liste kann Platzhalter " " enthalten, wodurch die Anwendung den Proxyserver für Adressen \* umgeht, die dem angegebenen Muster entsprechen. Um mehrere Adressen und Hostnamen auflisten zu können, trennen Sie sie durch Semikolons in der Proxyumgehungszeichenfolge. Wenn das Makro " " angegeben ist, umgeht die Funktion den Proxy für jeden <local> Hostnamen, der keinen Zeitraum enthält.
+Hostnamen oder IP-Adressen, die nicht an den Proxy gesendet werden sollen, können in der Proxyumgehungsliste aufgeführt werden. Diese Liste kann Platzhalter " " enthalten, wodurch die Anwendung den Proxyserver für Adressen \* umgeht, die dem angegebenen Muster entsprechen. Um mehrere Adressen und Hostnamen auflisten zu können, trennen Sie sie durch Semikolons in der Proxyumgehungszeichenfolge. Wenn das lokale Makro "" angegeben wird, umgeht die Funktion den Proxy für jeden Hostnamen, &lt; &gt; der keinen Zeitraum enthält.
 
 WinINet umgeht standardmäßig den Proxy für Anforderungen, die die Hostnamen "localhost", "loopback", "127.0.0.1" oder \[ "::1" \] verwenden. Dieses Verhalten tritt auf, da ein Remoteproxyserver diese Adressen in der Regel nicht ordnungsgemäß auflöset.
 
@@ -98,51 +98,21 @@ Um eine Sitzung zu starten, muss die [**InternetConnect-Funktion**](/windows/des
 
 [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet das von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) erstellte [**HINTERNET-Stammhand**](appendix-a-hinternet-handles.md) handle, um ein Sitzungshand handle zu erstellen. Wenn das [INTERNET \_ FLAG \_ ASYNC-Flag](api-flags.md) im Aufruf von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena)festgelegt wurde, sollte der Aufruf von [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) einen Kontextwert ungleich 0 (null) enthalten.
 
-Der Servername kann entweder den Hostnamen (z. B. "www.servername.com") oder die IP-Nummer der Website im ASCII-Dezimalformat (z. B. "10.0.1.45") enthalten.
+Der Servername kann entweder den Hostnamen (z. B. "www.servername.com") oder die IP-Nummer des Standorts im ASCII-Format mit gepunkteten Dezimalzahlen (z. B. "10.0.1.45") enthalten.
 
 Der Serverport ist die TCP/IP-Portnummer (Transmission Control Protocol/Internet Protocol), mit der eine Verbindung auf dem Server hergestellt werden soll. [**InternetConnect**](/windows/desktop/api/Wininet/nf-wininet-internetconnecta) verwendet den Standardport für den ausgewählten Diensttyp, wenn der Wert INTERNET \_ INVALID PORT NUMBER verwendet \_ \_ wird. Die folgenden Tabellen enthalten die Serverport-Standardwerte für WinINet.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>INTERNET_DEFAULT_FTP_PORT</td>
-<td>Verwenden Sie den Standardport für FTP-Server (Port 21).</td>
-</tr>
-<tr class="even">
-<td>INTERNET_DEFAULT_GOPHER_PORT</td>
-<td>Verwenden Sie den Standardport für Gopherserver (Port 70).
-<blockquote>
-[!Note]<br />
-Windows Xp und Windows Server 2003 R2 und früher.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td>INTERNET_DEFAULT_HTTP_PORT</td>
-<td>Verwenden Sie den Standardport für HTTP-Server (Port 80).</td>
-</tr>
-<tr class="even">
-<td>INTERNET_DEFAULT_HTTPS_PORT</td>
-<td>Verwenden Sie den Standardport für HTTPS-Server (Port 443).</td>
-</tr>
-<tr class="odd">
-<td>INTERNET_DEFAULT_SOCKS_PORT</td>
-<td>Verwenden Sie den Standardport für SOCKS-Firewallserver (Port 1080).</td>
-</tr>
-</tbody>
-</table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| INTERNET_DEFAULT_FTP_PORT | Verwenden Sie den Standardport für FTP-Server (Port 21). | 
+| INTERNET_DEFAULT_GOPHER_PORT | Verwenden Sie den Standardport für Gopherserver (Port 70).<blockquote>[!Note]<br />Windows Xp und Windows Server 2003 R2 und früher.</blockquote><br /> | 
+| INTERNET_DEFAULT_HTTP_PORT | Verwenden Sie den Standardport für HTTP-Server (Port 80). | 
+| INTERNET_DEFAULT_HTTPS_PORT | Verwenden Sie den Standardport für HTTPS-Server (Port 443). | 
+| INTERNET_DEFAULT_SOCKS_PORT | Verwenden Sie den Standardport für SOCKS-Firewallserver (Port 1080). | 
+
 
 
 

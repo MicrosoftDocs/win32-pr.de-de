@@ -1,5 +1,5 @@
 ---
-description: Schränkt die internen Ressourcen ein, die von von WMI-Clients initiierten Vorgängen verwendet werden.
+description: Schränkt die internen Ressourcen ein, die von Vorgängen verwendet werden, die von WMI-Clients initiiert werden.
 ms.assetid: e877899d-2f5e-4468-8c47-055fd4d16f56
 ms.tgt_platform: multiple
 title: __ArbitratorConfiguration-Klasse
@@ -35,18 +35,18 @@ api_type:
 - Schema
 api_location:
 - Root
-ms.openlocfilehash: 906164d6d715ed70bccecf61fba767ada622c74f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4344eb368a96d2d47207748cba622d07d11ef78e0a046c6ea169305d9c587957
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118321120"
 ---
-# <a name="__arbitratorconfiguration-class"></a>\_\_"Arbiatorconfiguration"-Klasse
+# <a name="__arbitratorconfiguration-class"></a>\_\_Configuration-Klasse
 
-Die Klasse " **\_ \_ arbiatorconfiguration** " ist eine Konfigurations Klasse, die die internen Ressourcen einschränkt, die von den WMI-Clients initiierten Vorgängen verwendet werden. Dies ist eine Singleton-Klasse, die sich im Stamm \\ Namespace befindet. Die Klasse wird intern generiert, sodass keine MOF-Datei dafür vorhanden ist.
+Die **\_ \_ Klasse "Configuration"** ist eine Konfigurationsklasse, die die internen Ressourcen einschränkt, die von Vorgängen verwendet werden, die von WMI-Clients initiiert werden. Dies ist eine Singletonklasse, die sich im \\ Stammnamespace befindet. Die -Klasse wird intern generiert, sodass keine MOF-Datei dafür vorhanden ist.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,163 +80,163 @@ class __ArbitratorConfiguration : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die Klasse " **\_ \_ arbiatorconfiguration** " verfügt über diese Typen von Membern:
+Die **\_ \_ Klasse "Configuration"** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **\_ \_ arbiatorconfiguration** " verfügt über diese Eigenschaften.
+Die **\_ \_ Klasse "Configuration"** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Outstandingtasksperuser**
+**OutstandingTasksPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Anzahl ausstehender Benutzer initiierter Aufgaben zu einem beliebigen Zeitpunkt.
+Nicht verwendet. Anzahl der ausstehenden vom Benutzer initiierten Aufgaben gleichzeitig.
 
 </dd> <dt>
 
-**Outstandingtaskstotal**
+**OutstandingTasksTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Die Gesamtanzahl der ausstehenden Aufgaben.
+Nicht verwendet. Gesamtanzahl der zu einem beliebigen Zeitpunkt ausstehenden Aufgaben.
 
 </dd> <dt>
 
-**Permanentabonneptionsperuser**
+**PermanentSubscriptionsPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der dauerhaften Abonnements, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
+Anzahl der permanenten Abonnements, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Permanent abonniert**
+**PermanentSubscriptionsTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der dauerhaften Abonnements, die für alle Benutzer gleichzeitig zulässig sind.
+Gesamtanzahl der permanenten Abonnements, die für alle Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Pollinginstructionsperuser**
+**PollingInstructionsPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Abruf Ereignis Abfragen, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
+Die Anzahl der Abfragen von Abrufereignissen, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Pollinginstructionstotal**
+**PollingInstructionsTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der Abruf Anweisungen, die für alle Benutzer gleichzeitig zulässig sind.
+Gesamtanzahl von Abrufanweisungen, die für alle Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Pollingmemoryperuser**
+**PollingMemoryPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Menge der von einem bestimmten Benutzer ausgegebenen Arbeitsspeicher-Abruf Ereignis Abfragen kann zu einem beliebigen Zeitpunkt genutzt werden.
+Die Von einem bestimmten Benutzer ausgegebene Menge an Arbeitsspeicherabfragen für Abrufereignisse kann jederzeit verbraucht werden.
 
 </dd> <dt>
 
-**Pollingmemorytotal**
+**PollingMemoryTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Gesamtumfang des Arbeitsspeichers, der durch Abfragen von Ereignis Abfragen für alle Benutzer kombiniert wird, kann zu einem beliebigen Zeitpunkt Verbraucher werden.
+Gesamtmenge des Arbeitsspeichers, der für alle Benutzer, die Ereignisabfragen abruft, für alle Benutzer gleichzeitig consumern kann.
 
 </dd> <dt>
 
-**Quotaretrycount**
+**QuotaRetryCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Anzahl von Kontingent Verstößen, die zulässig sind, bevor ein Task abgebrochen wird.
+Nicht verwendet. Anzahl der zulässigen Kontingentverletzungen, bevor ein Task abgebrochen wird.
 
 </dd> <dt>
 
-**Quotaretrywaitinterval**
+**QuotaRetryWaitInterval**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Die bei der Aufgabenausführung bei den einzelnen Kontingent Verletzungen eingeführte Verzögerung.
+Nicht verwendet. Verzögerung, die bei jeder Kontingentverletzung in die Taskausführung eingeführt wurde.
 
 </dd> <dt>
 
-**Taskthreadsperuser**
+**TaskThreadsPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Die maximal zulässige Anzahl von Taskthreads, die einem bestimmten Benutzer zugeordnet sind.
+Nicht verwendet. Maximale Anzahl von Taskthreads, die einem bestimmten Benutzer nicht einmal zugeordnet sind.
 
 </dd> <dt>
 
-**Taskthreadstotal**
+**TaskThreadsTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -246,114 +246,114 @@ Nicht verwendet. Maximale Anzahl von Taskthreads.
 
 </dd> <dt>
 
-**Temporaryabonnemenamtionsperuser**
+**TemporarySubscriptionsPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl temporärer Abonnements, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
+Anzahl der temporären Abonnements, die für einen bestimmten Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Temporaryabonnemenzstotal**
+**TemporarySubscriptionsTotal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der temporären Abonnements, die für alle Benutzer gleichzeitig zulässig sind.
+Gesamtzahl der temporären Abonnements, die für alle Benutzer gleichzeitig zulässig sind.
 
 </dd> <dt>
 
-**Totalcachedisk**
+**TotalCacheDisk**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Gesamter Datenträger Cache, der alle Benutzer gleichzeitig zugeordnet ist.
+Nicht verwendet. Gesamter Datenträgercache, der allen Benutzern gleichzeitig zugeordnet ist.
 
 </dd> <dt>
 
-**Totalcachediskpertask**
+**TotalCacheDiskPerTask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Der gesamte Datenträger Cache, der einer bestimmten Aufgabe zugeordnet ist.
+Nicht verwendet. Gesamter Datenträgercache, der einer bestimmten Aufgabe gleichzeitig zugeordnet ist.
 
 </dd> <dt>
 
-**Totalcachediskperuser**
+**TotalCacheDiskPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Der gesamte Datenträger Cache, der einem bestimmten Benutzer zugeordnet ist.
+Nicht verwendet. Gesamter Datenträgercache, der einem bestimmten Benutzer gleichzeitig zugeordnet ist.
 
 </dd> <dt>
 
-**Totalcachememory**
+**TotalCacheMemory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Insgesamt zugeordneter Arbeitsspeicher Cache für alle Benutzer.
+Nicht verwendet. Gesamter Speichercache, der allen Benutzern gleichzeitig zugeordnet ist.
 
 </dd> <dt>
 
-**Totalcachememorypertask**
+**TotalCacheMemoryPerTask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Der gesamte Arbeitsspeicher Cache, der einer bestimmten Aufgabe zugeordnet ist.
+Nicht verwendet. Gesamter Arbeitsspeichercache, der einem bestimmten Task gleichzeitig zugeordnet ist.
 
 </dd> <dt>
 
-**Totalcachememoryperuser**
+**TotalCacheMemoryPerUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Nicht verwendet. Gesamter Arbeitsspeicher Cache, der einem bestimmten Benutzer zu jedem Zeitpunkt zugeordnet ist.
+Nicht verwendet. Gesamter Arbeitsspeichercache, der einem bestimmten Benutzer zu einem bestimmten Zeitpunkt zugeordnet ist.
 
 </dd> <dt>
 
-**Totalusers**
+**TotalUsers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -363,9 +363,9 @@ Nicht verwendet. Maximale Anzahl verbundener Benutzer.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die " **\_ \_ arbiatorconfiguration** " wird von " [**\_ \_ System Class**](--systemclass.md)" geerbt.
+**\_ \_ "Configuration"** wird von [**\_ \_ SystemClass geerbt.**](--systemclass.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -379,14 +379,14 @@ Die " **\_ \_ arbiatorconfiguration** " wird von " [**\_ \_ System Class**](--sy
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_System Class**](/windows/desktop/WmiSdk/--systemclass)
+[**\_\_SystemClass**](/windows/desktop/WmiSdk/--systemclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  
