@@ -1,46 +1,46 @@
 ---
-description: Wie bei allen Anwendungen empfängt WMI Fehlercodes vom Windows-Betriebssystem.
+description: Wie bei allen Anwendungen empfängt WMI Fehlercodes vom Windows Betriebssystem.
 ms.assetid: f54b8e7c-c531-47d5-bab8-780652b94555
 ms.tgt_platform: multiple
 title: Abrufen eines Fehlercodes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75c42dbd160ef6412c332e2da2c01f6590e10966
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f16bb7af3c5c2b17d3a99ac00c9122a2ddfa6c075f463819e182fe44193613a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345244"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119640630"
 ---
 # <a name="retrieving-an-error-code"></a>Abrufen eines Fehlercodes
 
-Wie bei allen Anwendungen empfängt WMI Fehlercodes vom Windows-Betriebssystem.
+Wie bei allen Anwendungen empfängt WMI Fehlercodes vom Windows Betriebssystem.
 
 Wenn Sie einen Fehlercode erhalten, haben Sie die folgenden Optionen:
 
 -   Sehen Sie sich das Ereignisprotokoll an.
 
-    WMI sendet Fehlermeldungen an den Ereignisprotokoll Dienst, der die Ereignisprotokolle prüft, um die Ursache eines Fehlers zu ermitteln. Sie können die Klassen, die vom [Ereignisprotokoll](/previous-versions/windows/desktop/eventlogprov/event-log-provider) Anbieter unterstützt werden, für den programmgesteuerten Zugriff auf Ereignisprotokolle verwenden.
+    WMI sendet Fehlermeldungen an den Ereignisprotokolldienst, der die Ereignisprotokolle überprüft, um die Ursache eines Fehlers zu ermitteln. Sie können die Klassen verwenden, die der [Ereignisprotokollanbieter](/previous-versions/windows/desktop/eventlogprov/event-log-provider) unterstützt, um programmgesteuert auf Ereignisprotokolle zuzugreifen.
 
--   Rufen Sie den Fehlercode in der Regel ab.
+-   Rufen Sie den Fehlercode normal ab.
 
-    WMI unterstützt die Standardverfahren zum Abrufen von Fehlercodes, die com-Fehlercodes für C++ sind, und systemeigene Fehler Objekte wie [Err Object (VBScript)](/previous-versions//sbf5ze0e(v=vs.85))oder [**Swap-LastError**](swbemlasterror.md) , wenn der Anbieter Fehlerinformationen liefert.
+    WMI unterstützt die Standardtechniken zum Abrufen von Fehlercodes, bei denen es sich um COM-Fehlercodes für C++ handelt, sowie native Fehlerobjekte wie [Err Object (VBScript)](/previous-versions//sbf5ze0e(v=vs.85))oder [**SWbemLastError,**](swbemlasterror.md) wenn der Anbieter Fehlerinformationen liefert.
 
-Weitere Informationen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md).
+Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen.](manipulating-class-and-instance-information.md)
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
 -   [Behandeln eines Fehlers mit VBScript](#handling-an-error-with-vbscript)
--   [Behandeln eines Fehlers mithilfe von C++](#handling-an-error-using-c)
+-   [Behandeln eines Fehlers mit C++](#handling-an-error-using-c)
 
 ## <a name="handling-an-error-with-vbscript"></a>Behandeln eines Fehlers mit VBScript
 
-Wenn ein WMI-Aufrufe über die Skript-API für WMI einen Fehler verursacht, haben Sie die folgenden Optionen für den Zugriff auf die Fehlerinformationen:
+Wenn ein Aufruf von WMI über die Skripterstellungs-API für WMI einen Fehler verursacht, haben Sie die folgenden Optionen, um auf die Fehlerinformationen zuzugreifen:
 
--   Verwenden Sie Native Fehler Mechanismen der Skriptsprache, z. b. Wenn Sie in VBScript das [Err-Objekt (VBScript)](/previous-versions//sbf5ze0e(v=vs.85)) verwenden, um die Fehlerbehandlung zu unterstützen.
--   Erstellen Sie ein " [**taubemlasterror**](swbemlasterror.md) "-Objekt, um einen Fehlerbericht zu erhalten.
+-   Verwenden Sie native Fehlermechanismen der Skriptsprache, z. B. verwenden Sie in VBScript [Err Object (VBScript),](/previous-versions//sbf5ze0e(v=vs.85)) um die Fehlerbehandlung zu unterstützen.
+-   Erstellen Sie ein [**SWbemLastError-Objekt,**](swbemlasterror.md) um einen Fehlerbericht abzurufen.
 
-Das folgende Skript zeigt die Verwendung des nativen [Err-Objekts (VBScript)](/previous-versions//sbf5ze0e(v=vs.85)). Wenn ein falscher Wert für das Prozess handle angegeben ist, wird ein Fehler generiert.
+Das folgende Skript zeigt die Verwendung des [nativen Err-Objekts (VBScript).](/previous-versions//sbf5ze0e(v=vs.85)) Wenn ein falscher Wert für das Prozesshandle angegeben wird, wird ein Fehler generiert.
 
 
 ```VB
@@ -54,16 +54,16 @@ Wscript.Echo Err.Number
 
 > [!Note]
 >
-> Die **Description** -Eigenschaft des [Err-Objekts (VBScript)](/previous-versions//sbf5ze0e(v=vs.85)) ist beim Herstellen einer Verbindung mit WMI über den Moniker "winmgmts:" leer. Wenn Sie jedoch mithilfe von " [**Swap-Locator**](swbemlocator.md)" eine Verbindung herstellen, ist die Beschreibung verfügbar.
+> Die **Description-Eigenschaft** von [Err Object (VBScript)](/previous-versions//sbf5ze0e(v=vs.85)) ist leer, wenn eine Verbindung mit WMI über den Moniker "winmgmts:" hergestellt wird. Wenn Sie jedoch eine Verbindung mit [**SWbemLocator**](swbemlocator.md)herstellen, ist die Beschreibung verfügbar.
 >
-> In der folgenden Tabelle werden die Eigenschaften des [Err-Objekts (VBScript)](/previous-versions//sbf5ze0e(v=vs.85))aufgelistet.
+> In der folgenden Tabelle sind die Eigenschaften von [Err Object (VBScript)](/previous-versions//sbf5ze0e(v=vs.85))aufgeführt.
 >
 > 
 >
 > | Eigenschaft                   | Enthält                                                       |
 > |----------------------------|----------------------------------------------------------------|
 > | **Beschreibung**<br/> | Lokalisierte, lesbare Beschreibung des Fehlers.<br/> |
-> | **Number**<br/>      | **HRESULT** , das von der Skript-API für WMI zurückgegeben wurde.<br/>  |
+> | **Number**<br/>      | **HRESULT, das** von der Skripterstellungs-API für WMI zurückgegeben wird.<br/>  |
 > | **Quelle**<br/>      | Identifiziert das Objekt, das den Fehler ausgelöst hat.<br/>        |
 >
 > 
@@ -72,7 +72,7 @@ Wscript.Echo Err.Number
 
  
 
-Das folgende Skript veranschaulicht die Verwendung eines " [**Swap**](swbemlasterror.md) "-Objekts, um ausführliche Fehlerinformationen abzurufen. Beachten Sie, dass nicht alle Anbieter Informationen für " **taubemlasterror**" bereitstellen. Weitere Informationen zu Fehlercodes in Skripts finden Sie unter [WbemErrorEnum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemerrorenum).
+Das folgende Skript zeigt die Verwendung eines [**SWbemLastError-Objekts,**](swbemlasterror.md) um ausführliche Fehlerinformationen abzurufen. Beachten Sie, dass nicht alle Anbieter Informationen für **SWbemLastError** bereitstellen. Weitere Informationen zu Fehlercodes im Skript finden Sie unter [WbemErrorEnum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemerrorenum).
 
 
 ```VB
@@ -85,34 +85,34 @@ Wscript.Echo "Operation = " & LastError.operation & VBCRLF & "ParameterInfo = " 
 
 
 
-## <a name="handling-an-error-using-c"></a>Behandeln eines Fehlers mithilfe von C++
+## <a name="handling-an-error-using-c"></a>Behandeln eines Fehlers mit C++
 
-Eine WMI-Client Anwendung kann entweder com-oder WMI-spezifische Fehler empfangen. Die com-Fehler entsprechen der Struktur von com-Fehlercodes. Alle WMI-Schnittstellen können einen com-spezifischen Fehler außer den Schnittstellen [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext), [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject)und [**iwbemqualifierset**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) zurückgeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md). Auf den Referenzseiten der WMI-Schnittstellen werden die entsprechenden WMI-Fehlercodes im Abschnitt Fehlercodes aufgeführt.
+Eine WMI-Clientanwendung kann com- oder WMI-spezifische Fehler empfangen. Die COM-Fehler entsprechen der Struktur der COM-Fehlercodes. Alle WMI-Schnittstellen können einen COM-spezifischen Fehler zurückgeben, mit Ausnahme der Schnittstellen [**IWbemContext,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) [**IWbemClassObject**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemclassobject)und [**IWbemQualifierSet.**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md) Auf den Referenzseiten der WMI-Schnittstellen werden die entsprechenden WMI-Fehlercodes im Abschnitt Fehlercodes aufgeführt.
 
-Eine Client Anwendung muss die com-Standards zum Überprüfen von Status-und Fehlerrückgabe Codes einhalten. Der Hauptunterschied, den Sie auswählen müssen, ist, ob Sie den Fehlercode von einem synchronen, semisynchronen oder asynchronen aufrufen möchten.
+Eine Clientanwendung muss die COM-Standards zum Überprüfen von Status- und Fehlerrückgabecodes befolgen. Der Hauptunterschied, den Sie auswählen müssen, ist, ob Sie den Fehlercode aus einem synchronen, semisynchronen oder asynchronen Aufruf abrufen möchten.
 
 **So greifen Sie mit C++ auf synchrone und semisynchrone Fehlermeldungen zu**
 
-1.  Rufen Sie die Fehlerinformationen mit einem Aufrufen der com-Funktion [GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) ab.
+1.  Rufen Sie die Fehlerinformationen mit einem Aufruf der [COM-Funktion GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) ab.
 
-    Stellen Sie sicher, dass [GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) unmittelbar nach einer Schnittstellen Methode aufgerufen wird, die auf einen Fehler hinweist. Dies schließt alle [**iwbemcallresult**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemcallresult) -Methoden ein, die Sie bei der Verarbeitung eines semisynchronen Prozesses aufrufen.
+    Stellen Sie sicher, dass [GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) sofort aufgerufen wird, nachdem eine Schnittstellenmethode einen Fehler angegeben hat. Dies schließt eine der [**IWbemCallResult-Methoden**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemcallresult) ein, die Sie während der Verarbeitung eines semisynchronen Prozesses aufrufen.
 
-2.  Überprüfen Sie das zurückgegebene com-Fehler Objekt mit einem Rückruf der [**IErrorInterface:: QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Methode.
+2.  Untersuchen Sie das zurückgegebene COM-Fehlerobjekt mit einem Aufruf der [**IErrorInterface::QueryInterface-Methode.**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))
 
-    Stellen Sie sicher, dass IID \_ wbemclassobject für den *riid* -Parameter im [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) -Befehl angegeben wird. Die **QueryInterface** -Methode gibt eine Instanz einer WMI-Klasse zurück, in der Regel [**\_ \_ ExtendedStatus**](--extendedstatus.md).
+    Stellen Sie sicher, dass Sie IID \_ WbemClassObject für den *riid-Parameter* im [**QueryInterface-Aufruf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) angeben. Die **QueryInterface-Methode** gibt eine Instanz einer WMI-Klasse zurück, in der Regel [**\_ \_ ExtendedStatus**](--extendedstatus.md).
 
-WMI stellt das Fehler Objekt nicht über [GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) für einen asynchronen-Befehl bereit, da es keine Möglichkeit gibt, zu wissen, wann oder in welchem Thread der asynchrone-Befehl aufgetreten ist. Daher kann Ihr Code nur bestimmte Fehler verarbeiten oder den Fehler des Aufrufes über com übergeben.
+WMI übermittelt das Fehlerobjekt nicht über [GetErrorInfo]( /windows/win32/api/oleauto/nf-oleauto-geterrorinfo) für einen asynchronen Aufruf, da es keine Möglichkeit gibt, zu wissen, wann oder in welchem Thread der asynchrone Aufruf aufgetreten ist. Daher kann Ihr Code nur bestimmte Fehler behandeln oder den Aufruffehler über COM übergeben.
 
 > [!Note]  
-> Da der Rückruf für die Senke möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Client zurückgegeben wird, wird empfohlen, semisynchrone anstelle der asynchronen Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Da der Rückruf an die Senke möglicherweise nicht auf der gleichen Authentifizierungsebene zurückgegeben wird, die der Client erfordert, wird empfohlen, anstelle der asynchronen Kommunikation semisynchron zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 
-**So greifen Sie mithilfe von C++ auf asynchrone Fehlermeldungen zu**
+**So greifen Sie mit C++ auf asynchrone Fehlermeldungen zu**
 
--   Rufen Sie das com-Fehler Objekt aus der Implementierung von [**iwbemubjectsink:: SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus)ab.
+-   Rufen Sie das COM-Fehlerobjekt aus Ihrer Implementierung von [**IWbemObjectSink::SetStatus ab.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus)
 
-    Der folgende Pseudo Code zeigt eine typische Implementierung der Fehlerbehandlung für eine Client Anwendung.
+    Der folgende Pseudocode zeigt eine typische Fehlerbehandlungsimplementierungen für eine Clientanwendung.
 
     ```C++
     HRESULT hRes = SomeMethod;

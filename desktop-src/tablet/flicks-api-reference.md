@@ -1,26 +1,26 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen, die Sie beim Implementieren der Unterstützung von Tablet PC-Flick Gesten in Steuerelementen oder Anwendungen verwenden können.
+description: Dieser Abschnitt enthält Referenzinformationen zur Verwendung beim Implementieren der Unterstützung für Tablet PC-Flackergesten in Steuerelementen oder Anwendungen.
 ms.assetid: 5559b3a0-739b-4dd5-acf4-a44811c7cf37
-title: Flicks-Referenz
+title: Referenz zu Flicks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f7e6a1f7718e3b616fc3e2ad5d95c07c1155905a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d7a7c6387766589df12f1ddad05a67675c9610f8cdcc219eb92777b721e1fd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774020"
 ---
-# <a name="flicks-reference"></a>Flicks-Referenz
+# <a name="flicks-reference"></a>Referenz zu Flicks
 
-Dieser Abschnitt enthält Referenzinformationen, die Sie beim Implementieren der Unterstützung von Tablet PC-Flick Gesten in Steuerelementen oder Anwendungen verwenden können.
+Dieser Abschnitt enthält Referenzinformationen zur Verwendung beim Implementieren der Unterstützung für Tablet PC-Flackergesten in Steuerelementen oder Anwendungen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Flicks-Meldungen](flicks-messages.md)
+-   [Flattern von Nachrichten](flicks-messages.md)
 -   [Flicks-Enumerationen](flicks-enumerations.md)
--   [Flicks-Strukturen](flicks-structures.md)
--   [Flicks-Konstanten](flicks-constants.md)
+-   [Flimmerstrukturen](flicks-structures.md)
+-   [Flatterkonstanten](flicks-constants.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

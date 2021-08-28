@@ -20,14 +20,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9e2d7043653b219bc0d54ac7bee3393275dab673
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6529270946543d19fe79ea529f4fa88ef1f9055b20f350887061e84901b28139
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695930"
 ---
-# <a name="cim_enabledlogicalelement-class"></a>CIM \_ enabledlogicalelement-Klasse
+# <a name="cim_enabledlogicalelement-class"></a>CIM \_ EnabledLogicalElement-Klasse
 
 Stellt ein logisches Element dar, das aktiviert und deaktiviert werden kann.
 
@@ -49,18 +49,18 @@ class CIM_EnabledLogicalElement : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ enabledlogicalelement** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ EnabledLogicalElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ enabledlogicalelement** -Klasse verfügt über diese Methoden.
+Die **CIM \_ EnabledLogicalElement-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                     | BESCHREIBUNG                                                                          |
+| Methode                                                                     | Beschreibung                                                                          |
 |:---------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
 | [**RequestStateChange**](cim-enabledlogicalelement-requeststatechange.md) | Fordert an, dass der Zustand des Elements in den angegebenen Wert geändert wird.<br/> |
 
@@ -70,25 +70,25 @@ Die **CIM \_ enabledlogicalelement** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ enabledlogicalelement** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ EnabledLogicalElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Availablerequestedstates**
+**AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelement**".**RequestStateChange**","[**CIM \_ enabledlogicalelementfunktionen**](cim-enabledlogicalelementcapabilities.md).**Requestedstaatunter stützt**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElement**.**RequestStateChange**", "[**CIM \_ EnabledLogicalElementCapabilities**](cim-enabledlogicalelementcapabilities.md).**RequestedStatesSupported**")
 </dt> </dl>
 
-Gibt die möglichen Werte für den *requestedstate* -Parameter der [**requestStateChange**](cim-enabledlogicalelement-requeststatechange.md) -Methode an.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der [**RequestStateChange-Methode**](cim-enabledlogicalelement-requeststatechange.md) an.
 
-Die aufgelisteten Werte müssen eine Teilmenge der Werte sein, die in der **requestedstaatsupported** -Eigenschaft der zugeordneten **CIM \_ enabledlogicalelementfunktionalitäten** -Instanz enthalten sind. Diese Eigenschaft ist **null** , wenn die Implementierung den Satz möglicher Werte für den aktuellen Zustand des Elements nicht ermitteln kann.
+Die aufgelisteten Werte müssen eine Teilmenge der Werte sein, die in der **RequestedStatesSupported-Eigenschaft** der zugeordneten **CIM \_ EnabledLogicalElementCapabilities-Instanz enthalten** sind. Diese Eigenschaft ist **NULL,** wenn die Implementierung den Satz möglicher Werte für den aktuellen Zustand des Elements nicht bestimmen kann.
 
 <dt>
 
@@ -108,7 +108,7 @@ Die aufgelisteten Werte müssen eine Teilmenge der Werte sein, die in der **requ
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -129,14 +129,14 @@ Die aufgelisteten Werte müssen eine Teilmenge der Werte sein, die in der **requ
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-Zurück **stellen (8** )
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -157,23 +157,23 @@ Still **legung (9** )
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Enableddefault**
+**EnabledDefault**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die Standard-oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements an. Der **aktivierte** Standardwert (2).
+Gibt die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements an. Der Standardwert **Aktiviert** (2).
 
 <dt>
 
@@ -207,28 +207,28 @@ Gibt die Standard-oder Startkonfiguration eines Administrators für den aktivier
 
 <span id="No_Default"></span><span id="no_default"></span><span id="NO_DEFAULT"></span>
 
-**Kein Standard** Wert (7)
+**Kein Standardwert** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -238,16 +238,16 @@ Still **legung (9** )
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelement**".**Otherenabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElement**.**OtherEnabledState**")
 </dt> </dl>
 
-Gibt den aktivierten Zustand eines Elements an. Mögliche Werte sind die Übergänge zwischen Zuständen. Das **Herunterfahren (4** ) und das **starten** (10) sind z. b. vorübergehende Zustände zwischen **aktiviertem** und **deaktiviertem** Zustand.
+Gibt den aktivierten Zustand eines Elements an. Mögliche Werte sind die Übergänge zwischen Zuzuständen. Beispielsweise sind **Herunterfahren** (4) und **Starten** (10) vorübergehende Zustände zwischen **Aktiviert** und **Deaktiviert.**
 
 <dt>
 
@@ -272,7 +272,7 @@ Gibt den aktivierten Zustand eines Elements an. Mögliche Werte sind die Überg�
 
 </dt> <dd>
 
-Das-Element ist oder kann Befehle ausführen, verarbeitet alle in der Warteschlange befindlichen Befehle und fügt neue Anforderungen in die Warteschlange ein.
+Das Element ist oder kann Befehle ausführen, alle Befehle in der Warteschlange verarbeiten und neue Anforderungen in die Warteschlange stellen.
 
 </dd> <dt>
 
@@ -283,18 +283,18 @@ Das-Element ist oder kann Befehle ausführen, verarbeitet alle in der Warteschla
 
 </dt> <dd>
 
-das-Element führt keine Befehle aus und löscht alle neuen Anforderungen.
+das -Element führt keine Befehle aus und verdringt alle neuen Anforderungen.
 
 </dd> <dt>
 
 <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>
 
-<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunter** fahren (4)
+<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunterfahren** (4)
 
 
 </dt> <dd>
 
-Das Element wird gerade in den deaktivierten Zustand versetzt.
+Das -Element befindet sich im Zustand Deaktiviert.
 
 </dd> <dt>
 
@@ -305,7 +305,7 @@ Das Element wird gerade in den deaktivierten Zustand versetzt.
 
 </dt> <dd>
 
-Das Element unterstützt das Aktivieren oder Deaktivieren des Elements nicht.
+Das -Element unterstützt nicht das Aktivieren oder Deaktivieren.
 
 </dd> <dt>
 
@@ -316,102 +316,102 @@ Das Element unterstützt das Aktivieren oder Deaktivieren des Elements nicht.
 
 </dt> <dd>
 
-Das Element kann Befehle abschließen und löscht alle neuen Anforderungen.
+Das -Element kann Befehle abschließen und alle neuen Anforderungen ablegen.
 
 </dd> <dt>
 
 <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>
 
-<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**In Test** (7)
+<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**Im Test** (7)
 
 
 </dt> <dd>
 
-Das-Element befindet sich in einem Testzustand.
+Das Element befindet sich in einem Testzustand.
 
 </dd> <dt>
 
 <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>
 
-<span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>Verzögert **(8** )
+<span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>**Verzögert** (8)
 
 
 </dt> <dd>
 
-Das Element kann Befehle abschließen, aber alle neuen Anforderungen in die Warteschlange stellen.
+Das -Element kann Befehle abschließen, aber es werden alle neuen Anforderungen in die Warteschlange gestellt.
 
 </dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>Still **legung (9** )
+<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>**Ruhe** (9)
 
 
 </dt> <dd>
 
-, Wenn das Element aktiviert ist, jedoch in einem eingeschränkten Modus.
+Das Element ist aktiviert, befindet sich jedoch in einem eingeschränkten Modus.
 
 </dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>Wird **gestartet** (10)
+<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>**Ab** (10)
 
 
 </dt> <dd>
 
-Das Element wechselt in den Zustand "aktiviert". Neue Anforderungen werden in die Warteschlange eingereiht.
+Das -Element befindet sich im Zustand Aktiviert. Neue Anforderungen werden in die Warteschlange gestellt.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (11.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (11..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelement**".**Enabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElement**.**EnabledState**")
 </dt> </dl>
 
-Beschreibt den Zustand des Elements, wenn der Wert der **enabledstate** -Eigenschaft ein **anderer** Wert ist. Diese Eigenschaft muss auf **null** festgelegt werden, wenn **enabledstate** nicht **anders** ist.
+Beschreibt den Zustand des Elements, wenn der Wert der **EnabledState-Eigenschaft** Other **ist.** Diese Eigenschaft muss auf NULL festgelegt **werden,** wenn **EnabledState** nicht **Other ist.**
 
 </dd> <dt>
 
 **RequestedState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelement**".**Enabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElement**.**EnabledState**")
 </dt> </dl>
 
-Gibt den letzten angeforderten Zustand für das Element an. Der aktuelle Zustand wird durch die **enabledstate** -Eigenschaft angegeben. Mit dieser Eigenschaft können Sie die zuletzt angeforderten und aktuellen Zustände vergleichen.
+Gibt den zuletzt angeforderten Zustand für das Element an. Der aktuelle Zustand wird durch die **EnabledState-Eigenschaft** angegeben. Mit dieser Eigenschaft können Sie den zuletzt angeforderten und den aktuellen Status vergleichen.
 
 > [!Note]  
-> Wenn der Wert der **enabledstate** -Eigenschaft **nicht anwendbar** ist, hat diese Eigenschaft keine Bedeutung.
+> Wenn der Wert der **EnabledState-Eigenschaft** **Nicht** zutreffend ist, hat diese Eigenschaft keine Bedeutung.
 
  
 
@@ -424,7 +424,7 @@ Gibt den letzten angeforderten Zustand für das Element an. Der aktuelle Zustand
 
 </dt> <dd>
 
-Der zuletzt angeforderte Status für das Element ist unbekannt.
+Der zuletzt angeforderte Zustand für das Element ist unbekannt.
 
 </dd> <dt>
 
@@ -442,18 +442,18 @@ Der zuletzt angeforderte Status für das Element ist unbekannt.
 
 </dt> <dd>
 
-Fordert eine sofortige Deaktivierung des-Elements an, sodass keine Befehle oder Verarbeitungsanforderungen ausgeführt oder akzeptiert werden.
+Fordert eine sofortige Deaktivierung des Elements an, damit es keine Befehle oder Verarbeitungsanforderungen ausführt oder akzeptiert.
 
 </dd> <dt>
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunter** fahren (4)
+<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunterfahren** (4)
 
 
 </dt> <dd>
 
-Fordert einen ordnungsgemäßen Übergang in den deaktivierten Zustand an und kann dazu führen, dass die Stromversorgung vollständig gelöscht wird.
+Fordert einen geordneten Übergang in den Status Deaktiviert an und kann das Entfernen der Stromversorgung beinhalten, um alle vorhandenen Status vollständig zu löschen.
 
 </dd> <dt>
 
@@ -464,7 +464,7 @@ Fordert einen ordnungsgemäßen Übergang in den deaktivierten Zustand an und ka
 
 </dt> <dd>
 
-Wurde als veraltet markiert, um anzugeben, dass der zuletzt angeforderte Status "unknown" (0) ist. Wenn der zuletzt angeforderte oder gewünschte Zustand unbekannt ist, sollte **requestedstate** den Wert "unknown" (0) aufweisen, aber möglicherweise den Wert "keine Änderung" (5).
+Veraltet, statt angibt, dass der zuletzt angeforderte Zustand "Unbekannt" (0) ist. Wenn der zuletzt angeforderte oder gewünschte Zustand unbekannt ist, sollte **RequestedState** den Wert "Unknown" (0) haben, aber möglicherweise den Wert "No Change" (5) haben.
 
 </dd> <dt>
 
@@ -475,7 +475,7 @@ Wurde als veraltet markiert, um anzugeben, dass der zuletzt angeforderte Status 
 
 </dt> <dd>
 
-Das Element wurde aufgefordert, in den aktivierten, aber offline- **enabledstate** zu wechseln.
+Das -Element wurde für den Übergang zum Enabled- aber Offline **EnabledState-Element angefordert.**
 
 </dd> <dt>
 
@@ -488,14 +488,14 @@ Das Element wurde aufgefordert, in den aktivierten, aber offline- **enabledstate
 
 <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>
 
-<span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>Verzögert **(8** )
+<span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>**Verzögert** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>Still **legung (9** )
+<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -507,7 +507,7 @@ Das Element wurde aufgefordert, in den aktivierten, aber offline- **enabledstate
 
 </dt> <dd>
 
-Bezieht sich auf das Herunterfahren und anschließende verschieben in den Zustand "aktiviert".
+Bezieht sich auf das "Herunterfahren" und das anschließende Verschieben in den Status "Aktiviert".
 
 </dd> <dt>
 
@@ -518,7 +518,7 @@ Bezieht sich auf das Herunterfahren und anschließende verschieben in den Zustan
 
 </dt> <dd>
 
-Gibt an, dass das Element zuerst "deaktiviert" und dann "aktiviert" ist.
+Gibt an, dass das Element zuerst "Disabled" und dann "Enabled" ist.
 
 </dd> <dt>
 
@@ -531,48 +531,48 @@ Gibt an, dass das Element zuerst "deaktiviert" und dann "aktiviert" ist.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wann der Zustand des Elements zuletzt geändert wurde. Wenn der Zustand des Elements nicht geändert wurde und diese Eigenschaft aufgefüllt ist, muss Sie auf einen Wert von 0 (null) festgelegt werden. Wenn eine Zustandsänderung angefordert wurde, aber abgelehnt wurde oder noch nicht verarbeitet wurde, darf die Eigenschaft nicht aktualisiert werden.
+Gibt an, wann der Zustand des Elements zuletzt geändert wurde. Wenn sich der Zustand des Elements nicht geändert hat und diese Eigenschaft aufgefüllt wird, muss sie auf einen Intervallwert von 0 (null) festgelegt werden. Wenn eine Zustandsänderung angefordert wurde, aber abgelehnt wurde oder noch nicht verarbeitet wurde, darf die Eigenschaft nicht aktualisiert werden.
 
 </dd> <dt>
 
-**Transitioningumstate**
+**TransitioningToState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelement**".**RequestStateChange**","**CIM \_ enabledlogicalelement**.**Requestedstate**","**CIM \_ enabledlogicalelement**.**Enabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElement**.**RequestStateChange**", "**CIM \_ EnabledLogicalElement**.**RequestedState**", "**CIM \_ EnabledLogicalElement**.**EnabledState**")
 </dt> </dl>
 
-Gibt den Ziel Status an, in dem die-Instanz geändert wird.
+Gibt den Zielzustand an, in den sich die Instanz ändert.
 
-Der Wert **keine Änderung** bedeutet, dass kein Übergang ausgeführt wird. Der Wert **nicht zutreffend** gibt an, dass die Implementierung keine laufenden Übergänge meldet.
+Der Wert **No Change (Keine Änderung)** gibt an, dass kein Übergang in Bearbeitung ist. Der Wert Nicht zutreffend **gibt** an, dass die Implementierung keine laufenden Übergänge berichtet.
 
 <dt>
 
@@ -599,7 +599,7 @@ Der Wert **keine Änderung** bedeutet, dass kein Übergang ausgeführt wird. Der
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -627,14 +627,14 @@ Der Wert **keine Änderung** bedeutet, dass kein Übergang ausgeführt wird. Der
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-Zurück **stellen (8** )
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -662,7 +662,7 @@ Still **legung (9** )
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
@@ -678,7 +678,7 @@ Still **legung (9** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob Computer den integrierten automatischen Konfigurations Dienst (AutoConfig) zum Verwalten von Drahtlos Verbindungen verwenden.
+description: Gibt an, ob Computer den integrierten automatischen Konfigurationsdienst (AutoConfig) zum Verwalten von Drahtlosverbindungen verwenden.
 ms.assetid: c255e0a0-65ae-44a8-95cb-1a000394109d
-title: enableautoconfig (globalflags)-Element (LAN_policy) für WLAN
+title: enableAutoConfig-Element (globalFlags) (LAN_policy) für WLAN
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 5105b8e634aa5affa8648b763a82bbd60cbaec17
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 77b09bf046cdbadb58c888a3084d14ed14794064bf9f11c110ccecaff105fceb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106364581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684410"
 ---
-# <a name="enableautoconfig-globalflags-element-lan_policy-for-wlan"></a>enableautoconfig (globalflags)-Element (LAN_policy) für WLAN 
+# <a name="enableautoconfig-globalflags-element-lan_policy-for-wlan"></a>enableAutoConfig-Element (globalFlags) (LAN_policy) für WLAN 
 
-Das **enableautoconfig** (globalflags)-Element gibt an, ob Computer den integrierten automatischen Konfigurations Dienst (AutoConfig) zum Verwalten von Drahtlos Verbindungen verwenden. Wenn **enableautoconfig** den Wert false aufweist, dürfen Computer keine automatische Konfiguration zum Verwalten von Drahtlos Verbindungen verwenden, und der Auto Config-Dienst antwortet nur auf Anforderungen zum Aktivieren des Dienstanbieter. Wenn **enableautoconfig** den Wert true aufweist, kann der AutoConfig-Dienst von Computern verwendet werden.
+Das **element enableAutoConfig** (globalFlags) gibt an, ob Computer den integrierten automatischen Konfigurationsdienst (AutoConfig) zum Verwalten von Drahtlosverbindungen verwenden. Wenn **enableAutoConfig** den Wert FALSE hat, dürfen Computer autoConfig nicht zum Verwalten von Drahtlosverbindungen verwenden, und der AutoConfig-Dienst reagiert nur auf Anforderungen, um den Dienst zu aktivieren. Wenn **enableAutoConfig** den Wert TRUE auf hat, können Computer den AutoConfig-Dienst verwenden.
 
-Dieses Element ist obligatorisch. Wenn ein Profil vom AutoConfig-Dienst erstellt wird, hat dieses Element den Standardwert true.
+Dieses Element ist obligatorisch. Wenn vom AutoConfig-Dienst ein Profil erstellt wird, hat dieses Element den Standardwert TRUE.
 
 ``` syntax
 <xs:element name="enableAutoConfig"
@@ -31,7 +31,7 @@ Dieses Element ist obligatorisch. Wenn ein Profil vom AutoConfig-Dienst erstellt
  />
 ```
 
-Das **enableautoconfig** -Element wird durch das [**globalflags**](wlan-policyschema-globalflags-wlanpolicy-element.md) -Element definiert.
+Das **enableAutoConfig-Element** wird durch das [**globalFlags-Element**](wlan-policyschema-globalflags-wlanpolicy-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Das **enableautoconfig** -Element wird durch das [**globalflags**](wlan-policysc
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -48,16 +48,16 @@ Das **enableautoconfig** -Element wird durch das [**globalflags**](wlan-policysc
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**globalflags**](wlan-policyschema-globalflags-wlanpolicy-element.md)
+[**globalFlags**](wlan-policyschema-globalflags-wlanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**globalflags (wlanpolicy)**](wlan-policyschema-globalflags-wlanpolicy-element.md)
+[**globalFlags (WLANPolicy)**](wlan-policyschema-globalflags-wlanpolicy-element.md)
 </dt> </dl>
 
  

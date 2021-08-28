@@ -1,9 +1,9 @@
 ---
-title: PSM_ENABLEWIZBUTTONS Meldung (prsht. h)
-description: Aktiviert oder deaktiviert alle Standard Schaltflächen in einem Aero-Assistenten. Sie können diese Nachricht explizit senden oder das propsheet \_ enablewizbuttons-Makro verwenden.
+title: PSM_ENABLEWIZBUTTONS-Nachricht (Prsht.h)
+description: Aktiviert oder deaktiviert eine der Standardschaltflächen in einem Assistenten für Dies. Sie können diese Nachricht explizit senden oder das \_ PropSheet-Makro EnableWizButtons verwenden.
 ms.assetid: 9e8ff2dc-c0e7-4754-8be2-2c7b65a524f4
 keywords:
-- Windows-Steuerelemente für PSM_ENABLEWIZBUTTONS Meldung
+- PSM_ENABLEWIZBUTTONS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01fb30fa3337aed369c2cd24a1296785bd6b3a79
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a677b596e57a55271224f5b22baac5d979e2806c20676065457aa47b8a66e527
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825871"
 ---
-# <a name="psm_enablewizbuttons-message"></a>PSM \_ enablewizbuttons-Meldung
+# <a name="psm_enablewizbuttons-message"></a>PSM \_ ENABLEWIZBUTTONS-Nachricht
 
-Aktiviert oder deaktiviert alle Standard Schaltflächen in einem Aero-Assistenten. Sie können diese Nachricht explizit senden oder das [**propsheet \_ enablewizbuttons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_enablewizbuttons) -Makro verwenden.
+Aktiviert oder deaktiviert eine der Standardschaltflächen in einem Assistenten für Dies. Sie können diese Nachricht explizit senden oder das [**\_ PropSheet-Makro EnableWizButtons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_enablewizbuttons) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,17 +32,17 @@ Aktiviert oder deaktiviert alle Standard Schaltflächen in einem Aero-Assistente
 *wParam* 
 </dt> <dd>
 
-Einer oder mehrere der folgenden Werte, die angeben, welche Eigenschaften Blatt Schaltflächen aktiviert werden sollen. Wenn ein Schaltflächen Wert sowohl in diesem Parameter als auch in *LPARAM* enthalten ist, wird er aktiviert.
+Mindestens einer der folgenden Werte, der angibt, welche Eigenschaftenblattschaltflächen aktiviert werden sollen. Wenn ein Schaltflächenwert sowohl in diesem Parameter als auch in *lParam* enthalten ist, wird er aktiviert.
 
 
 
 | Wert                                                                                                                                                                                 | Bedeutung                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**pswizb \_ zurück**</dt> </dl>                               | Die Schaltfläche " **zurück** ".<br/>   |
-| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**pswizb- \_ Abbruch**</dt> </dl>                         | Die Schaltfläche " **Abbrechen** ".<br/> |
-| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**pswizb \_ disabledfinish**</dt> </dl> | Die Schaltfläche **Fertig** stellen.<br/> |
-| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**pswizb- \_ Fertigstellen**</dt> </dl>                         | Die Schaltfläche **Fertig** stellen.<br/> |
-| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**pswizb \_ als nächstes**</dt> </dl>                               | Die Schaltfläche **weiter** .<br/>   |
+| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**PSWIBESTAND \_ ZURÜCK**</dt> </dl>                               | Die Schaltfläche **Zurück.**<br/>   |
+| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**PSWI WIEDER \_ ABBRECHEN**</dt> </dl>                         | Die Schaltfläche **Abbrechen.**<br/> |
+| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**PSWIATUR \_ DISABLEDFINISH**</dt> </dl> | Die Schaltfläche **Fertig stellen.**<br/> |
+| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**PSWIFABRIK \_ FINISH**</dt> </dl>                         | Die Schaltfläche **Fertig stellen.**<br/> |
+| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**PSWIEINANDER \_ WEITER**</dt> </dl>                               | Die Schaltfläche **Weiter.**<br/>   |
 
 
 
@@ -53,7 +53,7 @@ Einer oder mehrere der folgenden Werte, die angeben, welche Eigenschaften Blatt 
 *lParam* 
 </dt> <dd>
 
-Mindestens einer der in *wParam* verwendeten Werte, der angibt, welche Schaltflächen von diesem-Befehl betroffen sind. Wenn ein Schaltflächen Wert in diesem Parameter, aber nicht in *wParam* angezeigt wird, weist dies darauf hin, dass die Schaltfläche deaktiviert werden soll.
+Mindestens einer der in *wParam* verwendeten Werte, der angibt, welche Schaltflächen von diesem Aufruf betroffen sind. Wenn ein Schaltflächenwert in diesem Parameter, aber nicht in *wParam* angezeigt wird, gibt er an, dass die Schaltfläche deaktiviert werden soll.
 
 </dd> </dl>
 
@@ -67,9 +67,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

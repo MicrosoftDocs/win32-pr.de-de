@@ -1,34 +1,34 @@
 ---
-title: Befehls Objekteigenschaften
-description: Befehls Objekteigenschaften
+title: Befehlsobjekteigenschaften
+description: Befehlsobjekteigenschaften
 ms.assetid: 731bd14b-e213-4516-82fa-a904955cb7e4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18d4590901c3c7e967bad900191287b0e1795d8e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 57542038ac4faaa98fc6fc9dc19f8372f44bc382633cb9507299d8b5a701362f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119665770"
 ---
-# <a name="command-object-properties"></a>Befehls Objekteigenschaften
+# <a name="command-object-properties"></a>Befehlsobjekteigenschaften
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Die folgenden [**Befehls**](the-command-object.md) Eigenschaften werden unterstützt:
+Die folgenden [**Befehlseigenschaften**](the-command-object.md) werden unterstützt:
 
 -   [**Caption**](caption-property.md)
 -   [**Confidence**](confidence-property.md)
--   [**Vertrauvertrautext**](confidencetext-property.md)
+-   [**ConfidenceText**](confidencetext-property.md)
 -   [**Aktiviert**](enabled-property-co.md)
--   [**HelpContextID**](helpcontextid-property-com.md)
+-   [**Helpcontextid**](helpcontextid-property-com.md)
 -   [**Sichtbar**](visible-property-cop.md)
 -   [**Sprache**](voice-property.md)
--   [**Voicecaption**](voicecaption-property-c.md)
+-   [**VoiceCaption**](voicecaption-property-c.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,22 +4,22 @@ ms.assetid: e92ecb14-3f3a-48bb-963b-0c6e58c54089
 title: PNRP und BLOB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5caacfa32c84d89e8d655b6c0826e5e27b32c845
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b474c5d28fcd5211a62cc69fd9efeb98c4838eadfa23e120269203db3f26b638
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675130"
 ---
 # <a name="pnrp-and-blob"></a>PNRP und BLOB
 
-PNRP verwendet die [**BLOB**](winsock-nsp-reference-links.md) -Struktur, um Daten während Aufrufe mehrerer Funktionen an die **wsaqueryset** -Struktur zu übergeben. Zur Verwendung mit PNRP verweist die **BLOB** -Struktur entweder auf eine [**pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) -Struktur oder eine [**pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo) -Struktur.
+PNRP verwendet die [**BLOB-Struktur,**](winsock-nsp-reference-links.md) um Daten bei Aufrufen mehrerer Funktionen an die **WSAQUERYSET-Struktur** zu übergeben. Für die Verwendung mit PNRP verweist die **BLOB-Struktur** entweder auf eine [**PNRPINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) oder eine [**PNRPCLOUDINFO-Struktur.**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[PNRP und wsalookupservicebegin](pnrp-and-wsalookupservicebegin.md)
+[PNRP und WSALookupServiceBegin](pnrp-and-wsalookupservicebegin.md)
 </dt> <dt>
 
 [PNRP und WSALookupServiceEnd](pnrp-and-wsalookupserviceend.md)
@@ -28,19 +28,19 @@ PNRP verwendet die [**BLOB**](winsock-nsp-reference-links.md) -Struktur, um Date
 [PNRP und WSALookupServiceNext](pnrp-and-wsalookupservicenext.md)
 </dt> <dt>
 
-[PNRP und wsaqueryset](pnrp-and-wsaqueryset.md)
+[PNRP und WSAQUERYSET](pnrp-and-wsaqueryset.md)
 </dt> <dt>
 
-[PNRP und wsasetservice](pnrp-and-wsasetservice.md)
+[PNRP und WSASetService](pnrp-and-wsasetservice.md)
 </dt> <dt>
 
-[**Pnrpcloudinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
+[**PNRPCLOUDINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpcloudinfo)
 </dt> <dt>
 
-[**Pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
+[**PNRPINFO**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1)
 </dt> <dt>
 
-[**Wsaqueryset**](winsock-nsp-reference-links.md)
+[**WSAQUERYSET**](winsock-nsp-reference-links.md)
 </dt> </dl>
 
  

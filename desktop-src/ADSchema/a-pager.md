@@ -1,11 +1,11 @@
 ---
-title: Phone-Pager-Primary-Attribut
-description: Die primäre Pager-Nummer.
+title: Telefon-Pager-Primary-Attribut
+description: Die primäre Pagernummer.
 ms.assetid: e5230e09-f76b-4d2a-b56b-d989d315f9bb
 ms.tgt_platform: multiple
 keywords:
-- Telefon-Pager-primäres Attribut AD-Schema
-- Pager-Attribut, AD-Schema
+- ad-Schema des Telefon-Pager-Primary-Attributs
+- AD-Schema des Pagerattributs
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 883e0d519b0fabc14afbdd78fd8eb93bd29a9824
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b1ebfa52809d53ebf42679b303ebd03fb1f4056f725f08624269c3bdcca8683a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647870"
 ---
-# <a name="phone-pager-primary-attribute"></a>Phone-Pager-Primary-Attribut
+# <a name="phone-pager-primary-attribute"></a>Telefon-Pager-Primary-Attribut
 
-Die primäre Pager-Nummer.
+Die primäre Pagernummer.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Telefon-Pager-primär                                                              |
-| LDAP-Display-Name | pager                                                                            |
+| CN                | Telefon-Pager-Primary                                                              |
+| Ldap-Anzeigename | pager                                                                            |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                           |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt und die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 0.9.2342.19200300.100.1.42                                                       |
 | System-ID-GUID    | f0f8ffa6-1191-11d0-a060-00aa006c33ed                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
@@ -43,7 +43,7 @@ Die primäre Pager-Nummer.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Die primäre Pager-Nummer.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a21                                                             |
+| MAPI-Id                | 0x3A21                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Ist einwertig       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Die primäre Pager-Nummer.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a21                                                                                                                                                   |
+| MAPI-Id                | 0x3A21                                                                                                                                                   |
 | System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
+| Ist einwertig       | True                                                                                                                                                     |
 | Ist indiziert             | False                                                                                                                                                    |
 | Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -98,12 +98,12 @@ Die primäre Pager-Nummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a21                                                                                                                                                   |
+| MAPI-Id                | 0x3A21                                                                                                                                                   |
 | System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
+| Ist einwertig       | True                                                                                                                                                     |
 | Ist indiziert             | False                                                                                                                                                    |
 | Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -119,12 +119,12 @@ Die primäre Pager-Nummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a21                                                                                                                                                   |
+| MAPI-Id                | 0x3A21                                                                                                                                                   |
 | System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
+| Is-Single-Valued       | True                                                                                                                                                     |
 | Ist indiziert             | False                                                                                                                                                    |
 | Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -140,12 +140,12 @@ Die primäre Pager-Nummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a21                                                                                                                                                   |
+| MAPI-Id                | 0x3A21                                                                                                                                                   |
 | System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
+| Is-Single-Valued       | True                                                                                                                                                     |
 | Ist indiziert             | False                                                                                                                                                    |
 | Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |
@@ -161,12 +161,12 @@ Die primäre Pager-Nummer.
 | Eingabe | Wert |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                       |
-| MAPI-Id                | 0x3a21                                                                                                                                                   |
+| MAPI-Id                | 0x3A21                                                                                                                                                   |
 | System-Only            | False                                                                                                                                                    |
-| Ist-einwertig       | Richtig                                                                                                                                                     |
+| Is-Single-Valued       | True                                                                                                                                                     |
 | Ist indiziert             | False                                                                                                                                                    |
 | Im globalen Katalog      | False                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
 | Range-Lower            | 1                                                                                                                                                        |
 | Range-Upper            | 64                                                                                                                                                       |
 | Search-Flags           | 0x00000000                                                                                                                                               |

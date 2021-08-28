@@ -1,7 +1,7 @@
 ---
-description: Die AddAfter-Methode fügt eine Liste nach der angegebenen Position ein und verwendet die Parameter "POS" und "plist".
+description: Die AddAfter-Methode fügt eine Liste nach der angegebenen Position ein und verwendet die Parameter "pos" und "plist".
 ms.assetid: 99214667-8478-40e5-b55b-6ac47b1fb4d2
-title: Cgenericlist. AddAfter-Methode (wxlist. h)-POS, plist-Parameter
+title: CGenericList.AddAfter-Methode (Wxlist.h) – pos, plist-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c6bbe26e98acc999f067a7b0e96c3716e7e0c0c0
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 846e37b961af8d2492b3aff032193e87fb3603eb1751c25f0e3ca8e0c5d38618
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104531106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697480"
 ---
-# <a name="cgenericlistaddafter-method-wxlisth---pos-plist-parameters"></a>Cgenericlist. AddAfter-Methode (wxlist. h)-POS, plist-Parameter
+# <a name="cgenericlistaddafter-method-wxlisth---pos-plist-parameters"></a>CGenericList.AddAfter-Methode (Wxlist.h) – pos, plist-Parameter
 
-Die- `AddAfter` Methode fügt eine Liste nach der angegebenen Position ein.
+Die `AddAfter` -Methode fügt eine Liste nach der angegebenen Position ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,29 +50,29 @@ Position zum Einfügen der Liste. Die Liste wird nach dieser Position eingefügt
 
 </dd> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die einzufügende Liste.
+Zeiger auf die einzufügende Liste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
-| Header | Wxlist. h (Include Streams. h) |
-| Bibliothek| "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header | Wxlist.h (include Streams.h) |
+| Bibliothek| Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cgenericlist-Klasse**](cgenericlist.md)
+[**CGenericList-Klasse**](cgenericlist.md)
 </dt> </dl>
 
  

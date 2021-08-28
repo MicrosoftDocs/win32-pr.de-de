@@ -1,30 +1,30 @@
 ---
-title: Mittel l und RPC
-description: Wenn Sie eine RPC-Anwendung entwickeln, verwenden Sie einen Text-Editor, um eine IDL-Datei zu erstellen, die die Schnittstelle zwischen dem Client und dem Server definiert.
+title: MIDL und RPC
+description: Wenn Sie eine RPC-Anwendung entwickeln, verwenden Sie einen Text-Editor, um eine IDL-Datei zu erstellen, die die Schnittstelle zwischen client und server definiert.
 ms.assetid: 222a1e45-f007-4089-b700-6f4bed672cfa
 keywords:
-- Mittel l compilermittell, Mittel l und RPC
-- Compiler, Mittel l, Mittel l und RPC
-- Mittel l und RPC-Mitte
-- RPC-Mittell
+- MIDL-Compiler MIDL, MIDL und RPC
+- Compiler MIDL, MIDL und RPC
+- MIDL und RPC MIDL
+- RPC MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffbb89ba823c3db43fa45a200b02fe5970fd2a37
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 02d8196d15d25eb9ef52f2b199d17046b27de672ca5cd1f0fcf3eb67cc5028ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787500"
 ---
-# <a name="midl-and-rpc"></a>Mittel l und RPC
+# <a name="midl-and-rpc"></a>MIDL und RPC
 
-Wenn Sie eine RPC-Anwendung entwickeln, verwenden Sie einen Text-Editor, um eine IDL-Datei zu erstellen, die die Schnittstelle zwischen dem Client und dem Server definiert. Mit dem Mittelwert Compiler generieren Sie Quelldateien, die von den Client-und Serverprogrammen benötigt werden. In den folgenden Themen finden Sie Informationen zur Verwendung des-Mittell-Compilers für RPC-Anwendungen:
+Wenn Sie eine RPC-Anwendung entwickeln, verwenden Sie einen Text-Editor, um eine IDL-Datei zu erstellen, die die Schnittstelle zwischen client und server definiert. Sie verwenden den MIDL-Compiler, um Quelldateien zu generieren, die für Ihre Client- und Serverprogramme erforderlich sind. Die folgenden Themen enthalten Informationen zur Verwendung des MIDL-Compilers für RPC-Anwendungen:
 
 -   [Für eine RPC-Schnittstelle generierte Dateien](files-generated-for-an-rpc-interface.md)
--   [Stubziele für bestimmte 32-Bit-oder 64-Bit-Plattformen](targeting-stubs-for-specific-32-bit-or-64-bit-platforms.md)
+-   [Zielstubs für bestimmte 32-Bit- oder 64-Bit-Plattformen](targeting-stubs-for-specific-32-bit-or-64-bit-platforms.md)
 
-Weitere Informationen finden Sie unter [aufbauen von RPC-Anwendungen](/windows/desktop/Rpc/building-rpc-applications).
+Weitere Informationen finden Sie unter [Erstellen von RPC-Anwendungen.](/windows/desktop/Rpc/building-rpc-applications)
 
- 
+ 
 
- 
+ 

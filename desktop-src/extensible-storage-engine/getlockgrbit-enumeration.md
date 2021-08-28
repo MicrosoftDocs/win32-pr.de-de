@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der getlockgrbit-Enumeration.
-title: Getlockgrbit-Enumeration
+description: 'Weitere Informationen zu: GetLockGrbit-Enumeration'
+title: GetLockGrbit-Enumeration
 TOCTitle: GetLockGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.GetLockGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.getlockgrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2cfcad088fa93d73910a0333d3aca9a700e97996
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4a77ca293fc39504c0e78e25150ae12ba46b8317daa8e00c59b6dc3dca3f1ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732170"
 ---
-# <a name="getlockgrbit-enumeration"></a>Getlockgrbit-Enumeration
+# <a name="getlockgrbit-enumeration"></a>GetLockGrbit-Enumeration
 
-Optionen für jetgetlock.
+Optionen für JetGetLock.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,20 +72,20 @@ public enum GetLockGrbit
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Lesen</td>
-<td>Erhält eine Lesesperre für den aktuellen Datensatz. Lese Sperren sind nicht kompatibel mit Schreib sperren, die bereits von anderen Sitzungen gehalten wurden, aber mit Lese Sperren von anderen Sitzungen kompatibel sind.</td>
+<td>Überwachungsdaten</td>
+<td>Abrufen einer Lesesperre für den aktuellen Datensatz. Lesesperren sind nicht kompatibel mit Schreibsperren, die bereits von anderen Sitzungen gehalten werden, sind aber mit Lesesperren kompatibel, die von anderen Sitzungen gehalten werden.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Schreiben</td>
-<td>Rufen Sie eine Schreibsperre für den aktuellen Datensatz ab. Schreib Sperren sind nicht kompatibel mit Schreib-oder Lese sperren, die von anderen Sitzungen aufrechterhalten werden, aber mit Lese Sperren in derselben Sitzung kompatibel sind.</td>
+<td>Abrufen einer Schreibsperre für den aktuellen Datensatz. Schreibsperren sind nicht mit Schreib- oder Lesesperren kompatibel, die von anderen Sitzungen gehalten werden, sind jedoch mit Lesesperren kompatibel, die von derselben Sitzung gehalten werden.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

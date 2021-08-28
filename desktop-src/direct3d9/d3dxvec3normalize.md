@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f39890a92bbff9d27a1150e76092d865dc36c089
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 161978529f12518280284c8c62328756e92b313a63caf0210a6da35ec23ffe0b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791470"
 ---
 # <a name="d3dxvec3normalize-function-d3dx9mathh"></a>D3DXVec3Normalize-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
 Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die normalisierte Version des angegebenen Vektors ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXVec3Normalize-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -73,14 +73,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

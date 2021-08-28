@@ -1,7 +1,7 @@
 ---
-description: Mit der Put \_ Visible-Methode wird das Fenster angezeigt oder ausgeblendet.
+description: Die Put \_ Visible-Methode zeigt das Fenster an oder blendet es aus.
 ms.assetid: 77e8d071-f876-4e35-945c-d1daf96ad02b
-title: CBaseControlWindow.put_Visible-Methode (ctlutil. h)
+title: CBaseControlWindow.put_Visible -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7bf713b4ccb9932b1201e7ced40fddcd87407ef6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f2c8565d14c58d520a91c682e55d3dbc2ba079cf956213bdc61d044834d690c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793290"
 ---
-# <a name="cbasecontrolwindowput_visible-method"></a>Cbasecontrolwindow. Put \_ Visible-Methode
+# <a name="cbasecontrolwindowput_visible-method"></a>CBaseControlWindow.put \_ Visible-Methode
 
-Mit der- `put_Visible` Methode wird das Fenster angezeigt oder ausgeblendet.
+Die `put_Visible` -Methode zeigt das Fenster an oder blendet es aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ HRESULT put_Visible(
 *Visible* 
 </dt> <dd>
 
-Boolesches Automatisierungs Flag (0 bedeutet, dass das Fenster ausgeblendet ist, 1 bedeutet, dass das Fenster angezeigt wird).
+Boolean-Flag für Automation (0 bedeutet, dass das Fenster ausgeblendet ist, 1 bedeutet, dass das Fenster angezeigt wird).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

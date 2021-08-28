@@ -1,10 +1,10 @@
 ---
-title: Inapserverinfo-Schnittstelle (napservermanagement. h)
-description: Verwaltungs Clients (z. b. WMI-Anbieter oder Befehlszeilen Tools) verwenden, um den Status des NAP-Server Systems abzufragen.
+title: INapServerInfo-Schnittstelle (NapServerManagement.h)
+description: Verwaltungsclients (z. B. WMI-Anbieter oder Befehlszeilentools) verwenden , um den Status des NAP-Serversystems abzufragen.
 ms.assetid: 3c6d3f76-ea63-4cb2-bac7-e5668e50b7a7
 keywords:
-- Inapserverinfo-Schnittstelle NAP
-- Inapserverinfo-Schnittstelle NAP, beschrieben
+- NAP der INapServerInfo-Schnittstelle
+- INapServerInfo-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,47 +15,47 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec17e3303fe4af4d359279de6c5fa7aa5f34d409
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 556c2a5b7e7545038995d5091d46931352f9ee32bddfa31b91237dfa54d69620
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626100"
 ---
-# <a name="inapserverinfo-interface"></a>Inapserverinfo-Schnittstelle
+# <a name="inapserverinfo-interface"></a>INapServerInfo-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-**Inapserverinfo** stellt Methoden bereit, mit denen Verwaltungs Clients (z. b. WMI-Anbieter oder Befehlszeilen Tools) den Status des NAP-Server Systems Abfragen.
+**INapServerInfo** stellt Methoden bereit, die Verwaltungsclients (z. B. WMI-Anbieter oder Befehlszeilentools) verwenden, um den Status des NAP-Serversystems abzufragen.
 
 ## <a name="members"></a>Member
 
-Die **inapserverinfo** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapserverinfo** verfügt auch über die folgenden Typen von Membern:
+Die **INapServerInfo-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapServerInfo** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapserverinfo** -Schnittstelle verfügt über diese Methoden.
+Die **INapServerInfo-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                   | BESCHREIBUNG                                                             |
+| Methode                                                                                                                   | Beschreibung                                                             |
 |:-------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| [**Inapserverinfo:: getfailurecategorymappings**](inapserverinfo-getfailurecategorymappings-method.md)                   | Ruft die Zuordnungen der Fehlerkategorien für einen angegebenen SHV ab.<br/> |
-| [**Inapserverinfo:: getnapserverinfo**](inapserverinfo-getnapserverinfo-method.md)                                       | Ruft Informationen zum NAP-Server ab.<br/>                  |
-| [**Inapserverinfo:: getregisteredsystemhealthvalidators**](inapserverinfo-getregisteredsystemhealthvalidators-method.md) | Ruft eine Liste registrierter SHVs ab.<br/>                         |
+| [**INapServerInfo::GetFailureCategoryMappings**](inapserverinfo-getfailurecategorymappings-method.md)                   | Ruft die Fehlerkategoriezuordnungen für eine angegebene SHV ab.<br/> |
+| [**INapServerInfo::GetNapServerInfo**](inapserverinfo-getnapserverinfo-method.md)                                       | Ruft Informationen zum NAP-Server ab.<br/>                  |
+| [**INapServerInfo::GetRegisteredSystemHealthValidators**](inapserverinfo-getregisteredsystemhealthvalidators-method.md) | Ruft eine Liste registrierter SHVs ab.<br/>                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methoden bieten nur statische Informationen über den NAP-Server und dessen Komponenten im System.
+Diese Methoden stellen nur statische Informationen zum NAP-Server und seinen Komponenten auf dem System bereit.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,14 +64,14 @@ Diese Methoden bieten nur statische Informationen über den NAP-Server und desse
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                               |
-| Header<br/>                   | <dl> <dt>Napservermanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napservermanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                               |
+| Header<br/>                   | <dl> <dt>NapServerManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapServerManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qsvrmgmt.dll</dt> </dl>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

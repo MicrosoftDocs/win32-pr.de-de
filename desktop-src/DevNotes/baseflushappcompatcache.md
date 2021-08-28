@@ -1,7 +1,7 @@
 ---
-description: Leert den Anwendungskompatibilitäts-Cache.
+description: Leert den Anwendungskompatibilitätscache.
 ms.assetid: 03f47813-87f6-4b71-b453-77a2facab019
-title: Baseflushappcompatcache-Funktion
+title: BaseFlushAppcompatCache-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - API-MS-Win-Core-appcompat-l1-1-0.dll
 - KernelBase.dll
 - API-MS-Win-Core-appcompat-l1-1-1.dll
-ms.openlocfilehash: 6118c78784bb96b9f25e008cd2221112eeb646f3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 44ea71a28ff85b00c72dc7b0255144381a2d8f01ead0901ee30ff216e17e20d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768750"
 ---
-# <a name="baseflushappcompatcache-function"></a>Baseflushappcompatcache-Funktion
+# <a name="baseflushappcompatcache-function"></a>BaseFlushAppcompatCache-Funktion
 
-Leert den Anwendungskompatibilitäts-Cache.
+Leert den Anwendungskompatibilitätscache.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Funktion gibt **true** zurück, wenn Sie erfolgreich ist, andernfalls **false** .
+Die Funktion gibt **TRUE zurück,** wenn sie erfolgreich ist, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Aufrufer muss ein Administrator sein.
+Der Aufrufer muss administrator sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Der Aufrufer muss ein Administrator sein.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl> |
 
 
@@ -64,7 +64,7 @@ Der Aufrufer muss ein Administrator sein.
 
 <dl> <dt>
 
-[**Shimflushcache**](shimflushcache.md)
+[**ShimFlushCache**](shimflushcache.md)
 </dt> </dl>
 
  

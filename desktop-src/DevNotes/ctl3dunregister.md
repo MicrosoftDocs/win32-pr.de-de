@@ -1,5 +1,5 @@
 ---
-description: Hebt die Registrierung einer Anwendung als Client von ctl3d auf.
+description: Aufheben der Registrierung einer Anwendung als Client von CTL3D.
 ms.assetid: 21990A79-F90D-4AE1-AB02-2B33583B47F5
 title: Ctl3dUnregister-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 85cd45062da9c01ef8af5a312a855bfaab6a6bf7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 32a954efceba7400692ad92c91bedb47283587827739c19f23e7802e1481fbe6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691500"
 ---
 # <a name="ctl3dunregister-function"></a>Ctl3dUnregister-Funktion
 
-Hebt die Registrierung einer Anwendung als Client von ctl3d auf.
+Aufheben der Registrierung einer Anwendung als Client von CTL3D.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ BOOL Ctl3dUnregister(
 
 <dl> <dt>
 
-*hinstapp* 
+*hinstApp* 
 </dt> <dd>
 
 Ein Handle für die Anwendung, deren Registrierung als Client aufgehoben werden soll.
@@ -48,15 +48,15 @@ Ein Handle für die Anwendung, deren Registrierung als Client aufgehoben werden 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Registrierung der Anwendung als Client von ctl3d aufgehoben wird. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn die Registrierung der Anwendung als Client von CTL3D aufgehoben wurde. Andernfalls wird **FALSE** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung, die ctl3d verwendet, sollte diese Funktion in WinMain aufruft.
+Eine Anwendung, die CTL3D verwendet, sollte diese Funktion in WinMain aufrufen.
 
-3D-Effekte sind auf Systemen mit einer geringeren Auflösung als VGA nicht verfügbar.
+3D-Effekte sind auf Systemen mit einer geringeren VGA-Auflösung nicht verfügbar.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

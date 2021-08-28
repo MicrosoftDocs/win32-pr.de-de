@@ -1,37 +1,37 @@
 ---
-description: Enthält einen Zeiger auf die streamattribute des verbundenen Streams auf einer hardwarebasierten Media Foundation Transformation (MFT).
+description: Enthält einen Zeiger auf die Streamattribute des verbundenen Streams auf einer hardwarebasierten Media Foundation Transform (MFT).
 ms.assetid: 7e14a02e-4cbf-45aa-a6f5-2c53b2437127
-title: MFT_CONNECTED_STREAM_ATTRIBUTE-Attribut (MF Transform. h)
+title: MFT_CONNECTED_STREAM_ATTRIBUTE -Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3b182cbed78f5f9851b621de72bf691bf698b70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2289b8f1e8d5d751f7aa69564b8bbd26d865b43efedb474529147385b1851bb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722566"
 ---
-# <a name="mft_connected_stream_attribute-attribute"></a>Attribut Attribut des MFT- \_ verbundenen \_ Streams \_
+# <a name="mft_connected_stream_attribute-attribute"></a>Attribut "MFT \_ CONNECTED \_ STREAM \_ ATTRIBUTE"
 
-Enthält einen Zeiger auf die streamattribute des verbundenen Streams auf einer hardwarebasierten Media Foundation Transformation (MFT).
+Enthält einen Zeiger auf die Streamattribute des verbundenen Streams auf einer hardwarebasierten Media Foundation Transform (MFT).
 
 ## <a name="data-type"></a>Datentyp
 
-**Imfattributes \** _ als " _*IUnknown \** " gespeichert_
+**ATTRIBUTE _ \* *gespeichert als _* IUnknown\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [_ *imfattributes:: getunknown* *](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown).
+Um dieses Attribut zu erhalten, rufen [**Sie DANNATTRIBUTEs::GetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: setunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown).
+Rufen Sie ZUM Festlegen dieses [**Attributs DEN WERTATTRIBUTEs::SetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Anwendungen verwenden dieses Attribut in der Regel nicht.
 
-Dieses Attribut wird für MFTs verwendet, die als Proxys für ein Hardware Gerät fungieren. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
+Dieses Attribut wird für MFTs verwendet, die als Proxys für ein Hardwaregerät fungieren. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,26 +39,26 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[mit \_ \_ dem HW- \_ \_ Stream verbundene MFT](mft-connected-to-hw-stream.md)
+[MFT \_ MIT \_ \_ HW-STREAM \_ VERBUNDEN](mft-connected-to-hw-stream.md)
 </dt> <dt>
 
 [Hardware-MFTs](hardware-mfts.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

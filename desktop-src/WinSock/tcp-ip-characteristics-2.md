@@ -1,31 +1,31 @@
 ---
-description: TCP/IP verfügt über Eigenschaften, mit denen das Protokoll gemäß den Anforderungen der standardisierten Implementierung funktionieren kann.
+description: TCP/IP verfügt über Merkmale, die es dem Protokoll ermöglichen, wie es die standardisierten Implementierungsanforderungen vorschreiben.
 ms.assetid: 6e9b3878-85f0-4572-9c00-a2e7647286ff
 title: TCP/IP-Merkmale
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 561ab497d6f37c1c84b0203088b29e216ff0a69f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f720dac1157149fe34da1b6bcbc08928654f268c7ac3e32b2e22599ae43cb701
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119733420"
 ---
 # <a name="tcpip-characteristics"></a>TCP/IP-Merkmale
 
-TCP/IP verfügt über Eigenschaften, mit denen das Protokoll gemäß den Anforderungen der standardisierten Implementierung funktionieren kann. Diese Merkmale können mit Entwicklungsoptionen kombiniert werden, die zu einer schlechten Leistung führen. Welche Auswirkung diese TCP/IP-Merkmale auf eine Anwendung haben, hängt davon ab, ob die Anwendung transaktional oder Streaming ist.
+TCP/IP verfügt über Merkmale, die es dem Protokoll ermöglichen, wie es die standardisierten Implementierungsanforderungen vorschreiben. Diese Merkmale können mit Entwicklungsoptionen kombiniert werden, die zu einer schlechten Leistung führen. Die Auswirkungen dieser TCP/IP-Merkmale auf eine Anwendung hängen davon ab, ob es sich um eine Transaktion oder ein Streaming handelt.
 
-Transaktionale Anwendungen sind von dem Aufwand betroffen, der zum Einrichten und Beenden der Verbindung erforderlich ist. Wenn z. b. eine Verbindung in einem Ethernet-Netzwerk hergestellt wird, müssen jeweils drei Pakete mit ungefähr 60 Byte gesendet werden, und für den Austausch ist ungefähr eine RTT erforderlich. Wenn eine Verbindung beendet wird, werden vier Pakete ausgetauscht. Dies gilt für jede Verbindung. eine Anwendung, die Verbindungen öffnet und schließt, verursacht häufig den Aufwand für jedes Vorkommen.
+Transaktionsanwendungen sind von dem Aufwand betroffen, der für die Verbindungseinrichtung und -beendigung erforderlich ist. Jedes Mal, wenn eine Verbindung in einem Ethernet-Netzwerk hergestellt wird, müssen beispielsweise drei Pakete mit jeweils ca. 60 Bytes gesendet werden, und für den Austausch ist ungefähr eine RTT erforderlich. Beim Beenden einer Verbindung werden vier Pakete ausgetauscht. Dies gilt für jede Verbindung. Eine Anwendung, die Verbindungen öffnet und schließt, verursacht häufig diesen Mehraufwand bei jedem Vorkommen.
 
-Ein anderer Aspekt von TCP/IP ist ein *langsamer Start*, der immer dann stattfindet, wenn eine Verbindung hergestellt wird. Der langsame Start ist ein künstlicher Grenzwert für die Anzahl der Daten Segmente, die gesendet werden können, bevor die Bestätigung dieser Segmente empfangen wird. Der langsame Start ist so konzipiert, dass die Überlastung des Netzwerks eingeschränkt wird. Wenn eine Verbindung über Ethernet hergestellt wird, kann unabhängig von der Fenstergröße des Empfängers eine Übertragung von 4 KB bis zu 3-4 RTT dauern, da langsam begonnen wird.
+Ein weiterer Aspekt von TCP/IP ist *der langsame Start,* der immer dann erfolgt, wenn eine Verbindung hergestellt wird. Der langsame Start ist ein künstlicher Grenzwert für die Anzahl der Datensegmente, die gesendet werden können, bevor eine Bestätigung dieser Segmente empfangen wird. Der langsame Start wurde entwickelt, um die Netzwerküberlastung zu begrenzen. Wenn unabhängig von der Fenstergröße des Empfängers eine Verbindung über Ethernet hergestellt wird, kann eine Übertragung mit 4 KB aufgrund eines langsamen Startes bis zu 3 bis 4 RTT dauern.
 
-Eine TCP/IP-Optimierung, die als Nagle-Algorithmus bezeichnet wird, kann auch die Datenübertragungsgeschwindigkeit bei einer Verbindung einschränken. Der Nagle-Algorithmus ist so konzipiert, dass der Protokoll Mehraufwand für Anwendungen reduziert wird, die kleine Datenmengen senden, wie z. b. Telnet, die jeweils jeweils ein einzelnes Zeichen senden. Anstatt direkt ein Paket mit vielen Header-und kleinen Daten zu senden, wartet der Stapel auf weitere Daten von der Anwendung oder einer Bestätigung, bevor der Vorgang fortgesetzt wird.
+Eine TCP/IP-Optimierung namens Nagle-Algorithmus kann auch die Datenübertragungsgeschwindigkeit für eine Verbindung einschränken. Der Nagle-Algorithmus wurde entwickelt, um den Protokollaufwand für Anwendungen zu reduzieren, die kleine Datenmengen senden, z. B. Telnet, das gleichzeitig ein einzelnes Zeichen sendet. Anstatt sofort ein Paket mit vielen Headern und wenig Daten zu senden, wartet der Stapel auf weitere Daten aus der Anwendung oder eine Bestätigung, bevor der Vorgang fortfahren kann.
 
-Verzögerte Bestätigungen, die häufig als *verzögerte* Bestätigung bezeichnet werden, werden auch in TCP/IP integriert, um eine effizientere piggyunterstützung von Bestätigungen zu ermöglichen, wenn Rückgabe Daten von der empfangenden Anwendung empfangen werden. Wenn diese Daten nicht in Kürze vorhanden sind und die Sendeseite auf eine Bestätigung wartet, können Verzögerungen von ungefähr 200 Millisekunden pro Sendevorgang auftreten.
+Verzögerte Bestätigungen, die häufig als verzögerte *ACK* bezeichnet werden, sind auch für TCP/IP konzipiert, um ein effizienteres Piggybacking von Bestätigungen zu ermöglichen, wenn Rückgabedaten von der empfangenden Anwendung anstehender werden. Wenn diese Daten nicht in Kürze angezeigt werden und die sendende Seite auf eine Bestätigung wartet, kann es zu Verzögerungen von ca. 200 Millisekunden pro Sendedaten kommen.
 
-Wenn eine TCP-Verbindung geschlossen wird, werden Verbindungs Ressourcen an dem Knoten, der die Schließung initiiert hat, in einen Wartezustand versetzt, der als Zeit Wartezeit bezeichnet wird, um Schutz vor Daten Beschädigungen zu erhalten, wenn doppelte Pakete im Netzwerk gelinger werden. Dadurch wird sichergestellt, dass beide Enden mit der Verbindung abgeschlossen sind. Dies kann zu einem Mangel an Ressourcen, die pro Verbindung erforderlich sind, führen, z. b. RAM und Ports, wenn Anwendungen häufig Verbindungen öffnen und schließen.
+Wenn eine TCP-Verbindung geschlossen wird, werden Verbindungsressourcen auf dem Knoten, der das Schließen initiiert hat, in den Wartezustand TIME-WAIT aufgenommen, um datenverfälschungsgeschützt zu werden, wenn doppelte Pakete im Netzwerk vorhanden sind. Dadurch wird sichergestellt, dass beide Enden mit der Verbindung beendet werden. Dies kann zu einer Verknappung der pro Verbindung erforderlichen Ressourcen führen, z. B. RAM und Ports, wenn Anwendungen häufig Verbindungen öffnen und schließen.
 
-Neben der Auswirkung von verzögertem ACK und anderen Überlastungs Vermeidungs Schemas können Streaminganwendungen auch durch eine zu geringe standardmäßige Empfangs Fenstergröße auf dem empfangenden Ende beeinträchtigt werden.
+Streaminganwendungen sind nicht nur von verzögerter ACK und anderen Überlastungsvermeidungsschemas betroffen, sondern können auch von einer zu kleinen Standardgröße des Empfangsfensters auf der Empfangende betroffen sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,7 +34,7 @@ Neben der Auswirkung von verzögertem ACK und anderen Überlastungs Vermeidungs 
 [Anwendungsverhalten](application-behavior-2.md)
 </dt> <dt>
 
-[Hochleistungsfähige Windows Sockets-Anwendungen](high-performance-windows-sockets-applications-2.md)
+[Hochleistungsanwendungen Windows Sockets](high-performance-windows-sockets-applications-2.md)
 </dt> <dt>
 
 [Nagle-Algorithmus](https://msdn.microsoft.com/library/ms817942.aspx)

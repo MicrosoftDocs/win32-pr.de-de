@@ -1,19 +1,19 @@
 ---
-description: Wird in der Meldungs Warteschlange des Installations Threads gepostet, wenn ein Timer abläuft. Die Nachricht wird von der getMessage-Funktion oder der Peer Message-Funktion gepostet.
+description: Wird an die Nachrichtenwarteschlange des Installationsthreads gesendet, wenn ein Timer abläuft. Die Nachricht wird von der GetMessage- oder PeekMessage-Funktion bereitgestellt.
 ms.assetid: 419e3f05-35ec-4e48-b24d-ab98df687b20
-title: WM_TIMER Meldung (Winuser. h)
+title: WM_TIMER Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7c99db67c9c9b3419e477ccd0a78133df453a7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d770d640b801849eeebe1c4ec86df8c41642c6149b89e00d82261f4e090f56f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710030"
 ---
-# <a name="wm_timer-message"></a>WM-Zeit Geber \_ Meldung
+# <a name="wm_timer-message"></a>WM \_ TIMER-Meldung
 
-Wird in der Meldungs Warteschlange des Installations Threads gepostet, wenn ein Timer abläuft. Die Nachricht wird von der [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) -Funktion oder der [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) -Funktion gepostet.
+Wird an die Nachrichtenwarteschlange des Installationsthreads gesendet, wenn ein Timer abläuft. Die Nachricht wird von der [**GetMessage-**](/windows/win32/api/winuser/nf-winuser-getmessage) oder [**PeekMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-peekmessagea) bereitgestellt.
 
 
 ```C++
@@ -26,17 +26,17 @@ Wird in der Meldungs Warteschlange des Installations Threads gepostet, wenn ein 
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Der timerbezeichner.
+Der Timerbezeichner.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Anwendungs definierte Rückruffunktion, die bei der Installation des Timers an die [**SETTIMER**](/windows/win32/api/winuser/nf-winuser-settimer) -Funktion übermittelt wurde.
+Ein Zeiger auf eine anwendungsdefinierte Rückruffunktion, die bei der Installation des Timers an die [**SetTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) übergeben wurde.
 
 </dd> </dl>
 
@@ -44,13 +44,13 @@ Ein Zeiger auf eine Anwendungs definierte Rückruffunktion, die bei der Installa
 
 Typ: **LRESULT**
 
-Eine Anwendung sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte 0 (null) zurückgeben, wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die Nachricht verarbeiten, indem Sie **einen \_ WM** -Zeit Geber Fall in der Fenster Prozedur bereitstellen. Andernfalls ruft [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) die [*timerproc*](/windows/win32/api/winuser/nc-winuser-timerproc) -Rückruffunktion auf, die im [**Aufrufen der Funktion "-Funktion"**](/windows/win32/api/winuser/nf-winuser-settimer) angegeben ist, die zum Installieren des Timers verwendet wird.
+Sie können die Nachricht verarbeiten, indem Sie im Fensterverfahren einen **WM \_ TIMER-Fall** bereitstellen. Andernfalls ruft [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) die [*TimerProc-Rückruffunktion*](/windows/win32/api/winuser/nc-winuser-timerproc) auf, die im Aufruf der [**SetTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) angegeben ist, die zum Installieren des Timers verwendet wird.
 
-Die WM-Zeit Geber Nachricht ist eine Nachricht mit niedriger Priorität. **\_** Die Funktionen [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**Peer Message**](/windows/win32/api/winuser/nf-winuser-peekmessagea) stellen diese Nachricht nur dann bereit, wenn sich keine anderen Nachrichten mit höherer Priorität in der Nachrichten Warteschlange des Threads befinden.
+Die **WM \_ TIMER-Nachricht** ist eine Nachricht mit niedriger Priorität. Die Funktionen [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage) und [**PeekMessage**](/windows/win32/api/winuser/nf-winuser-peekmessagea) stellen diese Nachricht nur dann bereit, wenn sich keine anderen Nachrichten mit höherer Priorität in der Nachrichtenwarteschlange des Threads befinden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Die WM-Zeit Geber Nachricht ist eine Nachricht mit niedriger Priorität. **\_** 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Die WM-Zeit Geber Nachricht ist eine Nachricht mit niedriger Priorität. **\_** 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GetMessage**](/windows/win32/api/winuser/nf-winuser-getmessage)
@@ -77,13 +77,13 @@ Die WM-Zeit Geber Nachricht ist eine Nachricht mit niedriger Priorität. **\_** 
 [**PeekMessage**](/windows/win32/api/winuser/nf-winuser-peekmessagea)
 </dt> <dt>
 
-[**Ziel**](/windows/win32/api/winuser/nf-winuser-settimer)
+[**SetTimer**](/windows/win32/api/winuser/nf-winuser-settimer)
 </dt> <dt>
 
-[**Timerproc**](/windows/win32/api/winuser/nc-winuser-timerproc)
+[**TimerProc**](/windows/win32/api/winuser/nc-winuser-timerproc)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Timer](timers.md)

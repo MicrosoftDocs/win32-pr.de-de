@@ -4,8 +4,8 @@ description: Verweise auf Objekte in anderen ADSI-Namespaces.
 ms.assetid: d659029b-f929-4810-a369-d6d1062b33b8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Wbem-Path-Attribut
-- AD-Schema für wbempath-Attribut
+- Wbem-Path AD-Schema
+- wbemPath-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06bf3628ff9f44f1a928ca88c6bb8af62f61af91
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7aa1e8030b85941b326adbf9af2e4d4fec98ce5981c21e6670ccc9ab327b8a7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119644260"
 ---
 # <a name="wbem-path-attribute"></a>Wbem-Path-Attribut
 
@@ -30,12 +30,12 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Wbem-Path                                   |
-| LDAP-Display-Name | wbempath                                    |
+| Ldap-Anzeigename | wbemPath                                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.301                      |
-| System-ID-GUID    | 244b2970-5abd-11D0-afd2-00c04f 930c9        |
+| System-Id-Guid    | 244b2970-5abd-11d0-afd2-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Verweise auf Objekte in anderen ADSI-Namespaces.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

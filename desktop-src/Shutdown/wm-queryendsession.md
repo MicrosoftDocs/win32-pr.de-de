@@ -1,23 +1,23 @@
 ---
-description: Die WM- \_ queryendsession-Nachricht wird gesendet, wenn der Benutzer die Sitzung beendet, oder wenn eine Anwendung eine der Funktionen zum Herunterfahren des Systems aufruft.
+description: Die WM QUERYENDSESSION-Nachricht wird gesendet, wenn der Benutzer die Sitzung beendet oder wenn eine Anwendung eine der Funktionen zum Herunterfahren des \_ Systems aufruft.
 ms.assetid: 7ad73444-f1f6-4b73-8450-0580b146a5a6
-title: WM_QUERYENDSESSION Meldung (Winuser. h)
+title: WM_QUERYENDSESSION (WinUser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff2e2f82388b229523f371c680d6ccc7c4b1e27f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6807a861ffb0670013a1d1f5b98a2f202e5d7470a6c306b3ed29c42baad6e6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119664210"
 ---
-# <a name="wm_queryendsession-message"></a>WM- \_ queryendsession-Nachricht
+# <a name="wm_queryendsession-message"></a>WM \_ QUERYENDSESSION-Meldung
 
-Die **WM- \_ queryendsession** -Nachricht wird gesendet, wenn der Benutzer die Sitzung beendet, oder wenn eine Anwendung eine der Funktionen zum Herunterfahren des Systems aufruft. Wenn eine Anwendung 0 (null) zurückgibt, wird die Sitzung nicht beendet. Das System beendet das Senden von **WM- \_ queryendsession** -Nachrichten, sobald eine Anwendung NULL zurückgibt.
+Die **WM \_ QUERYENDSESSION-Nachricht** wird gesendet, wenn der Benutzer die Sitzung beendet oder wenn eine Anwendung eine der Funktionen zum Herunterfahren des Systems aufruft. Wenn eine Anwendung 0 (null) zurückgibt, wird die Sitzung nicht beendet. Das System beendet das Senden von **WM \_ QUERYENDSESSION-Nachrichten,** sobald eine Anwendung 0 (null) zurückgibt.
 
-Nach der Verarbeitung dieser Nachricht sendet das System die [**WM- \_ EndSession**](wm-endsession.md) -Nachricht mit dem *wParam* -Parameter, der auf die Ergebnisse der **WM-Abfrage " \_ queryendsession** " festgelegt ist.
+Nach der Verarbeitung dieser Nachricht sendet das System die [**WM \_ ENDSESSION-Nachricht**](wm-endsession.md) mit dem *wParam-Parameter,* der auf die Ergebnisse der **WM \_ QUERYENDSESSION-Nachricht festgelegt** ist.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -35,17 +35,17 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Ein Handle für das Fenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der **WM- \_ queryendsession** -Bezeichner.
+Der **WM \_ QUERYENDSESSION-Bezeichner.**
 
 </dd> <dt>
 
@@ -59,43 +59,43 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen. Wenn dieser Parameter 0 ist, wird das System heruntergefahren oder neu gestartet (es ist nicht möglich, zu bestimmen, welches Ereignis auftritt).
+Dieser Parameter kann einen oder mehrere der folgenden Werte sein. Wenn dieser Parameter 0 ist, wird das System heruntergefahren oder neu gestartet (es ist nicht möglich, zu bestimmen, welches Ereignis auftritt).
 
 
 
 | Wert                                                                                                                                                                                                                                           | Bedeutung                                                                                                                                                                                                                         |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="ENDSESSION_CLOSEAPP"></span><span id="endsession_closeapp"></span><dl> <dt>**EndSession \_ CloseApp**</dt> <dt>0x00000001</dt> </dl> | Von der Anwendung wird eine Datei verwendet, die ersetzt werden muss, das System gewartet wird oder die Systemressourcen erschöpft sind. Weitere Informationen finden Sie unter [Richtlinien für Anwendungen](../rstmgr/guidelines-for-applications.md).<br/> |
-| <span id="ENDSESSION_CRITICAL"></span><span id="endsession_critical"></span><dl> <dt>**EndSession \_ Kritisch**</dt> <dt>0x40000000</dt> </dl> | Die Anwendung muss heruntergefahren werden.<br/>                                                                                                                                                                              |
-| <span id="ENDSESSION_LOGOFF"></span><span id="endsession_logoff"></span><dl> <dt>**EndSession \_**</dt>Abmeldung <dt>0x80000000</dt> </dl>       | Der Benutzer meldet sich ab. Weitere Informationen finden Sie unter [Abmelden](logging-off.md).<br/>                                                                                                                                   |
+| <span id="ENDSESSION_CLOSEAPP"></span><span id="endsession_closeapp"></span><dl> <dt>**ENDSESSION \_ CLOSEAPP-0x00000001**</dt> <dt></dt> </dl> | Die Anwendung verwendet eine Datei, die ersetzt werden muss, das System wird serviced, oder die Systemressourcen sind erschöpft. Weitere Informationen finden Sie unter [Richtlinien für Anwendungen](../rstmgr/guidelines-for-applications.md).<br/> |
+| <span id="ENDSESSION_CRITICAL"></span><span id="endsession_critical"></span><dl> <dt>**ENDSESSION \_ CRITICAL**</dt> <dt>0x40000000</dt> </dl> | Die Anwendung wird zum Herunterfahren gezwungen.<br/>                                                                                                                                                                              |
+| <span id="ENDSESSION_LOGOFF"></span><span id="endsession_logoff"></span><dl> <dt>**ENDSESSION \_ LOGOFF-0x80000000**</dt> <dt></dt> </dl>       | Der Benutzer wird abgemeldet. Weitere Informationen finden Sie unter [Logging Off](logging-off.md).<br/>                                                                                                                                   |
 
 
 
  
 
-Beachten Sie, dass dieser Parameter eine Bitmaske ist. Um diesen Wert zu testen, verwenden Sie einen bitweisen Vorgang. nicht auf Gleichheit testen.
+Beachten Sie, dass dieser Parameter eine Bitmaske ist. Um auf diesen Wert zu testen, verwenden Sie einen bitweisen Vorgang. nicht auf Gleichheit testen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Anwendungen sollten die Absichten des Benutzers berücksichtigen und **true** zurückgeben. Standardmäßig gibt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion für diese Nachricht **true** zurück.
+Anwendungen sollten die Absichten des Benutzers achten und **TRUE zurückgeben.** Standardmäßig gibt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) **TRUE für** diese Meldung zurück.
 
-Wenn das Herunterfahren das System oder die Medien beschädigt, die verbrannt werden, kann die Anwendung **false** zurückgeben. Es wird jedoch empfohlen, die Aktionen des Benutzers zu berücksichtigen.
+Wenn das Herunterfahren das System oder das Medium beschädigt, das bzw. das bzw. das gerade geschaltet wird, kann die Anwendung **FALSE zurückgeben.** Es ist jedoch eine bewährte Methode, die Aktionen des Benutzers zu achten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung für diese Nachricht **true** zurückgibt, empfängt Sie die [**WM- \_ endsitzungs**](wm-endsession.md) Nachricht, unabhängig davon, wie die anderen Anwendungen auf die **WM- \_ queryendsession** -Nachricht reagieren. Jede Anwendung sollte beim Empfang dieser Nachricht sofort **true** oder **false** zurückgeben und alle Bereinigungs Vorgänge verzögern, bis Sie die **WM- \_ EndSession** -Nachricht empfängt.
+Wenn eine Anwendung **TRUE für** diese Nachricht zurückgibt, empfängt sie die [**WM \_ ENDSESSION-Nachricht,**](wm-endsession.md) unabhängig davon, wie die anderen Anwendungen auf die **WM \_ QUERYENDSESSION-Nachricht** reagieren. Jede Anwendung sollte **SOFORT nach** dem Empfang dieser Nachricht TRUE oder **FALSE** zurückgeben und alle Bereinigungsvorgänge zurückverlangen, bis sie die **WM \_ ENDSESSION-Nachricht empfängt.**
 
-Anwendungen können eine Benutzeroberfläche anzeigen, in der der Benutzer zur Eingabe von Informationen aufgefordert wird. Dies wird jedoch nicht empfohlen. Nach fünf Sekunden zeigt das Systeminformationen zu den Anwendungen an, die das Herunterfahren verhindern, und ermöglicht es dem Benutzer, Sie zu beenden. Windows XP zeigt z. b. ein Dialogfeld an, während in Windows Vista ein voll Bildschirm mit zusätzlichen Informationen zu den Anwendungen angezeigt wird, die das Herunterfahren blockieren. Wenn die Anwendung das Herunterfahren des Systems blockieren oder verschieben muss, verwenden Sie die [**shutdownblockreasoncreate**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate) -Funktion. Weitere Informationen finden Sie unter [Herunterfahren von Änderungen für Windows Vista](shutdown-changes-for-windows-vista.md).
+Anwendungen können eine Benutzeroberfläche anzeigen, in der der Benutzer beim Herunterfahren zur Eingabe von Informationen aufgefordert wird. Dies wird jedoch nicht empfohlen. Nach fünf Sekunden zeigt das System Informationen zu den Anwendungen an, die das Herunterfahren verhindern, und ermöglicht es dem Benutzer, sie zu beenden. Beispielsweise zeigt Windows XP ein Dialogfeld an, während Windows Vista einen Vollbildbildschirm mit zusätzlichen Informationen zu den Anwendungen anzeigt, die das Herunterfahren blockieren. Wenn Ihre Anwendung das Herunterfahren des Systems blockieren oder verschieben muss, verwenden Sie die [**ShutdownBlockReasonCreate-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate) Weitere Informationen finden Sie unter [Shutdown Changes for Windows Vista](shutdown-changes-for-windows-vista.md).
 
-Konsolen Anwendungen können die [**SetConsoleCtrlHandler**](/windows/console/setconsolectrlhandler) -Funktion verwenden, um eine Benachrichtigung zum Herunterfahren zu empfangen.
+Konsolenanwendungen können die [**Funktion SetConsoleCtrlHandler verwenden,**](/windows/console/setconsolectrlhandler) um Benachrichtigungen zum Herunterfahren zu erhalten.
 
-Dienst Anwendungen können die [**RegisterServiceCtrlHandlerEx**](/windows/win32/api/winsvc/nf-winsvc-registerservicectrlhandlerexa) -Funktion verwenden, um Shutdown-Benachrichtigungen in einer Handlerroutine zu empfangen.
+Dienstanwendungen können die [**RegisterServiceCtrlHandlerEx-Funktion**](/windows/win32/api/winsvc/nf-winsvc-registerservicectrlhandlerexa) verwenden, um Benachrichtigungen zum Herunterfahren in einer Handlerroutine zu empfangen.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel finden Sie unter [Abmelden](logging-off.md).
+Ein Beispiel finden Sie unter [Logging Off](logging-off.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,9 +103,9 @@ Ein Beispiel finden Sie unter [Abmelden](logging-off.md).
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[UWP-Apps für Windows XP-Desktop-Apps \|\]<br/>                                                       |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 \[ -Desktop-Apps \| UWP-apps\]<br/>                                              |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[XP-Desktop-Apps \| UWP-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2003-Desktop-Apps \|\]<br/>                                              |
+| Header<br/>                   | <dl> <dt>WinUser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -116,19 +116,19 @@ Ein Beispiel finden Sie unter [Abmelden](logging-off.md).
 [Abmelden](logging-off.md)
 </dt> <dt>
 
-[Wird heruntergefahren](shutting-down.md)
+[Herunterfahren](shutting-down.md)
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
 </dt> <dt>
 
-[**Exitwindows**](/windows/desktop/api/Winuser/nf-winuser-exitwindows)
+[**ExitWindows**](/windows/desktop/api/Winuser/nf-winuser-exitwindows)
 </dt> <dt>
 
-[**Setprocessshutdownparameters**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setprocessshutdownparameters)
+[**SetProcessShutdownParameters**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setprocessshutdownparameters)
 </dt> <dt>
 
-[**WM- \_ Endsitzung**](wm-endsession.md)
+[**WM \_ ENDSESSION**](wm-endsession.md)
 </dt> </dl>
 
  

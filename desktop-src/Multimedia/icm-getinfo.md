@@ -1,9 +1,9 @@
 ---
-title: ICM_GETINFO Meldung (VFW. h)
-description: Die ICM \_ GetInfo-Nachricht fragt einen Video Komprimierungs Treiber ab, um eine Beschreibung von sich selbst in einer icinfo-Struktur zurückzugeben.
+title: ICM_GETINFO (Vfw.h)
+description: Die ICM GETINFO-Nachricht fragt einen Videokomprimierungstreiber ab, um eine Beschreibung von \_ sich selbst in einer ICINFO-Struktur zurück zu geben.
 ms.assetid: 8029f247-9777-4a34-9e84-908482094493
 keywords:
-- ICM_GETINFO-Nachricht (Multimedia)
+- ICM_GETINFO-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 634803b7dd9a3b8900c35fabedcadb99908c2b31
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 173f510642b807a0e4c4a8c5c84d6d4de2aa7ce55cc0707eccabf5421cf98a44
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690810"
 ---
-# <a name="icm_getinfo-message"></a>ICM \_ GetInfo-Nachricht
+# <a name="icm_getinfo-message"></a>\_ICM GETINFO-Nachricht
 
-Die **ICM \_ GetInfo** -Nachricht fragt einen Video Komprimierungs Treiber ab, um eine Beschreibung von sich selbst in einer [**icinfo**](/windows/desktop/api/Vfw/ns-vfw-icinfo) -Struktur zurückzugeben.
+Die **ICM \_ GETINFO-Nachricht** fragt einen Videokomprimierungstreiber ab, um eine Beschreibung von sich selbst in einer [**ICINFO-Struktur zurück**](/windows/desktop/api/Vfw/ns-vfw-icinfo) zu geben.
 
 
 ```C++
@@ -41,26 +41,26 @@ lParam = sizeof(ICINFO);
 <span id="lpicinfo"></span><span id="LPICINFO"></span>*lpicinfo*
 </dt> <dd>
 
-Zeiger auf eine **icinfo** -Struktur, die Informationen enthalten soll.
+Zeiger auf eine **ICINFO-Struktur,** die Informationen enthalten soll.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Größe von **icinfo**(in Bytes).
+Größe von **ICINFO** in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Größe von [**icinfo**](/windows/desktop/api/Vfw/ns-vfw-icinfo) (in Bytes) oder 0 (null) zurück, wenn ein Fehler auftritt.
+Gibt die Größe von [**ICINFO**](/windows/desktop/api/Vfw/ns-vfw-icinfo) in Bytes oder 0 (null) zurück, wenn ein Fehler auftritt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Normalerweise senden Anwendungen diese Nachricht, um eine Liste der installierten Kompressoren anzuzeigen.
+In der Regel senden Anwendungen diese Meldung, um eine Liste der installierten 2007-Computer anzuzeigen.
 
-Der Treiber sollte alle Elemente der [**icinfo**](/windows/desktop/api/Vfw/ns-vfw-icinfo) -Struktur mit Ausnahme von **szdriver** ausfüllen.
+Der Treiber sollte alle Member der [**ICINFO-Struktur**](/windows/desktop/api/Vfw/ns-vfw-icinfo) mit Ausnahme **von szDriver ausfüllen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Der Treiber sollte alle Elemente der [**icinfo**](/windows/desktop/api/Vfw/ns-vf
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Der Treiber sollte alle Elemente der [**icinfo**](/windows/desktop/api/Vfw/ns-vf
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

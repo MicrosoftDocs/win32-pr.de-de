@@ -1,9 +1,9 @@
 ---
 title: DRM_IsDRMCached
-description: Die DRM- \_ Eigenschaft "isdrmcsend" gibt an, ob die Lizenzinformationen der DRM-Version 1 auf dem lokalen Computer gespeichert wurden.
+description: Die DRM \_ IsDRMCached-Eigenschaft gibt an, ob DRM-Lizenzinformationen der Version 1 auf dem lokalen Computer gespeichert wurden.
 ms.assetid: 868e3ada-d608-41d6-93d7-0b7930cbf2f9
 keywords:
-- DRM_IsDRMCached Windows Media-Format
+- DRM_IsDRMCached Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 185a8b2c94ca5ec517eb1a781262e3f988001a01
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: c9b5bbcf7e4e1c11c8ae992156b7541ac66c7a9d43f2cb1d52878d1ee6762d6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106341289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709040"
 ---
-# <a name="drm_isdrmcached"></a>DRM- \_ isdrmcme
+# <a name="drm_isdrmcached"></a>DRM \_ IsDRMCached
 
-Die DRM-Eigenschaft " **\_ isdrmcsend** " gibt an, ob die Lizenzinformationen der DRM-Version 1 auf dem lokalen Computer gespeichert wurden.
+Die **DRM \_ IsDRMCached-Eigenschaft** gibt an, ob DRM-Lizenzinformationen der Version 1 auf dem lokalen Computer gespeichert wurden.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ isdrmcme
+g \_ wszWMDRM \_ IsDRMCached
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird. Dies **trifft** zu, wenn die Lizenz Erwerbs-URL mit einer von zwei bekannten URLs übereinstimmt, die für die lokale Lizenz Beschaffung in DRM-Version 1 verwendet werden.
+Dies ist eine schreibgeschützte Eigenschaft, die mit [**IWMDRMReader::GetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird. Dies ist **TRUE,** wenn die Lizenzerwerbs-URL mit einer von zwei urls übereinstimmt, die für den lokalen Lizenzerwerb in DRM Version 1 verwendet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -42,9 +42,9 @@ Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader::
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

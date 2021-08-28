@@ -1,11 +1,11 @@
 ---
-title: System-hilfclass-Attribut
-description: Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
+title: Attribut "System-Auxiliary-Class"
+description: Eine Liste von Hilfsklassen, die vom Benutzer nicht geändert werden können.
 ms.assetid: 6d629925-7321-4f3a-bf4c-4adf0d33c946
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für System-hilfklassenattribut
-- AD-Schema des systemAuxiliaryClass-Attributs
+- AD-Schema des Attributs "System-Auxiliary-Class"
+- systemAuxiliaryClass-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebe70899ba2bda8fe98b38228cb661e7a773ec1d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7d49d19d51e20795f761331f548af72810a32561591c4b7dbdd3d2871f438915
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342902"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119645350"
 ---
-# <a name="system-auxiliary-class-attribute"></a>System-hilfclass-Attribut
+# <a name="system-auxiliary-class-attribute"></a>Attribut "System-Auxiliary-Class"
 
-Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
+Eine Liste von Hilfsklassen, die vom Benutzer nicht geändert werden können.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------------------------|
-| CN                | System-Zusatz-Class                                             |
-| LDAP-Display-Name | systemAuxiliaryClass                                               |
+| CN                | System-Auxiliary-Class                                             |
+| Ldap-Anzeigename | systemAuxiliaryClass                                               |
 | Size              | \-                                                                 |
-| Berechtigung aktualisieren  | Schema Administrator                                               |
-| Aktualisierungshäufigkeit  | Wenn die Klasse erstellt oder eine neue Erweiterungs Klasse hinzugefügt wird. |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                                               |
+| Updatehäufigkeit  | Wenn die -Klasse erstellt oder ihr eine neue Hilfsklasse hinzugefügt wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.198                                             |
 | System-ID-GUID    | bf967a43-0de6-11d0-a285-00aa003049e2                               |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md)    |
@@ -43,7 +43,7 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Eine Liste von Hilfsklassen, die nicht vom Benutzer geändert werden können.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | False                                            |
+| System-Only            | True                                             |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 

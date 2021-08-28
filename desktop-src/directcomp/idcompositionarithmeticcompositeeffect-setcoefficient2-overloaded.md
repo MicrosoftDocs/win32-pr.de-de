@@ -1,9 +1,9 @@
 ---
-title: idcompositionarithmeticcompositeeffect setcoefficient2-Methoden (Dcomp. h)
-description: Legt den zweiten Koeffizient für die Gleichung fest, mit der die beiden Eingabe Bilder zusammengesetzt werden.
+title: idcompositionarithmeticcompositeeffect setcoefficient2-Methoden (Dcomp.h)
+description: Legt den zweiten Koeffizient für die Gleichung fest, die zum Zusammengesetzten der beiden Eingabebilder verwendet wird.
 ms.assetid: 58ecefbe-ca31-3c13-7bea-e97fb73753e2
 keywords:
-- setcoefficient2 Methods directcomposition
+- setcoefficient2-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d411ba2a79bd651c8e044776dab8353e29f006d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7bcf83de94297bc9e88eb0f3e62ca966bc781c596821e61a776b4c7239a70a13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726650"
 ---
-# <a name="idcompositionarithmeticcompositeeffectsetcoefficient2-methods"></a>idcompositionarithmeticcompositeeffect:: setcoefficient2-Methoden
+# <a name="idcompositionarithmeticcompositeeffectsetcoefficient2-methods"></a>idcompositionarithmeticcompositeeffect::setcoefficient2-Methoden
 
-Legt den zweiten Koeffizient für die Gleichung fest, mit der die beiden Eingabe Bilder zusammengesetzt werden.
+Legt den zweiten Koeffizient für die Gleichung fest, die zum Zusammengesetzten der beiden Eingabebilder verwendet wird.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                          | BESCHREIBUNG                                                                                     |
+| Methode                                                                                                          | Beschreibung                                                                                     |
 |:----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
-| [**SetCoefficient2**](/windows/win32/api/dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setcoefficient2(float))                               | Legt den zweiten Koeffizient für die Gleichung fest, mit der die beiden Eingabe Bilder zusammengesetzt werden.<br/> |
-| [**SetCoefficient2 (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setcoefficient2(idcompositionanimation)) | Legt den zweiten Koeffizient für die Gleichung fest, mit der die beiden Eingabe Bilder zusammengesetzt werden.<br/> |
+| [**SetCoefficient2**](/windows/win32/api/dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setcoefficient2(float))                               | Legt den zweiten Koeffizient für die Gleichung fest, die zum Zusammengesetzten der beiden Eingabebilder verwendet wird.<br/> |
+| [**SetCoefficient2 (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionarithmeticcompositeeffect-setcoefficient2(idcompositionanimation)) | Legt den zweiten Koeffizient für die Gleichung fest, die zum Zusammengesetzten der beiden Eingabebilder verwendet wird.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Legt den zweiten Koeffizient für die Gleichung fest, mit der die beiden Eingabe
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

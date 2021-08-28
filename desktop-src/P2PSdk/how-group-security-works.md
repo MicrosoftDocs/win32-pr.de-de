@@ -1,47 +1,47 @@
 ---
-description: Für Peer Gruppen ist es erforderlich, dass jedes Mitglied über ein bestimmtes Zertifikat verfügt, das als Gruppenmitglieds Zertifikat (GMC) bezeichnet wird.
+description: Peergruppen erfordern, dass jedes Mitglied über ein bestimmtes Zertifikat verfügt, das als Gruppenmitgliedszertifikat (Group Member Certificate, GMC) bezeichnet wird.
 ms.assetid: 3966d4eb-4504-4b1e-9c9f-6eab7751d7ed
-title: Funktionsweise der Gruppen Sicherheit
+title: Funktionsweise der Gruppensicherheit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d272e9a0567c6edc300a52cfa206305253ec5a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0941b4bded19b914218d5c011e8696cdd9c92612a493954dc5dd45d91e59006a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675210"
 ---
-# <a name="how-group-security-works"></a>Funktionsweise der Gruppen Sicherheit
+# <a name="how-group-security-works"></a>Funktionsweise der Gruppensicherheit
 
-Für Peer Gruppen ist es erforderlich, dass jedes Mitglied über ein bestimmtes Zertifikat verfügt, das als Gruppenmitglieds Zertifikat (GMC) bezeichnet wird. Mit dem GMC-Zertifikat wird sichergestellt, dass alle zwischen Peers ausgetauschten Datensätze digital signiert sind. Der öffentliche Schlüssel eines Peers ist in den Strukturen enthalten, die als Teil der Kommunikation zwischen Peers – einschließlich Peer-Anmelde [**\_ \_ Informationen**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info), übermittelt werden.
+Peergruppen erfordern, dass jedes Mitglied über ein bestimmtes Zertifikat verfügt, das als Gruppenmitgliedszertifikat (Group Member Certificate, GMC) bezeichnet wird. Das GMC-Zertifikat stellt sicher, dass alle zwischen Peers ausgetauschten Datensätze digital signiert sind. Der öffentliche Schlüssel eines Peers ist in den Strukturen enthalten, die als Teil der Kommunikation zwischen Peers übergeben werden, einschließlich [**PEER \_ CREDENTIAL \_ INFO.**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info)
 
-Eine GMC kann in einer Kette ausgestellt werden. Ein Ersteller kann z. B. eine GMC an Administrator a ausstellen, der eine GMC für Administrator B ausstellen kann, der eine GMC für das Mitglied M ausgeben kann. Die resultierende GMC-Kette ist: Creator->A->B->M, das eine Länge von 4 hat. Die Kettenlänge ist wichtig, da Sie nicht länger als 24 sein darf. Wenn der 24. Administrator in einer Kette versucht, eine GMC an einen Member auszugeben, gibt [**peergroupissuecredenseins**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) oder [**peergroupkreateinvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) eine Peer- \_ E- \_ Kette \_ zu lang zurück \_ .
+Ein GMC kann in einer Kette ausgegeben werden. Beispielsweise kann ein Ersteller ein GMC für Administrator A ausstellen, der ein GMC an Administrator B ausstellen kann, der ein GMC für Mitglied M ausstellen kann. Die resultierende GMC-Kette ist: Creator->A->B->M, die eine Länge von 4 hat. Die Kettenlänge ist wichtig, da sie nicht länger als 24 sein darf. Wenn der 24. Administrator in einer Kette versucht, ein GMC für ein Mitglied auszugeben, gibt [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) oder [**PeerGroupCreateInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) PEER \_ E CHAIN TOO LONG \_ \_ \_ zurück.
 
-Eine GMC kann auch durch Aufrufen von " [**Peer groupissuecredenseins**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)" ausgegeben werden. Eine GMC impliziert eine Benutzer Mitgliedschaft in der Gruppe, für die die GMC ausgestellt wird, und kann eine begrenzte oder unbegrenzte Lebensdauer aufweisen. Die Aktivität "Gruppenmitglied" darf nicht länger als die in der GMC angegebene Gültigkeitsdauer sein.
+Ein GMC kann auch durch Aufrufen von [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials)ausgegeben werden. Ein GMC impliziert die Benutzermitgliedschaft in der Gruppe, für die der GMC ausgestellt wird, und kann eine begrenzte oder unendliche Lebensdauer aufweisen. Die Gruppenmitgliedsaktivität darf nicht länger als die im GMC angegebene Lebensdauer sein.
 
 > [!Note]  
-> Die unbegrenzte Lebensdauer der GMC ist zurzeit auf 1000 Jahre festgelegt.
+> Die unbegrenzte GMC-Lebensdauer ist derzeit auf 1.000 Jahre festgelegt.
 
  
 
-Die Gruppenmitglieder Aktivität wird durch die GMC-Lebensdauer beschränkt und umfasst Folgendes:
+Die Gruppenmitgliedsaktivität ist durch die GMC-Lebensdauer beschränkt und umfasst Folgendes:
 
--   Daten **Satz Vorgänge** : ein Peer kann keine Informationen in einer Gruppe veröffentlichen, nachdem die Gruppenmitgliedschaft abgelaufen ist, oder Datensätze veröffentlichen, deren Lebensdauer länger als die Lebensdauer der Peer Mitgliedschaft ist.
--   **Mitgliedschafts Vorgänge** : ein Gruppenadministrator kann keine Mitgliedschaft ausstellen, die über das in der Gruppenadministrator Mitgliedschaft angegebene Datum hinausgeht. Wenn ein Administrator beispielsweise 500 Stunden für die GMC-Lebensdauer verbleiben, müssen alle ausgegebenen Mitgliedschaften weniger als 500 Stunden betragen.
+-   **Datensatzvorgänge:** Ein Peer kann keine Informationen in einer Gruppe veröffentlichen, nachdem die Gruppenmitgliedschaft abgelaufen ist, oder Datensätze veröffentlichen, deren Lebensdauer länger ist als die Gruppenmitgliedschaftsdauer des Peers.
+-   **Mitgliedschaftsvorgänge:** Ein Gruppenadministrator kann keine Mitgliedschaft ausstellen, deren Lebensdauer über das in der Gruppenadministratormitgliedschaft angegebene Datum hinausgeht. Wenn ein Administrator beispielsweise 500 Stunden für seine GMC-Lebensdauer übrig hat, müssen alle ausgestellten Mitgliedschaften weniger als 500 Stunden betragen.
 
-Da für ein Gruppenmitglied nicht länger als für den Administrator, der das Mitglied der Gruppe ist, eine Gültigkeitsdauer festgelegt werden kann, empfiehlt es sich, die GMC-Lebensdauer eines Administrators als unendlich oder für eine sehr lange Lebensdauer festzulegen. Der Ersteller der Gruppe weist standardmäßig eine unbegrenzte Lebensdauer auf.
+Da ein Gruppenmitglied keine längere Lebensdauer als der Administrator haben kann, der dieses Gruppenmitglied einlädt, wird empfohlen, die GMC-Lebensdauer eines Administrators als unendlich oder für eine sehr lange Lebensdauer festzulegen. Der Gruppenersteller verfügt standardmäßig über eine unbegrenzte Lebensdauer.
 
 ## <a name="renewing-group-membership"></a>Erneuern der Gruppenmitgliedschaft
 
-Zum Erneuern der Anmelde Informationen eines Administrators oder Mitglieds, dessen GMC-Lebensdauer bereit ist, stehen Ihnen die folgenden beiden Optionen zur folgenden zur Folge:
+Zum Erneuern der Anmeldeinformationen eines Administrators oder Mitglieds, dessen GMC-Lebensdauer läuft, haben Sie die folgenden beiden Optionen:
 
--   Aufrufen von " [**Peer groupissuecredenseins**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) " und übergeben der Identität des Members, dessen Lebensdauer bereit ist, ablaufen zu lassen. Wenn die Anmelde Informationen als **null** angegeben werden und die Mitgliedschafts Informationen des Peers der Gruppe zur Verfügung stehen, wird die Erneuerungszeit auf dieselbe Dauer festgelegt, die in den zuvor veröffentlichten Anmelde Informationen für das Mitglied angegeben ist. Wenn ein anderer Zeitraum angegeben werden muss, muss eine neue [**Peer \_ Credential \_ Info**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) -Struktur bereitgestellt werden, die die neue Lebensdauer enthält. Anschließend wird eine neue GMC für das Element veröffentlicht.
+-   Rufen Sie [**PeerGroupIssueCredentials**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) auf, und übergeben Sie die Identität des Members, dessen Lebensdauer läuft. Wenn die Anmeldeinformationen als **NULL** angegeben sind und die Mitgliedschaftsinformationen des Peers für die Gruppe verfügbar sind, wird die Verlängerungszeit auf die gleiche Dauer festgelegt, die in den zuvor veröffentlichten Anmeldeinformationen des Mitglieds angegeben ist. Wenn ein anderer Zeitraum angegeben werden muss, muss eine neue [**PEER \_ CREDENTIAL \_ INFO-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_credential_info) bereitgestellt werden, die die neue Lebensdauerdauer enthält, und dann wird ein neues GMC für den Member veröffentlicht.
 
-    Die [**peergroupissuecredenseins**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) -Funktion übernimmt optional das Kennzeichen für die Peer \_ Gruppen- \_ Anmelde Informationen \_ , mit dem die neuen Anmelde Informationen des Mitglieds in der Gruppen Datenbank automatisch veröffentlicht werden. Wenn der Member zum nächsten Mal eine Verbindung mit der Gruppe herstellt, erhält das Mitglied zum ersten Mal oder nach dem Offline schalten die aktualisierte GMC aus der Datenbank.
+    Die [**PeerGroupIssueCredentials-Funktion**](/windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials) verwendet optional das Flag PEER \_ GROUP STORE \_ \_ CREDENTIALS, das automatisch die neuen Anmeldeinformationen des Mitglieds in der Gruppendatenbank veröffentlicht. Wenn das Mitglied das nächste Mal eine Verbindung mit der Gruppe herstellt , entweder zum ersten Mal oder nach dem Offlineschalten, erhält das Mitglied die aktualisierte GMC aus der Datenbank.
 
--   Aufrufen von " [**Peer groupkreateinvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) " zum übergeben der Identität des Members, dessen GMC-Lebensdauer bereit zum ablaufen ist. Wenn die in der Einladung angegebene Ablaufzeit **null** ist, entspricht die Gültigkeitsdauer der GMC dem Administrator-GMC, der die Mitgliedschaft ausgibt. Wenn der Ersteller den Ablauf als **null** angibt, wird eine GMC mit einer unendlichen Lebensdauer ausgegeben.
+-   Rufen Sie [**PeerGroupCreateInvitation**](/windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation) auf, um die Identität des Members zu übergeben, dessen GMC-Lebensdauer läuft. Wenn der in der Einladung angegebene Ablauf **NULL** ist, entspricht die Lebensdauer des GMC dem Gmc-Administrator, der die Mitgliedschaft ausgibt. Wenn der Ersteller den Ablauf als **NULL** angibt, wird ein GMC mit einer unbegrenzten Lebensdauer ausgegeben.
 
-    Wenn für einen Peer eine GMC ausgegeben wird, die vor dem Anwesenheits Lebensdauer-Wert abläuft, sind die Adressen des Peers nicht in den [**\_ peermember**](/windows/desktop/api/P2P/ns-p2p-peer_member) -Strukturen verfügbar, die in der durch einen [**peergroupummembers**](/windows/desktop/api/P2P/nf-p2p-peergroupenummembers)-Aufrufe initiierten Enumeration zurückgegeben werden. Dies liegt daran, dass Anwesenheits Informationen in diesem Fall nicht veröffentlicht werden, auch wenn das Flag zum Deaktivieren des Peers \_ \_ nicht festgelegt ist.
+    Wenn einem Peer ein GMC ausgestellt wird, der vor dem Wert für die Anwesenheitslebensdauer abläuft, sind die Adressen des Peers nicht in den [**PEER \_ MEMBER-Strukturen**](/windows/desktop/api/P2P/ns-p2p-peer_member) verfügbar, die in der Enumeration zurückgegeben werden, die durch einen Aufruf von [**PeerGroupEnumMembers**](/windows/desktop/api/P2P/nf-p2p-peergroupenummembers)initiiert wurde. Dies liegt daran, dass in diesem Fall keine Anwesenheitsinformationen veröffentlicht werden, auch wenn das FLAG PEER \_ DISABLE PRESENCE nicht festgelegt \_ ist.
 
  
 

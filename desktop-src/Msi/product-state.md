@@ -1,7 +1,7 @@
 ---
 description: Die State-Eigenschaft gibt den Installationsstatus dieser Instanz des Produkts zurück.
 ms.assetid: ae4c7a43-d4af-4e06-a3f8-d7c2d0715d84
-title: Product. State (Eigenschaft)
+title: Product.State-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 64d2f5d39a516fc4a0c00b8e18c159e1f2496e22
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: befa632feae7b4c57983f13a28e695051842cb5d1a2ff0908e6ffd011c6e4918
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119753950"
 ---
-# <a name="productstate-property"></a>Product. State (Eigenschaft)
+# <a name="productstate-property"></a>Product.State-Eigenschaft
 
-Die **State** -Eigenschaft gibt den Installationsstatus dieser Instanz des Produkts zurück.
+Die **State-Eigenschaft** gibt den Installationsstatus dieser Instanz des Produkts zurück.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,7 +37,7 @@ propVal = Product.State
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft gibt einen der folgenden Werte zurück.
 
@@ -45,9 +45,9 @@ Diese Eigenschaft gibt einen der folgenden Werte zurück.
 
 | Installationsstatus       | Bedeutung                                |
 |--------------------------|----------------------------------------|
-| InstallState ( \_ Standard)    | Die lokal installierte Instanz des Produkts. |
-| InstallState \_ angekündigt | Die Instanz des angekündigten Produkts.        |
-| InstallState \_ unbekannt    | Unbekannte Produkt Instanz.           |
+| INSTALLSTATE \_ DEFAULT    | Lokal installierte Instanz des Produkts. |
+| INSTALLSTATE \_ ANGEKÜNDIGT | Die Instanz des angekündigten Produkts.        |
+| INSTALLSTATE \_ UNKNOWN    | Die Instanz des Produkts ist unbekannt.           |
 
 
 
@@ -59,20 +59,20 @@ Diese Eigenschaft gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ iproduct ist definiert als 000c10a0-0000-0000-C000-000000000046<br/>                                                                                                                                                                                                          |
+| IID<br/>     | IID \_ IProduct ist als 000C10A0-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                                                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Product**](product-object.md)
+[**Produkt**](product-object.md)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

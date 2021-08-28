@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Gerät dar, das verwendet wird, um auf die Bereiche einer Anzeige zu zeigen.
+description: Stellt ein Gerät dar, das verwendet wird, um auf Bereiche einer Anzeige zu verweisen.
 ms.assetid: ffc675c3-29bd-4c54-8e54-8b6212daf66d
 title: CIM_PointingDevice-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 57cca8c81a2d363e9e31bfc958a75b71e1b910d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9eeb3d039f94b2011c2a5a0187a520cb7800623e52e8a983c1dd20d6d05349e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104132101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694670"
 ---
 # <a name="cim_pointingdevice-class-hyper-v-management"></a>CIM_PointingDevice-Klasse (Hyper-V-Verwaltung)
 
-Stellt ein Gerät dar, das verwendet wird, um auf die Bereiche einer Anzeige zu zeigen.
+Stellt ein Gerät dar, das verwendet wird, um auf Bereiche einer Anzeige zu verweisen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ class CIM_PointingDevice : CIM_UserDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ pointingdevice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ PointingDevice-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ pointingdevice** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ PointingDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Händigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Zeigegerät für den rechten oder den überfälligen Vorgang konfiguriert ist.
+Gibt an, ob das zeigede Gerät für den Rechts- oder Linkshändervorgang konfiguriert ist.
 
 <dt>
 
@@ -82,55 +82,55 @@ Gibt an, ob das Zeigegerät für den rechten oder den überfälligen Vorgang kon
 
 <span id="Right_Handed_Operation"></span><span id="right_handed_operation"></span><span id="RIGHT_HANDED_OPERATION"></span>
 
-**Rechter übergebenen Vorgang** (2)
+**Rechtshändige Operation** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Left_Handed_Operation"></span><span id="left_handed_operation"></span><span id="LEFT_HANDED_OPERATION"></span>
 
-**Linker Vorgang** (3)
+**Linkshändervorgang** (3)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Anzahl von Schaltflächen**
+**NumberOfButtons**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| zeigt Gerät \| 003,4 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Pointing Device \| 003.4")
 </dt> </dl>
 
-Die Anzahl der Schaltflächen auf dem Gerät. Wenn das Zeigegerät keine Schaltflächen hat, sollte dieser Wert auf "0" festgelegt werden.
+Die Anzahl der Schaltflächen auf dem Gerät. Wenn das zeigende Gerät über keine Schaltflächen verfügt, sollte dieser Wert auf "0" festgelegt werden.
 
 </dd> <dt>
 
-**Pointingtype**
+**PointingType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| zeigt Gerät \| 003,1 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Pointing Device \| 003.1")
 </dt> </dl>
 
-Der Typ des Zeige Geräts.
+Der Typ des zeigenden Geräts.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -151,21 +151,21 @@ Der Typ des Zeige Geräts.
 
 <span id="Track_Ball"></span><span id="track_ball"></span><span id="TRACK_BALL"></span>
 
-**Ball verfolgen** (4)
+**Track Ball** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Track_Point"></span><span id="track_point"></span><span id="TRACK_POINT"></span>
 
-Verfolgungs **Punkt** (5)
+**Track Point** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Glide_Point"></span><span id="glide_point"></span><span id="GLIDE_POINT"></span>
 
-**Gleitspunkt** (6)
+**Endpunkt** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -186,7 +186,7 @@ Verfolgungs **Punkt** (5)
 
 <span id="Mouse_-_Optical_Sensor"></span><span id="mouse_-_optical_sensor"></span><span id="MOUSE_-_OPTICAL_SENSOR"></span>
 
-**Maus optischer Sensor** (9)
+**Maus – Optischer Sensor** (9)
 
 
 </dt> <dd></dd> </dl>
@@ -196,16 +196,16 @@ Verfolgungs **Punkt** (5)
 **Auflösung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zählungen pro Zoll"), **Punit** ("count/inch")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Anzahl pro Zoll"), **PUnit** ("count/inch")
 </dt> </dl>
 
-Die nach Verfolgungs Auflösung des Zeige Geräts in Zählungen pro Zoll.
+Die Nachverfolgungsauflösung des zeigenden Geräts in Zähler pro Zoll.
 
 </dd> </dl>
 
@@ -217,8 +217,8 @@ Die nach Verfolgungs Auflösung des Zeige Geräts in Zählungen pro Zoll.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -227,7 +227,7 @@ Die nach Verfolgungs Auflösung des Zeige Geräts in Zählungen pro Zoll.
 
 <dl> <dt>
 
-[**CIM- \_ userdevice**](cim-userdevice.md)
+[**CIM \_ UserDevice**](cim-userdevice.md)
 </dt> </dl>
 
  

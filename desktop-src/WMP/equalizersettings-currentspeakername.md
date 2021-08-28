@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. currentspeakername
-description: Das currentspeakername-Attribut ruft den Namen der aktuellen sprechereinstellung ab.
+title: EQUALIZERSETTINGS.currentSpeakerName
+description: Das attribut currentSpeakerName ruft den Namen der aktuellen Sprechereinstellung ab.
 ms.assetid: 22a7fb76-1345-42b1-9b6b-ef36dfb027bd
 keywords:
-- Equalizersettings. currentspeakername Windows Media Player
+- EQUALIZERSETTINGS.currentSpeakerName Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e89441aa101fbb39a45b0e7f1ab7cf59c7350354
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fc8f7a8a6af018c7b450baf0d1b58f678079008b6f06cbeaeb23173f2fa2742c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119736380"
 ---
-# <a name="equalizersettingscurrentspeakername"></a>Equalizersettings. currentspeakername
+# <a name="equalizersettingscurrentspeakername"></a>EQUALIZERSETTINGS.currentSpeakerName
 
-Das **currentspeakername** -Attribut ruft den Namen der aktuellen sprechereinstellung ab.
+Das **attribut currentSpeakerName** ruft den Namen der aktuellen Sprechereinstellung ab.
 
 ``` syntax
         elementID.currentSpeakerName
@@ -29,15 +29,15 @@ Das **currentspeakername** -Attribut ruft den Namen der aktuellen sprechereinste
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge** , die einen der folgenden Werte enthält.
+Dieses Attribut ist eine schreibgeschützte **Zeichenfolge,** die einen der folgenden Werte enthält.
 
 
 
-| Wert           | BESCHREIBUNG                              |
+| Wert           | Beschreibung                              |
 |-----------------|------------------------------------------|
-| Aufgesetzt      | Die aktuellen Referenten sind Kopfhörer.     |
-| Normale Referenten | Die aktuellen Redner haben eine normale Größe. |
-| Große Referenten  | Die aktuellen Referenten sind groß.          |
+| Kopfhörer      | Bei den aktuellen Sprechern handelt es sich um Eindrückungen.     |
+| Normale Lautsprecher | Die aktuellen Sprecher haben eine normale Größe. |
+| Große Lautsprecher  | Die aktuellen Sprecher sind groß.          |
 
 
 
@@ -53,14 +53,14 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge** 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. speakersize**](equalizersettings-speakersize.md)
+[**EQUALIZERSETTINGS.speakerSize**](equalizersettings-speakersize.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM_CHOOSEFONT_SETFLAGS Meldung (kommdlg. h)
-description: Eine Anwendung sendet die WM \_ choosefont- \_ setFlags-Nachricht an ein Schriftart Dialogfeld, um die Anzeigeoptionen für das Dialogfeld festzulegen.
+title: WM_CHOOSEFONT_SETFLAGS Meldung (Commdlg.h)
+description: Eine Anwendung sendet die WM \_ CHOOSEFONT \_ SETFLAGS-Meldung an ein Dialogfeld Schriftart, um die Anzeigeoptionen für das Dialogfeld festzulegen.
 ms.assetid: 945ebc07-440d-4466-8255-ad344bdc568a
 keywords:
-- Dialog Felder WM_CHOOSEFONT_SETFLAGS Meldung
+- Dialogfelder für WM_CHOOSEFONT_SETFLAGS Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f7abf436311f8a3868b1471c2a10a7ee2e4a3b7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0d77290dfb3668e24d3586cf6d742b524e05fb07979de7c8d45f39998aca9708
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726080"
 ---
-# <a name="wm_choosefont_setflags-message"></a>WM \_ choosefont \_ setFlags-Nachricht
+# <a name="wm_choosefont_setflags-message"></a>WM \_ CHOOSEFONT \_ SETFLAGS-Meldung
 
-Eine Anwendung sendet die **WM \_ choosefont- \_ setFlags** -Nachricht an ein **Schriftart** Dialogfeld, um die Anzeigeoptionen für das Dialogfeld festzulegen.
+Eine Anwendung sendet die **WM \_ CHOOSEFONT \_ SETFLAGS-Meldung** an ein Dialogfeld **Schriftart,** um die Anzeigeoptionen für das Dialogfeld festzulegen.
 
 
 ```C++
@@ -47,7 +47,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) Struktur, die neue Einstellungen im **Flags** -Member enthält.
+Ein Zeiger auf eine [**CHOOSEFONT-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) die neue Einstellungen im **Flags-Member** enthält.
 
 </dd> </dl>
 
@@ -55,11 +55,11 @@ Ein Zeiger auf eine [**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commd
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) erstellt ein Dialogfeld **Schriftart** und verwendet eine [**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) , um die Anfangswerte für den **Flags** -Member anzugeben. Verwenden Sie die " **WM \_ choosefont \_ setFlags** "-Meldung, um unterschiedliche Werte für den **Flags** -Member anzugeben, während das Dialogfeld **Schriftart** geöffnet ist.
+Die [**ChooseFont-Funktion**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) erstellt ein Dialogfeld **Schriftart** und verwendet eine [**CHOOSEFONT-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) um die Anfangswerte für den **Flags-Member** anzugeben. Verwenden Sie die **WM \_ CHOOSEFONT \_ SETFLAGS-Meldung,** um unterschiedliche Werte für den **Flags-Member** anzugeben, während das Dialogfeld **Schriftart** geöffnet ist.
 
-Normalerweise sollten Sie die **WM \_ choosefont- \_ setFlags** -Nachricht von einer [**cfhuokproc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc) -Hook-Prozedur senden.
+In der Regel sollten Sie die **WM \_ CHOOSEFONT \_ SETFLAGS-Nachricht** von einer [**CFHookProc-Hookprozedur**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc) senden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Normalerweise sollten Sie die **WM \_ choosefont- \_ setFlags** -Nachricht von e
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -77,22 +77,22 @@ Normalerweise sollten Sie die **WM \_ choosefont- \_ setFlags** -Nachricht von e
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Cfhuokproc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc)
+[**CFHookProc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc)
 </dt> <dt>
 
-[**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+[**ChooseFont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 </dt> <dt>
 
-[**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+[**CHOOSEFONT**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  

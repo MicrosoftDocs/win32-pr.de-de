@@ -1,5 +1,5 @@
 ---
-description: Verschieben, migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
+description: Verschiebt, migriert oder verschiebt ein virtuelles System in ein Zielsystem.
 ms.assetid: 3a0be791-4514-4ce2-b4e8-3735bd6ea1d7
 title: MigrateVirtualSystemToSystem-Methode der Msvm_VirtualSystemMigrationService-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a346596b094b60456af8e2b63865bec1171d99ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 398c4ae9d9d8ad89f7188ecbfe19e1b687bd694f7e716e88bd5231e79a38a665
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694279"
 ---
-# <a name="migratevirtualsystemtosystem-method-of-the-msvm_virtualsystemmigrationservice-class"></a>MigrateVirtualSystemToSystem-Methode der MSVM \_ virtualsystemmigrationservice-Klasse
+# <a name="migratevirtualsystemtosystem-method-of-the-msvm_virtualsystemmigrationservice-class"></a>MigrateVirtualSystemToSystem-Methode der Msvm \_ VirtualSystemMigrationService-Klasse
 
-Verschieben, migrieren oder Verschieben eines virtuellen Systems in ein Zielsystem.
+Verschiebt, migriert oder verschiebt ein virtuelles System in ein Zielsystem.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,52 +45,52 @@ uint32 MigrateVirtualSystemToSystem(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das zu migrierende virtuelle Computersystem darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das zu migrierende virtuelle Computersystem darstellt.
 
 </dd> <dt>
 
-*DestinationSystem* \[ in\]
+*DestinationSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das System darstellt, zu dem migriert werden soll.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das System darstellt, zu dem migriert werden soll.
 
 </dd> <dt>
 
-*Migrationsettingdata* \[ in\]
+*MigrationSettingData* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md) -Klasse, die Einstellungen für den Migrations Vorgang darstellt.
+Eine eingebettete Instanz der [**Msvm \_ VirtualSystemMigrationSettingData-Klasse,**](msvm-virtualsystemmigrationsettingdata.md) die Einstellungen für den Migrationsvorgang darstellt.
 
 </dd> <dt>
 
-*Newsystemsettingdata* \[ in\]
+*NewSystemSettingData* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Klasse, die neue Eigenschaften darstellt, die für das virtuelle System nach der Migration gelten.
+Eine eingebettete Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die neue Eigenschaften darstellt, die nach der Migration auf das virtuelle System anwendbar sind.
 
 </dd> <dt>
 
-*Newresourcesettingdata* \[ in\]
+*NewResourceSettingData* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz der [**MSVM \_ resourcezucationsettingdata**](msvm-resourceallocationsettingdata.md) -Klasse enthalten, die die neuen Eigenschaften darstellt, die für virtuelle Ressourcen des virtuellen Systems nach der Migration gelten.
+Ein Array von Zeichenfolgen, das eine eingebettete Instanz der [**Msvm \_ ResourceAllocationSettingData-Klasse**](msvm-resourceallocationsettingdata.md) enthält, die die neuen Eigenschaften darstellt, die nach der Migration auf virtuelle Ressourcen des virtuellen Systems anwendbar sind.
 
 </dd> <dt>
 
-*Newcomputersystem* \[ vorgenommen\]
+*NewComputerSystem* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das neue migrierte System darstellt.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das neue migrierte System darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -106,7 +106,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -115,22 +115,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535 )
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -139,10 +139,10 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -151,7 +151,7 @@ Nicht **kompatible Parameter** (6)
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md)
+[**Msvm \_ VirtualSystemMigrationService**](msvm-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

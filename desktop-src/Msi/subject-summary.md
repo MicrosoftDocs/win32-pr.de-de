@@ -1,25 +1,25 @@
 ---
-description: Der Wert der Eigenschaft "betreffzusammenfassung" überträgt den Namen des Produkts, der Transformation oder des Patches, das vom Paket installiert wird.
+description: Der Wert der Eigenschaft Betreffzusammenfassung gibt den Namen des Produkts, der Transformation oder des Patches an, das bzw. der vom Paket installiert wird.
 ms.assetid: fb08a240-db30-477f-8dc0-701156d73cfc
-title: Subject Summary-Eigenschaft
+title: Eigenschaft "Zusammenfassung des Betreffs"
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d21139f686bc8a6cfc5ba2edecdfc57c349d84ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ad9d92328f142e4fd47567e92d4fe3bb7f016b0bf058b2932f7e1136687507e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119627230"
 ---
-# <a name="subject-summary-property"></a>Subject Summary-Eigenschaft
+# <a name="subject-summary-property"></a>Eigenschaft "Zusammenfassung des Betreffs"
 
-Der Wert der Eigenschaft " **betreffzusammenfassung** " überträgt den Namen des Produkts, der Transformation oder des Patches, das vom Paket installiert wird.
+Der Wert der **Eigenschaft Betreffzusammenfassung** gibt den Namen des Produkts, der Transformation oder des Patches an, das bzw. der vom Paket installiert wird.
 
-Es liegt an der Erstellung einer Installations Datenbank, einer Transformation oder eines Patchpakets, um den Wert dieser Eigenschaft in den Zusammenfassungs Informationen bereitzustellen. Autoren sollten die folgenden Schritte ausführen, um den richtigen Wert zu bestimmen.
+Der Autor eines Installationsdatenbank-, Transformations- oder Patchpakets muss den Wert dieser Eigenschaft in den Zusammenfassungsinformationen bereitstellen. Autoren sollten folgende Schritte unternehmen, um den richtigen Wert zu ermitteln.
 
--   Legen Sie die Eigenschaft für die **betreffzusammenfassung** in einem Installationspaket auf denselben Wert fest wie die [**ProductName**](productname.md) -Eigenschaft.
--   Legen Sie die Eigenschaft für die **betreffzusammenfassung** in einer Transformation auf denselben Wert wie die Eigenschaft für die **betreffzusammenfassung** im ursprünglichen Installationspaket fest.
--   Legen Sie die Eigenschaft für die **betreffzusammenfassung** in den Zusammenfassungs Informationen eines Patchpakets auf eine kurze Beschreibung des Patches fest, der den Namen des Produkts enthält.
+-   Legen Sie **die Eigenschaft Betreffzusammenfassung** in einem Installationspaket auf den gleichen Wert wie die [**ProductName-Eigenschaft**](productname.md) fest.
+-   Legen Sie **die Eigenschaft Zusammenfassung des** Betreffs in einer Transformation auf den gleichen Wert wie die Eigenschaft **Betreffzusammenfassung** im ursprünglichen Installationspaket fest.
+-   Legen Sie **die Eigenschaft Betreffzusammenfassung** in den Zusammenfassungsinformationen eines Patchpakets auf eine kurze Beschreibung des Patches fest, die den Namen des Produkts enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -27,7 +27,7 @@ Es liegt an der Erstellung einer Installations Datenbank, einer Transformation o
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -35,10 +35,10 @@ Es liegt an der Erstellung einer Installations Datenbank, einer Transformation o
 
 <dl> <dt>
 
-[**Patchnewsummarysubject**](patchnewsummarysubject.md)
+[**PATCH PATCHUMMARYSUBJECT**](patchnewsummarysubject.md)
 </dt> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftsbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

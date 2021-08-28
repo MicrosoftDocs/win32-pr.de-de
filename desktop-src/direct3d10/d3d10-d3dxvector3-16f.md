@@ -1,7 +1,7 @@
 ---
-description: Identisch mit D3DXVECTOR3, verwendet jedoch 16-Bit-Gleit Komma Werte für x, y und z.
+description: Entspricht D3DXVECTOR3, verwendet aber 16-Bit-Gleitkommawerte für x, y und z.
 ms.assetid: b21676f1-5cff-4eef-bd60-5c09882283dc
-title: D3DXVECTOR3_16F-Struktur (D3DX10Math. h)
+title: D3DXVECTOR3_16F-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: b7143e864eddf37842e19d7554150beaf50c0b53
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: afb5e12d19655ddf6f2d31d23a21cbac2347ba05a9d7900c1bc2a90977a9fd88
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729860"
 ---
-# <a name="d3dxvector3_16f-structure"></a>D3DXVECTOR3 \_ 16f-Struktur
+# <a name="d3dxvector3_16f-structure"></a>D3DXVECTOR3 \_ 16F-Struktur
 
-Identisch mit [**D3DXVECTOR3**](d3d10-d3dxvector3.md), verwendet jedoch 16-Bit-Gleit Komma Werte für x, y und z.
+Entspricht [**D3DXVECTOR3,**](d3d10-d3dxvector3.md)verwendet aber 16-Bit-Gleitkommawerte für x, y und z.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ typedef struct D3DXVECTOR3_16F {
 **x**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -55,7 +55,7 @@ Die x-Komponente.
 **y**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -66,7 +66,7 @@ Die y-Komponente.
 **z**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -74,11 +74,11 @@ Die z-Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D3DXVECTOR3 \_ 16f** verfügt über die folgenden C++-Erweiterungen.
+**D3DXVECTOR3 \_ 16F** verfügt über die folgenden C++-Erweiterungen.
 
-### <a name="d3dxvector3_16f-extensions"></a>D3DXVECTOR3 \_ 16f-Erweiterungen
+### <a name="d3dxvector3_16f-extensions"></a>D3DXVECTOR3 \_ 16F-Erweiterungen
 
 
 ```
@@ -116,7 +116,7 @@ public:
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 

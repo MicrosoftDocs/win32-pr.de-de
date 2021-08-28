@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Double ColumnValue. Size-Eigenschaft.
-title: Doublecolumnvalue. Size-Eigenschaft
+description: 'Weitere Informationen zu: DoubleColumnValue.Size-Eigenschaft'
+title: DoubleColumnValue.Size-Eigenschaft
 TOCTitle: 'Size property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.DoubleColumnValue.Size
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.doublecolumnvalue.size(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0f3f2951f697c3091fa3f31893e4bf2b5ade8c88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a26ba5c16ef3007cebece98b55c39afde8fb0f0292bd260074c9a7f649f582cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119623520"
 ---
-# <a name="doublecolumnvaluesize-property"></a>Doublecolumnvalue. Size-Eigenschaft
+# <a name="doublecolumnvaluesize-property"></a>DoubleColumnValue.Size-Eigenschaft
 
-Ruft die Größe des Werts in der Spalte ab. Dadurch wird 0 für Spalten variabler Größen (z. b. Binär und Zeichenfolge) zurückgegeben.
+Ruft die Größe des Werts in der Spalte ab. Dies gibt 0 für Spalten variabler Größe (d. h. binär und Zeichenfolge) zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ protected override int Size { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Doublecolumnvalue-Klasse](./doublecolumnvalue-class.md)
+[DoubleColumnValue-Klasse](./doublecolumnvalue-class.md)
 
-[Doublecolumnvalue-Member](./doublecolumnvalue-members.md)
+[DoubleColumnValue-Member](./doublecolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_Start02-Klasse
-description: Die Benutzer Config01 Start02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren Start Richtlinien dar, die pro Benutzer festgelegt werden.
+description: Die Mdm \_ Policy \_ User \_ Config01 \_ Start02-Klasse stellt die verfügbaren Startrichtlinien dar, die pro Benutzer festgelegt werden.
 ms.assetid: bbb64553-4d93-433d-96e4-bfd3f5588138
 keywords:
 - MDM_Policy_User_Config01_Start02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b98b25ee0c3118f741d3a52bc9001c6106d86f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 59f991e3ffb6ec1ad1a05482744e2bb120e94596ec891f75ab324b50009c5cbc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693970"
 ---
-# <a name="mdm_policy_user_config01_start02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ Start02-Klasse
+# <a name="mdm_policy_user_config01_start02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ Start02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **\_ \_ Benutzer \_ Config01 \_ Start02-Klasse der MDM-Richtlinie** stellt die verfügbaren Start Richtlinien dar, die pro Benutzer festgelegt werden.
+Die **Mdm Policy User \_ \_ \_ Config01 \_ Start02-Klasse** stellt die verfügbaren Startrichtlinien dar, die pro Benutzer festgelegt werden.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,17 +47,17 @@ class MDM_Policy_User_Config01_Start02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ Start02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ Start02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ Start02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ Start02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Hidepeoplebar](/windows/client-management/mdm/policy-csp-start#start-hidepeoplebar)
+[HidePeopleBar](/windows/client-management/mdm/policy-csp-start#start-hidepeoplebar)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -71,39 +71,39 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Start".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "Start".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./User/Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./User/Vendor/MSFT/Policy/Config".
 
 </dd> <dt>
 
 [StartLayout](/windows/client-management/mdm/policy-csp-start#start-startlayout)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -117,10 +117,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -129,7 +129,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

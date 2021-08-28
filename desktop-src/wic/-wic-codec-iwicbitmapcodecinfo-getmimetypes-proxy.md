@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getmimetypes-Methode.
+description: Proxyfunktion für die GetMimeTypes-Methode.
 ms.assetid: 9d05624f-da08-4475-933b-faa12bec9012
 title: IWICBitmapCodecInfo_GetMimeTypes_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: eb00b2ae3cd935171a9333a55a76038ef9ae2ed8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc579283b35ed7d112f17aa639be592d70f304cb83930d1219e976655f0b13c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772440"
 ---
-# <a name="iwicbitmapcodecinfo_getmimetypes_proxy-function"></a>Iwicbitmapcodecinfo \_ getmimetypes- \_ Proxy Funktion
+# <a name="iwicbitmapcodecinfo_getmimetypes_proxy-function"></a>IWICBitmapCodecInfo \_ GetMimeTypes-Proxyfunktion \_
 
-Proxy Funktion für die [**getmimetypes**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-getmimetypes) -Methode.
+Proxyfunktion für die [**GetMimeTypes-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapcodecinfo-getmimetypes)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,47 +43,47 @@ HRESULT IWICBitmapCodecInfo_GetMimeTypes_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapcodecinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) \** _
+Typ: **[ **IWICBitmapCodecInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)\***
 
-Zeiger auf dieses [_ *iwicbitmapcodecinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo) -Objekt.
+Zeiger auf dieses [**IWICBitmapCodecInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapcodecinfo)
 
 </dd> <dt>
 
-*cchmimetypes* \[ in\]
+*cchMimeTypes* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des MIME-Typen Puffers.
+Die Größe des Puffers der MIME-Typen.
 
 </dd> <dt>
 
-*wzmimetypes* \[ vorgenommen\]
+*wzMimeTypes* \[ out\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Ein Zeiger, der die MIME-Typen empfängt, die dem Codec zugeordnet sind.
+Ein Zeiger, der die mime-Typen empfängt, die dem Codec zugeordnet sind.
 
 </dd> <dt>
 
-_pcchActual * \[ out\]
+*pcchActual* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Die tatsächliche Puffergröße, die zum Abrufen aller dem Codec zugeordneten MIME-Typen benötigt wird.
+Die tatsächliche Puffergröße, die zum Abrufen aller mime-Typen erforderlich ist, die dem Codec zugeordnet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -93,9 +93,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

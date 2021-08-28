@@ -1,58 +1,58 @@
 ---
-description: 'Dieses Thema enthält zwei allgemeine Ansichten der Architektur von Direct3D:'
+description: 'Dieses Thema bietet zwei übergeordnete Ansichten der Architektur von Direct3D:'
 ms.assetid: ed08b4c8-fdd9-46fb-a2be-c2fb15af2dc6
 title: Direct3D-Architektur (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e557b7a36aadcaa8b96899047a721741ecef2156
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9d288cbf7896b276824f358364bede519e778375d1d3f8c9915108cbfadf8486
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791489"
 ---
 # <a name="direct3d-architecture-direct3d-9"></a>Direct3D-Architektur (Direct3D 9)
 
-Dieses Thema enthält zwei allgemeine Ansichten der Architektur von Direct3D:
+Dieses Thema bietet zwei übergeordnete Ansichten der Architektur von Direct3D:
 
--   [Direct3D graphics Pipeline](#direct3d-graphics-pipeline) : eine Ansicht der internen Verarbeitungs Architektur des Direct3D-Renderingsystems.
--   [Direct3D System Integration](#direct3d-system-integration) : eine Ansicht, wie Direct3D zwischen einer Anwendung und der Grafikhardware mediiert.
+-   [Direct3D-Grafikpipeline:](#direct3d-graphics-pipeline) Eine Ansicht der internen Verarbeitungsarchitektur des Direct3D-Renderingsystems.
+-   [Direct3D-Systemintegration:](#direct3d-system-integration) Eine Ansicht, wie Direct3D zwischen einer Anwendung und der Grafikhardware vermittelt.
 
-## <a name="direct3d-graphics-pipeline"></a>Direct3D-Grafik Pipeline
+## <a name="direct3d-graphics-pipeline"></a>Direct3D-Grafikpipeline
 
-Die Grafik Pipeline ermöglicht die effiziente Verarbeitung und renderingDirect3D Szenen in einer Anzeige und nutzt die verfügbare Hardware. Das folgende Diagramm zeigt die Bausteine der Pipeline:
+Die Grafikpipeline bietet die Leistung, Direct3D-Szenen effizient zu verarbeiten und auf einer Anzeige zu rendern, wobei die Vorteile der verfügbaren Hardware genutzt werden. Das folgende Diagramm zeigt die Bausteine der Pipeline:
 
-![Diagramm der Direct3D-Grafik Pipeline](images/blockdiag-graphics.png)
+![Diagramm der Direct3d-Grafikpipeline](images/blockdiag-graphics.png)
 
 
 
-| Pipeline Komponente  | BESCHREIBUNG                                                                                                                                                                                      | Verwandte Themen                                                                                                                                                                                             |
+| Pipelinekomponente  | Beschreibung                                                                                                                                                                                      | Verwandte Themen                                                                                                                                                                                             |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Scheitelpunkt Daten         | Nicht transformierte Modell Scheitel Punkte werden in Scheitelpunkt Speicher Puffern gespeichert.                                                                                                                                | [Vertex-Puffer (Direct3D 9)](vertex-buffers.md), [ **IDirect3DVertexBuffer9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvertexbuffer9)                                                                                                |
-| Primitive Daten      | Auf geometrische Primitive, einschließlich Punkten, Linien, Dreiecke und Polygone, wird in den Scheitelpunkt Daten mit Index Puffern verwiesen.                                                                    | [Index Puffer (Direct3D 9)](index-buffers.md), [**IDirect3DIndexBuffer9**](/windows/desktop/api), [primitive](primitives.md), [höherwertige primitive (Direct3D 9)](higher-order-primitives.md) |
-| Mosaik        | Die tesselator-Einheit konvertiert primitive in höherer Reihenfolge, Verschiebungs Zuordnungen und mespatches in Scheitelpunkt Positionen und speichert diese Speicherorte in Scheitelpunkt Puffern.                                      | [Mosaik (Direct3D 9)](tessellation.md)                                                                                                                                                              |
-| Vertexverarbeitung   | Direct3D-Transformationen werden auf Vertices angewendet, die im Vertex-Puffer gespeichert sind.                                                                                                                    | [Scheitelpunkt Pipeline (Direct3D 9)](vertex-pipeline.md)                                                                                                                                                        |
-| Geometrie Verarbeitung | Clipping, Hintergrund-Culling, Attribut Auswertung und rasterisierung werden auf die transformierten Scheitel Punkte angewendet.                                                                                    | [Pixel Pipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
-| Strukturierte Oberfläche    | Texturkoordinaten für Direct3D-Oberflächen werden für Direct3D über die [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle bereitgestellt.                                                         | [Direct3D Texturen (Direct3D 9)](direct3d-textures.md), [ **IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)                                                                                                    |
-| Textur Sampler     | Die Textur Ebene der Detail Filterung wird auf Eingabe Textur Werte angewendet.                                                                                                                            | [Direct3D-Texturen (Direct3D 9)](direct3d-textures.md)                                                                                                                                                    |
-| Pixel Verarbeitung    | Pixel-Shader-Vorgänge verwenden Geometry-Daten, um die Vertex-und Textur Daten der Eingabe zu ändern, sodass Ausgabe Pixel-Farbwerte                                                                           | [Pixel Pipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
-| Pixel Rendering     | Abschließende renderingprozesse ändern Pixel Farbwerte durch Alpha, Tiefe oder Schablonen Tests oder durch Anwenden von Alpha Mischungen oder Nebel. Alle resultierenden Pixelwerte werden der Ausgabe Anzeige angezeigt. | [Pixel Pipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
+| Scheitelpunktdaten         | Nicht transformierte Modellvertices werden in Vertexspeicherpuffern gespeichert.                                                                                                                                | [Vertexpuffer (Direct3D 9),](vertex-buffers.md) [ **IDirect3DVertexBuffer9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dvertexbuffer9)                                                                                                |
+| Primitive Daten      | Auf geometrische Grundtypen, einschließlich Punkten, Linien, Dreiecken und Polygonen, wird in den Scheitelpunktdaten mit Indexpuffern verwiesen.                                                                    | [Indexpuffer (Direct3D 9),](index-buffers.md) [**IDirect3DIndexBuffer9,**](/windows/desktop/api) [Primitive,](primitives.md) [Primitive höherer Ordnung (Direct3D 9)](higher-order-primitives.md) |
+| Mosaik        | Die Mosaikeinheit konvertiert Primitive höherer Ordnung, Verschiebungszuordnungen und Gitternetzpatches in Scheitelpunktpositionen und speichert diese Positionen in Scheitelpunktpuffern.                                      | [Mosaik (Direct3D 9)](tessellation.md)                                                                                                                                                              |
+| Vertexverarbeitung   | Direct3D-Transformationen werden auf Scheitelpunkte angewendet, die im Scheitelpunktpuffer gespeichert sind.                                                                                                                    | [Vertexpipeline (Direct3D 9)](vertex-pipeline.md)                                                                                                                                                        |
+| Geometrieverarbeitung | Clipping, Back Face Culling, Attributauswertung und Rasterung werden auf die transformierten Scheitelpunkte angewendet.                                                                                    | [Pixelpipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
+| Texturierte Oberfläche    | Texturkoordinaten für Direct3D-Oberflächen werden direct3D über die [**IDirect3DTexture9-Schnittstelle**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) bereitgestellt.                                                         | [Direct3D Textures (Direct3D 9)](direct3d-textures.md), [ **IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)                                                                                                    |
+| Textur-Sampler     | Die Filterung auf Texturebene wird auf Eingabetexturwerte angewendet.                                                                                                                            | [Direct3D-Texturen (Direct3D 9)](direct3d-textures.md)                                                                                                                                                    |
+| Pixelverarbeitung    | Pixel-Shadervorgänge verwenden Geometriedaten, um Eingabevertex- und Texturdaten zu ändern und Ausgabepixelfarbwerte zu erhalten.                                                                           | [Pixelpipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
+| Pixelrendering     | Endgültige Renderingprozesse ändern Pixelfarbwerte mit Alpha-, Tiefen- oder Schablonentests oder durch Anwenden von Alphablending oder Blending. Alle resultierenden Pixelwerte werden der Ausgabeanzeige angezeigt. | [Pixelpipeline (Direct3D 9)](pixel-pipeline.md)                                                                                                                                                          |
 
 
 
  
 
-## <a name="direct3d-system-integration"></a>Direct3D-System Integration
+## <a name="direct3d-system-integration"></a>Direct3D-Systemintegration
 
-Das folgende Diagramm zeigt die Beziehungen zwischen einer Fenster Anwendung, Direct3D, GDI und der Hardware:
+Das folgende Diagramm zeigt die Beziehungen zwischen einer Window-Anwendung, Direct3D, GDI und der Hardware:
 
-![Diagramm der Beziehung zwischen Direct3D und anderen Systemkomponenten](images/d3dsysint.png)
+![Diagramm der Beziehung zwischen direct3d und anderen Systemkomponenten](images/d3dsysint.png)
 
-Direct3D macht eine geräteunabhängige Schnittstelle für eine Anwendung verfügbar. Direct3D-Anwendungen können neben GDI-Anwendungen vorhanden sein, und beide haben Zugriff auf die Grafikhardware des Computers über den Gerätetreiber für die Grafikkarte. Im Gegensatz zu GDI können Direct3D die Hardware Features nutzen, indem Sie ein HAL-Gerät erstellen.
+Direct3D macht eine geräteunabhängige Schnittstelle für eine Anwendung verfügbar. Direct3D-Anwendungen können zusammen mit GDI-Anwendungen vorhanden sein, und beide haben über den Gerätetreiber für die Grafikkarte Zugriff auf die Grafikhardware des Computers. Im Gegensatz zu GDI kann Direct3D hardwarefeatures nutzen, indem ein -Gerät erstellt wird.
 
-Ein HAL-Gerät ermöglicht die Hardwarebeschleunigung an Grafik Pipeline Funktionen, basierend auf der von der Grafikkarte unterstützten featuremenge. Direct3D-Methoden werden bereitgestellt, um zur Laufzeit Geräte Anzeigefunktionen abzurufen. (Siehe [**IDirect3DDevice9:: getde vicecaps**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps).) Wenn eine Funktion nicht von der Hardware bereitgestellt wird, wird Sie von der HAL nicht als Hardware Funktion gemeldet.
+Ein Speichergerät bietet Hardwarebeschleunigung für Grafikpipelinefunktionen basierend auf dem von der Grafikkarte unterstützten Featuresatz. Direct3D-Methoden werden bereitgestellt, um Geräteanzeigefunktionen zur Laufzeit abzurufen. (Siehe [**IDirect3DDevice9::GetDeviceCaps**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps).) Wenn eine Funktion nicht von der Hardware bereitgestellt wird, wird sie nicht als Hardwarefunktion berichtet.
 
-Weitere Informationen zu hal und Referenz Geräten, die von Direct3D unterstützt werden, finden Sie unter [Gerätetypen (Direct3D 9)](device-types.md).
+Weitere Informationen zu -Geräten und Referenzgeräten, die von Direct3D unterstützt werden, finden Sie unter [Gerätetypen (Direct3D 9).](device-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

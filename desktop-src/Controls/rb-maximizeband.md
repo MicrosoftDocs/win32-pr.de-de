@@ -1,9 +1,9 @@
 ---
-title: RB_MAXIMIZEBAND Meldung (kommstrg. h)
-description: Ändert die Größe eines Bands in einem Grund leisten-Steuerelement entweder auf seine ideale oder größte Größe.
+title: RB_MAXIMIZEBAND (Commctrl.h)
+description: Ändern der Größe eines Bands in einem Rebar-Steuerelement in seine ideale oder größte Größe.
 ms.assetid: 79fff6d0-01f2-4308-b916-38dc06dad894
 keywords:
-- Windows-Steuerelemente für RB_MAXIMIZEBAND Meldung
+- RB_MAXIMIZEBAND von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 708a8fae7c0dd8e72eea8e5acefe43ab50054592
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 13ef02fbe9611c09d1932907c8218ffd169d3e18d10e0b07faa2b63d50058af1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770090"
 ---
-# <a name="rb_maximizeband-message"></a>RB \_ maximizeband-Meldung
+# <a name="rb_maximizeband-message"></a>RB \_ MAXIMIZEBAND-Meldung
 
-Ändert die Größe eines Bands in einem Grund leisten-Steuerelement entweder auf seine ideale oder größte Größe.
+Ändern der Größe eines Bands in einem Rebar-Steuerelement in seine ideale oder größte Größe.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ ms.locfileid: "103859070"
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des zu maximier enden Bands.
+Nullbasierter Index des zu maximierenden Bands.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Gibt an, ob die ideale Breite des Bands verwendet werden soll, wenn das Band maximiert ist. Wenn dieser Wert ungleich 0 (null) ist, wird die ideale Breite verwendet. Wenn dieser Wert 0 (null) ist, wird das Band so groß wie möglich gemacht.
+Gibt an, ob die ideale Breite des Bandes verwendet werden soll, wenn das Band maximiert ist. Wenn dieser Wert ungleich 0 (null) ist, wird die ideale Breite verwendet. Wenn dieser Wert 0 (null) ist, wird das Band so groß wie möglich.
 
 </dd> </dl>
 
@@ -53,20 +53,20 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**RB \_ SetBandInfo**](rb-setbandinfo.md)
+[**RB \_ SETBANDINFO**](rb-setbandinfo.md)
 </dt> </dl>
 
  

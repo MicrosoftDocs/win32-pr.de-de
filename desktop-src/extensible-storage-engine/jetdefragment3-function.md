@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetDefragment3-Funktion'
+description: Weitere Informationen finden Sie unter JetDefragment3-Funktion.
 title: JetDefragment3-Funktion
 TOCTitle: JetDefragment3 Function
 ms:assetid: e086295f-cb47-432a-9570-04e706c42608
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9bc5ea804061d08da47b93a491d3ce4f97c1dfbf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c67f528608edba7f9065132f38d3160a78be53273e56f10fe32a4e30b425befd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119667390"
 ---
 # <a name="jetdefragment3-function"></a>JetDefragment3-Funktion
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetdefragment3-function"></a>JetDefragment3-Funktion
 
-Die **JetDefragment3** -Funktion ist reserviert. Verwenden Sie die **JetDefragment3** -Funktion nicht.
+Die **JetDefragment3-Funktion** ist reserviert. Verwenden Sie nicht die **JetDefragment3-Funktion.**
 
-**Windows XP:**  **JetDefragment3** wird in Windows XP eingeführt.
+**Windows XP:****JetDefragment3** wird in Windows XP eingeführt.  
 

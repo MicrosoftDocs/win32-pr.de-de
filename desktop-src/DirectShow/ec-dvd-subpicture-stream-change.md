@@ -1,7 +1,7 @@
 ---
-description: Signalisiert, dass die aktuelle Teilbild-streamnummer für den Haupttitel geändert wurde.
+description: Signalisiert, dass sich die aktuelle Datenstromnummer für den Haupttitel geändert hat.
 ms.assetid: b6da3201-55df-47dc-ad4f-5cd2e78073ee
-title: EC_DVD_SUBPICTURE_STREAM_CHANGE (dvdevcode. h)
+title: EC_DVD_SUBPICTURE_STREAM_CHANGE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: c30ef0b27185b5300ac5cec877ed4e4b38685c12
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 21549ec6427b82c6d229d2e3962689bc8879815429f3a68fd32d54283c30d6a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639770"
 ---
-# <a name="ec_dvd_subpicture_stream_change"></a>Datenstrom Änderung des EC-DVD- \_ \_ subbildes \_ \_
+# <a name="ec_dvd_subpicture_stream_change"></a>EC \_ DVD \_ SUBPICTURE \_ STREAM \_ CHANGE
 
-Signalisiert, dass die aktuelle Teilbild-streamnummer für den Haupttitel geändert wurde.
+Signalisiert, dass sich die aktuelle Datenstromnummer für den Haupttitel geändert hat.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,20 +31,20 @@ Signalisiert, dass die aktuelle Teilbild-streamnummer für den Haupttitel geänd
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD** -Wert, der die neue Datenstrom Nummer des Benutzer Bilds angibt. Die Werte des subbildstreams reichen von 0 bis 31. Der Stream 0xFFFFFFFF gibt an, dass kein Stream ausgewählt ist.
+**DWORD-Wert,** der die neue Streamnummer der Benutzerunterdrückung angibt. Subpicture-Datenstromnummern liegen zwischen 0 und 31. Stream 0xFFFFFFFF gibt an, dass kein Stream ausgewählt ist.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-Boolescher Wert, der den Zustand "ein/aus" des Teil Bilds angibt.
+Boolescher Wert, der den Ein-/Aus-Zustand der Unterbildung angibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Teilbild kann automatisch geändert werden, wenn ein Navigations Befehl auf der Festplatte und über die Anwendungssteuerung mithilfe von [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2)erstellt wurde.
+Die Teilbild kann automatisch mit einem Navigationsbefehl geändert werden, der auf dem Datenträger sowie über die Anwendungssteuerung mit [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2)erstellt wurde.
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -54,7 +54,7 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
@@ -65,10 +65,10 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

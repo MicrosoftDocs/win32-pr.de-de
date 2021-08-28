@@ -1,25 +1,25 @@
 ---
-description: AVI/WAV-Datei Quelle
+description: AVI/WAV-Dateiquelle
 ms.assetid: b8abf5d8-ba7f-441d-beef-9f85859318d5
-title: AVI/WAV-Datei Quelle
+title: AVI/WAV-Dateiquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef659d880ef570176f94ac91875291ea9d200cf5
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: de8c99de9eed21afa716c4f3ee81a5d1cc4e9731739526f7c9531c758b30a22a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689360"
 ---
-# <a name="aviwav-file-source"></a>AVI/WAV-Datei Quelle
+# <a name="aviwav-file-source"></a>AVI/WAV-Dateiquelle
 
-(Veraltet. Verwenden Sie für AVI-und WAV-Dateien die [Datei Quelle (Async)](file-source--async--filter.md) und den [avi-Splitter](avi-splitter-filter.md) -oder [Wave-Parser](wave-parser-filter.md).)
+(Veraltet. Verwenden Sie für AVI- und WAV-Dateien die [Dateiquelle (Async)](file-source--async--filter.md) und den [AVI-Splitter](avi-splitter-filter.md) oder [WAVE-Parser](wave-parser-filter.md).)
 
-Der Quell Filter der AVI/WAV-Datei liest AVI-und WAV-Quelldateien und generiert die entsprechenden Ausgabe Pins für den Dateityp.
+Der Filter "AVI/WAV-Dateiquelle" liest DIE UND WAV-Quelldateien und generiert die entsprechenden Ausgabepins für den Dateityp.
 
-Bei WAV-Dateien erstellt der Filter eine audioausgabepin, die einen Audiostream erzeugt, der mit einem audiorenderingfilter oder einem Beteiligten audiotransformier Filter verbunden werden kann.
+Für WAV-Dateien erstellt der Filter einen Audioausgabepin, der einen Audiostream erzeugt, der mit einem Audiorenderingfilter oder einem intervening audio transform filter verbunden werden kann.
 
-Für AVI-Dateien erstellt der Filter eine Videoausgabe-PIN, die einen komprimierten AVI-Stream erzeugt, der für den AVI-Codec-Filter geeignet ist, sowie eine audioausgabepin, die einen Audiostream erzeugt, der für einen audiorenderingfilter oder einen dazwischen liegenden audiotransformier
+Für AVI-Dateien erstellt der Filter einen Videoausgabepin, der einen komprimierten AVI-Stream erzeugt, der für den AVI-Codecfilter geeignet ist, und einen Audioausgabepin, der einen Audiostream erzeugt, der für einen Audiorenderingfilter oder einen intervening audio transform filter geeignet ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

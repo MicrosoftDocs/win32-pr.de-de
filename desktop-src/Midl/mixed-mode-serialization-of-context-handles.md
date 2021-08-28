@@ -1,48 +1,48 @@
 ---
-title: Serialisierung im gemischten Modus von Kontext Handles
-description: In Microsoft Windows XP kann eine einzelne Schnittstelle sowohl serialisierte als auch nicht serialisierte Kontext Handles aufnehmen, die als "im gemischten Modus" bezeichnete Serialisierung bezeichnet werden.
+title: Serialisierung von Kontexthandles im gemischten Modus
+description: In Microsoft Windows XP kann eine einzelne Schnittstelle sowohl serialisierte als auch nicht serialisierte Kontexthandles aufnehmen, die als Serialisierung im gemischten Modus bezeichnet wird.
 ms.assetid: b52c1d6f-cdc5-4597-a36e-bb957e4aab01
 keywords:
-- Mittel l-sprach Verweis-Mittel l, Serialisierung im gemischten Modus von Kontext Handles
-- Kontext Handles (Mitte)
-- serialisierungsmittell im gemischten Modus
+- MIDL-Sprachreferenz MIDL , Serialisierung von Kontexthandles im gemischten Modus
+- Context handles MIDL (Kontexthandles MIDL)
+- MIDL-Serialisierung im gemischten Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0922b53bfc7ba2e30ad8df0764e3cf9a36f0f723
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0aaa35f02a939a50e2484ace29630783ee219d6313d7538cba54b1f54cd83007
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787430"
 ---
-# <a name="mixed-mode-serialization-of-context-handles"></a>Serialisierung im gemischten Modus von Kontext Handles
+# <a name="mixed-mode-serialization-of-context-handles"></a>Serialisierung von Kontexthandles im gemischten Modus
 
-Ab Windows XP kann eine einzelne Schnittstelle sowohl serialisierte als auch nicht serialisierte Kontext Handles aufnehmen, sodass eine Methode in einer Schnittstelle ausschließlich auf ein Kontext Handle (serialisiert) zugreifen kann, während andere Methoden auf dieses Kontext Handle im freigegebenen Modus zugreifen (nicht serialisiert). Weitere Informationen zu Kontext Handles finden Sie unter den folgenden Attributen:
+Ab Windows XP kann eine einzelne Schnittstelle sowohl serialisierte als auch nicht serialisierte Kontexthandles aufnehmen, sodass eine Methode auf einer Schnittstelle ausschließlich (serialisiert) auf ein Kontexthandle zugreifen kann, während andere Methoden auf dieses Kontexthandle im freigegebenen Modus (nicht serialisiert) zugreifen. Weitere Informationen zu Kontexthandles finden Sie in den folgenden Attributen:
 
--   [**Kontext \_ handle**](context-handle.md)
--   [**Kontext \_ handle- \_ Serialisierung**](context-handle-serialize.md)
--   [**Kontext \_ handle \_ noserialize**](context-handle-noserialize.md)
+-   [**Kontexthand \_ handle**](context-handle.md)
+-   [**Context \_ Handle \_ serialize**](context-handle-serialize.md)
+-   [**context \_ handle \_ noserialize**](context-handle-noserialize.md)
 
-Die Zugriffs Funktionen für serialisierte und freigegebene Modi sind mit Lese-/schreibsperrungs-Mechanismen vergleichbar. Methoden, die ein serialisiertes Kontext Handle verwenden, sind exklusive Benutzer (Writer), während Methoden, die ein nicht serialisiertes Kontext Handle verwenden, freigegebene Benutzer (Reader) sind. Methoden, die den Zustand eines Kontext Handles zerstören oder ändern, müssen serialisiert werden. Methoden, die den Zustand eines Kontext Handles nicht ändern, wie z. b. die Methoden, die einfach aus einem Kontext Handle lesen, können nicht serialisiert werden. Die Verwendung eines Kontext Handles im gemischten Modus kann die Skalierbarkeit eines Servers erheblich verbessern, insbesondere dann, wenn mehrere Threads gleichzeitige Aufrufe desselben Kontext Handles durchführen.
+Zugriffsfunktionen im serialisierten modus und im gemeinsam genutzten Modus sind mit Lese-/Schreibsperrmechanismen vergleichbar. -Methoden, die ein serialisiertes Kontexthandle verwenden, sind exklusive Benutzer (Writer), während Methoden, die ein nicht serialisiertes Kontexthandle verwenden, freigegebene Benutzer (Reader) sind. Methoden, die den Zustand eines Kontexthandpunkts zerstören oder ändern, müssen serialisiert werden. Methoden, die den Zustand eines Kontexthandles nicht ändern, z. B. methoden, die einfach aus einem Kontexthandle lesen, können nicht serialisiert werden. Die Verwendung eines Kontexthandlings im gemischten Modus kann die Skalierbarkeit eines Servers erheblich verbessern, insbesondere wenn mehrere Threads gleichzeitig Aufrufe desselben Kontexthandlings ausführen.
 
-RPC erzwingt keine "Schreibsperre" für Methoden, die ein Kontext Handle im freigegebenen Modus verwenden. das bedeutet, dass Anwendungen sicherstellen müssen, dass Kontext Handles im gemeinsam genutzten Modus nicht geändert werden. Die Änderung eines Kontext Handles, das im freigegebenen Modus verwendet wird, kann zu geringfügigen Beschädigungen von Kontext Handle-Inhalten führen, die nicht debuggt werden können.
+RPC erzwingt keine Schreibsperre für Methoden, die ein Kontexthandles im freigegebenen Modus verwenden. Das bedeutet, dass Anwendungen sicherstellen müssen, dass Kontexthandles im freigegebenen Modus nicht geändert werden. Die Änderung eines kontextigen Handles, das im freigegebenen Modus verwendet wird, kann zu feinen Beschädigungen von Kontexthandpunktinhalten führen, die nicht debuggt werden können.
 
-Das Ändern der Serialisierungslogik eines Kontext Handles wirkt sich nur auf den Server aus. Außerdem wirkt sich das Ändern der Serialisierungslogik eines Kontext Handles nicht auf das Wire-Format aus. aus diesem Grund haben Änderungen an der Serialisierungslogik auf einem Server keinen Einfluss auf die Funktion vorhandener Clients, mit dem Server zu interagieren.
+Das Ändern der Serialisierungslogik eines Kontexthandpunkts wirkt sich nur auf den Server aus. Außerdem wirkt sich das Ändern der Serialisierungslogik eines Kontexthandpunkts nicht auf das Wire-Format aus. Änderungen an der Serialisierungslogik auf einem Server wirken sich daher nicht auf die Fähigkeit vorhandener Clients aus, mit dem Server zu interagieren.
 
-Es wird nicht empfohlen, nur nicht serialisierte Kontext Handles zu verwenden. Server, die nicht serialisierte Handles verwenden, sollten zum serialisierten Zugriff für die Methode wechseln, die das Kontext Handle schließt.
+Es wird nicht empfohlen, nur nicht-lokalisierte Kontexthandles zu verwenden. Server, die nicht serialisierte Handles verwenden, sollten zum serialisierten Zugriff für die Methode wechseln, die das Kontexthandle schließt.
 
-Kontext Handles, die \[ out \] -only sind, werden in der Regel von Erstellungs Methoden verwendet und erfordern keine Serialisierung. Daher wird ein beliebiges serialisierungsattribut, das auf reine \[ out \] -Kontext Handles angewendet wird, wie z. b. das Verarbeiten von [**Kontext \_ \_**](context-handle-serialize.md) Handles oder das [**Kontext \_ handle \_ noserialize**](context-handle-noserialize.md), von RPC ignoriert.
+Kontexthandles, die nur out sind, werden in der Regel von Erstellungsmethoden verwendet und erfordern \[ \] keine Serialisierung. Daher wird jedes Serialisierungsattribut, das auf out-only-Kontexthandles angewendet wird, z. B. context \[ handle \] [**\_ \_ serialize**](context-handle-serialize.md) oder [**context handle \_ \_ noserialize,**](context-handle-noserialize.md)von RPC ignoriert.
 
 > [!Note]  
-> Erstellungs Methoden werden implizit serialisiert.
+> Erstellungsmethoden werden implizit serialisiert.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden zwei Beispielen wird gezeigt, wie die Serialisierung im gemischten Modus von Kontext Handles aktiviert wird.
+In den folgenden beiden Beispielen wird gezeigt, wie die Serialisierung von Kontexthandles im gemischten Modus aktiviert wird.
 
-Das erste Beispiel zeigt die Vorgehensweise in der IDL-Datei:
+Das erste Beispiel zeigt dies in der IDL-Datei:
 
 ``` syntax
 typedef [context_handle] void *TestContextHandleExclusive;
@@ -59,7 +59,7 @@ UseExclusive(...
              ...);
 ```
 
-Im zweiten Beispiel wird gezeigt, wie Sie die Serialisierung im gemischten Modus von Kontext Handles in der ACF-Datei aktivieren:
+Das zweite Beispiel zeigt, wie die Serialisierung von Kontexthandles im gemischten Modus in der ACF-Datei aktiviert wird:
 
 ``` syntax
 typedef [context_handle_serialize] TestContextHandleExclusive;
@@ -71,18 +71,18 @@ typedef [context_handle_noserialize] TestContextHandleShared;
 
 <dl> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**Kontexthand \_ handle**](context-handle.md)
 </dt> <dt>
 
-[**Kontext \_ handle- \_ Serialisierung**](context-handle-serialize.md)
+[**Context \_ Handle \_ serialize**](context-handle-serialize.md)
 </dt> <dt>
 
-[**Kontext \_ handle \_ noserialize**](context-handle-noserialize.md)
+[**context \_ handle \_ noserialize**](context-handle-noserialize.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

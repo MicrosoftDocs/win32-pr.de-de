@@ -1,15 +1,15 @@
 ---
-description: Die vorgeschlagenen Aktions Sequenzen für eine grundlegende AdminUISequence-Tabelle in einer Windows Installer-Datenbank.
+description: Die vorgeschlagenen Aktionssequenzen für eine grundlegende AdminUISequence-Tabelle in Windows Installer-Datenbank.
 ms.assetid: a5371133-7d55-4041-8e1f-ecc8245c8d3a
 title: Vorgeschlagene AdminUISequence
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af34c0662d19070b1d97b88e8942b2276cc64a97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40a38958bac2be283a43054f6b2ab8d0473f0ecf3646e259f872c4336c0e5aa1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119627160"
 ---
 # <a name="suggested-adminuisequence"></a>Vorgeschlagene AdminUISequence
 
@@ -17,16 +17,16 @@ ms.locfileid: "103755400"
 
 | Aktion                                      | Bedingung | Sequenz |
 |---------------------------------------------|-----------|----------|
-| Fatalerrordlg                               |           | -3       |
-| Userexitdlg                                 |           | -2       |
-| Exitdlg                                     |           | -1       |
-| Preparedlg                                  |           | 140      |
-| [Costinitialize](costinitialize-action.md) |           | 800      |
-| [Datei Kosten](filecost-action.md)             |           | 900      |
-| [Costfinalize](costfinalize-action.md)     |           | 1000     |
-| Adminwelcomedlg                             |           | 1230     |
+| FatalErrorDlg                               |           | -3       |
+| UserExitDlg                                 |           | –2       |
+| ExitDlg                                     |           | –1       |
+| PrepareDlg                                  |           | 140      |
+| [CostInitialize](costinitialize-action.md) |           | 800      |
+| [FileCost](filecost-action.md)             |           | 900      |
+| [CostFinalize](costfinalize-action.md)     |           | 1000     |
+| AdminWelcomeDlg                             |           | 1230     |
 | ProgressDlg                                 |           | 1280     |
-| [ExecuteAction](executeaction-action.md)   |           | 1300     |
+| [Executeaction](executeaction-action.md)   |           | 1300     |
 
 
 

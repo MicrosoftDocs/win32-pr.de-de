@@ -1,6 +1,6 @@
 ---
 title: tex2Dproj
-description: Abtastungen einer 2D-Textur mithilfe einer projektives Teilung; die Textur Koordinate wird durch t. w dividiert, bevor die Suche stattfindet.
+description: Samples a 2D texture using a projective divide; (Stichproben einer 2D-Textur mithilfe einer projektiven Division) Die Texturkoordinate wird durch t.w geteilt, bevor die Suche erfolgt.
 ms.assetid: c6b79360-3737-4b74-bdf3-6d46323e8e54
 keywords:
 - tex2Dproj HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 365401e4e4eca8703207ffb5c7676748f4a06d30
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: 928e216f7ae25bd13722a4f432d9d37ca41e0665cc9f1b50158c02386027d4e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789410"
 ---
 # <a name="tex2dproj"></a>tex2Dproj
 
-Abtastungen einer 2D-Textur mithilfe einer projektives Teilung; die Textur Koordinate wird durch t. w dividiert, bevor die Suche stattfindet.
+Samples a 2D texture using a projective divide; (Stichproben einer 2D-Textur mithilfe einer projektiven Division) Die Texturkoordinate wird durch t.w geteilt, bevor die Suche erfolgt.
 
 
 
-| Ret tex2Dproj (s, t) |
+| ret tex2Dproj(s, t) |
 |---------------------|
 
 
@@ -37,10 +37,10 @@ Abtastungen einer 2D-Textur mithilfe einer projektives Teilung; die Textur Koord
 
 
 
-| Element                                                   | BESCHREIBUNG                               |
+| Element                                                   | Beschreibung                               |
 |--------------------------------------------------------|-------------------------------------------|
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[im \] samplerzustand.<br/>      |
-| <span id="t"></span><span id="T"></span>*Bund*<br/> | \[in \] der Textur Koordinate.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[im \] Zustand "Sampler".<br/>      |
+| <span id="t"></span><span id="T"></span>*T*<br/> | \[in \] Die Texturkoordinate.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Abtastungen einer 2D-Textur mithilfe einer projektives Teilung; die Textur Koord
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der Textur Daten.
+Der Wert der Texturdaten.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,26 +56,26 @@ Der Wert der Textur Daten.
 
 | Name | Ein/Aus | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |------|--------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| s    | in     | [**Objekt**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler2D](dx-graphics-hlsl-sampler.md)                      | 1    |
-| t    | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
-| TZI  | out    | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| s    | in     | [**Objekt (object)**](dx-graphics-hlsl-intrinsic-functions.md) | [sampler2D](dx-graphics-hlsl-sampler.md)                      | 1    |
+| t    | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| Ret  | out    | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt               |
 |-----------------------------------------------------------|-------------------------|
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja (nur Pixel-Shader) |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein                      |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein                      |
 
 
 
@@ -85,7 +85,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

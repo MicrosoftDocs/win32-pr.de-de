@@ -1,7 +1,7 @@
 ---
-description: Die setfiltergraph-Methode gibt ein Filter Diagramm für die zu verwendende Rendering-Engine an.
+description: Die SetFilterGraph-Methode gibt ein Filterdiagramm für die zu verwendende Render-Engine an.
 ms.assetid: 6a245864-7d22-4608-995b-b28662a6ab90
-title: 'Unenderengine:: setfiltergraph-Methode (qedit. h)'
+title: IRenderEngine::SetFilterGraph-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 72c93ef6610fd301c497589858a8941e2b8f71b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4472d1152d45ee160885a4cdbc898a55ece24b6795a9880a5eeb958e05330287
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767100"
 ---
-# <a name="irenderenginesetfiltergraph-method"></a>Unenderengine:: setfiltergraph-Methode
+# <a name="irenderenginesetfiltergraph-method"></a>IRenderEngine::SetFilterGraph-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SetFilterGraph` Methode gibt ein Filter Diagramm für die zu verwendende Rendering-Engine an.
+Die `SetFilterGraph` -Methode gibt ein Filterdiagramm für die zu verwendende Render-Engine an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ HRESULT SetFilterGraph(
 
 <dl> <dt>
 
-*PFG* 
+*Pfg* 
 </dt> <dd>
 
-Ein Zeiger auf die [**igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) -Schnittstelle des Filter Diagramms.
+Zeiger auf die [**IGraphBuilder-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) des Filterdiagramms.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück:
+Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                    |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg.<br/>                            |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>           | Ungültiges Argument.<br/>                   |
-| <dl> <dt>**E \_ muss \_ Init \_ Renderer**</dt> </dl> | Fehler beim Initialisieren der Rendering-Engine.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>           | Ungültiges Argument.<br/>                   |
+| <dl> <dt>**E \_ MUSS \_ RENDERER INIT \_**</dt> </dl> | Fehler beim Initialisieren der Render-Engine.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die meisten Anwendungen müssen diese Methode nicht aufzurufen. Es ist eher typisch, dass die Renderingengine das Diagramm für Sie erstellt, indem Sie die Methode " [**irienderengine:: connectfrontend**](irenderengine-connectfrontend.md) " aufrufen.
+Die meisten Anwendungen müssen diese Methode nicht aufrufen. Es ist typischer, dass die Render-Engine das Diagramm für Sie erstellen lässt, indem sie die [**IRenderEngine::ConnectFrontEnd-Methode aufruft.**](irenderengine-connectfrontend.md)
 
-Diese Methode schlägt fehl, wenn die Renderingengine bereits über ein Filter Diagramm verfügt.
+Diese Methode schlägt fehl, wenn die Render-Engine bereits über ein Filterdiagramm verfügt.
 
-Rufen Sie niemals einen Zeiger auf ein Filter Diagramm ab, das von einem Rendermodul erstellt wurde, und verwenden Sie es dann als Parameter für diese Methode in einer anderen Renderingengine. Dies führt zu unvorhersehbaren Ergebnissen.
+Rufen Sie niemals einen Zeiger auf ein Filterdiagramm ab, das von einer Render-Engine erstellt wurde, und verwenden Sie ihn dann als Parameter für diese Methode in einer anderen Render-Engine. Dies führt zu unvorhersehbaren Ergebnissen.
 
-Die **connectfrontend** -Methode führt ein beliebiges vorhandenes Filter Diagramm aus, behält aber dieselbe Filter-Graph-Manager-Instanz bei.
+Die **ConnectFrontEnd-Methode** entfernt alle vorhandenen Filterdiagramme, behält jedoch die gleiche Filter Graph Manager-Instanz bei.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -94,19 +94,19 @@ Die **connectfrontend** -Methode führt ein beliebiges vorhandenes Filter Diagra
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstelle ""**](irenderengine.md)
+[**IRenderEngine-Schnittstelle**](irenderengine.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

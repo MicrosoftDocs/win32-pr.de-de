@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1c7e1c0d626c74f5427f91a5b9eb796e3b79d5a9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8a1e9ed35325390f3315cd269d89284fd3426a9f1cbad4c1c025be06dd33204f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119676260"
 ---
 # <a name="d3dxcreatemesh-function"></a>D3DXCreateMesh-Funktion
 
@@ -50,7 +50,7 @@ HRESULT D3DXCreateMesh(
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Gesichter für das Gitternetz. Der gültige Bereich für diese Zahl ist größer als 0 und einer kleiner als der maximale DWORD-Wert (in der Regel 65534), da der letzte Index reserviert ist.
+Anzahl der Gesichter für das Gitter. Der gültige Bereich für diese Zahl ist größer als 0 und eins kleiner als das maximale DWORD (in der Regel 65534), da der letzte Index reserviert ist.
 
 </dd> <dt>
 
@@ -59,7 +59,7 @@ Anzahl der Gesichter für das Gitternetz. Der gültige Bereich für diese Zahl i
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelpunkte für das Gitternetz. Dieser Parameter muss größer als 0 sein.
+Anzahl der Scheitelzeichen für das Gitternetz. Dieser Parameter muss größer als 0 sein.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Anzahl der Scheitelpunkte für das Gitternetz. Dieser Parameter muss größer al
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus einem oder mehreren Flags aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Optionen für das Gitternetz angeben.
+Kombination eines oder mehrerer Flags aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Optionen für das Gitternetz angeben.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Kombination aus einem oder mehreren Flags aus der [**D3DXMESH-Enumeration,**](./
 
 Typ: **const [**LPD3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Scheitelpunktformat für das zurückgegebene Gitternetz beschreibt. Dieser Parameter muss direkt einem flexiblen Vertexformat (FVF) zugeordnet werden.
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Scheitelpunktformat für das zurückgegebene Netz beschreibt. Dieser Parameter muss direkt einem flexiblen Scheitelpunktformat (FVF) zuordnen.
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Schei
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das Geräteobjekt, das dem Gittermodell zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das Geräteobjekt, das dem Netz zugeordnet werden soll.
 
 </dd> <dt>
 
@@ -103,20 +103,20 @@ Adresse eines Zeigers auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Leistungsindikatoren-Elemente'
+description: 'Weitere Informationen finden Sie unter: Leistungsindikatorelemente'
 ms.assetid: dc5dd33c-a2ed-4c0c-9f54-aca3df57d4fb
-title: Leistungsindikator Elemente
+title: Leistungsindikatorelemente
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,27 +9,27 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6c074bdbf31bf835cfba9201f0c1a153a6c7e84d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c008bd0d5fe85ee0d662b0896348be24e4db1497b2d5f0656f50c67ca0499e95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625040"
 ---
-# <a name="performance-counters-elements"></a>Leistungsindikator Elemente
+# <a name="performance-counters-elements"></a>Leistungsindikatorelemente
 
-Das Leistungsindikator Schema definiert die folgenden Elemente:
+Das Leistungsindikatorschema definiert die folgenden Elemente:
 
--   [**Indikator (Counter Set)**](performance-counters-counter--counterset--element.md)
--   [**Counter Attribute (Counter Attribute)**](performance-counters-counterattribute--counterattributes--element.md)
--   [**Counter-Attribute (Indikator)**](performance-counters-counterattributes--counter--element.md)
--   [**tert**](performance-counters-counters-element.md)
--   [**Counter Set (Anbieter)**](performance-counters-counterset--provider--element.md)
--   [**Anbieter (Indikatoren)**](performance-counters-provider--counters--element.md)
+-   [**counter (counterSet)**](performance-counters-counter--counterset--element.md)
+-   [**counterAttribute (counterAttributes)**](performance-counters-counterattribute--counterattributes--element.md)
+-   [**counterAttributes (counter)**](performance-counters-counterattributes--counter--element.md)
+-   [**Leistungsindikatoren**](performance-counters-counters-element.md)
+-   [**counterSet (Anbieter)**](performance-counters-counterset--provider--element.md)
+-   [**Provider (Leistungsindikatoren)**](performance-counters-provider--counters--element.md)
 -   [**Struktur (Strukturen)**](performance-counters-struct--structs--element.md)
--   [**Strukturen (CounterSet)**](performance-counters-structs--counterset--element.md)
+-   [**Strukturen (counterSet)**](performance-counters-structs--counterset--element.md)
 
-Dieser Abschnitt enthält die Namen der Elemente, die Sie im Manifest verwenden. Informationen zu den einzelnen Elementen finden Sie jedoch unter dem komplexen Typ, der das Element enthält. Das Stamm Element des Abschnitts "Leistungsindikatoren" des Manifests ist das [**Zähler**](performance-counters-counters-element.md) Element.
+Dieser Abschnitt enthält die Namen der Elemente, die Sie in Ihrem Manifest verwenden. Um jedoch die Details für jedes Element zu erhalten, sehen Sie sich den komplexen Typ an, der das Element enthält. Das Stammelement des Abschnitts "Leistungsindikatoren" des Manifests ist [**das counters-Element.**](performance-counters-counters-element.md)
 
  
 

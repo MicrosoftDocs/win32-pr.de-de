@@ -1,9 +1,9 @@
 ---
-title: 'Texture1DArray:: Operator-Funktion'
-description: 'Gibt eine schreibgeschützte Ressourcen Variable zurück. | Texture1DArray:: Operator-Funktion'
+title: Texture1DArray::Operator-Funktion
+description: Gibt eine schreibgeschützte Ressourcenvariable zurück. | Texture1DArray::Operator-Funktion
 ms.assetid: 05ec9652-b5dd-41cf-8bef-730c507c5ba4
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 578d778cd1e0e064c435c19fb094feb66f651e05
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ed214b4c4ccc55dfe6500f70659f4f81b2188de68b8cea7b5ba69c495108d730
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788350"
 ---
-# <a name="texture1darrayoperator--function"></a>Texture1DArray:: Operator-Funktion
+# <a name="texture1darrayoperator--function"></a>Texture1DArray::Operator-Funktion
 
-Gibt eine schreibgeschützte Ressourcen Variable zurück.
+Gibt eine schreibgeschützte Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,12 +36,12 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint2**
 
-Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Array Slice an.
+Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Komponente gibt den gewünschten Arrayslice an.
 
 </dd> </dl>
 
@@ -49,17 +49,17 @@ Die Indexposition. Die erste Komponente enthält die x-Koordinate. Die zweite Ko
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode greift immer auf die erste MIP-Ebene zu. Um andere MIP-Ebenen anzugeben, verwenden Sie stattdessen die [**MIP. Operator \[ \] \[ \]**](sm5-object-texture1darray-mipsoperatorindex.md) -Methode.
+Diese Methode greift immer auf die erste MIP-Ebene zu. Um andere MIP-Ebenen anzugeben, verwenden Sie stattdessen die [**\[ \] \[ \] mip.operator-Methode.**](sm5-object-texture1darray-mipsoperatorindex.md)
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -74,7 +74,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture1DArray](sm5-object-texture1darray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

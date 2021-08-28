@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidplaceholdercolumnexception-Konstruktor'
-title: Esentinvalidplaceholdercolumnexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidPlaceholderColumnException-Konstruktor'
+title: EsentInvalidPlaceholderColumnException-Konstruktor
 TOCTitle: 'EsentInvalidPlaceholderColumnException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidPlaceholderColumnException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidplaceholdercolumnexception.esentinvalidplaceholdercolumnexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8af28c1e7b180980c9cb5286c81b5731e0b3bae2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 11710ad49b3b068b0e43753c166ba4f7205317bf64bd5fd7b2dc9311edfe6ba3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723520"
 ---
-# <a name="esentinvalidplaceholdercolumnexception-constructor"></a>Esentinvalidplaceholdercolumnexception-Konstruktor
+# <a name="esentinvalidplaceholdercolumnexception-constructor"></a>EsentInvalidPlaceholderColumnException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidplaceholdercolumnexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidPlaceholderColumnException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidPlaceholderColumnException()
 public EsentInvalidPlaceholderColumnException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidplaceholdercolumnexception-Klasse](./esentinvalidplaceholdercolumnexception-class.md)
+[EsentInvalidPlaceholderColumnException-Klasse](./esentinvalidplaceholdercolumnexception-class.md)
 
-[Esentinvalidplaceholdercolumnexception-Member](./esentinvalidplaceholdercolumnexception-members.md)
+[EsentInvalidPlaceholderColumnException-Member](./esentinvalidplaceholdercolumnexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

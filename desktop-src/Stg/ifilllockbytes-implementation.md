@@ -1,65 +1,65 @@
 ---
-title: Ifilllockbytes-Implementierung
-description: Das System stellt eine ifilllockbytes-Implementierung als Teil der Implementierung der Verbund Dateien bereit.
+title: 'IFillLockBytes : Implementierung'
+description: Das System stellt eine IFillLockBytes-Implementierung als Teil der Compound Files-Implementierung zur Anwendung.
 ms.assetid: a8aed8c5-3c4c-4cce-b568-68031da0edf5
 keywords:
-- Ifilllockbytes-"STG", Implementierung
+- IFillLockBytes Strctd Stg , Implementierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c58737d02e3e6bc2511670178825aef8cbe2dcc0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 313c095d32bf9a932062b527cd486ee518e099d8de0f0d859caf2f1143e68237
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119663020"
 ---
-# <a name="ifilllockbytes---implementation"></a>Ifilllockbytes-Implementierung
+# <a name="ifilllockbytes---implementation"></a>IFillLockBytes : Implementierung
 
-Das System stellt eine [**ifilllockbytes**](/windows/desktop/api/Objidl/nn-objidl-ifilllockbytes) -Implementierung als Teil der Implementierung der Verbund Dateien bereit.
+Das System stellt eine [**IFillLockBytes-Implementierung**](/windows/desktop/api/Objidl/nn-objidl-ifilllockbytes) als Teil der Compound Files-Implementierung zur Anwendung.
 
-Beim Herunterladen von Code kann eine Instanz eines asynchronen Verbund Datei Objekts durch Aufrufen von [**stgopenasyncdocfileonifilllockbytes**](/windows/desktop/api/Objbase/nf-objbase-stgopenasyncdocfileonifilllockbytes)erstellt werden. Durch das Herunterladen von Code kann auch eine Instanz eines asynchronen Byte Array-Wrapper Objekts für ein vorhandenes Datei-oder Bytearray erstellt werden, indem entweder die Funktion " [**stggetifilllockbytesonfile**](/windows/desktop/api/Objbase/nf-objbase-stggetifilllockbytesonfile) " oder die Funktion " [**stggetifilllockbytesonilockbytes**](/windows/desktop/api/Objbase/nf-objbase-stggetifilllockbytesonilockbytes) " aufgerufen wird.
+Durch herunterladen von Code kann eine Instanz eines asynchronen Verbunddateiobjekts erstellt werden, indem [**StgOpenAsyncDocFileOnIFillLockBytes aufgerufen wird.**](/windows/desktop/api/Objbase/nf-objbase-stgopenasyncdocfileonifilllockbytes) Das Herunterladen von Code kann auch eine Instanz eines asynchronen Bytearray-Wrapperobjekts für eine vorhandene Datei oder ein Bytearray erstellen, indem entweder die [**StgGetIFillLockBytesOnFile-Funktion**](/windows/desktop/api/Objbase/nf-objbase-stggetifilllockbytesonfile) oder die [**StgGetIFillLockBytesOnILockBytes-Funktion**](/windows/desktop/api/Objbase/nf-objbase-stggetifilllockbytesonilockbytes) aufgerufen wird.
 
-## <a name="when-to-use"></a>Verwendungs Zeitpunkt
+## <a name="when-to-use"></a>Verwendung
 
-Derzeit sind URL-Moniker die einzigen Benutzer der asynchronen com-Speicher Implementierung.
+Derzeit sind URL-Moniker die einzigen Benutzer der asynchronen COM-Speicherimplementierung.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie die vier Methoden der [**ifilllockbytes**](/windows/desktop/api/Objidl/nn-objidl-ifilllockbytes) -Implementierung.
+Im Folgenden finden Sie die vier Methoden der [**IFillLockBytes-Implementierung.**](/windows/desktop/api/Objidl/nn-objidl-ifilllockbytes)
 
 <dl> <dt>
 
-<span id="IFillLockBytes__FillAppend"></span><span id="ifilllockbytes__fillappend"></span><span id="IFILLLOCKBYTES__FILLAPPEND"></span>**Ifilllockbytes:: fillappend**
+<span id="IFillLockBytes__FillAppend"></span><span id="ifilllockbytes__fillappend"></span><span id="IFILLLOCKBYTES__FILLAPPEND"></span>**IFillLockBytes::FillAppend**
 </dt> <dd>
 
-Schreibt einen neuen Byte Block an das Ende eines Bytearrays. Die Größe des Blocks wird als Parameter für [**fillappend**](/windows/desktop/api/Objidl/nf-objidl-ifilllockbytes-fillappend)angegeben.
+Schreibt einen neuen Byteblock an das Ende eines Bytearrays. Die Größe des Blocks wird als Parameter für [**FillAppend angegeben.**](/windows/desktop/api/Objidl/nf-objidl-ifilllockbytes-fillappend)
 
 </dd> <dt>
 
-<span id="IFillLockBytes__FillAt"></span><span id="ifilllockbytes__fillat"></span><span id="IFILLLOCKBYTES__FILLAT"></span>**Ifilllockbytes:: Fillat**
+<span id="IFillLockBytes__FillAt"></span><span id="ifilllockbytes__fillat"></span><span id="IFILLLOCKBYTES__FILLAT"></span>**IFillLockBytes::FillAt**
 </dt> <dd>
 
 Schreibt einen neuen Datenblock an eine angegebene Position im Bytearray.
 
 </dd> <dt>
 
-<span id="IFillLockBytes__SetFillSize"></span><span id="ifilllockbytes__setfillsize"></span><span id="IFILLLOCKBYTES__SETFILLSIZE"></span>**Ifilllockbytes:: setfillsize**
+<span id="IFillLockBytes__SetFillSize"></span><span id="ifilllockbytes__setfillsize"></span><span id="IFILLLOCKBYTES__SETFILLSIZE"></span>**IFillLockBytes::SetFillSize**
 </dt> <dd>
 
-Legt die Größe des Bytearrays fest. Gibt "E Fail" bei \_ Aufrufen von [**ILockBytes:: Read an**](/windows/desktop/api/Objidl/nf-objidl-ilockbytes-readat) zurück, die versuchen, auf Daten über die durch die-Methode angegebene Obergrenze hinaus zuzugreifen.
+Legt die Größe des Bytearrays fest. Gibt E \_ FAIL von Aufrufen von [**ILockBytes::ReadAt**](/windows/desktop/api/Objidl/nf-objidl-ilockbytes-readat) zurück, die versuchen, über die von der -Methode angegebene Obergrenze hinaus auf Daten zu zugreifen.
 
 </dd> <dt>
 
-<span id="IFillLockBytes__Terminate"></span><span id="ifilllockbytes__terminate"></span><span id="IFILLLOCKBYTES__TERMINATE"></span>**Ifilllockbytes:: beenden**
+<span id="IFillLockBytes__Terminate"></span><span id="ifilllockbytes__terminate"></span><span id="IFILLLOCKBYTES__TERMINATE"></span>**IFillLockBytes::Terminate**
 </dt> <dd>
 
-Informiert das Bytearray, dass ein Download entweder erfolgreich oder erfolglos beendet wurde.
+Informiert das Bytearray darüber, dass ein Download entweder erfolgreich oder nicht erfolgreich beendet wurde.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Komplexer DataType-Typ (Windows-Ereignisprotokoll)
+title: Komplexer Datentyp "DataType" (Windows Ereignisprotokoll)
 description: Definiert ein Datenelement.
 ms.assetid: f3b7de63-1ac1-429d-9e36-1f13c26c9618
 keywords:
-- DataType Complex-Typ EventLog
+- Komplexer DataType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9d3ac6e545cbe8567bbe041568c442f762743ad0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ba1fcbf217b16fb675a7a4eca00c8faa201737c07eea35a809f85617e96e9445
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119620280"
 ---
-# <a name="datatype-complex-type"></a>Komplexer DataType-Typ
+# <a name="datatype-complex-type"></a>Komplexer Datentyp "DataType"
 
 Definiert ein Datenelement.
 
@@ -47,16 +47,16 @@ Definiert ein Datenelement.
 
 
 
-| Name | type   | BESCHREIBUNG                                                                                                                                                              |
+| Name | type   | Beschreibung                                                                                                                                                              |
 |------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name | Zeichenfolge | Der Name eines Datenelements, das in der Vorlage definiert wurde (siehe den komplexen Typ " [**templateitemtype**](eventmanifestschema-templateitemtype-complextype.md) ").<br/> |
-| type | QName  | Nicht verwendet.<br/>                                                                                                                                                     |
+| Name | Zeichenfolge | Der Name eines Datenelements, das in der Vorlage definiert wurde (siehe komplexer [**TemplateItemType-Typ).**](eventmanifestschema-templateitemtype-complextype.md)<br/> |
+| type | QName  | Wird nicht verwendet.<br/>                                                                                                                                                     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Datenelement kann ein Datenelement der obersten Ebene oder ein Datenelement in einer Struktur sein.
+Das Datenelement kann ein Datenelement der obersten Ebene oder ein Datenelement in einer -Struktur sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Das Datenelement kann ein Datenelement der obersten Ebene oder ein Datenelement 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

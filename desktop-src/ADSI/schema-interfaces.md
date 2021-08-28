@@ -1,38 +1,38 @@
 ---
-title: Schema Schnittstellen
-description: Schema Schnittstellen
+title: Schemaschnittstellen
+description: Schemaschnittstellen
 ms.assetid: b3427202-352b-4b35-877e-d28fb3d3906a
 ms.tgt_platform: multiple
 keywords:
-- Schema Schnittstellen ADSI
+- Schemaschnittstellen ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f414fdea2418fb92a0a3c8c9e8bf88eb6d7f00b1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7dfa22a32a4d93c36a7419d48ea6127c2345ffdea62686147d1ba08c41ea7992
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770554"
 ---
-# <a name="schema-interfaces"></a>Schema Schnittstellen
+# <a name="schema-interfaces"></a>Schemaschnittstellen
 
-Der Schema Container enthält einen Satz von Schema Definitionen, die an einen Teil der Namespace Struktur des Anbieters angefügt werden. In der Regel verfügt jede Instanz eines Namespace über ein eigenes Schema. In der folgenden Abbildung definiert z. b. der ADSI-Beispiel Anbieter einen Schema Container in jedem der Stamm Knoten "Seattle" und "Toronto".
+Der Schemacontainer enthält eine Reihe von Schemadefinitionen, die an einen Teil der Namespacestruktur des Anbieters angefügt sind. In der Regel verfügt jede Instanz eines Namespace über ein eigenes Schema. In der folgenden Abbildung definiert der ADSI-Beispielanbieter beispielsweise einen Schemacontainer in jedem der Stammknoten "Seattle" und "Toronto".
 
-![Schema Kapselung](images/schemacont.png)
+![Schemaeinschluss](images/schemacont.png)
 
-Zum Erstellen einer ADSI-Implementierung für einen Anbieter müssen Sie Schema Verwaltungs Objekte bereitstellen, die den zugrunde liegenden Namespace des Anbieters widerspiegeln und die ADSI-Schema Schnittstellen unterstützen. Im folgenden finden Sie eine Liste der ADSI-Schema Schnittstellen, die im Schema Container enthalten sind.
+Um eine ADSI-Implementierung für einen Anbieter zu erstellen, müssen Sie Schemaverwaltungsobjekte bereitstellen, die den zugrunde liegenden Namespace des Anbieters widerspiegeln und ADSI-Schemaschnittstellen unterstützen. Im Folgenden sind die ADSI-Schemaschnittstellen aufgeführt, die im Schemacontainer enthalten sind.
 
--   [**Iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass) stellt Verzeichnisdienst Klassen dar.
--   [**Iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty) stellt Verzeichnisdienst Eigenschaften mit einzelnen oder mehreren Werten dar.
--   [**Iadssyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax) stellt den einzelnen Variant-Typ dar.
+-   [**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass) stellt Verzeichnisdienstklassen dar.
+-   [**IADsProperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty) stellt Verzeichnisdiensteigenschaften dar, die einzelne oder mehrere Werte aufweisen.
+-   [**IADsSyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax) stellt den einzelnen VARIANT-Typ dar.
 
-Von ADSI definierte Schnittstellen können bestimmte Eigenschaften und Syntaxen für Ihren Anbieter unterstützen. Anbieter können eine ADSI-Definition mithilfe der Methoden erweitern, die Eigenschaften erstellen und aufrufen. Sie können z. b. die Methoden der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle verwenden, z. b. [**Get**](/windows/desktop/api/Iads/nf-iads-iads-get), [**Getex**](/windows/desktop/api/Iads/nf-iads-iads-getex), [**Put**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**PutEx**](/windows/desktop/api/Iads/nf-iads-iads-putex). Anbieter können zusätzliche Eigenschaften auch über zusätzliche Schnittstellen unterstützen. Eine umfassende Liste der ADSI-Schnittstellen finden Sie unter [ADSI-Schnittstellen](adsi-interfaces.md).
+Von ADSI definierte Schnittstellen können bestimmte Eigenschaften und Syntaxen für Ihren Anbieter unterstützen. Anbieter können eine ADSI-Definition mithilfe der Methoden erweitern, die Eigenschaften erstellen und darauf zugreifen. Beispielsweise können Sie die Methoden der [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) wie [**Get**](/windows/desktop/api/Iads/nf-iads-iads-get), [**GetEx,**](/windows/desktop/api/Iads/nf-iads-iads-getex) [**Put**](/windows/desktop/api/Iads/nf-iads-iads-put) und [**PutEx**](/windows/desktop/api/Iads/nf-iads-iads-putex)verwenden. Anbieter können auch zusätzliche Eigenschaften über zusätzliche Schnittstellen unterstützen. Eine vollständige Liste der ADSI-Schnittstellen finden Sie unter [ADSI-Schnittstellen.](adsi-interfaces.md)
 
-Eine ADSI-Anbieter Komponente mit einem komplexen Namespace kann möglicherweise mehrere Schemas in einer Namespace Instanz enthalten, die jeweils in einem anderen Teil der Struktur vorhanden sind. Die [**IADs:: Schema**](iads-property-methods.md) -Eigenschaft eines Objekts benennt jedoch immer seine eigene Schema Definition.
+Eine ADSI-Anbieterkomponente mit einem komplexen Namespace lässt möglicherweise zu, dass mehrere Schemas in einer Namespaceinstanz vorhanden sind, die sich jeweils an einem anderen Teil der Struktur befinden. Die [**IADs::Schema-Eigenschaft**](iads-property-methods.md) eines Objekts benennt jedoch immer seine eigene Schemadefinition.
 
- 
+ 
 
- 
+ 
 
 
 

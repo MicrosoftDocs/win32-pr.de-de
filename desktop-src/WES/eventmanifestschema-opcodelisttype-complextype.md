@@ -1,9 +1,9 @@
 ---
-title: Komplexer opcodelisttype-Typ
+title: Komplexer OpcodeListType-Typ
 description: Definiert eine Liste von Opcodes, die verwendet werden, um die Vorgänge einer Komponente der Anwendung zu identifizieren.
 ms.assetid: 0cbca036-b32e-4fc4-96ee-1dd5bee019bf
 keywords:
-- Opcodelisttype komplexer Typ EventLog
+- Komplexer OpcodeListType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dce0942ef0268f50b25987a6be0fd4fffeebd614
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0c44a2c2fa38957f302dfe3861a89f57dbe51d44ca737268a8988f8c138be8b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767300"
 ---
-# <a name="opcodelisttype-complex-type"></a>Komplexer opcodelisttype-Typ
+# <a name="opcodelisttype-complex-type"></a>Komplexer OpcodeListType-Typ
 
 Definiert eine Liste von Opcodes, die verwendet werden, um die Vorgänge einer Komponente der Anwendung zu identifizieren.
 
@@ -40,9 +40,9 @@ Definiert eine Liste von Opcodes, die verwendet werden, um die Vorgänge einer K
 
 
 
-| Element                                                             | type                                                             | BESCHREIBUNG                                                            |
+| Element                                                             | Typ                                                             | Beschreibung                                                            |
 |---------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**OpCode**](eventmanifestschema-opcode-opcodelisttype-element.md) | [**OpCodeType**](eventmanifestschema-opcodetype-complextype.md) | Definiert einen Vorgang innerhalb einer Komponente der Anwendung.<br/> |
+| [**Opcode**](eventmanifestschema-opcode-opcodelisttype-element.md) | [**OpcodeType**](eventmanifestschema-opcodetype-complextype.md) | Definiert einen Vorgang innerhalb einer Komponente der Anwendung.<br/> |
 
 
 
@@ -52,8 +52,8 @@ Definiert eine Liste von Opcodes, die verwendet werden, um die Vorgänge einer K
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

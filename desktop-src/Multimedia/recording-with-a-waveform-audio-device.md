@@ -1,21 +1,21 @@
 ---
-title: Aufzeichnen mit einem Waveform-Audio Gerät
-description: Aufzeichnen mit einem Waveform-Audio Gerät
+title: Aufzeichnen mit einem Waveform-Audio-Gerät
+description: Aufzeichnen mit einem Waveform-Audio-Gerät
 ms.assetid: b29a07d1-1b92-4d66-9f2d-ccfbf4074876
 keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb7ab9df07cbe9748fb082239bac20f511010ab3
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f457058b6de38e8add9ccc091fce45ddf59c6b343bdf57cceda8b980722544c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689290"
 ---
-# <a name="recording-with-a-waveform-audio-device"></a>Aufzeichnen mit einem Waveform-Audio Gerät
+# <a name="recording-with-a-waveform-audio-device"></a>Aufzeichnen mit einem Waveform-Audio-Gerät
 
-Im folgenden Beispiel wird ein Waveform-Audiogerät mit einer neuen Datei geöffnet, Datensätze für die angegebene Zeit aufgezeichnet, die Aufzeichnung abgespielt und der Benutzer aufgefordert, die Aufzeichnung bei Bedarf zu speichern. Er verwendet die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion.
+Im folgenden Beispiel wird ein Waveform-Audiogerät mit einer neuen Datei geöffnet, für die angegebene Zeit aufgezeichnet, die Aufzeichnung wird wiedergegeben, und der Benutzer wird aufgefordert, die Aufzeichnung bei Bedarf zu speichern. Er verwendet die [**mciSendCommand-Funktion.**](/previous-versions//dd757160(v=vs.85))
 
 
 ```C++
@@ -89,6 +89,6 @@ DWORD recordWAVEFile(DWORD dwMilliSeconds)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: MaxSize (channelloggingtype)-Element
+title: maxSize (ChannelLoggingType)-Element
 description: Die maximale Größe der Protokolldatei in Bytes.
 ms.assetid: 94b5e4c9-9a7b-4950-8e23-b3b0aa0dd100
 keywords:
-- MaxSize-Element (EventLog)
+- maxSize-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8a27b2224a64eadf1637f3d2f7f44973f4614536
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 569b69cdfaf43cbb38382529e55565f19f0e398a2a7adb69d4d2860b36839b0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767330"
 ---
-# <a name="maxsize-channelloggingtype-element"></a>MaxSize (channelloggingtype)-Element
+# <a name="maxsize-channelloggingtype-element"></a>maxSize (ChannelLoggingType)-Element
 
 Die maximale Größe der Protokolldatei in Bytes.
 
@@ -30,7 +30,7 @@ Die maximale Größe der Protokolldatei in Bytes.
  />
 ```
 
-Das **MaxSize** -Element wird durch den komplexen Typ [**channelloggingtype**](eventmanifestschema-channelloggingtype-complextype.md) definiert.
+Das **maxSize-Element** wird vom komplexen [**ChannelLoggingType-Typ**](eventmanifestschema-channelloggingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **MaxSize** -Element wird durch den komplexen Typ [**channelloggingtype**](e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **MaxSize** -Element wird durch den komplexen Typ [**channelloggingtype**](e
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Protokollierung (channelType)**](eventmanifestschema-logging-channeltype-element.md)
+[**logging (ChannelType)**](eventmanifestschema-logging-channeltype-element.md)
 </dt> </dl>
 
  

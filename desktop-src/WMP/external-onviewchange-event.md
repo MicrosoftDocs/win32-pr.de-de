@@ -1,9 +1,9 @@
 ---
-title: Externes. OnViewChange-Ereignis
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Das OnViewChange-Ereignis tritt auf, wenn sich die Sicht in Windows Media Player ändert.
+title: External.OnViewChange-Ereignis
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Das OnViewChange-Ereignis tritt auf, wenn sich die Ansicht in Windows Media Player ändert.
 ms.assetid: aa1378ad-8b84-4592-85c5-5e284be05ea6
 keywords:
-- Externe. OnViewChange-Ereignisfenster Media Player
+- External.OnViewChange-Ereignis Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c7144e03955fb67ed90cad4a4336bf782ca1566
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c01db02ef1bfd194330483c8dd7e71eba7ed09d9b347aee4b4813f413950c65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648680"
 ---
-# <a name="externalonviewchange-event"></a>Externes. OnViewChange-Ereignis
+# <a name="externalonviewchange-event"></a>External.OnViewChange-Ereignis
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **OnViewChange** -Ereignis tritt auf, wenn sich die Sicht in Windows Media Player ändert.
+Das **OnViewChange-Ereignis** tritt auf, wenn sich die Ansicht in Windows Media Player ändert.
 
 ``` syntax
 window.external.OnViewChange = FunctionName
@@ -36,21 +36,21 @@ window.external.OnViewChange = FunctionName
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die den Namen der Funktion im Skript angibt, die von Windows Media Player bei Auftreten des Ereignisses aufgerufen wird.
+Dies ist eine Schreibeigenschaft, die den Namen der Funktion im Skript angibt, die Windows Media Player aufruft, wenn das Ereignis auftritt.
 
 ## <a name="parameters"></a>Parameter
 
 Die Funktion, die dieses Ereignis behandelt, nimmt keine Parameter an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Ansicht in Windows Media Player kann aus einem der folgenden Gründe geändert werden:
+Die Ansicht in Windows Media Player kann sich aus einem der folgenden Gründe ändern:
 
--   Der Benutzer interagiert mit der Windows Media Player-Benutzeroberfläche.
--   Der Benutzer interagiert mit einer Ermittlungs Seite, und das Skript auf der Ermittlungs Seite ruft [extern. changeView](external-changeview.md)auf.
--   Der Benutzer interagiert mit einer Ermittlungs Seite, und das Skript auf der Ermittlungs Seite ruft [extern. changeviewonlinelist](external-changeviewonlinelist.md)auf.
+-   Der Benutzer interagiert mit der Windows Media Player Benutzeroberfläche.
+-   Der Benutzer interagiert mit einer Ermittlungsseite, und das Skript auf der Ermittlungsseite ruft [External.changeView](external-changeview.md)auf.
+-   Der Benutzer interagiert mit einer Ermittlungsseite, und das Skript auf der Ermittlungsseite ruft [External.changeViewOnlineList](external-changeviewonlinelist.md)auf.
 
-Wenn sich die Ansicht in Windows Media Player ändert, ruft der Player [iwmpcontentpartner:: GetTemplate](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) auf, um die URL der nächsten Ermittlungs Seite anzuzeigen, die angezeigt werden soll. Bevor der Spieler jedoch die neue Ermittlungs Seite anzeigt, löst er das **OnViewChange** -Ereignis aus. Wenn der **OnViewChange** -Ereignishandler " [extern. cancelnavigate](external-cancelnavigate.md)" aufruft, zeigt Windows Media Player die Seite "neue Ermittlung" nicht an. Stattdessen wird die aktuelle Ermittlungs Seite weiterhin angezeigt.
+Wenn sich die Ansicht in Windows Media Player ändert, ruft der Player [IWMPContentPartner::GetTemplate](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) auf, um die URL der nächsten anzuzeigenden Ermittlungsseite abzurufen. Bevor der Player jedoch die neue Ermittlungsseite anzeigt, löst er das **OnViewChange-Ereignis** aus. Wenn der **OnViewChange-Ereignishandler** [External.cancelNavigate](external-cancelnavigate.md)aufruft, zeigt Windows Media Player die neue Ermittlungsseite nicht an. Stattdessen wird weiterhin die aktuelle Ermittlungsseite angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,13 +67,13 @@ Wenn sich die Ansicht in Windows Media Player ändert, ruft der Player [iwmpcont
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. changeView**](external-changeview.md)
+[**External.changeView**](external-changeview.md)
 </dt> <dt>
 
-[**Extern. changeviewonlinelist**](external-changeviewonlinelist.md)
+[**External.changeViewOnlineList**](external-changeviewonlinelist.md)
 </dt> </dl>
 
  

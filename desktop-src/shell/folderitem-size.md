@@ -1,7 +1,7 @@
 ---
 description: Enthält die Größe des Elements.
 ms.assetid: 0eda405e-d54f-48d2-a060-a1fdcdb23785
-title: FolderItem. Size-Eigenschaft (Shldisp. h)
+title: FolderItem.Size-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5d44d1c1ddd9b46f768f218250802562f9a36312
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 576da1ef42768fe8574fab5f965270134cad50d96f4b4e3fe0aaa7234af6d365
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715440"
 ---
-# <a name="folderitemsize-property"></a>FolderItem. Size (Eigenschaft)
+# <a name="folderitemsize-property"></a>FolderItem.Size-Eigenschaft
 
 Enthält die Größe des Elements.
 
@@ -37,13 +37,13 @@ iSize = FolderItem.Size
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ganze** Zahl, die die Größe des Elements empfängt.
+Eine **ganze Zahl,** die die Größe des Elements empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Größe** verwendet, um die Größe der ausführbaren Editor-Datei abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Size** verwendet, um die Größe der Editor ausführbaren Datei abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -73,7 +73,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -142,17 +142,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

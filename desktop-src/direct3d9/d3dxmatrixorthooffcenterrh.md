@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixOrthoOffCenterRH-Funktion (D3dx9math.h): Erstellt eine benutzerdefinierte, rechtshändige orthografische Projektionsmatrix.'
+description: 'D3DXMatrixOrthoOffCenterRH-Funktion (D3dx9math.h): Erstellt eine angepasste, rechtshändige orthografische Projektionsmatrix.'
 ms.assetid: d6171e28-b138-4ccf-9f12-fb977a30aca1
 title: D3DXMatrixOrthoOffCenterRH-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8519dca07a4475ff043491802ae173ecc61c0bd3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 270ff91100e5f12239c741188368d131d542721ed1fd307ef4149b0c25940981
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791660"
 ---
 # <a name="d3dxmatrixorthooffcenterrh-function-d3dx9mathh"></a>D3DXMatrixOrthoOffCenterRH-Funktion (D3dx9math.h)
 
@@ -60,7 +60,7 @@ Zeiger auf die resultierende [**D3DXMATRIX.**](../direct3d10/d3d10-d3dxmatrix.md
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler x-Wert des Ansichtsvolumens.
+Minimaler x-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Minimaler x-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler x-Wert des Ansichtsvolumens.
+Maximaler x-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
@@ -78,7 +78,7 @@ Maximaler x-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler y-Wert des Ansichtsvolumens.
+Minimaler y-Wert des Anzeigevolumes.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Minimaler y-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler y-Wert des Ansichtsvolumens.
+Maximaler y-Wert des Anzeigevolumes.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Minimaler Z-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -115,7 +115,7 @@ Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
 Zeiger auf die resultierende [**D3DXMATRIX.**](../direct3d10/d3d10-d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die [**D3DXMatrixOrthoRH-Funktion**](d3dxmatrixorthorh.md) ist ein Sonderfall der **D3DXMatrixOrthoOffCenterRH-Funktion.** Um dieselbe Projektion mit **D3DXMatrixOrthoOffCenterRH** zu erstellen, verwenden Sie die folgenden Werte: l = -w/2, r = w/2, b = -h/2 und t = h/2.
 
@@ -139,14 +139,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

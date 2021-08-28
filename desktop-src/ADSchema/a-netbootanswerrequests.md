@@ -1,11 +1,11 @@
 ---
-title: NetBoot-answer-requests-Attribut
-description: Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
+title: netboot-Answer-Requests-Attribut
+description: Ermöglicht es dem RIS-Server, alle RIS-Anforderungen zu akzeptieren.
 ms.assetid: fb57762f-d7af-45ae-80f2-5dd52b5688a9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für netboot-answer-requests
-- AD-Schema des netbootAnswerRequests-Attributs
+- netboot-Answer-Requests-Attribut AD-Schema
+- netbootAnswerRequests-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e3552517189635da9c2ed464e286c06bb3c8d19
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d8580c3ff7cacda36fc63430f615ad9615c7ff8aa3b0354d725b97a5e9896c61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648700"
 ---
-# <a name="netboot-answer-requests-attribute"></a>NetBoot-answer-requests-Attribut
+# <a name="netboot-answer-requests-attribute"></a>netboot-Answer-Requests-Attribut
 
-Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
+Ermöglicht es dem RIS-Server, alle RIS-Anforderungen zu akzeptieren.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | NetBoot-Antwort-Anforderungen              |
-| LDAP-Display-Name | netbootAnswerRequests                |
+| CN                | netboot-Answer-Requests              |
+| Ldap-Anzeigename | netbootAnswerRequests                |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.853               |
-| System-ID-GUID    | 0738307a-91df-11d1-AEbc-0000-C1 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-ID-GUID    | 0738307a-91df-11d1-aebc-0000f80367c1 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Ist einwertig       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Is-Single-Valued       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Is-Single-Valued       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Ermöglicht es dem RIS-Server, RIS-Anforderungen zu akzeptieren.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | Richtig                                                       |
+| Is-Single-Valued       | True                                                       |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**IntelliMirror-SCP**](c-intellimirrorscp.md)<br/> |
+| In verwendete Klassen        | [**Intellimirror-SCP**](c-intellimirrorscp.md)<br/> |
 
 
 

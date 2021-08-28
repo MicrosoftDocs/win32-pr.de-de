@@ -1,121 +1,121 @@
 ---
 title: Farben (Dialogfeld)
-description: Zeigt ein modales Dialogfeld an, das es dem Benutzer ermöglicht, einen bestimmten Farbwert auszuwählen.
+description: Zeigt ein modales Dialogfeld an, in dem der Benutzer einen bestimmten Farbwert auswählen kann.
 ms.assetid: 248586b5-5068-4021-8407-56eb79243789
 keywords:
-- Benutzereingabe, allgemeine Dialog Feld Bibliothek
-- Erfassen von Benutzereingaben, allgemeine Dialog Feld Bibliothek
-- Allgemeine Dialog Feld Bibliothek
+- Benutzereingabe, Common Dialog Box Library
+- Erfassen von Benutzereingaben, Allgemeine Dialogfeldbibliothek
+- Allgemeine Dialogfeldbibliothek
 - Allgemeine Dialogfelder
 - Dialogfeld "Farbe"
-- partielle Farbe (Dialogfeld)
-- vollständige Farbe (Dialogfeld)
-- Anpassen der Farbe (Dialogfeld)
+- Partielle Farbe (Dialogfeld)
+- Vollfarbe (Dialogfeld)
+- Anpassen des Dialogfelds "Farbe"
 - RGB-Farbmodell
 - HSL-Farbmodell
-- Farbton-Helligkeit (HSL)
-- HSL (Hue-Sättigungs Helligkeit)
-- RGB (rotes grünes blau)
-- rotes grünes blau (RGB)
+- Helligkeit der Farbtonsättigung (HSL)
+- HSL (Helligkeit der Farbtonsättigung)
+- RGB (rotgrün blau)
+- Rotgrünblau (RGB)
 - Hooks, Dialogfeld "Farbe"
-- vordefinierte Dialogfelder
+- Vordefinierte Dialogfelder
 - Dialogfelder, Farbe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bb90150f49ea7bed4edac53af40ba89e0459946
-ms.sourcegitcommit: 56f8e4d5119e5018363fa2dc3472cdff203c6913
+ms.openlocfilehash: f2bdfb1543de80ac105d4a6012a0c95ff46cd8da1fef204ed573d14d05a6dfe9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "104568115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726397"
 ---
 # <a name="color-dialog-box"></a>Farben (Dialogfeld)
 
-Zeigt ein modales Dialogfeld an, das es dem Benutzer ermöglicht, einen bestimmten Farbwert auszuwählen. Der Benutzer kann eine Farbe aus einer Reihe von einfachen oder benutzerdefinierten Farbpaletten auswählen. Alternativ kann der Benutzer einen Farbwert generieren, indem er die Farbwerte RGB oder Hue, Sättigung, Brillanz (HSL) der Dialogfeld-Benutzeroberfläche ändert. Das Dialogfeld **Farbe** gibt den RGB-Wert der vom Benutzer ausgewählten Farbe zurück.
+Zeigt ein modales Dialogfeld an, in dem der Benutzer einen bestimmten Farbwert auswählen kann. Der Benutzer kann eine Farbe aus einer Reihe von einfachen oder benutzerdefinierten Farbpaletten auswählen. Alternativ kann der Benutzer einen Farbwert generieren, indem er die Farbwerte RGB oder Farbton, Sättigung, Helligkeit (HSL) der Benutzeroberfläche des Dialogfelds ändert. Das Dialogfeld **Farbe** gibt den RGB-Wert der vom Benutzer ausgewählten Farbe zurück.
 
-Sie erstellen und zeigen ein **Farb** Dialogfeld an, indem Sie eine [**Auswahl Color**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur initialisieren und die-Struktur an die [**chooabcolor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) -Funktion übergeben. Durch Festlegen verschiedener Parameterwerte für die **Auswahl Farbe** können Sie beeinflussen, wie das Dialogfeld Farbe angezeigt wird. Beispielsweise können Sie entweder eine vollständige oder eine partielle Benutzeroberflächen Version des Dialog Felds anzeigen. Die folgende Abbildung zeigt die Vollversion der Benutzeroberfläche des Dialog Felds **Farbe** .
+Sie erstellen und zeigen ein Dialogfeld **Farbe** an, indem Sie eine [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) initialisieren und die Struktur an die [**ChooseColor-Funktion**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) übergeben. Indem Sie unterschiedliche Parameterwerte für die **CHOOSECOLOR-Struktur** festlegen, können Sie beeinflussen, wie das Dialogfeld Farbe angezeigt wird. Sie können z. B. eine vollständige oder eine teilversion der Benutzeroberfläche des Dialogfelds anzeigen. Die folgende Abbildung zeigt die vollständige Version der Benutzeroberfläche des Dialogfelds **Farbe.**
 
 ![Farbe (Dialogfeld)](images/colordialogboxxp.png)
 
-Wenn der Benutzer auf die Schaltfläche **OK** klickt, gibt [**Choice Color**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) **true** zurück. Der **rgbresult** -Member der [**chooseecolor**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur enthält den RGB-Farbwert der vom Benutzer ausgewählten Farbe. Der RGB-Farbwert gibt die Intensitäten der einzelnen roten, grünen und blauen Farben an, die die ausgewählte Farbe ausmachen. Die einzelnen Werte reichen von 0 bis 255. Verwenden Sie die Makros [**getrvalue**](/windows/desktop/api/wingdi/nf-wingdi-getrvalue), [**getgvalue**](/windows/desktop/api/wingdi/nf-wingdi-getgvalue)und [**getbvalue**](/windows/desktop/api/wingdi/nf-wingdi-getbvalue) , um einzelne Farben aus einem RGB-Farbwert zu extrahieren.
+Wenn der Benutzer auf die Schaltfläche **OK** klickt, gibt [**ChooseColor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) **TRUE** zurück. Der **rgbResult-Member** der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) enthält den RGB-Farbwert der vom Benutzer ausgewählten Farbe. Der RGB-Farbwert gibt die Intensitäten der einzelnen roten, grünen und blauen Farben an, aus denen die ausgewählte Farbe besteht. Die einzelnen Werte liegen zwischen 0 und 255. Verwenden Sie die Makros [**GetRValue,**](/windows/desktop/api/wingdi/nf-wingdi-getrvalue) [**GetGValue**](/windows/desktop/api/wingdi/nf-wingdi-getgvalue)und [**GetBValue,**](/windows/desktop/api/wingdi/nf-wingdi-getbvalue) um einzelne Farben aus einem RGB-Farbwert zu extrahieren.
 
-Wenn der Benutzer das Dialogfeld " **Farbe** " abbricht oder wenn ein Fehler auftritt, gibt " [**Choice Color**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) " den Wert " **false** " zurück, und der **rgbresult** -Member ist nicht definiert Um die Ursache des Fehlers zu ermitteln, rufen Sie die [**kommdlgextendecoderror**](/windows/desktop/api/Commdlg/nf-commdlg-commdlgextendederror) -Funktion auf, um den erweiterten Fehlerwert abzurufen.
+Wenn der Benutzer das Dialogfeld **Farbe** abbricht oder ein Fehler auftritt, gibt [**ChooseColor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) **FALSE** zurück, und der **rgbResult-Member** ist nicht definiert. Um die Ursache des Fehlers zu ermitteln, rufen Sie die [**CommDlgExtendedError-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-commdlgextendederror) auf, um den erweiterten Fehlerwert abzurufen.
 
-In diesem Abschnitt werden die folgenden Themen behandelt:
+Die folgenden Themen werden in diesem Abschnitt behandelt.
 
--   [Vollständige und partielle Farb Dialogfelder](#full-and-partial-color-dialog-boxes)
--   [Anpassen des Dialog Felds "Farbe"](#customizing-the-color-dialog-box)
-    -   [So stellen Sie eine benutzerdefinierte Vorlage für das Dialogfeld "Farbe" bereit](#to-provide-a-custom-template-for-the-color-dialog-box)
-    -   [So aktivieren Sie eine Hook-Prozedur für das Dialogfeld "Farbe"](#to-enable-a-hook-procedure-for-the-color-dialog-box)
--   [Farbmodelle, die im Dialog Feld "Farbe" verwendet werden](#color-models-used-by-the-color-dialog-box)
+-   [Voll- und Teilfarbendialogfelder](#full-and-partial-color-dialog-boxes)
+-   [Anpassen des Dialogfelds "Farbe"](#customizing-the-color-dialog-box)
+    -   [So stellen Sie eine benutzerdefinierte Vorlage für das Dialogfeld Farbe bereit](#to-provide-a-custom-template-for-the-color-dialog-box)
+    -   [So aktivieren Sie eine Hookprozedur für das Dialogfeld Farbe](#to-enable-a-hook-procedure-for-the-color-dialog-box)
+-   [Vom Dialogfeld "Farbe" verwendete Farbmodelle](#color-models-used-by-the-color-dialog-box)
     -   [RGB-Farbmodell](#rgb-color-model)
     -   [HSL-Farbmodell](#hsl-color-model)
-    -   [HSL-Werte werden in RGB-Werte umgerechnet](#converting-hsl-values-to-rgb-values)
+    -   [Konvertieren von HSL-Werten in RGB-Werte](#converting-hsl-values-to-rgb-values)
 
-## <a name="full-and-partial-color-dialog-boxes"></a>Vollständige und partielle Farb Dialogfelder
+## <a name="full-and-partial-color-dialog-boxes"></a>Voll- und Teilfarbendialogfelder
 
-Das Dialogfeld Farbe verfügt über eine Vollversion und eine partielle Version der Benutzeroberfläche. Die Vollversion enthält die grundlegenden Steuerelemente und verfügt über zusätzliche Steuerelemente, mit denen Benutzer benutzerdefinierte Farben erstellen können. Die partielle Version verfügt über Steuerelemente, die die grundlegenden und benutzerdefinierten Farbpaletten anzeigen, von denen der Benutzer einen Farbwert auswählen kann.
+Das Dialogfeld Farbe verfügt über eine Vollversion und eine Teilversion der Benutzeroberfläche. Die Vollversion enthält die grundlegenden Steuerelemente und verfügt über zusätzliche Steuerelemente, mit denen der Benutzer benutzerdefinierte Farben erstellen kann. Die Teilversion verfügt über Steuerelemente, die die grundlegenden und benutzerdefinierten Farbpaletten anzeigen, aus denen der Benutzer einen Farbwert auswählen kann.
 
-Die partielle Version des Dialog Felds Farbe enthält die Schaltfläche **benutzerdefinierte Farben definieren** . Der Benutzer kann auf diese Schaltfläche klicken, um die Vollversion anzuzeigen. Sie können das Dialogfeld Farbe so ausrichten, dass immer die Vollversion angezeigt wird, indem Sie das **CC \_ FullOpen** -Flag im **Flags** -Member der [**CHOOSECOLOR**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur festlegen. Um zu verhindern, dass Benutzer benutzerdefinierte Farben erstellt werden, können Sie das Flag **CC \_ preventfullopen** festlegen, um die Schaltfläche **benutzerdefinierte Farben definieren** zu deaktivieren.
+Die Teilversion des Dialogfelds Farbe enthält die Schaltfläche **Benutzerdefinierte Farben definieren.** Der Benutzer kann auf diese Schaltfläche klicken, um die Vollversion anzuzeigen. Sie können das Dialogfeld Farbe anweisen, immer die Vollversion anzuzeigen, indem Sie das **CC \_ FULLOPEN-Flag** im **Flags-Member** der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) festlegen. Um zu verhindern, dass der Benutzer benutzerdefinierte Farben erstellt, können Sie das **CC \_ PREVENTFULLOPEN-Flag** so festlegen, dass die Schaltfläche **Benutzerdefinierte Farben definieren** deaktiviert wird.
 
-Die Grundfarben stellen eine Auswahl der Farben dar, die auf dem angegebenen Gerät verfügbar sind. Die tatsächliche Anzahl angezeigter Farben wird vom Anzeigetreiber bestimmt. Ein VGA-Treiber zeigt z. b. 48 Farben an, während ein monochrome Anzeigetreiber nur 16 anzeigt.
+Die Basisfarben stellen eine Auswahl der Farben dar, die auf dem angegebenen Gerät verfügbar sind. Die tatsächliche Anzahl der angezeigten Farben wird vom Anzeigetreiber bestimmt. Ein VGA-Treiber zeigt z. B. 48 Farben an, und ein Monocolore-Anzeigetreiber zeigt nur 16 an.
 
-Die benutzerdefinierten Farben sind diejenigen, die Sie angeben oder die der Benutzer erstellt. Wenn Sie ein Dialogfeld für die Farbe erstellen, müssen Sie den **lpcustcolors** -Member der [**choost Color**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur verwenden, um die Anfangswerte für die 16 benutzerdefinierten Farben anzugeben. Wenn die Vollversion des Dialog Felds Farbe geöffnet ist, kann der Benutzer eine benutzerdefinierte Farbe mit einer der folgenden Methoden erstellen:
+Die benutzerdefinierten Farben sind die, die Sie angeben oder die der Benutzer erstellt. Wenn Sie ein Dialogfeld Farbe erstellen, müssen Sie den **lpCustColors-Member** der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) verwenden, um die Anfangswerte für die 16 benutzerdefinierten Farben anzugeben. Wenn die Vollversion des Dialogfelds Farbe geöffnet ist, kann der Benutzer mit einer der folgenden Methoden eine benutzerdefinierte Farbe erstellen:
 
--   Verschieben des Cursors in das Farbspektrum-Steuerelement und das Leuchtkraft-Schiebe Steuerelement
--   Eingeben von RGB-Werten in den **roten**, **grünen** und **blauen** Bearbeitungs Steuerelementen
--   Eingeben von HSL-Werten in den Steuerelementen **Hue**, **Sat** und **Lum** Edit
+-   Bewegen des Cursors im Farbspektrum-Steuerelement und im Helligkeits-Schieberegler
+-   Eingeben von RGB-Werten in die Bearbeitungssteuerelemente **"Rot",** **"Grün"** und **"Blau"**
+-   Eingeben von HSL-Werten in die **Farbton-,** **Sat-** und Lum-Bearbeitungssteuerelemente 
 
-Um der Anzeige benutzerdefinierter Farben eine neue benutzerdefinierte Farbe hinzuzufügen, kann der Benutzer auf die Schaltfläche **zu benutzerdefinierten Farben hinzufügen** klicken. Dies bewirkt auch, dass das Dialogfeld den RGB-Wert der neuen Farbe in das entsprechende Element im Array kopiert, auf das der **lpcustcolors** -Member verweist. Wenn Sie neue benutzerdefinierte Farben zwischen den Aufrufen von [**chootarcolor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85))beibehalten möchten, sollten Sie statischen Arbeitsspeicher für das Array zuweisen. Weitere Informationen zu den RGB-und HSL-Farb Modellen finden Sie unter [Farbmodelle, die im Dialog Feld Farbe verwendet werden](#color-models-used-by-the-color-dialog-box).
+Um der Anzeige benutzerdefinierter Farben eine neue benutzerdefinierte Farbe hinzuzufügen, kann der Benutzer auf die Schaltfläche **Zu benutzerdefinierten Farben hinzufügen** klicken. Dies bewirkt auch, dass das Dialogfeld den RGB-Wert der neuen Farbe in das entsprechende Element im Array kopiert, auf das der **lpCustColors-Member** zeigt. Um neue benutzerdefinierte Farben zwischen Aufrufen von [**ChooseColor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85))beizubehalten, sollten Sie statischen Speicher für das Array zuordnen. Weitere Informationen zu den RGB- und HSL-Farbmodellen finden Sie unter [Farbmodelle, die vom Dialogfeld Farbe verwendet werden.](#color-models-used-by-the-color-dialog-box)
 
-## <a name="customizing-the-color-dialog-box"></a>Anpassen des Dialog Felds "Farbe"
+## <a name="customizing-the-color-dialog-box"></a>Anpassen des Dialogfelds "Farbe"
 
-Um das Dialogfeld Farbe anzupassen, können Sie eine der folgenden Methoden verwenden:
+Zum Anpassen eines Dialogfelds Farbe können Sie eine der folgenden Methoden verwenden:
 
--   Geben Sie beim Erstellen des Dialog Felds Werte in der [**Auswahl Farbe**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) an.
+-   Angeben von Werten in der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) beim Erstellen des Dialogfelds
 -   Bereitstellen einer benutzerdefinierten Vorlage
--   Bereitstellen einer Hook-Prozedur
+-   Bereitstellen einer Hookprozedur
 
-Sie können die Darstellung und das Verhalten des Dialog Felds Farbe ändern, indem Sie die Flags im **Flags** -Member der [**chooon Color**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur festlegen. Beispielsweise können Sie das **CC \_ solidcolor** -Flag so festlegen, dass das Dialogfeld angewiesen wird, nur voll Tonfarben anzuzeigen. Um zu bewirken, dass im Dialogfeld anfänglich eine andere Farbe als schwarz ausgewählt wird, legen Sie das **CC \_ rgbinit** -Flag fest, und geben Sie eine Farbe im **rgbresult** -Member an.
+Sie können die Darstellung und das Verhalten des Dialogfelds Farbe ändern, indem Sie Flags im **Flags-Member** der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) festlegen. Beispielsweise können Sie das **CC \_ SOLIDCOLOR-Flag** so festlegen, dass das Dialogfeld nur Volltonfarben anzeigt. Damit das Dialogfeld zunächst eine andere Farbe als Schwarz auswählt, legen Sie das **CC \_ RGBINIT-Flag** fest, und geben Sie eine Farbe im **rgbResult-Member** an.
 
-Sie können für das Dialogfeld Farbe eine benutzerdefinierte Vorlage bereitstellen, z. b. Wenn Sie zusätzliche Steuerelemente einschließen möchten, die für Ihre Anwendung eindeutig sind. Die Funktion " [**chooscolor**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) " verwendet anstelle der Standardvorlage Ihre benutzerdefinierte Vorlage.
+Sie können eine benutzerdefinierte Vorlage für das Dialogfeld Farbe bereitstellen, wenn Sie beispielsweise zusätzliche Steuerelemente einschließen möchten, die für Ihre Anwendung eindeutig sind. Die [**ChooseColor-Funktion**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) verwendet Ihre benutzerdefinierte Vorlage anstelle der Standardvorlage.
 
-### <a name="to-provide-a-custom-template-for-the-color-dialog-box"></a>So stellen Sie eine benutzerdefinierte Vorlage für das Dialogfeld "Farbe" bereit
+### <a name="to-provide-a-custom-template-for-the-color-dialog-box"></a>So stellen Sie eine benutzerdefinierte Vorlage für das Dialogfeld Farbe bereit
 
-1.  Erstellen Sie die benutzerdefinierte Vorlage, indem Sie die in der Datei Color. DLG angegebene Standardvorlage ändern. Die in der standardmäßigen Farb Dialogfeld Vorlage verwendeten Steuerelement-IDs werden in der Color. DLG-Datei definiert.
-2.  Verwenden Sie die-Struktur " [**chooancolor**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) ", um die Vorlage wie folgt zu aktivieren:
-    -   Wenn Ihre benutzerdefinierte Vorlage eine Ressource in einer Anwendung oder einer Dynamic Link Library ist, legen Sie das **CC \_ ENABLETEMPLATE** -Flag im **Flags** -Member fest. Verwenden Sie die **HINSTANCE** -und **lptemplatename** -Member der-Struktur, um das Modul und den Ressourcennamen zu identifizieren.
+1.  Erstellen Sie die benutzerdefinierte Vorlage, indem Sie die in der Datei Color.dlg angegebene Standardvorlage ändern. Die Steuerelementbezeichner, die in der Standardvorlage Des Dialogfelds Farbe verwendet werden, werden in der Datei Color.dlg definiert.
+2.  Verwenden Sie die [**CHOOSECOLOR-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) um die Vorlage wie folgt zu aktivieren:
+    -   Wenn Ihre benutzerdefinierte Vorlage eine Ressource in einer Anwendung oder einer Dynamic Link Library ist, legen Sie das **CC \_ ENABLETEMPLATE-Flag** im **Flags-Member** fest. Verwenden Sie die Member **hInstance** und **lpTemplateName** der Struktur, um den Modul- und Ressourcennamen zu identifizieren.
 
         -Oder-
 
-    -   Wenn Ihre benutzerdefinierte Vorlage bereits im Arbeitsspeicher vorhanden ist, legen Sie das Flag **CC \_ enabletemplatehandle** fest. Verwenden Sie das **HINSTANCE** -Element, um das Speicher Objekt zu identifizieren, das die Vorlage enthält.
+    -   Wenn sich Ihre benutzerdefinierte Vorlage bereits im Arbeitsspeicher befindet, legen Sie das **CC \_ ENABLETEMPLATEHANDLE-Flag** fest. Verwenden Sie den **Member hInstance,** um das Speicherobjekt zu identifizieren, das die Vorlage enthält.
 
-Sie können für das Dialogfeld Farbe eine [**cchookproc**](/windows/win32/api/commdlg/nc-commdlg-lpcchookproc) -Hook-Prozedur bereitstellen. Die Hook-Prozedur kann an das Dialogfeld gesendete Nachrichten verarbeiten. Außerdem können registrierte Nachrichten verwendet werden, um das Verhalten des Dialog Felds zu steuern. Wenn Sie eine benutzerdefinierte Vorlage verwenden, um zusätzliche Steuerelemente zu definieren, müssen Sie eine Hook-Prozedur bereitstellen, um Eingaben für die Steuerelemente zu verarbeiten.
+Sie können eine [**CCHookProc-Hookprozedur**](/windows/win32/api/commdlg/nc-commdlg-lpcchookproc) für das Dialogfeld Farbe angeben. Die Hookprozedur kann Nachrichten verarbeiten, die an das Dialogfeld gesendet werden. Sie kann auch registrierte Nachrichten verwenden, um das Verhalten des Dialogfelds zu steuern. Wenn Sie eine benutzerdefinierte Vorlage verwenden, um zusätzliche Steuerelemente zu definieren, müssen Sie eine Hookprozedur zum Verarbeiten von Eingaben für Ihre Steuerelemente bereitstellen.
 
-### <a name="to-enable-a-hook-procedure-for-the-color-dialog-box"></a>So aktivieren Sie eine Hook-Prozedur für das Dialogfeld "Farbe"
+### <a name="to-enable-a-hook-procedure-for-the-color-dialog-box"></a>So aktivieren Sie eine Hookprozedur für das Dialogfeld Farbe
 
-1.  Legen Sie das **CC \_ ENABLEHOOK** -Flag im **Flags** -Member der [**CHOOSECOLOR**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur fest.
-2.  Geben Sie die Adresse der Hook-Prozedur im **lpfnhook** -Member an.
+1.  Legen Sie das **CC \_ ENABLEHOOK-Flag** im **Flags-Member** der [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) fest.
+2.  Geben Sie die Adresse der Hookprozedur im **lpfnHook-Member** an.
 
-Nach der Verarbeitung der " [**WM \_ InitDialog**](wm-initdialog.md) "-Meldung sendet die Dialogfeld Prozedur eine " **WM \_ InitDialog** "-Meldung an die Hook-Prozedur. Der *LPARAM* -Parameter dieser Nachricht ist ein Zeiger auf die " [**choolcolor**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) "-Struktur, die verwendet wird, um das Dialogfeld zu initialisieren.
+Nach der Verarbeitung der [**WM \_ INITDIALOG-Nachricht**](wm-initdialog.md) sendet die Dialogfeldprozedur eine **WM \_ INITDIALOG-Nachricht** an die Hookprozedur. Der *lParam-Parameter* dieser Nachricht ist ein Zeiger auf die [**CHOOSECOLOR-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) die zum Initialisieren des Dialogfelds verwendet wird.
 
-Wenn der Benutzer auf die Schaltfläche **OK** klickt, sendet das Dialogfeld die registrierte [**colorokstring**](colorokstring.md) -Nachricht an die Hook-Prozedur. Die Hook-Prozedur kann die ausgewählte Farbe ablehnen und erzwingen, dass das Dialogfeld geöffnet bleibt, indem beim Empfang dieser Nachricht 0 (null) zurückgegeben wird. Die Hook-Prozedur kann erzwingen, dass das Dialogfeld eine bestimmte Farbe auswählt, indem Sie die registrierte Nachricht "" von "*" [**an das Dialog**](setrgbstring.md) Feld sendet. Um diese registrierten Nachrichten zu verwenden, müssen Sie die Konstanten " **colorokstring** " und " **strgbstring** " an die [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) -Funktion übergeben, um eine Nachrichten-ID zu erhalten. Anschließend können Sie den Bezeichner verwenden, um über das Dialogfeld gesendete Nachrichten zu erkennen und zu verarbeiten oder um Nachrichten an das Dialogfeld zu senden.
+Das Dialogfeld sendet die registrierte [**COLOROKSTRING-Nachricht**](colorokstring.md) an die Hookprozedur, wenn der Benutzer auf die Schaltfläche **OK** klickt. Die Hookprozedur kann die ausgewählte Farbe ablehnen und erzwingen, dass das Dialogfeld geöffnet bleibt, indem null zurückgegeben wird, wenn diese Meldung empfangen wird. Die Hookprozedur kann erzwingen, dass das Dialogfeld eine bestimmte Farbe auswählt, indem die registrierte [**SETRGBSTRING-Nachricht**](setrgbstring.md) an das Dialogfeld gesendet wird. Um diese registrierten Nachrichten zu verwenden, müssen Sie die Konstanten **COLOROKSTRING** und **SETRGBSTRING** an die [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) übergeben, um einen Nachrichtenbezeichner abzurufen. Anschließend können Sie den Bezeichner verwenden, um vom Dialogfeld gesendete Nachrichten zu erkennen und zu verarbeiten oder um Nachrichten an das Dialogfeld zu senden.
 
-## <a name="color-models-used-by-the-color-dialog-box"></a>Farbmodelle, die im Dialog Feld "Farbe" verwendet werden
+## <a name="color-models-used-by-the-color-dialog-box"></a>Vom Dialogfeld "Farbe" verwendete Farbmodelle
 
-Mit der Erweiterung benutzerdefinierte Farben des Dialog Felds Farbe kann der Benutzer eine Farbe mithilfe von RGB-oder HSL-Werten angeben. Allerdings verwendet die [**chooset Color**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) -Struktur nur RGB-Werte, um die vom Benutzer erstellten oder ausgewählten Farben zu melden.
+Die Benutzerdefinierte Farberweiterung des Dialogfelds Farbe ermöglicht es dem Benutzer, eine Farbe mit RGB- oder HSL-Werten anzugeben. Die [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) verwendet jedoch nur RGB-Werte, um die vom Benutzer erstellten oder ausgewählten Farben zu melden.
 
 -   [RGB-Farbmodell](#rgb-color-model)
 -   [HSL-Farbmodell](#hsl-color-model)
--   [HSL-Werte werden in RGB-Werte umgerechnet](#converting-hsl-values-to-rgb-values)
+-   [Konvertieren von HSL-Werten in RGB-Werte](#converting-hsl-values-to-rgb-values)
 
 ### <a name="rgb-color-model"></a>RGB-Farbmodell
 
-Das RGB-Modell wird verwendet, um Farben für anzeigen und andere Geräte anzugeben, die ein Licht ausgeben. Gültige rote, grüne und blaue Werte reichen von 0 bis 255, wobei 0 die minimale Intensität und 255 angibt, die die maximale Intensität angibt. Die folgende Abbildung zeigt, wie die Primärfarben Rot, grün und blau kombiniert werden können, um vier zusätzliche Farben zu schaffen. (Bei Anzeigegeräten ist die Farbe schwarz, wenn die Werte rot, grün und blau auf 0 festgelegt sind. In der Anzeige Technologie ist schwarz das Fehlen aller Farben.)
+Das RGB-Modell wird verwendet, um Farben für Displays und andere Geräte festzulegen, die Licht ausgeben. Gültige rote, grüne und blaue Werte liegen zwischen 0 und 255, wobei 0 die minimale Intensität und 255 die maximale Intensität angeben. Die folgende Abbildung zeigt, wie die Primärfarben Rot, Grün und Blau kombiniert werden können, um vier zusätzliche Farben zu erzeugen. (Bei Anzeigegeräten wird die Farbe Schwarz angezeigt, wenn die Werte rot, grün und blau auf 0 festgelegt sind. In der Anzeigetechnologie ist Schwarz das Fehlen aller Farben.)
 
-![überlappende rote, grüne und blaue Kreise](images/rgbcolormodel.png)
+![Überlappende rote, grüne und blaue Kreise](images/rgbcolormodel.png)
 
-In der folgenden Tabelle werden acht Farben des RGB-Modells und die zugehörigen RGB-Werte aufgelistet.
+In der folgenden Tabelle sind acht Farben des RGB-Modells und die zugehörigen RGB-Werte aufgeführt.
 
 
 
@@ -127,30 +127,30 @@ In der folgenden Tabelle werden acht Farben des RGB-Modells und die zugehörigen
 | Cyan    | 0, 255, 255   |
 | Magenta | 255, 0, 255   |
 | Gelb  | 255, 255, 0   |
-| Weiß   | 255, 255, 255 |
+| White   | 255, 255, 255 |
 | Schwarz   | 0, 0, 0       |
 
 
 
  
 
-Das System speichert interne Farben als 32-Bit-RGB-Werte, die die folgende hexadezimale Form aufweisen: 0x00bbggrr.
+Das System speichert interne Farben als 32-Bit-RGB-Werte mit der folgenden hexadezimalen Form: 0x00bbggrr.
 
-Das nieder wertige Byte enthält einen Wert für die relative Intensität von rot. Das zweite Byte enthält einen Wert für grün; Das dritte Byte enthält einen Wert für blau. Das höchst wertige Byte muss NULL sein.
+Das Low-Order-Byte enthält einen Wert für die relative Intensität von Rot. Das zweite Byte enthält einen Wert für Grün. und das dritte Byte enthält einen Wert für blau. Das höher geordnete Byte muss 0 (null) sein.
 
-Sie können das [**RGB**](/windows/desktop/api/wingdi/nf-wingdi-rgb) -Makro verwenden, um einen RGB-Wert basierend auf den angegebenen Intensitäten für die roten, grünen und blauen Komponenten zu erhalten. Verwenden Sie die Makros [**getrvalue**](/windows/desktop/api/wingdi/nf-wingdi-getrvalue), [**getbvalue**](/windows/desktop/api/wingdi/nf-wingdi-getbvalue)und [**getgvalue**](/windows/desktop/api/wingdi/nf-wingdi-getgvalue) , um einzelne Farben aus einem RGB-Farbwert zu extrahieren.
+Sie können das [**RGB-Makro**](/windows/desktop/api/wingdi/nf-wingdi-rgb) verwenden, um einen RGB-Wert basierend auf den angegebenen Intensitäten für die roten, grünen und blauen Komponenten abzurufen. Verwenden Sie die Makros [**GetRValue,**](/windows/desktop/api/wingdi/nf-wingdi-getrvalue) [**GetBValue**](/windows/desktop/api/wingdi/nf-wingdi-getbvalue)und [**GetGValue,**](/windows/desktop/api/wingdi/nf-wingdi-getgvalue) um einzelne Farben aus einem RGB-Farbwert zu extrahieren.
 
 ### <a name="hsl-color-model"></a>HSL-Farbmodell
 
-Das Dialogfeld Farbe stellt Steuerelemente zum Angeben von HSL-Werten bereit. Die folgende Abbildung zeigt das Farbspektrum-Steuerelement und das Steuerelement für die Helligkeit, das im Dialogfeld Farbe angezeigt wird. Die Abbildung zeigt auch die Wertebereiche, die der Benutzer mit diesen Steuerelementen angeben kann.
+Das Dialogfeld Farbe stellt Steuerelemente zum Angeben von HSL-Werten bereit. Die folgende Abbildung zeigt das Farbspektrum-Steuerelement und das Helligkeits-Schiebesteuerelement, das im Dialogfeld Farbe angezeigt wird. Die Abbildung zeigt auch die Wertebereiche, die der Benutzer mit diesen Steuerelementen angeben kann.
 
-![Farbspektrum und Leuchtkraft Skala](images/colordialogranges.png)
+![Farbspektrum und Helligkeitsskala](images/colordialogranges.png)
 
-Im Dialogfeld Farbe müssen die Werte für Sättigung und Helligkeit im Bereich von 0 bis 240 liegen, und der Hue-Wert muss zwischen 0 und 239 liegen.
+Im Dialogfeld Farbe müssen sich die Werte für Sättigung und Helligkeit im Bereich von 0 bis 240 und der Farbtonwert im Bereich von 0 bis 239 liegen.
 
-### <a name="converting-hsl-values-to-rgb-values"></a>HSL-Werte werden in RGB-Werte umgerechnet
+### <a name="converting-hsl-values-to-rgb-values"></a>Konvertieren von HSL-Werten in RGB-Werte
 
-Die in Comdlg32.dll für das Dialogfeld Farbe bereitgestellte Dialogfeld Prozedur enthält Code, mit dem HSL-Werte in die entsprechenden RGB-Werte konvertiert werden. In der folgenden Tabelle werden acht Farben des RGB-Modells und die zugehörigen HSL-und RGB-Werte aufgelistet.
+Die in Comdlg32.dll für das Dialogfeld Farbe bereitgestellte Dialogfeldprozedur enthält Code, der HSL-Werte in die entsprechenden RGB-Werte konvertiert. In der folgenden Tabelle sind acht Farben des RGB-Modells und die zugehörigen HSL- und RGB-Werte aufgeführt.
 
 
 
@@ -160,9 +160,9 @@ Die in Comdlg32.dll für das Dialogfeld Farbe bereitgestellte Dialogfeld Prozedu
 | Gelb  | (40, 240, 120)  | (255, 255, 0)   |
 | Grün   | (80, 240, 120)  | (0, 255, 0)     |
 | Cyan    | (120, 240, 120) | (0, 255, 255)   |
-| Blau    | (160, 240, 120) | (255 0,0)     |
+| Blau    | (160, 240, 120) | (0, 0, 255)     |
 | Magenta | (200, 240, 120) | (255, 0, 255)   |
-| Weiß   | (240 0,0)     | (255, 255, 255) |
+| White   | (0, 0, 240)     | (255, 255, 255) |
 | Schwarz   | (0, 0, 0)       | (0, 0, 0)       |
 
 

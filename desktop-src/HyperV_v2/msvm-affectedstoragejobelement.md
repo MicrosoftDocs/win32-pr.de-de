@@ -17,14 +17,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d900f42e5022301a08ebeee0036400be3a2f1bf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9eed09eab5a2bbb6985d1dc230d12a4f60fe5834b3fce1927036b560adc5d7e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693520"
 ---
-# <a name="msvm_affectedstoragejobelement-class"></a>MSVM \_ affectedstoragejobelements-Klasse
+# <a name="msvm_affectedstoragejobelement-class"></a>Msvm \_ AffectedStorageJobElement-Klasse
 
 Stellt die Zuordnung zwischen einem Auftrag und den verwalteten Elementen dar, die von seiner Ausführung betroffen sein können.
 
@@ -45,20 +45,20 @@ class Msvm_AffectedStorageJobElement : CIM_AffectedJobElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ affectedstoragejobelements** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ AffectedStorageJobElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ affectedstoragejobelements** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ AffectedStorageJobElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Affectedelta-Element**
+**AffectedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
+Datentyp: **[ **CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -67,36 +67,36 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Das verwaltete Element, das von der Ausführung des Auftrags betroffen ist. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Das verwaltete Element, das von der Ausführung des Auftrags betroffen ist. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> <dt>
 
-**Affectingelement**
+**AffectingElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ storagejob**](msvm-storagejob.md)**
+Datentyp: **[ **Msvm \_ StorageJob**](msvm-storagejob.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ affectedjobelement. affectingelement")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ AffectedJobElement.AffectingElement")
 </dt> </dl>
 
-Der Auftrag, der sich auf das betroffene Element auswirkt. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Der Auftrag, der das betroffene Element beeinflusst. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> <dt>
 
-**Elementeffects**
+**ElementEffects**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Enumeration, die den Effekt auf das verwaltete Element beschreibt. Dieses Array entspricht dem **otherelementeffectbeschreigenschaftenarray** , bei dem letztere Details zu den von dieser Eigenschaft aufgelisteten Grund Effekten bereitstellt. Weitere Details sind erforderlich, wenn das **elementeffects** -Eigenschafts Array den Wert 1 (Sonstiges) enthält. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Eine Enumeration, die die Auswirkung auf das verwaltete Element beschreibt. Dieses Array entspricht dem **OtherElementEffectsDescriptions-Eigenschaftenarray,** wobei letztere Details zu den von dieser Eigenschaft aufzählten auswirkungen auf hoher Ebene enthält. Zusätzliche Details sind erforderlich, wenn das **ElementEffects-Eigenschaftenarray** den Wert 1, (Other) enthält. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 <dl> <dt>
 
@@ -109,30 +109,30 @@ Eine Enumeration, die den Effekt auf das verwaltete Element beschreibt. Dieses A
 <span id="Exclusive_Use"></span><span id="exclusive_use"></span><span id="EXCLUSIVE_USE"></span>**Exklusive Verwendung** (2)
 </dt> <dt>
 
-<span id="Performance_Impact"></span><span id="performance_impact"></span><span id="PERFORMANCE_IMPACT"></span>**Leistungs Beeinträchtigung** (3)
+<span id="Performance_Impact"></span><span id="performance_impact"></span><span id="PERFORMANCE_IMPACT"></span>**Auswirkungen auf die** Leistung (3)
 </dt> <dt>
 
-<span id="Element_Integrity_"></span><span id="element_integrity_"></span><span id="ELEMENT_INTEGRITY_"></span>**Element Integrität** (4)
+<span id="Element_Integrity_"></span><span id="element_integrity_"></span><span id="ELEMENT_INTEGRITY_"></span>**Elementintegrität** (4 )
 </dt> </dl>
 
 </dd> <dt>
 
-**Otherelementeffect-Beschreibungen**
+**OtherElementEffectsDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Details für den Effekt an der entsprechenden Array Position im **elementeffects** -Eigenschafts Array bereit. Diese Informationen sind immer dann erforderlich, wenn das entsprechende Element im **elementeffects** -Eigenschafts Array den Wert 1 (Sonstiges) enthält. Diese Eigenschaft wird von [**CIM \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))geerbt.
+Stellt Details für den Effekt an der entsprechenden Arrayposition im **ElementEffects-Eigenschaftenarray** dar. Diese Informationen sind immer dann erforderlich, wenn das entsprechende Element im **ElementEffects-Eigenschaftenarray** den Wert 1 (Sonstige) enthält. Diese Eigenschaft wird von [**CIM \_ AffectedJobElement geerbt.**](/previous-versions//cc150663(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ affectedstoragejobelements** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ AffectedStorageJobElement-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -140,10 +140,10 @@ Der Zugriff auf die **MSVM \_ affectedstoragejobelements** -Klasse kann durch di
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -152,13 +152,13 @@ Der Zugriff auf die **MSVM \_ affectedstoragejobelements** -Klasse kann durch di
 
 <dl> <dt>
 
-[**CIM- \_ affectedjobelements**](cim-affectedjobelement.md)
+[**CIM \_ AffectedJobElement**](cim-affectedjobelement.md)
 </dt> <dt>
 
-[**CIM- \_ affectedjobelements**](/previous-versions//cc150663(v=vs.85))
+[**CIM \_ AffectedJobElement**](/previous-versions//cc150663(v=vs.85))
 </dt> <dt>
 
-[Speicher Klassen](storage-classes.md)
+[Storage Klassen](storage-classes.md)
 </dt> </dl>
 
  

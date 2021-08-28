@@ -1,11 +1,11 @@
 ---
 title: Win32_TSGatewayLoadBalancer-Klasse
-description: Beschreibt eine Gruppe von Remotedesktop Gateway-Lasten Ausgleichs Servern (RD-Gateway). Diese werden verwendet, um einen Lastenausgleich RD-Gateway Verbindungen über mehrere Server hinweg durchzusetzen.
+description: Beschreibt eine Reihe von Lastenausgleichsservern Remotedesktop Gateways (RD-Gateway). Diese werden zum Lastenausgleich von RD-Gatewayverbindungen über mehrere Server hinweg verwendet.
 ms.assetid: aa7e7b77-7233-4c6a-8f41-cc332fa509d5
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSGatewayLoadBalancer-Klasse Remotedesktopdienste
-- Win32_TSGatewayLoadBalancer Klasse Remotedesktopdienste, beschrieben
+- Win32_TSGatewayLoadBalancer-Remotedesktopdienste
+- Win32_TSGatewayLoadBalancer klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4956ed4dc9536ff6f7e3263071a2a477cb0f515
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 584077911faf8593e7c26aadd36ca17a0a11d82b18d1d6ade20be1f1444fedf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769870"
 ---
-# <a name="win32_tsgatewayloadbalancer-class"></a>Win32-Klasse "t- \_ gatewayloadbalancer"
+# <a name="win32_tsgatewayloadbalancer-class"></a>Win32 \_ TSGatewayLoadBalancer-Klasse
 
-Beschreibt eine Gruppe von Remotedesktop Gateway-Lasten Ausgleichs Servern (RD-Gateway). Diese werden verwendet, um einen Lastenausgleich RD-Gateway Verbindungen über mehrere Server hinweg durchzusetzen.
+Beschreibt eine Reihe von Lastenausgleichsservern Remotedesktop Gateways (RD-Gateway). Diese werden zum Lastenausgleich von RD-Gatewayverbindungen über mehrere Server hinweg verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,24 +40,24 @@ class Win32_TSGatewayLoadBalancer
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zgatewayloadbalancer** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSGatewayLoadBalancer-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zgatewayloadbalancer** " verfügt über diese Methoden.
+Die **Win32 \_ TSGatewayLoadBalancer-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                                                                                      |
+| Methode                                                                             | Beschreibung                                                                                                      |
 |:-----------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
-| [**Addservers**](addservers-win32-tsgatewayloadbalancer.md)                       | Fügt der **Server** Eigenschaft Server hinzu.<br/>                                                             |
-| [**Deleteallservers**](deleteallservers-win32-tsgatewayloadbalancer.md)           | Löscht alle RD-Gateway Lasten Ausgleichs Server, die Teil der Lasten Ausgleichs Farm sind.<br/>               |
-| [**Delta Server**](deleteservers-win32-tsgatewayloadbalancer.md)                 | Löscht Server aus der **Server** -Eigenschaft.<br/>                                                        |
-| [**Isloadbalancingserver**](win32-tsgatewayloadbalancer-isloadbalancingserver.md) | Bestimmt, ob der Server einen Lastenausgleich durchführen kann.<br/>                                             |
-| [**Setservers**](setservers-win32-tsgatewayloadbalancer.md)                       | Legt die **Server** -Eigenschaft mit der durch Semikolons getrennten Liste von RD-Gateway Lasten Ausgleichs Servern fest.<br/> |
+| [**AddServers**](addservers-win32-tsgatewayloadbalancer.md)                       | Fügt der **Server-Eigenschaft Server** hinzu.<br/>                                                             |
+| [**DeleteAllServers**](deleteallservers-win32-tsgatewayloadbalancer.md)           | Löscht alle RD-Gateway-Lastenausgleichsserver, die an der Lastenausgleichsfarm teilnehmen.<br/>               |
+| [**DeleteServers**](deleteservers-win32-tsgatewayloadbalancer.md)                 | Löscht Server aus der **Server-Eigenschaft.**<br/>                                                        |
+| [**IsLoadBalancingServer**](win32-tsgatewayloadbalancer-isloadbalancingserver.md) | Bestimmt, ob der Server einen Lastenausgleich durchführen kann.<br/>                                             |
+| [**SetServers**](setservers-win32-tsgatewayloadbalancer.md)                       | Legt die **Server-Eigenschaft** mit der durch Semikolons getrennten Liste von RD-Gateway-Lastenausgleichsservern fest.<br/> |
 
 
 
@@ -65,7 +65,7 @@ Die Win32-Klasse " **\_ zgatewayloadbalancer** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse "t- **\_ gatewayloadbalancer** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSGatewayLoadBalancer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -81,15 +81,15 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Durch Semikolons getrennte Liste der RD-Gateway Lasten Ausgleichs Server. Diese Eigenschaft kann mit den Methoden [**setservers**](setservers-win32-tsgatewayloadbalancer.md), [**addservers**](addservers-win32-tsgatewayloadbalancer.md), [**deleteservers**](deleteservers-win32-tsgatewayloadbalancer.md)und [**deleteallservers**](deleteallservers-win32-tsgatewayloadbalancer.md) geändert werden.
+Durch Semikolons getrennte Liste von RD-Gateway-Lastenausgleichsservern. Diese Eigenschaft kann mit den Methoden [**SetServers,**](setservers-win32-tsgatewayloadbalancer.md) [**AddServers,**](addservers-win32-tsgatewayloadbalancer.md) [**DeleteServers**](deleteservers-win32-tsgatewayloadbalancer.md)und [**DeleteAllServers geändert**](deleteallservers-win32-tsgatewayloadbalancer.md) werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,32 +99,32 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-"- \_ gatewayconnection"**](win32-tsgatewayconnection.md)
+[**Win32 \_ TSGatewayConnection**](win32-tsgatewayconnection.md)
 </dt> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> <dt>
 
-[**Win32-"t- \_ gatewayradiusserver"**](win32-tsgatewayradiusserver.md)
+[**Win32 \_ TSGatewayRADIUSServer**](win32-tsgatewayradiusserver.md)
 </dt> <dt>
 
-[**Win32- \_ faigatewayresourceauthorizationpolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
+[**Win32 \_ TSGatewayResourceAuthorizationPolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
 </dt> <dt>
 
-[**Win32-Datei " \_ zgatewayresourcegroup"**](win32-tsgatewayresourcegroup.md)
+[**Win32 \_ TSGatewayResourceGroup**](win32-tsgatewayresourcegroup.md)
 </dt> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

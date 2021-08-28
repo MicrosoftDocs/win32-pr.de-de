@@ -3,7 +3,7 @@
   items:
     - name: Neuerungen bei Windows Sockets
       href: what-s-new-for-windows-sockets-2.md
-    - name: Winsock-Netzwerkprotokollunterstützung unter Windows
+    - name: Winsock-Netzwerkprotokollunterstützung in Windows
       href: network-protocol-support-in-windows.md
     - name: Informationen zu Winsock
       href: about-winsock.md
@@ -19,7 +19,7 @@
               href: scatter-gather-i-o-2.md
             - name: Protocol-Independent Multicast und Multipoint
               href: protocol-independent-multicast-and-multipoint-2.md
-            - name: Flow Specification Quality of Service
+            - name: Flow Spezifikations-Quality of Service
               href: flow-specification-quality-of-service-2.md
             - name: Provider-Specific-Erweiterungsmechanismus
               href: provider-specific-extension-mechanism-2.md
@@ -33,12 +33,12 @@
               href: protocol-independent-out-of-band-data-2.md
             - name: Debug- und Ablaufverfolgungs-Funktionen
               href: debug-and-trace-facilities-2.md
-            - name: Kompatibilitätsprobleme mit Windows Sockets
+            - name: Windows Kompatibilitätsprobleme bei Sockets
               href: windows-sockets-compatibility-issues-2.md
               items:
                 - name: Standardzustand für das überlappende Attribut eines Sockets
                   href: default-state-for-a-socket-s-overlapped-attribute-2.md
-                - name: Blockierende Routinen für Windows Sockets 1.1 und EINPROGRESS
+                - name: Windows Sockets 1.1 Blockierende Routinen und EINPROGRESS
                   href: windows-sockets-1-1-blocking-routines-and-einprogress-2.md
             - name: Behandeln von Winsock-Fehlern
               href: handling-winsock-errors.md
@@ -56,11 +56,11 @@
           items:
             - name: Ereignisobjekte
               href: event-objects-2.md
-            - name: Empfangen von Abschlusshinweisen
+            - name: Empfangen von Vervollständigungshinweisen
               href: receiving-completion-indications-2.md
-            - name: Asynchrone Benachrichtigung mithilfe von Ereignisobjekten
+            - name: Asynchrone Benachrichtigung mit Ereignisobjekten
               href: asynchronous-notification-using-event-objects-2.md
-        - name: Registrierung und Namensauflösung
+        - name: Registrierungs- und Namensauflösung
           href: registration-and-name-resolution-2.md
           items:
             - name: Protocol-Independent Namensauflösung
@@ -90,7 +90,7 @@
         - name: Multipoint- und Multicastsemantik
           href: multipoint-and-multicast-semantics-2.md
           items:
-            - name: Multipunkttaxonomie
+            - name: Multipunkt-Taxonomie
               href: multipoint-taxonomy-2.md
             - name: Windows Sockets 2-Schnittstellenelemente für Multipoint und Multicast
               href: windows-sockets-2-interface-elements-for-multipoint-and-multicast-2.md
@@ -103,7 +103,7 @@
                   href: sio-multipoint-loopback-command-code-for-wsaioctl-2.md
                 - name: SIO_MULTICAST_SCOPE Befehlscode für WSAIoctl
                   href: sio-multicast-scope-command-code-for-wsaioctl-2.md
-            - name: Semantik für das Verknüpfen von Mehrpunktblättern
+            - name: Semantik für das Verknüpfen von Multipointblättern
               href: semantics-for-joining-multipoint-leaves-2.md
               items:
                 - name: Verwenden von WSAJoinLeaf
@@ -155,7 +155,7 @@
                   href: multicast-destination-addresses-2.md
                 - name: Automatisches IPv6-Tunneling und 6to4
                   href: automatic-tunneling-and-6to4-2.md
-                - name: Mit IPv6-Weiterleitung getunnelte Pakete
+                - name: Getunnelte IPv6-Weiterleitungspakete
                   href: forwarding-tunneled-packets-2.md
         - name: Network Location Awareness Service Provider (NLA)
           href: network-location-awareness-service-provider-nla--2.md
@@ -212,7 +212,7 @@
                     - name: Blockierende Vorgänge
                       href: blocking-operations-2.md
                       items:
-                        - name: Pseudoblockierung und True Blocking
+                        - name: Pseudoblockierung und TRUE-Blockierung
                           href: pseudo-vs--true-blocking-2.md
                         - name: Blockierende Hooks
                           href: blocking-hook-2.md
@@ -236,7 +236,7 @@
                           href: windows-messages-2.md
                         - name: Ereignisobjektsignalisierung
                           href: event-object-signaling-2.md
-                    - name: Socketgruppen in Windows Sockets 2 SPI
+                    - name: Socketgruppen in der Windows Sockets 2 SPI
                       href: socket-groups-in-the-windows-sockets-2-spi-2.md
                       items:
                         - name: Socketgruppenvorgänge
@@ -265,7 +265,7 @@
                           href: protocol-basics-listen-connect-accept-2.md
                         - name: Bestimmen von lokalen und Remotenamen
                           href: determining-local-and-remote-names-2.md
-                        - name: Erweiterte Funktionalität zur Verbindungszeit
+                        - name: Erweiterte Funktionalität zur Verbinden Zeitpunkt
                           href: enhanced-functionality-at-connect-time-2.md
                         - name: Herunterfahren der Verbindung
                           href: connection-shutdown-2.md
@@ -322,7 +322,7 @@
                           href: sio-multipoint-loopback-ioctl-2.md
                         - name: SIO_MULTICAST_SCOPE Ioctl
                           href: sio-multicast-scope-ioctl-2.md
-                        - name: SPI-Semantik zum Verbinden von Multipointblättern
+                        - name: SPI-Semantik zum Verbinden von Mehrpunktblättern
                           href: spi-semantics-for-joining-multipoint-leaves-2.md
                         - name: Verwenden von WSPJoinLeaf
                           href: using-wspjoinleaf-2.md
@@ -340,7 +340,7 @@
                       items:
                         - name: Generische Datentransportfunktionen
                           href: generic-data-transport-functions-2.md
-                        - name: Von Windows Sockets 2-DLL verfügbar gemachte Upcalls
+                        - name: 'Upcalls, die von Windows Sockets 2-DLL verfügbar gemacht werden'
                           href: upcalls-exposed-by-windows-sockets-2-dll-2.md
                         - name: Installations- und Konfigurationsfunktionen
                           href: installation-and-configuration-functions-2.md
@@ -372,7 +372,7 @@
                           href: name-space-provider-configuration-and-installation-2.md
                         - name: Initialisierung und Bereinigung des Namespaceanbieters
                           href: name-space-provider-initialization-and-cleanup-2.md
-                        - name: Dienstinstallation in Windows Sockets 2 SPI
+                        - name: Dienstinstallation in der Windows Sockets 2 SPI
                           href: service-installation-in-the-windows-sockets-2-spi-2.md
                         - name: Dienstabfrage
                           href: service-query-2.md
@@ -450,16 +450,16 @@
         - name: Sichere Winsock-Programmierung
           href: secure-winsock-programming.md
           items:
-            - name: Verwenden von SO_REUSEADDR und SO_EXCLUSIVEADDRUSE
+            - name: Verwenden SO_REUSEADDR und SO_EXCLUSIVEADDRUSE
               href: using-so-reuseaddr-and-so-exclusiveaddruse.md
-            - name: Winsock Secure Socket-Erweiterungen
+            - name: Winsock Secure Socket Extensions
               href: winsock-secure-socket-extensions.md
               items:
                 - name: Verwenden von Secure Socket-Erweiterungen
                   href: using-secure-socket-extensions.md
                 - name: Erweiterte Winsock-Beispiele mit Secure Socket-Erweiterungen
                   href: advanced-winsock-samples-using-secure-socket-extensions.md
-        - name: Portieren von Socketanwendungen in Winsock
+        - name: Portieren von Socketanwendungen zu Winsock
           href: porting-socket-applications-to-winsock.md
           items:
             - name: Socketdatentyp
@@ -476,46 +476,46 @@
               href: maximum-number-of-sockets-supported-2.md
             - name: Includedateien
               href: include-files-2.md
-            - name: Rückgabewerte bei Funktionsfehlern
+            - name: Rückgabewerte bei Funktionsfehler
               href: return-values-on-function-failure-2.md
-            - name: Rohdatensockets
+            - name: Unformatiert sockets
               href: service-provided-raw-sockets-2.md
             - name: Bytereihenfolge
               href: byte-ordering-2.md
-            - name: Erweiterte Byte-Order Konvertierungsroutinen
+            - name: Erweiterte Byte-Order-Konvertierungsroutinen
               href: extended-byte-order-conversion-routines-2.md
         - name: IPv6-Leitfaden für Windows Sockets-Anwendungen
           href: ipv6-guide-for-windows-sockets-applications-2.md
           items:
-            - name: Ändern von Datenstrukturen für IPv6-Winsock-Appications
+            - name: Ändern von Datenstrukturen für IPv6 Winsock-Appications
               href: changing-data-structures-2.md
-            - name: Funktionsaufrufe für IPv6-Winsock-Anwendungen
+            - name: Funktionsaufrufe für IPv6 Winsock-Anwendungen
               href: function-calls-2.md
             - name: Verwenden von hartcodierten IPv4-Adressen
               href: use-of-hardcoded-ipv4-addresses-2.md
-            - name: Benutzeroberfläche Probleme bei IPv6-Winsock-Anwendungen
+            - name: Benutzeroberfläche von IPv6-Winsock-Anwendungen
               href: user-interface-issues-2.md
-            - name: Zugrunde liegende Protokolle für IPv6-Winsock-Anwendungen
+            - name: Zugrunde liegende Protokolle für IPv6 Winsock-Anwendungen
               href: underlying-protocols-2.md
-            - name: Dual-Stack Sockets für IPv6-Winsockanwendungen
+            - name: Dual-Stack Sockets für IPv6 Winsock-Anwendungen
               href: dual-stack-sockets.md
-            - name: Verwenden des hilfsprogramms für Checkv4.exe
+            - name: Verwenden des Checkv4.exe-Hilfsprogramms
               href: using-the-checkv4-exe-utility-2.md
             - name: 'Anhang A: Nur IPv4-Quellcode'
               href: appendix-a-ipv4-only-source-code-2.md
               items:
-                - name: Nur-IPv4-Clientcode
+                - name: Nur IPv4-Clientcode
                   href: ipv4-only-client-code-2.md
-                - name: Nur-IPv4-Servercode
+                - name: Nur IPv4-Servercode
                   href: ipv4-only-server-code-2.md
-            - name: 'Anhang B: Agnostic Source Code der IP-Version'
+            - name: 'Anhang B: Ip-Version Agnostic Source Code'
               href: appendix-b-ip-version-agnostic-source-code-2.md
               items:
                 - name: IPv6-Enabled Clientcode
                   href: ipv6-enabled-client-code-2.md
                 - name: IPv6-Enabled Servercode
                   href: ipv6-enabled-server-code-2.md
-        - name: Leistungsstarke Windows Sockets-Anwendungen
+        - name: Hochleistungsanwendungen Windows Sockets
           href: high-performance-windows-sockets-applications-2.md
           items:
             - name: Netzwerkterminologie
@@ -525,7 +525,7 @@
               items:
                 - name: 'Leistungsanforderungen: Benutzer und Administratoren'
                   href: performance-needs-users-and-administrators-2.md
-                - name: Transaktions- und Streaminganwendungen
+                - name: Transaktions- im Vergleich zu Streaminganwendungen
                   href: transactional-versus-streaming-applications-2.md
                 - name: Verschiedene Netzwerkumgebungen
                   href: different-network-environments-2.md
@@ -545,37 +545,37 @@
               items:
                 - name: 'Baselineversion: Eine Anwendung mit sehr schlechter Leistung'
                   href: the-baseline-version-a-very-poor-performing-application-2.md
-                - name: 'Revision 1: Bereinigen des Offensichtlichen'
+                - name: 'Revision 1: Bereinigen des offensichtlichen'
                   href: revision-1-cleaning-up-the-obvious-2.md
-                - name: 'Revision 2: Umgestaltung für weniger Verbindungen'
+                - name: 'Revision 2: Neugestaltung für weniger Verbindungen'
                   href: revision-2-redesigning-for-fewer-connects-2.md
-                - name: 'Revision Three: Compressed Block Send'
+                - name: 'Revision 3: Compressed Block Send'
                   href: revision-3-compressed-block-send-2.md
                 - name: Zukünftige Verbesserungen
                   href: future-improvements-2.md
             - name: Bewährte Methoden für interaktive Anwendungen
               href: best-practices-for-interactive-applications-2.md
-        - name: Kategorisieren von mehrstufigen Dienstanbietern und Apps
+        - name: Kategorisieren von mehrschichtigen Dienstanbietern und Apps
           href: categorizing-layered-service-providers-and-applications.md
         - name: Multicastprogrammierung
           href: multicast-programming.md
           items:
             - name: MLD und IGMP mit Windows Sockets
               href: igmp-and-windows-sockets.md
-            - name: Multicastsocket-Optionsverhalten
+            - name: Verhalten der Multicastsocketoption
               href: multicast-socket-option-behavior.md
             - name: Multicastprogrammierungsbeispiel
               href: multicast-programming-sample.md
-            - name: Endzustandsbasierte Multicastprogrammierung
+            - name: Final-State-Based Multicast Programming
               href: final-state-based-multicast-programming.md
             - name: Portieren von Broadcastanwendungen zu IPv6
               href: porting-broadcast-applications-to-ipv6.md
-        - name: 'Zuverlässige Multicastprogrammierung (Reliable Multicast Programming, PGM)'
+        - name: Zuverlässige Multicastprogrammierung (PGM)
           href: reliable-multicast-programming--pgm-.md
           items:
             - name: PGM-Absender und -Empfänger
               href: pgm-senders-and-receivers.md
-            - name: Optionen für PGM-Absender
+            - name: PGM-Senderoptionen
               href: pgm-sender-options.md
             - name: Senden und Empfangen von PGM-Daten
               href: sending-and-receiving-pgm-data.md
@@ -590,15 +590,15 @@
               href: winsock-tracing-levels.md
             - name: Steuerung der Winsock-Ablaufverfolgung
               href: control-of-winsock-tracing.md
-            - name: Details zur Ablaufverfolgung von Winsock-Netzwerkereignissen
+            - name: Details zur Winsock Network-Ereignisablaufverfolgung
               href: winsock-tracing-event-details.md
-            - name: Ablaufverfolgungsdetails für Winsock-Katalogänderungen
+            - name: Details zur Ablaufverfolgung für Winsock-Katalogänderung
               href: winsock-layered-service-provider-tracing-event-details.md
         - name: Winsock-Zeitstempel
           href: winsock-timestamping.md
-        - name: Winsock-Benachrichtigung über explizite Überlastung
+        - name: Explizite Winsock-Überlastungsbenachrichtigung
           href: winsock-ecn.md
-        - name: Winsock-Socketstatusbenachrichtigungen
+        - name: Winsock-Socketzustandsbenachrichtigungen
           href: winsock-socket-state-notifications.md
     - name: Winsock-Referenz
       href: winsock-reference.md
@@ -684,7 +684,7 @@
               href: sio-tcp-info.md
             - name: SIO_TCP_INITIAL_RTO
               href: sio-tcp-initial-rto.md
-        - name: Winsock- Datenbank
+        - name: Winsock-1600
           href: winsock-annexes.md
           items:
             - name: Winsock ATM-Anhang
@@ -692,30 +692,30 @@
               items:
                 - name: Winsock ATM-Steuerelemente
                   href: winsock-atm-controls.md
-                - name: Funktionsdetails zu Winsock ATM
+                - name: Details zur Winsock ATM-Funktion
                   href: winsock-atm-function-details.md
-                - name: Winsock ATM QoS-Erweiterung
+                - name: QoS-Erweiterung für Winsock ATM
                   href: winsock-atm-qos-extension.md
                   items:
                     - name: AAL-Parameter
                       href: aal-parameters-2.md
-                    - name: ATM-Datenverkehrsdeskriptor
+                    - name: AtM-Datenverkehrsdeskriptor
                       href: atm-traffic-descriptor-2.md
                     - name: Breitband-Bearerfunktion
                       href: broadband-bearer-capability-2.md
-                    - name: Informationen zur hohen Breitbandebene
+                    - name: Informationen zur breitbandigen Hochebene
                       href: broadband-high-layer-information-2.md
                     - name: Informationen zur unteren Breitbandebene
                       href: broadband-lower-layer-information-2.md
-                    - name: Aufgerufene Parteinummer
+                    - name: Nummer der aufgerufenen Partei
                       href: called-party-number-2.md
-                    - name: Subaddress der aufgerufenen Partei
+                    - name: Aufgerufene Parteiunteradresse
                       href: called-party-subaddress-2.md
-                    - name: Nummer der aufrufenden Partei
+                    - name: Nummer der anrufenden Partei
                       href: calling-party-number-2.md
                     - name: Unteradresse der aufrufenden Partei
                       href: calling-party-subaddress-2.md
-                    - name: Quality of Service Parameter
+                    - name: Quality of Service-Parameter
                       href: quality-of-service-parameter-2.md
                     - name: Auswahl des Transitnetzwerks
                       href: transit-network-selection-2.md
@@ -732,18 +732,18 @@
                       href: /windows/win32/api/Ws2atm/ns-ws2atm-atm_blli
                     - name: sockaddr_atm
                       href: /windows/win32/api/Ws2atm/ns-ws2atm-sockaddr_atm
-            - name: Winsock IPX/SPX-Anhang
+            - name: Winsock IPX/SPX Anhang
               href: winsock-ipx-spx-annex.md
               items:
-                - name: AF_IPX-Adressfamilie
+                - name: AF_IPX Adressfamilie
                   href: af-ipx-address-family-2.md
                 - name: IPX-Familie von Protokollbezeichnern
                   href: ipx-family-of-protocol-identifiers-2.md
                 - name: Übertragung an lokales Netzwerk
                   href: broadcast-to-local-network-2.md
-                - name: Übertragung aller Routen
+                - name: Alle Routen übertragen
                   href: all-routes-broadcast-2.md
-                - name: Gerichtete Übertragung
+                - name: Directed Broadcast
                   href: directed-broadcast-2.md
                 - name: Informationen zur Medienpaketgröße
                   href: about-media-packet-size-2.md
@@ -758,23 +758,23 @@
                       href: /windows/win32/api/Wsnwlink/ns-wsnwlink-ipx_netnum_data
                     - name: IPX_SPXCONNSTATUS_DATA
                       href: /windows/win32/api/Wsnwlink/ns-wsnwlink-ipx_spxconnstatus_data
-            - name: Winsock TCP/IP-Anhang
+            - name: Winsock TCP/IP Anhang
               href: winsock-tcp-ip-annex.md
               items:
-                - name: Verwenden von UNIX-Ioctls in Winsock
+                - name: Verwenden von UNIX Ioctls in Winsock
                   href: using-unix-ioctls-in-winsock.md
-                - name: Details zur WINSOCK-TCP/IP-Funktion
+                - name: Details zur Winsock-TCP/IP-Funktion
                   href: winsock-tcp-ip-function-details.md
                   items:
                     - name: Multicast
                       href: multicast-2.md
-                    - name: Unformatiert TCP/IP-Sockets
+                    - name: UNFORMATIERTE TCP/IP-Sockets
                       href: tcp-ip-raw-sockets-2.md
                     - name: IPv6-Unterstützung
                       href: ipv6-support-2.md
                     - name: Textdarstellung von IPv6-Adressen
                       href: text-representation-of-ipv6-addresses-2.md
-                - name: Winsock TCP/IP-Strukturen
+                - name: Winsock-TCP/IP-Strukturen
                   href: winsock-tcp-ip-structures.md
                   items:
                     - name: INTERFACE_INFO
@@ -1533,7 +1533,7 @@
                   href: /windows/win32/api/Ws2spi/nf-ws2spi-wspstartup
                 - name: LPWSPSTRINGTOADDRESS
                   href: /windows/win32/api/Ws2spi/nc-ws2spi-lpwspstringtoaddress
-            - name: Winsock-SPI-Strukturen
+            - name: Winsock SPI-Strukturen
               href: winsock-spi-structures.md
               items:
                 - name: NSP_ROUTINE

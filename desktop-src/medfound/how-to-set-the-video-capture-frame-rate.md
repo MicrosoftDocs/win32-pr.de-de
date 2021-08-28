@@ -1,46 +1,46 @@
 ---
-description: Ein Video Erfassungsgerät unterstützt möglicherweise einen Bereich von Frameraten.
+description: Ein Videoaufnahmegerät unterstützt möglicherweise eine Reihe von Bildfrequenzen.
 ms.assetid: 9578e60d-0339-4382-b798-2d31d2ddbe76
-title: Festlegen der Frame Rate für die Video Erfassung
+title: Festlegen der Videoaufnahme-Bildfrequenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44e105965f5449cb7f4cab59f49410ecfb40221c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b0e80c26c5a53a89cbc87ca509f25db1ebccf4571b4dda2e83ea63717c7d91a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827970"
 ---
-# <a name="how-to-set-the-video-capture-frame-rate"></a>Festlegen der Frame Rate für die Video Erfassung
+# <a name="how-to-set-the-video-capture-frame-rate"></a>Festlegen der Videoaufnahme-Bildfrequenz
 
-Ein Video Erfassungsgerät unterstützt möglicherweise einen Bereich von Frameraten. Wenn diese Informationen verfügbar sind, werden die minimalen und maximalen Frameraten als Medientyp Attribute gespeichert:
+Ein Videoaufnahmegerät unterstützt möglicherweise eine Reihe von Bildfrequenzen. Wenn diese Informationen verfügbar sind, werden die minimalen und maximalen Bildraten als Medientypattribute gespeichert:
 
 
 
-| Attribut                                                         | BESCHREIBUNG         |
+| attribute                                                         | Beschreibung         |
 |-------------------------------------------------------------------|---------------------|
-| [maximal zulässige Anzahl von MF- \_ MT- \_ Frame \_ Raten \_ \_](mf-mt-frame-rate-range-max.md) | Maximale Framerate. |
-| [Bereich für die Anzahl von MF \_ MT- \_ Frame \_ Raten \_ \_](mf-mt-frame-rate-range-min.md) | Minimale Framerate. |
+| [MF \_ MT \_ FRAME \_ RATE \_ RANGE \_ MAX](mf-mt-frame-rate-range-max.md) | Maximale Bildfrequenz. |
+| [MF \_ MT \_ FRAME \_ RATE \_ RANGE \_ MIN](mf-mt-frame-rate-range-min.md) | Minimale Bildfrequenz. |
 
 
 
  
 
-Der Bereich kann je nach Erfassungs Format variieren. Beispielsweise kann bei größeren Frame Größen die maximale Framerate reduziert werden.
+Der Bereich kann je nach Erfassungsformat variieren. Bei größeren Rahmengrößen kann beispielsweise die maximale Bildfrequenz reduziert werden.
 
-So legen Sie die Framerate fest:
+So legen Sie die Bildfrequenz fest:
 
-1.  Erstellen Sie die Medienquelle für das Erfassungsgerät. Weitere Informationen finden Sie unter Auflisten von [Video Erfassungs Geräten](enumerating-video-capture-devices.md).
-2.  Aufrufen von [**imfmediasource:: foratepresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) für die Medienquelle zum Abrufen des Präsentations Deskriptors.
-3.  Aufrufen von [**imfpresentationdescriptor:: getstreamdescriptorbyindex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) zum Abrufen des streamdeskriptors für den Videostream.
-4.  Aufrufen von [**imfstreamdescriptor:: getmediatypeer Handler**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamdescriptor-getmediatypehandler) für den Datenstrom Deskriptor.
-5.  Auflisten der Erfassungs Formate, wie unter Gewusst [wie: Festlegen des Video Erfassungs Formats](how-to-set-the-video-capture-format.md)beschrieben.
+1.  Erstellen Sie die Medienquelle für das Erfassungsgerät. Weitere Informationen finden Sie unter [Enumerating Video Capture Devices (Aufzählen von Videoaufnahmegeräten).](enumerating-video-capture-devices.md)
+2.  Rufen Sie [**ÜBER DIE MEDIENQUELLE::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) für die Medienquelle auf, um den Präsentationsdeskriptor abzurufen.
+3.  Rufen Sie [**DIE DATEI PRESENTPresentationDescriptor::GetStreamDescriptorByIndex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex) auf, um den Streamdeskriptor für den Videostream abzurufen.
+4.  Rufen Sie IM STREAM-Deskriptor [**DIESSTREAMDESCRIPTOR::GetMediaTypeHandler**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamdescriptor-getmediatypehandler) auf.
+5.  Aufzählen der Aufzeichnungsformate, wie unter [Festlegen des Videoaufnahmeformats](how-to-set-the-video-capture-format.md)beschrieben.
 6.  Wählen Sie das gewünschte Ausgabeformat aus der Liste aus.
-7.  Fragen Sie den Medientyp für den Bereich " [MF \_ MT \_ Frame \_ Rate \_ Range \_ Max](mf-mt-frame-rate-range-max.md) " und " [MF \_ MT \_ Frame \_ Rate \_ Range \_ Min](mf-mt-frame-rate-range-min.md) Attribute" ab. Diese Werte gibt den Bereich der unterstützten Frameraten an. Das Gerät unterstützt möglicherweise andere Frameraten innerhalb dieses Bereichs.
-8.  Legen Sie das [**MF \_ MT- \_ Frame**](mf-mt-frame-rate-attribute.md) -Attribut für den Medientyp fest, um die gewünschte Frame Rate anzugeben.
-9.  Aufrufen von [**imfmediatyphandler:: setcurrentmediatype**](/windows/desktop/api/mfidl/nf-mfidl-imfmediatypehandler-setcurrentmediatype) mit dem geänderten Medientyp.
+7.  Fragen Sie den Medientyp nach den Attributen [MF MT FRAME RATE RANGE \_ \_ \_ \_ \_ MAX](mf-mt-frame-rate-range-max.md) und [MF MT FRAME RATE RANGE \_ \_ \_ \_ \_ MIN](mf-mt-frame-rate-range-min.md) ab. Diese Werte geben den Bereich der unterstützten Frameraten an. Das Gerät unterstützt möglicherweise andere Bildfrequenzen innerhalb dieses Bereichs.
+8.  Legen Sie das [**MF \_ MT \_ FRAME-Attribut**](mf-mt-frame-rate-attribute.md) für den Medientyp fest, um die gewünschte Bildfrequenz anzugeben.
+9.  Rufen Sie [**ÜBERMEDIATypeHandler::SetCurrentMediaType**](/windows/desktop/api/mfidl/nf-mfidl-imfmediatypehandler-setcurrentmediatype) den geänderten Medientyp auf.
 
-Im folgenden Beispiel wird die Framerate auf die maximale Framerate festgelegt, die vom Gerät unterstützt wird:
+Im folgenden Beispiel wird die Bildfrequenz auf die maximale Bildfrequenz festgelegt, die das Gerät unterstützt:
 
 
 ```C++
@@ -111,7 +111,7 @@ done:
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

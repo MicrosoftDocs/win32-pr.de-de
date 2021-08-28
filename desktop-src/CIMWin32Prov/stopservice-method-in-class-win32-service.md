@@ -1,8 +1,8 @@
 ---
-description: Versetzt den Dienst, der durch das Win32- \_ Dienst Objekt dargestellt wird, in den Zustand "beendet".
+description: Versetzt den durch das Win32-Dienstobjekt dargestellten Dienst \_ in den Zustand "Beendet".
 ms.assetid: cc2c71f7-12e6-4ba4-bfb4-f23845d798b5
 ms.tgt_platform: multiple
-title: Stop Service-Methode der Win32_Service-Klasse (sdoias. h)
+title: StopService-Methode der Win32_Service-Klasse (Sdoias.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 90d979754a3d6f034c353229dbaa1b1dbaedea79
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1c8c055c260f4983622010ced5de652cf673391b7ae02a75b40fd28427a78827
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751880"
 ---
-# <a name="stopservice-method-of-the-win32_service-class-sdoiash"></a>Stop Service-Methode der Win32_Service-Klasse (sdoias. h)
+# <a name="stopservice-method-of-the-win32_service-class-sdoiash"></a>StopService-Methode der Win32_Service-Klasse (Sdoias.h)
 
-Die **StopService** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode versetzt den Dienst, der durch das Win32- [**\_ Dienst**](win32-service.md) Objekt dargestellt wird, in den Zustand "beendet".
+Die **StopService** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) versetzt den durch das [**Win32-Dienstobjekt \_**](win32-service.md) dargestellten Dienst in den Zustand "Beendet".
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService**](win32-baseservice.md)) ist.**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -105,14 +105,14 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -168,42 +168,42 @@ Dieser Dienst wird aus dem System entfernt.
 **17**
 </dt> <dd>
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
 
 </dd> <dt>
 
 **19**
 </dt> <dd>
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
 **20**
 </dt> <dd>
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname weist ungültige Zeichen auf.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -221,25 +221,25 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie ermittelt haben, welche Dienste beendet oder angehalten werden können, können Sie die-Methode **StopService** und die [**anhaleservice**](pauseservice-method-in-class-win32-systemdriver.md) -Methode verwenden, um-Dienste anzuhalten und anzuhalten. Die Entscheidung, einen Dienst zu stoppen, anstatt ihn anzuhalten oder umgekehrt, hängt von mehreren Faktoren ab, einschließlich der folgenden:
+Nachdem Sie ermittelt haben, welche Dienste beendet oder angehalten werden können, können Sie die Dienste mithilfe der Methoden **StopService** und [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md) beenden und anhalten. Die Entscheidung, einen Dienst anzuhalten, anstatt ihn anzuhalten oder umgekehrt, hängt von mehreren Faktoren ab, einschließlich der folgenden:
 
--   Ist der Dienst in der Lage, angehalten zu werden? Wenn dies nicht der Wert ist, ist die einzige Option der Dienst wird beendet.
--   Müssen Sie die Verarbeitung von Client Anforderungen für alle Benutzer fortsetzen, die bereits mit dem Dienst verbunden sind? Wenn dies der Fall ist, ermöglicht das Anhalten eines Dienstanbieter in der Regel die Verarbeitung vorhandener Clients, während der Zugriff auf neue Clients verweigert Wenn Sie einen Dienst beenden, werden dagegen alle Clients sofort getrennt.
--   Müssen Sie einen Dienst neu konfigurieren, damit die Änderungen sofort wirksam werden? Obwohl Dienst Eigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten nicht wirksam, bis der Dienst tatsächlich beendet und neu gestartet wird.
+-   Kann der Dienst angehalten werden? Wenn dies nicht dere ist, ist die einzige Option das Beenden des Diensts.
+-   Müssen Sie weiterhin Clientanforderungen für personen verarbeiten, die bereits mit dem Dienst verbunden sind? In diesem Falle ermöglicht das Anhalten eines Diensts in der Regel die Verarbeitung vorhandener Clients, während der Zugriff auf neue Clients verweigert wird. Wenn Sie dagegen einen Dienst beenden, werden alle Clients sofort getrennt.
+-   Müssen Sie einen Dienst neu konfigurieren und lassen sie sofort wirksam werden? Obwohl Diensteigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten erst wirksam, wenn der Dienst tatsächlich beendet und neu gestartet wurde.
 
-Der zum Anhalten eines Dienstanbieter erforderliche Skriptcode ist nahezu identisch mit dem Code, der zum Anhalten des Dienstanbieter erforderlich ist.
+Der Skriptcode, der zum Beenden eines Diensts erforderlich ist, ist fast identisch mit dem Code, der zum Anhalten des Diensts erforderlich ist.
 
-Wenn Sie versuchen, einen Dienst zu beenden, für den abhängige Dienste ausgeführt werden, schlägt die **Stop Service** -Methode mit einem Rückgabewert von 3 fehl. Die abhängigen Dienste müssen zuerst beendet werden.
+Wenn Sie versuchen, einen Dienst zu beenden, auf dem abhängige Dienste ausgeführt werden, schlägt die **StopService-Methode** mit dem Rückgabewert 3 fehl. Die abhängigen Dienste müssen zuerst beendet werden.
 
-Wenn Sie einen Dienst abbrechen, überprüfen Sie den [**Win32- \_ Dienst**](win32-service.md)sofort.**State** -Eigenschaft, da der Dienst möglicherweise weiterhin als wird ausgeführt angezeigt wird.
+Wenn Sie einen Dienst beenden, überprüfen Sie sofort den [**\_ Win32-Dienst**](win32-service.md).**State-Eigenschaft,** da der -Wert den Dienst möglicherweise weiterhin als ausgeführt zeigt.
 
 ## <a name="examples"></a>Beispiele
 
-[Set-RemoteService](https://Gallery.TechNet.Microsoft.Com/79595ce9-bfc3-463e-9e84-d9e0b78590c1) PowerShell-Beispiel legt den Dienststatus für Remote Computer fest.
+[Set-RemoteService](https://Gallery.TechNet.Microsoft.Com/79595ce9-bfc3-463e-9e84-d9e0b78590c1) PowerShell-Beispiel Legt den Dienststatus für Remotecomputer fest.
 
-Das Beispiel zum [Beenden eines Diensts und seiner abhängigen](https://Gallery.TechNet.Microsoft.Com/ae07e623-2cbd-4983-b991-aa4d1e6e2732) VBScript beendet einen Dienst und alle abhängigen Dienste.
+Das Beispiel [Stop a Service and Its Dependents](https://Gallery.TechNet.Microsoft.Com/ae07e623-2cbd-4983-b991-aa4d1e6e2732) VBScript beendet einen Dienst und alle abhängigen Dienste.
 
 Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie ein Dienst heruntergefahren wird.
 
@@ -259,7 +259,7 @@ next
 
 
 
-Im folgenden perl-Codebeispiel wird veranschaulicht, wie ein Dienst heruntergefahren wird.
+Im folgenden Perl-Codebeispiel wird veranschaulicht, wie ein Dienst heruntergefahren wird.
 
 
 ```
@@ -295,9 +295,9 @@ else
 
 
 
-Das folgende VBScript-Codebeispiel zeigt, dass Sie den NetDDE-Dienst erst beenden können, wenn die abhängigen Dienste beendet wurden. Stellen Sie zum Ausführen des Skripts sicher, dass der NetDDE-Dienst und die zugehörigen abhängigen Dienste über das MMC-Snap-in "Services. msc" oder den Befehl **net Start** ausgeführt werden.
+Das folgende VBScript-Codebeispiel zeigt, dass Sie den NetDDE-Dienst erst beenden können, wenn die abhängigen Dienste beendet wurden. Stellen Sie zum Ausführen des Skripts sicher, dass der NetDDE-Dienst und die abhängigen Dienste mithilfe des MMC-Snap-Ins Services.msc oder des **Befehls Net Start** ausgeführt werden.
 
-Die [**Win32 \_ dependentservice**](win32-dependentservice.md) -Klasse ermöglicht das Auffinden von Dienst Abhängigkeiten über einen [assoziator von](/windows/desktop/WmiSdk/associators-of-statement) Abfragen.
+Mit der [**Win32 \_ DependentService-Klasse**](win32-dependentservice.md) können Sie Dienstabhängigkeiten über eine [Associators Of-Abfrage](/windows/desktop/WmiSdk/associators-of-statement) suchen.
 
 
 ```VB
@@ -344,9 +344,9 @@ WScript.Echo "Return value: " & Return
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Sdoias. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| Header<br/>                   | <dl> <dt>Sdoias.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -358,10 +358,10 @@ WScript.Echo "Return value: " & Return
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Dienst**](win32-service.md)
+[**\_Win32-Dienst**](win32-service.md)
 </dt> <dt>
 
-[WMI-Tasks: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
+[WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
 </dt> <dt>
 
 [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md)

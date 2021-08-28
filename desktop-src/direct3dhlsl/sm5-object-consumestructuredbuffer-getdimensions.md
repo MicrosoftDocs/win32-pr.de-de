@@ -1,6 +1,6 @@
 ---
-title: 'Consumestructuredbuffer:: GetDimensions-Funktion'
-description: 'Ruft die Ressourcen Dimensionen ab. | Consumestructuredbuffer:: GetDimensions-Funktion'
+title: ConsumeStructuredBuffer::GetDimensions-Funktion
+description: Ruft die Ressourcendimensionen ab. | ConsumeStructuredBuffer::GetDimensions-Funktion
 ms.assetid: 0710a4fb-23b0-4b19-b9ed-21bbb9874d33
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a204ed44c90c60b327ceb201037c6758763b3a05
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5cc7c7c9234d00343f91a3fcb137eed65b95515a07f765cf8fce6893e2d4998a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788390"
 ---
-# <a name="consumestructuredbuffergetdimensions-function"></a>Consumestructuredbuffer:: GetDimensions-Funktion
+# <a name="consumestructuredbuffergetdimensions-function"></a>ConsumeStructuredBuffer::GetDimensions-Funktion
 
-Ruft die Ressourcen Dimensionen ab.
+Ruft die Ressourcendimensionen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ void GetDimensions(
 
 <dl> <dt>
 
-*numstructs* \[ vorgenommen\]
+*numStructs* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -46,12 +46,12 @@ Die Anzahl der Strukturen.
 
 </dd> <dt>
 
-*Stride* \[ vorgenommen\]
+*stride* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Schritt (in Byte) der einzelnen Elemente.
+Der Schritt jedes Elements in Bytes.
 
 </dd> </dl>
 
@@ -59,13 +59,13 @@ Der Schritt (in Byte) der einzelnen Elemente.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -77,10 +77,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Consumestructuredbuffer](sm5-object-consumestructuredbuffer.md)
+[ConsumeStructuredBuffer](sm5-object-consumestructuredbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  
