@@ -1,29 +1,29 @@
 ---
-description: Weitere Informationen finden Sie in der CAB-API-Referenz
+description: Weitere Informationen finden Sie in der Referenz zur Cabinet-API.
 ms.assetid: c6e7de1e-6006-41e9-aa25-4cb8faf6f0d1
-title: CAB-API-Referenz
+title: Referenz zur Cab-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df9cc9a0c8a4cebca0ce92d824e51f2bf7aea456
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 00fa1a11f1bb480cfd1c30d56d4a62fd1c66ece25268c29c7b4e6f0f88c6efe2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503390"
 ---
-# <a name="cabinet-api-reference"></a>CAB-API-Referenz
+# <a name="cabinet-api-reference"></a>Referenz zur Cab-API
 
-Die folgenden Elemente werden von der CAB-API definiert:
+Die folgenden Elemente werden von der Cabinet-API definiert:
 
--   [CAB-API-Funktionen](cabinet-api-functions.md)
--   [CAB-API-Makros](cabinet-api-macros.md)
--   [CAB-API-Strukturen](cabinet-api-structures.md)
+-   [Cabinet-API-Funktionen](cabinet-api-functions.md)
+-   [Cab-API-Makros](cabinet-api-macros.md)
+-   [Cab-API-Strukturen](cabinet-api-structures.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der CAB-API](using-the-cabinet-api.md)
+[Verwenden der Cabinet-API](using-the-cabinet-api.md)
 </dt> </dl>
 
  

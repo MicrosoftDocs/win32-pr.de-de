@@ -1,6 +1,6 @@
 ---
-title: Config-Element (eaphostconfig)
-description: Wird verwendet, wenn die Methoden Konfiguration im XML-Textformular statt in einem binären BLOB erfolgt.
+title: Config-Element (EapHostConfig)
+description: Wird verwendet, wenn die Methodenkonfiguration in XML-Textform und nicht in einem binären BLOB vor sich geht.
 ms.assetid: f47bec23-745f-47db-84db-2556beb6a9e9
 keywords:
 - Config-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a81c90063a57a9d55d8ab6d9c18486315c187f0e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ba798afaa418e5de49c48abdc8dac242a300a7228ffe27a76241f4cbabed5833
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739080"
 ---
-# <a name="config-eaphostconfig-element"></a>Config-Element (eaphostconfig)
+# <a name="config-eaphostconfig-element"></a>Config-Element (EapHostConfig)
 
-Das Element **config (eaphostconfig)** wird verwendet, wenn die Methoden Konfiguration im XML-Textformular statt in einem binären BLOB erfolgt.
+Das **Config-Element (EapHostConfig)** wird verwendet, wenn die Methodenkonfiguration in XML-Textform und nicht in einem binären BLOB vor sich geht.
 
 ``` syntax
 <xs:element name="Config"
@@ -31,11 +31,11 @@ Das Element **config (eaphostconfig)** wird verwendet, wenn die Methoden Konfigu
  />
 ```
 
-Das **config** -Element wird durch das [**eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md) -Element definiert.
+Das **Config-Element** wird durch das [**EapHostConfig-Element**](eaphostconfigschema-eaphostconfig-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente **config** und [**configblob**](eaphostconfigschema-configblob-eaphostconfig-element.md) können nicht gleichzeitig verwendet werden.
+Die **Elemente Config** und [**ConfigBlob**](eaphostconfigschema-configblob-eaphostconfig-element.md) können nicht gleichzeitig verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,28 +43,28 @@ Die Elemente **config** und [**configblob**](eaphostconfigschema-configblob-eaph
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md)
+[**EapHostConfig**](eaphostconfigschema-eaphostconfig-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaphostconfig**](eaphostconfigschema-eaphostconfig-element.md)
+[**EapHostConfig**](eaphostconfigschema-eaphostconfig-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaphostconfig-Schema](eaphostconfigschema-schema.md)

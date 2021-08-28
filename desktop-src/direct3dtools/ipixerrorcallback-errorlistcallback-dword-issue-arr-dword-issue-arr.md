@@ -1,10 +1,10 @@
 ---
-description: Ein Rückruf, der den Host von Fehlern benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.
+description: Ein Rückruf, der den Host über Fehler benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.
 MS-HAID: vspixengine.IPixErrorCallback\_ErrorListCallback\_DWORD\_Issue\_arr\_DWORD\_Issue\_arr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ipixerrorcallback:: errorlistcallback-Methode'
+title: IPixErrorCallback::ErrorListCallback-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: B345846D-4853-4F6B-AB79-42265720451D
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 91754cd7db13165efcb66e9bc87b8e4661842fce
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 32c8bb53e98ebaa31c758e50371c88534cfc074a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344928"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626366"
 ---
-# <a name="span-idvspixengineipixerrorcallback_errorlistcallback_dword_issue_arr_dword_issue_arrspanipixerrorcallbackerrorlistcallback-method"></a><span id="vspixengine.ipixerrorcallback_errorlistcallback_dword_issue_arr_dword_issue_arr"></span>Ipixerrorcallback:: errorlistcallback-Methode
+# <a name="span-idvspixengineipixerrorcallback_errorlistcallback_dword_issue_arr_dword_issue_arrspanipixerrorcallbackerrorlistcallback-method"></a><span id="vspixengine.ipixerrorcallback_errorlistcallback_dword_issue_arr_dword_issue_arr"></span>IPixErrorCallback::ErrorListCallback-Methode
 
-Ein Rückruf, der den Host von Fehlern benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.
+Ein Rückruf, der den Host über Fehler benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ HRESULT ErrorListCallback(
 
 ## <a name="parameters"></a>Parameter
 
-*Countdown*   
+*Count*   
 Die Anzahl der Fehler.
 
-*count0 \_ errorlist*   
+*count0 \_ errorList*   
 Die Fehler.
 
-*Countdown*   
-Die Anzahl der warningns.
+*Count*   
+Die Anzahl der Warnungen.
 
-*count0 \_ warninglist*   
+*count0 \_ warningList*   
 Die Warnungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Ipixerrorcallback**](/windows/desktop/direct3dtools/ipixerrorcallback)
+[**IPixErrorCallback**](/windows/desktop/direct3dtools/ipixerrorcallback)
 
  
 

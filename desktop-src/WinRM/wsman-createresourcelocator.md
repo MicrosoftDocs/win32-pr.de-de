@@ -1,12 +1,12 @@
 ---
-title: WSMAN. kreateresourcelocator-Methode (WSManDisp. h)
-description: Erstellt ein ResourceLocator-Objekt, das verwendet werden kann, anstatt einen Ressourcen-URI in Sitzungs Objekt Vorgängen wie "Session. Get", "Session. Put" oder "Session. Enumerate" anzugeben.
+title: WSMan.CreateResourceLocator-Methode (WSManDisp.h)
+description: Erstellt ein ResourceLocator-Objekt, das verwendet werden kann, anstatt einen Ressourcen-URI in Sitzungsobjektvorgängen wie Session.Get, Session.Put oder Session.Enumerate anzugeben.
 ms.assetid: 1b04fe11-ec90-4374-9838-a0df313b722e
 ms.tgt_platform: multiple
 keywords:
-- Windows-Remoteverwaltung der Methode "kreateresourcelocator"
-- Methode Windows-Remoteverwaltung, WSMAN-Objekt
-- WSMAN-Objekt Windows-Remoteverwaltung, Methode "kreateresourcelocator"
+- CreateResourceLocator-Methode Windows Remoteverwaltung
+- CreateResourceLocator-Methode Windows Remoteverwaltung, WSMan-Objekt
+- WSMan-Objekt Windows Remoteverwaltung, CreateResourceLocator-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6982d1ea0b257ca9276918931ce233e675fd3eb3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d78276f40ee6e2e1aff10f17bc9f41bb1d1e4aa32cde68a41842c5cee8b95bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117742612"
 ---
-# <a name="wsmancreateresourcelocator-method"></a>WSMAN. kreateresourcelocator-Methode
+# <a name="wsmancreateresourcelocator-method"></a>WSMan.CreateResourceLocator-Methode
 
-Erstellt ein [**ResourceLocator**](resourcelocator.md) -Objekt, das verwendet werden kann, anstatt einen Ressourcen-URI in [**Sitzungs**](session.md) Objekt Vorgängen wie " [**Session. Get**](session-get.md)", " [**Session. Put**](session-put.md)" oder " [**Session. Enumerate**](session-enumerate.md)" anzugeben.
+Erstellt ein [**ResourceLocator-Objekt,**](resourcelocator.md) das verwendet werden kann, anstatt einen Ressourcen-URI in [**Sitzungsobjektvorgängen**](session.md) wie [**Session.Get,**](session-get.md) [**Session.Put**](session-put.md)oder [**Session.Enumerate**](session-enumerate.md)anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ WSMan.CreateResourceLocator( _
 *URI* \[ in, optional\]
 </dt> <dd>
 
-Der Ressourcen-URI für die Ressource. Weitere Informationen zu URI-Zeichen folgen finden Sie unter [Ressourcen-URIs](resource-uris.md).
+Der Ressourcen-URI für die Ressource. Weitere Informationen zu URI-Zeichenfolgen finden Sie unter [Ressourcen-URIs.](resource-uris.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein [**ResourceLocator**](resourcelocator.md) -Objekt, das dann zum Ausführen von lokalen oder Remote-WinRM-Vorgängen verwendet werden kann.
+Ein [**ResourceLocator-Objekt,**](resourcelocator.md) das dann zum Ausführen lokaler oder Remote-WinRM-Vorgänge verwendet werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die **Fragmentdialekt** -Eigenschaft im [**ResourceLocator**](resourcelocator.md) -Objekt nicht angegeben ist, ist der Standardwert die XPath 1,0-Spezifikation. Weitere Informationen finden Sie unter [https://www.w3.org/TR/xpath](https://www.w3.org/TR/xpath).
+Wenn die **FragmentDialect-Eigenschaft** nicht im [**ResourceLocator-Objekt**](resourcelocator.md) angegeben ist, ist der Standardwert die XPath 1.0-Spezifikation. Weitere Informationen finden Sie unter [https://www.w3.org/TR/xpath](https://www.w3.org/TR/xpath).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird ein [**ResourceLocator**](resourcelocator.md) -Objekt erstellt und der Eigenschafts Wert für die Netzwerkadapter **Beschreibung** aus der Instanz von [**Win32 \_ networkadapterconfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) mit dem Index "1" abgerufen.
+Im folgenden VBScript-Codebeispiel wird ein [**ResourceLocator-Objekt**](resourcelocator.md) erstellt und der Wert der **Description-Eigenschaft** des Netzwerkadapters aus der Instanz von [**Win32 \_ NetworkAdapterConfiguration**](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) mit dem Index "1" ermittelt.
 
 
 ```VB
@@ -91,24 +91,24 @@ WScript.Echo Xml
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WSMAN**](wsman.md)
+[**Wsman**](wsman.md)
 </dt> <dt>
 
-[**ConnectionOptions**](connectionoptions.md)
+[**Connectionoptions**](connectionoptions.md)
 </dt> <dt>
 
-[**Sitzung**](session.md)
+[**Sitzungskonsistenz**](session.md)
 </dt> </dl>
 
  

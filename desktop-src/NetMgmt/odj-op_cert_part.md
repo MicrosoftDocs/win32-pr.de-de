@@ -5,16 +5,16 @@ ms.assetid: 30492801-f26e-447f-bcbf-d1108e7ae524
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: feb4f05171204442085f7d69691aa010d13e6042
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: 6b8b2bf6a7ebeb8eacdd426d1c8b8bf4ebf22040acffdbcda159a041989d59fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "106340541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117983431"
 ---
-# <a name="op_cert_part-structure"></a>OP_CERT_PART Struktur
+# <a name="op_cert_part-structure"></a>OP_CERT_PART-Struktur
 
-Enthält serialisierte PFX-und Zertifikat Speicher.
+Enthält serialisierte PFX- und Zertifikatspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,33 +31,33 @@ typedef struct _OP_CERT_PART
 
 ## <a name="members"></a>Member
 
-### <a name="cpfxstores"></a>cpfxstores
+### <a name="cpfxstores"></a>cPfxStores
 
-Enthält die Anzahl der Elemente in ppfxstores.
+Enthält die Anzahl der Elemente in pPfxStores.
 
-### <a name="ppfxstores"></a>ppfxstores
+### <a name="ppfxstores"></a>pPfxStores
 
 Enthält ein Array von OP_CERT_PFX_STORE Strukturen.
 
-### <a name="csststores"></a>csststores
+### <a name="csststores"></a>cSstStores
 
-Enthält die Anzahl der Elemente in psststores.
+Enthält die Anzahl der Elemente in pSstStores.
 
-### <a name="psststores"></a>psststores
+### <a name="psststores"></a>pSstStores
 
 Enthält ein Array von OP_CERT_SST_STORE Strukturen.
 
-### <a name="extension"></a>Durchwahl
+### <a name="extension"></a>Erweiterung
 
-Für zukünftige Verwendung reserviert und muss alle Nullen enthalten.
+Für die zukünftige Verwendung reserviert und muss alle Nullen enthalten.
 
 ## <a name="see-also"></a>Siehe auch
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)
 
-[**OP- \_ Zertifikat- \_ PFX- \_ Speicher**](odj-op_cert_pfx_store.md)
+[**OP \_ CERT \_ PFX \_ STORE**](odj-op_cert_pfx_store.md)
 
-[**Betriebs \_ Zertifikat- \_ SST- \_ Speicher**](odj-op_cert_sst_store.md)
+[**OP \_ CERT \_ SST \_ STORE**](odj-op_cert_sst_store.md)
 
-[**OP- \_ BLOB**](odj-op_blob.md)
+[**\_OP-BLOB**](odj-op_blob.md)
 

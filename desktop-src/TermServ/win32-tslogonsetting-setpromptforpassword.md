@@ -1,12 +1,12 @@
 ---
-title: Setpromptforpassword-Methode der Win32_TSLogonSetting-Klasse
-description: Die setpromptforpassword-Methode legt die PromptForPassword-Eigenschaft fest.
+title: SetPromptForPassword-Methode der Win32_TSLogonSetting-Klasse
+description: Die SetPromptForPassword-Methode legt die PromptForPassword-Eigenschaft fest.
 ms.assetid: eeeed374-4a8a-4014-833c-d931be3ef455
 ms.tgt_platform: multiple
 keywords:
-- Setpromptforpassword-Methode Remotedesktopdienste
-- Setpromptforpassword-Methode Remotedesktopdienste, Win32_TSLogonSetting-Klasse
-- Win32_TSLogonSetting-Klasse Remotedesktopdienste, setpromptforpassword-Methode
+- SetPromptForPassword-Remotedesktopdienste
+- SetPromptForPassword-Methode Remotedesktopdienste , Win32_TSLogonSetting-Klasse
+- Win32_TSLogonSetting der Remotedesktopdienste , SetPromptForPassword-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f86dc065a143505ea81bce78d9bf787fae6b0a33
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 90ea5202b0cfdfb624a05240deb042a88a8c73c8ea994cd810e1d9680ac0ddc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769520"
 ---
-# <a name="setpromptforpassword-method-of-the-win32_tslogonsetting-class"></a>Setpromptforpassword-Methode der Win32- \_ Klasse "tlogonsetting"
+# <a name="setpromptforpassword-method-of-the-win32_tslogonsetting-class"></a>SetPromptForPassword-Methode der Win32 \_ TSLogonSetting-Klasse
 
-Die **setpromptforpassword** -Methode legt die **PromptForPassword** -Eigenschaft fest.
+Die **SetPromptForPassword-Methode legt** die **PromptForPassword-Eigenschaft** fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,42 +43,42 @@ uint32 SetPromptForPassword(
 
 <dl> <dt>
 
-*PromptForPassword* \[ in\]
+*PromptForPassword* \[ In\]
 </dt> <dd>
 
-Flag zum Deaktivieren oder Aktivieren der **PromptForPassword** -Eigenschaft.
+Flag zum Deaktivieren oder Aktivieren der **PromptForPassword-Eigenschaft.**
 
 <dt>
 
 0
 </dt> <dd>
 
-Deaktiviert die Kenn Wort Eingabeaufforderung.
+Deaktiviert die Kennwortaufforderung.
 
 </dd> <dt>
 
 1
 </dt> <dd>
 
-Aktiviert die Kenn Wort Eingabeaufforderung.
+Aktiviert die Kennwortaufforderung.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Success bei Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter. Die -Methode gibt einen Fehler zurück, wenn sich die Einstellung unter der Gruppenrichtliniensteuerung befindet.
 
 <dl> <dt>
 
-**False** (0)
+**FALSE** (0)
 </dt> <dt>
 
-**True** (1)
+**TRUE** (1)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,17 +88,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Anmelde \_ Einstellung**](win32-tslogonsetting.md)
+[**Win32 \_ TSLogonSetting**](win32-tslogonsetting.md)
 </dt> </dl>
 
  

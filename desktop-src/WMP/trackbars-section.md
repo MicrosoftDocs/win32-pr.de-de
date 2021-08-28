@@ -1,26 +1,26 @@
 ---
-title: Trackbars (Abschnitt)
-description: Trackbars (Abschnitt)
+title: Abschnitt "Trackbars"
+description: Abschnitt "Trackbars"
 ms.assetid: cc6d1286-413b-4c4b-bcbd-6dd12811d24e
 keywords:
-- Windows Media Player Mobile Skins, trackbars
-- Skins, trackbars
-- Erstellen von Skins, trackbars (Abschnitt)
-- Schreiben von Code für Skins, trackbars (Abschnitt)
-- trackbars in Skins, trackbars (Abschnitt)
-- Skin-Definitions Dateien, Abschnitt "trackbars"
+- Windows Media Player Mobile Skins, Trackbars
+- Skins, Trackbars
+- Erstellen von Skins, Abschnitt "Trackbars"
+- Schreiben von Code für Skins, Abschnitt "Trackbars"
+- Trackbars in Skins,Trackbars-Abschnitt
+- Skindefinitionsdateien, Abschnitt "Trackbars"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ed10e576e38c3fdc694fd6bef67c513b2983f05
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7ac92278a2c565e3f98e039ca06192ef3f64eb6edddae9bd3b1795330ce5fc1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507220"
 ---
-# <a name="trackbars-section"></a>Trackbars (Abschnitt)
+# <a name="trackbars-section"></a>Abschnitt "Trackbars"
 
-Der Abschnitt "trackbars" enthält Informationen zu allen trackbars, die Sie einschließen möchten:
+Der Abschnitt Trackbars enthält Informationen zu allen Trackbars, die Sie enthalten möchten:
 
 
 ```C++
@@ -34,7 +34,7 @@ Der Abschnitt "trackbars" enthält Informationen zu allen trackbars, die Sie ein
 
 
 
-Hier ist nur die Volume TrackBar definiert. Weitere Informationen zum TrackBar-Abschnitt der Skin-Definitionsdatei finden Sie unter [trackbars](trackbars.md) in der Skin-Referenz.
+Hier wird nur die Trackleiste Volume definiert. Weitere Informationen zum Abschnitt Trackbar der Skindefinitionsdatei finden Sie unter [Trackbars](trackbars.md) in der Skin-Referenz.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,9 +43,9 @@ Hier ist nur die Volume TrackBar definiert. Weitere Informationen zum TrackBar-A
 [**Schreiben des Codes**](writing-the-code.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

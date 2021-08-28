@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetsetdatabasesize-Methode
-title: API. jetsetdatabasesize-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetSetDatabaseSize-Methode'
+title: Api.JetSetDatabaseSize-Methode
 TOCTitle: 'JetSetDatabaseSize method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetSetDatabaseSize(Microsoft.Isam.Esent.Interop.JET_SESID,System.String,System.Int32,System.Int32@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetsetdatabasesize(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c90ba5ef2ebc96cbe6d50fa6c0888db9a09a0a99
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04134cec24888a7ed6d046fddf2380f6483ed0d2d8c59c3ce33f51f6e64fcaa2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084814"
 ---
-# <a name="apijetsetdatabasesize-method"></a>API. jetsetdatabasesize-Methode
+# <a name="apijetsetdatabasesize-method"></a>Api.JetSetDatabaseSize-Methode
 
-Legt die Größe einer nicht geöffneten Datenbankdatei fest.
+Legt die Größe einer nicht öffnenden Datenbankdatei fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetSetDatabaseSize(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - database  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Datenbank.
 
 <!-- end list -->
 
-  - desiredpages  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - desiredPages  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die gewünschte Größe der Datenbank in Seiten.
 
 <!-- end list -->
 
-  - actualpages  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualPages  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Größe der Datenbank in Seiten nach dem-Befehl.
+    Die Größe der Datenbank in Seiten nach dem Aufruf.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

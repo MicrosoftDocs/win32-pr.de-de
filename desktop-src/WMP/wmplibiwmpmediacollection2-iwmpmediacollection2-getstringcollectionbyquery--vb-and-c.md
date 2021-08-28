@@ -1,11 +1,11 @@
 ---
-title: IWMPMediaCollection2 getstringcollectionbyquery-Methode
-description: Die getstringcollectionbyquery-Methode gibt eine iwmpstringcollection-Schnittstelle zurück, die Zugriff auf den Satz aller Zeichen folgen Werte für ein angegebenes Attribut bietet, die den Abfragebedingungen entsprechen.
+title: IWMPMediaCollection2 getStringCollectionByQuery-Methode
+description: Die getStringCollectionByQuery-Methode gibt eine IWMPStringCollection-Schnittstelle zurück, die Zugriff auf den Satz aller Zeichenfolgenwerte für ein angegebenes Attribut bietet, die den Abfragebedingungen entsprechen.
 ms.assetid: 2d3b29af-0b6c-4405-8334-9a47a30ff6de
 keywords:
-- getstringcollectionbyquery-Methode, Windows-Media Player
-- getstringcollectionbyquery-Methode, Windows Media Player, IWMPMediaCollection2-Schnittstelle
-- IWMPMediaCollection2 Interface, Windows Media Player, getstringcollectionbyquery-Methode
+- getStringCollectionByQuery-Windows Media Player
+- getStringCollectionByQuery-Methode Windows Media Player , IWMPMediaCollection2-Schnittstelle
+- IWMPMediaCollection2-Schnittstelle Windows Media Player , getStringCollectionByQuery-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 322781bc9ddec3e6f8d74d7229f16ce38e519f05
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 054dd5b76cb6dcf3e6cb29ba624cd1f5c0f281d69c4b2b5e5125f5de9b4e7b04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745968"
 ---
-# <a name="iwmpmediacollection2getstringcollectionbyquery-method"></a>IWMPMediaCollection2:: getstringcollectionbyquery-Methode
+# <a name="iwmpmediacollection2getstringcollectionbyquery-method"></a>IWMPMediaCollection2::getStringCollectionByQuery-Methode
 
-Die- `getStringCollectionByQuery` Methode gibt eine **iwmpstringcollection** -Schnittstelle zurück, die Zugriff auf den Satz aller Zeichen folgen Werte für ein angegebenes Attribut bietet, die den Abfragebedingungen entsprechen.
+Die `getStringCollectionByQuery` -Methode gibt eine **IWMPStringCollection-Schnittstelle** zurück, die Zugriff auf den Satz aller Zeichenfolgenwerte für ein angegebenes Attribut bietet, die den Abfragebedingungen entsprechen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,50 +61,50 @@ Implements IWMPMediaCollection2.getStringCollectionByQuery
 
 <dl> <dt>
 
-*bstrattribute* \[ in\]
+*bstrAttribute* \[ In\]
 </dt> <dd>
 
-Der **System. String** -Wert, der der Attribut Name ist.
+Die **System.String,** die der Attributname ist.
 
 </dd> <dt>
 
-*pquery* \[ in\]
+*pQuery* \[ In\]
 </dt> <dd>
 
-Die **WMPLib. iwmpquery** -Schnittstelle, bei der es sich um die Abfrage handelt, die die zum Abrufen der Zeichen folgen Auflistung verwendeten Bedingungen definiert.
+Die **WMPLib.IWMPQuery-Schnittstelle,** die die Abfrage ist, die die Bedingungen definiert, die zum Abrufen der Zeichenfolgensammlung verwendet werden.
 
 </dd> <dt>
 
-*bstraumediatype* \[ in\]
+*bstrMediaType* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den Medientyp ist. Muss einen der folgenden Werte enthalten: "Audiodatei", "Video", "Photo", "Wiedergabeliste" oder "Other".
+Die **System.String,** die den Medientyp ist. Muss einen der folgenden Werte enthalten: "audio", "video", "photo", "playlist" oder "other".
 
 </dd> <dt>
 
-*bstrausortattribute* \[ in\]
+*bstrSortAttribute* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die der für die Sortierung verwendete Attribut Name ist. Eine Zeichenfolge der Länge 0 (null) bedeutet, dass keine Sortierung angewendet wird.
+Das **System.String-Attribut,** das für die Sortierung verwendet wird. Eine Zeichenfolge der Länge 0 (null) ("") bedeutet, dass keine Sortierung angewendet wird.
 
 </dd> <dt>
 
-*fsortascending* \[ in\]
+*fSortAscending* \[ In\]
 </dt> <dd>
 
-Der **System. Boolean** -Wert, der angibt, ob der Satz von Zeichen folgen Werten in aufsteigender Reihenfolge sortiert werden muss.
+Der **System.Boolean-Wert,** der angibt, ob der Satz von Zeichenfolgenwerten in aufsteigender Reihenfolge sortiert werden muss.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpstringcollection** -Schnittstelle für den abgerufenen Satz von Zeichen folgen Werten.
+Eine **WMPLib.IWMPStringCollection-Schnittstelle** für den abgerufenen Satz von Zeichenfolgenwerten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Verbund Abfragen mit **iwmpquery** wird die Groß-/Kleinschreibung nicht beachtet
+Bei zusammengesetzten Abfragen, **die IWMPQuery verwenden,** wird die Kleinschreibung nicht beachtet.
 
-Wenn die durch den *pquery* -Parameter angegebene Verbund Abfrage eine Bedingung enthält, die auf dem **mediaType** -Attribut basiert, wird diese Bedingung ignoriert. Der Wert für den *bstraumediatype* -Parameter wird immer verwendet. Wenn die Verbund Abfrage z. b. die Bedingung "MediaType ist mit Audiodaten" enthält und der Wert für den *botmediatype* -Parameter "Video" ist, enthält die resultierende Wiedergabeliste nur Video Elemente.
+Wenn die durch den *pQuery-Parameter* angegebene Verbundabfrage eine Bedingung enthält, die auf dem **MediaType-Attribut** basiert, wird diese Bedingung ignoriert. Der Wert für den *bstrMediaType-Parameter* wird immer verwendet. Wenn die Verbundabfrage beispielsweise die Bedingung "MediaType Gleich Audio" enthält und der Wert für den *bstrMediaType-Parameter* "video" ist, enthält die resultierende Wiedergabeliste nur Videoelemente.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,17 +118,17 @@ Wenn die durch den *pquery* -Parameter angegebene Verbund Abfrage eine Bedingung
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPMediaCollection2-Schnittstelle (VB und c#)**](iwmpmediacollection2--vb-and-c.md)
+[**IWMPMediaCollection2-Schnittstelle (VB und C#)**](iwmpmediacollection2--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpquery-Schnittstelle (VB und c#)**](iwmpquery--vb-and-c.md)
+[**IWMPQuery-Schnittstelle (VB und C#)**](iwmpquery--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpstringcollection-Schnittstelle (VB und c#)**](iwmpstringcollection--vb-and-c.md)
+[**IWMPStringCollection-Schnittstelle (VB und C#)**](iwmpstringcollection--vb-and-c.md)
 </dt> <dt>
 
 [**MediaType-Attribut**](mediatype-attribute.md)

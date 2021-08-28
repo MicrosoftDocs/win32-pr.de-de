@@ -1,7 +1,7 @@
 ---
-description: Starten Sie die Erfassung von Zustandsänderungen in einem Parameter Block.
+description: Beginnen Sie mit der Erfassung von Zustandsänderungen in einem Parameterblock.
 ms.assetid: cdf6f572-1a21-4c1d-a113-13b48bacd060
-title: 'ID3DXEffect:: beginparameterblock-Methode (D3DX9Effect. h)'
+title: ID3DXEffect::BeginParameterBlock-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 60a43304c8e0e3d64ac6469c1c075c57b5411e3a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b7345a045d152d5637b656bf4e9090b9645baf33645905e5e956737a1e6ede30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119494280"
 ---
-# <a name="id3dxeffectbeginparameterblock-method"></a>ID3DXEffect:: beginparameterblock-Methode
+# <a name="id3dxeffectbeginparameterblock-method"></a>ID3DXEffect::BeginParameterBlock-Methode
 
-Starten Sie die Erfassung von Zustandsänderungen in einem Parameter Block.
+Beginnen Sie mit der Erfassung von Zustandsänderungen in einem Parameterblock.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Statusänderungen des Erfassungs Effekts-Parameters, bis endparameterblock aufgerufen wird. Effektparameter enthalten alle Zustandsänderungen außerhalb eines bestanden. Löschen Sie Parameter Blöcke, wenn Sie durch Aufrufen von deleteparameterblock nicht mehr benötigt werden.
+Der Zustand des Capture Effect-Parameters ändert sich, bis EndParameterBlock aufgerufen wird. Effektparameter enthalten alle Zustandsänderungen außerhalb eines Durchlaufs. Löschen Sie Parameterblöcke, wenn sie nicht mehr benötigt werden, indem Sie DeleteParameterBlock aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Statusänderungen des Erfassungs Effekts-Parameters, bis endparameterblock aufge
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -66,13 +66,13 @@ Statusänderungen des Erfassungs Effekts-Parameters, bis endparameterblock aufge
 [ID3DXEffect](id3dxeffect.md)
 </dt> <dt>
 
-[**ID3DXEffect:: endparameterblock**](id3dxeffect--endparameterblock.md)
+[**ID3DXEffect::EndParameterBlock**](id3dxeffect--endparameterblock.md)
 </dt> <dt>
 
-[**ID3DXEffect:: applyparameterblock**](id3dxeffect--applyparameterblock.md)
+[**ID3DXEffect::ApplyParameterBlock**](id3dxeffect--applyparameterblock.md)
 </dt> <dt>
 
-[**ID3DXEffect::D eleteparameterblock**](id3dxeffect--deleteparameterblock.md)
+[**ID3DXEffect::D eleteParameterBlock**](id3dxeffect--deleteparameterblock.md)
 </dt> </dl>
 
  

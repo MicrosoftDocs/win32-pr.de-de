@@ -1,22 +1,22 @@
 ---
-description: Im folgenden Beispiel wird die iwiavideo-Schnittstelle verwendet, um eine Streaming-Video Vorschau zu erstellen und ein Bild von diesem Streaming-Video zu erhalten. Im Beispiel wird davon ausgegangen, dass Sie über ein gültiges Handle für ein Fenster (HWND) verfügen.
+description: Im folgenden Beispiel wird die IWiaVideo-Schnittstelle verwendet, um eine Streamingvideovorschau zu erstellen und ein Stillbild aus diesem Streamingvideo zu erhalten. Im Beispiel wird davon ausgegangen, dass Sie über ein gültiges Handle für ein Fenster (HWND) verfügen.
 ms.assetid: bca00825-32a7-40b2-9ca9-23475e3218a8
-title: Erfassen eines Images vom Streaming-Video
+title: Erfassen eines Still-Bilds aus dem Streamingvideo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf43acdb1bd472a9d5a5dca2344b2f4ad37f474a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7af209ec0261418ab18d01414d040c9015a2436e055675a94608b1089f66fa58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772869"
 ---
-# <a name="capturing-a-still-image-from-streaming-video"></a>Erfassen eines Images vom Streaming-Video
+# <a name="capturing-a-still-image-from-streaming-video"></a>Erfassen eines Still-Bilds aus dem Streamingvideo
 
-Im folgenden Beispiel wird die [**iwiavideo**](/windows/desktop/api/Wiavideo/nn-wiavideo-iwiavideo) -Schnittstelle verwendet, um eine Streaming-Video Vorschau zu erstellen und ein Bild von diesem Streaming-Video zu erhalten. Im Beispiel wird davon ausgegangen, dass Sie über ein gültiges Handle für ein Fenster (HWND) verfügen.
+Im folgenden Beispiel wird die [**IWiaVideo-Schnittstelle**](/windows/desktop/api/Wiavideo/nn-wiavideo-iwiavideo) verwendet, um eine Streamingvideovorschau zu erstellen und ein Stillbild aus diesem Streamingvideo zu erhalten. Im Beispiel wird davon ausgegangen, dass Sie über ein gültiges Handle für ein Fenster (HWND) verfügen.
 
 > [!Note]  
-> Windows-Abbild Beschaffung (WIA) unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen von Windows [DirectShow](/previous-versions//ms783323(v=vs.85)) zum Abrufen von Bildern aus Videos.
+> Windows Die Bilderfassung (WIA) unterstützt keine Videogeräte in Windows Server 2003, Windows Vista oder höher. Verwenden Sie für diese Versionen Windows [DirectShow,](/previous-versions//ms783323(v=vs.85)) um Bilder aus Videos zu erhalten.
 
  
 

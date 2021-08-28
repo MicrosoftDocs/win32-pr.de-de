@@ -1,28 +1,28 @@
 ---
-title: System Wiederherstellungs Strukturen
-description: Die folgenden Strukturen werden bei der System Wiederherstellung verwendet.
+title: Systemwiederherstellungsstrukturen
+description: Die folgenden Strukturen werden mit der Systemwiederherstellung verwendet.
 ms.assetid: e0248ee3-e167-4c8a-adbd-6ba6d94c1bd4
 keywords:
-- System Wiederherstellung, Referenz, Strukturen
+- Systemwiederherstellung, Referenz, Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2365282e662c69dbc7d6398cb61823d4ae8933c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d889c002535840d3e9fde2b27ec9104d2595556c981f1d7883c71b8c26179bae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111239"
 ---
-# <a name="system-restore-structures"></a>System Wiederherstellungs Strukturen
+# <a name="system-restore-structures"></a>Systemwiederherstellungsstrukturen
 
-Die folgenden Strukturen werden bei der System Wiederherstellung verwendet:
+Die folgenden Strukturen werden mit der Systemwiederherstellung verwendet:
 
--   [**Restorepointinfo**](/windows/win32/api/srrestoreptapi/ns-srrestoreptapi-restorepointinfoa)
--   [**Statemgrstatus**](/windows/win32/api/srrestoreptapi/ns-srrestoreptapi-statemgrstatus)
+-   [**RESTOREPOINTINFO**](/windows/win32/api/srrestoreptapi/ns-srrestoreptapi-restorepointinfoa)
+-   [**STATEMGRSTATUS**](/windows/win32/api/srrestoreptapi/ns-srrestoreptapi-statemgrstatus)
 
- 
+ 
 
- 
+ 
 
 
 

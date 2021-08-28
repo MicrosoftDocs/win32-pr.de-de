@@ -1,37 +1,37 @@
 ---
-title: Informationen zu multimeditimern
-description: Informationen zu multimeditimern
+title: Informationen zu Multimediatimern
+description: Informationen zu Multimediatimern
 ms.assetid: 42101923-3f46-4234-bfcf-a0d06c382fa1
 keywords:
-- Windows-Multimedia, Timer
+- Windows Multimedia, Timer
 - Multimedia, Timer
-- Multimedia-Eingabe, Timer
-- Multimedia-Timer, Informationen zu
-- Timer, Info
-- Multimedia-Timer, Planungs Ereignisse
-- Timer, Zeit Planungs Ereignisse
-- Planen von Zeit Geber Ereignissen
-- Zeitüberschreitung bei hoher Auflösung
-- Funktion "Funktion"
-- Funktion "kreatewaitabletimer"
-- WM_TIMER Meldungen
+- Multimediaeingabe, Timer
+- Multimediatimer, Informationen
+- Timer, Informationen
+- Multimediatimer, Planen von Ereignissen
+- Timer, Planen von Ereignissen
+- Planen von Zeitgeberereignissen
+- Zeitsteuerung mit hoher Auflösung
+- SetTimer-Funktion
+- CreateWaitableTimer-Funktion
+- WM_TIMER Nachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c36e5f19a92b6b47a3b1976bd85aadef88ab3ec
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 99b5d899c93f0f292d7ef45e8584ae9e2b5e0e001037c456dcc4900f1c0d3f26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498210"
 ---
-# <a name="about-multimedia-timers"></a>Informationen zu multimeditimern
+# <a name="about-multimedia-timers"></a>Informationen zu Multimediatimern
 
-Multimedietdienste ermöglichen es Anwendungen, Zeit Geber Ereignisse mit der größtmöglichen Auflösung (oder Genauigkeit) für die Hardwareplattform zu planen. Diese Multimedia-Timer-Dienste ermöglichen es Ihnen, Zeit Geber Ereignisse in einer höheren Auflösung als andere Zeit Geber Dienste zu planen.
+Mit Multimedia-Timerdiensten können Anwendungen Zeitgeberereignisse mit der größtmöglichen Auflösung (oder Genauigkeit) für die Hardwareplattform planen. Mit diesen Multimedia-Timerdiensten können Sie Timerereignisse mit einer höheren Auflösung als andere Timerdienste planen.
 
-Diese Timer-Dienste sind für Anwendungen nützlich, die eine Zeitüberschreitung mit hoher Auflösung erfordern. Beispielsweise erfordert ein "MIDI Sequencer" einen Zeit Geber mit hoher Auflösung, da er die Geschwindigkeit von "MIDI"-Ereignissen innerhalb einer Auflösung von 1 Millisekunden aufrechterhalten muss.
+Diese Timerdienste sind nützlich für Anwendungen, die eine zeitauflösende Zeitsteuerung mit hoher Auflösung erfordern. Beispielsweise erfordert ein CAB-Sequencer einen Zeitgeber mit hoher Auflösung, da er die Geschwindigkeit von EREIGNISSEN innerhalb einer Auflösung von 1 Millisekunde beibehalten muss.
 
-Anwendungen, die keine Zeitüberschreitung mit hoher Auflösung verwenden, sollten [die Funktion](/windows/win32/api/winuser/nf-winuser-settimer) "-Funktion" anstelle von Multimedia-Timer-Diensten verwenden. Die **von "** " bereitgestellten Timer-Dienste stellen Zeit Geber Nachrichten in einer Nachrichten Warteschlange bereit, während die Multimediatimer-Dienste eine Rückruffunktion aufzurufen. [ \_](../winmsg/wm-timer.md) Anwendungen, die einen aktivierbaren Timer benötigen, sollten die Funktion " [kreatewaitabletimer](/windows/win32/api/synchapi/nf-synchapi-createwaitabletimerw) " verwenden.
+Anwendungen, die keine Zeitsteuerung mit hoher Auflösung verwenden, sollten die [SetTimer-Funktion](/windows/win32/api/winuser/nf-winuser-settimer) anstelle von Multimedia-Timerdiensten verwenden. Die von **SetTimer** bereitgestellten Timerdienste stellen [WM \_ TIMER-Nachrichten](../winmsg/wm-timer.md) an eine Nachrichtenwarteschlange, während die Multimedia-Timerdienste eine Rückruffunktion aufrufen. Anwendungen, die einen wartebaren Timer benötigen, sollten die [CreateWaitableTimer-Funktion](/windows/win32/api/synchapi/nf-synchapi-createwaitabletimerw) verwenden.
 
- 
+ 
 
- 
+ 

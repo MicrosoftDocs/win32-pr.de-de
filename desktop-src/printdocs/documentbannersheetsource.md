@@ -4,16 +4,16 @@ ms.assetid: 3b55935f-3d71-43cc-9c59-5019d7eb5cc5
 title: DocumentBannerSheetSource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d33aa949982e98781c42cbf6aa770dbd4e3d1707
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 13d818e657ceaa2298dccc9c557aa56ec94026146b4bc3db95cb731cacb2d947
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112530"
 ---
 # <a name="documentbannersheetsource"></a>DocumentBannerSheetSource
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt die Quelle für ein benutzerdefiniertes Bannerblatt an.
 
@@ -28,7 +28,7 @@ Gibt die Quelle für ein benutzerdefiniertes Bannerblatt an.
 |----------------------------|--------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                          |
 | Bereichspräfix <br/> | Dokument<br/>                              |
-| Hinweise <br/>          | Verknüpft mit dem DocumentBannerSheet-Element<br/> |
+| Hinweise <br/>          | Mit DocumentBannerSheet-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt die Quelle für ein benutzerdefiniertes Bannerblatt an.
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:DocumentBannerSheetSource">
@@ -64,7 +64,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

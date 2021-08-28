@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 3f80c32953dbc591d5d8bc7a95fc707e93fe384c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 883ddb49684d4e5f5ca7cfb3585a26653a7f0ef4960b59e3c74aafecdd7e2f93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498030"
 ---
 # <a name="d3dxmatrixperspectiveoffcenterrh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveOffCenterRH-Funktion (D3DX10Math.h)
 
@@ -100,7 +100,7 @@ Minimaler Z-Wert des Ansichtsvolumes.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -113,9 +113,9 @@ Maximaler Z-Wert des Ansichtsvolumes.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die eine angepasste, rechtshändige perspektivische Projektionsmatrix ist.
+Zeiger auf eine D3DXMATRIX-Struktur, die eine angepasste, rechtshändige Projektionsmatrix für die Perspektive ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Alle Parameter der D3DXMatrixPerspectiveOffCenterRH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
@@ -137,14 +137,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

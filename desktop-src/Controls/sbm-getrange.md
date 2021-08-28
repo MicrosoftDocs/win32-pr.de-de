@@ -1,9 +1,9 @@
 ---
-title: SBM_GETRANGE Meldung (Winuser. h)
-description: Die SBM \_ -GetRange-Nachricht wird gesendet, um die minimalen und maximalen Positionswerte für das ScrollBar-Steuerelement abzurufen.
+title: SBM_GETRANGE Nachricht (Winuser.h)
+description: Die SBM \_ GETRANGE-Nachricht wird gesendet, um die minimalen und maximalen Positionswerte für das Scrollleisten-Steuerelement abzurufen.
 ms.assetid: 661a9491-3bf6-4685-aea0-c5e4126313af
 keywords:
-- Windows-Steuerelemente für SBM_GETRANGE Meldung
+- SBM_GETRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8ca47e0474152a9771d2787c4a039fb2c868b8c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8e66c6e7bf79c270d66fdeac0ece1a1ce82ed813d1638be3587be7237ecd30e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770040"
 ---
-# <a name="sbm_getrange-message"></a>SBM- \_ GetRange-Nachricht
+# <a name="sbm_getrange-message"></a>SBM \_ GETRANGE-Nachricht
 
-Die **SBM- \_ GetRange** -Nachricht wird gesendet, um die minimalen und maximalen Positionswerte für das ScrollBar-Steuerelement abzurufen.
+Die **SBM \_ GETRANGE-Nachricht** wird gesendet, um die minimalen und maximalen Positionswerte für das Scrollleisten-Steuerelement abzurufen.
 
-Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten Sie die [**getscrollrange**](/windows/desktop/api/Winuser/nf-winuser-getscrollrange) -Funktion verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion. Anwendungen, die ein benutzerdefiniertes Bild Lauf leisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **getscrollrange** -Funktion ordnungsgemäß funktioniert.
+Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten sie die [**GetScrollRange-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getscrollrange) verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Anwendungen, die ein benutzerdefiniertes Scrollleisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **GetScrollRange-Funktion** ordnungsgemäß funktioniert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,14 +34,14 @@ Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten Sie
 *wParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die minimale Bild Lauf Position empfängt.
+Zeiger auf eine Variable, die die minimale Bildlaufposition empfängt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die maximale Scrollposition empfängt.
+Zeiger auf eine Variable, die die maximale Bildlaufposition empfängt.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Diese Meldung gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -65,19 +65,19 @@ Diese Meldung gibt keinen Wert zurück.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**SBM- \_ GetPos**](sbm-getpos.md)
+[**SBM \_ GETPOS**](sbm-getpos.md)
 </dt> <dt>
 
-[**SBM- \_ SetPos**](sbm-setpos.md)
+[**SBM \_ SETPOS**](sbm-setpos.md)
 </dt> <dt>
 
-[**SBM-über \_ Tragung**](sbm-setrange.md)
+[**SBM \_ SETRANGE**](sbm-setrange.md)
 </dt> <dt>
 
-[**SBM- \_ abzeichnende**](sbm-setrangeredraw.md)
+[**SBM \_ SETRANGEREDRAW**](sbm-setrangeredraw.md)
 </dt> </dl>
 
  

@@ -1,36 +1,36 @@
 ---
-title: Implementieren von imediaobject-"depjeestreamingresources"
-description: Implementieren von imediaobject-"depjeestreamingresources"
+title: Implementieren von IMediaObject AllocateStreamingResources
+description: Implementieren von IMediaObject AllocateStreamingResources
 ms.assetid: 630550fe-2cca-4bfa-a824-a355f7fc5e02
 keywords:
-- Windows Media Player-Plug-ins, Echo Sample Streaming Resources
-- Plug-ins, Echo Sample Streaming-Ressourcen
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample Streaming-Ressourcen
-- DSP-Plug-ins, Echo Sample Streaming-Ressourcen
-- Echo DSP-Plug-in-Beispiel, Streamingressourcen
-- Echo DSP-Plug-in-Beispiel, Verzögerungs Puffer
+- Windows Media Player-Plug-Ins,Echo-Beispielstreamingressourcen
+- Plug-Ins, Echo-Beispielstreamingressourcen
+- Plug-Ins für die digitale Signalverarbeitung, Echo-Beispielstreamingressourcen
+- DSP-Plug-Ins, Echo-Beispielstreamingressourcen
+- Echo DSP-Plug-In-Beispiel,Streamingressourcen
+- Echo DSP-Plug-In-Beispiel, Verzögerungspuffer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f1e347e35eaabbcbcc00a586e4cba0d8ad31cc6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 291b1f9627d9dfb78ae2aff9d34b6fadd47cbf28a5c2f0830f5833d9e83cde21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508960"
 ---
-# <a name="implementing-imediaobjectallocatestreamingresources"></a>Implementieren von imediaobject:: Zuweisung
+# <a name="implementing-imediaobjectallocatestreamingresources"></a>Implementieren von IMediaObject::AllocateStreamingResources
 
-Im Echo-Beispiel erstellt die Methode " **depingestreamingresources** " den Verzögerungs Puffer. Dies geschieht wie folgt:
+Im Echo-Beispiel erstellt die **AllocateStreamingResources-Methode** den Verzögerungspuffer. Dazu wird Folgendes verwendet:
 
-1.  Berechnen einer Größe für den Puffer, der der angegebenen Verzögerungszeit für den angegebenen Medientyp entspricht.
-2.  Ordnen Sie entweder neuen Speicher zu, oder ordnen Sie die Puffergröße neu zu, wenn Sie bereits vorhanden ist.
-3.  Aufrufen einer Methode, die den Puffer mit Werten füllt, die die Stille darstellen.
+1.  Berechnen einer Größe für den Puffer, die der angegebenen Verzögerungszeit für den angegebenen Medientyp entspricht.
+2.  Entweder wird neuer Arbeitsspeicher zugewiesen, oder die Puffergröße wird neu zugewiesen, wenn sie bereits vorhanden ist.
+3.  Aufrufen einer Methode, die den Puffer mit Werten füllt, die Stille darstellen.
 
-Der Wert für "Stille" ist abhängig von der Bittiefe unterschiedlich. Für 8-Bit-Audiodaten wird Stille durch den Hexadezimalwert 80 dargestellt. für 16-Bit-Audiodaten wird die Ruhe durch 0 (null) dargestellt.
+Der Wert für die Stille ist abhängig von der Bittiefe unterschiedlich. Bei 8-Bit-Audio wird Stille durch den Hexadezimalwert 80 dargestellt. Bei 16-Bit-Audio wird Stille durch 0 (null) dargestellt.
 
-## <a name="calculating-the-delay-buffer-size"></a>Berechnen der Verzögerungs Puffergröße
+## <a name="calculating-the-delay-buffer-size"></a>Berechnen der Verzögerungspuffergröße
 
-Um die für den Verzögerungs Puffer erforderliche Größe zu berechnen, müssen Sie zuerst eine **WaveFormatEx** -Struktur abrufen, die Informationen über die Audiodaten enthält. Im folgenden Beispiel wird ein Zeiger auf diese-Struktur aus der Eingabe- **DMO- \_ \_ Medientyp** Struktur abgerufen:
+Um die erforderliche Größe für den Verzögerungspuffer zu berechnen, müssen Sie zunächst eine **WAVEFORMATEX-Struktur** abrufen, die Informationen zu den Audiodaten enthält. Im folgenden Beispiel wird ein Zeiger auf diese Struktur aus der Eingabe DMO **\_ MEDIA \_ TYPE-Struktur** abgerufen:
 
 
 ```
@@ -44,7 +44,7 @@ if (NULL == pWave)
 
 
 
-Nachdem Sie einen Zeiger auf die richtige **WaveFormatEx** -Struktur gespeichert haben, können Sie seine Member überprüfen und verwenden, um die erforderliche Puffergröße zu berechnen. Dies wird im folgenden Codebeispiel veranschaulicht:
+Nachdem Sie einen Zeiger auf die richtige **WAVEFORMATEX-Struktur** gespeichert haben, können Sie deren Member überprüfen und sie verwenden, um die erforderliche Puffergröße zu berechnen. Im folgenden Codebeispiel wird dies veranschaulicht:
 
 
 ```
@@ -54,11 +54,11 @@ m_cbDelayBuffer = (m_dwDelayTime * pWave->nSamplesPerSec * pWave->nBlockAlign) /
 
 
 
-Mit diesem Algorithmus wird die Puffergröße berechnet, indem die Verzögerungszeit (in Millisekunden) multipliziert mit der Anzahl von Samplings pro Millisekunde multipliziert wird. Anschließend wird das Ergebnis mit der Anzahl der Kanäle multipliziert und das Ergebnis dann mit der Anzahl der Bytes pro Stichprobe multipliziert. Die Anzahl der Kanäle und die Anzahl der Bytes pro Stichprobe sind nicht offensichtlich. Sie werden im nBlockAlign-Member codiert. Division durch 1000 reduziert den nsamplespersec-Wert auf Stichproben pro Millisekunde. die Millisekunde ist die gewünschte Einheit, da die Verzögerungszeit in Millisekunden angegeben wird.
+Dieser Algorithmus berechnet die Puffergröße, indem er die Verzögerungszeit in Millisekunden mit der Anzahl der Stichproben pro Millisekunde multipliziert, das Ergebnis dann mit der Anzahl der Kanäle multipliziert und dann das Ergebnis mit der Anzahl der Bytes pro Stichprobe multipliziert. Die Anzahl der Kanäle und die Anzahl der Bytes pro Stichprobe sind nicht offensichtlich. sie werden im nBlockAlign-Member codiert. Die Division durch 1000 reduziert den nSamplesPerSec-Wert auf Stichproben pro Millisekunde. Die Millisekunde ist die gewünschte Einheit, da die Verzögerungszeit in Millisekunden ausgedrückt wird.
 
-## <a name="allocating-the-delay-buffer-memory"></a>Zuordnen des Verzögerungs Pufferspeichers
+## <a name="allocating-the-delay-buffer-memory"></a>Zuordnen des Verzögerungspufferspeichers
 
-Nachdem Sie die Arbeitsspeicher Anforderungen berechnet haben, können Sie den Puffer zuordnen. Der Puffer muss möglicherweise gelöscht werden, wenn er vorhanden ist, z. b. wenn der Benutzer die Eigenschaften Seite aufruft, um den Wert für die Verzögerungszeit zu ändern. Der folgende Code veranschaulicht die Zuordnung des Verzögerungs Puffers:
+Nachdem Sie die Arbeitsspeicheranforderungen berechnet haben, können Sie den Puffer zuordnen. Der Puffer muss möglicherweise gelöscht werden, wenn er vorhanden ist, z. B. wenn der Benutzer die Eigenschaftenseite aufruft, um den Verzögerungszeitwert zu ändern. Der folgende Code veranschaulicht die Zuweisung des Verzögerungspuffers:
 
 
 ```
@@ -80,7 +80,7 @@ if (!m_pbDelayBuffer)
 
 
 
-Wenn der Puffer erfolgreich zugewiesen wurde, sollten Sie den verschiebbaren Zeiger auf den Anfang des Puffers verschieben, wie im folgenden Beispiel gezeigt:
+Wenn der Puffer erfolgreich zugeordnet wurde, sollten Sie den verschiebbaren Zeiger auf den Kopf des Puffers verschieben, wie im folgenden Beispiel gezeigt:
 
 
 ```
@@ -90,9 +90,9 @@ m_pbDelayPointer = m_pbDelayBuffer;
 
 
 
-## <a name="filling-the-delay-buffer-with-silence"></a>Auffüllen des Verzögerungs Puffers mit Ruhe
+## <a name="filling-the-delay-buffer-with-silence"></a>Auffüllen des Verzögerungspuffers mit Stille
 
-Es ist praktisch, eine Methode zu schreiben, um den Verzögerungs Puffer mit Werten zu füllen, die die Stille darstellen. Die Methode sollte den Zeiger auf die gültige WaveFormatEx-Struktur empfangen und dann den Member von wbitspersample überprüfen, um zu bestimmen, ob das Audioelement 8-Bit oder höher ist. Im folgenden Beispiel wird der Verzögerungs Puffer mit dem korrekten Wert für "Stille" gefüllt:
+Es ist praktisch, eine Methode zu schreiben, um den Verzögerungspuffer mit Werten zu füllen, die Stille darstellen. Die -Methode sollte den Zeiger auf die gültige WAVEFORMATEX-Struktur empfangen und dann den wBitsPerSample-Member überprüfen, um zu ermitteln, ob die Audiodatei 8-Bit oder höher ist. Im folgenden Beispiel wird der Verzögerungspuffer mit dem richtigen Wert für Stille auffüllt:
 
 
 ```
@@ -109,7 +109,7 @@ void CEcho::FillBufferWithSilence(WAVEFORMATEX *pWfex)
 
 
 
-Denken Sie daran, die vorwärts Deklaration für die Funktion der Header Datei "Echo. h" im Abschnitt "private" hinzuzufügen:
+Denken Sie daran, die Vorwärtsdeklaration für die Funktion der Headerdatei Echo.h im privaten Abschnitt hinzuzufügen:
 
 
 ```
@@ -118,7 +118,7 @@ void FillBufferWithSilence(WAVEFORMATEX *pWfex);
 
 
 
-Sie sollten Code am Ende von "zufügerestreamingresources" hinzufügen, um diese Methode jedes Mal aufzurufen, wenn der Verzögerungs Puffer erstellt oder seine Größe geändert wird. Der folgende Beispielcode übergibt den WaveFormatEx-Zeiger mit dem Namen pwave an die neue Methode:
+Sie sollten Code am Ende von AllocateStreamingResources hinzufügen, um diese Methode jedes Mal auf aufruft, wenn der Verzögerungspuffer erstellt oder die Größe geändert wird. Der folgende Beispielcode übergibt den WAVEFORMATEX-Zeiger mit dem Namen pWave an die neue Methode:
 
 
 ```
@@ -128,9 +128,9 @@ FillBufferWithSilence(pWave);
 
 
 
-## <a name="reallocating-the-delay-buffer-memory"></a>Neuzuordnen des Verzögerungs Pufferspeichers
+## <a name="reallocating-the-delay-buffer-memory"></a>Neuverlegung des Verzögerungspufferspeichers
 
-Wenn der Benutzer die Verzögerungszeit mithilfe der Eigenschaften Seite ändert, muss auch die Größe des Verzögerungs Puffers geändert werden. Sie haben den Code zu alloingestreamingresources bereits hinzugefügt, um die Größe des Puffers zu ändern. Sie müssen jedoch eine Codezeile zu Cecho::p UT Delay hinzufügen, \_ um die Ressourcen Zuordnungs Methode bei jeder Änderung des Eigenschafts Werts aufzurufen. Hier folgt der Code:
+Wenn der Benutzer die Verzögerungszeit über die Eigenschaftenseite ändert, muss sich auch die Größe des Verzögerungspuffers ändern. Sie haben den Code bereits zu AllocateStreamingResources hinzugefügt, um die Größe des Puffers zu ändern. Sie müssen jedoch eine Codezeile zu CEcho::p ut delay hinzufügen, um die Ressourcenzuordnungsmethode bei jeder Änderung des Eigenschaftswerts auf \_ aufruft. Hier folgt der Code:
 
 
 ```
@@ -147,9 +147,9 @@ AllocateStreamingResources();
 [**Arbeiten mit Streamingressourcen**](working-with-streaming-resources.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

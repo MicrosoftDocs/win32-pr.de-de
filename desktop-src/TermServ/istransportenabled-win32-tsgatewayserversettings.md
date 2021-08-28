@@ -1,12 +1,12 @@
 ---
-title: Istransportenabled-Methode der Win32_TSGatewayServerSettings-Klasse
+title: IsTransportEnabled-Methode der Win32_TSGatewayServerSettings Klasse
 description: Bestimmt, ob der angegebene Transport aktiviert ist.
 ms.assetid: 3f08a206-5800-4088-a113-bb3f0cc826f2
 ms.tgt_platform: multiple
 keywords:
-- Istransportenabled-Methode Remotedesktopdienste
-- Istransportenabled-Methode Remotedesktopdienste, Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, istransportenabled-Methode
+- IsTransportEnabled-Remotedesktopdienste
+- IsTransportEnabled-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , IsTransportEnabled-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: da152499138f6c1aba1ff6477c719aa0e787deee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7960748228e11f3749cd86daa2a323ca32ab9b05e1c17f98261ad4ae62b0fc9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103522"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119515080"
 ---
-# <a name="istransportenabled-method-of-the-win32_tsgatewayserversettings-class"></a>Istransportenabled-Methode der Win32-Klasse "t- \_ gatewayserversettings"
+# <a name="istransportenabled-method-of-the-win32_tsgatewayserversettings-class"></a>IsTransportEnabled-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
 Bestimmt, ob der angegebene Transport aktiviert ist.
 
@@ -44,17 +44,17 @@ uint32 IsTransportEnabled(
 
 <dl> <dt>
 
-*TransportType* \[ in\]
+*TransportType* \[ In\]
 </dt> <dd>
 
-Gibt den Transporttyp an. Dabei muss es sich um einen der folgenden Werte handeln:
+Gibt den Transporttyp an. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
 0
 </dt> <dd>
 
-RPC-über-HTTP-Transport.
+RPC über HTTP-Transport.
 
 </dd> <dt>
 
@@ -72,16 +72,16 @@ UDP-Transport.
 
 </dd> </dl> </dd> <dt>
 
-*Aktiviert* \[ vorgenommen\]
+*Aktiviert* \[ out\]
 </dt> <dd>
 
-Ein **boolescher** Wert, der angibt, ob der Transport aktiviert ist.
+Ein **boolescher Wert,** der angibt, ob der Transport aktiviert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -101,7 +101,7 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

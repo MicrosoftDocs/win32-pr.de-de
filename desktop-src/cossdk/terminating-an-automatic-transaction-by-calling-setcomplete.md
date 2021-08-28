@@ -4,20 +4,20 @@ ms.assetid: 5bd06cfd-1ee0-48ac-84ab-3737d76bccc0
 title: Beenden einer automatischen Transaktion durch Aufrufen von SetComplete
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba4bf09e631acf69a9b663d68d7eb82cfaa4490f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5d1d84d18b45309d750864d514728b8e23a3326e5edeba0bf144105bcbaa4797
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119499660"
 ---
 # <a name="terminating-an-automatic-transaction-by-calling-setcomplete"></a>Beenden einer automatischen Transaktion durch Aufrufen von SetComplete
 
-Um automatische Transaktionen effektiv zu verwenden, sollte jede Transaktions Komponente angeben, dass Sie Ihre Arbeit abgeschlossen hat. Wenn eine Objektinstanz die Aufgabe erfolgreich abgeschlossen hat, sollte Sie Ihre konsistenten und done-Flags auf true festlegen, indem Sie die [**IObjectContext:: SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) -Methode aufruft, die über die [**IObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext) -Schnittstelle und das [**ObjectContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-objectcontext) -Objekt verfügbar gemacht wird.
+Um automatische Transaktionen effektiv zu verwenden, sollte jede Transaktionskomponente angeben, dass sie ihre Arbeit abgeschlossen hat. Wenn eine Objektinstanz ihre Aufgabe erfolgreich abgeschlossen hat, sollte sie ihre konsistenten und abgeschlossenen Flags auf True festlegen, indem sie die [**IObjectContext::SetComplete-Methode**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) aufruft, die sowohl über die [**IObjectContext-Schnittstelle**](/windows/desktop/api/ComSvcs/nn-comsvcs-iobjectcontext) als auch über das [**ObjectContext-Objekt**](/windows/desktop/api/ComSvcs/nn-comsvcs-objectcontext) verfügbar gemacht wird.
 
-Die effizienteste Methode zum Ausführen einer automatischen Transaktion besteht darin, das Stamm Objekt mithilfe der [**SetComplete**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) -Methode explizit zu deaktivieren. Wenn Sie explizit angeben, dass ein Stamm Objekt seine Arbeit abgeschlossen hat, können Sie die Länge der Transaktion reduzieren.
+Die effizienteste Möglichkeit zum Abschließen einer automatischen Transaktion besteht darin, das Stammobjekt explizit mithilfe der [**SetComplete-Methode**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-setcomplete) zu deaktivieren. Indem Sie explizit angeben, dass ein Stammobjekt seine Arbeit abgeschlossen hat, können Sie die Länge der Transaktion reduzieren.
 
-Im folgenden Visual Basic Beispiel wird gezeigt, wie angegeben wird, dass die Arbeit eines transaktionalen Objekts erfolgreich abgeschlossen wurde:
+Das folgende Visual Basic Beispiel zeigt, wie Sie angeben, dass ein Transaktionsobjekt seine Arbeit erfolgreich abgeschlossen hat:
 
 
 ```VB
@@ -39,10 +39,10 @@ End Sub
 
 <dl> <dt>
 
-[Konsistente und done-Flags](consistent-and-done-flags.md)
+[Konsistente und fertige Flags](consistent-and-done-flags.md)
 </dt> <dt>
 
-[Verwalten von automatischen Transaktionen in com+](managing-automatic-transactions-in-com-.md)
+[Verwalten automatischer Transaktionen in COM+](managing-automatic-transactions-in-com-.md)
 </dt> </dl>
 
  

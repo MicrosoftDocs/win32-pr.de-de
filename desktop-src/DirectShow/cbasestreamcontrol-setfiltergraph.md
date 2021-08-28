@@ -1,7 +1,7 @@
 ---
-description: Die setfiltergraph-Methode gibt die Ereignis Senke für streamsteuerungsereignisse an.
+description: Die SetFilterGraph-Methode gibt die Ereignissenke für Streamsteuerungsereignisse an.
 ms.assetid: a4c3dca6-6c80-4eca-87d6-875e746e9ed3
-title: Cbasestreamcontrol. setfiltergraph-Methode ("strinmctl. h")
+title: CBaseStreamControl.SetFilterGraph-Methode (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1cf8b571ee5d017acd056e00a06af54cd90b943a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 304ec081ce7087d822ce3382bf4784c05cbc8782fadb3cdfee887f6bd8f0acfd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106363208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119502640"
 ---
-# <a name="cbasestreamcontrolsetfiltergraph-method"></a>Cbasestreamcontrol. setfiltergraph-Methode
+# <a name="cbasestreamcontrolsetfiltergraph-method"></a>CBaseStreamControl.SetFilterGraph-Methode
 
-Die- `SetFilterGraph` Methode gibt die Ereignis Senke für streamsteuerungsereignisse an.
+Die `SetFilterGraph` -Methode gibt die Ereignissenke für Streamsteuerungsereignisse an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetFilterGraph(
 
 <dl> <dt>
 
-*psink* 
+*pSink* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) -Schnittstelle des Filter Diagramm-Managers oder **null** , wenn der Filter das Filter Diagramm verlässt.
+Zeiger auf die [**IMediaEventSink Graph-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) des Filter-Managers oder **NULL,** wenn der Filter das Filterdiagramm verlässt.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf die [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-i
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird innerhalb der [**ibasefilter:: joinfiltergraph**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-joinfiltergraph) -Methode des Filters aufgerufen. Die **cbasestreamcontrol** -Klasse verwendet die **imediaeventsink** -Schnittstelle, um das [**gestartete EC- \_ Stream- \_ Steuer \_**](ec-stream-control-started.md) Element zu senden, und Ereignisse, die von der [**\_ \_ \_**](ec-stream-control-stopped.md)
+Rufen Sie diese Methode innerhalb der [**IBaseFilter::JoinFilterGraph-Methode des Filters**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-joinfiltergraph) auf. Die **CBaseStreamControl-Klasse** verwendet die **IMediaEventSink-Schnittstelle,** um [**EC STREAM CONTROL \_ \_ \_ STARTED-**](ec-stream-control-started.md) und [**EC STREAM CONTROL \_ \_ \_ STOPPED-Ereignisse zu**](ec-stream-control-stopped.md) senden.
 
-Wenn der Filter von **cbasefilter** abgeleitet ist, müssen Sie zuerst die [**cbasefilter:: joinfiltergraph**](cbasefilter-joinfiltergraph.md) -Methode aufzurufen, mit der die [**cbasefilter:: m \_ psink**](cbasefilter-m-psink.md) -Element Variable festgelegt wird. Übergeben Sie dann **m \_ psink** an die- `SetFilterGraph` Methode. Beachten Sie, dass **m \_ psink** **null** ist, wenn der Filter das Diagramm verlässt, was korrekt ist.
+Wenn Ihr Filter von **CBaseFilter** ableitung, rufen Sie zuerst die [**CBaseFilter::JoinFilterGraph-Methode**](cbasefilter-joinfiltergraph.md) auf, die die [**CBaseFilter::m \_ pSink-Membervariable**](cbasefilter-m-psink.md) legt. Übergeben Sie **dann m \_ pSink** an die `SetFilterGraph` -Methode. Beachten **Sie, \_ dass m pSink** **NULL ist,** wenn der Filter das Diagramm verlässt. Dies ist richtig.
 
 ## <a name="examples"></a>Beispiele
 
@@ -84,8 +84,8 @@ STDMETHODIMP CMyFilter::JoinFilterGraph(IFilterGraph * pGraph, LPCWSTR pName)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ STDMETHODIMP CMyFilter::JoinFilterGraph(IFilterGraph * pGraph, LPCWSTR pName)
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

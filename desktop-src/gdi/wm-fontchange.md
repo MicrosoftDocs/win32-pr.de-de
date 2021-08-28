@@ -1,21 +1,21 @@
 ---
-description: Eine Anwendung sendet nach dem \_ Ändern des Pools der Schriftart Ressourcen die WM-fontchange-Nachricht an alle Fenster der obersten Ebene im System.
+description: Eine Anwendung sendet die WM \_ FONTCHANGE-Nachricht an alle Fenster der obersten Ebene im System, nachdem der Pool der Schriftartressourcen geändert wurde.
 ms.assetid: 4774308e-2f18-4a35-a769-56871f3c29a2
-title: WM_FONTCHANGE Meldung (Winuser. h)
+title: WM_FONTCHANGE-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3b40650f0077ed854b87a6fd10e1dae610f0c3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12c88edaf2db356fea2b92ce05769360ac9c8664e913ff6e5a05daaf245d1204
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119399930"
 ---
-# <a name="wm_fontchange-message"></a>WM- \_ fontchange-Meldung
+# <a name="wm_fontchange-message"></a>WM \_ FONTCHANGE-Meldung
 
-Eine Anwendung sendet nach dem Ändern des Pools der Schriftart Ressourcen die **WM- \_ fontchange** -Nachricht an alle Fenster der obersten Ebene im System.
+Eine Anwendung sendet die **WM \_ FONTCHANGE-Nachricht** an alle Fenster der obersten Ebene im System, nachdem der Pool der Schriftartressourcen geändert wurde.
 
-Um diese Nachricht zu senden, wenden Sie die [**SendMessage**](/windows/win32/api/winuser/nf-winuser-sendmessage) -Funktion mit den folgenden Parametern an.
+Um diese Nachricht zu senden, rufen Sie die [**SendMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessage) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -47,13 +47,13 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung, die Schriftarten aus dem System hinzufügt oder entfernt (z. b. mithilfe der [**AddFontResource**](/windows/desktop/api/Wingdi/nf-wingdi-addfontresourcea) -Funktion oder der [**removefontresource**](/windows/desktop/api/Wingdi/nf-wingdi-removefontresourcea) -Funktion), sollte diese Nachricht an alle Fenster der obersten Ebene senden.
+Eine Anwendung, die Schriftarten dem System hinzufügt oder entfernt (z. B. mithilfe der [**Funktion AddFontResource**](/windows/desktop/api/Wingdi/nf-wingdi-addfontresourcea) oder [**RemoveFontResource),**](/windows/desktop/api/Wingdi/nf-wingdi-removefontresourcea) sollte diese Meldung an alle Fenster der obersten Ebene senden.
 
-Zum Senden der " **WM \_ fontchange** "-Nachricht an alle Fenster der obersten Ebene kann eine Anwendung die **SendMessage** -Funktion mit dem *HWND* -Parameter aufrufen \_ .
+Um die **WM \_ FONTCHANGE-Nachricht** an alle Fenster der obersten Ebene zu senden, kann eine Anwendung die **SendMessage-Funktion** aufrufen, wobei der *hwnd-Parameter* auf HWND BROADCAST festgelegt \_ ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -61,7 +61,7 @@ Zum Senden der " **WM \_ fontchange** "-Nachricht an alle Fenster der obersten E
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,16 +69,16 @@ Zum Senden der " **WM \_ fontchange** "-Nachricht an alle Fenster der obersten E
 
 <dl> <dt>
 
-[Übersicht Überschrift Arten und Text](fonts-and-text.md)
+[Übersicht über Schriftarten und Text](fonts-and-text.md)
 </dt> <dt>
 
-[Schriftart und Text Nachrichten](font-and-text-messages.md)
+[Schriftart- und Textnachrichten](font-and-text-messages.md)
 </dt> <dt>
 
 [**AddFontResource**](/windows/desktop/api/Wingdi/nf-wingdi-addfontresourcea)
 </dt> <dt>
 
-[**Removefontresource**](/windows/desktop/api/Wingdi/nf-wingdi-removefontresourcea)
+[**RemoveFontResource**](/windows/desktop/api/Wingdi/nf-wingdi-removefontresourcea)
 </dt> </dl>
 
  

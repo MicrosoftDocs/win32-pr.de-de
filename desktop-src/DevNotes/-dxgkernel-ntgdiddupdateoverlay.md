@@ -1,7 +1,7 @@
 ---
-description: Ändert die visuellen Attribute einer Überlagerungs Oberfläche neu oder ändert Sie.
+description: Positioniert oder ändert die visuellen Attribute einer Überlagerungsoberfläche.
 ms.assetid: 6d39166c-0efc-450d-adf4-9f4dfdf7c57f
-title: Ntgdiddupdateoverlay-Funktion (ntgdi. h)
+title: NtGdiDdUpdateOverlay-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: bbe610c27d83061bda0996ce9acc082efa95e3a7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c65e906529e8afa11f2a16a1171c1d4a7c31ae29bac70d8200997b7a7b88a131
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108940"
 ---
-# <a name="ntgdiddupdateoverlay-function"></a>Ntgdiddupdateoverlay-Funktion
+# <a name="ntgdiddupdateoverlay-function"></a>NtGdiDdUpdateOverlay-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Ändert die visuellen Attribute einer Überlagerungs Oberfläche neu oder ändert Sie.
+Positioniert oder ändert die visuellen Attribute einer Überlagerungsoberfläche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,37 +46,37 @@ DWORD APIENTRY NtGdiDdUpdateOverlay(
 
 <dl> <dt>
 
-*hsurfacedestination* \[ in\]
+*hSurfaceDestination* \[ In\]
 </dt> <dd>
 
-Handle für das zuvor erstellte Kernel Modus-DirectDraw-Objekt.
+Handle für zuvor erstelltes DirectDraw-Objekt im Kernelmodus.
 
 </dd> <dt>
 
-*hsurfakesource* \[ in\]
+*hSurfaceSource* \[ In\]
 </dt> <dd>
 
-Handle für eine [**\_ \_ lokale DD-Oberflächen**](/windows/win32/api/ddrawint/ns-ddrawint-dd_surface_local) Struktur, die die Überlagerungs Oberfläche beschreibt.
+Handle für eine [**DD \_ SURFACE \_ LOCAL-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_surface_local) die die Überlagerungsoberfläche beschreibt.
 
 </dd> <dt>
 
-*puupdateoverlaydata* \[ in, out\]
+*puUpdateOverlayData* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**DD \_ updateoverlaydata**](/windows/win32/api/ddrawint/ns-ddrawint-dd_updateoverlaydata) -Struktur, die die zum Aktualisieren der Überlagerung erforderlichen Informationen enthält.
+Zeiger auf eine [**DD \_ UPDATEOVERLAYDATA-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_updateoverlaydata) die die zum Aktualisieren der Überlagerung erforderlichen Informationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ntgdiddupdateoverlay** gibt einen der folgenden Rückruf Codes zurück.
+**NtGdiDdUpdateOverlay** gibt einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ddhal- \_ Treiber \_ behandelt**</dt> </dl>    | Der Treiber hat den Vorgang durchgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, fährt DirectDraw oder Direct3D mit der-Funktion fort. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
-| <dl> <dt>**ddhal- \_ Treiber \_ nothandled**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementieren muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls behandelt DirectDraw oder Direct3D den Vorgang so, als ob der Treiber Rückruf nicht durch Ausführen der geräteunabhängigen DirectDraw-oder Direct3D-Implementierung definiert wurde.<br/> |
+| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
 
@@ -90,7 +90,7 @@ Ein Zeiger auf eine [**DD \_ updateoverlaydata**](/windows/win32/api/ddrawint/ns
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Ein Zeiger auf eine [**DD \_ updateoverlaydata**](/windows/win32/api/ddrawint/ns
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia Duration (Eigenschaft)
-description: Die Duration-Eigenschaft ruft die Dauer des aktuellen Medien Elements in Sekunden ab.
+title: IWMPMedia duration-Eigenschaft
+description: Die duration-Eigenschaft ruft die Dauer des aktuellen Medienelements in Sekunden ab.
 ms.assetid: f8a0bf3e-eeaf-46f5-90c8-d3b11ce4eb39
 keywords:
-- Duration-Eigenschaften Fenster Media Player
-- Duration-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, Duration-Eigenschaft
+- duration-Eigenschaft Windows Media Player
+- duration-Eigenschaft Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , duration-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f796cab042713082ce2066659f62736855e62787
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 38703c37e73ba6312970b8e5b929441c3c5c9ccd1f034ab244dc97c36c2d2162
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119506020"
 ---
-# <a name="iwmpmediaduration-property"></a>Iwmpmedia::d urationseigenschaft
+# <a name="iwmpmediaduration-property"></a>IWMPMedia::d uration-Eigenschaft
 
-Die **Duration** -Eigenschaft ruft die Dauer des aktuellen Medien Elements in Sekunden ab.
+Die **duration-Eigenschaft** ruft die Dauer des aktuellen Medienelements in Sekunden ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,21 +49,21 @@ Public ReadOnly Property duration As System.Double
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Double** -Wert, der die Dauer in Sekunden angibt.
+Eine **System.Double-Datei,** die die Dauer in Sekunden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Eigenschaft mit einem anderen als dem in AxWindowsMediaPlayer. currentMedia angegebenen Medien Element verwendet wird, enthält Sie möglicherweise keinen gültigen Wert.
+Wenn diese Eigenschaft mit einem anderen Medienelement als dem in AxWindowsMediaPlayer.currentMedia angegebenen verwendet wird, enthält sie möglicherweise keinen gültigen Wert.
 
-Zum Abrufen der Dauer für Dateien, die sich nicht in der Bibliothek des Benutzers befinden, müssen Sie auf das Öffnen der Datei durch Windows Media Player warten. Das heißt, dass der aktuelle **openstate** -Wert " **mediaopen**" entsprechen muss. Sie können dies überprüfen, indem Sie **AxWindowsMediaPlayer verarbeiten. \_ Wmpocxevents \_ OpenStateChange** -Ereignis oder durch regelmäßiges Überprüfen des Werts von **AxWindowsMediaPlayer. openstate**.
+Um die Dauer für Dateien abzurufen, die sich nicht in der Bibliothek des Benutzers befinden, müssen Sie warten, bis Windows Media Player die Datei öffnet. Das bedeutet, dass der aktuelle **OpenState** gleich **MediaOpen** sein muss. Sie können dies überprüfen, indem Sie **axWindowsMediaPlayer behandeln. \_ WMPOCXEvents \_ OpenStateChange-Ereignis** oder durch regelmäßiges Überprüfen des Werts von **AxWindowsMediaPlayer.openState**.
 
-Bei Wiedergabelisten kann die Dauer der einzelnen Medienelemente abgerufen werden, wenn das einzelne Medien Element geöffnet wird, anstatt beim Öffnen der Wiedergabeliste.
+Bei Wiedergabelisten kann die Dauer jedes Medienelements abgerufen werden, wenn das einzelne Medienelement geöffnet wird, anstatt die , wenn die Wiedergabeliste geöffnet wird.
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Duration** verwendet, um die verbleibende Zeit im aktuellen Medien Element in einer Bezeichnung anzuzeigen. Ein Timer aktualisiert den Text in der Bezeichnung jede Sekunde.
+Im folgenden Beispiel wird **duration** verwendet, um die verbleibende Zeit im aktuellen Medienelement in einer Bezeichnung anzuzeigen. Ein Timer aktualisiert den Text in der Bezeichnung jede Sekunde.
 
 
 ```CSharp
@@ -119,7 +119,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -129,19 +129,19 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. currentMedia (VB und c#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
+[**AxWindowsMediaPlayer.currentMedia (VB und C#)**](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. openstate (VB und c#)**](axwmplib-axwindowsmediaplayer-openstate--vb-and-c.md)
+[**AxWindowsMediaPlayer.openState (VB und C#)**](axwmplib-axwindowsmediaplayer-openstate--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. OpenStateChange-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-openstatechange.md)
+[**AxWindowsMediaPlayer.OpenStateChange-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-openstatechange.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. durationString (VB und c#)**](wmplibiwmpmedia-iwmpmedia-durationstring--vb-and-c.md)
+[**IWMPMedia.durationString (VB und C#)**](wmplibiwmpmedia-iwmpmedia-durationstring--vb-and-c.md)
 </dt> </dl>
 
  

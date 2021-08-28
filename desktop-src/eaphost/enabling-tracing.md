@@ -1,82 +1,82 @@
 ---
-title: Aktivieren der EAPHost-Ablauf Verfolgung
-description: Kann Benutzer bei der Suche nach den Hauptursachen von Problemen unterstützen, die während des EAP-Authentifizierungs Vorgangs auftreten. Zu den Debuginformationen können API-Aufrufe ausgeführt werden, interne Funktionsaufrufe durchgeführt und Zustandsübergänge ausgeführt werden.
+title: Aktivieren der EAPHost-Ablaufverfolgung
+description: Kann Benutzern dabei helfen, die Grundursachen von Problemen zu finden, die während des EAP-Authentifizierungsprozesses auftreten. Die Debuginformationen können ausgeführte API-Aufrufe, ausgeführte interne Funktionsaufrufe und ausgeführte Zustandsübergänge umfassen.
 ms.assetid: 5f401101-59aa-4ee8-825a-0b998489eed9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fdee8a5516b218e51f0151e1964885789560d82
-ms.sourcegitcommit: db89157e3be911fdce2e543e99faa31fb2403bc8
+ms.openlocfilehash: c638fa7f546028cd9cf66227cfe3c302d6599492d1cbbfcfdac6c2b428273db8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "104039882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086292"
 ---
-# <a name="enabling-eaphost-tracing"></a>Aktivieren der EAPHost-Ablauf Verfolgung
+# <a name="enabling-eaphost-tracing"></a>Aktivieren der EAPHost-Ablaufverfolgung
 
-Ablauf Verfolgungs Protokolle mit Debuginformationen können Benutzer bei der Suche nach den Hauptursachen von Problemen unterstützen, die während des EAP-Authentifizierungs Vorgangs auftreten. Zu den Debuginformationen können API-Aufrufe ausgeführt werden, interne Funktionsaufrufe durchgeführt und Zustandsübergänge ausgeführt werden.
+Ablaufverfolgungsprotokolle, die Debuginformationen enthalten, können Benutzern helfen, die Grundursachen von Problemen zu finden, die während des EAP-Authentifizierungsprozesses auftreten. Die Debuginformationen können ausgeführte API-Aufrufe, ausgeführte interne Funktionsaufrufe und ausgeführte Zustandsübergänge umfassen.
 
-Die Ablauf Verfolgung kann sowohl auf der Clientseite als auch auf der Authenticator-Seite aktiviert werden. Die Ablauf Verfolgung kann auch für Aufrufe der APIs für den [Routing-und RAS-Dienst (RRAS)](/windows/desktop/RRAS/routing-start-page) aktiviert werden. Weitere Informationen finden Sie unter Ablauf [Verfolgung für den Routing-und RAS-Dienst](#tracing-on-the-routing-and-remote-access-service).
+Die Ablaufverfolgung kann sowohl auf clientseitiger als auch auf Authentatorseite aktiviert werden. Die Ablaufverfolgung kann auch für Aufrufe der [RRAS-APIs (Routing and Remote Access Service)](/windows/desktop/RRAS/routing-start-page) aktiviert werden. Weitere Informationen finden Sie unter [Ablaufverfolgung für den Routing- und RAS-Dienst.](#tracing-on-the-routing-and-remote-access-service)
 
 > [!Note]  
-> Ablauf Verfolgungs Protokolle sind nur in englischer Sprache verfügbar.
+> Ablaufverfolgungsprotokolle sind nur auf Englisch verfügbar.
 
  
 
-Wenn die EAPHost-Ablauf Verfolgung aktiviert ist, werden die Protokollierungs Informationen in einer ETL-Datei an einem vom Benutzer angegebenen Speicherort gespeichert. Wenn während der EAP-Authentifizierung Fehler auftreten, generiert die Ablauf Verfolgung eine ETL-Datei, die für die Fehlerursachen Analyse an Developer Support Microsoft gesendet werden kann. Partner, die Zugriff auf Microsoft Windows Build-Freigaben,-Symbole und traceformat-Dateien haben, können die ETL-Dateien mithilfe des **tracerpt** -Tools in eine einfache Textdatei konvertieren.
+Wenn die EAPHost-Ablaufverfolgung aktiviert ist, werden Protokollierungsinformationen in einer ETL-Datei an einem vom Benutzer angegebenen Speicherort gespeichert. Wenn während der EAP-Authentifizierung Fehler auftreten, generiert die Ablaufverfolgung eine ETL-Datei, die zur Ursachenanalyse an Microsoft-Entwickler Support gesendet werden kann. Partner, die Zugriff auf Microsoft Windows-Buildfreigaben, Symbole und Traceformatdateien haben, können die ETL-Dateien mithilfe des **Tracerpt-Tools** in eine Nur-Text-Datei konvertieren.
 
-NPS-Fehler (Network Policy Server, Netzwerk Richtlinien Server) werden in den EAPHost-Protokollen nicht erfasst. Wenn Sie versuchen, einen NPS-Fehler zu beheben, sehen Sie sich den iassam an. Log und [iasnap. Protokoll](https://go.microsoft.com/fwlink/p/?linkid=84108) Dateien.
+NpS-Fehler (Netzwerkrichtlinienserver) werden in den EAPHost-Protokollen nicht erfasst. Wenn Sie versuchen, einen NPS-Fehler zu beheben, sehen Sie sich den IASSAM an. LOG und [IASNAP. LOG-Dateien.](https://go.microsoft.com/fwlink/p/?linkid=84108)
 
-## <a name="tracing-on-the-client"></a>Ablauf Verfolgung auf dem Client
+## <a name="tracing-on-the-client"></a>Ablaufverfolgung auf dem Client
 
-So aktivieren Sie die Ablauf Verfolgung auf der Clientseite:
+So aktivieren Sie die Ablaufverfolgung auf Clientseite:
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-2.  Führen Sie den folgenden Befehl aus: **logman** **Start Trace** **eaphostpeer** **-o** **. \\ Eaphostpeer. ETL** **-p** **{5f31090b-d990-4e91-b16d-46121d0255aa} 0x4000ffff 0** **-ETS**
+2.  Führen Sie den folgenden Befehl aus: **logman** **start trace** **EapHostPeer** **-o** **. \\ EapHostPeer.etl** **-p** **{5F31090B-D990-4e91-B16D-46121D0255AA} 0x4000ffff 0** **-ets**
 3.  Reproduzieren Sie das Szenario, das Sie nachverfolgen möchten.
-4.  Führen Sie den folgenden Befehl aus: **logman** **stoppt** **eaphostpeer** **-ETS** .
-5.  Konvertieren Sie die ETL-Datei mithilfe des folgenden Befehls in Text: **tracerpt eaphostpeer. ETL** **– PDB** **&lt; PDBPATH &gt;** **-tp** **&lt; tracemessagefilesdirector &gt; ypath** **-o** **EapHostPeer.txt**
+4.  Führen Sie den folgenden Befehl aus: **logman** **stop** **EapHostPeer** **-ets**
+5.  Konvertieren Sie die etl-Datei mit dem folgenden Befehl in Text: **tracerpt EapHostPeer.etl** **–pdb** **&lt; pdbpath &gt;** **-tp** **&lt; tracemessagefilesdirectorypath &gt;** **-o** **EapHostPeer.txt**
     > [!Note]  
-    > Wenn Sie keinen Zugriff auf das tracerpt-Tool haben, vermeiden Sie den letzten Schritt, und senden Sie die ETL-Datei an Microsoft Developer Support.
+    > Wenn Sie keinen Zugriff auf das Tracerpt-Tool haben, vermeiden Sie den letzten Schritt, und senden Sie die ETL-Datei an Microsoft-Entwickler Support.
 
      
 
-## <a name="tracing-on-the-authenticator"></a>Ablauf Verfolgung für den Authentifikator
+## <a name="tracing-on-the-authenticator"></a>Ablaufverfolgung im Authenticator
 
-So aktivieren Sie die Ablauf Verfolgung auf der Authentifikator-Seite:
+So aktivieren Sie die Ablaufverfolgung auf Authentatorseite:
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-2.  Führen Sie den folgenden Befehl aus: **logman** **Start Trace** **eaphostauthr** **-o** **. \\ Eaphostauthr. ETL** **-p** **{F6578502-DF4E-4a67-9661-E3A2F05D1D9B} 0x4000ffff 0** **-ETS**
+2.  Führen Sie den folgenden Befehl aus: **logman** **start trace** **EapHostAuthr** **-o** **. \\ EapHostAuthr.etl** **-p** **{F6578502-DF4E-4a67-9661-E3A2F05D1D9B} 0x4000ffff 0** **-ets**
 3.  Reproduzieren Sie das Szenario, das Sie nachverfolgen möchten.
-4.  Führen Sie den folgenden Befehl aus: **logman** **stoppt** **eaphostauthr** **-ETS** .
-5.  Konvertieren Sie die ETL-Datei mithilfe des folgenden Befehls in Text: **tracerpt eaphostauthr. ETL** **– PDB** **&lt; PDBPATH &gt;** **-tp** **&lt; tracemessagefilesdirecterypath &gt;** **-o** **EapHostAuthr.txt**
+4.  Führen Sie den folgenden Befehl aus: **logman** **stop** **EapHostAuthr** **-ets**
+5.  Konvertieren Sie die etl-Datei mit dem folgenden Befehl in Text: **tracerpt EapHostAuthr.etl** **–pdb** **&lt; pdbpath &gt;** **-tp** **&lt; tracemessagefilesdirectorypath &gt;** **-o** **EapHostAuthr.txt**
     > [!Note]  
-    > Wenn Sie keinen Zugriff auf das tracerpt-Tool haben, vermeiden Sie den letzten Schritt, und senden Sie stattdessen die ETL-Datei an Microsoft Developer Support.
+    > Wenn Sie keinen Zugriff auf das Tracerpt-Tool haben, vermeiden Sie den letzten Schritt, und senden Sie stattdessen die ETL-Datei an Microsoft-Entwickler Support.
 
      
 
 ## <a name="event-tracing"></a>Ereignisablaufverfolgung
 
-In Windows 7 und höheren Versionen von Windows bietet EAPHost eine ereignisbasierte Ablauf Verfolgung für den Authentifikator und den Peer. Der Vorteil der ereignisbasierten Ablauf Verfolgung besteht darin, dass zum Anzeigen der Ablauf Verfolgungs Meldungen keine Symbol Dateien erforderlich sind. So aktivieren Sie die Ereignis Ablauf Verfolgung:
+In Windows 7 und neueren Versionen von Windows stellt EapHost eine ereignisbasierte Ablaufverfolgung für den Authentator und den Peer zur Verfügung. Der Vorteil der ereignisbasierten Ablaufverfolgung ist, dass zum Anzeigen der Ablaufverfolgungsmeldungen keine Symboldateien erforderlich sind. So aktivieren Sie die Ereignisablaufverfolgung:
 
-1.  Öffnen Sie **Event Viewer**.
-2.  Wichtige EAPHost-Nachrichten werden unter "benutzerdefinierte Ansichten \\ Administrative Ereignisse" protokolliert.
-3.  Nicht kritische Nachrichten werden unter "Anwendungen und Dienste \\ Microsoft \\ Windows \\ EAPHost" protokolliert.
-4.  Ereignismeldungen vom Typ "Analyse" und "Debuggen" können unter demselben Pfad angezeigt werden, indem Sie in der Titelleiste im Menü **Ansicht** die Option **analytische und Debugprotokolle anzeigen** auswählen.
+1.  Öffnen **Sie EventViewer.**
+2.  Kritische EapHost-Nachrichten werden unter "Administrative Ereignisse für benutzerdefinierte \\ Ansichten" protokolliert.
+3.  Nicht kritische Meldungen werden protokolliert unter: "Anwendungen und Dienste \\ Microsoft \\ Windows \\ EapHost
+4.  Ereignismeldungen vom Typ "Analytics" und "Debug" können unter demselben Pfad angezeigt  werden, indem Sie im Ansichtsmenü in der Titelleiste Analyse- und **Debugprotokolle** anzeigen auswählen.
 
-## <a name="tracing-on-the-routing-and-remote-access-service"></a>Ablauf Verfolgung für den Routing-und RAS-Dienst
+## <a name="tracing-on-the-routing-and-remote-access-service"></a>Ablaufverfolgung für den Routing- und RAS-Dienst
 
-So aktivieren Sie die RRAS-Ablauf Verfolgung:
-
-1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-2.  Führen Sie den folgenden Befehl aus: **netsh** **RAS** **set** **TR** **\* *_ _* en**
-3.  **% Systemroot%-Ablauf \\ Verfolgung** öffnen, um RAS-Ablauf Verfolgungen anzuzeigen
-
-So deaktivieren Sie die RRAS-Ablauf Verfolgung:
+So aktivieren Sie die RRAS-Ablaufverfolgung:
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
-2.  Führen Sie den folgenden Befehl aus: **netsh** **RAS** **set** **TR** **\* *_ _* DIS**
+2.  Führen Sie den folgenden Befehl aus: **netsh** **ras** **set** **tr** **\* *_ _* en**
+3.  Öffnen der **Ablaufverfolgung %systemroot% \\** zum Anzeigen von RAS-Ablaufverfolgungen
 
-Weitere Informationen finden Sie unter [Netsh Commands](/previous-versions/windows/it-pro/windows-server-2003/cc779693(v=ws.10)).
+So deaktivieren Sie die RRAS-Ablaufverfolgung:
+
+1.  Öffnen Sie ein Eingabeaufforderungsfenster mit erhöhten Rechten.
+2.  Führen Sie den folgenden Befehl aus: **netsh** **ras** **set** **tr** _ **\* *_* dis**
+
+Weitere Informationen finden Sie unter [Netsh-Befehle.](/previous-versions/windows/it-pro/windows-server-2003/cc779693(v=ws.10))
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

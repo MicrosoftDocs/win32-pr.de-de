@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_WKSType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Well-Known Services (WLS)-Ressourcen Eintrag.
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_WKSType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen WKS-Ressourceneintrag (Well-Known Services).
 ms.assetid: 6d910716-74f9-48a0-b43c-3243f5518caf
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_WKSType
-- DNS-MicrosoftDNS_WKSType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_WKSType-Klasse
+- MicrosoftDNS_WKSType-Klasse DNS, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06e27b62bd2008c58d283d0e7564fa7821c452cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 892e0fbd6d39d794c074c5070ac6065d4be8a1b3ed5cd8e9d7610021589aa2b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109070"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_wkstype-class"></a>Methode "kreateinzustancefrompropertydata" der MicrosoftDNS- \_ Klasse "wkstype"
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_wkstype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ WKSType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Well-Known Services (WLS)-Ressourcen Eintrag.
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen WKS-Ressourceneintrag (Well-Known Services).
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,31 +50,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -82,7 +82,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -91,38 +91,38 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Internetadresse* \[ in\]
+*InternetAddress* \[ In\]
 </dt> <dd>
 
 Internet-IP-Adresse für den Besitzer des Datensatzes.
 
 </dd> <dt>
 
-*Ipprotocol* \[ in\]
+*IPProtocol* \[ In\]
 </dt> <dd>
 
 Zeichenfolge, die das IP-Protokoll für diesen Datensatz darstellt. Gültige Werte sind UDP oder TCP.
 
 </dd> <dt>
 
-*Dienste* \[ in\]
+*Dienste* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die alle Dienste enthält, die vom Wi-Datensatz (well known Service) verwendet werden.
+Zeichenfolge mit allen Diensten, die vom WKS-Datensatz (Well Known Service) verwendet werden.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -138,8 +138,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -147,13 +147,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ wkstype**](microsoftdns-wkstype.md)
+[**MicrosoftDNS \_ WKSType**](microsoftdns-wkstype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ Klasse "wkstype"**](microsoftdns-wkstype-modify.md)
+[**Modify-Methode der \_ MicrosoftDNS-WKSType-Klasse**](microsoftdns-wkstype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

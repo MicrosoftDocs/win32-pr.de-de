@@ -1,9 +1,9 @@
 ---
-title: SBM_ENABLE_ARROWS Meldung (Winuser. h)
-description: Eine Anwendung sendet die SBM-Option \_ \_ Pfeile aktivieren, um einen oder beide Pfeile eines ScrollBar-Steuer Elements zu aktivieren oder zu deaktivieren.
+title: SBM_ENABLE_ARROWS (Winuser.h)
+description: Eine Anwendung sendet die SBM ENABLE ARROWS-Meldung, um einen oder beide Pfeile eines \_ \_ Bildlaufleisten-Steuerelements zu aktivieren oder zu deaktivieren.
 ms.assetid: 9646826a-3a7c-490b-822d-7511e4ef2262
 keywords:
-- Windows-Steuerelemente für SBM_ENABLE_ARROWS Meldung
+- SBM_ENABLE_ARROWS von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78895b43ec7908172a6164917b33ac8549088db4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85e7f3ef8728befe72ec4f2c4afe39caeb10bc0b58984612a5db2445963dc549
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770020"
 ---
-# <a name="sbm_enable_arrows-message"></a>SBM \_ - \_ Meldung "Pfeile aktivieren"
+# <a name="sbm_enable_arrows-message"></a>SBM \_ ENABLE \_ ARROWS message
 
-Eine Anwendung sendet die **SBM-Option \_ \_ Pfeile aktivieren** , um einen oder beide Pfeile eines ScrollBar-Steuer Elements zu aktivieren oder zu deaktivieren.
+Eine Anwendung sendet die **SBM \_ ENABLE \_ ARROWS-Meldung,** um einen oder beide Pfeile eines Bildlaufleisten-Steuerelements zu aktivieren oder zu deaktivieren.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,19 +32,19 @@ Eine Anwendung sendet die **SBM-Option \_ \_ Pfeile aktivieren** , um einen oder
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob die Schiebe leisten Pfeile aktiviert oder deaktiviert sind, und gibt an, welche Pfeile aktiviert oder deaktiviert werden. Dieser Parameter kann einen der folgenden Werte annehmen.
+Gibt an, ob die Scrollleistenpfeile aktiviert oder deaktiviert sind, und gibt an, welche Pfeile aktiviert oder deaktiviert sind. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                   | Bedeutung                                                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| <span id="ESB_DISABLE_BOTH"></span><span id="esb_disable_both"></span><dl> <dt>**ESB- \_ Deaktivierung \_**</dt> </dl> | Deaktiviert beide Pfeile auf einer Schiebe Leiste.<br/>                                                           |
-| <span id="ESB_DISABLE_DOWN"></span><span id="esb_disable_down"></span><dl> <dt>**ESB- \_ Deaktivierung \_**</dt> </dl> | Deaktiviert den Pfeil nach unten auf einer vertikalen Schiebe Leiste.<br/>                                               |
-| <span id="ESB_DISABLE_LTUP"></span><span id="esb_disable_ltup"></span><dl> <dt>**ESB- \_ Deaktivierung von \_ ltup**</dt> </dl> | Deaktiviert den Pfeil nach links auf einer horizontalen Schiebe Leiste oder den Pfeil nach oben auf einer vertikalen Schiebe Leiste.<br/>    |
-| <span id="ESB_DISABLE_LEFT"></span><span id="esb_disable_left"></span><dl> <dt>**ESB \_ deaktiviert \_ Links**</dt> </dl> | Deaktiviert den Pfeil nach links auf einer horizontalen Schiebe Leiste.<br/>                                             |
-| <span id="ESB_DISABLE_RTDN"></span><span id="esb_disable_rtdn"></span><dl> <dt>**ESB- \_ Deaktivieren von \_ rtdn**</dt> </dl> | Deaktiviert den Pfeil nach rechts auf einer horizontalen Schiebe Leiste oder den Pfeil nach unten auf einer vertikalen Schiebe Leiste.<br/> |
-| <span id="ESB_DISABLE_UP"></span><span id="esb_disable_up"></span><dl> <dt>**ESB- \_ Deaktivierung \_**</dt> </dl>       | Deaktiviert den Pfeil nach oben auf einer vertikalen Schiebe Leiste.<br/>                                                 |
-| <span id="ESB_ENABLE_BOTH"></span><span id="esb_enable_both"></span><dl> <dt>**ESB \_ aktivieren \_**</dt> </dl>    | Aktiviert beide Pfeile auf einer Schiebe Leiste.<br/>                                                            |
+| <span id="ESB_DISABLE_BOTH"></span><span id="esb_disable_both"></span><dl> <dt>**ESB \_ DISABLE \_ BOTH**</dt> </dl> | Deaktiviert beide Pfeile auf einer Bildlaufleiste.<br/>                                                           |
+| <span id="ESB_DISABLE_DOWN"></span><span id="esb_disable_down"></span><dl> <dt>**ESB \_ DISABLE \_ DOWN**</dt> </dl> | Deaktiviert den Pfeil nach unten auf einer vertikalen Scrollleiste.<br/>                                               |
+| <span id="ESB_DISABLE_LTUP"></span><span id="esb_disable_ltup"></span><dl> <dt>**ESB \_ DISABLE \_ LTUP**</dt> </dl> | Deaktiviert den Pfeil nach links auf einer horizontalen Scrollleiste oder den Nach-oben-Pfeil auf einer vertikalen Bildlaufleiste.<br/>    |
+| <span id="ESB_DISABLE_LEFT"></span><span id="esb_disable_left"></span><dl> <dt>**ESB \_ DISABLE \_ LEFT**</dt> </dl> | Deaktiviert den Pfeil nach links auf einer horizontalen Scrollleiste.<br/>                                             |
+| <span id="ESB_DISABLE_RTDN"></span><span id="esb_disable_rtdn"></span><dl> <dt>**ESB \_ DISABLE \_ RTDN**</dt> </dl> | Deaktiviert den Pfeil nach rechts auf einer horizontalen Scrollleiste oder den Pfeil nach unten auf einer vertikalen Bildlaufleiste.<br/> |
+| <span id="ESB_DISABLE_UP"></span><span id="esb_disable_up"></span><dl> <dt>**ESB \_ DISABLE \_ UP**</dt> </dl>       | Deaktiviert den Nach-oben-Pfeil auf einer vertikalen Scrollleiste.<br/>                                                 |
+| <span id="ESB_ENABLE_BOTH"></span><span id="esb_enable_both"></span><dl> <dt>**ESB \_ AKTIVIEREN SIE \_ BEIDES.**</dt> </dl>    | Aktiviert beide Pfeile auf einer Scrollleiste.<br/>                                                            |
 
 
 
@@ -61,7 +61,7 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, lautet der Rückgabewert " **true**". Andernfalls ist Sie **false**.
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert **TRUE.** Andernfalls ist dies **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ Wenn die Nachricht erfolgreich ist, lautet der Rückgabewert " **true**". Andern
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

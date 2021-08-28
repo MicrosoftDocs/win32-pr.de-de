@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmentschlüsseln-Schnittstelle
-description: Die iwmdrmentschlüsselungsschnittstelle stellt eine Methode für das Entschlüsseln von Inhalten bereit.
+title: IWMDRMDecrypt-Schnittstelle
+description: Die IWMDRMDecrypt-Schnittstelle stellt eine Methode zum Entschlüsseln von Inhalten bereit.
 ms.assetid: 361f0c2b-b011-4c76-a599-69a982d037e9
 keywords:
-- Iwmdrmentschlüsseln-Schnittstelle Windows Media-Format
-- Iwmdrmentschlüsseln-Schnittstelle Windows Media-Format, beschrieben
+- IWMDRMDecrypt-Schnittstelle windows Media Format
+- IWMDRMDecrypt-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,30 +14,30 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0d6b36872e3b066a29640b45b2fac255b94a8af5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 73c8c3d77104cf3203ff4e4a63671c11c9e08045095decd92c14f6290034bd01
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110360"
 ---
-# <a name="iwmdrmdecrypt-interface"></a>Iwmdrmentschlüsseln-Schnittstelle
+# <a name="iwmdrmdecrypt-interface"></a>IWMDRMDecrypt-Schnittstelle
 
-Die **iwmdrmentschlüsselungsschnittstelle** stellt eine Methode für das Entschlüsseln von Inhalten bereit.
+Die **IWMDRMDecrypt-Schnittstelle** stellt eine Methode zum Entschlüsseln von Inhalten bereit.
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmentschlüsseln** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmentschlüsseln** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMDecrypt-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMDecrypt** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmentschlüsselungsschnittstelle** verfügt über diese Methoden.
+Die **IWMDRMDecrypt-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                   | BESCHREIBUNG                                 |
+| Methode                                   | Beschreibung                                 |
 |:-----------------------------------------|:--------------------------------------------|
 | [**Entschlüsseln**](iwmdrmdecrypt-decrypt.md) | Entschlüsselt einen Datenpuffer an Ort und Stelle.<br/> |
 

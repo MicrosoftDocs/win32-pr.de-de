@@ -1,7 +1,7 @@
 ---
-description: Bricht den aktuellen Analyse Vorgang ab.
+description: Bricht den aktuellen Analysevorgang ab.
 ms.assetid: 909bfa66-b6df-4730-95b7-809fc2170e85
-title: 'Iinkanalyzer:: Abort-Methode (iacom. h)'
+title: IInkAnalyzer::Abort-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: eac96809bfbe41e7d6a070782da3ffd0f6407c60
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f52b2037210e39533d1247cb338bb22a7785f354dbca6b615c6ada67eff3bb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119773600"
 ---
-# <a name="iinkanalyzerabort-method"></a>Iinkanalyzer:: Abort-Methode
+# <a name="iinkanalyzerabort-method"></a>IInkAnalyzer::Abort-Methode
 
-Bricht den aktuellen Analyse Vorgang ab.
+Bricht den aktuellen Analysevorgang ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,40 +39,40 @@ HRESULT Abort(
 
 <dl> <dt>
 
-*ppabortedregion* \[ vorgenommen\]
+*ppAbortedRegion* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen [**ianalysisregion**](ianalysisregion.md) , der den geänderten Bereich darstellt (siehe [**iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)) des aktuellen Analyse Vorgangs.
+Ein Zeiger auf eine [**IAnalysisRegion,**](ianalysisregion.md) die den geänderten Bereich (siehe [**IInkAnalyzer::GetDirtyRegion-Methode)**](iinkanalyzer-getdirtyregion.md)des aktuellen Analysevorgangs darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppabortedregion* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+Rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppAbortedRegion* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
-Mit dieser Methode wird der aktuelle Analyse Vorgang abgebrochen.
+Diese Methode bricht den aktuellen Analysevorgang ab.
 
-Wenn *ppabortedregion* den Wert **null** hat, führt diese Methode den Abbruch wie üblich aus, da dies darauf hinweist, dass der Aufrufer keinen Interesse am Rückgabewert hat.
+Wenn *ppAbortedRegion* **NULL** ist, führt diese Methode den Abbruch wie gewohnt aus, da dies angibt, dass der Aufrufer kein Interesse am Rückgabewert hat.
 
-Die **iinkanalyzer:: Abort-Methode** deaktiviert die [**\_ ianalysisevents:: results**](-ianalysisevents-results.md) -und [**\_ ianalysisevents:: Activity**](-ianalysisevents-activity.md) -Ereignisse für den aktuellen Analyse Vorgang.
+**Die IInkAnalyzer::Abort-Methode** stillt die [**\_ Ereignisse IAnalysisEvents::Results**](-ianalysisevents-results.md) und [**\_ IAnalysisEvents::Activity**](-ianalysisevents-activity.md) für den aktuellen Analysevorgang.
 
-Die **iinkanalyzer:: Abort-Methode** wird asynchron ausgeführt, bis der aktuelle Hintergrundanalyse Vorgang abgebrochen wird. Da der abbruchprozess asynchron ist, kann die Anwendung andere Aufgaben ausführen, während die aktuellen Analyse Operations abgebrochen werden.
+**Die IInkAnalyzer::Abort-Methode** wird asynchron ausgeführt, bis der aktuelle Hintergrundanalysevorgang abgebrochen wird. Da der Abbruchvorgang asynchron ist, kann die Anwendung andere Aufgaben ausführen, während die aktuellen Analysevorgänge abgebrochen werden.
 
-Wenn keine Analyse Vorgänge ausgeführt werden, gibt diese Methode einen leeren Analysebereich zurück.
+Wenn keine Analysevorgänge ausgeführt werden, gibt diese Methode einen leeren Analysebereich zurück.
 
-Wenn ein Analyse Vorgang ausgeführt wird, bricht diese Methode den Vorgang ab.
+Wenn ein Analysevorgang ausgeführt wird, bricht diese Methode den Vorgang ab.
 
-Wenn synchrone und asynchrone Analyse Vorgänge ausgeführt werden, bricht diese Methode den synchronen Vorgang ab.
+Wenn sowohl synchrone als auch asynchrone Analysevorgänge ausgeführt werden, bricht diese Methode den synchronen Vorgang ab.
 
-Wenn diese Methode mehrmals für denselben Analyse Vorgang aufgerufen wird, gibt der erste Aufruf den geänderten Bereich für den Vorgang zurück, und die nachfolgenden Aufrufe geben einen leeren Bereich zurück.
+Wenn diese Methode für denselben Analysevorgang mehr als einmal aufgerufen wird, gibt der erste Aufruf den geänderten Bereich für den Vorgang zurück, und die nachfolgenden Aufrufe geben einen leeren Bereich zurück.
 
-Wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert ist, kann durch das Aufrufen der **iinkanalyzer:: Abort-Methode** das Dokument mit partiellen Ergebnissen belassen werden. Um dies zu vermeiden, müssen Sie die **iinkanalyzer:: Abort-Methode** nicht zwischen dem Zeitpunkt aufrufen, an dem der **iinkanalyzer** das [**\_ ianalysisproxyevents:: InkAnalyzerStateChanging**](-ianalysisproxyevents-inkanalyzerstatechanging.md) -Ereignis empfängt, und dem Zeitpunkt, an dem **iinkanalyzer** das [**\_ ianalysitsvents::**](-ianalysisevents-intermediateresults.md) - [**\_ results**](-ianalysisevents-results.md) -Ereignis empfängt.
+Wenn Ihre Anwendung eine eigene Datenstruktur beibehält, die mit der der [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird, kann der Aufruf der **IInkAnalyzer::Abort-Methode** ihr Dokument mit Teilergebnissen belassen. Um dies zu vermeiden, rufen Sie die **IInkAnalyzer::Abort-Methode** nicht zwischen dem Empfang des [**\_ IAnalysisProxyEvents::InkAnalyzerStateChanging-Ereignisses**](-ianalysisproxyevents-inkanalyzerstatechanging.md) und dem Zeitpunkt auf, zu dem **IInkAnalyzer** das  [**\_ IAnalysisEvents::IntermediateResults-**](-ianalysisevents-intermediateresults.md) oder [**\_ IAnalysisEvents::Results-Ereignis**](-ianalysisevents-results.md) empfängt.
 
-Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit der Ink Analyzer finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit dem Ink-Analysetools finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,33 +80,33 @@ Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit der Ink Anal
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)
+[**IInkAnalyzer::GetDirtyRegion-Methode**](iinkanalyzer-getdirtyregion.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: setdirtyregion-Methode**](iinkanalyzer-setdirtyregion.md)
+[**IInkAnalyzer::SetDirtyRegion-Methode**](iinkanalyzer-setdirtyregion.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

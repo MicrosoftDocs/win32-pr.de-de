@@ -1,19 +1,19 @@
 ---
-description: TAPI 1,5 wurde speziell für Windows CE Version 1,0 entwickelt. Es handelt sich um eine Teilmenge von TAPI 1,4, ist nur auf Windows CE verfügbar und wird in der Windows CE Entwicklerdokumentation dokumentiert.
+description: TAPI 1.5 wurde speziell für Windows CE Version 1.0 entwickelt. Es handelt sich um eine Teilmenge von TAPI 1.4, ist nur auf Windows CE verfügbar und ist in der Windows CE Entwicklerdokumentation dokumentiert.
 ms.assetid: 74abab6f-95fd-419b-b832-c3c7de18c9b4
-title: TAPI 1,5
+title: TAPI 1.5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f668329a038f6c220c2c01439733360dd063b80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4bef68cf6f2749c24177096a1a0e0ec37bc935433915430d30e291e6cb2eb45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119518390"
 ---
-# <a name="tapi-15"></a>TAPI 1,5
+# <a name="tapi-15"></a>TAPI 1.5
 
-TAPI 1,5 wurde speziell für Windows CE Version 1,0 entwickelt. Es handelt sich um eine Teilmenge von TAPI 1,4, ist nur auf Windows CE verfügbar und wird in der Windows CE Entwicklerdokumentation dokumentiert.
+TAPI 1.5 wurde speziell für Windows CE Version 1.0 entwickelt. Es handelt sich um eine Teilmenge von TAPI 1.4, ist nur auf Windows CE verfügbar und ist in der Windows CE Entwicklerdokumentation dokumentiert.
 
  
 

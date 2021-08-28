@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 7b128593c30b2ca8f9de634e3ce9c7f9ba894089
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 416e62e06b1f9b03bd2dbe55c67f7047896c4585
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860212"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631129"
 ---
 # <a name="span-idvspixenginepixengineint4spanpixengineint4-structure"></a><span id="vspixengine.pixengineint4"></span>PixEngineInt4-Struktur
 
@@ -38,20 +38,20 @@ Stellt einen 4D-Vektor mit ganzzahligen Koordinaten mit Vorzeichen dar.
 ## <a name="members"></a>Member
 
 **X**  
-Die Position der Komponente der X-Achse.
+Die Position der X-Achsenkomponente.
 
 **J**  
-Die Position der Komponente der Y-Achse.
+Die Position der Y-Achsenkomponente.
 
 **Z**  
-Die Position der Z-Achsen Komponente.
+Die Position der Z-Achsenkomponente.
 
 **W**  
-Die Position der Komponente der W-Achse.
+Die Position der W-Achsenkomponente.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

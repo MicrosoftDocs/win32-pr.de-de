@@ -1,23 +1,23 @@
 ---
 title: MicrosoftDNS_StatisticCollection
-description: Die MicrosoftDNS \_ statisticcollection-Klasse stellt eine Sammlung verwandter DNS-Server Statistiken dar.
+description: Die MicrosoftDNS \_ StatisticCollection-Klasse stellt eine Sammlung verwandter DNS-Serverstatistiken dar.
 ms.assetid: 74e080e9-a676-4a82-ae8b-ee904622eb9a
 keywords:
 - MicrosoftDNS_StatisticCollection
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c44f9c65714fb3b1db58b5a6439ade5531792501
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 42fda276433290ab2b151b4b6a34abae7a0113ee3db75054f6c66c0536009dfa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109090"
 ---
-# <a name="microsoftdns_statisticcollection"></a>MicrosoftDNS \_ statisticcollection
+# <a name="microsoftdns_statisticcollection"></a>MicrosoftDNS \_ StatisticCollection
 
-Die MicrosoftDNS \_ statisticcollection-Klasse stellt eine Sammlung verwandter DNS-Server Statistiken dar.
+Die MicrosoftDNS \_ StatisticCollection-Klasse stellt eine Sammlung verwandter DNS-Serverstatistiken dar.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ``` syntax
 class MicrosoftDNS_StatisticCollection : CIM_LogicalElement
@@ -32,21 +32,21 @@ class MicrosoftDNS_StatisticCollection : CIM_LogicalElement
 
 <dl> <dt>
 
-<span id="Name"></span><span id="name"></span><span id="NAME"></span>**Benennen**
+<span id="Name"></span><span id="name"></span><span id="NAME"></span>**Namen**
 </dt> <dd>
 
-Der Name der Statistik Sammlung.
+Name der Statistiksammlung.
 
 </dd> <dt>
 
-<span id="StatId"></span><span id="statid"></span><span id="STATID"></span>**Statid**
+<span id="StatId"></span><span id="statid"></span><span id="STATID"></span>**StatId**
 </dt> <dd>
 
-Numerische Darstellung der Statistik Sammlung.
+Numerische Darstellung der Statistiksammlung.
 
 </dd> <dt>
 
-<span id="MicrosoftDNS_Statistic_Statistics__"></span><span id="microsoftdns_statistic_statistics__"></span><span id="MICROSOFTDNS_STATISTIC_STATISTICS__"></span>**Statistik Statistik zu MicrosoftDNS \_\[\]**
+<span id="MicrosoftDNS_Statistic_Statistics__"></span><span id="microsoftdns_statistic_statistics__"></span><span id="MICROSOFTDNS_STATISTIC_STATISTICS__"></span>**Statistik der \_ MicrosoftDNS-Statistik\[\]**
 </dt> <dd>
 
 Array von Werten, die der Statistik zugeordnet sind.
@@ -64,12 +64,12 @@ Array von Werten, die der Statistik zugeordnet sind.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Statistik**](microsoftdns-statistic.md)
+[**MicrosoftDNS-Statistik \_**](microsoftdns-statistic.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

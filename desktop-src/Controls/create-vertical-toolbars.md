@@ -1,38 +1,38 @@
 ---
-title: Erstellen vertikaler Symbolleisten
-description: Der Schlüssel zum Erstellen einer vertikalen Symbolleiste ist das Einschließen von CCS \_ -Vert in den Fenster Stil und das Festlegen des TBSTATE- \_ Wrap-Stils für jede Schaltfläche.
+title: Erstellen von vertikalen Symbolleisten
+description: Der Schlüssel zum Erstellen einer vertikalen Symbolleiste besteht im Einschluss von CCS VERT in den Fensterstil und dem Festlegen des \_ TBSTATE WRAP-Stils \_ für jede Schaltfläche.
 ms.assetid: C2EAB160-0D8D-4BB9-AD41-D5175FBE81AB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: acd32609e81196a94f4298197c33a4cc6e21d117
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: ea66c22461c3616a6b90fdb9fed65fc65fec751055c27d15170aab30e3531e96
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "103948528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119504035"
 ---
-# <a name="how-to-create-vertical-toolbars"></a>Erstellen vertikaler Symbolleisten
+# <a name="how-to-create-vertical-toolbars"></a>Erstellen von vertikalen Symbolleisten
 
-Der Schlüssel zum Erstellen einer vertikalen Symbolleiste ist das Einschließen von [**CCS- \_ Vert**](common-control-styles.md) in den Fenster Stil und das Festlegen des [**TBSTATE- \_ Wrap**](toolbar-button-states.md) -Stils für jede Schaltfläche.
+Der Schlüssel zum Erstellen einer vertikalen Symbolleiste besteht im Einschluss von [**CCS \_ VERT**](common-control-styles.md) in den Fensterstil und dem Festlegen des [**TBSTATE \_ WRAP-Stils**](toolbar-button-states.md) für jede Schaltfläche.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="create-a-vertical-toolbar"></a>Erstellen einer vertikalen Symbolleiste
 
-Der folgende Beispielcode erstellt die vertikale Symbolleiste, die in der folgenden Abbildung dargestellt ist.
+Der folgende Beispielcode erstellt die vertikale Symbolleiste, die in der folgenden Abbildung gezeigt wird.
 
-![Screenshot mit einem Dialogfeld, in dem drei Symbolleisten Elemente vertikal angeordnet sind, von denen jedes nur ein Symbol aufweist](images/tb-vertical.png)
+![Screenshot eines Dialogfelds mit drei vertikal angeordneten Symbolleistenelementen, von denen jedes nur über ein Symbol verfügt](images/tb-vertical.png)
 
 
 ```C++
@@ -80,15 +80,15 @@ HWND CreateVerticalToolbar(HWND hWndParent)
 
 <dl> <dt>
 
-[Verwenden von Symbolleisten](using-toolbar-controls.md)
+[Verwenden von Symbolleisten-Steuerelementen](using-toolbar-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

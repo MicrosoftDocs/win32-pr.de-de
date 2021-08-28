@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionBrokerFarmAccount-Klasse
-description: Die Win32- \_ Klasse "sessionbrokerfarmaccount" ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar. | Win32_SessionBrokerFarmAccount-Klasse
+description: Die Win32 \_ SessionBrokerFarmAccount-Klasse ist ab diesem Windows Server 2012. | Win32_SessionBrokerFarmAccount-Klasse
 ms.assetid: a76ade0f-cd94-438c-bc07-30dc4b4ee6c8
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionBrokerFarmAccount-Klasse Remotedesktopdienste
-- Win32_SessionBrokerFarmAccount Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionBrokerFarmAccount-Remotedesktopdienste
+- Win32_SessionBrokerFarmAccount klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,18 +24,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a31f076ddc6f9361be12a57dc60ada24ed75e4bb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b8b7d55f973dc19c03182a4199b64f91f9de5a0774cc8c8f9d77d67eeb715c24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422490"
 ---
-# <a name="win32_sessionbrokerfarmaccount-class"></a>Win32 \_ sessionbrokerfarmaccount-Klasse
+# <a name="win32_sessionbrokerfarmaccount-class"></a>Win32 \_ SessionBrokerFarmAccount-Klasse
 
-\[Die Win32-Klasse " **\_ sessionbrokerfarmaccount** " ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar.\]
+\[Die **Win32 \_ SessionBrokerFarmAccount-Klasse** ist ab diesem Windows Server 2012.\]
 
-Definiert ein Sitzungs Broker-Farmkonto.
+Definiert ein Sitzungsbrokerfarmkonto.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -58,18 +58,18 @@ class Win32_SessionBrokerFarmAccount
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ sessionbrokerfarmaccount** " verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionBrokerFarmAccount-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ sessionbrokerfarmaccount** " verfügt über diese Methoden.
+Die **Win32 \_ SessionBrokerFarmAccount-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                      | BESCHREIBUNG                          |
+| Methode                                                      | Beschreibung                          |
 |:------------------------------------------------------------|:-------------------------------------|
 | [**DeleteEx**](deleteex-win32-sessionbrokerfarmaccount.md) | Löscht das Farmkonto.<br/> |
 
@@ -79,7 +79,7 @@ Die Win32-Klasse " **\_ sessionbrokerfarmaccount** " verfügt über diese Method
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ sessionbrokerfarmaccount** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionBrokerFarmAccount-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -105,11 +105,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Name des Farm Kontos.
+Der Name des Farmkontos.
 
 </dd> <dt>
 
-**Accountpassword**
+**AccountPassword**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -118,7 +118,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Kennwort des Farm Kontos.
+Das Kennwort des Farmkontos.
 
 </dd> <dt>
 
@@ -131,7 +131,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der erste Dienst Prinzipal Name (Service Principal Name, SPN), der dem Farmkonto zugeordnet ist.
+Der erste Dienstprinzipalname (SPN), der dem Farmkonto zugeordnet ist.
 
 </dd> <dt>
 
@@ -148,7 +148,7 @@ Der zweite SPN, der dem Farmkonto zugeordnet ist.
 
 </dd> <dt>
 
-**Computerdnsname**
+**ComputerDNSName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -161,7 +161,7 @@ Der DNS-Name des Computers, der dem Farmkonto zugeordnet ist.
 
 </dd> <dt>
 
-**Farmname**
+**FarmName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -173,14 +173,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name der Sitzungs Broker Farm.
+Der Name der Sitzungsbrokerfarm.
 
 </dd> <dt>
 
 **Manuell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -200,8 +200,8 @@ Gibt an, ob das Kennwort für das Konto manuell aktualisiert wird.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                              |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                               |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 

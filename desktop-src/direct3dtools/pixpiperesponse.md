@@ -1,5 +1,5 @@
 ---
-description: Eine Enum, die zum Senden von Antworten von der Erfassungs-Engine an Grafikdiagnose.
+description: Eine Enumeration, die zum Senden von Antworten von der Erfassungs-Engine an Grafikdiagnose verwendet wird.
 MS-HAID: vspixengine.PixPipeResponse
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b28971a4a4011422fae5f37c11b4d8fc665cce7c0989842ab81dda027777c253
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ad00d7bada935dd27f711499e5975d31709b9940
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119119264"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631688"
 ---
 # <a name="span-idvspixenginepixpiperesponsespanpixpiperesponse-enumeration"></a><span id="vspixengine.pixpiperesponse"></span>PixPipeResponse-Enumeration
 
-Eine Enum, die zum Senden von Antworten von der Erfassungs-Engine an Grafikdiagnose.
+Eine Enumeration, die zum Senden von Antworten von der Erfassungs-Engine an Grafikdiagnose verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,36 +37,36 @@ Eine Enum, die zum Senden von Antworten von der Erfassungs-Engine an Grafikdiagn
 
 ## <a name="constants"></a>Konstanten
 
-<span id="NEW_DATA_AVAILABLE"></span><span id="new_data_available"></span>**NEUE \_ DATEN \_ VERFÜGBAR**  
-Eine Antwort, die angibt, dass neue Daten in das Grafikprotokoll geschrieben wurden und gelesen werden können.
+<span id="NEW_DATA_AVAILABLE"></span><span id="new_data_available"></span>**NEUE \_ \_ VERFÜGBARE DATEN**  
+Eine Antwort, die angibt, dass neue Daten in das Grafikprotokoll geschrieben wurden und zum Lesen bereit sind.
 
 <span id="EXPERIMENT_DATA"></span><span id="experiment_data"></span>**\_EXPERIMENTDATEN**  
-Eine Antwort, die Konfigurationsinformationen zur Erfassungssitzung angibt.
+Eine Antwort, die Konfigurationsinformationen zur Aufzeichnungssitzung angibt.
 
-<span id="ERRORCODE"></span><span id="errorcode"></span>**Errorcode**  
+<span id="ERRORCODE"></span><span id="errorcode"></span>**ERRORCODE**  
 Eine Antwort, die angibt, dass bei der Erfassungs-Engine ein Fehler aufgetreten ist.
 
 <span id="APPLICATIONCAPTUREINPROGRESS"></span><span id="applicationcaptureinprogress"></span>**APPLICATIONCAPTUREINPROGRESS**  
-Eine Antwort, die angibt, dass die Erfassungs-Engine mit dem Erfassen von Grafikinformationen begonnen hat. Dies deutet nicht darauf hin, dass daten noch untersucht werden können.
+Eine Antwort, die angibt, dass die Erfassungs-Engine mit der Erfassung von Grafikinformationen begonnen hat. Dies gibt nicht an, dass die Daten noch untersucht werden können.
 
 <span id="PARTIAL_DATA"></span><span id="partial_data"></span>**PARTIELLE \_ DATEN**  
-Eine Antwort, die angibt, dass partielle Daten in das Grafikprotokoll geschrieben wurden.
+Eine Antwort, die angibt, dass Teildaten in das Grafikprotokoll geschrieben wurden.
 
-<span id="READY"></span><span id="ready"></span>**Bereit**  
-Eine Antwort, die angibt, dass die Erfassungs-Engine zum Erfassen von Grafikinformationen bereit ist.
+<span id="READY"></span><span id="ready"></span>**BEREIT**  
+Eine Antwort, die angibt, dass die Erfassungs-Engine bereit ist, mit der Erfassung von Grafikinformationen zu beginnen.
 
-<span id="DONE"></span><span id="done"></span>**fertig**  
+<span id="DONE"></span><span id="done"></span>**FERTIG**  
 Intern
 
 <span id="CAPTURESTARTED"></span><span id="capturestarted"></span>**CAPTURESTARTED**  
 Eine Antwort, die angibt, dass eine Frameerfassung gestartet wurde.
 
-<span id="STATUS"></span><span id="status"></span>**Status**  
-Eine Antwort, die Statusinformationen zur erfassten App angibt. Beispiel: Framerate.
+<span id="STATUS"></span><span id="status"></span>**STATUS**  
+Eine Antwort, die Statusinformationen zur erfassten App angibt. z. B. Framerate.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

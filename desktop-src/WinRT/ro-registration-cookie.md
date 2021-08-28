@@ -1,19 +1,19 @@
 ---
-description: Stellt Aktivierungs Factorys dar, die durch Aufrufen der Funktion roregisteractivationfactorys registriert werden.
+description: Stellt Aktivierungs factorys dar, die durch Aufrufen der RoRegisterActivationFactories-Funktion registriert werden.
 ms.assetid: D74E5886-45DB-40DE-9740-D14341E78713
-title: RO_REGISTRATION_COOKIE (roapi. h)
+title: RO_REGISTRATION_COOKIE (Roapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe9b5242901c1beff4152bc16108976d6f7de275
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8efc7d3364f02c11750e6b42ddec6d2a3dee3f83368d277bc979a22ea3a0854a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741597"
 ---
-# <a name="ro_registration_cookie"></a>Registrierungs Cookie für die \_ Registrierung \_
+# <a name="ro_registration_cookie"></a>\_ \_ RO-REGISTRIERUNGSCOOKIE
 
-Stellt Aktivierungs Factorys dar, die durch Aufrufen der Funktion [**roregisteractivationfactorys**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories) registriert werden.
+Stellt Aktivierungs factorys dar, die durch Aufrufen der [**RoRegisterActivationFactories-Funktion registriert**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories) werden.
 
 
 ```C++
@@ -22,9 +22,9 @@ typedef struct {}* RO_REGISTRATION_COOKIE;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion [**roregisteractivationfactorys**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories) gibt ein **\_ Registrierungs \_ Cookie für Registrierungs** stellen zurück, wenn eine aktivierbare Klassenfactorys beim Windows-Runtime registriert sind. Die [**rorevokeactivationfactoryfunktion**](/windows/win32/api/roapi/nf-roapi-rorevokeactivationfactories) verwendet das Cookie, um die Klassenfactorys zu entfernen.
+Die [**RoRegisterActivationFactories-Funktion**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories) gibt ein **RO REGISTRATION \_ \_ COOKIE** zurück, wenn eine aktivierbare Klassen factorys bei der Windows werden. Die [**RoRevokeActivationFactories-Funktion**](/windows/win32/api/roapi/nf-roapi-rorevokeactivationfactories) verwendet das Cookie, um die Klassen factorys zu entfernen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,18 +34,18 @@ Die Funktion [**roregisteractivationfactorys**](/windows/win32/api/roapi/nf-roap
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Roapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Roapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Roregisteractivationfactorys**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories)
+[**RoRegisterActivationFactories**](/windows/win32/api/roapi/nf-roapi-roregisteractivationfactories)
 </dt> <dt>
 
-[**Rorevokeactivationfactorys**](/windows/win32/api/roapi/nf-roapi-rorevokeactivationfactories)
+[**RoRevokeActivationFactories**](/windows/win32/api/roapi/nf-roapi-rorevokeactivationfactories)
 </dt> </dl>
 
  

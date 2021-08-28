@@ -1,42 +1,42 @@
 ---
-description: In diesem Beispiel kann der modulconsumer ein Bearbeitungs Steuerelement, das Prüfsumme-Attribut und das komprimierte Attribut unabhängig konfigurieren.
+description: In diesem Beispiel kann der Modulverbraucher ein Bearbeitungssteuerelement, das Prüfsummenattribut und das komprimierte Attribut unabhängig konfigurieren.
 ms.assetid: f0500856-18d0-45e5-992a-57e01fb2cca5
-title: Beispiel für konfigurierbare Komponente
+title: Beispiel für konfigurierbare Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 971b2a7c442acb96d7ba00a444c8c3a038c339f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9ff3e1567a19afd50a0ae2035893c027398816b535d5edfb233e89021ea9e59
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119500740"
 ---
-# <a name="configurable-component-example"></a>Beispiel für konfigurierbare Komponente
+# <a name="configurable-component-example"></a>Beispiel für konfigurierbare Komponenten
 
-In diesem Beispiel kann der modulconsumer mithilfe der folgenden ModuleConfiguration-und ModuleSubstitution-Tabellen das Kenn Wort Attribut für ein Bearbeitungs Steuerelement, das Prüfsumme-Attribut für eine Datei und das komprimierte Attribut für dieselbe Datei unabhängig konfigurieren.
+In diesem Beispiel ermöglicht es die folgenden ModuleConfiguration- und ModuleSubsuma-Tabellen dem Modulverbraucher, das Password-Attribut für ein Bearbeitungssteuerelement, das Prüfsummenattribut für eine Datei und das komprimierte Attribut für dieselbe Datei unabhängig zu konfigurieren.
 
-[ModuleSubstitution-Tabelle](modulesubstitution-table.md)
+[Tabelle "ModuleSubsbor"](modulesubstitution-table.md)
 
 
 
 | Tabelle   | Zeile           | Spalte     | Wert                        |
 |---------|---------------|------------|------------------------------|
-| Control | Dialog1; Edit1 | Attribute | \[= Kennwort\]                |
-| File    | Datei1         | Attribute | \[= Prüfsumme \] \[ = komprimiert\] |
+| Control | Dialog1; Bearbeiten1 | Attribute | \[=Kennwort\]                |
+| Datei    | Datei1         | Attribute | \[=Checksum \] \[ =Compressed\] |
 
 
 
  
 
-[ModuleConfiguration-Tabelle](moduleconfiguration-table.md)
+[Tabelle "ModuleConfiguration"](moduleconfiguration-table.md)
 
 
 
-| Name       | Format   | type | ContextData                              | DefaultValue | Attribute | DisplayName | BESCHREIBUNG |
+| Name       | Format   | Typ | ContextData                              | DefaultValue | Attribute | DisplayName | BESCHREIBUNG |
 |------------|----------|------|------------------------------------------|--------------|------------|-------------|-------------|
-| Kennwort   | Bitfeld |      | 2097152; True = 2097152; False = 0             | 0            | 0          |             |             |
-| Checksum   | Bitfeld |      | 1024; Prüfsumme = 1024; Keine Prüfsumme = 0         | 0            | 0          |             |             |
-| Compressed | Bitfeld |      | 24576; Komprimiert = 16384; Unkomprimiert = 8192 | 8192         | 0          |             |             |
+| Kennwort   | Bitfield |      | 2097152; True=2097152; False=0             | 0            | 0          |             |             |
+| Checksum   | Bitfield |      | 1024; Checksum=1024; Keine Prüfsumme=0         | 0            | 0          |             |             |
+| Compressed | Bitfield |      | 24576; Compressed=16384; Uncompressed=8192 | 8192         | 0          |             |             |
 
 
 

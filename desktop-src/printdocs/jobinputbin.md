@@ -4,12 +4,12 @@ ms.assetid: 9192ceb1-90c4-480e-9247-68d457976f42
 title: JobInputBin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 929df4cb4871e5a8d2ebacfe533b5da3ad9babf3
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: cf0226979ed714380a85bb803cfcfba6703e2ba74770dc4ac725aae4408ed208
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112460"
 ---
 # <a name="jobinputbin"></a>JobInputBin
 
@@ -19,7 +19,7 @@ Beschreibt den installierten Eingabebehälter in einem Gerät oder die vollstän
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML) Content](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt den installierten Eingabebehälter in einem Gerät oder die vollstän
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -97,18 +97,18 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 | \_BinTypeValue\_<br/>            | Zeichenfolge<br/>  | –<br/>        | ContinuousFeed, SheetFeed.<br/>                                                                                                                                                 | Gibt den Typ des Bin-Werts an.<br/>                                           |
 | \_FeedTypeValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                         | Gibt den Feedmechanismus des Bin-Werts an.<br/>                                 |
 | \_MediaCapacityValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | Hoch, Standard.<br/>                                                                                                                                                            | Gibt an, ob es sich bei der Behälter um einen Hochkapazitätsbehälter (qualitativ) handelt.<br/>          |
-| \_MediaSizeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion zur automatischen Nutzung der Mediengröße des Geräts an.<br/>                |
+| \_MediaSizeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion zur automatischen Mediengrößesenkung des Geräts an.<br/>                |
 | \_MediaTypeAutoSenseValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | Unterstützt, Keine.<br/>                                                                                                                                                           | Gibt die Funktion für den automatischen Medientypsendung des Geräts an.<br/>                |
 | \_MediaSheetCapacityValue\_<br/> | integer<br/> | Blätter<br/>     | Maximale ganzzahlige Einschränkung, die vom Gerät zugelassen wird.<br/>                                                                                                                              | Gibt die Medienkapazität in der Anzahl der Seiten (vollständige Ebene) des Bin-Werts an.<br/> |
 | \_MediaPathValue\_<br/>          | Zeichenfolge<br/>  | –<br/>        | Gerade, Serpentine.<br/>                                                                                                                                                      | Gibt die Merkmale des Medienpfads an.<br/>                         |
 | \_FeedFaceValue\_<br/>           | Zeichenfolge<br/>  | –<br/>        | FaceUp, FaceDown<br/>                                                                                                                                                           | Gibt an, ob Medien nach oben oder nach unten gedruckt werden sollen.<br/>           |
-| \_FeedDirectionValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | LongEdgeFirst, ShortEdgeFirst<br/>                                                                                                                                              | Gibt an, ob medien zuerst lange Kanten oder kurze Kanten gespeist werden.<br/>      |
+| \_FeedDirectionValue\_<br/>      | Zeichenfolge<br/>  | –<br/>        | LongEdgeFirst, ShortEdgeFirst<br/>                                                                                                                                              | Gibt an, ob das Medium zuerst einen langen Edge oder einen kurzen Rand einfährt.<br/>      |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML) Content
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
 
 Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

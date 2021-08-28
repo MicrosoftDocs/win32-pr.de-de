@@ -1,50 +1,50 @@
 ---
-description: Sie können das Verfahren und das Codebeispiel in diesem Thema verwenden, um eine WMI-Client Anwendung abzuschließen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, eine Ereignis Benachrichtigung empfängt und dann bereinigt.
+description: Sie können die Prozedur und das Codebeispiel in diesem Thema verwenden, um die WMI-Clientanwendung zu vervollständigen, die die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, eine Ereignisbenachrichtigung empfängt und dann bereinigt.
 ms.assetid: 4d581965-e22a-4205-908c-661eeeec88cf
 ms.tgt_platform: multiple
-title: 'Beispiel: empfangen von Ereignis Benachrichtigungen über WMI'
+title: 'Beispiel: Empfangen von Ereignisbenachrichtigungen über WMI'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd6380d306783f8b547d0d93df0275fd36e17e2f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 759ed91ed1f7892b622089fa64fe8e8421a8b3bd73bf77ba2f60fa4199d25434
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119411880"
 ---
-# <a name="example-receiving-event-notifications-through-wmi"></a>Beispiel: empfangen von Ereignis Benachrichtigungen über WMI
+# <a name="example-receiving-event-notifications-through-wmi"></a>Beispiel: Empfangen von Ereignisbenachrichtigungen über WMI
 
-Sie können das Verfahren und das Codebeispiel in diesem Thema verwenden, um eine WMI-Client Anwendung abzuschließen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, eine Ereignis Benachrichtigung empfängt und dann bereinigt. Im Beispiel wird der Benutzer über ein Ereignis benachrichtigt, wenn ein neuer Prozess erstellt wird. Die Ereignisse werden asynchron empfangen.
+Sie können die Prozedur und das Codebeispiel in diesem Thema verwenden, um die WMI-Clientanwendung zu vervollständigen, die die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, eine Ereignisbenachrichtigung empfängt und dann bereinigt. Im Beispiel wird der Benutzer über ein Ereignis benachrichtigt, wenn ein neuer Prozess erstellt wird. Die Ereignisse werden asynchron empfangen.
 
-Das folgende Verfahren wird verwendet, um die WMI-Anwendung auszuführen. Die Schritte 1 bis 5 enthalten alle Schritte, die für die Einrichtung und Verbindung mit WMI erforderlich sind, und in Schritt 6 werden die Ereignis Benachrichtigungen empfangen.
+Mit dem folgenden Verfahren wird die WMI-Anwendung ausgeführt. Die Schritte 1 bis 5 enthalten alle erforderlichen Schritte zum Einrichten und Herstellen einer Verbindung mit WMI. In Schritt 6 werden die Ereignisbenachrichtigungen empfangen.
 
-**So empfangen Sie eine Ereignis Benachrichtigung über WMI**
+**So empfangen Sie eine Ereignisbenachrichtigung über WMI**
 
-1.  Initialisieren von com-Parametern mit einem [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)-Rückruf.
+1.  Initialisieren Sie COM-Parameter mit einem Aufruf von [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex).
 
-    Weitere Informationen finden Sie unter [Initialisieren von com für eine WMI-Anwendung](initializing-com-for-a-wmi-application.md).
+    Weitere Informationen finden Sie unter [Initialisieren von COM für eine WMI-Anwendung.](initializing-com-for-a-wmi-application.md)
 
-2.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity).
+2.  Initialisieren Sie die COM-Prozesssicherheit, indem [**Sie CoInitializeSecurity aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)
 
-    Weitere Informationen finden Sie unter [Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von C++](setting-the-default-process-security-level-using-c-.md).
+    Weitere Informationen finden Sie unter [Festlegen der Standardprozesssicherheitsebene mithilfe von C++.](setting-the-default-process-security-level-using-c-.md)
 
-3.  Rufen Sie den anfänglichen Serverlocatorpunkt in WMI durch Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)ab.
+3.  Rufen Sie den ersten Locator für WMI ab, indem Sie [**CoCreateInstance aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-4.  Rufen Sie mithilfe [](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) \\ von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)einen Zeiger auf IWbemServices für den Stamm-CIMV2-Namespace auf dem lokalen Computer ab. Informationen zum Herstellen einer Verbindung mit einem Remote Computer finden Sie unter [Beispiel: erhalten von WMI-Daten von einem Remote Computer aus](example--getting-wmi-data-from-a-remote-computer.md).
+4.  Rufen Sie einen Zeiger auf [**IWbemServices für**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) den Cimv2-Stammnamespace auf dem lokalen Computer ab, indem Sie \\ [**IWbemLocator::ConnectServer aufrufen.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) Informationen zum Herstellen einer Verbindung mit einem Remotecomputer finden Sie unter [Beispiel: Abrufen von WMI-Daten von einem Remotecomputer.](example--getting-wmi-data-from-a-remote-computer.md)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-5.  Legen Sie die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy Sicherheit fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)annehmen kann.
+5.  Legen [**Sie die IWbemServices-Proxysicherheit**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket angenommen werden kann.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
-    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung](setting-the-security-levels-on-a-wmi-connection.md).
+    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsebenen für eine WMI-Verbindung.](setting-the-security-levels-on-a-wmi-connection.md)
 
-6.  Verwenden Sie den [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger, um WMI-Anforderungen zu stellen. In diesem Beispiel wird die [**IWbemServices:: ExecNotificationQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync) -Methode verwendet, um asynchrone Ereignisse zu empfangen. Wenn Sie asynchrone Ereignisse empfangen, müssen Sie die Implementierung von [**iwbemjebjectsink**](iwbemobjectsink.md)bereitstellen. In diesem Beispiel wird die Implementierung in der EventSink-Klasse bereitstellt. Der Implementierungs Code und der Header Datei Code für diese Klasse werden unterhalb des Haupt Beispiels bereitgestellt. Die **IWbemServices:: ExecNotificationQueryAsync** -Methode ruft die **EventSink::** Display-Methode immer dann auf, wenn ein Ereignis empfangen wird. In diesem Beispiel wird die **EventSink::** Print-Methode immer dann aufgerufen, wenn ein Prozess erstellt wird. Um dieses Beispiel zu testen, führen Sie den Code aus und starten einen Prozess, z. b. Notepad.exe. Dadurch wird eine Ereignis Benachrichtigung ausgelöst.
+6.  Verwenden Sie [**den IWbemServices-Zeiger,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) um Anforderungen an WMI zu senden. In diesem Beispiel wird die [**IWbemServices::ExecNotificationQueryAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationqueryasync) verwendet, um asynchrone Ereignisse zu empfangen. Wenn Sie asynchrone Ereignisse empfangen, müssen Sie eine Implementierung von [**IWbemObjectSink bereitstellen.**](iwbemobjectsink.md) Dieses Beispiel stellt die Implementierung in der EventSink-Klasse zur Anwendung. Der Implementierungscode und der Headerdateicode für diese Klasse werden unterhalb des Hauptbeispiels bereitgestellt. Die **IWbemServices::ExecNotificationQueryAsync-Methode** ruft die **EventSink::Indicate-Methode** auf, wenn ein Ereignis empfangen wird. In diesem Beispiel wird **die EventSink::Indicate-Methode** aufgerufen, wenn ein Prozess erstellt wird. Um dieses Beispiel zu testen, führen Sie den Code aus, und starten Sie einen Prozess wie Notepad.exe. Dadurch wird eine Ereignisbenachrichtigung ausgelöst.
 
-    Weitere Informationen zum Erstellen von WMI-Anforderungen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md) und [Aufrufen einer Methode](calling-a-method.md).
+    Weitere Informationen zum Senden von WMI-Anforderungen finden Sie unter Manipulating Class and Instance Information (Bearbeiten von Klassen- und [Instanzinformationen)](manipulating-class-and-instance-information.md) und [Calling a Method (Aufrufen einer Methode).](calling-a-method.md)
 
-Der folgende Beispielcode empfängt Ereignis Benachrichtigungen über WMI.
+Der folgende Beispielcode empfängt Ereignisbenachrichtigungen über WMI.
 
 
 ```C++
@@ -232,7 +232,7 @@ int main(int iArgCnt, char ** argv)
 
 
 
-Die folgende Header Datei wird für die EventSink-Klasse verwendet. Die EventSink-Klasse wird im vorherigen Codebeispiel verwendet.
+Die folgende Headerdatei wird für die Klasse EventSink verwendet. Die EventSink-Klasse wird im vorherigen Codebeispiel verwendet.
 
 
 ```C++

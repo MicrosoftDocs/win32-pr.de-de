@@ -1,41 +1,41 @@
 ---
-title: Portieren von Viewports, screenmasken und scrboxes
-description: Die folgenden IRIS GL-viewportfunktionen haben keine OpenGL-Entsprechung.
+title: Portieren von Viewports, Bildschirmmasken und Boxes
+description: Die folgenden IRIS GL-Viewportfunktionen verfügen nicht über eine OpenGL-Entsprechung.
 ms.assetid: 223e9b5b-1ddd-45a6-8489-b262d0207a5a
 keywords:
-- IRIS GL Porting, Viewport-Funktionen
-- Portieren von IRIS GL, Viewport-Funktionen
-- Portieren auf OpenGL von IRIS GL, Viewport-Funktionen
-- OpenGL-Portierung von IRIS GL, Viewport-Funktionen
-- Viewport-Funktionen
+- IRIS GL-Portierung, Viewportfunktionen
+- Portieren von IRIS GL,Viewportfunktionen
+- Portieren von IRIS GL,Viewportfunktionen zu OpenGL
+- OpenGL-Portierung über IRIS GL,Viewportfunktionen
+- Viewportfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b3429a0d154f4ef62a12d767c6497099ac09751
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb1a01cfb038faf87e48381856fe281bf2c935d13fedb78b79266e2af4fe15e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776910"
 ---
-# <a name="porting-viewports-screenmasks-and-scrboxes"></a>Portieren von Viewports, screenmasken und scrboxes
+# <a name="porting-viewports-screenmasks-and-scrboxes"></a>Portieren von Viewports, Bildschirmmasken und Boxes
 
-Die folgenden IRIS GL-viewportfunktionen haben keine OpenGL-Entsprechung:
+Die folgenden IRIS GL-Viewportfunktionen verfügen nicht über ein OpenGL-Äquivalent:
 
 -   **reshapeviewport**
--   **scrbox**
+-   **box**
 -   **getscrbox**
 
-Mit der Iris GL **Viewport** -Funktion geben Sie die x-Koordinaten (in Pixel) für den linken und rechten Rand eines Viewportrechtecks und die y-Koordinaten für den oberen und unteren Rand an. Mit der OpenGL-Funktion " [**glViewport**](glviewport.md) " geben Sie jedoch die x-und y-Koordinaten (in Pixel) der unteren linken Ecke des Viewportrechtecks zusammen mit der Breite und Höhe an.
+Mit der **Viewportfunktion** IRIS GL geben Sie die x-Koordinaten (in Pixel) für die linke und rechte Seite eines Viewportrechtecks und die y-Koordinaten für den oberen und unteren Rand an. Bei der Funktion OpenGL [**glViewport**](glviewport.md) geben Sie jedoch die x- und y-Koordinaten (in Pixel) der unteren linken Ecke des Viewportrechtecks zusammen mit ihrer Breite und Höhe an.
 
-In der folgenden Tabelle sind die Funktionen von IRIS GL Viewport und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die IRIS GL-Viewportfunktionen und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion                          | OpenGL-Funktion                                                                                         | Bedeutung                      |
 |-------------------------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
-| **Viewport** (Links, rechts, unten, oben) | [**glViewport**](glviewport.md) (x, y, Breite, Höhe)                                                | Legt den Viewport fest.           |
-| **popviewportpushviewport**<br/>    | [**glpopatpub**](glpopattrib.md)[**glpushatkarb**](glpushattrib.md) (GL- \_ \_ viewportbit)<br/> | Überträgt den Stapel und zeigt ihn an.   |
-| **getviewport**                           | [**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) (GL \_ Viewport)               | Gibt viewportdimensionen zurück. |
+| **viewport** ( left, right, bottom, top ) | [**glViewport**](glviewport.md) ( x, y, width, height )                                                | Legt den Viewport fest.           |
+| **popviewportpushviewport**<br/>    | [**glPopAttrib**](glpopattrib.md)[**glPushAttrib**](glpushattrib.md) ( GL \_ VIEWPORT BIT \_ )<br/> | Pusht den Stapel und popt ihn.   |
+| **getviewport**                           | [**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) ( GL \_ VIEWPORT )               | Gibt Viewportdimensionen zurück. |
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: SampleLevel (DirectX HLSL-Texturobjekt)
-description: Probieren Sie eine Textur mithilfe eines Offsets auf Mipmapebene aus.
+description: Stichproben einer Textur mithilfe eines Offsets auf Mipmapebene.
 ms.assetid: d61426c8-e09f-4e88-99f6-fa96c4a2b58d
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,24 +9,24 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bc3a074641ce5b15a3d837e8bd91dfdae09fe627
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 4249d094f142af8a9015f4e8a3b32d4e39cd42fb
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111826684"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122629553"
 ---
 # <a name="samplelevel-directx-hlsl-texture-object"></a>SampleLevel (DirectX HLSL-Texturobjekt)
 
-Probieren Sie eine Textur mithilfe eines Offsets auf Mipmapebene aus.
+Stichproben einer Textur mithilfe eines Offsets auf Mipmapebene.
 
-&lt;Vorlagentyp &gt; Object.SampleLevel( sampler \_ state S, float Location, float LOD \[ , int Offset \] );
+&lt;Vorlagentyp &gt; Object.SampleLevel( \_ Samplerzustand S, float Location, float \[ LOD, int Offset \] );
 
 
 
  
 
-Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme, dass sie die LOD-Ebene (in der letzten Komponente des Location-Parameters) verwendet, um die Mipmapebene auszuwählen. Beispielsweise verwendet eine 2D-Textur die ersten beiden Komponenten für UV-Koordinaten und die dritte Komponente für die Mipmapebene.
+Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) verwendet jedoch die LOD-Ebene (in der letzten Komponente des Location-Parameters), um die Mipmapebene zu wählen. Beispielsweise verwendet eine 2D-Textur die ersten beiden Komponenten für UV-Koordinaten und die dritte Komponente für die Mipmapebene.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,8 +34,8 @@ Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -46,7 +46,7 @@ Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme
 <tbody>
 <tr class="odd">
 <td><span id="Object"></span><span id="object"></span><span id="OBJECT"></span><em>Objekt</em><br/></td>
-<td>Jeder <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (mit Ausnahme von Texture2DMS und Texture2DMSArray).<br/></td>
+<td>Beliebiger <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (außer Texture2DMS und Texture2DMSArray).<br/></td>
 </tr>
 <tr class="even">
 <td><span id="S"></span><span id="s"></span><em>S</em><br/></td>
@@ -58,7 +58,7 @@ Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -86,17 +86,17 @@ Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme
 <p>Wenn das Texturobjekt ein Array ist, ist die letzte Komponente der Arrayindex.</p></td>
 </tr>
 <tr class="even">
-<td><p><span id="LOD"></span><span id="lod"></span><em>Lod</em></p></td>
-<td><p>[in] Eine Zahl, die die Mipmapebene angibt. Wenn der Wert = 0 ist, wird der Nullth (größte Karte) verwendet. Der Bruchwert (sofern angegeben) wird verwendet, um zwischen zwei Mipmapebenen zu interpolieren.</p></td>
+<td><p><span id="LOD"></span><span id="lod"></span><em>LOD</em></p></td>
+<td><p>[in] Eine Zahl, die die Mipmapebene angibt. Wenn der Wert = 0 ist, wird die nullte (größte Karte) verwendet. Der Bruchwert (sofern angegeben) wird verwendet, um zwischen zwei Mipmapebenen zu interpolieren.</p></td>
 </tr>
 <tr class="odd">
 <td><p><span id="Offset"></span><span id="offset"></span><span id="OFFSET"></span><em>Offset</em></p></td>
-<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Die Texturoffsets müssen statisch sein. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter <a href="/windows/win32/direct3dhlsl/dx-graphics-hlsl-to-sample#applying-texture-coordinate-offsets">Anwenden von Texturkoordinatenoffsets.</a></p>
+<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Die Texturoffsets müssen statisch sein. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter <a href="/windows/win32/direct3dhlsl/dx-graphics-hlsl-to-sample#applying-texture-coordinate-offsets">Anwenden von Texturkoordinatenoffsets.</a></p>
 
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object-Typ</th>
+<th>Texture-Object Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -131,15 +131,15 @@ Diese Funktion ähnelt [Sample,](dx-graphics-hlsl-to-sample.md) mit der Ausnahme
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Vorlagentyp der Textur, bei dem es sich um einen Ein- oder Mehrkomponentenvektor aussetzen kann. Das Format basiert auf dem [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)der Textur.
+Der Vorlagentyp der Textur, der ein Vektor mit einer oder mehreren Komponenten sein kann. Das Format basiert auf dem DXGI FORMAT der [**\_ Textur.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-| Vs \_ 4 \_ 0 | Vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
+| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
 |----------|-----------|----------|-----------|----------|-----------|
 | x        | x         | x        | x         | x        | x         |
 
@@ -147,12 +147,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
  
 
-1.  TextureCubeArray ist im Shadermodell 4.1 oder höher verfügbar.
-2.  Shadermodell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
+1.  TextureCubeArray ist in Shader Model 4.1 oder höher verfügbar.
+2.  ShaderModell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Teilcodebeispiel stammt aus der Datei Instancing.fx im [Beispiel Instancing10.](https://msdn.microsoft.com/library/Ee416415(v=VS.85).aspx)
+Dieses Teilcodebeispiel ist aus der Datei Instancing.fx im [Beispiel Instancing10.](https://msdn.microsoft.com/library/Ee416415(v=VS.85).aspx)
 
 
 ```
@@ -182,7 +182,7 @@ float3 RandomDir(float fOffset)
 
 <dl> <dt>
 
-[Texturobjekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

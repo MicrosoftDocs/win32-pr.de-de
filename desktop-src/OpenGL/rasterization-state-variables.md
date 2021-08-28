@@ -1,6 +1,6 @@
 ---
-title: Rasterungszustandsvariablen
-description: Rasterungszustandsvariablen
+title: Statusvariablen für die Rasterung
+description: Statusvariablen für die Rasterung
 ms.assetid: 57ce3dc0-3983-449a-bbe1-153232727ff8
 keywords:
 - Rasterungszustandsvariablen OpenGL
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6210f93c23dc52f19f3e01ea01ebe8fc9d631c8c
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 1586861eee26f93bca85b8c0f03e9f746e983046bbda755b67a792d65d660b53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776890"
 ---
-# <a name="rasterization-state-variables"></a>Rasterungszustandsvariablen
+# <a name="rasterization-state-variables"></a>Statusvariablen für die Rasterung
 
 <dl> <dt><span id="GL_POINT_SIZE"></span><span id="gl_point_size"></span>\_ \_ GL-PUNKTGRÖßE</dt> <dd> 
 
@@ -64,7 +64,7 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Line antialiasing on               |
+| Beschreibung:     | Zeilen antialiasing on               |
 | Attributgruppe: | line/enable                        |
 | Anfangswert:   | GL \_ FALSE                          |
 | Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
@@ -77,9 +77,9 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Zeilenausschnitt                                                                     |
+| Beschreibung:     | Zeilentipple                                                                     |
 | Attributgruppe: | line                                                                             |
-| Anfangswert:   | 1 s                                                                              |
+| Anfangswert:   | 1                                                                              |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -90,7 +90,7 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Zeilenausschnitt wiederholen                                                              |
+| Beschreibung:     | Zeilenstipple wiederholen                                                              |
 | Attributgruppe: | line                                                                             |
 | Anfangswert:   | 1                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -129,7 +129,7 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Cull-Polygone mit Vorder-/Rückseite                                           |
+| Beschreibung:     | Polygone mit Cull-Front/Back-Facing                                           |
 | Attributgruppe: | polygon                                                                          |
 | Anfangswert:   | GL \_ BACK                                                                         |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -164,7 +164,7 @@ ms.locfileid: "107909838"
 
  
 
-</dd> <dt><span id="GL_POLYGON_MODE"></span><span id="gl_polygon_mode"></span>\_ \_ GL-POLYGONMODUS</dt> <dd> 
+</dd> <dt><span id="GL_POLYGON_MODE"></span><span id="gl_polygon_mode"></span>GL \_ \_ POLYGON-MODUS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -181,7 +181,7 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Polygonstipple aktivieren             |
+| Beschreibung:     | Polygonausschnitt aktivieren             |
 | Attributgruppe: | polygon/enable                     |
 | Anfangswert:   | GL \_ FALSE                          |
 | Get-Befehl:     | [**glIsEnabled**](glisenabled.md) |
@@ -194,7 +194,7 @@ ms.locfileid: "107909838"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------|
-| Beschreibung:     | Polygonstipplemuster                            |
+| Beschreibung:     | Polygon-Ausschnittmuster                            |
 | Attributgruppe: | polygon-stipple                                    |
 | Anfangswert:   | 1 s                                                |
 | Get-Befehl:     | [**glGetPolygonStipple**](glgetpolygonstipple.md) |

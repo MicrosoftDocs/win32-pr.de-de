@@ -6,16 +6,16 @@ ms.tgt_platform: multiple
 title: I (WMI)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 888a6c701b2ff7b4083c9d493ceb9235c6bedc9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e19fe50cc4ac24286eda2879589c45b24f532773ce2df8cc843c44d8f12f519
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119411850"
 ---
 # <a name="i-wmi"></a>I (WMI)
 
-[a](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F](gloss-f.md) G [H](gloss-h.md) I J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) [T](gloss-t.md) U V [W](gloss-w.md) X Y Z
+[A](gloss-a.md) B [C](gloss-c.md) [D](gloss-d.md) [E](gloss-e.md) [F G](gloss-f.md) [H](gloss-h.md) I J [K](gloss-k.md) [L](gloss-l.md) [M](gloss-m.md) [N](gloss-n.md) [O](gloss-o.md) [P](gloss-p.md) [Q](gloss-q.md) [R](gloss-r.md) [S](gloss-s.md) T [U](gloss-t.md) V [W](gloss-w.md) X Y Z
 
 <dl> <dt>
 
@@ -29,21 +29,21 @@ Die Fähigkeit eines Threads in einem Prozess, die Sicherheitsidentität und die
 <span id="wmi.gloss_instance_provider"></span><span id="WMI.GLOSS_INSTANCE_PROVIDER"></span>**Instanzanbieter**
 </dt> <dd>
 
-Ein com-Server, der Instanzen von Klassen bereitstellt und Methoden der [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Schnittstelle implementiert, um das Abrufen, ändern, löschen, Enumeration oder Abfragen von Daten zu unterstützen.
+Ein COM-Server, der Instanzen von Klassen zur Verfügung stellt und Methoden der [**IWbemServices-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) implementiert, um den Datenabruf, die Änderung, das Löschen, die Enumeration oder die Abfrageverarbeitung zu unterstützen.
 
 </dd> <dt>
 
-<span id="wmi.gloss_intrinsic_event"></span><span id="WMI.GLOSS_INTRINSIC_EVENT"></span>**System internes Ereignis**
+<span id="wmi.gloss_intrinsic_event"></span><span id="WMI.GLOSS_INTRINSIC_EVENT"></span>**Systeminternes Ereignis**
 </dt> <dd>
 
-Ein von WMI bereitgestellten Ereignis, bei dem es sich um eine Benachrichtigung über eine Änderung im standardmäßigen WMI-Datenmodell handelt. Beispielsweise ist die Erstellung einer neuen [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process) Instanz ein [**\_ \_ instancecreationevent**](--instancecreationevent.md) -Typ eines systeminternen Ereignisses. Siehe auch [*System externe-Ereignis*](gloss-e.md).
+Ein Ereignis, das WMI bietet. Dabei handelt es sich um eine Benachrichtigung über eine Änderung im WMI-Standarddatenmodell. Beispielsweise ist die Erstellung einer neuen Instanz des [**Win32-Prozesses \_**](/windows/desktop/CIMWin32Prov/win32-process) ein [**\_ \_ InstanceCreationEvent-Typ**](--instancecreationevent.md) des systeminternen Ereignisses. Siehe auch [*das extrinsische Ereignis*](gloss-e.md).
 
 </dd> <dt>
 
-<span id="wmi.gloss_instrumentation"></span><span id="WMI.GLOSS_INSTRUMENTATION"></span>**Ener**
+<span id="wmi.gloss_instrumentation"></span><span id="WMI.GLOSS_INSTRUMENTATION"></span>**Instrumentation**
 </dt> <dd>
 
-Ein Mechanismus, der verwendet wird, um den Status von System Hardware und Software zu melden. WMI implementiert Instrumentation durch Modellieren eines Systems mithilfe von Klassen, die auf dem [*Common Information Model (CIM)*](gloss-c.md)basieren. WMI im .NET Framework erstellt instrumentierte Klassen durch Hinzufügen von Attributen.
+Ein Mechanismus zum Melden des Status von Systemhardware und -software. WMI implementiert die Instrumentierung, indem ein System mithilfe von Klassen modelliert wird, die auf dem Common Information Model [*(CIM) basieren.*](gloss-c.md) WMI in der .NET Framework instrumentierte Klassen durch Hinzufügen von Attributen erstellt.
 
 </dd> </dl>
 

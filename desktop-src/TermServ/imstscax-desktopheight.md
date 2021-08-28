@@ -1,30 +1,30 @@
 ---
-title: Imstscax desktopheight (Eigenschaft)
-description: Gibt die Höhe des aktuellen Steuer Elements auf dem anfänglichen Remote Desktop in Pixel an.
+title: IMsTscAx DesktopHeight (Eigenschaft)
+description: Gibt die Höhe des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel an.
 ms.assetid: 7071053b-bdd1-408b-ab69-965c504fafb0
 ms.tgt_platform: multiple
 keywords:
-- Desktopheight-Eigenschaft Remotedesktopdienste
-- Desktopheight-Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
-- Desktopheight-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, desktopheight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste
+- DesktopHeight-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste, DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
+- DesktopHeight-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste, DesktopHeight-Eigenschaft
+- DesktopHeight-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , DesktopHeight-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb75467b35703420ce49fd99ea032b139d721505
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4e55d5a1f529435f0cdf6db3dcf801e7f24dda1a69e0bc1cad393942b672d4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513100"
 ---
-# <a name="imstscaxdesktopheight-property"></a>Imstscax::D esktopheight-Eigenschaft
+# <a name="imstscaxdesktopheight-property"></a>IMsTscAx::D esktopHeight-Eigenschaft
 
-Gibt die Höhe des aktuellen Steuer Elements auf dem anfänglichen Remote Desktop in Pixel an.
+Gibt die Höhe des aktuellen Steuerelements auf dem ursprünglichen Remotedesktop in Pixel an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -98,38 +98,38 @@ Die neue Höhe in Pixel.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Festlegen der **desktopheight** -Eigenschaft ist optional, muss jedoch vor dem Aufrufen der [**Connect**](imstscax-connect.md) -Methode festgelegt werden. Wenn keine Desktop Höhe angegeben wird oder auf 0 (null) festgelegt ist, wird die Höhe des Desktops auf die Höhe des Steuer Elements festgelegt. Die Mindest-und Höchstwerte sind abhängig von der Betriebssystemversion des Remotedesktop Clients.
+Das Festlegen **der DesktopHeight-Eigenschaft** ist optional, muss jedoch vor dem Aufrufen der Verbinden [**festgelegt**](imstscax-connect.md) werden. Wenn keine Desktophöhe angegeben oder auf 0 (null) festgelegt ist, wird die Desktophöhe auf die Höhe des Steuerelements festgelegt. Die Mindest- und Höchstwerte hängen von der Betriebssystemversion des Remotedesktop ab.
 
 <dl> <dt>
 
 <span id="_"></span>Windows 8/Windows Server 2012
 </dt> <dd>
 
-200 minimal, 8192 maximal
+Mindestens 200, maximal 8192
 
 </dd> <dt>
 
 <span id="_"></span>Windows 7/Windows Server 2008
 </dt> <dd>
 
-200 minimal, 2048 maximal
+Mindestens 200, maximal 2048
 
 </dd> <dt>
 
 Windows Vista
 </dt> <dd>
 
-200 minimal, 1200 maximal
+Mindestens 200, maximal 1200
 
 </dd> </dl>
 
-Nachdem eine Verbindung hergestellt wurde, ändern alle Änderungen an der Höhe des Steuer Elements nicht die Höhe des Remote Desktops. Stattdessen ruft das Steuerelement nach Bedarf Bild Lauf leisten auf oder zentriert den Remote Desktop. Verwenden Sie die [**IMsRdpClient8:: Reconnect**](imsrdpclient8-reconnect.md) -Methode, um die Desktop Größe einer aktiven Verbindung zu ändern.
+Nachdem eine Verbindung hergestellt wurde, ändern alle Änderungen an der Höhe des Steuerelements die Höhe des Remotedesktops nicht. Stattdessen werden vom Steuerelement bildlaufleisten angezeigt oder der Remotedesktop entsprechend centert. Verwenden Sie die [**IMsRdpClient8::Reconnect-Methode,**](imsrdpclient8-reconnect.md) um die Desktopgröße einer aktiven Verbindung zu ändern.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -141,7 +141,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -149,7 +149,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -176,7 +176,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

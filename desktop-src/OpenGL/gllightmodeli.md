@@ -1,9 +1,9 @@
 ---
-title: gllightmodeli-Funktion (GL. h)
-description: Die gllightmodeli-Funktion legt Beleuchtungsmodell Parameter fest.
+title: glLightModeli-Funktion (Gl.h)
+description: Die glLightModeli-Funktion legt Beleuchtungsmodellparameter fest.
 ms.assetid: 49975166-b2b3-47f9-8305-aea2ba364546
 keywords:
-- gllightmodeli-Funktion OpenGL
+- glLightModeli-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7ae32e91e62a5341ceb0fc3fc4b16b0e7cfbae0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0985df04d77a606535d5791e52ea90784a34ed3ef38ac2810840353a68b67539
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493090"
 ---
-# <a name="gllightmodeli-function"></a>gllightmodeli-Funktion
+# <a name="gllightmodeli-function"></a>glLightModeli-Funktion
 
-Die [**gllightmodeli**](gllightf.md) -Funktion legt Beleuchtungsmodell Parameter fest.
+Die [**glLightModeli-Funktion**](gllightf.md) legt Beleuchtungsmodellparameter fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glLightModeli(
 
 <dl> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Ein einwertiger Beleuchtungsmodell Parameter. Die folgenden Werte werden akzeptiert.
+Ein einwertige Beleuchtungsmodellparameter. Die folgenden Werte werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_LIGHT_MODEL_LOCAL_VIEWER"></span><span id="gl_light_model_local_viewer"></span><dl> <dt>**\_ \_ \_ lokaler \_ Viewer für GL-Light-Modell**</dt> </dl> | Der Parameter *param* ist ein einzelner ganzzahliger Wert, der angibt, wie Glanz Winkel der Reflektion berechnet werden. Wenn *param* den Wert 0 (oder 0,0) hat, nehmen Glanz reflektionswinkel die Ansichts Richtung an, und die Richtung der-*z* -Achse ist unabhängig von der Position des Scheitel Punkts in den Augen Koordinaten. Andernfalls werden Glanz Spiegelung vom Ursprung des Augen Koordinatensystems berechnet. Die Standardeinstellung ist 0. <br/>                                                                                                                                                                                                                                                                                                                |
-| <span id="GL_LIGHT_MODEL_TWO_SIDE"></span><span id="gl_light_model_two_side"></span><dl> <dt>**GL- \_ Light- \_ Modell auf \_ zwei \_ Seiten**</dt> </dl>             | Der Parameter *param* ist ein einzelner ganzzahliger Wert, der angibt, ob einseitige oder zweiseitige Beleuchtungsberechnungen für Polygone durchgeführt werden. Dies hat keine Auswirkung auf die Beleuchtungsberechnungen für Punkte, Linien oder Bitmaps. Wenn *param* 0 (oder 0,0) ist, wird eine einseitige Beleuchtung angegeben, und nur die Front-Material-Parameter werden in der Beleuchtungs Gleichung verwendet. Andernfalls wird eine zweiseitige Beleuchtung angegeben. <br/> In diesem Fall werden Vertices von rückwärts gerichteten Polygonen mit den backmaterialparametern beleuchtet und deren normale umgekehrt, bevor die Beleuchtungs Gleichung ausgewertet wird. Vertices von nach vorne gerichteten Polygonen werden immer mit den Front-Material-Parametern beleuchtet, ohne dass ihre normale geändert werden. Die Standardeinstellung ist 0.<br/> |
+| <span id="GL_LIGHT_MODEL_LOCAL_VIEWER"></span><span id="gl_light_model_local_viewer"></span><dl> <dt>**GL \_ LIGHT \_ MODEL \_ LOCAL \_ VIEWER**</dt> </dl> | Der *Parameter param* ist ein einzelner ganzzahliger Wert, der angibt, wie spiegelförmige Reflektionswinkel berechnet werden. Wenn *param* 0 (oder 0,0) ist, nehmen spiegelförmige Reflektionswinkel die Ansichtsrichtung an, die parallel zur und in Richtung der -*z-Achse* ist, unabhängig von der Position des Scheitelpunkts in den Augenkoordinaten. Andernfalls werden spiegelförmige Reflektionen vom Ursprung des Augenkoordinatensystems berechnet. Die Standardeinstellung ist 0. <br/>                                                                                                                                                                                                                                                                                                                |
+| <span id="GL_LIGHT_MODEL_TWO_SIDE"></span><span id="gl_light_model_two_side"></span><dl> <dt>**GL \_ LIGHT \_ MODEL \_ TWO \_ SIDE**</dt> </dl>             | Der *Parameter param* ist ein einzelner ganzzahliger Wert, der angibt, ob einseitige oder zweiseitige Beleuchtungsberechnungen für Polygone durchgeführt werden. Sie hat keine Auswirkungen auf die Beleuchtungsberechnungen für Punkte, Linien oder Bitmaps. Wenn *param* 0 (oder 0,0) ist, wird eine einseitige Beleuchtung angegeben, und nur die Parameter für das Vordermaterial werden in der Beleuchtungsgleichung verwendet. Andernfalls wird die zweiseitige Beleuchtung angegeben. <br/> In diesem Fall werden Scheiteltices von nach außen gerichteten Polygonen mithilfe der Parameter des Hintergrundmaterials hell gemacht, und ihre Normalwerte werden umgekehrt, bevor die Beleuchtungsgleichung ausgewertet wird. Scheitelungen von polygonen nach vorne gerichteten Polygonen werden immer mithilfe der Parameter des Vordermaterials leuchtet, ohne dass sich ihre Normalwerte ändern. Die Standardeinstellung ist 0.<br/> |
 
 
 
@@ -62,7 +62,7 @@ Ein einwertiger Beleuchtungsmodell Parameter. Die folgenden Werte werden akzepti
 *param* 
 </dt> <dd>
 
-Der Wert, auf den *param* festgelegt wird.
+Der Wert, auf *den param* festgelegt wird.
 
 </dd> </dl>
 
@@ -72,40 +72,40 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *PName* war kein akzeptierter Wert.<br/>                                                                                         |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *pname* war kein akzeptierter Wert.<br/>                                                                                         |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gllightmodeli** -Funktion legt den Beleuchtungsmodell Parameter fest. Der Parameter " *PName* " benennt einen *Parameter und gibt* den neuen Wert an. der Wert oder die Werte einzelner Licht Quellparameter.
+Die **funktion glLightModeli legt** den Beleuchtungsmodellparameter fest. Der *pname-Parameter* benennt einen Parameter, *und param* gibt den neuen Wert an. Der Wert oder die Werte einzelner Lichtquellenparameter.
 
-Im RGBA-Modus ist die Farbe eines Scheitel Punkts die Summe der Material-Emissionsintensität, das Produkt der Material Ambient-Reflektion und das Beleuchtungsmodell der Umgebungs Intensität in voller Szene und der Anteil der einzelnen aktivierten Lichtquellen. Jede helle Quelle trägt die Summe von drei Begriffen bei: Ambient, diffuses und specarität.
+Im RGBA-Modus ist die helle Farbe eines Scheitelpunkts die Summe der Materialausdrucksstärke, des Produkts der materialen Umgebungsrefleance und der Umgebungsstärke des Beleuchtungsmodells mit voller Szenenstärke und dem Beitrag jeder aktivierten Lichtquelle. Jede Lichtquelle trägt zur Summe von drei Begriffen bei: Ambient, Diffuse und Specular.
 
--   Der Ambient-Lichtquellen Beitrag ist das Produkt der Material Ambient Reflektion und der Umgebungs Intensität des Lichts.
--   Der Anteil der diffusen Lichtquelle ist das Produkt der Material diffctance, der diffusen Intensität des Lichts und des Punkt Produkts der normalen Vertex mit dem normalisierten Vektor aus dem Scheitelpunkt und der Lichtquelle.
--   Der Glanz der Glanzlicht Quelle ist das Produkt der hellen Glanz Reflektion, die Glanz Intensität des Lichts und das Punktprodukt der normalisierten Scheitelpunkt-zu-Auge-und Vertex-zu-Licht-Vektoren, die an die Leistungsfähigkeit des Materials hervorgehoben werden.
+-   Der Beitrag der Umgebungslichtquelle ist das Produkt der materialen Umgebungsreflektoranz und der Umgebungsstärke des Lichts.
+-   Der diffuse Lichtquellenbeitrag ist das Produkt der materialen diffusen Reflektoranz, der diffusen Intensität des Lichts und des Punktprodukts des Normalwerts des Scheitelpunkts mit dem normalisierten Vektor vom Scheitelpunkt zur Lichtquelle.
+-   Der Glanzlichtquellenbeitrag ist das Produkt der materialspezifischen Reflektoren, der Glanzstärke des Lichts und des Punktprodukts der normalisierten Vertex-to-Eye- und Vertex-to-Light-Vektoren, die zur Stärke des Materials erhöht werden.
 
-Alle drei Lichtquellen Beiträge werden gleichmäßig auf Grundlage der Entfernung zwischen dem Scheitelpunkt und der Lichtquelle und der Lichtquelle, dem Spread-Exponent und dem Spread-Umstellungs-Winkel verringert. Alle Punkt Produkte werden durch 0 (null) ersetzt, wenn Sie einen negativen Wert ergeben.
+Alle drei Lichtquellenbeiträge werden gleichmäßig auf der Grundlage des Abstands vom Scheitelpunkt zur Lichtquelle und der Lichtquellenrichtung, des Verteilungs exponenten und des Verteilungsabschneidewinkels abgedämpft. Alle Punktprodukte werden durch 0 (null) ersetzt, wenn sie zu einem negativen Wert ausgewertet werden.
 
-Die Alpha Komponente der resultierenden beleuchteten Farbe wird auf den Alpha-Wert der Material diffctance festgelegt.
+Die Alphakomponente der resultierenden hellfarbenen Farbe wird auf den Alphawert der diffusen Materialreflektoranz festgelegt.
 
-Im Farb Index Modus wird der Wert des beleuchteten Indexes eines Scheitel Punkts von der Ambient-zu den Glanzwerten, die mithilfe von GL-Farbindizes an [**glmaterial**](glmaterial-functions.md) übergeben werden \_ \_ . Diffuse und glanzvolle Koeffizienten, berechnet mit einer (. 30,. 59, .11) Gewichtung der hellen Farben, dem Glanz des Materials und denselben Reflektions-und Dämpfungs Gleichungen wie im RGBA-Fall, legen fest, wie viel oben in der Umgebung der resultierende Index ist.
+Im Farbindexmodus reicht der Wert des hell erlichten Indexes eines Scheitelpunkts von der Umgebung bis zu den an [**glMaterial**](glmaterial-functions.md) übergebenen Specularwerten mithilfe von GL \_ COLOR \_ INDEXES. Diffuse und glanzförmige Koeffizienten, berechnet mit einer Gewichtung (.30, 0,59, 0,11) der Farben des Lichts, der Schläfrigkeit des Materials und den gleichen Reflektions- und Dämpfungsgleichungen wie im RGBA-Fall, bestimmen, wie viel über der Umgebung des resultierenden Indexes liegt.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gllightmodeli** -Funktion ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glLightModeli-Funktion** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Light \_ Model \_ local \_ Viewer
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) dem Argument GL \_ LIGHT MODEL LOCAL \_ \_ \_ VIEWER
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Light \_ Model \_ Two \_ Side
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ LIGHT MODEL TWO \_ \_ \_ SIDE
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL- \_ Beleuchtung
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ LIGHTING
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,8 +115,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gllightmo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -131,10 +131,10 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **gllightmo
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gllight**](gllight-functions.md)
+[**glLight**](gllight-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> </dl>
 
  

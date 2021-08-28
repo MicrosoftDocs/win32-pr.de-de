@@ -1,11 +1,11 @@
 ---
-title: Download Manager. getdownloadcollection-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Mit der getdownloadcollection-Methode wird die angegebene Download Auflistung abgerufen.
+title: DownloadManager.getDownloadCollection-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die getDownloadCollection-Methode ruft die angegebene Downloadsammlung ab.
 ms.assetid: 743d6bcf-2d5b-4a30-a4ef-4538cf7c901e
 keywords:
-- getdownloadcollection-Methode, Windows Media Player
-- getdownloadcollection-Methode, Windows Media Player, Download Manager-Klasse
-- Download Manager-Klasse, Windows Media Player, getdownloadcollection-Methode
+- getDownloadCollection-Windows Media Player
+- getDownloadCollection-Methode Windows Media Player , DownloadManager-Klasse
+- DownloadManager-Klasse Windows Media Player , getDownloadCollection-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e879d82c3f49db08d75b8aec37271e8d966019e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 57fc729296f15b39e603683cab38e3d0d878733ab0990d9876e32b4001a15cf8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749620"
 ---
-# <a name="downloadmanagergetdownloadcollection-method"></a>Download Manager. getdownloadcollection-Methode
+# <a name="downloadmanagergetdownloadcollection-method"></a>DownloadManager.getDownloadCollection-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Mit der **getdownloadcollection** -Methode wird die angegebene Download Auflistung abgerufen.
+Die **getDownloadCollection-Methode** ruft die angegebene Downloadsammlung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ retVal = DownloadManager.getDownloadCollection(
 
 <dl> <dt>
 
-*CollectionId* \[ in\]
+*collectionId* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die die ID der abzurufenden Download Auflistung angibt.
+**Number** **(long)** gibt die ID der abzurufenden Downloadsammlung an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **downloadcollection** -Objekt zurück.
+Diese Methode gibt ein **DownloadCollection-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen zuerst *Download Manager* anrufen. " **kreatedownloadcollection** " zum Erstellen einer neuen Sammlung und zum Abrufen des ID-Werts.
+Sie müssen zuerst *DownloadManager aufrufen.* **createDownloadCollection,** um eine neue Sammlung zu erstellen und ihren ID-Wert abzurufen.
 
-Eine vorhandene Download Sammlung kann Elemente enthalten, die als abgebrochen markiert wurden.
+Eine vorhandene Downloadsammlung kann Elemente enthalten, die als abgebrochen markiert wurden.
 
-Echt Zeit Download Elemente, die nicht in einer vorherigen Sitzung abgeschlossen wurden, werden nicht als Teil der Sammlung abgerufen. Hintergrund Downloads, die vor der aktuellen Sitzung abgeschlossen wurden, verbleiben bis zum Entfernen in der Download Auflistung.
+In einer vorherigen Sitzung nicht abgeschlossene Echtzeitdownloadelemente werden nicht als Teil der Auflistung abgerufen. Hintergrunddownloads, die vor der aktuellen Sitzung abgeschlossen wurden, verbleiben bis zum Entfernen in der Downloadsammlung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,17 +77,17 @@ Echt Zeit Download Elemente, die nicht in einer vorherigen Sitzung abgeschlossen
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Manager-Objekt**](downloadmanager-object.md)
+[**DownloadManager-Objekt**](downloadmanager-object.md)
 </dt> <dt>
 
-[**Download Manager. "kreatedownloadcollection"**](downloadmanager-createdownloadcollection.md)
+[**DownloadManager. createDownloadCollection**](downloadmanager-createdownloadcollection.md)
 </dt> <dt>
 
-[**Download Collection-Objekt**](downloadcollection-object.md)
+[**DownloadCollection-Objekt**](downloadcollection-object.md)
 </dt> </dl>
 
  

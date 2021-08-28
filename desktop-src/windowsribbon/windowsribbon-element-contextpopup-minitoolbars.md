@@ -1,9 +1,9 @@
 ---
-title: Contextpopup. minitoolbars (Eigenschaft)
+title: ContextPopup.MiniToolbars-Eigenschaft
 description: Stellt einen Container für MiniToolbar-Elemente dar.
 ms.assetid: 5c17e070-0520-44e6-a066-476107691205
 keywords:
-- Contextpopup. minitoolbars-Eigenschaften Fenster (Menüband)
+- ContextPopup.MiniToolbars-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee1e85e6b170b4b7408a17687bd26725e9183161
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 18f4a083d894f798d83bd153fe74b9fb0560e2fbdb8132ec7874db0a2e533824
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772130"
 ---
-# <a name="contextpopupminitoolbars-property"></a>Contextpopup. minitoolbars (Eigenschaft)
+# <a name="contextpopupminitoolbars-property"></a>ContextPopup.MiniToolbars-Eigenschaft
 
-Stellt einen Container für [**MiniToolbar**](windowsribbon-element-minitoolbar.md) -Elemente dar.
+Stellt einen Container für [**MiniToolbar-Elemente**](windowsribbon-element-minitoolbar.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                             | BESCHREIBUNG                                        |
+| Element                                                             | Beschreibung                                        |
 |---------------------------------------------------------------------|----------------------------------------------------|
-| [**MiniToolbar**](windowsribbon-element-minitoolbar.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**MiniToolbar**](windowsribbon-element-minitoolbar.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,23 +51,23 @@ Es gibt keine Attribute.
 
 | Element                                                               |
 |-----------------------------------------------------------------------|
-| [**Contextpopup**](windowsribbon-element-contextpopup.md)<br/> |
+| [**ContextPopup**](windowsribbon-element-contextpopup.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**contextpopup**](windowsribbon-element-contextpopup.md)vorkommen.
+Kann für jedes [**ContextPopup--Ereignis mindestens einmal auftreten.**](windowsribbon-element-contextpopup.md)
 
-Da Steuerelemente in der [**MiniToolbar**](windowsribbon-element-minitoolbar.md) nicht auf Tastatur zugänglich sind, sollten die von Ihnen verfügbar gemachten Befehle an anderer Stelle in der Multifunktionsleisten-Benutzeroberfläche verfügbar sein.
+Da auf Steuerelemente in [**der MiniToolbar**](windowsribbon-element-minitoolbar.md) nicht auf die Tastatur zugegriffen werden kann, sollten die von ihnen verfügbar gemachten Befehle an anderer Stelle auf der Menüband-Benutzeroberfläche verfügbar sein.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-In diesem Code Abschnitt wird die **contextpopup. minitoolbars** -Steuerelement Deklaration gezeigt.
+Dieser Codeabschnitt zeigt die **ContextPopup.MiniToolbars-Steuerelementdeklaration.**
 
 
 ```XML
@@ -160,16 +160,16 @@ In diesem Code Abschnitt wird die **contextpopup. minitoolbars** -Steuerelement 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  
