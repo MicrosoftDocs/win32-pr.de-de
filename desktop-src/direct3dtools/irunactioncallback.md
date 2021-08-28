@@ -1,5 +1,5 @@
 ---
-description: Nicht verwendet. Früher ein Rückruf zum Reagieren auf &\# 0034;Capture frame&\# 0034;-Ereignis.
+description: Nicht verwendet. Früher ein Rückruf, um auf &\# 0034;Erfassungsrahmen&\# 0034;-Ereignis zu reagieren.
 MS-HAID: vspixengine.IRunActionCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 343d41c884889017e9397b9890ca356531b94ca7ff19000f26f138c25974023a
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: faa9e58fa3ef86fbcf6fde94c64ea6421853b999
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118985750"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122787296"
 ---
 # <a name="span-idvspixengineirunactioncallbackspanirunactioncallback-interface"></a><span id="vspixengine.irunactioncallback"></span>IRunActionCallback-Schnittstelle
 
-Wird nicht verwendet. Früher ein Rückruf, der auf das Ereignis "Frame erfassen" reagiert.
+Nicht verwendet. Früher ein Rückruf, um auf das Erfassungsframeereignis zu reagieren.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **IRunActionCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IRunActionCallback** verfügt auch über diese Typen von Membern:
 
@@ -38,13 +38,13 @@ Die **IRunActionCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.
 
 Die **IRunActionCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/irunactioncallback-requestresult-iunknown-ptr"><strong>RequestResult</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer angeforderten Aktion zu benachrichtigen (z. B. einen Frame zu erfassen).</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/irunactioncallback-requestresult-iunknown-ptr"><strong>RequestResult</strong></a></td><td ><p>Eine Rückruffunktion, die verwendet wird, um den Host über Die Ergebnisse einer aktion (z. B. einen Frame) zu benachrichtigen, die angefordert wurde.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

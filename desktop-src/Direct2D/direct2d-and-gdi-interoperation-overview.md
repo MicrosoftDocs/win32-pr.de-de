@@ -13,16 +13,16 @@ keywords:
 - Direct3D,Direct2D-Interoperation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a1f3be132aba742eb1df4b8a893dad245f851a0
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 0cf75f68278bdead5f3806eefd1cda251bfbea4a
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122631562"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122787396"
 ---
 # <a name="direct2d-and-gdi-interoperability-overview"></a>Übersicht über die Interoperabilität von Direct2D und GDI
 
-In diesem Thema wird beschrieben, wie Direct2D und [GDI](/windows/desktop/gdi/windows-gdi) zusammen verwendet werden. Es gibt zwei Möglichkeiten, Direct2D mit GDI zu kombinieren: Sie können GDI-Inhalt in ein Direct2D GDI-kompatibles Renderziel schreiben oder Direct2D-Inhalt in einen [GDI-Gerätekontext (DC)](/windows/desktop/gdi/device-contexts)schreiben.
+In diesem Thema wird beschrieben, wie Direct2D und [GDI](/windows/desktop/gdi/windows-gdi) zusammen verwendet werden. Es gibt zwei Möglichkeiten, Direct2D mit GDI zu kombinieren: Sie können GDI-Inhalte in ein Direct2D GDI-kompatibles Renderziel schreiben oder Direct2D-Inhalte in einen [GDI-Gerätekontext (DC)](/windows/desktop/gdi/device-contexts)schreiben.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -30,7 +30,7 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Zeichnen von Direct2D-Inhalten in einen GDI-Gerätekontext](#draw-direct2d-content-to-a-gdi-device-context)
 -   [ID2D1DCRenderTargets, GDI-Transformationen und Sprachbuilds von rechts nach links von Windows](#id2d1dcrendertargets-gdi-transforms-and-right-to-left-language-builds-of-windows)
 -   [Zeichnen von GDI-Inhalten in ein Direct2D-GDI-Compatible-Renderziel](#draw-gdi-content-to-a-direct2d-gdi-compatible-render-target)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -38,7 +38,7 @@ In dieser Übersicht wird davon ausgegangen, dass Sie mit grundlegenden Direct2D
 
 ## <a name="draw-direct2d-content-to-a-gdi-device-context"></a>Zeichnen von Direct2D-Inhalten in einen GDI-Gerätekontext
 
-Um Direct2D-Inhalt auf einen GDI-DC zu zeichnen, verwenden Sie eine [**ID2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) Um ein DC-Renderziel zu erstellen, verwenden Sie die [**ID2D1Factory::CreateDCRenderTarget-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdcrendertarget) Diese Methode nimmt zwei Parameter an.
+Um Direct2D-Inhalte auf einen GDI-DC zu zeichnen, verwenden Sie [**id2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) Um ein DC-Renderziel zu erstellen, verwenden Sie die [**ID2D1Factory::CreateDCRenderTarget-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdcrendertarget) Diese Methode nimmt zwei Parameter an.
 
 Der erste Parameter, eine [**D2D1 \_ RENDER \_ TARGET \_ PROPERTIES-Struktur,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) gibt Rendering-, Remoting-, DPI-, Pixelformat- und Nutzungsinformationen an. Damit das DC-Renderziel mit GDI funktioniert, legen Sie das DXGI-Format auf [DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) und den Alphamodus auf [**D2D1 \_ ALPHA MODE \_ \_ PREMULTIPLIED**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) oder **D2D1 \_ ALPHA MODE \_ \_ IGNORE** fest.
 
@@ -85,7 +85,7 @@ GetClientRect(m_hwnd, &rc);
 
 
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>
