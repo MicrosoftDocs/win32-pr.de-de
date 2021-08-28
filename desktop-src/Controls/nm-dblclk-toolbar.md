@@ -1,9 +1,9 @@
 ---
-title: NM_DBLCLK (Symbolleisten-) Benachrichtigungs Code (kommstrg. h)
-description: Benachrichtigt das übergeordnete Fenster eines Symbolleisten-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_DBLCLK (Symbolleiste) Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Symbolleisten-Steuerelements, dass der Benutzer im Steuerelement auf die linke Maustaste doppelklickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: c6198245-cfd4-4e1f-877d-94c1d47e09d2
 keywords:
-- NM_DBLCLK (Symbolleiste) Benachrichtigungs Code Windows-Steuerelemente
+- NM_DBLCLK -Benachrichtigungscode (Symbolleiste) Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5441f86fa47f25a98dad82f9bfde05a84b5f498
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75abaf61938fbf377dbe8b6c5eaca99ff5ab027abe08c670de72a218dd51f1b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919660"
 ---
-# <a name="nm_dblclk-toolbar-notification-code"></a>NM- \_ dblclk-Benachrichtigungs Code (Symbolleiste)
+# <a name="nm_dblclk-toolbar-notification-code"></a>NM \_ DBLCLK-Benachrichtigungscode (Symbolleiste)
 
-Benachrichtigt das übergeordnete Fenster eines Symbolleisten-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Symbolleisten-Steuerelements, dass der Benutzer im Steuerelement auf die linke Maustaste doppelklickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_DBLCLK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmmouse**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) -Struktur, die Informationen zu diesem Benachrichtigungs Code enthält. Wenn auf ein Symbolleisten Element auf die Maus geklickt wurde, enthält das Element **dwitemspec** den Element Bezeichner, und der **dwitemdata** -Member enthält die Elementdaten. Wenn die Maus auf ein Trennzeichen oder Leerraum auf der Symbolleiste geklickt wurde, enthält das Element **dwitemspec** -1.
+Zeiger auf eine [**NMMOUSE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) die Informationen zu diesem Benachrichtigungscode enthält. Wenn mit der Maus auf ein Symbolleistenelement geklickt wurde, enthält das **dwItemSpec-Element** den Elementbezeichner und **das dwItemData-Element** die Elementdaten. Wenn mit der Maus auf ein Trennzeichen oder Leerzeichen in der Symbolleiste geklickt wurde, enthält **das dwItemSpec-Member** -1.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **false** zurück, damit das Symbolleisten-Steuerelement die Standard Verarbeitung des Ereignisses ausführen kann, oder **true** , um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
+Gibt **FALSE zurück,** damit das Symbolleisten-Steuerelement die Standardverarbeitung des Ereignisses durchführen kann, oder **TRUE,** um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt **false** zurück, damit das Symbolleisten-Steuerelement die Standard Verar
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

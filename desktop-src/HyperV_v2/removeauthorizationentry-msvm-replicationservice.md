@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen Autorisierungs Eintrag von einem Wiederherstellungs Server.
+description: Entfernt einen Autorisierungseintrag von einem Wiederherstellungsserver.
 ms.assetid: 1647b35d-1c2f-4fb5-84c0-10b357326abf
-title: Removeauthorizationentry-Methode der Msvm_ReplicationService-Klasse
+title: RemoveAuthorizationEntry-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: d0bb0d24c9cf4936c6e0187e5091b9fac14ee28c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12276ded5e9021fb775ee6f6be4eb2e5a92c4375a5bce9e3debca7972df2ee86
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980070"
 ---
-# <a name="removeauthorizationentry-method-of-the-msvm_replicationservice-class"></a>Removeauthorizationentry-Methode der MSVM- \_ replicationservice-Klasse
+# <a name="removeauthorizationentry-method-of-the-msvm_replicationservice-class"></a>RemoveAuthorizationEntry-Methode der Msvm \_ ReplicationService-Klasse
 
-Entfernt einen Autorisierungs Eintrag von einem Wiederherstellungs Server.
+Entfernt einen Autorisierungseintrag von einem Wiederherstellungsserver.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 RemoveAuthorizationEntry(
 
 <dl> <dt>
 
-"Bereitstellungs- *Hostsystem* \[ " in\]
+*AllowedPrimaryHostSystem* \[ In\]
 </dt> <dd>
 
-Der primäre Server, für den der Autorisierungs Eintrag vom Server entfernt wird. Dies ist identisch mit **der Eigenschaft "" der Eigenschaft** "" der Klasse " [**MSVM" \_ replicationauthorizationsettingdata**](msvm-replicationauthorizationsettingdata.md) .
+Der primäre Server, für den der Autorisierungseintrag vom Server entfernt wird. Dies entspricht der **AllowedPrimaryHostSystem-Eigenschaft** der [**Msvm \_ ReplicationAuthorizationSettingData-Klasse.**](msvm-replicationauthorizationsettingdata.md)
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,7 +75,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -84,27 +84,27 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen Autorisierungs Eintrag entfernen, wird die Replikation für alle virtuellen Computer beendet, die mit dem Eintrag autorisiert sind.
+Durch das Entfernen eines Autorisierungseintrags wird die Replikation für alle virtuellen Computer beendet, die mit dem Eintrag autorisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,10 +112,10 @@ Wenn Sie einen Autorisierungs Eintrag entfernen, wird die Replikation für alle 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -124,16 +124,16 @@ Wenn Sie einen Autorisierungs Eintrag entfernen, wird die Replikation für alle 
 
 <dl> <dt>
 
-[**Addauthorizationentry**](addauthorizationentry-msvm-replicationservice.md)
+[**AddAuthorizationEntry**](addauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Modifyauthorizationentry**](modifyauthorizationentry-msvm-replicationservice.md)
+[**ModifyAuthorizationEntry**](modifyauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Setauthorizationentry**](setauthorizationentry-msvm-replicationservice.md)
+[**SetAuthorizationEntry**](setauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

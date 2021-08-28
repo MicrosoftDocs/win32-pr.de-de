@@ -1,5 +1,5 @@
 ---
-description: Die WMI-Klassenmethode SetDNSDomain ermöglicht die Einstellung der DNS-Domäne.
+description: Die WMI-Klassenmethode SetDNSDomain ermöglicht das Festlegen der DNS-Domäne.
 ms.assetid: a531133e-1b7c-4d85-979d-63bf4f7c9bed
 ms.tgt_platform: multiple
 title: SetDNSDomain-Methode der Win32_NetworkAdapterConfiguration-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c440d8cb5c720bf6922707f04bc75e2383755c1e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a5fd02168c19a5424ef455380bd9e1251f2e8f6c48a9dd8ea5ec4e9e1a1b1e4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119759910"
 ---
-# <a name="setdnsdomain-method-of-the-win32_networkadapterconfiguration-class"></a>SetDNSDomain-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="setdnsdomain-method-of-the-win32_networkadapterconfiguration-class"></a>SetDNSDomain-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **SetDNSDomain** ermöglicht die Einstellung der DNS-Domäne.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **SetDNSDomain** ermöglicht das Festlegen der DNS-Domäne.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,18 +42,18 @@ uint32 SetDNSDomain(
 
 <dl> <dt>
 
-*DNSDomain* \[ in\]
+*DNSDomain* \[ In\]
 </dt> <dd>
 
-Domäne, der der DNS zugeordnet ist, dargestellt durch einen Organisationsnamen, gefolgt von einem Zeitraum und einer Erweiterung, die den Typ der Organisation angibt.
+Domäne, der das DNS zugeordnet ist, dargestellt durch einen Organisationsnamen gefolgt von einem Punkt und einer Erweiterung, die den Typ der Organisation angibt.
 
-Beispiel: "Microsoft.com"
+Beispiel: "microsoft.com"
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -75,7 +75,7 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt.**
+**Die Methode wird auf dieser Plattform nicht unterstützt.**
 </dt> <dd>
 
 64
@@ -84,7 +84,7 @@ Die Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 65
@@ -93,7 +93,7 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**Ungültige Subnetzmaske.**
+**Ungültige Subnetzmaske**
 </dt> <dd>
 
 66
@@ -102,12 +102,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.**
+**Fehler beim Verarbeiten einer zurückgegebenen Instanz**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.
+Fehler beim Verarbeiten einer zurückgegebenen Instanz.
 
 </dd> <dt>
 
@@ -120,12 +120,12 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben.**
+**Mehr als 5 Gateways angegeben**
 </dt> <dd>
 
 69
 
-Es wurden mehr als fünf Gateways angegeben.
+Mehr als fünf Gateways angegeben.
 
 </dd> <dt>
 
@@ -147,7 +147,7 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.**
+**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
@@ -156,12 +156,12 @@ Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
-**Ungültiger Domänen Name**
+**Ungültiger Domänenname**
 </dt> <dd>
 
 73
 
-Ungültiger Domänen Name.
+Ungültiger Domänenname.
 
 </dd> <dt>
 
@@ -174,12 +174,12 @@ Ungültiger Hostname.
 
 </dd> <dt>
 
-**Kein primärer/sekundärer WINS-Server definiert.**
+**Kein primärer/sekundärer WINS-Server definiert**
 </dt> <dd>
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server
+Es wurde kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -192,7 +192,7 @@ Ungültige Datei.
 
 </dd> <dt>
 
-**Ungültiger Systempfad.**
+**Ungültiger Systempfad**
 </dt> <dd>
 
 77
@@ -219,102 +219,102 @@ Ungültiger Sicherheitsparameter.
 
 </dd> <dt>
 
-**Der TCP/IP-Dienst kann nicht konfiguriert werden.**
+**TCP/IP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 80
 
-Der TCP/IP-Dienst kann nicht konfiguriert werden.
+Tcp/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert werden.**
+**DHCP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 81
 
-Der DHCP-Dienst kann nicht konfiguriert werden.
+Dhcp-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden.**
+**DHCP-Lease kann nicht erneuert werden**
 </dt> <dd>
 
 82
 
-Die DHCP-Lease kann nicht erneuert werden.
+DHCP-Lease kann nicht verlängert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht freigegeben werden**
+**DHCP-Lease kann nicht veröffentlicht werden**
 </dt> <dd>
 
 83
 
-DHCP-Lease kann nicht freigegeben werden.
+DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP ist auf dem Adapter nicht aktiviert.**
+**IP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
 
-Die IP ist auf dem Adapter nicht aktiviert.
+DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert.**
+**IPX auf Adapter nicht aktiviert**
 </dt> <dd>
 
 85
 
-IPX ist auf dem Adapter nicht aktiviert.
+IPX für Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer.**
+**Frame-/Netzwerknummern-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Fehler bei Frame-oder Netzwerk Nummern Begrenzungen.
+Frame- oder Netzwerknummern-Begrenzungsfehler.
 
 </dd> <dt>
 
-**Ungültiger Frame-Typ**
+**Ungültiger Frametyp**
 </dt> <dd>
 
 87
 
-Ungültiger Rahmentyp.
+Ungültiger Frametyp.
 
 </dd> <dt>
 
-**Ungültige Netzwerk Nummer**
+**Ungültige Netzwerknummer**
 </dt> <dd>
 
 88
 
-Ungültige Netzwerk Nummer.
+Ungültige Netzwerknummer.
 
 </dd> <dt>
 
-**Doppelte Netzwerk Nummer**
+**Doppelte Netzwerknummer**
 </dt> <dd>
 
 89
 
-Doppelte Netzwerk Nummer.
+Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb des gültigen Bereichs**
+**Parameter außerhalb der Grenzen**
 </dt> <dd>
 
 90
 
-Der Parameter liegt außerhalb des gültigen Bereichs.
+Parameter außerhalb der Grenzen.
 
 </dd> <dt>
 
@@ -323,11 +323,11 @@ Der Parameter liegt außerhalb des gültigen Bereichs.
 
 91
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht genügend Arbeitsspeicher**
+**Nicht genügend Arbeitsspeicher.**
 </dt> <dd>
 
 92
@@ -336,7 +336,7 @@ Nicht genügend Arbeitsspeicher.
 
 </dd> <dt>
 
-**Ist bereits vorhanden.**
+**Bereits vorhanden**
 </dt> <dd>
 
 93
@@ -345,16 +345,16 @@ Ist bereits vorhanden.
 
 </dd> <dt>
 
-**Der Pfad, die Datei oder das Objekt wurde nicht gefunden.**
+**Pfad, Datei oder Objekt nicht gefunden**
 </dt> <dd>
 
 94
 
-Der Pfad, die Datei oder das Objekt wurde nicht gefunden.
+Pfad, Datei oder Objekt nicht gefunden.
 
 </dd> <dt>
 
-**Der Dienst kann nicht benachrichtigt werden.**
+**Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 95
@@ -363,7 +363,7 @@ Der Dienst kann nicht benachrichtigt werden.
 
 </dd> <dt>
 
-**DNS-Dienst kann nicht benachrichtigt werden.**
+**DNS-Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 96
@@ -377,7 +377,7 @@ Der DNS-Dienst kann nicht benachrichtigt werden.
 
 97
 
-Schnittstelle nicht konfigurierbar.
+Die Schnittstelle kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -390,12 +390,12 @@ Nicht alle DHCP-Leases können freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert.**
+**DHCP für Adapter nicht aktiviert**
 </dt> <dd>
 
 100
 
-DHCP ist auf dem Adapter nicht aktiviert.
+DHCP für Adapter nicht aktiviert.
 
 </dd> <dt>
 
@@ -406,17 +406,17 @@ DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dabei handelt es sich um einen instanzabhängigen Methoden Aufrufwert, der pro Adapter angewendet wird. Die Einstellung gilt für den Ziel Adapter.
+Dies ist ein instanzabhängiger Methodenaufruf, der pro Adapter angewendet wird. Die Einstellung gilt für den Zieladapter.
 
 ## <a name="examples"></a>Beispiele
 
-Das Codebeispiel [Zuweisen der DNS-Domäne für einen Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/6044a0a4-d320-4c18-a94b-c125796d219b) VBScript in der TechNet Gallery verwendet **SetDNSDomain** , um die DNS-Domäne für einen TCP/IP-gebundenen Netzwerk Adapter festzulegen.
+Das [VbScript-Codebeispiel Zuweisen der DNS-Domäne für einen Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/6044a0a4-d320-4c18-a94b-c125796d219b) im TechNet-Katalog verwendet **SetDNSDomain,** um die DNS-Domäne für einen TCP/IP-gebundenen Netzwerkadapter festzulegen.
 
-Das Codebeispiel zum [Ändern der TCP/IP-Konfiguration für einen Computer](https://Gallery.TechNet.Microsoft.Com/3d5ae334-1d75-4cea-8079-78c6bd836faf) mit VBScript in der TechNet Gallery verwendet **SetDNSDomain** zum Ändern der TCP/IP-Einstellungen für einen Netzwerkadapter.
+Das Beispiel [Ändern der TCP/IP-Konfiguration für einen](https://Gallery.TechNet.Microsoft.Com/3d5ae334-1d75-4cea-8079-78c6bd836faf) Computer-VBScript-Code im TechNet-Katalog verwendet **SetDNSDomain,** um TCP/IP-Einstellungen für einen Netzwerkadapter zu ändern.
 
-Das Beispiel [Enable DHCP settings on a Computer](https://Gallery.TechNet.Microsoft.Com/41e6ab51-78c0-4413-b086-03fde33ea125) VBScript in der TechNet Gallery verwendet **SetDNSDomain** , um alle Einstellungen zu konfigurieren, die in der Regel zum Aktivieren von DHCP auf einem Computer erforderlich sind.
+Das Beispiel [DHCP Einstellungen auf einem Computer](https://Gallery.TechNet.Microsoft.Com/41e6ab51-78c0-4413-b086-03fde33ea125) mit VBScript aktivieren im TechNet-Katalog verwendet **SetDNSDomain,** um alle Einstellungen zu konfigurieren, die normalerweise zum Aktivieren von DHCP auf einem Computer erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -426,29 +426,29 @@ Das Beispiel [Enable DHCP settings on a Computer](https://Gallery.TechNet.Micros
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

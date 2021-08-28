@@ -1,33 +1,33 @@
 ---
-title: Aushandlung des Video Formats im Beispiel-Video-DSP-Plug-in
-description: Aushandlung des Video Formats im Beispiel-Video-DSP-Plug-in
+title: Videoformataushandlung im Beispielvideo-DSP-Plug-In
+description: Videoformataushandlung im Beispielvideo-DSP-Plug-In
 ms.assetid: 3e92ce10-2b9b-4689-a181-f56c33472fea
 keywords:
-- Windows Media Player-Plug-ins, videodsp
-- Plug-ins, videodsp
-- Plug-Ins für die digitale Signalverarbeitung, Video formataushandlung
-- DSP-Plug-ins, Videoformat Aushandlung
-- Video DSP-Plug-ins, Format Aushandlung
+- Windows Media Player-Plug-Ins,Video-DSP
+- Plug-Ins, Video-DSP
+- Plug-Ins für die digitale Signalverarbeitung, Videoformataushandlung
+- DSP-Plug-Ins, Videoformataushandlung
+- Video-DSP-Plug-Ins, Formataushandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c287a38fbfcf11f1b9d74087a91c5825b22f1243
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 90154f3fe7824fb9af563cb662fdcb2847339bc6061d79b3e92cab9c6e36e44d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761820"
 ---
-# <a name="video-format-negotiation-in-the-sample-video-dsp-plug-in"></a>Aushandlung des Video Formats im Beispiel-Video-DSP-Plug-in
+# <a name="video-format-negotiation-in-the-sample-video-dsp-plug-in"></a>Videoformataushandlung im Beispielvideo-DSP-Plug-In
 
-Bevor Windows Media Player ein Video-DSP-Plug-in in die Signalkette einfügt, muss der Spieler ermitteln, ob das Plug-in das Video verarbeiten kann, das abgespielt wird. Der Prozess, mit dem das Plug-in und der Spieler mit unterstützten Videoformaten kommunizieren, wird als formataushandlung bezeichnet.
+Bevor Windows Media Player ein Video-DSP-Plug-In in die Signalkette einfügung, muss der Player bestimmen, ob das Plug-In das abgespielte Video verarbeiten kann. Der Prozess, bei dem das Plug-In und der Player über unterstützte Videoformate kommunizieren, wird als Formataushandlung bezeichnet.
 
-## <a name="providing-the-supported-input-and-output-types"></a>Bereitstellen der unterstützten Eingabe-und Ausgabetypen
+## <a name="providing-the-supported-input-and-output-types"></a>Bereitstellen der unterstützten Eingabe- und Ausgabetypen
 
-Wenn das DSP-Plug-in als DirectX Media Object (DMO) fungiert, fragt der Player das Plug-in über die unterstützten Formate ab, indem er eine Sequenz von Aufrufen an **imediaobject:: getinputtype** und **imediaobject:: getoutputtype** sendet.
+Wenn das DSP-Plug-In als DirectX-Medienobjekt (DMO) verwendet wird, fragt der Player das Plug-In nach den unterstützten Formaten ab, indem er eine Folge von Aufrufen von **IMediaObject::GetInputType** und **IMediaObject::GetOutputType vor** sich geht.
 
-Wenn das DSP-Plug-in als Media Foundation Transformation (MFT) fungiert, fragt der Spieler das Plug-in über die unterstützten Formate ab, indem es eine Sequenz von Aufrufen von **imftransform:: getinputavailabletype** und **imftransform:: getoutputavailabletype** ausführt.
+Wenn das DSP-Plug-In als Media Foundation-Transformation (MFT) verwendet wird, fragt der Player das Plug-In nach den unterstützten Formaten ab, indem er eine Folge von Aufrufen an **DENTTRANSFORM::GetInputAvailableType** und den 1000111111111111111111118881111555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555 
 
-Das Beispiel-Video-Plug-in, das vom Windows Media Player-Plug-in-Assistenten generiert wird, speichert die Liste der unterstützten Videoformate als Array von GUIDs. Der folgende Code wird aus der Datei "Main. cpp" abgeleitet:
+Das beispielbasierte Video-Plug-In, das vom Windows Media Player Plug-In-Assistenten generiert wurde, speichert die Liste der unterstützten Videoformate als Array von GUIDs. Der folgende Code wird aus der CPP-Hauptdatei verwendet:
 
 
 ```C++
@@ -46,7 +46,7 @@ static const GUID*    k_guidValidSubtypes[] = {
 
 
 
-Der Player kann **imediaobject:: getinputtype** und **imediaobject:: getoutputtype** in beliebiger Reihenfolge aufrufen, sodass der Plug-in-Code dies vorhersehen muss. Der Spieler kann in beliebiger Reihenfolge **imftransform:: getinputavailabletype** und **imftransform:: getoutputavailabletype** aufrufen. Die Beispiel Implementierungen von **getoutputtype** und **getoutputavailabletype** testen, ob der Eingabetyp bereits definiert wurde. Wenn dies der Fall ist, antwortet das Plug-in, dass es nur diesen Typ unterstützt. Andernfalls gibt das Plug-in den Typ zurück, der dem angegebenen Index entspricht, wie im folgenden Code veranschaulicht:
+Der Player kann **IMediaObject::GetInputType** und **IMediaObject::GetOutputType** in beliebiger Reihenfolge aufrufen, sodass der Plug-In-Code dies voraussehen muss. Auf ähnliche Weise kann der Player IN beliebiger Reihenfolge **DIEBTRANSFORM::GetInputAvailableType** und **DIETTRANSFORM::GetOutputAvailableType** aufrufen. Die Beispielimplementierungen **von GetOutputType** und **GetOutputAvailableType** testen, ob der Eingabetyp bereits definiert wurde. Wenn dies der Typ ist, antwortet das Plug-In, dass es nur diesen Typ unterstützt. Andernfalls gibt das Plug-In den Typ zurück, der dem angegebenen Index entspricht, wie der folgende Code veranschaulicht:
 
 
 ```C++
@@ -66,13 +66,13 @@ else // Otherwise use default for this plug-in.
 
 
 
-## <a name="setting-the-input-and-output-types"></a>Festlegen der Eingabe-und Ausgabetypen
+## <a name="setting-the-input-and-output-types"></a>Festlegen der Eingabe- und Ausgabetypen
 
-Wenn das DSP-Plug-in als DMO fungiert, legt Windows Media Player den Medientyp durch Aufrufen von **imediaobject:: setinputtype** und **imediaobject:: setoutputtype** fest und übergibt an jede Funktion einen Zeiger auf eine **DMO- \_ \_ Medientyp** Struktur, die den angeforderten Medientyp darstellt.
+Wenn das DSP-Plug-In als DMO verwendet wird, legt Windows Media Player den Medientyp durch Aufrufen von **IMediaObject::SetInputType** und **IMediaObject::SetOutputType** fest. Dabei wird jeder Funktion ein Zeiger auf eine **DMO MEDIA \_ \_ TYPE-Struktur übergeben,** die den angeforderten Medientyp darstellt.
 
-Wenn das DSP-Plug-in als MFT fungiert, legt Windows Media Player den Medientyp durch Aufrufen von **imftransform:: setinputtype** und **imftransform:: setoutputtype** fest und übergibt an jede Funktion einen Zeiger auf eine **imfmediatype** -Schnittstelle, die den angeforderten Medientyp darstellt.
+Wenn das DSP-Plug-In als MFT verwendet wird, legt Windows Media Player den Medientyp fest, indem **ERGETransform::SetInputType** und **DANNTransform::SetOutputType** aufruft. Dabei wird jeder Funktion ein Zeiger auf eine **20177-Schnittstelle übergeben,** die den angeforderten Medientyp darstellt.
 
-Es gibt keine Garantie, dass der Spieler formataushandlungs Methoden in einer bestimmten Reihenfolge aufruft, sodass der Plug-in-Code jeden Fall verarbeiten muss. Wenn der Player beispielsweise **setoutputtype** aufruft, bevor **setinputtype** aufgerufen wird, ist es eine gültige Vorgehensweise, mit der das Plug-in den vorgeschlagenen Ausgabe Medientyp ablehnen kann. Der folgende Code aus der Beispiel Implementierung von **imediaobject:: setoutputtype** veranschaulicht dies:
+Es gibt keine Garantie, dass der Player Formataushandlungsmethoden in einer bestimmten Reihenfolge aufruft, daher muss der Plug-In-Code jeden Fall verarbeiten. Wenn der Player beispielsweise **SetOutputType** vor dem Aufruf von **SetInputType** aufruft, ist es eine gültige Aktion für das Plug-In, den vorgeschlagenen Ausgabemedientyp abzulehnen. Der folgende Code aus der Beispielimplementierung von **IMediaObject::SetOutputType** veranschaulicht dies:
 
 
 ```C++
@@ -91,25 +91,25 @@ else
 
 
 
-Die Plug-in-Beispiel Implementierungen von **setinputtype** und **setoutputtype** aufrufen die benutzerdefinierte Funktion mit dem Namen **validatemediatype**. Diese Plug-in-Funktion führt eine Reihe von Tests für den vorgeschlagenen Medientyp aus, um sicherzustellen, dass der Medientyp wohl geformt und vom Plug-in unterstützt wird. **Validatemediatype** führt die folgenden Tests aus:
+Die Beispiel-Plug-In-Implementierungen **von SetInputType** und **SetOutputType** rufen die benutzerdefinierte Funktion mit dem Namen **ValidateMediaType auf.** Diese Plug-In-Funktion führt eine Reihe von Tests für den vorgeschlagenen Medientyp aus, um sicherzustellen, dass der Medientyp wohlgeformt ist und vom Plug-In unterstützt wird. **ValidateMediaType führt** die folgenden Tests aus:
 
--   Überprüft, ob die Member **majortype** und **Format Type** die korrekten Werte enthalten.
--   Überprüft, ob der **Untertyp** Member mit einem der unterstützten Formate übereinstimmt.
--   Überprüft, ob die Informationen in den Strukturen **BITMAPINFOHEADER** und **videoinfoheader** bzw. **VIDEOINFOHEADER2** gültige Werte enthalten.
--   Testet, ob die Eingabe-und Ausgabemedien Typen Stimmen, da das Plug-in keine Formate von der Eingabe in die Ausgabe konvertiert.
+-   Überprüft, ob die **Member majortype und** **formattype** die richtigen Werte enthalten.
+-   Überprüft, ob der **Untertyp-Member** einem der unterstützten Formate entspricht.
+-   Überprüft, ob die Informationen in den **Strukturen BITMAPINFOHEADER** und **VIDEOINFOHEADER** oder **VIDEOINFOHEADER2** gültige Werte enthalten.
+-   Testet, ob die Eingabe- und Ausgabemedientypen übereinstimmen, da das Plug-In keine Formate von der Eingabe in die Ausgabe konvertiert.
 
-Wenn der vorgeschlagene Medientyp die Validierungstests besteht, wird er in einer Mitgliedsvariablen gespeichert: **m \_ mtinput** für den Eingabe Medientyp, **m \_ mtoutput** für den Ausgabe Medientyp.
+Wenn der vorgeschlagene Medientyp die Validierungstests besteht, wird er in einer Membervariablen gespeichert: **m \_ mtInput** für den Eingabemedientyp, **m \_ mtOutput** für den Ausgabemedientyp.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Implementieren eines Video DSP-Plug-ins**](implementing-a-video-dsp-plug-in.md)
+[**Implementieren eines Video-DSP-Plug-Ins**](implementing-a-video-dsp-plug-in.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

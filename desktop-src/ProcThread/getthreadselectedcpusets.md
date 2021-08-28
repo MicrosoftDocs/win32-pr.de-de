@@ -1,7 +1,7 @@
 ---
-description: Gibt die explizite CPU-Satz Zuweisung des angegebenen Threads zurück, wenn eine Zuweisung mithilfe der setthreadselectedcpusets-API festgelegt wurde. Wenn keine explizite Zuweisung festgelegt ist, wird "Requirements didcount" auf 0 festgelegt, und die Funktion gibt "true" zurück.
+description: Gibt die explizite CPU-Set-Zuweisung des angegebenen Threads zurück, wenn eine Zuweisung mithilfe der SetThreadSelectedCpuSets-API festgelegt wurde. Wenn keine explizite Zuweisung festgelegt ist, wird RequiredIdCount auf 0 festgelegt, und die Funktion gibt TRUE zurück.
 ms.assetid: 9ACF72F8-A64C-4FFF-B340-C920E80238CA
-title: Getthreadselectedcpusets-Funktion (processthreadapi. h)
+title: GetThreadSelectedCpuSets-Funktion (Processthreadapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-ProcessThreads-L1-1-3.dll
 - KernelBase.dll
-ms.openlocfilehash: 26530b1fbb9694ed7ecc8c4e457ad023e971a470
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76e8fb9ff9fb540d15c8610a673ff52c5586f0ab57eb06668ef5e586db7513d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978780"
 ---
-# <a name="getthreadselectedcpusets-function"></a>Getthreadselectedcpusets-Funktion
+# <a name="getthreadselectedcpusets-function"></a>GetThreadSelectedCpuSets-Funktion
 
-Gibt die explizite CPU-Satz Zuweisung des angegebenen Threads zurück, wenn eine Zuweisung mithilfe der [**setthreadselectedcpusets**](setthreadselectedcpusets.md) -API festgelegt wurde. Wenn keine explizite Zuweisung festgelegt ist, wird "Requirements **didcount** " auf 0 festgelegt, und die Funktion gibt "true" zurück.
+Gibt die explizite CPU-Set-Zuweisung des angegebenen Threads zurück, wenn eine Zuweisung mithilfe der [**SetThreadSelectedCpuSets-API**](setthreadselectedcpusets.md) festgelegt wurde. Wenn keine explizite Zuweisung festgelegt ist, wird **RequiredIdCount** auf 0 festgelegt, und die Funktion gibt TRUE zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ BOOL WINAPI GetThreadSelectedCpuSets(
 
 <dl> <dt>
 
-*Thread* \[ in\]
+*Thread* \[ In\]
 </dt> <dd>
 
-Gibt den Thread an, für den die ausgewählten CPU-Sätze abgefragt werden sollen. Dieses Handle muss über den \_ \_ eingeschränkten \_ Informations Zugriff für die Thread Abfrage verfügen. Der von [**GetCurrentThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) zurückgegebene Wert kann auch hier angegeben werden.
+Gibt den Thread an, für den die ausgewählten CPU-Sätze abgefragt werden sollen. Dieses Handle muss über das Zugriffsrecht THREAD \_ QUERY LIMITED \_ INFORMATION \_ verfügen. Der von [**GetCurrentThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) zurückgegebene Wert kann hier ebenfalls angegeben werden.
 
 </dd> <dt>
 
-*Cpuabtids* \[ Out, optional\]
+*CpuSetIds* \[ out, optional\]
 </dt> <dd>
 
-Gibt einen optionalen Puffer zum Abrufen der Liste der CPU-Satz Bezeichner an.
+Gibt einen optionalen Puffer an, um die Liste der CPU-Satzbezeichner abzurufen.
 
 </dd> <dt>
 
-*Cpuantidcount* \[ in\]
+*CpuSetIdCount* \[ In\]
 </dt> <dd>
 
-Gibt die Kapazität des Puffers an, der in **cpuabtids** angegeben ist. Wenn der Puffer NULL ist, muss dieser 0 sein.
+Gibt die Kapazität des puffers an, der in **CpuSetIds** angegeben ist. Wenn der Puffer NULL ist, muss er 0 sein.
 
 </dd> <dt>
 
-Requirements- *count* \[ vorgenommen\]
+*RequiredIdCount* \[ out\]
 </dt> <dd>
 
-Gibt die erforderliche Kapazität des Puffers an, der die gesamte Liste der von einem Thread ausgewählten CPU-Sätze enthalten soll. Bei erfolgreicher Rückgabe wird dadurch die Anzahl der in den Puffer gefüllten IDs angegeben.
+Gibt die erforderliche Kapazität des Puffers an, um die gesamte Liste der vom Thread ausgewählten CPU-Sätze aufzunehmen. Bei erfolgreicher Rückgabe gibt dies die Anzahl der IDs an, die in den Puffer gefüllt sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese API gibt bei Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, ist der Wert von " **GetLastError** " Fehler \_ unzureichend \_ . Diese API kann nicht ausgeführt werden, wenn gültige Parameter bestanden werden und der Rückgabe Puffer groß genug ist.
+Diese API gibt BEI Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, lautet der **GetLastError-Wert** ERROR \_ INSUFFICIENT \_ BUFFER. Diese API kann nicht fehlschlagen, wenn gültige Parameter übergeben werden und der Rückgabepuffer groß genug ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,10 +82,10 @@ Diese API gibt bei Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, i
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop Apps \| UWP-apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2016 \[ -Desktop-Apps \| UWP-apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Processthreadsapi. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Windows. h</dt> </dl>          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 \|Desktop-Apps UWP-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 \|Desktop-Apps UWP-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Processthreadsapi.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Windows.h</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl>       |
 
 

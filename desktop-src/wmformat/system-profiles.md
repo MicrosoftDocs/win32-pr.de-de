@@ -1,77 +1,77 @@
 ---
-title: System profile
-description: System profile
+title: Systemprofile
+description: Systemprofile
 ms.assetid: 5f687aae-cf9b-4b2d-a3aa-d130b443fbf3
 keywords:
-- Windows Media-Format-SDK, Systemprofile
+- Windows Medienformat-SDK, Systemprofile
 - Advanced Systems Format (ASF), Systemprofile
 - ASF (Advanced Systems Format), Systemprofile
-- Windows Media-Format-SDK, Profil-IDs
+- Windows Medienformat-SDK, Profil-IDs
 - Advanced Systems Format (ASF), Profil-IDs
 - ASF (Advanced Systems Format), Profil-IDs
 - Systemprofile, Liste der
 - Profil-IDs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eeca66023e6de6aba9c07a6bcb84a73756e316a8
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 6389f82e93a0b27c079bd75ded9eb7d35d78a380ab72d244c5443c07f4c9ed5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807740"
 ---
-# <a name="system-profiles"></a>System profile
+# <a name="system-profiles"></a>Systemprofile
 
-Die folgende Tabelle enthält die vollständige Liste der unterstützten Systemprofile. Jedes aufgeführte Profil weist einen Namen und eine Profil-ID auf. Die Profil-ID ist eine Konstante, die auf den dem Systemprofil zugewiesenen GUID-Wert festgelegt ist. Um die Systemprofil-IDs in Ihrem Code zu verwenden, müssen Sie wmsysprf. h in Ihre Anwendung einschließen. Beispiele zum Laden von Systemprofilen finden [Sie unter So laden Sie ein Systemprofil](to-load-a-system-profile.md).
+Die folgende Tabelle enthält die vollständige Liste der unterstützten Systemprofile. Jedes aufgelistete Profil verfügt über einen Namen und eine Profil-ID. Die Profil-ID ist eine Konstante, die auf den GUID-Wert festgelegt ist, der dem Systemprofil zugewiesen ist. Um die Systemprofil-IDs in Ihrem Code zu verwenden, müssen Sie wmsysprf.h in Ihre Anwendung einschließen. Beispiele zum Laden eines Systemprofils finden Sie unter [So laden Sie ein Systemprofil.](to-load-a-system-profile.md)
 
 > [!IMPORTANT]
-> Die unten aufgeführten Profile verwenden die Windows Media Audio und Windows Media Video Codecs der Version 8. Es sind keine vordefinierten Systemprofile vorhanden, die die Codecs der Windows Media 9-Serie verwenden. Sie können ein eigenes Windows Media 9-Serien Profil erstellen, indem Sie ein Profil der Version 8 als Ausgangspunkt verwenden. Weitere Informationen finden Sie unter [wieder verwenden von streamkonfigurationen](reusing-stream-configurations.md).
+> Die unten aufgeführten Profile verwenden alle die Version 8 Windows Medienaudio- und Windows Media Video-Codecs. Es gibt keine vordefinierten Systemprofile, die die Codecs der Windows Media 9-Serie verwenden. Sie können ein eigenes Profil Windows Media 9-Serie erstellen, indem Sie ein Profil der Version 8 als Ausgangspunkt verwenden. Weitere Informationen finden Sie unter [Wiederverwenden von Streamkonfigurationen.](reusing-stream-configurations.md)
 
- 
+ 
 
 
 
-| Profilname                                                                      | Profil-ID                     | BESCHREIBUNG                                                                                                                                                         |
+| Profilname                                                                      | Profil-ID                     | Beschreibung                                                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows Media Video 8 für Farb Pocket PCs (225 Kbit/s)                             | Wmprofile \_ V80 \_ 255 videopda    | Verwenden Sie dieses Profil beim Erstellen von Videodateien für die Wiedergabe auf schnelleren Farb Pocket PCs.                                                                                 |
-| Windows Media Video 8 für Farb Pocket PCs (150 KBit/s)                             | Wmprofile \_ V80 \_ 150videopda    | Verwenden Sie dieses Profil beim Erstellen von Videodateien für die Wiedergabe auf den meisten Pocket PCs.                                                                                         |
-| Windows Media Video 8 für Einwählmodems oder ISDN mit einem Kanal (28,8 bis 56 Kbit/s) | Wmprofile \_ V80 \_ 28856videombr  | Verwenden Sie dieses mehrbitrate-Profil für Zielgruppen mit DFÜ-Modems oder ISDN-Verbindungen mit einem Kanal (Bandbreite zwischen 28,8 Kbit/s und 56 Kbit/s).        |
-| Windows Media Video 8 für LAN, Kabel Modem oder xDSL (100 bis 768 Kbit/s)             | Wmprofile \_ V80 \_ 100768videombr | Verwenden Sie dieses Multi-Bitrate-Profil für Zielgruppen mit Dual-Channel-ISDN, LAN, Kabelmodem oder xDSL-Verbindungen (Bandbreite zwischen 100 kbit/s und 500 KBit/s). |
-| Windows Media Video 8 für Einwählmodems oder LAN (28,8 bis 100 kbit/s)                | Wmprofile \_ V80 \_ 288100videombr | Verwenden Sie dieses mehrbitrate-Profil für Zielgruppen mit DFÜ-Modem-, LAN-oder Dual-Channel-ISDN-Verbindungen (Bandbreite zwischen 28,8 und 100 kbit/s).         |
-| Windows Media Video 8 für Einwählmodems (28,8 Kbit/s)                              | Wmprofile \_ V80 \_ 288-Video       | Verwenden Sie dieses Profil für die Low-Bit-audiobereitstellung über 28,8 Kbit/s mit DFÜ-Verbindungen.                                                                          |
-| Windows Media Video 8 für Einwählmodems (56 Kbit/s)                                | Wmprofile \_ V80 \_ 56video        | Verwenden Sie dieses Profil für die Low-Bit-audiobereitstellung über 56 Kbit/s mit DFÜ-Verbindungen.                                                                            |
-| Windows Media Video 8 für lokales Netzwerk (100 kbit/s)                           | Wmprofile \_ V80 \_ 100Video       | Verwenden Sie dieses Profil für die mittlere Bitrate-Übermittlung über Dual-Channel-ISDN-, LAN-oder Kabelmodem Verbindungen.                                                              |
-| Windows Media Video 8 für lokales Netzwerk (256 KBit/s)                           | Wmprofile \_ V80 \_ 256-Video       | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Video 8 für lokales Netzwerk (384 Kbit/s)                           | Wmprofile \_ V80 \_ 384-Video       | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Video 8 für lokales Netzwerk (768 Kbit/s)                           | Wmprofile \_ V80 \_ 768-Video       | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Video 8 für Breitband (NTSC, 700 Kbit/s)                              | Wmprofile \_ V80 \_ 700 ntscvideo   | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder Download und Wiedergabe gedacht sind.                                                         |
-| Windows Media Video 8 für Breitband (NTSC, 1400 Kbit/s)                             | Wmprofile \_ V80 \_ 1400ntscvideo  | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Video 8 für Breitband (PAL, 384 Kbit/s)                               | Wmprofile \_ V80 \_ 384palvideo    | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Video 8 für Breitband (PAL, 700 Kbit/s)                               | Wmprofile \_ V80 \_ 700palvideo    | Verwenden Sie dieses Profil für hochwertige Audioinhalte und Videoinhalte, die für die lokale Wiedergabe oder für Download und Wiedergabe gedacht sind.                                                     |
-| Windows Media Audio 8 für das Einwählmodem (Mono, 28,8 Kbit/s)                         | Wmprofile \_ V80 \_ 288monoaudiodatei   | Verwenden Sie dieses Profil für Radio-und Musikinhalte (nur Audiodaten).                                                                                                          |
-| Windows Media Audio 8 für das Einwählmodem (FM Radio Stereo, 28,8 Kbit/s)              | Wmprofile \_ V80 \_ 288stereoaudiodatei | Verwenden Sie dieses Profil für Radio-und Musikinhalte (nur Audiodaten).                                                                                                          |
-| Windows Media Audio 8 für das Einwählmodem (32 Kbit/s)                                 | Wmprofile \_ V80 \_ 32stereoaudiodatei  | Verwenden Sie dieses Profil für Radio-und Musikinhalte (nur Audiodaten).                                                                                                          |
-| Windows Media Audio 8 für DFÜ-Modem (Near CD Quality, 48 Kbit/s)                | Wmprofile \_ V80 \_ 48stereoaudiodatei  | Verwendung für Radio-, Musik-und allgemeine Audioinhalte.                                                                                                            |
-| Windows Media Audio 8 für DFÜ-Modem (CD-Qualität, 64 Kbit/s)                     | Wmprofile \_ V80 \_ 64stereoaudiodatei  | Verwenden Sie dieses Profil für Zielgruppen mit hoher Geschwindigkeit von Internet-oder LAN-Verbindungen.                                                                                  |
-| Windows Media Audio 8 für ISDN (besser als CD-Qualität, 96 Kbit/s)                  | Wmprofile \_ V80 \_ 96stereoaudiodatei  | Verwenden Sie dieses Profil für Zielgruppen mit hoher Geschwindigkeit von Internet-oder LAN-Verbindungen.                                                                                  |
-| Windows Media Audio 8 für ISDN (besser als CD-Qualität, 128 Kbit/s)                 | Wmprofile \_ V80 \_ 128 stereoaudiodatei | Verwenden Sie dieses Profil für Zielgruppen mit hoher Geschwindigkeit von Internet-oder LAN-Verbindungen.                                                                                  |
-| Windows Media Video 8 für das Einwählmodem (keine Audiodaten, 28,8 Kbit/s)                     | Wmprofile \_ V80 \_ 288videoonly   | Verwenden Sie dieses Profil, wenn Sie nur-Video-Inhalte für Zielgruppen mit DFÜ-Modems erstellen.                                                                         |
-| Windows Media Video 8 für das Einwählmodem (keine Audiodaten, 56 Kbit/s)                       | Wmprofile \_ V80 \_ 56videoonly    | Verwenden Sie dieses Profil, wenn Sie nur-Video-Inhalte für Zielgruppen mit DFÜ-Modems erstellen.                                                                         |
-| Windows Media 8 Fair Quality based VBR for Breitband                              | Wmprofile \_ V80 \_ fairvbrvideo   | Auf hoher Qualität basierendes Profil für VBR-Inhalte, die mit eingeschränkter Qualität eingeschränkt sind.                                                                                     |
-| Windows Media 8 High Quality based VBR for Breitband.                             | Wmprofile \_ V80 \_ highvbrvideo   | High-to-Quality-basiertes Profil für VBR-Inhalte, die mit eingeschränkter Qualität eingeschränkt sind.                                                                                     |
-| Windows Media 8 Best Quality based VBR for Breitband.                             | Wmprofile \_ V80 \_ bestvbrvideo   | Bestes Qualitäts basiertes Profil für VBR-Inhalte, die mit eingeschränkter Qualität eingeschränkt sind.                                                                                             |
+| Windows Media Video 8 für Color Pocket PCs (225 KBit/s)                             | WMProfile \_ V80 \_ 255VideoPDA    | Verwenden Sie dieses Profil, wenn Sie Videodateien für die Wiedergabe auf schnelleren Color Pocket-PCs erstellen.                                                                                 |
+| Windows Media Video 8 für Color Pocket PCs (150 KBit/s)                             | WMProfile \_ V80 \_ 150VideoPDA    | Verwenden Sie dieses Profil, wenn Sie Videodateien für die Wiedergabe auf den meisten Pocket-PCs erstellen.                                                                                         |
+| Windows Media Video 8 für Dial-up Modems oder Single-Channel ISDN (28,8 bis 56 KBit/s) | WMProfile \_ V80 \_ 28856VideoMBR  | Verwenden Sie dieses Profil mit mehreren Bitraten für Zielgruppen mit DFÜ-Modems oder ISDN-Verbindungen mit einem Kanal (Bandbreite zwischen 28,8 KBit/s und 56 KBit/s).        |
+| Windows Media Video 8 für LAN, Kabelmodem oder xDSL (100 bis 768 KBit/s)             | WMProfile \_ V80 \_ 100768VideoMBR | Verwenden Sie dieses Profil mit mehreren Bitraten für Zielgruppen mit DUAL-Channel-ISDN-, LAN-, Kabelmodem- oder xDSL-Verbindungen (Bandbreite zwischen 100 KBit/s und 500 KBit/s). |
+| Windows Media Video 8 für DFÜ-Modems oder LAN (28,8 bis 100 KBit/s)                | WMProfile \_ V80 \_ 288100VideoMBR | Verwenden Sie dieses Profil mit mehreren Bitraten für Zielgruppen mit DFÜ-Modem-, LAN- oder DUAL-Channel-ISDN-Verbindungen (Bandbreite zwischen 28,8 und 100 KBit/s).         |
+| Windows Media Video 8 für DFÜ-Modems (28,8 KBit/s)                              | WMProfile \_ V80 \_ 288Video       | Verwenden Sie dieses Profil für die Audio-/Videoübermittlung mit niedriger Bitrate über DFÜ-Verbindungen mit 28,8 KBit/s.                                                                          |
+| Windows Media Video 8 für DFÜ-Modems (56 KBit/s)                                | WMProfile \_ V80 \_ 56Video        | Verwenden Sie dieses Profil für die Audio-/Videoübermittlung mit niedriger Bitrate über DFÜ-Verbindungen mit 56 KBit/s.                                                                            |
+| Windows Media Video 8 for Local Area Network (100 KBit/s)                           | WMProfile \_ V80 \_ 100Video       | Verwenden Sie dieses Profil für die Übermittlung mittlerer Bitraten über DUAL-Channel-ISDN-, LAN- oder Kabelmodemverbindungen.                                                              |
+| Windows Media Video 8 for Local Area Network (256 KBit/s)                           | WMProfile \_ V80 \_ 256Video       | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Media Video 8 for Local Area Network (384 KBit/s)                           | WMProfile \_ V80 \_ 384Video       | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Media Video 8 für lokales Netzwerk (768 KBit/s)                           | WMProfile \_ V80 \_ 768Video       | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Media Video 8 für Breitband (NTSC, 700 KBit/s)                              | WMProfile \_ V80 \_ 700NTSCVideo   | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder das Herunterladen und Wiedergeben vorgesehen sind.                                                         |
+| Windows Media Video 8 für Breitband (NTSC, 1400 KBit/s)                             | WMProfile \_ V80 \_ 1400NTSCVideo  | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Media Video 8 für Breitband (PAL, 384 KBit/s)                               | WMProfile \_ V80 \_ 384PALVideo    | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Media Video 8 für Breitband (PAL, 700 KBit/s)                               | WMProfile \_ V80 \_ 700PALVideo    | Verwenden Sie dieses Profil für qualitativ hochwertige Audio-/Videoinhalte, die für die lokale Wiedergabe oder zum Herunterladen und Wiedergeben vorgesehen sind.                                                     |
+| Windows Medienaudio 8 für Einwählmodem (Mono, 28,8 KBit/s)                         | WMProfile \_ V80 \_ 288MonoAudio   | Verwenden Sie dieses Profil für Radio- und Musikinhalte (nur Audio).                                                                                                          |
+| Windows Medienaudio 8 für DFÜ-Modem (FM Radio Stereo, 28,8 KBit/s)              | WMProfile \_ V80 \_ 288StereoAudio | Verwenden Sie dieses Profil für Radio- und Musikinhalte (nur Audio).                                                                                                          |
+| Windows Medienaudio 8 für DFÜ-Modem (32 KBit/s)                                 | WMProfile \_ V80 \_ 32StereoAudio  | Verwenden Sie dieses Profil für Radio- und Musikinhalte (nur Audio).                                                                                                          |
+| Windows Medienaudio 8 für DFÜ-Modem (Nahezu CD-Qualität, 48 KBit/s)                | WMProfile \_ V80 \_ 48StereoAudio  | Wird für Radio-, Musik- und allgemeine Audioinhalte verwendet.                                                                                                            |
+| Windows Medienaudio 8 für DFÜ-Modem (CD-Qualität, 64 KBit/s)                     | WMProfile \_ V80 \_ 64StereoAudio  | Verwenden Sie dieses Profil für Zielgruppen mit Hochgeschwindigkeits-Internet- oder LAN-Verbindungen.                                                                                  |
+| Windows Medienaudio 8 für ISDN (besser als CD-Qualität, 96 KBit/s)                  | WMProfile \_ V80 \_ 96StereoAudio  | Verwenden Sie dieses Profil für Zielgruppen mit Hochgeschwindigkeits-Internet- oder LAN-Verbindungen.                                                                                  |
+| Windows Medienaudio 8 für ISDN (besser als CD-Qualität, 128 KBit/s)                 | WMProfile \_ V80 \_ 128StereoAudio | Verwenden Sie dieses Profil für Zielgruppen mit Hochgeschwindigkeits-Internet- oder LAN-Verbindungen.                                                                                  |
+| Windows Media Video 8 für Dial-up Modem (No audio, 28,8 KBit/s)                     | WMProfile \_ V80 \_ 288VideoOnly   | Verwenden Sie dieses Profil, wenn Sie Nur-Video-Inhalte für Zielgruppen mit DFÜ-Modems erstellen.                                                                         |
+| Windows Media Video 8 for Dial-up Modem (No audio, 56 KBit/s)                       | WMProfile \_ V80 \_ 56VideoOnly    | Verwenden Sie dieses Profil, wenn Sie Nur-Video-Inhalte für Zielgruppen mit DFÜ-Modems erstellen.                                                                         |
+| Windows Media 8 Fair Quality-basierte VBR für Breitband                              | WMProfile \_ V80 \_ FAIRVBRVideo   | Faires bis qualitativ hochwertiges Profil für VBR-Inhalte, die von der Qualität eingeschränkt sind.                                                                                     |
+| Windows Media 8 High Quality based VBR for Broadband.                             | WMProfile \_ V80 \_ HIGHVBRVideo   | Auf hoher bis optimaler Qualität basierendes Profil für VBR-Inhalte mit eingeschränkter Qualität.                                                                                     |
+| Windows Media 8 Best Quality-basierte VBR für Breitband.                             | WMProfile \_ V80 \_ BESTVBRVideo   | Bestes qualitätsbasiertes Profil für VBR-Inhalte mit eingeschränkter Qualität.                                                                                             |
 
 
 
- 
+ 
 
-Die Systemprofile sind in anderen Sprachen als Englisch verfügbar. Weitere Informationen finden Sie unter [lokalisierte System profile](localized-system-profiles.md).
+Die Systemprofile sind für andere Sprachen als Englisch lokalisiert verfügbar. Weitere Informationen finden Sie unter [Lokalisierte Systemprofile.](localized-system-profiles.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmprofilemanager:: loadprofilebyid**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadprofilebyid)
+[**IWMProfileManager::LoadProfileByID**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadprofilebyid)
 </dt> <dt>
 
 [**IWMProfileManager2-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager2)
@@ -80,9 +80,9 @@ Die Systemprofile sind in anderen Sprachen als Englisch verfügbar. Weitere Info
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

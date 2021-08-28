@@ -1,9 +1,9 @@
 ---
-title: Idcompositionlineartransfereffect setblueyintercept-Methode (Dcomp. h)
-description: Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.
+title: IDCompositionLinearTransferEffect SetBlueYIntercept-Methoden (Dcomp.h)
+description: Legt den Y-Intercept der linearen Funktion für den blauen Kanal fest.
 ms.assetid: 34bff151-4844-73fa-8e7e-9a542373b820
 keywords:
-- Setblueyintercept-Methoden directcomposition
+- SetBlueYIntercept-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: baa85682fe37e12df649a503737cf7e9f8423e18
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2a9e089141f26f16fffcf027922565cc6b5b1d97411a88daf4e23b00fbb0ea7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980020"
 ---
-# <a name="idcompositionlineartransfereffectsetblueyintercept-methods"></a>Idcompositionlineartransfereffect:: setblueyintercept-Methoden
+# <a name="idcompositionlineartransfereffectsetblueyintercept-methods"></a>IDCompositionLinearTransferEffect::SetBlueYIntercept-Methoden
 
-Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.
+Legt den Y-Intercept der linearen Funktion für den blauen Kanal fest.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.
 
 | Methode                                                                                                         | BESCHREIBUNG                                                                  |
 |:---------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
-| [**Setblueyintercept**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setblueyintercept(float))                               | Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.<br/> |
-| [**Setblueyintercept (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setblueyintercept(idcompositionanimation)) | Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.<br/> |
+| [**SetBlueYIntercept**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setblueyintercept(float))                               | Legt den Y-Intercept der linearen Funktion für den blauen Kanal fest.<br/> |
+| [**SetBlueYIntercept (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionlineartransfereffect-setblueyintercept(idcompositionanimation)) | Legt den Y-Intercept der linearen Funktion für den blauen Kanal fest.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
@@ -48,7 +48,7 @@ Legt den Y-Abfang der linearen Funktion für den blauen Kanal fest.
 
 <dl> <dt>
 
-[**Idcompositionlineartransfereffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
+[**IDCompositionLinearTransferEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionlineartransfereffect)
 </dt> </dl>
 
 �

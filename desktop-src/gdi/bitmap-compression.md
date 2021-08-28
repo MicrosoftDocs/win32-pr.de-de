@@ -4,12 +4,12 @@ ms.assetid: 14d14662-910a-4f3f-914e-6ccfc602c822
 title: Bitmapkomprimierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dcefec93bb5583ba066e35d5143410d1c249bb09
-ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
+ms.openlocfilehash: 462b41bffe207aecc82deece7e2090cfe6389635
+ms.sourcegitcommit: 8eb9ae480cf2cb3524d83a1e7adcdaa875d625e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "121812846"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "123096446"
 ---
 # <a name="bitmap-compression"></a>Bitmapkomprimierung
 
@@ -21,11 +21,11 @@ Wenn der **Komprimierungsmember** der Bitmapinformationsheaderstruktur BI \_ RLE
 
 
 
-| Wert | Bedeutung                                                                                                                                                     |
-|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0     | Zeilenende.                                                                                                                                                |
-| 1     | Ende der Bitmap.                                                                                                                                              |
-| 2     | Delta. Die 2 Bytes nach dem Escapezeichen enthalten Werte ohne Vorzeichen, die die horizontalen und vertikalen Offsets des nächsten Pixels von der aktuellen Position angeben. |
+| Wert | Bedeutung                                                                                                                                                |
+|-------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 0     | Zeilenende.                                                                                                                                           |
+| 1     | Ende der Bitmap.                                                                                                                                         |
+| 2     | Delta. Die 2 Bytes nach dem Escapezeichen enthalten Werte ohne Vorzeichen, die den Offset rechts und bis zum nächsten Pixel von der aktuellen Position angeben. |
 
 
 
@@ -51,7 +51,7 @@ Die Bitmap wird wie folgt erweitert (zweistellige Werte stellen einen Farbindex 
 06 06 06 06 06 
 45 56 67 
 78 78 
-move current position 5 right and 1 down 
+move current position 5 right and 1 up 
 78 78 
 end of line 
 1E 1E 1E 1E 1E 1E 1E 1E 1E 
@@ -83,7 +83,7 @@ Die Bitmap wird wie folgt erweitert (einstellige Werte stellen einen Farbindex f
 0 6 0 6 0 
 4 5 5 6 6 7 
 7 8 7 8 
-move current position 5 right and 1 down 
+move current position 5 right and 1 up 
 7 8 7 8 
 end of line 
 1 E 1 E 1 E 1 E 1 

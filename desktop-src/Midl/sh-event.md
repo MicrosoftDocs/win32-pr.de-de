@@ -1,8 +1,8 @@
 ---
 title: sh_event-Schlüsselwort
-description: Das \ SH \_ Event \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für ein Ereignis ist.
+description: Das Schlüsselwort \sh \_ event\ gibt an, dass das Systemobjekt ein Handle für ein Ereignis ist.
 keywords:
-- sh_event-Schlüsselwort-Mittel l
+- sh_event-Schlüsselwort MIDL
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: 1a9b6dc7cc9dc4de4abd5dcc88a53588167db59d
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: b2f489c27d32c40f80cef326b99131158df92cad2183cee1dc5a3dd74310cf6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "106367259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013648"
 ---
-# <a name="sh_event-keyword"></a>SH \_ Event-Schlüsselwort
+# <a name="sh_event-keyword"></a>\_sh event-Schlüsselwort
 
-Das **SH- \_ Ereignis** Schlüsselwort gibt an, dass ein `system_handle` ein Handle für ein Ereignis enthält.
+Das **schlüsselwort sh \_ event** gibt an, dass `system_handle` ein ein Handle für ein Ereignis enthält.
 
 ``` syntax
 [system_handle(sh_event)]
@@ -32,11 +32,11 @@ Das **SH- \_ Ereignis** Schlüsselwort gibt an, dass ein `system_handle` ein Han
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle-Dokumentation**](system-handle.md) enthält auch Details zur optionalen Verwendung des *Access-Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **DuplicateHandle-Funktionsspezifikationen.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut zu `system_handle` verwenden, muss das `-target` Flag bei der Ausführung von midl.exe auf `NT100` (oder höher) festgelegt werden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -61,14 +61,14 @@ interface MyInterface : IUnknown
 [**system_handle**](system-handle.md)
 </dt> <dt>
 
-[Ereignis Objekte](../sync/event-objects.md)
+[Ereignisobjekte](../sync/event-objects.md)
 </dt> <dt>
 
-[Sicherheits-und Zugriffsrechte für das Synchronisierungs Objekt](../sync/synchronization-object-security-and-access-rights.md)
+[Sicherheit und Zugriffsrechte für Synchronisierungsobjekte](../sync/synchronization-object-security-and-access-rights.md)
 </dt> <dt>
 
-[Funktion " **kreateevent** "](/windows/win32/api/synchapi/nf-synchapi-createeventa)
+[**CreateEvent-Funktion**](/windows/win32/api/synchapi/nf-synchapi-createeventa)
 </dt> <dt>
 
-[Funktion " **kreateeventex** "](/windows/win32/api/synchapi/nf-synchapi-createeventexa)
+[**CreateEventEx-Funktion**](/windows/win32/api/synchapi/nf-synchapi-createeventexa)
 </dt> </dl>

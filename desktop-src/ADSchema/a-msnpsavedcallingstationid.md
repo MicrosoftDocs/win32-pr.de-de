@@ -1,10 +1,10 @@
 ---
-title: msnpsavedcallingstationid-Attribut
-description: Das msnpsavedcallingstationid-Attribut wird intern verwendet.
+title: msNPSavedCallingStationID-Attribut
+description: Das msNPSavedCallingStationID-Attribut wird intern verwendet.
 ms.assetid: aa967146-d736-421d-9d03-0be5ebde88e5
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das msnpsavedcallingstationid-Attribut
+- MSNPSavedCallingStationID-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41dc2a00d14903ef5d86f07111a412628ed597a2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c63d9a9ed48d969889cc0d93edc9c5ecb23d29305edd8a4a810f1668929c01ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761890"
 ---
-# <a name="msnpsavedcallingstationid-attribute"></a>msnpsavedcallingstationid-Attribut
+# <a name="msnpsavedcallingstationid-attribute"></a>msNPSavedCallingStationID-Attribut
 
-Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **msNPSavedCallingStationID-Attribut** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msnpsavedcallingstationid            |
-| LDAP-Display-Name | msnpsavedcallingstationid            |
+| CN                | msNPSavedCallingStationID            |
+| Ldap-Anzeigename | msNPSavedCallingStationID            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1130              |
-| System-ID-GUID    | db0c908e-c1f2-11d1-bbc5-0080c76670c0 |
+| System-ID-GUID    | db0c908e-c1f2-11d1-sender5-0080c76670c0 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -42,7 +42,7 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,11 +56,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,11 +77,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -98,11 +98,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -119,11 +119,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -140,11 +140,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -161,11 +161,11 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Falsch                             |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -174,7 +174,7 @@ Das **msnpsavedcallingstationid** -Attribut wird intern verwendet. Ändern Sie d
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

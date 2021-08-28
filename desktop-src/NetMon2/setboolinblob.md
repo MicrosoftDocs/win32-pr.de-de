@@ -1,7 +1,7 @@
 ---
-description: Die setboolinblob-Funktion legt einen booleschen Wert an einer bestimmten Position innerhalb eines BLOBs fest.
+description: Die SetBoolInBlob-Funktion legt einen booleschen Wert an einer bestimmten Position in einem BLOB fest.
 ms.assetid: 354d22be-b8c4-4068-8356-19b30ac188d0
-title: Setboolinblob-Funktion (Netmon. h)
+title: SetBoolInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 5cfbb9a3410d511ab143f1d77584a0144435c230
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95785714919ad99026c8e179c11f992a79efc4d99d0de4caab20fd00f63cbffc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128820"
 ---
-# <a name="setboolinblob-function"></a>Setboolinblob-Funktion
+# <a name="setboolinblob-function"></a>SetBoolInBlob-Funktion
 
-Die **setboolinblob** -Funktion legt einen booleschen Wert an einer bestimmten Position innerhalb eines BLOBs fest.
+Die **SetBoolInBlob-Funktion** legt einen booleschen Wert an einer bestimmten Position in einem BLOB fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,35 +43,35 @@ DWORD SetBoolInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Handle für ein BLOB.
 
 </dd> <dt>
 
-*pownername* \[ in\]
+*pOwnerName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen des BLOB- **Besitzers** .
+Zeiger auf den Namen des **BLOB-Besitzers.**
 
 </dd> <dt>
 
-*pcategoryname* \[ in\]
+*pCategoryName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den BLOB- **Kategoriename** .
+Zeiger auf den Namen der **BLOB-Kategorie.**
 
 </dd> <dt>
 
-*ptagname* \[ in\]
+*pTagName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den BLOB- **Tagnamen** .
+Zeiger auf den Namen des **BLOB-Tags.**
 
 </dd> <dt>
 
-*Bool* \[ in\]
+*Bool* \[ In\]
 </dt> <dd>
 
 Boolescher Wert, der an der angegebenen Position festgelegt wird.
@@ -80,9 +80,9 @@ Boolescher Wert, der an der angegebenen Position festgelegt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,8 +92,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
@@ -102,31 +102,31 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 
 <dl> <dt>
 
-[Getboolfromblob](getboolfromblob.md)
+[GetBoolFromBlob](getboolfromblob.md)
 </dt> <dt>
 
-[Setclassidinblob](setclassidinblob.md)
+[SetClassIDInBlob](setclassidinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setmacaddressinblob](setmacaddressinblob.md)
+[SetMacAddressInBlob](setmacaddressinblob.md)
 </dt> <dt>
 
-[Setnetworkinfoinblob](setnetworkinfoinblob.md)
+[SetNetworkInfoInBlob](setnetworkinfoinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Setnpptriggerinblob](setnpptriggerinblob.md)
+[SetNPPTriggerInBlob](setnpptriggerinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

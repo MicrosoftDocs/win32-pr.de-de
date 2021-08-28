@@ -1,26 +1,26 @@
 ---
-title: So laden Sie ein System Profil
-description: So laden Sie ein System Profil
+title: So laden Sie ein Systemprofil
+description: So laden Sie ein Systemprofil
 ms.assetid: 2398a44d-c5c7-4fa2-b0ed-1cfb75d8822c
 keywords:
 - Profile, System
-- Systemprofile, laden
+- Systemprofile, Laden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73e745cb2fed32d650a22febef827ed7662f4448
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: becd98903921b81ce1eaf7d2317659c7760bb99c4e55e07efe336719d5d34ed4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807480"
 ---
-# <a name="to-load-a-system-profile"></a>So laden Sie ein System Profil
+# <a name="to-load-a-system-profile"></a>So laden Sie ein Systemprofil
 
-Wenn Sie Änderungen an einem Systemprofil vornehmen möchten, müssen Sie es in ein Profil Objekt laden. Der Profil-Manager bietet zwei Optionen zum Laden von Systemprofilen: nach Bezeichner und nach Index.
+Um Änderungen an einem Systemprofil vorzunehmen, müssen Sie es in ein Profilobjekt laden. Der Profil-Manager bietet zwei Optionen zum Laden von Systemprofilen: nach Bezeichner und nach Index.
 
-Ein Systemprofil Bezeichner ist ein GUID-Wert, der dem Systemprofil beim Erstellen zugewiesen wurde. Eine Liste der GUID-Konstanten, die den Systemprofilen der Version 8 zugeordnet sind, finden Sie unter [Systemprofile](system-profiles.md). Die GUID-Konstanten für frühere Versionen finden Sie in der Header Datei "wmsysprf. h". Weitere Informationen zu diesem und anderen Header Dateien, die im Windows Media Format SDK enthalten sind, finden Sie unter [Bibliotheksdateien und Compilereinstellungen](library-files-and-compiler-settings.md).
+Ein Systemprofilbezeichner ist ein GUID-Wert, der dem Systemprofil beim Erstellen zugewiesen wurde. Eine Liste der GUID-Konstanten, die den Systemprofilen der Version 8 zugeordnet sind, finden Sie unter [Systemprofile.](system-profiles.md) Die GUID-Konstanten für frühere Versionen finden Sie in der Headerdatei WMSysPrf.h. Weitere Informationen zu dieser und anderen Headerdateien, die im Windows Media Format SDK enthalten sind, finden Sie unter [Bibliotheksdateien und Compiler Einstellungen](library-files-and-compiler-settings.md).
 
-Im folgenden Beispielcode wird veranschaulicht, wie ein Systemprofil mithilfe des Systemprofil Bezeichners geladen wird. Damit dieser Code funktioniert, müssen Sie "wmsysprf. h" und "stdio. h" einschließen. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
+Der folgende Beispielcode veranschaulicht das Laden eines Systemprofils mithilfe des Systemprofilbezeichners. Damit dieser Code funktioniert, müssen Sie WMSysPrf.h und stdio.h einschließen. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
 
 ```C++
@@ -50,18 +50,18 @@ pProfileMgr = NULL;
 
 
 
-Wenn Sie nicht wissen, welches Profil Sie verwenden möchten, können Sie alle Systemprofile einer bestimmten Version durchlaufen, indem Sie die [**getsystemprofilecount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-getsystemprofilecount) -Methode und die [**loadsystemprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadsystemprofile) -Methode der [**iwmprofilemanager**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager) -Schnittstelle verwenden. Diese Methoden behandeln nur eine Version der Systemprofile gleichzeitig. Weitere Informationen zum Ändern der Systemprofil Version finden [Sie unter So ändern Sie Systemprofil Versionen](to-change-system-profile-versions.md).
+Wenn Sie nicht wissen, welches Profil Sie verwenden möchten, können Sie mithilfe der Methoden [**GetSystemProfileCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-getsystemprofilecount) und [**LoadSystemProfile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadsystemprofile) der [**IWMProfileManager-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager) alle Systemprofile einer bestimmten Version durchlaufen. Diese Methoden behandeln jeweils nur eine Version der Systemprofile. Weitere Informationen zum Ändern der Systemprofilversion finden Sie unter [So ändern Sie Systemprofilversionen.](to-change-system-profile-versions.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verwenden von System Profilen**](using-system-profiles.md)
+[**Verwenden von Systemprofilen**](using-system-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

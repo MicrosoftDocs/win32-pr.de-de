@@ -1,5 +1,5 @@
 ---
-description: Bietet zusätzliche Informationen, die mit der Methode "kreatereferencepoint" der MSVM \_ collectionreferencepointservice-Klasse verwendet werden können.
+description: Stellt zusätzliche Informationen zur Verwendung mit der CreateReferencePoint-Methode der Msvm \_ CollectionReferencePointService-Klasse zur Verfügung.
 ms.assetid: abf7953a-e10e-4dab-962f-a7dde5126fbe
 title: Msvm_CollectionReferencePointSettingData-Klasse
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: ac05518a3ea9512745e9d2391c2d8cf1d387c96a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1164c61f9335ce900dfbcf0b317dd0c4c9a8f84c0a97aaf13b2ea851a80dbd17
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130670"
 ---
-# <a name="msvm_collectionreferencepointsettingdata-class"></a>MSVM \_ collectionreferencepointsettingdata-Klasse
+# <a name="msvm_collectionreferencepointsettingdata-class"></a>Msvm \_ CollectionReferencePointSettingData-Klasse
 
-Bietet zusätzliche Informationen, die mit der Methode " [**kreatereferencepoint**](msvm-collectionreferencepointservice-createreferencepoint.md) " der [**MSVM \_ collectionreferencepointservice**](msvm-collectionreferencepointservice.md) -Klasse verwendet werden können.
+Stellt zusätzliche Informationen zur Verwendung mit der [**CreateReferencePoint-Methode**](msvm-collectionreferencepointservice-createreferencepoint.md) der [**Msvm \_ CollectionReferencePointService-Klasse**](msvm-collectionreferencepointservice.md) zur Verfügung.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -39,26 +39,26 @@ class Msvm_CollectionReferencePointSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ collectionreferencepointsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CollectionReferencePointSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ collectionreferencepointsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CollectionReferencePointSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ConsistencyLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Konsistenz Ebene des Bezugspunkts.
+Konsistenzebene des Referenzpunkts.
 
 <dt>
 
@@ -76,7 +76,7 @@ Konsistenz Ebene des Bezugspunkts.
 
 </dt> <dd>
 
-Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in einem Absturz konsistenten Zustand befunden hat.
+Der Referenzpunkt gibt einen Zeitpunkt an, zu dem sich das virtuelle System im absturz konsistenten Zustand hatte.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in ein
 
 </dt> <dd>
 
-Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in einem Anwendungs konsistenten Zustand befunden hat.
+Der Referenzpunkt gibt einen Zeitpunkt an, zu dem sich das virtuelle System im anwendungs konsistenten Zustand hatte.
 
 </dd> </dl>
 
@@ -99,10 +99,10 @@ Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in ein
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -111,7 +111,7 @@ Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in ein
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

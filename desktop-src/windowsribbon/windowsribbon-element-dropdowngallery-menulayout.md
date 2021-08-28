@@ -1,9 +1,9 @@
 ---
-title: Dropdowngallery. menulayout (Eigenschaft)
-description: Stellt einen Container für Dropdown Gallery-Dropdown Menü Layouts dar.
+title: DropDownGallery.MenuLayout-Eigenschaft
+description: Stellt einen Container für DropDownGallery-Dropdownmenülayouts dar.
 ms.assetid: 7251e889-377d-4d7f-b049-bd81a202774d
 keywords:
-- Dropdowngallery. menulayout-Eigenschaften Fenster (Menüband)
+- DropDownGallery.MenuLayout-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d1b6ad3f07f369dfef90b1e6c52c34793e60520
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b3fa4c0e2cca92aa2f95f73e0c817314bb71a8260db21a89cb40ec78fff7765
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810680"
 ---
-# <a name="dropdowngallerymenulayout-property"></a>Dropdowngallery. menulayout (Eigenschaft)
+# <a name="dropdowngallerymenulayout-property"></a>DropDownGallery.MenuLayout-Eigenschaft
 
-Stellt einen Container für [**Dropdown Gallery-Dropdown**](windowsribbon-element-dropdowngallery.md) Menü Layouts dar.
+Stellt einen Container für [**DropDownGallery-Dropdownmenülayouts**](windowsribbon-element-dropdowngallery.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <DropDownGallery.MenuLayout>
@@ -39,10 +39,10 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                           | BESCHREIBUNG                                    |
+| Element                                                                           | Beschreibung                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
-| [**Flowmenulayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
-| [**Verticalmenulayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
+| [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
+| [**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -52,26 +52,26 @@ Es gibt keine Attribute.
 
 | Element                                                                     |
 |-----------------------------------------------------------------------------|
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)<br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**dropdowngallery**](windowsribbon-element-dropdowngallery.md) -Element auftreten.
+Kann höchstens einmal für jedes [**DropDownGallery-Element**](windowsribbon-element-dropdowngallery.md) auftreten.
 
 > [!Note]  
-> Maximal ein untergeordnetes Element ([**verticalmenulayout**](windowsribbon-element-verticalmenulayout.md) oder [**flowmenulayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
+> Maximal ein untergeordnetes Element ([**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md) oder [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [**dropDownGallery**](windowsribbon-element-dropdowngallery.md)veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration des **dropdowngallery. menulayout** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **DropDownGallery.MenuLayout-Steuerelementdeklaration.**
 
 
 ```XML
@@ -108,8 +108,8 @@ In diesem Code Abschnitt wird die Deklaration des **dropdowngallery. menulayout*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -117,10 +117,10 @@ In diesem Code Abschnitt wird die Deklaration des **dropdowngallery. menulayout*
 
 <dl> <dt>
 
-[**Dropdown-Katalog-Steuerelement**](windowsribbon-element-dropdowngallery.md)
+[**Dropdownkatalog-Steuerelement**](windowsribbon-element-dropdowngallery.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> </dl>
 
  

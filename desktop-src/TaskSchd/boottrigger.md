@@ -1,11 +1,11 @@
 ---
-title: Boottrigger-Objekt
-description: Skript Objekt, das einen-Auslösers darstellt, der einen Task startet, wenn das System gestartet wird.
+title: BootTrigger-Objekt
+description: Skriptobjekt, das einen Trigger darstellt, der eine Aufgabe startet, wenn das System gestartet wird.
 ms.assetid: 9d5a7cf6-2e1d-44ae-bb45-66424770d61b
 keywords:
-- Taskplaner des Start Auslösers, Objekt
-- Boottrigger-Objekt Taskplaner
-- Boottrigger-Objekt Taskplaner, beschrieben
+- Starttrigger Taskplaner , Objekt
+- BootTrigger-Objekt Taskplaner
+- BootTrigger-Objekt Taskplaner beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,55 +16,55 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 346a4bc7b20606f59c26b131590b92593d40d07e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ede15265a0ff492ddb062687c1ca45af77c32fd6319821b1c214b82dce002a7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118860170"
 ---
-# <a name="boottrigger-object"></a>Boottrigger-Objekt
+# <a name="boottrigger-object"></a>BootTrigger-Objekt
 
-Skript Objekt, das einen-Auslösers darstellt, der einen Task startet, wenn das System gestartet wird.
+Skriptobjekt, das einen Trigger darstellt, der eine Aufgabe startet, wenn das System gestartet wird.
 
 ## <a name="members"></a>Member
 
-Das **boottrigger** -Objekt verfügt über folgende Typen von Membern:
+Das **BootTrigger-Objekt** weist diese Typen von Membern auf:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **boottrigger** -Objekt verfügt über diese Eigenschaften.
+Das **BootTrigger-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                            | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                 |
+| Eigenschaft                                                            | Zugriffstyp           | Beschreibung                                                                                                                                                                                 |
 |:--------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Verzögern**](boottrigger-delay.md)<br/>                       |                       | Ruft einen Wert ab oder legt einen Wert fest, der die Zeitspanne zwischen dem Start des Systems und dem Start der Aufgabe angibt.<br/>                                                           |
-| [**Aktiviert**](trigger-enabled.md)<br/>                       | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft einen booleschen Wert ab, der angibt, ob der-Wert aktiviert ist, oder legt ihn fest.<br/>                                                |
-| [**Endgrenze**](trigger-endboundary.md)<br/>               | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft das Datum und die Uhrzeit der Deaktivierung des Auslösers ab oder legt diese fest. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Executiontimelimit**](trigger-executiontimelimit.md)<br/> | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft die maximale Zeitspanne ab, die der vom-Aufruf gestartete Task ausgeführt werden darf, oder legt diese fest.<br/>                           |
-| [**Name**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_id)<br/>                                | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft den Bezeichner für den-Typ ab oder legt ihn fest.<br/>                                                                               |
-| [**Wiederholen**](trigger-repetition.md)<br/>                 | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft ab oder legt fest, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem die Aufgabe gestartet wurde.<br/>          |
-| [**StartBoundary**](trigger-startboundary.md)<br/>           | Lesen/Schreiben<br/> | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft das Datum und die Uhrzeit der Aktivierung des Auslösers ab oder legt diese fest.<br/>                                                              |
-| [**type**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_type)<br/>                            | Schreibgeschützt<br/>  | Wird vom- [**Auslöserobjekt**](trigger.md) geerbt. Ruft den Typ des Auslösers ab.<br/>                                                                                              |
+| [**Verzögern**](boottrigger-delay.md)<br/>                       |                       | Ruft einen Wert ab, der die Zeitspanne zwischen dem Start des Systems und dem Start des Tasks angibt, oder legt diesen fest.<br/>                                                           |
+| [**Aktiviert**](trigger-enabled.md)<br/>                       | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft einen booleschen Wert ab, der angibt, ob der Trigger aktiviert ist, oder legt diesen fest.<br/>                                                |
+| [**EndBoundary**](trigger-endboundary.md)<br/>               | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft das Datum und die Uhrzeit der Deaktivierung des Triggers ab oder legt diese fest. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**ExecutionTimeLimit**](trigger-executiontimelimit.md)<br/> | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft die maximale Zeit ab, die der vom Trigger gestartete Task ausführen darf, oder legt diese fest.<br/>                           |
+| [**Id**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_id)<br/>                                | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft den Bezeichner für den Trigger ab oder legt den Bezeichner fest.<br/>                                                                               |
+| [**Wiederholen**](trigger-repetition.md)<br/>                 | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft ab oder legt fest, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**StartBoundary**](trigger-startboundary.md)<br/>           | Lesen/Schreiben<br/> | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft das Datum und die Uhrzeit der Aktivierung des Triggers ab oder legt diese fest.<br/>                                                              |
+| [**Typ**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_type)<br/>                            | Schreibgeschützt<br/>  | Geerbt [](trigger.md) vom Trigger-Objekt. Ruft den Typ des Triggers ab.<br/>                                                                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Taskplaner-Dienst wird gestartet, wenn das Betriebssystem gestartet wird, und Start auslösertasks werden festgelegt, wenn der Taskplaner Dienst gestartet wird.
+Der Taskplaner Dienst wird gestartet, wenn das Betriebssystem gestartet wird, und Starttriggertasks werden so festgelegt, dass sie beim Starten des Taskplaner Diensts gestartet werden.
 
-Nur ein Mitglied der Gruppe "Administratoren" kann eine Aufgabe mit einem Start--Vorgang erstellen.
+Nur ein Mitglied der Gruppe Administratoren kann eine Aufgabe mit einem Starttrigger erstellen.
 
-Beim Erstellen eines eigenen XML-Codes für eine Aufgabe wird ein Start--Befehl mit dem [**boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Erstellen eines eigenen XML-Elements für eine Aufgabe wird ein Starttrigger mithilfe des [**BootTrigger-Elements**](taskschedulerschema-boottrigger-triggergroup-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen und Beispielcode für dieses Skript Objekt finden Sie unter [Beispiel für den Start-Beispiel (Skripterstellung)](boot-trigger-example--scripting-.md).
+Weitere Informationen und Beispielcode für dieses Skriptobjekt finden Sie unter [Starttriggerbeispiel (Skripterstellung).](boot-trigger-example--scripting-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Weitere Informationen und Beispielcode für dieses Skript Objekt finden Sie unte
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -86,10 +86,10 @@ Weitere Informationen und Beispielcode für dieses Skript Objekt finden Sie unte
 [**Trigger**](trigger.md)
 </dt> <dt>
 
-[**TriggerCollection**](triggercollection.md)
+[**Triggercollection**](triggercollection.md)
 </dt> <dt>
 
-[**TriggerCollection. Create**](triggercollection-create.md)
+[**TriggerCollection.Create**](triggercollection-create.md)
 </dt> </dl>
 
  

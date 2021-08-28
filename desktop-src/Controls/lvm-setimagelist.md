@@ -1,9 +1,9 @@
 ---
-title: LVM_SETIMAGELIST Meldung (kommstrg. h)
-description: Weist einem Listenansicht-Steuerelement eine Bildliste zu. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetImageList-Makros senden.
+title: LVM_SETIMAGELIST (Commctrl.h)
+description: Weist einem Listenansicht-Steuerelement eine Bildliste zu. Sie können diese Nachricht explizit oder mithilfe des \_ ListView-Makros SetImageList senden.
 ms.assetid: 5241065b-85e4-412e-9868-fd5b15ff7c17
 keywords:
-- Windows-Steuerelemente für LVM_SETIMAGELIST Meldung
+- LVM_SETIMAGELIST von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 779d31fd781a72dbdfbc4738e091482ca4a08528
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4151f7d6e3736e6fe28faa28bc258fb4f85bfb57622b1ec77c02ed83ea187941
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919960"
 ---
-# <a name="lvm_setimagelist-message"></a>LVM \_ SetImageList-Nachricht
+# <a name="lvm_setimagelist-message"></a>LVM \_ SETIMAGELIST-Meldung
 
-Weist einem Listenansicht-Steuerelement eine Bildliste zu. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ SetImageList**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setimagelist) -Makros senden.
+Weist einem Listenansicht-Steuerelement eine Bildliste zu. Sie können diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros SetImageList**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setimagelist) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,16 +32,16 @@ Weist einem Listenansicht-Steuerelement eine Bildliste zu. Sie können diese Nac
 *wParam* 
 </dt> <dd>
 
-Typ der Bildliste. Dieser Parameter kann einen der folgenden Werte aufweisen:
+Typ der Bildliste. Dieser Parameter kann einen der folgenden Werte haben:
 
 
 
 | Wert                                                                                                                                                                     | Bedeutung                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| <span id="LVSIL_NORMAL"></span><span id="lvsil_normal"></span><dl> <dt>**lvsil \_ Normal**</dt> </dl>                | Bildliste mit großen Symbolen.<br/>  |
-| <span id="LVSIL_SMALL"></span><span id="lvsil_small"></span><dl> <dt>**lvsil \_ Small**</dt> </dl>                   | Bildliste mit kleinen Symbolen.<br/>  |
-| <span id="LVSIL_STATE"></span><span id="lvsil_state"></span><dl> <dt>**Zustand "lvsil" \_**</dt> </dl>                   | Bildliste mit Zustands Bildern.<br/> |
-| <span id="LVSIL_GROUPHEADER"></span><span id="lvsil_groupheader"></span><dl> <dt>**lvsil- \_ GroupHeader**</dt> </dl> | Bildliste für Gruppen Kopfzeile.<br/>  |
+| <span id="LVSIL_NORMAL"></span><span id="lvsil_normal"></span><dl> <dt>**LVSIL \_ NORMAL**</dt> </dl>                | Bildliste mit großen Symbolen.<br/>  |
+| <span id="LVSIL_SMALL"></span><span id="lvsil_small"></span><dl> <dt>**LVSIL \_ SMALL**</dt> </dl>                   | Bildliste mit kleinen Symbolen.<br/>  |
+| <span id="LVSIL_STATE"></span><span id="lvsil_state"></span><dl> <dt>**LVSIL \_ STATE**</dt> </dl>                   | Bildliste mit Zustandsbildern.<br/> |
+| <span id="LVSIL_GROUPHEADER"></span><span id="lvsil_groupheader"></span><dl> <dt>**LVSIL \_ GROUPHEADER**</dt> </dl> | Bildliste für Gruppenheader.<br/>  |
 
 
 
@@ -52,17 +52,17 @@ Typ der Bildliste. Dieser Parameter kann einen der folgenden Werte aufweisen:
 *lParam* 
 </dt> <dd>
 
-Handle der zuzuweisenden Bildliste.
+Handle für die bildliste, die zugewiesen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, die zuvor dem Steuerelement zugeordnet war, wenn erfolgreich, andernfalls **null** .
+Gibt das Handle an die Imageliste zurück, die dem Steuerelement zuvor zugeordnet war, sofern erfolgreich, **andernfalls NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die aktuelle Bildliste wird zerstört, wenn das Listenansicht-Steuerelement zerstört wird, es sei denn, der LVS-Stil " [**\_ shareimagelists**](list-view-window-styles.md) " ist festgelegt. Wenn Sie diese Meldung verwenden, um eine Bildliste durch einen anderen zu ersetzen, muss Ihre Anwendung alle anderen Bildlisten explizit zerstören als die aktuelle.
+Die aktuelle Bildliste wird zerstört, wenn das Listenansicht-Steuerelement zerstört wird, es sei denn, [**der LVS \_ SHAREIMAGELISTS-Stil**](list-view-window-styles.md) ist festgelegt. Wenn Sie diese Meldung verwenden, um eine Bildliste durch eine andere zu ersetzen, muss Ihre Anwendung explizit alle Bildlisten zerstören, die nicht die aktuelle Bildliste sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,9 +70,9 @@ Die aktuelle Bildliste wird zerstört, wenn das Listenansicht-Steuerelement zers
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

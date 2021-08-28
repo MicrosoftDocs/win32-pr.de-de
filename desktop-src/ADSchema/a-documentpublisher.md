@@ -1,10 +1,10 @@
 ---
-title: documentpublisher-Attribut
-description: Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokument veröffentlicht hat.
+title: documentPublisher-Attribut
+description: Das documentPublisher-Attribut ist die Person oder Organisation, die ein Dokument veröffentlicht hat.
 ms.assetid: 3239d96a-bfc7-4258-a4f7-bc3cb348c5f6
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für documentpublisher-Attribut
+- documentPublisher-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97ce5049cebd94766b9cd55f65b7c766a0e399b3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e9e58ccf2ab97b1f078f4c6587d0047ba003a790e330980c718dc54d8e3c5ae8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077820"
 ---
-# <a name="documentpublisher-attribute"></a>documentpublisher-Attribut
+# <a name="documentpublisher-attribute"></a>documentPublisher-Attribut
 
-Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokument veröffentlicht hat.
+Das documentPublisher-Attribut ist die Person oder Organisation, die ein Dokument veröffentlicht hat.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | documentpublisher                           |
-| LDAP-Display-Name | documentpublisher                           |
+| CN                | documentPublisher                           |
+| Ldap-Anzeigename | documentPublisher                           |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.56                  |
-| System-ID-GUID    | 170f 09d7-EB69-448A-9a30f 1afecb32d7        |
+| System-ID-GUID    | 170f09d7-eb69-448a-9a30-f1afecfd32d7        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -55,11 +55,11 @@ Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokumen
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Falsch                                     |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -76,11 +76,11 @@ Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokumen
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Falsch                                     |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -97,11 +97,11 @@ Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokumen
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Falsch                                     |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -118,11 +118,11 @@ Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokumen
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Falsch                                     |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -139,11 +139,11 @@ Das documentpublisher-Attribut ist die Person oder Organisation, die ein Dokumen
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Falsch                                     |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |

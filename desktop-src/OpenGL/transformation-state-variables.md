@@ -1,6 +1,6 @@
 ---
-title: Transformationszustandsvariablen
-description: Transformationszustandsvariablen
+title: Statusvariablen für Transformationen
+description: Statusvariablen für Transformationen
 ms.assetid: 3a6be5ac-ac7a-4c3e-8b65-0404849ae67c
 keywords:
 - Transformationszustandsvariablen OpenGL
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c7b53e0abae08447df86d8968a33a361be08a1e
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 3c79b4363419d97a64184dd2408a9f6221ada52adc49adbb28eb3d049a4b2a36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011918"
 ---
-# <a name="transformation-state-variables"></a>Transformationszustandsvariablen
+# <a name="transformation-state-variables"></a>Statusvariablen für Transformationen
 
 <dl> <dt><span id="GL_MODELVIEW_MATRIX"></span><span id="gl_modelview_matrix"></span>GL \_ MODELVIEW \_ MATRIX</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Modellansichtsmatrixstapel             |
+| Beschreibung:     | Modelview-Matrixstapel             |
 | Attributgruppe: |                                    |
-| Anfangswert:   | Identity                           |
+| Anfangswert:   | Identität                           |
 | Get-Befehl:     | [**glGetFloatv**](glgetfloatv.md) |
 
 
@@ -40,7 +40,7 @@ ms.locfileid: "107908828"
 |------------------|--------------------------------------------------------------------------------|
 | Beschreibung:     | Projektionsmatrixstapel                                                        |
 | Attributgruppe: |                                                                                |
-| Anfangswert:   | Identity                                                                       |
+| Anfangswert:   | Identität                                                                       |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -53,7 +53,7 @@ ms.locfileid: "107908828"
 |------------------|--------------------------------------------------------------------------------|
 | Beschreibung:     | Texturmatrixstapel                                                           |
 | Attributgruppe: |                                                                                |
-| Anfangswert:   | Identity                                                                       |
+| Anfangswert:   | Identität                                                                       |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -90,7 +90,7 @@ ms.locfileid: "107908828"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Modellansichtsmatrixstapelzeiger                                                   |
+| Beschreibung:     | Modelview-Matrixstapelzeiger                                                   |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 1                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -99,7 +99,7 @@ ms.locfileid: "107908828"
 
  
 
-</dd> <dt><span id="GL_PROJECTION_STACK_DEPTH"></span><span id="gl_projection_stack_depth"></span>\_ \_ GL-PROJEKTIONSSTAPELTIEFE \_</dt> <dd> 
+</dd> <dt><span id="GL_PROJECTION_STACK_DEPTH"></span><span id="gl_projection_stack_depth"></span>GL \_ \_ PROJEKTIONSSTAPELTIEFE \_</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -112,7 +112,7 @@ ms.locfileid: "107908828"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_STACK_DEPTH"></span><span id="gl_texture_stack_depth"></span>GL \_ TEXTURE \_ STACK \_ DEPTH</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_STACK_DEPTH"></span><span id="gl_texture_stack_depth"></span>GL \_ \_ TEXTURSTAPELTIEFE \_</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -125,7 +125,7 @@ ms.locfileid: "107908828"
 
  
 
-</dd> <dt><span id="GL_MATRIX_MODE"></span><span id="gl_matrix_mode"></span>GL \_ \_ MATRIX-MODUS</dt> <dd> 
+</dd> <dt><span id="GL_MATRIX_MODE"></span><span id="gl_matrix_mode"></span>\_ \_ GL-MATRIXMODUS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|

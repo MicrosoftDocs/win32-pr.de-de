@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Ressourcenpool dar, bei dem es sich um eine vom Host System bereitgestellte logische Entität zum Zuweisen und Zuweisen von Ressourcen handelt.
+description: Stellt einen Ressourcenpool dar, bei dem es sich um eine logische Entität handelt, die vom Hostsystem zum Zuordnen und Zuweisen von Ressourcen bereitgestellt wird.
 ms.assetid: c8e0b701-1814-4409-a073-017f8fea841a
 title: CIM_ResourcePool-Klasse
 ms.topic: reference
@@ -25,16 +25,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 11a073f817da27dbbd45be26a008486a776470cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d87a78d5a8ea43cc8a1a59bbabf5b8091948d153420dbdf91ba7e14fc1616b7e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980960"
 ---
-# <a name="cim_resourcepool-class"></a>CIM \_ resourcepool-Klasse
+# <a name="cim_resourcepool-class"></a>CIM \_ ResourcePool-Klasse
 
-Stellt einen Ressourcenpool dar, bei dem es sich um eine vom Host System bereitgestellte logische Entität zum Zuweisen und Zuweisen von Ressourcen handelt.
+Stellt einen Ressourcenpool dar, bei dem es sich um eine logische Entität handelt, die vom Hostsystem zum Zuordnen und Zuweisen von Ressourcen bereitgestellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,208 +59,208 @@ class CIM_ResourcePool : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ resourcepool** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ResourcePool-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ resourcepool** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ResourcePool-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Zuordnung von Einheiten**
+**AllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **ispunit**
+Qualifizierer: **IsPUnit**
 </dt> </dl>
 
-Die Zuordnungs Einheiten, die von den **Reservierungs** -und **Limit** -Eigenschaften verwendet werden. Wenn **ResourceType** beispielsweise auf "Processor" festgelegt ist, kann " **zugcationunits** " auf "Hertz \* 10 ^ 6" oder "Prozent" festgelegt werden. Der Wert dieser Eigenschaft muss ein gültiger Wert des Qualifizierers für programmatische Einheiten aus Anhang C. 1 von *DSP0004 v 2.4* oder höher sein.
+Die Zuordnungseinheiten, die von den **Eigenschaften Reservierung** und **Limit verwendet** werden. Wenn **ResourceType** beispielsweise auf "Processor" festgelegt ist, kann **AllocationUnits** auf "hertz \* 10^6" oder "percent" festgelegt werden. Der Wert dieser Eigenschaft sollte ein rechtlicher Wert des Qualifizierers Programmatic Units aus Anhang C.1 von *DSP0004 V2.4* oder höher sein.
 
 </dd> <dt>
 
 **Capacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Menge an Reservierungen, die der Ressourcenpool unterstützen kann. Die Eigenschaft " **Zuordnungseinheiten** " gibt den Einheitentyp an.
+Die maximale Anzahl von Reservierungen, die der Ressourcenpool unterstützen kann. Die **AllocationUnits-Eigenschaft** gibt den Einheitentyp an.
 
 </dd> <dt>
 
-**Consumedresourceunits**
+**ConsumedResourceUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**Maxconsumableresource**","**CIM \_ resourcepool**.**Currentlyconsumedresource**"), **ispunit**
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**MaxConsumableResource**", "**CIM \_ ResourcePool**.**CurrentlyConsumedResource**"), **IsPUnit**
 </dt> </dl>
 
-Die Einheiten für die **maxconsubar** und die **verbrauchten** Eigenschaften.
+Die Einheiten für die **Eigenschaften MaxConsumable** und **Consumed.**
 
 </dd> <dt>
 
-**Currentlyconsumedresource**
+**CurrentlyConsumedResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**Consumedresourceunits**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**ConsumedResourceUnits**")
 </dt> </dl>
 
-Die Menge der Ressource, die der Ressourcenpool derzeit für ressourcenconsumer darstellt. Diese Eigenschaft unterscheidet sich von der **reservierten** Eigenschaft, da Sie die Consumer-Ansicht der Ressource beschreibt, während die **reservierte** Eigenschaft die Producer-Ansicht der Ressource beschreibt.
+Die Menge der Ressource, die der Ressourcenpool derzeit ressourcenverbrauchern präsentiert. Diese Eigenschaft ist  anders als die Reserved-Eigenschaft, da sie die Ansicht consumers der Ressource beschreibt, während die **Reserved-Eigenschaft** die Producers-Ansicht der Ressource beschreibt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceId")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Überschreibung**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceID")
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig innerhalb des Gültigkeits Bereichs des enthaltenden Namespace.
+Identifiziert eine Instanz dieser Klasse eindeutig innerhalb des Bereichs des enthaltenden Namespace.
 
 > [!IMPORTANT]
 >
-> Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert der **InstanceId-** Eigenschaft im folgenden Muster erstellt werden: *OrgId*:*localId*
+> Um die Eindeutigkeit innerhalb des Namespace sicherzustellen, sollte der Wert der **InstanceID-Eigenschaft** im folgenden Muster erstellt werden: *OrgID*:*LocalID*
 >
-> -   *OrgId* muss einen urheberrechtlich geschützten oder anderweitig eindeutigen Namen enthalten, der der Geschäfts Entität gehört, die die **InstanceId-** Eigenschaft definiert, oder eine registrierte ID ist, die von einer anerkannten globalen Autorität zugewiesen wird.
-> -   *OrgId* darf keinen Doppelpunkt enthalten. Der erste Doppelpunkt in **InstanceId** muss zwischen der *OrgId* und der *Lok-* ID liegen.
-> -   *LocalId* wird von der Geschäfts Entität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
-> -   Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceId** -Wert nicht für **InstanceId** -Eigenschaften wieder verwendet wird, die von diesem Anbieter oder von anderen Anbietern für diesen Namespace erstellt werden.
-> -   Für von DMTF definierte Instanzen muss das Muster verwendet werden, wenn die *OrgId* auf "CIM" festgelegt ist.
+> -   *OrgID* muss einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten, der im Besitz der Geschäftsentität ist, die die **InstanceID-Eigenschaft** definiert, oder eine registrierte ID sein, die von einer erkannten globalen Autorität zugewiesen wird.
+> -   *OrgID* darf keinen Doppelpunkt enthalten. Der erste Doppelpunkt in **InstanceID** muss zwischen *OrgID* und *LocalID liegen.*
+> -   *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
+> -   Wenn das oben genannte Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceID-Wert** nicht für **InstanceID-Eigenschaften** erneut verwendet wird, die von diesem Anbieter oder anderen Anbietern für diesen Namespace erstellt werden.
+> -   Für DMTF-definierte Instanzen muss das Muster verwendet werden, und die *OrgID* muss auf "CIM" festgelegt sein.
 
  
 
 </dd> <dt>
 
-**Maxconsumableresource**
+**MaxConsumableResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**Consumedresourceunits**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**ConsumedResourceUnits**")
 </dt> </dl>
 
-Die maximale Menge an nutzbaren Ressourcen, die der Ressourcenpool für ressourcenconsumer bereitstellen kann. Diese Eigenschaft unterscheidet sich von der **Capacity** -Eigenschaft, da Sie die Consumer-Ansicht der Ressource beschreibt, während die **Capacity** -Eigenschaft die Producer-Ansicht der Ressource beschreibt.
+Die maximale Menge an verfügbaren Ressourcen, die der Ressourcenpool Ressourcenverbrauchern zur Verfügung stellen kann. Diese Eigenschaft ist  anders als die Capacity-Eigenschaft, da sie die Ansicht consumers der Ressource beschreibt, während die **Capacity-Eigenschaft** die Ansicht "Producers" der Ressource beschreibt.
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**ResourceType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**ResourceType**")
 </dt> </dl>
 
-Der Ressourcentyp, wenn die **ResourceType** -Eigenschaft auf "0" (sonstige) festgelegt ist.
+Der Ressourcentyp, wenn die **ResourceType-Eigenschaft** auf "0" (andere) festgelegt ist.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md)".**Poolid**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md).**PoolId**")
 </dt> </dl>
 
-Ein nicht transparenter Bezeichner für den Pool. Diese Eigenschaft wird verwendet, um die Korrelation beim Speichern und Wiederherstellen von Konfigurationsdaten im zugrunde liegenden permanenten Speicher bereitzustellen.
+Ein nicht transparenter Bezeichner für den Pool. Diese Eigenschaft wird verwendet, um Korrelation beim Speichern und Wiederherstellen von Konfigurationsdaten im zugrunde liegenden persistenten Speicher zu ermöglichen.
 
 </dd> <dt>
 
 **Ursprünglich**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**true** , wenn der Ressourcenpool uralt ist. **false** , wenn der Ressourcenpool ein konkreter Ressourcenpool ist. Bei einem ursprünglichen Ressourcenpool handelt es sich um einen Ressourcenpool, der nicht von Kunden der Ressource erstellt oder gelöscht wird. Ein konkreter Ressourcenpool kann durch Ressourcen Zuordnungs Dienste aktualisiert werden.
+**TRUE,** wenn der Ressourcenpool vom Ursprünglichen ist. **FALSE,** wenn der Ressourcenpool ein konkretes Ressourcenpool ist. Ein unerreichter Ressourcenpool ist ein Ressourcenpool, der nicht von den Ressourcenverbrauchern erstellt oder gelöscht wird. Ein konkretes Ressourcenpool kann von Ressourcenzuordnungsdiensten aktualisiert werden.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuelle Anzahl der Reservierungen, die auf alle aktiven Zuweisungen aus diesem Pool verteilt sind. In einer hierarchischen Konfiguration stellt dies die Summe aller aktuellen untergeordneten Reservierungen dar. Die Eigenschaft " **Zuordnungseinheiten** " gibt den Einheitentyp an.
+Die aktuelle Anzahl von Reservierungen, die auf alle aktiven Zuordnungen aus diesem Pool verteilt sind. In einer hierarchischen Konfiguration stellt dies die Summe aller aktuellen Nachfolgerreservierungen dar. Die **AllocationUnits-Eigenschaft** gibt den Einheitentyp an.
 
 </dd> <dt>
 
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**ResourceType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**ResourceType**")
 </dt> </dl>
 
-Der Implementierungs spezifische Untertyp für den Ressourcenpool. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden.
+Der implementierungsspezifische Untertyp für den Ressourcenpool. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ resourcepool**".**Otherresourcetype**","**CIM \_ resourcepool**.**Resourcesubtype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ResourcePool**.**OtherResourceType**", "**CIM \_ ResourcePool**.**ResourceSubType**")
 </dt> </dl>
 
-Der Typ der Ressource, die vom Ressourcenpool zugewiesen wird.
+Der Vom Ressourcenpool zugeordnete Ressourcentyp.
 
 <dt>
 
@@ -273,7 +273,7 @@ Der Typ der Ressource, die vom Ressourcenpool zugewiesen wird.
 
 <span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>
 
-**Computer System** (2)
+**Computersystem** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -287,7 +287,7 @@ Der Typ der Ressource, die vom Ressourcenpool zugewiesen wird.
 
 <span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>
 
-Arbeits **Speicher** (4)
+**Arbeitsspeicher** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -308,14 +308,14 @@ Arbeits **Speicher** (4)
 
 <span id="FC_HBA"></span><span id="fc_hba"></span>
 
-**FC-HBA** (7)
+**FC HBA** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>
 
-**iSCSI-HBA** (8)
+**iSCSI HBA** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -336,21 +336,21 @@ Arbeits **Speicher** (4)
 
 <span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>
 
-**Anderer Netzwerk Adapter** (11)
+**Anderer Netzwerkadapter** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>
 
-E **/a-Slot** (12)
+**E/A-Slot** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>
 
-E **/a-Gerät** (13)
+**E/A-Gerät** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -378,7 +378,7 @@ E **/a-Gerät** (13)
 
 <span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>
 
-**Laufwerk (17** )
+**Laufwerk** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -392,7 +392,7 @@ E **/a-Gerät** (13)
 
 <span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>
 
-**Speicher** Block (19)
+**Storage Extent** (19)
 
 
 </dt> <dd></dd> <dt>
@@ -406,14 +406,14 @@ E **/a-Gerät** (13)
 
 <span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>
 
-**Seriellen Anschluss** (21)
+**Serieller** Port (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>
 
-**Paralleler Anschluss** (22)
+**Paralleler** Port (22)
 
 
 </dt> <dd></dd> <dt>
@@ -434,28 +434,28 @@ E **/a-Gerät** (13)
 
 <span id="IEEE_1394_Controller"></span><span id="ieee_1394_controller"></span><span id="IEEE_1394_CONTROLLER"></span>
 
-**IEEE 1394-Controller** (25)
+**IEEE 1394 Controller** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>
 
-**Partitionier Bare Einheit** (26)
+**Partitionierbare Einheit** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>
 
-**Partitionier bare Basiseinheit** (27)
+**Partitionierbare Basiseinheit** (27)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power"></span><span id="power"></span><span id="POWER"></span>
 
-**Energie** (28)
+**Power** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -483,28 +483,28 @@ E **/a-Gerät** (13)
 
 <span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>
 
-**Speicher Volume** (32)
+**Storage Volume** (32)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Ethernet_Connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>
 
-**Ethernet-Verbindung** (33)
+**Ethernetverbindung** (33)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF reserved** (.)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
@@ -520,7 +520,7 @@ E **/a-Gerät** (13)
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

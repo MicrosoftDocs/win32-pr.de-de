@@ -1,26 +1,26 @@
 ---
-title: Konfigurations Benutzeroberfläche
-description: Konfigurations Benutzeroberflächen (UI) für Authentifizierungsprotokolle werden unterschiedlich implementiert, abhängig davon, ob die Benutzeroberfläche zum Konfigurieren des Authentifizierungs Protokolls auf dem Client oder auf dem Server dient.
+title: Konfiguration Benutzeroberfläche
+description: Konfigurationsbenutzeroberflächen (UI) für Authentifizierungsprotokolle werden unterschiedlich implementiert, je nachdem, ob die Benutzeroberfläche für die Konfiguration des Authentifizierungsprotokolls auf dem Client oder auf dem Server verwendet wird.
 ms.assetid: 956a7ad6-1fd5-4938-aa2f-4de646dfd6c2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 47d61a577c7a37ccda277b56aead563262112f8c
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 392850d5589aa2c42da023c30a7970e77f2fc5b11377542309ccba5bd6da8b7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104313836"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978550"
 ---
-# <a name="configuration-user-interface"></a>Konfigurations Benutzeroberfläche
+# <a name="configuration-user-interface"></a>Konfiguration Benutzeroberfläche
 
-Konfigurations Benutzeroberflächen (UI) für Authentifizierungsprotokolle werden unterschiedlich implementiert, abhängig davon, ob die Benutzeroberfläche zum Konfigurieren des Authentifizierungs Protokolls auf dem Client oder auf dem Server dient. In den folgenden Themen wird beschrieben, wie Sie eine Konfigurations Benutzeroberfläche für den-Client und den-Server implementieren:
+Konfigurationsbenutzeroberflächen (UI) für Authentifizierungsprotokolle werden unterschiedlich implementiert, je nachdem, ob die Benutzeroberfläche für die Konfiguration des Authentifizierungsprotokolls auf dem Client oder auf dem Server verwendet wird. In den folgenden Themen wird der Prozess beschrieben, mit dem eine Konfigurationsbenutzeroberfläche für den Client und den Server implementiert wird:
 
--   [Benutzeroberfläche für die Server seitige Konfiguration](server-side-configuration-user-interface.md)
--   [Client seitige Konfigurations Benutzeroberfläche](client-side-configuration-user-interface.md)
+-   [Serverseitige Konfiguration Benutzeroberfläche](server-side-configuration-user-interface.md)
+-   [Clientseitige Konfiguration Benutzeroberfläche](client-side-configuration-user-interface.md)
 
- 
+ 
 
- 
+ 
 
 
 

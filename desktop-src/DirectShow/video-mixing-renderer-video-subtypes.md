@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Untertypen sind für die Verwendung mit dem Filter für Video Mischungs-Renderer (VMR) definiert.
+description: Die folgenden Untertypen sind für die Verwendung mit dem Filter Video Mixing Renderer (VMR) definiert.
 ms.assetid: 74dec302-5ef7-41db-abe9-c3e9cbed17de
-title: Video-Untertypen für Video Mischungs Renderer (DShow. h)
+title: VideoMischung von Renderer-Videountertypen (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c157c239d9ba8120b20913519181b0ba571d2100
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bd4f8f37cc32187d6606f9c276349d6455915edcf50f459a4c849dab429c135c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078580"
 ---
-# <a name="video-mixing-renderer-video-subtypes"></a>Video-Untertypen Video Mischungs-Renderer
+# <a name="video-mixing-renderer-video-subtypes"></a>Videomischung von Renderer-Videountertypen
 
-Die folgenden Untertypen sind für die Verwendung mit dem Filter für Video Mischungs-Renderer (VMR) definiert.
+Die folgenden Untertypen sind für die Verwendung mit dem Filter Video Mixing Renderer (VMR) definiert.
 
 ## <a name="vmr-7-subtypes"></a>VMR-7-Untertypen
 
@@ -21,11 +21,11 @@ Die folgenden Untertypen sind für die Verwendung mit dem Filter für Video Misc
 
 | Subtype                              | BESCHREIBUNG                                      |
 |--------------------------------------|--------------------------------------------------|
-| Mediasubtype \_ RGB32 \_ D3D \_ DX7 \_ RT    | 32-Bit-RGB-Renderziel.                        |
-| Mediasubtype \_ RGB16 \_ D3D \_ DX7 \_ RT    | 16-Bit-RGB-Renderziel.                        |
-| Mediasubtype \_ ARGB32 \_ D3D \_ DX7 \_ RT   | 32-Bit-ARGB-Renderziel.                       |
-| Mediasubtype \_ ARGB4444 \_ D3D \_ DX7 \_ RT | ARGB4444 Renderziel. Für unter Bild Grafiken. |
-| Mediasubtype \_ ARGB1555 \_ D3D \_ DX7 \_ RT | ARGB1555 Renderziel. Für unter Bild Grafiken. |
+| MEDIASUBTYPE \_ RGB32 \_ D3D \_ DX7 \_ RT    | 32-Bit-RGB-Renderziel.                        |
+| MEDIASUBTYPE \_ RGB16 \_ D3D \_ DX7 \_ RT    | 16-Bit-RGB-Renderziel.                        |
+| MEDIASUBTYPE \_ ARGB32 \_ D3D \_ DX7 \_ RT   | 32-Bit-ARGB-Renderziel.                       |
+| MEDIASUBTYPE \_ ARGB4444 \_ D3D \_ DX7 \_ RT | ARGB4444-Renderziel. Für Unterbildgrafiken. |
+| MEDIASUBTYPE \_ ARGB1555 \_ D3D \_ DX7 \_ RT | ARGB1555-Renderziel. Für Unterbildgrafiken. |
 
 
 
@@ -37,23 +37,23 @@ Die folgenden Untertypen sind für die Verwendung mit dem Filter für Video Misc
 
 | Subtype                              | BESCHREIBUNG                                      |
 |--------------------------------------|--------------------------------------------------|
-| Mediasubtype \_ RGB32 \_ D3D \_ DX9 \_ RT    | 32-Bit-RGB-Renderziel.                        |
-| Mediasubtype \_ RGB16 \_ D3D \_ DX9 \_ RT    | 16-Bit-RGB-Renderziel.                        |
-| Mediasubtype \_ ARGB32 \_ D3D \_ DX9 \_ RT   | 32-Bit-ARGB-Renderziel.                       |
-| Mediasubtype \_ ARGB4444 \_ D3D \_ DX9 \_ RT | ARGB4444 Renderziel. Für unter Bild Grafiken. |
-| Mediasubtype \_ ARGB1555 \_ D3D \_ DX9 \_ RT | ARGB1555 Renderziel. Für unter Bild Grafiken. |
+| MEDIASUBTYPE \_ RGB32 \_ D3D \_ DX9 \_ RT    | 32-Bit-RGB-Renderziel.                        |
+| MEDIASUBTYPE \_ RGB16 \_ D3D \_ DX9 \_ RT    | 16-Bit-RGB-Renderziel.                        |
+| MEDIASUBTYPE \_ ARGB32 \_ D3D \_ DX9 \_ RT   | 32-Bit-ARGB-Renderziel.                       |
+| MEDIASUBTYPE \_ ARGB4444 \_ D3D \_ DX9 \_ RT | ARGB4444-Renderziel. Für Unterbildgrafiken. |
+| MEDIASUBTYPE \_ ARGB1555 \_ D3D \_ DX9 \_ RT | ARGB1555-Renderziel. Für Unterbildgrafiken. |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -61,10 +61,10 @@ Die folgenden Untertypen sind für die Verwendung mit dem Filter für Video Misc
 
 <dl> <dt>
 
-[Video Untertypen](video-subtypes.md)
+[Videountertypen](video-subtypes.md)
 </dt> <dt>
 
-[Arbeiten mit Direct3D-Renderingzielen](working-with-direct3d-render-targets.md)
+[Arbeiten mit Direct3D-Renderzielen](working-with-direct3d-render-targets.md)
 </dt> </dl>
 
  

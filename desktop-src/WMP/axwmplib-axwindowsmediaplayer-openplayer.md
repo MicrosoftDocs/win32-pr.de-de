@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. openplayer-Methode
-description: Die openplayer-Methode öffnet Windows Media Player unter Verwendung der angegebenen URL. | AxWindowsMediaPlayer. openplayer-Methode
+title: AxWindowsMediaPlayer.openPlayer-Methode
+description: Die openPlayer-Methode wird Windows Media Player der angegebenen URL geöffnet. | AxWindowsMediaPlayer.openPlayer-Methode
 ms.assetid: 9a9d8200-f427-42ff-b49f-d973cf86014f
 keywords:
-- openplayer-Methode, Windows-Media Player
-- openplayer-Methode, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, openplayer-Methode
+- openPlayer-Windows Media Player
+- openPlayer-Methode Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , openPlayer-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58416a1f20969b0bd223f653f44b5633f19cb096
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c9a2ae5660969e78aeb165c5f9fd9420ea04c79a6aeec9a57c4627cd61d32ef8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764710"
 ---
-# <a name="axwindowsmediaplayeropenplayer-method"></a>AxWindowsMediaPlayer. openplayer-Methode
+# <a name="axwindowsmediaplayeropenplayer-method"></a>AxWindowsMediaPlayer.openPlayer-Methode
 
-Die **openplayer** -Methode öffnet Windows Media Player unter Verwendung der angegebenen URL.
+Die **openPlayer-Methode** wird Windows Media Player der angegebenen URL geöffnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Public Sub openPlayer( _
 *bstrURL* 
 </dt> <dd>
 
-Die **System. String** -URL, die die URL des wieder zugebende Medien Elements ist.
+Die **System.String,die** die URL des medienelements ist, das wiedergibt.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Die **System. String** -URL, die die URL des wieder zugebende Medien Elements is
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode wird Windows Media Player gestartet, wobei der angegebene URL als Aktuelles Medien Element festgelegt ist. Wenn der Spieler zuvor im Skin-Modus geschlossen wurde, wird er mithilfe der Skin geöffnet, die zuletzt vom Benutzer ausgewählt wurde. Andernfalls wird der Spieler im vollständigen Modus geöffnet.
+Diese Methode startet Windows Media Player, bei der die angegebene URL als aktuelles Medienelement festgelegt ist. Wenn der Player zuvor im Skinmodus geschlossen wurde, wird er mit der zuletzt vom Benutzer ausgewählten Skin geöffnet. Andernfalls wird der Player im Vollmodus geöffnet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Mit dieser Methode wird Windows Media Player gestartet, wobei der angegebene URL
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -83,7 +83,7 @@ Mit dieser Methode wird Windows Media Player gestartet, wobei der angegebene URL
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

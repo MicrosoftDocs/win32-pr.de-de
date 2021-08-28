@@ -3,37 +3,37 @@ title: Funktionen und Strukturen des Audiokomprimierungs-Managers
 description: Funktionen und Strukturen des Audiokomprimierungs-Managers
 ms.assetid: eb00ec23-ecae-4a6c-a767-fa27513c168d
 keywords:
-- Multimedia-Audiofunktionen, ACM-Funktionen
-- Audiofunktionen, ACM-Funktionen
+- Multimediaaudio, ACM-Funktionen
+- Audio,ACM-Funktionen
 - Audiokomprimierungs-Manager (ACM), Funktionen
 - ACM (Audiokomprimierungs-Manager), Funktionen
-- Multimedia-Audiodaten, ACM-Strukturen
-- Audiodaten, ACM-Strukturen
+- Multimediaaudio, ACM-Strukturen
+- Audio, ACM-Strukturen
 - Audiokomprimierungs-Manager (ACM), Strukturen
 - ACM (Audiokomprimierungs-Manager), Strukturen
 - ACM-Strukturen
 - ACM-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b2c261e0a3de7409fc79ec43eb5046f084ee11d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cabd9a66bee13c02c87df95565744eb973283baedb7e955449feb2ddad3005a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808380"
 ---
 # <a name="audio-compression-manager-functions-and-structures"></a>Funktionen und Strukturen des Audiokomprimierungs-Managers
 
-Die ACM-Funktionen sind in verschiedene Kategorien unterteilt. Benennungs Konventionen für die-Funktionen erleichtern die Identifizierung dieser Kategorien. Funktionsnamen (mit zwei Ausnahmen) weisen die Form *acmgroupfunction* auf, wobei die *Gruppe* die ACM-Kategorie festlegt (z. b. "Driver", "Format", "Formattag", "Filter", "Filtertag" oder "Stream") und die *Funktion* die von der Funktion ausgeführte Aktion beschreibt.
+Die ACM-Funktionen lassen sich in verschiedene Kategorien unterteilen. Namenskonventionen für die Funktionen machen es einfach, diese Kategorien zu identifizieren. Funktionsnamen (mit zwei Ausnahmen) haben die Form *acmGroupFunction,* wobei *Group* die ACM-Kategorie bestimmt (z.B. "Driver", "Format", "FormatTag", "Filter", "FilterTag" oder "Stream"), und *Function* beschreibt die von der Funktion ausgeführte Aktion.
 
-Die Funktionen in den Filter-und Format Gruppen sind sehr ähnlich. Fast jede Funktion, die auf Filter angewendet wird, verfügt über eine parallele Funktion, die für Formate fungiert.
+Die Funktionen in den Filter- und Formatgruppen sind sehr ähnlich. Fast jede Funktion, die auf Filtern arbeitet, verfügt über eine parallele Funktion, die auf Formaten arbeitet.
 
-In der Format Gruppe verwenden einige Funktionen wellenformat-Audiotags (das **wformattag** -Element einer [**WaveFormatEx**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) -Struktur), während andere die vollständigen wellenformat-Audioformate (die vollständige **WaveFormatEx** -Struktur) benötigen. (Referenzinformationen zur **WaveFormatEx** -Struktur finden Sie unter [Error](error.md).)
+In der Formatgruppe verwenden einige Funktionen Waveform-Audio-Formattags **(das wFormatTag-Member** einer [**WAVEFORMATEX-Struktur),**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) während andere vollständige Waveform-Audioformate (die vollständige **WAVEFORMATEX-Struktur)** erfordern. (Referenzinformationen zur **WAVEFORMATEX-Struktur** finden Sie unter [Fehler](error.md).)
 
-In der Filter Gruppe verwenden einige Funktionen Waveform-audiofiltertags (das **dwfiltertag** -Element einer [**wavefilter**](/windows/desktop/api/Mmreg/ns-mmreg-wavefilter) -Struktur), während andere die vollständigen Wellenform-Audiofilter (die vollständige **Wellen Filter** Struktur) erfordern.
+In der Filtergruppe verwenden einige Funktionen Waveform-Audio-Filtertags **(das dwFilterTag-Mitglied** einer [**WAVEFILTER-Struktur),**](/windows/desktop/api/Mmreg/ns-mmreg-wavefilter) während andere vollständige Waveform-Audiofilter (die vollständige **WAVEFILTER-Struktur)** erfordern.
 
-Die Funktionen in der streamgruppe stellen die vielen Schritte dar, die an einer Konvertierung beteiligt sind: das Öffnen einer Konvertierungs Instanz, das Vorbereiten der Konvertierung, das Ausführen der Konvertierung, das Bereinigen nach Abschluss der Konvertierung und das Schließen der Konvertierungs Instanz.
+Die Funktionen in der Streamgruppe stellen die vielen Schritte dar, die an einer Konvertierung beteiligt sind: Öffnen einer Konvertierungsinstanz, Vorbereiten der Konvertierung, Durchführen der Konvertierung, Bereinigen nach Abschluss der Konvertierung und Schließen der Konvertierungsinstanz.
 
- 
+ 
 
- 
+ 

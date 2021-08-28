@@ -1,9 +1,9 @@
 ---
-title: Wmpeffects
-description: Dies sind vordefinierte Effekte mit den folgenden Standardwerten.
+title: WMPEFFECTS
+description: Dies ist ein vordefinierter EFFEKT mit den folgenden Standardwerten.
 ms.assetid: ebee17e3-96b0-4748-b69f-4ff41d0bc386
 keywords:
-- Wmpeffects-Fenster Media Player
+- WMPEFFECTS Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: db3e35143242c5ca7888ffc50feb006f586e68d0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e84f33833e9d69c39cb50ff81bd6c97ff8f79d1e2f881f82d6e4d293e78d87bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761270"
 ---
-# <a name="wmpeffects"></a>Wmpeffects
+# <a name="wmpeffects"></a>WMPEFFECTS
 
-Dies sind vordefinierte **Effekte** mit den folgenden Standardwerten.
+Dies ist ein vordefinierter **EFFEKT** mit den folgenden Standardwerten.
 
 ``` syntax
 horizontalAlignment="stretch"
@@ -33,13 +33,13 @@ tabStop="false"
 onclick="next();"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Effekt** Element erstellt, das die Visualisierungs Voreinstellungen durchläuft, wenn der Benutzer auf das-Steuerelement klickt. Außerdem werden die Visualisierungen gestreckt, wenn die Größe des Players geändert wird.
+Dadurch wird ein **EFFECTS-Element** erstellt, das die Visualisierungsvoreinstellungen schrittweise durchflickt, wenn der Benutzer auf das Steuerelement klickt. Außerdem werden die Visualisierungen gestreckt, wenn die Größe des Players geändert wird.
 
-Die angezeigte anfängliche Visualisierungs Voreinstellung ist die Option, die im Menü **Ansicht** unter **Visualisierungen** ausgewählt ist. Wenn Sie die Auswahl in diesem Menü ändern, ändert sich automatisch die Voreinstellung, die von diesem Element angezeigt wird, wenn sich der Player im Skin-Modus befindet. Das Menü **Ansicht** wird im vollständigen Modus des Players angezeigt, oder wenn das **View. TitleBar** -Attribut in einem Skin auf true festgelegt ist.
+Die anfängliche Visualisierungsvoreinstellung wird im Menü Ansicht **unter** **Visualisierungen ausgewählt.** Wenn Sie die Auswahl in diesem Menü ändern, wird die von diesem Element angezeigte Voreinstellung automatisch geändert, wenn sich der Player im Skinmodus befindet. Das **Menü** Ansicht wird im vollständigen Modus des Players oder angezeigt, wenn das **VIEW.titleBar-Attribut** in einer Skin auf TRUE festgelegt ist.
 
-Alle Eigenschaften dieses **Effects** -Elements können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieses **EFFECTS-Elements** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,15 +47,15 @@ Alle Eigenschaften dieses **Effects** -Elements können überschrieben werden, i
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

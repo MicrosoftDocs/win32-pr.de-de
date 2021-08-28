@@ -1,24 +1,24 @@
 ---
-description: Die selectleftbutton-Methode wählt die linke direktionale Schaltfläche aus dem angezeigten Menü aus.
+description: Die SelectLeftButton-Methode wählt im angezeigten Menü die linke Richtungsschaltfläche aus.
 ms.assetid: cd1813a0-9eb2-4f7e-8fa4-94f3bfa92ee4
-title: Selectleftbutton-Methode (Segment. h)
+title: SelectLeftButton-Methode (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69f51f08e04c1c7466e24314c82d9cf94c3524b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8e4d4fa3f7f6ec2d766c5b1bf6283d2bf9abe95b8982ade1c47893ea17f17b74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078910"
 ---
-# <a name="selectleftbutton-method"></a>Selectleftbutton-Methode
+# <a name="selectleftbutton-method"></a>SelectLeftButton-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `SelectLeftButton` Methode wählt die linke direktionale Schaltfläche aus dem angezeigten Menü aus.
+Die `SelectLeftButton` -Methode wählt im angezeigten Menü die linke Richtungsschaltfläche aus.
 
 ``` syntax
 MSWebDVD.SelectLeftButton()
@@ -28,13 +28,13 @@ MSWebDVD.SelectLeftButton()
 
 Kein Rückgabewert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 
@@ -42,16 +42,16 @@ Kein Rückgabewert.
 
 <dl> <dt>
 
-[**Activatebutton**](activatebutton-method.md)
+[**ActivateButton**](activatebutton-method.md)
 </dt> <dt>
 
-[**Selectlowerbutton**](selectlowerbutton-method.md)
+[**SelectLowerButton**](selectlowerbutton-method.md)
 </dt> <dt>
 
-[**Selectaghtbutton**](selectrightbutton-method.md)
+[**SelectRightButton**](selectrightbutton-method.md)
 </dt> <dt>
 
-[**Selectupperbutton**](selectupperbutton-method.md)
+[**SelectUpperButton**](selectupperbutton-method.md)
 </dt> </dl>
 
  

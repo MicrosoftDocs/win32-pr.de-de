@@ -1,23 +1,23 @@
 ---
-description: Eine Anwendung kann die msienumproducts-oder msienumproductsex-Funktionen zum Auflisten der auf dem System installierten oder angekündigten Produkte aufzählen.
+description: Eine Anwendung kann die Funktionen MsiEnumProducts oder MsiEnumProductsEx aufrufen, um Produkte aufzuzählen, die auf dem System installiert oder angekündigt werden.
 ms.assetid: 162bda20-0c62-4eac-8c1f-fd107e42c528
-title: Bestimmen des Installations Kontexts
+title: Bestimmen des Installationskontexts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24367e2367f845dfef2e4947a32d9dec84d644cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89c3ea847a410c5d253061e93153da4462e3cdd8ae8da12b4b6b701812d37d89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764260"
 ---
-# <a name="determining-installation-context"></a>Bestimmen des Installations Kontexts
+# <a name="determining-installation-context"></a>Bestimmen des Installationskontexts
 
-Eine Anwendung kann die [**msienumproducts**](/windows/desktop/api/Msi/nf-msi-msienumproductsa) -oder [**msienumproductsex**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa) -Funktionen zum Auflisten der auf dem System installierten oder angekündigten Produkte aufzählen. Diese Funktion kann alle Produkte auflisten, die im [Installations Kontext](installation-context.md)pro Computer installiert sind. Die Produkte, die im Einzelbenutzer Kontext für den aktuellen Benutzer installiert sind, können aufgelistet werden. Die Anwendung kann Informationen über den Kontext dieser Produkte abrufen, indem Sie die [**msigetproductinfoex**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa) -oder [**msigetproductinfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa) -Funktionen aufruft.
+Eine Anwendung kann die Funktionen [**MsiEnumProducts**](/windows/desktop/api/Msi/nf-msi-msienumproductsa) oder [**MsiEnumProductsEx**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa) aufrufen, um Produkte aufzuzählen, die auf dem System installiert oder angekündigt werden. Diese Funktion kann alle Produkte aufzählen, die im [Installationskontext](installation-context.md)pro Computer installiert sind. Sie kann die Produkte aufzählen, die im Kontext pro Benutzer für den aktuellen Benutzer installiert sind. Die Anwendung kann Informationen über den Kontext dieser Produkte abrufen, indem sie die [**Funktionen MsiGetProductInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa) oder [**MsiGetProductInfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa) aufruft.
 
-Mit dem Windows Installer können Produkte installiert werden, die mit erhöhten Rechten (System Berechtigungen) für Benutzer ohne Administratorrechte ausgeführt werden. Hierfür ist die Berechtigung eines Administrator Benutzers erforderlich. Ein Produkt, das mit erhöhten Rechten installiert wird, wird als "verwaltet" bezeichnet. Alle Produkte, die pro Computer installiert sind, werden verwaltet. Pro Benutzer installierte Produkte werden nur verwaltet, wenn ein lokaler System-Agent eine Ankündigung durchführt, während die Identität eines Benutzers angenommen wird. Dies ist die Methode, die von der Software Bereitstellung über [Gruppenrichtlinie](/previous-versions/windows/desktop/Policy/group-policy-start-page)verwendet wird. Anwendungen pro Benutzer, die installiert werden, während die [alwaysinstallerhöhten](alwaysinstallelevated.md) -Richtlinien festgelegt sind, werden nicht als verwaltet betrachtet. Durch Aufrufen von " [**msiisproductelevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)" kann eine Anwendung überprüfen, ob ein bestimmtes Produkt verwaltet wird.
+Der Windows Installer kann Produkte installieren, die mit erhöhten (System-)Berechtigungen für Benutzer ohne Administratorrechte ausgeführt werden. Dies erfordert die Berechtigung eines Administratorbenutzers. Ein Produkt, das mit erhöhten Rechten installiert wird, wird als "verwaltet" bezeichnet. Alle pro Computer installierten Produkte werden verwaltet. Pro Benutzer installierte Produkte werden nur verwaltet, wenn ein lokaler System-Agent eine Ankündigung ausführt, während die Identität eines Benutzers angenommen wird. Dies ist die Methode, die von der Softwarebereitstellung über [Gruppenrichtlinie](/previous-versions/windows/desktop/Policy/group-policy-start-page)verwendet wird. Benutzerspezifische Anwendungen, die installiert werden, während die [AlwaysInstallElevated-Richtlinien](alwaysinstallelevated.md) festgelegt sind, gelten nicht als verwaltet. Durch Aufrufen von [**MsiIsProductElevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)kann eine Anwendung überprüfen, ob ein bestimmtes Produkt verwaltet wird.
 
-Im folgenden Beispiel wird veranschaulicht, wie eine Anwendung den Kontext mithilfe von " [**msienumschlag Products**](/windows/desktop/api/Msi/nf-msi-msienumproductsa)", " [**msigetproductinfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)" und " [**msiisproductelevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)" bestimmt.
+Im folgenden Beispiel wird veranschaulicht, wie eine Anwendung den Kontext mithilfe von [**MsiEnumProducts,**](/windows/desktop/api/Msi/nf-msi-msienumproductsa) [**MsiGetProductInfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)und [**MsiIsProductElevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)bestimmt.
 
 
 ```C++
@@ -155,25 +155,25 @@ UINT DetermineContextForAllProducts()
 
 <dl> <dt>
 
-[**Msienumschlag Produkte**](/windows/desktop/api/Msi/nf-msi-msienumproductsa)
+[**MsiEnumProducts**](/windows/desktop/api/Msi/nf-msi-msienumproductsa)
 </dt> <dt>
 
-[**Msigetproductinfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)
+[**MsiGetProductInfo**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoa)
 </dt> <dt>
 
-[**Msigetproductinfoex**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa)
+[**MsiGetProductInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetproductinfoexa)
 </dt> <dt>
 
-[**Msiisproductelevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)
+[**MsiIsProductElevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda)
 </dt> <dt>
 
-[Installieren eines Pakets mit erhöhten Rechten für einen nicht Administrator](installing-a-package-with-elevated-privileges-for-a-non-admin.md)
+[Installieren eines Pakets mit erhöhten Rechten für einen Nichtadministrator](installing-a-package-with-elevated-privileges-for-a-non-admin.md)
 </dt> <dt>
 
-[Ankündigen einer Per-User Anwendung, die mit erhöhten Rechten installiert werden soll](advertising-a-per-user-application-to-be-installed-with-elevated-privileges.md)
+[Ananzeigen einer zu installierenden Per-User-Anwendung mit erhöhten Rechten](advertising-a-per-user-application-to-be-installed-with-elevated-privileges.md)
 </dt> <dt>
 
-[Installations Kontext](installation-context.md)
+[Installationskontext](installation-context.md)
 </dt> </dl>
 
  

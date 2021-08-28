@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b916a5142f09628852a016754f9fb3ad691882731466d802b8367e03837b9699
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 140271d365d9673c948c4ff6f540e9bef33e8006
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119083734"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469317"
 ---
 # <a name="wmt_videoimage_transition_reveal"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ REVEAL
 
@@ -31,47 +31,13 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Strukturmember</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Entfernung</td>
-<td><strong>fEffectPara0</strong></td>
-<td>Die Menge des angezeigten neuen Bilds in Pixel. Dieser Wert ist relativ zur Ursprungsseite des Frames.</td>
-</tr>
-<tr class="even">
-<td>Direction</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Richtung des aufschlussenden . Legen Sie auf einen der folgenden Werte fest:<br/>
-<ul>
-<li>0 – Rechts zeigen; stammen von der linken Seite des Frames.</li>
-<li>1 – Links zeigen; stammen von der rechten Seite des Frames.</li>
-<li>2 – Aufwärts zeigen; stammen vom unteren Rand des Frames.</li>
-<li>3– Nach unten zeigen; stammen aus dem oberen Rand des Frames.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Aufbau</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Legen Sie auf einen der folgenden Werte fest:
-<ul>
-<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li>
-<li>1 – Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Strukturmember | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| Distance | <strong>fEffectPara0</strong> | Die Menge des angezeigten neuen Bilds in Pixel. Dieser Wert ist relativ zur Ursprungsseite des Frames. | 
+| Direction | <strong>fEffectPara1</strong> | Richtung des aufschlussenden . Legen Sie auf einen der folgenden Werte fest:<br /><ul><li>0 – Rechts zeigen; stammen von der linken Seite des Frames.</li><li>1 – Links zeigen; stammen von der rechten Seite des Frames.</li><li>2 – Aufwärts zeigen; stammen vom unteren Rand des Frames.</li><li>3– Nach unten zeigen; stammen aus dem oberen Rand des Frames.</li></ul> | 
+| Aufbau | <strong>fEffectPara2</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 

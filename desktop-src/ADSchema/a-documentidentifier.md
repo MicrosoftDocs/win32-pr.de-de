@@ -1,10 +1,10 @@
 ---
-title: documentidentifier-Attribut
-description: Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Dokument an.
+title: documentIdentifier-Attribut
+description: Der attributtyp documentIdentifier gibt einen eindeutigen Bezeichner für ein Dokument an.
 ms.assetid: 93a99e32-4487-463c-9189-b78312d8e94e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des documentidentifier-Attributs
+- ad-Schema des documentIdentifier-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 784a673b1461c4b68189493aac2623a0c5e0e3cb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3e34a53988358a9e4a1a7699454f8a8e5f4aed0fc59f298dc0bbdb3ed772b610
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077830"
 ---
-# <a name="documentidentifier-attribute"></a>documentidentifier-Attribut
+# <a name="documentidentifier-attribute"></a>documentIdentifier-Attribut
 
-Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Dokument an.
+Der attributtyp documentIdentifier gibt einen eindeutigen Bezeichner für ein Dokument an.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | documentidentifier                          |
-| LDAP-Display-Name | documentidentifier                          |
+| CN                | documentIdentifier                          |
+| Ldap-Anzeigename | documentIdentifier                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 0.9.2342.19200300.100.1.11                  |
-| System-ID-GUID    | 0b21ce82-ff63-46d9-90fb-c8b9f24e97b9        |
+| System-Id-Guid    | 0b21ce82-ff63-46d9-90fb-c8b9f24e97b9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,10 +56,10 @@ Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Do
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -77,10 +77,10 @@ Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Do
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -98,10 +98,10 @@ Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Do
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Is-Single-Valued       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -119,10 +119,10 @@ Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Do
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |
@@ -140,10 +140,10 @@ Der documentidentifier-Attributtyp gibt einen eindeutigen Bezeichner für ein Do
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
 | System-Only            | False                                     |
-| Ist-einwertig       | False                                     |
+| Ist einwertig       | False                                     |
 | Ist indiziert             | False                                     |
 | Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | 1                                         |
 | Range-Upper            | 256                                       |
 | Search-Flags           | 0x00000000                                |

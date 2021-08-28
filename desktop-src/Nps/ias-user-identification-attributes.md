@@ -1,74 +1,74 @@
 ---
-title: Benutzer Identifizierungs Attribute
-description: Die Identität des Benutzers, der die Authentifizierung anfordert, wird für die NPS-Erweiterungs-DLLs in einer Reihe unterschiedlicher Attribute bereitgestellt.
+title: Benutzeridentifikationsattribute
+description: Die Identität des Benutzers, der die Authentifizierung anfordert, wird den NPS-Erweiterungs-DLLs in einer Reihe verschiedener Attribute bereitgestellt.
 ms.assetid: 2f741a81-e432-47fe-a14a-8b77ecd41e28
 ms.tgt_platform: multiple
 keywords:
 - Attribute, Benutzeridentifikation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 527bdffad376ce92fa2fd7c5d5330fb752fea6aa
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ff099b46844f2259ad127346bb1ee2bfafccf4b116f3dba86dff3e175d11c28c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128760"
 ---
-# <a name="user-identification-attributes"></a>Benutzer Identifizierungs Attribute
+# <a name="user-identification-attributes"></a>Benutzeridentifikationsattribute
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Der Internetauthentifizierungsdienst (INTERNET Authentication Service, IAS) wurde ab Windows Server 2008 in Netzwerkrichtlinienserver (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-Die Identität des Benutzers, der die Authentifizierung anfordert, wird für die NPS-Erweiterungs-DLLs in einer Reihe unterschiedlicher Attribute bereitgestellt.
+Die Identität des Benutzers, der die Authentifizierung anfordert, wird den NPS-Erweiterungs-DLLs in einer Reihe verschiedener Attribute bereitgestellt.
 
--   **ratusername**
--   **ratstrippeer Name**
--   **ratsqusername**
+-   **ratUserName**
+-   **ratStrippedUserName**
+-   **ratFQUserName**
 
-Jedes Attribut stellt die Benutzeridentität in einem anderen Format bereit. Im Allgemeinen sollten Entwickler **ratstripetdusername** verwenden. Die Verwendung des **ratusername** -Attributs und des **ratf qusername** -Attributs ist spezialisiertere.
+Jedes Attribut stellt die Benutzeridentität in einem anderen Format bereit. Im Allgemeinen sollten Entwickler **ratStrippedUserName** verwenden. Die Verwendungsmöglichkeiten der Attribute **ratUserName** und **ratFQUserName sind spezialisierter.**
 
 > [!Note]  
-> Das User-Password-Attribut, **ratuserpassword**, wurde bereits entschlüsselt, wenn es an die Erweiterungs-DLL gesendet wird und in diesem Formular verwendbar ist.
+> Das User-Password-Attribut **ratUserPassword** wurde beim Senden an die Erweiterungs-DLL bereits entschlüsselt und kann in dieser Form verwendet werden.
 
- 
+ 
 
-## <a name="ratusername"></a>ratusername
+## <a name="ratusername"></a>ratUserName
 
-Das **ratusername** -Attribut enthält den Namen, der tatsächlich gesendet wurde. NPS hat den Inhalt dieses Attributs in keiner Weise verarbeitet oder überprüft. Dieses Attribut ist möglicherweise überhaupt nicht verfügbar, da der Benutzer möglicherweise über eine Methode, z. b. eine Aufruferkennung, identifiziert worden ist.
+Das **ratUserName-Attribut** enthält den Namen, der tatsächlich "über das Kabel" gesendet wurde. NPS hat den Inhalt dieses Attributs in keiner Weise verarbeitet oder überprüft. Dieses Attribut ist möglicherweise überhaupt nicht verfügbar, da der Benutzer möglicherweise über ein Mittel wie die Aufrufer-ID identifiziert wurde.
 
-Wenn dieses Attribut verfügbar ist, ist es bei Verwendung von [**radiusextensionprocess/Ex**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex)nur im Plug-in-Punkt der Authentifizierungs Erweiterung verfügbar. Das **ratusername** -Attribut ist im Plug-in-Punkt der Autorisierungs Erweiterung nicht verfügbar, da die **radiusextensionprocess/Ex-** Funktionen in Autorisierungs Erweiterungs-DLLs nur die "ausgehenden" Attribute sehen.
+Wenn [**Sie RadiusExtensionProcess/Ex**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_ex)verwenden, ist dieses Attribut nur am DLL-Plug-In-Punkt der Authentifizierungserweiterung verfügbar, wenn dieses Attribut verfügbar ist. Das **ratUserName-Attribut** ist am DLL-Plug-In-Punkt der Autorisierungserweiterung nicht verfügbar, da die **RadiusExtensionProcess/Ex-Funktionen** in Autorisierungserweiterungs-DLLs nur die "ausgehenden" Attribute sehen.
 
-Wenn dieses Attribut bei Verwendung von [**RadiusExtensionProcess2**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_2)verfügbar ist, ist es sowohl unter dem Plug-in-Endpunkt der Authentifizierungs Erweiterung als auch im Plug-in-Punkt der Autorisierungs Erweiterung verfügbar.
+Wenn [**Sie RadiusExtensionProcess2**](/windows/desktop/api/authif/nc-authif-pradius_extension_process_2)verwenden, ist dieses Attribut sowohl am DLL-Plug-In-Punkt der Authentifizierungserweiterung als auch am DLL-Plug-In-Punkt für die Autorisierungserweiterung verfügbar.
 
-## <a name="ratstrippedusername"></a>ratstrippeer Name
+## <a name="ratstrippedusername"></a>ratStrippedUserName
 
-" **Ratstripetdusername** " ist die Identität des Benutzers nach "Bereichs Einschränkung". Weitere Informationen zum Entfernen von Bereichen finden Sie im Thema " [Bereichs Namen](/previous-versions/windows/it-pro/windows-server-2003/cc779938(v=ws.10)) " unter http: \\ \\ technet2.Microsoft.com.
+**RatStrippedUserName** ist die Identität des Benutzers nach dem Bereichsstripping. Weitere Informationen zum Bereichsstripping finden Sie im Thema [Bereichsnamen](/previous-versions/windows/it-pro/windows-server-2003/cc779938(v=ws.10)) unter http: \\ \\ technet2.microsoft.com.
 
-Dieses Attribut ist möglicherweise im Plug-in-Endpunkt der Authentifizierungs Erweiterung, dem Plug-in-Endpunkt für die Autorisierungs Erweiterung oder beides vorhanden. Dieses Attribut weist garantiert folgendes Format auf:
+Dieses Attribut kann am DLL-Plug-In-Punkt der Authentifizierungserweiterung, am DLL-Plug-In-Punkt für die Autorisierungserweiterung oder in beiden vorhanden sein. Dieses Attribut hat garantiert das folgende Format:
 
-*Domänen ***\\*** Benutzername*
+*Domain* **\\** _UserName_
 
-Dabei ist *Domäne* der NetBIOS-Domänen Name.
+Wobei *Domäne* der NetBIOS-Domänenname ist.
 
-## <a name="ratfqusername"></a>ratsqusername
+## <a name="ratfqusername"></a>ratFQUserName
 
-Das **ratfqusername** -Attribut ist der "voll qualifizierte" Benutzername.
+Das **ratFQUserName-Attribut** ist der vollqualifizierte Benutzername.
 
-Dieses Attribut ist möglicherweise im Plug-in-Endpunkt der Authentifizierungs Erweiterung, dem Plug-in-Endpunkt für die Autorisierungs Erweiterung oder beides vorhanden. Allerdings kann sich das Format des-Attributs zwischen den beiden Plug-in-Punkten unterscheiden. Beim Plug-in-Plug-in für Authentifizierungs Erweiterungen weist dieses Attribut immer folgendes Format auf:
+Dieses Attribut kann im Dll-Plug-In-Punkt der Authentifizierungserweiterung, im Dll-Plug-In-Punkt für die Autorisierungserweiterung oder in beiden vorhanden sein. Das Format des Attributs kann sich jedoch zwischen den beiden Plug-In-Punkten unterscheiden. Am Dll-Plug-In-Punkt der Authentifizierungserweiterung hat dieses Attribut immer folgendes Format:
 
-*Domänen ***\\*** Benutzername*
+*Domain* **\\** _UserName_
 
-Das Format des **ratsqusername** -Attributs am Plug-in-Punkt der Autorisierungs Erweiterung ist davon abhängig, ob der Benutzer ein Active Directory Benutzer ist.
+Das Format des **ratFQUserName-Attributs** am DLL-Plug-In-Punkt der Autorisierungserweiterung hängt davon ab, ob der Benutzer ein Active Directory-Benutzer ist.
 
--   Wenn es sich bei dem Benutzer um einen lokalen Benutzer handelt **, hat das** gleiche Format wie für den Plug-in-Endpunkt der Authentifizierungs Erweiterungs-DLL:
+-   Wenn der Benutzer ein lokaler Benutzer ist, weist **ratFQUserName** das gleiche Format wie für den DLL-Plug-In-Punkt der Authentifizierungserweiterung auf:
 
-    *Domänen ***\\*** Benutzername*
+    *Domain* **\\** _UserName_
 
     .
 
--   Wenn der Benutzer ein Active Directory Benutzer ist, kann " **ratsqusername** " den Namen des Benutzers im "kanonischen" Format enthalten. Das kanonische Format ist das Format, das vom Active Directory verwendet wird, um den Benutzer zu identifizieren. Dabei handelt es sich um den Pfad aus dem Stammverzeichnis der Active Directory Struktur, der die Organisationseinheit (OU) des Benutzers enthält.
+-   Wenn der Benutzer ein Active Directory-Benutzer ist, kann **ratFQUserName** den Namen des Benutzers im kanonischen Format enthalten. Das kanonische Format ist das Format, das von Active Directory zum Identifizieren des Benutzers verwendet wird. Dies ist der Pfad aus dem Stamm der Active Directory-Struktur und enthält die Organisationseinheit (OE) des Benutzers.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -80,6 +80,6 @@ Das Format des **ratsqusername** -Attributs am Plug-in-Punkt der Autorisierungs 
 [Aufrufen der Erweiterungs-DLLs](/windows/desktop/Nps/ias-authentication-and-authorization-process)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

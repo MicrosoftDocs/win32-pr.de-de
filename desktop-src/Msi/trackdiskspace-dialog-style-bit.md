@@ -1,21 +1,21 @@
 ---
-description: Wenn dieses Bit festgelegt ist, ruft das Dialogfeld den Installer regelmäßig auf.
+description: Wenn dieses Bit festgelegt ist, ruft das Dialogfeld in regelmäßigen Abständen das Installationsprogramm auf.
 ms.assetid: 7798cb50-72e4-4530-bf06-1927dd963a01
-title: Trackdiskspace-Dialog Feld-Stilbit
+title: TrackDiskSpace Dialog Style Bit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eab0cf234071ace41432e20a598b38fb1fc431e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd8e12a77f0b7e67bd82e094953a2bacd8204d93b444dc6bd1dc378602e67809
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810570"
 ---
-# <a name="trackdiskspace-dialog-style-bit"></a>Trackdiskspace-Dialog Feld-Stilbit
+# <a name="trackdiskspace-dialog-style-bit"></a>TrackDiskSpace Dialog Style Bit
 
-Wenn dieses Bit festgelegt ist, ruft das Dialogfeld den Installer regelmäßig auf. Wenn sich die-Eigenschaft ändert, werden die-Steuerelemente im Dialogfeld benachrichtigt. Dieser Stil kann verwendet werden, wenn ein Steuerelement im Dialogfeld vorhanden ist, das den Speicherplatz angibt. Wenn der Benutzer zu einer anderen Anwendung wechselt, Dateien hinzufügt oder entfernt oder den verfügbaren Speicherplatz anderweitig ändert, können Sie die Änderung schnell mithilfe dieses Stils implementieren.
+Wenn dieses Bit festgelegt ist, ruft das Dialogfeld in regelmäßigen Abständen das Installationsprogramm auf. Wenn sich die Eigenschaft ändert, werden die Steuerelemente im Dialogfeld benachrichtigt. Dieser Stil kann verwendet werden, wenn im Dialogfeld ein Steuerelement vorhanden ist, das Speicherplatz angibt. Wenn der Benutzer zu einer anderen Anwendung wechselt, Dateien hinzufügt oder entfernt oder anderweitig den verfügbaren Speicherplatz ändert, können Sie die Änderung schnell mithilfe dieses Stils implementieren.
 
-Alle Dialogfelder, die sich auf die [**ouesfdiskspace**](outofdiskspace.md) -Eigenschaft verlassen, um zu bestimmen, ob ein Dialogfeld angezeigt werden soll, müssen das Dialogfeld "trackdiskspace"-Dialogfeld für den Dialog festlegen, um den Speicherplatz auf den Zielvolumes
+Jedes Dialogfeld, das die [**OutOfDiskSpace-Eigenschaft**](outofdiskspace.md) verwendet, um zu bestimmen, ob ein Dialogfeld geöffnet werden soll, muss das TrackDiskSpace Dialog Style Bit festlegen, damit das Dialogfeld den Speicherplatz auf den Zielvolumes dynamisch aktualisiert.
 
 ## <a name="value"></a>Wert
 
@@ -23,7 +23,7 @@ Alle Dialogfelder, die sich auf die [**ouesfdiskspace**](outofdiskspace.md) -Eig
 
 | Decimal | Hexadezimal | Konstante                                |
 |---------|-------------|-----------------------------------------|
-| 32      | 0x00000020  | **msidbdialogattributestrackdiskspace** |
+| 32      | 0x00000020  | **msidbDialogAttributesTrackDiskSpace** |
 
 
 

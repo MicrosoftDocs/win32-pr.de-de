@@ -1,9 +1,9 @@
 ---
-title: LVM_SETINSERTMARKCOLOR Meldung (kommstrg. h)
+title: LVM_SETINSERTMARKCOLOR (Commctrl.h)
 description: Legt die Farbe der Einfügemarke fest.
 ms.assetid: dce2c266-672b-4682-ba23-51d9a8e1102b
 keywords:
-- Windows-Steuerelemente für LVM_SETINSERTMARKCOLOR Meldung
+- LVM_SETINSERTMARKCOLOR von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 260d21d083e2c70d8e82a27628e42596bd1b37eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 135275faa83f16956cfdeab90aaddded93caf2127f57c395a83deb4b29dd442a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919840"
 ---
-# <a name="lvm_setinsertmarkcolor-message"></a>LVM- \_ Nachricht
+# <a name="lvm_setinsertmarkcolor-message"></a>LVM \_ SETINSERTMARKCOLOR-Meldung
 
 Legt die Farbe der Einfügemarke fest.
 
@@ -33,16 +33,16 @@ Legt die Farbe der Einfügemarke fest.
 </dt> <dd>Muss Null sein.</dd> <dt>
 
 *lParam* 
-</dt> <dd>**COLORREF** -Struktur, die die Farbe zum Festlegen der Einfügemarke angibt.</dd> </dl>
+</dt> <dd>**COLORREF-Struktur,** die die Farbe angibt, in der die Einfügemarke festgelegt werden soll.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die auf die vorherige Farbe festgelegte **COLORREF** -Struktur zurück.
+Gibt **die COLORREF-Struktur** zurück, die auf die vorherige Farbe festgelegt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -52,9 +52,9 @@ Gibt die auf die vorherige Farbe festgelegte **COLORREF** -Struktur zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

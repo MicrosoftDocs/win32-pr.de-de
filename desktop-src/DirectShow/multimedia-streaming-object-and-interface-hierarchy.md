@@ -1,48 +1,48 @@
 ---
-description: Multimediastreamingobjekt und Schnittstellen Hierarchie
+description: Multimedia-Streamingobjekt und Schnittstellenhierarchie
 ms.assetid: dbb6dc3b-b55e-4f6c-918f-068308e2dba9
-title: Multimediastreamingobjekt und Schnittstellen Hierarchie
+title: Multimedia-Streamingobjekt und Schnittstellenhierarchie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52339644730139af22fd21fa2c24b8448a1afaf3
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: b73da4777c2d05ff6455758ebde6e64a9a4c8277e8445ed59dca7f17088baea0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075768"
 ---
-# <a name="multimedia-streaming-object-and-interface-hierarchy"></a>Multimediastreamingobjekt und Schnittstellen Hierarchie
+# <a name="multimedia-streaming-object-and-interface-hierarchy"></a>Multimedia-Streamingobjekt und Schnittstellenhierarchie
 
 > [!Note]  
-> Diese APIs sind veraltet. Anwendungen sollten den [**Beispiel-Grabber**](sample-grabber-filter.md) Filter verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filter Diagramm zu erhalten.
+> Diese APIs sind veraltet. Anwendungen sollten den [**Sample Grabber-Filter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm zu erhalten.
 
  
 
-Das folgende Diagramm zeigt die Objekthierarchie, die beim Multimedia-Streaming verwendet wird.
+Das folgende Diagramm zeigt die Objekthierarchie, die beim Multimediastreaming verwendet wird.
 
 ![multimediastreaming-Objekthierarchie](images/mmstream02.png)
 
-Die Multimedia-streamingarchitektur definiert drei allgemeine Objekttyp:
+Die Multimediastreamingarchitektur definiert drei allgemeine Objekttypen:
 
--   Das **ammultimediastream** -Objekt macht die [**iammultimediastream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammultimediastream) -Schnittstelle verfügbar. Intern umschließt dieses Objekt das DirectShow-Filter Diagramm.
--   *Media Stream* -Objekte machen die [**imediastream**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imediastream) -Schnittstelle verfügbar und sind Daten spezifisch. Das ammultimediastream-Objekt enthält einen oder mehrere Mediendaten Ströme.
--   *Stream-Beispiel* Objekte enthalten die Daten für einen bestimmten Datenstrom.
+-   Das **AMMultimediaStream-Objekt** macht die [**IAMMultiMediaStream-Schnittstelle**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammultimediastream) verfügbar. Intern umschließt dieses Objekt das DirectShow-Filterdiagramm.
+-   *Medienstreamobjekte* machen die [**IMediaStream-Schnittstelle**](/previous-versions/windows/desktop/api/mmstream/nn-mmstream-imediastream) verfügbar und sind datenspezifisch. Das AMMultimediaStream-Objekt enthält mindestens einen Medienstream.
+-   *Streambeispielobjekte* enthalten die Daten für einen bestimmten Stream.
 
-Die folgenden Medienstrom Objekte werden unterstützt:
+Die folgenden Medienstreamobjekte werden unterstützt:
 
--   Audiodatenstrom. Macht die [**iaudiomediastream**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiomediastream) -Schnittstelle verfügbar.
--   DirectDraw-Stream. Stellt einen Videostream dar, der auf eine DirectDraw-Oberfläche gerendert wird. Macht die [**idirectdrawmediastream**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawmediastream) -Schnittstelle verfügbar.
--   Medientyp-Stream. Stellt beliebige Daten dar. Macht die [**iammediatypeer Stream**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypestream) -Schnittstelle verfügbar.
+-   Audiostream. Macht die [**IAudioMediaStream-Schnittstelle**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiomediastream) verfügbar.
+-   DirectDraw-Stream. Stellt einen Videostream dar, der auf einer DirectDraw-Oberfläche gerendert wird. Macht die [**IDirectDrawMediaStream-Schnittstelle**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawmediastream) verfügbar.
+-   Medientypstream. Stellt beliebige Daten dar. Macht die [**IAMMediaTypeStream-Schnittstelle**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypestream) verfügbar.
 
-Jedes Mediendaten Strom-Objekt erstellt eine eigene Art von Datenstrom Sample-Objekt:
+Jedes Medienstreamobjekt erstellt eine eigene Art von Streambeispielobjekt:
 
--   Audiodatenströme erstellen Audiobeispiele, die die [**iaudiostreamsample**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiostreamsample) -Schnittstelle verfügbar machen.
--   DirectDraw-Streams erstellen DirectDraw-Beispiele, die die [**idirectdrawstreamsample**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawstreamsample) -Schnittstelle verfügbar machen.
--   Medientyp-Streams erstellen Beispiele für den Medientyp, die die [**iammediatypesample**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypesample) -Schnittstelle verfügbar machen.
+-   Audiostreams erstellen Audiobeispiele, die die [**IAudioStreamSample-Schnittstelle**](/previous-versions/windows/desktop/api/austream/nn-austream-iaudiostreamsample) verfügbar machen.
+-   DirectDraw-Streams erstellen DirectDraw-Beispiele, die die [**IDirectDrawStreamSample-Schnittstelle**](/previous-versions/windows/desktop/api/ddstream/nn-ddstream-idirectdrawstreamsample) verfügbar machen.
+-   Medientypstreams erstellen Medientypbeispiele, die die [**IAMMediaTypeSample-Schnittstelle**](/previous-versions/windows/desktop/api/amstream/nn-amstream-iammediatypesample) verfügbar machen.
 
-Das folgende Diagramm zeigt die Schnittstellen Hierarchie für die zuvor aufgelisteten Schnittstellen:
+Das folgende Diagramm zeigt die Schnittstellenhierarchie für die zuvor aufgeführten Schnittstellen:
 
-![multimediastreaming-Schnittstellen Hierarchie](images/mmstream01.png)
+![Multimediastreaming-Schnittstellenhierarchie](images/mmstream01.png)
 
  
 

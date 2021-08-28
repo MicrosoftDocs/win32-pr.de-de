@@ -1,9 +1,9 @@
 ---
-title: /Proxy-Schalter
-description: Der/Proxy-Schalter gibt den Namen der Schnittstellen Proxy Datei für eine COM-Schnittstelle an.
+title: /proxy switch
+description: Der Schalter /proxy gibt den Namen der Schnittstellenproxydatei für eine COM-Schnittstelle an.
 ms.assetid: 3428f723-81e1-441a-93d5-24034251830c
 keywords:
-- /Proxy-Schalter-Mittel l
+- /proxy switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27bff2103e22952e456976c6e0a88e7d232e42c3
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 6dc3483706369837d96d14cf30b2f0c6ee307e376f8c422e11d56e06451a22e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811210"
 ---
-# <a name="proxy-switch"></a>/Proxy-Schalter
+# <a name="proxy-switch"></a>/proxy switch
 
-Der **/Proxy** -Schalter gibt den Namen der Schnittstellen Proxy Datei für eine COM-Schnittstelle an.
+Der Schalter **/proxy** gibt den Namen der Schnittstellenproxydatei für eine COM-Schnittstelle an.
 
 ``` syntax
 midl /proxy proxy_file_name
@@ -31,44 +31,44 @@ midl /proxy proxy_file_name
 
 <dl> <dt>
 
-*Name der Proxy \_ Datei \_* 
+*\_ \_ Proxydateiname* 
 </dt> <dd>
 
-Gibt einen Dateinamen an, der den Standardnamen der Schnittstellen Proxy Datei überschreibt. Dateinamen können mit doppelten Anführungszeichen (") explizit angegeben werden, um zu verhindern, dass die Shell die Sonderzeichen interpretiert.
+Gibt einen Dateinamen an, der den Proxydateinamen der Standardschnittstelle überschreibt. Dateinamen können explizit mit doppelten Anführungszeichen (") angegeben werden, um zu verhindern, dass die Shell die Sonderzeichen interpretiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der angegebene Dateiname ersetzt den Standard Dateinamen, der durch das Hinzufügen von \_ P. C abgerufen wird, zum Namen der IDL-Datei. Der Schalter/ [**Proxy**](proxy.md) wirkt sich nicht auf RPC-Schnittstellen aus.
+Der angegebene Dateiname ersetzt den Standarddateinamen, der durch Hinzufügen von \_ P.C zum Namen der IDL-Datei abgerufen wird. Der Schalter [**/proxy**](proxy.md) wirkt sich nicht auf RPC-Schnittstellen aus.
 
-Wenn *der \_ Proxy \_ Dateiname* keinen expliziten Pfad enthält, wird die Datei in das aktuelle Verzeichnis oder in das durch den Schalter [**/out**](-out.md) angegebene Verzeichnis geschrieben. Ein expliziter Pfad im *\_ \_ Namen der Proxy Datei* überschreibt die **/out** -switchspezifikation.
+Wenn der *\_ \_ Proxydateiname* keinen expliziten Pfad enthält, wird die Datei in das aktuelle Verzeichnis oder in das Verzeichnis geschrieben, das durch den Schalter [**/out**](-out.md) angegeben wird. Ein expliziter Pfad im *\_ \_ Proxydateinamen* überschreibt die **/out-Switchspezifikation.**
 
-Eine ausführlichere Beschreibung der Schnittstellen Proxy Datei und anderer Dateien, die vom-Mittell-Compiler generiert werden, finden Sie unter [allgemeine Syntax für die Befehlszeilen](general-midl-command-line-syntax.md)Schnittstelle.
+Eine ausführlichere Beschreibung der Schnittstellenproxydatei und anderer Dateien, die vom MIDL-Compiler generiert werden, finden Sie unter [Allgemeine MIDL-Befehlszeilensyntax.](general-midl-command-line-syntax.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Proxy My \_ Proxy. c filename. idl**
+**midl /proxy my \_ proxy.c filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/Header**](-header.md)
+[**/header**](-header.md)
 </dt> <dt>
 
-[**/IID**](-iid.md)
+[**/iid**](-iid.md)
 </dt> <dt>
 
-[**/Out**](-out.md)
+[**/out**](-out.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

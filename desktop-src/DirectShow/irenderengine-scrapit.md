@@ -1,7 +1,7 @@
 ---
-description: Die scrapit-Methode verwirft das Filter Diagramm der Rendering-Engine und alle zugeordneten Objekte.
+description: Die ScrapIt-Methode verwirft das Filterdiagramm der Render-Engine und alle zugeordneten Objekte.
 ms.assetid: b7470947-a661-4c08-8786-9298e5322e58
-title: 'Unenderengine:: scrapit-Methode (qedit. h)'
+title: IRenderEngine::ScrapIt-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 7f9febbe20cfd5ab9a6577a6e00989c7d6fc4145
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ab89f833167a0a974e860113d342b4486b9649ef3a4cc862a82e345e5d9cd090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118153956"
 ---
-# <a name="irenderenginescrapit-method"></a>Unenderengine:: scrapit-Methode
+# <a name="irenderenginescrapit-method"></a>IRenderEngine::ScrapIt-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `ScrapIt` -Methode verwirft das Filter Diagramm der Renderengine und alle zugeordneten Objekte.
+Die `ScrapIt` -Methode verwirft das Filterdiagramm der Render-Engine und alle zugeordneten Objekte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück:
+Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                    |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg.<br/>                            |
-| <dl> <dt>**E \_ muss \_ Init \_ Renderer**</dt> </dl> | Fehler beim Initialisieren der Rendering-Engine.<br/> |
+| <dl> <dt>**E \_ MUSS \_ RENDERER INIT \_**</dt> </dl> | Fehler beim Initialisieren der Render-Engine.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Gibt einen der folgenden **HRESULT** -Werte zurück:
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Gibt einen der folgenden **HRESULT** -Werte zurück:
 
 <dl> <dt>
 
-[**Schnittstelle ""**](irenderengine.md)
+[**IRenderEngine-Schnittstelle**](irenderengine.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

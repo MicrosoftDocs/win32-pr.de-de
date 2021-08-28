@@ -1,9 +1,9 @@
 ---
-title: /ZP-Schalter
-description: Der/ZP-Schalter ist mit der Option/Pack identisch.
+title: /Zp-Schalter
+description: Der Schalter /Zp ist mit der Option /pack identisch.
 ms.assetid: ccdae6a5-e53c-4ddc-9f5f-2b2118709fdb
 keywords:
-- /ZP-Schalter-Mittel l
+- /Zp switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,62 +12,62 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 553d99dee7dd08218680fc0b43e6e12237c4f8fa
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 1795068aae1a5a8c3e793b828d5a80dbab369e16f9c5383af367b66d0febc738
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067440"
 ---
-# <a name="zp-switch"></a>/ZP-Schalter
+# <a name="zp-switch"></a>/Zp-Schalter
 
-Der **/ZP** -Schalter ist mit der Option [**/Pack**](-pack.md) identisch.
+Der **Schalter /Zp** ist mit der Option [**/pack**](-pack.md) identisch.
 
 ``` syntax
 midl /Zp packing_level
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
-*Packungs \_ Stufe* 
+*\_Packebene* 
 </dt> <dd>
 
-Gibt die Verpackungs Ebene von Strukturen im Zielsystem an. Der Wert auf der Verpackungs Ebene kann auf 1, 2, 4 oder 8 festgelegt werden.
+Gibt die Packebene von Strukturen im Zielsystem an. Der Füllebenenwert kann auf 1, 2, 4 oder 8 festgelegt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **/ZP** -Schalter legt die Verpackungs Ebene von Strukturen im Zielsystem fest. Der Wert auf der Packungs Ebene entspricht dem Wert der **/ZP** -Option, der vom Microsoft C/C++-Compiler verwendet wird. Weitere Informationen finden Sie in der Microsoft C/C++-Programmier Dokumentation.
+Der **Schalter /Zp** bestimmt die Packebene von Strukturen im Zielsystem. Der Wert der Packebene entspricht dem **/Zp-Optionswert,** der vom Microsoft C/C++-Compiler verwendet wird. Weitere Informationen finden Sie in der Dokumentation zur C/C++-Programmierung von Microsoft.
 
-Geben Sie die gleiche Packungs Ebene an, wenn Sie den Mittelwert Compiler und den C-Compiler aufrufen.
+Geben Sie die gleiche Packebene an, wenn Sie den MIDL-Compiler und den C-Compiler aufrufen.
 
-Der standardmäßige Verpackungs Grad, der verwendet wird, wenn weder der Schalter **/ZP** noch [**/Pack**](-pack.md) in allen Buildumgebungen 8 angegeben wird.
+Die Standardpackungsebene, die verwendet wird, wenn weder **der Schalter /Zp** noch [**/pack**](-pack.md) angegeben wird, ist in allen Buildumgebungen 8.
 
 > [!Note]  
-> Verwenden Sie nicht **/Zp1** oder **/Zp2** auf MIPS-oder Alpha-Plattformen, und verwenden Sie **/zp4** oder **/Zp8** nicht auf 16-Bit-Plattformen. Abhängig vom Datentyp und dem Speicherort, die der C-Compiler zur Laufzeit zugewiesen hat, kann dies zu einer Ausnahme bei der Daten Ausrichtungs Änderung auf MIPS-und Alpha-Plattformen führen. Auf MS-DOS-Plattformen stellt der C-Compiler die Ausrichtung bei 4 oder 8 nicht sicher, sodass die Anwendung beendet werden kann.
+> Verwenden Sie **/Zp1 oder** **/Zp2** nicht auf MIPS- oder Alphaplattformen und **nicht /Zp4** oder **/Zp8** auf 16-Bit-Plattformen. Je nach Datentyp und Speicherort, der vom C-Compiler zur Laufzeit zugewiesen wird, kann dies zu einer Datenfehlausnahme auf MIPS- und Alphaplattformen führen. Auf MS-DOS-Plattformen stellt der C-Compiler die Ausrichtung bei 4 oder 8 nicht sicher, sodass die Anwendung beendet werden kann.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/zp4 Dateiname. idl**
+**midl /Zp4 filename.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/Pack**](-pack.md)
+[**/pack**](-pack.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
