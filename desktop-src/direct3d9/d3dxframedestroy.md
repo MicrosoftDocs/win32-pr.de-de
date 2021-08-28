@@ -1,7 +1,7 @@
 ---
 description: Zerstört die Teilstruktur von Frames unter dem Stamm, einschließlich des Stamms.
 ms.assetid: 0bbb529f-01d8-430b-a72b-4af5f7a71253
-title: D3DXFrameDestroy-Funktion (D3dx9anim. h)
+title: D3DXFrameDestroy-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f1c0809ff61abec6f55564ca17a116ad4c826bca
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4e20e878b402ad0b8c4d0a9b721cd9300154305b2a06426564d1639ceddd7a92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988480"
 ---
 # <a name="d3dxframedestroy-function"></a>D3DXFrameDestroy-Funktion
 
@@ -41,21 +41,21 @@ HRESULT D3DXFrameDestroy(
 
 <dl> <dt>
 
-*pframeroot* \[ in\]
+*pFrameRoot* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)**
 
-Zeiger auf den Stamm Knoten.
+Zeiger auf den Stammknoten.
 
 </dd> <dt>
 
-*palloc* \[ in\]
+*pAlloc* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXALLOCATEHIERARCHY**](id3dxallocatehierarchy.md)**
 
-Zuordnungs Schnittstelle zum Aufheben der Zuordnung von Knoten der Frame Hierarchie.
+Zuordnungsschnittstelle, die verwendet wird, um die Zuordnung von Knoten der Framehierarchie aufzugeben.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zuordnungs Schnittstelle zum Aufheben der Zuordnung von Knoten der Frame Hierarc
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

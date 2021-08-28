@@ -1,11 +1,11 @@
 ---
-title: Idlesettings. idleduration-Eigenschaft
-description: Ruft bei der Skripterstellung einen Wert ab, der angibt, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird, oder legt ihn fest.
+title: IdleSettings.IdleDuration-Eigenschaft
+description: Ruft für die Skripterstellung einen Wert ab, der angibt, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird, oder legt diesen fest.
 ms.assetid: 32b9a14e-e37e-4e3a-81eb-041387f2017b
 keywords:
-- Idleduration-Eigenschaft Taskplaner
-- Idleduration-Eigenschaft Taskplaner, idlesettings-Objekt
-- Idlesettings-Objekt Taskplaner, idleduration-Eigenschaft
+- IdleDuration-Eigenschaft Taskplaner
+- IdleDuration-Eigenschaft Taskplaner , IdleSettings-Objekt
+- IdleSettings-Objekt Taskplaner , IdleDuration-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f6eeed4fef540b3a9e13d0f52e3ce1934cb9e220
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 30a78210202579d517410a2d82f1c5566d947f1ceb76cbd92538a0266b7b81ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002438"
 ---
-# <a name="idlesettingsidleduration-property"></a>Idlesettings. idleduration-Eigenschaft
+# <a name="idlesettingsidleduration-property"></a>IdleSettings.IdleDuration-Eigenschaft
 
-Ruft bei der Skripterstellung einen Wert ab, der angibt, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird, oder legt ihn fest.
+Ruft für die Skripterstellung einen Wert ab, der angibt, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ IdleSettings.IdleDuration As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein-Wert, der die Zeitspanne angibt, in der sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird.) Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Der Mindestwert ist eine Minute. Wenn dieser Wert **null** ist, wird die Verzögerung auf den Standardwert von 10 Minuten festgelegt.
+Ein -Wert, der angibt, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird. Das Format für diese Zeichenfolge lautet PnYnMnDTnHnMnS, wobei nY die Anzahl der Jahre, nM die Anzahl der Monate, nD die Anzahl der Tage, "T" das Datums-/Uhrzeittrennzeichen, nH die Anzahl der Stunden, nM die Anzahl der Minuten und nS die Anzahl von Sekunden ist (z. B. PT5M gibt 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Der Mindestwert beträgt eine Minute. Wenn dieser Wert **NULL** ist, wird die Verzögerung auf den Standardwert von 10 Minuten festgelegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**Duration**](taskschedulerschema-duration-idlesettingstype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**Duration-Element**](taskschedulerschema-duration-idlesettingstype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -64,7 +64,7 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Idlesettings**](idlesettings.md)
+[**IdleSettings**](idlesettings.md)
 </dt> </dl>
 
  

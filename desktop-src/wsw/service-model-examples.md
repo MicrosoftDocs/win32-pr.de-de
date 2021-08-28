@@ -1,89 +1,89 @@
 ---
-title: Beispiele für Dienst Modelle
+title: Dienstmodellbeispiele
 ms.assetid: 019918e1-fff5-40d7-b466-866de8e2e5e5
-description: 'Weitere Informationen: Beispiele für Dienst Modelle'
+description: Weitere Informationen finden Sie unter Dienstmodellbeispiele.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cf609c8235d4f407dbb47449014c179272c2929
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f006a846aff11e48426c7a9d673f191af0f6e6dfdc8191e8b1fe59e69a70f0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962909"
 ---
-# <a name="service-model-examples"></a>Beispiele für Dienst Modelle
+# <a name="service-model-examples"></a>Dienstmodellbeispiele
 
-In den folgenden Beispielen wird die Verwendung des [Dienst Modells](service-model-layer-overview.md)veranschaulicht:
+Die folgenden Beispiele veranschaulichen die Verwendung des [Dienstmodells:](service-model-layer-overview.md)
 
--   Rechner Dienst:
+-   Rechnerdienst:
 
-    -   Client: [httpcalculatorclieintexample](httpcalculatorclientexample.md)
-    -   Server: [httpcalculatorserviceexample](httpcalculatorserviceexample.md)
+    -   Client: [HttpCalculatorClientExample](httpcalculatorclientexample.md)
+    -   Server: [HttpCalculatorServiceExample](httpcalculatorserviceexample.md)
 
--   Rechner Dienst mit SSL-Transportsicherheit:
+-   Rechnerdienst mit SSL-Transportsicherheit:
 
-    -   Client: [httpcalculatorwithsslclieintexample](httpcalculatorwithsslclientexample.md)
-    -   Server: [httpcalculatorwithsslserviceexample](httpcalculatorwithsslserviceexample.md)
+    -   Client: [HttpCalculatorWithSslClientExample](httpcalculatorwithsslclientexample.md)
+    -   Server: [HttpCalculatorWithSslServiceExample](httpcalculatorwithsslserviceexample.md)
 
--   Rechner Dienst mit Benutzername über SSL-Sicherheit im gemischten Modus:
+-   Rechnerdienst mit Benutzername über SSL-Sicherheit im gemischten Modus:
 
-    -   Client: [httpcalculatorwithusernameoversslclieintexample](httpcalculatorwithusernameoversslclientexample.md)
-    -   Server: [httpcalculatorwithusernameoversslserviceexample](httpcalculatorwithusernameoversslserviceexample.md)
+    -   Client: [HttpCalculatorWithUsernameOverSslClientExample](httpcalculatorwithusernameoversslclientexample.md)
+    -   Server: [HttpCalculatorWithUserNameOverSslServiceExample](httpcalculatorwithusernameoversslserviceexample.md)
 
--   Rechner Dienst mit Kerberos über SSL-Sicherheit im gemischten Modus:
+-   Rechnerdienst mit Kerberos über SSL-Sicherheit im gemischten Modus:
 
-    -   Client: [httpcalculatorwithkerberosoversslclieintexample](httpcalculatorwithkerberosoversslclientexample.md)
-    -   Server: [httpcalculatorwithkerberosoversslserviceexample](httpcalculatorwithkerberosoversslserviceexample.md)
+    -   Client: [HttpCalculatorWithKerberosOverSslClientExample](httpcalculatorwithkerberosoversslclientexample.md)
+    -   Server: [HttpCalculatorWithKerberosOverSslServiceExample](httpcalculatorwithkerberosoversslserviceexample.md)
 
--   Rechner Dienst mit grundlegender HTTP-Header Authentifizierung über SSL-Transportsicherheit:
+-   Rechnerdienst mit grundlegender HTTP-Headerauthentifizierung über SSL-Transportsicherheit:
 
-    -   Client: [httpcalculatorwithbasicoversslcliumtexample](httpcalculatorwithbasicoversslclientexample.md)
-    -   Server: [httpcalculatorwithbasicoversslserviceexample](httpcalculatorwithbasicoversslserviceexample.md)
+    -   Client: [HttpCalculatorWithBasicOverSslClientExample](httpcalculatorwithbasicoversslclientexample.md)
+    -   Server: [HttpCalculatorWithBasicOverSslServiceExample](httpcalculatorwithbasicoversslserviceexample.md)
 
--   Bestell Dienst:
+-   Bestelldienst:
 
-    -   Client: [httppurchaseorderclieintexample](httppurchaseorderclientexample.md)
-    -   Server: [httppurchaseorderserviceexample](httppurchaseorderserviceexample.md)
+    -   Client: [HttpPurchaseOrderClientExample](httppurchaseorderclientexample.md)
+    -   Server: [HttpPurchaseOrderServiceExample](httppurchaseorderserviceexample.md)
 
--   Bestell Dienst mit SSL-Transportsicherheit:
+-   Bestelldienst mit SSL-Transportsicherheit:
 
-    -   Client: [httppurchaseorderwithsslcliumtexample](httppurchaseorderwithsslclientexample.md)
-    -   Server: [httppurchaseorderwithsslserviceexample](httppurchaseorderwithsslserviceexample.md)
+    -   Client: [HttpPurchaseOrderWithSslClientExample](httppurchaseorderwithsslclientexample.md)
+    -   Server: [HttpPurchaseOrderWithSslServiceExample](httppurchaseorderwithsslserviceexample.md)
 
--   Bestell Dienst mit Benutzername über SSL-Sicherheit im gemischten Modus:
+-   Bestelldienst mit Benutzername über SSL-Sicherheit im gemischten Modus:
 
-    -   Client: [httppurchaseorderwithusernameoversslcliumtexample](httppurchaseorderwithusernameoversslclientexample.md)
-    -   Server: [httppurchaseorderwithusernameoversslserviceexample](httppurchaseorderwithusernameoversslserviceexample.md)
+    -   Client: [HttpPurchaseOrderWithUsernameOverSslClientExample](httppurchaseorderwithusernameoversslclientexample.md)
+    -   Server: [HttpPurchaseOrderWithUserNameOverSslServiceExample](httppurchaseorderwithusernameoversslserviceexample.md)
 
--   Bestell Dienst mit Kerberos über SSL-Sicherheit im gemischten Modus:
+-   Bestelldienst mit Kerberos über SSL-Sicherheit im gemischten Modus:
 
-    -   Client: [httppurchaseorderwithkerberosoversslclieintexample](httppurchaseorderwithkerberosoversslclientexample.md)
-    -   Server: [httppurchaseorderwithkerberosoversslserviceexample](httppurchaseorderwithkerberosoversslserviceexample.md)
+    -   Client: [HttpPurchaseOrderWithKerberosOverSslClientExample](httppurchaseorderwithkerberosoversslclientexample.md)
+    -   Server: [HttpPurchaseOrderWithKerberosOverSslServiceExample](httppurchaseorderwithkerberosoversslserviceexample.md)
 
--   Nicht typisierter Bestell Dienst:
+-   Nicht typisierter Bestelldienst:
 
-    -   Client: [untypedcliumtexample](untypedclientexample.md)
-    -   Server: [untypedserviceexample](untypedserviceexample.md)
+    -   Client: [UnTypedClientExample](untypedclientexample.md)
+    -   Server: [UnTypedServiceExample](untypedserviceexample.md)
 
--   Sitzungs basierter Rechner:
+-   Sitzungsbehaftete Rechner:
 
-    -   Client: [sessionfullcalculatorclieintexample](sessionfullcalculatorclientexample.md)
-    -   Server: [sessionfullcalculatorserviceexample](sessionfullcalculatorserviceexample.md)
+    -   Client: [SessionfullCalculatorClientExample](sessionfullcalculatorclientexample.md)
+    -   Server: [SessionfullCalculatorServiceExample](sessionfullcalculatorserviceexample.md)
 
--   Dienst Vorgang mit Abbruch Benachrichtigung:
+-   Dienstvorgang mit Abbruchbenachrichtigung:
 
-    -   Client: [servicecancellationexample](servicecancellationexample.md)
-    -   Server: [blockingserviceexample](blockingserviceexample.md)
+    -   Client: [ServiceCancellationExample](servicecancellationexample.md)
+    -   Server: [BlockingServiceExample](blockingserviceexample.md)
 
--   Rückruf Abbruch:
+-   Aufrufabbruch:
 
-    -   Client: [callabandonexample](callabandonexample.md)
-    -   Server: [sessionfullcalculatorserviceexample](sessionfullcalculatorserviceexample.md)
+    -   Client: [CallAbillenExample](callabandonexample.md)
+    -   Server: [SessionfullCalculatorServiceExample](sessionfullcalculatorserviceexample.md)
 
--   Kommunizieren mit einem ASMX-TerraService-Dienst mithilfe eines benutzerdefinierten Proxys: [asmxterraservicesamplewithcustomproxy](asmxterraservicesamplewithcustomproxy.md).
+-   Kommunizieren Sie mit einem ASMX-TerraService-Dienst über einen benutzerdefinierten Proxy: [AsmxProxyServiceSampleWithCustomProxy](asmxterraservicesamplewithcustomproxy.md).
 
--   Erstellen Sie manuell eine Richtlinien Beschreibung, und verwenden Sie Sie zum Erstellen eines Dienst Proxys: [policytemplateexample](policytemplateexample.md).
--   Kommunikation mit einem WCF-Dienst: [wcfpublicservicesample](wcfpublicservicesample.md).
+-   Erstellen Sie manuell eine Richtlinienbeschreibung, und verwenden Sie sie, um einen Dienstproxy zu erstellen: [PolicyTemplateExample](policytemplateexample.md).
+-   Kommunizieren mit einem WCF-Dienst: [WcfPublicServiceSample](wcfpublicservicesample.md).
 
  
 

@@ -1,31 +1,31 @@
 ---
-description: Der System Event Notification Service (Sens) definiert die Sens-Co-Klasse als Teil der Sens-Typbibliothek.
+description: Der Systemereignisbenachrichtigungsdienst (SENS) definiert die SENS-Co-Klasse als Teil der SENS-Typbibliothek.
 ms.assetid: b494808c-1116-47ac-8713-0d515b312368
-title: Sens-Objekt
+title: SENS-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e9d0d5cd857063d6ac224de66610d2604db619d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1acdf70b5e2229051d569bd1f607ad8db5d3d567b4c0421464757f02bc6a8e4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003948"
 ---
-# <a name="sens-object"></a>Sens-Objekt
+# <a name="sens-object"></a>SENS-Objekt
 
-Der System Event Notification Service (Sens) definiert die Sens-Co-Klasse als Teil der Sens-Typbibliothek.
+Der Systemereignisbenachrichtigungsdienst (SENS) definiert die SENS-Co-Klasse als Teil der SENS-Typbibliothek.
 
 ## <a name="implementation"></a>Implementierung
 
-Die Sens-Objekt Implementierung wird vom Betriebssystem bereitgestellt.
+Die SENS-Objektimplementierung wird vom Betriebssystem bereitgestellt.
 
-## <a name="creationaccess-functions"></a>Erstellungs-/Zugriffs Funktionen
+## <a name="creationaccess-functions"></a>Erstellungs-/Zugriffsfunktionen
 
 
 
-| Funktion                                      | BESCHREIBUNG                                             |
+| Funktion                                      | Beschreibung                                             |
 |-----------------------------------------------|---------------------------------------------------------|
-| [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) | Erstellt eine Instanz des Sens-Objekts unter Verwendung der zugehörigen CLSID. |
+| [**Cocreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) | Erstellt eine Instanz des SENS-Objekts mithilfe seiner CLSID. |
 
 
 
@@ -37,10 +37,10 @@ Die Sens-Objekt Implementierung wird vom Betriebssystem bereitgestellt.
 
 | Schnittstelle                            | BESCHREIBUNG                                                                                         |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**Isensnetwork**](/windows/desktop/api/Sensevts/nn-sensevts-isensnetwork) | Standard. Ausgehende Schnittstelle, die vom Sink-Objekt in der Abonnenten Anwendung implementiert                   |
-| [**Isennow**](/windows/desktop/api/Sensevts/nn-sensevts-isensonnow)     | Ausgehende Schnittstelle, die vom Sink-Objekt in der Abonnenten Anwendung implementiert                            |
-| [**Isenslogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon)     | Ausgehende Schnittstelle, die vom Sink-Objekt in der Abonnenten Anwendung implementiert                            |
-| [**IsensLogon2**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon2)   | Ausgehende Schnittstelle, die vom Sink-Objekt in der Abonnenten Anwendung implementiert Verfügbar in Windows XP. |
+| [**IsensNetwork**](/windows/desktop/api/Sensevts/nn-sensevts-isensnetwork) | Standard. Ausgehende Schnittstelle, die vom Senkenobjekt in der Abonnentenanwendung implementiert wird.                   |
+| [**IsensOnNow**](/windows/desktop/api/Sensevts/nn-sensevts-isensonnow)     | Ausgehende Schnittstelle, die vom Senkenobjekt in der Abonnentenanwendung implementiert wird.                            |
+| [**IsensLogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon)     | Ausgehende Schnittstelle, die vom Senkenobjekt in der Abonnentenanwendung implementiert wird.                            |
+| [**IsensLogon2**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon2)   | Ausgehende Schnittstelle, die vom Senkenobjekt in der Abonnentenanwendung implementiert wird. Verfügbar mit Windows XP. |
 
 
 
@@ -50,16 +50,16 @@ Die Sens-Objekt Implementierung wird vom Betriebssystem bereitgestellt.
 
 <dl> <dt>
 
-[**Isenslogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon)
+[**ISensLogon**](/windows/desktop/api/Sensevts/nn-sensevts-isenslogon)
 </dt> <dt>
 
-[**Isensnetwork**](/windows/desktop/api/Sensevts/nn-sensevts-isensnetwork)
+[**ISensNetwork**](/windows/desktop/api/Sensevts/nn-sensevts-isensnetwork)
 </dt> <dt>
 
-[**Isennow**](/windows/desktop/api/Sensevts/nn-sensevts-isensonnow)
+[**ISensOnNow**](/windows/desktop/api/Sensevts/nn-sensevts-isensonnow)
 </dt> <dt>
 
-[Informationen zum System Ereignis Benachrichtigungsdienst](about-system-event-notification-service.md)
+[Informationen zum Systemereignisbenachrichtigungsdienst](about-system-event-notification-service.md)
 </dt> </dl>
 
  

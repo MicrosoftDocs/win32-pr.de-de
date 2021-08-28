@@ -1,29 +1,29 @@
 ---
-title: Auflisten von ADSI-Objekten
-description: Dieses Thema enthält Links zu Themen, in denen die Enumeration von ADSI-Objekten erläutert wird.
+title: Aufzählen von ADSI-Objekten
+description: Dieses Thema enthält Links zu Themen, in denen erläutert wird, wie ADSI-Objekte aufzählt werden.
 ms.assetid: f7ce743c-80b3-41a6-9d83-db739dd119a7
 ms.tgt_platform: multiple
 keywords:
-- Objekte ADSI, Enumerieren von ADSI-Objekten
+- ADSI-Objekte, Aufzählen von ADSI-Objekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c0a2a6aa007ec0621a671591a67ff195f477b23d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 069884607c517467c931f1c4b3b1cd54c666ec54fc31c64a03e05fd789522866
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023628"
 ---
-# <a name="enumerating-adsi-objects"></a>Auflisten von ADSI-Objekten
+# <a name="enumerating-adsi-objects"></a>Aufzählen von ADSI-Objekten
 
 In diesem Abschnitt werden die folgenden Themen beschrieben:
 
 -   [Enumeration](enumeration.md)
--   [Enumerationshilfsobjekte](enumeration-helper-functions.md)
+-   [Enumerationshilfsfunktionen](enumeration-helper-functions.md)
 
- 
+ 
 
- 
+ 
 
 
 

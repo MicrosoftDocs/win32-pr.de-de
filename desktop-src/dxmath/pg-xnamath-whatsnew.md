@@ -4,12 +4,12 @@ ms.assetid: 105800d3-a191-c78f-316a-bf2daf7b27a6
 title: Neues (DirectXMath)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1df1e7f25789ca6f58205ce9f45482e0a49540d1
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 7e94d4ba2433501fb5389b82dab4f5c3de4b8ed80904ed4629729537bbf264a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111827626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984710"
 ---
 # <a name="whats-new-directxmath"></a>Neues (DirectXMath)
 
@@ -17,7 +17,7 @@ Die DirectXMath-Bibliothek basiert auf der [XNA Math C++-SIMD-Bibliotheksversion
 
 -   [Rlease-Verlauf](#release-history)
 -   [DirectXMath-Unterschiede zu XNA Math](#directxmath-differences-from-xna-math)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="release-history"></a>Releaseverlauf
 
@@ -26,16 +26,16 @@ Die DirectXMath-Bibliothek basiert auf der [XNA Math C++-SIMD-Bibliotheksversion
   <td>Windows 10 SDK (20348), Version 2104</td><td>DirectXMath 3.16</td>
  </td>
  <tr>
-  <td>Windows 10 Update SDK von Mai 2020</td><td>DirectXMath 3.14</td>
+  <td>Windows 10 Mai 2020 Update SDK</td><td>DirectXMath 3.14</td>
  </tr>
  <tr>
-  <td>Windows 10 October 2018 Update SDK</td><td>DirectXMath 3.13</td>
+  <td>Windows 10 October 2018 Update Sdk</td><td>DirectXMath 3.13</td>
  </tr>
  <tr>
-  <td>Windows 10 April 2018 Update SDK<br />Windows 10 Fall Creators Update SDK</td><td>DirectXMath 3.11</td>
+  <td>Windows 10 Update-SDK für April 2018<br />Windows 10 Fall Creators Update Sdk</td><td>DirectXMath 3.11</td>
  </tr>
  <tr>
-  <td>Windows 10 Creators Update SDK</td><td>DirectXMath 3.10</td>
+  <td>Windows 10 Creators Update Sdk</td><td>DirectXMath 3.10</td>
  </tr>
  <tr>
   <td>SDK für Windows 10 Anniversary</td><td>DirectXMath 3.09</td>
@@ -64,8 +64,8 @@ Die DirectXMath-Bibliothek unterscheidet sich in erster Linie von der XNA Math-B
 -   Erfordert C++11-Standardbibliotheksunterstützung (d. h. stdint.h und so weiter).
 -   Systeminterne ARM-NEON-Unterstützung für die Windows RT Plattform.
 -   Neue Farbfunktionalität (Farbraumkonvertierungen, .NET-Farbkonst constants).
--   Begrenzungsvolumentypen (eine Version von , die zuvor im XNACollision-Header im DirectX SDK Collision-Beispiel enthalten war).
--   Es Xbox 360 Version nicht verfügbar. Das Xbox 360 XDK wird weiterhin XNAMath v2.x liefern. Entfernen von Xbox 360 Datentypen und Funktionsvarianten.
+-   Begrenzungs-Volumetypen (eine Version von , die zuvor im XNACollision-Header im DirectX SDK-Kollisionsbeispiel enthalten war).
+-   Es Xbox 360 Version nicht verfügbar. Das Xbox 360 XDK wird weiterhin XNAMath v2.x liefern. Entfernen von Xbox 360 bestimmten Datentypen und Funktionsvarianten.
 -   Überarbeitete [**XMVectorPermute**](/windows/win32/api/directxmath/nf-directxmath-xmvectorpermute) für verbesserte Optimierung für systeminterne SSE- und ARM-NEON-Systema.
 -   Der [**XMMATRIX-Typ**](/windows/win32/api/directxmath/ns-directxmath-xmmatrix) ist vollständig deckend. Um auf einzelne Elemente von **XMMATRIX** zu zugreifen, verwenden Sie andere Typen wie [**XMFLOAT4X4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4x4).
 

@@ -1,7 +1,7 @@
 ---
-description: Die Aufruf Methode ermöglicht den Zugriff auf Methoden und Eigenschaften, die von einem-Objekt verfügbar gemacht werden.
+description: Die Invoke-Methode ermöglicht den Zugriff auf Methoden und Eigenschaften, die von einem -Objekt verfügbar gemacht werden.
 ms.assetid: d9539b89-b7c2-4b4d-b6d6-6275cc6d7e7c
-title: Cdeferredcommand. aufrufen-Methode (ctlutil. h)
+title: CDeferredCommand.Invoke-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 268cfc3d4665eeacafbd695b974f55445747e151
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1df087e71ba03ef67ea250235a4ef8a9ef5e6623efe67594381111de6088cf7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074374"
 ---
-# <a name="cdeferredcommandinvoke-method"></a>Cdeferredcommand. aufrufen-Methode
+# <a name="cdeferredcommandinvoke-method"></a>CDeferredCommand.Invoke-Methode
 
-Die- `Invoke` Methode bietet Zugriff auf Methoden und Eigenschaften, die von einem-Objekt verfügbar gemacht werden.
+Die `Invoke` -Methode ermöglicht den Zugriff auf Methoden und Eigenschaften, die von einem -Objekt verfügbar gemacht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt VFW E zurück, die \_ \_ bereits \_ abgebrochen wurde, wenn **m \_ pqueue** **null** ist. Andernfalls wird das **HRESULT** zurückgegeben, das sich aus einem **IDispatch:: GetTypeInfo** -oder **IUnknown:: QueryInterface**-Ausdruck ergibt.
+Gibt VFW \_ E \_ ALREADY CANCELLED \_ zurück, wenn m **\_ pQueue** **NULL ist.** Andernfalls gibt das **HRESULT zurück,** das sich aus einem Aufruf von **IDispatch::GetTypeInfo** oder **IUnknown::QueryInterface ergibt.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt VFW E zurück, die \_ \_ bereits \_ abgebrochen wurde, wenn **m \_ pqueue**
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

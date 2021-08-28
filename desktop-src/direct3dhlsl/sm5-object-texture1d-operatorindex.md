@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Operator-Funktion'
-description: Gibt eine schreibgeschützte Ressourcen Variable für ein Texture1D-Wert zurück.
+title: Texture1D::Operator-Funktion
+description: Gibt eine schreibgeschützte Ressourcenvariable für eine Texture1D zurück.
 ms.assetid: df54097d-4d1b-496a-a17d-6e9a10cfb996
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 44e5b502c7ae8b766363956920d7922858b4d771
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: d2c11ef313531adb9b129ffb99103ea6c7778462eddf8c1c76f4b235c92951c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985910"
 ---
-# <a name="texture1doperator--function"></a>Texture1D:: Operator-Funktion
+# <a name="texture1doperator--function"></a>Texture1D::Operator-Funktion
 
-Gibt eine schreibgeschützte Ressourcen Variable für ein [**Texture1D**](sm5-object-texture1d.md)-Wert zurück.
+Gibt eine schreibgeschützte Ressourcenvariable für eine [**Texture1D zurück.**](sm5-object-texture1d.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,17 +49,17 @@ Die Indexposition. Enthält die x-Koordinate.
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode greift immer auf die erste MIP-Ebene zu. Um andere MIP-Ebenen anzugeben, verwenden Sie stattdessen den [**\[ \] \[ \] MIP.-Operator**](sm5-object-texture1d-mipsoperatorindex.md) .
+Diese Methode greifen immer auf die erste MIP-Ebene zu. Verwenden Sie stattdessen den [**mip.operator, \[ \] \[ \]**](sm5-object-texture1d-mipsoperatorindex.md) um andere MIP-Ebenen anzugeben.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -74,7 +74,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture1D](sm5-object-texture1d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

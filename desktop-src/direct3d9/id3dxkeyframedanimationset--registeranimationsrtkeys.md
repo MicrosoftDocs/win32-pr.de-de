@@ -1,7 +1,7 @@
 ---
-description: Registrieren der schlüsselrahmen Daten für die Skalierung, Drehung und Übersetzung (SRT) für eine Animation.
+description: Registrieren sie die SRT-Keyframedaten (Scale, Rotate, Translate) für eine Animation.
 ms.assetid: 10e5b391-1529-4952-abbb-ef560a35d667
-title: 'ID3DXKeyframedAnimationSet:: registeranimationsrtkeys-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::RegisterAnimationSRTKeys-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3098c8e779834daf273d5e85469e3f45b01cb039
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 07ec4db0bb02eb0a177375fc37af67264f1368b2ab952c0b170580112e4dbf40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987370"
 ---
-# <a name="id3dxkeyframedanimationsetregisteranimationsrtkeys-method"></a>ID3DXKeyframedAnimationSet:: registeranimationsrtkeys-Methode
+# <a name="id3dxkeyframedanimationsetregisteranimationsrtkeys-method"></a>ID3DXKeyframedAnimationSet::RegisterAnimationSRTKeys-Methode
 
-Registrieren der schlüsselrahmen Daten für die Skalierung, Drehung und Übersetzung (SRT) für eine Animation.
+Registrieren sie die SRT-Keyframedaten (Scale, Rotate, Translate) für eine Animation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT RegisterAnimationSRTKeys(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Namen der Animation.
+Zeiger auf den Animationsnamen.
 
 </dd> <dt>
 
-*Numscalekeys* \[ in\]
+*NumScaleKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Skalierungs Schlüssel.
+Anzahl der Skalierungsschlüssel.
 
 </dd> <dt>
 
-*Numrotationkeys* \[ in\]
+*NumRotationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Rotations Schlüsseln.
+Anzahl der Rotationsschlüssel.
 
 </dd> <dt>
 
-*Numtranslationkeys* \[ in\]
+*NumTranslationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Übersetzungs Schlüsseln.
+Anzahl der Übersetzungsschlüssel.
 
 </dd> <dt>
 
-*pscalekeys* \[ in\]
+*pScaleKeys* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) \***
+Typ: **const [**LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) \***
 
-Adresse eines Zeigers auf ein vom Benutzer zugeordneter [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) Vektoren, das von der Methode mit Skalierungs Daten gefüllt wird.
+Adresse eines Zeigers auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ VECTOR3-Vektoren,**](d3dxkey-vector3.md) die die Methode mit Skalierungsdaten auffüllt.
 
 </dd> <dt>
 
-" *protationkeys* \[ " in\]
+*pRotationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DXKEY \_ Quaternion**](d3dxkey-quaternion.md) \***
+Typ: **const [**LPD3DXKEY \_ QUATERNION**](d3dxkey-quaternion.md) \***
 
-Adresse eines Zeigers auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ Quaternion**](d3dxkey-quaternion.md) -Quaternionen, die die Methode mit den Rotationsdaten füllt.
+Adresse eines Zeigers auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ QUATERNION-Quaternionen,**](d3dxkey-quaternion.md) die die Methode mit Drehungsdaten auffüllt.
 
 </dd> <dt>
 
-*ptranslationkeys* \[ in\]
+*pTranslationKeys* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) \***
+Typ: **const [**LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) \***
 
-Adresse eines Zeigers auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md) Vektoren, das die Methode mit Übersetzungs Daten füllt.
+Adresse eines Zeigers auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ VECTOR3-Vektoren,**](d3dxkey-vector3.md) die die Methode mit Übersetzungsdaten auffüllt.
 
 </dd> <dt>
 
-*panimationindex* \[ vorgenommen\]
+*pAnimationIndex* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Gibt den Animations Index zurück.
+Gibt den Animationsindex zurück.
 
 </dd> </dl>
 
@@ -123,7 +123,7 @@ Gibt den Animations Index zurück.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -131,8 +131,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -143,13 +143,13 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 [ID3DXKeyframedAnimationSet](id3dxkeyframedanimationset.md)
 </dt> <dt>
 
-[**ID3DXKeyframedAnimationSet:: getnumscalekeys**](id3dxkeyframedanimationset--getnumscalekeys.md)
+[**ID3DXKeyframedAnimationSet::GetNumScaleKeys**](id3dxkeyframedanimationset--getnumscalekeys.md)
 </dt> <dt>
 
-[**ID3DXKeyframedAnimationSet:: getnumrotationkeys**](id3dxkeyframedanimationset--getnumrotationkeys.md)
+[**ID3DXKeyframedAnimationSet::GetNumRotationKeys**](id3dxkeyframedanimationset--getnumrotationkeys.md)
 </dt> <dt>
 
-[**ID3DXKeyframedAnimationSet:: getnumtranslationkeys**](id3dxkeyframedanimationset--getnumtranslationkeys.md)
+[**ID3DXKeyframedAnimationSet::GetNumTranslationKeys**](id3dxkeyframedanimationset--getnumtranslationkeys.md)
 </dt> </dl>
 
  

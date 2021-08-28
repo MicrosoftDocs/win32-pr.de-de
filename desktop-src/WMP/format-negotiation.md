@@ -1,43 +1,43 @@
 ---
-title: Aushandlung formatieren
-description: Aushandlung formatieren
+title: Formataushandlung
+description: Formataushandlung
 ms.assetid: 7847d4e3-1250-4c35-88e1-52d61bf1553f
 keywords:
-- Windows Media Player-Plug-ins, Format Aushandlung
-- Plug-ins, Format Aushandlung
-- Plug-Ins für die digitale Signalverarbeitung, Format Aushandlung
-- DSP-Plug-ins, Format Aushandlung
+- Windows Media Player Plug-Ins, Formataushandlung
+- Plug-Ins, Formataushandlung
+- Plug-Ins für die digitale Signalverarbeitung, Formataushandlung
+- DSP-Plug-Ins, Formataushandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbc805b18d3e2be081e4f85bcc5ed42aded06853
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 69669bc3af82400ea62d154335d117fef185d0b34184be4101ffa5ae309e6ccb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054968"
 ---
-# <a name="format-negotiation"></a>Aushandlung formatieren
+# <a name="format-negotiation"></a>Formataushandlung
 
-Bei Windows Media Player und einem DSP-Plug-in für die gemeinsame Nutzung von Daten müssen beide Programme das Format der Daten, die Sie verarbeiten, zustimmen. Das DSP-Plug-in implementiert Methoden, die der Player aufruft, um zu bestimmen, welche Formate das Plug-in unterstützt. Das Plug-in implementiert auch Methoden, die der Player aufruft, um das aktuelle Format festzulegen.
+Damit Windows Media Player und ein DSP-Plug-In Daten freigeben können, müssen sich beide Programme auf das Format der daten einigen, die sie verarbeiten. Das DSP-Plug-In implementiert Methoden, die der Player aufruft, um zu bestimmen, welche Formate das Plug-In unterstützt. Das Plug-In implementiert auch Methoden, die der Player aufruft, um das aktuelle Format festzulegen.
 
-Wenn das Plug-in als "direkmo (direkmo)" fungiert, ermittelt Windows Media Player Medienformate und legt diese fest, indem Methoden der **imediaobject** -Schnittstelle aufgerufen werden. Beispielsweise ruft der Player den **imediaobject:: getinputtype** des Plug-ins wiederholt auf, um eine Liste aller vom Plug-in unterstützten Eingabeformate zu erhalten. DMO-Plug-Ins verwenden die **DMO- \_ \_ Medientyp** Struktur zum Organisieren der Informationen, die ein Medienformat angeben. Weitere Informationen zur Verwendung von DMO-Plug-ins und des playeraushandlungs-Formats finden Sie unter [Informationen zu imediaobject](about-imediaobject.md).
+Wenn das Plug-In als DirextX-Medienobjekt (DMO) fungiert, ermittelt Windows Media Player Medienformate und legt diese fest, indem methoden der **IMediaObject-Schnittstelle** aufgerufen werden. Beispielsweise ruft der Player wiederholt **IMediaObject::GetInputType** des Plug-Ins auf, um eine Liste aller Eingabeformate abzurufen, die vom Plug-In unterstützt werden. DMO Plug-Ins verwenden die **DMO \_ MEDIA \_ TYPE-Struktur,** um die Informationen zu organisieren, die ein Medienformat angeben. Weitere Informationen dazu, wie DMO Plug-Ins und das Player-Aushandlungsformat verwenden, finden Sie unter [Informationen zu IMediaObject.](about-imediaobject.md)
 
-Wenn das Plug-in als Media Foundation Transformation (MFT) fungiert, erkennt Windows Media Player Medienformate durch Aufrufen von Methoden der **imftransform** -Schnittstelle und legt diese fest. Beispielsweise ruft der Player den **imftransform:: getinputavailabletype** des Plug-ins wiederholt auf, um eine Liste aller vom Plug-in unterstützten Eingabeformate zu erhalten. MFT-Plug-ins und der Player verwenden die **imfmediatype** -Schnittstelle zum organisieren und Austauschen von Formatinformationen.
+Wenn das Plug-In als Media Foundation Transform (MFT) fungiert, ermittelt Windows Media Player Medienformate und legt diese fest, indem methoden der **INTERFACESTransform-Schnittstelle** aufgerufen werden. Der Player ruft z. B. wiederholt **DENTRANSFORM::GetInputAvailableType** des Plug-Ins auf, um eine Liste aller Eingabeformate abzurufen, die vom Plug-In unterstützt werden. MFT-Plug-Ins und player verwenden die **SCHNITTSTELLE "FORMATSMediaType",** um Formatinformationen zu organisieren und auszutauschen.
 
-Windows Media Player verwendet ein audiodsp-Plug-in nur dann, wenn das Plug-in dieselbe bidirektiontiefe wie die wiedergegebene digitale Audiodatei unterstützt. Wenn die digitale Audiodatei beispielsweise 20-Bit ist, muss das Plug-in für die Verarbeitung von 20-Bit-Audiodaten geschrieben werden. Bei CD-Audiodaten müssen DSP-Plug-ins 20-Bit-Verarbeitung unterstützen.
+Windows Media Player verwendet nur dann ein DSP-Audio-Plug-In, wenn das Plug-In die gleiche Bittiefe unterstützt wie das wiedergegebene digitale Audio. Wenn die digitale Audiodatei beispielsweise 20 Bit ist, muss das Plug-In geschrieben werden, um 20-Bit-Audio zu verarbeiten. Für CD-Audio müssen DSP-Plug-Ins die 20-Bit-Verarbeitung unterstützen.
 
-Bei der formataushandlung von Multi-Channel-Inhalten auf einem Computer, der für die Verwendung mit Stereo Referenten konfiguriert ist, versucht Windows Media Player zuerst, mithilfe des vorhandenen Eingabe-und Ausgabeformats eine Verbindung zu einem audiodsp-Plug-in herzustellen, indem **imediaobject:: setinputtype** und **imediaobject:: setoutputtype** aufgerufen werden. Nach dieser anfänglichen Aushandlung listet der Spieler die Formate auf, die das Plug-in unterstützt, und versucht, die beste Format Kombination für den Player und das Plug-in auszuhandeln. Wenn das Plug-in bei der anfänglichen Aushandlung Stereo-Audiodaten (definiert durch eine **WaveFormatEx** -Struktur) als Eingabeformat annimmt und anschließend nur multikanalaudiodaten akzeptiert (definiert durch eine **WAVEFORMATEXTENSIBLE** -Struktur), stellt der Spieler multikanalaudiodaten als Eingabeformat für das Plug-in bereit. Dieses Verhalten während der formataushandlung ist für die Verwendung im Microsoft Windows XP-Betriebssystem verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
+Während der Formataushandlung von Mehrkanalinhalten auf einem Computer, der für die Verwendung mit Stereolautmodulen konfiguriert ist, versucht Windows Media Player zunächst, eine Verbindung mit einem Audio-DSP-Plug-In herzustellen, indem das vorhandene Eingabe- und Ausgabeformat verwendet wird, indem **IMediaObject::SetInputType** und **IMediaObject::SetOutputType** aufgerufen werden. Sobald diese erste Aushandlung erfolgt ist, listet der Player die Formate auf, die das Plug-In unterstützt, und versucht, die beste Formatkombination für Player und Plug-In auszuhandeln. Wenn das Plug-In stereo-Audio (definiert durch eine **WAVEFORMATEX-Struktur)** während der ersten Aushandlung als Eingabeformat akzeptiert und anschließend nur Mehrkanalaudio (definiert durch eine **WAVEFORMATEXTENSIBLE-Struktur)** akzeptiert, stellt der Player mehrkanalige Audiodaten als Eingabeformat für das Plug-In bereit. Dieses Verhalten während der Formataushandlung ist für die Verwendung im Betriebssystem Microsoft Windows XP verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über den DSP-Plug-in-Entwickler**](dsp-plug-in-developer-overview.md)
+[**Übersicht über DSP-Plug-In-Entwickler**](dsp-plug-in-developer-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

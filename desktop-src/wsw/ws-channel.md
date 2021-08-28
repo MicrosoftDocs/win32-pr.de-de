@@ -1,21 +1,21 @@
 ---
-title: WS_CHANNEL (Webservices. h)
-description: Ein nicht transparenter Typ, der zum Verweisen auf einen Kanal verwendet wird.
+title: WS_CHANNEL (WebServices.h)
+description: Ein nicht transparenter Typ, der verwendet wird, um auf einen Kanal zu verweisen.
 ms.assetid: 741636a4-5e0f-495a-bb1d-1a00cfd6f65a
 keywords:
 - WS_CHANNEL
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b877862d6987b9312e1b390cd7b0f4373c40a27
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 243c130d5b07b88f1398d0be805775b937e2c69114c5c0ac32de94b3f451e1b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962789"
 ---
-# <a name="ws_channel"></a>WS- \_ Kanal
+# <a name="ws_channel"></a>\_WS-KANAL
 
-Ein nicht transparenter Typ, der zum Verweisen auf einen Kanal verwendet wird.
+Ein nicht transparenter Typ, der verwendet wird, um auf einen Kanal zu verweisen.
 
 
 ```C++
@@ -24,9 +24,9 @@ typedef struct _WS_CHANNEL WS_CHANNEL;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt ist Thread sicher. Weitere Informationen finden Sie unter [Thread Sicherheit](thread-safety.md).
+Dieses Objekt ist threadsicher. Weitere Informationen finden Sie unter [Threadsicherheit.](thread-safety.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,17 +34,17 @@ Dieses Objekt ist Thread sicher. Weitere Informationen finden Sie unter [Thread 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Webservices. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>WebServices.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Thread Sicherheit](thread-safety.md)
+[Threadsicherheit](thread-safety.md)
 </dt> </dl>
 
  

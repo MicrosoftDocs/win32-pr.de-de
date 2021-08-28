@@ -1,9 +1,9 @@
 ---
-title: LVM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ getunicodeformat-Makro verwenden.
+title: LVM_GETUNICODEFORMAT Meldung (Commctrl.h)
+description: Ruft das UNICODE-Zeichenformatflag für das -Steuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ GetUnicodeFormat-Makro verwenden.
 ms.assetid: b0598b60-4d0e-4c68-b63a-e614c6268129
 keywords:
-- Windows-Steuerelemente für LVM_GETUNICODEFORMAT Meldung
+- LVM_GETUNICODEFORMAT Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 720a65baab8ec9c1ec3b311e49fe3672c97a0fba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b3166d7349bf138fa853523c019a4c1db86e3f1a2d81a6da86c4ef25b5ed405
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019258"
 ---
-# <a name="lvm_getunicodeformat-message"></a>LVM \_ getunicodeformat-Meldung
+# <a name="lvm_getunicodeformat-message"></a>LVM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ getunicodeformat**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getunicodeformat) -Makro verwenden.
+Ruft das UNICODE-Zeichenformatflag für das -Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ GetUnicodeFormat-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getunicodeformat) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ getunicodeformat**](ccm-getunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ get
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**LVM- \_ Code Format**](lvm-setunicodeformat.md)
+[**LVM \_ SETUNICODEFORMAT**](lvm-setunicodeformat.md)
 </dt> </dl>
 
  

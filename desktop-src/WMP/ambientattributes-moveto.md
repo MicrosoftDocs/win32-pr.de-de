@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. muveto
-description: Die Methode "muveto" verschiebt das Steuerelement mit einer linearen Geschwindigkeit an einen neuen Speicherort.
+title: AmbientAttributes.moveTo
+description: Die moveTo-Methode verschiebt das Steuerelement mit linearer Geschwindigkeit an eine neue Position.
 ms.assetid: 8670aa7b-a5c1-4d93-9f48-452bc53e65e6
 keywords:
-- Ambientattribute. muveto-Fenster Media Player
+- AmbientAttributes.moveTo Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af481526c0923c527bb14aa4700a6c6fe5ea3613
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf05beedad4fe4abb839e957519384b58102253cd0ab6a292d629df23a7bef98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055048"
 ---
-# <a name="ambientattributesmoveto"></a>Ambientattribute. muveto
+# <a name="ambientattributesmoveto"></a>AmbientAttributes.moveTo
 
-Die Methode " **muveto** " verschiebt das Steuerelement mit einer linearen Geschwindigkeit an einen neuen Speicherort.
+Die **moveTo-Methode** verschiebt das Steuerelement mit linearer Geschwindigkeit an eine neue Position.
 
 ``` syntax
         elementID.moveTo(newLeft, newTop, time)
@@ -31,24 +31,24 @@ Die Methode " **muveto** " verschiebt das Steuerelement mit einer linearen Gesch
 
 <dl> <dt>
 
-<span id="newLeft"></span><span id="newleft"></span><span id="NEWLEFT"></span>*newleft*
+<span id="newLeft"></span><span id="newleft"></span><span id="NEWLEFT"></span>*newLeft*
 </dt> <dd>
 
-**Number** (**Long**) gibt den neuen Wert für das **linke** Attribut des Steuer Elements an.
+**Number** (**long**), die den neuen Wert für das **linke** Attribut des Steuerelements angibt.
 
 </dd> <dt>
 
-<span id="newTop"></span><span id="newtop"></span><span id="NEWTOP"></span>*newtop*
+<span id="newTop"></span><span id="newtop"></span><span id="NEWTOP"></span>*newTop*
 </dt> <dd>
 
-**Number** (**Long**) gibt den neuen Wert für das **Top** -Attribut des Steuer Elements an.
+**Number** (**long**), die den neuen Wert für das **oberste** Attribut des Steuerelements angibt.
 
 </dd> <dt>
 
 <span id="time"></span><span id="TIME"></span>*Zeit*
 </dt> <dd>
 
-**Number** (**Long**) gibt die Zeit in Millisekunden an, die das Steuerelement benötigt, um zum neuen Speicherort zu wechseln.
+**Number** (**long**), die die Zeit in Millisekunden angibt, die benötigt wird, bis das Steuerelement an seine neue Position verschoben wird.
 
 </dd> </dl>
 
@@ -56,11 +56,11 @@ Die Methode " **muveto** " verschiebt das Steuerelement mit einer linearen Gesch
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist hilfreich für animierte **unter Ansicht** -Elemente (z. b. wenn der Benutzer auf eine Leiste klickt und die Steuerelemente auf die Folie nach unten klicken).
+Diese Methode ist nützlich für animierte **SUBVIEW-Elemente** (z. B. wenn der Benutzer auf eine Taskleiste klickt und die Steuerelemente nach unten schieben).
 
-Diese Methode erstellt eine lineare Bewegung, wenn das Steuerelement verschoben wird. Dies unterscheidet sich von " **diasto**", wodurch eine nichtlineare Bewegung erstellt wird.
+Diese Methode erstellt eine lineare Bewegung, wenn das Steuerelement bewegt wird. Dies unterscheidet sich von **slideTo,** wodurch eine nicht lineare Bewegung erstellt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Diese Methode erstellt eine lineare Bewegung, wenn das Steuerelement verschoben 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -79,10 +79,10 @@ Diese Methode erstellt eine lineare Bewegung, wenn das Steuerelement verschoben 
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. Left**](ambientattributes-left.md)
+[**AmbientAttributes.left**](ambientattributes-left.md)
 </dt> <dt>
 
-[**Ambientattribute. slideto**](ambientattributes-slideto.md)
+[**AmbientAttributes.slideTo**](ambientattributes-slideto.md)
 </dt> <dt>
 
 [**AmbientAttributes.top**](ambientattributes-top.md)

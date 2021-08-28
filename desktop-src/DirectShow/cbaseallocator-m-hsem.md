@@ -1,7 +1,7 @@
 ---
-description: Semaphore, die signalisiert wird, wenn ein Beispiel verfügbar wird.
+description: Semaphor, das signalisiert wird, wenn eine Stichprobe verfügbar wird.
 ms.assetid: 1861bc3a-b071-4876-a69c-84bf249260bd
-title: 'Cbasezucator:: m_hSem Member (amfilter. h)'
+title: CBaseAllocator::m_hSem-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4c97227809be462d6b68cde0281ab0cd4cf1f96e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c78d5dbcdba6551ef27299ea78bad217f17f68777499f15846c33c0496cb8fbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017468"
 ---
-# <a name="cbaseallocatorm_hsem-member"></a>Cbasezucator:: m \_ hsem-Member
+# <a name="cbaseallocatorm_hsem-member"></a>CBaseAllocator::m \_ hSem-Member
 
-Semaphore, die signalisiert wird, wenn ein Beispiel verfügbar wird.
+Semaphor, das signalisiert wird, wenn eine Stichprobe verfügbar wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HANDLE m_hSem;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

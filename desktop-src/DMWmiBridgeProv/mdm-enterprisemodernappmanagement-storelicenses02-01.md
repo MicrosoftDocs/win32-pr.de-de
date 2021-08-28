@@ -1,6 +1,6 @@
 ---
 title: MDM_EnterpriseModernAppManagement_StoreLicenses02_01-Klasse
-description: Die MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01-Klasse wird verwendet, um Lizenzen für Store-Apps zu verwalten.
+description: Die MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 01-Klasse wird verwendet, um Lizenzen \_ für Store-Apps zu verwalten.
 ms.assetid: 9fdcba35-6c21-4a39-99f4-470acf7d35bb
 keywords:
 - MDM_EnterpriseModernAppManagement_StoreLicenses02_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19a4549ba473afaf76bea3f23ec65aacf301121a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d0342acc9cb74825552a409d686e5bc55f0cebc75642d5981a7144f3bac74bee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018108"
 ---
-# <a name="mdm_enterprisemodernappmanagement_storelicenses02_01-class"></a>MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01-Klasse
+# <a name="mdm_enterprisemodernappmanagement_storelicenses02_01-class"></a>MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01** -Klasse wird verwendet, um Lizenzen für Store-Apps zu verwalten.
+Die **MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 \_ 01-Klasse** wird verwendet, um Lizenzen für Store-Apps zu verwalten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,21 +48,21 @@ class MDM_EnterpriseModernAppManagement_StoreLicenses02_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ enterpritarmodernappmanagement \_ StoreLicenses02 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 \_ 01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01** -Klasse verfügt über diese Methoden.
+Die **MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 \_ 01-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                                              | BESCHREIBUNG                                             |
 |:--------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
-| [**Addlicenanmethod**](mdm-enterprisemodernappmanagement-storelicenses02-01-addlicensemethod.md)                   | Methode zum Hinzufügen einer Lizenz.<br/>                 |
-| [**Getlicenabfromstoremethod**](mdm-enterprisemodernappmanagement-storelicenses02-01-getlicensefromstoremethod.md) | Methode zum erhalten einer Lizenz aus dem Store.<br/> |
+| [**AddLicenseMethod**](mdm-enterprisemodernappmanagement-storelicenses02-01-addlicensemethod.md)                   | Methode zum Hinzufügen einer Lizenz.<br/>                 |
+| [**GetLicenseFromStoreMethod**](mdm-enterprisemodernappmanagement-storelicenses02-01-getlicensefromstoremethod.md) | Methode zum Abrufen einer Lizenz aus dem Store.<br/> |
 
 
 
@@ -70,7 +70,7 @@ Die **MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01** -Klasse ver
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ enterprismodernappmanagement \_ StoreLicenses02 \_ 01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ EnterpriseModernAppManagement \_ StoreLicenses02 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -86,13 +86,13 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Optionaler Knoten. Lizenz-ID für eine installierte Store-App. Die Lizenz-ID ist im Allgemeinen der PFN der app.
+Optionaler Knoten. Lizenz-ID für eine im Store installierte App. Die Lizenz-ID ist im Allgemeinen der PFN der App.
 
-Unterstützte Vorgänge sind Add, Get und DELETE.
+Unterstützte Vorgänge sind Hinzufügen, Get und Löschen.
 
 </dd> <dt>
 
-[Licensecategory](/windows/client-management/mdm/enterprisemodernappmanagement-csp#applicenses-storelicenses-licenseid-licensecategory)
+[LicenseCategory](/windows/client-management/mdm/enterprisemodernappmanagement-csp#applicenses-storelicenses-licenseid-licensecategory)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -103,7 +103,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Licensusage](/windows/client-management/mdm/enterprisemodernappmanagement-csp#applicenses-storelicenses-licenseid-licenseusage)
+[LicenseUsage](/windows/client-management/mdm/enterprisemodernappmanagement-csp#applicenses-storelicenses-licenseid-licenseusage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -114,7 +114,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -147,10 +147,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -159,7 +159,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

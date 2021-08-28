@@ -1,21 +1,21 @@
 ---
-title: Kapselung der einfachen Frame Site
-description: Kapselung der einfachen Frame Site
+title: Simple Frame Site Containment
+description: Simple Frame Site Containment
 ms.assetid: 85c3565f-f557-43af-8d36-58414d0790cd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0106bc88d9f69f380590e808741e0b1a0bdc2f1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2d356d6cc4993702ac571a800ad2abbfe378e8a8fe06ddc80225d81f0fe21a36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129856"
 ---
-# <a name="simple-frame-site-containment"></a>Kapselung der einfachen Frame Site
+# <a name="simple-frame-site-containment"></a>Simple Frame Site Containment
 
-Ein Container Steuerelement ist ein ActiveX-Steuerelement, das andere Steuerelemente enthalten kann. Ein Gruppenfeld, das eine Sammlung von Options Feldern enthält, ist ein Beispiel für ein Container Steuerelement. Container Steuerelemente müssen das OLEMISC \_ simpleframe-Statusbit festlegen und sollten die [**ISimpleFrameSite**](/windows/desktop/api/OCIdl/nn-ocidl-isimpleframesite) -Implementierung Ihres Containers aufzurufen. **ISimpleFrameSite** muss von einem ActiveX-Steuerelement Container implementiert werden, der Container Steuerelemente unterstützt.
+Ein Containersteuerelement ist ein ActiveX Steuerelement, das andere Steuerelemente enthalten kann. Ein Gruppenfeld, das eine Auflistung von Optionsfeldern enthält, ist ein Beispiel für ein Containersteuerelement. Containersteuerelemente sollten das OLEMISC \_ SIMPLEFRAME-Statusbit festlegen und die [**ISimpleFrameSite-Implementierung**](/windows/desktop/api/OCIdl/nn-ocidl-isimpleframesite) des Containers aufrufen. Ein ActiveX Steuerelementcontainer, der Containersteuerelemente unterstützt, muss **ISimpleFrameSite** implementieren.
 
-CATID-{157083e0-2368-11CF-87b9-00aa006c8166} CATID \_ simpleframecontrol
+CATID : {157083E0-2368-11cf-87B9-00AA006C8166} CATID \_ SimpleFrameControl
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -24,9 +24,9 @@ CATID-{157083e0-2368-11CF-87b9-00aa006c8166} CATID \_ simpleframecontrol
 [Komponentenkategorien](component-categories.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

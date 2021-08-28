@@ -1,7 +1,7 @@
 ---
-title: Event Manifest-Schema
+title: EventManifest-Schema
 ms.assetid: 89acbc43-739b-4e89-a96a-cc3438ec8ecc
-description: 'Weitere Informationen finden Sie hier: eventmanifest-Schema'
+description: Weitere Informationen finden Sie unter EventManifest-Schema.
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,31 +9,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 67e1c2e9b769cd26e81a71853037655220a27d1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b282a3570c7ddc510f55c012a13b9438108693a3b6abba06de08ce1da59d734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055848"
 ---
-# <a name="eventmanifest-schema"></a>Event Manifest-Schema
+# <a name="eventmanifest-schema"></a>EventManifest-Schema
 
-Das eventmanifest-Schema definiert die folgenden Elemente und Typen, mit denen Sie ein Instrumentations Manifest schreiben können:
+Das EventManifest-Schema definiert die folgenden Elemente und Typen, die Sie zum Schreiben eines Instrumentierungsmanifests verwenden:
 
 -   [EventManifestSchema-Elemente](eventmanifestschema-elements.md)
--   [EventManifestSchema einfache Typen](eventmanifestschema-simple-types.md)
+-   [Einfache EventManifestSchema-Typen](eventmanifestschema-simple-types.md)
 -   [Komplexe EventManifestSchema-Typen](eventmanifestschema-complex-types.md)
 
-Der Abschnitt "Elemente" enthält die Namen der Elemente, die Sie im Manifest verwenden. Informationen zu den einzelnen Elementen finden Sie jedoch unter dem komplexen Typ, der das Element enthält.
+Der Abschnitt elements enthält die Namen der Elemente, die Sie in Ihrem Manifest verwenden. Um jedoch die Details für jedes Element zu erhalten, sehen Sie sich den komplexen Typ an, der das Element enthält.
 
-Ein Instrumentations Manifest ist eine XML-Datei, die einen Ereignis Anbieter definiert, die Kanäle, auf die die Ereignisse geschrieben werden, die Ereignisse selbst, die Ereignis Filterkriterien, wie z. b. Ebenen, Tasks und Opcodes, und die lokalisierten Zeichen folgen, die beim Rendern der Ereignisse verwendet werden. Die Konvention besteht darin, ". man" als Erweiterung für Manifest-Dateien zu verwenden. Ausführliche Informationen zum Schreiben eines Manifests finden Sie unter [Schreiben eines Instrumentierungs Manifests](writing-an-instrumentation-manifest.md).
+Ein Instrumentierungsmanifest ist eine XML-Datei, die einen Ereignisanbieter definiert, die Kanäle, in die die Ereignisse geschrieben werden, die Ereignisse selbst, die Kriterien für die Ereignisfilterung wie Ebenen, Tasks und Opcodes sowie die lokalisierten Zeichenfolgen, die beim Rendern der Ereignisse verwendet werden. Die Konvention besteht in der Verwendung von .man als Erweiterung für Manifestdateien. Weitere Informationen zum Schreiben eines Manifests finden Sie unter [Schreiben eines Instrumentierungsmanifests.](writing-an-instrumentation-manifest.md)
 
-Die Windows SDK enthält das Schema in der \\ include- \\ Datei "eventman. xsd". Sie können das Manifest mit XSD validieren.
+Das Windows SDK enthält das Schema in der \\ Datei \\ Eventman.xsd enthalten. Sie können die XSD verwenden, um Ihr Manifest zu überprüfen.
 
-Zusätzlich zum eventmanifest-Schema definiert das Windows-Ereignisprotokoll auch die folgenden Schemas:
+Zusätzlich zum EventManifest-Schema definiert Windows Ereignisprotokoll auch die folgenden Schemas:
 
--   [Ereignis Schema](eventschema-schema.md)– definiert die Elemente und Typen, die zum Rendering eines Ereignisses verwendet werden.
--   [Abfrage Schema](queryschema-schema.md)– definiert die Elemente und Typen, mit denen eine Abfrage zum Abrufen von Ereignissen von einem oder mehreren Kanälen geschrieben wird.
+-   [Ereignisschema](eventschema-schema.md): Definiert die Elemente und Typen, die zum Rendern eines Ereignisses verwendet werden.
+-   [Abfrageschema](queryschema-schema.md): Definiert die Elemente und Typen, die zum Schreiben einer Abfrage verwendet werden, um Ereignisse aus einem oder mehr Kanälen abzurufen.
 
  
 

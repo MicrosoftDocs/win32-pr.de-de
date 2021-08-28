@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_PAGEINIT Meldung (adsprop. h)
-description: Eine Active Directory Eigenschaften Blatt Erweiterung ruft adspropgetinitinfo auf, um Daten über das Verzeichnis Objekt zu erhalten, für das die Eigenschaften Blatt Erweiterung gilt.
+title: WM_ADSPROP_NOTIFY_PAGEINIT (Adsprop.h)
+description: Eine Active Directory-Eigenschaftenblatterweiterung ruft die ADsPropGetInitInfo auf, um Daten über das Verzeichnisobjekt zu erhalten, für das die Eigenschaftenblatterweiterung gilt.
 ms.assetid: 473c5a75-d0d9-4d12-b855-63683e8cdf3f
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_PAGEINIT Meldung Active Directory
+- WM_ADSPROP_NOTIFY_PAGEINIT Active Directory-Nachricht
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2718ee30cdbecec7c4e0954636aa14c75f13027
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fcad6ed359edf195b2355920b08d6010597f33dbc0f4e3b1e4c2438c3841ca47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024208"
 ---
-# <a name="wm_adsprop_notify_pageinit-message"></a>WM \_ adsprop \_ benachrichtigt \_ pageInit-Nachricht
+# <a name="wm_adsprop_notify_pageinit-message"></a>WM \_ ADSPROP \_ NOTIFY \_ PAGEINIT-Meldung
 
-Eine Active Directory Eigenschaften Blatt Erweiterung ruft [**adspropgetinitinfo**](/windows/desktop/api/Adsprop/nf-adsprop-adspropgetinitinfo) auf, um Daten über das Verzeichnis Objekt zu erhalten, für das die Eigenschaften Blatt Erweiterung gilt. Die **adspropgetinitinfo** -Funktion sendet die " **WM \_ adsprop \_ Notify \_ pageInit** "-Nachricht an das Benachrichtigungs Objekt, um dieses Ergebnis zu erzielen.
+Eine Active Directory-Eigenschaftenblatterweiterung ruft [**die ADsPropGetInitInfo**](/windows/desktop/api/Adsprop/nf-adsprop-adspropgetinitinfo) auf, um Daten über das Verzeichnisobjekt zu erhalten, für das die Eigenschaftenblatterweiterung gilt. Die **ADsPropGetInitInfo-Funktion** sendet die **WM \_ ADSPROP NOTIFY \_ \_ PAGEINIT-Nachricht** an das Benachrichtigungsobjekt, um dieses Ergebnis zu erzielen.
 
 
 ```C++
@@ -41,30 +41,30 @@ WM_ADSPROP_NOTIFY_PAGEINIT
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Handle des Benachrichtigungs Objekts. Dies ist der *hnotifyobject* -Parameter, der durch einen Aufrufen von [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)abgerufen wird.
+Handle des Benachrichtigungsobjekts. Dies ist der *hNotifyObject-Parameter,* der durch einen Aufruf von [**ADsPropCreateNotifyObj erhalten wurde.**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-*padspropinitparametriams* 
+*pADsPropInitParams* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**adspropinitparameams**](/windows/desktop/api/Adsprop/ns-adsprop-adspropinitparams) -Struktur, die die Verzeichnis Objektinformationen empfängt. Dies ist der an [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)übergebenen *pinitparameams* -Parameter.
+Zeiger auf eine [**ADSPROPINITPARAMS-Struktur,**](/windows/desktop/api/Adsprop/ns-adsprop-adspropinitparams) die die Verzeichnisobjektinformationen empfängt. Dies ist der *pInitParams-Parameter,* der an [**ADsPropCreateNotifyObj übergeben wird.**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,21 +74,21 @@ Diese Nachricht weist keinen Rückgabewert auf.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Adsprop. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adsprop.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Nachrichten in Active Directory Domain Services](messages-in-active-directory-domain-services.md)
 </dt> <dt>
 
-[**Adspropgetinitinfo**](/windows/desktop/api/Adsprop/nf-adsprop-adspropgetinitinfo)
+[**ADsPropGetInitInfo**](/windows/desktop/api/Adsprop/nf-adsprop-adspropgetinitinfo)
 </dt> <dt>
 
-[**Adspropinitparameams**](/windows/desktop/api/Adsprop/ns-adsprop-adspropinitparams)
+[**ADSPROPINITPARAMS**](/windows/desktop/api/Adsprop/ns-adsprop-adspropinitparams)
 </dt> </dl>
 
  

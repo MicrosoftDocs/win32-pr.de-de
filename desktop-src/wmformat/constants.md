@@ -1,32 +1,32 @@
 ---
 title: Windows Media Format SDK-Konstanten
-description: In diesen Artikeln werden Konstanten beschrieben, die von den Objekten der erweiterten WINDOWS Media DRM-Client-APIs verwendet werden.
+description: In diesen Artikeln werden Konstanten beschrieben, die von den Objekten der erweiterten APIs des Windows Media DRM-Clients verwendet werden.
 ms.assetid: 4a481813-c876-4603-85e3-7652e3e20c02
 keywords:
-- Windows Media Format SDK, Konstanten
+- Windows Medienformat-SDK, Konstanten
 - Digital Rights Management (DRM), Konstanten
 - DRM (Digital Rights Management), Konstanten
 - Erweiterte DRM-Client-APIs, Konstanten
 - Erweiterte Client-APIs, Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79e246665761d8d85afef03641d1f9f0c20b1f69
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 1f18ea308afd33be67fa19d30ee60b629bf12192b6cc53fc26cc6569d52f8dd6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112406213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964149"
 ---
 # <a name="windows-media-format-sdk-constants"></a>Windows Media Format SDK-Konstanten
 
-In diesem Abschnitt werden Konstanten beschrieben, die von den -Objekten der erweiterten WINDOWS Media DRM-Client-APIs verwendet werden. Sie enthält die in der folgenden Tabelle aufgeführten Themen.
+In diesem Abschnitt werden Konstanten beschrieben, die von den Objekten der erweiterten WINDOWS-APIs des Media DRM-Clients verwendet werden. Sie enthält die themen, die in der folgenden Tabelle aufgeführt sind.
 
 
 
-| Thema                                                          | Beschreibung                                                                                |
+| Thema                                                          | BESCHREIBUNG                                                                                |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [Rechtekonstanten](rights-constants.md)                       | Listet die Rechtekonstanten auf, die von mehreren Methoden in den DRM-Schnittstellen verwendet werden. |
-| [Bezeichner des Sperrtyps](revocation-type-identifiers.md) | Listet die Konstanten auf, die für GUIDs des Sperrtyps definiert sind.                                     |
+| [Rechtekonst constants](rights-constants.md)                       | Listet die Rechtekonst constants, die von mehreren Methoden in den DRM-Schnittstellen verwendet werden. |
+| [Sperrtypbezeichner](revocation-type-identifiers.md) | Listet die Konstanten auf, die für Sperrtyp-GUIDs definiert sind.                                     |
 
 
 

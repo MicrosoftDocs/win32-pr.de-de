@@ -1,23 +1,23 @@
 ---
-description: Dies ist die Liste der Fehlercodes, die die Implementierung zurückgeben kann, wenn Vorgänge auf Telefongeräten aufgerufen werden. Überprüfen Sie anhand der einzelnen Funktionsbeschreibungen, welche dieser Fehlercodes von den einzelnen Funktionen zurückgegeben werden können.
+description: Dies ist die Liste der Fehlercodes, die die Implementierung beim Aufrufen von Vorgängen auf Telefongeräten zurückgeben kann. Sehen Sie sich die einzelnen Funktionsbeschreibungen an, um zu bestimmen, welche dieser Fehlercodes von jeder Funktion zurückgegeben werden können.
 ms.assetid: 763a9dc2-3e70-4169-a66e-3aac78ef8d33
-title: PHONEERR_ Konstanten (TAPI. h)
+title: PHONEERR_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b41ba5d14f4aa12318dd4bc9f2b20e4e9e2e6b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b66c4dd2078b7de1572137ee1d759e7b186328dc5604c9790e444db428eb774a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060658"
 ---
-# <a name="phoneerr_-constants"></a>Phoneerr- \_ Konstanten
+# <a name="phoneerr_-constants"></a>\_PHONEERR-Konstanten
 
-Dies ist die Liste der Fehlercodes, die die Implementierung zurückgeben kann, wenn Vorgänge auf Telefongeräten aufgerufen werden. Überprüfen Sie anhand der einzelnen Funktionsbeschreibungen, welche dieser Fehlercodes von den einzelnen Funktionen zurückgegeben werden können.
+Dies ist die Liste der Fehlercodes, die die Implementierung beim Aufrufen von Vorgängen auf Telefongeräten zurückgeben kann. Sehen Sie sich die einzelnen Funktionsbeschreibungen an, um zu bestimmen, welche dieser Fehlercodes von jeder Funktion zurückgegeben werden können.
 
 <dl> <dt>
 
-<span id="PHONEERR_ALLOCATED"></span><span id="phoneerr_allocated"></span>**zugewiesene phoneerr \_**
+<span id="PHONEERR_ALLOCATED"></span><span id="phoneerr_allocated"></span>**PHONEERR \_ ZUGEORDNET**
 </dt> <dd> <dl> <dt>
 
 
@@ -27,127 +27,127 @@ Die angegebene Ressource ist bereits zugeordnet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_BADDEVICEID"></span><span id="phoneerr_baddeviceid"></span>**phoneerr \_ badde viceid**
+<span id="PHONEERR_BADDEVICEID"></span><span id="phoneerr_baddeviceid"></span>**PHONEERR \_ BADDEVICEID**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Geräte Bezeichner ist ungültig oder liegt außerhalb des zulässigen Bereichs.
+Der angegebene Gerätebezeichner ist ungültig oder liegt außerhalb des zulässigen Bereichs.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_DISCONNECTED"></span><span id="phoneerr_disconnected"></span>**phoneerr \_ getrennt**
+<span id="PHONEERR_DISCONNECTED"></span><span id="phoneerr_disconnected"></span>**PHONEERR \_ DISCONNECTED**
 </dt> <dd> <dl> <dt>
 
 
 
-Der-Rückruf wurde getrennt.
+Der Aufruf wurde getrennt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INCOMPATIBLEAPIVERSION"></span><span id="phoneerr_incompatibleapiversion"></span>**phoneerr \_ incompatibleapiversion**
+<span id="PHONEERR_INCOMPATIBLEAPIVERSION"></span><span id="phoneerr_incompatibleapiversion"></span>**PHONEERR \_ INCOMPATIBLEAPIVERSION**
 </dt> <dd> <dl> <dt>
 
 
 
-Von der Anwendung wurde eine API-Version oder ein Versions Bereich angefordert, die von der telefonieimplementierung oder dem entsprechenden Dienstanbieter nicht unterstützt werden kann.
+Die Anwendung hat eine API-Version oder einen Versionsbereich angefordert, die von der Telefonie-API-Implementierung oder dem entsprechenden Dienstanbieter nicht unterstützt werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INCOMPATIBLEEXTVERSION"></span><span id="phoneerr_incompatibleextversion"></span>**phoneerr \_ incompatibleextversion**
+<span id="PHONEERR_INCOMPATIBLEEXTVERSION"></span><span id="phoneerr_incompatibleextversion"></span>**PHONEERR \_ INCOMPATIBLEEXTVERSION**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Anwendung hat eine Erweiterungs Version oder einen Versions Bereich angefordert, der vom Dienstanbieter nicht unterstützt werden kann.
+Die Anwendung hat eine Erweiterungsversion oder einen Versionsbereich angefordert, die vom Dienstanbieter nicht unterstützt werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INIFILECORRUPT"></span><span id="phoneerr_inifilecorrupt"></span>**phoneerr \_ inifilebeschädigt**
+<span id="PHONEERR_INIFILECORRUPT"></span><span id="phoneerr_inifilecorrupt"></span>**PHONEERR \_ INIFILECORRUPT**
 </dt> <dd> <dl> <dt>
 
 
 
-Aufgrund interner Inkonsistenzen oder Formatierungs Probleme in der Telephon.ini-Datei kann Sie von TAPI nicht gelesen und verstanden werden.
+Aufgrund interner Inkonsistenzen oder Formatierungsprobleme in der Telephon.ini-Datei kann sie von TAPI nicht ordnungsgemäß gelesen und verstanden werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INUSE"></span><span id="phoneerr_inuse"></span>**phoneerr- \_ InUse**
+<span id="PHONEERR_INUSE"></span><span id="phoneerr_inuse"></span>**PHONEERR \_ INUSE**
 </dt> <dd> <dl> <dt>
 
 
 
-Das Gerät wird zurzeit verwendet. Das Gerät kann nicht konfiguriert werden.
+Das Gerät wird derzeit verwendet. Das Gerät kann nicht konfiguriert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALAPPHANDLE"></span><span id="phoneerr_invalapphandle"></span>**phoneerr \_ invalapphandle**
+<span id="PHONEERR_INVALAPPHANDLE"></span><span id="phoneerr_invalapphandle"></span>**PHONEERR \_ INVALAPPHANDLE**
 </dt> <dd> <dl> <dt>
 
 
 
-Das angegebene Verwendungs handle oder Registrierungs Handle der Anwendung ist ungültig.
+Das angegebene Nutzungshandle oder Registrierungshandle der Anwendung ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALAPPNAME"></span><span id="phoneerr_invalappname"></span>**phoneerr \_ invalappname**
+<span id="PHONEERR_INVALAPPNAME"></span><span id="phoneerr_invalappname"></span>**PHONEERR \_ INVALAPPNAME**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Anwendungsname ist ungültig. Wenn ein Anwendungsname von der Anwendung angegeben wird, wird davon ausgegangen, dass die Zeichenfolge keine nicht anzeigbaren Zeichen enthält und **null**-terminierte Zeichen enthält.
+Der angegebene Anwendungsname ist ungültig. Wenn ein Anwendungsname von der Anwendung angegeben wird, wird davon ausgegangen, dass die Zeichenfolge keine zeichenfreien Zeichen enthält und **NULL**-terminiert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALBUTTONLAMPID"></span><span id="phoneerr_invalbuttonlampid"></span>**phoneerr \_ invalbuttonlampid**
+<span id="PHONEERR_INVALBUTTONLAMPID"></span><span id="phoneerr_invalbuttonlampid"></span>**PHONEERR \_ INVALBUTTONLAMPID**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Schaltflächen-/Lamp-Bezeichner liegt außerhalb des gültigen Bereichs oder ist ungültig.
+Der angegebene Button/Lamp-Bezeichner liegt außerhalb des Bereichs oder ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALBUTTONMODE"></span><span id="phoneerr_invalbuttonmode"></span>**phoneerr- \_ invalbuttonmode**
+<span id="PHONEERR_INVALBUTTONMODE"></span><span id="phoneerr_invalbuttonmode"></span>**PHONEERR \_ INVALBUTTONMODE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Parameter für den Schaltflächen Modus ist ungültig.
+Der Parameter für den Schaltflächenmodus ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALBUTTONSTATE"></span><span id="phoneerr_invalbuttonstate"></span>**phoneerr \_ invalbuttonstate**
+<span id="PHONEERR_INVALBUTTONSTATE"></span><span id="phoneerr_invalbuttonstate"></span>**PHONEERR \_ INVALBUTTONSTATE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Optionsparameter für die Schaltfläche ist ungültig.
+Der Parameter "Button States" ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALDATAID"></span><span id="phoneerr_invaldataid"></span>**phoneerr \_ invaldataid**
+<span id="PHONEERR_INVALDATAID"></span><span id="phoneerr_invaldataid"></span>**PHONEERR \_ INVALDATAID**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Daten Bezeichner ist ungültig.
+Der angegebene Datenbezeichner ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALDEVICECLASS"></span><span id="phoneerr_invaldeviceclass"></span>**phoneerr \_ invalentviceclass**
+<span id="PHONEERR_INVALDEVICECLASS"></span><span id="phoneerr_invaldeviceclass"></span>**PHONEERR \_ INVALDEVICECLASS**
 </dt> <dd> <dl> <dt>
 
 
@@ -157,147 +157,147 @@ Das angegebene Telefon unterstützt die angegebene Geräteklasse nicht.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALEXTVERSION"></span><span id="phoneerr_invalextversion"></span>**phoneerr \_ invalextversion**
+<span id="PHONEERR_INVALEXTVERSION"></span><span id="phoneerr_invalextversion"></span>**PHONEERR \_ INVALEXTVERSION**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Versionsnummer der Dienstanbieter Erweiterung ist ungültig.
+Die Versionsnummer der Dienstanbietererweiterung ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALHOOKSWITCHDEV"></span><span id="phoneerr_invalhookswitchdev"></span>**phoneerr \_ invalhuokswitchdev**
+<span id="PHONEERR_INVALHOOKSWITCHDEV"></span><span id="phoneerr_invalhookswitchdev"></span>**PHONEERR \_ INVALHOOKSWITCHDEV**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Geräteparameter "huokswitch" ist ungültig.
+Der hookswitch-Geräteparameter ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALHOOKSWITCHMODE"></span><span id="phoneerr_invalhookswitchmode"></span>**phoneerr \_ invalchokswitchmode**
+<span id="PHONEERR_INVALHOOKSWITCHMODE"></span><span id="phoneerr_invalhookswitchmode"></span>**PHONEERR \_ INVALHOOKSWITCHMODE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Parameter "sokswitch Mode" ist ungültig.
+Der Hookswitch-Modusparameter ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALLAMPMODE"></span><span id="phoneerr_invallampmode"></span>**phoneerr- \_ invallampmode**
+<span id="PHONEERR_INVALLAMPMODE"></span><span id="phoneerr_invallampmode"></span>**PHONEERR \_ INVALLAMPMODE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Lamp-Modusparameter ist ungültig.
+Der angegebene Lampemodusparameter ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALPARAM"></span><span id="phoneerr_invalparam"></span>**phoneerr \_ invalparam**
+<span id="PHONEERR_INVALPARAM"></span><span id="phoneerr_invalparam"></span>**PHONEERR \_ INVALPARAM**
 </dt> <dd> <dl> <dt>
 
 
 
-Ein Parameter, z. b. ein Zeilen-oder Spaltenwert oder ein Fenster Handle, ist ungültig oder liegt außerhalb des gültigen Bereichs.
+Ein Parameter, z. B. ein Zeilen- oder Spaltenwert oder ein Fensterhandle, ist ungültig oder liegt außerhalb des zulässigen Bereichs.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALPHONEHANDLE"></span><span id="phoneerr_invalphonehandle"></span>**phoneerr \_ invalphonehandle**
+<span id="PHONEERR_INVALPHONEHANDLE"></span><span id="phoneerr_invalphonehandle"></span>**PHONEERR \_ INVALPHONEHANDLE**
 </dt> <dd> <dl> <dt>
 
 
 
-Das angegebene Geräte Handle ist ungültig.
+Das angegebene Gerätehandle ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALPHONESTATE"></span><span id="phoneerr_invalphonestate"></span>**phoneerr \_ invalphonestate**
+<span id="PHONEERR_INVALPHONESTATE"></span><span id="phoneerr_invalphonestate"></span>**PHONEERR \_ INVALPHONESTATE**
 </dt> <dd> <dl> <dt>
 
 
 
-Das Telefongerät befindet sich nicht in einem gültigen Zustand für den angeforderten Vorgang.
+Das Telefongerät befindet sich für den angeforderten Vorgang nicht in einem gültigen Zustand.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALPOINTER"></span><span id="phoneerr_invalpointer"></span>**phoneerr- \_ invalpointer**
+<span id="PHONEERR_INVALPOINTER"></span><span id="phoneerr_invalpointer"></span>**PHONEERR \_ INVALPOINTER**
 </dt> <dd> <dl> <dt>
 
 
 
-Mindestens einer der angegebenen Zeiger Parameter ist ungültig.
+Mindestens einer der angegebenen Zeigerparameter ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALPRIVILEGE"></span><span id="phoneerr_invalprivilege"></span>**phoneerr \_ invalprivilege**
+<span id="PHONEERR_INVALPRIVILEGE"></span><span id="phoneerr_invalprivilege"></span>**PHONEERR \_ INVALPRIVILEGE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der *dwprivilege* -Parameter ist ungültig.
+Der *dwPrivilege-Parameter* ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_INVALRINGMODE"></span><span id="phoneerr_invalringmode"></span>**phoneerr- \_ invalringmode**
+<span id="PHONEERR_INVALRINGMODE"></span><span id="phoneerr_invalringmode"></span>**PHONEERR \_ INVALRINGMODE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der ringmodusparameter ist ungültig.
+Der Ringmodusparameter ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_NODEVICE"></span><span id="phoneerr_nodevice"></span>**phoneerr- \_ nodevice**
+<span id="PHONEERR_NODEVICE"></span><span id="phoneerr_nodevice"></span>**PHONEERR \_ NODEVICE**
 </dt> <dd> <dl> <dt>
 
 
 
-Der angegebene Geräte Bezeichner, der zuvor gültig war, wird nicht mehr akzeptiert, weil das zugehörige Gerät seit der letzten Initialisierung von TAPI aus dem System entfernt wurde oder auf eine Weise beschädigt ist, die bei der Initialisierung nicht erkannt wurde.
+Der angegebene Gerätebezeichner, der zuvor gültig war, wird nicht mehr akzeptiert, da das zugeordnete Gerät seit der letzten Initialisierung von TAPI aus dem System entfernt wurde oder in einer Weise beschädigt ist, die bei der Initialisierung nicht erkannt wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_NODRIVER"></span><span id="phoneerr_nodriver"></span>**phoneerr- \_ nodriver**
+<span id="PHONEERR_NODRIVER"></span><span id="phoneerr_nodriver"></span>**PHONEERR \_ NODRIVER**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Telefon Dienstanbieter für das angegebene Gerät hat festgestellt, dass eine der Komponenten fehlt oder beschädigt ist, weil Sie beim Initialisierungs Zeitpunkt nicht erkannt wurde. Der Benutzer sollte aufgefordert werden, das Problem mithilfe der Telefonie-Systemsteuerung zu beheben.
+Der Telefondienstanbieter für das angegebene Gerät hat festgestellt, dass eine seiner Komponenten auf eine Weise fehlt oder beschädigt ist, die zum Zeitpunkt der Initialisierung nicht erkannt wurde. Dem Benutzer sollte empfohlen werden, die Telefonie-Systemsteuerung zu verwenden, um das Problem zu beheben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_NOMEM"></span><span id="phoneerr_nomem"></span>**phoneerr \_ NOMEM**
+<span id="PHONEERR_NOMEM"></span><span id="phoneerr_nomem"></span>**PHONEERR \_ NOMEM**
 </dt> <dd> <dl> <dt>
 
 
 
-Nicht genügend Arbeitsspeicher, um den angeforderten Vorgang abzuschließen, oder es kann kein Arbeitsspeicher belegt oder gesperrt werden.
+Nicht genügend Arbeitsspeicher, um den angeforderten Vorgang abzuschließen, oder Arbeitsspeicher kann nicht zugeordnet oder gesperrt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_NOTOWNER"></span><span id="phoneerr_notowner"></span>**phoneerr- \_ notowner**
+<span id="PHONEERR_NOTOWNER"></span><span id="phoneerr_notowner"></span>**PHONEERR \_ NOLOCKER**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Anwendung verfügt nicht über die Berechtigung "Besitzer" für das angegebene Telefongerät.
+Die Anwendung verfügt nicht über Besitzerberechtigungen für das angegebene Telefongerät.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_OPERATIONFAILED"></span><span id="phoneerr_operationfailed"></span>**phoneerr- \_ operationfailed**
+<span id="PHONEERR_OPERATIONFAILED"></span><span id="phoneerr_operationfailed"></span>**PHONEERR \_ OPERATIONFAILED**
 </dt> <dd> <dl> <dt>
 
 
@@ -307,7 +307,7 @@ Der Vorgang ist aus einem nicht angegebenen Grund fehlgeschlagen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_OPERATIONUNAVAIL"></span><span id="phoneerr_operationunavail"></span>**phoneerr \_ operationunnütz**
+<span id="PHONEERR_OPERATIONUNAVAIL"></span><span id="phoneerr_operationunavail"></span>**\_PHONEERR-VORGANGUNAVAIL**
 </dt> <dd> <dl> <dt>
 
 
@@ -317,61 +317,61 @@ Der Vorgang ist nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_REINIT"></span><span id="phoneerr_reinit"></span>**phoneerr \_ Reit**
+<span id="PHONEERR_REINIT"></span><span id="phoneerr_reinit"></span>**PHONEERR \_ REINIT**
 </dt> <dd> <dl> <dt>
 
 
 
-Wenn die TAPI-Neuinitialisierung angefordert wurde, z. b. aufgrund des Hinzufügens oder Entfernens eines Telefoniedienstanbieters, anschließend werden [**phoneinitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize)-, [**phoneinitializeex**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa) -oder [**phoneopen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen) -Anforderungen mit diesem Fehler zurückgewiesen, bis die letzte Anwendung die Verwendung der API herunterfährt (mithilfe von " [**phoneshutdown**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)"). zu diesem Zeitpunkt wird die neue Konfiguration wirksam, und Anwendungen sind erneut berechtigt, **phoneinitialize** oder **phoneinitializeex** aufzurufen.
+Wenn die erneute INITIALISIERUNG von TAPI angefordert wurde, z. B. aufgrund des Hinzufügens oder Entfernens eines Telefoniedienstanbieters, werden [**phoneInitialize-,**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize) [**phoneInitializeEx-**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa) oder [**phoneOpen-Anforderungen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen) mit diesem Fehler abgelehnt, bis die letzte Anwendung die Verwendung der API heruntergefahren hat (mit [**phoneShutdown).**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)Zu diesem Zeitpunkt wird die neue Konfiguration wirksam, und Anwendungen können **phoneInitialize** oder **phoneInitializeEx** erneut aufrufen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_REQUESTOVERRUN"></span><span id="phoneerr_requestoverrun"></span>**phoneerr \_ requestüberlauf**
+<span id="PHONEERR_REQUESTOVERRUN"></span><span id="phoneerr_requestoverrun"></span>**PHONEERR \_ REQUESTOVERRUN**
 </dt> <dd> <dl> <dt>
 
 
 
-Die maximal zulässige Anzahl von ausstehenden Telefon Anforderungen wurde überschritten.
+Die maximale Anzahl ausstehender Telefonanforderungen wurde überschritten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_RESOURCEUNAVAIL"></span><span id="phoneerr_resourceunavail"></span>**phoneerr \_ resourceunnütz**
+<span id="PHONEERR_RESOURCEUNAVAIL"></span><span id="phoneerr_resourceunavail"></span>**\_PHONEERR-RESSOURCEUNAVAIL**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Vorgang kann nicht abgeschlossen werden, da eine übermäßige Ressourcen Überschreitung besteht.
+Der Vorgang kann aufgrund einer Ressourcenüberbelegung nicht abgeschlossen werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_STRUCTURETOOSMALL"></span><span id="phoneerr_structuretoosmall"></span>**phoneerr \_ structureum**
+<span id="PHONEERR_STRUCTURETOOSMALL"></span><span id="phoneerr_structuretoosmall"></span>**\_PHONEERR-STRUKTURTOOSMALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Die angegebene Telefon Caps-Struktur ist zu klein.
+Die angegebene Telefondekortestruktur ist zu klein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="PHONEERR_UNINITIALIZED"></span><span id="phoneerr_uninitialized"></span>**phoneerr \_ nicht initialisiert**
+<span id="PHONEERR_UNINITIALIZED"></span><span id="phoneerr_uninitialized"></span>**PHONEERR \_ NICHT INITIALISIERT**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Vorgang wurde vor einer Anwendung namens [**phoneinitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize), [**phoneinitializeex**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)aufgerufen.
+Der Vorgang wurde vor jeder Anwendung namens [**phoneInitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize), [**phoneInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)aufgerufen.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Werte 0xC0000000 bis 0xffffffff sind für gerätespezifische Erweiterungen verfügbar. die Werte 0x80000000 bis 0xBFFFFFFF sind reserviert. und 0x00000000 bis 0x7FFFFFFF werden als Anforderungs Bezeichner verwendet.
+Die Werte, die über 0xFFFFFFFF 0xC0000000 werden, sind für gerätespezifische Erweiterungen verfügbar. die Werte, die über 0xBFFFFFFF 0x80000000 werden, reserviert sind. und 0x00000000 über 0x7FFFFFFF werden als Anforderungsbezeichner verwendet.
 
-Wenn eine Anwendung eine Fehlermeldung erhält, die Sie nicht speziell behandelt (z. b. einen Fehler, der durch eine gerätespezifische Erweiterung definiert wurde), sollte Sie den Fehler als phoneerr \_ operationfailed (aus einem nicht angegebenen Grund) behandeln.
+Wenn eine Anwendung eine Fehlerrückgabe erhält, die sie nicht spezifisch behandelt (z. B. einen von einer gerätespezifischen Erweiterung definierten Fehler), sollte sie den Fehler als PHONEERR \_ OPERATIONFAILED behandeln (aus einem nicht angegebenen Grund).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -379,8 +379,8 @@ Wenn eine Anwendung eine Fehlermeldung erhält, die Sie nicht speziell behandelt
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -388,16 +388,16 @@ Wenn eine Anwendung eine Fehlermeldung erhält, die Sie nicht speziell behandelt
 
 <dl> <dt>
 
-[**phoneinitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize)
+[**phoneInitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize)
 </dt> <dt>
 
-[**phoneinitializeex**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)
+[**phoneInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)
 </dt> <dt>
 
-[**phoneopen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen)
+[**phoneÖffnen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen)
 </dt> <dt>
 
-[**phoneshutdown**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)
+[**phoneShutdown**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)
 </dt> </dl>
 
  

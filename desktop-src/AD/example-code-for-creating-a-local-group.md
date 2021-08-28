@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Erstellen einer lokalen Gruppe
-description: Beispiel Code für das Erstellen einer lokalen Gruppe
+title: Beispielcode zum Erstellen einer lokalen Gruppe
+description: Beispielcode zum Erstellen einer lokalen Gruppe
 ms.assetid: e204ea67-52c0-430a-bb22-a53f4c084e4f
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Erstellen einer lokalen Gruppe
+- 'Active Directory-Beispiele: Active Directory, Erstellen einer lokalen Gruppe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19ac9439d22613920b07ad24b2c4e79f66eff05e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 99ecb6de577c185b1e73244a609ad9e58af9d0fa2979b8ffd1e41f282c933100
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962419"
 ---
-# <a name="example-code-for-creating-a-local-group"></a>Beispiel Code für das Erstellen einer lokalen Gruppe
+# <a name="example-code-for-creating-a-local-group"></a>Beispielcode zum Erstellen einer lokalen Gruppe
 
-Im folgenden C++-Codebeispiel wird eine lokale Gruppe auf einem Mitglieds Server oder einem Computer erstellt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
+Im folgenden C++-Codebeispiel wird eine lokale Gruppe auf einem Mitgliedsserver oder einem Computer erstellt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
 
 
 ```C++
@@ -145,7 +145,7 @@ HRESULT CreateMachineLocalGroup(
 
 
 
-Im folgenden Visual Basic Codebeispiel wird eine lokale Gruppe auf einem Mitglieds Server oder einem Computer erstellt, der auf Windows NT Workstation oder Windows 2000 Professional ausgeführt wird.
+Im folgenden Visual Basic Codebeispiel wird eine lokale Gruppe auf einem Mitgliedsserver oder einem Computer erstellt, der auf Windows NT-Arbeitsstation oder Windows 2000-Professional ausgeführt wird.
 
 
 ```VB
@@ -178,9 +178,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

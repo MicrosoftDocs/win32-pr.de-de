@@ -1,22 +1,22 @@
 ---
-title: Wichtige Pipe-Terminologie
-description: Wie bei anderen Typen von Parametern für Remote Prozedur Aufrufe können Pipes in den Parametern \ oder \ out \ Parameter lauten.
+title: Grundlegende Pipeterminologie
+description: Wie bei anderen Parametertypen für Remoteprozeduraufrufe können Pipes die Parameter \in\ oder \ out\ sein.
 ms.assetid: 377fb65a-e819-4e96-a5b7-9850afd97b73
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3df183d18d7962ad0c63ecaa0d350006a4144f23
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 389885f440faa477ab22f2100685e2955cbf9fb7ddc4ffcb6440dc4b6f68e003
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104517018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118930069"
 ---
-# <a name="essential-pipe-terminology"></a>Wichtige Pipe-Terminologie
+# <a name="essential-pipe-terminology"></a>Grundlegende Pipeterminologie
 
-Wie bei anderen Typen von Parametern für Remote Prozedur Aufrufe können Pipes \[ [**in**](/windows/desktop/Midl/in) - \] oder \[ [**out**](/windows/desktop/Midl/out-idl) - \] Parameter sein. Da der Server die Übertragung von Daten über eine Pipe steuert, werden Pipes mit dem \[ **in** - \] Attribut zum *Abrufen* von Daten an den Server verwendet. Auf ähnliche Weise überträgt *Output Pipes Daten* vom Server an den Client. Die Prozeduren, die die Datenübertragung ausführen, werden als *Pull-Prozedur* bzw. als *pushprozedur* bezeichnet.
+Wie bei anderen Parametertypen für Remoteprozeduraufrufe können Pipes \[ [**in - oder**](/windows/desktop/Midl/in) \] \[ [**out-Parametern enthalten**](/windows/desktop/Midl/out-idl) \] sein. Da der Server die Übertragung von Daten über eine Pipe steuert, werden Pipes mit dem in-Attribut als Pulldaten \[  \] an den Server  bezeichnet. Ebenso übertragen Ausgabepipes *Daten* vom Server an den Client. Die Prozeduren für die Datenübertragung werden als *Pullprozedur* bzw. *Pushprozedur* bezeichnet.
 
-Der mittlerer l-Compiler generiert die Push-und Pull-Prozeduren für den Server. Außerdem wird die Zuordnung von Daten Puffern im Arbeitsspeicher verwaltet. Der Client muss jedoch eigene Push-und Pull-Prozeduren bereitstellen. Außerdem muss Sie eine Prozedur zum Zuordnen der von der Pipe verwendeten Speicherpuffer bereitstellen. Diese werden automatisch vom Clientstub zum richtigen Zeitpunkt aufgerufen. Die Zuordnungs Prozedur wird häufig als Zuordnungseinheits-Prozedur oder Zuordnungseinheits-Funktion bezeichnet.
+Der MIDL-Compiler generiert die Push- und Pull-Prozeduren für den Server. Darüber hinaus wird die Zuordnung von Datenpuffern im Arbeitsspeicher verwaltet. Der Client muss jedoch eigene Push- und Pull-Prozeduren bereitstellen. Sie muss auch eine Prozedur zum Zuordnen der von der Pipe verwendeten Speicherpuffer bereitstellen. Diese werden automatisch zum entsprechenden Zeitpunkt vom Clientstub aufgerufen. Die Zuordnungsprozedur wird häufig als Zuordnungsprozedur oder zuordnungsfunktion bezeichnet.
 
- 
+ 
 
- 
+ 

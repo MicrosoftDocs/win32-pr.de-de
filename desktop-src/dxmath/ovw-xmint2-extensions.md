@@ -4,12 +4,12 @@ ms.assetid: de42c75b-fd8d-4888-9673-370930d98fb5
 title: XMINT2-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2cca272563d973c6fba87184faaf297bd19918d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07a9715ab89e22d936300cd86a33beb7c9fcad575e7bab20369d29c2e064cafb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984920"
 ---
 # <a name="xmint2-extensions"></a>XMINT2-Erweiterungen
 
@@ -24,10 +24,10 @@ ms.locfileid: "106359956"
 
 
 
-| Thema                                                   | BESCHREIBUNG                                  |
+| Thema                                                   | Beschreibung                                  |
 |---------------------------------------------------------|----------------------------------------------|
-| [**XMINT2-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmint2-xmint2(constint32_t))<br/>   | Von verfügbar gemachte Konstruktoren `XMINT2` .<br/> |
-| [XMINT2-Operatoren](ovw-xmint2-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMINT2` .<br/>    |
+| [**XMINT2-Konstruktoren**](/windows/win32/api/directxmath/nf-directxmath-xmint2-xmint2(constint32_t))<br/>   | Konstruktoren, die von verfügbar gemacht `XMINT2` werden.<br/> |
+| [XMINT2-Operatoren](ovw-xmint2-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMINT2` werden.<br/>    |
 
 
 

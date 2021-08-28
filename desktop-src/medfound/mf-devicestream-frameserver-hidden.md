@@ -1,19 +1,19 @@
 ---
-description: Wenn das Attribut für einen Stream festgelegt ist, wird der Datenstrom vom Client als ausgeblendet markiert.
+description: Wenn dieses Attribut für einen Stream festgelegt wird, wird der Datenstrom als vom Client ausgeblendet markiert.
 ms.assetid: E1C3A4B6-7D51-4D29-AF06-0A7FBDDB9A9E
-title: MF_DEVICESTREAM_FRAMESERVER_HIDDEN-Attribut (mspdl. h)
+title: MF_DEVICESTREAM_FRAMESERVER_HIDDEN-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 981df1670bec3cff7bad2e241b1f47d3d340dcdd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab49a9fcf0876e8708460e9e7cf36d68eb630aea4499b358a542f759cc4dfcd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119104976"
 ---
-# <a name="mf_devicestream_frameserver_hidden-attribute"></a>Ausgeblendetes Attribut für MF- \_ Attribut "envicestream" \_ \_
+# <a name="mf_devicestream_frameserver_hidden-attribute"></a>MF \_ DEVICESTREAM \_ FRAMESERVER \_ HIDDEN-Attribut
 
-Wenn das Attribut für einen Stream festgelegt ist, wird der Datenstrom vom Client als ausgeblendet markiert.
+Wenn dieses Attribut für einen Stream festgelegt wird, wird der Datenstrom als vom Client ausgeblendet markiert.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,9 +25,9 @@ Wenn das Attribut für einen Stream festgelegt ist, wird der Datenstrom vom Clie
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

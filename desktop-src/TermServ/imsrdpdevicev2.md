@@ -1,11 +1,11 @@
 ---
 title: IMsRdpDeviceV2-Schnittstelle
-description: Enthält Informationen zu einem Geräte Objekt. Dies ist eine Erweiterung der imsrdpdevice-Schnittstelle.
+description: Enthält Informationen zu einem Geräteobjekt. Dies ist eine Erweiterung der IMsRdpDevice-Schnittstelle.
 ms.assetid: 9a380a1a-d44f-4147-8917-bf1e07dbac15
 ms.tgt_platform: multiple
 keywords:
 - IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste
-- IMsRdpDeviceV2 Interface Remotedesktopdienste, beschrieben
+- IMsRdpDeviceV2-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,38 +16,38 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c46e1e4df8f9cd521d67383960e9ccf5060bb2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cca125024592851b260fb8e4c1f43c7621d4897fec0fc19dfc80d18278e09cf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000750"
 ---
 # <a name="imsrdpdevicev2-interface"></a>IMsRdpDeviceV2-Schnittstelle
 
-Enthält Informationen zu einem Geräte Objekt. Dies ist eine Erweiterung der [**imsrdpdevice**](imsrdpdevice.md) -Schnittstelle.
+Enthält Informationen zu einem Geräteobjekt. Dies ist eine Erweiterung der [**IMsRdpDevice-Schnittstelle.**](imsrdpdevice.md)
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpDeviceV2** -Schnittstelle erbt von [**imsrdpdevice**](imsrdpdevice.md). **IMsRdpDeviceV2** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpDeviceV2-Schnittstelle** erbt von [**IMsRdpDevice**](imsrdpdevice.md). **IMsRdpDeviceV2** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **IMsRdpDeviceV2** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpDeviceV2-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                 | Zugriffstyp          | BESCHREIBUNG                                                                                        |
+| Eigenschaft                                                                 | Zugriffstyp          | Beschreibung                                                                                        |
 |:-------------------------------------------------------------------------|:---------------------|:---------------------------------------------------------------------------------------------------|
-| [**Cmclassguid**](imsrdpdevicev2-cmclassguid.md)<br/>             | Schreibgeschützt<br/> | Enthält die Configuration Manager-Setup Klassen-GUID für das Gerät.<br/>                     |
-| [**Cmdebug**](imsrdpdevicev2-cmdeviceinstance.md)<br/>   | Schreibgeschützt<br/> | Enthält die Configuration Manager-Geräte Instanz des Geräts.<br/>                       |
-| [**Devicetext**](imsrdpdevicev2-devicetext.md)<br/>               | Schreibgeschützt<br/> | Enthält den Geräte Text.<br/>                                                               |
-| [**Driveletterbitmap**](imsrdpdevicev2-driveletterbitmap.md)<br/> | Schreibgeschützt<br/> | Enthält ein Bitfeld, das eine Zuordnung der im Gerät enthaltenen Laufwerk Buchstaben darstellt.<br/> |
-| [**Iscompositedevice**](imsrdpdevicev2-iscompositedevice.md)<br/> | Schreibgeschützt<br/> | Gibt an, ob es sich um ein zusammengesetztes Gerät handelt.<br/>                                          |
-| [**Isoptionaldevice**](imsrdpdevicev2-isoptionaldevice.md)<br/>   | Schreibgeschützt<br/> | Gibt an, ob das Gerät für die USB-Umleitung optional ist.<br/>                                |
-| [**Isusbdevice**](imsrdpdevicev2-isusbdevice.md)<br/>             | Schreibgeschützt<br/> | Gibt an, ob das Gerät für die USB-Umleitung vorgesehen ist.<br/>                                         |
+| [**CmClassGuid**](imsrdpdevicev2-cmclassguid.md)<br/>             | Schreibgeschützt<br/> | Enthält die Configuration Manager-Setupklassen-GUID für das Gerät.<br/>                     |
+| [**CmDeviceInstance**](imsrdpdevicev2-cmdeviceinstance.md)<br/>   | Schreibgeschützt<br/> | Enthält die Configuration Manager-Geräteinstanz des Geräts.<br/>                       |
+| [**DeviceText**](imsrdpdevicev2-devicetext.md)<br/>               | Schreibgeschützt<br/> | Enthält den Gerätetext.<br/>                                                               |
+| [**DriveLetterBitmap**](imsrdpdevicev2-driveletterbitmap.md)<br/> | Schreibgeschützt<br/> | Enthält ein Bitfeld, das eine Zuordnung von Laufwerkbuchstaben darstellt, die im Gerät enthalten sind.<br/> |
+| [**IsCompositeDevice**](imsrdpdevicev2-iscompositedevice.md)<br/> | Schreibgeschützt<br/> | Gibt an, ob das Gerät ein zusammengesetztes Gerät ist.<br/>                                          |
+| [**IsOptionalDevice**](imsrdpdevicev2-isoptionaldevice.md)<br/>   | Schreibgeschützt<br/> | Gibt an, ob das Gerät für die USB-Umleitung optional ist.<br/>                                |
+| [**IsUSBDevice**](imsrdpdevicev2-isusbdevice.md)<br/>             | Schreibgeschützt<br/> | Gibt an, ob das Gerät für die USB-Umleitung vorgesehen ist.<br/>                                         |
 
 
 
@@ -63,7 +63,7 @@ Die **IMsRdpDeviceV2** -Schnittstelle verfügt über diese Eigenschaften.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 mit SP1<br/>                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpDeviceV2 wird als 5b94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
+| IID<br/>                      | IID \_ IMsRdpDeviceV2 ist als 5fb94466-7661-42a8-98b7-01904c11668f definiert.<br/>      |
 
 
 

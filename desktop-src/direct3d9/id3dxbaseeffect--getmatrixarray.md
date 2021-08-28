@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Array von nicht umsetzten Matrizen ab.
+description: Ruft ein Array von nicht übersetzten Matrizen ab.
 ms.assetid: 37b08f55-22f1-4b60-8cd4-566a77e7dbd6
-title: 'ID3DXBaseEffect:: getmatrixarray-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetMatrixArray-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 242b3c42976f9bfe4ad8ecad4d965c473839ffdd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6d94820200cfc4cdc90c0a67562ac84efd57cd5cacb8e2a0ff37fcb91454db33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987790"
 ---
-# <a name="id3dxbaseeffectgetmatrixarray-method"></a>ID3DXBaseEffect:: getmatrixarray-Methode
+# <a name="id3dxbaseeffectgetmatrixarray-method"></a>ID3DXBaseEffect::GetMatrixArray-Methode
 
-Ruft ein Array von nicht umsetzten Matrizen ab.
+Ruft ein Array von nicht übersetzten Matrizen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT GetMatrixArray(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*pmatrix* \[ vorgenommen\]
+*pMatrix* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Gibt ein Array nicht umsetzbarer Matrizen zurück. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Gibt ein Array von nicht übersetzten Matrizen zurück. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Matrizen im Array.
+Anzahl der Matrizen im Array.
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Anzahl von Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine nicht umgesetzte Matrix enthält Zeilen Hauptdaten; Das heißt, jeder Vektor ist in einer Zeile enthalten.
+Eine nicht übersetzte Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
 
-Wenn die Ziel Matrizen größer als die Quell Matrizen sind, werden nur die linken oberen Komponenten der einzelnen Ziel Matrix gefüllt, und die restlichen Ziel Matrixkomponenten werden auf 0 (null) festgelegt.
+Wenn die Zielmatrizen größer als die Quellmatrizen sind, werden nur die linken oberen Komponenten jeder Zielmatrix gefüllt, und die verbleibenden Zielmatrixkomponenten werden auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,19 +87,19 @@ Wenn die Ziel Matrizen größer als die Quell Matrizen sind, werden nur die link
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXBaseEffect](id3dxbaseeffect.md)
 </dt> <dt>
 
-[**Setmatrixarray**](id3dxbaseeffect--setmatrixarray.md)
+[**SetMatrixArray**](id3dxbaseeffect--setmatrixarray.md)
 </dt> </dl>
 
  

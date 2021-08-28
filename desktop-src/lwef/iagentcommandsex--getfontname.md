@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandsex getfontname
-description: Iagentcommandsex getfontname
+title: IAgentCommandsEx GetFontName
+description: IAgentCommandsEx GetFontName
 ms.assetid: cd0d0d93-839e-471c-9cfa-9f47dcce841b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 215f08cbe1e5e97b218f9279baff5e3affd74956
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 757b2d7554f1efcee27a519b9df61b4601a237b557c3aa26b6575864144a2850
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105236"
 ---
-# <a name="iagentcommandsexgetfontname"></a>Iagentcommandsex:: getfontname
+# <a name="iagentcommandsexgetfontname"></a>IAgentCommandsEx::GetFontName
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetFontName(
@@ -27,25 +27,25 @@ Ruft den Wert für die Schriftart ab, die im Popupmenü des Zeichens angezeigt w
 
 <dl> <dt>
 
-<span id="pbszFontName"></span><span id="pbszfontname"></span><span id="PBSZFONTNAME"></span>*pbszfontname*
+<span id="pbszFontName"></span><span id="pbszfontname"></span><span id="PBSZFONTNAME"></span>*pbszFontName*
 </dt> <dd>
 
-Die Adresse eines BSTR, der den im Popupmenü des Zeichens angezeigten Schriftart Namen empfängt.
+Die Adresse eines BSTR, der den im Popupmenü des Zeichens angezeigten Schriftartnamen empfängt.
 
 </dd> </dl>
 
-Der zurückgegebene Schriftart Name entspricht der Schriftart, die zum Anzeigen von Text im Popupmenü des Zeichens verwendet wird, wenn die Client Anwendung aktiv ist. Der Standardwert für die Schriftart Einstellung basiert auf der Einstellung für die Menü Schriftart für die Sprach-ID-Einstellung des Zeichens oder, wenn nicht festgelegt, der Standardeinstellung für die Benutzereinstellung für die Sprache.
+Der zurückgegebene Schriftartname entspricht der Schriftart, die verwendet wird, um Text im Popupmenü des Zeichens anzuzeigen, wenn Ihre Clientanwendung eingabeaktiv ist. Der Standardwert für die Schriftarteinstellung basiert auf der Menüschriftarteinstellung für die Sprach-ID-Einstellung des Zeichens oder, falls nicht festgelegt, der Einstellung der Standardsprach-ID des Benutzers.
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandsex:: setfontname**](iagentcommandsex--setfontname.md), [ **iagentcommandsex:: SetFontSize**](iagentcommandsex--setfontsize.md)
+[**IAgentCommandsEx::SetFontName**](iagentcommandsex--setfontname.md), [ **IAgentCommandsEx::SetFontSize**](iagentcommandsex--setfontsize.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

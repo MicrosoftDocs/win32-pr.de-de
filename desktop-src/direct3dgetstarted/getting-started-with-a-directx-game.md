@@ -4,12 +4,12 @@ description: Das Erstellen eines Microsoft DirectX-Spiels für Windows ist eine 
 ms.assetid: fd460c52-9854-4ffe-b89e-5219be2e11f0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bac8ca2805fed9ec42faf9deda9ddd51da39685
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: a6c93944b29546746f88b3edcacaefeeeacde0784e51f82c74f4cd462bc62025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987000"
 ---
 # <a name="get-started-with-directx-for-windows"></a>Erste Schritte mit DirectX für Windows
 
@@ -25,7 +25,7 @@ Um ein Spiel in DirectX für Windows entwickeln zu können, müssen Sie über ei
 -   Grundlegendes zur Geometrie, Trigonometrie und linearen Algebra. Ein Großteil des Codes, den Sie in den Beispielen finden, setzt voraus, dass Sie diese Formen der Mathematik und ihre allgemeinen Regeln verstehen.
 -   Vertrautheit mit COM– insbesondere [**Microsoft::WRL::ComPtr**](/previous-versions/visualstudio/visual-studio-2012/br244983(v=vs.110)) (intelligenter Zeiger).
 -   Machen Sie sich mit den Grundlagen der Grafik- und Grafiktechnologie, insbesondere 3D-Grafiken, aus. Obwohl DirectX selbst über eine eigene Terminologie verfügt, baut es immer noch auf einem fundierten Verständnis allgemeiner 3D-Grafikprinzipien auf.
--   Verstehen Sie das Konzept einer Nachrichtenschleife, da Sie eine Schleife implementieren, die auf das Windows-Betriebssystem lauscht.
+-   Verstehen Sie das Konzept einer Nachrichtenschleife, da Sie eine Schleife implementieren, die auf das Windows Betriebssystem lauscht.
 
 ## <a name="and-were-off"></a>Und wir sind los!
 
@@ -33,16 +33,16 @@ Bist du bereit? Sehen wir uns dies noch einmal an. Sie haben:
 
 -   Eine aktualisierte und funktionierende Installation von Windows 8.1.
 -   Eine Installation von [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/download-visual-studio-vs).
--   Ein unerschrockener Kasten und der Wunsch, mehr über die DirectX-Spieleentwicklung zu erfahren!
+-   Ein unerschrockener Spieler und der Wunsch, mehr über die Entwicklung von DirectX-Spielen zu erfahren!
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 
 
-| Thema                                                                                                   | BESCHREIBUNG                                                                                                           |
+| Thema                                                                                                   | Beschreibung                                                                                                           |
 |----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [Arbeiten mit DirectX-Geräteressourcen](work-with-dxgi.md)                                           | Erfahren Sie, wie Sie DXGI verwenden, um ein virtualisiertes Grafikgerät zu erstellen und eine Austauschkette zu erstellen und zu konfigurieren.     |
-| [Verstehen der Direct3D 11-Renderingpipeline](understand-the-directx-11-2-graphics-pipeline.md) | Erfahren Sie, wie Sie mithilfe der Direct3D-Grafikpipeline eine Verbindung mit der DirectX-Geräteressourcenklasse erstellen und zeichnen. |
+| [Arbeiten mit DirectX-Geräteressourcen](work-with-dxgi.md)                                           | Erfahren Sie, wie Sie DXGI verwenden, um ein virtualisiertes Grafikgerät zu erstellen und eine Swapkette zu erstellen und zu konfigurieren.     |
+| [Grundlegendes zur Direct3D 11-Renderingpipeline](understand-the-directx-11-2-graphics-pipeline.md) | Erfahren Sie, wie Sie die DirectX-Geräteressourcenklasse verknüpfen und mithilfe der Direct3D-Grafikpipeline zeichnen. |
 | [Arbeiten mit Shadern und Shaderressourcen](work-with-shaders-and-shader-resources.md)               | Erfahren Sie, wie Sie HLSL-Shaderprogramme für Direct3D-Grafikpipelinestufen schreiben.                            |
 
 

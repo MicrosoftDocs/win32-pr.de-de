@@ -1,21 +1,21 @@
 ---
-description: Die get \_ enumerationif-Methode ruft einen Zeiger auf eine mediumenumerationsschnittstelle ab.
+description: Die get \_ EnumerationIf-Methode ruft einen Zeiger auf eine Medienenumerationsschnittstelle ab.
 ms.assetid: d5f1e10f-e5ad-45e6-a5ec-024905603012
-title: 'Itmediacollection:: get_EnumerationIf-Methode (sdpblb. h)'
+title: ITMediaCollection::get_EnumerationIf-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28a7e7d85c1f7a433a31360fabc8b5dac71e68ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dfe14475e216b5143b599aab50d12d1d0c548b5f64dd8e44edd2e6aab249905c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060858"
 ---
-# <a name="itmediacollectionget_enumerationif-method"></a>Itmediacollection:: get \_ enumerationif-Methode
+# <a name="itmediacollectionget_enumerationif-method"></a>ITMediaCollection::get \_ EnumerationIf-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ enumerationif** -Methode ruft einen Zeiger auf eine mediumenumerationsschnittstelle ab.
+Die **get \_ EnumerationIf-Methode** ruft einen Zeiger auf eine Medienenumerationsschnittstelle ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_EnumerationIf(
 
 <dl> <dt>
 
-*PVal* \[ vorgenommen\]
+*pVal* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**ienummedia**](ienummedia.md) -Schnittstelle für das gewünschte Element.
+Zeiger auf die [**IEnumMedia-Schnittstelle**](ienummedia.md) für das gewünschte Element.
 
 </dd> </dl>
 
@@ -48,20 +48,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *PVal* -Parameter ist kein gültiger Zeiger.<br/>         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pVal-Parameter* ist kein gültiger Zeiger.<br/>         |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist mit [**get \_ \_ netwenum**](itmediacollection-get--newenum.md) austauschbar, mit dem Unterschied, dass Sie [**ienummedia**](ienummedia.md) anstelle von **IUnknown** zurückgibt.
+Diese Methode ist mit [**get \_ \_ NewEnum**](itmediacollection-get--newenum.md) austauschbar, außer dass sie [**IEnumMedia**](ienummedia.md) anstelle von **IUnknown** zurückgibt.
 
-TAPI Ruft die **adressf** -Methode für die [**ienummedia**](ienummedia.md) -Schnittstelle auf, die von **itmediacollection:: get \_ enumerationlf** zurückgegeben wurde. Die Anwendung muss Release auf der **ienummedia** -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** für die [**IEnumMedia-Schnittstelle**](ienummedia.md) auf, die von **ITMediaCollection::get \_ Enumerationlf** zurückgegeben wird. Die Anwendung muss **Release** auf der **IEnumMedia-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ TAPI Ruft die **adressf** -Methode für die [**ienummedia**](ienummedia.md) -Sch
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -80,10 +80,10 @@ TAPI Ruft die **adressf** -Methode für die [**ienummedia**](ienummedia.md) -Sch
 
 <dl> <dt>
 
-[**Ienummedia**](ienummedia.md)
+[**IEnumMedia**](ienummedia.md)
 </dt> <dt>
 
-[**Itmediacollection**](itmediacollection.md)
+[**ITMediaCollection**](itmediacollection.md)
 </dt> </dl>
 
  

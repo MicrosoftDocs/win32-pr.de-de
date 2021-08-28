@@ -1,9 +1,9 @@
 ---
-title: gluquadricorientation-Funktion (glu. h)
-description: Die Funktion "gluquadricorientation" gibt die Ausrichtung innerhalb oder außerhalb von viercs an.
+title: gluQuadricOrientation-Funktion (Glu.h)
+description: Die gluQuadricOrientation-Funktion gibt die Innerhalb- oder Außenausrichtung für Quadrrizen an.
 ms.assetid: 4e3fc6d3-5a39-455b-bd24-8eb497333096
 keywords:
-- gluquadricorientation-Funktion OpenGL
+- gluQuadricOrientation-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d05ffb1eeff199297943e678783731a26a38092a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: baa02c3b6d207cbcc2bf487f51c0e96dc2f2dd98748edc81efb58ac957fac4ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937626"
 ---
-# <a name="gluquadricorientation-function"></a>gluquadricorientation-Funktion
+# <a name="gluquadricorientation-function"></a>gluQuadricOrientation-Funktion
 
-Die Funktion " **gluquadricorientation** " gibt die Ausrichtung innerhalb oder außerhalb von viercs an.
+Die **gluQuadricOrientation-Funktion** gibt die Innerhalb- oder Außenausrichtung für Quadrrizen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ void WINAPI gluQuadricOrientation(
 
 <dl> <dt>
 
-*quadobject* 
+*quadObject* 
 </dt> <dd>
 
-Das Quadric-Objekt (mit [**glunewquadric**](glunewquadric.md)erstellt).
+Das Quadric-Objekt (erstellt mit [**gluNewQuadric**](glunewquadric.md)).
 
 </dd> <dt>
 
-*orientation* 
+*Ausrichtung* 
 </dt> <dd>
 
 Die gewünschte Ausrichtung. Die folgenden Werte sind gültig.
@@ -57,8 +57,8 @@ Die gewünschte Ausrichtung. Die folgenden Werte sind gültig.
 
 | Wert                                                                                                                                                   | Bedeutung                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <span id="GLU_OUTSIDE"></span><span id="glu_outside"></span><dl> <dt>**Glu \_ außerhalb**</dt> </dl> | Zeichnen von viercs mit normalen, die nach außen zeigen. Dies ist der Standardwert.<br/> |
-| <span id="GLU_INSIDE"></span><span id="glu_inside"></span><dl> <dt>**Glu \_ in**</dt> </dl>    | Zeichnen von viercs mit normalen, die nach innen zeigen.<br/>                             |
+| <span id="GLU_OUTSIDE"></span><span id="glu_outside"></span><dl> <dt>**GLU \_ OUTSIDE**</dt> </dl> | Zeichnen von Quadrieren mit Normals, die nach außen zeigen. Dies ist der Standardwert.<br/> |
+| <span id="GLU_INSIDE"></span><span id="glu_inside"></span><dl> <dt>**GLU \_ INSIDE**</dt> </dl>    | Zeichnen von Quadrieren mit Normals, die nach innen zeigen.<br/>                             |
 
 
 
@@ -70,9 +70,9 @@ Die gewünschte Ausrichtung. Die folgenden Werte sind gültig.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluquadricorientation** " gibt an, welche Art von Ausrichtung für mit **quadobject** gerenderten viercs gewünscht ist. Die Interpretation von außen und innen hängt von der Quadric ab, die gezeichnet wird.
+Die **gluQuadricOrientation-Funktion** gibt an, welche Art von Ausrichtung für quadric-Objekte, die mit **quadObject gerendert** werden, gewünscht wird. Die Interpretation von nach außen und nach innen hängt vom gezeichneten Quadric ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Die Funktion " **gluquadricorientation** " gibt an, welche Art von Ausrichtung f
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -92,16 +92,16 @@ Die Funktion " **gluquadricorientation** " gibt an, welche Art von Ausrichtung f
 
 <dl> <dt>
 
-[**glunewquadric**](glunewquadric.md)
+[**gluNewQuadric**](glunewquadric.md)
 </dt> <dt>
 
-[**gluquadricdrawstyle**](gluquadricdrawstyle.md)
+[**gluQuadricDrawStyle**](gluquadricdrawstyle.md)
 </dt> <dt>
 
-[**gluquadricnormals**](gluquadricnormals.md)
+[**gluQuadricNormals**](gluquadricnormals.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Message (debugdatatype)-Element
-description: Die Meldungszeichenfolge. Der XML-Code enthält dieses Element, wenn das Feld "formattedstring" vom WPP-Ereignis angegeben wurde.
+title: Message (DebugDataType)-Element
+description: Die Meldungszeichenfolge. Der XML-Code enthält dieses Element, wenn das WPP-Ereignis das Feld FormattedString angegeben hat.
 ms.assetid: 9a18f576-a9c0-43f3-b7eb-71a78a67bb0c
 keywords:
-- Message-Element-Ereignisprotokoll
+- Message-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f8c3ead8609125530c2f202f0b6e68209d0233b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 137a78b8f3efdfe78a679284daa09fe1269d44a645121fa992bbc5e991591208
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055738"
 ---
-# <a name="message-debugdatatype-element"></a>Message (debugdatatype)-Element
+# <a name="message-debugdatatype-element"></a>Message (DebugDataType)-Element
 
-Die Meldungszeichenfolge. Der XML-Code enthält dieses Element, wenn das Feld "formattedstring" vom WPP-Ereignis angegeben wurde.
+Die Meldungszeichenfolge. Der XML-Code enthält dieses Element, wenn das WPP-Ereignis das Feld FormattedString angegeben hat.
 
 ``` syntax
 <xs:element name="Message"
@@ -30,7 +30,7 @@ Die Meldungszeichenfolge. Der XML-Code enthält dieses Element, wenn das Feld "f
  />
 ```
 
-Das **Message** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **Message-Element** wird vom komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Message** -Element wird durch den komplexen Typ [**debugdatatype**](events
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

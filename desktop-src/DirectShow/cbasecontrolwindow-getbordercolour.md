@@ -1,7 +1,7 @@
 ---
-description: Die getBorderColor-Methode ruft die aktuelle Fensterrahmen Farbe (m \_ BorderColor) ab.
+description: Die GetBorderColour-Methode ruft die aktuelle Fensterrahmenfarbe m \_ BorderColour ab.
 ms.assetid: 5cd9b834-5438-475e-9671-ee9917f9a485
-title: Cbasecontrolwindow. getBorderColor-Methode (ctlutil. h)
+title: CBaseControlWindow.GetBorderColour-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0ba6e1be9babf96d03235c49d9cde0f11cae1b83
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9b5b94e0fa58c95e74fd140c04710e8aaacef9402397fa475983c0e01e586528
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017368"
 ---
-# <a name="cbasecontrolwindowgetbordercolour-method"></a>Cbasecontrolwindow. getBorderColor-Methode
+# <a name="cbasecontrolwindowgetbordercolour-method"></a>CBaseControlWindow.GetBorderColour-Methode
 
-Die- `GetBorderColour` Methode ruft die aktuelle Fensterrahmen Farbe ( **m \_ BorderColor**) ab.
+Die `GetBorderColour` -Methode ruft die aktuelle Fensterrahmenfarbe **m \_ BorderColour ab.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt die Farbe des Rahmens zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann ein Ziel Rechteck festlegen, um das Video anzuzeigen. Dieses Rechteck sollte relativ zum Client Bereich des Fensters sein. Wenn dies geschieht (Standardmäßig wird das gesamte Fenster gezeichnet), gibt es einen Bereich, in dem das Video umgeben ist. Das heißt, der Rahmen. Die Rahmenfarbe kann über die Funktion " [**cbasecontrolwindow::p UT \_ BorderColor**](cbasecontrolwindow-put-bordercolor.md) Member" festgelegt werden. Diese Eigenschaft wirkt sich auf die Rahmenfarbe aus. Verwenden Sie diese Member-Funktion anstelle von [**cbasecontrolwindow:: get \_ BorderColor**](cbasecontrolwindow-get-bordercolor.md), es sei denn, Sie rufen dies extern über die [**IVideoWindow:: get \_ BorderColor**](/windows/desktop/api/Control/nf-control-ivideowindow-get_bordercolor) -Methode auf.
+Eine Anwendung kann ein Zielrechteck festlegen, um das Video anzuzeigen. Dieses Rechteck sollte relativ zum Clientbereich für das Fenster sein. Wenn dies erfolgt (standardmäßig wird immer das gesamte Fenster ge zeichnet), gibt es einen Bereich, der das Video umgibt. das heißt, der Rahmen. Die Rahmenfarbe kann über die [**Memberfunktion CBaseControlWindow::p ut \_ BorderColor**](cbasecontrolwindow-put-bordercolor.md) festgelegt werden. Diese Eigenschaft wirkt sich auf die Farbe des Rahmens aus. Verwenden Sie diese Memberfunktion anstelle [**von CBaseControlWindow::get \_ BorderColor,**](cbasecontrolwindow-get-bordercolor.md)es sei denn, Sie rufen diese extern über die [**IVideoWindow::get \_ BorderColor-Methode**](/windows/desktop/api/Control/nf-control-ivideowindow-get_bordercolor) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Eine Anwendung kann ein Ziel Rechteck festlegen, um das Video anzuzeigen. Dieses
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

@@ -1,8 +1,8 @@
 ---
-description: Im folgenden finden Sie die Qualifizierer, mit denen Sie Ansichts Anbieter Klassen definieren.
+description: Im Folgenden werden die Qualifizierer aufgeführt, die zum Definieren von Ansichtsanbieterklassen verwendet werden.
 ms.assetid: 31a6af2d-33da-44f2-86d7-c467dd2f3e00
 ms.tgt_platform: multiple
-title: Spezifische Qualifizierer für den Ansichts Anbieter
+title: Qualifizierer, die für den Ansichtsanbieter spezifisch sind
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,32 +13,32 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 76f28e4ba3433c168e1d0bf86887ee93df953444
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d7890effa0e8edd07edbb9506f88a78ceffc65fcb8d19bf6c8bcf67860a677f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130972"
 ---
-# <a name="qualifiers-specific-to-the-view-provider"></a>Spezifische Qualifizierer für den Ansichts Anbieter
+# <a name="qualifiers-specific-to-the-view-provider"></a>Qualifizierer, die für den Ansichtsanbieter spezifisch sind
 
-Im folgenden finden Sie die Qualifizierer, mit denen Sie Ansichts Anbieter Klassen definieren.
+Im Folgenden werden die Qualifizierer aufgeführt, die zum Definieren von Ansichtsanbieterklassen verwendet werden.
 
 > [!Note]  
-> Die Ansichts Anbieter Klasse unterstützt nur NetBIOS-Namen, wenn Remote Verweise verwendet werden. Wenn Sie eine IP-Adresse oder einen DNS-Namen in einem Remote Verweis verwenden, schlägt die Verbindung mit einem 0x800706ba-Fehler fehl.
+> Die View-Anbieterklasse unterstützt NetBIOS-Namen nur bei Verwendung von Remoteverweisen. Wenn Sie eine IP-Adresse oder einen DNS-Namen in einem Remoteverweis verwenden, tritt bei der Verbindung ein 0x800706ba Fehler auf.
 
  
 
 <dt>
 
-<span id="Direct"></span><span id="direct"></span><span id="DIRECT"></span>**Unmittelbaren**
+<span id="Direct"></span><span id="direct"></span><span id="DIRECT"></span>**Direkte**
 </dt> <dd>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 
-Wird zusammen mit Ansichts Zuordnungs Eigenschaften verwendet, um zu verhindern, dass Zuordnungs Verweise einem Sicht Verweis zugeordnet werden.
+Wird mit Ansichtszuordnungseigenschaften verwendet, um zu verhindern, dass Zuordnungsverweise einem Sichtverweis zugeordnet werden.
 
-Im folgenden Beispiel wird die Eigenschaft **GroupComponent** als Zuordnungs Verweis definiert, der nicht in der Sicht Referenz zugeordnet ist.
+Im folgenden Beispiel wird die **Eigenschaft GroupComponent** als Zuordnungsverweis definiert, der nicht im Sichtverweis zugeordnet ist.
 
 
 ```mof
@@ -50,14 +50,14 @@ Im folgenden Beispiel wird die Eigenschaft **GroupComponent** als Zuordnungs Ver
 
 </dd> <dt>
 
-<span id="HiddenDefault"></span><span id="hiddendefault"></span><span id="HIDDENDEFAULT"></span>**Hiddendefault**
+<span id="HiddenDefault"></span><span id="hiddendefault"></span><span id="HIDDENDEFAULT"></span>**HiddenDefault**
 </dt> <dd>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 
-Standardwert für eine Ansichts Klassen Eigenschaft, die auf einer Quell Klassen Eigenschaft mit einem anderen Standardwert basiert. Die zugrunde liegende Quell Klasse wird von der Ansicht impliziert.
+Standardwert für eine Ansichtsklasseneigenschaft, die auf einer Quellklasseneigenschaft mit einem anderen Standardwert basiert. Die zugrunde liegende Quellklasse wird von der Sicht impliziert.
 
-Beispielsweise verfügt die Quell Klasse [**Win32 \_ ScheduledJob**](/windows/desktop/CIMWin32Prov/win32-scheduledjob) über eine [boolesche](boolean.md) Eigenschaft **runwiederholtem** , die angibt, ob der Auftrag in regelmäßigen Abständen oder nur einmal ausgeführt werden soll. Der Standardwert von **runwiederholtem** ist für **Win32 \_ ScheduledJob** nicht true, aber für die Ansichts Klasse.
+Die Quellklasse [**Win32 \_ ScheduledJob**](/windows/desktop/CIMWin32Prov/win32-scheduledjob) verfügt beispielsweise über die [boolesche](boolean.md) Eigenschaft **RunRepeatedly,** die angibt, ob der Auftrag regelmäßig oder nur einmal ausgeführt werden soll. Der Standardwert von **RunRepeatedly** ist für **Win32 \_ ScheduledJob** nicht True, für die Ansichtsklasse jedoch True.
 
 
 ```mof
@@ -81,12 +81,12 @@ Class View_PeriodicJob
 
 </dd> <dt>
 
-<span id="JoinOn"></span><span id="joinon"></span><span id="JOINON"></span>**Joinon**
+<span id="JoinOn"></span><span id="joinon"></span><span id="JOINON"></span>**JoinOn**
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
-Definiert, wie Quell Klassen Instanzen in joinansichts Klassen verknüpft werden. Im folgenden Beispiel wird gezeigt, wie der **joinon** -Qualifizierer verwendet wird, um zwei Quell Klassen zu verknüpfen.
+Definiert, wie Quellklasseninstanzen in Joinansichtsklassen verknüpft werden. Das folgende Beispiel zeigt, wie der **JoinOn-Qualifizierer** verwendet wird, um zwei Quellklassen zu verbinden.
 
 
 ```mof
@@ -97,12 +97,12 @@ JoinOn("Win32Perf_RawProcess.IDProcess = Win32Perf_RawThread.IDProcess")
 
 </dd> <dt>
 
-<span id="MethodSource"></span><span id="methodsource"></span><span id="METHODSOURCE"></span>**Methodsource**
+<span id="MethodSource"></span><span id="methodsource"></span><span id="METHODSOURCE"></span>**MethodSource**
 </dt> <dd>
 
-Datentyp: **Zeichen folgen Array**
+Datentyp: **Zeichenfolgenarray**
 
-Die Quell Methode, die für die Ansichts Methode ausgeführt werden soll. Eine ähnliche Syntax finden Sie unter [propertysources-Qualifizierer](propertysources-qualifier.md). Die Signatur der Methode muss genau mit der Signatur der Quell Klasse übereinstimmen. Kopieren Sie die Methoden Signatur aus der MOF-Datei, die die Quell Klasse definiert. Im folgenden Beispiel wird eine Methode aus der [**cleareventlog**](/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile) -Methode der [**Win32-Datei " \_ nteventlogfile**](/previous-versions/windows/desktop/legacy/aa394225(v=vs.85))" definiert:
+Quellmethode, die für die View-Methode ausgeführt werden soll. Eine ähnliche Syntax finden Sie unter [PropertySources-Qualifizierer.](propertysources-qualifier.md) Die Signatur der -Methode muss genau mit der Signatur der Quellklasse übereinstimmen. Kopieren Sie die Methodensignatur aus der MOF-Datei, die die Quellklasse definiert. Im folgenden Beispiel wird eine Methode aus der [**ClearEventLog-Methode**](/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile) von [**Win32 \_ NTEventlogFile**](/previous-versions/windows/desktop/legacy/aa394225(v=vs.85))definiert:
 
 
 ```mof
@@ -113,34 +113,34 @@ Die Quell Methode, die für die Ansichts Methode ausgeführt werden soll. Eine �
 
 
 
-Dieser Qualifizierer ist nur gültig, wenn er mit Union-Sichten verwendet wird.
+Dieser Qualifizierer ist nur gültig, wenn er mit Union-Ansichten verwendet wird.
 
 </dd> <dt>
 
-<span id="PostJoinFilter"></span><span id="postjoinfilter"></span><span id="POSTJOINFILTER"></span>[**Postjoinfilter**](postjoinfilter-qualifier.md)
+<span id="PostJoinFilter"></span><span id="postjoinfilter"></span><span id="POSTJOINFILTER"></span>[**PostJoinFilter**](postjoinfilter-qualifier.md)
 </dt> <dd>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 
-WQL-Abfrage zum Filtern von Instanzen, nachdem Sie in einer joinklasse verknüpft wurden.
+WQL-Abfrage zum Filtern von Instanzen, nachdem sie in eine Joinklasse eingebunden wurden.
 
 </dd> <dt>
 
-<span id="PropertySources"></span><span id="propertysources"></span><span id="PROPERTYSOURCES"></span>[**Propertysources**](propertysources-qualifier.md)
+<span id="PropertySources"></span><span id="propertysources"></span><span id="PROPERTYSOURCES"></span>[**PropertySources**](propertysources-qualifier.md)
 </dt> <dd>
 
-Datentyp: **Zeichen folgen Array**
+Datentyp: **Zeichenfolgenarray**
 
-Quell Eigenschaften, von denen eine Eigenschaft der Ansichts Klasse Daten abruft.
+Quelleigenschaften, aus denen eine Ansichtsklasseneigenschaft Daten erhält.
 
 </dd> <dt>
 
 <span id="Union"></span><span id="union"></span><span id="UNION"></span>**Union**
 </dt> <dd>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 
-Gibt an, ob Sie eine Union-Klasse definieren. Union-Sichten enthalten Instanzen, die auf der Vereinigung der Quell Instanzen basieren. Sie können z. b. Folgendes deklarieren:
+Gibt an, ob Sie eine Union-Klasse definieren. Union-Ansichten enthalten -Instanzen, die auf der Vereinigung von Quellinstanzen basieren. Beispielsweise können Sie Folgendes deklarieren:
 
 
 ```mof
@@ -152,21 +152,21 @@ Union, ViewSources{"SELECT Handle, Name, CreationDate FROM Win32_Process",
 
 </dd> <dt>
 
-<span id="ViewSources"></span><span id="viewsources"></span><span id="VIEWSOURCES"></span>[**Viewsources**](viewsources-qualifier.md)
+<span id="ViewSources"></span><span id="viewsources"></span><span id="VIEWSOURCES"></span>[**ViewSources**](viewsources-qualifier.md)
 </dt> <dd>
 
-Datentyp: **Zeichen folgen Array**
+Datentyp: **Zeichenfolgenarray**
 
-WQL-Abfragen (Set of WMI Query Language), die die Quell Instanzen und-Eigenschaften definieren, die in einer bestimmten Ansichts Klasse verwendet werden. Die Positions Entsprechung aller Array Qualifizierer ist wichtig.
+Satz von WQL-Abfragen (WMI Query Language), die die Quellinstanzen und -eigenschaften definieren, die in einer bestimmten Ansichtsklasse verwendet werden. Die positionale Entsprechung aller Arrayqualifizierer ist wichtig.
 
 </dd> <dt>
 
-<span id="ViewSpaces"></span><span id="viewspaces"></span><span id="VIEWSPACES"></span>[**Viewspaces**](viewspaces-qualifier.md)
+<span id="ViewSpaces"></span><span id="viewspaces"></span><span id="VIEWSPACES"></span>[**ViewSpaces**](viewspaces-qualifier.md)
 </dt> <dd>
 
-Datentyp: **Zeichen folgen Array**
+Datentyp: **Zeichenfolgenarray**
 
-Namespaces, in denen sich die Quell Instanzen befinden.
+Namespaces, in denen sich die Quellinstanzen befinden.
 
 </dd> </dl>
 

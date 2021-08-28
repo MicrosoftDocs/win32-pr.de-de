@@ -1,23 +1,23 @@
 ---
-title: Beispiel Code für die programmgesteuerte Erweiterung des Schemas
-description: Dieses Thema enthält ein C++-Codebeispiel, das das Active Directory Schema Programm gesteuert erweitert.
+title: Beispielcode zum programmgesteuerten Erweitern des Schemas
+description: Dieses Thema enthält ein C++-Codebeispiel, das das Active Directory-Schema programmgesteuert erweitert.
 ms.assetid: e84678c5-ac12-424b-ba6c-c6cba23e4ff6
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die programmgesteuerte Erweiterung des Schemas
-- Programm gesteuertes Erweitern des Schemas, Beispiel Code für
+- Beispielcode zum programmgesteuerten Erweitern des Schemas in AD
+- Programmgesteuertes Erweitern des Schemas von AD , Beispielcode für
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c76264267c4ea97e4cf7998c19442a28483b4758
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b1ee2331fa31946691d0906eb9abd4942c037044b2d9f7891182ed8e2f890abb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962329"
 ---
-# <a name="example-code-for-extending-the-schema-programmatically"></a>Beispiel Code für die programmgesteuerte Erweiterung des Schemas
+# <a name="example-code-for-extending-the-schema-programmatically"></a>Beispielcode zum programmgesteuerten Erweitern des Schemas
 
-Dieses Thema enthält ein C++-Codebeispiel, das das Active Directory Schema Programm gesteuert erweitert.
+Dieses Thema enthält ein C++-Codebeispiel, das das Active Directory-Schema programmgesteuert erweitert.
 
 
 ```C++
@@ -863,9 +863,9 @@ void ReportErrorW(LPCWSTR pwszDefaultMsg, DWORD dwErr)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

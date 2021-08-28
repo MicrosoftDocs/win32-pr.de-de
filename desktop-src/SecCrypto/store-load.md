@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 32261a6fd8c5cf4382832d8286d63ce5d44fb542
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b39c2be625ff88869d27e6210e49496352af868c73557d2657c509fd0e79f82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118897790"
 ---
 # <a name="storeload-method"></a>Store. Load-Methode
 
-\[Die **Load** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Store-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[Die **Load-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Store-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **Load** -Methode importiert Zertifikate aus einer Datei in den Speicher.
+Die **Load-Methode** importiert Zertifikate aus einer Datei in den Speicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,32 +43,32 @@ Store.Load( _
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Die Zeichenfolge, die den Pfad zu einer CER-, SST-,. SPC-,. p7s-oder PFX-Datei oder einer beliebigen mit Authenticode signierten Datei enthält.
+Die Zeichenfolge, die den Pfad zu einer CER-, SST-, SPC-, P7S- oder PFX-Datei oder zu einer signierten Authenticode-Datei enthält.
 
 </dd> <dt>
 
 *Kennwort* \[ in, optional\]
 </dt> <dd>
 
-Die Zeichenfolge, die das Klartext-Kennwort für die Datei enthält. Bis zu 32 Unicode-Zeichen, einschließlich eines abschließenden NULL-Zeichens, können für das Kennwort verwendet werden. Informationen zum Schützen des Kennworts finden Sie unter Behandeln von Kenn [Wörtern](../secbp/handling-passwords.md).
+Die Zeichenfolge, die das Klartextkennwort für die Datei enthält. Für das Kennwort können bis zu 32 Unicode-Zeichen verwendet werden, einschließlich eines beendenden NULL-Zeichens. Informationen zum Schutz des Kennworts finden Sie unter [Behandeln von Kennwörtern.](../secbp/handling-passwords.md)
 
 </dd> <dt>
 
-*Keystorageflag* \[ in, optional\]
+*KeyStorageFlag* \[ in, optional\]
 </dt> <dd>
 
-Ein Wert der [**CAPICOM- \_ \_ Schlüsselspeicherflag \_**](capicom-key-storage-flag.md) -Enumeration, die Schlüsselspeicherflags definiert. Der Standardwert ist der Standardwert von CAPICOM \_ Key \_ Storage \_ . Dieser Parameter kann einen der folgenden Werte annehmen.
+Ein Wert der [**CAPICOM \_ KEY STORAGE \_ \_ FLAG-Enumeration,**](capicom-key-storage-flag.md) die Schlüsselspeicherflags definiert. Der Standardwert ist CAPICOM \_ KEY \_ STORAGE \_ DEFAULT. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                                                           | Bedeutung                               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| <span id="CAPICOM_KEY_STORAGE_DEFAULT"></span><span id="capicom_key_storage_default"></span><dl> <dt>**Standardwert für CAPICOM- \_ Schlüssel \_ Speicher \_**</dt> </dl>                       | Standardschlüssel Speicher.<br/>       |
-| <span id="CAPICOM_KEY_STORAGE_EXPORTABLE"></span><span id="capicom_key_storage_exportable"></span><dl> <dt>**zu \_ \_ \_ exportier barer CAPICOM-Schlüsselspeicher**</dt> </dl>              | Der Schlüssel ist exportierbar.<br/>     |
-| <span id="CAPICOM_KEY_STORAGE_USER_PROTECTED"></span><span id="capicom_key_storage_user_protected"></span><dl> <dt>**Benutzer geschützter CAPICOM- \_ Schlüssel \_ Speicher \_ \_**</dt> </dl> | Der Schlüssel ist Benutzer geschützt.<br/> |
+| <span id="CAPICOM_KEY_STORAGE_DEFAULT"></span><span id="capicom_key_storage_default"></span><dl> <dt>**CAPICOM \_ KEY \_ STORAGE \_ DEFAULT**</dt> </dl>                       | Standardspeicher für Schlüssel.<br/>       |
+| <span id="CAPICOM_KEY_STORAGE_EXPORTABLE"></span><span id="capicom_key_storage_exportable"></span><dl> <dt>**CAPICOM \_ KEY \_ STORAGE \_ EXPORTABLE**</dt> </dl>              | Der Schlüssel kann exportiert werden.<br/>     |
+| <span id="CAPICOM_KEY_STORAGE_USER_PROTECTED"></span><span id="capicom_key_storage_user_protected"></span><dl> <dt>**CAPICOM \_ KEY \_ STORAGE \_ USER \_ PROTECTED**</dt> </dl> | Der Schlüssel ist benutzergeschützt.<br/> |
 
 
 
@@ -80,15 +80,15 @@ Ein Wert der [**CAPICOM- \_ \_ Schlüsselspeicherflag \_**](capicom-key-storage-
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die **Load** -Methode für einen Speicher Speicher aufgerufen wird, werden alle erstellten Schlüssel Container gelöscht, wenn der Speicher Speicher gelöscht wird. Wenn z. b. eine PFX-Datei in einen Speicher Speicher geladen und später einem Systemspeicher (z. b. dem eigenen Speicher) aus dem Speicher Speicher hinzugefügt wird, enthält das Zertifikat im My Store keinen Schlüssel. In diesem Fall muss die PFX-Datei direkt in den My-Speicher geladen werden.
+Wenn die **Load-Methode** für einen Speicher aufgerufen wird, werden alle erstellten Schlüsselcontainer gelöscht, wenn der Speicher gelöscht wird. Wenn z. B. eine PFX-Datei in einen Speicher geladen und später einem Systemspeicher (z. B. my store) aus dem Speicher hinzugefügt wird, enthält das Zertifikat im Speicher My keinen Schlüssel. In diesem Fall sollte die PFX-Datei direkt in den Speicher My geladen werden.
 
-Diese Methode löst CAPICOM \_ E \_ nicht \_ zulässig aus, wenn eine Skripterstellung aus einer webbasierten Anwendung erfolgt.
+Diese Methode löst CAPICOM E NOT ALLOWED aus, wenn ein Skript \_ aus einer \_ \_ webbasierten Anwendung erstellt wird.
 
-Wenn das Kennwort die Datei mit dem privaten Schlüssel nicht entschlüsseln kann, sollte der Standard- [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) abgefragt werden. Wenn der Standard-CSP der Kryptografieanbieter von Microsoft ist und der Entschlüsselungsvorgang fehlschlägt, sollte der Entschlüsselungsvorgang erneut mit dem Microsoft-starken Kryptografieanbieter oder Microsoft Enhanced Cryptographic Provider ausgeführt werden, je nachdem, welcher Wert verfügbar ist.
+Wenn das Kennwort die Datei mit dem privaten Schlüssel nicht entschlüsseln kann, sollte der Standardmäßige Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) abgefragt werden. Wenn der Standard-CSP der Microsoft Base Cryptographic Provider ist und der Entschlüsselungsvorgang fehlschlägt, sollte der Entschlüsselungsvorgang erneut mit dem Microsoft Strong Cryptographic Provider oder dem Microsoft Enhanced Cryptographic Provider versucht werden, sofern verfügbar.
 
-Wenn das Zertifikat, das in den Speicher geladen wird, dasselbe ist, das bereits vorhanden ist, löscht die **Load** -Methode das vorhandene Zertifikat aus dem Speicher und fügt dann das neue Zertifikat hinzu. Das neue Zertifikat erbt die Eigenschaften des vorhandenen Zertifikats. Der vorhandene Container für den privaten Schlüssel wird durch den neuen Container für private Schlüssel ersetzt.
+Wenn das in den Speicher geladene Zertifikat mit dem bereits vorhandenen Zertifikat identisch ist, löscht die **Load-Methode** das vorhandene Zertifikat aus dem Speicher und fügt dann das neue Zertifikat hinzu. Das neue Zertifikat erbt Eigenschaften vom vorhandenen Zertifikat. Der vorhandene Private Key-Container wird durch den neuen Privaten Schlüsselcontainer ersetzt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,12 +96,12 @@ Wenn das Zertifikat, das in den Speicher geladen wird, dasselbe ist, das bereits
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

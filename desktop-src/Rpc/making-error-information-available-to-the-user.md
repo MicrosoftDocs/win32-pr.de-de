@@ -1,19 +1,19 @@
 ---
-title: Verfügbar machung von Fehlerinformationen für den Benutzer
-description: Wenn ein Aufrufer einen Fehler empfängt und den Benutzer über den Fehler benachrichtigt, muss das vorhanden sein erweiterter Fehlerinformationen geprüft werden, und wenn er gefunden wird, sollte der Aufrufer den Benutzern die resultierenden Informationen zur Verfügung stellen.
+title: Verfügbarmachen von Fehlerinformationen für den Benutzer
+description: Wenn ein Aufrufer einen Fehler empfängt und den Benutzer über den Fehler benachrichtigen muss, sollte das Vorhandensein erweiterter Fehlerinformationen überprüft werden, und wenn er gefunden wird, sollte der Aufrufer die resultierenden Informationen dem Benutzer zur Verfügung stellen.
 ms.assetid: 18689280-7124-46e4-9341-ad8d0c1705db
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18386dbebd443aced4f5680922549c0ecb0eba55
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c334b0d5b5044a13b507945cfa9d8ac97b67eb120f496f83c080d2b79b857f9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103857023"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118928575"
 ---
-# <a name="making-error-information-available-to-the-user"></a>Verfügbar machung von Fehlerinformationen für den Benutzer
+# <a name="making-error-information-available-to-the-user"></a>Verfügbarmachen von Fehlerinformationen für den Benutzer
 
-Wenn ein Aufrufer einen Fehler empfängt und den Benutzer über den Fehler benachrichtigt, muss das vorhanden sein erweiterter Fehlerinformationen geprüft werden, und wenn er gefunden wird, sollte der Aufrufer den Benutzern die resultierenden Informationen zur Verfügung stellen. Das folgende Code Fragment ist ein Beispiel dafür, wie diese Informationen für den Benutzer verfügbar gemacht werden:
+Wenn ein Aufrufer einen Fehler empfängt und den Benutzer über den Fehler benachrichtigen muss, sollte das Vorhandensein erweiterter Fehlerinformationen überprüft werden, und wenn er gefunden wird, sollte der Aufrufer die resultierenden Informationen dem Benutzer zur Verfügung stellen. Das folgende Codefragment ist ein Beispiel für die Bereitstellung dieser Informationen für den Benutzer:
 
 
 ```C++
@@ -163,11 +163,11 @@ if (status)
 
 
 
-In diesem Beispiel werden die erweiterten Fehlerinformationen in die Konsole gekippt, aber Ihre Komponente kann Sie dem Benutzer auf andere Weise zur Verfügung stellen. Wenn die Komponente die Informationen im persistenten Speicher speichert und später anzeigt, ist es oft einfacher, das binäre Format zu verwenden, das von den [**rpcerrorsaveerrorinfo**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcerrorsaveerrorinfo) -und [**rpcerrorloaderrorinfo**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcerrorloaderrorinfo) -Funktionsaufrufen zur Verfügung gestellt wird.
+In diesem Beispiel werden die erweiterten Fehlerinformationen in der Konsole ausgegeben, aber Ihre Komponente kann sie dem Benutzer auf andere Weise zur Verfügung stellen. Wenn Ihre Komponente die Informationen im persistenten Speicher speichert und später anzeigen möchte, ist es häufig einfacher, das binäre Format zu verwenden, das von den [**Funktionsaufrufen RpcErrorSaveErrorInfo**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcerrorsaveerrorinfo) und [**RpcErrorLoadErrorInfo**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcerrorloaderrorinfo) zur Verfügung gestellt wird.
 
- 
+ 
 
- 
+ 
 
 
 

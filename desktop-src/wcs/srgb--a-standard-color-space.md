@@ -4,7 +4,7 @@ description: Aufgrund von Überlegungen zur Internetbandbreite haben Hewlett-Pac
 ms.assetid: b9017702-7dca-4d79-bed0-936f97cb6109
 keywords:
 - Windows Color System (WCS), sRGB-Farbraum
-- WCS (Windows-Farbsystem),sRGB-Farbraum
+- WCS (Windows Color System), sRGB-Farbraum
 - Bildfarbverwaltung, sRGB-Farbraum
 - Farbverwaltung,sRGB-Farbraum
 - Farben, sRGB-Farbraum
@@ -13,12 +13,12 @@ keywords:
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa5d1b2d87cdca5424f8393ae47e592718f33985
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 0779ec79868a6ec6d78e447b7ee3473847b8fdc1ffa165897abd2dcbcb7a0793
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965919"
 ---
 # <a name="srgb-a-standard-color-space"></a>sRGB: Ein Standardfarbraum
 
@@ -26,7 +26,7 @@ Aufgrund von Überlegungen zur Internetbandbreite haben Hewlett-Packard und Micr
 
 Eine Hilfedateiversion eines Whitepapers, in dem die technischen Details von sRGB, sRGB.hlp, erörtert werden, finden Sie im \\ Hilfeordner der WCS 1.0-Programmierreferenz.
 
-Verschiedene Dateiformate können ein Flag verwenden oder hinzufügen, um anzugeben, dass sich das Bild im sRGB-Farbraum befindet. Im Windows-DIB-Format (Device-Independent Bitmap) gibt das Festlegen des **bV5CSType-Elements** der [**BITMAPV5HEADER-Struktur**](using-structures-in-wcs-1-0.md) auf **LCS \_ sRGB** an, dass sich die DIB-Farben im sRGB-Farbraum befinden.
+Verschiedene Dateiformate können ein Flag verwenden oder hinzufügen, um anzugeben, dass sich das Bild im sRGB-Farbraum befindet. Im Windows geräteunabhängigen Bitmapformat (DEVICE-Independent Bitmap, DIB) gibt das Festlegen des **bV5CSType-Elements** der [**BITMAPV5HEADER-Struktur**](using-structures-in-wcs-1-0.md) auf **LCS \_ sRGB** an, dass sich die DIB-Farben im sRGB-Farbraum befinden.
 
 WCS 1.0 bietet native Unterstützung für sRGB. Es gibt zwei Möglichkeiten, WCS 1.0 zum Rendern eines im sRGB-Farbraum definierten Bilds zu verwenden:
 
@@ -66,7 +66,7 @@ Ab ICM Version 2.0 können Anwendungen, die WCS verwenden, Profile in Images ein
 
 Bilder, die den sRGB-Farbraum verwenden, benötigen kein eingebettetes Farbprofil. Da sie über kein eingebettetes Profil verfügen, sind sRGB-basierte Images kleiner und leichter über Datenkanäle mit begrenzter Bandbreite übertragbar.
 
-Anwendungen sollten das **LCS \_ sRGB-Flag** im Bitmapheader des Bilds festlegen, um anzugeben, dass das Bild den sRGB-Farbraum verwendet. Weitere Informationen finden Sie unter [Windows Bitmap Header Structures](using-structures-in-wcs-1-0.md) und [**LOGCOLORSPACE**](/windows/desktop/api/Wingdi/ns-wingdi-taglogcolorspacea).
+Anwendungen sollten das **LCS \_ sRGB-Flag** im Bitmapheader des Bilds festlegen, um anzugeben, dass das Bild den sRGB-Farbraum verwendet. Weitere Informationen finden Sie unter [Windows Bitmapheaderstrukturen](using-structures-in-wcs-1-0.md) und [**LOGCOLORSPACE**](/windows/desktop/api/Wingdi/ns-wingdi-taglogcolorspacea).
 
  
 

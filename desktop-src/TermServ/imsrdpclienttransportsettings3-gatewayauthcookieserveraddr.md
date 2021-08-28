@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings3 gatewayauthcookieserveraddr (Eigenschaft)
-description: Die Server Adresse für die cookiebasierte Authentifizierung.
+title: IMsRdpClientTransportSettings3 GatewayAuthCookieServerAddr-Eigenschaft
+description: Die Serveradresse für die cookiebasierte Authentifizierung.
 ms.assetid: e00480cd-2133-42ff-8447-6c4234b56bf9
 ms.tgt_platform: multiple
 keywords:
-- Gatewayauthcookieserveraddr-Eigenschaft Remotedesktopdienste
-- Gatewayauthcookieserveraddr-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings3-Schnittstelle
-- IMsRdpClientTransportSettings3 Interface Remotedesktopdienste, gatewayauthcookieserveraddr (Eigenschaft)
+- GatewayAuthCookieServerAddr-Eigenschaft Remotedesktopdienste
+- GatewayAuthCookieServerAddr-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings3-Schnittstelle
+- IMsRdpClientTransportSettings3-Schnittstelle Remotedesktopdienste , GatewayAuthCookieServerAddr-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc238129d0bb9f698e90fc5e1de85e7257a4d16e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 330a1ddb15d548988c23f8140ce848f7f68be5d1deb17fc51bd88eed23b9eec2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000920"
 ---
-# <a name="imsrdpclienttransportsettings3gatewayauthcookieserveraddr-property"></a>IMsRdpClientTransportSettings3:: gatewayauthcookieserveraddr (Eigenschaft)
+# <a name="imsrdpclienttransportsettings3gatewayauthcookieserveraddr-property"></a>IMsRdpClientTransportSettings3::GatewayAuthCookieServerAddr-Eigenschaft
 
-Die Server Adresse für die cookiebasierte Authentifizierung.
+Die Serveradresse für die cookiebasierte Authentifizierung.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_GatewayAuthCookieServerAddr(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Server Adresse für die cookiebasierte Authentifizierung.
+Die neue Serveradresse für die cookiebasierte Authentifizierung.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,27 +1,27 @@
 ---
 title: AsyncAdd3ExplicitExample
-description: In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion ohne Verwendung von wsasyncexecute veranschaulicht.
+description: In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion ohne Verwendung von WsAsyncExecute veranschaulicht.
 ms.assetid: e60a4005-4849-4603-ae25-b88da8628f80
 keywords:
 - AsyncAdd3ExplicitExample-Webdienste für Windows
-- Wwsapi
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f4747823eea2aa3c8bff9ce7b6b6cea5b1a9da4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2c58dd75c76afd901a961cf7cced35f5aebb1b3036e5c2f82e5068ae159b4613
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963419"
 ---
 # <a name="asyncadd3explicitexample"></a>AsyncAdd3ExplicitExample
 
-In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion ohne Verwendung von [**wsasyncexecute**](/windows/desktop/api/WebServices/nf-webservices-wsasyncexecute)veranschaulicht.
+In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion ohne Verwendung von [**WsAsyncExecute**](/windows/desktop/api/WebServices/nf-webservices-wsasyncexecute)veranschaulicht.
 
-Im Beispiel wird eine asynchrone Funktion "addthree" implementiert, die drei ganze Zahlen addiert, indem Sie auf einer vorhandenen Add-Funktion aufbaut, die zwei ganze Zahlen asynchron hinzufügen kann.
+Im Beispiel wird eine asynchrone Funktion "AddThree" implementiert, die drei ganze Zahlen addiert, indem sie auf einer vorhandenen Add-Funktion aufbaut, die zwei ganze Zahlen asynchron hinzufügen kann.
 
-## <a name="asyncadd3explicitcpp"></a>AsyncAdd3Explicit. cpp
+## <a name="asyncadd3explicitcpp"></a>AsyncAdd3Explicit.cpp
 
 
 ```C++
@@ -347,9 +347,9 @@ int __cdecl wmain(int argc, __in_ecount(argc) wchar_t **argv)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

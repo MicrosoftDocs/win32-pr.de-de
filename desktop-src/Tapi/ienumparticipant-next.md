@@ -1,21 +1,21 @@
 ---
-description: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab. Diese Methode ist in Visual Basic-und Skriptsprachen ausgeblendet.
+description: Die Next-Methode ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab. Diese Methode ist vor Visual Basic und Skriptsprachen verborgen.
 ms.assetid: bd94f592-ac6f-48b7-8190-352a5e18f224
-title: 'Ienumteilnehmer:: Next-Methode (confpriv. h)'
+title: IEnumParticipant::Next-Methode (Confpriv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89586370d01aaac54f05242e0eb3c53eb938c47b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d574f7c34bc48679ea679caf8ba07c881bcd1c692fa3215ae48a9ecf54d7cbfc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003588"
 ---
-# <a name="ienumparticipantnext-method"></a>Ienumteilnehmer:: Next-Methode
+# <a name="ienumparticipantnext-method"></a>IEnumParticipant::Next-Methode
 
-\[**Als nächstes** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**Next** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Next** -Methode ruft die nächste angegebene Anzahl von Elementen in der enumerationssequenz ab. Diese Methode ist in Visual Basic-und Skriptsprachen ausgeblendet.
+Die **Next-Methode** ruft die nächste angegebene Anzahl von Elementen in der Enumerationssequenz ab. Diese Methode ist vor Visual Basic und Skriptsprachen verborgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT Next(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
 Anzahl der angeforderten Elemente.
 
 </dd> <dt>
 
-*ppelements* \[ vorgenommen\]
+*ppElements* \[ out\]
 </dt> <dd>
 
-Zeiger auf [**itagenthandler**](/windows/win32/api/tapi3cc/nn-tapi3cc-itagenthandler) -Schnittstellen.
+Zeiger auf [**ITAgentHandler-Schnittstellen.**](/windows/win32/api/tapi3cc/nn-tapi3cc-itagenthandler)
 
 </dd> <dt>
 
-*pceltfetch* \[ vorgenommen\]
+*pceltFetched* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann **null** sein, wenn es sich um einen *celt* handelt.
+Zeiger auf die Anzahl der tatsächlich bereitgestellten Elemente. Kann **NULL** sein, wenn *Celt* eins ist.
 
 </dd> </dl>
 
@@ -63,18 +63,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Von der Methode wurde *die Anzahl der* Elemente zurückgegeben.<br/>           |
-| <dl> <dt>**S \_ false**</dt> </dl>       | Die Anzahl der verbleibenden Elemente war kleiner als *celt*.<br/>   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppelements* -Parameter ist kein gültiger Zeiger.<br/>   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Die Methode hat die anzahl der *Elemente zurückgegeben.*<br/>           |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>       | Die Anzahl der verbleibenden Elemente war kleiner als *die von Celt.*<br/>   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppElements-Parameter* ist kein gültiger Zeiger.<br/>   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-TAPI Ruft die [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) -Methode für die [**itagenthandler**](/windows/win32/api/tapi3cc/nn-tapi3cc-itagenthandler) -Schnittstelle auf, die von **ienumteilnehmer:: Next** zurückgegeben wurde. Die Anwendung muss Release auf der **itagenthandler** -Schnittstelle aufzurufen, um Ressourcen frei [**zugeben**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) , die ihr zugeordnet sind.
+TAPI ruft die [**AddRef-Methode**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) für die [**ITAgentHandler-Schnittstelle**](/windows/win32/api/tapi3cc/nn-tapi3cc-itagenthandler) auf, die von **IEnumParticipant::Next** zurückgegeben wird. Die Anwendung muss [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) auf der **ITAgentHandler-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,21 +82,21 @@ TAPI Ruft die [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>"Confpriv. h"</dt> </dl> |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Confpriv.h</dt> </dl> |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienumteilnehmer**](ienumparticipant.md)
+[**IEnumParticipant**](ienumparticipant.md)
 </dt> <dt>
 
-[**Itteilnehmer**](itparticipant.md)
+[**ITParticipant**](itparticipant.md)
 </dt> </dl>
 
  

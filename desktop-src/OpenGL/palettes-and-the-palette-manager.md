@@ -1,36 +1,36 @@
 ---
-title: Paletten und der Palette-Manager
-description: Der Windows-palettenmanager, der Teil des GDI ist, zielt speziell auf 8-Bit-Anzeige Adapter mit einer Hardware Palette von 256-Farb Einträgen ab.
+title: Paletten und der Paletten-Manager
+description: Der Windows Paletten-Manager, der Teil des GDI ist, ist speziell auf 8-Bit-Anzeigeadapter mit einer Hardwarepalette von 256 Farbeinträgen ausgerichtet.
 ms.assetid: 3bfa5077-37ac-4597-98da-f26ad1c107a1
 keywords:
-- OpenGL unter Windows, Palette Manager
-- OpenGL unter Windows, Hardware Paletten
-- Palette-Manager OpenGL
-- Hardware Paletten OpenGL
+- OpenGL auf Windows,Paletten-Manager
+- OpenGL auf Windows,Hardwarepaletten
+- Paletten-Manager OpenGL
+- Hardwarepaletten OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dac7d122ec36201e0156a141efc3291a87c7150
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 58407a5ddafe862caa73edd498c4da529b0ac987880828177d0d0b284601efed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118936276"
 ---
-# <a name="palettes-and-the-palette-manager"></a>Paletten und der Palette-Manager
+# <a name="palettes-and-the-palette-manager"></a>Paletten und der Paletten-Manager
 
-Der Windows-palettenmanager, der Teil des GDI ist, zielt speziell auf 8-Bit-Anzeige Adapter mit einer *Hardware Palette* von 256-Farb Einträgen ab. Pixel auf dem Bildschirm werden als 8-Bit-Index in der Hardware Palette gespeichert. Jeder Eintrag in der Hardware Palette definiert in der Regel eine 24-Bit-Farbe (8 von rot, grün und blau).
+Der Windows Paletten-Manager, der Teil des GDI ist, ist speziell auf 8-Bit-Anzeigeadapter mit einer *Hardwarepalette* von 256 Farbeinträgen ausgerichtet. Pixel auf dem Bildschirm werden als 8-Bit-Index in der Hardwarepalette gespeichert. Jeder Eintrag in der Hardwarepalette definiert in der Regel eine 24-Bit-Farbe (jeweils 8 rot, grün und blau).
 
-Der Palette-Manager verwaltet eine *Systempalette* , bei der es sich um eine Kopie der Hardware Palette handelt. Die Systempalette ist in zwei Abschnitte unterteilt: 20 reservierte Farben und die restlichen 236-Farben, die Sie mit dem palettenmanager festlegen können.
+Der Paletten-Manager verwaltet eine *Systempalette,* die eine Kopie der Hardwarepalette ist. Die Systempalette ist in zwei Abschnitte unterteilt: 20 reservierte Farben und die verbleibenden 236 Farben, die Sie mit dem Paletten-Manager festlegen können.
 
-Eine standardmäßige, 20-farbige, *logische Palette* wird ausgewählt und in einem Gerätekontext realisiert. Sie können eine neue logische Palette erstellen und verwenden. Wählen Sie die logische Palette aus, die Sie erstellt haben, um die Systempalette zu ändern.
+Eine *logische Standardpalette* mit 20 Farben wird ausgewählt und in einem Gerätekontext realisiert. Sie können eine neue logische Palette erstellen und verwenden. Um die Systempalette zu ändern, wählen Sie die erstellte logische Palette aus, und realisieren Sie sie.
 
-Wahrscheinlich erstellen Sie eine logische Palette, um die Farben anzugeben, die Sie in ihrer OpenGL-Anwendung anzeigen möchten. Mit bestimmten GDI-aufrufen können Sie den größten Teil der Systempalette temporär durch eine logische Palette ersetzen. Mithilfe einer logischen Palette können Sie Pixel Farben für das GDI mithilfe des RGBA-oder des Farb Index Modus definieren. Die maximale Größe einer logischen Palette beträgt 256 Farben für 8-Bit-Geräte und 4.096-Farben auf einem echten Farbgerät (16, 24 und 32 Bits).
+Sie erstellen wahrscheinlich eine logische Palette, um die Farben anzugeben, die in Ihrer OpenGL-Anwendung angezeigt werden sollen. Mit bestimmten GDI-Aufrufen können Sie den Großteil der Systempalette vorübergehend durch eine logische Palette ersetzen. Mithilfe einer logischen Palette können Sie Pixelfarben für das GDI definieren, indem Sie entweder den RGBA- oder den Farbindexmodus verwenden. Die maximale Größe einer logischen Palette beträgt 256 Farben für 8-Bit-Geräte und 4.096 Farben auf einem echten Farbgerät (16, 24 und 32 Bits).
 
-Weitere Informationen zu den Modi RGBA und Color-Index finden Sie unter [RGBA-Modus und Windows-Palettenverwaltung](rgba-mode-and-windows-palette-management.md) und [OpenGL-Farbmodi und Windows-Palettenverwaltung](opengl-color-modes-and-windows-palette-management.md).
+Weitere Informationen zum RGBA- und Farbindexmodus finden Sie unter [RGBA-Modus und Windows Palettenverwaltung](rgba-mode-and-windows-palette-management.md) und [OpenGL-Farbmodi und Windows Palettenverwaltung.](opengl-color-modes-and-windows-palette-management.md)
 
- 
+ 
 
- 
+ 
 
 
 

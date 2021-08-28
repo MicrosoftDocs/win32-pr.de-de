@@ -4,47 +4,47 @@ description: VML Control2-Attribut
 ms.assetid: fd0f92fa-ae70-46c9-bfbe-fad8deea34f7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb7af3871981e26ff7eff471651de555483fd540
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 702c0eee9ba861a73ec6d9f0fd07cca22a551c92c5add5498cd0e33522419fcd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999250"
 ---
 # <a name="vml-control2-attribute"></a>VML Control2-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den zweiten Kontrollpunkt einer Bézier-Kurve. Lese-/Schreibzugriff. **VgVector2D**.
+Definiert den zweiten Kontrollpunkt einer Bézierkurve. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
-[FF](msdn-online-vml-curve-element.md)
+[Kurve](msdn-online-vml-curve-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Control2 = " *Ausdruck* " >
+<v: *element* control2="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Control2 = "*Ausdruck*"
+*element* .control2="*expression*"
 
-*Ausdruck* = *Element*. Control2
+*expression* = *Element*.control2
 
 **Anmerkungen**
 
-Definiert den zweiten Kontrollpunkt einer kubischen Bézier-Kurve im Koordinaten Bereich des übergeordneten Elements. Wenn das übergeordnete Element kein VML-Element ist, ist die Standard [Einheit](msdn-online-vml-units.md) ein Pixel (in, cm, mm, PT, kann jedoch auch der PC angegeben werden). Der Standardwert ist 20,0.
+Definiert den zweiten Kontrollpunkt einer kubischen Bézierkurve im Koordinatenraum des übergeordneten Elements. Wenn das übergeordnete Element kein VML-Element ist, ist die Standardeinheit ein Pixel (in, cm, mm, pt, pc kann jedoch auch angegeben werden). [](msdn-online-vml-units.md) Der Standardwert ist 20.0.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Kurve wird Lächeln. Sie beginnt auf der linken Seite und endet auf der rechten Seite. Die beiden Kontrollpunkte sind auf dem Weg, um die Kurve nach unten zu ziehen, um die Darstellung eines Lächelns zu gestalten.
+Die Kurve lächelt. Er beginnt links und endet auf der rechten Seite. Die beiden Kontrollpunkte werden entlang des Wegs entlang gezogen, um die Kurve nach unten zu ziehen, um das Aussehen eines Lächelns zu erhalten.
 
 
 ```HTML
@@ -58,6 +58,6 @@ Die Kurve wird Lächeln. Sie beginnt auf der linken Seite und endet auf der rech
 
 
 
- 
+ 
 
- 
+ 

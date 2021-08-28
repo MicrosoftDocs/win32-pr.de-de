@@ -1,21 +1,21 @@
 ---
-description: Die Erweiterung des Erweiterungs-Snap-Ins muss dem Benutzer die Möglichkeit geben, Konfigurationsinformationen zum Dienst zu ändern.
+description: Eine Anfüge-Snap-In-Erweiterung muss es dem Benutzer ermöglichen, Konfigurationsinformationen zum Dienst zu ändern.
 ms.assetid: fb36fcce-5a69-49cd-8cd3-b0b048f2f566
-title: Ändern von Konfigurationsinformationen in der Benutzeroberfläche
+title: Ändern von Konfigurationsinformationen im Benutzeroberfläche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c6158d76d0f5114bd2d7b483e0af3d00f8f2439
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 414e2ab1475ec1c3241d60b96d182a522c299a9f5cf6134f50339c2088c99d9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005118"
 ---
-# <a name="modifying-configuration-information-in-the-user-interface"></a>Ändern von Konfigurationsinformationen in der Benutzeroberfläche
+# <a name="modifying-configuration-information-in-the-user-interface"></a>Ändern von Konfigurationsinformationen im Benutzeroberfläche
 
-Die Erweiterung des Erweiterungs-Snap-Ins muss dem Benutzer die Möglichkeit geben, Konfigurationsinformationen zum Dienst zu ändern. Die geänderten Informationen sollten von der Erweiterungs-Snap-in-Erweiterung gespeichert werden, bis das Sicherheitskonfigurations-Snap-in Methoden der [**iscesvplattachmentpersistinfo**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo) -Schnittstelle aufruft, um die Informationen abzurufen.
+Eine Anfüge-Snap-In-Erweiterung muss es dem Benutzer ermöglichen, Konfigurationsinformationen zum Dienst zu ändern. Die geänderten Informationen sollten von der Erweiterung des Anfüge-Snap-Ins gespeichert werden, bis das Sicherheitskonfigurations-Snap-In Methoden der [**ISceSvcAttachmentPersistInfo-Schnittstelle**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo) aufruft, um die Informationen abzurufen.
 
-Um Speicher Verluste zu vermeiden, können Sie von der Snap-in-Erweiterung zugeordnete Arbeitsspeicher freigeben, indem Sie [**iscesvplattachmentpersistinfo:: FreeBuffer**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentpersistinfo-freebuffer)aufrufen.
+Um Speicherverluste zu vermeiden, können Sie den von der Snap-In-Erweiterung belegten Arbeitsspeicher freigeben, indem [**Sie ISceSvcAttachmentPersistInfo::FreeBuffer**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentpersistinfo-freebuffer)aufrufen.
 
  
 

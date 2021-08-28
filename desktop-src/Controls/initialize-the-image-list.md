@@ -1,36 +1,36 @@
 ---
 title: Initialisieren der Bildliste
-description: Jedem Element in einem Strukturansicht-Steuerelement können zwei Bilder zugeordnet werden.
+description: Jedem Element in einem Strukturansicht-Steuerelement können zwei Bilder zugeordnet sein.
 ms.assetid: 3683DB35-D70F-4181-9181-95354599B9FB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 011d789da4eec39febae9d93436e23c23fa59507
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: d2b8edcff0d07f46aa6eb8612ddbbfa37145c5ab26ab463a7d57e9e6543430e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104101286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019348"
 ---
 # <a name="how-to-initialize-the-image-list"></a>Initialisieren der Bildliste
 
-Jedem Element in einem Strukturansicht-Steuerelement können zwei Bilder zugeordnet werden. Ein Element zeigt ein Bild an, wenn es ausgewählt wird, und das andere, wenn dies nicht der Fall ist. Um Bilder in Struktur Ansichts Elemente einzuschließen, verwenden Sie zuerst die Funktionen der [Bild](image-lists.md) Liste, um eine Bildliste zu erstellen und Ihr Bilder hinzuzufügen. Ordnen Sie dann die Bildliste dem Strukturansicht-Steuerelement mithilfe der [**TVM-Meldung " \_ SetImageList**](tvm-setimagelist.md) " zu.
+Jedem Element in einem Strukturansicht-Steuerelement können zwei Bilder zugeordnet sein. Ein Element zeigt ein Bild an, wenn es ausgewählt ist, und das andere, wenn es nicht ausgewählt ist. Wenn Sie Bilder mit Strukturansichtselementen hinzufügen möchten, verwenden Sie zunächst die [Funktionen Bildlisten,](image-lists.md) um eine Bildliste zu erstellen und ihr Bilder hinzuzufügen. Ordnen Sie dann die Bildliste mithilfe der [**TVM \_ SETIMAGELIST-Meldung**](tvm-setimagelist.md) dem Strukturansicht-Steuerelement zu.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="initialize-the-image-list"></a>Initialisieren der Bildliste
 
-Im folgenden Beispiel wird eine Bildliste erstellt, drei Bitmaps werden der Liste hinzugefügt, und die Bildliste wird einem Strukturansicht-Steuerelement zugeordnet.
+Das folgende Beispiel erstellt eine Bildliste, fügt der Liste drei Bitmaps hinzu und ordnet die Bildliste einem Strukturansicht-Steuerelement zu.
 
 
 ```C++
@@ -92,12 +92,12 @@ BOOL InitTreeViewImageLists(HWND hwndTV)
 [Verwenden von Tree-View Steuerelementen](using-treeview.md)
 </dt> <dt>
 
-[Custdtv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View-Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
+[CustDTv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Enthält den Bezeichner des Wiedergabelisten Elements in der Präsentation.
+description: Enthält den Bezeichner des Wiedergabelistenelements in der Präsentation.
 ms.assetid: 355818cf-1e00-46ad-9ce1-ab3a178164f9
-title: MF_PD_PLAYBACK_ELEMENT_ID-Attribut (mspdl. h)
+title: MF_PD_PLAYBACK_ELEMENT_ID -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 744a1d164c71cbd7eb8bb47ef12be68d47b8351d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 775aca29ab1cea36be9a2b87d64566210c03f6d6771d3493c73d34572975671e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102887"
 ---
-# <a name="mf_pd_playback_element_id-attribute"></a>\_Attribut- \_ ID \_ - \_ Attribut der MF-PD
+# <a name="mf_pd_playback_element_id-attribute"></a>MF \_ PD PLAYBACK ELEMENT \_ \_ \_ ID-Attribut
 
-Enthält den Bezeichner des Wiedergabelisten Elements in der Präsentation.
+Enthält den Bezeichner des Wiedergabelistenelements in der Präsentation.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,25 +21,25 @@ Enthält den Bezeichner des Wiedergabelisten Elements in der Präsentation.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Medienquellen, die Wiedergabelisten übermitteln, können dieses Attribut optional für die Präsentations Deskriptoren festlegen.
+Medienquellen, die Wiedergabelisten liefern, können dieses Attribut optional für ihre Präsentationsdeskriptoren festlegen.
 
-Wenn eine Medienquelle eine Wiedergabeliste bereitstellt, sendet Sie ein [menewpresentation](menewpresentation.md) -Ereignis für jedes Wiedergabelisten Element nach dem ersten. Dieses Ereignis enthält einen Präsentations Deskriptor für das neue Wiedergabelisten Element. Die Medienquelle kann den Elementen Bezeichner zuweisen, indem Sie \_ \_ \_ \_ für jeden Präsentations Deskriptor, einschließlich der von [**imfmediasource:: kreatepresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)erstellten, das Attribut "MF PD Playback" ID-Attribut, festgelegt wird.
+Wenn eine Medienquelle eine Wiedergabeliste übermittelt, sendet sie ein [MENewPresentation-Ereignis](menewpresentation.md) für jedes Wiedergabelistenelement nach dem ersten. Dieses Ereignis enthält einen Präsentationsdeskriptor für das neue Wiedergabelistenelement. Die Medienquelle kann den Elementen Bezeichner zuweisen, indem sie das MF PD PLAYBACK ELEMENT ID-Attribut für jeden Präsentationsdeskriptor festlegen, einschließlich des von \_ \_ \_ \_ [**DERMEDIASOURCE::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)erstellten Attributs.
 
-Eine Medienquelle kann das [menewpresentation](menewpresentation.md) -Ereignis auch aufgrund eines dynamischen streamschalters oder einer Änderung in der Anzahl der Streams senden. In dieser Situation sollte der Wert der MF-ID für die \_ \_ Wiedergabe \_ Element-ID in \_ beiden Präsentationen gleich bleiben, um anzugeben, dass beide Präsentationen dasselbe Wiedergabelisten Element darstellen. Wenn zwei aufeinander folgende Präsentationen denselben Wert für dieses Attribut aufweisen, erwartet die Microsoft Media Foundation Pipeline, dass die Zeitstempel während des Übergangs fortlaufend bleiben. Daher darf die Medienquelle das [ \_ \_ \_ tatsächliche \_ Start Attribut der MF-Ereignis Quelle](mf-event-source-actual-start-attribute.md) nicht verwenden, wenn Sie zur nächsten Präsentation übergeht.
+Eine Medienquelle kann aufgrund eines dynamischen Datenstromschalters oder einer Änderung der Anzahl von Streams auch das [MENewPresentation-Ereignis](menewpresentation.md) senden. In diesem Fall sollte der Wert von MF PD PLAYBACK ELEMENT ID in beiden Präsentationen gleich bleiben, um anzugeben, dass beide Präsentationen das gleiche \_ \_ \_ \_ Wiedergabelistenelement darstellen. Wenn zwei aufeinander folgende Präsentationen denselben Wert für dieses Attribut haben, erwartet Microsoft Media Foundation Pipeline, dass die Zeitstempel während des Übergangs kontinuierlich bleiben. Daher darf die Medienquelle beim Übergang zur nächsten Präsentation nicht das [ATTRIBUT MF \_ EVENT SOURCE \_ ACTUAL \_ \_ START](mf-event-source-actual-start-attribute.md) verwenden.
 
-Medienquellen, die [**imfmediasourcetopologyprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) implementieren, sollten das Element " [MF \_ toponode \_ Sequence \_ elementId](mf-toponode-sequence-elementid-attribute.md) " anstelle des "MF PD"- \_ \_ \_ \_ Attributs "ID" verwenden.
+Medienquellen, die [**EINEMEDIASourceTopologyProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcetopologyprovider) implementieren, sollten das [MF \_ TOPONODE \_ SEQUENCE \_ ELEMENTID-Attribut](mf-toponode-sequence-elementid-attribute.md) anstelle des MF \_ PD PLAYBACK ELEMENT \_ \_ \_ ID-Attributs verwenden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,20 +47,20 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> </dl>
 
  

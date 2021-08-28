@@ -1,33 +1,33 @@
 ---
-description: In diesem Thema werden die Schritte zum Auffüllen der Strukturen beschrieben, die für die Wiedergabe von Audiodaten in XAudio2 erforderlich sind.
+description: In diesem Thema werden die Schritte zum Auffüllen der Strukturen beschrieben, die zum Wiedergeben von Audiodaten in XAudio2 erforderlich sind.
 ms.assetid: caeb522e-d4f6-91e2-5e85-ea0af0f61300
 title: "So wird's gemacht: Laden von Datendateien in XAudio2"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 659b4d8e106b6f0b2eb942505f99562f56fdada7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bacf08e8f16e5cd9c42409776b02846990b9d66d685a0186314445742f23341
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962659"
 ---
 # <a name="how-to-load-audio-data-files-in-xaudio2"></a>So wird's gemacht: Laden von Datendateien in XAudio2
 
 > [!Note]  
-> Dieser Inhalt gilt nur für Desktop-Apps und erfordert Revision, damit Sie in einer Windows Store-App funktionieren. Weitere Informationen finden Sie in der Dokumentation zu [**CreateFile2**](/windows/win32/api/fileapi/nf-fileapi-createfile2), " [**forateeventex**](/windows/win32/api/synchapi/nf-synchapi-createeventexa)", " [**WaitForSingleObjectEx**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex)", " [**setfilepointerex**](/windows/win32/api/fileapi/nf-fileapi-setfilepointerex)" und " [**getoverlappedresultex**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresultex)". Weitere Informationen finden Sie unter "Soundfilter eader. h/. cpp" im Beispiel "basicsound Windows 8" aus der [Windows SDK Samples Gallery](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/XAudio2%20audio%20file%20playback%20sample%20(Windows%208)).
+> Dieser Inhalt gilt nur für Desktop-Apps und erfordert eine Revision, um in einer Windows Store-App zu funktionieren. Weitere Informationen finden Sie in der Dokumentation zu [**CreateFile2,**](/windows/win32/api/fileapi/nf-fileapi-createfile2) [**CreateEventEx,**](/windows/win32/api/synchapi/nf-synchapi-createeventexa) [**WaitForSingleObjectEx,**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex) [**SetFilePointerEx**](/windows/win32/api/fileapi/nf-fileapi-setfilepointerex)und [**GetOverlappedResultEx.**](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresultex) Weitere Informationen finden Sie unter SoundFileReader.h/.cpp im BasicSound Windows 8-Beispiel aus dem [Windows SDK-Beispielkatalog.](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/XAudio2%20audio%20file%20playback%20sample%20(Windows%208))
 
  
 
-In diesem Thema werden die Schritte zum Auffüllen der Strukturen beschrieben, die für die Wiedergabe von Audiodaten in XAudio2 erforderlich sind. Mit den folgenden Schritten werden die "fmt"-und "Data"-Blöcke einer Audiodatei geladen und verwendet, um eine **WAVEFORMATEXTENSIBLE** -Struktur und eine [**XAUDIO2- \_ Puffer**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Struktur aufzufüllen.
+In diesem Thema werden die Schritte zum Auffüllen der Strukturen beschrieben, die zum Wiedergeben von Audiodaten in XAudio2 erforderlich sind. Die folgenden Schritte laden die Blöcke "fmt" und "data" einer Audiodatei und verwenden sie, um eine **WAVEFORMATEXTENSIBLE-Struktur** und eine [**XAUDIO2 \_ BUFFER-Struktur**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) aufzufüllen.
 
--   [Das Analysieren der Audiodatei wird vorbereitet.](#preparing-to-parse-the-audio-file)
--   [Auffüllen von XAudio2-Strukturen mit dem Inhalt von Riff-Blöcken.](#populating-xaudio2-structures-with-the-contents-of-riff-chunks)
+-   [Vorbereiten der Analyse der Audiodatei.](#preparing-to-parse-the-audio-file)
+-   [Auffüllen von XAudio2-Strukturen mit dem Inhalt von CSV-Blöcken.](#populating-xaudio2-structures-with-the-contents-of-riff-chunks)
 
-## <a name="preparing-to-parse-the-audio-file"></a>Das Analysieren der Audiodatei wird vorbereitet.
+## <a name="preparing-to-parse-the-audio-file"></a>Vorbereiten der Analyse der Audiodatei
 
-Audiodateien, die von XAudio2 unterstützt werden, verwenden das Ressourcenaustausch Datei Format (Riff). Das Riff wird in der Übersicht über das [Ressourcenaustausch Datei Format (Riff)](resource-interchange-file-format--riff-.md) beschrieben. Audiodaten in einer Riff Datei werden geladen, indem der Riff Block gefunden und dann durch den Block durchlaufen wird, um einzelne Segmente im Riff Block zu suchen. Die folgenden Funktionen sind Beispiele für Code zum Suchen von Blöcken und Laden von Daten, die in den Blöcken enthalten sind.
+Audiodateien, die von XAudio2 unterstützt werden, verwenden das Resource Interchange File Format (DOSSIER). DER ABSCHNITT WIRD in der Übersicht über das [Resource Interchange File Format (CSV)](resource-interchange-file-format--riff-.md) beschrieben. Die Audiodaten in einer CSV-Datei werden geladen, indem der ABSCHNITT GESUCHT und dann durch den Block schleifet wird, um einzelne Blöcke zu finden, die im SEGMENT enthalten sind. Die folgenden Funktionen sind Beispiele für Code zum Suchen von Segmenten und Laden von Daten, die in den Blöcken enthalten sind.
 
--   So finden Sie einen Block in einer Riff Datei:
+-   So suchen Sie einen Block in einer PROTOKOLLDATEI:
 
     ```
     #ifdef _XBOX //Big-Endian
@@ -105,9 +105,9 @@ Audiodateien, die von XAudio2 unterstützt werden, verwenden das Ressourcenausta
 
     
 
--   , Wenn Daten in einem Block gelesen werden sollen, nachdem Sie gefunden wurden.
+-   So lesen Sie Daten in einem Block, nachdem sie gefunden wurden.
 
-    Sobald ein gewünschter Block gefunden wird, können seine Daten gelesen werden, indem der Dateizeiger auf den Anfang des Daten Abschnitts des Segments angepasst wird. Eine Funktion zum Lesen der Daten aus einem Block, sobald Sie gefunden wird, könnte wie folgt aussehen.
+    Sobald ein gewünschter Block gefunden wurde, können seine Daten gelesen werden, indem der Dateizeiger an den Anfang des Datenabschnitts des Blockes angepasst wird. Eine Funktion zum Lesen der Daten aus einem Block, sobald sie gefunden wurde, könnte wie folgt aussehen.
 
     ```
     HRESULT ReadChunkData(HANDLE hFile, void * buffer, DWORD buffersize, DWORD bufferoffset)
@@ -124,15 +124,15 @@ Audiodateien, die von XAudio2 unterstützt werden, verwenden das Ressourcenausta
 
     
 
-## <a name="populating-xaudio2-structures-with-the-contents-of-riff-chunks"></a>Auffüllen von XAudio2-Strukturen mit dem Inhalt von Riff Blöcken
+## <a name="populating-xaudio2-structures-with-the-contents-of-riff-chunks"></a>Auffüllen von XAudio2-Strukturen mit dem Inhalt von VERSA-Blöcken
 
-Damit XAudio2 Audiodaten mit einer Quell Stimme abspielen kann, benötigt es eine **WaveFormatEx** -Struktur und eine [**XAudio2- \_ Puffer**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Struktur. Die **WaveFormatEx** -Struktur kann eine größere Struktur sein, z. b. **WAVEFORMATEXTENSIBLE** , die eine **WaveFormatEx** -Struktur als ersten Member enthält. Weitere Informationen finden Sie auf der Referenzseite zu **WaveFormatEx** .
+Damit XAudio2 Audio mit einer Quellstimme wiedergeben kann, benötigen sie eine **WAVEFORMATEX-Struktur** und eine [**XAUDIO2 \_ BUFFER-Struktur.**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Die **WAVEFORMATEX-Struktur** kann eine größere Struktur wie **WAVEFORMATEXTENSIBLE** sein, die eine **WAVEFORMATEX-Struktur** als erstes Element enthält. Weitere Informationen finden Sie auf der **WAVEFORMATEX-Referenzseite.**
 
-In diesem Beispiel wird eine **WAVEFORMATEXTENSIBLE** verwendet, um das Laden von PCM-Audiodateien mit mehr als zwei Kanälen zuzulassen.
+In diesem Beispiel wird **WAVEFORMATEXTENSIBLE** verwendet, um das Laden von PCM-Audiodateien mit mehr als zwei Kanälen zu ermöglichen.
 
-Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Funktionen, um eine **WAVEFORMATEXTENSIBLE** -Struktur und eine [**XAUDIO2- \_ Puffer**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Struktur aufzufüllen. In diesem Fall enthält die Audiodatei, die geladen wird, PCM-Daten und enthält nur den Block "Riff", "fmt" und "Data". Andere Formate enthalten möglicherweise zusätzliche Segmenttypen, wie im Text [Format der Ressourcenaustausch Datei (Riff)](resource-interchange-file-format--riff-.md)beschrieben.
+Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Funktionen, um eine **WAVEFORMATEXTENSIBLE-Struktur** und eine [**XAUDIO2 \_ BUFFER-Struktur**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) aufzufüllen. In diesem Fall enthält die zu ladende Audiodatei PCM-Daten und nur die Blöcke 'CSV', 'fmt ' und 'data'. Andere Formate können zusätzliche Blocktypen enthalten, wie in [RESOURCE Interchange File Format (CSV)](resource-interchange-file-format--riff-.md)beschrieben.
 
-1.  Deklarieren Sie **WAVEFORMATEXTENSIBLE** -und [**XAUDIO2- \_ Puffer**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Strukturen.
+1.  Deklarieren Sie **WAVEFORMATEXTENSIBLE-** und [**XAUDIO2 \_ BUFFER-Strukturen.**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer)
     ```
     WAVEFORMATEXTENSIBLE wfx = {0};
     XAUDIO2_BUFFER buffer = {0};
@@ -140,7 +140,7 @@ Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Fu
 
     
 
-2.  Öffnen Sie die Audiodatei mit "deatefile".
+2.  Öffnen Sie die Audiodatei mit CreateFile.
     ```
     #ifdef _XBOX
     char * strFileName = "game:\\media\\MusicMono.wav";
@@ -166,7 +166,7 @@ Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Fu
 
     
 
-3.  Suchen Sie den Block "Riff" in der Audiodatei, und überprüfen Sie den Dateityp.
+3.  Suchen Sie in der Audiodatei nach dem Block "CSV", und überprüfen Sie den Dateityp.
     ```
     DWORD dwChunkSize;
     DWORD dwChunkPosition;
@@ -180,7 +180,7 @@ Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Fu
 
     
 
-4.  Suchen Sie den Block "f", und kopieren Sie seinen Inhalt in eine **WAVEFORMATEXTENSIBLE** -Struktur.
+4.  Suchen Sie den Block "fmt", und kopieren Sie dessen Inhalt in eine **WAVEFORMATEXTENSIBLE-Struktur.**
     ```
     FindChunk(hFile,fourccFMT, dwChunkSize, dwChunkPosition );
     ReadChunkData(hFile, &wfx, dwChunkSize, dwChunkPosition );
@@ -188,7 +188,7 @@ Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Fu
 
     
 
-5.  Suchen Sie den Block "Data", und lesen Sie seinen Inhalt in einem Puffer.
+5.  Suchen Sie den Datenabschnitt, und lesen Sie dessen Inhalt in einen Puffer.
     ```
     //fill out the audio data buffer with the contents of the fourccDATA chunk
     FindChunk(hFile,fourccDATA,dwChunkSize, dwChunkPosition );
@@ -198,7 +198,7 @@ Die folgenden Schritte veranschaulichen die Verwendung der oben beschriebenen Fu
 
     
 
-6.  Füllt eine [**XAUDIO2- \_ Puffer**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) Struktur auf.
+6.  Füllen Sie eine [**XAUDIO2 \_ BUFFER-Struktur**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer) auf.
     ```
     buffer.AudioBytes = dwChunkSize;  //size of the audio buffer in bytes
     buffer.pAudioData = pDataBuffer;  //buffer containing audio data

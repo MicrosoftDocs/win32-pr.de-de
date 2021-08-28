@@ -1,7 +1,7 @@
 ---
-description: Die getwindowheight-Methode ruft die aktuelle Höhe des Fensters ab.
+description: Die GetWindowHeight-Methode ruft die aktuelle Höhe des Fensters ab.
 ms.assetid: f569ad8e-7773-4efb-897b-1c21aa851124
-title: Cbasewindow. getwindowheight-Methode (winutil. h)
+title: CBaseWindow.GetWindowHeight-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 88189fd3d5b881ab6c88063ef9e1d7d0aedbe9ba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f88cedc63b2132345c57079ea25f64fd4a1829f2bc394d71746567105a950d0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016628"
 ---
-# <a name="cbasewindowgetwindowheight-method"></a>Cbasewindow. getwindowheight-Methode
+# <a name="cbasewindowgetwindowheight-method"></a>CBaseWindow.GetWindowHeight-Methode
 
-Die- `GetWindowHeight` Methode ruft die aktuelle Höhe des Fensters ab.
+Die `GetWindowHeight` -Methode ruft die aktuelle Höhe des Fensters ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,16 +50,16 @@ Gibt die Höhe des Fensters in Pixel zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Methode "-Methode (GetResults)"
+title: CreateMediaRendererOperation-GetResults-Methode
 description: Ruft die Ergebnisse des asynchronen Vorgangs ab.
 ms.assetid: 02C5DCB9-5C0F-4C0C-9443-B97168B5CEBB
 keywords:
-- GetResults-Methode Medien Streaming-API
-- GetResults-Methode Medien Streaming-API, Schnittstelle von "kreatemediarendereroperation"
-- Methode "kreatemediarendereroperation" Medien Streaming-API, GetResults-Methode
+- 'GetResults-Methode: Medienstreaming-API'
+- 'GetResults-Methode: Medienstreaming-API, CreateMediaRendererOperation-Schnittstelle'
+- CreateMediaRendererOperation-Schnittstelle Medienstreaming-API, GetResults-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b8c3da874b2259eccbb2c56271400d05c69da71c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 73e068eeebbd85a1f792875dc11d2d0445b5a715be5bf94996e05e32cf9e5a9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100832"
 ---
-# <a name="createmediarendereroperationgetresults-method"></a>Methode "kreatemediarendereroperation:: GetResults"
+# <a name="createmediarendereroperationgetresults-method"></a>CreateMediaRendererOperation::GetResults-Methode
 
 Ruft die Ergebnisse des asynchronen Vorgangs ab.
 
@@ -41,18 +41,18 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Ergebnisse des Vorgangs. Ein Zeiger auf das neu erstellte [**MediaRenderer**](mediarenderer.md) -Objekt.
+Die Ergebnisse des Vorgangs. Ein Zeiger auf das neu erstellte [**MediaRenderer-Objekt.**](mediarenderer.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**"Kreatemediarendereroperation"**](createmediarendereroperation.md)
+[**CreateMediaRendererOperation**](createmediarendereroperation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

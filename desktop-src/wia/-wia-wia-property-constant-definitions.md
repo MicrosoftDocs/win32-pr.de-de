@@ -1,7 +1,7 @@
 ---
-description: Im folgenden finden Sie eine Liste der anzeigen Amen und numerischen IDs der Windows-Abbild Erfassung (WIA). Sie werden als Microsoft-Visual Basic Konstante Definitionen dargestellt, um eine bequeme Einbindung in Anwendungen oder Skripts zu erhalten.
+description: Im Folgenden sind die Anzeigenamen und numerischen IDs für Windows WiA-Eigenschaften (Image Acquisition) aufgeführt. Sie werden als Microsoft Visual Basic konstanten Definitionen dargestellt, um sie bequem in Anwendungen oder Skripts aufzunehmen.
 ms.assetid: 6cacb7ce-1f41-4d24-adcb-c7aa9049f846
-title: Eigenschafts Konstante Definitionen von WIA
+title: Definitionen von WIA-Eigenschaftenkonstanten
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,18 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0fec89e2e10b019b7186482609d3ab4089ede692
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6539e14daf6a1fc124c177713f3056b981fd6c00ac9a41392ed03ae8759319cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965449"
 ---
-# <a name="wia-property-constant-definitions"></a>Eigenschafts Konstante Definitionen von WIA
+# <a name="wia-property-constant-definitions"></a>Definitionen von WIA-Eigenschaftenkonstanten
 
-Im folgenden finden Sie eine Liste der anzeigen Amen und numerischen IDs der Windows-Abbild Erfassung (WIA). Sie werden als Microsoft-Visual Basic Konstante Definitionen dargestellt, um eine bequeme Einbindung in Anwendungen oder Skripts zu erhalten.
+Im Folgenden sind die Anzeigenamen und numerischen IDs für Windows WiA-Eigenschaften (Image Acquisition) aufgeführt. Sie werden als Microsoft Visual Basic konstanten Definitionen dargestellt, um sie bequem in Anwendungen oder Skripts aufzunehmen.
 
-Fügen Sie für Visual Basic Anwendungen einen Verweis auf die Microsoft Windows-Abbild Erfassung 1,01-Typbibliothek hinzu, wobei diese Konstanten als Enumerationstypen bereitgestellt werden.
+Fügen Sie für Visual Basic Anwendungen einen Verweis auf "Microsoft Windows Image Acquisition 1.01 Type Library" hinzu, wobei diese Konstanten als Enumerationstypen bereitgestellt werden.
 
 
 ```

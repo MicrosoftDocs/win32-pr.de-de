@@ -1,10 +1,10 @@
 ---
-title: Subclass-of-Attribut
+title: Sub-Class-Of-Attribut
 description: Die übergeordnete Klasse einer Klasse.
 ms.assetid: ff2afb13-5d72-4b8b-9e66-c16fb0ae5e88
 ms.tgt_platform: multiple
 keywords:
-- Unterklasse-of-Attribut-AD-Schema
+- AD-Schema für untergeordnete Klassen von Attributen
 - subClassOf-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b90c1e431e8c1e501731070359d379436973ef67
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1d6e9ea83cf538ee9b49acc38399ac6d7ae651e789cc9e9c9de5b15625c54438
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959969"
 ---
-# <a name="sub-class-of-attribute"></a>Subclass-of-Attribut
+# <a name="sub-class-of-attribute"></a>Sub-Class-Of-Attribut
 
 Die übergeordnete Klasse einer Klasse.
 
@@ -29,11 +29,11 @@ Die übergeordnete Klasse einer Klasse.
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
-| CN                | Unterklasse-von                                                    |
-| LDAP-Display-Name | subClassOf                                                      |
+| CN                | Unterklasse von                                                    |
+| Ldap-Anzeigename | subClassOf                                                      |
 | Size              | \-                                                              |
-| Berechtigung aktualisieren  | Schema Administrator                                            |
-| Aktualisierungshäufigkeit  | \-                                                              |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                                            |
+| Updatehäufigkeit  | \-                                                              |
 | Attribute-Id      | 1.2.840.113556.1.2.21                                           |
 | System-ID-GUID    | bf967a3b-0de6-11d0-a285-00aa003049e2                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
@@ -43,7 +43,7 @@ Die übergeordnete Klasse einer Klasse.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Die übergeordnete Klasse einer Klasse.
 |------------------------|--------------------------------------------------|
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
-| System-Only            | Richtig                                             |
-| Ist-einwertig       | Richtig                                             |
+| System-Only            | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000008                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Klassenschema**](c-classschema.md)<br/> |
 
 
 

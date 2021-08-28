@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. canwakedevices (Eigenschaft)
-description: Ruft einen Wert ab, der angibt, ob das Gerät aktiviert werden kann.
+title: BasicDevice.CanWakeDevices-Eigenschaft
+description: Ruft einen Wert ab, der angibt, ob das Gerät reaktiviert werden kann.
 ms.assetid: 0BF0B2CD-E09E-4A0B-9D48-A980CBFE4233
 keywords:
-- Canwakedevices-Eigenschaft Medien Streaming-API
-- Canwakedevices-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, canwakedevices-Eigenschaft
+- CanWakeDevices-Eigenschaft Medienstreaming-API
+- CanWakeDevices-Eigenschaft Medienstreaming-API, BasicDevice-Schnittstelle
+- Media Streaming-API der BasicDevice-Schnittstelle, CanWakeDevices-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 63fc4ed8c387c7fbe083e64311442b9e12176e5d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 37aba33168993df0e6e2853ea5bbc5f618863c3f025b28ab8ab98b81025486bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100902"
 ---
-# <a name="basicdevicecanwakedevices-property"></a>Basicdevice. canwakedevices (Eigenschaft)
+# <a name="basicdevicecanwakedevices-property"></a>BasicDevice.CanWakeDevices-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob das Gerät aktiviert werden kann.
+Ruft einen Wert ab, der angibt, ob das Gerät reaktiviert werden kann.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_CanWakeDevices(
-  [out] boolean *value
+  [out] boolean *value
 );
 ```
 
@@ -41,15 +41,15 @@ HRESULT get_CanWakeDevices(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf einen booleschen Wert, der **true** ist, wenn das Gerät aktiviert werden kann.
+Ein Zeiger auf einen booleschen Wert, der **True** ist, wenn das Gerät aktiviert werden kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

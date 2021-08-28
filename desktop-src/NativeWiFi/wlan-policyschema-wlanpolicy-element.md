@@ -1,7 +1,7 @@
 ---
-description: Enthält eine Drahtlos-LAN-Richtlinie.
+description: Enthält eine WLAN-Richtlinie.
 ms.assetid: 16ffb682-f88b-4ca1-a902-d2db5e347975
-title: Wlanpolicy-Element
+title: WLANPolicy-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: ec26a3cab15014deabca4e9332c1fbef7a788b17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9e56e25e51a3c6e798242b390f5d8b7341d7306455f1b15eb9e450830d3c9b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064700"
 ---
-# <a name="wlanpolicy-element"></a>Wlanpolicy-Element
+# <a name="wlanpolicy-element"></a>WLANPolicy-Element
 
-Das **wlanpolicy** -Element enthält eine Drahtlos-LAN-Richtlinie. Dieses Element ist das eindeutige root-Element für ein drahtlos Richtlinien Profil.
+Das **WLANPolicy-Element** enthält eine WLAN-Richtlinie. Dieses Element ist das eindeutige Stammelement für ein Drahtlosrichtlinienprofil.
 
-Der Ziel Namespace für das **wlanpolicy** -Element ist `https://www.microsoft.com/networking/WLAN/policy/v1` .
+Der Zielnamespace für das **WLANPolicy-Element** ist `https://www.microsoft.com/networking/WLAN/policy/v1` .
 
 ``` syntax
 <xs:element name="WLANPolicy">
@@ -145,26 +145,26 @@ Der Ziel Namespace für das **wlanpolicy** -Element ist `https://www.microsoft.c
 
 | Element                                                                                                                    | type                                                                     | BESCHREIBUNG                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| [**"Zuweisung von" "" "".**](wlan-policyschema-alloweveryonetocreatealluserprofiles-globalflags-element.md) | boolean                                                                  | Gibt an, ob ein Benutzer ein Profil für alle Benutzer erstellen kann. <br/>                                                               |
-| [**Zulassungs**](wlan-policyschema-allowlist-networkfilter-element.md)                                                     |                                                                          | Die Liste der Drahtlos-LAN-Netzwerke, denen jeder Computer eine Verbindung herstellen darf. <br/>                                       |
-| [**Blocklisten**](wlan-policyschema-blocklist-networkfilter-element.md)                                                     |                                                                          | Die Liste der Drahtlos-LAN-Netzwerke, mit denen ein Computer keine Verbindung herstellen darf.<br/>                                                    |
-| [**denyalless**](wlan-policyschema-denyalless-networkfilter-element.md)                                                   | boolean                                                                  | Gibt an, ob der Zugriff auf alle Infrastruktur Netzwerke blockiert ist. <br/>                                                           |
-| [**denyallibss**](wlan-policyschema-denyallibss-networkfilter-element.md)                                                 | boolean                                                                  | Gibt an, ob der Zugriff auf alle Ad-hoc-Netzwerke blockiert ist. <br/>                                                                   |
-| [**Beschreibung**](wlan-policyschema-description-wlanpolicy-element.md)                                                    | [**nametype**](wlan-policyschema-nametype-simpletype.md)                | Die Beschreibung einer Drahtlos-LAN-Richtlinie. <br/>                                                                                |
-| [**enableautoconfig**](wlan-policyschema-enableautoconfig-globalflags-element.md)                                         | boolean                                                                  | Gibt an, ob Computer den integrierten automatischen Konfigurations Dienst (AutoConfig) zum Verwalten von Drahtlos Verbindungen verwenden. <br/> |
-| [**globalflags**](wlan-policyschema-globalflags-wlanpolicy-element.md)                                                    |                                                                          | Enthält die globalen Einstellungen für das Auto Configuration Module (ACM). <br/>                                                    |
-| [**Benennen**](wlan-policyschema-name-wlanpolicy-element.md)                                                                  | [**nametype**](wlan-policyschema-nametype-simpletype.md)                | Der Name einer Drahtlos-LAN-Richtlinie. <br/>                                                                                       |
-| [**Netzwerk**](wlan-policyschema-network-allowlist-element.md)                                                             | [**networkitemtype**](wlan-policyschema-networkitemtype-complextype.md) | Ein zulässiges Netzwerk. <br/>                                                                                                      |
-| [**Netzwerk**](wlan-policyschema-network-blocklist-element.md)                                                             | [**networkitemtype**](wlan-policyschema-networkitemtype-complextype.md) | Ein blockiertes Netzwerk. <br/>                                                                                                       |
-| [**Network Filter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)                                                |                                                                          | Die Liste der zugelassenen und verweigerten Netzwerke.<br/>                                                                                  |
-| [**Profilliste**](wlan-policyschema-profilelist-wlanpolicy-element.md)                                                    |                                                                          | Enthält eine Liste der Profile, die auf Domänen-oder Computer Ebene angewendet werden sollen. <br/>                                                |
-| [**showdeniednetwork**](wlan-policyschema-showdeniednetwork-globalflags-element.md)                                       | boolean                                                                  | Gibt an, ob abgelehnte Netzwerke im Assistenten **zum Herstellen einer Verbindung mit einem Netzwerk** angezeigt werden. <br/>                                         |
+| [**allowEveryoneToCreateAllUserProfiles**](wlan-policyschema-alloweveryonetocreatealluserprofiles-globalflags-element.md) | boolean                                                                  | Gibt an, ob ein Benutzer ein All-User-Profil erstellen kann. <br/>                                                               |
+| [**allowList**](wlan-policyschema-allowlist-networkfilter-element.md)                                                     |                                                                          | Die Liste der WLAN-Netzwerke, mit denen jeder Computer eine Verbindung herstellen darf. <br/>                                       |
+| [**Blocklist**](wlan-policyschema-blocklist-networkfilter-element.md)                                                     |                                                                          | Die Liste der WLAN-Netzwerke, mit denen ein Computer keine Verbindung herstellen darf.<br/>                                                    |
+| [**denyAllESS**](wlan-policyschema-denyalless-networkfilter-element.md)                                                   | boolean                                                                  | Gibt an, ob der Zugriff auf alle Infrastrukturnetzwerke blockiert ist. <br/>                                                           |
+| [**denyAllIBSS**](wlan-policyschema-denyallibss-networkfilter-element.md)                                                 | boolean                                                                  | Gibt an, ob der Zugriff auf alle Ad-hoc-Netzwerke blockiert ist. <br/>                                                                   |
+| [**Beschreibung**](wlan-policyschema-description-wlanpolicy-element.md)                                                    | [**nameType**](wlan-policyschema-nametype-simpletype.md)                | Die Beschreibung einer WLAN-Richtlinie. <br/>                                                                                |
+| [**enableAutoConfig**](wlan-policyschema-enableautoconfig-globalflags-element.md)                                         | boolean                                                                  | Gibt an, ob Computer den integrierten automatischen Konfigurationsdienst (AutoConfig) zum Verwalten von Drahtlosverbindungen verwenden. <br/> |
+| [**globalFlags**](wlan-policyschema-globalflags-wlanpolicy-element.md)                                                    |                                                                          | Enthält die globalen Einstellungen für das Auto Configuration Module (ACM). <br/>                                                    |
+| [**Namen**](wlan-policyschema-name-wlanpolicy-element.md)                                                                  | [**nameType**](wlan-policyschema-nametype-simpletype.md)                | Der Name einer WLAN-Richtlinie. <br/>                                                                                       |
+| [**Netzwerk**](wlan-policyschema-network-allowlist-element.md)                                                             | [**networkItemType**](wlan-policyschema-networkitemtype-complextype.md) | Ein zulässiges Netzwerk. <br/>                                                                                                      |
+| [**Netzwerk**](wlan-policyschema-network-blocklist-element.md)                                                             | [**networkItemType**](wlan-policyschema-networkitemtype-complextype.md) | Ein blockiertes Netzwerk. <br/>                                                                                                       |
+| [**networkFilter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)                                                |                                                                          | Die Liste der zulässigen und verweigerten Netzwerke.<br/>                                                                                  |
+| [**profileList**](wlan-policyschema-profilelist-wlanpolicy-element.md)                                                    |                                                                          | Enthält eine Liste von Profilen, die auf Domänen- oder Computerebene angewendet werden sollen. <br/>                                                |
+| [**showDeniedNetwork**](wlan-policyschema-showdeniednetwork-globalflags-element.md)                                       | boolean                                                                  | Gibt an, ob abgelehnte Netzwerke im **Verbinden eines Netzwerk-Assistenten** angezeigt werden. <br/>                                         |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer Struktur ähnlichen Struktur finden Sie unter [WLAN- \_ Richtlinien Schema Elemente](wlan-policyschema-elements.md).
+Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer strukturähnlichen Struktur finden Sie unter Schemaelemente der [ \_ WLAN-Richtlinie.](wlan-policyschema-elements.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -172,8 +172,8 @@ Informationen zum Anzeigen der Liste der untergeordneten Elemente in einer Struk
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -1,37 +1,37 @@
 ---
 title: Eingabedaten
-description: Die OpenGL-Pipeline erfordert, dass Sie mehrere Datentypen eingeben.
+description: Für die OpenGL-Pipeline müssen Sie verschiedene Arten von Daten eingeben.
 ms.assetid: e820d093-3e39-4feb-ab2a-0c28e298bde4
 keywords:
-- OpenGL-Verarbeitungs Pipeline, Eingabedaten
+- OpenGL-Verarbeitungspipeline, Eingabedaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 121cf032e0e718b95fd42f3001d2ff8efee1f6b5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9a588e60991ad068653890659e236f8a7a96e62cad524b13ea72bfd38fb5bba4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118937427"
 ---
 # <a name="input-data"></a>Eingabedaten
 
-Die OpenGL-Pipeline erfordert, dass Sie mehrere Datentypen eingeben:
+Für die OpenGL-Pipeline müssen Sie verschiedene Arten von Daten eingeben:
 
--   **Vertices**. Vertices beschreiben die Form des gewünschten geometrischen Objekts. Um Vertices anzugeben, verwenden Sie die [**glVertex \***](glvertex-functions.md) -Funktionen in Verbindung mit [**glBegin**](glbegin.md) und [**glEnd**](glend.md) , um einen Punkt, eine Linie oder ein Polygon zu erstellen. Sie können auch [**glrect**](glrect-functions.md) verwenden, um ein gesamtes Rechteck gleichzeitig zu beschreiben.
--   **Edge-Flag**. Standardmäßig sind alle Ränder von Polygonen Begrenzungs Kanten. Verwenden Sie [**gledgeflag \***](gledgeflag-functions.md) , um das Edge-Flag explizit festzulegen.
--   **Aktuelle Raster Position**. Mit [**glRasterPos \***](glrasterpos-functions.md)angegeben, wird die aktuelle Raster Position verwendet, um Raster Koordinaten für Pixel-und Bitmap-Zeichnungsvorgänge zu bestimmen.
--   **Aktuelle normal**. Ein normaler Vektor, der einem bestimmten Scheitelpunkt zugeordnet ist, bestimmt, wie eine Oberfläche an diesem Scheitelpunkt im dreidimensionalen Raum ausgerichtet wird. Dies wirkt sich wiederum darauf aus, wie viel Licht der jeweilige Scheitelpunkt empfängt. Verwenden Sie [**glnormal \***](glnormal-functions.md) , um einen normalen Vektor anzugeben.
--   **Aktuelle Farbe**. Die Farbe eines Scheitel Punkts und die Beleuchtungsbedingungen bestimmen die endgültige, Leuchtende Farbe. Die Farbe wird mit " [**glcolor \***](glcolor-functions.md) " angegeben, wenn im RGBA-Modus angegeben ist, oder mit " [**glindex \***](glindex-functions.md) ", wenn im Farb Index Modus
--   **Aktuelle Texturkoordinaten**. Mit " [**gltexcoord \***](gltexcoord-functions.md)" angegeben, bestimmen Texturkoordinaten die Position in einer Textur Zuordnung, die einem Scheitelpunkt eines Objekts zugeordnet werden soll.
+-   **Vertices**. Scheitelpunkte beschreiben die Form des gewünschten geometrischen Objekts. Verwenden Sie zum Angeben von Scheitelpunkten [ * *glVertex \** _-Funktionen](glvertex-functions.md) in Verbindung mit [_ *glBegin* *](glbegin.md) und [**glEnd,**](glend.md) um einen Punkt, eine Linie oder ein Polygon zu erstellen. Sie können [**glRect**](glrect-functions.md) auch verwenden, um ein gesamtes Rechteck gleichzeitig zu beschreiben.
+-   **Edgeflag**. Standardmäßig sind alle Kanten von Polygonen Begrenzungsränder. Verwenden Sie [**glEdgeFlag, \***](gledgeflag-functions.md) um das Edgeflag explizit festzulegen.
+-   **Aktuelle Rasterposition.** Mit [**glRasterPos \***](glrasterpos-functions.md)angegeben, wird die aktuelle Rasterposition verwendet, um Rasterkoordinaten für Pixel- und Bitmapzeichnungsvorgänge zu bestimmen.
+-   **Der aktuelle normale**. Ein normaler Vektor, der einem bestimmten Scheitelpunkt zugeordnet ist, bestimmt, wie eine Oberfläche an diesem Scheitelpunkt im dreidimensionalen Raum ausgerichtet ist. dies wiederum wirkt sich darauf aus, wie viel Licht ein bestimmter Scheitelpunkt empfängt. Verwenden Sie [**glNormal, \***](glnormal-functions.md) um einen normalen Vektor anzugeben.
+-   **Aktuelle Farbe**. Die Farbe eines Scheitelpunkts sowie die Beleuchtungsbedingungen bestimmen die endgültige, helle Farbe. Die Farbe wird mit [ * *glColor \** _](glcolor-functions.md) im RGBA-Modus oder mit _ [*glIndex \** *](glindex-functions.md) im Farbindexmodus angegeben.
+-   **Aktuelle Texturkoordinaten.** Mit [**glTexCoord \***](gltexcoord-functions.md)angegeben, bestimmen Texturkoordinaten die Position in einer Texturkarte, die einem Scheitelpunkt eines Objekts zugeordnet werden soll.
 
 > [!Note]  
-> Wenn " **glVertex \*** " aufgerufen wird, erbt der resultierende Scheitelpunkt die aktuellen Edge-Flag-, normal-, Farb-und Texturkoordinaten. Daher muss " **gledgeflag \***", " **glnormal \***", " **glcolor \***" und " **gltexcoord \*** " vor " **glVertex \***" aufgerufen werden, wenn Sie sich auf den resultierenden Scheitelpunkt auswirken.
+> Wenn **glVertex \* *_ aufgerufen wird, erbt der resultierende Scheitelpunkt das aktuelle Randflag, die normale, die Farbe und die Texturkoordinaten. Daher* müssen _ glEdgeFlag \* *_, _* glNormal \* *_, _* glColor \* *_, und _* glTexCoord _ vor _ \* glVertex \* *aufgerufen werden,*** wenn sie sich auf den resultierenden Scheitelpunkt auswirken sollen.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

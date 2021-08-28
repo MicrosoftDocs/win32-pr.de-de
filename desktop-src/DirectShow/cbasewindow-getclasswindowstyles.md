@@ -1,7 +1,7 @@
 ---
-description: Die getclasswindowstyles-Methode ruft die Klassen Stile und Fenster Stile des Fensters ab.
+description: Die GetClassWindowStyles-Methode ruft die Klassenstile und Fensterstile des Fensters ab.
 ms.assetid: 6eec7912-c654-4e4f-b6f1-ec94c7284575
-title: Cbasewindow. getclasswindowstyles-Methode (winutil. h)
+title: CBaseWindow.GetClassWindowStyles-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a34332f84a91ee88d61ee5f29f0b6a0b0cc44714
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba7042069d4f1190a88b25ea4cc349e8230c149dd61d2d06fc91fa3439a9e55f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074629"
 ---
-# <a name="cbasewindowgetclasswindowstyles-method"></a>Cbasewindow. getclasswindowstyles-Methode
+# <a name="cbasewindowgetclasswindowstyles-method"></a>CBaseWindow.GetClassWindowStyles-Methode
 
-Die `GetClassWindowStyles` -Methode ruft die Klassen Stile und Fenster Stile des Fensters ab.
+Die `GetClassWindowStyles` -Methode ruft die Klassenstile und Fensterstile des Fensters ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,36 +44,36 @@ virtual LPTSTR GetClassWindowStyles(
 
 <dl> <dt>
 
-*pclassstyles* 
+*pClassStyles* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Klassen Stile empfängt.
+Zeiger auf eine Variable, die die Klassenstile empfängt.
 
 </dd> <dt>
 
-*pwindowstyles* 
+*pWindowStyles* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Fenster Stile empfängt.
+Zeiger auf eine Variable, die die Fensterstile empfängt.
 
 </dd> <dt>
 
-*pwindowstylesex* 
+*pWindowStylesEx* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die erweiterten Fenster Stile empfängt.
+Zeiger auf eine Variable, die die erweiterten Fensterstile empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine statische Text Zeichenfolge zurück, die den Klassennamen enthält.
+Gibt eine statische Textzeichenfolge zurück, die den Klassennamen enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbasewindow::P Analyse Window**](cbasewindow-preparewindow.md) -Methode ruft diese Methode auf, um die Klassen Stile und Fenster Stile des Fensters abzurufen.
+Die [**CBaseWindow::P repareWindow-Methode**](cbasewindow-preparewindow.md) ruft diese Methode auf, um die Klassen- und Fensterstile des Fensters abzurufen.
 
-Diese Methode ist rein virtuell. Diese Klasse muss von der abgeleiteten Klasse implementiert werden. Das folgende Beispiel zeigt eine mögliche Implementierung:
+Diese Methode ist rein virtuell. die abgeleitete Klasse muss sie implementieren. Das folgende Beispiel zeigt eine mögliche Implementierung:
 
 
 ```C++
@@ -90,7 +90,7 @@ LPTSTR CMyWindowClass::GetClassWindowStyles(DWORD *pClassStyles,
 
 
 
-Das-Objekt verwendet den Klassen Stil für den **lpszClassName** -Member einer WNDCLASS-Struktur, die an die **registerClass** -Funktion übergeben wird. Das-Objekt verwendet die Fenster Stile für den *dwExStyle* -Parameter und den *dwstyle* -Parameter **der Funktion "** -Funktion". Weitere Informationen finden Sie unter Platform SDK.
+Das -Objekt verwendet den Klassenstil für den **lpszClassName-Member** einer WNDCLASS-Struktur, den es an die **RegisterClass-Funktion** übergibt. Das -Objekt verwendet die Fensterstile für die *Parameter dwExStyle* und *dwStyle* der **CreateWindowEx-Funktion.** Weitere Informationen finden Sie im Plattform-SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,16 +98,16 @@ Das-Objekt verwendet den Klassen Stil für den **lpszClassName** -Member einer W
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

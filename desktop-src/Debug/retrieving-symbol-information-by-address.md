@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code veranschaulicht, wie die symfromaddr-Funktion aufgerufen wird.
+description: Der folgende Code veranschaulicht, wie die SymFromAddr-Funktion aufgerufen wird.
 ms.assetid: 63dfadea-b0c4-4050-add8-d1f3aef7a495
-title: Abrufen von Symbol Informationen nach Adresse
+title: Abrufen von Symbolinformationen nach Adresse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29ad9d2879dbfd5820c4aa6c2e7563a1575ebe1c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6484327117e66826402dc97abb09f58813e528599c69bd97054528f5cfe89aba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119076384"
 ---
-# <a name="retrieving-symbol-information-by-address"></a>Abrufen von Symbol Informationen nach Adresse
+# <a name="retrieving-symbol-information-by-address"></a>Abrufen von Symbolinformationen nach Adresse
 
-Der folgende Code veranschaulicht, wie die [**symfromaddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromaddr) -Funktion aufgerufen wird. Diese Funktion füllt eine [**Symbol \_ Informations**](/windows/desktop/api/DbgHelp/ns-dbghelp-symbol_info) Struktur aus. Da der Name eine Variable Länge hat, müssen Sie einen Puffer bereitstellen, der groß genug ist, um den am Ende der **Symbol \_ Informations** Struktur gespeicherten Namen zu speichern. Außerdem muss der **maxnamelen** -Member auf die Anzahl der für den Namen reservierten Bytes festgelegt werden. In diesem Beispiel handelt es sich bei *dwaddress* um die Adresse, die einem Symbol zugeordnet werden soll. Die **symfromaddr** -Funktion speichert einen Offset am Anfang des Symbols für die Adresse in *dwverschiebungen*. Im Beispiel wird davon ausgegangen, dass Sie den Symbol Handler initialisiert haben, indem Sie den Code zum [Initialisieren des Symbol Handlers](initializing-the-symbol-handler.md)verwenden.
+Der folgende Code veranschaulicht, wie die [**SymFromAddr-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromaddr) aufgerufen wird. Diese Funktion füllt eine [**SYMBOL \_ INFO-Struktur**](/windows/desktop/api/DbgHelp/ns-dbghelp-symbol_info) aus. Da der Name eine variable Länge aufweist, müssen Sie einen Puffer angeben, der groß genug ist, um den Namen zu speichern, der am Ende der **SYMBOL \_ INFO-Struktur** gespeichert ist. Außerdem muss der **MaxNameLen-Member** auf die Anzahl von Bytes festgelegt werden, die für den Namen reserviert sind. In diesem Beispiel ist *dwAddress* die Adresse, die einem Symbol zugeordnet werden soll. Die **SymFromAddr-Funktion** speichert einen Offset am Anfang des Symbols in der Adresse in *dwDisplacement.* Im Beispiel wird davon ausgegangen, dass Sie den Symbolhandler mithilfe des Codes in [Initialisieren des Symbolhandlers initialisiert](initializing-the-symbol-handler.md)haben.
 
 
 ```C++
@@ -40,7 +40,7 @@ else
 
 
 
-Zum Abrufen der Quell Codezeilen Nummer für eine angegebene Adresse kann eine Anwendung [**SymGetLineFromAddr64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromaddr)verwenden. Diese Funktion erfordert einen Zeiger auf eine [**imagehlp \_ LINE64**](/windows/desktop/api/DbgHelp/ns-dbghelp-imagehlp_line) -Struktur, um den Quell Dateinamen und die Zeilennummer zu erhalten, die einer angegebenen Code Adresse entsprechen. Beachten Sie, dass der Symbol Handler Zeilennummern Informationen nur abrufen kann, wenn **symopt- \_ Auslastungs \_ Zeilen** mithilfe der [**symsetoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) -Funktion festgelegt werden. Diese Option muss vor dem Laden des Moduls festgelegt werden. Der dwaddress-Parameter enthält die Code Adresse, für die der Quell Dateiname und die Zeilennummer gesucht werden.
+Um die Quellcodezeilennummer für eine angegebene Adresse abzurufen, kann eine Anwendung [**SymGetLineFromAddr64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromaddr)verwenden. Diese Funktion erfordert einen Zeiger auf eine [**IMAGEHLP \_ LINE64-Struktur,**](/windows/desktop/api/DbgHelp/ns-dbghelp-imagehlp_line) um den Quelldateinamen und die Zeilennummer zu erhalten, die einer angegebenen Codeadresse entsprechen. Beachten Sie, dass der Symbolhandler Zeilennummerninformationen nur abrufen kann, wenn **SYMOPT \_ LOAD \_ LINES** mithilfe der [**Funktion SymSetOptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) festgelegt wird. Diese Option muss vor dem Laden des Moduls festgelegt werden. Der dwAddress-Parameter enthält die Codeadresse, für die sich der Quelldateiname und die Zeilennummer befinden.
 
 
 ```C++

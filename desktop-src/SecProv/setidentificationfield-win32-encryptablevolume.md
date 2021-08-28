@@ -1,7 +1,7 @@
 ---
 description: Legt die angegebene Bezeichnerzeichenfolge in den Metadaten des Volumes fest.
 ms.assetid: 21355669-2052-4e7a-9c9d-aaa67533dd5e
-title: Die "cationfield"-Methode der Win32_EncryptableVolume-Klasse
+title: SetIdentificationField-Methode der Win32_EncryptableVolume Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: e8405be7aef91571bd3bd5d7dcb97214dcdfdb4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 473b10bda95177fa2019a7439b46b475ac3bb8477ef45e19d945e8a7c1bc87a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004268"
 ---
-# <a name="setidentificationfield-method-of-the-win32_encryptablevolume-class"></a>Die Methode "nettidentificationfield" der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="setidentificationfield-method-of-the-win32_encryptablevolume-class"></a>SetIdentificationField-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Mit der **setidentificationfield** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " wird die angegebene Bezeichnerzeichenfolge in den Metadaten des Volumes festgelegt.
+Die **SetIdentificationField-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) legt die angegebene Bezeichnerzeichenfolge in den Metadaten des Volumes fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ uint32 SetIdentificationField(
 
 <dl> <dt>
 
-*Identificationfield* \[ in, optional\]
+*IdentificationField* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die das Identifikations Feld angibt, das dem Volume zugewiesen wird. Wenn die optionale Zeichenfolge nicht vorhanden ist, werden die Registrierungs Satz Werte verwendet. Wenn die Zeichenfolge vorhanden und nicht leer ist, wird der angegebene-Wert verwendet. Beim *identificationfield* -Parameter wird die Groß-/Kleinschreibung nicht beachtet.
+Eine Zeichenfolge, die das Identifikationsfeld angibt, das dem Volume zugewiesen ist. Wenn die optionale Zeichenfolge nicht vorhanden ist, werden die Registrierungssatzwerte verwendet. Wenn die Zeichenfolge vorhanden und nicht leer ist, wird der angegebene Wert verwendet. Beim *IdentificationField-Parameter* wird die Kleinschreibung nicht beachtet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
 
@@ -59,8 +59,8 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 | Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode war erfolgreich.<br/>                                                                           |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Dieses Laufwerk ist BitLocker-Laufwerkverschlüsselung gesperrt. Dieses Volume muss in der Systemsteuerung entsperrt werden. <br/> |
-| <dl> <dt>**F \_ E \_ nicht \_ aktiviert**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüssel Schutzvorrichtung zum Aktivieren von BitLocker hinzu. <br/>                    |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Dieses Laufwerk wird durch einen BitLocker-Laufwerkverschlüsselung. Sie müssen dieses Volume aus der Systemsteuerung. <br/> |
+| <dl> <dt>**FVE \_ E \_ NOT \_ ACTIVATED**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüsselschutzvorrichtung hinzu, um BitLocker zu aktivieren. <br/>                    |
 
 
 
@@ -72,10 +72,10 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise, Windows 7 Ultimate \[ Desktop-Apps\]<br/>                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise, Windows 7 \[ Ultimate-Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

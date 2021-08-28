@@ -1,6 +1,6 @@
 ---
 title: NetServiceControl
-description: Die NetServiceControl-Funktion ist veraltet. Es ist aus Gründen der Kompatibilität mit 16-Bit-Versionen von Windows enthalten. Andere Anwendungen sollten die Dienstfunktionen verwenden.
+description: Die NetServiceControl-Funktion ist veraltet. Sie ist aus Kompatibilitäts- und 16-Bit-Versionen von Windows. Andere Anwendungen sollten die Dienstfunktionen verwenden.
 ms.assetid: 4ea0e624-7b6e-459d-879e-f6c5998765cf
 keywords:
 - NetServiceControl
@@ -14,17 +14,17 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3a7067f51337f748d3082b8ae6fc60a53535316c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0ef51f4ab6810d37fa1a2e1f833359098f3780423318cf2279d78a1a751f7e9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064440"
 ---
 # <a name="netservicecontrol"></a>NetServiceControl
 
-Die **NetServiceControl** -Funktion ist veraltet. Es ist aus Gründen der Kompatibilität mit 16-Bit-Versionen von Windows enthalten. Andere Anwendungen sollten die [Dienstfunktionen](/windows/desktop/Services/service-functions)verwenden.
+Die **NetServiceControl-Funktion** ist veraltet. Sie ist aus Kompatibilitäts- und 16-Bit-Versionen von Windows. Andere Anwendungen sollten die [Dienstfunktionen verwenden.](/windows/desktop/Services/service-functions)
 
- 
+ 
 
- 
+ 

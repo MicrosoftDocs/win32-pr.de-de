@@ -1,9 +1,9 @@
 ---
-title: Iwmpcontrols. IsAvailable (VB und C)
-description: Die IsAvailable-Eigenschaft (die get \_ IsAvailable-Methode in C \) Ruft einen Wert ab, der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann.
+title: IWMPControls.isAvailable (VB und C )
+description: Die isAvailable-Eigenschaft (die get \_ isAvailable-Methode in C\) ruft einen Wert ab, der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
 ms.assetid: 00812d5c-513e-49d5-93ba-750b81a852dd
 keywords:
-- Iwmpcontrols. IsAvailable (VB und C) Windows Media Player
+- IWMPControls.isAvailable (VB und C) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe0d5d9ffcd6cad6eefb7cdff25fd2cf34b76ccc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d73562fb4f96731216c30ada33db8e13d1468b31fb6fcefe7eedef6dd7892348
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054848"
 ---
-# <a name="iwmpcontrolsisavailable-vb-and-c"></a>Iwmpcontrols. IsAvailable (VB und c#)
+# <a name="iwmpcontrolsisavailable-vb-and-c"></a>IWMPControls.isAvailable (VB und C#)
 
-Mit der **IsAvailable** -Eigenschaft (der **get \_ IsAvailable** -Methode in c#) wird ein Wert abgerufen, der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
+Die **isAvailable-Eigenschaft** (die **get \_ isAvailable-Methode** in C#) ruft einen Wert ab, der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
 
 
 ```
@@ -47,25 +47,25 @@ bool get_isAvailable (
 
 ## <a name="parameters"></a>Parameter
 
-*bstritem*
+*bstrItem*
 
-Ein System. String-Wert, der einem der folgenden Werte entspricht.
+Eine System.String,die einer der folgenden Werte ist.
 
 
 
-| Wert           | BESCHREIBUNG                                                                                                                                                       |
+| Wert           | Beschreibung                                                                                                                                                       |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| currentItem     | Ermittelt, ob der Benutzer die **iwmpcontrols. accesstitem** -Eigenschaft festlegen kann.                                                                                     |
-| currentmarker   | Ermittelt, ob der Benutzer einen bestimmten Marker suchen kann.                                                                                                         |
-| CurrentPosition | Ermittelt, ob der Benutzer eine bestimmte Position in der Datei suchen kann. Einige Dateien unterstützen keine Suchvorgänge.                                                        |
-| FastForward     | Ermittelt, ob die Datei eine schnelle Weiterleitung unterstützt und ob diese Funktion aufgerufen werden kann. FastForward wird von vielen Dateitypen (und Livestreams) nicht unterstützt. |
-| fastreverse     | Ermittelt, ob die Datei fastreverse unterstützt und ob diese Funktion aufgerufen werden kann. Fastreverse wird von vielen Dateitypen (und Livestreams) nicht unterstützt.     |
+| Currentitem     | Ermittelt, ob der Benutzer die **IWMPControls.currentItem-Eigenschaft** festlegen kann.                                                                                     |
+| currentMarker   | Ermittelt, ob der Benutzer nach einem bestimmten Marker suchen kann.                                                                                                         |
+| currentPosition | Ermittelt, ob der Benutzer eine bestimmte Position in der Datei suchen kann. Einige Dateien unterstützen keine Suche.                                                        |
+| Fastforward     | Ermittelt, ob die Datei die schnelle Weiterleitung unterstützt und ob diese Funktionalität aufgerufen werden kann. Viele Dateitypen (und Livestreams) unterstützen fastForward nicht. |
+| fastReverse     | Ermittelt, ob die Datei fastReverse unterstützt und ob diese Funktionalität aufgerufen werden kann. Viele Dateitypen (und Livestreams) unterstützen fastReverse nicht.     |
 | Weiter            | Ermittelt, ob der Benutzer den nächsten Eintrag in einer Wiedergabeliste suchen kann.                                                                                              |
-| pause           | Ermittelt, ob die **iwmpcontrols. Pause** -Methode verfügbar ist.                                                                                                 |
-| Theater            | Ermittelt, ob die **iwmpcontrols. Play** -Methode verfügbar ist.                                                                                                  |
+| pause           | Ermittelt, ob die **IWMPControls.pause-Methode** verfügbar ist.                                                                                                 |
+| Spielen            | Ermittelt, ob die **IWMPControls.play-Methode** verfügbar ist.                                                                                                  |
 | Vorherige        | Ermittelt, ob der Benutzer den vorherigen Eintrag in einer Wiedergabeliste suchen kann.                                                                                          |
-| Schritt            | Ermittelt, ob die **IWMPControls2. Step** -Methode während der Wiedergabe verfügbar ist.                                                                                 |
-| stop            | Ermittelt, ob die **iwmpcontrols.** End-Methode verfügbar ist.                                                                                                  |
+| Schritt            | Ermittelt, ob die **IWMPControls2.step-Methode** während der Wiedergabe verfügbar ist.                                                                                 |
+| stop            | Ermittelt, ob die **IWMPControls.stop-Methode** verfügbar ist.                                                                                                  |
 
 
 
@@ -75,15 +75,15 @@ Ein System. String-Wert, der einem der folgenden Werte entspricht.
 
 **System.Boolean**
 
-Ein **System. boolescher** Wert, der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann.
+Ein **System.Boolean,** der angibt, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwmpcontrols. IsAvailable** ist eine Eigenschaft in Visual Basic, die einen-Parameter annimmt. In c# wird dies als **iwmpcontrols. get \_ IsAvailable** -Methode bezeichnet.
+**IWMPControls.isAvailable** ist eine Eigenschaft in Visual Basic, die einen Parameter annimmt. In C# wird dies als **IWMPControls.get \_ isAvailable-Methode** bezeichnet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die **IsAvailable** -Eigenschaft (die **get \_ IsAvailable** -Methode in c#) verwendet, um zu überprüfen, ob das aktuelle Medien Element die **CurrentPosition** -Eigenschaft unterstützt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird die **isAvailable-Eigenschaft** (die **get \_ isAvailable-Methode** in C#) verwendet, um zu überprüfen, ob das aktuelle Medienelement die **currentPosition-Eigenschaft** unterstützt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -115,7 +115,7 @@ End If
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -125,22 +125,22 @@ End If
 
 <dl> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Currency Item (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
+[**IWMPControls.currentItem (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Pause (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-pause--vb-and-c.md)
+[**IWMPControls.pause (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-pause--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Play (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
+[**IWMPControls.play (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Stopps (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-stop--vb-and-c.md)
+[**IWMPControls.stop (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-stop--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls2. Step (VB und c#)**](wmplibiwmpcontrols2-iwmpcontrols2-step--vb-and-c.md)
+[**IWMPControls2.step (VB und C#)**](wmplibiwmpcontrols2-iwmpcontrols2-step--vb-and-c.md)
 </dt> </dl>
 
  

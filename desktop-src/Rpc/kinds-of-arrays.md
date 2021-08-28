@@ -1,26 +1,26 @@
 ---
 title: Arten von Arrays
-description: Mithilfe von "Mittel l" können Sie in einer RPC-Anwendung (Remote Procedure Aufruf) festgelegte, abweichende und konforme arrys angeben.
+description: MIDL ermöglicht die Angabe fester, variierender und konformer Arrys in einer RPC-Anwendung (Remote Procedure Call).
 ms.assetid: df0ebcd0-0a2a-4ae1-90ec-aa5bc8dc59a0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5259caacf869b797ce24b1bd781023fb636da666
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ece8b984e09e6122768e6e8ead9fdd1012619c17576681a8cdc9e80c0ed7897f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118928676"
 ---
 # <a name="kinds-of-arrays"></a>Arten von Arrays
 
-Mit der Option "Mittel l" können Sie die folgenden Typen von Arrays in der RPC-Anwendung angeben:
+MIDL bietet die Möglichkeit, die folgenden Arraytypen in Ihrer RPC-Anwendung anzugeben:
 
--   [Fixierte Arrays](fixed-arrays.md)
+-   [Feste Arrays](fixed-arrays.md)
 -   [Variierende Arrays](varying-arrays.md)
 -   [Konforme Arrays](conformant-arrays.md)
 
-Alle drei Array Typen können als in- \[ [](/windows/desktop/Midl/in) \] , \[ [out](/windows/desktop/Midl/out-idl)- \] oder **\[ in-out \]** -Parameter verwendet werden.
+Alle drei Arraytypen können als \[ [](/windows/desktop/Midl/in) \] Parameter in , \[ [out](/windows/desktop/Midl/out-idl) \] oder **\[ in,out \]** verwendet werden.
 
- 
+ 
 
- 
+ 

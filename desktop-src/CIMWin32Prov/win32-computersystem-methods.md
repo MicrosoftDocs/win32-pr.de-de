@@ -1,20 +1,20 @@
 ---
-description: Die Win32 \_ Computersystem-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die Win32 \_ ComputerSystem-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: AA48A5CC-CD2A-41CD-8025-FDA2B92B6D75
 ms.tgt_platform: multiple
-title: Win32_ComputerSystem Methoden
+title: Win32_ComputerSystem-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c31abeedbb563601195f7234113139490706ccc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ee655f19eb6e51eab5067e3318065423b081004c74ef1b1062d0ed86ba6c6cb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020268"
 ---
-# <a name="win32_computersystem-methods"></a>Win32- \_ Computersystem Methoden
+# <a name="win32_computersystem-methods"></a>\_Win32-ComputerSystemmethoden
 
-Die [**Win32 \_ Computersystem**](win32-computersystem.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ ComputerSystem-Klasse**](win32-computersystem.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
