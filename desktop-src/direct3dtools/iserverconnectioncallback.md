@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 25aa867ea1c4451fd036b3f9a68f3571097b2d58
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: b09a1d5313430f253efdbb0e087c467dd3ca67c5
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122626976"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786735"
 ---
 # <a name="span-idvspixengineiserverconnectioncallbackspaniserverconnectioncallback-interface"></a><span id="vspixengine.iserverconnectioncallback"></span>IServerConnectionCallback-Schnittstelle
 
 Nicht verwendet.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **IServerConnectionCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IServerConnectionCallback** verfügt auch über die folgenden Membertypen:
+Die **IServerConnectionCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IServerConnectionCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,11 +38,11 @@ Die **IServerConnectionCallback-Schnittstelle** erbt von der [**IUnknown-Schnitt
 
 Die **IServerConnectionCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/iserverconnectioncallback-connecttoengine-bool-bstr-ipixengine-ptr-ptr"><strong>ConnectToEngine</strong></a></td><td style="text-align: left;"><p>Verbinden eine andere Instanz einer Remote-Engine auf dem lokalen Computer.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/iserverconnectioncallback-waitforshutdown-ipixengine-ptr"><strong>WaitForShutdown</strong></a></td><td style="text-align: left;"><p>Warten Sie auf das Herunterfahren der angegebenen Engine (Blockierungsaufruf).</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/iserverconnectioncallback-connecttoengine-bool-bstr-ipixengine-ptr-ptr"><strong>ConnectToEngine</strong></a></td><td ><p>Verbinden zu einer anderen Instanz einer Remote-Engine auf dem lokalen Computer.</p></td></tr><tr class="even"><td ><a href="/windows/desktop/direct3dtools/iserverconnectioncallback-waitforshutdown-ipixengine-ptr"><strong>WaitForShutdown</strong></a></td><td ><p>Warten Sie auf das Herunterfahren der angegebenen Engine (blockierender Aufruf).</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

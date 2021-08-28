@@ -24,12 +24,12 @@ keywords:
 - Steuerelementtypen,DataItem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5ec4612b43855578256d52bf6647b105ea666882cfe2f72dcdbf355559a7e5e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 49840dbe2aeed9200ebf02b80e270cd8fa3e0747
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118826315"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468187"
 ---
 # <a name="dataitem-control-type"></a>DataItem-Steuerelementtyp
 
@@ -51,38 +51,15 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="typical-tree-structure"></a>Typische Struktur
 
-Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die datenelementsteuerelemente betrifft, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die datenelementsteuerelemente betrifft, und beschreibt, was in den einzelnen Ansichten enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>DataItem
-<ul>
-<li>Variabel (0 oder mehr, kann hierarchisch strukturiert werden)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>DataItem
-<ul>
-<li>Variabel (0 oder mehr, kann hierarchisch strukturiert werden)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>DataItem<ul><li>Variabel (0 oder mehr, kann hierarchisch strukturiert werden)</li></ul></li></ul> | <ul><li>DataItem<ul><li>Variabel (0 oder mehr, kann hierarchisch strukturiert werden)</li></ul></li></ul> | 
+
 
 
 
@@ -139,7 +116,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelem
 
 Da große Listen häufig in Benutzeroberflächenframeworks virtualisiert werden, um die Leistung zu verbessern, kann ein Benutzeroberflächenautomatisierung-Client das Abfragefeature Benutzeroberflächenautomatisierung nicht verwenden, um den Inhalt der vollständigen Struktur auf die gleiche Weise wie in anderen Elementcontainern zu durchsuchen. Ein Client sollte das Element in die Ansicht scrollen (oder das Steuerelement erweitern, um alle verfügbaren Optionen anzuzeigen), bevor er auf den vollständigen Satz von Informationen aus dem Datenelement zugreift.
 
-Wenn [**Sie SetFocus**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-setfocus) für das Benutzeroberflächenautomatisierung -Element für das Datenelement aufrufen, gibt Microsoft Windows Explorer erfolgreich zurück und bewirkt, dass der Fokus auf das Edit-Steuerelement innerhalb der Datenelementunterstruktur festgelegt wird.
+Beim Aufrufen von [**SetFocus**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-setfocus) für das Benutzeroberflächenautomatisierung-Element für das Datenelement gibt Microsoft Windows Explorer erfolgreich zurück und bewirkt, dass der Fokus auf das Steuerelement Bearbeiten innerhalb der Datenelementunterstruktur festgelegt wird.
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
@@ -174,64 +151,21 @@ Die folgende Abbildung veranschaulicht einen DataItem-Steuerelementtyp in einem 
 
 ![Screenshot des Listenansicht-Steuerelements mit dem Steuerelementtyp "dataitem"](images/dataitemxmpl.jpg)
 
-Die Steuerelementansicht und die Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf das Datenelementsteuerelement bezieht, werden unten angezeigt. Die Steuerelementmuster für jedes Automatisierungselement sind in Klammern aufgeführt. Die **Gruppe** "Contoso" ist auch Teil des Rasters des Datenraster-Hoststeuerelements. Ein Beispiel für eine Rasterstruktur auf höherer Ebene finden Sie unter [DataGrid-Steuerelementtyp.](uiauto-supportdatagridcontroltype.md)
+Die Steuerelementansicht und die Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf das Datenelement-Steuerelement bezieht, werden unten angezeigt. Die Steuerelementmuster für jedes Automatisierungselement sind in Klammern aufgeführt. Die **Gruppe** "Contoso" ist auch Teil des Rasters des Datenraster-Hoststeuerelements. Ein Beispiel für eine Rasterstruktur auf höherer Ebene finden Sie unter [DataGrid-Steuerelementtyp.](uiauto-supportdatagridcontroltype.md)
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Benutzeroberflächenautomatisierung-Struktur – Steuerelementansicht</th>
-<th>Benutzeroberflächenautomatisierung-Struktur – Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Gruppe &quot; Contoso &quot; (Tabelle, Raster)
-<ul>
-<li>&quot;DataItem-Konten Receivable.doc&quot; (TableItem, GridItem, SelectionItem, Invoke)
-<ul>
-<li>&quot;image accounts Receivable.doc&quot;</li>
-<li>Edit &quot; Name &quot; (TableItem, GridItem, Value &quot; Accounts Receivable.doc&quot; )</li>
-<li>Edit &quot; Date modified &quot; (TableItem, GridItem, Value &quot; 8/25/2006 15:29 &quot; PM)</li>
-<li>Größe bearbeiten &quot; &quot; (GridItem, TableItem, Wert &quot; 11,0 &quot; KB)</li>
-</ul></li>
-<li>&quot;DataItem-Konten Payable.doc&quot; (TableItem, GridItem, SelectionItem, Invoke)
-<ul>
-<li>...</li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>Gruppe &quot; Contoso &quot; (Tabelle, Raster)
-<ul>
-<li>&quot;DataItem-Konten Receivable.doc&quot; (TableItem, GridItem, SelectionItem, Invoke)
-<ul>
-<li>&quot;image accounts Receivable.doc&quot;</li>
-<li>Edit &quot; Name &quot; (TableItem, GridItem, Value &quot; Accounts Receivable.doc&quot; )</li>
-<li>Edit &quot; Date modified &quot; (TableItem, GridItem, Value &quot; 8/25/2006 15:29 &quot; PM)</li>
-<li>Größe bearbeiten &quot; &quot; (GridItem, TableItem, Wert &quot; 11,0 &quot; KB)</li>
-</ul></li>
-<li>&quot;DataItem-Konten Payable.doc&quot; (TableItem, GridItem, SelectionItem, Invoke)
-<ul>
-<li>...</li>
-</ul></li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Benutzeroberflächenautomatisierung-Struktur – Steuerelementansicht | Benutzeroberflächenautomatisierung-Struktur – Inhaltsansicht | 
+|-----------------------------------|-----------------------------------|
+| <ul><li>Group „Contoso“ (Table, Grid)<ul><li>DataItem „Accounts Receivable.doc“ (TableItem, GridItem, SelectionItem, Invoke)<ul><li>Image „Accounts Receivable.doc“</li><li>Edit „Name“ (TableItem, GridItem, Value „Accounts Receivable.doc“)</li><li>Edit „Date modified“ (TableItem, GridItem, Value „8/25/2006 3:29 PM“)</li><li>Bearbeiten von "Size" (GridItem, TableItem, Value "11.0 KB")</li></ul></li><li>DataItem „Accounts Payable.doc“ (TableItem, GridItem, SelectionItem, Invoke)<ul><li>...</li></ul></li></ul></li></ul> | <ul><li>Group „Contoso“ (Table, Grid)<ul><li>DataItem „Accounts Receivable.doc“ (TableItem, GridItem, SelectionItem, Invoke)<ul><li>Image „Accounts Receivable.doc“</li><li>Edit „Name“ (TableItem, GridItem, Value „Accounts Receivable.doc“)</li><li>Edit „Date modified“ (TableItem, GridItem, Value „8/25/2006 3:29 PM“)</li><li>Bearbeiten von "Size" (GridItem, TableItem, Value "11.0 KB")</li></ul></li><li>DataItem „Accounts Payable.doc“ (TableItem, GridItem, SelectionItem, Invoke)<ul><li>...</li></ul></li></ul></li></ul> | 
+
 
 
 
  
 
-Wenn ein Raster eine Liste auswählbarer Elemente darstellt, können die entsprechenden auswählbaren UI-Elemente mit dem [ListItem-Steuerelementtyp](uiauto-supportlistitemcontroltype.md) anstelle des DataItem-Steuerelementtyps verfügbar gemacht werden. Im vorherigen Beispiel können die **DataItem-Elemente** ("Accounts Receivable.doc" und "Accounts Payable.doc") unter **Group** ("Contoso") verbessert werden, indem sie als ListItem-Steuerelementtypen verfügbar sind, da dieser Typ bereits das [SelectionItem-Steuerelementmuster](uiauto-implementingselectionitem.md) unterstützt.
+Wenn ein Raster eine Liste auswählbarer Elemente darstellt, können die entsprechenden auswählbaren UI-Elemente mit dem [ListItem-Steuerelementtyp](uiauto-supportlistitemcontroltype.md) anstelle des DataItem-Steuerelementtyps verfügbar gemacht werden. Im vorherigen Beispiel können die **DataItem-Elemente** ("Konten Receivable.doc" und "Konten Payable.doc") unter **Gruppe** ("Contoso") verbessert werden, indem sie als ListItem-Steuerelementtypen verfügbar sind, da dieser Typ bereits das [SelectionItem-Steuerelementmuster](uiauto-implementingselectionitem.md) unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

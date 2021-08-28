@@ -7,12 +7,12 @@ MSHAttr:
 title: IPixEngine5::RenderTextureAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41189637fd741d22fc566f913b25ddba1109854ed12a0336ffac899c10fd3147
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 400ade8aa962a73234efbfb710d9ab6b178dfd4e
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119405680"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626566"
 ---
 # <a name="span-idvspixengineipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5rendertextureasync-method"></a><span id="vspixengine.ipixengine5_rendertextureasync_uint_pixenginetexturesliceindex_int_float_arr4_float_arr4_bstr_uint_bstr_arr_float_arr_uint_bstr_arr_bool_arr_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5::RenderTextureAsync-Methode
 
@@ -45,13 +45,13 @@ HRESULT RenderTextureAsync(
 ## <a name="parameters"></a>Parameter
 
 *textureId*   
-Die ID der zu rendernden Textur.
+Die ID der zu rendernde Textur.
 
 *sliceIndex*   
-Der Index des Zu rendernden Slices innerhalb der Textur.
+Der Index des Slices innerhalb der textur, die gerendert werden soll.
 
 *formatOverride*   
-Die Überschreibung des Farbformats.
+Die Farbformatüberschreibung.
 
 *Niedriger*   
 
@@ -64,7 +64,7 @@ Eine COM-Zeichenfolge, die den Pfadnamen der Shaderdatei enthält.
 Die Anzahl der Gleitkomma-Shadervariablen
 
 *count6 \_ shaderFloatVarName*   
-COM-Zeichenfolgen, die die Namen der Gleitkomma-Shadervariablen aufeinander folgen.
+COM-Zeichenfolgen, die die Namen der Gleitkomma-Shadervariablen zuordnen.
 
 *count6 \_ shaderFloatVarValue*   
 Die Gleitkomma-Shadervariablen.
@@ -73,7 +73,7 @@ Die Gleitkomma-Shadervariablen.
 Die Anzahl der booleschen Shadervariablen.
 
 *count9 \_ shaderBoolVarName*   
-COM-Zeichenfolgen, die die Namen der booleschen Shadervariablen aufeinander folgen.
+COM-Zeichenfolgen, die die Namen der booleschen Shadervariablen enthalten.
 
 *count9 \_ shaderBoolVarValue*   
 Die booleschen Shadervariablen.
@@ -82,21 +82,21 @@ Die booleschen Shadervariablen.
 Eine COM-Zeichenfolge, die den Pfadnamen der Datei enthält, in die die gerenderte Textur geschrieben wurde.
 
 *Rückrufe*   
-Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle anordnt.
+Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle bereitstellt.
 
 *requestCookie*   
 Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

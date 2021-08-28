@@ -1,42 +1,42 @@
 ---
-title: Aufbau eines UI-Plug-ins
-description: Aufbau eines UI-Plug-ins
+title: Erstellen eines Benutzeroberflächen-Plug-Ins
+description: Erstellen eines Benutzeroberflächen-Plug-Ins
 ms.assetid: 95a14bd1-8d71-44dd-be1e-f6a218710718
 keywords:
-- Windows Media Player-Plug-ins, Gebäude
-- Plug-ins, Gebäude
-- Plug-Ins für die Benutzeroberfläche, Gebäude
-- UI-Plug-ins, Building
-- Entwickeln von Plug-ins, Benutzeroberfläche
+- Windows Media Player-Plug-Ins, Erstellen
+- Plug-Ins, Erstellen
+- Benutzeroberflächen-Plug-Ins, Erstellen
+- UI-Plug-Ins, Erstellen
+- Erstellen von Plug-Ins, Benutzeroberfläche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b967a6e0a72ac115fc97a8b276ab15ce214ecc6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d7501d664c469de388a3f52c6c130d89ee160dd5aa4acc99c1342063d3def623
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123830"
 ---
-# <a name="building-a-ui-plug-in"></a>Aufbau eines UI-Plug-ins
+# <a name="building-a-ui-plug-in"></a>Erstellen eines Benutzeroberflächen-Plug-Ins
 
-Sie können ein UI-Plug-in mithilfe von Visual Studio und dem Assistenten für Windows-Media Player-Plug-in erstellen. Informationen zum Einrichten des Assistenten und zum Einrichten eines Plug-Ins finden Sie unter Einrichten [eines Plug-ins](building-a-plug-in.md).
+Sie können ein Benutzeroberflächen-Plug-In erstellen, indem Sie Visual Studio und den Windows Media Player-Plug-In-Assistenten verwenden. Informationen zum Einrichten des Assistenten und zum Erstellen eines Plug-Ins finden Sie unter [Erstellen eines Plug-Ins.](building-a-plug-in.md)
 
-Wenn Sie den Assistenten ausführen, können Sie verschiedene Arten von Plug-ins auswählen. Wählen Sie das UI-Plug-in aus.
+Wenn Sie den Assistenten ausführen, haben Sie die Wahl zwischen verschiedenen Arten von Plug-Ins. Wählen Sie UI-Plug-In aus.
 
-Der Assistent erstellt ein UI-Plug-in, das Sie als Ausgangspunkt verwenden können. Im folgenden Thema wird erläutert, wie Sie das Plug-in für Ihre eigenen Zwecke anpassen:
+Der Assistent erstellt ein Benutzeroberflächen-Plug-In, das Sie als Ausgangspunkt verwenden können. Im folgenden Thema wird erläutert, wie Sie das Plug-In für Ihre eigenen Zwecke anpassen:
 
--   [Anpassen des Plug-Ins für die Benutzeroberfläche](customizing-the-ui-plug-in.md)
+-   [Anpassen des Ui-Plug-Ins](customizing-the-ui-plug-in.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Benutzeroberflächen-Plug-ins**](about-user-interface-plug-ins.md)
+[**Informationen zu Benutzeroberfläche Plug-Ins**](about-user-interface-plug-ins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

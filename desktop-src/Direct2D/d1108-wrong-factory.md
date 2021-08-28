@@ -1,9 +1,9 @@
 ---
-title: D1108 Falsche Factory
+title: D1108 Wrong Factory
 ms.assetid: eb851118-0541-4c9a-a22d-b98f041852bb
 description: Die Ressource wurde von Factory 1 zugeordnet und mit Factory 2 verwendet.
 keywords:
-- D1108 Falsche Factory Direct2D
+- D1108 Wrong Factory Direct2D
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 20021472467d7861aa2b9cabd5602b5a167f20ab
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 463909abeda1410804fa4b842dbdc829c3a74271
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122622156"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786726"
 ---
 # <a name="d1108-wrong-factory"></a>D1108: Falsche Factory
 
-Die \[ *Ressourcenressource* \] wurde von Factory 1 zugeordnet und mit Factory \[  \] \[ *2* \] verwendet.
+Die \[ *Ressourcenressource* \] wurde von Factory \[ *1 zugeordnet* und mit Factory \] \[ *2 verwendet.* \]
 
 ## <a name="placeholders"></a>Platzhalter
 
@@ -38,14 +38,14 @@ Die Adresse der Schnittstelle.
 <span id="factory_1"></span><span id="FACTORY_1"></span>*Factory 1*
 </dt> <dd>
 
-Die Adresse der Factory, die die *Ressource* zugeordnet hat.
+Die Adresse der Factory, die die Ressource *zugeordnet hat.*
 
 </dd> <dt>
 
 <span id="factory_2"></span><span id="FACTORY_2"></span>*Factory 2*
 </dt> <dd>
 
-Die Adresse der Factory, mit der die *Ressource* verwendet wurde.
+Die Adresse der Factory, mit der *die Ressource* verwendet wurde.
 
 </dd> </dl> 
 
@@ -56,7 +56,7 @@ Die Adresse der Factory, mit der die *Ressource* verwendet wurde.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) erstellt: anschließend wird eine Geometrie aus der ersten Factory und ein Pinsel aus der zweiten Factory erstellt. Schließlich ruft sie [**FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry)auf und übergibt die Geometrie und den Pinsel.
+Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) erstellt. Anschließend wird eine Geometrie aus der ersten Factory und ein Pinsel aus der zweiten Factory erstellt. Schließlich wird [**FillGeometry genannt,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry)und die Geometrie und der Pinsel werden übergeben.
 
 
 ```C++
@@ -96,7 +96,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 
 
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>
@@ -119,7 +119,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 </tbody>
 </table>
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>
@@ -143,7 +143,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 </tbody>
 </table>
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>
@@ -178,7 +178,7 @@ by factory [002ED698] and used with factory [002ED470].
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Ungültige Ressourcenverwendung. Eine von einer Factory zugeordnete Ressource wurde mit einer anderen Factory verwendet.
+Ungültige Ressourcennutzung. Eine von einer Factory zugeordnete Ressource wurde mit einer anderen Factory verwendet.
 
  
 

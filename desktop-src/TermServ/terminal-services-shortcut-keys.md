@@ -4,104 +4,77 @@ description: Eine Liste der Remotedesktopdienste Tastenkombinationen.
 ms.assetid: 03a94323-2616-4f35-a5c0-3c238acb7693
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste Remotedesktopdienste, Tastenkombinationen
-- Remotedesktopdienste Remotedesktopdienste, Tastenkombinationen
+- Remotedesktopdienste Remotedesktopdienste , Tastenkombinationen
+- Remotedesktopdienste Remotedesktopdienste , Tastenkombinationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ed5f9560b78585145e6f9d8685ef202caa650de
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 19bad388372aaacf836b1be83b858ff9fddd1acc
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037373"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467827"
 ---
 # <a name="remote-desktop-services-shortcut-keys"></a>Remotedesktopdienste Tastenkombinationen
 
-Im folgenden finden Sie eine Liste der Remotedesktopdienste Tastenkombinationen.
+Im Folgenden finden Sie eine Liste der Remotedesktopdienste Tastenkombinationen.
 
-Hinweis zu fehlenden Schlüsseln: viele kompakte Tastaturen enthalten einige Schlüssel nicht. Viele Laptops verfügen z. b. nicht über eine dedizierte Break Key-Taste. Allerdings verfügen Sie in der Regel über Tastenkombinationen, die dedizierte Schlüssel ersetzen. Diese Schlüssel Ersetzungen werden vom Hersteller der Tastatur festgelegt, sodass Sie möglicherweise wichtige Ersetzungen in der Dokumentation Ihres Tastatur-oder Laptop Herstellers nachschlagen müssen.
+Hinweis zu fehlenden Tasten: Viele kompakte Tastaturen enthalten einige Tasten nicht. Viele Laptops verfügen beispielsweise nicht über einen dedizierten BREAK-Schlüssel. Sie verfügen jedoch in der Regel über Tastenkombinationen, die dedizierte Tasten ersetzen. Diese Schlüsselersetzungen werden vom Hersteller der Tastatur angegeben, daher müssen Sie möglicherweise in der Dokumentation, die von Ihrem Tastatur- oder Laptophersteller bereitgestellt wird, nach Schlüsselaustausch suchen.
 
-Es gibt zwei mögliche Tastenkombinationen, die Sie für eine Remote Desktop Verbindung verwenden können: die standardmäßigen Windows-Tastenkombinationen oder die Tastenkombinationen, die ursprünglich für den Remote Desktop entworfen wurden. Sie können festlegen, welche Tastenkombinationen Sie auf dem lokalen und dem Remote Computer über den Remotedesktopverbindung Client (d.h. das Dialogfeld, das angezeigt wird, wenn Sie auf das Symbol " **Remotedesktopverbindung** " klicken). Klicken Sie dort auf **Optionen anzeigen** (wenn die Optionen nicht angezeigt werden), und klicken Sie dann auf die Registerkarte **lokale Ressourcen** . In der Dropdown-Datei **Windows-Tastenkombinationen anwenden** haben Sie drei Möglichkeiten:
+Es gibt zwei mögliche Tastenkombinationen, die Sie für eine Remotedesktopverbindung verwenden können: die Standardtastenkombinationen Windows oder die Tastenkombinationen, die ursprünglich für den Remotedesktop entwickelt wurden. Sie können festlegen, welche Tastenkombinationen Sie auf dem lokalen und Remotecomputer über den Remotedesktopverbindung-Client verwenden (d. h. das Dialogfeld, das angezeigt wird, wenn Sie auf das Symbol Remotedesktopverbindung **klicken).** Klicken Sie dort auf **Optionen anzeigen** (wenn die Optionen nicht angezeigt werden), und klicken Sie dann auf die **Registerkarte Lokale** Ressourcen. In der **Dropdownliste Windows Tastenkombinationen anwenden** haben Sie drei Optionen:
 
 <dl> <dt>
 
 <span id="On_this_computer"></span><span id="on_this_computer"></span><span id="ON_THIS_COMPUTER"></span>Auf diesem Computer
 </dt> <dd>
 
-die Standardtasten Kombinationen können nur auf dem lokalen Computer verwendet werden. Sie müssen die alternativen Kombinationen auf dem Remote Desktop verwenden.
+Die Standardschlüsselkombinationen funktionieren nur auf Ihrem lokalen Computer. Sie müssen die alternativen Kombinationen auf dem Remotedesktop verwenden.
 
 </dd> <dt>
 
-<span id="On_the_remote_computer"></span><span id="on_the_remote_computer"></span><span id="ON_THE_REMOTE_COMPUTER"></span>Auf dem Remote Computer
+<span id="On_the_remote_computer"></span><span id="on_the_remote_computer"></span><span id="ON_THE_REMOTE_COMPUTER"></span>Auf dem Remotecomputer
 </dt> <dd>
 
-Die Standardtasten Kombinationen können nur auf dem Remote Desktop verwendet werden. Sie müssen die alternativen Kombinationen auf dem lokalen Computer verwenden. Beachten Sie, dass der lokale Computer nach dem Schließen des Remotedesktopverbindung wieder die Standard Tastenkombinationen von Windows verwendet.
+Die Standardschlüsselkombinationen funktionieren nur auf dem Remotedesktop. Sie müssen die alternativen Kombinationen auf dem lokalen Computer verwenden. Beachten Sie, dass ihr lokaler Computer nach dem Remotedesktopverbindung wieder die Standardverknüpfungen für Fenster verwendet.
 
 </dd> <dt>
 
-<span id="Only_when_using_the_full_screen"></span><span id="only_when_using_the_full_screen"></span><span id="ONLY_WHEN_USING_THE_FULL_SCREEN"></span>Nur bei Verwendung des voll Bildschirms
+<span id="Only_when_using_the_full_screen"></span><span id="only_when_using_the_full_screen"></span><span id="ONLY_WHEN_USING_THE_FULL_SCREEN"></span>Nur bei Verwendung des Vollbildmodus
 </dt> <dd>
 
-Die Standardtasten Kombinationen funktionieren auf dem Computer, auf dem sich der vollständige Desktop befindet. funktional bedeutet dies, dass die Standardtasten Kombinationen für den lokalen Computer funktionieren, es sei denn, Sie haben das Remotedesktopverbindung Fenster im Vollbildmodus.
+Die Standardtastenkombinationen funktionieren auf jedem Computer, der über den vollständigen Desktop verfügt. Funktionell bedeutet dies, dass die Standardschlüsselkombinationen für den lokalen Computer funktionieren, es sei denn, sie Remotedesktopverbindung im Vollbildmodus.
 
 </dd> </dl>
 
-Weitere Benutzerinformationen zu Remotedesktop Verbindung finden Sie unter [Remotedesktopverbindung: häufig gestellte Fragen](https://windows.microsoft.com/windows/remote-desktop-connection-faq#1TC=windows-8).
+Weitere Benutzerinformationen zum Herstellen Remotedesktop finden Sie unter [Remotedesktopverbindung: Häufig gestellte Fragen](https://windows.microsoft.com/windows/remote-desktop-connection-faq#1TC=windows-8).
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tastenkombination</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>STRG + ALT + Startseite<br/></td>
-<td>Aktiviert die <strong>Verbindungs</strong> Leiste.<br/></td>
-</tr>
-<tr class="even">
-<td>STRG + ALT + Pause oder eine der folgenden Tastenkombinationen:<br/>
-<ul>
-<li>STRG + ALT + Pause<br/></li>
-<li>STRG + ALT + PrtScn<br/></li>
-<li>Strg + Alt + Fn + scrlk<br/></li>
-</ul></td>
-<td>Schaltet den Client zwischen dem Vollbildmodus und dem Fenstermodus um.<br/> Wenn diese Tastenkombinationen nicht funktionieren oder die Schlüssel nicht verfügbar sind, können Sie die folgende Alternative ausprobieren:<br/>
-<ul>
-<li>Drücken Sie Strg + Alt + Home, Tab, Tab, Tab, Tab, Tab, EINGABETASTE. Dadurch wird die <strong>Verbindungs</strong> Leiste aktiviert und dann die Schaltfläche " <strong>Wiederherstellen</strong> " gedrückt.<br/></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>STRG + ALT + ENDE<br/></td>
-<td>Öffnet das Dialogfeld <strong>Windows-Sicherheit</strong> für die Remotedesktop-Sitzungshost (RD-Sitzungshost) (bietet die gleiche Funktionalität wie das Drücken von STRG + ALT + ENTF auf dem lokalen Computer).<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Tastenkombination | BESCHREIBUNG | 
+|--------------|-------------|
+| STRG+ALT+HOME<br /> | Aktiviert die <strong>Verbindungsleiste.</strong><br /> | 
+| STRG+ALT+BREAK oder eine der folgenden Tastenkombinationen:<br /><ul><li>STRG+ALT+PAUSE<br /></li><li>STRG+ALT+PRTSCN<br /></li><li>STRG+ALT+FN+CTLK<br /></li></ul> | Schaltet den Client zwischen Vollbildmodus und Fenstermodus um.<br /> Wenn diese Tastenkombinationen nicht funktionieren oder die Schlüssel nicht verfügbar sind, können Sie die folgende Alternative ausprobieren:<br /><ul><li>Drücken Sie STRG+ALT+HOME, TAB, TAB, TAB, TAB, TAB, TAB, EINGABETASTE. Dadurch wird die <strong>Verbindungsleiste aktiviert,</strong> und anschließend wird die Schaltfläche Wiederherstellen <strong>gedrückt.</strong><br /></li></ul> | 
+| STRG + ALT + ENDE<br /> | Öffnet das <strong>Windows-Sicherheit-Dialogfeld</strong> für Remotedesktop-Sitzungshost (RD-Sitzungshost) (bietet die gleiche Funktionalität wie das Drücken von STRG+ALT+ENTF auf dem lokalen Computer).<br /> | 
+
 
 
 
  
 
-In der folgenden Tabelle werden die standardmäßigen Windows-Tastenkombinationen und ihre entsprechenden Remotedesktop Verknüpfungen beschrieben, die sich unterscheiden. (Beispiel: STRG + Z ist im Allgemeinen die "Rückgängig"-Verknüpfung in Standard Fenstern und Remotedesktop.)
+In der folgenden Tabelle werden die Windows Tastenkombinationen und die entsprechenden tastenkombinationen Remotedesktop, die sich unterscheiden. (Strg+Z ist z. B. in der Regel die Tastenkombination "Rückgängig" auf standard Windows und Remotedesktop.)
 
 
 
-| Windows-Tastenkombination                                         | Remotedesktop Verknüpfung            | BESCHREIBUNG                                                                             |
+| Windows-Tastenkombination                                         | Remotedesktop Tastenkombination            | BESCHREIBUNG                                                                             |
 |----------------------------------------------------------|------------------------------------|-----------------------------------------------------------------------------------------|
-| ALT+TAB<br/>                                       | Alt + Bild-auf<br/>             | Wechselt zwischen Programmen von links nach rechts.<br/>                                |
-| ALT + UMSCHALT + TAB<br/>                                 | Alt + Bild-ab<br/>           | Wechselt zwischen Programmen von rechts nach links.<br/>                                |
-|                                                          | ALT + Einfügung<br/>              | Durchläuft die Programme in der Reihenfolge, in der Sie gestartet wurden.<br/>                  |
+| ALT+TAB<br/>                                       | ALT+SEITE NACH OBEN<br/>             | Wechselt zwischen Programmen von links nach rechts.<br/>                                |
+| ALT+UMSCHALT+TAB<br/>                                 | ALT+NACH-UNTEN<br/>           | Wechselt zwischen Programmen von rechts nach links.<br/>                                |
+|                                                          | ALT+EINFÜGEN<br/>              | Durchzyklen der Programme in der Reihenfolge, in der sie gestartet wurden.<br/>                  |
 | WINDOWS-TASTE<br/> oder<br/> STRG+ESC<br/> | ALT+POS1<br/>                | Zeigt das Menü **Start** an.<br/>                                                 |
-| ALT + LEERTASTE<br/>                                 | ALT+ENTF<br/>              | Zeigt das **System** Menü an.<br/>                                                |
-| Bildschirm Alt + Druck<br/>                              | STRG + ALT + Minus Zeichen (-)<br/> | Fügt eine Momentaufnahme des aktiven Fensters innerhalb des Clients in der Zwischenablage ein.<br/> |
-| Bildschirm drucken<br/>                                  | STRG + ALT + Plus Zeichen (+)<br/>  | Fügt eine Momentaufnahme des gesamten Windows-Client Bereichs in der Zwischenablage ein.<br/>       |
+| ALT+LEERZEICHENLEISTE<br/>                                 | ALT+ENTF<br/>              | Zeigt das **Systemmenü** an.<br/>                                                |
+| ALT+DRUCKBILDSCHIRM<br/>                              | STRG+ALT+MINUSZEICHEN (-)<br/> | Platziert eine Momentaufnahme des aktiven Fensters innerhalb des Clients in der Zwischenablage.<br/> |
+| DRUCKBILDSCHIRM<br/>                                  | STRG+ALT+PLUSZEICHEN (+)<br/>  | Platziert eine Momentaufnahme des gesamten Clientfensterbereichs in der Zwischenablage.<br/>       |
 
 
 
@@ -111,7 +84,7 @@ In der folgenden Tabelle werden die standardmäßigen Windows-Tastenkombinatione
 
 <dl> <dt>
 
-[Remotedesktopdienste (RDS)](terminal-services-portal.md)
+[Remotedesktopdienste](terminal-services-portal.md)
 </dt> </dl>
 
  

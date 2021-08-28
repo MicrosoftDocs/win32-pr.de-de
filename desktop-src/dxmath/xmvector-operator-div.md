@@ -1,7 +1,7 @@
 ---
 description: Divisionsoperator
 ms.assetid: 2cb92c4f-883f-402f-bde7-2b77a0bca1fc
-title: Operator/Operatoren
+title: operator/operators
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,14 +11,14 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 01ed9e5dc4233ee40038e98ecb6f22a15e850e53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 826544f78df9769fd137cedfb432c5746863d496
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347036"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468397"
 ---
-# <a name="operator--operators"></a>Operator/Operatoren
+# <a name="operator--operators"></a>operator/operators
 
 Divisionsoperator
 
@@ -26,52 +26,26 @@ Divisionsoperator
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Operator</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421381(v=vs.85)"><strong>Xmvector:: Operator/(xmvector, float)</strong></a></td>
-<td style="text-align: left;">Dividiert eine <code>XMVECTOR</code> Instanz durch einen Gleit Komma Wert und gibt das Ergebnis einer neuen Instanz von zurück <code>XMVECTOR</code> . <br/> Der <code>operator /</code> dividiert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> durch einen Gleit Komma Wert und gibt eine neue-Instanz zurück, <code>XMVECTOR</code> die das Ergebnis enthält. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Operator ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee421380(v=vs.85)"><strong>Xmvector:: Operator/(xmvector, xmvector)</strong></a></td>
-<td style="text-align: left;">Dividiert eine Instanz von <code>XMVECTOR</code> durch eine zweite-Instanz und gibt das Ergebnis in einer dritten-Instanz zurück. <br/> Der <code>operator /</code> dividiert jede Komponente einer Instanz des <a href="xmvector-data-type.md"><strong>xmvector-Datentyps</strong></a> durch die entsprechende Komponente in einer zweiten Instanz von <code>XMVECTOR</code> und gibt eine neue-Instanz zurück, <code>XMVECTOR</code> die das Ergebnis enthält. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Operator ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Operator | BESCHREIBUNG | 
+|----------|-------------|
+| <a href="/previous-versions/windows/desktop/legacy/ee421381(v=vs.85)"><strong>XMVECTOR::operator / (XMVECTOR,float)</strong></a> | Dividiert eine <code>XMVECTOR</code> -Instanz durch einen Gleitkommawert und gibt das Ergebnis eine neue Instanz von <code>XMVECTOR</code> zurück. <br /> Dividiert jede Komponente einer Instanz des <code>operator /</code> <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> durch einen Gleitkommawert und gibt eine neue Instanz zurück, <code>XMVECTOR</code> die das Ergebnis enthält. <br /><blockquote>[!Note]<br />Dieser Operator ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/ee421380(v=vs.85)"><strong>XMVECTOR::operator / (XMVECTOR,XMVECTOR)</strong></a> | Dividiert eine Instanz von <code>XMVECTOR</code> durch eine zweite Instanz und gibt das Ergebnis in einer dritten Instanz zurück. <br /> Dividiert jede Komponente einer Instanz des <code>operator /</code> <a href="xmvector-data-type.md"><strong>XMVECTOR-Datentyps</strong></a> durch die entsprechende Komponente in einer zweiten Instanz von und gibt eine neue Instanz zurück, die <code>XMVECTOR</code> das Ergebnis <code>XMVECTOR</code> enthält. <br /><blockquote>[!Note]<br />Dieser Operator ist nur unter C++ verfügbar.</blockquote><br /> | 
 
 
 
-## <a name="see-also"></a>Siehe auch
+
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Xmvector-Operatoren](ovw-xmvector-operators.md)
+[XMVECTOR-Operatoren](ovw-xmvector-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> </dl>
 
  

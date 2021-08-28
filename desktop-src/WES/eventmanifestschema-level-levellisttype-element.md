@@ -1,9 +1,9 @@
 ---
-title: Level (levellisttype)-Element
+title: level (LevelListType) -Element
 description: Definiert einen Schweregrad, der die Ausführlichkeit von Ereignissen während der Protokollierung bestimmt.
 ms.assetid: 898b4784-7acc-45b5-8ff9-485e919fe9c6
 keywords:
-- Ereignisprotokoll für Ebene-Element
+- level-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 469ed05f6acb7b4189afdadda772982441fdb435
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61f8e979e4bc7de7b017b75976ad47b3bf4f4c7cfde46bbaa9e1fc698bc92db3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124310"
 ---
-# <a name="level-levellisttype-element"></a>Level (levellisttype)-Element
+# <a name="level-levellisttype-element"></a>level (LevelListType) -Element
 
 Definiert einen Schweregrad, der die Ausführlichkeit von Ereignissen während der Protokollierung bestimmt.
 
@@ -30,7 +30,7 @@ Definiert einen Schweregrad, der die Ausführlichkeit von Ereignissen während d
  />
 ```
 
-Das **Level** -Element wird durch den komplexen [**levellisttype**](eventmanifestschema-levellisttype-complextype.md) -Typ definiert.
+Das **level-Element** wird durch den komplexen [**LevelListType-Typ**](eventmanifestschema-levellisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Level** -Element wird durch den komplexen [**levellisttype**](eventmanifes
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,10 +50,10 @@ Das **Level** -Element wird durch den komplexen [**levellisttype**](eventmanifes
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**Ebenen (ProviderType)**](eventmanifestschema-levels-providertype-element.md)
+[**levels (ProviderType)**](eventmanifestschema-levels-providertype-element.md)
 </dt> <dt>
 
-[**Ebenen (metadataType)**](eventmanifestschema-levels-metadatatype-element.md)
+[**levels (MetadataType)**](eventmanifestschema-levels-metadatatype-element.md)
 </dt> </dl>
 
  

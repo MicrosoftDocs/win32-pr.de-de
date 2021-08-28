@@ -1,31 +1,31 @@
 ---
-title: Die Metadaten eines Anbieters werden erhalten.
-description: Ein Anbieter verwendet ein Instrumentierungs Manifest, um sich selbst zu identifizieren, die zu schreibenden Ereignisse und andere Komponenten, wie z. b. Kanäle, Tasks und Schlüsselwörter, zu definieren.
+title: Abrufen der Metadaten eines Anbieters
+description: Ein Anbieter verwendet ein Instrumentierungsmanifest, um sich selbst zu identifizieren, die von ihm zu schreibenden Ereignisse und andere Komponenten wie Kanäle, Aufgaben und Schlüsselwörter zu definieren.
 ms.assetid: c9442dc1-3599-4e81-a144-943c2843a2f7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b7c78c4e8b96a8d7b0c7002b54e96eec473811f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 757796bcc80f9130e20c79c2ed05b98cd2fa0866485cb7df1ca17133d5074b6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124210"
 ---
-# <a name="getting-a-providers-metadata"></a>Die Metadaten eines Anbieters werden erhalten.
+# <a name="getting-a-providers-metadata"></a>Abrufen der Metadaten eines Anbieters
 
-Ein Anbieter verwendet ein Instrumentierungs Manifest, um sich selbst zu identifizieren, die zu schreibenden Ereignisse und andere Komponenten, wie z. b. Kanäle, Tasks und Schlüsselwörter, zu definieren. Um zur Laufzeit auf diese Informationen zuzugreifen, müssen Sie die [**evtopenpublishermetadata**](/windows/desktop/api/WinEvt/nf-winevt-evtopenpublishermetadata) -Funktion aufrufen, um ein Handle für die Metadaten des Herausgebers abzurufen.
+Ein Anbieter verwendet ein Instrumentierungsmanifest, um sich selbst zu identifizieren, die von ihm zu schreibenden Ereignisse und andere Komponenten wie Kanäle, Aufgaben und Schlüsselwörter zu definieren. Um zur Laufzeit auf diese Informationen zu zugreifen, rufen Sie die [**EvtOpenPublisherMetadata-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopenpublishermetadata) auf, um ein Handle für die Metadaten des Herausgebers zu erhalten.
 
-Die Metadaten werden zwischen den Verleger Metadaten und den Ereignis Metadaten aufgeteilt. Die Verleger Metadaten enthalten die Metadaten, die den Verleger identifizieren, und alle von ihm definierten Metadaten, z. b. Kanäle, Ebenen, Tasks, Opcodes und Schlüsselwörter. Eine Liste der Anbieter Metadaten, die Sie abrufen können, finden Sie unter [**EVT \_ Publisher \_ Metadata \_ Property \_ ID**](/windows/desktop/api/WinEvt/ne-winevt-evt_publisher_metadata_property_id) Enumeration. Um die Metadaten abzurufen, nennen Sie die [**EvtGetPublisherMetadataProperty**](/windows/desktop/api/WinEvt/nf-winevt-evtgetpublishermetadataproperty) -Funktion. Diese Funktion gibt die Eigenschaftswerte für die Eigenschaften zurück, die den Anbieter identifizieren, und die Handles für die Kanäle, Ebenen, Tasks, Opcodes und Schlüsselwort Komponenten. Um auf die Metadaten für diese Komponenten zuzugreifen, müssen Sie die [**evtgetobjectarrayproperty**](/windows/desktop/api/WinEvt/nf-winevt-evtgetobjectarrayproperty) -Funktion aufrufen.
+Die Metadaten werden zwischen den Herausgebermetadaten und den Ereignismetadaten aufgeteilt. Die Herausgebermetadaten enthalten die Metadaten, die den Herausgeber und alle von ihm definierten Metadaten wie Kanäle, Ebenen, Aufgaben, Opcodes und Schlüsselwörter identifizieren. Eine Liste der Anbietermetadaten, die Sie abrufen können, finden Sie in der [**EVT \_ PUBLISHER METADATA PROPERTY \_ \_ \_ ID-Enumeration.**](/windows/desktop/api/WinEvt/ne-winevt-evt_publisher_metadata_property_id) Rufen Sie zum Abrufen der Metadaten die [**EvtGetPublisherMetadataProperty-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetpublishermetadataproperty) auf. Diese Funktion gibt die Eigenschaftswerte für die Eigenschaften zurück, die den Anbieter und Handles für die Kanäle, Ebenen, Aufgaben, Opcodes und Schlüsselwörterkomponenten identifizieren. Um auf die Metadaten für diese Komponenten zu zugreifen, rufen Sie die [**EvtGetObjectArrayProperty-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetobjectarrayproperty) auf.
 
-Zum Abrufen der Ereignis Metadaten müssen Sie die [**EvtOpenEventMetadataEnum**](/windows/desktop/api/WinEvt/nf-winevt-evtopeneventmetadataenum) -Funktion zum Abrufen einer Liste der vom Anbieter definierten Ereignisse abrufen. Anschließend können Sie die [**evtnexteventmetadata**](/windows/desktop/api/WinEvt/nf-winevt-evtnexteventmetadata) -Funktion in einer Schleife aufrufen, um die Ereignisse aufzulisten. Eine Liste der Metadaten, die Sie für ein Ereignis erhalten können, finden Sie unter [**EVT \_ \_ ereignismetadateneigenschaft \_ \_ ID**](/windows/desktop/api/WinEvt/ne-winevt-evt_event_metadata_property_id) Enumeration. Um die Metadaten abzurufen, nennen Sie die [**EvtGetEventMetadataProperty**](/windows/desktop/api/WinEvt/nf-winevt-evtgeteventmetadataproperty) -Funktion. Diese Eigenschaften geben einen ganzzahligen Wert für jedes Element der Ereignis Definition zurück. Bei der Ereignis-ID und-Version ist die Anzeige des ganzzahligen Werts in Ordnung, aber für die anderen Elemente, wie z. b. Kanal und Ebene, hat das Anzeigen des ganzzahligen Werts für den Benutzer möglicherweise keine Bedeutung Der ganzzahlige Wert für diese Elemente ist der Wert des value-Attributs. Sie können den ganzzahligen Wert verwenden, um die Metadaten des Anbieters zuzuordnen und den Wert für die Meldungs Zeichenfolge oder den Namen für das Element zu erhalten und ihn stattdessen dem Benutzer anzuzeigen.
+Um die Ereignismetadaten zu erhalten, rufen Sie die [**EvtOpenEventMetadataEnum-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopeneventmetadataenum) auf, um eine Liste der Ereignisse zu erhalten, die der Anbieter definiert. Rufen Sie dann die [**EvtNextEventMetadata-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtnexteventmetadata) in einer Schleife auf, um die Ereignisse aufzählen. Eine Liste der Metadaten, die Sie für ein Ereignis abrufen können, finden Sie in der [**EVT \_ EVENT METADATA PROPERTY \_ \_ \_ ID-Enumeration.**](/windows/desktop/api/WinEvt/ne-winevt-evt_event_metadata_property_id) Rufen Sie zum Abrufen der Metadaten die [**EvtGetEventMetadataProperty-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgeteventmetadataproperty) auf. Diese Eigenschaften geben einen ganzzahligen Wert für jedes Element der Ereignisdefinition zurück. Für Ereignis-ID und -Version ist die Anzeige des ganzzahligen Werts in Ordnung, aber für die anderen Elemente, z. B. Kanal und Ebene, hat die Anzeige des ganzzahligen Werts für den Benutzer möglicherweise keine Bedeutung. Der ganzzahlige Wert für diese Elemente ist der Wert des Value-Attributs. Sie können den ganzzahligen Wert verwenden, um den Metadaten des Anbieters zu zuordnen, die Meldungszeichenfolge oder den Namenswert für das Element zu erhalten und stattdessen dem Benutzer anzuzeigen.
 
-Ein Beispiel, das zeigt, wie die registrierten Anbieter auf dem Computer aufgelistet werden, finden Sie unter Auflisten [registrierter Anbieter](#enumerating-registered-providers).
+Ein Beispiel, das zeigt, wie die registrierten Anbieter auf dem Computer aufzählt werden, finden Sie unter [Aufzählen registrierter Anbieter.](#enumerating-registered-providers)
 
-Ein Beispiel, das zeigt, wie Sie die Metadaten für einen registrierten Anbieter erhalten, finden Sie unter Get [The Metadata for a Provider](#getting-a-providers-metadata).
+Ein Beispiel zum Abrufen der Metadaten für einen registrierten Anbieter finden Sie unter [Abrufen der Metadaten für einen Anbieter.](#getting-a-providers-metadata)
 
-## <a name="enumerating-registered-providers"></a>Auflisten registrierter Anbieter
+## <a name="enumerating-registered-providers"></a>Aufzählen registrierter Anbieter
 
-Im folgenden Beispiel wird gezeigt, wie die auf dem Computer registrierten Anbieter aufgelistet werden.
+Im folgenden Beispiel wird gezeigt, wie die auf dem Computer registrierten Anbieter aufzählt werden.
 
 
 ```C++
@@ -107,9 +107,9 @@ cleanup:
 
 
 
-## <a name="getting-the-metadata-for-a-provider"></a>Die Metadaten für einen Anbieter werden erhalten.
+## <a name="getting-the-metadata-for-a-provider"></a>Abrufen der Metadaten für einen Anbieter
 
-Im folgenden Beispiel wird veranschaulicht, wie die Metadaten für den Anbieter und die von ihm definierten Ereignisse angezeigt werden.
+Das folgende Beispiel zeigt, wie die Metadaten für den Anbieter und die ereignisse, die er definiert, abrufen.
 
 
 ```C++
@@ -1485,9 +1485,9 @@ LPWSTR GetMessageString(EVT_HANDLE hMetadata, DWORD dwMessageId)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

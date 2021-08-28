@@ -4,12 +4,12 @@ ms.assetid: 7de8cb64-122a-475f-990c-c19590a9d9d8
 title: MEStreamThinMode-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 371c628498356f64918d42ffe6af94aef95af34005250ba3a4a891b6b76f6dc6
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: f13a9cc5b625a8b366bece1debc2017fce51e35d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120013560"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479516"
 ---
 # <a name="mestreamthinmode-event"></a>MEStreamThinMode-Ereignis
 
@@ -23,29 +23,11 @@ Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfob
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>VARTYPE</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>VT_BOOL<br/></td>
-<td>Gibt an, ob die Schlankerlegung gestartet oder beendet wurde.<br/>
-<ul>
-<li>VARIANT_TRUE: Nach diesem Ereignis übermittelte Beispiele werden ausgesät.</li>
-<li>VARIANT_FALSE: Stichproben, die nach diesem Ereignis übermittelt werden, werden nicht ausgesät.</li>
-</ul>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| VARTYPE | BESCHREIBUNG | 
+|---------|-------------|
+| VT_BOOL<br /> | Gibt an, ob die Ausschmalung gestartet oder beendet wurde.<br /><ul><li>VARIANT_TRUE: Die nach diesem Ereignis übermittelten Stichproben werden ausgesät.</li><li>VARIANT_FALSE: Stichproben, die nach diesem Ereignis übermittelt werden, werden nicht ausgesät.</li></ul><br /> | 
+
 
 
 
@@ -61,11 +43,11 @@ Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfob
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Media Foundation Ereignisse](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

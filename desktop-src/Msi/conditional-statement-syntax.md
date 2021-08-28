@@ -4,12 +4,12 @@ ms.assetid: 6f1657f9-063b-4d57-ad76-95e3dbe25786
 title: Syntax für bedingte Anweisungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7dfea7ec31cecbe9c72dee9c660b0e6ee9d07cee2f1818941d036a781c104a93
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: f131cf9513d4bf19bb84c5777d1fed1411a682ce
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120077960"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886436"
 ---
 # <a name="conditional-statement-syntax"></a>Syntax für bedingte Anweisungen
 
@@ -23,7 +23,7 @@ In dieser Tabelle und der folgenden Liste wird die Syntax zusammengefasst, die i
 
 | Element                | Syntax                                                                                                          |
 |---------------------|-----------------------------------------------------------------------------------------------------------------|
-| Wert               | \|Symbolliteral \| ganze Zahl                                                                                    |
+| value               | \|Symbolliteral \| ganze Zahl                                                                                    |
 | comparison-operator | < \| > \| <= \| >= \| = \| <>                                                                 |
 | Begriff                | value \| value comparison-operator value \| ( expression )\|                                                    |
 | Boolescher Faktor      | Begriff \| **NOT-Begriff**                                                                                            |
@@ -147,38 +147,38 @@ Die folgende Tabelle zeigt, wo die Verwendung der Funktions- und Komponentenoper
 
 
 
-| Operator <state> | Wo diese Syntax gültig ist                                                                                                                                         |
+| &lt;Operatorzustand&gt; | Hierbei ist diese Syntax gültig.                                                                                                                                         |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| $component Aktion      | In der [Tabelle Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der [Aktion CostFinalize.](costfinalize-action.md) |
-| &feature-action        | In der [Tabelle Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der [Aktion CostFinalize.](costfinalize-action.md) |
-| !feature-state         | In der [Tabelle Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der [Aktion CostFinalize.](costfinalize-action.md) |
-| ?Komponentenzustand       | In der [Tabelle Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der [Aktion CostFinalize.](costfinalize-action.md) |
+| $component-action      | In der Tabelle [Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der Aktion [CostFinalize.](costfinalize-action.md) |
+| &Featureaktion        | In der Tabelle [Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der Aktion [CostFinalize.](costfinalize-action.md) |
+| !feature-state         | In der Tabelle [Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der Aktion [CostFinalize.](costfinalize-action.md) |
+| ?component-state       | In der Tabelle [Bedingung](condition-table.md) und in den [Sequenztabellen](using-a-sequence-table.md) nach der Aktion [CostFinalize.](costfinalize-action.md) |
 
 
 
  
 
-Die folgende Tabelle zeigt die in bedingten Ausdrücken verwendeten Feature- und Komponentenzustandswerte. Diese Zustände werden erst festgelegt, wenn [**MsiSetInstallLevel**](/windows/desktop/api/Msiquery/nf-msiquery-msisetinstalllevel) entweder direkt oder durch die [Aktion CostFinalize aufgerufen](costfinalize-action.md) wird.
+Die folgende Tabelle zeigt die Feature- und Komponentenzustandswerte, die in bedingten Ausdrücken verwendet werden. Diese Zustände werden erst festgelegt, wenn [**MsiSetInstallLevel**](/windows/desktop/api/Msiquery/nf-msiquery-msisetinstalllevel) entweder direkt oder durch die [CostFinalize-Aktion](costfinalize-action.md) aufgerufen wird.
 
 
 
 | State                    | Wert | Bedeutung                                                         |
 |--------------------------|-------|-----------------------------------------------------------------|
-| INSTALLSTATE \_ UNKNOWN    | –1    | Es ist keine Aktion für das Feature oder die Komponente zu ergreifen.              |
-| INSTALLSTATE \_ ADVERTISED | 1     | Angekündigtes Feature. Dieser Zustand ist für Komponenten nicht verfügbar. |
+| INSTALLSTATE \_ UNKNOWN    | -1    | Es muss keine Aktion für das Feature oder die Komponente ausgeführt werden.              |
+| INSTALLSTATE \_ ANGEKÜNDIGT | 1     | Angekündigtes Feature. Dieser Zustand ist für Komponenten nicht verfügbar. |
 | INSTALLSTATE \_ ABSENT     | 2     | Das Feature oder die Komponente ist nicht vorhanden.                            |
 | INSTALLSTATE \_ LOCAL      | 3     | Feature oder Komponente auf dem lokalen Computer.                     |
-| INSTALLSTATE \_ SOURCE     | 4     | Das Feature oder die Komponente wird aus der Quelle ausgeführt.                       |
+| \_INSTALLSTATE-QUELLE     | 4     | Feature- oder Komponenten werden aus der Quelle ausgeführt.                       |
 
 
 
  
 
-Beispielsweise wird der bedingte Ausdruck "&MyFeature=3" nur dann als True ausgewertet, wenn MyFeature von seinem aktuellen Zustand in den Zustand der Installation auf dem lokalen Computer INSTALLSTATE LOCAL geändert \_ wird.
+Beispielsweise wird der bedingte Ausdruck "&MyFeature=3" nur dann zu True ausgewertet, wenn MyFeature vom aktuellen Zustand in den Zustand der Installation auf dem lokalen Computer INSTALLSTATE \_ LOCAL wechselt.
 
-Beachten Sie, dass Sie nicht von der Bedingung $Component 1=3 abhängen sollten, um zu überprüfen, ob Component1 lokal auf dem Computer installiert ist. Dies kann fehlschlagen, wenn Component1 von mehr als einem Produkt installiert wird. Nachdem Component1 lokal von Product1 installiert wurde, wertet das Installationsprogramm die Bedingung $Component 1=3 während der Installation von Product2 als False aus. Dies liegt daran, dass das Installationsprogramm die Version der Komponente anhand des Schlüsselpfads der Komponente bestimmt und die Komponente für die Installation markiert, wenn ihre Version größer oder gleich der installierten Komponente ist.
+Beachten Sie, dass Sie sich nicht auf die Bedingung $Component 1=3 verlassen sollten, um zu überprüfen, ob Component1 lokal auf dem Computer installiert ist. Dies kann fehlschlagen, wenn Component1 von mehreren Produkten installiert wird. Nachdem Component1 lokal von Product1 installiert wurde, wertet das Installationsprogramm die Bedingung $Component 1=3 während der Installation von Product2 als False aus. Dies liegt daran, dass das Installationsprogramm die Version der Komponente anhand des Schlüsselpfads der Komponente bestimmt und die Komponente für die Installation markiert, wenn ihre Version größer oder gleich der installierten Komponente ist.
 
-Beachten Sie, dass das Installationsprogramm [](version.md) keine direkten Vergleiche des Versionsdatentyps in bedingungsbedingten Anweisungen vor nimmt. Sie können beispielsweise keine Vergleichsoperatoren verwenden, um Versionen wie "01.10" und "1.010" in einer bedingungsbedingten Anweisung zu vergleichen. Verwenden Sie stattdessen eine gültige -Methode, um nach einer Version zu suchen, wie unter Suchen nach vorhandenen [Anwendungen, Dateien,](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md)Registrierungseinträgen oder .ini-Dateieinträgen beschrieben, und legen Sie dann eine Eigenschaft fest.
+Beachten Sie, dass das Installationsprogramm [](version.md) keine direkten Vergleiche des Versionsdatentyps in bedingten Anweisungen vorweist. Beispielsweise können Sie keine vergleichsoperatoren verwenden, um Versionen wie "01.10" und "1.010" in einer bedingten Anweisung zu vergleichen. Verwenden Sie stattdessen eine gültige Methode, um nach einer Version zu suchen, wie unter [Suchen nach vorhandenen Anwendungen, Dateien, Registrierungseinträgen oder .ini Dateieinträge](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md)beschrieben, und legen Sie dann eine Eigenschaft fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

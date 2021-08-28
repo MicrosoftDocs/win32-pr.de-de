@@ -4,12 +4,12 @@ ms.assetid: 24b400a4-f4c7-4b59-a9e3-8a20144cd52e
 title: System.Photo.Flash-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba32a7b4dfcde564f6b0c0c9e175aa56786e1324080264c7c928398fe97e6a34
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 1a7798e88c40193cac5c577f1960eee96fc2d868
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119811730"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880072"
 ---
 # <a name="systemphotoflash-photo-metadata-policy"></a>System.Photo.Flash-Richtlinie für Fotometadaten
 
@@ -49,10 +49,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                             | Datenträgerformat |
+| Order | Pfad                             | Datenträgerformat |
 |-------|----------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=37385}    | ushort      |
-| 2     | /xmp/ <xmpstruct> exif:Flash |             |
+| 2     | /xmp/ &lt; xmpstruct &gt; exif:Flash |             |
 
 
 
@@ -62,10 +62,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                             | Datenträgerformat |
+| Order | Pfad                             | Datenträgerformat |
 |-------|----------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=37385}    | ushort      |
-| 2     | /xmp/ <xmpstruct> exif:Flash |             |
+| 2     | /xmp/ &lt; xmpstruct &gt; exif:Flash |             |
 
 
 
@@ -75,10 +75,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                             |
+| Order | Pfad                             |
 |-------|----------------------------------|
 | 1     | /app1/ifd/exif/{ushort=37385}    |
-| 2     | /xmp/ <xmpstruct> exif:flash |
+| 2     | /xmp/ &lt; xmpstruct &gt; exif:flash |
 
 
 
@@ -90,10 +90,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                 | Datenträgerformat |
+| Order | Pfad                                 | Datenträgerformat |
 |-------|--------------------------------------|-------------|
 | 1     | /ifd/exif/{ushort=37385}             | ushort      |
-| 2     | /ifd/xmp/ <xmpstruct> exif:Flash |             |
+| 2     | /ifd/xmp/ &lt; xmpstruct &gt; exif:Flash |             |
 
 
 
@@ -103,10 +103,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                 | Datenträgerformat |
+| Order | Pfad                                 | Datenträgerformat |
 |-------|--------------------------------------|-------------|
 | 1     | /ifd/exif/{ushort=37385}             | ushort      |
-| 2     | /ifd/xmp/ <xmpstruct> exif:Flash |             |
+| 2     | /ifd/xmp/ &lt; xmpstruct &gt; exif:Flash |             |
 
 
 
@@ -116,10 +116,10 @@ Werte aus verschiedenen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                 |
+| Order | Pfad                                 |
 |-------|--------------------------------------|
 | 1     | /ifd/exif/{ushort=37385}             |
-| 2     | /ifd/xmp/ <xmpstruct> exif:flash |
+| 2     | /ifd/xmp/ &lt; xmpstruct &gt; exif:flash |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Levels (metadataType)-Element
-description: Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben. | Levels (metadataType)-Element
+title: levels (MetadataType)-Element
+description: Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben. | levels (MetadataType)-Element
 ms.assetid: 710a4c7e-d37e-4543-8fdf-44688085b996
 keywords:
-- Levels-Element (Ereignisprotokoll)
+- levels-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9df4a7d7fc58f21ab6c5c6965b635f8bd087d890
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7a7c187b8ed9660d5e95be1049c4e718eae9a3ebd4289040d364decb66c58c52
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124290"
 ---
-# <a name="levels-metadatatype-element"></a>Levels (metadataType)-Element
+# <a name="levels-metadatatype-element"></a>levels (MetadataType)-Element
 
 Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben.
 
@@ -30,7 +30,7 @@ Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben.
  />
 ```
 
-Das **Levels** -Element wird durch den komplexen [**metadataType**](eventmanifestschema-metadatatype-complextype.md) -Typ definiert.
+Das **levels-Element** wird vom komplexen [**MetadataType-Typ**](eventmanifestschema-metadatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Levels** -Element wird durch den komplexen [**metadataType**](eventmanifes
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Levels** -Element wird durch den komplexen [**metadataType**](eventmanifes
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Metadaten (instrumentationmanifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
+[**metadata (instrumentationManifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

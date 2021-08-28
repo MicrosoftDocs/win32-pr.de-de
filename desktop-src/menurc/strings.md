@@ -1,23 +1,23 @@
 ---
 title: Zeichenfolgen
-description: In diesem Abschnitt werden die Zeichen folgen Funktionen erläutert.
+description: In diesem Abschnitt werden die Zeichenfolgenfunktionen erläutert.
 ms.assetid: vs|winui|~\winui\windowsuserinterface\resources\strings.htm
 keywords:
-- Ressourcen, Zeichen folgen
+- Ressourcen,Zeichenfolgen
 - Zeichenfolgen
 - Zeichenfolgenfunktionen (string-Funktionen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3231006de2dfe6ed611b58e5b511819a40c21e8b
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: a3799c151b828dba1d687068da6f7f5924aded09
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "103732097"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478896"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
-In diesem Abschnitt werden die Zeichen folgen Funktionen beschrieben und erläutert, wie Sie in Ihren Anwendungen verwendet werden.
+In diesem Abschnitt werden die Zeichenfolgenfunktionen beschrieben und erläutert, wie sie in Ihren Anwendungen verwendet werden.
 
 ### <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -25,9 +25,9 @@ In diesem Abschnitt werden die Zeichen folgen Funktionen beschrieben und erläut
 
 | Name                                     | BESCHREIBUNG                                             |
 |------------------------------------------|---------------------------------------------------------|
-| [Informationen über Zeichenfolgen](about-strings.md)       | Erläutert die Zeichen folgen Funktionen.<br/>              |
-| [Informationen zu "strausafe. h"](strsafe-ovw.md)       | Erläutert die Zeichen folgen Funktionen in "strausafe. h".<br/> |
-| [Zeichen folgen Verweis](string-reference.md) | Enthält die API-Referenz.<br/>                  |
+| [Informationen über Zeichenfolgen](about-strings.md)       | Erläutert die Zeichenfolgenfunktionen.<br/>              |
+| [Informationen zu Strsafe.h](strsafe-ovw.md)       | Erläutert die Zeichenfolgenfunktionen in Strsafe.h.<br/> |
+| [Zeichenfolgenverweis](string-reference.md) | Enthält die API-Referenz.<br/>                  |
 
 
 
@@ -37,190 +37,82 @@ In diesem Abschnitt werden die Zeichen folgen Funktionen beschrieben und erläut
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charlowera"><strong>Charlower</strong></a></td>
-<td>Konvertiert eine Zeichenfolge oder ein einzelnes Zeichen in Kleinbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die-Funktion die Zeichen an Ort und Stelle. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charlowerbuffa"><strong>Charlowerbuff</strong></a></td>
-<td>Konvertiert Großbuchstaben in einem Puffer in Kleinbuchstaben. Die-Funktion konvertiert die Zeichen an Ort und Stelle. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charnexta"><strong>Charnext</strong></a></td>
-<td>Ruft einen Zeiger auf das nächste Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichen folgen verarbeiten, die aus Einzel-oder Multibytezeichen bestehen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charnextexa"><strong>Charnextexa</strong></a></td>
-<td>Ruft den Zeiger auf das nächste Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichen folgen verarbeiten, die aus Einzel-oder Multibytezeichen bestehen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charpreva"><strong>Charprev</strong></a></td>
-<td>Ruft einen Zeiger auf das vorangehende Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichen folgen verarbeiten, die aus Einzel-oder Multibytezeichen bestehen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charprevexa"><strong>Charprevexa</strong></a></td>
-<td>Ruft den Zeiger auf das vorangehende Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichen folgen verarbeiten, die aus Einzel-oder Multibytezeichen bestehen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-chartooema"><strong>Charper OEM</strong></a></td>
-<td>Übersetzt eine Zeichenfolge in den von OEM definierten Zeichensatz.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-chartooembuffa"><strong>Chartoken</strong></a></td>
-<td>Übersetzt eine angegebene Anzahl von Zeichen in einer Zeichenfolge in den von OEM definierten Zeichensatz.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charuppera"><strong>Charupper</strong></a></td>
-<td>Konvertiert eine Zeichenfolge oder ein einzelnes Zeichen in Großbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die-Funktion die Zeichen an Ort und Stelle. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-charupperbuffa"><strong>Charupperbuff</strong></a></td>
-<td>Konvertiert klein geschriebene Zeichen in einem Puffer in Großbuchstaben. Die-Funktion konvertiert die Zeichen an Ort und Stelle. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringw"><strong>CompareString</strong></a></td>
-<td>Vergleicht zwei Zeichen folgen unter Verwendung des angegebenen Gebiets Schemas.
-<blockquote>
-[!Note]<br />
-Verwenden Sie für die Kompatibilität mit Unicode <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringex"><strong>comparestringex</strong></a> oder die Unicode-Version von <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringw"><strong>CompareString</strong></a>.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringex"><strong>Comparestringex</strong></a></td>
-<td>Vergleicht zwei Unicode-Zeichen folgen (breit Zeichen) unter Verwendung des angegebenen Gebiets Schemas.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/stringapiset/nf-stringapiset-foldstringw"><strong>FoldString</strong></a></td>
-<td>Ordnet eine Zeichenfolge einer anderen zu, wobei eine angegebene Transformations Option durchgeführt wird. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/winnls/nf-winnls-getstringtypea"><strong>Getstringtypea</strong></a></td>
-<td>Ruft Zeichentyp Informationen für die Zeichen in der angegebenen Quell Zeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabe Arrays fest. Jedes Bit identifiziert einen angegebenen Zeichentyp, z. b. ob es sich um einen Buchstaben, eine Ziffer oder keines von beiden Zeichen handelt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw"><strong>Getstringtypeex</strong></a></td>
-<td>Ruft Zeichentyp Informationen für die Zeichen in der angegebenen Quell Zeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabe Arrays fest. Jedes Bit identifiziert einen angegebenen Zeichentyp, z. b. ob es sich um einen Buchstaben, eine Ziffer oder keines von beiden Zeichen handelt. <br/> Im Gegensatz zu seinen close-verwandten " <a href="/windows/desktop/api/winnls/nf-winnls-getstringtypea"><strong>getstringtypea</strong></a> " und " <a href="/windows/desktop/api/stringapiset/nf-stringapiset-getstringtypew"><strong>getstringtypew</strong></a>" zeigt <a href="/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw"><strong>getstringtypeex</strong></a> das Standardverhalten durch die Verwendung des Unicode-Schalters " <strong> # define</strong> ". Dies ist die empfohlene Funktion.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/stringapiset/nf-stringapiset-getstringtypew"><strong>Getstringtypew</strong></a></td>
-<td>Ruft Zeichentyp Informationen für die Zeichen in der angegebenen Quell Zeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabe Arrays fest. Jedes Bit identifiziert einen angegebenen Zeichentyp, z. b. ob es sich um einen Buchstaben, eine Ziffer oder keines von beiden Zeichen handelt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-ischaralphaa"><strong>Ischaralpha</strong></a></td>
-<td>Bestimmt, ob ein Zeichen ein alphabetisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die während des Setups oder über die Systemsteuerung vom Benutzer ausgewählt wurde. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-ischaralphanumerica"><strong>Ischaralpha numerisch</strong></a></td>
-<td>Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die während des Setups oder über die Systemsteuerung vom Benutzer ausgewählt wurde. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-ischarlowera"><strong>Ischarlower</strong></a></td>
-<td>Bestimmt, ob ein Zeichen klein geschrieben ist. Diese Bestimmung basiert auf der Semantik der Sprache, die während des Setups oder über die Systemsteuerung vom Benutzer ausgewählt wurde. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-ischaruppera"><strong>Ischarupper</strong></a></td>
-<td>Bestimmt, ob ein Zeichen in Großbuchstaben vorliegt. Diese Bestimmung basiert auf der Semantik der Sprache, die während des Setups oder über die Systemsteuerung vom Benutzer ausgewählt wurde. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-loadstringa"><strong>LoadString</strong></a></td>
-<td>Lädt eine Zeichen folgen Ressource aus der ausführbaren Datei, die einem angegebenen Modul zugeordnet ist, kopiert die Zeichenfolge in einen Puffer und fügt ein abschließendes NULL-Zeichen an.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrcata"><strong>lstrincat</strong></a></td>
-<td>Fügt eine Zeichenfolge an eine andere Zeichenfolge an.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrcmpa"><strong>lstraucmp</strong></a></td>
-<td>Vergleicht zwei Zeichen folgen. Beim Vergleich wird die Groß-/Kleinschreibung beachtet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrcmpia"><strong>lstraucmpi</strong></a></td>
-<td>Vergleicht zwei Zeichen folgen. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrcpya"><strong>lstrincpy</strong></a></td>
-<td>Kopiert eine Zeichenfolge in einen Puffer.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrcpyna"><strong>lstrincpyn</strong></a></td>
-<td>Kopiert eine angegebene Anzahl von Zeichen aus einer Quell Zeichenfolge in einen Puffer. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winbase/nf-winbase-lstrlena"><strong>lstrlen</strong></a></td>
-<td>Bestimmt die Länge der angegebenen Zeichenfolge (ohne das abschließende Null Zeichen).<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-oemtochara"><strong>Oemto Char</strong></a></td>
-<td>Übersetzt eine Zeichenfolge aus dem OEM-definierten Zeichensatz in eine ANSI-oder Zeichenfolge mit breit Zeichen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-oemtocharbuffa"><strong>Oemzu charbuff</strong></a></td>
-<td>Übersetzt eine angegebene Anzahl von Zeichen in einer Zeichenfolge aus dem OEM-definierten Zeichensatz in eine ANSI-oder eine Zeichenfolge mit breit Zeichen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-wsprintfa"><strong>wsprintf</strong></a></td>
-<td>Schreibt formatierte Daten in den angegebenen Puffer.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winuser/nf-winuser-wvsprintfa"><strong>Wvsprintf</strong></a></td>
-<td>Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in den angegebenen Puffer.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Name | BESCHREIBUNG | 
+|------|-------------|
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charlowera"><strong>CharLower</strong></a> | Konvertiert eine Zeichenfolge oder ein einzelnes Zeichen in Kleinbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die Funktion die Zeichen an Ort und Stelle. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charlowerbuffa"><strong>CharLowerBuff</strong></a> | Konvertiert Großbuchstaben in einem Puffer in Kleinbuchstaben. Die -Funktion konvertiert die Zeichen an Ort und Stelle. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charnexta"><strong>CharNext</strong></a> | Ruft einen Zeiger auf das nächste Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichenfolgen verarbeiten, die aus Einzel- oder Multi-Byte-Zeichen bestehen.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charnextexa"><strong>CharNextExA</strong></a> | Ruft den Zeiger auf das nächste Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichenfolgen verarbeiten, die aus Einzel- oder Multi-Byte-Zeichen bestehen.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charpreva"><strong>CharPrev</strong></a> | Ruft einen Zeiger auf das vorangehende Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichenfolgen verarbeiten, die aus Einzel- oder Multi-Byte-Zeichen bestehen.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charprevexa"><strong>CharPrevExA</strong></a> | Ruft den Zeiger auf das vorangehende Zeichen in einer Zeichenfolge ab. Diese Funktion kann Zeichenfolgen verarbeiten, die aus Einzel- oder Multi-Byte-Zeichen bestehen.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-chartooema"><strong>CharToOem</strong></a> | Übersetzt eine Zeichenfolge in den OEM-definierten Zeichensatz.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-chartooembuffa"><strong>CharToOemBuff</strong></a> | Übersetzt eine angegebene Anzahl von Zeichen in einer Zeichenfolge in den OEM-definierten Zeichensatz.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charuppera"><strong>CharUpper</strong></a> | Konvertiert eine Zeichenfolge oder ein einzelnes Zeichen in Großbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die Funktion die Zeichen an Ort und Stelle. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-charupperbuffa"><strong>CharUpperBuff</strong></a> | Konvertiert Kleinbuchstaben in einem Puffer in Großbuchstaben. Die -Funktion konvertiert die Zeichen an Ort und Stelle. <br /> | 
+| <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringw"><strong>CompareString</strong></a> | Vergleicht zwei Zeichenfolgen unter Verwendung des angegebenen -Locale.<blockquote>[!Note]<br />Zur Kompatibilität mit Unicode verwenden Sie <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringex"><strong>CompareStringEx</strong></a> oder die Unicode-Version von <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringw"><strong>CompareString</strong></a>.</blockquote><br /><br /> | 
+| <a href="/windows/desktop/api/stringapiset/nf-stringapiset-comparestringex"><strong>CompareStringEx</strong></a> | Vergleicht zwei Unicode-Zeichenfolgen (Breitzeichen) unter Verwendung des angegebenen -Locale.<br /> | 
+| <a href="/windows/desktop/api/stringapiset/nf-stringapiset-foldstringw"><strong>FoldString</strong></a> | Karten eine Zeichenfolge in eine andere, indem eine angegebene Transformationsoption verwendet wird. <br /> | 
+| <a href="/windows/desktop/api/winnls/nf-winnls-getstringtypea"><strong>GetStringTypeA</strong></a> | Ruft Zeichentypinformationen für die Zeichen in der angegebenen Quellzeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabearrays fest. Jedes Bit identifiziert einen bestimmten Zeichentyp, z. B. ob das Zeichen ein Buchstabe, eine Ziffer oder keines von beiden ist.<br /> | 
+| <a href="/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw"><strong>GetStringTypeEx</strong></a> | Ruft Zeichentypinformationen für die Zeichen in der angegebenen Quellzeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabearrays fest. Jedes Bit identifiziert einen bestimmten Zeichentyp, z. B. ob das Zeichen ein Buchstabe, eine Ziffer oder keines von beiden ist. <br /> Im Gegensatz zu den schließenden Verwandten <a href="/windows/desktop/api/winnls/nf-winnls-getstringtypea"><strong>GetStringTypeA</strong></a> und <a href="/windows/desktop/api/stringapiset/nf-stringapiset-getstringtypew"><strong>GetStringTypeW</strong></a>weist <a href="/windows/win32/api/stringapiset/nf-stringapiset-getstringtypeexw"><strong>GetStringTypeEx</strong></a> standardverhalten auf, wenn der Unicode#define verwendet <strong>wird.</strong> Dies ist die empfohlene Funktion.<br /> | 
+| <a href="/windows/desktop/api/stringapiset/nf-stringapiset-getstringtypew"><strong>GetStringTypeW</strong></a> | Ruft Zeichentypinformationen für die Zeichen in der angegebenen Quellzeichenfolge ab. Für jedes Zeichen in der Zeichenfolge legt die Funktion ein oder mehrere Bits im entsprechenden 16-Bit-Element des Ausgabearrays fest. Jedes Bit identifiziert einen bestimmten Zeichentyp, z. B. ob das Zeichen ein Buchstabe, eine Ziffer oder keines von beiden ist.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-ischaralphaa"><strong>IsCharAlpha</strong></a> | Bestimmt, ob ein Zeichen ein alphabetisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-ischaralphanumerica"><strong>IsCharAlphaNumeric</strong></a> | Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-ischarlowera"><strong>IsCharLower</strong></a> | Bestimmt, ob ein Zeichen aus Kleinbuchstaben besteht. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-ischaruppera"><strong>IsCharUpper</strong></a> | Bestimmt, ob ein Zeichen Großbuchstaben ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung. <br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-loadstringa"><strong>LoadString</strong></a> | Lädt eine Zeichenfolgenressource aus der ausführbaren Datei, die einem angegebenen Modul zugeordnet ist, kopiert die Zeichenfolge in einen Puffer und fügt ein beendendes NULL-Zeichen an.<br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrcata"><strong>lstrcat</strong></a> | Fügt eine Zeichenfolge an eine andere an.<br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrcmpa"><strong>lstrcmp</strong></a> | Vergleicht zwei Zeichenfolgen. Beim Vergleich wird die Kleinschreibung beachtet.<br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrcmpia"><strong>lstrcmpi</strong></a> | Vergleicht zwei Zeichenfolgen. Beim Vergleich wird die Groß-/Kleinschreibung nicht berücksichtigt.<br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrcpya"><strong>lstrcpy</strong></a> | Kopiert eine Zeichenfolge in einen Puffer.<br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrcpyna"><strong>lstrcpyn</strong></a> | Kopiert eine angegebene Anzahl von Zeichen aus einer Quellzeichenfolge in einen Puffer. <br /> | 
+| <a href="/windows/desktop/api/Winbase/nf-winbase-lstrlena"><strong>lstrlen</strong></a> | Bestimmt die Länge der angegebenen Zeichenfolge (ohne das beendende NULL-Zeichen).<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-oemtochara"><strong>OemToChar</strong></a> | Übersetzt eine Zeichenfolge aus dem OEM-definierten Zeichensatz entweder in eine ANSI- oder eine Breitzeichenzeichenfolge.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-oemtocharbuffa"><strong>OemToCharBuff</strong></a> | Übersetzt eine angegebene Anzahl von Zeichen in einer Zeichenfolge aus dem OEM-definierten Zeichensatz entweder in eine ANSI- oder eine Breitzeichenzeichenfolge.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-wsprintfa"><strong>wsprintf</strong></a> | Schreibt formatierte Daten in den angegebenen Puffer.<br /> | 
+| <a href="/windows/desktop/api/Winuser/nf-winuser-wvsprintfa"><strong>wvsprintf</strong></a> | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in den angegebenen Puffer.<br /> | 
+
 
 
 
  
 
-### <a name="strsafe-functions"></a>Strauchsichere Funktionen
+### <a name="strsafe-functions"></a>Strsafe-Funktionen
 
 
 
 | Name                                             | BESCHREIBUNG                                                                                      |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| [**Stringcbcat**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcata)               | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
-| [**Stringcb-Ex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatexa)           | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
-| [**Stringcb-n**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatna)             | Verkettet die angegebene Anzahl von Bytes von einer Zeichenfolge zu einer anderen Zeichenfolge.<br/>         |
-| [**Stringcbcr-x**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatnexa)         | Verkettet die angegebene Anzahl von Bytes von einer Zeichenfolge zu einer anderen Zeichenfolge.<br/>         |
-| [**Stringcbcopy**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopya)             | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
-| [**Stringcbcopyex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopyexa)         | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
-| [**Stringcbcopyn**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopyna)           | Kopiert die angegebene Anzahl von Bytes von einer Zeichenfolge in eine andere.<br/>                      |
-| [**Stringcbcopynetx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopynexa)       | Kopiert die angegebene Anzahl von Bytes von einer Zeichenfolge in eine andere.<br/>                      |
-| [**Stringcbgets**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbgetsa)             | Ruft eine Textzeile von stdin bis einschließlich des Zeilen einzeiligen Zeichens (' \\ n ') ab.<br/>  |
-| [**Stringcbgetsex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbgetsexa)         | Ruft eine Textzeile von stdin bis einschließlich des Zeilen einzeiligen Zeichens (' \\ n ') ab.<br/>  |
-| [**Stringcblength**](/windows/desktop/api/Strsafe/nf-strsafe-stringcblengtha)         | Bestimmt, ob eine Zeichenfolge die angegebene Länge in Bytes überschreitet.<br/>                   |
-| [**Stringcbprintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbprintfa)         | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
-| [**Stringcbprintfex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbprintfexa)     | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
-| [**Stringcbvprintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbvprintfa)       | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
-| [**Stringcbvprintfex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbvprintfexa)   | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
+| [**StringCbCat**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcata)               | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
+| [**StringCbCatEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatexa)           | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
+| [**StringCbCatN**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatna)             | Verkettet die angegebene Anzahl von Bytes von einer Zeichenfolge mit einer anderen Zeichenfolge.<br/>         |
+| [**StringCbCatNEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcatnexa)         | Verkettet die angegebene Anzahl von Bytes von einer Zeichenfolge mit einer anderen Zeichenfolge.<br/>         |
+| [**StringCbCopy**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopya)             | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
+| [**StringCbCopyEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopyexa)         | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
+| [**StringCbCopyN**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopyna)           | Kopiert die angegebene Anzahl von Bytes aus einer Zeichenfolge in eine andere.<br/>                      |
+| [**StringCbCopyNEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbcopynexa)       | Kopiert die angegebene Anzahl von Bytes aus einer Zeichenfolge in eine andere.<br/>                      |
+| [**StringCbGets**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbgetsa)             | Ruft eine Textzeile von stdin bis einschließlich des Zeilenzeilzeichens (' \\ n') ab.<br/>  |
+| [**StringCbGetsEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbgetsexa)         | Ruft eine Textzeile von stdin bis einschließlich des Zeilenzeilzeichens (' \\ n') ab.<br/>  |
+| [**StringCbLength**](/windows/desktop/api/Strsafe/nf-strsafe-stringcblengtha)         | Bestimmt, ob eine Zeichenfolge die angegebene Länge in Bytes überschreitet.<br/>                   |
+| [**StringCbPrintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbprintfa)         | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
+| [**StringCbPrintfEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbprintfexa)     | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
+| [**StringCbVPrintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbvprintfa)       | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
+| [**StringCbVPrintfEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcbvprintfexa)   | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
 | [**StringCchCat**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcata)             | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
-| [**Stringcch| Ex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatexa)         | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
-| [**Stringcch.**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatna)           | Verkettet die angegebene Anzahl von Zeichen aus einer Zeichenfolge zu einer anderen Zeichenfolge.<br/>    |
-| [**Stringcchcatcher**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatnexa)       | Verkettet die angegebene Anzahl von Zeichen aus einer Zeichenfolge zu einer anderen Zeichenfolge.<br/>    |
+| [**StringCchCatEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatexa)         | Verkettet eine Zeichenfolge mit einer anderen Zeichenfolge.<br/>                                            |
+| [**StringCchCatN**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatna)           | Verkettet die angegebene Anzahl von Zeichen von einer Zeichenfolge mit einer anderen Zeichenfolge.<br/>    |
+| [**StringCchCatNEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcatnexa)       | Verkettet die angegebene Anzahl von Zeichen von einer Zeichenfolge mit einer anderen Zeichenfolge.<br/>    |
 | [**StringCchCopy**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopya)           | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
-| [**Stringcchcopyex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopyexa)       | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
-| [**Stringcchcopyn**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopyna)         | Kopiert die angegebene Anzahl von Zeichen aus einer Zeichenfolge in eine andere.<br/>                 |
-| [**Stringcchcopynetx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopynexa)     | Kopiert die angegebene Anzahl von Zeichen aus einer Zeichenfolge in eine andere.<br/>                 |
-| [**Stringcchgets**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchgetsa)           | Ruft eine Textzeile von stdin bis einschließlich des Zeilen einzeiligen Zeichens (' \\ n ') ab.<br/>  |
-| [**Stringcchgetsex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchgetsexa)       | Ruft eine Textzeile von stdin bis einschließlich des Zeilen einzeiligen Zeichens (' \\ n ') ab.<br/>  |
-| [**Stringcchlength**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchlengtha)       | Bestimmt, ob eine Zeichenfolge die angegebene Länge in Zeichen überschreitet.<br/>              |
+| [**StringCchCopyEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopyexa)       | Kopiert eine Zeichenfolge in eine andere.<br/>                                                         |
+| [**StringCchCopyN**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopyna)         | Kopiert die angegebene Anzahl von Zeichen aus einer Zeichenfolge in eine andere.<br/>                 |
+| [**StringCchCopyNEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchcopynexa)     | Kopiert die angegebene Anzahl von Zeichen aus einer Zeichenfolge in eine andere.<br/>                 |
+| [**StringCchGets**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchgetsa)           | Ruft eine Textzeile von stdin bis einschließlich des Zeilenzeilzeichens (' \\ n') ab.<br/>  |
+| [**StringCchGetsEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchgetsexa)       | Ruft eine Textzeile von stdin bis einschließlich des Zeilenzeilzeichens (' \\ n') ab.<br/>  |
+| [**StringCchLength**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchlengtha)       | Bestimmt, ob eine Zeichenfolge die angegebene Länge in Zeichen überschreitet.<br/>              |
 | [**StringCchPrintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchprintfa)       | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
-| [**Stringcchprintfex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchprintfexa)   | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
-| [**Stringcchvprintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchvprintfa)     | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
-| [**Stringcchvprintfex**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchvprintfexa) | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
+| [**StringCchPrintfEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchprintfexa)   | Schreibt formatierte Daten in die angegebene Zeichenfolge.<br/>                                        |
+| [**StringCchVPrintf**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchvprintfa)     | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
+| [**StringCchVPrintfEx**](/windows/desktop/api/Strsafe/nf-strsafe-stringcchvprintfexa) | Schreibt formatierte Daten mithilfe eines Zeigers auf eine Liste von Argumenten in die angegebene Zeichenfolge.<br/> |
 
 
 

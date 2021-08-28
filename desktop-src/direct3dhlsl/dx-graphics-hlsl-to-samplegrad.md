@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 959304d36da2b95bdf6289fba1b8c75d6ecfa314
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 1e315cfc32b10274eee47258360e85543f15311a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111825737"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624096"
 ---
 # <a name="samplegrad-directx-hlsl-texture-object"></a>SampleGrad (DirectX HLSL-Texturobjekt)
 
@@ -32,8 +32,8 @@ Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -87,8 +87,8 @@ Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise 
 <p> </p></td>
 </tr>
 <tr class="even">
-<td><p><span id="DDX"></span><span id="ddx"></span><em>Ddx</em></p></td>
-<td><p>[in] Die Änderungsrate der Oberflächengeometrie in x-Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.</p>
+<td><p><span id="DDX"></span><span id="ddx"></span><em>DDX</em></p></td>
+<td><p>[in] Die Änderungsrate der Oberflächengeometrie in x Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.</p>
 
 <table>
 <thead>
@@ -154,7 +154,7 @@ Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise 
 </tr>
 <tr class="even">
 <td><p><span id="Offset"></span><span id="offset"></span><span id="OFFSET"></span><em>Offset</em></p></td>
-<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter<a href="dx-graphics-hlsl-to-sample.md">Anwenden von ganzzahligen Offsets.</a></p>
+<td><p>[in] Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter<a href="dx-graphics-hlsl-to-sample.md">Anwenden von ganzzahligen Offsets.</a></p>
 
 <table>
 <thead>

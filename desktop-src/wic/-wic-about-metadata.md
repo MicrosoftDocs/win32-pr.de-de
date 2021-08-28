@@ -4,12 +4,12 @@ ms.assetid: 35727810-3c4c-4c11-a4a2-3ae2cf3b8142
 title: Übersicht über WIC-Metadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80cfeb8afe773d661b0953e509f73be4234f2fbfc0a6b7b1f667815031614a56
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 44f5031759dd73861a97aace623b35f229b75952
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119772540"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472026"
 ---
 # <a name="wic-metadata-overview"></a>Übersicht über WIC-Metadaten
 
@@ -34,7 +34,7 @@ Um dieses Thema zu verstehen, sollten Sie mit dem WIC-Encoder und den Decodersch
 
 ## <a name="introduction"></a>Einführung
 
-Metadaten stellen erweiterte Informationen zu einem Bild bereit. Diese Informationen können auf verschiedene Weise verwendet werden. Ein Bild kann Metadaten wie Eine Beschreibung, Bewertung, Kategorietags und Copyrightinformationen enthalten. Der Zugriff auf die Metadaten erleichtert das Ausführen von Aufgaben wie Ressourcenverwaltung, Dateispeicherort oder Ermittlung von Copyrightinformationen. Mit dem Windows Fotogalerie in Windows Vista können Sie z. B. Bildbeschreibungen und Kategorietags hinzufügen. Dies ermöglicht eine bessere Aufholbarkeit von Bildern und eine bequeme Möglichkeit, Bilder zu kategorisieren. Mithilfe der WIC-APIs und gängiger Metadatenformate können Anwendungen diese Art von Metadaten problemlos in Oder aus Bildern schreiben oder lesen.
+Metadaten stellen erweiterte Informationen zu einem Bild bereit. Diese Informationen können auf verschiedene Weise verwendet werden. Ein Bild kann Metadaten wie Eine Beschreibung, Bewertung, Kategorietags und Copyrightinformationen enthalten. Der Zugriff auf die Metadaten erleichtert das Ausführen von Aufgaben wie Ressourcenverwaltung, Dateispeicherort oder Ermittlung von Copyrightinformationen. Beispielsweise können Sie Windows Fotogalerie in Windows Vista Beschreibungen und Kategorietags zu Bildern hinzufügen. Dies ermöglicht eine bessere Aufholbarkeit von Bildern und eine bequeme Möglichkeit, Bilder zu kategorisieren. Mithilfe der WIC-APIs und gängiger Metadatenformate können Anwendungen diese Art von Metadaten problemlos in Oder aus Bildern schreiben oder lesen.
 
 Das folgende Diagramm veranschaulicht den Inhalt einer JPEG-Datei, die eingebettete Metadatenblöcke und Metadatenelemente enthält.
 
@@ -169,11 +169,11 @@ WIC bietet Unterstützung für mehrere gängige Metadatenformate. Die folgende T
 | App1                       | JFIF 1.02                      | JPEG, TIFF           | Nein                              |
 | App13                      | Unbekannt                        | JPEG, TIFF           | Nein                              |
 | IFD                        | TIFF 6.0                       | JPEG, TIFF           | Ja                             |
-| Irb1                        | Unbekannt                        | JPEG, TIFF           | Nein                              |
+| IRB1                        | Unbekannt                        | JPEG, TIFF           | Nein                              |
 | EXIF                       | Exif 2.2                       | JPEG, TIFF           | Ja                             |
-| Xmp                        | XMP 1.0 (September 2005)            | JPEG, TIFF           | Ja                             |
+| XMP                        | XMP 1.0 (September 2005)            | JPEG, TIFF           | Ja                             |
 | GPS                        | Exif 2.2                       | JPEG, TIFF           | Ja                             |
-| Iptc                       | IPTC 4.0                       | JPEG, TIFF           | Ja                             |
+| IPTC                       | IPTC 4.0                       | JPEG, TIFF           | Ja                             |
 | Text                       | PNG 1.2                        | PNG                  | Nein                              |
 
 
@@ -189,52 +189,14 @@ WIC bietet Unterstützung für mehrere gängige Metadatenformate. Die folgende T
 
 In der folgenden Tabelle werden die WIC-Schnittstellen, die Metadaten unterstützen, und die entsprechenden Komponenten beschrieben. Diese Komponenten ermöglichen den Zugriff auf die Metadaten eines Images. Weitere Informationen zu diesen Komponenten finden Sie unter Windows Imaging Component Overview ( Übersicht [über Bildverarbeitungskomponenten).](-wic-about-windows-imaging-codec.md) 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Komponente</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bitmap-Decoder (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder"><strong>IWICBitmapDecoder</strong></a>)</td>
-<td><ul>
-<li>Liest einen Bilddatenstrom und erzeugt eine nutzbare Bitmapquelle. Zugeordnet mit einem Containerformat wie Tagged Image File Format (TIFF) oder Joint Photographic Experts Group (JPEG).</li>
-<li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader-Schnittstelle,</strong></a> um alle Metadatenblöcke im Datenstrom des Decoders aufzählen zu können, die sich nicht in einem Frame befinden.</li>
-<li>Macht einen Abfrageleser verfügbar, um die Metadaten zu lesen, die dem Bild zugeordnet sind, das sich nicht in einem Frame befindet.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Bitmapframe-Decodierung (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode"><strong>IWICBitmapFrameDecode</strong></a>)</td>
-<td><ul>
-<li>Greifen Sie auf einzelne Frames aus dem Bildstream zu, der vom Decoder gehalten wird.</li>
-<li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader-Schnittstelle,</strong></a> um alle Metadatenblöcke im Datenstrom des Frames aufzählen zu können.</li>
-<li>Macht einen Abfrageleser verfügbar, um die dem Frame zugeordneten Metadaten mithilfe von Abfrageausdrücken zu lesen.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Bitmap-Encoder (<a href="/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder"><strong>IWICBitmapEncoder</strong></a>)</td>
-<td><ul>
-<li>Schreibt eine Bitmapquelle in einen Bildstream. Ist einem Containerformat wie TIFF oder JPEG zugeordnet.</li>
-<li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter-Schnittstelle,</strong></a> um eine Liste von Metadatenblöcken zu erstellen, die in den Datenstrom des Encoders geschrieben werden.</li>
-<li>Macht einen Abfragewriter verfügbar, um die dem Bild zugeordneten Metadaten mithilfe von Abfrageausdrücken zu schreiben.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Bitma Frame Encode (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode"><strong>IWICBitmapFrameEncode</strong></a>)</td>
-<td><ul>
-<li>Erstellt einen Frame, der in den Stream codiert wird, der vom Encoder gehalten wird.</li>
-<li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter-Schnittstelle,</strong></a> um eine Liste von Metadatenblöcken zu erstellen, die in den Datenstrom des Frames geschrieben werden.</li>
-<li>Macht einen Abfragewriter verfügbar, um die dem Frame zugeordneten Metadaten mithilfe von Abfrageausdrücken zu schreiben.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Komponente | BESCHREIBUNG | 
+|-----------|-------------|
+| Bitmap-Decoder (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder"><strong>IWICBitmapDecoder</strong></a>) | <ul><li>Liest einen Bilddatenstrom und erzeugt eine nutzbare Bitmapquelle. Zugeordnet mit einem Containerformat wie Tagged Image File Format (TIFF) oder Joint Photographic Experts Group (JPEG).</li><li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader-Schnittstelle,</strong></a> um alle Metadatenblöcke im Datenstrom des Decoders aufzählen zu können, die sich nicht in einem Frame befinden.</li><li>Macht einen Abfrageleser verfügbar, um die Metadaten zu lesen, die dem Bild zugeordnet sind, das sich nicht in einem Frame befindet.</li></ul> | 
+| Bitmapframe-Decodierung (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode"><strong>IWICBitmapFrameDecode</strong></a>) | <ul><li>Greifen Sie auf einzelne Frames aus dem Bildstream zu, der vom Decoder gehalten wird.</li><li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader-Schnittstelle,</strong></a> um alle Metadatenblöcke im Datenstrom des Frames aufzählen zu können.</li><li>Macht einen Abfrageleser verfügbar, um die dem Frame zugeordneten Metadaten mithilfe von Abfrageausdrücken zu lesen.</li></ul> | 
+| Bitmap-Encoder (<a href="/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder"><strong>IWICBitmapEncoder</strong></a>) | <ul><li>Schreibt eine Bitmapquelle in einen Bildstream. Ist einem Containerformat wie TIFF oder JPEG zugeordnet.</li><li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter-Schnittstelle,</strong></a> um eine Liste von Metadatenblöcken zu erstellen, die in den Datenstrom des Encoders geschrieben werden.</li><li>Macht einen Abfragewriter verfügbar, um die dem Bild zugeordneten Metadaten mithilfe von Abfrageausdrücken zu schreiben.</li></ul> | 
+| Bitma Frame Encode (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode"><strong>IWICBitmapFrameEncode</strong></a>) | <ul><li>Erstellt einen Frame, der in den Stream codiert wird, der vom Encoder gehalten wird.</li><li>Implementiert eine <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter-Schnittstelle,</strong></a> um eine Liste von Metadatenblöcken zu erstellen, die in den Datenstrom des Frames geschrieben werden.</li><li>Macht einen Abfragewriter verfügbar, um die dem Frame zugeordneten Metadaten mithilfe von Abfrageausdrücken zu schreiben.</li></ul> | 
+
 
 
 
@@ -242,69 +204,17 @@ In der folgenden Tabelle werden die WIC-Schnittstellen, die Metadaten unterstüt
 
 In der folgenden Tabelle werden die WIC-Metadatenkomponenten beschrieben. Mit diesen Komponenten können Sie die Metadaten in einem Bild lesen und schreiben, das von den in der vorherigen Tabelle aufgeführten Komponenten verfügbar gemacht wird. 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Komponente</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Metadata Query Reader (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader"><strong>IWICMetadataQueryReader</strong></a>)</td>
-<td><ul>
-<li>Verwendet eine Abfragezeichenfolge und navigiert durch die zugrunde liegende Metadatenhierarchie, um Metadaten zu erhalten.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Metadata Query Writer (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter"><strong>IWICMetadataQueryWriter</strong></a>)</td>
-<td><ul>
-<li>Verwendet eine Abfragezeichenfolge und navigiert in der zugrunde liegenden Metadatenhierarchie zum Abrufen, Festlegen und Entfernen von Metadaten.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Metadata Block Reader (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader</strong></a>)</td>
-<td><ul>
-<li>Verwaltet eine schreibgeschützte Auflistung von <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatareader"><strong>IWICMetadataReader-Objekten</strong></a> am Anfang der Metadatenhierarchie und ermöglicht die Enumeration aller Metadatenblöcke.</li>
-<li>Wird von einem Bitmapdecoder und einem decodierten Bitmapframe implementiert.</li>
-<li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Codecs implementiert.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Metadata Block Writer (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter</strong></a>)</td>
-<td><ul>
-<li>Verwaltet eine Lese- und Schreibsammlung <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter"><strong>von IWICMetadataWriter-Objekten</strong></a> am Anfang der Metadatenhierarchie.</li>
-<li>Wird von einem Bitmapencoder und einer Bitmapframecodierung implementiert.</li>
-<li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Codecs implementiert.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Metadatenleser (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatareader"><strong>IWICMetadataReader</strong></a>)</td>
-<td><ul>
-<li>Analysiert einen Datenstrom von Metadaten und verwaltet eine schreibgeschützte Auflistung der Metadatenelemente. Wird einem Metadatenformat wie EXIF, IFD und XMP zugeordnet.</li>
-<li>Fungiert als Wörterbuch und gibt einen Wert zurück, wenn ein Format- und ID-Paar angegeben wird.</li>
-<li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Metadatentypen implementiert.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Metadata Writer (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter"><strong>IWICMetadataWriter</strong></a>)</td>
-<td><ul>
-<li>Analysiert und serialisiert einen Datenstrom von Metadaten und verwaltet eine Lese-/Schreibsammlung von Metadatenelementen.</li>
-<li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Metadatentypen implementiert.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Fast Metadata Encoder<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder"><strong>IWICFastMetadataEncoder</strong></a></td>
-<td><ul>
-<li>Macht Semantik für das Schreiben in eine Metadatenhierarchie verfügbar, die Metadaten aktualisiert, ohne das Bild neu zu codieren.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Komponente | BESCHREIBUNG | 
+|-----------|-------------|
+| Metadata Query Reader (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader"><strong>IWICMetadataQueryReader</strong></a>) | <ul><li>Verwendet eine Abfragezeichenfolge und navigiert durch die zugrunde liegende Metadatenhierarchie, um Metadaten zu erhalten.</li></ul> | 
+| Metadata Query Writer (<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter"><strong>IWICMetadataQueryWriter</strong></a>) | <ul><li>Verwendet eine Abfragezeichenfolge und navigiert in der zugrunde liegenden Metadatenhierarchie zum Abrufen, Festlegen und Entfernen von Metadaten.</li></ul> | 
+| Metadata Block Reader (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader</strong></a>) | <ul><li>Verwaltet eine schreibgeschützte Auflistung von <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatareader"><strong>IWICMetadataReader-Objekten</strong></a> am Anfang der Metadatenhierarchie und ermöglicht die Enumeration aller Metadatenblöcke.</li><li>Wird von einem Bitmapdecoder und einem decodierten Bitmapframe implementiert.</li><li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Codecs implementiert.</li></ul> | 
+| Metadata Block Writer (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter</strong></a>) | <ul><li>Verwaltet eine Lese- und Schreibsammlung <a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter"><strong>von IWICMetadataWriter-Objekten</strong></a> am Anfang der Metadatenhierarchie.</li><li>Wird von einem Bitmapencoder und einer Bitmapframecodierung implementiert.</li><li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Codecs implementiert.</li></ul> | 
+| Metadatenleser (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatareader"><strong>IWICMetadataReader</strong></a>) | <ul><li>Analysiert einen Datenstrom von Metadaten und verwaltet eine schreibgeschützte Auflistung der Metadatenelemente. Wird einem Metadatenformat wie EXIF, IFD und XMP zugeordnet.</li><li>Fungiert als Wörterbuch und gibt einen Wert zurück, wenn ein Format- und ID-Paar angegeben wird.</li><li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Metadatentypen implementiert.</li></ul> | 
+| Metadata Writer (<a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter"><strong>IWICMetadataWriter</strong></a>) | <ul><li>Analysiert und serialisiert einen Datenstrom von Metadaten und verwaltet eine Lese-/Schreibsammlung von Metadatenelementen.</li><li>Wird von Komponentenentwicklern von Drittanbietern für benutzerdefinierte Metadatentypen implementiert.</li></ul> | 
+| Fast Metadata Encoder<a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicfastmetadataencoder"><strong>IWICFastMetadataEncoder</strong></a> | <ul><li>Macht Semantik für das Schreiben in eine Metadatenhierarchie verfügbar, die Metadaten aktualisiert, ohne das Bild neu zu codieren.</li></ul> | 
+
 
 
 

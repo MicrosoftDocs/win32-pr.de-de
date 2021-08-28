@@ -1,5 +1,5 @@
 ---
-description: Anforderung von Pipelinestufendaten.
+description: Anforderung für Pipelinestufendaten.
 MS-HAID: vspixengine.IPipeLineStagesRequest3
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: bb7881f233016026c06b48da05bfd368c229d594
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 6016488816b132b1fc133ab1e207cf14cbc5b66d
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122623706"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786526"
 ---
 # <a name="span-idvspixengineipipelinestagesrequest3spanipipelinestagesrequest3-interface"></a><span id="vspixengine.ipipelinestagesrequest3"></span>IPipeLineStagesRequest3-Schnittstelle
 
-Anforderung von Pipelinestufendaten.
+Anforderung für Pipelinestufendaten.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **IPipeLineStagesRequest3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPipeLineStagesRequest3** verfügt auch über diese Typen von Membern:
+Die **IPipeLineStagesRequest3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPipeLineStagesRequest3** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -38,11 +38,11 @@ Die **IPipeLineStagesRequest3-Schnittstelle** erbt von der [**IUnknown-Schnittst
 
 Die **IPipeLineStagesRequest3-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest3-requestmeshasync-eventid-bstr-ipipelinestagescallback3-ptr-dword-dword"><strong>RequestMeshAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung zum Abrufen von Gitternetzdaten aus dem angegebenen Ereignis.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest3-requestmeshasync-eventid-bstr-ipipelinestagescallback3-ptr-dword-dword"><strong>RequestMeshAsync</strong></a></td><td ><p>Eine asynchrone Anforderung zum Abruf von Meshdaten aus dem angegebenen Ereignis.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

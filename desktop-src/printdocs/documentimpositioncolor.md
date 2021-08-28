@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über den DocumentImpositionColor-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über den DocumentImpositionColor-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: e1cb7e46-3078-46bf-a8c8-e10f6b9dd222
 title: DocumentImpositionColor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b747487c19160d29778f306a91b62cf43d245f65
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 834f5ec9ac613fcd683c22fe77252b99223e320b9fbde43bb3bad5a1bed8958c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112520"
 ---
 # <a name="documentimpositioncolor"></a>DocumentImpositionColor
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Anwendungsinhalt mit der angegebenen benannten Farbe MUSS in allen Farbtrennungen angezeigt werden.
+Anwendungsinhalt mit der angegebenen benannten Farbe MUSS bei allen Farbtrennungen angezeigt werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -36,7 +36,7 @@ Anwendungsinhalt mit der angegebenen benannten Farbe MUSS in allen Farbtrennunge
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:DocumentImpositionColor">
@@ -63,7 +63,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

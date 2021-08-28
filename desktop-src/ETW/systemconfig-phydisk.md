@@ -27,12 +27,12 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 465fe0bacd23ad99bb744c915b60056b96419761f93a4aefd5f1a3d2fb4c6129
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: d39c56dd5c099974c9dac281d1ed4c961b946b56
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119766350"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886386"
 ---
 # <a name="systemconfig_phydisk-class"></a>SystemConfig \_ PhyDisk-Klasse
 
@@ -88,7 +88,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (14), **Max** (3), **Format("s")**
 </dt> </dl>
 
-Laufwerkbuchstaben des Startlaufwerks im Folgenden: <letter> ":".
+Laufwerkbuchstaben des Startlaufwerks im Folgenden: &lt; "Letter &gt; :".
 
 </dd> <dt>
 
@@ -168,7 +168,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 </dd> <dt>
 
@@ -280,7 +280,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (15), **Max** (2), **Format("s")**
 </dt> </dl>
 
-Wird nicht verwendet.
+Nicht verwendet.
 
 </dd> <dt>
 
@@ -316,7 +316,7 @@ True, wenn der Schreibcache aktiviert ist.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -327,7 +327,7 @@ True, wenn der Schreibcache aktiviert ist.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

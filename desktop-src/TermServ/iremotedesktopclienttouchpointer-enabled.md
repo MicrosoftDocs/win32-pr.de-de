@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclienttouchpointer-aktivierte Eigenschaft
-description: Gibt an, ob die Funktion für den Fingerabdruck für das Client Steuerelement der RDP-App aktiviert ist.
+title: IRemoteDesktopClientTouchPointer Enabled (Eigenschaft)
+description: Gibt an, ob das Touchzeigerfeature im Clientsteuerfeld des RDP-App-Containers aktiviert ist.
 ms.assetid: f1e2f2f2-1b96-4c5a-b0dd-fd57627c5ec3
 ms.tgt_platform: multiple
 keywords:
-- Aktivierte Eigenschaften Remotedesktopdienste
-- Aktivierte Eigenschaften Remotedesktopdienste, iremotedesktopclienttouchpointer-Schnittstelle
-- Iremotedesktopclienttouchpointer-Schnittstelle Remotedesktopdienste, aktivierte Eigenschaft
+- Aktivierte Remotedesktopdienste
+- Enabled-Remotedesktopdienste , IRemoteDesktopClientTouchPointer-Schnittstelle
+- IRemoteDesktopClientTouchPointer-Schnittstelle Remotedesktopdienste , Enabled-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cdd534a9f8ec77903f196bbdfa10e1823a18dff4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d7ce04e38b41fce462973606f40f0099f010e6f4ab785900039e6771b0a9aaf4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124850"
 ---
-# <a name="iremotedesktopclienttouchpointerenabled-property"></a>Iremotedesktopclienttouchpointer:: aktivierte Eigenschaft
+# <a name="iremotedesktopclienttouchpointerenabled-property"></a>IRemoteDesktopClientTouchPointer::Enabled (Eigenschaft)
 
-Gibt an, ob die Funktion für den Fingerabdruck für das Client Steuerelement der RDP-App aktiviert ist.
+Gibt an, ob das Touchzeigerfeature im Clientsteuerfeld des RDP-App-Containers aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_Enabled(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**true** , wenn die Berührungs Zeiger Funktion aktiviert ist. andernfalls **false**.
+**TRUE,** wenn das Touchzeigerfeature aktiviert ist; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ HRESULT get_Enabled(
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                      |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>              |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>              |
-| IID<br/>                      | IID \_ iremotedesktopclienttouchpointer ist als 260ec22d-8cbc-44b5-9e88-2a37f 6c93ae9 definiert.<br/> |
+| IID<br/>                      | IID \_ IRemoteDesktopClientTouchPointer ist als 260EC22D-8CBC-44B5-9E88-2A37F6C93AE9 definiert.<br/> |
 
 
 
@@ -69,7 +69,7 @@ HRESULT get_Enabled(
 
 <dl> <dt>
 
-[**Iremotedesktopclienttouchpointer**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclienttouchpointer)
+[**IRemoteDesktopClientTouchPointer**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclienttouchpointer)
 </dt> </dl>
 
  

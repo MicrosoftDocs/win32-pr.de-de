@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 334c63bbe811a885ea40b2bf06722003c8ddabc5
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 676e64b816d018e574b3ce218155290c21f7ae01
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122623576"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786546"
 ---
 # <a name="span-idvspixengineipipelinestagesrequest2spanipipelinestagesrequest2-interface"></a><span id="vspixengine.ipipelinestagesrequest2"></span>IPipeLineStagesRequest2-Schnittstelle
 
 Nicht verwendet. Früher war eine Anforderung für Pipelinestufendaten.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **IPipeLineStagesRequest2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPipeLineStagesRequest2** verfügt auch über diese Membertypen:
 
@@ -38,11 +38,11 @@ Die **IPipeLineStagesRequest2-Schnittstelle** erbt von der [**IUnknown-Schnittst
 
 Die **IPipeLineStagesRequest2-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest2-requestcomputeshaderdataasync-eventid-ipipelinestagescallback2-ptr-dword-dword"><strong>RequestComputeShaderDataAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung zum Abruf von Compute-Shaderdaten für die angegebene Dispatch.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest2-requestcomputeshaderstageasync-dword-eventid-ipipelinestagescallback-ptr-dword-dword"><strong>RequestComputeShaderStageAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung, um zu erhalten, ob die Compute-Shaderstufe für den angegebenen Frame und das angegebene Ereignis verwendet wurde.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest2-requestcomputeshaderdataasync-eventid-ipipelinestagescallback2-ptr-dword-dword"><strong>RequestComputeShaderDataAsync</strong></a></td><td ><p>Eine asynchrone Anforderung zum Abruf von Compute-Shaderdaten für die angegebene Dispatch.</p></td></tr><tr class="even"><td ><a href="/windows/desktop/direct3dtools/ipipelinestagesrequest2-requestcomputeshaderstageasync-dword-eventid-ipipelinestagescallback-ptr-dword-dword"><strong>RequestComputeShaderStageAsync</strong></a></td><td ><p>Eine asynchrone Anforderung, um zu erhalten, ob die Compute-Shaderstufe für den angegebenen Frame und das angegebene Ereignis verwendet wurde.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

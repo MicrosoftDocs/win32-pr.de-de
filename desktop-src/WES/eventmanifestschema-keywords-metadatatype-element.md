@@ -1,9 +1,9 @@
 ---
-title: Keywords-Element (metadataType)
-description: Definiert eine Liste von Schlüsselwörtern zum Kategorisieren von Ereignissen. | Keywords-Element (metadataType)
+title: keywords (MetadataType)-Element
+description: Definiert eine Liste von Schlüsselwörtern, die Ereignisse kategorisieren. | keywords (MetadataType)-Element
 ms.assetid: 1e32d17d-71be-4c69-9709-ee65d8d578e7
 keywords:
-- Keywords-Element (EventLog)
+- keywords-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 03145bcaa3c99b3275b983a3f115b7cc85be791b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 0e4c19d6281430ac483c390ee313856ca0ef23357c6cde3a3c76e160c4bb6da0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124410"
 ---
-# <a name="keywords-metadatatype-element"></a>Keywords-Element (metadataType)
+# <a name="keywords-metadatatype-element"></a>keywords (MetadataType)-Element
 
-Definiert eine Liste von Schlüsselwörtern zum Kategorisieren von Ereignissen.
+Definiert eine Liste von Schlüsselwörtern, die Ereignisse kategorisieren.
 
 ``` syntax
 <xs:element name="keywords"
@@ -30,7 +30,7 @@ Definiert eine Liste von Schlüsselwörtern zum Kategorisieren von Ereignissen.
  />
 ```
 
-Das **Keywords** -Element wird durch den komplexen [**metadataType**](eventmanifestschema-metadatatype-complextype.md) -Typ definiert.
+Das **keywords-Element** wird durch den komplexen [**MetadataType-Typ**](eventmanifestschema-metadatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Keywords** -Element wird durch den komplexen [**metadataType**](eventmanif
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Keywords** -Element wird durch den komplexen [**metadataType**](eventmanif
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Metadaten (instrumentationmanifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
+[**metadata (instrumentationManifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

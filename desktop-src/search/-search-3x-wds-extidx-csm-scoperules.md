@@ -1,145 +1,145 @@
 ---
-description: Mit dem Crawl Scope Manager (CSM) können Sie Bereichs Regeln definieren, die URLs aus dem Windows Search-Crawl Bereich einschließen oder ausschließen.
+description: Mit Durchforstungsbereich-Manager (CSM) können Sie Bereichsregeln definieren, die URLs in den Durchforstungsbereich der Windows ein- oder ausschließen.
 ms.assetid: 132a55f9-680d-438e-b983-f5ce4cf66a41
-title: Verwalten von Bereichs Regeln
+title: Verwalten von Bereichsregeln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20d45199726cfe36dc1c4936e9ac7699a288c3ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 134e4241e9dcd66e468935ae56a4029a51a96c37
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128613"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880214"
 ---
-# <a name="managing-scope-rules"></a>Verwalten von Bereichs Regeln
+# <a name="managing-scope-rules"></a>Verwalten von Bereichsregeln
 
-Mit dem Crawl Scope Manager (CSM) können Sie Bereichs Regeln definieren, die URLs aus dem Windows Search-Crawl Bereich einschließen oder ausschließen.
+Mit Durchforstungsbereich-Manager (CSM) können Sie Bereichsregeln definieren, die URLs in den Durchforstungsbereich der Windows ein- oder ausschließen.
 
-Mit dem CSM können Sie folgende Aufgaben ausführen:
+Mit dem CSM können Sie Folgendes tun:
 
--   Neue Bereichs Regeln zum Arbeits Regelsatz hinzufügen
--   Entfernen vorhandener Bereichs Regeln
--   Standard Bereichs Regeln aufzählen
--   Ermitteln, ob eine bestimmte URL im Crawl Bereich enthalten oder ausgeschlossen ist oder ob eine über-oder untergeordnete Bereichs Regel vorhanden ist
+-   Hinzufügen neuer Bereichsregeln zum Arbeitsregelsatz
+-   Entfernen vorhandener Bereichsregeln
+-   Aufzählen von Standardbereichsregeln
+-   Bestimmen, ob eine bestimmte URL in den Durchforstungsbereich eingeschlossen oder daraus ausgeschlossen wird oder ob sie über eine übergeordnete oder untergeordnete Bereichsregel verfügt
 
  
 
 Dieses Thema enthält die folgenden Themen:
 
--   [Informationen zu Bereichs Regeln](#about-scope-rules)
+-   [Informationen zu Bereichsregeln](#about-scope-rules)
 -   [Vorbereitungen](#before-you-begin)
--   [Hinzufügen von Bereichs Regeln](#adding-scope-rules)
+-   [Hinzufügen von Bereichsregeln](#adding-scope-rules)
     -   [Hinweise zu Benutzerregeln](#notes-on-user-rules)
--   [Entfernen von Bereichs Regeln](#removing-scope-rules)
+-   [Entfernen von Bereichsregeln](#removing-scope-rules)
 -   [Zurücksetzen auf Standardregeln](#reverting-to-default-rules)
--   [Auflisten von Bereichs Regeln](#enumerating-scope-rules)
--   [Ablauf Verfolgungs Bereichs Regeln](#tracing-scope-rules)
+-   [Aufzählen von Bereichsregeln](#enumerating-scope-rules)
+-   [Ablaufverfolgungsbereichsregeln](#tracing-scope-rules)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="about-scope-rules"></a>Informationen zu Bereichs Regeln
+## <a name="about-scope-rules"></a>Informationen zu Bereichsregeln
 
-Eine Bereichs Regel ist eine Regel, die URLs innerhalb eines Suchstamms von der durch forchten und Indizierung enthält oder ausschließt. Einschluss Regeln bewirken, dass der Indexer diese URL in den aussperrungs Bereich einschließt, und Ausschluss Regeln bewirken, dass der Indexer diese URL (und seine untergeordneten Elemente) aus dem Crawl Bereich ausschließt.
+Eine Bereichsregel ist eine Regel, die URLs innerhalb eines Suchstamms einschließt oder davon ausschließt, durchforstung und indiziert zu werden. Einschlussregeln bewirken, dass der Indexer diese URL in den Scrawl-Bereich einschließt, und Ausschlussregeln bewirken, dass der Indexer diese URL (und seine unteren Bereiche) aus dem Durchforstungsbereich ausschließt.
 
-Nehmen Sie beispielsweise an, Sie haben eine neue Anwendung installiert, deren Datendateien sich im Ordner workteama \\ ProjectFiles auf einem lokalen Computer befinden. Angenommen, Sie möchten, dass alles im Ordner "ProjectFiles" indiziert ist, ausgenommen Elemente in den Unterordner Prototypen. In dieser Situation benötigen Sie eine Inklusions Regel für myPH:///C: \\ workteama \\ ProjectFiles \\ und eine Ausschlussregel für myPH:///C: \\ workteama \\ ProjectFiles- \\ Prototypen \\ .
+Angenommen, Sie haben eine neue Anwendung installiert, deren Datendateien sich im Ordner WorkteamA \\ ProjectFiles auf einem lokalen Computer befinden. Angenommen, Sie möchten, dass alles im Ordner ProjectFiles indiziert wird, mit Ausnahme der Elemente im Unterordner Prototypes. In diesem Fall benötigen Sie eine Einschlussregel für myPH:///C: \\ WorkteamA ProjectFiles und eine Ausschlussregel für \\ \\ myPH:///C: \\ WorkteamA \\ \\ ProjectFiles Prototypes \\ .
 
 Es gibt drei Arten von Regeln mit der folgenden Rangfolge:
 
-1.  Gruppenrichtlinie Regeln werden von Administratoren festgelegt und können alle anderen Regeln überschreiben.
-2.  Benutzerregeln werden von Benutzern festgelegt, die den Bereich in der Benutzeroberfläche der Windows-Suchoptionen ändern. Benutzer oder andere Anwendungen können alle Benutzerregeln entfernen und zu Standardregeln zurückkehren.
-3.  Standardregeln werden in der Regel von einer Anwendung festgelegt, um einen Standardbereich zu definieren. Standardregeln können z. b. festgelegt werden, wenn dem System ein neuer Protokollhandler oder Container hinzugefügt wird.
+1.  Gruppenrichtlinie Regeln werden von Administratoren festgelegt und können alle anderen Regeln außer Kraft setzen.
+2.  Benutzerregeln werden von Benutzern festgelegt, die den Bereich auf der Benutzeroberfläche Windows Suchoptionen ändern. Benutzer oder andere Anwendungen können alle Benutzerregeln entfernen und auf Standardregeln zurücksetzen.
+3.  Standardregeln werden in der Regel von einer Anwendung festgelegt, um einen Standardbereich zu definieren. Beispielsweise können Standardregeln festgelegt werden, wenn dem System ein neuer Protokollhandler oder Container hinzugefügt wird.
 
-Zusammen bilden diese Regel Typen den *Arbeits Regelsatz* , von dem aus der CSM (Crawl Scope Manager) die vollständige Liste der zu durch forckenden URLs generiert. Obwohl Standardregeln von Gruppenrichtlinien Regeln und Benutzerregeln überschrieben werden können, werden Sie in Ihrem eigenen Standard Regelsatz verwaltet, auf den Sie jederzeit zurückgreifen können. Der Indexer durchsucht die URLs aus dem Arbeits Regelsatz und fügt dem Katalog Elemente, Eigenschaften und Inhalt hinzu.
+Zusammen bilden diese Regeltypen  den Arbeitsregelsatz, aus dem der Durchforstungsbereich-Manager (CSM) die vollständige Liste der zu durchforstenden URLs generiert. Standardregeln können zwar durch Gruppenrichtlinienregeln und Benutzerregeln außer Kraft gesetzt werden, sie werden jedoch in einem eigenen Standardregelsatz verwaltet, auf den Sie jederzeit zurücksetzen können. Der Indexer durchforscht die URLs aus dem Arbeitsregelsatz und fügt dem Katalog Elemente, Eigenschaften und Inhalte hinzu.
 
 > [!Note]  
-> Benutzer mit Zugriff auf die Systemsteuerung können die Regeln über diese Schnittstelle ändern. Daher sollten Anwendungen, die die Bereichs Verwaltung anbieten, die Regeln immer direkt aus dem CSM erhalten, indem Sie die Enumerationsmethoden verwenden, anstatt sich auf eine gespeicherte Kopie von Benutzerregeln zu verlassen.
+> Benutzer mit Zugriff auf Systemsteuerung können die Regeln über diese Schnittstelle ändern. Daher sollten Anwendungen, die die Bereichsverwaltung anbieten, die Regeln immer direkt aus dem CSM erhalten, indem sie die Enumerationsmethoden verwenden, anstatt sich auf eine gespeicherte Kopie von Benutzerregeln zu verlassen.
 
  
 
-Ausschluss Regeln können Muster-URLs mit dem Platzhalter Zeichen ' \* ' definieren, z. b.: file:///C: \\ ProjectA \\ \* \\ . Eine Ausschlussregel, die dieses Muster verwendet, verhindert, dass der Indexer Ordner unter dem Verzeichnis "ProjectA" durchsucht. Ein komplizierteres Beispiel ist, dass es eine Inklusions Regel für file:///C: \\ ProjectA \\ und eine Ausschluss Muster Regel für file:///C: \\ ProjectA- \\ \* \\ Daten gibt \\ \* . In diesem Fall würde der Indexer Elemente in durchforsten:
+Ausschlussregeln können Muster-URLs mit dem Platzhalterzeichen " " \* definieren. Beispiel: file:///C: \\ ProjectA \\ \* \\ . Eine Ausschlussregel, die dieses Muster verwendet, verhindert, dass der Indexer Ordner im Verzeichnis ProjectA durchforstung. Angenommen, für ein komplizierteres Beispiel gibt es eine Einschlussregel für file:///C: ProjectA und eine Ausschlussmusterregel für \\ \\ file:///C: \\ \\ \* \\ ProjectA-Daten. \\ \* In diesem Fall durchforstung der Indexer Elemente in:
 
 -   C: \\ ProjectA\\
--   C: \\ ProjectA \\ **Version1** \\ testfiles\\
--   C: \\ ProjectA \\ **Version1 \\** temporäre \\ Daten\\
+-   C: \\ ProjectA \\ **version1** \\ testfiles\\
+-   C: \\ Temporäre Daten zu ProjectA \\ **Version1 \\** \\\\
 
-Der Indexer würde Elemente in jedoch nicht durchforsten:
+Der Indexer durchforste jedoch keine Elemente in:
 
--   C: \\ ProjectA \\ **Version1** \\ Daten\\
+-   C: \\ ProjectA \\ **version1-Daten** \\\\
 
  
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-Bevor Sie eine der Schnittstellen für den Crawl Bereich-Manager verwenden, müssen Sie die folgenden Schritte ausführen:
+Bevor Sie eine der Schnittstellen Durchforstungsbereich-Manager verwenden, müssen Sie die folgenden erforderlichen Schritte ausführen:
 
-1.  Erstellen des **csearchmanager** -Objekts und Abrufen der **isearchmanager** -Schnittstelle
-2.  Rufen Sie **isearchmanager:: getCatalog** für "SystemIndex" auf, um eine Instanz der **isearchcatalogmanager** -Schnittstelle zu erhalten.
-3.  Rufen Sie **isearchcatalogmanager:: getcrawlscopemanager** auf, um eine Instanz der **isearchcrawlscopemanager** -Schnittstelle zu erhalten.
+1.  Erstellen Sie das **CSearchManager-Objekt,** und erhalten Sie **dessen ISearchManager-Schnittstelle.**
+2.  Rufen **Sie ISearchManager::GetCatalog** für "SystemIndex" auf, um eine Instanz der **ISearchCatalogManager-Schnittstelle abzurufen.**
+3.  Rufen **Sie ISearchCatalogManager::GetCrawlScopeManager** auf, um eine Instanz der **ISearchCrawlScopeManager-Schnittstelle abzurufen.**
 
-Nachdem Sie die Änderungen an dem Crawl Bereich-Manager vorgenommen haben, müssen Sie die [**isearchcrawlscopemanager:: SaveAll**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-saveall) -Methode aufzurufen. Diese Methode nimmt keine Parameter an und gibt \_ bei Erfolg S OK zurück.
+Nachdem Sie Änderungen am -Durchforstungsbereich-Manager vorgenommen haben, müssen Sie die [**ISearchCrawlScopeManager::SaveAll-Methode**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-saveall) aufrufen. Diese Methode nimmt keine Parameter an und gibt bei Erfolg S \_ OK zurück.
 
  
 
-## <a name="adding-scope-rules"></a>Hinzufügen von Bereichs Regeln
+## <a name="adding-scope-rules"></a>Hinzufügen von Bereichsregeln
 
-Die für das CSM festgelegten Arbeitsregeln enthalten Benutzer-und Standardregeln sowie alle Regeln, die von der Gruppenrichtlinie erzwungen werden. Benutzerregeln werden von Benutzern auf einer Benutzeroberfläche eingerichtet, und Standardregeln können wie folgt festgelegt werden:
+Die für die CSM festgelegten Arbeitsregeln umfassen Benutzer- und Standardregeln sowie alle Regeln, die durch Gruppenrichtlinien erzwungen werden. Benutzerregeln werden von Benutzern in einer Benutzeroberfläche eingerichtet, und Standardregeln können durch eine der folgenden Regeln festgelegt werden:
 
--   Von einem Systemadministrator implementierte Gruppenrichtlinien (diese verwenden nicht die [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) -Schnittstelle.)
--   Installation oder Aktualisierung einer Anwendung wie Windows Search oder eines Protokoll Handlers
--   Eine Setup Anwendung für das Hinzufügen eines neuen Datenspeicher oder Containers
+-   Von einem Systemadministrator implementierte Gruppenrichtlinien (diese verwenden nicht die [**ISearchCrawlScopeManager-Schnittstelle.)**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)
+-   Installation oder Update einer Anwendung wie Windows Search oder eines Protokollhandlers
+-   Eine Setupanwendung zum Addition eines neuen Datenspeichers oder Containers
 
-[**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) bietet zwei Methoden zum Hinzufügen neuer Bereichs Regeln, wie in der folgenden Tabelle beschrieben. Pfade für Inklusions Regeln für das Dateisystem müssen mit einem umgekehrten Schrägstrich \\ (z. b. file:///C: \\ Files \\ ) enden, und Pfade für Ausschluss Regeln müssen mit einem Sternchen enden (z. b. file:///c: \\ Files \\ \* ). Nur Ausschluss Regeln können Muster-URLs enthalten. Außerdem wird empfohlen, die Sicherheits-IDs (SIDs) der Benutzer in Pfade zu einschließen, um die Sicherheit zu verbessern. Pro-Benutzer-Pfade sind sicherer, da Abfragen dann in einem benutzerspezifischen Prozess ausgeführt werden. Dadurch wird sichergestellt, dass ein Benutzer die Elemente nicht sehen kann, die beispielsweise aus dem Posteingang eines anderen Benutzers indiziert wurden.
+[**ISearchCrawlScopeManager bietet**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) zwei Methoden zum Hinzufügen neuer Bereichsregeln, wie in der folgenden Tabelle beschrieben. Pfade für Einschlussregeln für das Dateisystem müssen mit einem zurücken Schrägstrich ' ' enden (z. B. file:///C: Dateien), und Pfade für Ausschlussregeln müssen mit einem Sternchen enden (z. B. \\ \\ \\ file:///c: \\ Dateien \\ \* ). Nur Ausschlussregeln können Muster-URLs enthalten. Darüber hinaus wird empfohlen, Sicherheits-IDs (SIDs) von Benutzern in Pfade ein-/aus Sicherheitsgründen zu verwenden. Benutzerspezifische Pfade sind sicherer, da Abfragen dann in einem benutzerspezifischen Prozess ausgeführt werden. So wird beispielsweise sichergestellt, dass ein Benutzer keine Elemente sehen kann, die aus dem Posteingang eines anderen Benutzers indiziert wurden.
 
-In der folgenden Tabelle werden die Methoden der isearchcrawlscopemanager-Schnittstelle beschrieben, die zum Hinzufügen neuer Bereichs Regeln verwendet wird.
+In der folgenden Tabelle werden die Methoden der ISearchCrawlScopeManager-Schnittstelle beschrieben, die zum Hinzufügen neuer Bereichsregeln verwendet werden.
 
 
 
-| Methode                                                                              | BESCHREIBUNG                                                                                                                                                                                                                  |
+| Methode                                                                              | Beschreibung                                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Adduserscoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-adduserscoperule)       | Fügt eine Regel für eine URL hinzu, wie vom Benutzer angegeben. Diese Regeln überschreiben Standardregeln. Verwenden Sie diese Methode, wenn Sie eine Benutzeroberfläche implementiert haben, mit der Benutzer ihre eigenen Bereichs Regeln und URLs verwalten können.                         |
-| [**Adddefaultscoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-adddefaultscoperule) | Fügt eine Regel für eine URL hinzu, wie von einer anderen Anwendung angegeben, wie z. b. einem Protokollhandler. Verwenden Sie diese Methode, wenn Sie einen neuen Protokollhandler implementiert oder einen neuen Datenspeicher hinzugefügt haben. Diese Regeln können durch Benutzerregeln überschrieben werden. |
+| [**AddUserScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-adduserscoperule)       | Fügt eine Regel für eine URL hinzu, wie vom Benutzer angegeben. Diese Regeln überschreiben Standardregeln. Verwenden Sie diese Methode, wenn Sie eine Benutzeroberfläche implementiert haben, mit der Benutzer ihre eigenen Bereichsregeln und URLs verwalten können.                         |
+| [**AddDefaultScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-adddefaultscoperule) | Fügt eine Regel für eine URL hinzu, wie von einer anderen Anwendung wie einem Protokollhandler angegeben. Verwenden Sie diese Methode, wenn Sie einen neuen Protokollhandler implementiert oder einen neuen Datenspeicher hinzugefügt haben. Diese Regeln können durch Benutzerregeln überschrieben werden. |
 
 
 
  
 
-Jede Methode übernimmt eine URL zu einem indizierbaren Speicherort und Flags, die bestimmen, ob die URL eingeschlossen oder ausgeschlossen werden soll. Der *ffollowflags* -Parameter ist für die zukünftige Verwendung reserviert. Wenn Sie eine neue Bereichs Regel hinzufügen und der Crawl Bereichs-Manager feststellt, dass die Regel bereits vorhanden ist (basierend auf der URL oder dem angegebenen Muster), wird der Arbeits Regelsatz so aktualisiert, dass (1) die alte Regel durch die neue Regel ersetzt wird, und (2) alle Benutzerregeln, die ihm widersprechen, werden entfernt.
+Jede Methode verwendet eine URL zu einem indexierbaren Speicherort und Flags, die bestimmen, ob die URL eingeschlossen oder ausgeschlossen werden soll. Der *Parameter fFollowFlags* ist für die zukünftige Verwendung reserviert. Wenn Sie eine neue Bereichsregel hinzufügen und die Durchforstungsbereich-Manager ermittelt, dass die Regel bereits vorhanden ist (basierend auf der angegebenen URL oder dem bereitgestellten Muster), wird der Arbeitsregelsatz aktualisiert, sodass (1) die alte Regel durch die neue Regel ersetzt wird und (2) alle Benutzerregeln, die ihn verwechseln, entfernt werden.
 
-**Tipp:** Während der file://root standardmäßig im Crawl Bereich enthalten ist, werden Programmdateien nicht standardmäßig indiziert. Daher müssen Anwendungen mit Daten, die in Ihrem Programmdatei Verzeichnis gespeichert werden, ihren Speicherort als Standardregel hinzufügen.
+**Tipp:** Während der file:// standardmäßig im Durchforstungsbereich enthalten ist, werden Programmdateien nicht standardmäßig indiziert. Daher müssen Anwendungen, deren Daten im Verzeichnis Programme gespeichert sind, ihren Speicherort als Standardregel hinzufügen.
 
 ### <a name="notes-on-user-rules"></a>Hinweise zu Benutzerregeln
 
-Wenn eine neue Benutzer Regel mit einer vorhandenen Standardregel identisch ist, überschreibt die neue Benutzer Regel die Standardregel im Arbeits Regelsatz. Wenn die neue Benutzer Regel mit einer vorhandenen Benutzer Regel identisch ist, wird die alte Benutzer Regel ersetzt.
+Wenn eine neue Benutzerregel mit einer vorhandenen Standardregel identisch ist, überschreibt die neue Benutzerregel die Standardregel im Arbeitsregelsatz. Wenn die neue Benutzerregel mit einer vorhandenen Benutzerregel identisch ist, wird die alte Benutzerregel ersetzt.
 
-Das Festlegen des Flags " *foverridächildren* " hat im Arbeits Regelsatz die folgenden Ergebnisse:
+Das Festlegen des *Flags fOverrideChildren* führt zu den folgenden Ergebnissen im Arbeitsregelsatz:
 
--   " **True** " führt zum Entfernen aller untergeordneten Regeln aus dem Arbeits Regelsatz (sowohl Benutzerregeln als auch Standardregeln).
--   FALSE führt zum erneuten Hinzufügen der Arbeitsregeln alle Standardregeln aus, die untergeordnete Elemente der neuen Benutzer Regel sind. Wenn eine untergeordnete Standardregel eine Einfügung ist und die neue Benutzer Regel ein Ausschluss ist, wird die Standardregel in eine Inklusions Benutzer Regel geändert.
+-   **TRUE** führt zum Entfernen aller untergeordneten Regeln aus dem Arbeitsregelsatz (sowohl Benutzerregeln als auch Standardregeln).
+-   FALSE führt dazu, dass dem Arbeitsregelsatz erneut alle Standardregeln hinzugefügt werden, die der neuen Benutzerregel untergestellt sind. Wenn eine untergeordnete Standardregel ein Einschluss und die neue Benutzerregel ein Ausschluss ist, wird die Standardregel in eine Einschlussbenutzerregel geändert.
 
  
 
-## <a name="removing-scope-rules"></a>Entfernen von Bereichs Regeln
+## <a name="removing-scope-rules"></a>Entfernen von Bereichsregeln
 
-Sie können die [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) -Schnittstelle verwenden, um eine Bereichs Regel aus dem Arbeits Regelsatz zu entfernen. Diese Schnittstelle stellt die folgenden beiden Methoden zum Entfernen von Bereichs Regeln bereit.
+Sie können die [**ISearchCrawlScopeManager-Schnittstelle**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) verwenden, um eine Bereichsregel aus dem Arbeitsregelsatz zu entfernen. Diese Schnittstelle stellt die folgenden beiden Methoden zum Entfernen von Bereichsregeln bereit.
 
 
 
-| Methode                                                                                    | BESCHREIBUNG                                                                                                                                                                                           |
+| Methode                                                                                    | Beschreibung                                                                                                                                                                                           |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Removescoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removescoperule)               | Entfernt eine Benutzer Regel für eine angegebene URL aus dem Arbeits Regelsatz. Wenn die Benutzer Regel ein Duplikat von ist oder eine Standardregel überschreibt, verbleibt die Standardregel im Arbeits Regelsatz.                  |
-| [**Removedefaultscoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removedefaultscoperule) | Entfernt eine Standardregel für eine angegebene URL aus dem Arbeits Regelsatz und dem Standardregel Satz. Nachdem Sie diese Methode aufgerufen haben, können Sie mit reverttodefaultscopes nicht mehr auf diese Standardregel zurückgreifen. |
+| [**RemoveScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removescoperule)               | Entfernt eine Benutzerregel für eine angegebene URL aus dem Arbeitsregelsatz. Wenn die Benutzerregel ein Duplikat einer Standardregel ist oder diese überschreibt, verbleibt die Standardregel im Arbeitsregelsatz.                  |
+| [**RemoveDefaultScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removedefaultscoperule) | Entfernt eine Standardregel für eine angegebene URL sowohl aus dem Arbeitsregelsatz als auch aus dem Standardregelsatz. Nach dem Aufruf dieser Methode können Sie diese Standardregel nicht mit revertToDefaultScopes zurücksetzen. |
 
 
 
  
 
-Jede Methode übernimmt eine URL und ein Flag, das angibt, ob die zu entfernende Regel eine Inklusions-oder Ausschlussregel ist. Diese Methoden gibt einen Fehler zurück, wenn eine Regel mit dieser URL und dem Einschluss-/ausschlusflag nicht gefunden wurde.
+Jede Methode verwendet eine URL und ein Flag, das angibt, ob die zu entfernende Regel eine Einschluss- oder Ausschlussregel ist. Diese Methoden geben einen Fehler zurück, wenn eine Regel mit dieser URL und dem Einschluss-/Ausschlussflag nicht gefunden wird.
 
-**Tipp:** Wenn Sie einen Bereich vollständig aus dem Crawl Bereich entfernen möchten, verwenden Sie die [**removeroot**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removeroot) -Methode, mit der der Suchstamm und alle zugehörigen Bereichs Regeln entfernt werden. Dies wird beispielsweise beim Deinstallieren von als bewährte Vorgehensweise angesehen.
+**Tipp:** Wenn Sie einen Bereich vollständig aus dem Durchforstungsbereich entfernen möchten, verwenden Sie die [**RemoveRoot-Methode,**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-removeroot) die den Suchstamm und alle zugehörigen Bereichsregeln entfernt. Dies gilt beispielsweise beim Deinstallieren als bewährte Methode.
 
-Es ist auch möglich, alle Benutzer Satz Überschreibungen eines Suchstamms zu entfernen und die ursprünglichen Such Stamm-und Standard Bereichs Regeln wiederherzustellen. Weitere Informationen finden Sie im nächsten Abschnitt.
+Es ist auch möglich, alle benutzerspezifischen Außerkraftsetzungen eines Suchstamms zu entfernen und auf die ursprünglichen Regeln für den Suchstamm und den Standardbereich zurück zu setzen. Weitere Informationen finden Sie im nächsten Abschnitt.
 
 > [!Note]  
-> Wenn Benutzer unter Windows Vista über Benutzerprofile in der Systemsteuerung entfernt werden, entfernt CSM alle Regeln und Stämme, die ihre SID enthalten, und entfernt ihre indizierten Elemente aus dem Katalog. Unter Windows XP müssen Sie die Stamm Elemente und Regeln der Benutzer manuell entfernen.
+> Wenn benutzer Windows Vista über Benutzerprofile in Systemsteuerung entfernt werden, entfernt CSM alle Regeln und Stämme, die ihre SID enthalten, und entfernt ihre indizierten Elemente aus dem Katalog. Auf Windows XP müssen Sie die Stämme und Regeln der Benutzer manuell entfernen.
 
  
 
@@ -147,31 +147,31 @@ Es ist auch möglich, alle Benutzer Satz Überschreibungen eines Suchstamms zu e
 
 ## <a name="reverting-to-default-rules"></a>Zurücksetzen auf Standardregeln
 
-Durch das Zurücksetzen auf Standardregeln werden alle Benutzerregeln für eine URL oder einen Stamm entfernt und alle Standardregeln für den Arbeits Regelsatz wieder hergestellt. Regeln, die von der Gruppenrichtlinie festgelegt wurden, werden jedoch nicht entfernt. Die [**reverttodefaultscopes**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-reverttodefaultscopes) -Methode nimmt keine Parameter an und gibt einen Fehlercode zurück, wenn die Standardregeln nicht wieder hergestellt werden können.
+Beim Wiederherstellen von Standardregeln werden alle Benutzerregeln für eine URL oder einen Stamm entfernt und alle Standardregeln im Arbeitsregelsatz wiederhergestellt. Regeln, die von gruppenrichtlinien festgelegt werden, werden jedoch nicht entfernt. Die [**RevertToDefaultScopes-Methode**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-reverttodefaultscopes) verwendet keine Parameter und gibt einen Fehlercode zurück, wenn sie nicht auf Standardregeln zurückverwenden kann.
 
  
 
-## <a name="enumerating-scope-rules"></a>Auflisten von Bereichs Regeln
+## <a name="enumerating-scope-rules"></a>Aufzählen von Bereichsregeln
 
-Der CSM listet Bereichs Regeln mithilfe einer standardmäßigen Enumeratorschnittstelle im com-Stil, [**ienumsearchscoperules**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchscoperules) , auf. Sie können diese Schnittstelle verwenden, um Bereichs Regeln für verschiedene Zwecke aufzuzählen. Beispielsweise können Sie den gesamten Arbeits Regelsatz auf einer Benutzeroberfläche anzeigen oder ermitteln, ob eine Regel oder das untergeordnete Element einer Regel bereits im Crawl Bereich vorhanden ist.
+Der CSM aufzählt Bereichsregeln mithilfe einer Enumeratorschnittstelle im COM-Standardformat, [**IEnumSearchScopeRules.**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchscoperules) Sie können diese Schnittstelle verwenden, um Bereichsregeln für verschiedene Zwecke aufzählen. Beispielsweise können Sie den gesamten Arbeitsregelsatz in einer Benutzeroberfläche anzeigen oder feststellen, ob sich eine Regel oder das untergeordnete Einer Regel bereits im Durchforstungsbereich befindet.
 
  
 
-## <a name="tracing-scope-rules"></a>Ablauf Verfolgungs Bereichs Regeln
+## <a name="tracing-scope-rules"></a>Ablaufverfolgungsbereichsregeln
 
-Mit dem CSM können Sie auch bestimmen, ob eine angegebene URL im Durchforstungs Bereich enthalten ist und ob Sie über eine über-oder untergeordnete Bereichs Regel verfügt. Sie können auch herausfinden, warum eine URL im Crawl Bereich enthalten oder ausgeschlossen ist. Diese Methoden sind nicht für die Verwendung mit Muster-URLs vorgesehen.
+Mit dem CSM können Sie auch bestimmen, ob eine angegebene URL im Durchforstungsbereich enthalten ist und ob sie über eine übergeordnete oder untergeordnete Bereichsregel verfügt. Sie können auch herausfinden, warum eine URL in den Durchforstungsbereich eingeschlossen oder daraus ausgeschlossen wird. Diese Methoden sind nicht für die Verwendung mit Muster-URLs vorgesehen.
 
-In der folgenden Tabelle werden die Methoden von [**isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) beschrieben, die zum Hinzufügen neuer Bereichs Regeln verwendet werden.
+In der folgenden Tabelle werden die Methoden von [**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager) beschrieben, die zum Hinzufügen neuer Bereichsregeln verwendet werden.
 
 
 
-| Methode                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Methode                                                                                      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetParser-scopeversionid**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-getparentscopeversionid) | Ruft die Versions-ID der übergeordneten Inklusions-URL ab. Mit dieser Methode können Sie festzustellen, ob sich der übergeordnete Bereich seit der letzten Überprüfung geändert hat.<br/> Beispiel: Wenn eine e-Mail-Anwendung vom Anbieter verwaltete Benachrichtigungen verwendet, erhält Sie möglicherweise die übergeordnete Bereichs Version, bevor Sie geschlossen wird, und überprüft die Version erneut, wenn Sie geöffnet wird. Anschließend kann die Anwendung ermitteln, ob Sie einen neuen Benachrichtigungs Satz an den Indexer überbringen muss.<br/> |
-| [**Haschildscoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-haschildscoperule)             | Gibt **true** zurück, wenn die angegebene URL eine untergeordnete Regel aufweist (eine Regel, die auf ein untergeordnetes Element auf jeder Ebene innerhalb der URL-Hierarchie angewendet wird) <br/> Beispiel: Wenn die URL file:///C: \\ Folder lautet \\ , gibt diese Methode **true** zurück, wenn das CSM eine Bereichs Regel speziell für den \\ Unterordner file:///C: Folder enthält \\ \\ .<br/>                                                                                                                                              |
-| [**Hasparameentscoperule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-hasparentscoperule)           | Gibt **true** zurück, wenn die angegebene URL über eine übergeordnete Regel verfügt (eine Regel, die auf ein übergeordnetes Element in der URL-Hierarchie angewendet wird).<br/> Beispiel: Wenn die URL file:///C: \\ Folder- \\ Unterordner ist, gibt diese Methode **true** zurück, wenn das CSM eine Bereichs Regel speziell für file:///C: \\ Folder aufweist \\ .<br/>                                                                                                                                                   |
-| [**Includidincrawlscope**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscope)       | Gibt **true** zurück, wenn die angegebene URL im Crawl Bereich enthalten ist.                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**Incluentdincrawlscopeex**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscopeex)   | Gibt einen Wert aus der [**clusion \_ reason**](/windows/win32/api/searchapi/ne-searchapi-clusion_reason) -Enumeration zurück, der erklärt, warum die URL in den Crawl Bereich eingeschlossen oder davon ausgeschlossen wird, und ruft den Wert **true** ab, wenn die URL in den Crawl Bereich eingefügt wird. Diese Methode kann Ihnen helfen, Konflikte in Ihrem Arbeits Regelsatz zu identifizieren.                                                                                                                                       |
+| [**GetParentScopeVersionId**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-getparentscopeversionid) | Ruft die Versions-ID der übergeordneten Einschluss-URL ab. Mit dieser Methode können Sie überprüfen, ob sich der übergeordnete Bereich seit der letzten Überprüfung geändert hat.<br/> Beispiel: Wenn eine E-Mail-Anwendung vom Anbieter verwaltete Benachrichtigungen verwendet, kann sie die übergeordnete Bereichsversion erhalten, bevor sie geschlossen wird, und die Version erneut überprüfen, wenn sie geöffnet wird. Anschließend kann die Anwendung bestimmen, ob sie einen neuen Satz von Benachrichtigungen an den Indexer pushen muss.<br/> |
+| [**HasChildScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-haschildscoperule)             | Gibt **TRUE zurück,** wenn die angegebene URL über eine untergeordnete Regel verfügt (eine Regel, die auf eine untergeordnete Ebene auf einer beliebigen Ebene innerhalb der URL-Hierarchie anwendung). <br/> Beispiel: Wenn die URL file:///C Ordner ist, gibt diese Methode TRUE zurück, wenn die CSM über eine Bereichsregel speziell für \\ \\ file:///C:  \\ \\ Ordnerunterordner \\ verfügt.<br/>                                                                                                                                              |
+| [**HasParentScopeRule**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-hasparentscoperule)           | Gibt **TRUE zurück,** wenn die angegebene URL über eine übergeordnete Regel verfügt (eine Regel, die auf einem übergeordneten Element auf einer beliebigen Ebene in der URL-Hierarchie gilt).<br/> Beispiel: Wenn die URL file:///C Ordnerunterordner ist, gibt diese Methode TRUE zurück, wenn der CSM über eine Bereichsregel speziell für file:///C \\ \\ Ordner  \\ \\ verfügt.<br/>                                                                                                                                                   |
+| [**IncludedInCrawlScope**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscope)       | Gibt **TRUE zurück,** wenn die angegebene URL im Durchforstungsbereich enthalten ist.                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**IncludedInCrawlScopeEx**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscopeex)   | Gibt einen Wert aus der [**CLUSION \_ REASON-Enumeration**](/windows/win32/api/searchapi/ne-searchapi-clusion_reason) zurück, der erklärt, warum die URL in den Durchforstungsbereich eingeschlossen oder daraus ausgeschlossen wird, und ruft den Wert **TRUE** ab, wenn die URL im Durchforstungsbereich enthalten ist. Mit dieser Methode können Sie Konflikte in Ihrem Arbeitsregelsatz identifizieren.                                                                                                                                       |
 
 
 
@@ -180,11 +180,11 @@ In der folgenden Tabelle werden die Methoden von [**isearchcrawlscopemanager**](
  
 
 > [!Note]  
-> Die Methoden " [**includedincrawlscope**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscope) " und " [**includedincrawlscopeex**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscopeex) " bestimmen, ob die URL nur basierend auf den Regeln im CSM durchsucht wird. Es kann andere Gründe geben, dass eine URL nicht durchsucht wird, z. b. wenn das Fanci-Bit festgelegt wird (d. h., ein Benutzer hat die schnelle Indizierung im Eigenschaften Dialogfeld des Ordners nicht zugelassen).
+> Die [**Methoden IncludedInCrawlScope**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscope) und [**IncludedInCrawlScopeEx**](/windows/desktop/api/Searchapi/nf-searchapi-isearchcrawlscopemanager-includedincrawlscopeex) bestimmen, ob die URL ausschließlich anhand der Regeln in der CSM durchforscht wird. Es kann andere Gründe dafür geben, dass eine URL nicht durchforstet wird, z. B. das festgelegte FANCI-Bit (d. h., ein Benutzer hat die schnelle Indizierung im Dialogfeld Eigenschaft des Ordners nicht zulässig.
 
  
 
-Wenn Sie der Meinung sind, dass ein Dateipfad ausgeschlossen werden soll, er aber als eingeschlossen aufgeführt ist, stellen Sie sicher, dass die Ausschluss Regeln mit " <path> \\ \* " enden. Wenn Sie der Meinung sind, dass ein Datei-oder Dateipfad eingeschlossen werden soll, dies aber nicht der Fall ist, überprüfen Sie die Einstellung "Fanci-Bit" auf die Datei oder den Pfad. Klicken Sie hierzu mit der rechten Maustaste auf die Datei oder den Dateipfad, und wählen Sie **Eigenschaften** aus. Stellen Sie dann sicher, dass das Kontrollkästchen **für die schnelle Suche, dass der Indizierungs Dienst das Indizieren dieser Ordner zulässt** Wenn die Datei oder der Dateipfad hier nicht für die Indizierung markiert ist, wird er nicht indiziert, auch wenn er sich in einer Inklusions Regel befindet.
+Wenn Sie der Meinung sind, dass ein Dateipfad ausgeschlossen werden sollte, aber als eingeschlossen aufgeführt wird, stellen Sie sicher, dass Ausschlussregeln mit " Pfad " &lt; &gt; \\ \* enden. Wenn Sie der Meinung sind, dass ein Datei- oder Dateipfad enthalten sein sollte, aber nicht, überprüfen Sie die FANCI-Biteinstellung für die Datei oder den Pfad. Klicken Sie hierzu mit der rechten Maustaste auf den Datei- oder Dateipfad, und wählen Sie Eigenschaften aus. Stellen Sie dann sicher, dass das Kontrollkästchen **Indexing Service** to index this folder (Indizierungsdienst zum Indizieren dieses Ordners zulassen) aktiviert ist. Wenn der Datei- oder Dateipfad hier nicht für die Indizierung markiert ist, wird er auch dann nicht indiziert, wenn er sich in einer Einschlussregel befindet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -193,22 +193,22 @@ Wenn Sie der Meinung sind, dass ein Dateipfad ausgeschlossen werden soll, er abe
 **Referenz**
 </dt> <dt>
 
-[**Isearchcrawlscopemanager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)
+[**ISearchCrawlScopeManager**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager)
 </dt> <dt>
 
 [**ISearchCrawlScopeManager2**](/windows/desktop/api/Searchapi/nn-searchapi-isearchcrawlscopemanager2)
 </dt> <dt>
 
-[**Isearchscoperule**](/windows/desktop/api/Searchapi/nn-searchapi-isearchscoperule)
+[**ISearchScopeRule**](/windows/desktop/api/Searchapi/nn-searchapi-isearchscoperule)
 </dt> <dt>
 
-[**Ienumsearchscoperules**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchscoperules)
+[**IEnumSearchScopeRules**](/windows/desktop/api/Searchapi/nn-searchapi-ienumsearchscoperules)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Verwalten von Such Stämmen](-search-3x-wds-extidx-csm-searchroots.md)
+[Verwalten von Suchsynten](-search-3x-wds-extidx-csm-searchroots.md)
 </dt> </dl>
 
  

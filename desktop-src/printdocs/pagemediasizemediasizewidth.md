@@ -1,21 +1,21 @@
 ---
-description: Hier finden Sie Informationen zum PageMediaSizeMediaSizeWidth-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Abrufen von Informationen zum PageMediaSizeMediaSizeWidth-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 22e4a6e9-4d18-4fff-873c-27ba59a79222
 title: PageMediaSizeMediaSizeWidth
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b3f84e36f689d4b3c5ca060020327d78b12f7d6
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: a6d66be9c63af19aa60ae88b14aaa209af25a8800fc4024cec50c70f21ebf050
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112300"
 ---
 # <a name="pagemediasizemediasizewidth"></a>PageMediaSizeMediaSizeWidth
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die MediaSizeWidth-Richtung der Dimension für die Option Custom MediaSize an.
+Gibt die MediaSizeWidth-Dimensionsrichtung für die Option Custom MediaSize an.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -36,7 +36,7 @@ Gibt die MediaSizeWidth-Richtung der Dimension für die Option Custom MediaSize 
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageMediaSizeMediaSizeWidth">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 

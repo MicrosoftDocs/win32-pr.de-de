@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents-Methode (nicht getrennt)
-description: Wird aufgerufen, wenn das Client Steuerelement von einer Remote Sitzung getrennt wurde.
+title: IRemoteDesktopClientEvents OnDisconnected-Methode
+description: Wird aufgerufen, wenn das Clientsteuerelement von einer Remotesitzung getrennt wurde.
 ms.assetid: EA26B530-0AA8-49D6-8E3C-E53179FC5104
 ms.tgt_platform: multiple
 keywords:
-- Ongetrennte Methode Remotedesktopdienste
-- Ongetrennte Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, ongetrennte-Methode
+- OnDisconnected-Methode Remotedesktopdienste
+- OnDisconnected-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnDisconnected-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bd59b03fe9cb23309d53773289291c8a791935a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e93ebf7c85e4015539cbbcc15723cdfed9c7d181741925c1a97c93ccc4326eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124900"
 ---
-# <a name="iremotedesktopclienteventsondisconnected-method"></a>Iremotedesktopclientevents:: ongetrennte-Methode
+# <a name="iremotedesktopclienteventsondisconnected-method"></a>IRemoteDesktopClientEvents::OnDisconnected-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement von einer Remote Sitzung getrennt wurde.
+Wird aufgerufen, wenn das Clientsteuerelement von einer Remotesitzung getrennt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void OnDisconnected(
 
 <dl> <dt>
 
-*disconnecverrat* \[ in\]
+*disconnectReason* \[ In\]
 </dt> <dd>
 
-Der Grund für das Trennungs Ereignis.
+Der Grund für das Disconnect-Ereignis.
 
 </dd> <dt>
 
-*Extendeddisconnecverrat* \[ in\]
+*ExtendedDisconnectReason* \[ In\]
 </dt> <dd>
 
 Erweiterte Informationen für das Disconnect-Ereignis.
 
 </dd> <dt>
 
-*disconnecterrormessage* \[ in\]
+*disconnectErrorMessage* \[ In\]
 </dt> <dd>
 
 Die Fehlermeldung für das Disconnect-Ereignis.
@@ -80,7 +80,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -88,7 +88,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Das Ereignis auf System Ebene, das von Richtlinien für Software Einschränkungen (SRP) generiert wird, wenn eine Anwendung durch sicherere Regeln blockiert wird.
+description: Ereignis auf Systemebene, das durch Richtlinien für Softwareeinschränkungen (Software Restrictions Policies, SRP) generiert wird, wenn eine Anwendung durch sicherere Regeln blockiert wird.
 ms.assetid: 6772a2c9-35c1-4b75-94e4-baa84af7c0ed
-title: WPCEVENT_SYSTEM_APPBLOCKED-Ereignis (wpcevent. h)
+title: WPCEVENT_SYSTEM_APPBLOCKED Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 67c3f6255911f59717c1fa594aee4bfc49f6c5a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e0444cee0a2844ae868923b5cf51923e0024c9de9a2a12ad51e20d8db9fa3b60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112720"
 ---
-# <a name="wpcevent_system_appblocked-event"></a>Wpcevent \_ System \_ appblockierte-Ereignis
+# <a name="wpcevent_system_appblocked-event"></a>WPCEVENT \_ SYSTEM \_ APPBLOCKED-Ereignis
 
-Das Ereignis auf System Ebene, das von Richtlinien für Software Einschränkungen (SRP) generiert wird, wenn eine Anwendung durch sicherere Regeln blockiert wird.
+Ereignis auf Systemebene, das durch Richtlinien für Softwareeinschränkungen (Software Restrictions Policies, SRP) generiert wird, wenn eine Anwendung durch sicherere Regeln blockiert wird.
 
 
 ```C++
@@ -26,10 +26,10 @@ const EVENT_DESCRIPTOR WPCEVENT_SYSTEM_APPBLOCKED = {0x10, 0x0, 0x10, 0x4, 0x16,
 
 <dl> <dt>
 
-*Zeitstempel* 
+*Timestamp* 
 </dt> <dd>
 
-Der Zeitpunkt, zu dem der-Block aufgetreten ist.
+Der Zeitpunkt, zu dem der Block aufgetreten ist.
 
 </dd> <dt>
 
@@ -40,17 +40,17 @@ Die Sicherheits-ID des Benutzers, der versucht, die Anwendung zu starten.
 
 </dd> <dt>
 
-*Pfad* 
+*Path* 
 </dt> <dd>
 
-Der Pfad zu der Anwendung, die vom Benutzer gestartet werden soll.
+Der Pfad zur Anwendung, die der Benutzer zu starten versucht.
 
 </dd> <dt>
 
 *RuleID* 
 </dt> <dd>
 
-Die ID der Regel innerhalb des Satzes von Eltern Steuerelementen sicherere Regeln, die die Ausführung blockieren.
+Die ID der Regel innerhalb des Satzes sichererer Regeln für die Jugendschutz, die die Ausführung blockieren.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Die ID der Regel innerhalb des Satzes von Eltern Steuerelementen sicherere Regel
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -70,10 +70,10 @@ Die ID der Regel innerhalb des Satzes von Eltern Steuerelementen sicherere Regel
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

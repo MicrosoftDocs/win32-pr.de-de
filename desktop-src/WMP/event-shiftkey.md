@@ -1,9 +1,9 @@
 ---
-title: Event. shiftKey
-description: Das shiftKey-Attribut Ruft einen Wert ab, der angibt, ob die UMSCHALTTASTE gedrückt wurde, als das Ereignis aufgetreten ist.
+title: event.shiftKey
+description: Das shiftKey-Attribut ruft einen Wert ab, der angibt, ob die UMSCHALTTASTE beim Ereignis nicht mehr verwendet wurde.
 ms.assetid: 02b70533-936f-4543-8a36-88e7c2d1b2a8
 keywords:
-- Event. shiftKey-Fenster Media Player
+- event.shiftKey-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 256e4e51cb13136dc09f7e86b6805b7e0efd42a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 678e1048e5299446e75cfe16ff09a8f499aec4f0e1e768c80cf23d1ebb6cad3a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123600"
 ---
-# <a name="eventshiftkey"></a>Event. shiftKey
+# <a name="eventshiftkey"></a>event.shiftKey
 
-Das **shiftKey** -Attribut Ruft einen Wert ab, der angibt, ob die UMSCHALTTASTE gedrückt wurde, als das Ereignis aufgetreten ist.
+Das **shiftKey-Attribut** ruft einen Wert ab, der angibt, ob die UMSCHALTTASTE beim Ereignis nicht mehr verwendet wurde.
 
 ``` syntax
 event.shiftKey
@@ -29,14 +29,14 @@ event.shiftKey
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
+Dieses Attribut ist ein schreibgeschützter **boolescher Wert.**
 
 
 
 | Wert | BESCHREIBUNG                                       |
 |-------|---------------------------------------------------|
-| true  | Gibt an, dass die UMSCHALTTASTE gedrückt wurde. |
-| false | Gibt an, dass sich die UMSCHALTTASTE an der Position oben befand.   |
+| true  | Gibt an, dass sich die UMSCHALTTASTE in der nach unten angegebenen Position befing. |
+| false | Gibt an, dass sich die UMSCHALTTASTE an der Nach-oben-Position positioniert hat.   |
 
 
 
@@ -48,7 +48,7 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -56,7 +56,7 @@ Dieses Attribut ist ein Schreib geschützter **boolescher** Wert.
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> </dl>
 
  

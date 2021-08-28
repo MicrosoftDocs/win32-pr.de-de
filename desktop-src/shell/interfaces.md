@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt werden die Windows Shell-Schnittstellen beschrieben.
+description: In diesem Abschnitt werden die Windows Shellschnittstellen beschrieben.
 title: 'Shellschnittstellen '
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,1390 +9,359 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 8bf8a0669666ae45ba79fda014a8b3b92b57a974b6f72e06303c6c8a2e368bba
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9c5599c08471f29758276bf70ebbecc5d60fa28e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119032368"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473336"
 ---
 # <a name="shell-interfaces"></a>Shellschnittstellen 
 
-In diesem Abschnitt werden die Windows Shell-Schnittstellen beschrieben.
+In diesem Abschnitt werden die Windows Shellschnittstellen beschrieben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Thema</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iaccessibleobject"><strong>IAccessibleObject</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die von einer Barrierefreiheitsanwendung verwendet werden kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/previous-versions/windows/desktop/legacy/hh448546(v=vs.85)"><strong>IAccessibilityDockingService</strong></a><br/></td>
-<td>Dockt ein einzelnes Barrierefreiheits-App-Fenster am unteren Rand eines Bildschirms an.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/previous-versions/windows/desktop/legacy/hh448547(v=vs.85)"><strong>IAccessibilityDockingServiceCallback</strong></a><br/></td>
-<td>Informiert eine Barrierefreiheits-App, dass ihr Fenster abgedockt wurde.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="iaclcustommru.md"><strong>IACLCustomMRU</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die verwendet werden, um eine zuletzt verwendete Liste (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist"><strong>LIAList</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Effizienz der <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>automatischen Vervollständigung</strong></a> verbessert, wenn die Kandidatenzeichenfolgen in einer Hierarchie organisiert sind.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist2"><strong>LIAList2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist"><strong>LIAList-Schnittstelle,</strong></a> um Clients eines AutoVervollständigen-Objekts das Abrufen und Festlegen von Optionsflags zu ermöglichen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iactionprogress"><strong>IActionProgress</strong></a><br/></td>
-<td>Stellt die abstrakte Basisklasse dar, von der progressgesteuerte Vorgänge erben können.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iactionprogressdialog"><strong>IActionProgressDialog</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein Statusdialogfeld initialisieren und beenden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationactivationmanager"><strong>IApplicationActivationManager</strong></a><br/></td>
-<td>Stellt Methoden bereit, die Windows Store Apps für die <a href="/previous-versions/windows/apps/hh464906(v=win.10)">Erweiterungen</a>Launch, File und Protocol aktivieren. Normalerweise verwenden Sie diese Schnittstelle in Debuggern und Entwurfstools.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationassociationregistration"><strong>IApplicationAssociationRegistration</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Standardanwendungen für bestimmte <a href="/windows/desktop/api/shobjidl_core/ne-shobjidl_core-associationtype"><strong>Dateizuordnungstypen</strong></a>und Protokolle auf einer bestimmten <a href="/windows/desktop/api/shobjidl_core/ne-shobjidl_core-associationlevel"><strong>Zuordnungsebene</strong></a>abfragen und festlegen. <br/>
-<blockquote>
-[!Note]<br />
-Ab Windows 8 ist <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationassociationregistration-querycurrentdefault"><strong>queryCurrentDefault</strong></a>die einzige Funktionalität dieser Schnittstelle, die unterstützt wird.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iapplicationassociationregistrationui"><strong>IApplicationAssociationRegistrationUI</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die ein erweitertes Zuordnungsdialogfeld startet, über das der Benutzer seine Zuordnungen anpassen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdesignmodesettings"><strong>IApplicationDesignModeSettings</strong></a><br/></td>
-<td>Ermöglicht Es Entwicklungstoolsanwendungen, System- und Benutzerzustände dynamisch zu spoofen, z. B. native Anzeigeauflösung, Geräteskalierungsfaktor und Anwendungsansichtszustand, um Windows Store Apps zu testen, die im Entwurfsmodus für eine Vielzahl von Formfaktoren ausgeführt werden, ohne dass die tatsächliche Hardware benötigt wird. Ermöglicht auch das Testen von Änderungen im normalerweise benutzergesteuerten Zustand, um Windows Store Apps in einer Vielzahl von Szenarien zu testen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdesignmodesettings2"><strong>IApplicationDesignModeSettings2</strong></a><br/></td>
-<td>Ermöglicht Entwicklungstoolsanwendungen die dynamische Steuerung von System- und Benutzerzuständen, z. B. native Anzeigeauflösung, Geräteskalierungsfaktor und Anwendungsansichtslayout, die Windows Store Apps gemeldet werden, um Windows Store Apps zu testen, die im Entwurfsmodus für eine Vielzahl von Formularfaktoren ausgeführt werden, ohne dass die tatsächliche Hardware benötigt wird. Ermöglicht auch das Testen von Änderungen im normalerweise benutzergesteuerten Zustand, um Windows Store Apps in einer Vielzahl von Szenarien zu testen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations"><strong>IApplicationDestinations</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung ein oder alle Ziele aus den Kategorien <strong>Zuletzt oder</strong> <strong>Häufig</strong> in einem Sprungliste entfernen kann.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists"><strong>IApplicationDocumentLists</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung den Inhalt der Kategorien <strong>Zuletzt oder</strong> <strong>Häufig</strong> in einem Sprungliste abrufen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shappmgr/nn-shappmgr-iapppublisher"><strong>IAppPublisher</strong></a><br/></td>
-<td>Macht Methoden zum Veröffentlichen von Anwendungen über <strong>"Programme hinzufügen/entfernen"</strong> in Systemsteuerung verfügbar. Dies ist die Prinzipalschnittstelle, die für diesen Zweck implementiert wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iappvisibility"><strong>IAppVisibility</strong></a><br/></td>
-<td>Stellt Funktionen bereit, um zu bestimmen, ob die Anzeige Windows Store Apps anzeigt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iappvisibilityevents"><strong>IAppVisibilityEvents</strong></a><br/></td>
-<td>Ermöglicht Es Anwendungen, Benachrichtigungen über Statusänderungen in einer Anzeige und über Änderungen in Startbildschirm Sichtbarkeit zu empfangen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandler"><strong>IAssocHandler</strong></a><br/></td>
-<td>Macht Methoden für Vorgänge mit einem Dateizuordnungsdialogfeld oder -menü verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandlerinvoker"><strong>IAssocHandlerInvoker</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die einen zugeordneten Anwendungshandler aufrufen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iattachmentexecute"><strong>IAttachmentExecute</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die mit Clientanwendungen zusammenarbeiten, um eine Benutzerumgebung zu präsentieren, die einen sicheren Download und Austausch von Dateien über E-Mail- und Messaginganlagen ermöglicht.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>IAutoComplete</strong></a><br/></td>
-<td>Wird vom AutoVervollständigen-Objekt (CLSID_AutoComplete) verfügbar gemacht. Mit dieser Schnittstelle können Anwendungen das Objekt initialisieren, aktivieren und deaktivieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete2"><strong>IAutoComplete2</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>IAutoComplete.</strong></a> Mit dieser Schnittstelle können Clients des AutoVervollständigen-Objekts eine Reihe von Optionen abrufen und festlegen, die steuern, wie die automatische Vervollständigung funktioniert.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iautocompletedropdown"><strong>IAutoCompleteDropDown</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen Clients den Anzeigezustand der Dropdownliste "AutoVervollständigen" zurücksetzen oder abfragen können, die mögliche Vervollständigungen für eine Zeichenfolge enthält, die vom Benutzer in einem Bearbeitungssteuerelement eingegeben wurde.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ibandhost"><strong>IBandHost</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen Bänder erstellt und zerstört und ihre Verfügbarkeit offengelegt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ibandsite"><strong>IBandSite</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Bandobjekte steuern.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ibrowserframeoptions"><strong>IBrowserFrameOptions</strong></a><br/></td>
-<td>Ermöglicht es einem Browser oder Host, <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a> zu fragen, welche Art von Ansichtsverhalten unterstützt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icategorizer"><strong>ICategorizer</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die zum Abrufen von Informationen zu Elementbezeichnerlisten verwendet werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icategoryprovider"><strong>ICategoryProvider</strong></a><br/></td>
-<td>Macht eine Liste von Kategorisierungen verfügbar, die in einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder</strong></a>registriert sind.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-icdburn"><strong>ICD Ausstellen</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die bestimmen, ob ein System über Hardware zum Schreiben auf CD, den Laufwerkbuchstaben eines CD Writer-Geräts und programmgesteuertes Initiieren einer CD-Schreibsitzung verfügt. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icolumnmanager"><strong>IColumnManager</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Überprüfung und Bearbeitung von Spalten in der Detailansicht des Windows Explorers ermöglichen. Auf jede Spalte wird von einer <a href="/windows/desktop/api/wtypes/ns-wtypes-propertykey"><strong>PROPERTYKEY-Struktur</strong></a> verwiesen, die eine Eigenschaft benennt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a><br/></td>
-<td>Wird von den allgemeinen Dateidialogfeldern verfügbar gemacht, die beim Hosten eines Shell-Browsers verwendet werden sollen. Wenn dies unterstützt wird, macht <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a> Methoden verfügbar, mit denen eine Shellansicht mehrere Fälle verarbeiten kann, die in einem Dialogfeld ein anderes Verhalten erfordern als in einer normalen Shellansicht. Sie rufen einen <strong>ICommDlgBrowser-Schnittstellenzeiger</strong> ab, indem Sie <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>QueryInterface</strong></a> für das <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser-Objekt</strong></a> aufrufen. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a>. Diese Schnittstelle wird von den allgemeinen Dateidialogfeldern verfügbar gemacht, wenn sie einen Shell-Browser hosten. Ein Zeiger auf <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a> kann abgerufen werden, indem <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>QueryInterface</strong></a> für das <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser-Objekt</strong></a> aufgerufen wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-icommdlgbrowser3"><strong>ICommDlgBrowser3</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a>und wird von den allgemeinen Dateidialogfeldern verwendet, wenn sie einen Shellbrowser hosten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl/nn-shobjidl-icomputerinfochangenotify"><strong>IComputerInfoChangeNotify</strong></a><br/></td>
-<td>Diese Schnittstelle ist möglicherweise in späteren Versionen von Windows nicht vorhanden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iconnectablecredentialprovidercredential"><strong>IConnectableCredentialProviderCredential</strong></a><br/></td>
-<td>Macht Methoden zum Verbinden und Trennen von <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iconnectablecredentialprovidercredential"><strong>IConnectableCredentialProviderCredential-Objekten</strong></a> verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-icontactmanagerinterop"><strong>IContactManagerInterop</strong></a><br/></td>
-<td>Ermöglicht den Zugriff auf <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-icontactmanagerinterop"><strong>ContactManager-Methoden</strong></a> in einer App, die mehrere Fenster verwaltet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein einem Shell-Objekt zugeordnetes Kontextmenü erstellen oder zusammenführen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu2"><strong>IContextMenu2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die entweder ein Kontextmenü (Kontextmenü) erstellen oder zusammenführen, das einem Shell-Objekt zugeordnet ist. Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu</strong></a> durch Hinzufügen einer Methode, mit der Clientobjekte Nachrichten verarbeiten können, die besitzergezeichneten Menüelementen zugeordnet sind.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu3"><strong>IContextMenu3</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein einem Shell-Objekt zugeordnetes Kontextmenü erstellen oder zusammenführen. Ermöglicht Clientobjekten das Verarbeiten von Nachrichten, die besitzergezeichneten Menüelementen zugeordnet sind, und erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu2"><strong>IContextMenu2,</strong></a> indem ein Rückgabewert aus dieser Nachrichtenbehandlung akzeptiert wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb"><strong>IContextMenuCB</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die den Rückruf eines Kontextmenüs ermöglicht. Zum Hinzufügen eines Shield-Symbols zu einem <strong>MenuItem,</strong> das eine Erhöhung erfordert.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/previous-versions/windows/desktop/legacy/bb776063(v=vs.85)"><strong>IControlMarkup</strong></a><br/></td>
 
-</tr>
-<tr class="odd">
-<td><a href="/previous-versions/windows/desktop/legacy/bb776049(v=vs.85)"><strong>ICopyHook</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen <em>Kopierhookhandler</em>erstellt. Ein Copy Hook-Handler ist eine Shellerweiterung, die bestimmt, ob ein Shell-Ordner oder -Druckerobjekt verschoben, kopiert, umbenannt oder gelöscht werden kann. Die Shell ruft die <a href="/previous-versions/windows/desktop/legacy/bb776048(v=vs.85)"><strong>ICopyHook::CopyCallback-Methode</strong></a> auf, bevor einer dieser Vorgänge ausgeführt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-icreateobject"><strong>ICreateObject</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die ein Objekt einer angegebenen Klasse erstellt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreatingprocess"><strong>ICreatingProcess</strong></a><br/></td>
-<td>Wird von <a href="/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa"><strong>ShellExecuteEx</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu</strong></a> verwendet, um dem Aufrufer das Ändern einiger Parameter des zu erstellenden Prozesses zu ermöglichen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreateprocessinputs"><strong>ICreateProcessInputs</strong></a><br/></td>
-<td>Wird von der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreatingprocess"><strong>ICreatingProcess-Schnittstelle</strong></a> verwendet, um einige Parameter des Prozesses zu ändern, der erstellt wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovider"><strong>ICredentialProvider</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die beim Einrichten und Bearbeiten eines Anmeldeinformationsanbieters verwendet werden. Alle Anmeldeinformationsanbieter müssen diese Schnittstelle implementieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredential"><strong>ICredentialProviderCredential</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Verarbeitung von Anmeldeinformationen ermöglichen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredential2"><strong>ICredentialProviderCredential2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredential"><strong>ICredentialProviderCredential-Schnittstelle</strong></a> durch Hinzufügen einer Methode, die die Sicherheits-ID (SID) eines Benutzers abruft. Die Anmeldeinformationen sind diesem Benutzer zugeordnet und können unter der Kachel des Benutzers gruppiert werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredentialevents"><strong>ICredentialProviderCredentialEvents</strong></a><br/></td>
-<td>Stellt einen asynchronen Rückrufmechanismus bereit, der von Anmeldeinformationen verwendet wird, um sie über Status- oder Textänderungsereignisse auf der Anmelde- oder Anmeldeinformations-Benutzeroberfläche zu benachrichtigen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredentialevents2"><strong>ICredentialProviderCredentialEvents2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredentialevents"><strong>ICredentialProviderCredentialEvents-Schnittstelle,</strong></a> indem Methoden hinzugefügt werden, die die Batchaktualisierung von Feldern in der Anmeldebenutzeroberfläche oder der Anmeldeinformationsbenutzeroberfläche ermöglichen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredentialwithfieldoptions"><strong>ICredentialProviderCredentialWithFieldOptions</strong></a><br/></td>
-<td>Stellt eine Methode bereit, mit der das Anmeldeinformationsanbieter-Framework bestimmen kann, ob Sie eine Anpassung an der Option eines Felds in einer Anmelde- oder Anmeldeinformations-Benutzeroberfläche vorgenommen haben.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialproviderevents"><strong>ICredentialProviderEvents</strong></a><br/></td>
-<td>Stellt einen asynchronen Rückrufmechanismus bereit, der von einem Anmeldeinformationsanbieter verwendet wird, um ihn über Änderungen in der Liste der Anmeldeinformationen oder der zugehörigen Felder zu benachrichtigen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialproviderfilter"><strong>ICredentialProviderFilter</strong></a><br/></td>
-<td>Wird verwendet, um Anmeldeinformationsanbieter basierend auf zur Laufzeit verfügbaren Informationen dynamisch zu filtern.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidersetuserarray"><strong>ICredentialProviderSetUserArray</strong></a><br/></td>
-<td>Stellt eine Methode bereit, mit der ein Anmeldeinformationsanbieter die Benutzer empfangen kann, die auf der Anmelde- oder Anmeldeinformationsoberfläche angezeigt werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovideruser"><strong>ICredentialProviderUser</strong></a><br/></td>
-<td>Stellt Methoden zum Abrufen bestimmter Eigenschaften eines einzelnen Benutzers bereit, die in einer Anmelde- oder Anmeldeinformations-Benutzeroberfläche enthalten sind.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovideruserarray"><strong>ICredentialProviderUserArray</strong></a><br/></td>
-<td>Stellt den Satz von Benutzern dar, die auf der Anmelde- oder Anmeldeinformationsoberfläche angezeigt werden. Diese Informationen ermöglichen es dem Anmeldeinformationsanbieter, den Satz aufzuzählen, um Eigenschafteninformationen zu jedem Benutzer abzurufen, um Felder aufzufüllen oder den Satz zu filtern.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icurrentitem"><strong>ICurrentItem</strong></a><br/></td>
-<td>Wird durch Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-bindtoobject"><strong>IShellFolder::BindToObject</strong></a> für ein Element abgerufen. Wenn das Element eine Momentaufnahme eines Elements zu einem früheren Zeitpunkt darstellt, ruft diese Schnittstelle die aktuelle Version des Elements ab.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj/nn-shlobj-icurrentworkingdirectory"><strong>ICurrentWorkingDirectory</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen ein Client das aktuelle Arbeitsverzeichnis eines Objekts abrufen oder festlegen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist"><strong>ICustomDestinationList</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einer Anwendung ermöglichen, eine benutzerdefinierte Sprungliste, einschließlich Zielen und Aufgaben, für die Anzeige auf der Taskleiste bereitzustellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-idataobjectasynccapability"><strong>IDataObjectAsyncCapability</strong></a><br/></td>
-<td>Aktiviert Schnittstellen, die normalerweise synchron sind, um asynchron zu funktionieren. <br/>
-<blockquote>
-[!Note]<br />
-Diese Schnittstelle ist die aktuelle, umbenannte Version von <a href="/previous-versions//bb776309(v=vs.85)"><strong>IAsyncOperation.</strong></a>
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idataobjectprovider"><strong>IDataObjectProvider</strong></a><br/></td>
-<td>Stellt Methoden bereit, mit denen Sie die <a href="/windows/desktop/api/objidl/nn-objidl-idataobject"><strong>IDataObject-Schnittstelle</strong></a>eines <a href="/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage?view=winrt-19041">DataPackage-Objekts</a> festlegen oder abrufen können, die das DataPackage zur Unterstützung der Interoperabilität verwendet. Das DataPackage-Objekt wird von einer App verwendet, um Daten für eine andere App bereitzustellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop"><strong>IDataTransferManagerInterop</strong></a><br/></td>
-<td>Ermöglicht den Zugriff auf <a href="/uwp/api/Windows.ApplicationModel.DataTransfer.DataTransferManager"><strong>DataTransferManager-Methoden</strong></a> in einer Windows Store-App, die mehrere Fenster verwaltet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idefaultextracticoninit"><strong>IDefaultExtractIconInit</strong></a><br/></td>
-<td>Macht Methoden verfügbar, um einem Objekt zugeordnete Standardsymbole festzulegen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idefaultfoldermenuinitialize"><strong>IDefaultFolderMenuInitialize</strong></a><br/></td>
-<td>Stellt Methoden zum Abrufen und Festlegen von Kontextmenüinformationen bereit. Diese Informationen entsprechen den Informationen, die <a href="/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu"><strong>shcreateDefaultContextMenu</strong></a> über die <a href="/windows/desktop/api/shlobj_core/ns-shlobj_core-defcontextmenu"><strong>DEFCONTEXTMENU-Struktur</strong></a> bereitgestellt werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-idelayedpropertystorefactory"><strong>IDelayedPropertyStoreFactory</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, um ein angegebenes <a href="/windows/desktop/api/propsys/nn-propsys-ipropertystore"><strong>IPropertyStore-Objekt</strong></a> in Situationen zu erstellen, in denen der Zugriff auf Eigenschaften möglicherweise langsam ist.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idelegatefolder"><strong>IDelegateFolder</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, über die einem Delegatordner die <a href="/windows/desktop/api/objidl/nn-objidl-imalloc"><strong>IMalloc-Schnittstelle</strong></a> zugewiesen wird, die zum Zuordnen und Freigeben von Element-IDs erforderlich ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idelegateitem"><strong>IDelegateItem</strong></a><br/></td>
-<td>Wird verwendet, um die unmittelbar zugrunde liegende Darstellung des Pfads eines Elements abzurufen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idesktopgadget"><strong>IDesktopGadget</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die das programmgesteuerte Hinzufügen eines installierten Gadgets zum Desktop des Benutzers ermöglicht.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idesktopwallpaper"><strong>IDesktopWallpaper</strong></a><br/></td>
+| Thema | BESCHREIBUNG | 
+|-------|-------------|
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iaccessibleobject"><strong>IAccessibleObject</strong></a><br /> | Macht eine Methode verfügbar, die von einer Barrierefreiheitsanwendung verwendet werden kann.<br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/hh448546(v=vs.85)"><strong>IAccessibilityDockingService</strong></a><br /> | Dockt ein einzelnes App-Fenster für die Barrierefreiheit am unteren Rand eines Bildschirms an.<br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/hh448547(v=vs.85)"><strong>IAccessibilityDockingServiceCallback</strong></a><br /> | Informiert eine Barrierefreiheits-App darüber, dass ihr Fenster entdoppelt wurde.<br /> | 
+| <a href="iaclcustommru.md"><strong>IACLCustomMRU</strong></a><br /> | Macht Methoden verfügbar, die verwendet werden, um eine LISTE der zuletzt verwendeten (MRU) für ein AutoVervollständigen-Objekt zu initialisieren.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist"><strong>ODIList</strong></a><br /> | Macht eine Methode verfügbar, die die Effizienz der automatischen <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>Vervollstößung</strong></a> verbessert, wenn die Kandidatenzeichenfolgen in einer Hierarchie organisiert sind.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist2"><strong>ODIList2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iaclist"><strong>LIZList-Schnittstelle,</strong></a> um Clients eines AutoVervollständigen-Objekts das Abrufen und Festlegen von Optionsflags zu ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iactionprogress"><strong>IActionProgress</strong></a><br /> | Stellt die abstrakte Basisklasse dar, von der fortschrittsgesteuerte Vorgänge erben können.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iactionprogressdialog"><strong>IActionProgressDialog</strong></a><br /> | Macht Methoden verfügbar, die ein Statusdialogfeld initialisieren und beenden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationactivationmanager"><strong>IApplicationActivationManager</strong></a><br /> | Stellt Methoden zum Aktivieren Windows Store-Apps für die Erweiterungen Launch, File und Protocol <a href="/previous-versions/windows/apps/hh464906(v=win.10)">zur Verfügung.</a> Normalerweise verwenden Sie diese Schnittstelle in Debuggern und Entwurfstools.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationassociationregistration"><strong>IApplicationAssociationRegistration</strong></a><br /> | Macht Methoden verfügbar, die Standardanwendungen für bestimmte <a href="/windows/desktop/api/shobjidl_core/ne-shobjidl_core-associationtype"><strong>Datei-Zuordnungstypen</strong></a>abfragen und festlegen, sowie Protokolle auf einer bestimmten <a href="/windows/desktop/api/shobjidl_core/ne-shobjidl_core-associationlevel"><strong>Zuordnungsebene.</strong></a> <br /><blockquote>[!Note]<br />Ab Windows 8 ist <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationassociationregistration-querycurrentdefault"><strong>queryCurrentDefault</strong></a>die einzige unterstützte Funktionalität dieser Schnittstelle.</blockquote><br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iapplicationassociationregistrationui"><strong>IApplicationAssociationRegistrationUI</strong></a><br /> | Macht eine Methode verfügbar, die ein erweitertes Zuordnungsdialogfeld startet, über das der Benutzer seine Zuordnungen anpassen kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdesignmodesettings"><strong>IApplicationDesignModeSettings</strong></a><br /> | Ermöglicht Es Entwicklungstoolanwendungen, System- und Benutzerzustände dynamisch zu spoofen, z. B. native Anzeigeauflösung, Geräteskalierungsfaktor und Anwendungsansichtsstatus, um Windows Store-Apps, die im Entwurfsmodus ausgeführt werden, auf eine Vielzahl von Formfaktoren zu testen, ohne dass die tatsächliche Hardware benötigt wird. Ermöglicht auch das Testen von Änderungen im normalerweise benutzergesteuerten Zustand, um Windows Store-Apps in einer Vielzahl von Szenarien zu testen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdesignmodesettings2"><strong>IApplicationDesignModeSettings2</strong></a><br /> | Ermöglicht Entwicklungstoolanwendungen die dynamische Steuerung von System- und Benutzerzuständen, z. B. native Anzeigeauflösung, Geräteskalierungsfaktor und Anwendungsansichtslayout, die an Windows Store-Apps gemeldet werden, um im Entwurfsmodus ausgeführte Windows Store-Apps auf eine Vielzahl von Formfaktoren zu testen, ohne dass die tatsächliche Hardware benötigt wird. Ermöglicht auch das Testen von Änderungen im normalerweise benutzergesteuerten Zustand, um Windows Store-Apps in einer Vielzahl von Szenarien zu testen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdestinations"><strong>IApplicationDetolations</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung ein <strong></strong> oder alle Ziele aus den Kategorien <strong>Zuletzt</strong> verwendet oder Häufig in einer Sprungliste.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iapplicationdocumentlists"><strong>IApplicationDocumentLists</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung <strong></strong> den Inhalt der Kategorien <strong>Zuletzt</strong> verwendet oder Häufig in einer Sprungliste.<br /> | 
+| <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-iapppublisher"><strong>IAppPublisher</strong></a><br /> | Macht Methoden zum Veröffentlichen von Anwendungen über <strong>Das Hinzufügen/Entfernen von Programmen</strong> in Systemsteuerung. Dies ist die für diesen Zweck implementierte Prinzipalschnittstelle.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iappvisibility"><strong>IAppVisibility</strong></a><br /> | Stellt Funktionen zur Verfügung, um zu bestimmen, ob die Anzeige Windows Store wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iappvisibilityevents"><strong>IAppVisibilityEvents</strong></a><br /> | Ermöglicht Anwendungen das Empfangen von Benachrichtigungen über Zustandsänderungen in einer Anzeige und über Änderungen in Startbildschirm Sichtbarkeit.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandler"><strong>IAssocHandler</strong></a><br /> | Macht Methoden für Vorgänge mit einem Dateiassozdialogfeld oder -menü verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandlerinvoker"><strong>IAssocHandlerInvoker</strong></a><br /> | Macht Methoden verfügbar, die einen zugeordneten Anwendungshandler aufrufen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iattachmentexecute"><strong>IAttachmentExecute</strong></a><br /> | Macht Methoden verfügbar, die mit Clientanwendungen zusammenarbeiten, um eine Benutzerumgebung zu präsentieren, die einen sicheren Download und Austausch von Dateien über E-Mail- und Messaginganlagen ermöglicht.<br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>IAutoComplete</strong></a><br /> | Verfügbar gemacht durch das AutoVervollständigen-Objekt (CLSID_AutoComplete). Mit dieser Schnittstelle können Anwendungen das Objekt initialisieren, aktivieren und deaktivieren.<br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete2"><strong>IAutoComplete2</strong></a><br /> | Erweitert <a href="/windows/desktop/api/Shldisp/nn-shldisp-iautocomplete"><strong>IAutoComplete</strong></a>. Mit dieser Schnittstelle können Clients des AutoVervollständigen-Objekts eine Reihe von Optionen abrufen und festlegen, die steuern, wie die automatische Vervollständigung funktioniert.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iautocompletedropdown"><strong>IAutoCompleteDropDown</strong></a><br /> | Macht Methoden verfügbar, mit denen Clients den Anzeigezustand der Dropdownliste "AutoVervollständigen" zurücksetzen oder abfragen können, die mögliche Vervollständigungen für eine Zeichenfolge enthält, die vom Benutzer in ein Bearbeitungssteuer steuerelement eingegeben wurde.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ibandhost"><strong>IBandHost</strong></a><br /> | Macht Methoden verfügbar, die Bänder erstellen und zerstören und deren Verfügbarkeit spekulieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ibandsite"><strong>IBandSite</strong></a><br /> | Macht Methoden verfügbar, die Bandobjekte steuern.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ibrowserframeoptions"><strong>IBrowserFrameOptions</strong></a><br /> | Ermöglicht einem Browser oder Host, <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a> zu fragen, welche Art von Ansichtsverhalten unterstützt wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icategorizer"><strong>ICategorizer</strong></a><br /> | Macht Methoden verfügbar, die zum Abrufen von Informationen zu Elementbezeichnerlisten verwendet werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icategoryprovider"><strong>ICategoryProvider</strong></a><br /> | Macht eine Liste von Kategorisierungen verfügbar, die in einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder registriert sind.</strong></a><br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-icdburn"><strong>ICD Aus</strong></a><br /> | Macht Methoden verfügbar, die bestimmen, ob ein System hardware für das Schreiben auf CD, den Laufwerkbuchstaben eines CD Writer-Geräts und programmgesteuert eine CD-Schreibsitzung initiiert. <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icolumnmanager"><strong>IColumnManager</strong></a><br /> | Macht Methoden verfügbar, die die Überprüfung und Bearbeitung von Spalten in der Ansicht Windows Explorer-Details ermöglichen. Auf jede Spalte wird durch eine <a href="/windows/desktop/api/wtypes/ns-wtypes-propertykey"><strong>PROPERTYKEY-Struktur</strong></a> verwiesen, die eine Eigenschaft benennt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a><br /> | Wird von den allgemeinen Dateidialogfeldern verfügbar gemacht, die beim Hosten eines Shellbrowsers verwendet werden sollen. Wenn dies unterstützt wird, macht <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a> Methoden verfügbar, mit denen eine Shellansicht mehrere Fälle verarbeiten kann, die in einem Dialogfeld ein anderes Verhalten erfordern als in einer normalen Shellansicht. Sie rufen einen <strong>ICommDlgBrowser-Schnittstellenzeiger</strong> ab, indem <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>Sie QueryInterface für</strong></a> das <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser-Objekt</strong></a> aufrufen. <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser"><strong>ICommDlgBrowser</strong></a>. Diese Schnittstelle wird von den allgemeinen Dateidialogfeldern verfügbar gemacht, wenn sie einen Shellbrowser hosten. Ein Zeiger auf <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a> kann durch Aufrufen von <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>QueryInterface</strong></a> für das <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser-Objekt erhalten</strong></a> werden.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-icommdlgbrowser3"><strong>ICommDlgBrowser3</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icommdlgbrowser2"><strong>ICommDlgBrowser2</strong></a>und wird von den allgemeinen Dateidialogfeldern verwendet, wenn sie einen Shellbrowser hosten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl/nn-shobjidl-icomputerinfochangenotify"><strong>IComputerInfoChangeNotify</strong></a><br /> | Diese Schnittstelle fehlt möglicherweise in späteren Versionen von Windows.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iconnectablecredentialprovidercredential"><strong>IConnectableCredentialProviderCredential</strong></a><br /> | Macht Methoden zum Verbinden und Trennen von <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iconnectablecredentialprovidercredential"><strong>IConnectableCredentialProviderCredential-Objekten</strong></a> verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-icontactmanagerinterop"><strong>IContactManagerInterop</strong></a><br /> | Ermöglicht den Zugriff auf <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-icontactmanagerinterop"><strong>ContactManager-Methoden</strong></a> in einer App, die mehrere Fenster verwaltet.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu</strong></a><br /> | Macht Methoden verfügbar, die ein einem Shell-Objekt zugeordnetes Kontextmenü erstellen oder zusammenführen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu2"><strong>IContextMenu2</strong></a><br /> | Macht Methoden verfügbar, die entweder ein Kontextmenü erstellen oder zusammenführen, das einem Shell-Objekt zugeordnet ist. Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu, indem</strong></a> eine Methode hinzugefügt wird, mit der Clientobjekte Nachrichten verarbeiten können, die besitzergezeichneten Menüelementen zugeordnet sind.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu3"><strong>IContextMenu3</strong></a><br /> | Macht Methoden verfügbar, die ein einem Shell-Objekt zugeordnetes Kontextmenü erstellen oder zusammenführen. Ermöglicht Clientobjekten das Verarbeiten von Nachrichten, die besitzergezeichneten Menüelementen zugeordnet sind, und erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu2"><strong>IContextMenu2,</strong></a> indem ein Rückgabewert aus dieser Nachrichtenbehandlung akzeptiert wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb"><strong>IContextMenuCB</strong></a><br /> | Macht eine Methode verfügbar, die den Rückruf eines Kontextmenüs ermöglicht. Zum Hinzufügen eines Shield-Symbols zu einem <strong>MenuItem,</strong> das eine Erhöhung erfordert.<br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/bb776063(v=vs.85)"><strong>IControlMarkup</strong></a><br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/bb776049(v=vs.85)"><strong>ICopyHook</strong></a><br /> | Macht eine Methode verfügbar, die einen <em>Kopierhookhandler</em>erstellt. Ein Copy Hook-Handler ist eine Shellerweiterung, die bestimmt, ob ein Shell-Ordner oder -Druckerobjekt verschoben, kopiert, umbenannt oder gelöscht werden kann. Die Shell ruft die <a href="/previous-versions/windows/desktop/legacy/bb776048(v=vs.85)"><strong>ICopyHook::CopyCallback-Methode</strong></a> auf, bevor einer dieser Vorgänge ausgeführt wird.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-icreateobject"><strong>ICreateObject</strong></a><br /> | Macht eine Methode verfügbar, die ein Objekt einer angegebenen Klasse erstellt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreatingprocess"><strong>ICreatingProcess</strong></a><br /> | Wird von <a href="/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa"><strong>ShellExecuteEx</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenu"><strong>IContextMenu</strong></a> verwendet, um dem Aufrufer das Ändern einiger Parameter des zu erstellenden Prozesses zu ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreateprocessinputs"><strong>ICreateProcessInputs</strong></a><br /> | Wird von der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icreatingprocess"><strong>ICreatingProcess-Schnittstelle</strong></a> verwendet, um einige Parameter des Prozesses zu ändern, der erstellt wird.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovider"><strong>ICredentialProvider</strong></a><br /> | Macht Methoden verfügbar, die beim Einrichten und Bearbeiten eines Anmeldeinformationsanbieters verwendet werden. Alle Anmeldeinformationsanbieter müssen diese Schnittstelle implementieren.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredential"><strong>ICredentialProviderCredential</strong></a><br /> | Macht Methoden verfügbar, die die Verarbeitung von Anmeldeinformationen ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredential2"><strong>ICredentialProviderCredential2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredential"><strong>ICredentialProviderCredential-Schnittstelle,</strong></a> indem eine Methode hinzugefügt wird, die die Sicherheits-ID (SID) eines Benutzers abruft. Die Anmeldeinformationen sind diesem Benutzer zugeordnet und können unter der Kachel des Benutzers gruppiert werden.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredentialevents"><strong>ICredentialProviderCredentialEvents</strong></a><br /> | Stellt einen asynchronen Rückrufmechanismus bereit, der von Anmeldeinformationen verwendet wird, um sie über Status- oder Textänderungsereignisse auf der Anmelde- oder Anmeldeinformations-Benutzeroberfläche zu benachrichtigen.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredentialevents2"><strong>ICredentialProviderCredentialEvents2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialprovidercredentialevents"><strong>ICredentialProviderCredentialEvents-Schnittstelle,</strong></a> indem Methoden hinzugefügt werden, die die Batchaktualisierung von Feldern in der Anmeldebenutzeroberfläche oder der Anmeldeinformationsbenutzeroberfläche ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidercredentialwithfieldoptions"><strong>ICredentialProviderCredentialWithFieldOptions</strong></a><br /> | Stellt eine Methode bereit, mit der das Anmeldeinformationsanbieter-Framework bestimmen kann, ob Sie eine Anpassung an der Option eines Felds in einer Anmelde- oder Anmeldeinformations-Benutzeroberfläche vorgenommen haben.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialproviderevents"><strong>ICredentialProviderEvents</strong></a><br /> | Stellt einen asynchronen Rückrufmechanismus bereit, der von einem Anmeldeinformationsanbieter verwendet wird, um ihn über Änderungen in der Liste der Anmeldeinformationen oder der zugehörigen Felder zu benachrichtigen.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-icredentialproviderfilter"><strong>ICredentialProviderFilter</strong></a><br /> | Wird verwendet, um Anmeldeinformationsanbieter basierend auf zur Laufzeit verfügbaren Informationen dynamisch zu filtern.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovidersetuserarray"><strong>ICredentialProviderSetUserArray</strong></a><br /> | Stellt eine Methode bereit, mit der ein Anmeldeinformationsanbieter die Benutzer empfangen kann, die auf der Anmelde- oder Anmeldeinformationsoberfläche angezeigt werden.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovideruser"><strong>ICredentialProviderUser</strong></a><br /> | Stellt Methoden zum Abrufen bestimmter Eigenschaften eines einzelnen Benutzers bereit, die in einer Anmelde- oder Anmeldeinformations-Benutzeroberfläche enthalten sind.<br /> | 
+| <a href="/windows/desktop/api/CredentialProvider/nn-credentialprovider-icredentialprovideruserarray"><strong>ICredentialProviderUserArray</strong></a><br /> | Stellt den Satz von Benutzern dar, die auf der Anmelde- oder Anmeldeinformationsoberfläche angezeigt werden. Diese Informationen ermöglichen es dem Anmeldeinformationsanbieter, den Satz aufzuzählen, um Eigenschafteninformationen zu jedem Benutzer abzurufen, um Felder aufzufüllen oder den Satz zu filtern.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icurrentitem"><strong>ICurrentItem</strong></a><br /> | Wird abgerufen, indem <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-bindtoobject"><strong>IShellFolder::BindToObject</strong></a> für ein Element aufgerufen wird. Wenn das Element eine Momentaufnahme eines Elements zu einem früheren Zeitpunkt darstellt, ruft diese Schnittstelle die aktuelle Version des Elements ab.<br /> | 
+| <a href="/windows/desktop/api/shlobj/nn-shlobj-icurrentworkingdirectory"><strong>ICurrentWorkingDirectory</strong></a><br /> | Macht Methoden verfügbar, mit denen ein Client das aktuelle Arbeitsverzeichnis eines Objekts abrufen oder festlegen kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icustomdestinationlist"><strong>ICustomDestinationList</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung eine benutzerdefinierte Sprungliste, einschließlich Zielen und Aufgaben, zur Anzeige in der Taskleiste bereitstellen kann.<br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-idataobjectasynccapability"><strong>IDataObjectAsyncCapability</strong></a><br /> | Aktiviert Schnittstellen, die normalerweise synchron sind, um asynchron zu funktionieren. <br /><blockquote>[!Note]<br />Diese Schnittstelle ist die aktuelle, umbenannte Version von <a href="/previous-versions//bb776309(v=vs.85)"><strong>IAsyncOperation.</strong></a></blockquote><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idataobjectprovider"><strong>IDataObjectProvider</strong></a><br /> | Stellt Methoden bereit, mit denen Sie die <a href="/windows/desktop/api/objidl/nn-objidl-idataobject"><strong>IDataObject-Schnittstelle</strong></a>eines <a href="/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage?view=winrt-19041">DataPackage-Objekts</a> festlegen oder abrufen können, die das DataPackage zur Unterstützung der Interoperabilität verwendet. Das DataPackage-Objekt wird von einer App verwendet, um Daten für eine andere App bereitzustellen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop"><strong>IDataTransferManagerInterop</strong></a><br /> | Ermöglicht den Zugriff auf <a href="/uwp/api/Windows.ApplicationModel.DataTransfer.DataTransferManager"><strong>DataTransferManager-Methoden</strong></a> in einer Windows Store-App, die mehrere Fenster verwaltet.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idefaultextracticoninit"><strong>IDefaultExtractIconInit</strong></a><br /> | Macht Methoden verfügbar, um einem Objekt zugeordnete Standardsymbole festzulegen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idefaultfoldermenuinitialize"><strong>IDefaultFolderMenuInitialize</strong></a><br /> | Stellt Methoden zum Abrufen und Festlegen von Kontextmenüinformationen bereit. Diese Informationen entsprechen den Informationen, die <a href="/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu"><strong>shcreateDefaultContextMenu</strong></a> über die <a href="/windows/desktop/api/shlobj_core/ns-shlobj_core-defcontextmenu"><strong>DEFCONTEXTMENU-Struktur</strong></a> bereitgestellt werden.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-idelayedpropertystorefactory"><strong>IDelayedPropertyStoreFactory</strong></a><br /> | Macht eine Methode verfügbar, um ein angegebenes <a href="/windows/desktop/api/propsys/nn-propsys-ipropertystore"><strong>IPropertyStore-Objekt</strong></a> in Situationen zu erstellen, in denen der Zugriff auf Eigenschaften möglicherweise langsam ist.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idelegatefolder"><strong>IDelegateFolder</strong></a><br /> | Macht eine Methode verfügbar, über die einem Delegatordner die <a href="/windows/desktop/api/objidl/nn-objidl-imalloc"><strong>IMalloc-Schnittstelle</strong></a> zugewiesen wird, die zum Zuordnen und Freigeben von Element-IDs erforderlich ist.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idelegateitem"><strong>IDelegateItem</strong></a><br /> | Wird verwendet, um die unmittelbar zugrunde liegende Darstellung des Pfads eines Elements abzurufen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idesktopgadget"><strong>IDesktopGadget</strong></a><br /> | Macht eine Methode verfügbar, die das programmgesteuerte Hinzufügen eines installierten Gadgets zum Desktop des Benutzers ermöglicht.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idesktopwallpaper"><strong>IDesktopWallpaper</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idestinationstreamfactory"><strong>IDestinationStreamFactory</strong></a><br /> | Macht eine Methode zum manuellen Kopieren eines Streams oder einer Datei verfügbar, bevor Änderungen an Eigenschaften angewendet werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idisplayitem"><strong>IDisplayItem</strong></a><br /> | Macht Methoden verfügbar, die eine Version des aktuellen Elements finden, die zum Abrufen von Anzeigeeigenschaften wie dem Elementnamen verwendet werden soll, die auf der Benutzeroberfläche angezeigt werden. Wird von den Dialogfeldern der Kopier-Engine verwendet, um der Benutzeroberfläche ein geeignetes Anzuzeigende Element bereitzustellen. Wenn keine andere Version gefunden wird, wird das aktuelle Element verwendet.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow</strong></a><br /> | Macht Methoden verfügbar, die das Andockfensterobjekt über Änderungen benachrichtigen, einschließlich Anzeigen, Ausblenden und bevorstehendem Entfernen. Diese Schnittstelle wird von Fensterobjekten implementiert, die innerhalb des Rahmenbereichs eines Windows Explorer-Fensters angedockt werden können.<br /> | 
+| <a href="/windows/desktop/api/shlobj/nn-shlobj-idockingwindowframe"><strong>IDockingWindowFrame</strong></a><br /> | Macht Methoden verfügbar, die das Hinzufügen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow-Objekten</strong></a> zu einem Frame unterstützen. Wird vom Browser implementiert.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-idockingwindowsite"><strong>IDockingWindowSite</strong></a><br /> | Macht Methoden verfügbar, die den Rahmenbereich für ein oder mehrere <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow-Objekte</strong></a> verwalten. Diese Schnittstelle wird vom Browser implementiert und ähnelt der <a href="/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow"><strong>IOleInPlaceUIWindow-Schnittstelle.</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idragsourcehelper"><strong>IDragSourceHelper</strong></a><br /> | Wird von der Shell verfügbar gemacht, damit eine Anwendung das Bild angeben kann, das während eines Drag & Drop-Vorgangs der Shell angezeigt wird.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idragsourcehelper2"><strong>IDragSourceHelper2</strong></a><br /> | Macht eine Methode verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idragsourcehelper"><strong>IDragSourceHelper</strong></a>Funktionen hinzufügt. This method sets the characteristics of a drag-and-drop operation over an <strong>IDragSourceHelper</strong> object.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idroptargethelper"><strong>IDropTargetHelper</strong></a><br /> | Macht Methoden verfügbar, mit denen Ablageziele ein Ziehbild anzeigen können, während sich das Bild über dem Zielfenster befindet.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idynamichwhandler"><strong>IDynamicHWHandler</strong></a><br /> | Wird von AutoPlay aufgerufen. Macht Methoden verfügbar, die dynamische Informationen zu einem registrierten Handler abrufen, bevor sie dem Benutzer angezeigt werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumassochandlers"><strong>IEnumAssocHandlers</strong></a><br /> | Macht eine Methode verfügbar, die die Enumeration einer Auflistung von Handlern zulässt, die bestimmten Dateinamenerweiterungen zugeordnet sind.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ienumerableview"><strong>IEnumerableView</strong></a><br /> | Macht Methoden verfügbar, die den Inhalt einer Sicht aufzählen und nach Abschluss der Enumeration Benachrichtigungen vom Rückruf empfangen. Mit dieser Schnittstelle können Clients einer Ansicht versuchen, die Liste der Ordnerinhalte der Ansicht freizugeben.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumexplorercommand"><strong>IEnumExplorerCommand</strong></a><br /> | Wird von einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a>bereitgestellt. Diese Schnittstelle enthält die Enumeration der Befehle, die in der Befehlsleiste angezeigt werden sollen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumextrasearch"><strong>IEnumExtraSearch</strong></a><br /> | Ein standardmäßiger OLE-Enumerator, der von einem Client verwendet wird, um die verfügbaren Suchobjekte für einen Ordner zu bestimmen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumfullidlist"><strong>IEnumFullIDList</strong></a><br /> | Macht einen Standardsatz von Methoden verfügbar, die die Zeiger auf Elementbezeichnerlisten (PIDLs) der Elemente in einem Shellordner auflisten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist"><strong>IEnumIDList</strong></a><br /> | Macht einen Standardsatz von Methoden verfügbar, die zum Auflisten der PIDLs der Elemente in einem Shellordner verwendet werden. Wenn die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects"><strong>IShellFolder::EnumObjects-Methode</strong></a> eines Ordners aufgerufen wird, erstellt er ein Enumerationsobjekt und übergibt einen Zeiger auf die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist"><strong>IEnumIDList-Schnittstelle</strong></a> des Objekts zurück an die aufrufende Anwendung.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumobjects"><strong>IEnumObjects</strong></a><br /> | Macht Methoden zum Aufzählen unbekannter Objekte verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ienumpublishedapps"><strong>IEnumPublishedApps</strong></a><br /> | Macht Methoden verfügbar, die veröffentlichte Anwendungen aufzählen, um Programme im Systemsteuerung hinzuzufügen/zu entfernen. Das Objekt, das diese Schnittstelle verfügbar macht, wird über <a href="/windows/desktop/api/Shappmgr/nf-shappmgr-iapppublisher-enumapps"><strong>IAppPublisher::EnumApps</strong></a>angefordert. <br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ienumreadycallback"><strong>IEnumReadyCallback</strong></a><br /> | Macht Methoden verfügbar, die es der Sicht ermöglichen, die Implementierung zu benachrichtigen, wenn die Enumeration abgeschlossen ist. Die Sicht ruft diese Methode auf, um dem Implementierer mitzuteilen, dass die Enumeration über <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-ienumerableview-createenumidlistfromcontents"><strong>IEnumerableView::CreateEnumIDListFromContents</strong></a>abgerufen werden kann. Der Rückruf ermöglicht es dem Implementierer, die Ansichtenenumeration freizugeben.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumresources"><strong>IEnumResources</strong></a><br /> | Macht Ressourcenenumerationsmethoden verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumshellitems"><strong>IEnumShellItems</strong></a><br /> | Macht die Enumeration von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem-Schnittstellen</strong></a> verfügbar. Diese Schnittstelle wird in der Regel durch Aufrufen der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumshellitems"><strong>IEnumShellItems-Methode</strong></a> abgerufen.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrconflict"><strong>IEnumSyncMgrConflict</strong></a><br /> | Macht Konfliktenumerationsmethoden verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrevents"><strong>IEnumSyncMgrEvents</strong></a><br /> | Macht Synchronisierungsereignis-Enumerationsmethoden verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrsyncitems"><strong>IEnumSyncMgrSyncItems</strong></a><br /> | Macht Methoden verfügbar, die die vom Handler verwalteten Synchronisierungselementobjekte aufzählen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>IExecuteCommand</strong></a><br /> | Macht Methoden verfügbar, die einen bestimmten Zustand oder Parameter im Zusammenhang mit dem Befehlsverb festlegen, sowie eine Methode zum Aufrufen dieses Verbs.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommandapplicationhostenvironment"><strong>IExecuteCommandApplicationHostEnvironment</strong></a><br /> | Stellt eine einzelne Methode bereit, mit der eine Anwendung bestimmen kann, ob sich ihr Host im Desktopmodus oder im immersiven Modus befindet.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommandhost"><strong>IExecuteCommandHost</strong></a><br /> | Stellt eine Methode bereit, die einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand-basierten</strong></a>Shellverbenhandler ermöglicht, den Benutzeroberflächenmodus der Hostkomponente abzufragen, von der aus die Anwendung aufgerufen wurde.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser</strong></a><br /> | <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser</strong></a> ist ein Browserobjekt, das entweder navigiert werden kann oder eine Ansicht eines Datenobjekts hosten kann. Als Browserobjekt mit vollem Funktionsumfang unterstützt es auch ein automatisches Reiseprotokoll.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowserevents"><strong>IExplorerBrowserEvents</strong></a><br /> | Macht Methoden für die Benachrichtigung über Navigations- und Anzeigeerstellungsereignisse im Explorer-Browser verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand</strong></a><br /> | Macht Methoden verfügbar, die die Befehlsdarstellung abrufen, Unterbefehle aufzählen oder den Befehl aufrufen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a><br /> | Macht Methoden zum Erstellen von Explorer-Befehlen und Befehlsenumeratoren verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate"><strong>IExplorerCommandState</strong></a><br /> | Macht eine einzelne Methode verfügbar, die das Abrufen des Befehlszustands ermöglicht.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility</strong></a><br /> | Wird in Windows Explorer von einer <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Implementierung</strong></a> verwendet, um vorschläge für die Ansicht zu geben, welche Bereiche sichtbar sind. Darüber hinaus kann ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser-Host</strong></a> diese Schnittstelle verwenden, um Informationen zur Sichtbarkeit des Bereichs bereitzustellen. Der Host sollte <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>QueryService</strong></a> mit <strong>SID_ExplorerPaneVisibility</strong> als Dienst-ID implementieren. Der Host muss sich in der Standortkette befinden. <br /> Die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility-Implementierung</strong></a> wird aus dem Shell-Ordner abgerufen. Der Shell-Ordner wird wiederum aus der Ansicht abgerufen. Eine Namespaceerweiterung kann eine benutzerdefinierte Ansicht<a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>(IShellView)</strong></a>bereitstellen, anstatt das Systemordneransichtsobjekt (DefView) zu verwenden. In diesem Fall muss die <strong>IShellView-Implementierung</strong> eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifolderview-getfolder"><strong>IFolderView::GetFolder</strong></a> enthalten, um das <strong>IExplorerPaneVisibility-Objekt</strong> zurückzugeben.<br /> Eine Namespaceerweiterung kann eine benutzerdefinierte Ansicht bereitstellen, indem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a> selbst implementiert wird, anstatt das Systemordneransichtsobjekt (DefView) zu verwenden. In diesem Fall muss die <strong>IShellView-Implementierung</strong> eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifolderview-getfolder"><strong>IFolderView::GetFolder</strong></a> enthalten, um <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility</strong></a> verwenden zu können.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iextracticona"><strong>IExtractIcon</strong></a><br /> | Macht Methoden verfügbar, mit denen ein Client das Symbol abrufen kann, das einem der -Objekte in einem Ordner zugeordnet ist.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage"><strong>IExtractImage</strong></a><br /> | Macht Methoden verfügbar, die ein Miniaturbild aus einem Shellordner anfordern.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage2"><strong>IExtractImage2</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage"><strong>IExtractImage</strong></a>.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog</strong></a><br /> | Macht Methoden verfügbar, die ergebnisse aus dem allgemeinen Dateidialogfeld initialisieren, anzeigen und abrufen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialog2"><strong>IFileDialog2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, mit denen der Aufrufer einen bestimmten, eingeschränkten Speicherort benennen kann, der im allgemeinen Dateidialogfeld durchsucht werden kann, und um alternativen Text anzugeben, der als Bezeichnung auf der Schaltfläche <strong>Abbrechen</strong> angezeigt werden soll.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents"><strong>IFileDialogControlEvents</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung über Ereignisse benachrichtigt werden kann, die sich auf Steuerelemente beziehen, die die Anwendung einem allgemeinen Dateidialogfeld hinzugefügt hat.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize"><strong>IFileDialogCustomize</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung einem allgemeinen Dateidialogfeld Steuerelemente hinzufügen kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents"><strong>IFileDialogEvents</strong></a><br /> | Macht Methoden verfügbar, die die Benachrichtigung über Ereignisse innerhalb eines allgemeinen Dateidialogfelds zulassen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileisinuse"><strong>IFileIsInUse</strong></a><br /> | Macht Methoden verfügbar, die aufgerufen werden können, um Informationen zu einer Datei abzurufen oder zu schließen, die von einer anderen Anwendung verwendet wird. Wenn eine Anwendung versucht, auf eine Datei zuzugreifen und diese Datei bereits verwendet, kann sie die Methoden dieser Schnittstelle verwenden, um Informationen zu sammeln, die dem Benutzer in einem Dialogfeld angezeigt werden sollen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog"><strong>IFileOpenDialog</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle,</strong></a> indem spezifische Methoden für das geöffnete Dialogfeld hinzugefügt werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperation"><strong>IFileOperation</strong></a><br /> | Macht Methoden zum Kopieren, Verschieben, Umbenennen, Erstellen und Löschen von Shellelementen sowie Methoden zum Bereitstellen von Status- und Fehlerdialogen verfügbar. Diese Schnittstelle ersetzt die <a href="/windows/desktop/api/Shellapi/nf-shellapi-shfileoperationa"><strong>SHFileOperation-Funktion.</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperationprogresssink"><strong>IFileOperationProgressSink</strong></a><br /> | Macht Methoden verfügbar, die ein umfassendes Benachrichtigungssystem bereitstellen, das von Aufrufern von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperation"><strong>IFileOperation</strong></a> verwendet wird, um die Details der Vorgänge zu überwachen, die sie über diese Schnittstelle ausführen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog"><strong>IFileSaveDialog</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle,</strong></a> indem spezifische Methoden für das Speichern-Dialogfeld hinzugefügt werden, einschließlich der Methoden, die Unterstützung für die Sammlung von Metadaten bieten, die in der Datei beibehalten werden sollen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesyncmergehandler"><strong>IFileSyncMergeHandler</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata"><strong>IFileSystemBindData</strong></a><br /> | Macht Methoden verfügbar, die Dateisysteminformationen zum Optimieren von Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-parsedisplayname"><strong>IShellFolder::P arseDisplayName</strong></a>speichern.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata2"><strong>IFileSystemBindData2</strong></a><br /> | Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata"><strong>IFileSystemBindData,</strong></a>das Dateisysteminformationen zum Optimieren von Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-parsedisplayname"><strong>IShellFolder::P arseDisplayName</strong></a>speichert. Diese Schnittstelle fügt die Fähigkeit zum Festlegen oder Abrufen der Datei-ID oder des Verbindungsklassenbezeichners (CLSID) hinzu.<br /> | 
+| <a href="/windows/desktop/shell/schema-library-iconreference"><strong>IFileViewer</strong></a><br /> | Macht Methoden verfügbar, die eine Schnittstelle festlegen, die es einem registrierten Datei-Viewer ermöglicht, benachrichtigt zu werden, wenn eine Datei angezeigt oder gedruckt werden muss.<br /> | 
+| <a href="/windows/desktop/api/shlobj/nn-shlobj-ifileviewersite"><strong>IFileViewerSite</strong></a><br /> | Macht Methoden verfügbar, die eine Schnittstelle festlegen, die es einem Datei-Viewer ermöglicht, das Handle für das aktuelle angeheftete Fenster abzurufen oder ein neues angeheftetes Fenster festzulegen. Das angeheftete Fenster ist das Fenster, in dem der aktuelle Datei-Viewer eine Datei anzeigt. Wenn der Benutzer eine neue anzuzeigende Datei auswählt, weist die Shell den Datei-Viewer an, die neue Datei im angehefteten Fenster anzuzeigen, anstatt ein neues Fenster zu erstellen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderfilter"><strong>IFolderFilter</strong></a><br /> | Wird von einem Client verfügbar gemacht, um anzugeben, wie die Enumeration eines Shellordners nach einer Serveranwendung gefiltert werden soll.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderfiltersite"><strong>IFolderFilterSite</strong></a><br /> | Wird von einem Host exportiert, damit Clients angeben können, wie eine Shell-Ordnerenumeration gefiltert werden soll.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview"><strong>IFolderView</strong></a><br /> | Macht Methoden verfügbar, die Informationen zu den Anzeigeoptionen eines Ordners abrufen, angegebene Elemente in diesem Ordner auswählen und den Ansichtsmodus des Ordners festlegen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview2"><strong>IFolderView2</strong></a><br /> | Macht Methoden verfügbar, die Informationen zu den Anzeigeoptionen eines Ordners abrufen, angegebene Elemente in diesem Ordner auswählen und den Ansichtsmodus des Ordners festlegen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifolderviewhost"><strong>IFolderViewHost</strong></a><br /> | Macht eine Methode verfügbar, die ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview"><strong>IFolderView-Objekt</strong></a> in einem Fenster hostet.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifolderviewoptions"><strong>IFolderViewOptions</strong></a><br /> | Macht Methoden verfügbar, die die Steuerung von Ordneransichtsoptionen ermöglichen, die spezifisch für die ansichten Windows 7 und höher sind.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderviewsettings"><strong>IFolderViewSettings</strong></a><br /> | Macht Methoden zum Abrufen von Ordneransichtseinstellungen verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iframeworkinputpane"><strong>IFrameworkInputPane</strong></a><br /> | Stellt Methoden bereit, mit denen Apps über Zustandsänderungen und den Speicherort für den Eingabebereich informiert werden können.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iframeworkinputpanehandler"><strong>IFrameworkInputPaneHandler</strong></a><br /> | Ermöglicht es einer App, benachrichtigt zu werden, wenn der Eingabebereich (Tastatur auf dem Bildschirm oder Handschriftbereich) angezeigt oder ausgeblendet wird. Dadurch kann das App-Fenster seine Anzeige so anpassen, dass keine Eingabebereiche (z. B. ein Textfeld) vom Eingabebereich verdeckt werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandleractivationhost"><strong>IHandlerActivationHost</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandlerinfo"><strong>IHandlerInfo</strong></a><br /> | Stellt Methoden bereit, die Informationen über den Handler für Methoden der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandleractivationhost"><strong>IHandlerActivationHost-Schnittstelle</strong></a> bereitstellen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihomegroup"><strong>IHomeGroup</strong></a><br /> | Macht Methoden verfügbar, die den Mitgliedschaftsstatus der HomeGroup eines Computers bestimmen und den Freigabe-Assistenten anzeigen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler"><strong>IHWEventHandler</strong></a><br /> | Wird von der automatischen Wiedergabe aufgerufen, um die Behandlung registrierter Medientypen zu implementieren.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler2"><strong>IHWEventHandler2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler"><strong>IHWEventHandler-Schnittstelle,</strong></a> um die Erhöhung der Benutzerkontensteuerung (User Account Control, UAC) für Gerätehandler zu berücksichtigen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iidentityname"><strong>IIdentityName</strong></a><br /> | Macht Methoden verfügbar, um zwei Elemente zu vergleichen, um festzustellen, ob sie identisch sind.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iimagerecompress"><strong>IImageRecompress</strong></a><br /> | Macht eine Methode verfügbar, die Bilder neu komprimiert.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializecommand"><strong>IInitializeCommand</strong></a><br /> | Macht eine einzelne Methode verfügbar, die zum Initialisieren von Objekten verwendet wird, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate"><strong>IExplorerCommandState,</strong></a> <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>IExecuteCommand</strong></a> oder <a href="/windows/desktop/api/oleidl/nn-oleidl-idroptarget"><strong>IDropTarget</strong></a> mit dem von der Anwendung angegebenen Befehlsnamen und den registrierten Eigenschaften implementieren.<br /> | 
+| <a href="/windows/win32/api/shobjidl/nn-shobjidl-iinitializenetworkfolder"><strong>IInitializeNetworkFolder</strong></a><br /> | Macht eine Methode verfügbar, die die Netzwerkdatenquelle CLSID_NetworkPlaces wie angegeben initialisiert.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithbindctx"><strong>IInitializeWithBindCtx</strong></a><br /> | Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Bindungskontext.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile"><strong>Iinitializewithfile</strong></a><br /> | Macht eine Methode verfügbar, um einen Handler, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Dateipfad zu initialisieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem"><strong>IInitializeWithItem</strong></a><br /> | Macht eine Methode verfügbar, die verwendet wird, um einen Handler, z. B. einen Eigenschaftenhandler, Miniaturansichtshandler oder Vorschauhandler, mit einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a>zu initialisieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithpropertystore"><strong>IInitializeWithPropertyStore</strong></a><br /> | Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Eigenschaftenspeicher.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream"><strong>Iinitializewithstream</strong></a><br /> | Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Stream.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow"><strong>IInitializeWithWindow</strong></a><br /> | Macht eine Methode verfügbar, über die ein Client ein Besitzerfenster für ein Windows Runtimeobjekt bereitstellen kann, das in einer Desktopanwendung verwendet wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject"><strong>IInputObject</strong></a><br /> | Macht Methoden verfügbar, die die Aktivierung der Benutzeroberfläche und die Prozessbeschleunigung für ein benutzereingabeobjekt ändern, das in der Shell enthalten ist.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject2"><strong>IInputObject2</strong></a><br /> | Macht eine Methode verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject"><strong>IInputObject</strong></a> erweitert, indem globale Zugriffstasten verarbeitet werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite"><strong>IInputObjectSite</strong></a><br /> | Macht eine Methode verfügbar, die verwendet wird, um Fokusänderungen für ein in der Shell enthaltenes Benutzereingabeobjekt zu kommunizieren.<br /> | 
+| <a href="/windows/desktop/api/inputpanelconfiguration/nn-inputpanelconfiguration-iinputpanelconfiguration"><strong>IInputPanelConfiguration</strong></a><br /> | Stellt Funktionen für Desktop-Apps bereit, um sich für den Fokusverfolgungsmechanismus zu entscheiden, der in Windows Store-Apps verwendet wird.<br /> | 
+| <a href="/windows/desktop/api/inputpanelconfiguration/nn-inputpanelconfiguration-iinputpanelinvocationconfiguration"><strong>IInputPanelInvocationConfiguration</strong></a><br /> | Ermöglicht Windows Store Apps das Deaktivieren des automatischen Aufrufverhaltens.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iiocancelinformation"><strong>IIOCancelInformation</strong></a><br /> | Macht Methoden zum Veröffentlichen einer Abbruchfensternachricht im Prozessthread aus dem Statusdialogfeld verfügbar. <br /> Mit dieser Schnittstelle kann das Statusdialogfeld eine Threadnachricht über <a href="/windows/desktop/api/winuser/nf-winuser-postthreadmessagea"><strong>PostThreadMessage</strong></a> an den Arbeitsthread senden, um seine Vorgänge abzubrechen. Der Arbeitsthread muss die Nachrichtenwarteschlange in regelmäßigen Abständen über <a href="/windows/desktop/api/winuser/nf-winuser-getmessage"><strong>GetMessage,</strong></a> <a href="/windows/desktop/api/winuser/nf-winuser-peekmessagea"><strong>PeekMessage</strong></a> oder <a href="/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjectsex"><strong>MsgWaitForMultipleObjectsEx</strong></a>überprüfen.<br /> Die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iiocancelinformation-setcancelinformation"><strong>IIOCancelInformation::SetCancelInformation-Methode</strong></a> teilt dem Statusdialogfeld mit, welche Thread-ID und welche Nachricht <a href="/windows/desktop/api/winuser/nf-winuser-postthreadmessagea"><strong>PostThreadMessage</strong></a> angezeigt wird, wenn der Benutzer auf <strong>Abbrechen</strong>klickt. Die Thread-ID "0" deaktiviert den Sendevorgang für die Abbruchnachricht.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iitemnamelimits"><strong>IItemNameLimits</strong></a><br /> | Ruft eine Liste gültiger und ungültiger Zeichen oder die maximale Länge eines Namens im Namespace ab. Verwenden Sie diese Schnittstelle für die Validierungsüberprüfung und -übersetzung.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iknownfolder"><strong>IKnownFolder</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung Informationen zu Kategorie, Typ, GUID, PIDL-Wert, Umleitungsfunktionen und Definition eines bekannten Ordners abrufen kann. Sie stellt eine Methode zum erneuten Ausführen des <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem-Objekts</strong></a> eines bekannten Ordners bereit. Außerdem werden Methoden zum Abrufen oder Festlegen des Pfads des bekannten Ordners zur Verfügung gestellt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iknownfoldermanager"><strong>IKnownFolderManager</strong></a><br /> | Macht Methoden verfügbar, die vorhandene bekannte Ordner erstellen, aufzählen oder verwalten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchsourceappusermodelid"><strong>ILaunchSourceAppUserModelId</strong></a><br /> | Stellt eine Methode zum Abrufen einer <a href="appids.md">AppUserModelId bereit.</a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchsourceviewsizepreference"><strong>ILaunchSourceViewSizePreference</strong></a><br /> | Stellt Methoden zum Abrufen von Informationen über die Quellanwendung bereit.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchtargetmonitor"><strong>ILaunchTargetMonitor</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchtargetviewsizepreference"><strong>ILaunchTargetViewSizePreference</strong></a><br /> | Stellt eine Methode zum Abrufen der bevorzugten Ansichtsgröße für ein neues Anwendungsfenster bereit.<br /> | 
+| <a href="/windows/desktop/shell/shell-extensibility-bumper"><strong>IMarkupCallback</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imenupopup"><strong>IMenuPopup</strong></a><br /> | <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imenupopup"><strong>IMenuPopup</strong></a> kann geändert werden oder nicht verfügbar sein.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imodalwindow"><strong>IModalWindow</strong></a><br /> | Macht eine Methode verfügbar, die ein modales Fenster darstellt. Diese Schnittstelle wird im Windows XP Passport-Assistenten verwendet.<br /> | 
+| <a href="imultimonitordockingsite.md"><strong>IMultiMonitorDockingSite</strong></a><br /> | Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows Taskleiste auf einem System mit mehreren Monitoren enthält. <br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-inamedpropertybag"><strong>INamedPropertyBag</strong></a><br /> | Macht Methoden verfügbar, die ein Objekt mit einem angegebenen Eigenschaftenbehälter bereitstellen, in dem das Objekt seine Eigenschaften speichern kann.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-inamedpropertystore"><strong>INamedPropertyStore</strong></a><br /> | Macht Methoden verfügbar, die benannte Eigenschaften abrufen und festlegen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreeaccessible"><strong>INameSpaceTreeAccessible</strong></a><br /> | Macht Methoden verfügbar, die Barrierefreiheitsaktionen für ein Shellelement aus einem Namespacestruktursteuerelement ausführen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl</strong></a><br /> | Macht Methoden verfügbar, die zum Anzeigen und Bearbeiten von Knoten in einer Struktur von Shellelementen verwendet werden.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrol2"><strong>INameSpaceTreeControl2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, die die Anzeigestile von Treeview-Steuerelementen für die Verwendung mit Shell-Namespaceelementen abrufen und festlegen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrolcustomdraw"><strong>INameSpaceTreeControlCustomDraw</strong></a><br /> | Macht Methoden verfügbar, die es dem Benutzer ermöglichen, ein benutzerdefiniertes Namespacestruktur-Steuerelement und dessen Elemente zu zeichnen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontroldrophandler"><strong>INameSpaceTreeControlDropHandler</strong></a><br /> | Macht Handlermethoden für Drag & Drop verfügbar. Wird vom Namespacestruktur-Steuerelement verwendet, um den Client über alle Drag & Drop-Vorgänge innerhalb des Steuerelements zu benachrichtigen. Bietet einem Client die Möglichkeit, einen Ablagevorgang abzufangen und eine eigene Aktion auszuführen oder den gewünschten Ablageeffekt zurückzugeben.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrolevents"><strong>INameSpaceTreeControlEvents</strong></a><br /> | Macht Methoden für die Behandlung von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl-Ereignissen</strong></a> verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrolfoldercapabilities"><strong>INameSpaceTreeControlFolderCapabilities</strong></a><br /> | Macht eine einzelne Methode verfügbar, die den Status der Filterunterstützung <a href="/windows/desktop/properties/props-system-ispinnedtonamespacetree">System.IsPinnedToNameSpaceTree</a> eines Ordners abruft.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalk"><strong>INamespaceWalk</strong></a><br /> | Macht Methoden verfügbar, die einen Namespace von einem angegebenen Stammknoten aus durchgehen. Die Tiefe der Exemplarischen wird angegeben, und es wird ein optionales Array zurückgegeben, das die IDs aller ausgeführten Knoten enthält.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB</strong></a><br /> | Eine Rückrufschnittstelle, die methoden verfügbar machen kann, die mit <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalk"><strong>INamespaceWalk</strong></a>verwendet werden. Nach einer exemplarischen Vorgehensweise mit <strong>INamespaceWalk</strong>wird ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Objekt,</strong></a> das die exemplarischen Knoten darstellt, an die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB-Methoden</strong></a> übergeben. Was diese Methoden mit den Informationen machen, hängt vom Objekt ab, das sie implementiert.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb2"><strong>INamespaceWalkCB2</strong></a><br /> | Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB</strong></a> um eine Methode, die erforderlich ist, um eine Namespace-Exemplarische Vorgehensweise abzuschließen. Diese Methode entfernt daten, die während der Exemplarischen Vorgehensweise gesammelt wurden. <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inewmenuclient"><strong>INewMenuClient</strong></a><br /> | Macht Methoden verfügbar, die die Bearbeitung von Elementen in einem Windows 7-Menü ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/shlobj/nn-shlobj-inewshortcuthooka"><strong>INewShortcutHook</strong></a><br /> | Macht Methoden zum Erstellen einer neuen Internetverknüpfung verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inewwindowmanager"><strong>INewWindowManager</strong></a><br /> | Macht eine Methode verfügbar, die bestimmt, ob ein Fenster, das von einem anderen Fenster gestartet wird, angezeigt oder blockiert werden soll, wodurch die Steuerung von Popupfenstern ermöglicht wird.<br /> | 
+| <a href="/windows/desktop/api/reconcil/nn-reconcil-inotifyreplica"><strong>INotifyReplica</strong></a><br /> | Macht eine Methode verfügbar, die dem Ersteller eines Objekts die Möglichkeit bietet, das Objekt darüber zu benachrichtigen, dass es möglicherweise einer nachfolgenden Abstimmung unterliegt. Der Briefbuchstaben-Reconciler ist für die Implementierung dieser Schnittstelle verantwortlich.<br /> | 
+| <a href="/windows/desktop/api/Objectarray/nn-objectarray-iobjectarray"><strong>IObjectArray</strong></a><br /> | Macht Methoden verfügbar, mit denen Clients auf Elemente in einer Auflistung von -Objekten zugreifen können, die <a href="/windows/desktop/api/unknwn/nn-unknwn-iunknown"><strong>IUnknown</strong></a>unterstützen.<br /> | 
+| <a href="/windows/desktop/api/objectarray/nn-objectarray-iobjectcollection"><strong>IObjectCollection</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Objectarray/nn-objectarray-iobjectarray"><strong>IObjectArray-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, mit denen Clients Objekte hinzufügen und entfernen können, die <a href="/windows/desktop/api/unknwn/nn-unknwn-iunknown"><strong>IUnknown</strong></a> in einer Auflistung unterstützen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectprovider"><strong>IObjectProvider</strong></a><br /> | Macht eine Methode verfügbar, um Objekte zu ermitteln, die mit einer <strong>GUID</strong> aus einem anderen Objekt benannt werden. Im Gegensatz zu <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>QueryService</strong></a> delegiert diese Schnittstelle ihre Funktionalität nicht an andere Objekte.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithappusermodelid"><strong>IObjectWithAppUserModelID</strong></a><br /> | Macht Methoden verfügbar, die es Implementierern eines benutzerdefinierten <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandler"><strong>IAssocHandler-Objekts</strong></a> ermöglichen, Zugriff auf die explizite Anwendungsbenutzermodell-ID (AppUserModelID) bereitzustellen. Anhand dieser Informationen wird bestimmt, ob der Sprungliste einer Anwendung ein bestimmter Dateityp hinzugefügt werden kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithbackreferences"><strong>IObjectWithBackReferences</strong></a><br /> | Stellt eine Methode für die Interaktion mit Rückverweisen bereit, die von einem -Objekt gehalten werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithcancelevent"><strong>IObjectWithCancelEvent</strong></a><br /> | Stellt einen Aufrufer mit einem Ereignis bereit, das vom aufgerufenen Objekt signalisiert wird, um den Abbruch einer Aufgabe zu kennzeichnen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithfolderenummode"><strong>IObjectWithFolderEnumMode</strong></a><br /> | Macht Methoden verfügbar, die Enumerationsmodi eines analysierten Elements abrufen und festlegen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithprogid"><strong>IObjectWithProgID</strong></a><br /> | Macht Methoden verfügbar, die Zugriff auf die progID bieten, die einem Objekt zugeordnet ist.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-iobjectwithpropertykey"><strong>IObjectWithPropertyKey</strong></a><br /> | Macht Methoden zum Abrufen und Festlegen des Eigenschaftsschlüssels verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithselection"><strong>IObjectWithSelection</strong></a><br /> | Macht Methoden verfügbar, die ausgewählte Elemente abrufen oder festlegen, die durch ein Shell-Elementarray dargestellt werden.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iobjmgr"><strong>IObjMgr</strong></a><br /> | Macht Methoden verfügbar, die einem Client das Anfügen oder Entfernen eines Objekts aus einer Auflistung von Objekten ermöglichen, die von einem Serverobjekt verwaltet werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iopencontrolpanel"><strong>IOpenControlPanel</strong></a><br /> | Macht Methoden verfügbar, die den Ansichtszustand des Systemsteuerung, den Pfad einzelner Systemsteuerung Elemente abrufen und entweder die Systemsteuerung selbst oder ein einzelnes Systemsteuerung Element öffnen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iopensearchsource"><strong>IOpenSearchSource</strong></a><br /> | Macht eine Methode verfügbar, um Suchergebnisse aus einer benutzerdefinierten clientseitigen OpenSearch Datenquelle abzurufen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ioperationsprogressdialog"><strong>IOperationsProgressDialog</strong></a><br /> | Macht Methoden zum Abrufen, Festlegen und Abfragen eines Statusdialogfelds verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ipackagedebugsettings"><strong>IPackageDebugSettings</strong></a><br /> | Ermöglicht Debuggerentwicklern, den Lebenszyklus einer Windows Store App zu steuern, z. B. anhalten oder fortsetzen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackageexecutionstatechangenotification"><strong>IPackageExecutionStateChangeNotification</strong></a><br /> | Ermöglicht das Empfangen von Paketstatusänderungsbenachrichtigungen während des Debuggens Windows Store App.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparentanditem"><strong>IParentAndItem</strong></a><br /> | Macht Methoden verfügbar, die das übergeordnete Element und die untergeordnete ID des übergeordneten Elements abrufen und festlegen. <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparentanditem"><strong>IParentAndItem</strong></a> wird in der Regel in IShellItems implementiert, ist jedoch nicht spezifisch für <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem.</strong></a> <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparseandcreateitem"><strong>IParseAndCreateItem</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder"><strong>IPersistFolder</strong></a><br /> | Macht eine Methode verfügbar, die Shellordnerobjekte initialisiert.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder2"><strong>IPersistFolder2</strong></a><br /> | Macht Methoden verfügbar, die Informationen aus Shellordnerobjekten abrufen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder3"><strong>IPersistFolder3</strong></a><br /> | Erweitert die Schnittstellen <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder"><strong>IPersistFolder</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder2"><strong>IPersistFolder2,</strong></a> indem ein Ordnerobjekt die Nichtstandardbehandlung von Ordnerverknüpfungen implementieren kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistidlist"><strong>IPersistIDList</strong></a><br /> | Macht Methoden verfügbar, die zum Beibehalten von Elementbezeichnerlisten verwendet werden.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-ipersistserializedpropstorage"><strong>IPersistSerializedPropStorage</strong></a><br /> | Macht Methoden verfügbar, um serialisierte Eigenschaftsspeicherdaten zur späteren Verwendung zu speichern und persistente Daten in einer neuen Eigenschaftsspeicherinstanz wiederherzustellen.<br /> | 
+| <a href="/windows/desktop/api/Propsys/nn-propsys-ipersistserializedpropstorage2"><strong>IPersistSerializedPropStorage2</strong></a><br /> | Macht Methoden verfügbar, um serialisierte Eigenschaftsspeicherdaten zur späteren Verwendung zu speichern und persistente Daten in einer neuen Eigenschaftsspeicherinstanz wiederherzustellen.<br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/hh707033(v=vs.85)"><strong>IPlaybackManager</strong></a><br /> | Stellt Methoden bereit, mit denen Medienanwendungen mit dem Windows Wiedergabe-Manager kommunizieren können.<br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/hh707034(v=vs.85)"><strong>IPlaybackManagerEvents</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandler"><strong>IPreviewHandler</strong></a><br /> | Macht Methoden für die Anzeige von umfangreichen Vorschauversionen verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe"><strong>IPreviewHandlerFrame</strong></a><br /> | Ermöglicht Vorschauhandlern das Übergeben von Tastenkombinationen an den Host. Diese Schnittstelle ruft eine Liste von Tastenkombinationen ab und weist den Host an, eine Tastenkombination zu verarbeiten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlervisuals"><strong>IPreviewHandlerVisuals</strong></a><br /> | Macht Methoden zum Anwenden von Farb- und Schriftartinformationen auf Vorschauhandler verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewitem"><strong>IPreviewItem</strong></a><br /> | Identifiziert ein Element, das im Vorschaubereich angezeigt wird.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipreviousversionsinfo"><strong>IPreviousVersionsInfo</strong></a><br /> | Macht eine Methode verfügbar, die nach früheren Versionen von Serverdateien oder Ordnern sucht, die zum Zweck der Reversion durch die mit Windows Server 2003 bereitgestellte <em>Schattenkopietechnologie</em> gespeichert werden.<br /> | 
+| <a href="iprivateidentitymanager.md"><strong>IPrivateIdentityManager</strong></a><br /> | 
+| <a href="iprivateidentitymanager2.md"><strong>IPrivateIdentityManager2</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iprofferservice"><strong>IProfferService</strong></a><br /> | Macht einen allgemeinen Mechanismus für -Objekte verfügbar, um anderen Objekten auf demselben Host Dienste anzubieten.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iprogressdialog"><strong>IProgressDialog</strong></a><br /> | Macht Methoden verfügbar, die Optionen für eine Anwendung zum Anzeigen eines Statusdialogfelds bereitstellen. Diese Schnittstelle wird vom Statusdialogfeldobjekt (CLSID_ProgressDialog) exportiert. Dieses Objekt ist eine generische Möglichkeit, einem Benutzer zu zeigen, wie ein Vorgang ausgeführt wird. Sie wird in der Regel beim Löschen, Hochladen, Kopieren, Verschieben oder Herunterladen einer großen Anzahl von Dateien verwendet.<br /> | 
+| <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp"><strong>IPublishedApp</strong></a><br /> | Macht Methoden verfügbar, die Anwendungen zum Hinzufügen/Entfernen von Programmen in Systemsteuerung darstellen. <br /> | 
+| <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp2"><strong>IPublishedApp2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp"><strong>IPublishedApp-Schnittstelle</strong></a> durch Bereitstellen einer zusätzlichen Installationsmethode.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipublishingwizard"><strong>IPublishingWizard</strong></a><br /> | Macht Methoden für die Arbeit mit dem Onlinedruck-Assistenten, dem Webveröffentlichungs-Assistenten und dem Assistenten zum Hinzufügen von Netzwerkorten verfügbar. In Windows Vista unterstützt <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipublishingwizard"><strong>IPublishingWizard</strong></a> nicht mehr den Webveröffentlichungs-Assistenten oder den Onlinedruck-Assistenten.<br /> | 
+| <a href="/windows/desktop/api/shlwapi/nn-shlwapi-iqueryassociations"><strong>IQueryAssociations</strong></a><br /> | Macht Methoden verfügbar, die das Abrufen von Informationen, die in der Registrierung gespeichert sind, in Verbindung mit der Definition eines Dateityps oder Protokolls und der Zuordnung zu einer Anwendung vereinfachen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iquerycancelautoplay"><strong>IQueryCancelAutoPlay</strong></a><br /> | Macht eine Methode verfügbar, die <a href="autorun2k-intro.md">AutoPlay oder AutoRun</a> <a href="autoplay.md">programmgesteuert überschreibt.</a> Auf diese Weise können Sie den Speicherort und den Inhaltstyp anpassen, der beim Einfügen von Medien gestartet wird.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iquerycodepage"><strong>IQueryCodePage</strong></a><br /> | Ruft den numerischen Wert (Codepagebezeichner) der ANSI-Codepage ab und legt den Wert fest.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iquerycontinue"><strong>IQueryContinue</strong></a><br /> | Macht eine Methode verfügbar, die einen einfachen Standardmechanismus für Objekte bietet, um einen Client nach berechtigungen zum Fortsetzen eines Vorgangs zu fragen. Clients von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a>müssen z. B. eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iquerycontinue"><strong>IQueryContinue</strong></a> an die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-show"><strong>IUserNotification::Show-Methode</strong></a> übergeben.<br /> | 
+| <a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iquerycontinuewithstatus"><strong>IQueryContinueWithStatus</strong></a><br /> | Macht Methoden verfügbar, die einen Standardmechanismus für Anmeldeinformationsanbieter zum Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iquerycontinue-querycontinue"><strong>QueryContinue</strong></a> bereitstellen, während sie versuchen, eine Verbindung mit dem Netzwerk herzustellen, um zu bestimmen, ob sie diese Versuche fortsetzen sollten. Anmeldeinformationsanbieter können diese Schnittstelle auch verwenden, um dem Benutzer Nachrichten anzuzeigen, während er versucht, eine Netzwerkverbindung herzustellen.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iqueryinfo"><strong>IQueryInfo</strong></a><br /> | Macht Methoden verfügbar, die von der Shell verwendet werden, um Flags und Infoinfoinformationen für ein Element abzurufen, das sich in einer <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Implementierung</strong></a> befindet. Infotipps werden in der Regel in einem <a href="/windows/desktop/Controls/tooltip-controls">QuickInfo-Steuerelement</a> angezeigt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-irelateditem"><strong>IRelatedItem</strong></a><br /> | Macht Methoden verfügbar, die verknüpfte Elemente mit bestimmten Beziehungen ableiten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iremotecomputer"><strong>IRemoteComputer</strong></a><br /> | Macht eine Methode verfügbar, die eine Namespaceerweiterung auflistet oder initialisiert, wenn sie für ein Remoteobjekt aufgerufen wird. Diese Schnittstelle wird beispielsweise verwendet, um den virtuellen Remotedruckerordner zu initialisieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iresolveshelllink"><strong>IResolveShellLink</strong></a><br /> | Macht eine Methode verfügbar, mit der eine Anwendung anfordern kann, dass ein Shellordnerobjekt einen Link für eines seiner Elemente auflöset.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iresultsfolder"><strong>IResultsFolder</strong></a><br /> | Macht Methoden verfügbar, die Elemente aus einem Datenobjekt enthalten.<br /> Ein <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iresultsfolder"><strong>IResultsFolder</strong></a> ist ein Ordner, der Elemente aus dem ganzen Namespace enthalten und sie dem Benutzer in einem einzelnen Ordner darstellen kann.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-irunnabletask"><strong>IRunnableTask</strong></a><br /> | Eine Freithreadschnittstelle, die von einem -Objekt verfügbar gemacht werden kann, damit Vorgänge für einen Hintergrundthread ausgeführt werden können. Wenn die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iextractimage-getlocation"><strong>IExtractImage::GetLocation-Methode</strong></a> beispielsweise E_PENDING zurückgibt, kann die aufrufende Anwendung das Bild in einem Hintergrundthread extrahieren.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-isearchboxinfo"><strong>ISearchBoxInfo</strong></a><br /> | Macht Methoden verfügbar, mit denen der Aufrufer in ein Suchfeld eingegebene Informationen abrufen kann.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-isearchcontext"><strong>ISearchContext</strong></a><br /> | Macht Methoden verfügbar, die Anpassungsinformationen an die Suchhooks kanal.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isearchfolderitemfactory"><strong>ISearchFolderItemFactory</strong></a><br /> | Macht Methoden verfügbar, die Suchordner erstellen und ändern. Die Set-Methoden werden zuerst aufgerufen, um die Parameter der Suche zu einrichten. Wenn kein -Wert aufgerufen wird, werden stattdessen Standardwerte verwendet. <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-isearchfolderitemfactory-getidlist"><strong>ISearchFolderItemFactory::GetIDList</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-isearchfolderitemfactory-getshellitem"><strong>ISearchFolderItemFactory::GetShellItem</strong></a> geben die beiden Formen der Suche zurück, die von diesen Parametern angegeben werden. <br /> | 
+| <a href="/windows/desktop/api/Thumbcache/nn-thumbcache-isharedbitmap"><strong>ISharedBitmap</strong></a><br /> | Macht speichereffiziente Methoden für den Zugriff auf Bitmaps verfügbar. Diese Schnittstelle wird als schlanker Wrapper um HBITMAP-Objekte verwendet, sodass diese Objekte gezählt und geschützt werden können, damit ihre zugrunde liegenden Daten nicht geändert werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isharingconfigurationmanager"><strong>ISharingConfigurationManager</strong></a><br /> | Macht Methoden verfügbar, die Informationen zu den Standardfreigabeeinstellungen eines Computers für den Ordner <strong>Users</strong> ( ) oder Public ( ) festlegen <code>C:\Users</code> und <strong></strong> <code>C:\Users\Public</code> abrufen. Macht auch eine Reihe von Methoden verfügbar, die die Steuerung der Druckerfreigabe ermöglichen.<br /> | 
+| <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ishellapp"><strong>IShellApp</strong></a><br /> | Macht Methoden verfügbar, die allgemeine Informationen zu einer Anwendung für die Anwendung zum Hinzufügen/Entfernen von Programmen bereitstellen. Sie können sie nicht außerhalb der Anwendung "Programme hinzufügen/entfernen" verwenden. Die von dieser Schnittstelle angegebenen Informationen enthalten eine Liste der unterstützten Verwaltungsaktionen und ob die Anwendung derzeit installiert ist. <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser</strong></a><br /> | Wird von Hosts von Shellansichten implementiert (Objekte, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView implementieren).</strong></a> Macht Methoden verfügbar, die Dienste für die Ansicht bereitstellen, die sie hosten, und andere Objekte, die im Kontext des Explorer-Fensters ausgeführt werden. <br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishellchangenotify"><strong>IShellChangeNotify</strong></a><br /> | Macht eine Methode verfügbar, die eine Shell-Namespaceerweiterung benachrichtigt, wenn sich die ID eines Elements geändert hat.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelldetails"><strong>IShellDetails</strong></a><br /> | Wird von Shellordnern verfügbar gemacht, um ausführliche Informationen zu den Elementen in einem Ordner zu erhalten. Dies sind die gleichen Informationen, die vom Windows-Explorer angezeigt werden, wenn die Ansicht des Ordners auf Details festgelegt ist. Für Windows 2000- und höher-Systeme wird <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelldetails"><strong>IShellDetails</strong></a> durch <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder2"><strong>IShellFolder2 ersetzt.</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellextinit"><strong>IShellExtInit</strong></a><br /> | Macht eine Methode verfügbar, die Shellerweiterungen für Eigenschaftenblätter, Kontextmenüs und Drag & Drop-Handler initialisiert (Erweiterungen, die Verknüpfungsmenüs Während nicht standardmäßiger Drag & Drop-Vorgänge Elemente hinzufügen).<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder</strong></a><br /> | Werden von allen Shell-Namespaceordnerobjekten verfügbar gemacht, werden seine Methoden zum Verwalten von Ordnern verwendet.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder2"><strong>IShellFolder2</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder</strong></a>. Die Methoden stellen eine Vielzahl von Informationen über den Inhalt eines Shellordners zur Verfügung.<br /> | 
+| <a href="ishellfoldersearchable.md"><strong>IShellFolderSearchable</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Shellerweiterung einen durchsuchbaren Namespace bereitstellen kann.<br /> | 
+| <a href="ishellfoldersearchablecallback.md"><strong>IShellFolderSearchableCallback</strong></a><br /> | Macht Rückrufroutinen verfügbar, um den Suchprozess zu überwachen.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishellfolderviewcb"><strong>IShellFolderViewCB</strong></a><br /> | Macht eine Methode verfügbar, die die Kommunikation zwischen Windows Explorer und einer Ordneransicht ermöglicht, die mithilfe des Ordneransichtsobjekts des Systems implementiert wird (das über <a href="/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreateshellfolderview"><strong>SHCreateShellFolderView</strong></a>zurückgegebene <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView-Objekt),</strong></a> sodass die Ordneransicht über Ereignisse benachrichtigt und ihre Ansicht entsprechend ändern kann.<br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual"><strong>IShellFolderViewDual</strong></a><br /> | Macht Methoden verfügbar, die die Ansicht ändern und Elemente im aktuellen Ordner auswählen. <br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual2"><strong>IShellFolderViewDual2</strong></a><br /> | Macht Methoden verfügbar, die die Ansicht ändern und Elemente im aktuellen Ordner auswählen.<br /> | 
+| <a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual3"><strong>IShellFolderViewDual3</strong></a><br /> | Macht Methoden verfügbar, die die aktuelle Ordneransicht ändern.<br /> | 
+| <a href="ishellfolderviewtype.md"><strong>IShellFolderViewType</strong></a><br /> | Macht Methoden verfügbar, die es einem Shell-Ordner ermöglichen, verschiedene Ansichten des Inhalts (unterschiedliche hierarchische Layouts seiner Daten) zu unterstützen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellicon"><strong>IShellIcon</strong></a><br /> | Macht eine Methode verfügbar, die einen Symbolindex für ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Objekt</strong></a> erhält. <br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelliconoverlay"><strong>IShellIconOverlay</strong></a><br /> | Macht Methoden verfügbar, die von einer Namespaceerweiterung verwendet werden, um Symbolüberlagerungen für die objekte anzugeben, die sie enthält.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelliconoverlayidentifier"><strong>IShellIconOverlayIdentifier</strong></a><br /> | Macht Methoden verfügbar, die die gesamte Kommunikation zwischen Symbolüberlagerungshandlern und der Shell verarbeiten.<br /> | 
+| <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedataabort"><strong>IShellImageDataAbort</strong></a><br /> | Macht eine einzelne Methode verfügbar, die zum Abbrechen von <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedata"><strong>IShellImageData-Prozessen verwendet</strong></a> wird.<br /> | 
+| <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedatafactory"><strong>IShellImageDataFactory</strong></a><br /> | Macht Methoden verfügbar, die <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedata"><strong>IShellImageData-Instanzen</strong></a> basierend auf verschiedenen Bildquellen erstellen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a><br /> | Macht Methoden verfügbar, die Informationen zu einem Shellelement abrufen. <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a> sind die bevorzugten Darstellungen von Elementen in jedem neuen Code.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a><br /> | Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem um</strong></a> Methoden, die verschiedene Eigenschaftswerte des Elements abrufen. <strong>IShellItem</strong> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a> sind die bevorzugten Darstellungen von Elementen in jedem neuen Code.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemarray"><strong>IShellItemArray</strong></a><br /> | Macht Methoden verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>Shellelementarrays erstellen und</strong></a> bearbeiten.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemfilter"><strong>IShellItemFilter</strong></a><br /> | Wird von einem Client verfügbar gemacht, um anzugeben, wie die Enumeration eines <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>Shellelements durch</strong></a> eine Serveranwendung gefiltert werden soll.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemimagefactory"><strong>IShellItemImageFactory</strong></a><br /> | Macht eine Methode verfügbar, um Symbole oder Miniaturansichten für Shellelemente zurück zu geben. Wenn für das angeforderte Element keine Miniaturansicht oder kein Symbol verfügbar ist, kann von der Shell ein Symbol pro Klasse bereitgestellt werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemresources"><strong>IShellItemResources</strong></a><br /> | Macht Methoden zum Bearbeiten und Abfragen von Shellelementressourcen verfügbar.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary"><strong>IShellLibrary</strong></a><br /> | Macht Methoden zum Erstellen und Verwalten von Bibliotheken verfügbar.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka"><strong>IShellLink</strong></a><br /> | Macht Methoden verfügbar, die Shelllinks erstellen, ändern und auflösen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllinkdatalist"><strong>IShellLinkDataList</strong></a><br /> | Macht Methoden verfügbar, mit denen eine Anwendung zusätzliche Datenblöcke an einen <a href="/windows/desktop/shell/links">Shelllink anfügen kann.</a> Diese Methoden fügen Datenblöcke hinzu, kopieren oder entfernen sie.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu"><strong>IShellMenu</strong></a><br /> | Macht Methoden verfügbar, die mit Shellmenüs interagieren, z. B. das <strong>Startmenü</strong> und das <strong>Menü Favoriten.</strong><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenucallback"><strong>IShellMenuCallback</strong></a><br /> | Eine Rückrufschnittstelle, die eine Methode verfügbar macht, die Nachrichten von einem Menüband empfängt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext"><strong>IShellPropSheetExt</strong></a><br /> | Macht Methoden verfügbar, die es einem Eigenschaftenblatthandler ermöglichen, Seiten im Eigenschaftenblatt hinzuzufügen oder zu ersetzen, das für ein Dateiobjekt angezeigt wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl/nn-shobjidl-ishellrundll"><strong>IShellRunDll</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a><br /> | Macht Methoden verfügbar, die eine Ansicht im Windows Explorer- oder Ordnerfenstern anzeigen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview2"><strong>IShellView2</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a>.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ishellview3"><strong>IShellView3</strong></a><br /> | Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview2"><strong>IShellView2,</strong></a> indem eine Methode zum Ersetzen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellview2-createviewwindow2"><strong>IShellView2::CreateViewWindow2 zur Verfügung stellt.</strong></a><br /> | 
+| <a href="/windows/desktop/api/Exdisp/nn-exdisp-ishellwindows"><strong>IShellWindows</strong></a><br /> | Ermöglicht den Zugriff auf die Auflistung geöffneter Shellfenster.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istartmenupinnedlist"><strong>IStartMenuPinnedList</strong></a><br /> | Macht eine Methode verfügbar, die eine Anwendungsverknüpfung über das <strong>Startmenü oder</strong> die Taskleiste entpinnt.<br /> | 
+| <a href="nn-shobjidl-istorageprovidercopyhook.md"><strong>IStorageProviderCopyHook</strong></a><br /> | Macht eine Methode verfügbar, die bestimmt, ob die Shell einen Ordner im Synchronisierungsstamm eines Cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.<br /> | 
+| <a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderhandler"><strong>IStorageProviderHandler</strong></a><br /> | Ruft den <a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderpropertyhandler"><strong>IStorageProviderPropertyHandler ab,</strong></a> der einer bestimmten Datei oder einem bestimmten Ordner zugeordnet ist.<br /> | 
+| <a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderpropertyhandler"><strong>IStorageProviderPropertyHandler</strong></a><br /> | Stellt eine Auflistung von Eigenschaften, die einer Datei oder einem Ordner zugeordnet sind.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istreamasync"><strong>IStreamAsync</strong></a><br /> | Macht Methoden zum Verwalten von Eingabe/Ausgabe (E/A) für einen asynchronen Stream verfügbar. <br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istreamunbufferedinfo"><strong>IStreamUnbufferedInfo</strong></a><br /> | Macht eine Methode verfügbar, die die Sektorgröße als Hilfe bei der Byteausrichtung bestimmt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isuspensiondependencymanager"><strong>ISusseitigDependencyManager</strong></a><br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflict"><strong>ISyncMgrConflict</strong></a><br /> | Macht Methoden verfügbar, die Informationen zu einem Konflikt bereitstellen, der aus einem Konfliktspeicher abgerufen wurde, und ermöglicht die Lösung des Konflikts.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>ISyncMgrConflictFolder</strong></a><br /> | Macht eine Methode verfügbar, die die Konflikt-ID-Liste für ein Konfliktobjekt ruft.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictitems"><strong>ISyncMgrConflictItems</strong></a><br /> | Macht Methoden verfügbar, die Konfliktelementdaten und die Elementanzahl erhalten.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictpresenter"><strong>ISyncMgrConflictPresenter</strong></a><br /> | Macht eine Methode verfügbar, die einen Konflikt für den Benutzer ausdrungen hat.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictresolutionitems"><strong>ISyncMgrConflictResolutionItems</strong></a><br /> | Macht Methoden verfügbar, die Elementinformationen und Elementanzahl erhalten.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictresolveinfo"><strong>ISyncMgrConflictResolveInfo</strong></a><br /> | Macht Methoden verfügbar, die Informationen zur Konfliktlösung des Synchronisierungs-Managers erhalten und festlegen.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictstore"><strong>ISyncMgrConflictStore</strong></a><br /> | Macht Methoden verfügbar, mit denen ein Handler Konflikte bereitstellen kann, die im Ordner "Conflicts" angezeigt werden.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrcontrol"><strong>ISyncMgrControl</strong></a><br /> | Macht Methoden verfügbar, die es einer Anwendung oder einem Handler ermöglichen, eine Synchronisierung zu starten oder zu beenden, Synchronisierungscenter über Änderungen an der Gruppe von Handlern oder Elementen zu benachrichtigen oder über Änderungen an Eigenschaftswerten zu benachrichtigen.<br /> | 
+| <a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems"><strong>ISyncMgrEnumItems</strong></a><br /> | Macht Methoden verfügbar, die ein Array von <a href="/windows/win32/api/mobsync/ns-mobsync-syncmgritem"><strong>SYNCMCLIENTTEM-Strukturen</strong></a> aufzählen. Jede dieser Strukturen stellt Informationen zu einem Element zur Verfügung, das synchronisiert werden kann. <a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems"><strong>ISyncMgrEnumItems</strong></a> verfügt über die gleichen Methoden wie alle Standard-Enumeratorschnittstellen: Next, Skip, Reset und Clone.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrevent"><strong>ISyncMgrEvent</strong></a><br /> | Macht Methoden verfügbar, die Daten aus einem Ereignisspeicher abrufen. Ein Ereignisspeicher ermöglicht Synchronisierungscenter, einen Enumerator aller Ereignisse im Speicher abzurufen und einzelne Ereignisse abzurufen.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgreventlinkuioperation"><strong>ISyncMgrEventLinkUIOperation</strong></a><br /> | Stellt eine Methode zur Wahl, die aufgerufen wird, wenn im Ordner mit den Synchronisierungsergebnissen auf Ereignislinks geklickt wird.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgreventstore"><strong>ISyncMgrEventStore</strong></a><br /> | Macht Methoden verfügbar, mit denen ein Handler einen eigenen Ereignisspeicher bereitstellen und seine eigenen Synchronisierungsereignisse verwalten kann, anstatt den Standardereignisspeicher Synchronisierungscenter verwenden. Diese Ereignisse werden im Ordner Synchronisierungsergebnisse angezeigt.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandler"><strong>ISyncMgrHandler</strong></a><br /> | Macht Methoden verfügbar, aus denen die primäre Schnittstelle von einem Synchronisierungshandler implementiert wird. Synchronisierungscenter erstellt über diese Schnittstelle eine Instanz des Handlers, um Eigenschaften zu erhalten, Synchronisierungselemente aufzählen und den Zustand zu ändern. Synchronisierungscenter erstellt eine separate Instanz des Handlers in einem separaten Thread, um eine Synchronisierung oder einen Benutzeroberflächenvorgang durchzuführen.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandlercollection"><strong>ISyncMgrHandlerCollection</strong></a><br /> | Macht Methoden verfügbar, die einen Enumerator von Synchronisierungshandler-IDs bereitstellen und diese Synchronisierungshandler instanziieren.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandlerinfo"><strong>ISyncMgrHandlerInfo</strong></a><br /> | Macht Methoden verfügbar, die es einem Handler ermöglichen, Eigenschaften- und Zustandsinformationen für Synchronisierungscenter.<br /> | 
+| <a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrregister"><strong>ISyncMgrRegister</strong></a><br /> | Macht Methoden verfügbar, damit sich eine Anwendung beim Synchronisierungs-Manager registrieren kann. Dies kann entweder über die <a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrregister"><strong>ISyncMgrRegister-Schnittstelle</strong></a> oder durch direkte Registrierung in der Registrierung erreicht werden.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrresolutionhandler"><strong>ISyncMgrResolutionHandler</strong></a><br /> | Macht Methoden verfügbar, die Synchronisierungskonflikte verwalten. Implementieren Sie diese Schnittstelle, um einen Synchronisierungskonflikthandler zu erstellen. Die Konfliktlösungs-Benutzeroberfläche (UI) wird diese Schnittstelle aufrufen, um den Konflikt zu lösen, der dem Benutzer angezeigt wird. <br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrschedulewizarduioperation"><strong>ISyncMgrScheduleWizardUIOperation</strong></a><br /> | Macht eine Methode verfügbar, mit der ein Handler den Synchronisierungszeitplan-Assistenten für den Handler anzeigen kann.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsessioncreator"><strong>ISyncMgrSessionCreator</strong></a><br /> | Macht eine einzelne Methode verfügbar, mit der ein Handler oder eine externe Anwendung Synchronisierungscenter, dass die Synchronisierung begonnen hat, sowie den Fortschritt und Ereignisse melden kann.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsynccallback"><strong>ISyncMgrSyncCallback</strong></a><br /> | Macht Methoden verfügbar, die es einem Synchronisierungsprozess ermöglichen, Den Fortschritt und Ereignisse an Synchronisierungscenter zu melden oder abzufragen, ob der Prozess abgebrochen wurde.<br /> | 
+| <a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize"><strong>ISyncMgrSynchronize</strong></a><br /> | Macht Methoden verfügbar, die es der registrierten Anwendung oder dem registrierten Dienst ermöglichen, Benachrichtigungen vom Synchronisierungs-Manager zu empfangen.<br /> | 
+| <a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback"><strong>ISyncMgrSynchronizeCallback</strong></a><br /> | Macht Methoden verfügbar, die den Synchronisierungsprozess verwalten.<br /> | 
+| <a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronizeinvoke"><strong>ISyncMgrSynchronizeInvoke</strong></a><br /> | Macht Methoden verfügbar, mit denen eine registrierte Anwendung den Synchronisierungs-Manager aufrufen kann, um Elemente zu aktualisieren.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncitem"><strong>ISyncMgrSyncItem</strong></a><br /> | Macht Methoden verfügbar, die auf ein einzelnes Synchronisierungselement wirken und Informationen daraus abrufen, sodass Handler Synchronisierungselemente als unabhängige Objekte verwalten können.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncitemcontainer"><strong>ISyncMgrSyncItemContainer</strong></a><br /> | Macht Methoden verfügbar, die Handlern Informationen zu den elementen bereitstellen, die sie enthalten.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsynciteminfo"><strong>ISyncMgrSyncItemInfo</strong></a><br /> | Macht Methoden verfügbar, die Eigenschaften- und Zustandsinformationen für ein einzelnes Synchronisierungselement bereitstellen.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncresult"><strong>ISyncMgrSyncResult</strong></a><br /> | Macht eine Methode verfügbar, mit der Anwendungen, die <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrcontrol"><strong>ISyncMgrControl</strong></a> aufrufen, das Ergebnis eines <a href="/windows/desktop/api/Syncmgr/nf-syncmgr-isyncmgrcontrol-starthandlersync"><strong>ISyncMgrControl::StartHandlerSync-</strong></a> oder <a href="/windows/desktop/api/Syncmgr/nf-syncmgr-isyncmgrcontrol-startitemsync"><strong>ISyncMgrControl::StartItemSync-Aufrufs</strong></a> erhalten können.<br /> | 
+| <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgruioperation"><strong>ISyncMgrUIOperation</strong></a><br /> | Macht eine Methode verfügbar, mit der ein Synchronisierungshandler oder ein Synchronisierungselement ein Benutzeroberflächenobjekt anzeigen kann, wenn dies angefordert wird, indem Synchronisierungscenter.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist"><strong>ITaskbarList</strong></a><br /> | Macht Methoden verfügbar, die die Taskleiste steuern. Sie können Elemente auf der Taskleiste dynamisch hinzufügen, entfernen und aktivieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist2"><strong>ITaskbarList2</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist"><strong>ITaskbarList-Schnittstelle,</strong></a> indem eine Methode verfügbar wird, um ein Fenster als Vollbildanzeige zu markieren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist3"><strong>ITaskbarList3</strong></a><br /> | Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist2"><strong>ITaskbarList2,</strong></a> indem Methoden verfügbar gemacht werden, die die vereinheitlichte Funktion zum Starten und Wechseln der Taskleistenschaltfläche unterstützen, die in Windows 7 hinzugefügt wurde. Diese Funktionalität umfasst Miniaturansichtsdarstellungen und Switchziele basierend auf einzelnen Registerkarten in einer Registerkartenanwendung, Miniaturansichtssymbolleisten, Benachrichtigungs- und Statusüberlagerungen sowie Statusindikatoren.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist4"><strong>ITaskbarList4</strong></a><br /> | Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist3"><strong>ITaskbarList3</strong></a> durch die Bereitstellung einer Methode, mit der der Aufrufer zwei Eigenschaftswerte für die Miniaturansicht und das Peekfeature der Registerkarte steuern kann.<br /> | 
+| <a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailcache"><strong>IThumbnailCache</strong></a><br /> | Macht Methoden für einen Cache für Systemminiaturansichten verfügbar, die von mehreren Anwendungen gemeinsam genutzt werden.<br /> | 
+| <a href="/windows/desktop/api/thumbcache/nn-thumbcache-ithumbnailcacheprimer"><strong>IThumbnailCachePrimer</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ithumbnailhandlerfactory"><strong>IThumbnailHandlerFactory</strong></a><br /> | Macht eine Methode zum Abrufen des Miniaturansichtshandlers eines Elements verfügbar. Implementieren Sie diese Schnittstelle, wenn Sie angeben möchten, welcher Extraktor für eine untergeordnete IDList verwendet wird.<br /> | 
+| <a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailprovider"><strong>IThumbnailProvider</strong></a><br /> | Macht eine Methode zum Abrufen eines Miniaturbilds verfügbar und soll für Miniaturansichtshandler implementiert werden. Das Objekt, das diese Schnittstelle implementiert, muss auch <a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream"><strong>IInitializeWithStream implementieren.</strong></a> <br /> | 
+| <a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailsettings"><strong>IThumbnailSettings</strong></a><br /> | Stellt eine Methode zur Verfügung, mit der ein Miniaturansichtsanbieter den Benutzerkontext einer Miniaturansichtsanforderung bestimmen kann.<br /> | 
+| <a href="/windows/desktop/api/thumbnailstreamcache/nn-thumbnailstreamcache-ithumbnailstreamcache"><strong>IThumbnailStreamCache</strong></a><br /> | Ruft den Miniaturansichtsstream ab oder legt diese fest. Diese Schnittstelle ist nur für die interne Verwendung und kann nur von der Anwendung photos aufgerufen werden.<br /> | 
+| <a href="/windows/desktop/api/Shdeprecated/nn-shdeprecated-itrackshellmenu"><strong>ITrackShellMenu</strong></a><br /> | Macht Methoden verfügbar, die die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu"><strong>IShellMenu-Schnittstelle</strong></a> erweitern, indem sie die Möglichkeit bieten, Symbolleistenschaltflächen mit einem Menü zu koordinieren und ein Popupmenü anzuzeigen.<br /> | 
+| <a href="/windows/desktop/api/Imagetranscode/nn-imagetranscode-itranscodeimage"><strong>ITranscodeImage</strong></a><br /> | Macht eine Methode verfügbar, die die Konvertierung in JPEG- oder BMP-Bildformate (Bitmap) von einem beliebigen Bildtyp ermöglicht, der von Windows. <br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferadvisesink"><strong>ITransferAdviseSink</strong></a><br /> | Macht Methoden verfügbar, die Statussammlungs- und Fehlerinformationen unterstützen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferdestination"><strong>ITransferDestination</strong></a><br /> | Macht Methoden verfügbar, die ein Zielshellelement für einen Kopier- oder Verschieben-Vorgang erstellen. Diese Schnittstelle wird bereitgestellt, um mehr Kontrolle über Dateivorgänge zu ermöglichen, indem eine <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itransferdestination-advise"><strong>ITransferDestination::Advise-Methode bereitgestellt</strong></a> wird.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfermediumitem"><strong>ITransferMediumItem</strong></a><br /> | Wird von einer Kopier-Engine verwendet, um das Element zu erhalten, für das <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>QueryInterface</strong></a> zum Zurückgeben eines Zeigers auf die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferdestination"><strong>Schnittstelle ITransferDestination</strong></a> oder die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfersource"><strong>Schnittstelle ITransferSource verwendet werden soll.</strong></a> Diese Schnittstellen können für Kopier-, Verschieben- oder Löschvorgänge abgefragt und aufzählt werden.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfersource"><strong>ITransferSource</strong></a><br /> | Macht Methoden zum Bearbeiten von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a>verfügbar, einschließlich Kopieren, Verschieben, Wiederverarbeiten und anderen. Diese Schnittstelle wird angeboten, um mehr Kontrolle über Dateivorgänge zu bieten, indem eine <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itransfersource-advise"><strong>ITransferSource::Advise-Methode zur Verfügung</strong></a> steht.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-itraydeskband"><strong>ITrayDeskBand</strong></a><br /> | Macht Methoden verfügbar, die Deskbands anzeigen, ausblenden und abfragen.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iupdateidlist"><strong>IUpdateIDList</strong></a><br /> | Stellt eine Methode zum Aktualisieren der <a href="/windows/desktop/api/Shtypes/ns-shtypes-itemidlist"><strong>ITEMIDLIST</strong></a> des untergeordneten Elements eines Ordnerobjekts zur Auswahl.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iurlsearchhook"><strong>IURLSearchHook</strong></a><br /> | Macht eine Methode verfügbar, die vom Browser verwendet wird, um die Adresse eines unbekannten URL-Protokolls zu übersetzen.<br /> | 
+| <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iurlsearchhook2"><strong>IURLSearchHook2</strong></a><br /> | Macht eine Methode verfügbar, die vom Browser verwendet wird, um die Adresse eines unbekannten URL-Protokolls mithilfe eines Suchkontextobjekts zu übersetzen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iuseraccountchangecallback"><strong>IUserAccountChangeCallback</strong></a><br /> | Macht eine Methode verfügbar, die aufgerufen wird, wenn das Bild geändert wird, das ein Benutzerkonto darstellt.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a><br /> | Macht Methoden verfügbar, die Benachrichtigungsinformationen festlegen und diese Benachrichtigung dann dem Benutzer in einer Sprechblase anzeigen, die in Verbindung mit dem Infobereich der Taskleiste angezeigt wird. <br /><blockquote>[!Note]<br /><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a> unterscheidet sich von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a> nur in der <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>Show-Methode,</strong></a> die einen zusätzlichen Parameter für eine Rückrufschnittstelle für die Kommunikation mit der Benachrichtigung hinzufügt. Andernfalls sind die beiden Schnittstellen in Form und Funktion identisch. CLSID_UserNotification implementiert beide Versionen von <strong>Als Überladung</strong> anzeigen.</blockquote><br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a><br /> | Macht Methoden verfügbar, die Benachrichtigungsinformationen festlegen und diese Benachrichtigung dann dem Benutzer in einer Sprechblase anzeigen, die in Verbindung mit dem Infobereich der Taskleiste angezeigt wird. <br /><blockquote>[!Note]<br /><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a> erbt nicht von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a>. <strong>IUserNotification2</strong> unterscheidet sich von <strong>IUserNotification</strong> nur in der <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>Show-Methode,</strong></a> die einen zusätzlichen Parameter für eine Rückrufschnittstelle für die Kommunikation mit der Benachrichtigung hinzufügt. Andernfalls sind die beiden Schnittstellen in Form und Funktion identisch. CLSID_UserNotification implementiert beide Versionen von <strong>Als Überladung</strong> anzeigen.</blockquote><br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotificationcallback"><strong>IUserNotificationCallback</strong></a><br /> | Macht eine Methode für die Verarbeitung eines Mausklicks oder Kontextmenüzugriffs in einer Benachrichtigungssprechblase verfügbar. Wird mit <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>IUserNotification2::Show verwendet.</strong></a><br /> | 
+| <a href="/windows/desktop/api/shobjidl/nn-shobjidl-iusetobrowseitem"><strong>IUseToBrowseItem</strong></a><br /> | Sucht das Element, das beim Navigieren zu diesem Element verwendet werden soll.<br /> | 
+| <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iviewstateidentityitem"><strong>IViewStateIdentityItem</strong></a><br /> | Stellt ein kanonisches Persistenzelement, ein Element, für das Ansichtsanpassungen gespeichert werden, zur Erinnerung.<br /> | 
+| <a href="/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager"><strong>IVirtualDesktopManager</strong></a><br /> | Macht Methoden verfügbar, die es einer Anwendung ermöglichen, mit Gruppen von Fenstern zu interagieren, die virtuelle Arbeitsbereiche bilden.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ivisualproperties"><strong>IVisualProperties</strong></a><br /> | Macht Methoden verfügbar, die visuelle Eigenschaften festlegen und erhalten.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwebwizardextension"><strong>IWebWizardExtension</strong></a><br /> | Erweitert die <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardextension"><strong>IWizardExtension-Schnittstelle,</strong></a> indem Methoden verfügbar sind, um die anfängliche URL der Assistentenerweiterung und eine bestimmte URL im Falle eines Fehlers zu festlegen.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardextension"><strong>IWizardExtension</strong></a><br /> | Wird von Assistenten wie dem Webveröffentlichungs-Assistenten und dem Assistenten für die Onlinedruckbestellung verwendet, die serverseitige Inhaltsseiten hosten. Diese Schnittstelle macht Methoden verfügbar, um unterstützte Erweiterungsseiten anzugeben und zu und von diesen Seiten zu navigieren.<br /> | 
+| <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardsite"><strong>IWizardSite</strong></a><br /> | Macht Methoden verfügbar, die von einer Assistentenerweiterung verwendet werden, um durch die Rahmen zwischen sich selbst und dem Rest des Assistenten zu navigieren.<br /> | 
+| <a href="taskcompletionclient.md"><strong>TaskCompletionClient</strong></a><br /> | Aktiviert die Aufgabenerledigung. <br /> | 
 
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idestinationstreamfactory"><strong>IDestinationStreamFactory</strong></a><br/></td>
-<td>Macht eine Methode zum manuellen Kopieren eines Streams oder einer Datei verfügbar, bevor Änderungen an Eigenschaften angewendet werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idisplayitem"><strong>IDisplayItem</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die eine Version des aktuellen Elements finden, die zum Abrufen von Anzeigeeigenschaften wie dem Elementnamen verwendet werden soll, die auf der Benutzeroberfläche angezeigt werden. Wird von den Dialogfeldern der Kopier-Engine verwendet, um der Benutzeroberfläche ein geeignetes Anzuzeigende Element bereitzustellen. Wenn keine andere Version gefunden wird, wird das aktuelle Element verwendet.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die das Andockfensterobjekt über Änderungen benachrichtigen, einschließlich Anzeigen, Ausblenden und bevorstehendem Entfernen. Diese Schnittstelle wird von Fensterobjekten implementiert, die innerhalb des Rahmenbereichs eines Windows Explorer-Fensters angedockt werden können.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj/nn-shlobj-idockingwindowframe"><strong>IDockingWindowFrame</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die das Hinzufügen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow-Objekten</strong></a> zu einem Frame unterstützen. Wird vom Browser implementiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-idockingwindowsite"><strong>IDockingWindowSite</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die den Rahmenbereich für ein oder mehrere <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idockingwindow"><strong>IDockingWindow-Objekte</strong></a> verwalten. Diese Schnittstelle wird vom Browser implementiert und ähnelt der <a href="/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow"><strong>IOleInPlaceUIWindow-Schnittstelle.</strong></a><br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idragsourcehelper"><strong>IDragSourceHelper</strong></a><br/></td>
-<td>Wird von der Shell verfügbar gemacht, damit eine Anwendung das Bild angeben kann, das während eines Drag & Drop-Vorgangs der Shell angezeigt wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idragsourcehelper2"><strong>IDragSourceHelper2</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idragsourcehelper"><strong>IDragSourceHelper</strong></a>Funktionen hinzufügt. This method sets the characteristics of a drag-and-drop operation over an <strong>IDragSourceHelper</strong> object.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-idroptargethelper"><strong>IDropTargetHelper</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen Ablageziele ein Ziehbild anzeigen können, während sich das Bild über dem Zielfenster befindet.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-idynamichwhandler"><strong>IDynamicHWHandler</strong></a><br/></td>
-<td>Wird von AutoPlay aufgerufen. Macht Methoden verfügbar, die dynamische Informationen zu einem registrierten Handler abrufen, bevor sie dem Benutzer angezeigt werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumassochandlers"><strong>IEnumAssocHandlers</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Enumeration einer Auflistung von Handlern zulässt, die bestimmten Dateinamenerweiterungen zugeordnet sind.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ienumerableview"><strong>IEnumerableView</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die den Inhalt einer Sicht aufzählen und nach Abschluss der Enumeration Benachrichtigungen vom Rückruf empfangen. Mit dieser Schnittstelle können Clients einer Ansicht versuchen, die Liste der Ordnerinhalte der Ansicht freizugeben.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumexplorercommand"><strong>IEnumExplorerCommand</strong></a><br/></td>
-<td>Wird von einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a>bereitgestellt. Diese Schnittstelle enthält die Enumeration der Befehle, die in der Befehlsleiste angezeigt werden sollen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumextrasearch"><strong>IEnumExtraSearch</strong></a><br/></td>
-<td>Ein standardmäßiger OLE-Enumerator, der von einem Client verwendet wird, um die verfügbaren Suchobjekte für einen Ordner zu bestimmen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumfullidlist"><strong>IEnumFullIDList</strong></a><br/></td>
-<td>Macht einen Standardsatz von Methoden verfügbar, die die Zeiger auf Elementbezeichnerlisten (PIDLs) der Elemente in einem Shellordner auflisten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist"><strong>IEnumIDList</strong></a><br/></td>
-<td>Macht einen Standardsatz von Methoden verfügbar, die zum Auflisten der PIDLs der Elemente in einem Shellordner verwendet werden. Wenn die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects"><strong>IShellFolder::EnumObjects-Methode</strong></a> eines Ordners aufgerufen wird, erstellt er ein Enumerationsobjekt und übergibt einen Zeiger auf die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumidlist"><strong>IEnumIDList-Schnittstelle</strong></a> des Objekts zurück an die aufrufende Anwendung.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumobjects"><strong>IEnumObjects</strong></a><br/></td>
-<td>Macht Methoden zum Aufzählen unbekannter Objekte verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ienumpublishedapps"><strong>IEnumPublishedApps</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die veröffentlichte Anwendungen aufzählen, um Programme im Systemsteuerung hinzuzufügen/zu entfernen. Das Objekt, das diese Schnittstelle verfügbar macht, wird über <a href="/windows/desktop/api/Shappmgr/nf-shappmgr-iapppublisher-enumapps"><strong>IAppPublisher::EnumApps</strong></a>angefordert. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ienumreadycallback"><strong>IEnumReadyCallback</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es der Sicht ermöglichen, die Implementierung zu benachrichtigen, wenn die Enumeration abgeschlossen ist. Die Sicht ruft diese Methode auf, um dem Implementierer mitzuteilen, dass die Enumeration über <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-ienumerableview-createenumidlistfromcontents"><strong>IEnumerableView::CreateEnumIDListFromContents</strong></a>abgerufen werden kann. Der Rückruf ermöglicht es dem Implementierer, die Ansichtenenumeration freizugeben.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumresources"><strong>IEnumResources</strong></a><br/></td>
-<td>Macht Ressourcenenumerationsmethoden verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumshellitems"><strong>IEnumShellItems</strong></a><br/></td>
-<td>Macht die Enumeration von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem-Schnittstellen</strong></a> verfügbar. Diese Schnittstelle wird in der Regel durch Aufrufen der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ienumshellitems"><strong>IEnumShellItems-Methode</strong></a> abgerufen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrconflict"><strong>IEnumSyncMgrConflict</strong></a><br/></td>
-<td>Macht Konfliktenumerationsmethoden verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrevents"><strong>IEnumSyncMgrEvents</strong></a><br/></td>
-<td>Macht Enumerationsmethoden für Synchronisierungsereignisse verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-ienumsyncmgrsyncitems"><strong>IEnumSyncMgrSyncItems</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die vom Handler verwalteten Synchronisierungselementobjekte aufzählen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>IExecuteCommand</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die einen bestimmten Zustand oder Parameter für das Befehlsverb festlegen, sowie eine Methode zum Aufrufen dieses Verbs.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommandapplicationhostenvironment"><strong>IExecuteCommandApplicationHostEnvironment</strong></a><br/></td>
-<td>Stellt eine einzelne Methode bereit, mit der eine Anwendung bestimmen kann, ob sich ihr Host im Desktopmodus oder im immersiven Modus befindet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommandhost"><strong>IExecuteCommandHost</strong></a><br/></td>
-<td>Stellt eine Methode bereit, die einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand-basierten</strong></a>Shellverbenhandler ermöglicht, den Benutzeroberflächenmodus der Hostkomponente abzufragen, von der aus die Anwendung aufgerufen wurde.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser</strong></a><br/></td>
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser</strong></a> ist ein Browserobjekt, das entweder navigiert werden kann oder eine Ansicht eines Datenobjekts hosten kann. Als Browserobjekt mit vollem Funktionsumfang unterstützt es auch ein automatisches Reiseprotokoll.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowserevents"><strong>IExplorerBrowserEvents</strong></a><br/></td>
-<td>Macht Methoden für die Benachrichtigung über Navigations- und Anzeigeerstellungsereignisse im Explorer-Browser verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand"><strong>IExplorerCommand</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Befehlsdarstellung abrufen, Unterbefehle aufzählen oder den Befehl aufrufen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandprovider"><strong>IExplorerCommandProvider</strong></a><br/></td>
-<td>Macht Methoden zum Erstellen von Explorer-Befehlen und Befehlsenumeratoren verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate"><strong>IExplorerCommandState</strong></a><br/></td>
-<td>Macht eine einzelne Methode verfügbar, die das Abrufen des Befehlszustands ermöglicht.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility</strong></a><br/></td>
-<td>Wird in Windows Explorer von einer <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Implementierung</strong></a> verwendet, um vorschläge für die Ansicht zu geben, welche Bereiche sichtbar sind. Darüber hinaus kann ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser"><strong>IExplorerBrowser-Host</strong></a> diese Schnittstelle verwenden, um Informationen zur Sichtbarkeit des Bereichs bereitzustellen. Der Host sollte <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>QueryService</strong></a> mit <strong>SID_ExplorerPaneVisibility</strong> als Dienst-ID implementieren. Der Host muss sich in der Standortkette befinden. <br/> Die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility-Implementierung</strong></a> wird aus dem Shell-Ordner abgerufen. Der Shell-Ordner wird wiederum aus der Ansicht abgerufen. Eine Namespaceerweiterung kann eine benutzerdefinierte Ansicht<a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>(IShellView)</strong></a>bereitstellen, anstatt das Systemordneransichtsobjekt (DefView) zu verwenden. In diesem Fall muss die <strong>IShellView-Implementierung</strong> eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifolderview-getfolder"><strong>IFolderView::GetFolder</strong></a> enthalten, um das <strong>IExplorerPaneVisibility-Objekt</strong> zurückzugeben.<br/> Eine Namespaceerweiterung kann eine benutzerdefinierte Ansicht bereitstellen, indem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a> selbst implementiert wird, anstatt das Systemordneransichtsobjekt (DefView) zu verwenden. In diesem Fall muss die <strong>IShellView-Implementierung</strong> eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifolderview-getfolder"><strong>IFolderView::GetFolder</strong></a> enthalten, um <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerpanevisibility"><strong>IExplorerPaneVisibility</strong></a> verwenden zu können.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iextracticona"><strong>IExtractIcon</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen ein Client das Symbol abrufen kann, das einem der -Objekte in einem Ordner zugeordnet ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage"><strong>IExtractImage</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein Miniaturbild aus einem Shellordner anfordern.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage2"><strong>IExtractImage2</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iextractimage"><strong>IExtractImage</strong></a>.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ergebnisse aus dem allgemeinen Dateidialogfeld initialisieren, anzeigen und abrufen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialog2"><strong>IFileDialog2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, mit denen der Aufrufer einen bestimmten, eingeschränkten Speicherort benennen kann, der im allgemeinen Dateidialogfeld durchsucht werden kann, und um alternativen Text anzugeben, der als Bezeichnung auf der Schaltfläche <strong>Abbrechen</strong> angezeigt werden soll.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents"><strong>IFileDialogControlEvents</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung über Ereignisse benachrichtigt werden kann, die sich auf Steuerelemente beziehen, die die Anwendung einem allgemeinen Dateidialogfeld hinzugefügt hat.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize"><strong>IFileDialogCustomize</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung einem allgemeinen Dateidialogfeld Steuerelemente hinzufügen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents"><strong>IFileDialogEvents</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Benachrichtigung über Ereignisse innerhalb eines allgemeinen Dateidialogfelds zulassen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileisinuse"><strong>IFileIsInUse</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die aufgerufen werden können, um Informationen zu einer Datei abzurufen oder zu schließen, die von einer anderen Anwendung verwendet wird. Wenn eine Anwendung versucht, auf eine Datei zuzugreifen und diese Datei bereits verwendet, kann sie die Methoden dieser Schnittstelle verwenden, um Informationen zu sammeln, die dem Benutzer in einem Dialogfeld angezeigt werden sollen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog"><strong>IFileOpenDialog</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle,</strong></a> indem spezifische Methoden für das geöffnete Dialogfeld hinzugefügt werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperation"><strong>IFileOperation</strong></a><br/></td>
-<td>Macht Methoden zum Kopieren, Verschieben, Umbenennen, Erstellen und Löschen von Shellelementen sowie Methoden zum Bereitstellen von Status- und Fehlerdialogen verfügbar. Diese Schnittstelle ersetzt die <a href="/windows/desktop/api/Shellapi/nf-shellapi-shfileoperationa"><strong>SHFileOperation-Funktion.</strong></a><br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperationprogresssink"><strong>IFileOperationProgressSink</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein umfassendes Benachrichtigungssystem bereitstellen, das von Aufrufenden von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileoperation"><strong>IFileOperation</strong></a> verwendet wird, um die Details der Vorgänge zu überwachen, die sie über diese Schnittstelle ausführen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog"><strong>IFileSaveDialog</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialog"><strong>IFileDialog-Schnittstelle</strong></a> durch Hinzufügen von spezifischen Methoden für das Speichern-Dialogfeld, einschließlich der methoden, die Unterstützung für die Sammlung von Metadaten bieten, die in der Datei beibehalten werden sollen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesyncmergehandler"><strong>IFileSyncMergeHandler</strong></a><br/></td>
-
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata"><strong>IFileSystemBindData</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Dateisysteminformationen zum Optimieren von Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-parsedisplayname"><strong>IShellFolder::P arseDisplayName</strong></a>speichern.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata2"><strong>IFileSystemBindData2</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesystembinddata"><strong>IFileSystemBindData,</strong></a>das Dateisysteminformationen zum Optimieren von Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-parsedisplayname"><strong>IShellFolder::P arseDisplayName</strong></a>speichert. Diese Schnittstelle fügt die Fähigkeit zum Festlegen oder Abrufen der Datei-ID oder des Verbindungsklassenbezeichners (CLSID) hinzu.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/shell/schema-library-iconreference"><strong>IFileViewer</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die eine Schnittstelle festlegen, die es einem registrierten Datei-Viewer ermöglicht, benachrichtigt zu werden, wenn eine Datei angezeigt oder gedruckt werden muss.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj/nn-shlobj-ifileviewersite"><strong>IFileViewerSite</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die eine Schnittstelle festlegen, die es einem Datei-Viewer ermöglicht, das Handle für das aktuelle angeheftete Fenster abzurufen oder ein neues angeheftetes Fenster festzulegen. Das angeheftete Fenster ist das Fenster, in dem der aktuelle Datei-Viewer eine Datei anzeigt. Wenn der Benutzer eine neue anzuzeigende Datei auswählt, weist die Shell den Datei-Viewer an, die neue Datei im angehefteten Fenster anzuzeigen, anstatt ein neues Fenster zu erstellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderfilter"><strong>IFolderFilter</strong></a><br/></td>
-<td>Wird von einem Client verfügbar gemacht, um anzugeben, wie die Enumeration eines Shell-Ordners nach einer Serveranwendung gefiltert werden soll.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderfiltersite"><strong>IFolderFilterSite</strong></a><br/></td>
-<td>Wird von einem Host exportiert, damit Clients angeben können, wie eine Shell-Ordnerenumeration gefiltert werden soll.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview"><strong>IFolderView</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zu den Anzeigeoptionen eines Ordners abrufen, angegebene Elemente in diesem Ordner auswählen und den Ansichtsmodus des Ordners festlegen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview2"><strong>IFolderView2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zu den Anzeigeoptionen eines Ordners abrufen, angegebene Elemente in diesem Ordner auswählen und den Ansichtsmodus des Ordners festlegen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifolderviewhost"><strong>IFolderViewHost</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderview"><strong>IFolderView-Objekt</strong></a> in einem Fenster hostet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ifolderviewoptions"><strong>IFolderViewOptions</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Steuerung von Ordneransichtsoptionen ermöglichen, die spezifisch für die ansichten Windows 7 und höher sind.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifolderviewsettings"><strong>IFolderViewSettings</strong></a><br/></td>
-<td>Macht Methoden zum Abrufen von Ordneransichtseinstellungen verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iframeworkinputpane"><strong>IFrameworkInputPane</strong></a><br/></td>
-<td>Stellt Methoden bereit, mit denen Apps über Zustandsänderungen und den Speicherort für den Eingabebereich informiert werden können.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iframeworkinputpanehandler"><strong>IFrameworkInputPaneHandler</strong></a><br/></td>
-<td>Ermöglicht es einer App, benachrichtigt zu werden, wenn der Eingabebereich (Tastatur auf dem Bildschirm oder Handschriftbereich) angezeigt oder ausgeblendet wird. Dadurch kann das App-Fenster seine Anzeige so anpassen, dass keine Eingabebereiche (z. B. ein Textfeld) vom Eingabebereich verdeckt werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandleractivationhost"><strong>IHandlerActivationHost</strong></a><br/></td>
-
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandlerinfo"><strong>IHandlerInfo</strong></a><br/></td>
-<td>Stellt Methoden bereit, die Informationen über den Handler für Methoden der <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihandleractivationhost"><strong>IHandlerActivationHost-Schnittstelle</strong></a> bereitstellen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ihomegroup"><strong>IHomeGroup</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die den Mitgliedschaftsstatus der HomeGroup eines Computers bestimmen und den Freigabe-Assistenten anzeigen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler"><strong>IHWEventHandler</strong></a><br/></td>
-<td>Wird von AutoPlay aufgerufen, um die Behandlung registrierter Medientypen zu implementieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler2"><strong>IHWEventHandler2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler"><strong>IHWEventHandler-Schnittstelle,</strong></a> um die Erhöhung der Benutzerkontensteuerung (User Account Control, UAC) für Gerätehandler zu berücksichtigen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iidentityname"><strong>IIdentityName</strong></a><br/></td>
-<td>Macht Methoden verfügbar, um zwei Elemente zu vergleichen, um festzustellen, ob sie identisch sind.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iimagerecompress"><strong>IImageRecompress</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die Bilder neu komprimiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializecommand"><strong>IInitializeCommand</strong></a><br/></td>
-<td>Macht eine einzelne Methode verfügbar, die zum Initialisieren von Objekten verwendet wird, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate"><strong>IExplorerCommandState,</strong></a> <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexecutecommand"><strong>IExecuteCommand</strong></a> oder <a href="/windows/desktop/api/oleidl/nn-oleidl-idroptarget"><strong>IDropTarget</strong></a> mit dem von der Anwendung angegebenen Befehlsnamen und den registrierten Eigenschaften implementieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/win32/api/shobjidl/nn-shobjidl-iinitializenetworkfolder"><strong>IInitializeNetworkFolder</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Netzwerkdatenquelle CLSID_NetworkPlaces wie angegeben initialisiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithbindctx"><strong>IInitializeWithBindCtx</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Bindungskontext.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithfile"><strong>Iinitializewithfile</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, um einen Handler, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Dateipfad zu initialisieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithitem"><strong>IInitializeWithItem</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die verwendet wird, um einen Handler, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a>zu initialisieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithpropertystore"><strong>IInitializeWithPropertyStore</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Eigenschaftenspeicher.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream"><strong>Iinitializewithstream</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen Handler initialisiert, z. B. einen Eigenschaftenhandler, einen Miniaturansichtshandler oder einen Vorschauhandler, mit einem Stream.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow"><strong>IInitializeWithWindow</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, über die ein Client ein Besitzerfenster für ein Windows Runtimeobjekt bereitstellen kann, das in einer Desktopanwendung verwendet wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject"><strong>IInputObject</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Aktivierung der Benutzeroberfläche und die Prozessbeschleunigung für ein benutzereingabeobjekt in der Shell ändern.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject2"><strong>IInputObject2</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobject"><strong>IInputObject</strong></a> erweitert, indem globale Zugriffstasten verarbeitet werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinputobjectsite"><strong>IInputObjectSite</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die verwendet wird, um Fokusänderungen für ein in der Shell enthaltenes Benutzereingabeobjekt zu kommunizieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/inputpanelconfiguration/nn-inputpanelconfiguration-iinputpanelconfiguration"><strong>IInputPanelConfiguration</strong></a><br/></td>
-<td>Stellt Funktionen für Desktop-Apps bereit, um sich für den Fokusverfolgungsmechanismus zu entscheiden, der in Windows Store-Apps verwendet wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/inputpanelconfiguration/nn-inputpanelconfiguration-iinputpanelinvocationconfiguration"><strong>IInputPanelInvocationConfiguration</strong></a><br/></td>
-<td>Ermöglicht Windows Store Apps das Deaktivieren des automatischen Aufrufverhaltens.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iiocancelinformation"><strong>IIOCancelInformation</strong></a><br/></td>
-<td>Macht Methoden zum Veröffentlichen einer Abbruchfensternachricht im Prozessthread aus dem Statusdialogfeld verfügbar. <br/> Mit dieser Schnittstelle kann das Statusdialogfeld eine Threadnachricht über <a href="/windows/desktop/api/winuser/nf-winuser-postthreadmessagea"><strong>PostThreadMessage</strong></a> an den Arbeitsthread senden, um seine Vorgänge abzubrechen. Der Arbeitsthread muss die Nachrichtenwarteschlange in regelmäßigen Abständen über <a href="/windows/desktop/api/winuser/nf-winuser-getmessage"><strong>GetMessage,</strong></a> <a href="/windows/desktop/api/winuser/nf-winuser-peekmessagea"><strong>PeekMessage</strong></a> oder <a href="/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjectsex"><strong>MsgWaitForMultipleObjectsEx</strong></a>überprüfen.<br/> Die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iiocancelinformation-setcancelinformation"><strong>IIOCancelInformation::SetCancelInformation-Methode</strong></a> teilt dem Statusdialogfeld mit, welche Thread-ID und welche Nachricht <a href="/windows/desktop/api/winuser/nf-winuser-postthreadmessagea"><strong>PostThreadMessage</strong></a> angezeigt wird, wenn der Benutzer auf <strong>Abbrechen</strong>klickt. Die Thread-ID &quot; 0 &quot; (null) deaktiviert den Sendevorgang für die Abbruchnachricht.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iitemnamelimits"><strong>IItemNameLimits</strong></a><br/></td>
-<td>Ruft eine Liste gültiger und ungültiger Zeichen oder die maximale Länge eines Namens im Namespace ab. Verwenden Sie diese Schnittstelle für die Validierungsüberprüfung und -übersetzung.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iknownfolder"><strong>IKnownFolder</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung Informationen zu Kategorie, Typ, GUID, PIDL-Wert, Umleitungsfunktionen und Definition eines bekannten Ordners abrufen kann. Sie stellt eine Methode zum erneuten Ausführen des <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem-Objekts</strong></a> eines bekannten Ordners bereit. Außerdem werden Methoden zum Abrufen oder Festlegen des Pfads des bekannten Ordners zur Verfügung gestellt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iknownfoldermanager"><strong>IKnownFolderManager</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die vorhandene bekannte Ordner erstellen, aufzählen oder verwalten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchsourceappusermodelid"><strong>ILaunchSourceAppUserModelId</strong></a><br/></td>
-<td>Stellt eine Methode zum Abrufen einer <a href="appids.md">AppUserModelId bereit.</a><br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchsourceviewsizepreference"><strong>ILaunchSourceViewSizePreference</strong></a><br/></td>
-<td>Stellt Methoden zum Abrufen von Informationen über die Quellanwendung bereit.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchtargetmonitor"><strong>ILaunchTargetMonitor</strong></a><br/></td>
-
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ilaunchtargetviewsizepreference"><strong>ILaunchTargetViewSizePreference</strong></a><br/></td>
-<td>Stellt eine Methode zum Abrufen der bevorzugten Ansichtsgröße für ein neues Anwendungsfenster bereit.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/shell/shell-extensibility-bumper"><strong>IMarkupCallback</strong></a><br/></td>
-
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imenupopup"><strong>IMenuPopup</strong></a><br/></td>
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imenupopup"><strong>IMenuPopup</strong></a> kann geändert werden oder nicht verfügbar sein.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imodalwindow"><strong>IModalWindow</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die ein modales Fenster darstellt. Diese Schnittstelle wird im Windows XP Passport-Assistenten verwendet.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="imultimonitordockingsite.md"><strong>IMultiMonitorDockingSite</strong></a><br/></td>
-<td>Wird vom Browser implementiert. Macht Methoden verfügbar, die verwalten, welcher Monitor die Windows Taskleiste auf einem System mit mehreren Monitoren enthält. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-inamedpropertybag"><strong>INamedPropertyBag</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein Objekt mit einem angegebenen Eigenschaftenbehälter bereitstellen, in dem das Objekt seine Eigenschaften speichern kann.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-inamedpropertystore"><strong>INamedPropertyStore</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die benannte Eigenschaften abrufen und festlegen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreeaccessible"><strong>INameSpaceTreeAccessible</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Barrierefreiheitsaktionen für ein Shellelement aus einem Namespacestruktursteuerelement ausführen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die zum Anzeigen und Bearbeiten von Knoten in einer Struktur von Shellelementen verwendet werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrol2"><strong>INameSpaceTreeControl2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, die die Anzeigestile von Treeview-Steuerelementen für die Verwendung mit Shell-Namespaceelementen abrufen und festlegen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrolcustomdraw"><strong>INameSpaceTreeControlCustomDraw</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es dem Benutzer ermöglichen, ein benutzerdefiniertes Namespacestruktur-Steuerelement und dessen Elemente zu zeichnen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontroldrophandler"><strong>INameSpaceTreeControlDropHandler</strong></a><br/></td>
-<td>Macht Handlermethoden für Drag & Drop verfügbar. Wird vom Namespacestruktur-Steuerelement verwendet, um den Client über alle Drag & Drop-Benachrichtigungen zu informieren, die innerhalb des Steuerelements ausgeführt werden. Bietet einem Client die Möglichkeit, einen Ablagevorgang abzufangen und eine eigene Aktion durchzuführen oder den gewünschten Ablageeffekt zurück zu geben.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-inamespacetreecontrolevents"><strong>INameSpaceTreeControlEvents</strong></a><br/></td>
-<td>Macht Methoden zum Behandeln von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrol"><strong>INameSpaceTreeControl-Ereignissen</strong></a> verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacetreecontrolfoldercapabilities"><strong>INameSpaceTreeControlFolderCapabilities</strong></a><br/></td>
-<td>Macht eine einzelne Methode verfügbar, die den Status der Filterunterstützung <a href="/windows/desktop/properties/props-system-ispinnedtonamespacetree">system.IsPinnedToNameSpaceTree eines</a> Ordners abruft.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalk"><strong>INamespaceWalk</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die einen Namespace von einem bestimmten Stammknoten aus walken. Die Tiefe der exemplarischen Vorgehensweise wird angegeben, und es wird ein optionales Array zurückgegeben, das die IDs aller durchgegangenen Knoten enthält.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB</strong></a><br/></td>
-<td>Eine Rückrufschnittstelle, die Methoden verfügbar machen kann, die mit <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalk"><strong>INamespaceWalk verwendet werden.</strong></a> Nach dem Ausführen einer exemplarischen Vorgehensweise mit <strong>INamespaceWalk</strong>wird ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Objekt,</strong></a> das die exemplarischen Knoten darstellt, an die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB-Methoden</strong></a> übergeben. Was diese Methoden mit den Informationen tun, hängt von dem Objekt ab, das sie implementieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb2"><strong>INamespaceWalkCB2</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inamespacewalkcb"><strong>INamespaceWalkCB um</strong></a> eine Methode, die erforderlich ist, um eine Namespace-Exemplarische zu vervollständigen. Diese Methode entfernt während der exemplarischen Vorgehensweise gesammelte Daten. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inewmenuclient"><strong>INewMenuClient</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Bearbeitung von Elementen in einem Windows 7 ermöglichen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj/nn-shlobj-inewshortcuthooka"><strong>INewShortcutHook</strong></a><br/></td>
-<td>Macht Methoden zum Erstellen einer neuen Internetverknüpfung verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-inewwindowmanager"><strong>INewWindowManager</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die bestimmt, ob ein Fenster, das von einem anderen Fenster gestartet wird, angezeigt oder blockiert werden soll, wodurch die Steuerung von Popupfenstern ermöglicht wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/reconcil/nn-reconcil-inotifyreplica"><strong>INotifyReplica</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die dem Ersteller eines Objekts die Möglichkeit bietet, das Objekt zu benachrichtigen, dass es möglicherweise einer nachfolgenden Abstimmung unterliegt. Die Abstimmung von Kleinbuchstaben ist für die Implementierung dieser Schnittstelle verantwortlich.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Objectarray/nn-objectarray-iobjectarray"><strong>IObjectArray</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen Clients auf Elemente in einer Auflistung von -Objekten zugreifen können, die <a href="/windows/desktop/api/unknwn/nn-unknwn-iunknown"><strong>IUnknown unterstützen.</strong></a><br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/objectarray/nn-objectarray-iobjectcollection"><strong>IObjectCollection</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Objectarray/nn-objectarray-iobjectarray"><strong>IObjectArray-Schnittstelle</strong></a> durch die Bereitstellung von Methoden, mit denen Clients Objekte hinzufügen und entfernen können, die <a href="/windows/desktop/api/unknwn/nn-unknwn-iunknown"><strong>IUnknown</strong></a> in einer Auflistung unterstützen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectprovider"><strong>IObjectProvider</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, um Objekte zu finden, die mit einer <strong>GUID aus einem</strong> anderen Objekt benannt werden. Im <a href="/previous-versions/windows/internet-explorer/ie-developer/platform-apis/cc678966(v=vs.85)"><strong>Gegensatz zu QueryService</strong></a> delegiert diese Schnittstelle ihre Funktionalität nicht an andere Objekte.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithappusermodelid"><strong>IObjectWithAppUserModelID</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es Implementierern eines benutzerdefinierten <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iassochandler"><strong>IAssocHandler-Objekts</strong></a> ermöglichen, Zugriff auf die explizite Anwendungsbenutzermodell-ID (AppUserModelID) zu ermöglichen. Diese Informationen werden verwendet, um zu bestimmen, ob der Datei einer Anwendung ein bestimmter Dateityp hinzugefügt werden Sprungliste.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithbackreferences"><strong>IObjectWithBackReferences</strong></a><br/></td>
-<td>Stellt eine Methode für die Interaktion mit Denkverweisen eines -Objekts zur Auswahl.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithcancelevent"><strong>IObjectWithCancelEvent</strong></a><br/></td>
-<td>Stellt einem Aufrufer ein -Ereignis zur Veranschlagung des Abbruchs einer Aufgabe durch das aufgerufene Objekt zur Signalisierung zur Veranschlagung.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithfolderenummode"><strong>IObjectWithFolderEnumMode</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Enumerationsmodi eines analysierten Elements erhalten und festlegen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithprogid"><strong>IObjectWithProgID</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Zugriff auf die progID bereitstellen, die einem -Objekt zugeordnet ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-iobjectwithpropertykey"><strong>IObjectWithPropertyKey</strong></a><br/></td>
-<td>Macht Methoden zum Abrufen und Festlegen des Eigenschaftsschlüssels verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iobjectwithselection"><strong>IObjectWithSelection</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ausgewählte Elemente, die durch ein Shellelementarray dargestellt werden, erhalten oder festlegen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iobjmgr"><strong>IObjMgr</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen ein Client ein Objekt an eine Auflistung von Objekten anfügen oder daraus entfernen kann, die von einem Serverobjekt verwaltet werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iopencontrolpanel"><strong>IOpenControlPanel</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die den Ansichtszustand des Systemsteuerung, den Pfad einzelner Systemsteuerung-Elemente abrufen und die entweder die Systemsteuerung selbst oder ein einzelnes Systemsteuerung öffnen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iopensearchsource"><strong>IOpenSearchSource</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, um Suchergebnisse aus einer benutzerdefinierten clientseitigen datenquelle OpenSearch zu erhalten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ioperationsprogressdialog"><strong>IOperationsProgressDialog</strong></a><br/></td>
-<td>Macht Methoden zum Erhalten, Festlegen und Abfragen eines Statusdialogfelds verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ipackagedebugsettings"><strong>IPackageDebugSettings</strong></a><br/></td>
-<td>Ermöglicht Debuggerentwicklern das Steuern des Lebenszyklus einer Windows Store App, z. B. das Beenden oder Fortsetzen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackageexecutionstatechangenotification"><strong>IPackageExecutionStateChangeNotification</strong></a><br/></td>
-<td>Ermöglicht das Empfangen von Benachrichtigungen zu Paketzustandsänderung während Windows Store App-Debuggen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparentanditem"><strong>IParentAndItem</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die das übergeordnete Element und die untergeordnete ID des übergeordneten Elements erhalten und festlegen. <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparentanditem"><strong>IParentAndItem</strong></a> wird in der Regel in IShellItems implementiert, ist jedoch nicht spezifisch für <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem.</strong></a> <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iparseandcreateitem"><strong>IParseAndCreateItem</strong></a><br/></td>
-
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder"><strong>IPersistFolder</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die Shellordnerobjekte initialisiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder2"><strong>IPersistFolder2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen aus Shellordnerobjekten abrufen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder3"><strong>IPersistFolder3</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder"><strong>Schnittstellen IPersistFolder</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistfolder2"><strong>IPersistFolder2,</strong></a> indem einem Ordnerobjekt ermöglicht wird, die nicht standardmäßige Behandlung von Ordnerverknüpfungen zu implementieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipersistidlist"><strong>IPersistIDList</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die zum Beibehalten von Elementbezeichnerlisten verwendet werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-ipersistserializedpropstorage"><strong>IPersistSerializedPropStorage</strong></a><br/></td>
-<td>Macht Methoden verfügbar, um serialisierte Eigenschaftsspeicherdaten zur späteren Verwendung persistent zu speichern und persistente Daten in einer neuen Eigenschaftenspeicherinstanz wiederherzustellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Propsys/nn-propsys-ipersistserializedpropstorage2"><strong>IPersistSerializedPropStorage2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, um serialisierte Eigenschaftsspeicherdaten zur späteren Verwendung persistent zu speichern und persistente Daten in einer neuen Eigenschaftenspeicherinstanz wiederherzustellen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/previous-versions/windows/desktop/legacy/hh707033(v=vs.85)"><strong>IPlaybackManager</strong></a><br/></td>
-<td>Stellt Methoden zur Verfügung, mit denen Medienanwendungen mit dem Windows kommunizieren können.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/previous-versions/windows/desktop/legacy/hh707034(v=vs.85)"><strong>IPlaybackManagerEvents</strong></a><br/></td>
-
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandler"><strong>IPreviewHandler</strong></a><br/></td>
-<td>Macht Methoden für die Anzeige von Rich Previews verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe"><strong>IPreviewHandlerFrame</strong></a><br/></td>
-<td>Ermöglicht Vorschauhandlern das Übergeben von Tastenkombinationen an den Host. Diese Schnittstelle ruft eine Liste von Tastenkombinationen ab und leitet den Host an, eine Tastenkombination zu behandeln.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlervisuals"><strong>IPreviewHandlerVisuals</strong></a><br/></td>
-<td>Macht Methoden zum Anwenden von Farb- und Schriftartinformationen auf Vorschauhandler verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipreviewitem"><strong>IPreviewItem</strong></a><br/></td>
-<td>Identifiziert ein Element, das im Vorschaubereich angezeigt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipreviousversionsinfo"><strong>IPreviousVersionsInfo</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die nach früheren Versionen von Serverdateien oder <em></em> Ordnern sucht, die zum Zweck der Umkehrung durch die mit Windows Server 2003 bereitgestellte Schattenkopietechnologie gespeichert werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="iprivateidentitymanager.md"><strong>IPrivateIdentityManager</strong></a><br/></td>
-
-</tr>
-<tr class="even">
-<td><a href="iprivateidentitymanager2.md"><strong>IPrivateIdentityManager2</strong></a><br/></td>
-
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iprofferservice"><strong>IProfferService</strong></a><br/></td>
-<td>Macht einen allgemeinen Mechanismus für Objekte verfügbar, um Dienste für andere Objekte auf demselben Host anzubieten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iprogressdialog"><strong>IProgressDialog</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Optionen für eine Anwendung bereitstellen, um ein Statusdialogfeld anzuzeigen. Diese Schnittstelle wird vom Statusdialogfeldobjekt (CLSID_ProgressDialog) exportiert. Dieses Objekt ist eine allgemeine Möglichkeit, einem Benutzer den Fortschritt eines Vorgangs zu zeigen. Sie wird in der Regel beim Löschen, Hochladen, Kopieren, Verschieben oder Herunterladen einer großen Anzahl von Dateien verwendet.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp"><strong>IPublishedApp</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Anwendungen zum Hinzufügen/Entfernen von Programmen in Systemsteuerung. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp2"><strong>IPublishedApp2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp"><strong>IPublishedApp-Schnittstelle</strong></a> durch Bereitstellen einer zusätzlichen Installationsmethode.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipublishingwizard"><strong>IPublishingWizard</strong></a><br/></td>
-<td>Macht Methoden für die Arbeit mit dem Onlinedruck-Assistenten, dem Webveröffentlichungs-Assistenten und dem Assistenten zum Hinzufügen von Netzwerkorten verfügbar. In Windows Vista unterstützt <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ipublishingwizard"><strong>IPublishingWizard</strong></a> den Webveröffentlichungs-Assistenten oder den Onlinedruck-Assistenten nicht mehr.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlwapi/nn-shlwapi-iqueryassociations"><strong>IQueryAssociations</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die das Abrufen von Informationen, die in der Registrierung gespeichert sind, in Verbindung mit der Definition eines Dateityps oder Protokolls und der Zuordnung zu einer Anwendung vereinfachen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iquerycancelautoplay"><strong>IQueryCancelAutoPlay</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die <a href="autorun2k-intro.md">AutoPlay oder AutoRun</a> <a href="autoplay.md">programmgesteuert überschreibt.</a> Auf diese Weise können Sie den Speicherort und den Inhaltstyp anpassen, der beim Einfügen von Medien gestartet wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iquerycodepage"><strong>IQueryCodePage</strong></a><br/></td>
-<td>Ruft den numerischen Wert (Codepagebezeichner) der ANSI-Codepage ab und legt den Wert fest.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iquerycontinue"><strong>IQueryContinue</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen einfachen Standardmechanismus für Objekte bietet, um einen Client nach berechtigungen zum Fortsetzen eines Vorgangs zu fragen. Clients von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a>müssen z. B. eine Implementierung von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iquerycontinue"><strong>IQueryContinue</strong></a> an die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-show"><strong>IUserNotification::Show-Methode</strong></a> übergeben.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Credentialprovider/nn-credentialprovider-iquerycontinuewithstatus"><strong>IQueryContinueWithStatus</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die einen Standardmechanismus für Anmeldeinformationsanbieter zum Aufrufen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iquerycontinue-querycontinue"><strong>QueryContinue</strong></a> bereitstellen, während sie versuchen, eine Verbindung mit dem Netzwerk herzustellen, um zu bestimmen, ob sie diese Versuche fortsetzen sollten. Anmeldeinformationsanbieter können diese Schnittstelle auch verwenden, um dem Benutzer Nachrichten anzuzeigen, während er versucht, eine Netzwerkverbindung herzustellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iqueryinfo"><strong>IQueryInfo</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die von der Shell verwendet werden, um Flags und Infoinfoinformationen für ein Element abzurufen, das sich in einer <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Implementierung</strong></a> befindet. Infotipps werden in der Regel in einem <a href="/windows/desktop/Controls/tooltip-controls">QuickInfo-Steuerelement</a> angezeigt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-irelateditem"><strong>IRelatedItem</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die verknüpfte Elemente mit bestimmten Beziehungen ableiten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iremotecomputer"><strong>IRemoteComputer</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die eine Namespaceerweiterung auflistet oder initialisiert, wenn sie für ein Remoteobjekt aufgerufen wird. Diese Schnittstelle wird beispielsweise verwendet, um den virtuellen Remotedruckerordner zu initialisieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iresolveshelllink"><strong>IResolveShellLink</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, mit der eine Anwendung anfordern kann, dass ein Shellordnerobjekt einen Link für eines seiner Elemente auflöset.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iresultsfolder"><strong>IResultsFolder</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Elemente aus einem Datenobjekt enthalten.<br/> Ein <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iresultsfolder"><strong>IResultsFolder</strong></a> ist ein Ordner, der Elemente aus dem ganzen Namespace enthalten und sie dem Benutzer in einem einzelnen Ordner darstellen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-irunnabletask"><strong>IRunnableTask</strong></a><br/></td>
-<td>Eine Freithreadschnittstelle, die von einem -Objekt verfügbar gemacht werden kann, damit Vorgänge für einen Hintergrundthread ausgeführt werden können. Wenn die <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iextractimage-getlocation"><strong>IExtractImage::GetLocation-Methode</strong></a> beispielsweise E_PENDING zurückgibt, kann die aufrufende Anwendung das Bild in einem Hintergrundthread extrahieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-isearchboxinfo"><strong>ISearchBoxInfo</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen der Aufrufer in ein Suchfeld eingegebene Informationen abrufen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-isearchcontext"><strong>ISearchContext</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Anpassungsinformationen an die Suchhooks kanal.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isearchfolderitemfactory"><strong>ISearchFolderItemFactory</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Suchordner erstellen und ändern. Die Set-Methoden werden zuerst aufgerufen, um die Parameter der Suche zu einrichten. Wenn kein -Wert aufgerufen wird, werden stattdessen Standardwerte verwendet. <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-isearchfolderitemfactory-getidlist"><strong>ISearchFolderItemFactory::GetIDList</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-isearchfolderitemfactory-getshellitem"><strong>ISearchFolderItemFactory::GetShellItem</strong></a> geben die beiden Formen der Suche zurück, die von diesen Parametern angegeben werden. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Thumbcache/nn-thumbcache-isharedbitmap"><strong>ISharedBitmap</strong></a><br/></td>
-<td>Macht speichereffiziente Methoden für den Zugriff auf Bitmaps verfügbar. Diese Schnittstelle wird als schlanker Wrapper um HBITMAP-Objekte verwendet, sodass diese Objekte gezählt und geschützt werden können, damit ihre zugrunde liegenden Daten nicht geändert werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isharingconfigurationmanager"><strong>ISharingConfigurationManager</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zu den Standardfreigabeeinstellungen eines Computers für den Ordner <strong>Users</strong> ( ) oder Public ( ) festlegen <code>C:\Users</code> und <strong></strong> <code>C:\Users\Public</code> abrufen. Macht auch eine Reihe von Methoden verfügbar, die die Steuerung der Druckerfreigabe ermöglichen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shappmgr/nn-shappmgr-ishellapp"><strong>IShellApp</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die allgemeine Informationen zu einer Anwendung für die Anwendung zum Hinzufügen/Entfernen von Programmen bereitstellen. Sie können sie nicht außerhalb der Anwendung "Programme hinzufügen/entfernen" verwenden. Die von dieser Schnittstelle angegebenen Informationen enthalten eine Liste der unterstützten Verwaltungsaktionen und ob die Anwendung derzeit installiert ist. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellbrowser"><strong>IShellBrowser</strong></a><br/></td>
-<td>Wird von Hosts von Shellansichten implementiert (Objekte, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView implementieren).</strong></a> Macht Methoden verfügbar, die Dienste für die Ansicht bereitstellen, die sie hosten, und andere Objekte, die im Kontext des Explorer-Fensters ausgeführt werden. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishellchangenotify"><strong>IShellChangeNotify</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die eine Shell-Namespaceerweiterung benachrichtigt, wenn sich die ID eines Elements geändert hat.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelldetails"><strong>IShellDetails</strong></a><br/></td>
-<td>Wird von Shellordnern verfügbar gemacht, um ausführliche Informationen zu den Elementen in einem Ordner zu erhalten. Dies sind die gleichen Informationen, die vom Windows-Explorer angezeigt werden, wenn die Ansicht des Ordners auf Details festgelegt ist. Für Windows 2000- und höher-Systeme wird <a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelldetails"><strong>IShellDetails</strong></a> durch <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder2"><strong>IShellFolder2 ersetzt.</strong></a><br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellextinit"><strong>IShellExtInit</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die Shellerweiterungen für Eigenschaftenblätter, Kontextmenüs und Drag & Drop-Handler initialisiert (Erweiterungen, die Verknüpfungsmenüs Während nicht standardmäßiger Drag & Drop-Vorgänge Elemente hinzufügen).<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder</strong></a><br/></td>
-<td>Werden von allen Shell-Namespaceordnerobjekten verfügbar gemacht, werden seine Methoden zum Verwalten von Ordnern verwendet.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder2"><strong>IShellFolder2</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder</strong></a>. Die Methoden stellen eine Vielzahl von Informationen über den Inhalt eines Shellordners zur Verfügung.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="ishellfoldersearchable.md"><strong>IShellFolderSearchable</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Shellerweiterung einen durchsuchbaren Namespace bereitstellen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="ishellfoldersearchablecallback.md"><strong>IShellFolderSearchableCallback</strong></a><br/></td>
-<td>Macht Rückrufroutinen verfügbar, um den Suchprozess zu überwachen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishellfolderviewcb"><strong>IShellFolderViewCB</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Kommunikation zwischen dem Windows-Explorer und einer Ordneransicht ermöglicht, die mithilfe des Systemordneransichtsobjekts implementiert wird (das über <a href="/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreateshellfolderview"><strong>SHCreateShellFolderView</strong></a>zurückgegebene <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView-Objekt),</strong></a> sodass die Ordneransicht über Ereignisse benachrichtigt und ihre Ansicht entsprechend ändern kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual"><strong>IShellFolderViewDual</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Ansicht ändern und Elemente im aktuellen Ordner auswählen. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual2"><strong>IShellFolderViewDual2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Ansicht ändern und Elemente im aktuellen Ordner auswählen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shldisp/nn-shldisp-ishellfolderviewdual3"><strong>IShellFolderViewDual3</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die aktuelle Ordneransicht ändern.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="ishellfolderviewtype.md"><strong>IShellFolderViewType</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einem Shell-Ordner ermöglichen, verschiedene Ansichten des Inhalts (unterschiedliche hierarchische Layouts seiner Daten) zu unterstützen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellicon"><strong>IShellIcon</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen Symbolindex für ein <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder"><strong>IShellFolder-Objekt</strong></a> erhält. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-ishelliconoverlay"><strong>IShellIconOverlay</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die von einer Namespaceerweiterung verwendet werden, um Symbolüberlagerungen für die objekte anzugeben, die sie enthält.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelliconoverlayidentifier"><strong>IShellIconOverlayIdentifier</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die gesamte Kommunikation zwischen Symbolüberlagerungshandlern und der Shell verarbeiten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedataabort"><strong>IShellImageDataAbort</strong></a><br/></td>
-<td>Macht eine einzelne Methode verfügbar, die zum Abbrechen von <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedata"><strong>IShellImageData-Prozessen verwendet</strong></a> wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedatafactory"><strong>IShellImageDataFactory</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die <a href="/windows/desktop/api/Shimgdata/nn-shimgdata-ishellimagedata"><strong>IShellImageData-Instanzen</strong></a> basierend auf verschiedenen Bildquellen erstellen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zu einem Shellelement abrufen. <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a> sind die bevorzugten Darstellungen von Elementen in jedem neuen Code.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem um</strong></a> Methoden, die verschiedene Eigenschaftswerte des Elements abrufen. <strong>IShellItem</strong> und <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem2"><strong>IShellItem2</strong></a> sind die bevorzugten Darstellungen von Elementen in jedem neuen Code.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemarray"><strong>IShellItemArray</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>Shellelementarrays erstellen und</strong></a> bearbeiten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemfilter"><strong>IShellItemFilter</strong></a><br/></td>
-<td>Wird von einem Client verfügbar gemacht, um anzugeben, wie die Enumeration eines <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>Shellelements durch</strong></a> eine Serveranwendung gefiltert werden soll.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemimagefactory"><strong>IShellItemImageFactory</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, um Symbole oder Miniaturansichten für Shellelemente zurück zu geben. Wenn für das angeforderte Element keine Miniaturansicht oder kein Symbol verfügbar ist, kann von der Shell ein Symbol pro Klasse bereitgestellt werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemresources"><strong>IShellItemResources</strong></a><br/></td>
-<td>Macht Methoden zum Bearbeiten und Abfragen von Shellelementressourcen verfügbar.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary"><strong>IShellLibrary</strong></a><br/></td>
-<td>Macht Methoden zum Erstellen und Verwalten von Bibliotheken verfügbar.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka"><strong>IShellLink</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Shelllinks erstellen, ändern und auflösen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllinkdatalist"><strong>IShellLinkDataList</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine Anwendung zusätzliche Datenblöcke an einen <a href="/windows/desktop/shell/links">Shelllink anfügen kann.</a> Diese Methoden fügen Datenblöcke hinzu, kopieren oder entfernen sie.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu"><strong>IShellMenu</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die mit Shellmenüs interagieren, z. B. das <strong>Startmenü</strong> und das <strong>Menü Favoriten.</strong><br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenucallback"><strong>IShellMenuCallback</strong></a><br/></td>
-<td>Eine Rückrufschnittstelle, die eine Methode verfügbar macht, die Nachrichten von einem Menüband empfängt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellpropsheetext"><strong>IShellPropSheetExt</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einem Eigenschaftenblatthandler ermöglichen, Seiten im Eigenschaftenblatt hinzuzufügen oder zu ersetzen, das für ein Dateiobjekt angezeigt wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl/nn-shobjidl-ishellrundll"><strong>IShellRunDll</strong></a><br/></td>
-
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die eine Ansicht im Windows Explorer- oder Ordnerfenstern anzeigen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview2"><strong>IShellView2</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview"><strong>IShellView</strong></a>.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ishellview3"><strong>IShellView3</strong></a><br/></td>
-<td>Erweitert die Funktionen von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellview2"><strong>IShellView2,</strong></a> indem eine Methode zum Ersetzen von <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellview2-createviewwindow2"><strong>IShellView2::CreateViewWindow2 zur Verfügung stellt.</strong></a><br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Exdisp/nn-exdisp-ishellwindows"><strong>IShellWindows</strong></a><br/></td>
-<td>Ermöglicht den Zugriff auf die Auflistung geöffneter Shellfenster.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istartmenupinnedlist"><strong>IStartMenuPinnedList</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die eine Anwendungsverknüpfung über das <strong>Startmenü oder</strong> die Taskleiste entpinnt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="nn-shobjidl-istorageprovidercopyhook.md"><strong>IStorageProviderCopyHook</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die bestimmt, ob die Shell einen Ordner im Synchronisierungsstamm eines Cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderhandler"><strong>IStorageProviderHandler</strong></a><br/></td>
-<td>Ruft den <a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderpropertyhandler"><strong>IStorageProviderPropertyHandler ab,</strong></a> der einer bestimmten Datei oder einem bestimmten Ordner zugeordnet ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/storageprovider/nn-storageprovider-istorageproviderpropertyhandler"><strong>IStorageProviderPropertyHandler</strong></a><br/></td>
-<td>Stellt eine Auflistung von Eigenschaften, die einer Datei oder einem Ordner zugeordnet sind.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istreamasync"><strong>IStreamAsync</strong></a><br/></td>
-<td>Macht Methoden zum Verwalten von Eingabe/Ausgabe (E/A) für einen asynchronen Stream verfügbar. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-istreamunbufferedinfo"><strong>IStreamUnbufferedInfo</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Sektorgröße als Hilfe bei der Byteausrichtung bestimmt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-isuspensiondependencymanager"><strong>ISusseitigDependencyManager</strong></a><br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflict"><strong>ISyncMgrConflict</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zu einem Konflikt bereitstellen, der aus einem Konfliktspeicher abgerufen wurde, und ermöglicht die Lösung des Konflikts.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>ISyncMgrConflictFolder</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Konflikt-ID-Liste für ein Konfliktobjekt ruft.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictitems"><strong>ISyncMgrConflictItems</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Konfliktelementdaten und die Elementanzahl erhalten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictpresenter"><strong>ISyncMgrConflictPresenter</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die einen Konflikt für den Benutzer ausdrungen hat.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictresolutionitems"><strong>ISyncMgrConflictResolutionItems</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Elementinformationen und Elementanzahl erhalten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictresolveinfo"><strong>ISyncMgrConflictResolveInfo</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Informationen zur Konfliktlösung des Synchronisierungs-Managers erhalten und festlegen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictstore"><strong>ISyncMgrConflictStore</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen ein Handler Konflikte bereitstellen kann, die im Ordner "Conflicts" angezeigt werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrcontrol"><strong>ISyncMgrControl</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einer Anwendung oder einem Handler ermöglichen, eine Synchronisierung zu starten oder zu beenden, Synchronisierungscenter über Änderungen an der Gruppe von Handlern oder Elementen zu benachrichtigen oder über Änderungen an Eigenschaftswerten zu benachrichtigen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems"><strong>ISyncMgrEnumItems</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein Array von <a href="/windows/win32/api/mobsync/ns-mobsync-syncmgritem"><strong>SYNCMCLIENTTEM-Strukturen</strong></a> aufzählen. Jede dieser Strukturen stellt Informationen zu einem Element zur Verfügung, das synchronisiert werden kann. <a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems"><strong>ISyncMgrEnumItems</strong></a> verfügt über die gleichen Methoden wie alle Standard-Enumeratorschnittstellen: Next, Skip, Reset und Clone.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrevent"><strong>ISyncMgrEvent</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Daten aus einem Ereignisspeicher abrufen. Ein Ereignisspeicher ermöglicht Synchronisierungscenter, einen Enumerator aller Ereignisse im Speicher abzurufen und einzelne Ereignisse abzurufen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgreventlinkuioperation"><strong>ISyncMgrEventLinkUIOperation</strong></a><br/></td>
-<td>Stellt eine Methode zur Wahl, die aufgerufen wird, wenn im Ordner mit den Synchronisierungsergebnissen auf Ereignislinks geklickt wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgreventstore"><strong>ISyncMgrEventStore</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen ein Handler einen eigenen Ereignisspeicher bereitstellen und seine eigenen Synchronisierungsereignisse verwalten kann, anstatt den Standardereignisspeicher Synchronisierungscenter verwenden. Diese Ereignisse werden im Ordner Synchronisierungsergebnisse angezeigt.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandler"><strong>ISyncMgrHandler</strong></a><br/></td>
-<td>Macht Methoden verfügbar, aus denen die primäre Schnittstelle von einem Synchronisierungshandler implementiert wird. Synchronisierungscenter erstellt über diese Schnittstelle eine Instanz des Handlers, um Eigenschaften zu erhalten, Synchronisierungselemente aufzählen und den Zustand zu ändern. Synchronisierungscenter erstellt eine separate Instanz des Handlers in einem separaten Thread, um eine Synchronisierung oder einen Benutzeroberflächenvorgang durchzuführen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandlercollection"><strong>ISyncMgrHandlerCollection</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die einen Enumerator von Synchronisierungshandler-IDs bereitstellen und diese Synchronisierungshandler instanziieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrhandlerinfo"><strong>ISyncMgrHandlerInfo</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einem Handler ermöglichen, Eigenschaften- und Zustandsinformationen für Synchronisierungscenter.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrregister"><strong>ISyncMgrRegister</strong></a><br/></td>
-<td>Macht Methoden verfügbar, damit sich eine Anwendung beim Synchronisierungs-Manager registrieren kann. Dies kann entweder über die <a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrregister"><strong>ISyncMgrRegister-Schnittstelle</strong></a> oder durch direkte Registrierung in der Registrierung erreicht werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrresolutionhandler"><strong>ISyncMgrResolutionHandler</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Synchronisierungskonflikte verwalten. Implementieren Sie diese Schnittstelle, um einen Synchronisierungskonflikthandler zu erstellen. Die Konfliktlösungs-Benutzeroberfläche (UI) wird diese Schnittstelle aufrufen, um den Konflikt zu lösen, der dem Benutzer angezeigt wird. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrschedulewizarduioperation"><strong>ISyncMgrScheduleWizardUIOperation</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, mit der ein Handler den Synchronisierungszeitplan-Assistenten für den Handler anzeigen kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsessioncreator"><strong>ISyncMgrSessionCreator</strong></a><br/></td>
-<td>Macht eine einzelne Methode verfügbar, mit der ein Handler oder eine externe Anwendung Synchronisierungscenter, dass die Synchronisierung begonnen hat, sowie den Fortschritt und Ereignisse melden kann.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsynccallback"><strong>ISyncMgrSyncCallback</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einem Synchronisierungsprozess ermöglichen, Den Fortschritt und Ereignisse an Synchronisierungscenter zu melden oder abzufragen, ob der Prozess abgebrochen wurde.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize"><strong>ISyncMgrSynchronize</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es der registrierten Anwendung oder dem registrierten Dienst ermöglichen, Benachrichtigungen vom Synchronisierungs-Manager zu empfangen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback"><strong>ISyncMgrSynchronizeCallback</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die den Synchronisierungsprozess verwalten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronizeinvoke"><strong>ISyncMgrSynchronizeInvoke</strong></a><br/></td>
-<td>Macht Methoden verfügbar, mit denen eine registrierte Anwendung den Synchronisierungs-Manager aufrufen kann, um Elemente zu aktualisieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncitem"><strong>ISyncMgrSyncItem</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die auf ein einzelnes Synchronisierungselement wirken und Informationen daraus abrufen, sodass Handler Synchronisierungselemente als unabhängige Objekte verwalten können.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncitemcontainer"><strong>ISyncMgrSyncItemContainer</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Handlern Informationen zu den elementen bereitstellen, die sie enthalten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsynciteminfo"><strong>ISyncMgrSyncItemInfo</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Eigenschaften- und Zustandsinformationen für ein einzelnes Synchronisierungselement bereitstellen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrsyncresult"><strong>ISyncMgrSyncResult</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, mit der Anwendungen, die <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrcontrol"><strong>ISyncMgrControl</strong></a> aufrufen, das Ergebnis eines <a href="/windows/desktop/api/Syncmgr/nf-syncmgr-isyncmgrcontrol-starthandlersync"><strong>ISyncMgrControl::StartHandlerSync-</strong></a> oder <a href="/windows/desktop/api/Syncmgr/nf-syncmgr-isyncmgrcontrol-startitemsync"><strong>ISyncMgrControl::StartItemSync-Aufrufs</strong></a> erhalten können.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgruioperation"><strong>ISyncMgrUIOperation</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, über die ein Synchronisierungshandler oder ein Synchronisierungselement ein Benutzeroberflächenobjekt anzeigen kann, wenn dies angefordert wird, indem Synchronisierungscenter.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist"><strong>ITaskbarList</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die Taskleiste steuern. Sie können Elemente auf der Taskleiste dynamisch hinzufügen, entfernen und aktivieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist2"><strong>ITaskbarList2</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist"><strong>ITaskbarList-Schnittstelle,</strong></a> indem eine Methode verfügbar wird, um ein Fenster als Vollbildanzeige zu markieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist3"><strong>ITaskbarList3</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist2"><strong>ITaskbarList2,</strong></a> indem Methoden verfügbar gemacht werden, die die vereinheitlichte Funktion zum Starten und Wechseln der Taskleistenschaltfläche unterstützen, die in Windows 7 hinzugefügt wurde. Diese Funktionalität umfasst Miniaturansichtsdarstellungen und Switchziele basierend auf einzelnen Registerkarten in einer Registerkartenanwendung, Miniaturansichtssymbolleisten, Benachrichtigungs- und Statusüberlagerungen sowie Statusindikatoren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist4"><strong>ITaskbarList4</strong></a><br/></td>
-<td>Erweitert <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itaskbarlist3"><strong>ITaskbarList3</strong></a> durch die Bereitstellung einer Methode, mit der der Aufrufer zwei Eigenschaftswerte für die Miniaturansicht und das Peekfeature der Registerkarte steuern kann.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailcache"><strong>IThumbnailCache</strong></a><br/></td>
-<td>Macht Methoden für einen Cache für Systemminiaturansichten verfügbar, die von mehreren Anwendungen gemeinsam genutzt werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/thumbcache/nn-thumbcache-ithumbnailcacheprimer"><strong>IThumbnailCachePrimer</strong></a><br/></td>
-
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ithumbnailhandlerfactory"><strong>IThumbnailHandlerFactory</strong></a><br/></td>
-<td>Macht eine Methode zum Abrufen des Miniaturansichtshandlers eines Elements verfügbar. Implementieren Sie diese Schnittstelle, wenn Sie angeben möchten, welcher Extraktor für eine untergeordnete IDList verwendet wird.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailprovider"><strong>IThumbnailProvider</strong></a><br/></td>
-<td>Macht eine Methode zum Abrufen eines Miniaturbilds verfügbar und soll für Miniaturansichtshandler implementiert werden. Das Objekt, das diese Schnittstelle implementiert, muss auch <a href="/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream"><strong>IInitializeWithStream implementieren.</strong></a> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Thumbcache/nn-thumbcache-ithumbnailsettings"><strong>IThumbnailSettings</strong></a><br/></td>
-<td>Stellt eine Methode zur Verfügung, mit der ein Miniaturansichtsanbieter den Benutzerkontext einer Miniaturansichtsanforderung bestimmen kann.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/thumbnailstreamcache/nn-thumbnailstreamcache-ithumbnailstreamcache"><strong>IThumbnailStreamCache</strong></a><br/></td>
-<td>Ruft den Miniaturansichtsstream ab oder legt diese fest. Diese Schnittstelle ist nur für die interne Verwendung und kann nur von der Anwendung photos aufgerufen werden.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shdeprecated/nn-shdeprecated-itrackshellmenu"><strong>ITrackShellMenu</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellmenu"><strong>IShellMenu-Schnittstelle</strong></a> erweitern, indem sie die Möglichkeit bieten, Symbolleistenschaltflächen mit einem Menü zu koordinieren und ein Popupmenü anzuzeigen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Imagetranscode/nn-imagetranscode-itranscodeimage"><strong>ITranscodeImage</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die die Konvertierung in JPEG- oder BMP-Bildformate (Bitmap) von einem beliebigen Bildtyp ermöglicht, der von Windows. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferadvisesink"><strong>ITransferAdviseSink</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Statussammlungs- und Fehlerinformationen unterstützen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferdestination"><strong>ITransferDestination</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die ein Zielshellelement für einen Kopier- oder Verschieben-Vorgang erstellen. Diese Schnittstelle wird bereitgestellt, um mehr Kontrolle über Dateivorgänge zu ermöglichen, indem eine <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itransferdestination-advise"><strong>ITransferDestination::Advise-Methode bereitgestellt</strong></a> wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfermediumitem"><strong>ITransferMediumItem</strong></a><br/></td>
-<td>Wird von einer Kopier-Engine verwendet, um das Element zu erhalten, für das <a href="/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><strong>QueryInterface</strong></a> zum Zurückgeben eines Zeigers auf die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransferdestination"><strong>Schnittstelle ITransferDestination</strong></a> oder die <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfersource"><strong>Schnittstelle ITransferSource verwendet werden soll.</strong></a> Diese Schnittstellen können für Kopier-, Verschieben- oder Löschvorgänge abgefragt und aufzählt werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-itransfersource"><strong>ITransferSource</strong></a><br/></td>
-<td>Macht Methoden zum Bearbeiten von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem"><strong>IShellItem</strong></a>verfügbar, einschließlich Kopieren, Verschieben, Wiederverarbeiten und anderen. Diese Schnittstelle wird angeboten, um mehr Kontrolle über Dateivorgänge zu bieten, indem eine <a href="/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itransfersource-advise"><strong>ITransferSource::Advise-Methode zur Verfügung</strong></a> steht.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-itraydeskband"><strong>ITrayDeskBand</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Deskbands anzeigen, ausblenden und abfragen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iupdateidlist"><strong>IUpdateIDList</strong></a><br/></td>
-<td>Stellt eine Methode zum Aktualisieren der <a href="/windows/desktop/api/Shtypes/ns-shtypes-itemidlist"><strong>ITEMIDLIST</strong></a> des untergeordneten Elements eines Ordnerobjekts zur Auswahl.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iurlsearchhook"><strong>IURLSearchHook</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die vom Browser verwendet wird, um die Adresse eines unbekannten URL-Protokolls zu übersetzen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shlobj_core/nn-shlobj_core-iurlsearchhook2"><strong>IURLSearchHook2</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die vom Browser verwendet wird, um die Adresse eines unbekannten URL-Protokolls mithilfe eines Suchkontextobjekts zu übersetzen.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iuseraccountchangecallback"><strong>IUserAccountChangeCallback</strong></a><br/></td>
-<td>Macht eine Methode verfügbar, die aufgerufen wird, wenn das Bild geändert wird, das ein Benutzerkonto darstellt.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Benachrichtigungsinformationen festlegen und diese Benachrichtigung dann dem Benutzer in einer Sprechblase anzeigen, die in Verbindung mit dem Infobereich der Taskleiste angezeigt wird. <br/>
-<blockquote>
-[!Note]<br />
-<a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a> unterscheidet sich von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a> nur in der <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>Show-Methode,</strong></a> die einen zusätzlichen Parameter für eine Rückrufschnittstelle für die Kommunikation mit der Benachrichtigung hinzufügt. Andernfalls sind die beiden Schnittstellen in Form und Funktion identisch. CLSID_UserNotification implementiert beide Versionen von <strong>Als Überladung</strong> anzeigen.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die Benachrichtigungsinformationen festlegen und diese Benachrichtigung dann dem Benutzer in einer Sprechblase anzeigen, die in Verbindung mit dem Infobereich der Taskleiste angezeigt wird. <br/>
-<blockquote>
-[!Note]<br />
-<a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotification2"><strong>IUserNotification2</strong></a> erbt nicht von <a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iusernotification"><strong>IUserNotification</strong></a>. <strong>IUserNotification2</strong> unterscheidet sich von <strong>IUserNotification</strong> nur in der <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>Show-Methode,</strong></a> die einen zusätzlichen Parameter für eine Rückrufschnittstelle für die Kommunikation mit der Benachrichtigung hinzufügt. Andernfalls sind die beiden Schnittstellen in Form und Funktion identisch. CLSID_UserNotification implementiert beide Versionen von <strong>Als Überladung</strong> anzeigen.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iusernotificationcallback"><strong>IUserNotificationCallback</strong></a><br/></td>
-<td>Macht eine Methode für die Verarbeitung eines Mausklicks oder Kontextmenüzugriffs in einer Benachrichtigungssprechblase verfügbar. Wird mit <a href="/windows/desktop/api/Shobjidl/nf-shobjidl-iusernotification2-show"><strong>IUserNotification2::Show verwendet.</strong></a><br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/shobjidl/nn-shobjidl-iusetobrowseitem"><strong>IUseToBrowseItem</strong></a><br/></td>
-<td>Sucht das Element, das beim Navigieren zu diesem Element verwendet werden soll.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iviewstateidentityitem"><strong>IViewStateIdentityItem</strong></a><br/></td>
-<td>Stellt ein kanonisches Persistenzelement, ein Element, für das Ansichtsanpassungen gespeichert werden, zur Erinnerung.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/win32/api/shobjidl_core/nn-shobjidl_core-ivirtualdesktopmanager"><strong>IVirtualDesktopManager</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die es einer Anwendung ermöglichen, mit Gruppen von Fenstern zu interagieren, die virtuelle Arbeitsbereiche bilden.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-ivisualproperties"><strong>IVisualProperties</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die visuelle Eigenschaften festlegen und erhalten.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwebwizardextension"><strong>IWebWizardExtension</strong></a><br/></td>
-<td>Erweitert die <a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardextension"><strong>IWizardExtension-Schnittstelle,</strong></a> indem Methoden verfügbar sind, um die anfängliche URL der Assistentenerweiterung und eine bestimmte URL im Falle eines Fehlers zu festlegen.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardextension"><strong>IWizardExtension</strong></a><br/></td>
-<td>Wird von Assistenten wie dem Webveröffentlichungs-Assistenten und dem Assistenten für die Onlinedruckbestellung verwendet, die serverseitige Inhaltsseiten hosten. Diese Schnittstelle macht Methoden verfügbar, um unterstützte Erweiterungsseiten anzugeben und zu und von diesen Seiten zu navigieren.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Shobjidl/nn-shobjidl-iwizardsite"><strong>IWizardSite</strong></a><br/></td>
-<td>Macht Methoden verfügbar, die von einer Assistentenerweiterung verwendet werden, um durch die Rahmen zwischen sich selbst und dem Rest des Assistenten zu navigieren.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="taskcompletionclient.md"><strong>TaskCompletionClient</strong></a><br/></td>
-<td>Aktiviert die Aufgabenerledigung. <br/></td>
-</tr>
-</tbody>
-</table>
 
 
 

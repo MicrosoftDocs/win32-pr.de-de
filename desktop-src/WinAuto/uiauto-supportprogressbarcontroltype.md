@@ -1,146 +1,129 @@
 ---
-title: ProgressBar-Steuerelement Typen
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den ProgressBar-Steuerelement-Typ.
+title: ProgressBar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den ProgressBar-Steuerelementtyp.
 ms.assetid: 2ea0c1f1-1a0a-4360-bdcb-8edc13cc3c31
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für den ProgressBar-Steuerelement
-- Benutzeroberflächenautomatisierungs-, ProgressBar-Steuerelement
-- Benutzeroberflächenautomatisierungs-, Baumstruktur für ProgressBar-Steuerelement
-- UI-Automatisierung, Eigenschaften für den ProgressBar-Steuerelement-Typ
-- Benutzeroberflächenautomatisierungs-Steuerelement Muster für den ProgressBar-Steuerelement
-- UI-Automatisierung, Ereignisse für den ProgressBar-Steuerelement-Typ
-- Struktur Strukturen, ProgressBar-Steuerelement Typen
-- Eigenschaften, ProgressBar-Steuerelement Typen
-- Steuerelement Muster, ProgressBar-Steuerelement Typen
-- Ereignisse, ProgressBar-Steuerelement Typen
-- Unterstützung des ProgressBar-Steuerelement Typs
+- Benutzeroberflächenautomatisierung,Unterstützung für den ProgressBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,ProgressBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den ProgressBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den ProgressBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den ProgressBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Events für den ProgressBar-Steuerelementtyp
+- Strukturstrukturen,ProgressBar-Steuerelementtyp
+- properties,ProgressBar-Steuerelementtyp
+- Steuerelementmuster,ProgressBar-Steuerelementtyp
+- events,ProgressBar-Steuerelementtyp
+- Unterstützung für den ProgressBar-Steuerelementtyp
 - ProgressBar-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für den ProgressBar-Steuerelement-Typ
-- Steuerelement Typen, Steuerelement Muster für den ProgressBar-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für ProgressBar
-- Steuerelement Typen, ProgressBar
+- Steuerelementtypen,Struktur für ProgressBar-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für den ProgressBar-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für ProgressBar
+- Steuerelementtypen, ProgressBar
 ms.topic: article
 ms.date: 12/04/2019
-ms.openlocfilehash: 98be22a4a3d3b99e113d3c0d1402f2c45ee25550
-ms.sourcegitcommit: 6f7576b297d54c0b8f9c79e02c912b83041aa4fb
+ms.openlocfilehash: 5dc5dd22abcaca70ae9ce86717db6055642a21ce
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "104101150"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472297"
 ---
-# <a name="progressbar-control-type"></a>ProgressBar-Steuerelement Typen
+# <a name="progressbar-control-type"></a>ProgressBar-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **ProgressBar** -Steuerelement-Typ.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **ProgressBar-Steuerelementtyp.**
 
-Statusanzeige-Steuerelemente zeigen den Fortschritt eines langwierigen Vorgangs an. Das Steuerelement besteht aus einem Rechteck, das mit dem Fortschreiten eines Vorgangs allmählich mit der Hervorhebungsfarbe des Systems ausgefüllt wird.
+Statusleisten-Steuerelemente geben den Status eines längeren Vorgangs an. Das Steuerelement besteht aus einem Rechteck, das mit dem Fortschreiten eines Vorgangs allmählich mit der Hervorhebungsfarbe des Systems ausgefüllt wird.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **ProgressBar** -Steuerelement-Typ definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Statusanzeige-Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Unterstützung für die Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **ProgressBar-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Statusleisten-Steuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
-- [Typische Baumstruktur](#typical-tree-structure)
+- [Typische Strukturstruktur](#typical-tree-structure)
 - [Relevante Eigenschaften](#relevant-properties)
-- [Erforderliche Steuerelement Muster](#required-control-patterns)
+- [Erforderliche Steuerelementmuster](#required-control-patterns)
 - [Erforderliche Ereignisse](#required-events)
 - [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Statusanzeige-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf Statusleistensteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>ProgressBar</li>
-</ul></td>
-<td><ul>
-<li>ProgressBar</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
 
-Die Statusanzeige-Steuerelemente haben keine untergeordneten Elemente in der Steuerelement-oder Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur.
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>ProgressBar</li></ul> | <ul><li>ProgressBar</li></ul> | 
+
+
+Die Statusleisten-Steuerelemente enthalten keine unteren Bzw. in der Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur.
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Werte oder Definitionen für Status leisten besonders relevant sind. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für Statusleisten besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert           | Notizen                                                                                                                                                                                                |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert           | Hinweise                                                                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.      | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                         |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.      | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.      | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **ProgressBar** |                                                                                                                                                                                                      |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | **TRUE**        | Das Statusanzeige-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                           |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | **TRUE**        | Das Statusanzeige-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                           |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.      | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.      | Wenn eine statische Text Bezeichnung vorhanden ist, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen.                                                                                                              |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.      | Lokalisierte Zeichenfolge für den Steuerelement-Typ " **ProgressBar** ". Der Standardwert ist "Statusanzeige" für en-US oder Englisch (USA).                                                        |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.      | Das Statusanzeige-Steuerelement ruft seinen Namen in der Regel aus einer statischen Textbezeichnung ab. Wenn keine statische Textbezeichnung vorhanden ist, muss der Anwendungsentwickler einen Wert für die Eigenschaft „Name“ verfügbar machen.                  |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.      | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                         |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.      | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.      | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebundenen Rechtecks angeklickt werden kann und das Element spezielle Treffertests ausführt, überschreiben Und stellen Sie einen klickbaren Punkt zur Verfügung. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **ProgressBar** |                                                                                                                                                                                                      |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**        | Das Statusleisten-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                           |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | **TRUE**        | Das Statusleisten-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                           |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.      | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.      | Wenn es eine statische Textbezeichnung gibt, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen.                                                                                                              |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.      | Lokalisierte Zeichenfolge, die dem **ProgressBar-Steuerelementtyp** entspricht. Der Standardwert ist "Statusleiste" für en-US oder Englisch (USA).                                                        |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.      | Das Statusanzeige-Steuerelement ruft seinen Namen in der Regel aus einer statischen Textbezeichnung ab. Wenn keine statische Textbezeichnung vorhanden ist, muss der Anwendungsentwickler einen Wert für die Eigenschaft „Name“ verfügbar machen.                  |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Steuerelement Muster aufgelistet, die von Statusanzeige-Steuerelementen unterstützt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von Statusleisten-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
-| Steuerelementmuster/Mustereigenschaft                              | Unterstützung/Wert | Notizen                                                                                                                                      |
+| Steuerelementmuster/Mustereigenschaft                              | Unterstützung/Wert | Hinweise                                                                                                                                      |
 |---------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider)     | Depends (Abhängig)       | Statusanzeige-Steuerelemente, die einen numerischen Bereich annehmen, müssen das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster implementieren.        |
-| [**Minimum**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_minimum)         | Depends (Abhängig)           | Der Wert dieser Eigenschaft ist der Minimalwert, auf den das Steuerelement festgelegt werden kann. Dieser Wert muss kleiner als der [**maximal**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_maximum)Wert sein.                                                      |
-| [**Maximum**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_maximum)         | Depends (Abhängig)         | Der Wert dieser Eigenschaft ist der Höchstwert, auf den das Steuerelement festgelegt werden kann. Dieser Wert muss größer als der [**minimale**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_minimum)Wert sein.                                                        |
-| [**SmallChange**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_smallchange) | **NaN**       | Diese Eigenschaft ist nicht erforderlich, da Statusanzeige-Steuerelemente schreibgeschützt sind.                                                                 |
-| [**LargeChange**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_largechange) | **NaN**       | Diese Eigenschaft ist nicht erforderlich, da Statusanzeige-Steuerelemente schreibgeschützt sind.                                                                 |
-| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)               | Depends (Abhängig)       | Statusanzeige-Steuerelemente, die eine Text Angabe des Fortschritts enthalten, müssen das [value](uiauto-implementingvalue.md) -Steuerelement Muster implementieren. |
-| [**IsReadOnly**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-ivalueprovider-get_isreadonly)        | **TRUE**      | Der Wert für diese Eigenschaft ist immer " **true**".                                                                                            |
+| [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider)     | Depends (Abhängig)       | Statusleisten-Steuerelemente, die einen numerischen Bereich verwenden, müssen das [RangeValue-Steuerelementmuster](uiauto-implementingrangevalue.md) implementieren.        |
+| [**Minimum**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_minimum)         | Depends (Abhängig)           | Der Wert dieser Eigenschaft ist der Mindestwert, auf den das Steuerelement festgelegt werden kann. Dieser Wert sollte kleiner als Maximum [**sein.**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_maximum)                                                      |
+| [**Maximum**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_maximum)         | Depends (Abhängig)         | Der Wert dieser Eigenschaft ist der Höchstwert, auf den das Steuerelement festgelegt werden kann. Dieser Wert sollte größer als Minimum [**sein.**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_minimum)                                                        |
+| [**Smallchange**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_smallchange) | **NaN**       | Diese Eigenschaft ist nicht erforderlich, da Statusanzeige-Steuerelemente schreibgeschützt sind.                                                                 |
+| [**Largechange**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-irangevalueprovider-get_largechange) | **NaN**       | Diese Eigenschaft ist nicht erforderlich, da Statusanzeige-Steuerelemente schreibgeschützt sind.                                                                 |
+| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)               | Depends (Abhängig)       | Statusanzeige-Steuerelemente, die eine Textanzeige für den Fortschritt geben, müssen das [Value-Steuerelementmuster](uiauto-implementingvalue.md) implementieren. |
+| [**IsReadOnly**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-ivalueprovider-get_isreadonly)        | **TRUE**      | Der Wert für diese Eigenschaft ist immer **TRUE.**                                                                                            |
 | [**Wert**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-ivalueprovider-get_value)                  | Siehe Hinweise.    | Durch diese Eigenschaft wird der Fortschritt eines Statusanzeige-Steuerelements als Text verfügbar.                                                                          |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von Status leisten erforderlich Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die Statusleisten unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ Namepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                           |                                                                                                                            |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
-| [**UIA \_ Rangevaluevaluepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.        | Wenn das Steuerelement das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Valuevaluepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.                  | Wenn das Steuerelement das [value](uiauto-implementingvalue.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.             |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ NamePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                           |                                                                                                                            |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ RangeValueValuePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)        | Wenn das Steuerelement das [RangeValue-Steuerelementmuster](uiauto-implementingrangevalue.md) unterstützt, muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ Durch die ValueValuePropertyId-Eigenschaft**](uiauto-control-pattern-propids.md) geändertes Ereignis.                  | Wenn das Steuerelement das [Value-Steuerelementmuster](uiauto-implementingvalue.md) unterstützt, muss es dieses Ereignis unterstützen.             |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -149,9 +132,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

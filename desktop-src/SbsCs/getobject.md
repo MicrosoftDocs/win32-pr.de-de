@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Sxsoa.dll
-ms.openlocfilehash: a102fdae74232fa9a67c4b9455050bcdba32a219d8a66180ae8bc6ce6cb96c8c
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: b6c47c00f50cdeaa97fd0fafcd8aefa3c4863bc1
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119885280"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886619"
 ---
 # <a name="actctxgetobject-method"></a>ActCtx.GetObject-Methode
 
@@ -42,7 +42,7 @@ ActCtx.GetObject(
 *bstrName* 
 </dt> <dd>
 
-Erforderliche Zeichenfolge, die das Objekt angibt. Der Name muss in der Registrierung unter **HKEY \_ LOCAL \_ MACHINE** \\ **Microsoft** \\ **Visual Studio** \\ **6.0** Automation vorhanden \\ **<package>** \\ sein.
+Erforderliche Zeichenfolge, die das Objekt angibt. Der Name muss sich in der Registrierung unter **HKEY \_ LOCAL \_ MACHINE** \\ **Microsoft** \\ **Visual Studio** \\ **6.0-Paketautomatisierung** \\ **&lt; &gt;** \\ befindet.
 
 </dd> </dl>
 
@@ -50,7 +50,7 @@ Erforderliche Zeichenfolge, die das Objekt angibt. Der Name muss in der Registri
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

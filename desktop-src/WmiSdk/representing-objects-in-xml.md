@@ -5,12 +5,12 @@ ms.tgt_platform: multiple
 title: Darstellen von Objekten in XML
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cae7eefc495cee7e515d699faf5074d187c726365d4723d9bbf443d346edb1dd
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 68bcbc47a0e5466b69775b4ff9a6c09ce20bae6f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119050378"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122879656"
 ---
 # <a name="representing-objects-in-xml"></a>Darstellen von Objekten in XML
 
@@ -68,7 +68,7 @@ Im folgenden Verfahren wird beschrieben, wie ein Objekt in XML mit C oder C++ co
     </tr>
     <tr class="even">
     <td>&quot;&quot; <strong>PathLevel-VT_I4</strong></td>
-    <td><dl> 0 = Ein <CLASS> - oder <INSTANCE> -Element wird generiert.<br />
+    <td><dl> 0 = Eine &lt; KLASSE oder ein Element wird &gt; <INSTANCE> generiert.<br />
 1 = Ein <VALUE.NAMEDOBJECT> Element wird generiert.<br />
 2 = Ein <VALUE.OBJECTWITHLOCALPATH> Element wird generiert.<br />
 3 = A <VALUE.OBJECTWITHPATH> wird generiert.<br />
@@ -399,7 +399,7 @@ Im folgenden Verfahren wird beschrieben, wie ein Objekt in XML mithilfe von VBSc
 
     
 
-4.  Überprüfen Sie optional, ob es sich bei dem in Schritt 3 generierten XML-Code um wohlgeformte XML-Daten handelt, indem Sie ein XML-Dokumentobjektmodell -Objekt (DOM) erstellen und initialisieren und dann den XML-Text in dieses laden.
+4.  Überprüfen Sie optional, ob es sich bei dem in Schritt 3 generierten XML-Code um wohlgeformten XML-Code handelt, indem Sie ein XML-Dokumentobjektmodell -Objekt (DOM) erstellen und initialisieren und dann den XML-Text in dieses laden.
 
     Das folgende Codebeispiel zeigt, wie Sie ein XML-DOM-Objekt erstellen und initialisieren und den XML-Text darin laden.
 

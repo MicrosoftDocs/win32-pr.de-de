@@ -3,26 +3,26 @@ title: Senden der Datei an das Gerät
 description: Senden der Datei an das Gerät
 ms.assetid: 202185b8-f10e-4108-a950-60658c006cec
 keywords:
-- Windows Media Device Manager, Senden von Dateien an Geräte
-- Device Manager, Senden von Dateien an Geräte
-- Programmier Handbuch, Senden von Dateien an Geräte
-- Desktop Anwendungen, Senden von Dateien an Geräte
-- Erstellen von Windows Media Device Manager-Anwendungen, Senden von Dateien an Geräte
+- Windows Medien Geräte-Manager, Senden von Dateien an Geräte
+- Geräte-Manager,Senden von Dateien an Geräte
+- Programmierhandbuch,Senden von Dateien an Geräte
+- Desktopanwendungen, Senden von Dateien an Geräte
+- Erstellen Windows Media Geräte-Manager-Anwendungen, Senden von Dateien an Geräte
 - Schreiben von Dateien auf Geräte, Senden von Dateien an Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65be0c18a6022538dc5573d936f63392234e9c15
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 974a47de872d03d42701ff6e95516a9ead59f1206729ae9ca70d6dd9e5f1260f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124140"
 ---
 # <a name="sending-the-file-to-the-device"></a>Senden der Datei an das Gerät
 
-Nachdem die Datei bei Bedarf transcodiert wurde und alle Metadaten, einschließlich des Formats, festgelegt wurden, kann die Anwendung die Datei an das Gerät senden. Um dies zu erreichen, müssen Sie zuerst eine **iwmdmstoragecontrol** -Schnittstelle (oder eine höhere Version) für einen Zielort auf dem Gerät erhalten. Die **einfügeflags** geben an, ob der neue Speicher ein gleich geordnetes oder untergeordnetes Element des Ziels sein soll. Nachdem Sie das Ziel abgerufen haben, können Sie [**iwmdmstoragecontrol:: Insert**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-insert), [**IWMDMStorageControl2:: Insert2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol2-insert2)oder [**IWMDMStorageControl3:: Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3) zum Übertragen der Datei verwenden. Die Anwendung kann das Lesen der Datei Daten selbst durch Implementieren von [**iwmdmoperation**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation)verarbeiten, oder Sie kann es der **Insert** -Methode ermöglichen, die Datei automatisch zu lesen und zu übertragen, indem Sie keinen Zeiger auf einen von der Anwendung implementierten **iwmdmoperation-Vorgang** bereitstellt.
+Nachdem die Datei bei Bedarf transcodiert und alle Metadaten einschließlich des Formats festgelegt wurden, kann Ihre Anwendung die Datei an das Gerät senden. Hierzu müssen Sie zunächst eine **IWMDMStorageControl-Schnittstelle** (oder eine höhere Version) für einen Zielspeicherort auf dem Gerät abrufen. Die **Insert-Flags** geben an, ob der neue Speicher ein gleichgeordnetes oder untergeordnetes Element des Ziels sein soll. Nachdem Sie das Ziel erhalten haben, können Sie [**IWMDMStorageControl::Insert**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-insert), [**IWMDMStorageControl2::Insert2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol2-insert2)oder [**IWMDMStorageControl3::Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3) aufrufen, um die Datei zu übertragen. Die Anwendung kann das Lesen der Dateidaten selbst verarbeiten, indem [**sie IWMDMOperation**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation)implementiert, oder sie kann es der **Insert-Methode** ermöglichen, die Datei automatisch zu lesen und zu übertragen, indem sie keinen Zeiger auf eine von der Anwendung implementierte **IWMDMOperation** bereitstellt.
 
-Der folgende C++-Code veranschaulicht das Aufrufen von **Insert3** zum Schreiben einer Datei auf ein Gerät. Wenn der an **Insert3** weiter gegebene *poperation* -Zeiger **null** ist, wird die Datei in einem Schritt gesendet. Wenn dieser Zeiger ein gültiger Schnittstellen Zeiger ist, ruft Windows Media Device Manager die Rückruf Methode auf, um Daten in Blöcken abzurufen. Ausführliche Informationen zum Implementieren von **iwmdmoperation** finden Sie unter [Manuelles Verarbeiten von Dateiübertragungen](handling-file-transfers-manually.md).
+Der folgende C++-Code veranschaulicht das Aufrufen von **Insert3,** um eine Datei auf ein Gerät zu schreiben. Wenn der an **Insert3** übergebene *pOperation-Zeiger* **NULL** ist, wird die Datei in einem Schritt gesendet. Wenn dieser Zeiger ein gültiger Schnittstellenzeiger ist, ruft Windows Media Geräte-Manager Ihre Rückrufmethode auf, um Daten in Blöcken abzurufen. Ausführliche Informationen zum Implementieren von **IWMDMOperation** finden Sie unter [Manuelles Behandeln von Dateiübertragungen.](handling-file-transfers-manually.md)
 
 
 ```C++
@@ -57,9 +57,9 @@ hr = pStgCtl3->Insert3(
 [**Schreiben von Dateien auf das Gerät**](writing-files-to-the-device.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
