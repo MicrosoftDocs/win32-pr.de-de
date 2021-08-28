@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1b47cd9de933efdc5a73aba32a212432a9e37a12
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 87f3bed1dcd9fd43a67c96cbcb53d2496a976afa
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122984673"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474086"
 ---
 # <a name="jetgetthreadstats-function"></a>JetGetThreadStats-Funktion
 
@@ -47,7 +47,7 @@ Die **JetGetThreadStats-Funktion** ruft Leistungsinformationen aus der Datenbank
 
 *pvResult*
 
-Der Ausgabepuffer, der die Threadstatistikdaten empfängt. Der Puffer enthält [eine](./jet-threadstats-structure.md) JET_THREADSTATS Struktur nach einem erfolgreichen Aufruf.
+Der Ausgabepuffer, der die Threadstatistikdaten empfängt. Der Puffer enthält eine [JET_THREADSTATS](./jet-threadstats-structure.md) nach einem erfolgreichen Aufruf.
 
 *cbMax*
 
@@ -61,15 +61,15 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 | <p>Rückgabecode</p> | <p>Beschreibung</p> | 
 |--------------------|--------------------|
 | <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
-| <p>JET_errBufferTooSmall</p> | <p>Fehler beim Vorgang, weil der bereitgestellte Ausgabepuffer zu klein war, um die angeforderten Daten zu enthalten. Die <strong>JetGetThreadStats-Funktion</strong> gibt diesen Fehler zurück, wenn der Ausgabepuffer <a href="gg269227(v=exchg.10).md"></a> zu klein ist, um die kleinste Version der JET_THREADSTATS-Struktur zu enthalten, die von der Datenbank-Engine unterstützt wird.</p> | 
+| <p>JET_errBufferTooSmall</p> | <p>Fehler beim Vorgang, weil der bereitgestellte Ausgabepuffer zu klein war, um die angeforderten Daten zu enthalten. Die <strong>JetGetThreadStats-Funktion</strong> gibt diesen Fehler zurück, wenn der Ausgabepuffer zu klein ist, um die kleinste Version der <a href="gg269227(v=exchg.10).md">JET_THREADSTATS-Struktur</a> zu enthalten, die von der Datenbank-Engine unterstützt wird.</p> | 
 
 
 
-Bei Erfolg enthält der Ausgabepuffer eine JET_THREADSTATS [Struktur,](./jet-threadstats-structure.md) die Datenbank-Engine-Statistiken für den aktuellen Thread enthält.
+Bei Erfolg enthält der Ausgabepuffer eine JET_THREADSTATS Struktur, die Datenbank-Engine-Statistiken für den aktuellen Thread enthält. [](./jet-threadstats-structure.md)
 
 Bei einem Fehler ist der Status des Ausgabepuffers nicht definiert.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Die informationen, die von zwei aufeinander folgenden Aufrufen dieser API bereitgestellt werden, sollen verwendet werden, um die Kosten anderer Datenbank-Engine-Vorgänge für den aktuellen Thread zu berechnen. Im Allgemeinen erfolgt dies, indem ein vor und nach dem Lesen der Statistiken verwendet und die Nachzählung von der Anzahl der Vorher-Vorgänge subtrahiert wird, um die Nettoanzahl der ausgeführten Vorgänge zu erhalten.
 
@@ -77,18 +77,12 @@ Beispielsweise könnte eine Anwendung **JetGetThreadStats** einmal aufrufen, um 
 
 Die Statistiken für jeden Thread werden für die Lebensdauer dieses Threads akkumuliert. Die Statistiken werden zurückgesetzt, wenn die DLL der Datenbank-Engine aus dem Hostprozess entladen wird.
 
-Die [JET_THREADSTATS](./jet-threadstats-structure.md) struktur wird wahrscheinlich in Zukunft erweitert, um weitere Statistiken zu enthalten. Neue Statistiken werden am Ende der Struktur hinzugefügt und können mit einer erhöhten Ausgabepuffergröße abgerufen werden. Das Vorhandensein zusätzlicher Statistiken kann durch einen größeren cbStruct-Wert abgeleitet werden.
+Die [JET_THREADSTATS](./jet-threadstats-structure.md) struktur wird in Zukunft wahrscheinlich erweitert, um weitere Statistiken zu enthalten. Neue Statistiken werden am Ende der Struktur hinzugefügt und können mit einer erhöhten Ausgabepuffergröße abgerufen werden. Das Vorhandensein zusätzlicher Statistiken kann durch einen größeren cbStruct-Wert abgeleitet werden.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
-| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

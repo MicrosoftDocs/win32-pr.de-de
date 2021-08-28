@@ -1,19 +1,19 @@
 ---
-description: Erweiterte Abfragesyntax (Advanced Query Syntax, AQS) ist die Standardabfragesyntax, die von Windows Search verwendet wird, um den Index abfragt und Suchparameter zu verfeinern und zu verfeinern.
+description: Erweiterte Abfragesyntax (Advanced Query Syntax, AQS) ist die Standardabfragesyntax, die von Windows Search verwendet wird, um den Index zu abfragen und Suchparameter zu verfeinern und zu verfeinern.
 ms.assetid: 76e33903-d063-48c0-9afe-912c3daa8237
 title: Programmgesteuertes Verwenden der erweiterten Abfragesyntax
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ebde3119199d84f67315c2db73343d5dffc58ad
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: 24e480866120289605a7465af96d8aaa8dc2beda
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122880697"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627226"
 ---
 # <a name="using-advanced-query-syntax-programmatically"></a>Programmgesteuertes Verwenden der erweiterten Abfragesyntax
 
-Erweiterte Abfragesyntax (Advanced Query Syntax, AQS) ist die Standardabfragesyntax, die von Windows Search verwendet wird, um den Index abfragt und Suchparameter zu verfeinern und zu verfeinern. AQS wird von Entwicklern verwendet, um Abfragen programmgesteuert zu erstellen (und von Benutzern, um ihre Suchparameter ein schmaler zu machen). Canonical AQS wurde in Windows 7 eingeführt und muss in Windows 7 und höher verwendet werden, um AQS-Abfragen programmgesteuert zu generieren.
+Erweiterte Abfragesyntax (Advanced Query Syntax, AQS) ist die Standardabfragesyntax, die von Windows Search verwendet wird, um den Index zu abfragen und Suchparameter zu verfeinern und zu verfeinern. AQS wird von Entwicklern verwendet, um Abfragen programmgesteuert zu erstellen (und von Benutzern, um ihre Suchparameter ein schmaler zu machen). Canonical AQS wurde in Windows 7 eingeführt und muss in Windows 7 und höher verwendet werden, um AQS-Abfragen programmgesteuert zu generieren.
 
 Dieses Thema ist wie folgt organisiert:
 
@@ -50,7 +50,7 @@ Eine Abfrage besteht aus grundlegenden Abfragen, die mit AND, OR und NOT verbund
 
 Wenn eine Abfrage über zwei oder mehr Verwendungen von AND oder OR verfügt, werden sie von links nach rechts gebunden, unabhängig davon, ob es sich um AND oder OR handelt. Das heißt, die Abfrage "apple AND pear OR plum" wird so interpretiert, als wäre sie als "(Apple AND Pear) OR plum" geschrieben, und die Abfrage "apple OR pear AND plum" wird so interpretiert, als wäre sie als "(apple OR pear) AND plum" geschrieben. Wenn also ein Dokument das Wort plum enthält, aber weder Apple noch Pear, gibt die erste Abfrage es zurück, die zweite Abfrage jedoch nicht. Daher wird empfohlen, explizite Klammern für jede Abfrage zu verwenden, die AND und OR mischen, um Fehler oder Fehlinterpretationen zu vermeiden.
 
-Eine einfache Abfrage sucht nach Elementen, die eine Einschränkung für eine Eigenschaft erfüllen. Der einzige erforderliche Teil einer einfachen Abfrage ist die Einschränkung oder der Suchwert. Wenn Sie keine Eigenschaft angeben, Windows alle Eigenschaften durchsucht. &lt;restr &gt; stellt die Sucheinschränkung dar.
+Eine einfache Abfrage sucht nach Elementen, die eine Einschränkung für eine Eigenschaft erfüllen. Der einzige erforderliche Teil einer einfachen Abfrage ist die Einschränkung oder der Suchwert. Wenn Sie keine Eigenschaft angeben, Windows alle Eigenschaften durchsucht. <restr> stellt die Sucheinschränkung dar.
 
 Die folgenden Formulare für eine einfache Abfrage sind gültig:
 
@@ -90,7 +90,7 @@ Eine Einschränkung ist ein Suchwert, z. B. ein Zahlenwert oder ein Zeichenfolge
 | <restr> OR <restr>
 ```
 
-Wenn Sie keinen Operator angeben, wählt Windows Search den am besten geeigneten Operator für Ihre Abfrage aus:
+Wenn Sie keinen Operator angeben, Windows Search den am besten geeigneten Operator für Ihre Abfrage aus:
 
 -   Für eine Zeichenfolgeneigenschaft wird der OPERATOR COP \_ WORD \_ STARTSWITH $< angenommen.
 -   Für alle anderen Eigenschaften wird der OPERATOR COP \_ EQUAL = angenommen.
@@ -142,11 +142,11 @@ Auf Eigenschaften wird durch ein Schlüsselwort verwiesen, bei dem es sich um ei
 
 ### <a name="support-for-custom-properties"></a>Unterstützung für benutzerdefinierte Eigenschaften
 
-In Windows Vista und früher waren benutzerdefinierte Eigenschaften in AQS nicht verfügbar. In Windows 7 und höher funktioniert AQS mit benutzerdefinierten Eigenschaften, die beim Eigenschaftensystem registriert sind. Weitere Informationen zum Erstellen benutzerdefinierter Eigenschaften finden Sie unter [Eigenschaftensystem](../properties/building-property-handlers.md).
+In Windows Vista und früher waren benutzerdefinierte Eigenschaften in AQS nicht verfügbar. In Windows 7 und höher arbeitet AQS mit benutzerdefinierten Eigenschaften, die beim Eigenschaftensystem registriert sind. Weitere Informationen zum Erstellen benutzerdefinierter Eigenschaften finden Sie unter [Eigenschaftensystem](../properties/building-property-handlers.md).
 
 ### <a name="datetime-properties-in-windows-8"></a>DateTime-Eigenschaften in Windows 8
 
-Ab Windows 8 unterstützen DateTime-Eigenschaften (z. B. [System.DateModified)](../properties/props-system-datemodified.md)das kanonische Datums- und Uhrzeitformat, das von [ISO-8601](https://www.w3.org/TR/NOTE-datetime)angegeben wird, optional einschließlich der UTC-Zeitzone.
+Ab Windows 8 unterstützen DateTime-Eigenschaften [(z.B. System.DateModified)](../properties/props-system-datemodified.md)das kanonische Datums- und Uhrzeitformat, das von [ISO-8601](https://www.w3.org/TR/NOTE-datetime)angegeben wird, optional einschließlich der UTC-Zeitzone.
 
 -   **Windows 8 und früher, Datum/Uhrzeit ohne UTC-Zeitzone:** *YYYY* - *MM* - *DDThh*:*mm*:*ss*
 
@@ -174,9 +174,9 @@ Die Konventionen für kanonische Schlüsselwortsyntax lauten wie folgt:
 -   Die kanonische Syntax für eine Eigenschaft ist ihr kanonischer Name, z. `System.Photo.LightSource` B. . Bei kanonischen Namen wird die Kleinschreibung nicht beachtet.
 -   Die kanonische Syntax für die booleschen Operatoren besteht aus den Schlüsselwörtern AND, OR und NOT in Großbuchstaben.
 -   Die Operatoren <, >, =usw. sind nicht lokalisiert und daher auch Teil der kanonischen Syntax.
--   Wenn eine Eigenschaft über aufzählte Werte oder Bereiche mit den Namen N₁ bis Nk verfügt, ist die kanonische Syntax für den I-Wert oder -Bereich der kanonische Name für P, gefolgt vom Zeichen , gefolgt von `P`  \# N<sub>I,</sub>wie im folgenden Beispiel veranschaulicht:
+-   Wenn eine Eigenschaft über aufzählte Werte oder Bereiche mit den Namen N₁ bis Nk verfügt, ist die kanonische Syntax für den I-Wert oder -Bereich der kanonische Name für P, gefolgt von dem Zeichen , gefolgt von `P`  \# N<sub>I,</sub>wie im folgenden Beispiel veranschaulicht:
     -   `System.Photo.LightSource#Daylight`, `System.Photo.LightSource#StandardA` usw.
--   Für einen definierten semantischen Typ T mit Werten oder Bereichen mit den Namen N₁ bis Nk ist die kanonische Syntax für den I. Wert oder Bereich der kanonische Name für T, gefolgt von dem Zeichen , gefolgt von \# N<sub>I,</sub>wie im folgenden Beispiel veranschaulicht:
+-   Für einen definierten semantischen Typ T mit Werten oder Bereichen namens N₁ bis Nk ist die kanonische Syntax für den I-Wert oder -Bereich der kanonische Name für T, gefolgt vom Zeichen , gefolgt von \# N<sub>I,</sub>wie im folgenden Beispiel veranschaulicht:
     -   `System.Devices.LaunchDeviceStageFromExplorer:=System.StructuredQueryType.Boolean#True`
 -   Bei Literalwerten wie Wörtern oder Ausdrücken ist die kanonische Syntax mit der regulären Syntax identisch. Beispiele für Abfragen mit Literalwerten in kanonischer Syntax sind:
     -   `System.Author:sanjay`
@@ -184,7 +184,7 @@ Die Konventionen für kanonische Schlüsselwortsyntax lauten wie folgt:
     -   `System.FileCount:>100`
 
 > [!Note]  
-> Es gibt keine kanonische Syntax für Zahlen in Windows 7 und höher. Da Gleitkommaformate je nach Gebiet variieren, wird die Verwendung einer kanonischen Abfrage, die eine Gleitkommakonstu umfasst, nicht unterstützt. Ganzzahlige Konstanten können dagegen nur mit Ziffern geschrieben werden (keine Trennzeichen für Tausende) und können sicher in kanonischen Abfragen in Windows 7 und höher verwendet werden.
+> Es gibt keine kanonische Syntax für Zahlen in Windows 7 und höher. Da Gleitkommaformate je nach Gebiet variieren, wird die Verwendung einer kanonischen Abfrage, die eine Gleitkommakonstu umfasst, nicht unterstützt. Ganzzahlige Konstanten können dagegen nur mit Ziffern (keine Trennzeichen für Tausende) geschrieben werden und können sicher in kanonischen Abfragen in Windows 7 und höher verwendet werden.
 
  
 
@@ -199,19 +199,19 @@ Die folgende Tabelle enthält einige Beispiele für kanonische Eigenschaften und
 | Zeichenfolgenwert               | [System.Author](../properties/props-system-author.md)<br/>    | Der Zeichenfolgenwert wird in der author-Eigenschaft gesucht: <br/>`System.Author:Jacobs`                                                                                                                                                              |
 | Enumerationsbereich          | [System.Priority](../properties/props-system-priority.md)             | Die priority-Eigenschaft kann einen numerischen Wertbereich haben:<br/>`System.Priority:System.Priority#High`                                                                                                                                                |
 | Boolean                    | [System.IsDeleted](../properties/props-system-isdeleted.md)<br/> | Boolesche Werte können mit jeder booleschen Eigenschaft verwendet werden:<br/>`System.IsDeleted:System.StructuredQueryType.Boolean#True`Und `System.IsDeleted:System.StructuredQueryType.Boolean#False`                                                             |
-| Numerisch                  | [System.Size](../properties/props-system-size.md)<br/>      | Es ist nicht möglich, eine kanonische Abfrage, die eine Gleitkommakonstante umfasst, sicher zu schreiben, da Gleitkommaformate zwischen Gebietsschemas variieren. Ganze Zahlen müssen ohne Trennzeichen für Tausende geschrieben werden. Beispiel:<br/>`System.Size:<12345` |
+| Numerisch                  | [System.Size](../properties/props-system-size.md)<br/>      | Es ist nicht möglich, eine kanonische Abfrage sicher zu schreiben, die eine Gleitkommakonstu umfasst, da Gleitkommaformate je nach Gebiet variieren. Ganze Zahlen müssen ohne Trennzeichen für Tausende geschrieben werden. Zum Beispiel:<br/>`System.Size:<12345` |
 
 
 
  
 
-Weitere Informationen zu kanonischen Eigenschaften und zum Eigenschaftensystem im Allgemeinen finden Sie unter [Systemeigenschaften.](../properties/props.md) Alternativ können Sie auch auf die öffentlichen Headerdateien verweisen.
+Weitere Informationen zu kanonischen Eigenschaften und zum Eigenschaftensystem im Allgemeinen finden Sie unter [Systemeigenschaften](../properties/props.md). Alternativ können Sie auf die öffentlichen Headerdateien verweisen.
 
 ### <a name="query-operators"></a>Abfrageoperatoren
 
-Wenn die Eigenschaft p mehrere Werte für ein Element enthält, gibt eine AQS-Abfrage für p: &lt; restr &gt; das Element zurück, wenn &lt; restr für mindestens einen der &gt; -Werte **true** ist. ( &lt; Restr &gt; stellt eine Einschränkung dar.)
+Wenn eine Eigenschaft, p, mehrere Werte für ein Element hat, gibt eine AQS-Abfrage für p: das Element zurück, wenn für mindestens einen der Werte true <restr> <restr> ist.  ( <restr> stellt eine Einschränkung dar.)
 
-Die in der folgenden Tabelle aufgeführte Syntax besteht aus einem Operator, einem Operatorsymbol, einem Beispiel und einer Beispielbeschreibung. Der Operator und das Symbol können in jeder Sprache verwendet und in jeder Abfrage enthalten sein. Verwenden Sie nicht die \_ COP IMPLICIT- oder COP \_ APPLICATION \_ SPECIFIC-Operatoren. Einige der Operatoren verfügen über austauschbare Symbole.
+Die in der folgenden Tabelle aufgeführte Syntax besteht aus einem Operator, einem Operatorsymbol, einem Beispiel und einer Beispielbeschreibung. Der Operator und das Symbol können in jeder Sprache verwendet und in jeder Abfrage enthalten sein. Verwenden Sie nicht die Operatoren COP \_ IMPLICIT oder COP APPLICATION \_ \_ SPECIFIC. Einige der Operatoren verfügen über austauschbare Symbole.
 
 
 
@@ -224,7 +224,7 @@ Die in der folgenden Tabelle aufgeführte Syntax besteht aus einem Operator, ein
 </colgroup>
 <thead>
 <tr class="header">
-<th>Operator</th>
+<th>Betreiber</th>
 <th>Symbol</th>
 <th>Beispiel</th>
 <th>Beschreibung</th>
@@ -235,13 +235,13 @@ Die in der folgenden Tabelle aufgeführte Syntax besteht aus einem Operator, ein
 <td>COP_EQUAL</td>
 <td>=<br/></td>
 <td>System.FileExtension:= &quot;.txt&quot;<br/></td>
-<td>Der Wert ist die Zeichenfolge &quot; <em>.txt</em> &quot; .<br/></td>
+<td>Der Wert ist die Zeichenfolge &quot; <em>.txt. </em> &quot;<br/></td>
 </tr>
 <tr class="even">
 <td>COP_NOTEQUAL</td>
 <td>≠<br/> -<br/> &lt;&gt;<br/> NICHT<br/> - -<br/></td>
-<td>System.Kind:≠picture<br/> System.Photo.DateTaken:-[]¹<br/> System.Kind: &lt; &gt; picture<br/> System.Kind:NOT-Bild<br/> System.Kind:- -picture<br/></td>
-<td>Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild.<br/> Die <a href="/windows/desktop/properties/props-system-photo-datetaken">System.Photo.DateTaken-Eigenschaft</a> verfügt über einen -Wert.<br/> Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild. <br/> Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild. <br/> Doppelte NOT-Operatoren, die auf dieselbe Eigenschaft angewendet werden, brechen nicht ab. Daher entspricht System.Kind:- -picture System.Kind:-picture und System.Kind:NOT picture.<br/></td>
+<td>System.Kind:≠picture<br/> System.Photo.DateTaken:-[]<br/> System.Kind: &lt; &gt; picture<br/> System.Kind:NOT picture<br/> System.Kind:- -picture<br/></td>
+<td>Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild.<br/> Die <a href="/windows/desktop/properties/props-system-photo-datetaken">System.Photo.DateTaken-Eigenschaft</a> hat einen -Wert.<br/> Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild. <br/> Die <a href="/windows/desktop/properties/props-system-kind">System.Kind-Eigenschaft</a> ist kein Bild. <br/> Double NOT-Operatoren, die auf dieselbe Eigenschaft angewendet werden, brechen nicht ab. Daher entspricht System.Kind:- -picture system.Kind:-picture und System.Kind:NOT picture.<br/></td>
 </tr>
 <tr class="odd">
 <td>COP_LESSTHAN</td>
@@ -270,48 +270,48 @@ Die in der folgenden Tabelle aufgeführte Syntax besteht aus einem Operator, ein
 <tr class="odd">
 <td>COP_VALUE_STARTSWITH</td>
 <td>~&lt;<br/></td>
-<td>System.FileName:~ &lt; &quot; C++-Einführung&quot;<br/></td>
-<td>Sucht Elemente, bei denen der Dateiname mit den Zeichen &quot; <em>C++-Primer</em> &quot; beginnt.<br/></td>
+<td>System.FileName:~ &lt; &quot; C++-Primer&quot;<br/></td>
+<td>Sucht Nach Elementen, bei denen der Dateiname mit den Zeichen &quot; <em>C++ Primer</em> &quot; beginnt.<br/></td>
 </tr>
 <tr class="even">
 <td>COP_VALUE_ENDSWITH</td>
 <td>~&gt;<br/></td>
-<td>System.Photo.CameraModel:~ &gt; nicht<br/></td>
-<td>Sucht Nach Elementen, bei denen der Eigenschaftswert mit den Zeichen <em>endet,</em>die nicht sind.<br/></td>
+<td>System.Photo.CameraModel:~ &gt; non<br/></td>
+<td>Sucht Nach Elementen, bei denen der Eigenschaftswert mit den Zeichen endet, die <em>nicht sind.</em><br/></td>
 </tr>
 <tr class="odd">
 <td>COP_VALUE_CONTAINS</td>
 <td>~=<br/> ~~<br/></td>
 <td>System.Subject.~=round <br/> System.Search.Autosummary:~~round<br/></td>
-<td>Sucht eine Nachricht, die diese Zeichenfolge im Betreff enthält und &quot; z. B.<em>g-Rundungsregeln</em> &quot; entspricht.<br/> Sucht alle Elemente mit einem Autoummary, das die Zeichen <em>rundt.</em><br/></td>
+<td>Sucht eine Meldung, die diese Zeichenfolge im Betreff enthält und z. &quot; B. mit<em>g-Rundungsregeln</em> &quot; übereinstimmen wird.<br/> Sucht alle Elemente mit einer Autosummary, die die runden Zeichen <em>enthält.</em><br/></td>
 </tr>
 <tr class="even">
 <td>COP_VALUE_NOTCONTAINS</td>
 <td>~!<br/></td>
 <td>System.Author:~! &quot; Sanjay&quot;<br/></td>
-<td>Sucht Nach Autoren, die nicht über die Zeichensequenz &quot; <em>sjay</em> &quot; verfügen.<br/></td>
+<td>Sucht Autoren, die nicht über die &quot; <em>Zeichenfolgensyntität</em> &quot; verfügen.<br/></td>
 </tr>
 <tr class="odd">
 <td>COP_DOSWILDCARDS</td>
 <td>~ <br/></td>
 <td>System.FileName:~ &quot; Mic?osoft W*d&quot;<br/></td>
-<td>Sucht Dateien, bei denen der Dateiname mit <em>Mic</em>beginnt, gefolgt von einem Zeichen, gefolgt von <em>osoft w,</em>gefolgt von allen Zeichen, die mit <em>d</em>enden. <br/> Mit dem Zeichen „?“ und *-Zeichen werden nicht wörtlich interpretiert und funktionieren wie Platzhalterzeichen im DOS-Stil:<br/>
+<td>Sucht Dateien, bei denen der Dateiname mit <em>Mic</em>beginnt, gefolgt von einem Zeichen, gefolgt von <em>osoft w</em>, gefolgt von allen Zeichen, die mit <em>d enden.</em> <br/> Mit dem Zeichen „?“ - und *-Zeichen werden nicht wörtlich interpretiert und funktionieren wie Platzhalterzeichen im DOS-Stil:<br/>
 <ul>
 <li>? entspricht einem beliebigen Zeichen.</li>
-<li>* entspricht 0 (null) oder mehr beliebigen Zeichen.</li>
+<li>* entspricht null oder mehr beliebigen Zeichen.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>COP_WORD_EQUAL</td>
 <td>$=<br/> $$<br/></td>
-<td>System.StructuredQuery.Virtual.From:$= &quot; S !"&quot;<br/></td>
-<td>Für Windows 7 und höher. Sucht in allen From-Eigenschaften nach dem Ausdruck &quot; <em>SfloyEss.</em> &quot; Auf das Wort <em>Sjay</em> muss das Wort <em>Solls</em>folgen.<br/></td>
+<td>System.StructuredQuery.Virtual.From:$= &quot; S plugins&quot;<br/></td>
+<td>Für Windows 7 und höher. Sucht in allen From-Eigenschaften nach dem Ausdruck &quot; <em>S wies zu.</em> &quot; Auf <em>das Wort S wie</em> folgt muss das Wort <em>"/ " folgen.</em><br/></td>
 </tr>
 <tr class="odd">
 <td>COP_WORD_STARTSWITH</td>
 <td>$<<br/></td>
 <td>System.Author:$<&quot;San&quot; System.Filename:$<&quot;Micro Exe&quot;<br/></td>
-<td>Für Windows 7 und höher. Sucht nach jedem Element, bei dem Author ein Wort enthält, das mit den Zeichen &quot; <em>San</em> &quot; beginnt.<br/> Sucht eine beliebige Datei, in der der Dateiname ein Wort enthält, das mit <em>micro</em>beginnt, gefolgt von einem Wort, das mit <em>exe</em>beginnt.<br/></td>
+<td>Für Windows 7 und höher. Sucht nach jedem Element, bei dem Author ein Wort enthält, das mit den Zeichen &quot; <em>San beginnt.</em> &quot;<br/> Sucht eine beliebige Datei, in der der Dateiname ein Wort enthält, das mit <em>micro</em>beginnt, gefolgt von einem Wort, das mit <em>exe beginnt.</em><br/></td>
 </tr>
 </tbody>
 </table>
@@ -326,7 +326,7 @@ Für Zeichenfolgeneigenschaften ist der Standardvorgang entweder COP \_ WORD STA
 
 ### <a name="query-values"></a>Abfragewerte
 
-In der folgenden Tabelle sind nützliche Beispiele dafür aufgeführt, wie Abfragewerte eingeschränkt werden können.
+In der folgenden Tabelle finden Sie nützliche Beispiele dafür, wie Abfragewerte eingeschränkt werden können.
 
 
 
@@ -347,12 +347,12 @@ In der folgenden Tabelle sind nützliche Beispiele dafür aufgeführt, wie Abfra
 <tr class="odd">
 <td>String</td>
 <td>auto<br/></td>
-<td>Eine beliebige Zeichenfolge, nach der gesucht werden kann. Die Zeichenfolge darf keine Leerzeichen oder Zeichenkombinationen enthalten, die Teil der Syntax sind. In diesem Beispiel wird nach einem Wort gesucht, das mit <em>auto</em>beginnt.<br/></td>
+<td>Eine beliebige Zeichensequenz, nach der gesucht werden kann. Die Zeichenfolge darf keine Leerzeichen oder Zeichenkombinationen enthalten, die Teil der Syntax sind. In diesem Beispiel wird nach einem Wort gesucht, das mit auto <em>beginnt.</em><br/></td>
 </tr>
 <tr class="even">
-<td>Zeichenfolge in Anführungszeichen &quot;&quot;</td>
+<td>Zeichenfolge in Anführungszeichenfolgen &quot;&quot;</td>
 <td>&quot;Schlussfolgerungen: gültig &quot; &quot; Das blaue &quot; &quot; &quot; &quot; Team&quot;<br/></td>
-<td>Eine beliebige Sequenz von Zeichen. Die Zeichenfolge wird nicht als Teil der Syntax interpretiert.<br/> Anführungszeichen können in eine Abfrage eingefügt werden, wenn sie verdoppelt werden. In diesem Beispiel wird nach <em>Das &quot; blaue &quot; Team</em>gesucht.<br/></td>
+<td>Eine beliebige Folge von Zeichen. Die Zeichenfolge wird nicht als Teil der Syntax interpretiert.<br/> Anführungszeichen können in eine Abfrage eingefügt werden, wenn sie verdoppelt werden. In diesem Beispiel wird nach <em>Das &quot; blaue &quot; Team</em>gesucht.<br/></td>
 </tr>
 <tr class="odd">
 <td>Integer</td>
@@ -376,8 +376,8 @@ In der folgenden Tabelle sind nützliche Beispiele dafür aufgeführt, wie Abfra
 </tr>
 <tr class="odd">
 <td>Absolute Datumsangaben</td>
-<td>System.ItemDate:26.1.2010<br/> SystemDateModified 15.10.2002 19:00 Uhr<br/></td>
-<td>Sucht Elemente mit dem Datum 26. Januar 2010.<br/> Sucht elemente, die am 15. Oktober 2002 zwischen den Stunden 19:00:00 und 19:00:59 geändert wurden. <br/>
+<td>System.ItemDate:26.1.2010<br/> SystemDateModified 15.10.2002 19:00<br/></td>
+<td>Sucht Nach Elementen mit dem Datum 26. Januar 2010.<br/> Sucht elemente, die am 15. Oktober 2002 zwischen den Stunden 19:00:00 und 19:00:59 geändert wurden. <br/>
 <blockquote>
 [!Note]<br />
 Da Datumsformate (z. B. Gleitkommaformate) zwischen Gebietsschemas variieren, wird die Verwendung kanonischer Syntax mit absoluten Datumsangaben nicht unterstützt und ist nicht lokalisierungssicher.
@@ -396,7 +396,7 @@ Zusätzlich zur Suche nach bestimmten Datums- und Datumsbereichen erkennt AQS re
 </tr>
 <tr class="odd">
 <td>..</td>
-<td>System.ItemDate:11/05/04...11/10/04 System.Size:5kb.. 10 KB<br/></td>
+<td>System.ItemDate:11/05/04..11/10/04 System.Size:5kb.. 10 KB<br/></td>
 <td>Doppelte Zeiträume geben einen Wertbereich an. Sucht Elemente mit einem Datum zwischen dem 04.05.11 und dem 10.11.04 einschließlich.<br/> Sucht Elemente zwischen 5 und 10 KB.<br/></td>
 </tr>
 </tbody>
@@ -408,7 +408,7 @@ Zusätzlich zur Suche nach bestimmten Datums- und Datumsbereichen erkennt AQS re
 
 ## <a name="scope-restrictions"></a>Bereichseinschränkungen
 
-Benutzer können den Umfang ihrer Suchvorgänge auf bestimmte Ordner oder Datenspeicher beschränken. Wenn Sie beispielsweise mehrere E-Mail-Konten verwenden und eine Abfrage entweder auf Microsoft Outlook oder Microsoft Outlook Express beschränken möchten, können Sie `System.Search.Store:mapi` `System.Search.Store:oe` oder verwenden. Die folgende Tabelle zeigt einige Beispiele für die Einschränkung einer Suche nach Datenspeicher.
+Benutzer können den Umfang ihrer Suchvorgänge auf bestimmte Ordner oder Datenspeicher beschränken. Wenn Sie beispielsweise mehrere E-Mail-Konten verwenden und eine Abfrage entweder auf Microsoft Outlook oder Microsoft Outlook Express beschränken möchten, können Sie `System.Search.Store:mapi` `System.Search.Store:oe` bzw. verwenden. Die folgende Tabelle zeigt einige Beispiele für die Einschränkung einer Suche nach Datenspeicher.
 
 
 
@@ -424,7 +424,7 @@ Benutzer können den Umfang ihrer Suchvorgänge auf bestimmte Ordner oder Datens
 
  
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
 -   In Windows 7 und höher kann eine Kontextmenüoption abhängig davon verfügbar sein, ob eine AQS-Bedingung erfüllt ist. Weitere Informationen finden Sie unter "Getting Dynamic Behavior for Static Verbs by Using Advanced Query Syntax" (Abrufen von dynamischem Verhalten für statische Verben mithilfe der erweiterten Abfragesyntax) unter [Erstellen von Kontextmenühandlern.](../shell/context-menu-handlers.md)
 -   AQS-Abfragen können auf bestimmte Dateitypen beschränkt werden, die als Dateitypen bezeichnet werden. Weitere Informationen finden Sie unter [Dateitypen und Zuordnungen.](../shell/fa-intro.md) Eine Referenzdokumentation zu Eigenschaften finden Sie unter [System.Kind](../properties/props-system-kind.md)und [System.KindText](../properties/props-system-kindtext.md).
@@ -445,7 +445,7 @@ Benutzer können den Umfang ihrer Suchvorgänge auf bestimmte Ordner oder Datens
 [Abfragen des Indexes mit dem search-ms-Protokoll](-search-3x-wds-qryidx-searchms.md)
 </dt> <dt>
 
-[Abfragen des Index mit Windows Search-SQL syntax](-search-sql-windowssearch-entry.md)
+[Abfragen des Indexes mit Windows Search-SQL syntax](-search-sql-windowssearch-entry.md)
 </dt> </dl>
 
  

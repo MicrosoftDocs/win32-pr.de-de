@@ -5,7 +5,7 @@ ms.assetid: c70420d6-d9f3-47c8-a09f-35ed170f815f
 keywords:
 - Benutzeroberflächenautomatisierung,Unterstützung für den HeaderItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,HeaderItem-Steuerelementtyp
-- Benutzeroberflächenautomatisierung,Struktur für headerItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für HeaderItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Eigenschaften für den HeaderItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Steuerelementmuster für den HeaderItem-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,events für headerItem-Steuerelementtyp
@@ -21,12 +21,12 @@ keywords:
 - Steuerelementtypen,HeaderItem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6bbcd6d86e7401c3fa98d162e3aa273613dfd3a32705da891fc89d1f4ea003f
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: b26dcbc293beee3afec8ba0aa9da1359cbbe4c6b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120098210"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469127"
 ---
 # <a name="headeritem-control-type"></a>HeaderItem-Steuerelementtyp
 
@@ -50,26 +50,11 @@ Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht d
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>HeaderItem</li>
-</ul></td>
-<td>(Nicht vorhanden)</td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>HeaderItem</li></ul> | (Nicht vorhanden) | 
+
 
 
 
@@ -77,7 +62,7 @@ Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht d
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die eigenschaften Benutzeroberflächenautomatisierung, deren Wert oder Definition für den **HeaderItem-Steuerelementtyp besonders** relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für den **HeaderItem-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
@@ -116,7 +101,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von a
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die Headerelementsteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die Headerelementsteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
@@ -126,7 +111,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die Heade
 | [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
 | [**UIA \_ Invoke \_ InvokedEventId**](uiauto-event-ids.md)                                                     | Wenn das Steuerelement das [Invoke-Steuerelementmuster](uiauto-implementinginvoke.md) unterstützt, muss es dieses Ereignis unterstützen.           |
 | [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen. |
 | [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
 
 

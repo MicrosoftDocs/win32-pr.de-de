@@ -1,127 +1,127 @@
 ---
-description: Microsoft Windows Search verwendet Eigenschafts Handler, um die Werte von Eigenschaften aus Elementen zu extrahieren, und verwendet das Eigenschafts System Schema, um zu bestimmen, wie eine bestimmte Eigenschaft indiziert werden soll.
+description: Microsoft Windows Search verwendet Eigenschaftenhandler, um die Werte von Eigenschaften aus Elementen zu extrahieren, und verwendet das Eigenschaftensystemschema, um zu bestimmen, wie eine bestimmte Eigenschaft indiziert werden soll.
 ms.assetid: b475329a-1ed7-43a4-8e11-3700889a4ce9
-title: Entwickeln von Eigenschaften Handlern für Windows Search
+title: Entwickeln von Eigenschaftenhandlern für die Windows Suche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ac96e47738040321025b7f600e2c91109b08d51
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3933353d8bf00c3a68a2259daf94a1ce4f13d295
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214465"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627325"
 ---
-# <a name="developing-property-handlers-for-windows-search"></a>Entwickeln von Eigenschaften Handlern für Windows Search
+# <a name="developing-property-handlers-for-windows-search"></a>Entwickeln von Eigenschaftenhandlern für die Windows Suche
 
-Microsoft Windows Search verwendet Eigenschafts Handler, um die Werte von Eigenschaften aus Elementen zu extrahieren, und verwendet das Eigenschafts System Schema, um zu bestimmen, wie eine bestimmte Eigenschaft indiziert werden soll. Um Eigenschaftswerte zu lesen und zu indizieren, werden die Eigenschaften Handler von Windows Search außerhalb des Prozesses aufgerufen, um die Sicherheit und Stabilität zu verbessern. Im Gegensatz dazu werden Eigenschaften Handler in-Process von Windows-Explorer aufgerufen, um Eigenschaftswerte zu lesen und zu schreiben.
+Microsoft Windows Search verwendet Eigenschaftenhandler, um die Werte von Eigenschaften aus Elementen zu extrahieren, und verwendet das Eigenschaftensystemschema, um zu bestimmen, wie eine bestimmte Eigenschaft indiziert werden soll. Zum Lesen und Indizieren von Eigenschaftswerten werden Eigenschaftshandler von Windows Search außerhalb des Prozesses aufgerufen, um die Sicherheit und Stabilität zu verbessern. Im Gegensatz dazu werden Eigenschaftshandler von Windows Explorer prozessin-process aufgerufen, um Eigenschaftswerte zu lesen und zu schreiben.
 
-In diesem Thema wird das Thema " [Eigenschaften System](../properties/building-property-handlers.md) " mit speziellen Informationen zu Windows Search ergänzt. es enthält die folgenden Abschnitte:
+Dieses Thema ergänzt das Thema [Eigenschaftensystem](../properties/building-property-handlers.md) um spezifische Informationen für Windows Search und enthält die folgenden Abschnitte:
 
--   [Entwurfsentscheidungen für Eigenschaften Handler](#design-decisions-for-property-handlers)
-    -   [Eigenschafts Entscheidungen](#property-decisions)
+-   [Entwurfsentscheidungen für Eigenschaftenhandler](#design-decisions-for-property-handlers)
+    -   [Eigenschaftenentscheidungen](#property-decisions)
     -   [Volltextunterstützung](#full-text-support)
-    -   [Überlegungen zur Betriebs System Implementierung](#operating-system-implementatation-considerations)
--   [Schreiben von Eigenschafts Beschreibungsdateien](#writing-property-description-files)
--   [Implementieren von Eigenschaften Handlern](#implementing-property-handlers)
-    -   [IInitializeWithStream](#iinitializewithstream)
-    -   [IPropertyStore](#ipropertystore)
-    -   [Ipropertystorecapabilitäten](#ipropertystorecapabilities)
--   [Sicherstellen, dass ihre Elemente indiziert werden](#ensuring-your-items-get-indexed)
--   [Installieren und Registrieren von Eigenschaften Handlern](#installing-and-registering-property-handlers)
--   [Testen und Problembehandlung von Eigenschaften Handlern](#testing-and-troubleshooting-property-handlers)
-    -   [Installations-und Setup Tests](#installation-and-setup-tests)
-    -   [Problembehandlung bei Eigenschaften Handlern](#troubleshooting-property-handlers)
--   [Verwenden von System-Supplied-Eigenschaften Handlern](#using-system-supplied-property-handlers)
+    -   [Überlegungen zur Implementierung des Betriebssystems](#operating-system-implementatation-considerations)
+-   [Schreiben von Eigenschaftenbeschreibungsdateien](#writing-property-description-files)
+-   [Implementieren von Eigenschaftenhandlern](#implementing-property-handlers)
+    -   [Iinitializewithstream](#iinitializewithstream)
+    -   [Ipropertystore](#ipropertystore)
+    -   [IPropertyStoreCapabilities](#ipropertystorecapabilities)
+-   [Sicherstellen, dass Ihre Elemente indiziert werden](#ensuring-your-items-get-indexed)
+-   [Installieren und Registrieren von Eigenschaftenhandlern](#installing-and-registering-property-handlers)
+-   [Testen und Problembehandlung von Eigenschaftenhandlern](#testing-and-troubleshooting-property-handlers)
+    -   [Installations- und Setuptests](#installation-and-setup-tests)
+    -   [Problembehandlung bei Eigenschaftenhandlern](#troubleshooting-property-handlers)
+-   [Verwenden von System-Supplied-Eigenschaftenhandlern](#using-system-supplied-property-handlers)
 -   [Zugehörige Themen](#related-topics)
 
  
 
-## <a name="design-decisions-for-property-handlers"></a>Entwurfsentscheidungen für Eigenschaften Handler
+## <a name="design-decisions-for-property-handlers"></a>Entwurfsentscheidungen für Eigenschaftenhandler
 
-Das Implementieren von Eigenschaften Handlern umfasst die folgenden Schritte:
+Das Implementieren von Eigenschaftenhandlern umfasst die folgenden Schritte:
 
-1.  Treffen Sie Entwurfsentscheidungen bezüglich der Eigenschaften, die Sie unterstützen möchten.
-2.  Erstellen einer Eigenschafts Beschreibungsdatei (. PropDesc) für Eigenschaften, die sich nicht bereits im Eigenschaften System befinden.
-3.  Implementieren und Testen des Eigenschaften Handlers.
-4.  Installieren und Registrieren des eigenschaftenhandlers und der Eigenschaften Beschreibungsdateien.
-5.  Testen der Installation und Registrierung des eigenschaftenhandlers.
+1.  Treffen von Entwurfsentscheidungen in Bezug auf die Eigenschaften, die Sie unterstützen möchten.
+2.  Erstellen einer Eigenschaftenbeschreibungsdatei (.propdesc) für Eigenschaften, die nicht bereits im Eigenschaftensystem vorhanden sind.
+3.  Implementieren und Testen des Eigenschaftenhandlers.
+4.  Installieren und Registrieren der Eigenschaftenhandler- und Eigenschaftenbeschreibungsdateien.
+5.  Testen der Installation und Registrierung von Eigenschaftenhandlern.
 
-Bevor Sie beginnen, müssen Sie die folgenden Entwurfs Fragen berücksichtigen:
+Bevor Sie beginnen, müssen Sie die folgenden Designfragen berücksichtigen:
 
--   Welche Eigenschaften unterstützt das Dateiformat?
--   Sind diese Eigenschaften bereits im System Schema vorhanden?
--   Kann ein vorhandener vom System bereitgestellter Eigenschaften Handler verwendet werden?
+-   Welche Eigenschaften unterstützt bzw. sollte das Dateiformat unterstützen?
+-   Sind diese Eigenschaften bereits im Systemschema enthalten?
+-   Kann ich einen vorhandenen vom System bereitgestellten Eigenschaftenhandler verwenden?
 -   Welche Eigenschaften können Endbenutzern angezeigt werden?
 -   Welche Eigenschaften können Benutzer bearbeiten?
--   Sollte die Unterstützung für die Volltextsuche von einem Eigenschafts Handler oder einem Filter stammen?
--   Muss ich Legacy Anwendungen unterstützen? Wenn dies der Fall ist, was implementiere ich?
+-   Sollte die Volltextsuche von einem Eigenschaftenhandler oder Filter unterstützt werden?
+-   Muss ich Legacyanwendungen unterstützen? Wenn ja, was implementiere ich?
 
 > [!Note]  
-> Bevor Sie fortfahren, finden Sie weitere Informationen unter [Verwenden von System-Supplied-Eigenschaften Handlern](#using-system-supplied-property-handlers) , um zu ermitteln, ob Sie einen vom System bereitgestellten Eigenschaften Handler verwenden können
+> Bevor Sie fortfahren, lesen [Sie Using System-Supplied Property Handlers (Verwenden von System-Supplied-Eigenschaftenhandlern),](#using-system-supplied-property-handlers) um festzustellen, ob Sie einen vom System bereitgestellten Eigenschaftenhandler verwenden können, um Sowohl Zeit als auch Entwicklungsressourcen zu sparen.
 
  
 
-Nachdem Sie diese Entscheidungen getroffen haben, können Sie formale Beschreibungen Ihrer benutzerdefinierten Eigenschaften schreiben, damit die Windows-Suchmaschine mit der Indizierung Ihrer Dateien und Eigenschaften beginnen kann. Diese formalen Beschreibungen sind XML-Dateien, die im [Eigenschafts Beschreibungs Schema](/previous-versions//cc144127(v=vs.85))beschrieben werden.
+Nachdem Sie diese Entscheidungen getroffen haben, können Sie formale Beschreibungen Ihrer benutzerdefinierten Eigenschaften schreiben, damit die Windows-Suchmaschine mit der Indizierung Ihrer Dateien und Eigenschaften beginnen kann. Bei diesen formalen Beschreibungen handelt es sich um XML-Dateien, die unter [Eigenschaftenbeschreibungsschema](/previous-versions//cc144127(v=vs.85))beschrieben werden.
 
-### <a name="property-decisions"></a>Eigenschafts Entscheidungen
+### <a name="property-decisions"></a>Eigenschaftenentscheidungen
 
-Wenn Sie überlegen, welche Eigenschaften unterstützt werden sollen, sollten Sie die Indizierungs-und Suchanforderungen Ihrer Benutzer identifizieren. Beispielsweise können Sie möglicherweise 100 möglicherweise nützliche Eigenschaften für Ihren Dateityp identifizieren, aber Benutzer sind möglicherweise an der Suche nach nur einer Handvoll interessiert. Außerdem empfiehlt es sich, Benutzern in Windows-Explorer eine andere, größere oder kleinere Gruppe dieser Eigenschaften anzuzeigen und Benutzern zu gestatten, nur eine Teilmenge der angezeigten Eigenschaften zu bearbeiten.
+Wenn Sie überlegen, welche Eigenschaften unterstützt werden sollen, sollten Sie die Indizierungs- und Suchanforderungen Ihrer Benutzer identifizieren. Beispielsweise können Sie möglicherweise hundert potenziell nützliche Eigenschaften für Ihren Dateityp identifizieren, aber Benutzer sind möglicherweise nur an einer Handvoll Suchvorgänge interessiert. Darüber hinaus können Sie benutzern in Windows Explorer eine andere, größere oder kleinere Gruppe dieser Eigenschaften anzeigen und Benutzern erlauben, nur eine Teilmenge dieser angezeigten Eigenschaften zu bearbeiten.
 
-Ihr Dateityp unterstützt alle benutzerdefinierten Eigenschaften, die Sie definieren, sowie eine Reihe von System definierten Eigenschaften. Bevor Sie eine benutzerdefinierte Eigenschaft erstellen, überprüfen Sie die [Systemeigenschaften](https://msdn.microsoft.com/library/bb763010(VS.85).aspx) , um festzustellen, ob die Eigenschaft, die Sie unterstützen möchten, bereits durch eine System Eigenschaft definiert ist. Stellen Sie immer sicher, dass Sie die wichtigsten System definierten Eigenschaften unterstützen.
+Ihr Dateityp kann alle benutzerdefinierten Eigenschaften unterstützen, die Sie definieren, sowie eine Reihe von systemdefinierte Eigenschaften. Lesen Sie vor dem Erstellen einer benutzerdefinierten Eigenschaft die Informationen unter [Systemeigenschaften,](https://msdn.microsoft.com/library/bb763010(VS.85).aspx) um festzustellen, ob die eigenschaft, die Sie unterstützen möchten, bereits durch eine Systemeigenschaft definiert ist. Stellen Sie immer sicher, dass Sie die wichtigsten systemdefinierte Eigenschaften unterstützen.
 
-Es wird empfohlen, eine Matrix zu verwenden, die Sie beim Entwerfen Ihrer Eigenschaften unterstützt:
+Es wird empfohlen, eine Matrix zu verwenden, um Ihre Eigenschaften zu entwerfen:
 
 
 
-| Eigenschaftenname | Ist Indexable? | Kann angezeigt werden? | Kann bearbeitet werden? |
+| Eigenschaftenname | Ist indexierbar? | Kann angezeigt werden? | Kann bearbeitet werden? |
 |---------------|---------------|-----------------|--------------|
 | property1     | J             | J               | N            |
 | Eigenschaft...   | J             | J               | N            |
-| propertyN     | N             | N               | N            |
+| propertyn     | N             | N               | N            |
 
 
 
  
 
-Sie müssen für jede dieser Eigenschaften bestimmen, welche Attribute vorhanden sein sollten, und Sie dann formal in den Eigenschafts Beschreibungs-XML-Dateien (. PropDesc) beschreiben. Zu den Attributen zählen der Datentyp der Eigenschaft, die Bezeichnung, die Hilfe Zeichenfolge und mehr. Bei indizierbaren Eigenschaften sollten Sie besonders auf die folgenden Eigenschafts Attribute achten, die im XML-Element [SearchInfo](../properties/propdesc-schema-searchinfo.md)   der Eigenschafts Beschreibungsdatei gefunden wurden.
+Für jede dieser Eigenschaften müssen Sie bestimmen, welche Attribute sie aufweisen soll, und sie dann formell in XML-Dateien zur Eigenschaftenbeschreibung (PROPDESC) beschreiben. Zu den Attributen gehören der Datentyp der Eigenschaft, die Bezeichnung, die Hilfezeichenfolge und vieles mehr. Bei indizierbaren Eigenschaften sollten Sie besonders auf die folgenden Eigenschaftsattribute achten, die sich im [searchInfo](../properties/propdesc-schema-searchinfo.md)   XML-Element der Eigenschaftenbeschreibungsdatei befinden.
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ininvertedindex</td>
-<td>Dies ist optional. Gibt an, ob ein Zeichen folgen Eigenschafts Wert in Wörter und jedes im umgekehrten Index gespeicherte Wort unterteilt werden soll. Der invertierte Index ermöglicht das effiziente suchen nach Wörtern und Ausdrücken über den Eigenschafts Wert mit "enthält" oder "frei Text" (z. b. Select... Where enthält einen &quot; Text &quot; ). Wenn diese Einstellung auf " <strong>false</strong>" festgelegt ist, erfolgt die Suche anhand der gesamten Zeichenfolge Für die meisten Zeichen folgen Eigenschaften sollte diese Eigenschaft auf <strong>true</strong>festgelegt sein. für nicht-Zeichen folgen Eigenschaften sollte This auf <strong>false</strong>festgelegt sein. Der Standardwert ist <strong>false</strong>.</td>
+<td>inInvertedIndex</td>
+<td>Optional. Gibt an, ob ein Zeichenfolgeneigenschaftswert in Wörter unterteilt und jedes Wort im umgekehrten Index gespeichert werden soll. Der invertierte Index ermöglicht eine effiziente Suche nach Wörtern und Ausdrücken über den Eigenschaftswert mit CONTAINS oder FREETEXT (z. B. SELECT ... WHERE CONTAINS &quot; sometext &quot; ). Wenn <strong>false</strong>festgelegt ist, werden Suchvorgänge für die gesamte Zeichenfolge durchgeführt. Für die meisten Zeichenfolgeneigenschaften sollte diese auf <strong>TRUE</strong>festgelegt sein. Eigenschaften, die keine Zeichenfolgen sind, sollten auf FALSE festgelegt <strong>sein.</strong> Der Standardwert ist <strong>FALSE.</strong></td>
 </tr>
 <tr class="even">
-<td>iscolumn</td>
-<td>Dies ist optional. Gibt an, ob die-Eigenschaft in der Windows Search-Datenbank als Spalte gespeichert werden soll. Das Speichern der Eigenschaft als Spalte ermöglicht das Abrufen, sortieren, gruppieren und Filtern (d. h. die Verwendung eines beliebigen Prädikats außer enthält oder frei Text) für den gesamten Spaltenwert. Für Eigenschaften, die dem Benutzer angezeigt werden, sollte diese Eigenschaft auf " <strong>true</strong> " festgelegt sein, es sei denn, es handelt sich um eine sehr große Text Eigenschaft (z. b Der Standardwert ist <strong>false</strong>.</td>
+<td>isColumn</td>
+<td>Optional. Gibt an, ob die Eigenschaft in der Windows Search-Datenbank als Spalte gespeichert werden soll. Das Speichern der Eigenschaft als Spalte ermöglicht das Abrufen, Sortieren, Gruppieren und Filtern (d. h. das Verwenden eines beliebigen Prädikats mit Ausnahme von CONTAINS oder FREETEXT) für den gesamten Spaltenwert. Eigenschaften, die dem Benutzer angezeigt werden, sollten auf <strong>TRUE</strong> festgelegt sein, es sei denn, es handelt sich um eine sehr große Texteigenschaft (z. B. den Text eines Dokuments), die im umgekehrten Index durchsucht werden würde. Der Standardwert ist <strong>FALSE.</strong></td>
 </tr>
 <tr class="odd">
-<td>iscolumnsparse</td>
-<td>Dies ist optional. Gibt an, ob eine Eigenschaft keinen Speicherplatz annimmt, wenn der Wert <strong>null</strong>ist. Eine nicht-Sparse-Eigenschaft benötigt für jedes Element Platz, auch wenn der Wert <strong>null</strong>ist. Wenn die Eigenschaft mehr wertig ist, ist dieses Attribut immer " <strong>true</strong>". Dieses Attribut sollte nur dann <strong>false</strong> lauten, wenn für jedes Element ein Wert vorhanden ist. Der Standardwert ist " <strong>true</strong>".</td>
+<td>isColumnSparse</td>
+<td>Optional. Gibt an, ob eine Eigenschaft keinen Speicherplatz einnimmt, wenn der Wert <strong>NULL</strong>ist. Eine Nicht-Sparseeigenschaft nimmt Speicherplatz für jedes Element in Anspruch, auch wenn der Wert <strong>NULL</strong>ist. Wenn die -Eigenschaft mehrwertiger ist, ist dieses Attribut immer <strong>TRUE.</strong> Dieses Attribut sollte nur <strong>FALSE</strong> sein, wenn für jedes Element ein Wert vorhanden ist. Der Standardwert ist <strong>TRUE.</strong></td>
 </tr>
 <tr class="even">
-<td>columnindextype</td>
-<td>Dies ist optional. Um die Abfrage zu optimieren, kann das Windows Search-Modul sekundäre Indizes für Eigenschaften erstellen, deren iscolumn =<strong>true</strong>ist. Dies erfordert mehr Verarbeitung und Speicherplatz während der Indizierung, verbessert jedoch die Leistung während der Abfrage. Wenn die Eigenschaft tendenziell sortiert, gruppiert oder gefiltert wird (d. h., Sie verwendet =,! =, < >, wie z. b. Übereinstimmungen), sollte dieses Attribut auf ondisk festgelegt werden &quot; &quot; . Der Standardwert ist " &quot; notindiziert" &quot; . Folgende Werte sind gültig:
+<td>columnIndexType</td>
+<td>Optional. Zur Optimierung der Abfrage kann die Windows-Suchmaschine sekundäre Indizes für Eigenschaften erstellen, die isColumn=<strong>TRUE</strong>aufweisen. Dies erfordert mehr Verarbeitung und Speicherplatz während der Indizierung, verbessert aber die Leistung während der Abfrage. Wenn die Eigenschaft häufig nach Benutzern sortiert, gruppiert oder gefiltert wird (d. h. mit =, !=, <, >, LIKE, MATCHES), sollte dieses Attribut auf OnDisk festgelegt &quot; &quot; werden. Der Standardwert ist &quot; NotIndexed. &quot; Folgende Werte sind gültig:
 <ul>
-<li>Notindiziert: Es wird kein sekundärer Index erstellt.</li>
-<li>Ondisk: Erstellen und speichern Sie einen sekundären Index auf dem Datenträger.</li>
+<li>NotIndexed: Es wird kein sekundärer Index erstellt.</li>
+<li>OnDisk: Erstellen und speichern Sie einen sekundären Index auf dem Datenträger.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>MaxSize</td>
-<td>Dies ist optional. Gibt die maximal zulässige Größe für den Eigenschafts Wert an, der in der Windows Search-Datenbank gespeichert ist. Dieser Grenzwert gilt für die einzeidualen Elemente eines Vektors, nicht für den Vektor als Ganzes. Werte, die diese Größe überschreiten, werden abgeschnitten. Der Standardwert ist &quot; 128 &quot; (Bytes).<br/> Derzeit verwendet Windows Search nicht den MAXSIZE-Wert, wenn die Menge der Daten berechnet wird, die Sie aus einer Datei akzeptiert. Stattdessen ist der Grenzwert, den Windows Search verwendet, das Produkt der Dateigröße und der MaxGrowFactor (Dateigröße N * MaxGrowFactor), die aus der Registrierung bei HKEY_LOCAL_MACHINE->Software >Microsoft->Windows Search->Erteilungs-Manager->MaxGrowFactor gelesen wird. Der Standardwert für MaxGrowFactor ist vier (4). Wenn Ihr Dateityp tendenziell klein ist, aber größere Eigenschaften hat, akzeptiert Windows Search möglicherweise nicht alle Eigenschaften Daten, die Sie ausgeben möchten. Sie können jedoch den MaxGrowFactor-Faktor entsprechend Ihren Anforderungen erhöhen. <br/></td>
+<td>Maxsize</td>
+<td>Optional. Gibt die maximal zulässige Größe für den Eigenschaftswert an, der in der datenbankgespeicherten Windows gespeichert ist. Dieser Grenzwert gilt für die einzelnen Elemente eines Vektors, nicht für den Vektor als Ganzes. Werte, die über diese Größe hinausgehen, werden abgeschnitten. Der Standardwert ist &quot; 128 &quot; (Bytes).<br/> Derzeit verwendet Windows Search bei der Berechnung der Datenmenge, die sie aus einer Datei akzeptiert, nicht maxSize. Stattdessen ist das Limit, das Windows Search verwendet, das Produkt der Dateigröße und des MaxGrowFactor (Dateigröße N * MaxGrowFactor), das unter HKEY_LOCAL_MACHINE->Software->Microsoft->Windows Search->Gathering Manager->MaxGrowFactor aus der Registrierung gelesen wird. Der Standardwert von MaxGrowFactor ist vier (4). Wenn Ihr Dateityp tendenziell klein ist, aber größere Eigenschaften aufweist, akzeptiert Windows Search möglicherweise nicht alle Eigenschaftsdaten, die Sie aus geben möchten. Sie können den MaxGrowFactor jedoch entsprechend Ihren Anforderungen erhöhen. <br/></td>
 </tr>
 </tbody>
 </table>
@@ -131,76 +131,76 @@ Sie müssen für jede dieser Eigenschaften bestimmen, welche Attribute vorhanden
  
 
 > [!Note]  
-> Für das columnindextype-Attribut muss der Vorteil von schnelleren Abfragen mit der größeren Indizierungs Zeit und den Speicherplatz Kosten abgewogen werden, die die sekundären Indizes verursachen können. Diese Kosten werden jedoch nur für Elemente mit einem Wert ungleich **null** gezahlt, sodass dieses Attribut für die meisten Eigenschaften auf "ondisk" festgelegt werden kann.
+> Für das columnIndexType-Attribut muss der Vorteil schnellerer Abfragen gegen die höheren Indizierungszeit- und Speicherplatzkosten abgewogen werden, die die sekundären Indizes verursachen können. Diese Kosten werden jedoch nur für Elemente bezahlt, deren Wert nicht NULL ist, sodass dieses Attribut für die meisten Eigenschaften auf "OnDisk" festgelegt werden kann.
 
  
 
 ### <a name="full-text-support"></a>Volltextunterstützung
 
-Im Allgemeinen wird die Volltextsuche von Komponenten unterstützt, die als [Filter](-search-3x-wds-extidx-filters.md)bezeichnet werden. bei textbasierten Dateitypen mit unkomplizierten Dateiformaten können Eigenschafts Handler diese Funktionalität jedoch mit weniger Entwicklungsaufwand bereitstellen. Lesen Sie den Abschnitt [voll Text Inhalte](../properties/building-property-handlers-property-handlers.md) , um einen Vergleich der Filter-und eigenschaftenhandlerfunktionen zu finden, mit denen Sie entscheiden können, was für den Dateityp am besten ist. Besonders wichtig ist die Tatsache, dass Filter mehrere Sprachcode Bezeichner (LCIDs) pro Datei verarbeiten können, während dies bei Eigenschaften Handlern nicht der Fall ist.
+Im Allgemeinen wird die Volltextsuche von Komponenten unterstützt, die als Filter [bezeichnet werden.](-search-3x-wds-extidx-filters.md) Bei textbasierten Dateitypen mit formatbasierten Dateiformaten können Eigenschaftenhandler diese Funktionalität jedoch mit geringerem Entwicklungsaufwand bereitstellen. Im Abschnitt Volltextinhalt [finden](../properties/building-property-handlers-property-handlers.md) Sie einen Vergleich der Filter- und Eigenschaftenhandlerfunktionen, damit Sie entscheiden können, was für Ihren Dateityp am besten ist. Von besonderer Bedeutung ist die Tatsache, dass Filter mehrere Sprachcodebezeichner (Language Code Identifiers, LCIDs) pro Datei verarbeiten können, während Eigenschaftenhandler dies nicht können.
 
 > [!Note]  
-> Da Eigenschafts Handler Inhalte nicht wie Filter segmentieren können, müssen große Dateien vollständig in den Arbeitsspeicher geladen werden.
+> Da Eigenschaftenhandler Inhalte nicht auf die Weise, wie Filter es können, auf blockieren können, müssen große Dateien (selbst wenn es sich um unformatierte Dateiformate handelt) vollständig in den Arbeitsspeicher geladen werden.
 
  
 
-### <a name="operating-system-implementatation-considerations"></a>Überlegungen zur Betriebs System Implementierung
+### <a name="operating-system-implementatation-considerations"></a>Überlegungen zur Implementierung des Betriebssystems
 
-### <a name="implementation-information-for-windows-7"></a>Implementierungs Informationen für Windows 7
+### <a name="implementation-information-for-windows-7"></a>Implementierungsinformationen für Windows 7
 
-In Windows 7 und höher gibt es neues Verhalten beim Registrieren eines Eigenschaften Handlers, [**IFilters**](/windows/win32/api/filter/nn-filter-ifilter)oder einer neuen Erweiterung. Wenn ein neuer Eigenschaften Handler und/oder **IFilter** installiert wird, werden Dateien mit den entsprechenden Erweiterungen automatisch neu indiziert.
+In Windows 7 und höher gibt es ein neues Verhalten beim Registrieren eines Eigenschaftenhandlers, [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)oder einer neuen Erweiterung. Wenn ein neuer Eigenschaftenhandler und/oder **IFilter** installiert wird, werden Dateien mit den entsprechenden Erweiterungen automatisch neu indiziert.
 
-In Windows 7 wird empfohlen, dass ein [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) in Verbindung mit den entsprechenden Eigenschaften Handlern installiert wird und dass der **IFilter** vor dem Eigenschaften Handler registriert wird. Durch die Registrierung des Eigenschaften Handlers wird die sofortige Neuindizierung von zuvor indizierten Dateien initiiert, ohne dass zunächst ein Neustart erforderlich ist. dabei werden alle zuvor registrierten IFilter für die Inhalts Indizierung genutzt.
+In Windows 7 wird empfohlen, einen [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) in Verbindung mit den entsprechenden Eigenschaftenhandlern zu installieren und den **IFilter** vor dem Eigenschaftenhandler zu registrieren. Die Registrierung des Eigenschaftenhandlers initiiert eine sofortige neuindizierte Indizierung zuvor indizierter Dateien, ohne dass zuerst ein Neustart erforderlich ist, und nutzt alle zuvor registrierten IFilter für die Inhaltsindizierung.
 
-Wenn nur ein [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) ohne entsprechenden Eigenschaften Handler installiert wird, erfolgt die automatische Neuindizierung entweder nach einem Neustart des Indizierungs dienstanzdienstanzdienstanbieter oder einem Neustart des Systems.
+Wenn nur [**ein IFilter**](/windows/win32/api/filter/nn-filter-ifilter) ohne einen entsprechenden Eigenschaftenhandler installiert ist, erfolgt die automatische Neuindizierung entweder nach einem Neustart des Indizierungsdiensts oder nach einem Neustart des Systems.
 
-Informationen zu eigenschaftenbeschreibungsflags für Windows 7 finden Sie in den folgenden Referenz Themen:
+Spezifische Eigenschaftenbeschreibungsflags für Windows 7 finden Sie in den folgenden Referenzthemen:
 
--   [Getpropertystoreflags](/windows/win32/api/propsys/ne-propsys-getpropertystoreflags)
--   [PropDesc- \_ ColumnIndex- \_ Typ](/windows/win32/api/propsys/ne-propsys-propdesc_columnindex_type)
--   [propde- \_ SearchInfo- \_ Flags](/windows/win32/api/propsys/ne-propsys-propdesc_searchinfo_flags)
+-   [GETPROPERTYSTOREFLAGS](/windows/win32/api/propsys/ne-propsys-getpropertystoreflags)
+-   [PROPDESC \_ \_ COLUMNINDEX-TYP](/windows/win32/api/propsys/ne-propsys-propdesc_columnindex_type)
+-   [PROPDESC \_ \_ SEARCHINFO-FLAGS](/windows/win32/api/propsys/ne-propsys-propdesc_searchinfo_flags)
 
-### <a name="implementation-information-for-windows-vista-and-earlier"></a>Implementierungs Informationen für Windows Vista und frühere Versionen
+### <a name="implementation-information-for-windows-vista-and-earlier"></a>Implementierungsinformationen für Windows Vista und früher
 
-Vor Windows Vista wurden von Filtern Unterstützung für das Auswerten und Auflisten von Dateiinhalten und-Eigenschaften bereitgestellt. Mit der Einführung des Eigenschaften Systems behandeln Eigenschaften Handler Dateieigenschaften, während Filterdatei Inhalte verarbeiten. Für Windows Vista müssen Sie nur eine partielle Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter)-Schnittstelle in Abstimmung mit einem Eigenschafts Handler entwickeln, wie in [bewährte Methoden zum Erstellen von Filter Handlern in Windows Search](-search-3x-wds-extidx-filters.md)beschrieben.
+Vor der Windows Vista stellten Filter Unterstützung für das Analyse- und Aufzählen von Dateiinhalten und -eigenschaften zur Verfügung. Mit der Einführung des Eigenschaftensystems verarbeiten Eigenschaftenhandler Dateieigenschaften, während Filter Dateiinhalte verarbeiten. Für Windows Vista müssen Sie nur eine partielle Implementierung der [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter)in Koordination mit einem Eigenschaftenhandler entwickeln, wie unter [Best Practices for Creating Filter Handlers in Windows Search](-search-3x-wds-extidx-filters.md)beschrieben.
 
-Obwohl das-Eigenschaften System auch in der Windows Search-Installation für Windows XP enthalten ist, ist es für Drittanbieter-und Legacy Anwendungen möglicherweise erforderlich, dass Filter sowohl Inhalte als auch Eigenschaften verarbeiten. Wenn Sie auf der Windows XP-Plattform entwickeln, sollten Sie daher eine vollständige Filter Implementierung und einen Eigenschafts Handler für den Dateityp oder die benutzerdefinierte Eigenschaft bereitstellen.
-
- 
-
-## <a name="writing-property-description-files"></a>Schreiben von Eigenschafts Beschreibungsdateien
-
-Die Struktur der Eigenschafts Beschreibungs-XML-Dateien (. PropDesc) wird im Thema [propertydescription](../properties/propdesc-schema-propertydescription.md) beschrieben. Besonderes Interesse für die Suche sind die Attribute des [SearchInfo](../properties/propdesc-schema-searchinfo.md) -Elements. Nachdem Sie entschieden haben, welche Eigenschaften unterstützt werden sollen, müssen Sie Eigenschafts Beschreibungsdateien für die einzelnen Eigenschaften erstellen und registrieren. Wenn Sie Ihre. PropDesc-Dateien registrieren, sind Sie in der Eigenschafts Beschreibungs Liste des Schemas enthalten und werden zu Spaltennamen innerhalb des Eigenschaften Stores der Suchmaschine.
-
-Sie können Ihre benutzerdefinierten Eigenschaften Beschreibungen mithilfe der [psregisterpropertyschema](/windows/win32/api/propsys/nf-propsys-psregisterpropertyschema) -Funktion registrieren, einer Wrapper-API, die das ipropertysystem:: registerpropertyschema des Schema Subsystems aufruft. Diese Funktion informiert das Schema Subsystem über das Hinzufügen von Eigenschafts Beschreibungs-Schema Dateien (. PropDesc) mithilfe von Dateipfaden zu den. PropDesc-Dateien auf dem lokalen Computer, in der Regel das Installationsverzeichnis der Anwendung unter "Programme". In der Regel Ruft ein Setup oder eine Anwendung (z. b. das Installationsprogramm des Eigenschaften Handlers) diese Methode nach der Installation der. PropDesc-Datei (en) auf.
+Das Eigenschaftensystem ist zwar auch in der Windows Search-Installation für Windows XP enthalten, aber für Drittanbieter- und Legacyanwendungen kann es erforderlich sein, dass Filter sowohl Inhalte als auch Eigenschaften verarbeiten. Wenn Sie also auf der Windows XP-Plattform entwickeln, sollten Sie eine vollständige Filterimplementierung sowie einen Eigenschaftenhandler für Den Dateityp oder die benutzerdefinierte Eigenschaft bereitstellen.
 
  
 
-## <a name="implementing-property-handlers"></a>Implementieren von Eigenschaften Handlern
+## <a name="writing-property-description-files"></a>Schreiben von Eigenschaftenbeschreibungsdateien
 
-Die Entwicklung eines Eigenschaften Handlers umfasst die Implementierung der folgenden Schnittstellen:
+Die Struktur von XML-Dateien mit Eigenschaftenbeschreibung (.propdesc) wird im [Thema propertyDescription](../properties/propdesc-schema-propertydescription.md) beschrieben. Von besonderem Interesse für die Suche sind die Attribute des [searchInfo-Elements.](../properties/propdesc-schema-searchinfo.md) Nachdem Sie entschieden haben, welche Eigenschaften unterstützt werden, müssen Sie Eigenschaftenbeschreibungsdateien für jede Eigenschaft erstellen und registrieren. Wenn Sie Ihre PROPDESC-Dateien registrieren, sind sie in der Eigenschaftenbeschreibungsliste des Schemas enthalten und werden zu Spaltennamen im Eigenschaftenspeicher der Suchmaschine.
 
--   Iinitialzewithstream: stellt die streambasierte Initialisierung des Eigenschafts Handlers bereit.
--   IPropertyStore: Listet Eigenschaftswerte auf, ruft Sie ab und legt Sie fest.
--   Ipropertystorecapabili: optional. Gibt an, ob Benutzer eine Eigenschaft von einer Benutzeroberfläche aus bearbeiten können.
+Sie können Ihre benutzerdefinierten Eigenschaftenbeschreibungen mithilfe der [PSRegisterPropertySchema-Funktion](/windows/win32/api/propsys/nf-propsys-psregisterpropertyschema) registrieren, einer Wrapper-API, die das IPropertySystem::RegisterPropertySchema des Schemasubsystems aufruft. Diese Funktion informiert das Schemasubsystem über das Hinzufügen von Eigenschaftenbeschreibungsschemadateien (PROPDESC-Dateien) mithilfe von Dateipfaden zu den PROPDESC-Dateien auf dem lokalen Computer, in der Regel über das Installationsverzeichnis der Anwendung unter "Programme". In der Regel wird diese Methode von einem Setup oder einer Anwendung (z. B. ihrem Installationsprogramm für den Eigenschaftenhandler) nach der Installation der PROPDESC-Datei(en) aufgerufen.
 
-### <a name="iinitializewithstream"></a>IInitializeWithStream
+ 
 
-Wie im Thema " [Eigenschaften System](../properties/building-property-handlers.md) " beschrieben, wird dringend empfohlen, Eigenschafts Handler mit **IInitializeWithStream** zu implementieren, um die streambasierte Initialisierung durchzuführen. Wenn Sie IInitializeWithStream nicht implementieren möchten, muss der Eigenschafts Handler die Ausführung im Isolations Prozess deaktivieren, indem das Flag disableprocessisolation für den Registrierungsschlüssel des Eigenschaften Handlers festgelegt wird. Die Deaktivierung der Prozess Isolation ist in der Regel nur für Legacy-Eigenschaften Handler vorgesehen und sollte durch neuen Code energisch vermieden werden.
+## <a name="implementing-property-handlers"></a>Implementieren von Eigenschaftenhandlern
 
-### <a name="ipropertystore"></a>IPropertyStore
+Das Entwickeln eines Eigenschaftenhandlers umfasst die Implementierung der folgenden Schnittstellen:
 
-Zum Erstellen eines Eigenschaften Handlers müssen Sie die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Schnittstelle mit den folgenden Methoden implementieren.
+-   IInitialzeWithStream: Ermöglicht die streambasierte Initialisierung Ihres Eigenschaftenhandlers.
+-   IPropertyStore: Aufzählt, ruft Eigenschaftswerte ab und legt sie fest.
+-   IPropertyStoreCapabilities: Optional. Gibt an, ob Benutzer eine Eigenschaft über eine Benutzeroberfläche bearbeiten können.
+
+### <a name="iinitializewithstream"></a>Iinitializewithstream
+
+Wie im Thema [Eigenschaftensystem beschrieben,](../properties/building-property-handlers.md) wird dringend empfohlen, Eigenschaftenhandler mit **IInitializeWithStream** zu implementieren, um die streambasierte Initialisierung zu verwenden. Wenn Sie sich gegen die Implementierung von IInitializeWithStream entschieden haben, muss der Eigenschaftenhandler die Ausführung im Isolationsprozess deaktivieren, indem er das DisableProcessIsolation-Flag für den Registrierungsschlüssel des Eigenschaftenhandlers festlegen. Das Deaktivieren der Prozessisolation ist in der Regel nur für Legacyeigenschaftshandler vorgesehen und sollte durch neuen Code auf jeden Fall vermieden werden.
+
+### <a name="ipropertystore"></a>Ipropertystore
+
+Um einen Eigenschaftenhandler zu erstellen, müssen Sie die [**IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) mit den folgenden Methoden implementieren.
 
 
 
-| Methode   | BESCHREIBUNG                                                         |
+| Methode   | Beschreibung                                                         |
 |----------|---------------------------------------------------------------------|
-| Commit   | Speichert eine Eigenschafts Änderung in der Datei.                                |
-| GetAt    | Ruft einen Eigenschafts Schlüssel aus dem Array von Eigenschaften eines Elements ab.        |
-| GetCount | Ruft die Anzahl der Eigenschaften ab, die an die Datei angefügt sind.                 |
+| Commit   | Speichert eine Eigenschaftsänderung in der Datei.                                |
+| GetAt    | Ruft einen Eigenschaftsschlüssel aus dem Array von Eigenschaften eines Elements ab.        |
+| GetCount | Ruft die Anzahl der eigenschaften ab, die an die Datei angefügt sind.                 |
 | GetValue | Ruft Daten für eine bestimmte Eigenschaft ab.                             |
-| SetValue | Legt einen neuen Eigenschafts Wert fest oder ersetzt oder entfernt einen vorhandenen Wert. |
+| SetValue | Legt einen neuen Eigenschaftswert fest oder ersetzt oder entfernt einen vorhandenen Wert. |
 
 
 
@@ -210,32 +210,32 @@ Zum Erstellen eines Eigenschaften Handlers müssen Sie die [**IPropertyStore**](
 
  
 
-Wichtige Überlegungen zur Implementierung dieser Schnittstelle sind in der [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Dokumentation enthalten.
+Wichtige Überlegungen zur Implementierung dieser Schnittstelle sind in der [**IPropertyStore-Dokumentation**](/windows/win32/api/propsys/nn-propsys-ipropertystore) enthalten.
 
 > [!Note]  
-> Wenn der Eigenschafts Handler mehrere Werte für dieselbe Eigenschaft für ein bestimmtes Element ausgibt, wird nur der letzte ausgegebene Wert im Katalog gespeichert.
+> Wenn ihr Eigenschaftenhandler mehrere Werte für dieselbe Eigenschaft für ein bestimmtes Element aus gibt, wird nur der zuletzt ausgegebene Wert im Katalog gespeichert.
 
  
 
  
 
-### <a name="ipropertystorecapabilities"></a>Ipropertystorecapabilitäten
+### <a name="ipropertystorecapabilities"></a>IPropertyStoreCapabilities
 
-Eigenschaften Handler können diese Schnittstelle optional implementieren, um die Fähigkeit eines Benutzers zu deaktivieren, bestimmte Eigenschaften zu bearbeiten. Diese Eigenschaften sind in der Regel auf der Detailseite und im Bereich bearbeitbar, Sie können jedoch nicht unter dem implementierenden Eigenschaften Handler bearbeitet werden. Die Implementierung dieser Schnittstelle bietet eine bessere Benutzeroberfläche als die Alternative – ein einfacher Laufzeitfehler in der Shell.
-
- 
-
-## <a name="ensuring-your-items-get-indexed"></a>Sicherstellen, dass ihre Elemente indiziert werden
-
-Nachdem Sie den Eigenschafts Handler implementiert haben, möchten Sie sicherstellen, dass die Elemente, für die der Handler registriert ist, indiziert werden. Sie können den [Katalog-Manager](-search-3x-wds-mngidx-catalog-manager.md) verwenden, um die erneute Indizierung zu initiieren. Außerdem können Sie mit dem [Crawl Scope-Manager](-search-3x-wds-extidx-csm.md) Standardregeln einrichten, die die URLs angeben, die der Indexer durchforsten soll. Eine weitere Möglichkeit besteht darin, das Codebeispiel "REINDEX" in den [Windows Search SDK-Beispielen](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8)zu befolgen.
-
-Weitere Informationen finden Sie unter [Verwenden des Katalog-Managers](-search-3x-wds-mngidx-catalog-manager.md) und [Verwenden des Crawl Scope-Managers](-search-3x-wds-extidx-csm.md).
+Eigenschaftshandler können diese Schnittstelle optional implementieren, um die Fähigkeit eines Benutzers zu deaktivieren, bestimmte Eigenschaften zu bearbeiten. Diese Eigenschaften können normalerweise auf der Seite Details und im Bereich bearbeitet werden, aber das Bearbeiten ist unter dem implementierenden Eigenschaftenhandler nicht zulässig. Die korrekte Implementierung dieser Schnittstelle bietet eine bessere Benutzererfahrung als die Alternative– einen einfachen Laufzeitfehler von der Shell.
 
  
 
-## <a name="installing-and-registering-property-handlers"></a>Installieren und Registrieren von Eigenschaften Handlern
+## <a name="ensuring-your-items-get-indexed"></a>Sicherstellen, dass Ihre Elemente indiziert werden
 
-Nachdem der Eigenschaften Handler implementiert wurde, muss er registriert und seine Dateinamenerweiterung dem Handler zugeordnet sein. Das folgende Beispiel zeigt die Registrierungsschlüssel und-Werte, die hierfür erforderlich sind.
+Nachdem Sie ihren Eigenschaftenhandler implementiert haben, möchten Sie sicherstellen, dass die Elemente, für die Ihr Handler registriert ist, indiziert werden. Sie können den [Katalog-Manager](-search-3x-wds-mngidx-catalog-manager.md) verwenden, um die erneute [Indizierung](-search-3x-wds-extidx-csm.md) zu initiieren, und Sie können auch den Durchforstungsbereich-Manager zum Einrichten von Standardregeln verwenden, die die URLs angeben, die der Indexer durchforsten soll. Eine weitere Option ist das Befolgen des Codebeispiels ReIndex im Windows [Search SDK Samples](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8).
+
+Weitere Informationen finden Sie unter [Verwenden des Katalog-Managers](-search-3x-wds-mngidx-catalog-manager.md) und [Verwenden des Durchforstungsbereich-Manager](-search-3x-wds-extidx-csm.md).
+
+ 
+
+## <a name="installing-and-registering-property-handlers"></a>Installieren und Registrieren von Eigenschaftenhandlern
+
+Wenn der Eigenschaftenhandler implementiert ist, muss er registriert werden, und seine Dateierweiterung muss dem Handler zugeordnet sein. Das folgende Beispiel zeigt die Registrierungsschlüssel und -werte, die dafür erforderlich sind.
 
 ```
 HKEY_CLASSES_ROOT
@@ -261,87 +261,87 @@ HKEY_LOCAL_MACHINE
 
  
 
-## <a name="testing-and-troubleshooting-property-handlers"></a>Testen und Problembehandlung von Eigenschaften Handlern
+## <a name="testing-and-troubleshooting-property-handlers"></a>Testen und Behandeln von Problemen mit Eigenschaftenhandlern
 
-In der folgenden Liste finden Sie Ratschläge zu den Arten von Tests, die Sie durchführen sollten:
+Die folgende Liste enthält Hinweise zu den Arten von Tests, die Sie ausführen sollten:
 
--   Testen Sie die Ausgabe von jeder einzelnen Eigenschaft, die vom Dateityp unterstützt wird.
--   Verwenden Sie große Eigenschaftswerte, z. b. ein großes-Metatag in HTML-Dokumenten.
--   Überprüfen Sie, ob der Eigenschafts Handler Datei Handles nicht löscht, indem Sie Sie bearbeiten, nachdem Sie die Ausgabe des Eigenschaften Handlers erhalten haben, oder indem Sie ein Tool wie oh.exe vor und nach dem Auflisten von Dateieigenschaften verwenden.
--   Testen Sie alle Dateitypen, die dem Eigenschaften Handler zugeordnet sind. Überprüfen Sie z. b., ob der HTML-Filter mit den Dateitypen htm und HTML funktioniert.
--   Testen Sie mit beschädigten Dateien. Der Eigenschafts Handler sollte ordnungsgemäß fehlschlagen.
--   Wenn eine Anwendung die Verschlüsselung unterstützt, testen Sie, ob der Eigenschaften Handler verschlüsselten Text ausgibt.
--   Wenn der Eigenschafts Handler die Volltextsuche unterstützt:
-    -   Verwenden Sie mehrere spezielle Unicode-Zeichen im Dateiinhalt, und testen Sie Ihre Ausgabe.
-    -   Testen Sie die Verarbeitung sehr großer Dokumente, um sicherzustellen, dass der Eigenschafts Handler erwartungsgemäß funktioniert.
+-   Testen Sie das Abrufen der Ausgabe jeder einzelnen Eigenschaft, die vom Dateityp unterstützt wird.
+-   Verwenden Sie große Eigenschaftswerte, z. B. ein großes Metatag in HTML-Dokumenten.
+-   Stellen Sie sicher, dass der Eigenschaftenhandler keine Dateihandles aufweist, indem Sie sie nach dem Abrufen der Ausgabe des Eigenschaftenhandlers bearbeiten oder ein Tool wie oh.exe vor und nach dem Aufzählen von Dateieigenschaften verwenden.
+-   Testen Sie alle Dateitypen, die dem Eigenschaftenhandler zugeordnet sind. Überprüfen Sie beispielsweise, ob der HTML-Filter mit .htm und .html funktioniert.
+-   Testen Sie mit beschädigten Dateien. Der Eigenschaftenhandler sollte ordnungsgemäß fehlschlagen.
+-   Wenn eine Anwendung die Verschlüsselung unterstützt, testen Sie, ob der Eigenschaftenhandler keinen verschlüsselten Text aus gibt.
+-   Wenn der Eigenschaftenhandler die Volltextsuche unterstützt:
+    -   Verwenden Sie mehrere Unicode-Sonderzeichen im Dateiinhalt, und testen Sie deren Ausgabe.
+    -   Testen Sie die Verarbeitung sehr großer Dokumente, um sicherzustellen, dass der Eigenschaftenhandler wie erwartet funktioniert.
 
-### <a name="installation-and-setup-tests"></a>Installations-und Setup Tests
+### <a name="installation-and-setup-tests"></a>Installations- und Setuptests
 
-Schließlich müssen Sie die Installations-und Deinstallations Routinen testen.
+Schließlich müssen Sie Ihre Installations- und Deinstallationsroutinen testen.
 
--   Die Installation muss bei fehlgeschlagenen Installationen (z. b. beim Abbrechen und anschließenden erneuten Starten des Setups) wieder hergestellt werden.
--   Die Deinstallation muss alle Dateien löschen, die dem Eigenschaften Handler zugeordnet sind.
--   Bei der Deinstallation dürfen Dateien nicht gelöscht werden, die mit der Installation des Eigenschaften Handlers verknüpft sind.
--   Die dem Eigenschafts Handler zugeordneten Registrierungsschlüssel müssen entfernt werden, wenn Sie deinstalliert werden.
--   Die Deinstallation muss funktionieren, auch wenn Dateien aus dem Installationsverzeichnis gelöscht werden.
+-   Die Installation muss nach fehlerhaften Installationen wiederhergestellt werden (z. B. nach dem Abbrechen und anschließenden Neustarten des Setups).
+-   Bei der Deinstallation müssen alle Dateien gelöscht werden, die dem Eigenschaftenhandler zugeordnet sind.
+-   Die Deinstallation darf keine dateien löschen, die nicht der Installation des Eigenschaftenhandlers zugeordnet sind.
+-   Registrierungsschlüssel, die dem Eigenschaftenhandler zugeordnet sind, müssen entfernt werden, wenn sie deinstalliert werden.
+-   Die Deinstallation muss auch funktionieren, wenn Dateien aus dem Installationsverzeichnis gelöscht werden.
 
-### <a name="troubleshooting-property-handlers"></a>Problembehandlung bei Eigenschaften Handlern
+### <a name="troubleshooting-property-handlers"></a>Problembehandlung bei Eigenschaftenhandlern
 
-Im folgenden werden einige häufige Fehler beim Entwickeln von Eigenschaften Handlern aufgeführt:
+Im Folgenden sind einige häufige Fehler aufgeführt, die beim Entwickeln von Eigenschaftenhandlern auftreten:
 
--   Installieren von. PropDesc-Dateien oder-DLLs unter einem Benutzerverzeichnis.
--   Registrieren von Komponenten mithilfe relativer Pfade.
--   Die Komponenten unter HKEY \_ Current \_ User anstelle des lokalen HKEY-Computers werden registriert \_ \_ .
--   Das Festlegen von disableprocessisolations für nicht-Stream-Handler wird vergessen.
--   Die Testdatei wird an einem nicht indizierten Speicherort platziert.
+-   Installieren von PROPDESC-Dateien oder DLLs in einem Benutzerverzeichnis.
+-   Registrieren von Komponenten mit relativen Pfaden.
+-   Registrieren von Komponenten unter HKEY \_ CURRENT USER anstelle von \_ HKEY LOCAL \_ \_ MACHINE.
+-   Vergessen Sie, DisableProcessIsolation für Nicht-Streamhandler festzulegen.
+-   Platzieren der Testdatei an einem nicht indizierten Speicherort.
 
-Wenn Sie Probleme haben, den Eigenschaftenhandler mit dem Indexer zu arbeiten, finden Sie hier einige Tipps, die Ihnen bei der Problembehandlung helfen:
+Wenn Sie Probleme haben, ihren Eigenschaftenhandler mit dem Indexer zu verwenden, finden Sie hier einige Tipps zur Problembehandlung:
 
--   Überprüfen Sie, ob ihre Eigenschaften Beschreibungen (. PropDesc-Dateien) nach Bedarf als iscolumn = "**true**", "isviewable ="**true**"und" isquervable = "**true**" gekennzeichnet sind.
--   Überprüfen Sie, ob sich Ihre. PropDesc-Dateien an einem globalen Speicherort befinden.
--   Vergewissern Sie sich, dass Sie Ihre. PropDesc-Dateien mit absoluten Pfaden registriert haben.
--   Vergewissern Sie sich, dass das Ereignisprotokoll keine Fehler beim Registrieren Ihrer. PropDesc-Datei aufgezeichnet hat.
--   Stellen Sie sicher, dass sich Ihre DLLs an einem globalen Speicherort befinden (und nicht unter Ihrem Benutzerprofil).
--   Überprüfen Sie, ob Ihre DLLs unter HKEY- \_ Software Klassen für lokale Computer registriert sind \_ \\ \\ .
--   Stellen Sie sicher, dass Ihre DLLs mit vollständigen Pfaden registriert sind (oder reg-Zeichen folgen \_ \_ , die auf absolute Pfade erweitert werden, mithilfe von Umgebungsvariablen, die vom System Konto bekannt sind).
--   Überprüfen Sie, ob der Eigenschafts Handler im Windows-Explorer funktioniert.
--   Es wird empfohlen, IInitializeWithStream zu verwenden, wenn Sie IInitializeWithFile oder IInitializeWithItem verwenden müssen, vergewissern Sie sich, dass Sie disableprocessisolations angeben.
--   Vergewissern Sie sich, dass der Dateityp in der Systemsteuerung für die Indizierungs Optionen als indizierter Dateityp
--   Überprüfen Sie, ob sich die Testdatei an einem indizierten Speicherort befindet
--   Vergewissern Sie sich, dass die Testdatei seit der Installation des Eigenschaften Handlers geändert wurde.
+-   Vergewissern Sie sich, dass Ihre Eigenschaftenbeschreibungen (PROPDESC-Dateien) entsprechend mit isColumn="**true**", isViewable="**true**", and isQueryable="**true**" gekennzeichnet sind.
+-   Überprüfen Sie, ob sich Ihre PROPDESC-Dateien an einem globalen Speicherort befinden.
+-   Vergewissern Sie sich, dass Sie Ihre PROPDESC-Dateien mit absoluten Pfaden registriert haben.
+-   Vergewissern Sie sich, dass im Ereignisprotokoll keine Fehler beim Registrieren Ihrer PROPDESC-Datei aufgezeichnet wurden.
+-   Vergewissern Sie sich, dass sich Ihre DLLs an einem globalen Speicherort (und nicht unter Ihrem Benutzerprofil) befinden.
+-   Überprüfen Sie, ob Ihre DLLs unter HKEY LOCAL MACHINE Software Classes registriert \_ \_ \\ \\ sind.
+-   Stellen Sie sicher, dass Ihre DLLs mit vollständigen Pfaden registriert sind (oder REG \_ EXPAND \_ SZ-Zeichenfolgen, die mithilfe von Umgebungsvariablen, die vom Systemkonto bekannt sind, auf absolute Pfade erweitert werden).
+-   Vergewissern Sie sich, dass Ihr Eigenschaftenhandler unter Windows Explorer funktioniert.
+-   Es wird empfohlen, IInitializeWithStream zu verwenden. Wenn Sie IInitializeWithFile oder IInitializeWithItem verwenden müssen, überprüfen Sie, ob Sie DisableProcessIsolation angeben.
+-   Vergewissern Sie sich, dass der Dateityp im Systemsteuerung Indizierungsoptionen als indizierter Dateityp aufgeführt ist.
+-   Überprüfen Sie, ob sich die Testdatei an einem indizierten Speicherort befindet.
+-   Vergewissern Sie sich, dass die Testdatei seit der Installation des Eigenschaftenhandlers geändert wurde.
 
-Wenn sich die Testdatei an einem indizierten Speicherort befindet und der Indexer diese Position bereits durchlaufen hat, müssen Sie die Datei auf irgendeine Weise ändern, um eine Neuindizierung der Datei zu initiieren.
+Wenn sich die Testdatei an einem indizierten Speicherort befindet und der Indexer diesen Speicherort bereits durchforstet hat, müssen Sie die Datei auf irgendeine Weise ändern, um eine Neuindizierung der Datei auszulösen.
 
  
 
-## <a name="using-system-supplied-property-handlers"></a>Verwenden von System-Supplied-Eigenschaften Handlern
+## <a name="using-system-supplied-property-handlers"></a>Verwenden von System-Supplied-Eigenschaftenhandlern
 
-Windows enthält eine Reihe von vom System bereitgestellten Eigenschaften Handlern, die Sie verwenden können, wenn das Format des Dateityps kompatibel ist. Wenn Sie eine neue Dateierweiterung definieren, die eines dieser Formate verwendet, können Sie die vom System bereitgestellten Handler verwenden, indem Sie die Handlerklassen-ID (CLSID) für die Dateierweiterung registrieren.
+Windows enthält eine Reihe von vom System bereitgestellten Eigenschaftenhandlern, die Sie verwenden können, wenn das Format Ihres Dateityps kompatibel ist. Wenn Sie eine neue Dateierweiterung definieren, die eines dieser Formate verwendet, können Sie die vom System bereitgestellten Handler verwenden, indem Sie den Handlerklassenbezeichner (CLSID) für Ihre Dateierweiterung registrieren.
 
-Sie können die in der folgenden Tabelle aufgeführte CLSID verwenden, um die vom System bereitgestellten Eigenschaften Handler für den Datei Formattyp zu registrieren.
+Sie können die in der folgenden Tabelle aufgeführte CLSID verwenden, um die vom System bereitgestellten Eigenschaftenhandler für Ihren Dateiformattyp zu registrieren.
 
 
 
 | Format          | CLSID                                  |
 |-----------------|----------------------------------------|
-| OLE-DOCFILE     | {8d80504a-0826-40c5-97e1-ebc68f 953792} |
+| OLE DocFile     | {8d80504a-0826-40c5-97e1-ebc68f953792} |
 | Speichern von Spiel-XML   | {ECDD6472-2B9B-4b4b-AE36-F316DF3C8D60} |
-| XPS-/OPC-Handler | {45670fa8-ed97-4f 44-bc93-305082590bfb} |
+| XPS/OPC-Handler | {45670FA8-ED97-4F44-BC93-305082590BFB} |
 | XML             | {c73f6f30-97a0-4ad1-a08f-540d4e9bc7b9} |
 
 
 
  
 
-Vor dem Erstellen einer benutzerdefinierten Eigenschaft sollten Sie sicherstellen, dass es keine System definierte Eigenschaft gibt, die Sie stattdessen verwenden können. Sie können die System definierten Eigenschaften auflisten, indem Sie [**psenumeratepropertybeschreibungen**](/windows/win32/api/propsys/nf-propsys-psenumeratepropertydescriptions) aufrufen oder das Befehlszeilen Tool prop.exe verwenden.
+Bevor Sie eine benutzerdefinierte Eigenschaft erstellen, sollten Sie sicherstellen, dass es keine systemdefinierte Eigenschaft gibt, die Sie stattdessen verwenden können. Sie können die systemdefinierte Eigenschaften aufzählen, indem Sie [**PSEnumeratePropertyDescriptions**](/windows/win32/api/propsys/nf-propsys-psenumeratepropertydescriptions) aufrufen oder das befehlszeilentool prop.exe verwenden.
 
-Das System Schema definiert, wie diese Eigenschaften mit dem Indexer interagieren, und Sie können diese Eigenschaften nicht ändern. Außerdem muss die Anwendung, mit der Sie den Dateityp erstellen, bearbeiten und speichern, auch mit einem bestimmten Verhalten übereinstimmen. Wenn die Anwendung z. b. Sicheres Speichern implementiert (wobei eine temporäre Datei während der Bearbeitung erstellt wird und dann ReplaceFile () verwendet wird, um die neue Version für die alte zu tauschen), muss Sie alle Eigenschaften der ursprünglichen Datei in die neue Datei übertragen. Dies bedeutet, dass die Datei von Benutzern oder anderen Anwendungen hinzugefügte Eigenschaften verliert.
+Das Systemschema definiert, wie diese Eigenschaften mit dem Indexer interagieren, und Sie können dies nicht ändern. Darüber hinaus muss die Anwendung, die Sie zum Erstellen, Bearbeiten und Speichern Ihres Dateityps verwenden, auch bestimmtem Verhalten entsprechen. Wenn die Anwendung beispielsweise sicheres Speichern implementiert (wobei während der Bearbeitung eine temporäre Datei erstellt und dann ReplaceFile() verwendet wird, um die neue Version gegen die alte zu tauschen, muss sie alle Eigenschaften aus der ursprünglichen Datei in die neue Datei übertragen. Wenn dies nicht der Fall ist, verliert die Datei die Eigenschaften, die von Benutzern oder anderen Anwendungen hinzugefügt wurden.
 
  
 
 **Beispiel**
 
-Im folgenden Beispiel wird die Registrierung des vom System bereitgestellten OLE DOCFILE-Handlers für einen Dateityp mit einem gezeigt. Oledocfile-Erweiterung.
+Das folgende Beispiel zeigt die Registrierung des vom System bereitgestellten OLE DocFile-Handlers für einen Dateityp mit einem . OLEDocFile-Erweiterung.
 
 ```
 HKEY_CLASSES_ROOT
@@ -352,7 +352,7 @@ HKEY_CLASSES_ROOT
                (Default) = {9DBD2C50-62AD-11d0-B806-00C04FD706EC}
 ```
 
-Das folgende Beispiel zeigt die Registrierung der Eigenschaften Listen Informationen, sodass Eigenschaften von. Oledocfile-Dateien werden auf der Registerkarte Details und im Bereich angezeigt.
+Das folgende Beispiel zeigt die Registrierung der Eigenschaftenlisteninformationen, sodass eigenschaften von sind. OLEDocFile-Dateien werden auf der Registerkarte Details und im Bereich angezeigt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -391,34 +391,34 @@ System.FileOwner;System.ComputerName
 **Referenz**
 </dt> <dt>
 
-[Eigenschafts Zuordnungen](-search-3x-wds-propertymappings.md)
+[Eigenschaftenzuordnungen](-search-3x-wds-propertymappings.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Bewährte Methoden zum Erstellen von Filter Handlern in Windows Search](-search-3x-wds-extidx-filters.md)
+[Bewährte Methoden zum Erstellen von Filterhandlern in Windows Suche](-search-3x-wds-extidx-filters.md)
 </dt> <dt>
 
 [Der Indizierungsprozess](-search-indexing-process-overview.md)
 </dt> <dt>
 
-[Entwickeln von Protokoll Handlern](-search-3x-wds-phaddins.md)
+[Entwickeln von Protokollhandlern](-search-3x-wds-phaddins.md)
 </dt> <dt>
 
-[System definierte Eigenschaften für benutzerdefinierte Dateiformate](-shell-systemdefinedpropertiesforfileformats.md)
+[Systemdefinierte Eigenschaften für benutzerdefinierte Dateiformate](-shell-systemdefinedpropertiesforfileformats.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[Eigenschaften System](../properties/building-property-handlers.md)
+[Eigenschaftensystem](../properties/building-property-handlers.md)
 </dt> <dt>
 
-[System Eigenschaften](https://msdn.microsoft.com/library/bb763010(VS.85).aspx)
+[Systemeigenschaften](https://msdn.microsoft.com/library/bb763010(VS.85).aspx)
 </dt> <dt>
 
-[Beispiele für Windows Search SDK](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8)
+[Windows Suchen von SDK-Beispielen](https://www.microsoft.com/downloads/details.aspx?FamilyID=645300AE-5E7A-4CE7-95F0-49793F8F76E8)
 </dt> </dl>
 
  

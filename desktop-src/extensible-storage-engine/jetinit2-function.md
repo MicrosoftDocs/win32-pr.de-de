@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9b5d2a62aa448a84d539d8d2d557d06befacfbba
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 7874c475dc18beb5d7f6849b9f628ea06cbc32a3
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122988953"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470455"
 ---
 # <a name="jetinit2-function"></a>JetInit2-Funktion
 
@@ -53,7 +53,7 @@ Die -Instanz, die für diesen Aufruf verwendet werden soll.
 
 Für Windows 2000 wird dieser Parameter ignoriert und sollte immer NULL sein.
 
-Für Windows XP und höhere Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein oder auf einen gültigen Ausgabepuffer mit NULL oder JET_instanceNil festgelegt werden, der das globale Instanzhandle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieses Instanzhandle kann dann an jede andere API übergeben werden, die eine -Instanz annimmt. Wenn die Engine im Modus mit mehreren Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das Instanzhandle enthält, das von der [initialisierten JetCreateInstance](./jetcreateinstance-function.md) zurückgegeben wird.
+Für Windows XP und höhere Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein oder auf einen gültigen Ausgabepuffer mit NULL oder JET_instanceNil festgelegt werden, der das globale Instanzhandle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieses Instanzhandle kann dann an jede andere API übergeben werden, die eine -Instanz annimmt. Wenn die Engine im Modus mit mehreren Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das Instanzhandle enthält, das von der initialisierten [JetCreateInstance](./jetcreateinstance-function.md) zurückgegeben wird.
 
 *grbit*
 
@@ -77,26 +77,20 @@ Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Eine -Instanz muss mit einem Aufruf von **JetInit2** initialisiert werden, bevor sie von anderen Instanzen als [JetSetSystemParameter](./jetsetsystemparameter-function.md)verwendet werden kann.
 
 Eine -Instanz wird durch einen Aufruf der [JetTerm-Funktion](./jetterm-function.md) zerstört, auch wenn diese Instanz nie mit [JetInit](./jetinit-function.md)initialisiert wurde. Eine -Instanz ist die Einheit der Wiederherstellbarkeit für die Datenbank-Engine. Sie steuert den Lebenszyklus aller Dateien, die zum Schutz der Integrität der Daten in einem Satz von Datenbankdateien verwendet werden. Zu diesen Dateien gehören die Prüfpunktdatei und die Transaktionsprotokolldateien.
 
-Wenn die Wiederherstellung in einem Satz von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (wodurch der Fehler unter normalen Umständen JET_errAttachedDatabaseMismatch zurückgegeben wird) und der Client die Wiederherstellung trotz fehlender Datenbanken fortsetzen möchte, wird die JET_ bitReplayIgnoreMissingDB verwendet, um die Wiederherstellung für die verfügbaren Datenbanken fortzusetzen.
+Wenn die Wiederherstellung für eine Reihe von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (wodurch der Fehler unter normalen Umständen JET_errAttachedDatabaseMismatch zurückgegeben wird) und der Client die Wiederherstellung trotz fehlender Datenbanken fortsetzen möchte, wird die JET_ bitReplayIgnoreMissingDB verwendet, um die Wiederherstellung für die verfügbaren Datenbanken fortzusetzen.
 
 Weitere Informationen finden Sie im Abschnitt "Hinweise" in [JetInit.](./jetinit-function.md)
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

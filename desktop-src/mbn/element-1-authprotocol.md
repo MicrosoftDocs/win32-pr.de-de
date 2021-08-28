@@ -1,10 +1,10 @@
 ---
-description: "\"Fidemdmconfigprofile\" \\/ ... \\/ Authprotocol (v4)"
+description: ModemDMConfigProfile \/ ... \/ AuthProtocol (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_AuthProtocol
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Authprotocol (v4)
+title: AuthProtocol (v4)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 5e6c5a25-fe9e-4d0a-8b5b-4ff585f562af
@@ -16,20 +16,20 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 99a4b02ec173e070f4a6d615f3632f11f4949b64
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 46840bf958688ff8a1a1da4a796c07bfe21bd89d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388854"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469407"
 ---
-# <a name="span-idwwan_profile_v4element_1_authprotocolspanmodemdmconfigprofileauthprotocol-v4"></a><span id="WWAN_profile_v4.element_1_AuthProtocol"></span>"Fidemdmconfigprofile" \/ ... \/ Authprotocol (v4)
+# <a name="span-idwwan_profile_v4element_1_authprotocolspanmodemdmconfigprofileauthprotocol-v4"></a><span id="WWAN_profile_v4.element_1_AuthProtocol"></span>ModemDMConfigProfile \/ ... \/ AuthProtocol (v4)
 
 >Gibt das Authentifizierungsprotokoll an, das zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden soll.
 
-Beachten Sie, dass in v4 ein neuer-Enumerationswert für dieses Element verfügbar ist. **Autoselection** bedeutet, dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden muss.
+Beachten Sie, dass in v4 ein neuer Enumerationswert für dieses Element verfügbar ist. **AutoSelection bedeutet,** dass ein Authentifizierungsprotokoll von niedrigeren Ebenen ausgewählt werden soll.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1 [**authprotocol**](./schema-authprotocol-contexttype-element.md) -Element.
+Weitere Informationen finden Sie in der Dokumentation zum [**v1-AuthProtocol-Element.**](./schema-authprotocol-contexttype-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -63,41 +63,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-1-context.md">Context</a></td>
-<td><p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-1-context.md">Context</a> | <p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

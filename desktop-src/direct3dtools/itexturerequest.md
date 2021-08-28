@@ -1,5 +1,5 @@
 ---
-description: Fordern Sie an, dass eine Textur als DDS-Datei geschrieben wird.
+description: Anforderung, dass eine Textur als DDS-Datei geschrieben wird.
 MS-HAID: vspixengine.ITextureRequest
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6cf338ae4d32af409cc8036c126e5c121310dba8
-ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
+ms.openlocfilehash: 68d9d83d15ad8f05a7c842a881efd87e127e9509
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122786356"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622896"
 ---
 # <a name="span-idvspixengineitexturerequestspanitexturerequest-interface"></a><span id="vspixengine.itexturerequest"></span>ITextureRequest-Schnittstelle
 
-Fordern Sie an, dass eine Textur als DDS-Datei geschrieben wird.
+Anforderung, dass eine Textur als DDS-Datei geschrieben wird.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 Die **ITextureRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITextureRequest** verfügt auch über diese Typen von Membern:
 
@@ -38,11 +38,11 @@ Die **ITextureRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**]
 
 Die **ITextureRequest-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/itexturerequest-requestasync-eventid-dword-bstr-itexturecallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td ><p>Fordert an, den Inhalt einer Textur als zu erhalten. DDS-Datei (DirectDraw Surface).</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/itexturerequest-requestasync-eventid-dword-bstr-itexturecallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td style="text-align: left;"><p>Fordert an, den Inhalt einer Textur als abzurufen. DDS-Datei (DirectDraw Surface).</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

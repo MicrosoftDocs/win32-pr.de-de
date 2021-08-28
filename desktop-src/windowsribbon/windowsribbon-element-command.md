@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2def999c89994965f705f53edee684a3f1882fa2b47d43e512942715a8fc51f8
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 0c29539c9c76342b8b88603ea3dd2926554228ac
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119931550"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626946"
 ---
 # <a name="command-element"></a>Command-Element
 
 Stellt eine Befehlsdefinition dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Command
@@ -47,15 +47,15 @@ Stellt eine Befehlsdefinition dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -86,40 +86,40 @@ Stellt eine Befehlsdefinition dar.
 <td><strong>LabelDescription</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Eine Zeichenfolge, die den auf einem Befehlselement angezeigten Text darstellt.<br/> <br/>
+<td>Eine Zeichenfolge, die den in einem Befehlselement angezeigten Text darstellt.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>LabelTitle</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Eine Zeichenfolge, die den auf einem Befehlselement angezeigten Text darstellt.<br/> <br/>
+<td>Eine Zeichenfolge, die den in einem Befehlselement angezeigten Text darstellt.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Name</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder Unterstrich gefolgt von einer beliebigen Sequenz von Ziffern, Buchstaben oder Unterstrichen besteht.<br/> Maximale Länge: 100 Zeichen.<br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder Unterstrich besteht, gefolgt von einer beliebigen Sequenz von Ziffern, Buchstaben oder Unterstrichen.<br/> Maximale Länge: 100 Zeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>Symbol</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder Unterstrich gefolgt von einer beliebigen Sequenz von Ziffern, Buchstaben oder Unterstrichen besteht.<br/> Maximale Länge: 100 Zeichen.<br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einem Buchstaben oder Unterstrich besteht, gefolgt von einer beliebigen Sequenz von Ziffern, Buchstaben oder Unterstrichen.<br/> Maximale Länge: 100 Zeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>QuickInfoDescription</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Eine Zeichenfolge, die den auf einem Befehlselement angezeigten Text darstellt.<br/> <br/>
+<td>Eine Zeichenfolge, die den in einem Befehlselement angezeigten Text darstellt.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>QuickInfoTitle</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Eine Zeichenfolge, die den auf einem Befehlselement angezeigten Text darstellt.<br/> <br/>
+<td>Eine Zeichenfolge, die den in einem Befehlselement angezeigten Text darstellt.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl></td>
 </tr>
 </tbody>

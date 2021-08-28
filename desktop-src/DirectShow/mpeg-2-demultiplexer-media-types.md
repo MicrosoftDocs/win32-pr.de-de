@@ -4,12 +4,12 @@ ms.assetid: 240d1753-df8c-45fe-b5a7-9faa96fc5b18
 title: MPEG-2-Demultiplexer-Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b9b5276b975771ba62118976c8e63b4d5faa53d
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: bef3c7006f13b07394da7d9dc92e9295beda816c
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909998"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122982603"
 ---
 # <a name="mpeg-2-demultiplexer-media-types"></a>MPEG-2-Demultiplexer-Medientypen
 
@@ -36,38 +36,19 @@ Bei Transportpaketen mit Striding **(MEDIASUBTYPE \_ MPEG2 \_ TRANSPORT \_ STRID
 
 ### <a name="output-types"></a>Ausgabetypen
 
-Der MPEG-2-Demultiplexer überprüft keine Ausgabetypen. Der Downstreamfilter ist für die Analyse der Daten verantwortlich, die er vom Demultiplexer empfängt. Die folgenden Typen werden jedoch häufig von Downstreamfiltern als Ausgabe vom Demultiplexer akzeptiert.
+Der MPEG-2-Demultiplexer überprüft keine Ausgabetypen. Der Downstreamfilter ist für die Analyse der Vom Demultiplexer empfangenen Daten verantwortlich. Die folgenden Typen werden jedoch häufig von Downstreamfiltern als Ausgabe des Demultiplexers akzeptiert.
 
 ### <a name="mpeg-2-sections"></a>MPEG-2-Abschnitte
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Haupttyp</td>
-<td><strong>MEDIATYPE_MPEG2_SECTIONS</strong></td>
-</tr>
-<tr class="even">
-<td>Subtype</td>
-<td>Einer der folgenden Punkte trifft zu:<br/>
-<ul>
-<li><strong>MEDIASUBTYPE_ATSC_SI:</strong>ATSC-Dienstinformationen.</li>
-<li><strong>MEDIASUBTYPE_DVB_SI:</strong>WEBDIENST-Dienstinformationen.</li>
-<li><strong>MEDIASUBTYPE_ISDB_SI:</strong>IsDB-Dienstinformationen (Integrated Services Digital Broadcasting).</li>
-<li><strong>MEDIASUBTYPE_MPEG2DATA:</strong>MPEG-2-Abschnittsdaten.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Formattyp</td>
-<td>Keine</td>
-</tr>
-</tbody>
-</table>
+
+| Bezeichnung | Wert |
+|--------|-------|
+| Haupttyp | <strong>MEDIATYPE_MPEG2_SECTIONS</strong> | 
+| Subtype | Einer der folgenden Punkte trifft zu:<br /><ul><li><strong>MEDIASUBTYPE_ATSC_SI</strong>: ATSC-Dienstinformationen.</li><li><strong>MEDIASUBTYPE_DVB_SI</strong>: DIENSTINFORMATIONEN FÜR DEN BEF-Dienst.</li><li><strong>MEDIASUBTYPE_ISDB_SI</strong>: IsDB-Dienstinformationen (Integrated Services Digital Broadcasting).</li><li><strong>MEDIASUBTYPE_MPEG2DATA:</strong>MPEG-2-Abschnittsdaten.</li></ul> | 
+| Formattyp | Keine | 
+
 
 
 

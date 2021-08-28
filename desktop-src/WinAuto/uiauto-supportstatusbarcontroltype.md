@@ -5,7 +5,7 @@ ms.assetid: a28df0a1-95a8-4941-a00d-1f5570589626
 keywords:
 - Benutzeroberflächenautomatisierung,Unterstützung des StatusBar-Steuerelementtyps
 - Benutzeroberflächenautomatisierung,StatusBar-Steuerelementtyp
-- Benutzeroberflächenautomatisierung,Struktur für StatusBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den StatusBar-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Eigenschaften für den StatusBar-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Steuerelementmuster für den StatusBar-Steuerelementtyp
 - Benutzeroberflächenautomatisierung,Ereignisse für den StatusBar-Steuerelementtyp
@@ -15,18 +15,18 @@ keywords:
 - Ereignisse, StatusBar-Steuerelementtyp
 - Unterstützung für den StatusBar-Steuerelementtyp
 - StatusBar-Steuerelementtyp
-- Steuerelementtypen, Struktur für StatusBar-Steuerelementtyp
+- Steuerelementtypen,Struktur für StatusBar-Steuerelementtyp
 - Steuerelementtypen,Steuerelementmuster für StatusBar-Steuerelementtyp
 - Steuerelementtypen,Unterstützung für StatusBar
 - Steuerelementtypen,StatusBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f52f3f04db86a8c8ff0e9cad9a3938a17e996e8210960912c3abc5039468e178
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 032c0122bc472a8b2deace8cc48d41926778a11b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119614250"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473696"
 ---
 # <a name="statusbar-control-type"></a>StatusBar-Steuerelementtyp
 
@@ -51,40 +51,11 @@ Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der B
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>StatusBar
-<ul>
-<li>Bearbeiten (beliebige Anzahl)</li>
-<li>ProgressBar (0 oder viele)</li>
-<li>Bild (0 oder viele)</li>
-<li>Schaltfläche (0 oder viele)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>StatusBar
-<ul>
-<li>Bearbeiten (beliebige Anzahl)</li>
-<li>ProgressBar (0 oder viele)</li>
-<li>Bild (0 oder viele)</li>
-<li>Schaltfläche (0 oder viele)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>StatusBar<ul><li>Bearbeiten (beliebige Anzahl)</li><li>ProgressBar (0 oder viele)</li><li>Bild (0 oder viele)</li><li>Schaltfläche (0 oder viele)</li></ul></li></ul> | <ul><li>StatusBar<ul><li>Bearbeiten (beliebige Anzahl)</li><li>ProgressBar (0 oder viele)</li><li>Bild (0 oder viele)</li><li>Schaltfläche (0 oder viele)</li></ul></li></ul> | 
+
 
 
 
@@ -98,7 +69,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaf
 
 | Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert         | Hinweise                                                                                                                                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.    | Der Wert dieser Eigenschaft muss für alle Peerelemente in der Rohansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                                        |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.    | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                                        |
 | [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.    | Das umschließende Rechteck einer Statusleiste muss alle darin enthaltenen Steuerelemente umfassen.                                                                                                                      |
 | [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.    | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn innerhalb des umschließenden Rechtecks Bereiche vorhanden sind, die nicht angeklickt werden können, und das Element spezielle Treffertests durchführt, überschreiben Sie dies, und geben Sie einen klickbaren Punkt an. |
 | [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **StatusBar** |                                                                                                                                                                                                                     |

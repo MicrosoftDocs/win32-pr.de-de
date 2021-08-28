@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2c524d9067441bb2d9077a9a1751f4910a47f031f4e28701fe204f70c9c5b3e0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 854e38f91b894b1f7cc486a15afcfe857aaa31d6
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118072234"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473966"
 ---
 # <a name="jetossnapshotfreeze-function"></a>JetOSSnapshotFreeze-Funktion
 
@@ -69,48 +69,17 @@ Die Optionen für diesen Aufruf. Dieser Parameter ist für die zukünftige Verwe
 
 Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Die für die Ausgabeparameter bereitgestellten Zeiger sind NULL, die Momentaufnahmesitzung ist ungültig, oder der <em>grbit-Parameter</em> ist ungültig.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotInvalidSequence</p></td>
-<td><p>Die Momentaufnahmesitzung befindet sich nicht im entsprechenden Zustand, um ein Einfrieren zu starten (z. B. ist bei dieser Sitzung zuvor ein vorheriger Einfrieren fehlgeschlagen).</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errOSSnapshotNotAllowed</p></td>
-<td><p>Die Engine befindet sich nicht in einem Zustand, in dem eine Momentaufnahme ausgeführt werden kann. Mindestens eine Streamingsicherung wird bereits ausgeführt, oder eine oder mehrere Instanzen werden wiederherstellungsschritte ausgeführt oder werden beendet.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotInvalidSnapId</p></td>
-<td><p>Der Bezeichner für die Momentaufnahmesitzung ist ungültig.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errOutOfMemory</p></td>
-<td><p>Fehler bei der Funktion aufgrund einer nicht genügenden Arbeitsspeicherbedingung.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOutOfThreads</p></td>
-<td><p>Fehler bei der Funktion, weil ein neuer Thread, der das Einfrieren durchfing, nicht gestartet werden konnte.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Die für die Ausgabeparameter bereitgestellten Zeiger sind NULL, die Momentaufnahmesitzung ist ungültig, oder der <em>grbit-Parameter</em> ist ungültig.</p> | 
+| <p>JET_errOSSnapshotInvalidSequence</p> | <p>Die Momentaufnahmesitzung befindet sich nicht im entsprechenden Zustand, um ein Einfrieren zu starten (z. B. ist bei dieser Sitzung zuvor ein vorheriger Einfrieren fehlgeschlagen).</p> | 
+| <p>JET_errOSSnapshotNotAllowed</p> | <p>Die Engine befindet sich nicht in einem Zustand, in dem eine Momentaufnahme ausgeführt werden kann. Mindestens eine Streamingsicherung wird bereits ausgeführt, oder eine oder mehrere Instanzen werden wiederherstellungsschritte ausgeführt oder werden beendet.</p> | 
+| <p>JET_errOSSnapshotInvalidSnapId</p> | <p>Der Bezeichner für die Momentaufnahmesitzung ist ungültig.</p> | 
+| <p>JET_errOutOfMemory</p> | <p>Fehler bei der Funktion aufgrund einer nicht genügenden Arbeitsspeicherbedingung.</p> | 
+| <p>JET_errOutOfThreads</p> | <p>Fehler bei der Funktion, weil ein neuer Thread, der das Einfrieren durchfing, nicht gestartet werden konnte.</p> | 
+
 
 
 Wenn diese Funktion erfolgreich ist, werden keine Schreib-IOs für die Datenbankdateien oder die Protokolldateien ausgegeben, die Teil von instanzen sind, die fixiert sind. Außerdem werden die Instanzinformationen ordnungsgemäß ausgefüllt und müssen später durch Aufrufen von [JetFreeBuffer](./jetfreebuffer-function.md) mit dem Zeiger auf das zurückgegebene Instanzinformationsarray frei werden.
@@ -129,38 +98,9 @@ Aufgrund der oben beschriebenen möglichen Auswirkungen gibt es ein internes Tim
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>JetOSSnapshotFreezeW</strong> (Unicode) und <strong>JetOSSnapshotFreezeA</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetOSSnapshotFreezeW</strong> (Unicode) und <strong>JetOSSnapshotFreezeA</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

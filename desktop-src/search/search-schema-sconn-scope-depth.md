@@ -1,19 +1,19 @@
 ---
-description: Das -Element gibt an, ob der Bereich des <depth> Suchconnectors untergeordnete URLs enthalten soll. Die zulässigen Werte sind Deep und Shallow. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
+description: Das Tiefenelement gibt an, ob der Bereich des &lt; Suchconnectors &gt; untergeordnete URLs enthalten soll. Die zulässigen Werte sind Deep und Shallow. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: 859decab-cbe3-4cec-b37c-6d0e7c353876
 title: depth-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 245156088cd68fcf67103c18b987a9b459b0b760b3a04a1ced817badd25aada8
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 430ad3d047331a4bb3ffc58bd134d2364aaa0838
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117862525"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886769"
 ---
 # <a name="depth-element-search-connector-schema"></a>depth-Element (Search Connector Schema)
 
-Das -Element gibt an, ob der Bereich des <depth> Suchconnectors untergeordnete URLs enthalten soll. Die zulässigen Werte sind `Deep` und `Shallow`. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
+Das Tiefenelement gibt an, ob der Bereich des &lt; Suchconnectors &gt; untergeordnete URLs enthalten soll. Die zulässigen Werte sind `Deep` und `Shallow`. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 

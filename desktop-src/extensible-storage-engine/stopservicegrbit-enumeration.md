@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: StopServiceGrbit-Enumeration'
+description: Weitere Informationen finden Sie unter StopServiceGrbit-Enumeration.
 title: StopServiceGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: StopServiceGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows8.StopServiceGrbit
@@ -32,12 +32,12 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7ecd096cc6d55aa989b758f7c30364844d160e59e5eba209f8e38c73ae87d0ad
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 6c8280bf4abfbc9eb5818d1aab460a17298db7b0
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119603820"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477456"
 ---
 # <a name="stopservicegrbit-enumeration"></a>StopServiceGrbit-Enumeration
 
@@ -65,46 +65,17 @@ public enum StopServiceGrbit
 
 ## <a name="members"></a>Member
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Membername</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>Alle</td>
-<td>Beendet alle ESE-Dienste für die angegebene Instanz.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>BackgroundUserTasks</td>
-<td>Beendet neustartbare clientspezifische Hintergrundwartungsaufgaben (B+-Strukturdefragmentierung).</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>QuiesceCaches</td>
-<td>Lädt alle geänderten Caches in den Ruhespeicher auf den Datenträger. Asynchron. Die Stilllegung wird abgebrochen, wenn das Resume-Bit anschließend aufgerufen wird.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Fortsetzen</td>
-<td>Setzt zuvor ausgegebene StopService-Vorgänge fort, d.h. &quot; startet den Dienst &quot; neu. Kann mit obigen Grbits kombiniert werden, um bestimmte Dienste fortzusetzen, oder mit 0x0 Setzt alle vorherigen beendeten Dienste fort.
-<p>Warnung: Dieses Bit kann nur verwendet werden, um JET_bitStopServiceBackground und JET_bitStopServiceQuiesceCaches fortzusetzen. Wenn Sie eine JET_bitStopServiceAll oder JET_bitStopServiceAPI haben, schlägt der Versuch, JET_bitStopServiceResume zu verwenden, fehl.</p></td>
-</tr>
-</tbody>
-</table>
+
+|  | Membername | BESCHREIBUNG | 
+|--|-------------|-------------|
+|  | Alle | Beendet alle ESE-Dienste für die angegebene Instanz. | 
+|  | BackgroundUserTasks | Beendet neu startbare clientspezifische Hintergrundwartungsaufgaben (B+-Strukturdefragmentierung). | 
+|  | QuiesceCaches | Macht alle dirty Caches auf den Datenträger in Ruhe. Asynchron. Das Ruhen wird abgebrochen, wenn das Resume-Bit anschließend aufgerufen wird. | 
+|  | Fortsetzen | Setzt zuvor ausgegebene StopService-Vorgänge fort, d. h. "startet den Dienst neu". Kann mit den oben genannten Grbits kombiniert werden, um bestimmte Dienste wieder aufzunehmen, oder mit 0x0 alle vorherigen beendeten Dienste fortsetzen.<p>Warnung: Dieses Bit kann nur zum Fortsetzen von JET_bitStopServiceBackground und JET_bitStopServiceQuiesceCaches verwendet werden, wenn Sie eine JET_bitStopServiceAll- oder JET_bitStopServiceAPI-JET_bitStopServiceResume verwenden.</p> | 
 
 
-## <a name="see-also"></a>Siehe auch
+
+## <a name="see-also"></a>Weitere Informationen
 
 #### <a name="reference"></a>Verweis
 

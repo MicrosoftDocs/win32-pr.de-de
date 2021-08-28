@@ -1,10 +1,10 @@
 ---
-description: Rückruf, der Zusammenfassungs Informationen zurückgibt (die im Eigenschaften Fenster angezeigt werden).
+description: Rückruf zum Zurückgeben von Zusammenfassungsinformationen (im Eigenschaftenfenster angezeigt).
 MS-HAID: vspixengine.ISummaryCallback
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Isummarycallback-Schnittstelle
+title: ISummaryCallback-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 72B1491C-058A-480D-B3EF-AABF3C1E7D2A
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5ffecd81a1bb164e50a9139552c78c1dd520e671
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 62c3d926bb6020931c90ce2abc6ed36c0015c31d
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125132"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122787276"
 ---
-# <a name="span-idvspixengineisummarycallbackspanisummarycallback-interface"></a><span id="vspixengine.isummarycallback"></span>Isummarycallback-Schnittstelle
+# <a name="span-idvspixengineisummarycallbackspanisummarycallback-interface"></a><span id="vspixengine.isummarycallback"></span>ISummaryCallback-Schnittstelle
 
-Rückruf, der Zusammenfassungs Informationen zurückgibt (die im Eigenschaften Fenster angezeigt werden).
+Rückruf zum Zurückgeben von Zusammenfassungsinformationen (im Eigenschaftenfenster angezeigt).
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **isummarycallback** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Isummarycallback** verfügt auch über die folgenden Typen von Membern:
+Die **ISummaryCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ISummaryCallback** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **isummarycallback** -Schnittstelle verfügt über diese Methoden.
+Die **ISummaryCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/isummarycallback-resultcallback-dword-summaryitem-arr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die zum Benachrichtigen des Hosts über Zusammenfassungs Informationen des Grafik Protokolls verwendet wird.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/isummarycallback-resultcallback-dword-summaryitem-arr"><strong>ResultCallback</strong></a></td><td ><p>Eine Rückruffunktion, die verwendet wird, um den Host über Zusammenfassungsinformationen des Grafikprotokolls zu benachrichtigen.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

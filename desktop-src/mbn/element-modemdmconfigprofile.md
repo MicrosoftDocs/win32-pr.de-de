@@ -7,12 +7,12 @@ MSHAttr:
 title: ModemDMConfigProfile
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80684cdf2d47d203318afbfd7b5e6bc02de1d3dc
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 0c6de7275b092cd0cd95683d6b4de2ca28322f69
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122982743"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475136"
 ---
 # <a name="span-idwwan_profile_v4element_modemdmconfigprofilespanmodemdmconfigprofile"></a><span id="WWAN_profile_v4.element_ModemDMConfigProfile"></span>ModemDMConfigProfile
 
@@ -20,7 +20,7 @@ Modem DM-Konfigurationsprofil.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-**&lt;ModemDMConfigProfile&gt;**
+**<ModemDMConfigProfile>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,7 +67,7 @@ Keine.
 | <a href="element-oemconnectionid.md">OemConnectionId</a> | <p>Die OEM-Verbindungs-ID für die Dm-Konfiguration des Modems.</p> | 
 | <a href="element-1-profilecreationtype.md">ProfileCreationType (in ModemDMConfigProfile)</a> | <p>Gibt an, wie dieses Modem-DM-Profil erstellt wurde.</p><p>Dieser Wert wird verwendet, um zu entscheiden, ob ein Benutzer das Profil löschen kann. Benutzer können nur <strong>UserProvisioned-Profile</strong> löschen.</p> | 
 | <a href="element-1-roamapplicability.md">RoamApplicability</a> | <p>Gibt an, dass dieses Profil nur aktiv ist, wenn die aktuelle Roamingbedingung die angegebene ist. Andernfalls ist das Profil nicht anwendbar und kann nicht zum Aktivieren eines PDP-Kontexts (Packet Data Protocol) verwendet werden. Der Wert dieses Elements muss ein gültiger <a href="simpletype-roamapplicabilitytype.md"><strong>roamApplicabilityType-Wert</strong></a> sein.</p> | 
-| <a href="element-1-simiccid.md">SimIccID</a> | <p>Die SIM-Identifikationsnummer für GSM-Geräte. Weitere Informationen finden Sie in der Dokumentation für das <a href="../mbn/schema-simiccid-mbnprofile-element.md"><strong>v1 SimIccID-Element.</strong></a></p> | 
+| <a href="element-1-simiccid.md">SimIccID</a> | <p>Die SIM-Identifcation-Nummer für GSM-Geräte. Weitere Informationen finden Sie in der Dokumentation für das <a href="../mbn/schema-simiccid-mbnprofile-element.md"><strong>v1 SimIccID-Element.</strong></a></p> | 
 
 
  
@@ -79,9 +79,7 @@ Dieses äußerste Element (Dokument) darf nicht in anderen Elementen enthalten s
 ## <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

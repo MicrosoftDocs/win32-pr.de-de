@@ -1,21 +1,21 @@
 ---
-description: Gibt den Typ des Zuordnungsauslösers an, der von einer Stubfunktion verwendet werden soll.
+description: Gibt den Typ des Zuordnungsdelocators an, der von einer Stubfunktion verwendet werden soll.
 ms.assetid: 58228dfd-1d4b-41e5-b423-a54525021c22
 title: deallocator-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e9a27f768d0c9d854d13bd58c0c797234a0526c4abb95a0c5f4fb553466a6ba
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ba2617ce92dcd0c2763f77b0bc6f0fb5c1beea1c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118991750"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881059"
 ---
 # <a name="deallocator-element"></a>deallocator-Element
 
-Gibt den Typ des Zuordnungsauslösers an, der von einer Stubfunktion verwendet werden soll.
+Gibt den Typ des Zuordnungsdelocators an, der von einer Stubfunktion verwendet werden soll.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <deallocator/>
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                               | BESCHREIBUNG                                                                                   |
+| Element                                               | Beschreibung                                                                                   |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | [**stubDefinitions**](stubdefinitions.md)<br/> | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/> |
 
@@ -41,7 +41,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Zuordnungstyp sollte in ein Tagpaar eingeschlossen <deallocator></deallocator> werden. Die folgenden Zeichenfolgen sind gültige Zuordnungswerte:
+Der Zuordnungstyp sollte in ein Paar von &lt; &gt; </deallocator> Zuordnungstags eingeschlossen werden. Die folgenden Zeichenfolgen sind gültige Zuordnungswerte:
 
 -   Keine
 -   WSDFreeLinkedMemory

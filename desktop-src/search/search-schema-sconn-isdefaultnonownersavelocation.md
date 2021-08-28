@@ -1,19 +1,19 @@
 ---
-description: Das optionale boolesche <isDefaultNonOwnerSaveLocation> Element gibt an, ob der im Suchconnector beschriebene Speicherort als Standard Speicherort verwendet werden soll, wenn ein Benutzer von einem anderen Computer in einer Heim Netzgruppe ein Element speichern möchte.
+description: Das optionale boolesche &lt; Element isDefaultNonOwnerSaveLocation gibt an, ob der im Suchconnector beschriebene Speicherort als Standardspeicherort verwendet werden soll, wenn ein Benutzer eines anderen Computers in einer Homegroup ein Element speichern &gt; möchte.
 ms.assetid: 4286b122-2454-4dc3-9c06-9967b7a763dd
-title: isdefaultnonbesitzsaveloationselement (Suchconnector-Schema)
+title: isDefaultNonOwnerSaveLocation-Element (Connectorschema durchsuchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edd39ab76ae1b99d6518ca40407d328f5da9778c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e2a20912b10864d856bd4513e31a37eeee5c2a0
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344261"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881932"
 ---
-# <a name="isdefaultnonownersavelocation-element-search-connector-schema"></a>isdefaultnonbesitzsaveloationselement (Suchconnector-Schema)
+# <a name="isdefaultnonownersavelocation-element-search-connector-schema"></a>isDefaultNonOwnerSaveLocation-Element (Connectorschema durchsuchen)
 
-Das optionale boolesche <isDefaultNonOwnerSaveLocation> Element gibt an, ob der im Suchconnector beschriebene Speicherort als Standard Speicherort verwendet werden soll, wenn ein Benutzer von einem anderen Computer in einer Heim Netzgruppe ein Element speichern möchte. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das optionale boolesche &lt; Element isDefaultNonOwnerSaveLocation gibt an, ob der im Suchconnector beschriebene Speicherort als Standardspeicherort verwendet werden soll, wenn ein Benutzer eines anderen Computers in einer Homegroup ein Element speichern &gt; möchte. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ Das optionale boolesche <isDefaultNonOwnerSaveLocation> Element gibt an, ob der 
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn "true", wenn ein Benutzer eines anderen Computers in einer Heim Netzgruppe ein Element speichert, speichert Windows-Explorer das Element an dem im-Element angegebenen Speicherort <simpleLocation> .
+True gibt an, dass der Windows-Explorer das Element an dem im simpleLocation-Element angegebenen Speicherort speichert, wenn ein Benutzer von einem anderen Computer in einer Homegroup ein Element &lt; &gt; speichert.
 
 ## <a name="example"></a>Beispiel
 

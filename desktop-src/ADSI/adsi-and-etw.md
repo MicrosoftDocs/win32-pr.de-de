@@ -7,18 +7,18 @@ keywords:
 - ADSI für die Ereignisablaufverfolgung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a59b2db3775c8c578ad361667a2d89c36240caf4b3bbb4bcd5cdd2798011514b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 50ff881a408e2f6d7a6b661e7556c8d39366f726
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119023978"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469197"
 ---
 # <a name="event-tracing-in-adsi"></a>Ereignisablaufverfolgung in ADSI
 
 Windows Server 2008 und Windows Vista führen [die Ereignisablaufverfolgung](/windows/desktop/ETW/event-tracing-portal) in [Active Directory Service Interfaces](active-directory-service-interfaces-adsi.md) (ADSI) ein. Bestimmte Bereiche des ADSI LDAP-Anbieters verfügen über eine zugrunde liegende Implementierung, die komplex ist oder eine Abfolge von Schritten umfasst, die die Diagnose von Problemen erschweren. Um Anwendungsentwickler bei der Problembehandlung zu unterstützen, wurde die Ereignisablaufverfolgung den folgenden Bereichen hinzugefügt:
 
-## <a name="schema-parsing-and-downloading"></a>Schemaparsing und Downloading
+## <a name="schema-parsing-and-downloading"></a>Schemaparsing und -download
 
 Die IADs-Schnittstelle in ADSI erfordert, dass das LDAP-Schema auf dem Client zwischengespeichert wird, damit Attribute ordnungsgemäß gemarshallt werden können (wie im [ADSI-Schemamodell beschrieben).](adsi-schema-model.md) Um dies zu erreichen, lädt ADSI das Schema für jeden Prozess (und für jeden LDAP-Server/jede LDAP-Domäne) entweder aus einer Schemadatei (SCH-Datei), die auf dem lokalen Datenträger gespeichert ist, oder durch Herunterladen vom LDAP-Server in den Arbeitsspeicher. Verschiedene Prozesse auf demselben Clientcomputer verwenden das zwischengespeicherte Schema auf dem Datenträger, sofern es verfügbar und anwendbar ist.
 
@@ -59,75 +59,13 @@ Führen Sie dann den folgenden Befehl aus:
 
  
 
-Diese Flags bestimmen gemäß der folgenden Tabelle, welche [ADSI-Methoden](active-directory-service-interfaces-adsi.md) nachverfolgt werden:
+Diese Flags bestimmen gemäß der folgenden Tabelle, welche [ADSI-Methoden](active-directory-service-interfaces-adsi.md) verfolgt werden:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>DEBUG_SCHEMA</strong><br/></td>
-<td><ul>
-<li>LdapGetSchema</li>
-<li>GetSchemaInfoTime</li>
-<li>LdapReadSchemaInfoFromServer</li>
-<li>ProcessSchemaInfo</li>
-<li>HelperReadLdapSchemaInfo</li>
-<li>ProcessClassInfoArray</li>
-<li>ReadSchemaInfoFromRegistry</li>
-<li>StoreSchemaInfoFromRegistry</li>
-<li>AttributeTypeDescription</li>
-<li>ObjectClassDescription</li>
-<li>DITContentRuleDescription</li>
-<li>DirectoryString</li>
-<li>DirectoryStrings</li>
-<li>DITContentRuleDescription</li>
-</ul>
-<br/></td>
-</tr>
-<tr class="even">
-<td><strong>DEBUG_CHANGEPWD</strong><br/></td>
-<td><ul>
-<li>CADsUser::ChangePassword</li>
-</ul>
-<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>DEBUG_SETPWD</strong><br/></td>
-<td><ul>
-<li>CADsUser::SetPassword</li>
-</ul>
-<br/></td>
-</tr>
-<tr class="even">
-<td><strong>DEBUG_BINDCACHE</strong><br/></td>
-<td><ul>
-<li>GetServerBasedObject</li>
-<li>GetServerLessBasedObject</li>
-<li>GetGCDomainName</li>
-<li>GetDefaultDomainName</li>
-<li>GetUserDomainFlatName</li>
-<li>BindCacheLookup</li>
-<li>EquivalentPortNumbers</li>
-<li>CanCredentialsBeReused</li>
-<li>BindCacheAdd</li>
-<li>BindCacheAddRef</li>
-<li>AddReferralLink</li>
-<li>CommonRemoveEntry</li>
-<li>BindCacheDerefHelper</li>
-<li>NotifyNewConnection</li>
-<li>QueryForConnection</li>
-<li>LdapOpenBindWithCredentials</li>
-<li>LdapOpenBindWithDefaultCredentials</li>
-</ul>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| | | <strong>DEBUG_SCHEMA</strong><br /> | <ul><li>LdapGetSchema</li><li>GetSchemaInfoTime</li><li>LdapReadSchemaInfoFromServer</li><li>ProcessSchemaInfo</li><li>HelperReadLdapSchemaInfo</li><li>ProcessClassInfoArray</li><li>ReadSchemaInfoFromRegistry</li><li>StoreSchemaInfoFromRegistry</li><li>AttributeTypeDescription</li><li>ObjectClassDescription</li><li>DITContentRuleDescription</li><li>DirectoryString</li><li>DirectoryStrings</li><li>DITContentRuleDescription</li></ul><br /> | | <strong>DEBUG_CHANGEPWD</strong><br /> | <ul><li>CADsUser::ChangePassword</li></ul><br /> | | <strong>DEBUG_SETPWD</strong><br /> | <ul><li>CADsUser::SetPassword</li></ul><br /> | | <strong>DEBUG_BINDCACHE</strong><br /> | <ul><li>GetServerBasedObject</li><li>GetServerLessBasedObject</li><li>GetGCDomainName</li><li>GetDefaultDomainName</li><li>GetUserDomainFlatName</li><li>BindCacheLookup</li><li>EquivalentPortNumbers</li><li>CanCredentialsBeReused</li><li>BindCacheAdd</li><li>BindCacheAddRef</li><li>AddReferralLink</li><li>CommonRemoveEntry</li><li>BindCacheDerefHelper</li><li>NotifyNewConnection</li><li>QueryForConnection</li><li>LdapOpenBindWithCredentials</li><li>LdapOpenBindWithDefaultCredentials</li></ul><br /> | 
+
 
 
 
@@ -141,7 +79,7 @@ Schließlich sollte das *traceLevel-Flag* einer der folgenden Werte sein:
 
 |      Flag                                    |       Wert                |
 |------------------------------------------|-----------------------|
-| **\_ABLAUFVERFOLGUNGSEBENENFEHLER \_**<br/>       | 0x00000002<br/> |
+| **\_ \_ ABLAUFVERFOLGUNGSEBENENFEHLER**<br/>       | 0x00000002<br/> |
 | **INFORMATIONEN \_ AUF \_ ABLAUFVERFOLGUNGSEBENE**<br/> | 0x00000004<br/> |
 
 
@@ -158,15 +96,15 @@ Im vorherigen Beispiel ist *sessionname* der gleiche Name wie der, der mit dem B
 
 ## <a name="remarks"></a>Hinweise
 
-Es ist effektiver, nur bestimmte Prozesse durch Angabe einer bestimmten PID zu verfolgen, als alle Prozesse auf einem Computer zu verfolgen. Wenn Sie mehrere Anwendungen auf demselben Computer nachverfolgen müssen, kann dies auswirkungen auf die Leistung haben. In leistungsorientierten Abschnitten des Codes gibt es eine erhebliche Debugausgabe. Außerdem müssen Administratoren darauf achten, die Berechtigungen der Protokolldateien bei der Ablaufverfolgung mehrerer Prozesse ordnungsgemäß zu festlegen. Andernfalls kann jeder Benutzer die Ablaufverfolgungsprotokolle lesen, und andere Benutzer können Prozesse nachverfolgen, die sichere Informationen enthalten.
+Es ist effektiver, nur bestimmte Prozesse durch Angabe einer bestimmten PID zu verfolgen, als alle Prozesse auf einem Computer zu verfolgen. Wenn Sie mehrere Anwendungen auf demselben Computer nachverfolgen müssen, kann dies auswirkungen auf die Leistung haben. in leistungsorientierten Abschnitten des Codes gibt es eine erhebliche Debugausgabe. Außerdem müssen Administratoren darauf achten, die Berechtigungen der Protokolldateien bei der Ablaufverfolgung mehrerer Prozesse ordnungsgemäß zu festlegen. Andernfalls kann jeder Benutzer die Ablaufverfolgungsprotokolle lesen, und andere Benutzer können Prozesse nachverfolgen, die sichere Informationen enthalten.
 
-Gehen Sie beispielsweise davon aus, dass der Administrator die Ablaufverfolgung für eine Anwendung "Test.exe" ein richtet, und gibt keine PID in der Registrierung an, um mehrere Instanzen des Prozesses zu verfolgen. Nun möchte ein anderer Benutzer die Anwendung "Secure.exe" verfolgen. Wenn die Ablaufverfolgungsprotokolldateien nicht ordnungsgemäß eingeschränkt sind, muss dieser Benutzer nur "Secure.exe" in "Test.exe" umbenennen, und er wird nachverfolgt. Im Allgemeinen ist es am besten, bei der Problembehandlung nur bestimmte Prozesse zu verfolgen und den Registrierungsschlüssel für die Ablaufverfolgung zu entfernen, sobald die Problembehandlung durchgeführt wurde.
+Gehen Sie beispielsweise davon aus, dass der Administrator die Ablaufverfolgung für eine Anwendung "Test.exe" ein richtet, und gibt keine PID in der Registrierung an, um mehrere Instanzen des Prozesses zu verfolgen. Nun möchte ein anderer Benutzer die Anwendung "Secure.exe" nachverfolgen. Wenn die Ablaufverfolgungsprotokolldateien nicht ordnungsgemäß eingeschränkt sind, muss dieser Benutzer nur "Secure.exe" in "Test.exe" umbenennen und wird nachverfolgt. Im Allgemeinen ist es am besten, bei der Problembehandlung nur bestimmte Prozesse zu verfolgen und den Registrierungsschlüssel für die Ablaufverfolgung zu entfernen, sobald die Problembehandlung durchgeführt wurde.
 
 Da die Aktivierung der Ereignisablaufverfolgung zusätzliche Protokolldateien erzeugt, sollten Administratoren die Protokolldateigrößen sorgfältig überwachen. Fehlender Speicherplatz auf dem lokalen Computer kann zu einem Denial-of-Service-Angriff führen.
 
 ## <a name="example-scenarios"></a>Beispielszenarien
 
-Szenario 1: Der Administrator erkennt einen unerwarteten Fehler in einer Anwendung, die Kennwörter für Benutzerkonten festgelegt, sodass er die folgenden Schritte ausführen würde, um das Problem mithilfe der Ereignisablaufverfolgung zu beheben.
+Szenario 1: Der Administrator sieht einen unerwarteten Fehler in einer Anwendung, die Kennwörter für Benutzerkonten festgelegt, sodass er die folgenden Schritte ausführen würde, um das Problem mithilfe der Ereignisablaufverfolgung zu beheben.
 
 1.  Schreiben Sie ein Skript, das das Problem reproduziert, und erstellen Sie den Registrierungsschlüssel.
 
@@ -184,7 +122,7 @@ Szenario 1: Der Administrator erkennt einen unerwarteten Fehler in einer Anwendu
 
     **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **adsi** \\ **Tracing** \\ **cscript.exe**
 
-5.  Führen Sie das ETW-Tool Tracerpt.exe, um die Ablaufverfolgungsinformationen aus dem Protokoll zu analysieren:
+5.  Führen Sie das ETW-Tracerpt.exe aus, um die Ablaufverfolgungsinformationen aus dem Protokoll zu analysieren:
 
     **tracelog.exe -start scripttrace -guid \# 7288c9f8-d63c-4932-a345-89d6b060174d -f . \\ adsi.etl -flag 0x2 -level 0x4**
 
@@ -194,9 +132,9 @@ Szenario 2: Der Administrator möchte die Schemaparsing- und Downloadvorgänge i
 
     **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **adsi** \\ **Tracing** \\ **w3wp.exe**
 
-    und innerhalb dieses Schlüssels erstellen Sie einen Wert vom Typ DWORD mit dem Namen PID, und legen Sie ihn auf die Prozess-ID der Instanz von w3wp.exe fest, die derzeit auf dem lokalen Computer ausgeführt wird.
+    und in diesem Schlüssel erstellen Sie einen Wert vom Typ DWORD mit dem Namen PID, und legen Sie ihn auf die Prozess-ID der Instanz von w3wp.exe fest, die derzeit auf dem lokalen Computer ausgeführt wird.
 
-2.  Anschließend wird eine Ablaufverfolgungssitzung erstellt, und *traceFlags* wird auf 0x1 (**DEBUG \_ SCHEMA**) und *traceLevel* auf 0x4 ( TRACE LEVEL INFORMATION )**\_ \_ festgelegt:**
+2.  Anschließend erstellen sie eine Ablaufverfolgungssitzung, indem sie *traceFlags* auf 0x1 (**DEBUG \_ SCHEMA**) und *traceLevel* auf 0x4 (**TRACE LEVEL \_ \_ INFORMATION) festlegen:**
 
     **tracelog.exe -start w3wptrace -guid \# 7288c9f8-d63c-4932-a345-89d6b060174d -f . \\ w3wp.etl -flag 0x1 -level 0x4**
 
@@ -205,8 +143,8 @@ Szenario 2: Der Administrator möchte die Schemaparsing- und Downloadvorgänge i
 
     **tracelog.exe -stop w3wptrace**
 
-5.  Löschen Sie den Registrierungsschlüssel **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **adsi** \\ **Tracing** \\ **w3wp.exe.**
-6.  Führen Sie das ETW-Tool tracerpt.exe, um die Ablaufverfolgungsinformationen aus dem Protokoll zu analysieren:
+5.  Löschen Sie den Registrierungsschlüssel **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **adsi** \\ **Tracing** \\ **w3wp.exe**.
+6.  Führen Sie das ETW-tracerpt.exe aus, um die Ablaufverfolgungsinformationen aus dem Protokoll zu analysieren:
 
     **tracerpt.exe . \\ w3wp.etl -o -report**
 

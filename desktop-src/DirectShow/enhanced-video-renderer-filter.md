@@ -4,12 +4,12 @@ ms.assetid: ead99cb3-2be2-42c6-ac22-be0c2ddf28d5
 title: Erweiterter Videorendererfilter
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e6b99eefe8f31074c755f4f74b4cd8749e44de996f49592cea5827d6fa1e123
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 7ed63ba80864f98012a178ed775e5812ee5abe88
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119537070"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475526"
 ---
 # <a name="enhanced-video-renderer-filter"></a>Erweiterter Videorendererfilter
 
@@ -24,78 +24,9 @@ Der DirectShow EVR-Filter ist in der Dokumentation zum Media Foundation SDK doku
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Filterschnittstellen (über <strong>QueryInterface</strong>)</td>
-<td>DirectShow-Schnittstellen:
-<ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection"><strong>IAMCertifiedOutputProtection</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags"><strong>IAMFilterMiscFlags</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a></li>
-<li><a href="ikspropertyset.md"><strong>IKsPropertySet</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaeventsink"><strong>IMediaEventSink</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li>
-<li><a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>IQualProp</strong></a></li>
-</ul>
-Media Foundation Schnittstellen:<br/>
-<ul>
-<li><a href="/windows/desktop/api/evr/nn-evr-ievrfilterconfig"><strong>IEVRFilterConfig</strong></a></li>
-<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li>
-<li><a href="/windows/desktop/api/evr/nn-evr-imfvideopositionmapper"><strong>CITRIXVideoPositionMapper</strong></a></li>
-<li><a href="/windows/desktop/api/evr/nn-evr-imfvideorenderer"><strong>BENTVideoRenderer</strong></a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Eingabepin-Medientypen</td>
-<td>Variable, abhängig vom Grafiktreiber.</td>
-</tr>
-<tr class="odd">
-<td>Eingabepinschnittstellen (über <strong>QueryInterface</strong>)</td>
-<td>DirectShow-Schnittstellen:
-<ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>Ipin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li>
-</ul>
-Media Foundation Schnittstellen:<br/>
-<ul>
-<li><a href="/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration"><strong>IDirectXVideoMemoryConfiguration</strong></a></li>
-<li><a href="/windows/desktop/api/evr9/nn-evr9-ievrvideostreamcontrol"><strong>IEVRVideoStreamControl</strong></a></li>
-<li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Ausgabepin-Medientypen</td>
-<td>Nicht zutreffend</td>
-</tr>
-<tr class="odd">
-<td>Ausgabe-PIN-Schnittstellen</td>
-<td>Nicht zutreffend</td>
-</tr>
-<tr class="even">
-<td>Filtern der CLSID</td>
-<td>CLSID_EnhancedVideoRenderer</td>
-</tr>
-<tr class="odd">
-<td>Ausführbare Datei</td>
-<td>evr.dll</td>
-</tr>
-<tr class="even">
-<td><a href="merit.md">Verdienst</a></td>
-<td>MERIT_DO_NOT_USE</td>
-</tr>
-<tr class="odd">
-<td><a href="filter-categories.md">Filterkategorie</a></td>
-<td>CLSID_LegacyAmFilterCategory</td>
-</tr>
-</tbody>
-</table>
+
+| | | Filterschnittstellen (über <strong>QueryInterface</strong>) | DirectShow-Schnittstellen:<ul><li><a href="/windows/desktop/api/Strmif/nn-strmif-iamcertifiedoutputprotection"><strong>IAMCertifiedOutputProtection</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iamfiltermiscflags"><strong>IAMFilterMiscFlags</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a></li><li><a href="ikspropertyset.md"><strong>IKsPropertySet</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaeventsink"><strong>IMediaEventSink</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li><li><a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>IQualProp</strong></a></li></ul>Media Foundation Schnittstellen:<br /><ul><li><a href="/windows/desktop/api/evr/nn-evr-ievrfilterconfig"><strong>IEVRFilterConfig</strong></a></li><li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li><li><a href="/windows/desktop/api/evr/nn-evr-imfvideopositionmapper"><strong>CITRIXVideoPositionMapper</strong></a></li><li><a href="/windows/desktop/api/evr/nn-evr-imfvideorenderer"><strong>BENTVideoRenderer</strong></a></li></ul> | | Eingabepin-Medientypen | Variable, abhängig vom Grafiktreiber. | | Eingabepinschnittstellen (über <strong>QueryInterface</strong>) | DirectShow-Schnittstellen:<ul><li><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>Ipin</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li></ul>Media Foundation Schnittstellen:<br /><ul><li><a href="/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration"><strong>IDirectXVideoMemoryConfiguration</strong></a></li><li><a href="/windows/desktop/api/evr9/nn-evr9-ievrvideostreamcontrol"><strong>IEVRVideoStreamControl</strong></a></li><li><a href="/windows/desktop/api/mfidl/nn-mfidl-imfgetservice"><strong>GEGETService</strong></a></li></ul> | | Ausgabepin-Medientypen | Nicht zutreffend. | | Ausgabepinschnittstellen | Nicht zutreffend. | | Filtern von CLSID-| CLSID_EnhancedVideoRenderer | | Ausführbare | evr.dll | | <a href="merit.md">Leistungs-|</a> MERIT_DO_NOT_USE | | <a href="filter-categories.md">Filterkategorie-|</a> CLSID_LegacyAmFilterCategory | 
+
 
 
 
@@ -109,9 +40,9 @@ Zusätzlich zu den Schnittstellen, die über **QueryInterface verfügbar** gemac
 
 | Object     | Dienstbezeichner                                              | Schnittstellen                                                                                                                                                                                                                                                                                                     |
 |------------|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| EVR-Filter | MR \_ VIDEO \_ RENDER \_ SERVICE(Fragt EVR oder Presenter ab)<br/> | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**BILDSCHIRMANZEIGEVideoDisplayControl**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERERBUNGVideoPresenter**](/windows/desktop/api/evr/nn-evr-imfvideopresenter)<br/>                                                          |
+| EVR-Filter | MR \_ VIDEO \_ RENDER \_ SERVICE(Fragt EVR oder Presenter ab)<br/> | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**BILDSCHIRMEVideoDisplayControl**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERERBUNGVideoPresenter**](/windows/desktop/api/evr/nn-evr-imfvideopresenter)<br/>                                                          |
 | EVR-Filter | MR \_ VIDEO \_ ACCELERATION \_ SERVICE(Queries presenter)<br/>  | [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9)                                                                                                                                                                                                                                                      |
-| EVR-Filter | MR \_ VIDEO MIXER SERVICE \_ \_ (Abfragemixer)<br/>             | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**BEREINIGERVideoMixerBitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)<br/> [**BEREINIGERVideoMixerControl**](/windows/desktop/api/evr/nn-evr-imfvideomixercontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERWERTERVideoProzessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)<br/> |
+| EVR-Filter | MR \_ VIDEO MIXER SERVICE \_ \_ (Abfragemixer)<br/>             | [**BENTVideoDeviceID**](/windows/desktop/api/evr/nn-evr-imfvideodeviceid)<br/> [**VERSATZVideoMixerBitmap**](/windows/desktop/api/evr9/nn-evr9-imfvideomixerbitmap)<br/> [**BEREINIGERVideoMixerControl**](/windows/desktop/api/evr/nn-evr-imfvideomixercontrol)<br/> [**CITRIXVideoPositionMapper**](/windows/desktop/api/evr/nn-evr-imfvideopositionmapper)<br/> [**VERWERTERVideoProzessor**](/windows/desktop/api/evr9/nn-evr9-imfvideoprocessor)<br/> |
 | Eingabepins | \_ \_ MR-VIDEOBESCHLEUNIGUNGSDIENST \_                                | [**IDirectXVideoMemoryConfiguration**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration)                                                                                                                                                                                                                                    |
 
 
@@ -140,7 +71,7 @@ Der EVR weitert Suchbefehle upstream über Pin 0. Die Unterstreampins geben kein
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

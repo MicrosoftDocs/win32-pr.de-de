@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_PAGE_ROLL (wmsdkidl. h)
-description: Der Seiten rollenübergang transformiert das alte Bild mit einem Seitenumbruch Effekt und zeigt das neue Bild unterhalb an.
+title: WMT_VIDEOIMAGE_TRANSITION_PAGE_ROLL (Wmsdkidl.h)
+description: Der Seitenrollübergang transformiert das alte Bild mit einem Seitenumkehreffekt, der das neue Bild darunter zeigt.
 ms.assetid: 50efa4e9-0d3a-4b85-96b0-6d5cd637ca98
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_PAGE_ROLL Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_PAGE_ROLL windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,73 +14,31 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4167395dbe00242af42f30713438f33e88f2dda
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0bfa69988f5b5414eac3e27b3371bca0e0a28810
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364836"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474976"
 ---
-# <a name="wmt_videoimage_transition_page_roll"></a>WMT \_ Videoimage- \_ Übergangs \_ Seite \_ (Rollup)
+# <a name="wmt_videoimage_transition_page_roll"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ PAGE \_ ROLL
 
-Der Seiten rollenübergang transformiert das alte Bild mit einem Seitenumbruch Effekt und zeigt das neue Bild unterhalb an.
+Der Seitenrollübergang transformiert das alte Bild mit einem Seitenumkehreffekt, der das neue Bild darunter zeigt.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Member der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgeführt, der sie zugewiesen sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Strukturmember</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Radius</td>
-<td><strong>fEffectPara0</strong></td>
-<td>Der Radius des Rollbacks im Seiten Roll Effekt.</td>
-</tr>
-<tr class="even">
-<td>Entfernung</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Die Menge des neuen Bilds, das durch den Seiten rollffekt in Pixel angezeigt wird.</td>
-</tr>
-<tr class="odd">
-<td>Richtung</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Die Ecke oder Seite des Video Rahmens, von der die Seiten Ausführung ausgeht. Legen Sie einen der folgenden Werte fest:<br/>
-<ul>
-<li>0-linke Seite</li>
-<li>1-Rechte Seite</li>
-<li>2-unten</li>
-<li>3-oben</li>
-<li>4-untere linke Ecke</li>
-<li>5-untere rechte Ecke</li>
-<li>6-obere linke Ecke</li>
-<li>7-obere rechte Ecke</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Aufbau</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
-<ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt die umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild der Vordergrund.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Struktur-Member | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| Radius | <strong>fEffectPara0</strong> | Radius des Rolls im Seitenrolleffekt. | 
+| Distance | <strong>fEffectPara1</strong> | Die Menge des neuen Bilds, das durch den Seitenrolleffekt in Pixel angezeigt wird. | 
+| Direction | <strong>fEffectPara2</strong> | Ecke oder Seite des Videoframes, aus der der Seitenroll stammt. Legen Sie auf einen der folgenden Werte fest:<br /><ul><li>0 – Linke Seite</li><li>1– Rechte Seite</li><li>2 – Unten</li><li>3 – Oben</li><li>4– Linke untere Ecke</li><li>5: Rechte untere Ecke</li><li>6 – Obere linke Ecke</li><li>7 – Obere rechte Ecke</li></ul> | 
+| Aufbau | <strong>fEffectPara3</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 
@@ -92,15 +50,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Das <property> optionale -Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
+description: Das &lt; optionale &gt; Eigenschaftenelement gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
 ms.assetid: 33854123-d4c0-4385-910b-a32d6922423f
 title: property-Element von propertyStore (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0319e86674eb91bf8915ce6218bb387ac9d79e87
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: e6ad97c22ac87d67fdec0d007d4333bffe16aad1
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122464997"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886773"
 ---
 # <a name="property-element-of-propertystore-search-connector-schema"></a>property-Element von propertyStore (Connectorschema suchen)
 
-Das <property> optionale -Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
+Das &lt; optionale &gt; Eigenschaftenelement gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,10 +53,10 @@ Das <property> optionale -Element gibt eine Eigenschaft an, die vom Suchconnecto
 
 
 
-| Attribut | BESCHREIBUNG | Werte | 
+| attribute | Beschreibung | Werte | 
 |-----------|-------------|--------|
 | name | Öffentlich. Erforderlich. Der Anzeigename der Eigenschaft. |   | 
-| Typ | Öffentlich. Erforderlich. Der Typ der Eigenschaft. | Any: Standard. Der Wert wird nicht vom Eigenschaftensubsystem umerciert. VT_NULL wird von GetPropertyType zurückgegeben.<ul><li>NULL: Für diese Eigenschaft ist kein Wert enthalten. VT_NULL wird von GetPropertyType zurückgegeben.</li><li>Zeichenfolge: Der Wert muss ein VT_LPWSTR.</li><li>Boolescher Wert: Der Wert muss ein VT_BOOL.</li><li>Byte: Der Wert muss ein VT_UI1.</li><li>Puffer: Der Wert muss ein VT_UI1 | VT_VECTOR Puffer von Bytes.</li><li>Int16: Der Wert muss ein VT_I2.</li><li>UInt16: Der Wert muss ein VT_UI2.</li><li>Int32: Der Wert muss ein VT_I4.</li><li>UInt32: Der Wert muss ein VT_UI4.</li><li>Int64: Der Wert muss ein VT_I8.</li><li>UInt64: Der Wert muss ein VT_UI8</li><li>Double: Der Wert muss eine VT_R8.</li><li>DateTime: Der Wert muss ein VT_FILETIME.</li><li>GUID: Der Wert muss ein VT_CLSID.</li><li>Blob: Der Wert muss ein VT_BLOB.</li><li>Objekt: Der Wert muss ein VT_UNKNOWN.</li><li>Stream: Der Wert muss ein VT_STREAM.</li><li>Zwischenablage: Der Wert muss ein VT_CF.</li></ul> | 
+| Typ | Öffentlich. Erforderlich. Der Typ der Eigenschaft. | Any: Standard. Der Wert wird nicht vom Eigenschaftensubsystem umerciert. VT_NULL wird von GetPropertyType zurückgegeben.<ul><li>NULL: Für diese Eigenschaft ist kein Wert enthalten. VT_NULL wird von GetPropertyType zurückgegeben.</li><li>Zeichenfolge: Der Wert muss ein VT_LPWSTR.</li><li>Boolescher Wert: Der Wert muss ein VT_BOOL.</li><li>Byte: Der Wert muss ein VT_UI1.</li><li>Puffer: Der Wert muss ein VT_UI1 | VT_VECTOR Puffer von Bytes.</li><li>Int16: Der Wert muss ein VT_I2.</li><li>UInt16: Der Wert muss ein VT_UI2.</li><li>Int32: Der Wert muss ein VT_I4.</li><li>UInt32: Der Wert muss ein VT_UI4.</li><li>Int64: Der Wert muss ein VT_I8.</li><li>UInt64: Der Wert muss ein VT_UI8</li><li>Double: Der Wert muss ein VT_R8.</li><li>DateTime: Der Wert muss ein VT_FILETIME.</li><li>GUID: Der Wert muss ein VT_CLSID.</li><li>Blob: Der Wert muss ein VT_BLOB.</li><li>Objekt: Der Wert muss ein VT_UNKNOWN.</li><li>Stream: Der Wert muss ein VT_STREAM.</li><li>Zwischenablage: Der Wert muss ein VT_CF.</li></ul> | 
 | schema | Öffentlich. Optional. Das Schema, in dem die Eigenschaft definiert ist. |   | 
 
 
@@ -70,7 +70,7 @@ OpenSearch-Connectors können die OpenSearchHTMLRolloverTemplate-Eigenschaft ver
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein <propertyStore> -Element mit zwei <property> -Elementen.
+Das folgende Beispiel zeigt ein &lt; propertyStore-Element &gt; mit zwei &lt; &gt; Eigenschaftenelementen.
 
 
 ```

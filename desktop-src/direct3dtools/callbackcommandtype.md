@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 85e1b7d396d125add00824e9b7c94086e0da6be2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c71e3c7b45bdd84b2e335c47d46e90a3130c8912
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090128"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626716"
 ---
 # <a name="span-idvspixenginecallbackcommandtypespancallbackcommandtype-enumeration"></a><span id="vspixengine.callbackcommandtype"></span>CallbackCommandType-Enumeration
 
@@ -59,14 +59,14 @@ Ergebnis von RunAction.
 Ein -Wert, der einen Rückruf angibt, der aufgerufen werden soll, wenn neue Frames erfasst wurden und angezeigt werden können.
 
 <span id="BeginCommunicationCallbackLegacy"></span><span id="begincommunicationcallbacklegacy"></span><span id="BEGINCOMMUNICATIONCALLBACKLEGACY"></span>**BeginCommunicationCallbackLegacy**  
-Ergebnisse einer älteren Version von BeginCommunication, die unter Windows 7 und Windows 8 verwendet wird.
+Ergebnisse einer älteren Version von BeginCommunication, die auf Windows 7 und Windows 8 verwendet wird.
 
 <span id="RunExperimentStatusCallback"></span><span id="runexperimentstatuscallback"></span><span id="RUNEXPERIMENTSTATUSCALLBACK"></span>**RunExperimentStatusCallback**  
 Ergebnis von RunExperiementProgress.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

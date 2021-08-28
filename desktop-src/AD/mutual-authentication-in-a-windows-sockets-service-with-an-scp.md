@@ -4,16 +4,16 @@ description: Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen,
 ms.assetid: f730464c-95ac-4285-960c-18862f6f7852
 ms.tgt_platform: multiple
 keywords:
-- Gegenseitige Authentifizierung in einem Windows Sockets-Dienst mit einem SCP AD
+- Gegenseitige Authentifizierung in einem Windows Sockets Service mit einem SCP AD
 - Active Directory, verwenden, gegenseitige Authentifizierung, Windows Sockets-Dienst mit einem SCP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be8f3e65b044198c5ebf703b1c62ac03eb07a4d57b6bc5dcf7c5463247815f1b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 3ede3f05744e402cb483e46d6eb116f653e20d9e
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119025768"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881373"
 ---
 # <a name="mutual-authentication-in-a-windows-sockets-service-with-scp"></a>Gegenseitige Authentifizierung in einem Windows Sockets Service mit SCP
 
@@ -22,7 +22,7 @@ Die Themen in diesem Abschnitt enthalten Codebeispiele, die zeigen, wie die gege
 **So registrieren Sie SPNs in einem Verzeichnis, wenn ein Dienst installiert wird**
 
 1.  Rufen Sie die [**DsGetSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsgetspna) auf, um Dienstprinzipalnamen (SPNs) für den Dienst zu erstellen.
-2.  Rufen Sie die [**DsWriteAccountSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) auf, um die SPNs für das Dienstkonto oder Computerkonto zu registrieren, in dessen Kontext der Dienst ausgeführt wird. Dieser Schritt muss von einem Domänenadministrator ausgeführt werden. Eine Ausnahme besteht darin, dass ein Dienst, der unter dem LocalSystem-Konto ausgeführt wird, seinen SPN im Format <service class> / <host> " " auf dem Computerkonto des Diensthosts registrieren kann.
+2.  Rufen Sie die [**DsWriteAccountSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) auf, um die SPNs für das Dienstkonto oder Computerkonto zu registrieren, in dessen Kontext der Dienst ausgeführt wird. Dieser Schritt muss von einem Domänenadministrator ausgeführt werden. Eine Ausnahme besteht darin, dass ein Dienst, der unter dem LocalSystem-Konto ausgeführt wird, seinen SPN im Format <service class> / &lt; &gt; "host" auf dem Computerkonto des Diensthosts registrieren kann.
 
 **So überprüfen Sie die Konfiguration beim Dienststart**
 

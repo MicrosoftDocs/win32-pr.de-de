@@ -1,31 +1,31 @@
 ---
-title: Ändern des Kennworts für das Benutzerkonto eines Dienstanbieter
-description: Bei einer Dienst Instanz, die sich mit einem Benutzerkonto anstatt mit dem LocalSystem-Konto anmeldet, speichert der Dienststeuerungs-Manager auf dem Host Computer das Konto Kennwort, das für die Anmeldung beim Dienst beim Start des Diensts verwendet wird.
+title: Ändern des Kennworts für das Benutzerkonto eines Diensts
+description: Bei einer Dienstinstanz, die sich nicht mit dem LocalSystem-Konto, sondern mit einem Benutzerkonto anmeldet, speichert der Dienststeuerungs-Manager (Service Control Manager, SCM) auf dem Hostcomputer das Kontokennwort, das zum Anmelden beim Dienst beim Starten des Diensts verwendet wird.
 ms.assetid: d9cef772-bd85-4103-901e-3cf786b29163
 ms.tgt_platform: multiple
 keywords:
-- Ändern des Kennworts für das Benutzerkonto-AD eines Dienstanbieter
+- Ändern des Kennworts für das Ad-Benutzerkonto eines Diensts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bf16b018796979d3710825472a5f9abab72cd24
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: e66f0d7b4dc668697b7a0a8d5b120735f3a445cf
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472676"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881629"
 ---
-# <a name="changing-the-password-on-a-services-user-account"></a>Ändern des Kennworts für das Benutzerkonto eines Dienstanbieter
+# <a name="changing-the-password-on-a-services-user-account"></a>Ändern des Kennworts für das Benutzerkonto eines Diensts
 
-Bei einer Dienst Instanz, die sich mit einem Benutzerkonto anstatt mit dem LocalSystem-Konto anmeldet, speichert der Dienststeuerungs-Manager auf dem Host Computer das Konto Kennwort, das für die Anmeldung beim Dienst beim Start des Diensts verwendet wird. Wie bei jedem Benutzerkonto müssen Sie das Kennwort in regelmäßigen Abständen ändern, um die Sicherheit zu gewährleisten. Wenn Sie das Kennwort für ein Dienst Konto ändern, aktualisieren Sie das Kennwort, das vom SCM gespeichert wird. Im folgenden Codebeispiel wird gezeigt, wie beides durchzuführen ist.
+Bei einer Dienstinstanz, die sich nicht mit dem LocalSystem-Konto, sondern mit einem Benutzerkonto anmeldet, speichert der Dienststeuerungs-Manager (Service Control Manager, SCM) auf dem Hostcomputer das Kontokennwort, das zum Anmelden beim Dienst beim Starten des Diensts verwendet wird. Wie bei jedem Benutzerkonto müssen Sie das Kennwort in regelmäßigen Abständen ändern, um die Sicherheit zu gewährleisten. Wenn Sie das Kennwort für ein Dienstkonto ändern, aktualisieren Sie das vom SCM gespeicherte Kennwort. Im folgenden Codebeispiel wird gezeigt, wie beides funktioniert.
 
-In den Codebeispielen wird [**IADsUser. SetPassword**](/windows/desktop/api/iads/nf-iads-iadsuser-setpassword) verwendet, um das Konto Kennwort festzulegen. Diese Methode verwendet den Distinguished Name des Kontos. Anschließend wird im Beispiel ein Handle für den installierten Dienst auf dem angegebenen Host Computer geöffnet und die [**ChangeServiceConfig**](/windows/desktop/api/winsvc/nf-winsvc-changeserviceconfiga) -Funktion verwendet, um das vom SCM zwischengespeicherte Kennwort zu aktualisieren. Diese Funktion verwendet den SAM-Namen (" <domain> \\ <username> ") des Kontos.
+In den Codebeispielen wird [**IADsUser.SetPassword**](/windows/desktop/api/iads/nf-iads-iadsuser-setpassword) verwendet, um das Kontokennwort festzulegen. Diese Methode verwendet den Distinguished Name des Kontos. Anschließend öffnet das Beispiel ein Handle für den installierten Dienst auf dem angegebenen Hostcomputer und verwendet die [**ChangeServiceConfig-Funktion,**](/windows/desktop/api/winsvc/nf-winsvc-changeserviceconfiga) um das vom SCM zwischengespeicherte Kennwort zu aktualisieren. Diese Funktion verwendet den SAM-Namen &lt; &gt; \\ &lt; ("Domänenbenutzername") &gt; des Kontos.
 
 > [!Note]  
-> Dieser Code muss von einem Domänen Administrator ausgeführt werden.
+> Dieser Code muss von einem Domänenadministrator ausgeführt werden.
 
- 
+ 
 
-Bei einem replizierbaren Dienst, bei dem jedes Replikat ein anderes Anmelde Konto verwendet, können Sie die Kenn Wörter für alle Replikate aktualisieren, indem Sie die Dienst Instanzen auflisten. Weitere Informationen und ein Codebeispiel finden Sie unter Auflisten [der Replikate eines Dienstanbieter](enumerating-the-replicas-of-a-service.md).
+Für einen replikatierbaren Dienst, bei dem jedes Replikat ein anderes Anmeldekonto verwendet, können Sie die Kennwörter für alle Replikate aktualisieren, indem Sie die Dienstinstanzen aufzählen. Weitere Informationen und ein Codebeispiel finden Sie unter [Aufzählen der Replikate eines Diensts.](enumerating-the-replicas-of-a-service.md)
 
 
 ```C++
@@ -153,6 +153,6 @@ return dwStatus;
 
 
 
- 
+ 
 
- 
+ 

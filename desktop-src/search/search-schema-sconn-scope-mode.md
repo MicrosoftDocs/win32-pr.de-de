@@ -1,19 +1,19 @@
 ---
-description: Das <mode> -Element gibt an, ob die URL in den Bereich des Suchconnectors aufgenommen oder ausgeschlossen werden soll. Die zulässigen Werte sind Include und Exclude. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+description: Das &lt; mode-Element gibt an, ob die URL in den Bereich des Suchconnectors eingeschlossen oder &gt; daraus ausgeschlossen werden soll. Die zulässigen Werte sind Include und Exclude. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: 7654c04a-31c4-4260-a51c-0600804e62a9
-title: mode-Element (Search Connector Schema)
+title: mode-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32a210abf5c9c2bbc4cd5d53978866a729d834928cf39e54bfb6e6fcc9c42c7f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: b8e096bb21d634da6107359c014b82f1b367aba1
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119944320"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886748"
 ---
-# <a name="mode-element-search-connector-schema"></a>mode-Element (Search Connector Schema)
+# <a name="mode-element-search-connector-schema"></a>mode-Element (Connectorschema suchen)
 
-Das <mode> -Element gibt an, ob die URL in den Bereich des Suchconnectors aufgenommen oder ausgeschlossen werden soll. Die zulässigen Werte sind `Include` und `Exclude`. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das &lt; mode-Element gibt an, ob die URL in den Bereich des Suchconnectors eingeschlossen oder &gt; daraus ausgeschlossen werden soll. Die zulässigen Werte sind `Include` und `Exclude`. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,11 +68,11 @@ Das <mode> -Element gibt an, ob die URL in den Bereich des Suchconnectors aufgen
 
 ## <a name="remarks"></a>Hinweise
 
-Ein ausgeschlossener Bereich kann nicht durchsucht oder durchsucht werden. Sie können scopeItem-URLs schachteln. Sie können z. B. einen übergeordneten Bereich und alle untergeordneten Elemente mit Ausnahme eines einschließen, indem Sie die übergeordnete URL als eingeschlossen hinzufügen, den Tiefenwert Deep aufweisen und die untergeordnete URL ausschließen.
+Ein ausgeschlossener Bereich kann nicht durchsucht oder durchsucht werden. Sie können scopeItem-URLs schachteln. Sie können z. B. einen übergeordneten Bereich und alle untergeordneten Bereiche mit Ausnahme eines übergeordneten Bereichs hinzufügen, indem Sie die übergeordnete URL als eingeschlossen, den Tiefenwert Deep und die untergeordnete URL ausschließen.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt einen Suchbereich, der C: \\ ExampleFolder und alle seine untergeordneten Ordner mit Ausnahme von C: \\ ExampleFolder \\ ExcludeMe enthält.
+Das folgende Beispiel zeigt einen Suchbereich, der C: ExampleFolder und alle untergeordneten Ordner außer \\ C: \\ ExampleFolder \\ ExcludeMe enthält.
 
 
 ```

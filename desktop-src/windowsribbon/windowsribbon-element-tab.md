@@ -1,9 +1,9 @@
 ---
 title: Registerkartenelement
-description: Stellt eine Kernregisterkarte oder kontextbezogene Registerkarte dar.
+description: Stellt eine Kernregisterkarte oder eine kontextbezogene Registerkarte dar.
 ms.assetid: 2e73a89c-4d31-4075-93c8-e43213a20791
 keywords:
-- Registerkartenelement Windows Menüband
+- Tab-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 64f5bffb6a81a1efd112c3f52f5d1276f893e9cfb059a5f240a6c8c73b990c3f
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 349004f65713160acc75bdb6f77765ad9f0c3034
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119441640"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625956"
 ---
 # <a name="tab-element"></a>Registerkartenelement
 
-Stellt eine [Kernregisterkarte](windowsribbon-controls-tab.md) oder [kontextbezogene](windowsribbon-controls-tabgroup.md) Registerkarte dar.
+Stellt eine [Kernregisterkarte oder](windowsribbon-controls-tab.md) [eine kontextbezogene Registerkarte](windowsribbon-controls-tabgroup.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Tab
@@ -40,14 +40,14 @@ Stellt eine [Kernregisterkarte](windowsribbon-controls-tab.md) oder [kontextbezo
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
+<th>Attribut</th>
 <th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
@@ -58,14 +58,14 @@ Stellt eine [Kernregisterkarte](windowsribbon-controls-tab.md) oder [kontextbezo
 <td><strong>ApplicationModes</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Nur gültig, wenn <a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
+<td>Nur gültig, <a href="windowsribbon-element-menugroup.md"><strong>wenn MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Komma getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerzeichen sind gültig und werden ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
@@ -80,7 +80,7 @@ Stellt eine [Kernregisterkarte](windowsribbon-controls-tab.md) oder [kontextbezo
 | Element                                                                         | Beschreibung                                        |
 |---------------------------------------------------------------------------------|----------------------------------------------------|
 | [**Gruppe**](windowsribbon-element-group.md)<br/>                         | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**Tab.ScalingPolicy**](windowsribbon-element-tab-scalingpolicy.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>      |
+| [**Tab.ScalingPolicy**](windowsribbon-element-tab-scalingpolicy.md)<br/> | Kann nur einmal auftreten.<br/> <br/>      |
 
 
 
@@ -99,17 +99,17 @@ Stellt eine [Kernregisterkarte](windowsribbon-controls-tab.md) oder [kontextbezo
 
 Erforderlich.
 
-Muss mindestens einmal für jedes [**Ribbon.Tabs-**](windowsribbon-element-ribbon-tabs.md) oder [**TabGroup-Element**](windowsribbon-element-tabgroup.md) auftreten.
+Muss mindestens einmal für jedes [**Ribbon.Tabs- oder**](windowsribbon-element-ribbon-tabs.md) [**TabGroup-Element auftreten.**](windowsribbon-element-tabgroup.md)
 
-**Registerkarte** unterstützt [Anwendungsmodi.](ribbon-applicationmodes.md)
+**Die Registerkarte** unterstützt [die Anwendungsmodi](ribbon-applicationmodes.md).
 
-Wenn [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) für das **Tab-Element** vorhanden ist, ist unter **ScalingPolicy.IdealSizes** ein Eintrag für jedes [**Group-Element**](windowsribbon-element-group.md) und dessen ideale Größe erforderlich.
+Wenn [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) für das **Tab-Element** vorhanden ist, ist unter **ScalingPolicy.IdealSizes** ein Eintrag für jedes [**Group-Element**](windowsribbon-element-group.md) und seine ideale Größe erforderlich.
 
 ## <a name="examples"></a>Beispiele
 
 Im folgenden Beispiel wird das grundlegende Markup für das **Tab-Element** veranschaulicht.
 
-In diesem Codeabschnitt werden die Registerkartenbefehlsdeklarationen für eine Registerkarte **Home** angezeigt. 
+In diesem Codeabschnitt werden die **Tabstoppbefehlsdeklarationen** für eine Registerkarte **Start** angezeigt.
 
 
 ```XML
@@ -177,7 +177,7 @@ In diesem Codeabschnitt werden die Registerkartenbefehlsdeklarationen für eine 
 
 
 
-In diesem Codeabschnitt werden die **Deklarationen** des Registerkartensteuerelements angezeigt.
+In diesem Codeabschnitt werden die **Deklarationen des TAB-Steuerelements** angezeigt.
 
 
 ```XML

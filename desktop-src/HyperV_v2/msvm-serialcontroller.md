@@ -65,12 +65,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 04cf87a40b48e5f0fc505fe5bc921229ce208fe910d9418431ddae3187b2c5d0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9b1950431f79c8b41cc8fc29d14b66580f5fface
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118950699"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886962"
 ---
 # <a name="msvm_serialcontroller-class"></a>Msvm \_ SerialController-Klasse
 
@@ -81,7 +81,7 @@ Stellt die Funktionen und die Verwaltung des seriellen Controllers dar. Serielle
 
  
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax wird Managed Object Format MOF-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -261,7 +261,7 @@ Ein Array von Freiformzeichenfolgen, das ausführlichere Erläuterungen zu den F
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -310,7 +310,7 @@ Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalte
 **CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -323,7 +323,7 @@ Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwe
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -342,7 +342,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 <dl> <dt>
 
@@ -352,13 +352,13 @@ Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **
 <span id="No_Additional_Information"></span><span id="no_additional_information"></span><span id="NO_ADDITIONAL_INFORMATION"></span>**Keine zusätzlichen Informationen** (1)
 </dt> <dt>
 
-<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Wird** (2)
+<span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>**Besendung** (2)
 </dt> <dt>
 
 <span id="Predictive_Failure"></span><span id="predictive_failure"></span><span id="PREDICTIVE_FAILURE"></span>**Vorhersagefehler** (3)
 </dt> <dt>
 
-<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht wiederherstellbarer Fehler** (4)
+<span id="Non-Recoverable_Error"></span><span id="non-recoverable_error"></span><span id="NON-RECOVERABLE_ERROR"></span>**Nicht behebtbarer Fehler** (4)
 </dt> <dt>
 
 <span id="Supporting_Entity_in_Error"></span><span id="supporting_entity_in_error"></span><span id="SUPPORTING_ENTITY_IN_ERROR"></span>**Unterstützende Entität im Fehler** (5)
@@ -375,26 +375,26 @@ Ergänzt die **PrimaryStatus-Eigenschaft** um zusätzliche Statusdetails. Ein **
 **Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und immer auf "Microsoft: *<GUID>* " festgelegt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)und immer auf "Microsoft:*&lt; GUID" &gt;* festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -407,7 +407,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 
 
@@ -430,7 +430,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status eines Elements. Sie kann auch die Übergänge zwischen diesen angeforderten Zuständen angeben. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Der aktivierte und deaktivierte Zustände eines Elements. Sie kann auch die Übergänge zwischen diesen angeforderten Zuzuständen angeben. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 
 
@@ -453,20 +453,20 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der in der **LastErrorCode-Eigenschaft** gemeldete Fehler jetzt gelöscht wird. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Gibt an, ob der in der **LastErrorCode-Eigenschaft gemeldete** Fehler jetzt entfernt wurde. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die weitere Informationen zu dem in der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler und Informationen zu ggf. durchgeführten Korrekturmaßnahmen bereitstellt. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Eine Zeichenfolge, die weitere Informationen über den in der **LastErrorCode-Eigenschaft** aufgezeichneten Fehler sowie Informationen zu eventuell ergriffenen Korrekturmaßnahmen enthält. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
@@ -479,7 +479,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuelle Integrität des Elements. Dies drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionslos ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die aktuelle Integrität des Elements. Dies drückt die Integrität dieses Elements aus, aber nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist, und 30 bedeutet, dass das Element vollständig nichtfunktional ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
@@ -492,7 +492,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Freiformzeichenfolgen, die Erklärungen und Details hinter den Einträgen im **OtherIdentifyingInfo-Eigenschaftenarray** bereitstellen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt und immer auf **NULL** festgelegt.
+Ein Array von Freiformzeichenfolgen, die Erklärungen und Details hinter den Einträgen im **OtherIdentifyingInfo-Eigenschaftenarray** bereitstellen. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)und immer auf **NULL festgelegt.**
 
 </dd> <dt>
 
@@ -505,14 +505,14 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Das Datum und die Uhrzeit der Erstellung der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -521,7 +521,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -534,7 +534,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der letzte vom logischen Gerät gemeldete Fehlercode. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Der letzte vom logischen Gerät gemeldete Fehlercode. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
@@ -547,7 +547,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Baudrate in Bits pro Sekunde, die vom seriellen Controller unterstützt wird. Diese Eigenschaft wird von [**CIM \_ SerialController**](/windows/desktop/CIMWin32Prov/cim-serialcontroller)geerbt.
+Die maximale Baudrate in Bits pro Sekunde, die vom seriellen Controller unterstützt wird. Diese Eigenschaft wird von [**CIM \_ SerialController geerbt.**](/windows/desktop/CIMWin32Prov/cim-serialcontroller)
 
 </dd> <dt>
 
@@ -560,7 +560,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl direkt adressierbarer Entitäten, die von diesem Controller unterstützt werden. Der Wert 0 sollte verwendet werden, wenn die Zahl unbekannt oder unbegrenzt ist. Das Protokoll, das vom Controller für den Zugriff auf kontrollierte Geräte verwendet wird. Diese Eigenschaft wird vom [**\_ CIM-Controller**](/windows/desktop/CIMWin32Prov/cim-controller)geerbt.
+Die maximale Anzahl direkt adressierbarer Entitäten, die von diesem Controller unterstützt werden. Der Wert 0 sollte verwendet werden, wenn die Zahl unbekannt oder unbegrenzt ist. Das Protokoll, das vom Controller für den Zugriff auf kontrollierte Geräte verwendet wird. Diese Eigenschaft wird vom [**\_ CIM-Controller geerbt.**](/windows/desktop/CIMWin32Prov/cim-controller)
 
 </dd> <dt>
 
@@ -573,20 +573,20 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft ist veraltet. Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)geerbt, aber nicht verwendet.
+Diese Eigenschaft ist veraltet. Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt,**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)aber nicht verwendet.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Bezeichnung, mit der das Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und ist mit der **ElementName-Eigenschaft** identisch.
+Die Bezeichnung, unter der das -Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)und ist mit der **ElementName-Eigenschaft** identisch.
 
 </dd> <dt>
 
@@ -657,7 +657,7 @@ Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements zur 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -678,7 +678,7 @@ Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedS
 **OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -768,7 +768,7 @@ Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sol
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (0x8000. )
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (0x8000. )
 </dt> </dl>
 
 </dd> <dt>
@@ -776,7 +776,7 @@ Stellt Statusinformationen auf hoher Ebene zur Verfügung. Diese Eigenschaft sol
 **ProtocolDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -832,7 +832,7 @@ Der zuletzt angeforderte oder gewünschte Zustand für das Element. Der tatsäch
 
 </dd> <dt>
 
-**Sicherheit**
+**Security**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint16**
@@ -976,7 +976,7 @@ Gibt den Zielzustand an, in den die Instanz übergehen soll. Diese Eigenschaft w
 
 Der Zugriff auf die **Msvm \_ SerialController-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECSIZE Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE Struktur'
 title: JET_RECSIZE Struktur
 TOCTitle: JET_RECSIZE Structure
 ms:assetid: bb2a63bb-7956-46c2-9791-0d0678a6c366
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e4e6b2f313a5411ba5bfeea73db3b01afe007612
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7ea4520a75e83c77a6403a583e9131a15df337b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749856"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988228"
 ---
 # <a name="jet_recsize-structure"></a>JET_RECSIZE Struktur
 
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_recsize-structure"></a>JET_RECSIZE Struktur
 
-Die **JET_RECSIZE** Struktur wird von [jetgetrecordsize](./jetgetrecordsize-function.md) verwendet, um Informationen über die Verwendungs Anforderungen eines Datensatzes im Benutzerdaten Bereich, die Anzahl der Mengen Spalten, die Anzahl der Werte und den mehr Aufwand der ESE-Daten Satzstruktur zurückzugeben.
+Die **JET_RECSIZE-Struktur** wird von [JetGetRecordSize](./jetgetrecordsize-function.md) verwendet, um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl von Werten und den Mehraufwand für die ESE-Datensatzstruktur zurück zu geben.
 
-**Windows Vista:** Die **JET_RECSIZE** Struktur wird in Windows Vista eingeführt.
+**Windows Vista:** Die **JET_RECSIZE-Struktur** wird in Windows Vista eingeführt.
 
 ```cpp
     typedef struct {
@@ -50,72 +50,59 @@ Die **JET_RECSIZE** Struktur wird von [jetgetrecordsize](./jetgetrecordsize-func
 
 **cbData**
 
-Benutzer DataSet im Datensatz.
+Benutzerdatensatz im Datensatz.
 
-**Hinweis**  Die Schlüsselgröße ist in diesem nicht enthalten.
+**Hinweis:**  Die Schlüsselgröße ist in dieser nicht enthalten.
 
-**cblongvaluedata**
+**cbLongValueData**
 
-Benutzerdaten, die dem Datensatz zugeordnet sind, aber in der Struktur mit langem Wert gespeichert sind.
+Benutzerdaten, die dem Datensatz zugeordnet sind, aber in der Long-Value-Struktur gespeichert sind.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cboverhead**
+**cbOverhead**
 
-Der Aufwand der ESE-Daten Satzstruktur für diesen Datensatz. Dazu gehört auch die Schlüsselgröße des Datensatzes.
+Der Mehraufwand der ESE-Datensatzstruktur für diesen Datensatz. Dies schließt die Schlüsselgröße des Datensatzes ein.
 
-**cblongvalueoverhead**
+**cbLongValueOverhead**
 
-Der Aufwand für die Daten mit langen Werten.
+Der Mehraufwand der Long-Value-Daten.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cnontaggedcolumns**
+**cNonTaggedColumns**
 
-Die Gesamtanzahl der in diesem Datensatz festgelegten Fixed-und variable-Spalten.
+Die Gesamtanzahl der festen und variablen Spalten, die in diesem Datensatz festgelegt sind.
 
-**ctaggedcolumns**
+**cTaggedColumns**
 
-Die Gesamtanzahl der in diesem Datensatz festgelegten markierten Spalten.
+Gesamtanzahl der in diesem Datensatz festgelegten markierten Spalten.
 
-**clongvalues**
+**cLongValues**
 
-Gesamtzahl der langen Werte, die in der Struktur mit langem Wert für diesen Datensatz gespeichert sind.
+Gesamtanzahl der long-Werte, die in der Long-Value-Struktur für diesen Datensatz gespeichert sind.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cmultivalues**
+**cMultiValues**
 
-Die Ansammlung der Gesamtzahl der Werte, die über den ersten für alle Spalten im Datensatz hinausgehen.
+Die Akkumulation der Gesamtzahl von Werten, die über die erste für alle Spalten im Datensatz hinausgehen.
 
 ### <a name="remarks"></a>Bemerkungen
 
-Die Gesamtanzahl der Werte im Datensatz wäre **cmultivalues**  +  **cnontaggedcolumns**  +  **ctaggedcolumns**.
+Die Gesamtzahl der Werte im Datensatz wäre **cMultiValues**  +  **cNonTaggedColumns**  +  **cTaggedColumns**.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetgetrecordsize](./jetgetrecordsize-function.md)
+[JetGetRecordSize](./jetgetrecordsize-function.md)
