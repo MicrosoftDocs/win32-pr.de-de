@@ -1,39 +1,39 @@
 ---
-title: Erstellen eines Steuer Elements für ein Hot Key
-description: In diesem Thema wird veranschaulicht, wie Sie ein Steuerelement für den Hot Key erstellen Sie erstellen ein Hot Key-Steuerelement, indem Sie die Funktion "" der Klasse "Hotkey" angeben und die Fenster Klasse "Hotkey Class" angeben \_ .
+title: Erstellen eines Hot Key-Steuerelements
+description: In diesem Thema wird veranschaulicht, wie Sie ein Hot-Key-Steuerelement erstellen. Sie erstellen ein Hot-Key-Steuerelement, indem Sie die CreateWindowEx-Funktion verwenden und die \_ HOTKEY CLASS-Fensterklasse angeben.
 ms.assetid: A6723D4E-B8F6-4365-8FCD-99B73D2C0470
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 498005efcdfbbf001283551bbeea4906ebc854cf
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 081db39f07e8d80fcbb5a437bc8cbe83473b4299282c8b2437d95acda02b2db9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103858564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119577041"
 ---
-# <a name="how-to-create-a-hot-key-control"></a>Erstellen eines Steuer Elements für ein Hot Key
+# <a name="how-to-create-a-hot-key-control"></a>Erstellen eines Hot Key-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie Sie ein Steuerelement für den Hot Key erstellen Sie erstellen ein Hot Key-Steuerelement, indem Sie [**die Funktion "" der**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Klasse "Hotkey" angeben und die Fenster Klasse "Hotkey Class" angeben \_ .
+In diesem Thema wird veranschaulicht, wie Sie ein Hot-Key-Steuerelement erstellen. Sie erstellen ein Hot-Key-Steuerelement, indem Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden und die \_ HOTKEY CLASS-Fensterklasse angeben.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Vergewissern Sie sich, dass die DLL für allgemeine Steuerelemente geladen ist, bevor Sie das Steuerelement für den Hot Key erstellen
+Stellen Sie vor dem Erstellen des Hot-Key-Steuerelements sicher, dass die DLL der allgemeinen Steuerelemente geladen ist.
 
-Im folgenden C++-Codebeispiel ruft die Anwendungs definierte Funktion die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion auf, um die allgemeine Steuerelement-DLL zu laden. Anschließend wird die Funktion " [**roatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " aufgerufen, die die Klasse " **Hotkey \_ Class** Window" angibt, um ein Steuerelement für den Hot Key zu erstellen. Er verwendet die [**HKM \_**](hkm-setrules.md) -Meldungen "SKM" und " [**HKM \_**](hkm-sethotkey.md) ", um das Steuerelement zu initialisieren, und gibt ein Handle für das Steuerelement zurück.
+Im folgenden C++-Codebeispiel ruft die anwendungsdefinierte Funktion die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) auf, um die allgemeine Steuerelement-DLL zu laden. Anschließend ruft sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) auf und gibt die **HOTKEY \_ CLASS-Fensterklasse** an, um ein Hot-Key-Steuerelement zu erstellen. Er verwendet die [**HKM \_ SETRULES-**](hkm-setrules.md) und [**HKM \_ SETHOTKEY-Meldungen,**](hkm-sethotkey.md) um das Steuerelement zu initialisieren, und gibt ein Handle an das Steuerelement zurück.
 
-Mit diesem Hot Key-Steuerelement kann der Benutzer keine heiße Taste auswählen, bei der es sich um eine einzelne nicht geänderte Taste handelt, und es ist auch nicht möglich, die UMSCHALTTASTE und eine Taste auszuwählen. Diese Regeln verhindern effektiv, dass der Benutzer eine heiße Taste wählt, die bei der Eingabe von Text versehentlich eingegeben werden kann.
+Mit diesem Hot Key-Steuerelement kann der Benutzer weder einen hot-Schlüssel auswählen, bei dem es sich um einen einzelnen unveränderten Schlüssel handelt, noch erlaubt es dem Benutzer, nur UMSCHALTTASTE und einen Schlüssel auszuwählen. Diese Regeln verhindern effektiv, dass der Benutzer einen Hot-Key auswählt, der beim Eingeben von Text versehentlich eingegeben wird.
 
 
 
@@ -99,13 +99,13 @@ HWND WINAPI InitializeHotkey(HWND hwndDlg)
 
 <dl> <dt>
 
-[Referenz zur Hot Key-Steuerung](bumper-hot-key-hot-key-control-reference.md)
+[Referenz zum Hot-Key-Steuerelement](bumper-hot-key-hot-key-control-reference.md)
 </dt> <dt>
 
-[Informationen zu Hot Key-Steuerelementen](hot-key-controls.md)
+[Informationen zu Hot-Key-Steuerelementen](hot-key-controls.md)
 </dt> <dt>
 
-[Verwenden von Hot Key-Steuerelementen](using-hot-key-controls.md)
+[Verwenden von Hot-Key-Steuerelementen](using-hot-key-controls.md)
 </dt> </dl>
 
  

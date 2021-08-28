@@ -1,9 +1,9 @@
 ---
-title: WM/contentdistributor
-description: Das WM/contentdistributor-Attribut enthält den Namen des Verteilers der Datei.
+title: WM/ContentDistributor
+description: Das WM/ContentDistributor-Attribut enthält den Namen des Verteilers der Datei.
 ms.assetid: 813574e0-e6e1-4acd-b9ca-faab41db00a5
 keywords:
-- Windows Media-Format "WM/contentdistributor"
+- WM/ContentDistributor-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d05b90d49420a025ae3c6fc9a767e49e1f107764
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 2271f4c5277beb4ffcb5ead02cda25ed8507169df98aea3fd794085889923e18
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089660"
 ---
-# <a name="wmcontentdistributor"></a>WM/contentdistributor
+# <a name="wmcontentdistributor"></a>WM/ContentDistributor
 
-Das **WM/contentdistributor-** Attribut enthält den Namen des Verteilers der Datei.
+Das **WM/ContentDistributor-Attribut** enthält den Namen des Verteilers der Datei.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmcontentdistributor
+g \_ wszWMContentDistributor
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -38,9 +38,9 @@ g \_ wszwmcontentdistributor
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

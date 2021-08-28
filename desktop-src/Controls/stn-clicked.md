@@ -1,9 +1,9 @@
 ---
-title: STN_CLICKED Benachrichtigungs Code (Winuser. h)
-description: Der \_ angeklickte STN-Benachrichtigungs Code wird gesendet, wenn der Benutzer auf ein statisches Steuerelement mit dem SS-Benachrichtigungs \_ Stil klickt Das übergeordnete Fenster des Steuer Elements empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: STN_CLICKED Benachrichtigungscode (Winuser.h)
+description: Der STN CLICKED-Benachrichtigungscode wird gesendet, wenn der Benutzer auf ein statisches Steuerelement klickt, das über den \_ Stil SS \_ NOTIFY verfügt. Das übergeordnete Fenster des Steuerelements empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: deeac9e9-c23e-4ffb-a1d7-18782efb7a5c
 keywords:
-- Windows-Steuerelemente für STN_CLICKED Benachrichtigungs
+- STN_CLICKED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91f63bc496469f6edc26b4f9176f3f9157464bdd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 984bbe63444593707de7e410ebd9cb47fb60bac4766ea6ee57660f034e45924d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797870"
 ---
-# <a name="stn_clicked-notification-code"></a>\_Angeklickte STN-Benachrichtigung
+# <a name="stn_clicked-notification-code"></a>\_STN-Klickbenachrichtigungscode
 
-Der \_ angeklickte STN-Benachrichtigungs Code wird gesendet, wenn der Benutzer auf ein statisches Steuerelement mit dem [**SS \_**](static-control-styles.md) -Benachrichtigungs Stil klickt Das übergeordnete Fenster des Steuer Elements empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Der STN CLICKED-Benachrichtigungscode wird gesendet, wenn der Benutzer auf ein statisches Steuerelement klickt, das über den \_ [**Stil SS \_ NOTIFY**](static-control-styles.md) verfügt. Das übergeordnete Fenster des Steuerelements empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,7 +42,7 @@ STN_CLICKED
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des statischen Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Bezeichner des statischen Steuerelements. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -59,9 +59,9 @@ Handle für das statische Steuerelement.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Handle für das statische Steuerelement.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[STN- \_ dblclk](stn-dblclk.md)
+[STN \_ DBLCLK](stn-dblclk.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Statische Steuerelemente](static-controls.md)
@@ -90,7 +90,7 @@ Handle für das statische Steuerelement.
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpcevents onvmstatechange-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass sich der Zustand einer virtuellen Maschine geändert hat. | Ivmvirtualpcevents onvmstatechange-Methode (vpccominterfaces. h)
+title: IVMVirtualPCEvents OnVMStateChange-Methode (VPCCOMInterfaces.h)
+description: Empfängt eine Benachrichtigung, dass sich der Zustand eines virtuellen Computers geändert hat. | IVMVirtualPCEvents OnVMStateChange-Methode (VPCCOMInterfaces.h)
 ms.assetid: a79afe14-9b7d-4528-ad38-e9b5ad068561
 keywords:
-- Onvmstatechange-Methode Virtual PC
-- Onvmstatechange-Methode Virtual PC, ivmvirtualpcevents-Schnittstelle
-- Ivmvirtualpcevents Interface Virtual PC, onvmstatechange-Methode
+- OnVMStateChange-Methode Virtueller PC
+- OnVMStateChange-Methode Virtueller PC, IVMVirtualPCEvents-Schnittstelle
+- IVMVirtualPCEvents-Schnittstelle Virtueller PC , OnVMStateChange-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2d0a8bd9a362c558c307fb4719c95a9ba8cbf4a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f63516e80ce4f3b830229fdb4cd574e95378c0569a4855a73c1c528af2ec8b48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032980"
 ---
-# <a name="ivmvirtualpceventsonvmstatechange-method"></a>Ivmvirtualpcevents:: onvmstatechange-Methode
+# <a name="ivmvirtualpceventsonvmstatechange-method"></a>IVMVirtualPCEvents::OnVMStateChange-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass sich der Zustand einer virtuellen Maschine geändert hat.
+Empfängt eine Benachrichtigung, dass sich der Zustand eines virtuellen Computers geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ HRESULT OnVMStateChange(
 
 <dl> <dt>
 
-*virtualmachineconfig* \[ in\]
+*virtualMachineConfig* \[ In\]
 </dt> <dd>
 
 Der Name des virtuellen Computers.
 
 </dd> <dt>
 
-*virtualmachinestate* \[ in\]
+*virtualMachineState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand der virtuellen Maschine.
+Der neue Status des virtuellen Computers.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das **\_ vmstatechanged** -Ereignis von [**ivmvirtualpc**](ivmvirtualpc.md)empfangen zu können. Um einen bestimmten virtuellen Computer zu überwachen, verwenden Sie die [**ivmvirtualmachineevents:: OnStateChange**](ivmvirtualmachineevents-onstatechange.md) -Methode.
+Das Clientprogramm muss diese Schnittstellenmethode implementieren, um eine Benachrichtigung über das **\_ VMStateChanged-Ereignis vmVirtualPCEvent** zu erhalten, das von [**IVMVirtualPC**](ivmvirtualpc.md)stammt. Verwenden Sie zum Überwachen eines bestimmten virtuellen Computers die [**IVMVirtualMachineEvents::OnStateChange-Methode.**](ivmvirtualmachineevents-onstatechange.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,12 +73,12 @@ Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachr
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualpcevents ist als efed1ef1-3c09-41f7-a9c2-7e29fa286c9d definiert.<br/>        |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualPCEvents ist als efed1ef1-3c09-41f7-a9c2-7e29fa286c9d definiert.<br/>        |
 
 
 
@@ -86,7 +86,7 @@ Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachr
 
 <dl> <dt>
 
-[**Ivmvirtualpcevents**](ivmvirtualpcevents.md)
+[**IVMVirtualPCEvents**](ivmvirtualpcevents.md)
 </dt> </dl>
 
  

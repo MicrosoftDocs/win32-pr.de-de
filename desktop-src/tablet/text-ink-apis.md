@@ -1,21 +1,21 @@
 ---
-description: Neben der Unterstützung der standardmäßigen OLE-Schnittstellen unterstützt auch das Text Ink Object (Tink) iinklineinfo.
+description: Zusätzlich zur Unterstützung der ole-Standardschnittstellen unterstützt das tInk-Objekt (Text Ink) auch IInkLineInfo.
 ms.assetid: 60a386e7-b53f-490e-9a4b-2a4507d16a91
-title: Textzink-Referenz
+title: Referenz zu Text ink
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7713a34b4960ecdc560a1a5a3d7d4b7e5b8128c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ef3204b8bf5ffa2a22fd9a1080f67e052c3fd971289454e96a2730ab6bc6537
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119842788"
 ---
-# <a name="text-ink-reference"></a>Textzink-Referenz
+# <a name="text-ink-reference"></a>Referenz zu Text ink
 
-Neben der Unterstützung der standardmäßigen OLE-Schnittstellen unterstützt auch das Text Ink Object (Tink) [**iinklineinfo**](/windows/desktop/api/msinkaut/nn-msinkaut-iinklineinfo).
+Zusätzlich zur Unterstützung der OLE-Standardschnittstellen unterstützt das Text-Freihandobjekt (tInk) auch [**IInkLineInfo.**](/windows/desktop/api/msinkaut/nn-msinkaut-iinklineinfo)
 
-Informationen zum Angeben der Anzeigeeigenschaften für ein Text frei Hand Objekt finden Sie unter [**inkmetric**](/windows/win32/api/msinkaut/ns-msinkaut-inkmetric) -Struktur.
+Informationen zum Angeben von Anzeigeeigenschaften für ein Text-Ink-Objekt finden Sie unter [**INKMETRIC-Struktur.**](/windows/win32/api/msinkaut/ns-msinkaut-inkmetric)
 
  
 

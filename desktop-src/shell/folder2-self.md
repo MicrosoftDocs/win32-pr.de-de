@@ -1,7 +1,7 @@
 ---
-description: Enthält das folderItem-Objekt des Ordners.
+description: Enthält das FolderItem-Objekt des Ordners.
 ms.assetid: 0964505d-4138-4444-91d4-46c707c45688
-title: Folder2. Self-Eigenschaft (Shldisp. h)
+title: Folder2.Self-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: f49666096f35f9871f8a3b3c141d4bc169dea0c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a3f363300ae38817d39a9a6fb253f8d4a7bf34f4357b47e7e961b5cee5d5bb12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093096"
 ---
-# <a name="folder2self-property"></a>Folder2. Self-Eigenschaft
+# <a name="folder2self-property"></a>Folder2.Self (Eigenschaft)
 
-Enthält das [**folderItem**](folderitem.md) -Objekt des Ordners.
+Enthält das [**FolderItem-Objekt des**](folderitem.md) Ordners.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ Self = Folder2.Self
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das Objekt, das zu dem [**folderItem**](folderitem.md) -Objekt des Ordners ausgewertet wird.
+Das Objekt, das als [**FolderItem-Objekt des Ordners ausgewertet**](folderitem.md) wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Self** verwendet, um das [**folderItem**](folderitem.md) -Element für den Ordner "C: Windows" abzurufen \\ . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Self verwendet,** um [**folderItem für**](folderitem.md) den Ordner C: Windows \\ abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -70,7 +70,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -130,17 +130,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -148,7 +148,7 @@ End Sub
 
 <dl> <dt>
 
-[**Folder2**](folder2-object.md)
+[**Ordner2**](folder2-object.md)
 </dt> <dt>
 
 [**Ordner**](folder.md)

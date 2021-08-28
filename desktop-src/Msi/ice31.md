@@ -1,59 +1,59 @@
 ---
-description: ICE31 überprüft alle vordefinierten Schriftart Stile, die in Steuerelementen verwendet werden, die Text anzeigen. Außerdem wird überprüft, ob die defaultuifont-Eigenschaft auf einen gültigen Schrift Schnitt verweist.
+description: ICE31 überprüft alle vordefinierten Schriftschnitte, die in Steuerelementen verwendet werden, die Text anzeigen. Außerdem wird überprüft, ob die DefaultUIFont-Eigenschaft auf einen gültigen Schriftschnitt verweist.
 ms.assetid: 07e60774-0e26-4a50-b818-a8f074512e3e
 title: ICE31
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4797d577ceaa2a2b7838f1f03a8577d9a633fb65
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 783c8b842f80707bbd1ca833fbc7ad1f154a47a0d3aa24377ee58a1c6549bf7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528670"
 ---
 # <a name="ice31"></a>ICE31
 
-ICE31 überprüft alle vordefinierten Schriftart Stile, die in Steuer [Elementen](controls.md) verwendet werden, die Text anzeigen. Außerdem wird überprüft, ob die [**defaultuifont**](defaultuifont.md) -Eigenschaft auf einen gültigen Schrift Schnitt verweist.
+ICE31 überprüft alle vordefinierten Schriftschnitte, die in Steuerelementen verwendet [werden,](controls.md) die Text anzeigen. Außerdem wird überprüft, ob die [**DefaultUIFont-Eigenschaft**](defaultuifont.md) auf einen gültigen Schriftschnitt verweist.
 
-Steuerelemente können ein vordefiniertes Schriftformat aufweisen, wie unter [Hinzufügen von Steuerelementen und Text](adding-controls-and-text.md)beschrieben. Um die Schriftart und den Schrift Schnitt einer Text Zeichenfolge festzulegen, stellen Sie die Zeichenfolge der angezeigten Zeichen mit "{ \\ Style}" oder "{&*Style*}" vor. Dabei ist Style ein Bezeichner, der in der TextStyle-Spalte der [TextStyle-Tabelle](textstyle-table.md)aufgeführt ist. Wenn keines dieser beiden vorhanden ist, die [**defaultuifont**](defaultuifont.md) -Eigenschaft jedoch als gültiger Textstil definiert ist, wird diese Schriftart verwendet.
+Steuerelemente können einen vordefinierten Schriftschnitt haben, wie unter [Hinzufügen von Steuerelementen und Text beschrieben.](adding-controls-and-text.md) Stellen Sie der Zeichenfolge der angezeigten Zeichen { style} oder {&style } voran, um die Schriftart und den \\ Schriftschnitt einer Textzeichenfolge zu setzen. Dabei ist style ein Bezeichner, der in der TextStyle -Spalte der [TextStyle-Tabelle aufgeführt ist.](textstyle-table.md) Wenn keines dieser Eigenschaften vorhanden ist, die [**DefaultUIFont-Eigenschaft**](defaultuifont.md) jedoch als gültiger Textstil definiert ist, wird diese Schriftart verwendet.
 
-ICE31 überprüft die Text Spalte für jedes Steuerelement in der [Steuerelement Tabelle](control-table.md) , um zu überprüfen, ob ein gültiger Eintrag in der [TextStyle-Tabelle](textstyle-table.md)vorhanden ist.
+ICE31 überprüft die Text -Spalte [](control-table.md) für jedes Steuerelement in der Steuertabelle, um zu überprüfen, ob ein gültiger Eintrag in der [TextStyle-Tabelle vorhanden ist.](textstyle-table.md)
 
-ICE31 ignoriert das [scrollabletext-Steuer](scrollabletext-control.md)Element.
+ICE31 ignoriert das [ScrollableText-Steuerelement.](scrollabletext-control.md)
 
 ## <a name="results"></a>Ergebnisse
 
-ICE31 gibt eine Fehlermeldung für nicht definierte Stile, Formatvorlagen Namen, die zu lang sind, eine fehlende TextStyle-Tabelle und stiltags ohne schließende geschweifte Klammer an.
+ICE31 veröffentlicht eine Fehlermeldung für nicht definierte Stile, zu lange Formatnamen, eine fehlende TextStyle-Tabelle und Formattags ohne schließende geschweifte Klammer.
 
-ICE31 gibt eine Warnung aus, wenn sich das Stiltag nicht am Anfang der Zeile befindet, oder wenn ein Steuerelement über mehrere Style-Tags verfügt.
+ICE31 gibt eine Warnung aus, wenn sich das Formattag nicht am Anfang der Zeile befindet oder wenn ein Steuerelement über mehrere Formattags verfügt.
 
 ## <a name="example"></a>Beispiel
 
-ICE31 gibt die folgenden Fehler für das gezeigte Beispiel aus:
+ICE31 veröffentlicht die folgenden Fehler für das gezeigte Beispiel:
 
--   Steuerelement dialogb. Control1 verwendet nicht definierte TextStyle-badstyle-Elemente.
--   Steuerelement dialogb. Control2 verwendet nicht definierte TextStyle-badstyle-Elemente.
--   Im Steuerelement dialogb. Control6 fehlt die schließende geschweifte Klammer im Textstil.
--   Steuerelement dialogb. Control3 gibt einen Text Stil an, der zu lang ist, um gültig zu sein.
+-   Das Steuerelement DialogB.Control1 verwendet nicht definierten TextStyle BadStyle.
+-   Control DialogB.Control2 verwendet nicht definierte TextStyle BadStyle.
+-   Das Steuerelement DialogB.Control6 fehlt die schließende geschweifte Klammer im Textformat.
+-   Control DialogB.Control3 gibt einen Textstil an, der zu lang ist, um gültig zu sein.
 
-ICE31 gibt die folgende Warnung für das folgende Beispiel aus:
+ICE31 gibt die folgende Warnung für das gezeigte Beispiel aus:
 
--   Das textstiltag in dialogb. Control4 hat keine Auswirkung. Möchten Sie, dass Sie als Text angezeigt werden?
+-   Das Textformattag in DialogB.Control4 hat keine Auswirkungen. Möchten Sie, dass es als Text angezeigt wird?
 
-[Control-Tabelle](control-table.md) (partiell)
+[Steuertabelle](control-table.md) (partiell)
 
 
 
 | Dialog  | Control  | Text                                                                                                                                                                |
 |---------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dialoga | Control0 | { \\ Okstyle} Dies ist der anzuzeigende Text.                                                                                                                             |
-| Dialoga | Control1 | {&okstyle} Dies ist der anzuzeigende Text.                                                                                                                              |
-| Dialog GB | Control1 | {&badstyle} Dies ist der anzuzeigende Text.                                                                                                                             |
-| Dialog GB | Control2 | { \\ Badstyle} Dies ist der anzuzeigende Text.                                                                                                                            |
-| Dialog GB | Control3 | {&Stil, der mehr als 72 Zeichen hat und daher nicht möglicherweise ein Stil ist, auch wenn Sie es irgendwie geschafft haben, ihn in der TextStyle-Tabelle zu erhalten} Dies ist der anzuzeigende Text. |
-| Dialog GB | Control4 | Warnung { \\ okstyle} Dies ist der anzuzeigende Text.                                                                                                                     |
-| Dialog GB | Control5 | { \\ Okstyle} {&okstyle}. Dies ist der anzuzeigende Text.                                                                                                                   |
-| Dialog GB | Control6 | { \\ Okstyle Dies ist der anzuzeigende Text.                                                                                                                             |
+| DialogA | Control0 | { \\ OKStyle}Dies ist der anzuzeigende Text.                                                                                                                             |
+| DialogA | Control1 | {&OKStyle} Dies ist der anzuzeigende Text.                                                                                                                              |
+| DialogB | Control1 | {&BadStyle} Dies ist der anzuzeigende Text.                                                                                                                             |
+| DialogB | Control2 | { \\ BadStyle}Dies ist der anzuzeigende Text.                                                                                                                            |
+| DialogB | Control3 | {&Style, der mehr als 72 Zeichen hat und daher auch dann kein Stil sein kann, wenn Sie es auf irgendeine Weise in der TextStyle-Tabelle erhalten haben} Dies ist der anzuzeigende Text. |
+| DialogB | Control4 | Warnung { \\ OKStyle}Dies ist der anzuzeigende Text.                                                                                                                     |
+| DialogB | Control5 | { \\ OKStyle}{&OKStyle}Dies ist der anzuzeigende Text.                                                                                                                   |
+| DialogB | Control6 | { \\ OKStyle Dies ist der anzuzeigende Text.                                                                                                                             |
 
 
 
@@ -63,9 +63,9 @@ ICE31 gibt die folgende Warnung für das folgende Beispiel aus:
 
 
 
-| Textart |
+| TextStyle |
 |-----------|
-| Okstyle   |
+| OkStyle   |
 
 
 
@@ -75,7 +75,7 @@ ICE31 gibt die folgende Warnung für das folgende Beispiel aus:
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

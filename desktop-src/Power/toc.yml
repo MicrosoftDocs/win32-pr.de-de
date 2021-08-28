@@ -3,63 +3,63 @@
   items:
     - name: Neues bei der Energieverwaltung
       href: what-s-new-in-power-management.md
-    - name: Informationen zur Energie Verwaltung
+    - name: Informationen zur Energieverwaltung
       href: about-power-management.md
       items:
-        - name: Windows-Energie Verwaltung
+        - name: Windows Energieverwaltung
           href: windows-power-management.md
-        - name: System Energie Status
+        - name: Systemstromstatus
           href: system-power-status.md
-        - name: System Energiestatus
+        - name: Systemleistungszustände
           href: system-power-states.md
-        - name: Ereignisse der System Energie Verwaltung
+        - name: System Power Management Events
           href: system-power-management-events.md
-        - name: WM_POWERBROADCAST Meldungen
+        - name: WM_POWERBROADCAST-Meldungen
           href: wm-powerbroadcast-messages.md
           items:
-            - name: Registrieren für Strom Ereignisse
+            - name: Registrieren für Power Events
               href: registering-for-power-events.md
-        - name: System Energiespar Kriterien
+        - name: Kriterien für den Systemmodus
           href: system-sleep-criteria.md
-        - name: System Aktivierungs Ereignisse
+        - name: Systemreaktivierungsereignisse
           href: system-wake-up-events.md
-        - name: Akku Informationen
+        - name: Akkuinformationen
           href: battery-information.md
-        - name: Backlight-Steuerungs Schnittstelle
+        - name: Backlight-Steuerelementschnittstelle
           href: backlight-control-interface.md
-        - name: Energie Schemas
+        - name: Energieschemas
           href: power-schemes.md
           items:
-            - name: Energierichtlinien Einstellungen
+            - name: Power Policy Einstellungen
               href: power-policy-settings.md
-            - name: Energie Schema Verwaltung
+            - name: Energieschemaverwaltung
               href: managing-power-schemes.md
-            - name: Administrator Überschreibungen
+            - name: Administratorüberschreibungen
               href: administrator-overrides.md
-        - name: Geräte Energie Verwaltung
+        - name: Gerätestromverwaltung
           href: device-power-management.md
-    - name: Verwenden der Energie Verwaltung
+    - name: Verwenden der Energieverwaltung
       href: using-power-management.md
       items:
-        - name: Aufzählen von Akku Geräten
+        - name: Aufzählen von Akkugeräten
           href: enumerating-battery-devices.md
-        - name: Verwenden der Device Power-API
+        - name: Verwenden der Geräte-Power-API
           href: using-the-device-power-api.md
-    - name: Referenz zur Energie Verwaltung
+    - name: Power Management-Referenz
       href: power-management-reference.md
       items:
-        - name: Energie Verwaltungs Konstanten
+        - name: Energieverwaltungskonstanten
           href: power-management-constants.md
           items:
-            - name: Entlade Richtlinien Konstanten
+            - name: Richtlinienkonstanten
               href: discharge-policy-constants.md
-            - name: Globale Flags-Konstanten
+            - name: Globale Flagkonstanten
               href: global-flags-constants.md
-            - name: Richtlinien Konstanten für die Prozessor Leistungssteuerung
+            - name: Richtlinienkonstanten für die Prozessorleistungssteuerung
               href: processor-performance-control-policy-constants.md
-            - name: Energie Einstellungs-GUIDs
+            - name: Power Setting-GUIDs
               href: power-setting-guids.md
-        - name: Steuerungs Codes der Energie Verwaltung
+        - name: Steuerungscodes für die Energieverwaltung
           href: power-management-control-codes.md
           items:
             - name: IOCTL_BATTERY_QUERY_INFORMATION
@@ -76,7 +76,7 @@
               href: ioctl-video-query-supported-brightness.md
             - name: IOCTL_VIDEO_SET_DISPLAY_BRIGHTNESS
               href: ioctl-video-set-display-brightness.md
-        - name: Aufzählungs Typen der Energie Verwaltung
+        - name: Energieverwaltungsenumerationstypen
           href: power-management-enumeration-types.md
           items:
             - name: EFFECTIVE_POWER_MODE
@@ -91,7 +91,7 @@
               href: /windows/desktop/api/WinNT/ne-winnt-system_power_condition
             - name: SYSTEM_POWER_STATE
               href: /windows/win32/api/WinNT/ne-winnt-system_power_state
-        - name: Energie Verwaltungs Ereignisse
+        - name: Energieverwaltungsereignisse
           href: power-management-events.md
           items:
             - name: PBT_APMBATTERYLOW
@@ -114,182 +114,182 @@
               href: pbt-apmsuspend.md
             - name: PBT_POWERSETTINGCHANGE
               href: pbt-powersettingchange.md
-        - name: Energie Verwaltungsfunktionen
+        - name: Energieverwaltungsfunktionen
           href: power-management-functions.md
           items:
-            - name: Callntpowerinformation
+            - name: CallNtPowerInformation
               href: /windows/desktop/api/Powerbase/nf-powerbase-callntpowerinformation
-            - name: Canuserschreitepwrscheme
+            - name: CanUserWritePwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-canuserwritepwrscheme
-            - name: Deletepwrscheme
+            - name: DeletePwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-deletepwrscheme
-            - name: Devicenotifycallbackroutine
+            - name: DeviceNotifyCallbackRoutine
               href: /windows/desktop/api/Powrprof/nc-powrprof-device_notify_callback_routine
-            - name: Devicepowerclose
+            - name: DevicePowerClose
               href: /windows/desktop/api/PowrProf/nf-powrprof-devicepowerclose
-            - name: Devicepowerenumdevices
+            - name: DevicePowerEnumDevices
               href: /windows/desktop/api/PowrProf/nf-powrprof-devicepowerenumdevices
-            - name: Devicepoweropen
+            - name: DevicePowerOpen
               href: /windows/desktop/api/PowrProf/nf-powrprof-devicepoweropen
-            - name: Devicepowersetabvicestate
+            - name: DevicePowerSetDeviceState
               href: /windows/desktop/api/PowrProf/nf-powrprof-devicepowersetdevicestate
-            - name: Umumpwrschemas
+            - name: EnumPwrSchemes
               href: /windows/desktop/api/PowrProf/nf-powrprof-enumpwrschemes
             - name: EFFECTIVE_POWER_MODE_CALLBACK
               href: /windows/desktop/api/powersetting/nf-powersetting-effective_power_mode_callback
-            - name: Getactivepwrscheme
+            - name: GetActivePwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-getactivepwrscheme
-            - name: Getcurrentpowerpolicies
+            - name: GetCurrentPowerPolicies
               href: /windows/desktop/api/PowrProf/nf-powrprof-getcurrentpowerpolicies
-            - name: Getdevicepowerstate
+            - name: GetDevicePowerState
               href: /windows/desktop/api/Winbase/nf-winbase-getdevicepowerstate
-            - name: Getpwr-Funktionen
+            - name: GetPwrCapabilities
               href: /windows/desktop/api/Powerbase/nf-powerbase-getpwrcapabilities
-            - name: Getpwrdiskspindownrange
+            - name: GetPwrDiskSpindownRange
               href: /windows/desktop/api/PowrProf/nf-powrprof-getpwrdiskspindownrange
             - name: GetSystemPowerStatus
               href: /windows/desktop/api/Winbase/nf-winbase-getsystempowerstatus
             - name: IsPwrHibernateAllowed
               href: /windows/desktop/api/PowrProf/nf-powrprof-ispwrhibernateallowed
-            - name: Ispwrshutdownallowed
+            - name: IsPwrShutdownAllowed
               href: /windows/desktop/api/PowrProf/nf-powrprof-ispwrshutdownallowed
-            - name: Ispwrsuspendallowed
+            - name: IsPwrSuspendAllowed
               href: /windows/desktop/api/PowrProf/nf-powrprof-ispwrsuspendallowed
-            - name: Issystemresumeautomatic
+            - name: IsSystemResumeAutomatic
               href: /windows/desktop/api/Winbase/nf-winbase-issystemresumeautomatic
-            - name: Powercanrestoreingedividualdefaultpowerscheme
+            - name: PowerCanRestoreIndividualDefaultPowerScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-powercanrestoreindividualdefaultpowerscheme
-            - name: Brauch
+            - name: PowerClearRequest
               href: /windows/desktop/api/winbase/nf-winbase-powerclearrequest
-            - name: Power| atepossiblesetting
+            - name: PowerCreatePossibleSetting
               href: /windows/desktop/api/PowrProf/nf-powrprof-powercreatepossiblesetting
-            - name: Powerkreaterequest
+            - name: PowerCreateRequest
               href: /windows/desktop/api/winbase/nf-winbase-powercreaterequest
-            - name: Power| atesesetting
+            - name: PowerCreateSetting
               href: /windows/desktop/api/PowrProf/nf-powrprof-powercreatesetting
-            - name: Powerdeletescheme
+            - name: PowerDeleteScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerdeletescheme
-            - name: Powerdetermineplatformrole
+            - name: PowerDeterminePlatformRole
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerdetermineplatformrole
-            - name: Powerdetermineplatformroleex
+            - name: PowerDeterminePlatformRoleEx
               href: /windows/desktop/api/Powerbase/nf-powerbase-powerdetermineplatformroleex
-            - name: Powerduplicatescheme
+            - name: PowerDuplicateScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerduplicatescheme
-            - name: Powerenumerate
+            - name: PowerEnumerate
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerenumerate
-            - name: Powergetactivescheme
+            - name: PowerGetActiveScheme
               href: /windows/desktop/api/Powersetting/nf-powersetting-powergetactivescheme
-            - name: Powerimportpowerscheme
+            - name: PowerImportPowerScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerimportpowerscheme
-            - name: Powerissettingrangedefined
+            - name: PowerIsSettingRangeDefined
               href: /windows/desktop/api/Powrprof/nf-powrprof-powerissettingrangedefined
-            - name: Powerleseracdefaultindex
+            - name: PowerReadACDefaultIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadacdefaultindex
-            - name: Powerread-Wert
+            - name: PowerReadACValue
               href: /windows/desktop/api/Powersetting/nf-powersetting-powerreadacvalue
-            - name: Powerread acvaluandex
+            - name: PowerReadACValueIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadacvalueindex
-            - name: Powerread dcdefaultindex
+            - name: PowerReadDCDefaultIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreaddcdefaultindex
-            - name: Powerread dcvalue
+            - name: PowerReadDCValue
               href: /windows/desktop/api/Powersetting/nf-powersetting-powerreaddcvalue
-            - name: Powerread dcvalueingedex
+            - name: PowerReadDCValueIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreaddcvalueindex
-            - name: Powerread Description
+            - name: PowerReadDescription
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreaddescription
-            - name: Powerleserfriendlyname
+            - name: PowerReadFriendlyName
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadfriendlyname
-            - name: Powerreadianresourcespecifier
+            - name: PowerReadIconResourceSpecifier
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadiconresourcespecifier
-            - name: Powerumpossibledescription
+            - name: PowerReadPossibleDescription
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadpossibledescription
-            - name: Powerleserpossiblefriendlyname
+            - name: PowerReadPossibleFriendlyName
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadpossiblefriendlyname
-            - name: Powerlespossiblevalue
+            - name: PowerReadPossibleValue
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadpossiblevalue
-            - name: Powerreading SettingAttribute
+            - name: PowerReadSettingAttributes
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadsettingattributes
-            - name: Powerread valueingekrement
+            - name: PowerReadValueIncrement
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadvalueincrement
-            - name: Powerread valuemax
+            - name: PowerReadValueMax
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadvaluemax
-            - name: Powerread valuemin
+            - name: PowerReadValueMin
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadvaluemin
-            - name: Powerread valueunitspecifier
+            - name: PowerReadValueUnitsSpecifier
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreadvalueunitsspecifier
-            - name: Powerregisterforeffectivepowermubezeichtifications
+            - name: PowerRegisterForEffectivePowerModeNotifications
               href: /windows/desktop/api/powersetting/nf-powersetting-powerregisterforeffectivepowermodenotifications
-            - name: Powerregistersuspendresumenotifi
+            - name: PowerRegisterSuspendResumeNotification
               href: /windows/desktop/api/Powerbase/nf-powerbase-powerregistersuspendresumenotification
-            - name: Powerremovepowersetting
+            - name: PowerRemovePowerSetting
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerremovepowersetting
-            - name: Powerreplacedefaultpowerschemas
+            - name: PowerReplaceDefaultPowerSchemes
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreplacedefaultpowerschemes
-            - name: Powerreportthermal-Ereignis
+            - name: PowerReportEvent
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerreportthermalevent
-            - name: Powerrestoredefaultpowerschemas
+            - name: PowerRestoreDefaultPowerSchemes
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerrestoredefaultpowerschemes
-            - name: Powerrestoreingedividualdefaultpowerscheme
+            - name: PowerRestoreIndividualDefaultPowerScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerrestoreindividualdefaultpowerscheme
-            - name: '"Powerabtactivescheme"'
+            - name: PowerSetActiveScheme
               href: /windows/desktop/api/Powersetting/nf-powersetting-powersetactivescheme
-            - name: Power-trequest
+            - name: PowerSetRequest
               href: /windows/desktop/api/winbase/nf-winbase-powersetrequest
-            - name: Powersettingaccesscheck
+            - name: PowerSettingAccessCheck
               href: /windows/desktop/api/PowrProf/nf-powrprof-powersettingaccesscheck
-            - name: Powersettingaccesscheckex
+            - name: PowerSettingAccessCheckEx
               href: /windows/desktop/api/Powrprof/nf-powrprof-powersettingaccesscheckex
-            - name: Powersettingregisternotification
+            - name: PowerSettingRegisterNotification
               href: /windows/desktop/api/Powersetting/nf-powersetting-powersettingregisternotification
-            - name: Powersettingunregisternotification
+            - name: PowerSettingUnregisterNotification
               href: /windows/desktop/api/Powersetting/nf-powersetting-powersettingunregisternotification
-            - name: Powerunregisterfromeffectivepowermubezeichtifications
+            - name: PowerUnregisterFromEffectivePowerModeNotifications
               href: /windows/desktop/api/Powersetting/nf-powersetting-powersettingunregisternotification
-            - name: Powerunregistersuspendresumenotifi
+            - name: PowerUnregisterSuspendResumeNotification
               href: /windows/desktop/api/Powerbase/nf-powerbase-powerunregistersuspendresumenotification
-            - name: Powerwrite-acdefaultindex
+            - name: PowerWriteACDefaultIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwriteacdefaultindex
-            - name: Powerwrite-acvalueingedex
+            - name: PowerWriteACValueIndex
               href: /windows/desktop/api/Powersetting/nf-powersetting-powerwriteacvalueindex
-            - name: Powerschreitedcdefaultindex
+            - name: PowerWriteDCDefaultIndex
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritedcdefaultindex
-            - name: Powerwrite-cvalueingedex
+            - name: PowerWriteDCValueIndex
               href: /windows/desktop/api/Powersetting/nf-powersetting-powerwritedcvalueindex
-            - name: Powerscriptedescription
+            - name: PowerWriteDescription
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritedescription
-            - name: Powerscriptefriendlyname
+            - name: PowerWriteFriendlyName
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritefriendlyname
-            - name: Powerschreibanresourcespecifier
+            - name: PowerWriteIconResourceSpecifier
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwriteiconresourcespecifier
-            - name: Powerscriptepossibledescription
+            - name: PowerWritePossibleDescription
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritepossibledescription
-            - name: Powerscriptepossiblefriendlyname
+            - name: PowerWritePossibleFriendlyName
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritepossiblefriendlyname
-            - name: Powerschreitepossiblevalue
+            - name: PowerWritePossibleValue
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritepossiblevalue
-            - name: Powerwrite-ettingattribute
+            - name: PowerWriteSettingAttributes
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritesettingattributes
-            - name: Powerscriptevalueingekrement
+            - name: PowerWriteValueIncrement
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritevalueincrement
-            - name: Powerscriptevaluemax
+            - name: PowerWriteValueMax
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritevaluemax
-            - name: Powerscriptevaluemin
+            - name: PowerWriteValueMin
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritevaluemin
-            - name: Powerscriptevalueunitspecifier
+            - name: PowerWriteValueUnitsSpecifier
               href: /windows/desktop/api/PowrProf/nf-powrprof-powerwritevalueunitsspecifier
-            - name: '"Read globalpwrpolicy"'
+            - name: ReadGlobalPwrPolicy
               href: /windows/desktop/api/PowrProf/nf-powrprof-readglobalpwrpolicy
-            - name: '"Read processorpwrscheme"'
+            - name: ReadProcessorPwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-readprocessorpwrscheme
-            - name: '"Read pwrscheme"'
+            - name: ReadPwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-readpwrscheme
             - name: RegisterPowerSettingNotification
               href: /windows/desktop/api/WinUser/nf-winuser-registerpowersettingnotification
-            - name: Registersuspendresumenotifizierung
+            - name: RegisterSuspendResumeNotification
               href: /windows/desktop/api/Winuser/nf-winuser-registersuspendresumenotification
-            - name: Requestwakeuplatency
+            - name: RequestWakeupLatency
               href: /windows/desktop/api/WinBase/nf-winbase-requestwakeuplatency
-            - name: '"System"'
+            - name: SetActivePwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-setactivepwrscheme
             - name: SetSuspendState
               href: /windows/desktop/api/PowrProf/nf-powrprof-setsuspendstate
@@ -297,24 +297,24 @@
               href: /windows/desktop/api/WinBase/nf-winbase-setsystempowerstate
             - name: SetThreadExecutionState
               href: /windows/desktop/api/Winbase/nf-winbase-setthreadexecutionstate
-            - name: UnregisterPowerSettingNotification
+            - name: Aufheben der RegistrierungpowerSettingNotification
               href: /windows/desktop/api/WinUser/nf-winuser-unregisterpowersettingnotification
-            - name: Unregistersuspendresumenotifi
+            - name: UnregisterSuspendResumeNotification
               href: /windows/desktop/api/Winuser/nf-winuser-unregistersuspendresumenotification
-            - name: '"Write-globalpwrpolicy"'
+            - name: WriteGlobalPwrPolicy
               href: /windows/desktop/api/PowrProf/nf-powrprof-writeglobalpwrpolicy
-            - name: '"Write processorpwrscheme"'
+            - name: WriteProcessorPwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-writeprocessorpwrscheme
-            - name: '"Write-pwrscheme"'
+            - name: WritePwrScheme
               href: /windows/desktop/api/PowrProf/nf-powrprof-writepwrscheme
-        - name: Energie Verwaltungs Meldungen
+        - name: Energieverwaltungsmeldungen
           href: power-management-messages.md
           items:
             - name: WM_POWER
               href: wm-power.md
-            - name: WM_POWERBROADCAST
+            - name: Wm_powerbroadcast
               href: wm-powerbroadcast.md
-        - name: Energie Verwaltungsstrukturen
+        - name: Energieverwaltungsstrukturen
           href: power-management-structures.md
           items:
             - name: ADMINISTRATOR_POWER_POLICY

@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter getsoundebug
-description: Iagentcharacter getsoundebug
+title: IAgentCharacter GetSoundEffectsOn
+description: IAgentCharacter GetSoundEffectsOn
 ms.assetid: 11bc074e-7654-4a78-920e-acd56db52c98
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a40f18a4fb8e7778c116c54391a7dc50e5267af
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7f7133e41e4c291200feaf8fdb8ab3919cdb622ca927c155fc0941202fd555a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848640"
 ---
-# <a name="iagentcharactergetsoundeffectson"></a>Iagentcharacter:: getsounentffectson
+# <a name="iagentcharactergetsoundeffectson"></a>IAgentCharacter::GetSoundEffectsOn
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetSoundEffectsOn(
@@ -21,29 +21,29 @@ HRESULT GetSoundEffectsOn(
 );
 ```
 
-Ruft ab, ob die Einstellung für die Soundeffekte des Zeichens aktiviert ist.
+Ruft ab, ob die Einstellung für Soundeffekte des Zeichens aktiviert ist.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbOn"></span><span id="pbon"></span><span id="PBON"></span>*pbon*
+<span id="pbOn"></span><span id="pbon"></span><span id="PBON"></span>*pbOn*
 </dt> <dd>
 
-Die Adresse einer Variablen, die **true** empfängt, wenn die Einstellung für die Soundeffekte des Zeichens aktiviert ist, und **false** , wenn Sie deaktiviert ist.
+Adresse einer Variablen, die **True** empfängt, wenn die Soundeffekteinstellung des Zeichens aktiviert ist, **False,** wenn deaktiviert.
 
 </dd> </dl>
 
-Die Einstellung Soundeffekte des Zeichens bestimmt, ob Soundeffekte, die als Teil des Zeichens kompiliert werden, beim Abspielen einer zugeordneten Animation wiedergegeben werden. Die Einstellung unterliegt der Einstellung globaler Soundeffekte des Benutzers in [**iagentaudiooutputproperties:: getusingsoundebug**](iagentaudiooutputproperties--getusingsoundeffects.md).
+Die Einstellung für Soundeffekte des Zeichens bestimmt, ob als Teil des Zeichens kompilierte Soundeffekte wiedergegeben werden, wenn Sie eine zugeordnete Animation wiedergeben. Die Einstellung unterliegt der Globalen Soundeffekteinstellung des Benutzers in [**IAgentAudioOutputProperties::GetUsingSoundEffects.**](iagentaudiooutputproperties--getusingsoundeffects.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: setsounbinffectson**](iagentcharacter--setsoundeffectson.md), [ **iagentaudiooutputproperties:: getusingsoundebug**](iagentaudiooutputproperties--getusingsoundeffects.md)
+[**IAgentCharacter::SetSoundEffectsOn**](iagentcharacter--setsoundeffectson.md), [ **IAgentAudioOutputProperties::GetUsingSoundEffects**](iagentaudiooutputproperties--getusingsoundeffects.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

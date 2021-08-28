@@ -1,9 +1,9 @@
 ---
-title: Computer-Element (systempropertiestype)
+title: Computer (SystemPropertiesType)-Element
 description: Der Name des Computers, auf dem das Ereignis aufgetreten ist.
 ms.assetid: 87967597-23b1-4d6f-993b-3744c6471ed0
 keywords:
-- Computer Element-Ereignisprotokoll
+- Computerelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cde997a05a9b7ba7f6fea53a8433186b07399b91
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4d165f3ce930712ea505a49f4e1db1a18c60174f9e56deb662e02f5611fb95e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904980"
 ---
-# <a name="computer-systempropertiestype-element"></a>Computer-Element (systempropertiestype)
+# <a name="computer-systempropertiestype-element"></a>Computer (SystemPropertiesType)-Element
 
 Der Name des Computers, auf dem das Ereignis aufgetreten ist.
 
@@ -30,7 +30,7 @@ Der Name des Computers, auf dem das Ereignis aufgetreten ist.
  />
 ```
 
-Das **Computer** Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **Computer-Element** wird vom komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Computer** Element wird durch den komplexen [**systempropertiestype**](eve
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

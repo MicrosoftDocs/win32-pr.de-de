@@ -1,9 +1,9 @@
 ---
-title: CBN_SELCHANGE Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer die aktuelle Auswahl im Listenfeld eines Kombinations Felds ändert.
+title: CBN_SELCHANGE Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer die aktuelle Auswahl im Listenfeld eines Kombinationsfelds ändert.
 ms.assetid: 2d0d711c-dfc4-485b-97bb-9ccfa7c5864b
 keywords:
-- Windows-Steuerelemente für CBN_SELCHANGE Benachrichtigungs
+- CBN_SELCHANGE Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e921b7856780763923a448e42de072476cc02f6b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f808438f8592acfdede592fab352bbeb0dd7123b5dc41db86eadb6749ae8b4ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968620"
 ---
-# <a name="cbn_selchange-notification-code"></a>CBN- \_ selChange-Benachrichtigungs Code
+# <a name="cbn_selchange-notification-code"></a>CBN \_ SELCHANGE-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer die aktuelle Auswahl im Listenfeld eines Kombinations Felds ändert. Der Benutzer kann die Auswahl ändern, indem er im Listenfeld oder mithilfe der Pfeiltasten klickt. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code in Form einer [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn der Benutzer die aktuelle Auswahl im Listenfeld eines Kombinationsfelds ändert. Der Benutzer kann die Auswahl ändern, indem er auf das Listenfeld klickt oder die Pfeiltasten verwendet. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode in Form einer [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,22 +42,22 @@ CBN_SELCHANGE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner des Kombinationsfelds. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Index der aktuellen Auswahl zu erhalten, senden Sie die [**CB \_ getcurrsel**](cb-getcursel.md) -Nachricht an das-Steuerelement.
+Um den Index der aktuellen Auswahl abzurufen, senden Sie die [**CB \_ GETCURSEL-Nachricht**](cb-getcursel.md) an das Steuerelement.
 
-Der CBN \_ selChange-Benachrichtigungs Code wird nicht gesendet, wenn die aktuelle Auswahl mithilfe der [**CB- \_ setcurrsel**](cb-setcursel.md) -Nachricht festgelegt wird.
+Der CBN \_ SELCHANGE-Benachrichtigungscode wird nicht gesendet, wenn die aktuelle Auswahl mithilfe der [**CB \_ SETCURSEL-Nachricht**](cb-setcursel.md) festgelegt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,29 +65,29 @@ Der CBN \_ selChange-Benachrichtigungs Code wird nicht gesendet, wenn die aktuel
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[CBN- \_ Schließung](cbn-closeup.md)
+[CBN \_ CLOSEUP](cbn-closeup.md)
 </dt> <dt>
 
-[CBN- \_ dblclk](cbn-dblclk.md)
+[CBN \_ DBLCLK](cbn-dblclk.md)
 </dt> <dt>
 
-[**CB \_ getcurrsel**](cb-getcursel.md)
+[**CB \_ GETCURSEL**](cb-getcursel.md)
 </dt> <dt>
 
-[**CB \_ setcurrsel**](cb-setcursel.md)
+[**CB \_ SETCURSEL**](cb-setcursel.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -99,7 +99,7 @@ Der CBN \_ selChange-Benachrichtigungs Code wird nicht gesendet, wenn die aktuel
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: ICE41 überprüft, ob die Einträge in den Klassen-und Erweiterungs Tabellen auf Einträge in der Komponenten Tabelle verweisen, die das Klassenobjekt oder die Erweiterung der Komponente implementieren.
+description: ICE41 überprüft, ob die Einträge in den Klassen- und Erweiterungstabellen auf Einträge in der Component-Tabelle verweisen, die das Klassenobjekt oder die Erweiterung der Komponente implementieren.
 ms.assetid: 43572322-ba23-4f99-be34-e572d4c6e3eb
 title: ICE41
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4bc6c0a8bb634706750810484963e56b6d6e0ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c220e43cf8a275e520f5babe1ca609a1cee2194b4c08f8dcdafabe6d73bdca4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119581110"
 ---
 # <a name="ice41"></a>ICE41
 
-ICE41 überprüft, ob die Einträge in den [Klassen](class-table.md) -und [Erweiterungs](extension-table.md) Tabellen auf Einträge in der [Komponenten Tabelle](component-table.md) verweisen, die das Klassenobjekt oder die Erweiterung der Komponente implementieren.
+ICE41 überprüft, ob die Einträge in den [Klassen-](class-table.md) und [Erweiterungstabellen](extension-table.md) auf Einträge in der [Component-Tabelle](component-table.md) verweisen, die das Klassenobjekt oder die Erweiterung der Komponente implementieren.
 
 ## <a name="result"></a>Ergebnis
 
-ICE41 gibt einen Fehler aus, wenn eine Funktion vorhanden ist, die nicht die Komponente enthält, die das Klassenobjekt oder die Erweiterung implementiert.
+ICE41 gibt einen Fehler aus, wenn ein Feature vorhanden ist, das nicht die Komponente enthält, die das Klassenobjekt oder die Erweiterung implementiert.
 
 ## <a name="example"></a>Beispiel
 
@@ -25,10 +25,10 @@ ICE41 meldet die folgenden Fehler für das gezeigte Beispiel.
 
 
 
-| ICE41-Fehler                                                                                                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ICE41-Fehler                                                                                                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Class {00000000-0000-0000-0000-0000000000000} References Feature Feature2 und Component Component1, aber die Komponente ist nicht mit dieser Funktion in der FeatureComponents-Tabelle verknüpft. | Es gibt eine Funktion, die nicht die Komponente enthält, die das Klassenobjekt implementiert. Dies bedeutet, dass das Installationsprogramm die Komponente nicht mit der Funktion installiert, und dass die Werbung möglicherweise nicht wie erwartet funktioniert. Um diesen Fehler zu beheben, ändern Sie den Eintrag in der \_ featurespalte des [Klassen Tabellen](class-table.md) Eintrags, um auf eine Funktion zu verweisen, mit der die in der Spalte Komponente aufgeführte Komponente installiert wird, \_ oder ändern Sie die Funktion und die Komponente, die in der [FeatureComponents](featurecomponents-table.md)<br/>          |
-| Die Erweiterung. Yip verweist auf die Features Feature1 und Component Component2, aber diese Komponente ist nicht mit dieser Funktion in der FeatureComponents-Tabelle verknüpft.                                | Es gibt eine Funktion, die nicht die Komponente enthält, die die Erweiterung implementiert. Dies bedeutet, dass das Installationsprogramm die Komponente nicht mit der Funktion installiert, und dass die Werbung möglicherweise nicht wie erwartet funktioniert. Um diesen Fehler zu beheben, ändern Sie den Eintrag in der \_ featurespalte des [Erweiterungs Tabellen](extension-table.md) Eintrags, um auf eine Funktion zu verweisen, mit der die in der Spalte Komponente aufgeführte Komponente installiert wird, \_ oder ändern Sie die Funktion und die Komponente, die in der [Tabelle FeatureComponents](featurecomponents-table.md)<br/> |
+| Die Klasse {00000000-0000-0000-0000-0000000000000} verweist auf Feature Feature2 und Komponente Component1, aber die Komponente ist diesem Feature in der Tabelle FeatureComponents nicht zugeordnet. | Es gibt ein Feature, das nicht die Komponente enthält, die das Klassenobjekt implementiert. Dies bedeutet, dass das Installationsprogramm die Komponente nicht mit dem Feature installiert und die Ankündigung möglicherweise nicht wie erwartet funktioniert. Um diesen Fehler zu beheben, ändern Sie den Eintrag in der Spalte Feature \_ des [Klassentabelleneintrags](class-table.md) so, dass er auf ein Feature verweist, das die in der Spalte Komponente aufgeführte Komponente \_ installiert, oder ändern Sie das Feature und die Komponente, die in der [Tabelle FeatureComponents](featurecomponents-table.md)zugeordnet sind.<br/>          |
+| Die Erweiterung .yip verweist auf Feature1 und Komponente Component2, aber die Komponente ist diesem Feature in der Tabelle FeatureComponents nicht zugeordnet.                                | Es gibt ein Feature, das die Komponente, die die Erweiterung implementiert, nicht enthält. Dies bedeutet, dass das Installationsprogramm die Komponente nicht mit dem Feature installiert und die Ankündigung möglicherweise nicht wie erwartet funktioniert. Um diesen Fehler zu beheben, ändern Sie den Eintrag in der Spalte Feature \_ des [Tabelleneintrags Erweiterung](extension-table.md) so, dass er auf ein Feature verweist, das die in der Spalte Komponente aufgeführte Komponente \_ installiert, oder ändern Sie das Feature und die Komponente, die in der [Tabelle FeatureComponents](featurecomponents-table.md)zugeordnet sind.<br/> |
 
 
 
@@ -38,7 +38,7 @@ ICE41 meldet die folgenden Fehler für das gezeigte Beispiel.
 
 
 
-| Funktion\_ |
+| Feature\_ |
 |-----------|
 | Feature1  |
 | Feature2  |
@@ -47,11 +47,11 @@ ICE41 meldet die folgenden Fehler für das gezeigte Beispiel.
 
  
 
-[Klassen Tabelle](class-table.md) (partiell)
+[Klassentabelle](class-table.md) (partiell)
 
 
 
-| CLSID                                  | Komponente\_ | Funktion\_ |
+| CLSID                                  | Komponente\_ | Feature\_ |
 |----------------------------------------|-------------|-----------|
 | {00000000-0000-0000-0000-000000000000} | Component1  | Feature2  |
 
@@ -59,13 +59,13 @@ ICE41 meldet die folgenden Fehler für das gezeigte Beispiel.
 
  
 
-[Klassen Tabelle](class-table.md) (partiell)
+[Klassentabelle](class-table.md) (partiell)
 
 
 
-| Durchwahl | Komponente\_ | Funktion\_ |
+| Erweiterung | Komponente\_ | Feature\_ |
 |-----------|-------------|-----------|
-| . Yip      | Component2  | Feature1  |
+| .yip      | Component2  | Feature1  |
 
 
 
@@ -75,7 +75,7 @@ ICE41 meldet die folgenden Fehler für das gezeigte Beispiel.
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-description: Eine benutzerdefinierte Benutzeroberfläche kann in das Windows Installer Paket eingebettet werden.
+description: Eine benutzerdefinierte Benutzeroberfläche kann in das Windows Installer-Paket eingebettet werden.
 ms.assetid: d037cd8d-9c88-4851-a9da-b2179f53cee6
 title: Verwenden einer eingebetteten Benutzeroberfläche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f187e50461cfe88adc9c2cabbf8dd8b88ca97a5a
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 3153e0cb3ba79bd9c5cb6f1ee9b801c12ae828bb7d4dd332d04832bcd5200ea4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "104050743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119527300"
 ---
 # <a name="using-an-embedded-ui"></a>Verwenden einer eingebetteten Benutzeroberfläche
 
-Eine benutzerdefinierte Benutzeroberfläche kann in das Windows Installer Paket eingebettet werden.
+Eine benutzerdefinierte Benutzeroberfläche kann in das Windows Installer-Paket eingebettet werden.
 
-Die DLL-Datei, die die benutzerdefinierte Benutzeroberfläche und alle von der benutzerdefinierten Benutzeroberfläche verwendeten Ressourcen Dateien enthält, sollte in der Tabelle [msiembeddedui](msiembeddedui-table.md) aufgeführt werden. Diese msiembeddedui-Tabelle enthält beispielsweise eine Zeile für die DLL-Datei, die die eingebettete Benutzeroberfläche enthält, und eine Zeile für eine Bitmapdatei, die von der Benutzeroberfläche verwendet wird.
+Die DLL-Datei, die die benutzerdefinierte Benutzeroberfläche enthält, und alle Ressourcendateien, die von der benutzerdefinierten Benutzeroberfläche verwendet werden, sollten in der [Tabelle MsiEmbeddedUI](msiembeddedui-table.md) aufgeführt werden. Diese MsiEmbeddedUI-Tabelle enthält beispielsweise eine Zeile für die DLL-Datei, die die eingebettete Benutzeroberfläche enthält, und eine Zeile für eine Bitmapdatei, die von der Benutzeroberfläche verwendet wird.
 
-| Msiembeddedui | FileName    | Attribute | MessageFilter | Daten            |
+| MsiEmbeddedUI | FileName    | Attribute | Messagefilter | Daten            |
 |---------------|-------------|------------|---------------|-----------------|
-| Embeddedui    | embedui.dll | 3          | 201359327     | \[Binärdaten\] |
-| Custombitmap  | custom.bmp  | 0          |               | \[Binärdaten\] |
+| EmbeddedUI    | embedui.dll | 3          | 201359327     | \[Binärdaten\] |
+| CustomBitmap  | custom.bmp  | 0          |               | \[Binärdaten\] |
 
 
 
  
 
-In diesem Beispiel embedui.dll die benutzerdefinierte UI-dll die benutzerdefinierten *initializeembeddedui*-, *embeddeduihandler*-und *shutdownembeddedui* -Funktionen exportieren. Der folgende Beispielcode veranschaulicht diese Funktionen.
+Die benutzerdefinierte UI-DLL, in diesem Beispiel embedui.dll, sollte die benutzerdefinierten Funktionen *InitializeEmbeddedUI,* *EmbeddedUIHandler* und *ShutdownEmbeddedUI* exportieren. Der folgende Beispielcode veranschaulicht diese Funktionen.
 
 
 ```C++

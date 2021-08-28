@@ -4,13 +4,13 @@
     - name: Informationen zur HTTP-Server-API
       href: about-http-server-api.md
       items:
-        - name: HTTP-Server-API-Features
+        - name: HTTP-Server-API-Funktionen
           href: http-server-api-features.md
-        - name: HTTP-Features der Version 2.0
+        - name: Features der HTTP-Version 2.0
           href: http-version-2-0-features.md
-        - name: Neuerungen bei Windows Server 2003 SP1
+        - name: Neues bei Windows Server 2003 SP1
           href: what-s-new-for-windows-server-2003-sp1.md
-        - name: Neuerungen bei der HTTP Server Version 2.0-API
+        - name: 'What es New for HTTP Server Version 2.0 API (Neues bei der HTTP Server-API, Version 2.0)'
           href: what-s-new-for-http-version-2-0-api.md
     - name: Verwenden der HTTP-Server-API
       href: using-http-server-api.md
@@ -25,15 +25,15 @@
               items:
                 - name: Setupkonfiguration
                   href: setup-configuration.md
-                - name: Run-Time-Konfiguration
+                - name: Run-Time Konfiguration
                   href: run-time-configuration.md
                 - name: Erstellen und Binden an eine Anforderungswarteschlange
                   href: creating-and-binding-to-a-request-queue.md
                 - name: Verarbeiten von Anforderungen
                   href: processing-requests.md
-                - name: Herunterfahren und Bereinigen
+                - name: Herunterfahren und Bereinigten
                   href: shutdown-and-cleanup.md
-            - name: Versionskontrolle
+            - name: Versionsverwaltung
               href: versioning-in-http-2-0.md
             - name: Prozessisolation
               href: process-isolation.md
@@ -45,7 +45,7 @@
                       href: configuring-the-request-queue.md
                     - name: Bedarfsstart für Anforderungswarteschlangen der Version 2.0
                       href: demand-start-on-version-2-0-request-queues.md
-            - name: Server-Side-Protokollierung
+            - name: Server-Side Protokollierung
               href: server-side-logging-in-http-version-2-0.md
               items:
                 - name: Konfigurieren und Aktivieren der serverseitigen Protokollierung
@@ -74,7 +74,7 @@
                   href: configuring-the-server-session.md
                 - name: Konfigurieren der URL-Gruppe
                   href: configuring-the-url-group.md
-                - name: Konfigurieren der HTTP-Server-API-Wide Timer
+                - name: Konfigurieren der HTTP Server API Wide Timer
                   href: configuring-the-http-server-api-wide-timers.md
             - name: Server timeouts-Eigenschaft
               href: server-timeouts-property.md
@@ -112,7 +112,7 @@
           items:
             - name: Konfigurieren der Fehlerprotokollierung für die HTTP-Server-API
               href: configuring-http-server-api-error-logging.md
-            - name: Format der HTTP Server-API-Fehlerprotokolle
+            - name: Format der Fehlerprotokolle der HTTP-Server-API
               href: format-of-the-http-server-api-error-logs.md
             - name: Von der HTTP-Server-API protokollierte Fehlertypen
               href: types-of-errors-logged-by-the-http-server-api.md
@@ -121,9 +121,9 @@
         - name: 'Namespacereservierungen, Registrierungen und Routing'
           href: namespace-reservations-registrations-and-routing.md
           items:
-            - name: Zugreifen auf den Reservierungsspeicher
+            - name: Zugreifen auf die Store
               href: accessing-the-reservation-store.md
-            - name: Weiterleiten eingehender Anforderungen
+            - name: Routing eingehender Anforderungen
               href: routing-incoming-requests.md
             - name: Verarbeiten von Registrierungen
               href: processing-registrations.md
@@ -186,12 +186,12 @@
     - name: HTTP-Server-API-Referenz
       href: http-server-api-reference.md
       items:
-        - name: 'REFERENZ ZUR HTTP-Server-API, Version 1.0'
+        - name: 'Referenz zur HTTP-Server-API, Version 1.0'
           href: http-server-api-version-1-0-reference.md
           items:
             - name: HTTP Server API Version 1.0-Datentypen
               href: http-server-api-version-1-0-data-types.md
-            - name: HTTP Server API Version 1.0 Functions
+            - name: Funktionen der HTTP-Server-API Version 1.0
               href: http-server-api-version-1-0-functions.md
               items:
                 - name: HttpAddFragmentToCache
@@ -322,7 +322,7 @@
                   href: /windows/win32/api/http/nf-http-http_not_equal_version
                 - name: HTTP_SET_VERSION
                   href: /windows/win32/api/http/nf-http-http_set_version
-            - name: HTTP-Server-API- Version 1.0-Enumerationstypen
+            - name: HTTP Server API Version 1.0 Enumeration Types
               href: http-server-api-version-1-0-enumeration-types.md
               items:
                 - name: HTTP_CACHE_POLICY_TYPE
@@ -337,12 +337,12 @@
                   href: /windows/win32/api/http/ne-http-http_service_config_query_type
                 - name: HTTP_VERB
                   href: /windows/win32/api/http/ne-http-http_verb
-        - name: HTTP Server API Version 2.0 Reference
+        - name: 'Referenz zur HTTP-Server-API, Version 2.0'
           href: http-server-api-version-2-0-reference.md
           items:
             - name: HTTP Server API Version 2.0-Datentypen
               href: http-server-api-version-2-0-data-types.md
-            - name: HTTP Server API Version 2.0 Functions
+            - name: Funktionen der HTTP-Server-API Version 2.0
               href: http-server-api-version-2-0-functions.md
               items:
                 - name: HttpAddUrlToUrlGroup
@@ -456,7 +456,7 @@
                   href: /windows/win32/api/http/ns-http-http_state_info
                 - name: HTTP_TIMEOUT_LIMIT_INFO
                   href: /windows/win32/api/http/ns-http-http_timeout_limit_info
-            - name: HTTP Server API Version 2.0 Macros
+            - name: 'MAKROS der HTTP-Server-API, Version 2.0'
               href: http-server-api-version-2-0-macros.md
               items:
                 - name: HTTP_IS_NULL_ID
@@ -465,7 +465,7 @@
                   href: /previous-versions/windows/desktop/legacy/aa364541(v=vs.85)
                 - name: HTTP_SET_NULL_ID
                   href: /windows/desktop/api/http/nf-http-http_set_null_id
-            - name: HTTP Server API Version 2.0-Konstanten
+            - name: HTTP-Server-API- Version 2.0-Konstanten
               href: http-server-api-version-2-0-constants.md
               items:
                 - name: HTTP_AUTH_ENABLE_ Konstanten
@@ -476,7 +476,7 @@
                   href: http-logging-flag--constants.md
                 - name: HTTP_RESPONSE_FLAG_ Konstanten
                   href: http-response-flag--constants.md
-            - name: HTTP Server API Version 2.0 Enumeration Types
+            - name: HTTP Server API Version 2.0-Enumerationstypen
               href: http-server-api-version-2-0-enumeration-types.md
               items:
                 - name: HTTP_503_RESPONSE_VERBOSITY

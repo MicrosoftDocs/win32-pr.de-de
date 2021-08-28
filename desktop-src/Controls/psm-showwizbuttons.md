@@ -1,9 +1,9 @@
 ---
-title: PSM_SHOWWIZBUTTONS Meldung (prsht. h)
-description: Blendet Schaltflächen in einem Assistenten ein oder aus. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ showwitzbuttons-Makros senden.
+title: PSM_SHOWWIZBUTTONS-Nachricht (Prsht.h)
+description: Zeigt Schaltflächen in einem Assistenten an oder blendet sie aus. Sie können diese Nachricht explizit oder mithilfe des \_ PropSheet-Makros ShowWizButtons senden.
 ms.assetid: 669c4e51-cac1-40e1-8f23-afae0e41fc9b
 keywords:
-- Windows-Steuerelemente für PSM_SHOWWIZBUTTONS Meldung
+- PSM_SHOWWIZBUTTONS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22e8d1fc54d556240ef3fa6d6b6185a669978b84
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 86bbad4d6f0ce8a084709c04110d093e4d79b806226bdc1fa651278b4054fa8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088480"
 ---
-# <a name="psm_showwizbuttons-message"></a>PSM- \_ showwizbuttons-Meldung
+# <a name="psm_showwizbuttons-message"></a>PSM \_ SHOWWIZBUTTONS-Nachricht
 
-Blendet Schaltflächen in einem Assistenten ein oder aus. Sie können diese Nachricht explizit oder mithilfe des [**propsheet- \_ showwitzbuttons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_showwizbuttons) -Makros senden.
+Zeigt Schaltflächen in einem Assistenten an oder blendet sie aus. Sie können diese Nachricht explizit oder mithilfe des [**\_ PropSheet-Makros ShowWizButtons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_showwizbuttons) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,19 +32,19 @@ Blendet Schaltflächen in einem Assistenten ein oder aus. Sie können diese Nach
 *wParam* 
 </dt> <dd>
 
-Einer oder mehrere der folgenden Werte, die angeben, welche Eigenschaften Blatt Schaltflächen angezeigt werden sollen. Wenn ein Schaltflächen Wert sowohl in diesem Parameter als auch in *LPARAM* enthalten ist, wird er angezeigt.
+Mindestens einer der folgenden Werte, der angibt, welche Eigenschaftenblattschaltflächen angezeigt werden sollen. Wenn ein Schaltflächenwert sowohl in diesem Parameter als auch in *lParam* enthalten ist, wird er angezeigt.
 
 
 
 | Wert                                                                                                                                                                                 | Bedeutung                                                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**pswizb \_ zurück**</dt> </dl>                               | Die Schaltfläche " **zurück** ".<br/>                                                            |
-| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**pswizb- \_ Abbruch**</dt> </dl>                         | Die Schaltfläche " **Abbrechen** ".<br/>                                                          |
-| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**pswizb \_ disabledfinish**</dt> </dl> | Die Schaltfläche **Fertig** stellen.<br/>                                                          |
-| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**pswizb- \_ Fertigstellen**</dt> </dl>                         | Die Schaltfläche **Fertig** stellen.<br/>                                                          |
-| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**pswizb \_ als nächstes**</dt> </dl>                               | Die Schaltfläche **weiter** .<br/>                                                            |
-| <span id="PSWIZB_SHOW"></span><span id="pswizb_show"></span><dl> <dt>**pswizb- \_ Anzeige**</dt> </dl>                               | Legen Sie nur dieses Flag (definiert als null) fest, um alle in *LPARAM* angegebenen Schaltflächen auszublenden.<br/> |
-| <span id="PSWIZB_RESTORE"></span><span id="pswizb_restore"></span><dl> <dt>**pswizb- \_ Wiederherstellung**</dt> </dl>                      | Nicht implementiert.<br/>                                                                |
+| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**PSWIBESTAND \_ ZURÜCK**</dt> </dl>                               | Die Schaltfläche **Zurück.**<br/>                                                            |
+| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**PSWI WIEDER \_ ABBRECHEN**</dt> </dl>                         | Die Schaltfläche **Abbrechen.**<br/>                                                          |
+| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**PSWIATUR \_ DISABLEDFINISH**</dt> </dl> | Die Schaltfläche **Fertig stellen.**<br/>                                                          |
+| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**PSWIFABRIK \_ FINISH**</dt> </dl>                         | Die Schaltfläche **Fertig stellen.**<br/>                                                          |
+| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**PSWIEINANDER \_ WEITER**</dt> </dl>                               | Die Schaltfläche **Weiter.**<br/>                                                            |
+| <span id="PSWIZB_SHOW"></span><span id="pswizb_show"></span><dl> <dt>**PSWIBLEND \_ SHOW**</dt> </dl>                               | Legen Sie nur dieses Flag (definiert als 0) fest, um alle in *lParam* angegebenen Schaltflächen auszublenden.<br/> |
+| <span id="PSWIZB_RESTORE"></span><span id="pswizb_restore"></span><dl> <dt>**\_PSWIWIEDERHERSTELLUNG**</dt> </dl>                      | Nicht implementiert.<br/>                                                                |
 
 
 
@@ -55,7 +55,7 @@ Einer oder mehrere der folgenden Werte, die angeben, welche Eigenschaften Blatt 
 *lParam* 
 </dt> <dd>
 
-Mindestens einer der in *wParam* verwendeten Werte, der angibt, welche Schaltflächen von diesem-Befehl betroffen sind. Wenn ein Schaltflächen Wert in diesem Parameter, aber nicht in *wParam* angezeigt wird, wird die Schaltfläche ausgeblendet.
+Mindestens einer der in *wParam* verwendeten Werte, der angibt, welche Schaltflächen von diesem Aufruf betroffen sind. Wenn ein Schaltflächenwert in diesem Parameter, aber nicht in *wParam* angezeigt wird, wird die Schaltfläche ausgeblendet.
 
 </dd> </dl>
 
@@ -63,15 +63,15 @@ Mindestens einer der in *wParam* verwendeten Werte, der angibt, welche Schaltfl�
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Assistenten zeigen unter jeder Seite entweder drei oder vier Schaltflächen an. Diese Meldung wird verwendet, um anzugeben, welche Schaltflächen sichtbar sind. Assistenten werden normalerweise **zurück**, **Abbrechen** und entweder eine Schaltfläche " **weiter** " oder " **Fertig** stellen" angezeigt. Die Schaltfläche **Abbrechen** ist immer sichtbar.
+Assistenten zeigen drei oder vier Schaltflächen unter jeder Seite an. Diese Meldung wird verwendet, um anzugeben, welche Schaltflächen sichtbar sind. Assistenten zeigen normalerweise **Zurück,** **Abbrechen** und entweder die Schaltfläche **Weiter** oder **Fertig stellen** an. Die Schaltfläche **Abbrechen** ist immer sichtbar.
 
-Legen Sie in der Regel **pswizb- \_ Fertig** stellen oder **pswizb \_ disabledfinish** fest, um die Schaltfläche **weiter** durch die Schaltfläche **Fertig** stellen zu ersetzen Wenn Sie die Schaltflächen " **weiter** " und " **Fertig** stellen" gleichzeitig anzeigen möchten, legen Sie beim Erstellen des Assistenten das Flag " **PSH \_ wizardhasfinish** " im **dwFlags** -Member der [**propsheeder**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2) -Struktur fest. Auf jeder Seite werden dann alle vier Schaltflächen angezeigt: **zurück**, **weiter**, **Abbrechen** und **Fertig** stellen.
+Legen Sie in der Regel **PSWIEINANDER \_ FERTIG STELLEN** oder **PSWIRAFF \_ DEAKTIVIERTFINISH** fest, um die Schaltfläche **Weiter** durch die Schaltfläche **Fertig stellen** zu ersetzen. Um die Schaltflächen **Weiter** und **Fertig stellen** gleichzeitig anzuzeigen, legen Sie beim Erstellen des Assistenten das **PSH \_ WIZARDHASFINISH-Flag** im **dwFlags-Member** der [**PROPSHEETHEADER-Struktur**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2) fest. Auf jeder Seite werden dann alle vier Schaltflächen angezeigt: **Zurück,** **Weiter,** **Abbrechen** und **Fertig stellen.**
 
-Wenn Sie das [**propsheet- \_ showwitzbuttons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_showwizbuttons) -Makro verwenden, um diese Nachricht zu senden, wird Sie gepostet. Zu einem beliebigen Zeitpunkt können Sie [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) verwenden, um **PSM \_ showwitzbuttons** zu senden.
+Wenn Sie das [**\_ PropSheet-Makro ShowWizButtons**](/windows/desktop/api/Prsht/nf-prsht-propsheet_showwizbuttons) verwenden, um diese Nachricht zu senden, wird sie veröffentlicht. Sie können [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) jederzeit verwenden, um **PSM \_ SHOWWIZBUTTONS** zu senden.
 
-Wenn Ihr Benachrichtigungs Handler [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) verwendet, um eine **PSM- \_ showwitzbuttons** -Nachricht zu senden, sollten Sie keine Auswirkungen auf den Fenster Fokus haben, bis der Handler zurückkehrt. Wenn Sie z. b. [**MessageBox**](/windows/desktop/api/winuser/nf-winuser-messagebox) sofort nach dem Verwenden von **PostMessage** zum Senden von **PSM- \_ showwitzbuttons** aufzurufen, erhält das Meldungs Feld den Fokus. Da bereitgestellte Nachrichten erst übermittelt werden, wenn Sie den Anfang der Nachrichten Warteschlange erreichen, wird die **PSM- \_ showwitzbuttons** -Nachricht erst zugestellt, wenn der Fokus auf das Meldungs Feld verschoben wurde. Folglich kann das Eigenschaften Blatt den Fokus nicht ordnungsgemäß für die Schaltflächen festlegen.
+Wenn Ihr Benachrichtigungshandler [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) verwendet, um eine **PSM \_ SHOWWIZBUTTONS-Nachricht** zu senden, tun Sie nichts, was sich auf den Fensterfokus auswirkt, bis der Handler zurückgegeben wurde. Wenn Sie beispielsweise [**MessageBox**](/windows/desktop/api/winuser/nf-winuser-messagebox) sofort nach der Verwendung von **PostMessage** aufrufen, um **PSM \_ SHOWWIZBUTTONS** zu senden, erhält das Meldungsfeld den Fokus. Da gesendete Nachrichten erst übermittelt werden, wenn sie den Kopf der Nachrichtenwarteschlange erreichen, wird die **PSM \_ SHOWWIZBUTTONS-Nachricht** erst zugestellt, nachdem der Assistent den Fokus auf das Meldungsfeld verloren hat. Daher kann das Eigenschaftenblatt den Fokus für die Schaltflächen nicht ordnungsgemäß festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,9 +79,9 @@ Wenn Ihr Benachrichtigungs Handler [**PostMessage**](/windows/desktop/api/winuse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

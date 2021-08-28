@@ -1,7 +1,7 @@
 ---
-description: Gibt den Integritäts Status einer Anwendung an.
+description: Gibt den Integritätsstatus einer Anwendung an.
 ms.assetid: CA06AA34-A549-4CFC-9B52-D2E0B200C3E9
-title: APPLICATION_STATE-Enumeration
+title: APPLICATION_STATE Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - IDLDef
 api_location:
 - VmApplicationHealthMonitor.idl
-ms.openlocfilehash: 4b7e288f41c863dc3f0365db3c6aae867605e5c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f873e7a30a4cff6dc4cc89eaea225201a367f7c24ead11ad95da04c2ff1ab32
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914160"
 ---
-# <a name="application_state-enumeration"></a>\_Enumeration des Anwendungs Zustands
+# <a name="application_state-enumeration"></a>APPLICATION \_ STATE-Enumeration
 
-Gibt den Integritäts Status einer Anwendung an.
+Gibt den Integritätsstatus einer Anwendung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ typedef enum _APPLICATION_STATE {
 
 <dl> <dt>
 
-<span id="ApplicationStateHealthy"></span><span id="applicationstatehealthy"></span><span id="APPLICATIONSTATEHEALTHY"></span>**Applicationstatuehealthy**
+<span id="ApplicationStateHealthy"></span><span id="applicationstatehealthy"></span><span id="APPLICATIONSTATEHEALTHY"></span>**ApplicationStateHealthy**
 </dt> <dd>
 
-Der Anwendungs Status ist fehlerfrei.
+Der Anwendungsstatus ist fehlerfrei.
 
 </dd> <dt>
 
-<span id="ApplicationStateCritical"></span><span id="applicationstatecritical"></span><span id="APPLICATIONSTATECRITICAL"></span>**Applicationstatuecritical**
+<span id="ApplicationStateCritical"></span><span id="applicationstatecritical"></span><span id="APPLICATIONSTATECRITICAL"></span>**ApplicationStateCritical**
 </dt> <dd>
 
-Der Anwendungs Status ist kritisch.
+Der Anwendungsstatus ist kritisch.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Programmier Element zu verwenden, müssen die Windows 8-Integrations Komponenten auf dem virtuellen Computer installiert sein, auf dem die Anwendung ausgeführt wird.
+Um dieses Programmierelement verwenden zu können, Windows 8 Integrationskomponenten auf dem virtuellen Computer installiert sein, auf dem die Anwendung ausgeführt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,10 +64,10 @@ Um dieses Programmier Element zu verwenden, müssen die Windows 8-Integrations K
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                      |
-| Version<br/>                  | Integrations Komponenten für Windows 8<br/>                                                           |
-| IDL<br/>                      | <dl> <dt>Vmapplicationhealthmonitor. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                      |
+| Version<br/>                  | Integrationskomponenten für Windows 8<br/>                                                           |
+| Idl<br/>                      | <dl> <dt>VmApplicationHealthMonitor.idl</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Um dieses Programmier Element zu verwenden, müssen die Windows 8-Integrations K
 
 <dl> <dt>
 
-[**"Standort Status"**](ivmapplicationhealthmonitor-setapplicationstate.md)
+[**SetApplicationState**](ivmapplicationhealthmonitor-setapplicationstate.md)
 </dt> </dl>
 
  

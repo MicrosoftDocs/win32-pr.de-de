@@ -1,21 +1,21 @@
 ---
-description: Der Near-Begriff wird verwendet, um anzugeben, dass zwei Inhalts Suchbegriffe relativ nah beieinander liegen müssen, um als Übereinstimmung für das enthält-Prädikat erkannt zu werden.
+description: Der NEAR-Begriff wird verwendet, um anzugeben, dass zwei Inhaltssuchbegriffe relativ nah beieinander liegen müssen, um als Übereinstimmung für das CONTAINS-Prädikat erkannt zu werden.
 ms.assetid: cbc449b1-9f1d-42a2-b39e-d5cd69c052df
-title: Near-Term
+title: NEAR Term
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4676ec8af80f674ca0b8124d8b4f941d0d6f4936
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cad155d49638c33d3bc22c03ae8ce13e44c21478a3efabe987d4164081f8faf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094881"
 ---
-# <a name="near-term"></a>Near-Term
+# <a name="near-term"></a>NEAR Term
 
-Der Near-Begriff wird verwendet, um anzugeben, dass zwei Inhalts Suchbegriffe relativ nah beieinander liegen müssen, um als Übereinstimmung für das [enthält](-search-sql-contains.md) -Prädikat erkannt zu werden.
+Der NEAR-Begriff wird verwendet, um anzugeben, dass zwei Inhaltssuchbegriffe relativ nah beieinander liegen müssen, um als Übereinstimmung für das [CONTAINS-Prädikat](-search-sql-contains.md) erkannt zu werden.
 
-Die Syntax für den NEAR-Begriff lautet wie folgt:
+Die Syntax für den NEAR-Begriff lautet:
 
 
 ```
@@ -24,17 +24,17 @@ Die Syntax für den NEAR-Begriff lautet wie folgt:
 
 
 
-Der Near-Begriff kann durch das Schlüsselwort "Near" oder durch eine Tilde (~) dargestellt werden.
+Der NEAR-Begriff kann durch das Schlüsselwort "NEAR" oder durch eine Tilde (~) dargestellt werden.
 
-Wenn die mit Near in der Abfrage verbundenen Wörter innerhalb der Spalte, die durchsucht wird, innerhalb von ungefähr 50 Wörtern zueinander gefunden werden, gibt der Near-Begriff eine Übereinstimmung zurück. Je näher die beiden Wörter sind, desto höher ist der berechnete Rang für den NEAR-Begriff. Je weiter auseinander die beiden Wörter liegen, desto niedriger ist der Rang.
+Wenn die wörter, die mit NEAR in der Abfrage verknüpft sind, innerhalb von ca. 50 Wörtern voneinander innerhalb der spalte gefunden werden, die durchsucht wird, gibt der NEAR-Begriff eine Übereinstimmung zurück. Je näher die beiden Wörter liegen, desto höher ist der berechnete Rang für den NEAR-Begriff. Je weiter die beiden Wörter voneinander entfernt sind, desto niedriger ist der Rang.
 
 > [!Note]  
-> Die Anzahl von Wörtern zwischen gefundenen Suchbegriffen ist ungefähre Werte und hängt von der Darstellung von Füll Wörtern ab, wie z. b. "a" oder "The" und der Art und Weise, wie Wörter Trennungen Text mit Token versehen. Der Wert ist möglicherweise kleiner als 50.
+> Die Anzahl der Wörter zwischen gefundenen Suchbegriffen ist ungefähr und hängt von der Darstellung von Füllwörtern wie "a" oder "the" ab und davon, wie Wordbreaker Text tokenisieren. Er kann kleiner als 50 sein.
 
  
 
 
-In der folgenden Tabelle werden die Typen der Inhalts Suchbegriffe beschrieben, die mit einem NEAR-Begriff in einem enthält-Prädikat verwendet werden können.
+In der folgenden Tabelle werden Inhaltssuchbegriffstypen beschrieben, die mit einem NEAR-Begriff in einem CONTAINS-Prädikat verwendet werden können.
 
 
 
@@ -54,7 +54,7 @@ In der folgenden Tabelle werden die Typen der Inhalts Suchbegriffe beschrieben, 
 <tbody>
 <tr class="odd">
 <td>Word</td>
-<td>Ein einzelnes Wort ohne Leerzeichen oder ein anderes Interpunktions Zeichen. Doppelte Anführungszeichen sind nicht erforderlich.</td>
+<td>Ein einzelnes Wort ohne Leerzeichen oder andere Interpunktion. Doppelte Anführungszeichen sind nicht erforderlich.</td>
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
@@ -70,7 +70,7 @@ In der folgenden Tabelle werden die Typen der Inhalts Suchbegriffe beschrieben, 
 </tr>
 <tr class="even">
 <td>Ausdruck</td>
-<td>Mehrere Wörter oder enthaltene Leerzeichen.</td>
+<td>Mehrere Wörter oder eingeschlossene Leerzeichen.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -88,7 +88,7 @@ In der folgenden Tabelle werden die Typen der Inhalts Suchbegriffe beschrieben, 
 </tr>
 <tr class="odd">
 <td>Platzhalter</td>
-<td>Wörter oder Ausdrücke mit dem Sternchen (*) am Ende hinzugefügt. Weitere Informationen finden Sie unter Verwenden von Platzhaltern <a href="-search-sql-wildcards.md">im enthält-Prädikat</a>.</td>
+<td>Wörter oder Ausdrücke mit dem Sternchen (*) werden am Ende hinzugefügt. Weitere Informationen finden Sie unter <a href="-search-sql-wildcards.md">Verwenden von Platzhaltern im CONTAINS-Prädikat</a>.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -108,13 +108,13 @@ In der folgenden Tabelle werden die Typen der Inhalts Suchbegriffe beschrieben, 
 </table>
 
 > [!Note]  
-> Wenn die mit dem NEAR-Begriff angegebenen Übereinstimmungs Wörter in der Spalte gefunden werden, die durchsucht wird, die aber weiter auseinander liegen als 50 Wörter, wird das Ergebnis trotzdem zurückgegeben, aber hat den [Rang](-search-sql-understandingrelevancevalues.md) 0.
+> Wenn die mit dem NEAR-Begriff angegebenen Übereinstimmungswörter beide in der zu durchsuchenden Spalte gefunden werden, aber weiter entfernt als 50 Wörter liegen, wird das Ergebnis weiterhin zurückgegeben, hat aber den [Rang](-search-sql-understandingrelevancevalues.md) 0.
 
  
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Verkettung von Near-Begriffen mithilfe der kurzen und langen Formen der Laufzeit veranschaulicht:
+Das folgende Beispiel zeigt die Verkettung von NEAR-Begriffen, wobei sowohl die kurz- als auch die lange Form des Begriffs verwendet wird:
 
 
 ```
@@ -133,13 +133,13 @@ Im folgenden Beispiel wird die Verkettung von Near-Begriffen mithilfe der kurzen
 [WHERE-Klausel](-search-sql-where.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Verwenden von Platzhaltern im enthält-Prädikat](-search-sql-wildcards.md)
+[Verwenden von Platzhaltern im CONTAINS-Prädikat](-search-sql-wildcards.md)
 </dt> </dl>
 
  

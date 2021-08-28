@@ -1,21 +1,21 @@
 ---
 title: Überwachen des Fortschritts mit Ereignissen
-description: Mit mehreren Schnittstellen können Sie einen Ereignishandler implementieren, um Statusinformationen zu erhalten. Beispielsweise kann ein Ereignis Objekt an den Datenschreiber angefügt werden, um den Status des Schreibvorgangs zu empfangen.
+description: Mit mehreren Schnittstellen können Sie einen Ereignishandler implementieren, um Statusinformationen zu empfangen. Beispielsweise kann ein Ereignisobjekt an den Datenwriter angefügt werden, um den Status des Schreibvorgang zu empfangen.
 ms.assetid: 1f15a5fe-f5d7-4e09-805f-2d0380bf2bb2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ae3b425fc096234abf59d3a082fbe8a06f3f554
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a871120ca872a3258d32290273dda11360f1d5abb356d1ec48f6130d87e45648
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849010"
 ---
 # <a name="monitoring-progress-with-events"></a>Überwachen des Fortschritts mit Ereignissen
 
-Mit mehreren Schnittstellen können Sie einen Ereignishandler implementieren, um Statusinformationen zu erhalten. Beispielsweise kann ein Ereignis Objekt an den Datenschreiber angefügt werden, um den Status des Schreibvorgangs zu empfangen.
+Mit mehreren Schnittstellen können Sie einen Ereignishandler implementieren, um Statusinformationen zu empfangen. Beispielsweise kann ein Ereignisobjekt an den Datenwriter angefügt werden, um den Status des Schreibvorgang zu empfangen.
 
-Ein Ereignishandler wird in einem Skript als Unterroutine implementiert. Im folgenden Beispiel wird gezeigt, wie Sie die Unterroutine definieren und die **WScript. connectobject** -Methode verwenden, um den Ereignishandler mit dem-Objekt zu verbinden.
+Ein Ereignishandler wird als Unterroutine in einem Skript implementiert. Das folgende Beispiel zeigt, wie die Unterroutine definiert und die **WScript.ConnectObject-Methode verwendet** wird, um den Ereignishandler mit dem -Objekt zu verbinden.
 
 
 ```VB
@@ -38,9 +38,9 @@ END SUB
 
 
 
-Der für den Ereignishandlernamen angegebene Name muss das unterstrich Suffix (" \_ ") enthalten. Um den Namen der Unterroutine zu bilden, verketten Sie den Methodennamen mit dem Namen des Ereignis Handlers. Wenn Sie z. b. "dataschreiterevent \_ " als Ereignishandlername verwenden und der Methodenname "Update" lautet, ist der Name der Unterroutine "dataschreiterevent \_ Update".
+Der für den Ereignishandlername angegebene Name muss das Unterstrichsuffix (" \_ ") enthalten. Um den Namen der Unterroutine zu bilden, verketten Sie den Methodennamen mit dem Ereignishandlernamen. Wenn Sie beispielsweise "dataWriterEvent" als Ereignishandlernamen verwenden und der Methodenname "Update" ist, wäre der Name der \_ Unterroutine dataWriterEvent \_ Update.
 
-Das folgende Beispiel zeigt eine alternative Methode, um den-Ereignishandler mit dem-Objekt zu verbinden.
+Das folgende Beispiel zeigt einen alternativen Ansatz zum Verbinden des Ereignishandlers mit dem -Objekt.
 
 
 ```VB
@@ -57,9 +57,9 @@ END SUB
 
 
 
-Wenn ein System ein zweites Verbrennungs Gerät zum Überwachen enthält, müssen Sie ein weiteres **MsftDiscFormat2Data** -Objekt und einen anderen Ereignishandler erstellen.
+Wenn ein System ein zweites zu überwachendes Burn-Gerät enthält, müssen Sie ein weiteres **MsftDiscFormat2Data-Objekt** und einen weiteren Ereignishandler erstellen.
 
-Das folgende Beispiel baut auf dem Beispiel zum [Brennen eines Festplatten Bilds](burning-a-disc.md) auf. Im Beispiel wird ein ISO-Abbild auf eine leere CD geschrieben, und es wird ein Ereignishandler verwendet, um Statusaktualisierungen zu übergeben.
+Das folgende Beispiel baut auf dem [Beispiel für ein Disc-Image](burning-a-disc.md) auf. Im Beispiel wird ein ISO-Image auf einen leeren Datenträger schreibt und ein Ereignishandler verwendet, um Statusupdates zu erhalten.
 
 
 ```VB
@@ -193,7 +193,7 @@ END SUB
 [Verwenden von IMAPI](using-imapi.md)
 </dt> <dt>
 
-[**IStream**](/windows/desktop/api/objidl/nn-objidl-istream)
+[**Istream**](/windows/desktop/api/objidl/nn-objidl-istream)
 </dt> <dt>
 
 [**IDiscMaster2**](/windows/desktop/api/imapi2/nn-imapi2-idiscmaster2)
@@ -202,9 +202,9 @@ END SUB
 [**IDiscFormat2Data**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2data)
 </dt> <dt>
 
-[**Ifilesystemimage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
+[**IFileSystemImage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

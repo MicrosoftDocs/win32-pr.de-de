@@ -1,9 +1,9 @@
 ---
-title: NM_HOVER Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Steuerelement gesendet, wenn mit dem Mauszeiger auf ein Element gezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_HOVER Benachrichtigungscode (Commctrl.h)
+description: Wird von einem -Steuerelement gesendet, wenn der Mauszeiger auf ein Element zusteuert. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 0eef3e88-c1f0-4f9c-9ccf-580d8e464157
 keywords:
-- Windows-Steuerelemente für NM_HOVER Benachrichtigungs
+- NM_HOVER Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69344b1aae78ebee99b86c78f4442df20f66187a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c1f5d1332c54328fba1b09ecf4efd48011edbe9a81139f05ad375fb6c8b070de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088700"
 ---
-# <a name="nm_hover-notification-code"></a>NM- \_ Hover-Benachrichtigungs Code
+# <a name="nm_hover-notification-code"></a>NM \_ HOVER-Benachrichtigungscode
 
-Wird von einem Steuerelement gesendet, wenn mit dem Mauszeiger auf ein Element gezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem -Steuerelement gesendet, wenn der Mauszeiger auf ein Element zusteuert. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_HOVER
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Ein Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Sofern nicht anders angegeben, wird NULL zurückgegeben, damit das Steuerelement den Mauszeiger Normal verarbeiten kann, oder ungleich NULL, um zu verhindern, dass der Mauszeiger verarbeitet wird.
+Wenn nicht anders angegeben, geben Sie 0 (null) zurück, damit das Steuerelement den Mauszeiger normal verarbeiten kann, oder ungleich 0 (null), um zu verhindern, dass der Mauszeiger verarbeitet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Sofern nicht anders angegeben, wird NULL zurückgegeben, damit das Steuerelement
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

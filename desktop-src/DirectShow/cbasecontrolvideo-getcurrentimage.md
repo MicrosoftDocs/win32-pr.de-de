@@ -1,7 +1,7 @@
 ---
-description: Die getaccesstimage-Methode ruft eine Kopie des aktuellen Bilds beim Renderer ab.
+description: Die GetCurrentImage-Methode ruft eine Kopie des aktuellen Bilds beim Renderer ab.
 ms.assetid: fa322bd2-18e4-481d-bde1-92deb0f7de61
-title: Cbasecontrolvideo. getaccesstimage-Methode (ctlutil. h)
+title: CBaseControlVideo.GetCurrentImage-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d44e6930d0d7e179162939c13a54f2953c5ab965
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 782f540959b134f7ca00c2bc674a64ce60ccb4f6ddf166c79f2597e582ca9fc4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087570"
 ---
-# <a name="cbasecontrolvideogetcurrentimage-method"></a>Cbasecontrolvideo. gethapptimage-Methode
+# <a name="cbasecontrolvideogetcurrentimage-method"></a>CBaseControlVideo.GetCurrentImage-Methode
 
-Die- `GetCurrentImage` Methode ruft eine Kopie des aktuellen Bilds beim Renderer ab.
+Die `GetCurrentImage` -Methode ruft eine Kopie des aktuellen Bilds beim Renderer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ HRESULT GetCurrentImage(
 
 <dl> <dt>
 
-*pbuffersize* 
+*pBufferSize* 
 </dt> <dd>
 
-Ein Zeiger auf die Größe des Ausgabepuffers.
+Zeiger auf die Größe des Ausgabepuffers.
 
 </dd> <dt>
 
-*pvideoimage* 
+*pVideoImage* 
 </dt> <dd>
 
 Zeiger auf den Ausgabepuffer für das Bild.
@@ -59,25 +59,25 @@ Zeiger auf den Ausgabepuffer für das Bild.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte oder ein anderer nicht aufgeführter Wert sein.
 
 
 
 | Rückgabecode                                                                                        | Beschreibung                                                                       |
 |----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>             | Fehler.<br/>                                                               |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>       | Ungültiges Argument.<br/>                                                      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>      | Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn der *pvideoinfo* -Parameter **null** ist.<br/>   |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>             | Fehler.<br/>                                                               |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>       | Ungültiges Argument.<br/>                                                      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>      | Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn *der pVideoInfo-Parameter* **NULL ist.**<br/>   |
 | <dl> <dt>**NOERROR**</dt> </dl>             | Erfolg.<br/>                                                               |
-| <dl> <dt>**VFW \_ E \_ nicht \_ angehalten**</dt> </dl> | Der Vorgang konnte nicht ausgeführt werden, da der Filter nicht angehalten wurde.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ ANGEHALTEN**</dt> </dl> | Der Vorgang konnte nicht ausgeführt werden, da der Filter nicht angehalten wurde.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion Ruft das Bild aus dem Beispiel ab und kopiert es in den Ausgabepuffer. Der Abschnitt des Videos, das in den Ausgabepuffer kopiert wurde, reflektiert das Quell Rechteck, das über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle festgelegt Das Ziel Rechteck wird nicht wiederzugeben.
+Diese Memberfunktion ruft das Bild aus dem Beispiel ab und kopiert es in den Ausgabepuffer. Der Abschnitt des Videos, der in den Ausgabepuffer kopiert wird, spiegelt das Quellrechteck wider, das über die [**IBasicVideo-Schnittstelle festgelegt**](/windows/desktop/api/Control/nn-control-ibasicvideo) wurde. Es spiegelt nicht das Zielrechteck wider.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Diese Member-Funktion Ruft das Bild aus dem Beispiel ab und kopiert es in den Au
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -94,7 +94,7 @@ Diese Member-Funktion Ruft das Bild aus dem Beispiel ab und kopiert es in den Au
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

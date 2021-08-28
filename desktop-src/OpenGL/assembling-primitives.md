@@ -1,26 +1,26 @@
 ---
-title: Assemblierungsprimitive
-description: Nachdem alle notwendigen Berechnungen durchgeführt wurden, werden Vertices in primitiven Punkten, Liniensegmenten oder Polygonen zusammen mit dem entsprechenden edgeflag, der entsprechenden Farbe und den entsprechenden Textur Informationen für jeden Scheitelpunkt zusammengefasst.
+title: Assembling Primitives
+description: Nachdem alle erforderlichen Berechnungen durchgeführt wurden, werden Scheitelpunkte in Primitivenpunkten, Liniensegmenten oder Polygonen zusammen mit dem relevanten Edgeflag, der Farbe und den Texturinformationen für jeden Scheitelpunkt zusammengestellt.
 ms.assetid: 9af15db6-895e-4076-8e4c-ef4fcb7e0a7e
 keywords:
-- OpenGL-Verarbeitungs Pipeline, Zusammenstellen von Vertices
-- Zusammenstellen von Scheitel Punkten OpenGL
+- OpenGL-Verarbeitungspipeline, Assembling vertices
+- Assembling Vertices OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 882db69bfeb09ee88308ef11db1e9764c12407aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 795e5bbbd485db89315b23fc73831b4e3c2a8f386e0508df13bb5213abd4f938
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119580190"
 ---
-# <a name="assembling-primitives"></a>Assemblierungsprimitive
+# <a name="assembling-primitives"></a>Assembling Primitives
 
-Nachdem alle notwendigen Berechnungen durchgeführt wurden, werden Vertices in [primitiven](primitives.md) Punkten, Liniensegmenten oder Polygonen zusammen mit dem entsprechenden edgeflag, der entsprechenden Farbe und den entsprechenden Textur Informationen für jeden Scheitelpunkt zusammengefasst.
+Nachdem alle erforderlichen Berechnungen durchgeführt wurden, werden Scheitelpunkte in Primitivenpunkten, Liniensegmenten oder Polygonen zusammen mit dem relevanten Edgeflag, der Farbe und den Texturinformationen für jeden Scheitelpunkt zusammengestellt. [](primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

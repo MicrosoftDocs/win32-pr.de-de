@@ -1,7 +1,7 @@
 ---
-description: Material Merkmale für die präberechnete Glanz Farbe (SH) (SH).
+description: Sh-Materialmerkmale (SphericalIcal, pherical- oder SH)-Radiance Transfer (PRT) vorberechnunget.
 ms.assetid: 2be49f96-ac61-46aa-8d56-d8eee8dca9ed
-title: D3DXSHMATERIAL-Struktur (D3dx9mesh. h)
+title: D3DXSHMATERIAL-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 0600cc0c1ebe086f0d6679182125350b1ee8ca98
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4bfbf00c7d8654ad851ca8c691c9f028c09648219dbe76bb4ef07fe3b830e4d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849720"
 ---
 # <a name="d3dxshmaterial-structure"></a>D3DXSHMATERIAL-Struktur
 
-Material Merkmale für die präberechnete Glanz Farbe (SH) (SH).
+Sh-Materialmerkmale (SphericalIcal, pherical- oder SH)-Radiance Transfer (PRT) vorberechnunget.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,72 +51,72 @@ Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Diffuses Albedo der Oberfläche. Dieser Wert wird ignoriert, wenn das Objekt eine Spiegelung ist.
+Diffuses Albedo der Oberfläche. Dieser Wert wird ignoriert, wenn das -Objekt ein Spiegel ist.
 
 </dd> <dt>
 
-**bmirror**
+**bMirror**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Muss auf " **false**" festgelegt werden.
+Muss auf FALSE festgelegt **werden.**
 
 </dd> <dt>
 
-**bsubsurf**
+**bSubSurf**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Auf " **true** " festlegen, um unter Oberflächen-Scattering zu aktivieren; jedes Objekt, das die unter oberflächenzererung durchführt, darf kein Spiegel sein.
+Legen Sie diese Option **auf TRUE** fest, um die Subsurface-Punktung zu aktivieren. Jedes Objekt, das untergeordnetes Streuen vor sich geht, kann kein Spiegel sein.
 
 </dd> <dt>
 
-**Relativeingedexofrebruchteil**
+**RelativeIndexOfRefraction**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der relative Index der abbrechungs Rate ist das Verhältnis zwischen zwei absoluten Indizes der abbrechungs Rate. Ein Index der abbrechungs Rate ist das Verhältnis des Sinus des Winkels in den Sinus des Winkels der abbrechungs Spitze.
+Der relative Index der Refraction ist das Verhältnis zwischen zwei absoluten Indizes der Refraction. Ein Index der Refraktion ist das Verhältnis des Sinus des Winkels des Verhältnisses zum Sinus des Refraktionswinkels.
 
 </dd> <dt>
 
-**Übernahme**
-</dt> <dd>
-
-Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
-
-</dd> <dd>
-
-Der Absorptionskoeffizienten ist ein Parameter für die volumerenderinggleichung, mit der die Licht Weitergabe auf einem teilnehmenden Medium modelliert wird
-
-</dd> <dt>
-
-**Reducedscattering**
+**Absorption**
 </dt> <dd>
 
 Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
 
 </dd> <dd>
 
-Der reduzierte Streuungs Koeffizienten ist ein Parameter für die volumerenderinggleichung, die zum Modellieren der Licht Weitergabe in einem teilnehmenden Medium verwendet wird.
+Der Lichtkoeffizient ist ein Parameter für die Volumenrenderinggleichung, die verwendet wird, um die Lichtpropagierung in einem beteiligten Medium zu modellieren.
+
+</dd> <dt>
+
+**ReducedScattering**
+</dt> <dd>
+
+Typ: **[ **D3DCOLORVALUE**](d3dcolorvalue.md)**
+
+</dd> <dd>
+
+Der reduzierte Punktzahlkoeffizient ist ein Parameter für die Volumerenderinggleichung, die verwendet wird, um die Lichtweitergabe in einem beteiligten Medium zu modellieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nicht--spektrale Szenen verwenden den roten Kanal aus den Materialien anstelle des Leuchtkraft Werts.
+Nicht-Szenen verwenden den roten Kanal aus den Materialien anstelle des Leuchtdichtewerts.
 
-Weitere Informationen zu PRT finden Sie unter:
+Weitere Informationen zum PRT finden Sie unter:
 
--   Jensen, Henrik wann, et al. SIGGRAPH-Prozess: ein praktisches Modell für den subsurface Light-Transport, 2001.
+-   Siggraph Proceedings: A Practical Model for Subsurface Light Transport, 2001. (Siggraph Proceedings: A Practical Model for Subsurface Light Transport, 2001)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -124,7 +124,7 @@ Weitere Informationen zu PRT finden Sie unter:
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 

@@ -1,37 +1,37 @@
 ---
-title: Vorgehensweise beim unterstützen von Rückruf Elementen
-description: In diesem Thema wird veranschaulicht, wie Rückruf Elemente unterstützt werden.
+title: Unterstützen von Rückrufelementen
+description: In diesem Thema wird veranschaulicht, wie Rückrufelemente unterstützt werden.
 ms.assetid: BD32666F-9445-4871-AE21-5DC9F5FC9C1B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 056f64c086aeda94ccf928d93ae2c5db5e2187a4
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: df078b8be8cd02f56592a74de4242b515974a740df01d3cd4bd36074d5f8e022
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968220"
 ---
-# <a name="how-to-support-callback-items"></a>Vorgehensweise beim unterstützen von Rückruf Elementen
+# <a name="how-to-support-callback-items"></a>Unterstützen von Rückrufelementen
 
-In diesem Thema wird veranschaulicht, wie Rückruf Elemente unterstützt werden.
+In diesem Thema wird veranschaulicht, wie Rückrufelemente unterstützt werden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Wenn die Anwendung Rückruf Elemente in einem ComboBoxEx-Steuerelement verwendet, muss Sie darauf vorbereitet sein, den [cben \_ getdispinfo](cben-getdispinfo.md) -Benachrichtigungs Code zu verarbeiten. Ein ComboBoxEx-Steuerelement sendet diese Benachrichtigung, wenn der Besitzer bestimmte Element Informationen bereitstellen muss. Weitere Informationen zu Rückruf Elementen finden Sie unter [Callback Items (Rückruf](comboboxex-controls.md)Elemente).
+Wenn Ihre Anwendung Rückrufelemente in einem ComboBoxEx-Steuerelement verwenden soll, muss sie für die Handhabung des [CBEN \_ GETDISPINFO-Benachrichtigungscodes](cben-getdispinfo.md) vorbereitet sein. Ein ComboBoxEx-Steuerelement sendet diese Benachrichtigung, wenn der Besitzer bestimmte Elementinformationen bereitstellen muss. Weitere Informationen zu Rückrufelementen finden Sie unter [Rückrufelemente.](comboboxex-controls.md)
 
-Die folgende Anwendungs definierte Funktion verarbeitet [cben \_ getdispinfo](cben-getdispinfo.md) durch Bereitstellen von Attributen für ein bestimmtes Element. Beachten Sie, dass der **Mask** -Member der eingehenden [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur auf cbeif \_ di \_ SetItem festgelegt wird. Wenn Sie **Mask** auf diesen Wert festlegen, behält das Steuerelement die Element Informationen bei, sodass die Informationen nicht erneut angefordert werden müssen.
+Die folgende anwendungsdefinierte Funktion verarbeitet [CBEN \_ GETDISPINFO,](cben-getdispinfo.md) indem Attribute für ein bestimmtes Element angegeben werden. Beachten Sie, dass der **Mask-Member** der eingehenden [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) auf CBEIF \_ DI \_ SETITEM festgelegt wird. Durch **Festlegen der** Maske auf diesen Wert behält das Steuerelement die Elementinformationen bei, sodass es die Informationen nicht erneut anfordern muss.
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -70,7 +70,7 @@ void WINAPI DoItemCallback(PNMCOMBOBOXEX pNMCBex)
 [Informationen zu ComboBoxEx-Steuerelementen](comboboxex-controls.md)
 </dt> <dt>
 
-[ComboBoxEx-Steuerelement Verweis](bumper-comboboxex-comboboxex-control-reference.md)
+[ComboBoxEx-Steuerelementreferenz](bumper-comboboxex-comboboxex-control-reference.md)
 </dt> <dt>
 
 [Verwenden von ComboBoxEx-Steuerelementen](/windows/desktop/Controls/using-comboboxex)

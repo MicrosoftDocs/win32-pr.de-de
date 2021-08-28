@@ -1,51 +1,51 @@
 ### YamlMime:FAQ
 metadata:
-  description: Im Folgenden finden Sie häufig gestellte Fragen (FAQ) zur Entwicklung für die Komponenten der Tablet PC-Plattform, die vom Windows Vista SDK installiert werden.
+  description: Im Folgenden finden Sie häufig gestellte Fragen (FAQ) zur Entwicklung für die Tablet PC-Plattformkomponenten, die vom Windows Vista SDK installiert werden.
   ms.assetid: eb349493-a2b2-4b58-bcbc-ee09953c8dc8
   title: Häufig gestellte Fragen (Tablet PC)
   ms.topic: article
   ms.date: 05/31/2018
-  ms.openlocfilehash: 4d91b7ab4da91e5ab97199c787ae2ab599024360a0075068f27458889c2d1b56
-  ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+  ms.openlocfilehash: 8241efbe2207dbeb6d225001f0b8fdf55f03e20f
+  ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/11/2021
-  ms.locfileid: "119940810"
+  ms.lasthandoff: 08/26/2021
+  ms.locfileid: "122884707"
 title: Häufig gestellte Fragen zur Entwicklung für die Tablet PC-Plattform
-summary: Im Folgenden finden Sie häufig gestellte Fragen (FAQ) zur Entwicklung für die Komponenten der Tablet PC-Plattform, die vom Windows Vista SDK installiert werden.
+summary: Im Folgenden finden Sie häufig gestellte Fragen (FAQ) zur Entwicklung für die Tablet PC-Plattformkomponenten, die vom Windows Vista SDK installiert werden.
 sections:
 - name: Wird ignoriert.
   questions:
   - question: >
-      Kann ich die Ink-APIs oder Steuerelemente auf einer Webseite verwenden?
+      Kann ich die Ink-APIs oder -Steuerelemente auf einer Webseite verwenden?
     answer: >
-      Ja. Die verwaltete Tablet PC-Bibliothek unterstützt teilweise vertrauenswürdige Umgebungen, nämlich die Ausführung verwalteter Assemblys über Webseiten.
+      Ja. Die verwaltete Tablet PC-Bibliothek unterstützt teilweise vertrauenswürdige Umgebungen, nämlich die Ausführung verwalteter Assemblys von Webseiten.
 
 
-      Es gibt auch Unterstützung für die Browserbereitstellung von Anwendungen, die Windows Presentation Foundation.
+      Es gibt auch Unterstützung für die Browserbereitstellung von Anwendungen, die Windows Presentation Foundation verwenden.
   - question: >
-      Ben ben wir einen Tablet PC zum Entwickeln von Tablet PC-Anwendungen?
+      Benötig ich einen Tablet PC zum Entwickeln von Tablet PC-Anwendungen?
     answer: >
-      Nein, die vom Windows SDK installierten Komponenten der Tablet PC-Plattform enthalten die Erweiterungen und Hilfsprogramme, die zum Entwickeln von Software für den Tablet PC auf einem Desktop- oder Laptopcomputer erforderlich sind. Sie können eine Maus oder ein externes Tablet für Stift- und Handschrifteingaben verwenden.
+      Nein, die vom Windows SDK installierten Tablet PC-Plattformkomponenten enthalten die Erweiterungen und Hilfsprogramme, die zum Entwickeln von Software für den Tablet PC auf einem Desktop- oder Laptopcomputer erforderlich sind. Sie können eine Maus oder ein externes Tablet für Stift- und Handschrifteingaben verwenden.
 
 
-      Die vom Windows SDK installierten Komponenten der Tablet PC-Plattform können auf Windows XP Professional oder Windows Server 2003 installiert werden. Für Ihre Anwendungen sind jedoch weniger Funktionen verfügbar. Auf diesen Plattformen kann Ihre Anwendung [**InkCollector-**](inkcollector-class.md) und [**InkOverlay-Objekte**](inkoverlay-class.md) erfassen und testen und debuggen.
+      Die vom Windows SDK installierten Tablet PC-Plattformkomponenten können auf Windows XP Professional oder Windows Server 2003 installiert werden, aber es sind weniger Funktionen für Ihre Anwendungen verfügbar. Auf diesen Plattformen kann Ihre Anwendung Ink mit den [**InkCollector-**](inkcollector-class.md) und [**InkOverlay-Objekten**](inkoverlay-class.md) erfassen und getestet und debuggen.
 
 
-      Außerdem können die [Steuerelemente InkEdit](inkedit-control-reference.md) und [InkPicture](inkpicture-control-reference.md) nur dann Ink auf diesen Betriebssystemen erfassen, wenn die Komponenten der Tablet PC-Plattform aus dem Windows SDK (oder einer älteren Version des Tablet PC Development Kit) installiert wurden. Sie erfassen keine Ink-In-Anwendungen, die an Nicht-Tablet-Computer verteilt werden, ohne dass die Plattformkomponenten installiert sind.
+      Darüber hinaus können die Steuerelemente [InkEdit](inkedit-control-reference.md) und [InkPicture](inkpicture-control-reference.md) nur dann Inkk auf diesen Betriebssystemen sammeln, wenn die Tablet PC-Plattformkomponenten aus dem Windows SDK (oder einer älteren Version des Tablet PC Development Kit) installiert wurden. Sie sammeln keine Ink-Dateien in Anwendungen, die ohne installierte Plattformkomponenten auf Nicht-Tablet-Computer verteilt werden.
   - question: >
-      Muss ich eine spezielle Version von Windows für die Handschrifterkennung ausführen?
+      Muss ich für die Handschrifterkennung eine spezielle Version von Windows ausführen?
     answer: >
-      Nein. Während nur Windows XP Tablet PC Edition und bestimmte Versionen von Windows Vista Handschrifterkennungen enthalten, können Sie das [Windows XP Tablet PC Edition 2005 Recognizer Pack]( https://www.microsoft.com/downloads/details.aspx?FamilyId=080184DD-5E92-4464-B907-10762E9F918B&amp;displaylang=en) herunterladen und auf Windows XP Professional oder Windows Server 2003 nur zu Entwicklungszwecken installieren. Sie dürfen die Recognizer nicht mit Ihrer Anwendung neu verteilen.
+      Nein. Obwohl nur Windows XP Tablet PC Edition und bestimmte Versionen von Windows Vista Handschrifterkennungen enthalten, können Sie das [Windows XP Tablet PC Edition 2005 Recognizer Pack]( https://www.microsoft.com/downloads/details.aspx?FamilyId=080184DD-5E92-4464-B907-10762E9F918B&amp;displaylang=en) herunterladen und es nur zu Entwicklungszwecken auf Windows XP Professional oder Windows Server 2003 installieren. Sie dürfen die Erkennungen nicht mit Ihrer Anwendung neu verteilen.
   - question: >
       Was ist der Unterschied zwischen Windows Vista- und Tablet PC-Technologie?
     answer: >
-      Tablet-PCs führen das Windows Vista-Betriebssystem aus, das alle Funktionen von Windows Vista sowie zusätzliche Features speziell für den Tablet-PC bietet. Mithilfe dieser Features der Tablet PC-Technologie können Benutzer Windows- und Windows-Anwendungen ausführen, indem sie einen Stift verwenden, Dokumente mit Anmerkungen kommentieren und handschriftliche Dokumente mithilfe von digital ink erstellen. Die Tablet PC-Technologie ist in den meisten Versionen von Windows Vista verfügbar, und wenn Tablet PC-Hardware auf einem Computer verfügbar ist, funktionieren die Features einfach.
+      Tablet-PCs führen das Betriebssystem Windows Vista aus und bieten alle Funktionen von Windows Vista sowie zusätzliche Spezifische Features für den Tablet-PC. Diese Features der Tablet PC-Technologie ermöglichen es Benutzern, Windows und Windows Anwendungen auszuführen, indem sie einen Stift verwenden, Dokumente kommentieren und handschriftliche Dokumente mithilfe von digital ink erstellen. Tablet PC-Technologie ist in den meisten Versionen von Windows Vista verfügbar, und wenn Tablet PC-Hardware auf einem Computer verfügbar ist, funktionieren die Features einfach.
 
 
-      Für frühere Versionen von Windows Betriebssystemen, die keine nativ unterstützten Ink-Steuerelemente, können Sie die Tablet PC-Ink-Steuerelemente neu verteilen und verwenden, um auf einem Tablet PC gezeichnete Ink-Daten zu sehen.
+      Für frühere Versionen von Windows Betriebssystemen, die keine nativ unterstützten Ink-Steuerelemente verwenden, können Sie die Tablet PC-Ink-Steuerelemente neu verteilen und verwenden, um auf einem Tablet PC gezeichnete Ink anzuzeigen.
   - question: >
-      Worin besteht der Unterschied zwischen Windows XP Tablet PC Edition und Windows XP Tablet PC Edition 2005?
+      Was ist der Unterschied zwischen Windows XP Tablet PC Edition und Windows XP Tablet PC Edition 2005?
     answer: >
       Windows XP Tablet PC Edition 2005 ist eine aktualisierte Version von Windows XP Tablet PC Edition.
   - question: >
@@ -53,20 +53,20 @@ sections:
     answer: >
       Microsoft Windows Anwendungen, die auf einem Windows XP-Desktop- oder Laptopcomputer mit vergleichbarer Hardware ausgeführt werden, können ohne Änderungen auf einem Tablet-PC ausgeführt werden.
   - question: >
-      Ich weiß, dass ich keine Änderungen an meiner Anwendung vornehmen muss, aber es ist schwierig, sie mit einem Stift und einer Spracherkennung zu verwenden. Wie kann ich meine Anwendung für einen Tablet-PC optimieren?
+      Ich weiß, dass ich keine Änderungen an meiner Anwendung vornehmen muss, aber es ist schwierig, sie mit einem Stift und einer Sprache zu verwenden. Was kann ich tun, um meine Anwendung für einen Tablet-PC zu optimieren?
     answer: >
-      Die API- und Ink-Steuerelemente der Tablet PC-Plattformkomponenten können verwendet werden, um Benutzeroberflächen zu erstellen, die besser für Stift- und Handschrifteingaben geeignet sind. Weitere Informationen zu bestimmten Möglichkeiten zur Verbesserung Ihrer Anwendung finden Sie unter Benutzerfreundlichkeitsrichtlinien für mobile [PCs für Entwickler.](/previous-versions//dd356056(v=vs.85))
+      Die API- und Freihandsteuerelemente der Tablet PC-Plattformkomponenten können verwendet werden, um Benutzeroberflächen zu erstellen, die besser für Stift- und Handschrifteingaben geeignet sind. Weitere Informationen zu bestimmten Möglichkeiten, wie Sie Ihre Anwendung verbessern können, finden Sie unter Richtlinien für die [Benutzerfreundlichkeit mobiler PCs für Entwickler.](/previous-versions//dd356056(v=vs.85))
   - question: >
       Welche Programmiersprachen werden vom Tablet unterstützt?
     answer: >
-      Die Tablet PC-Technologie in Windows Vista unterstützt COM (C++) und verwaltete Bibliotheken (die Suite Visual Studio .NET-Sprachen).
+      Die Tablet PC-Technologie in Windows Vista unterstützt COM (C++) und verwaltete Bibliotheken (die Suite von Visual Studio .NET-Sprachen).
 
 
       Die Tablet PC-Technologie unterstützt auch Windows Presentation Foundation (WPF).
   - question: >
       Habe ich Beispielcode, der die Funktionen der Tablet-Plattform veranschaulicht?
     answer: >
-      Ja. Beispielcode für COM und ausgewählte verwaltete Sprachen ist in den Komponenten der Tablet PC-Plattform enthalten, die vom Windows Platform SDK installiert werden.
+      Ja, Beispielcode für COM und ausgewählte verwaltete Sprachen ist in den Tablet PC-Plattformkomponenten enthalten, die vom Windows Platform SDK installiert werden.
 
 
       Verfügbare Beispielanwendungen finden Sie unter:
@@ -76,37 +76,37 @@ sections:
 
       - [Digital Ink Samples, Windows Presentation Foundation (WPF)](/previous-versions/dotnet/netframework-3.0/aa972145(v=vs.85))
 
-      - <systemdrive>: \\ Programme \\ Microsoft SDKs Windows \\ \\ v6.0 \\ Samples \\ TabletPC
+      - &lt;&gt;systemdrive: \\ Programme Microsoft \\ SDKs Windows \\ \\ v6.0 \\ Samples \\ TabletPC
   - question: >
-      Für welche Basisebene sollte ich Tablet-Hardware entwickeln?
+      Was ist die Basisebene der Tablet-Hardware, für die ich entwickeln sollte?
     answer: >
       Im Allgemeinen sollten Sie für ein Windows Vista-kompatibles, legacyfreies System entwerfen.
   - question: >
-      Welche Richtlinien für die Benutzeroberfläche können Sie für Tablet-Anwendungen bereitstellen?
+      Welche Benutzeroberflächenrichtlinien können Sie für Tablet-Anwendungen bereitstellen?
     answer: >
-      Probleme von der Ausrichtung des Dropdownmenüs auf bildschirm-/digitizer-Parameter werden im Abschnitt Richtlinien für die Benutzerfreundlichkeit mobiler [PCs](/previous-versions//dd356056(v=vs.85)) für Entwickler im Abschnitt Mobiler PC des Windows SDK beschrieben.
+      Probleme von der Ausrichtung des Dropdownmenüs bis hin zu Bildschirm-/Digitizer-Parametern werden in den Richtlinien für die [Benutzerfreundlichkeit mobiler PCs für Entwickler](/previous-versions//dd356056(v=vs.85)) im Abschnitt Mobile PC des Windows SDK beschrieben.
   - question: >
-      Schließen Sie Handschriftgesten auf Systemebene für häufig verwendete Tastatureingaben ein? Kann ich meine eigenen Gesten für die Verwendung erstellen, wenn eine Anwendung ausgeführt wird oder den Fokus besitzt?
+      Schließen Sie Handschriftgesten auf Systemebene für häufig verwendete Tastatureingaben ein? Kann ich eigene Gesten für die Verwendung erstellen, wenn eine Anwendung ausgeführt wird oder den Fokus besitzt?
     answer: >
-      Ja, wir schließen eine Reihe von Gesten für Mausereignisse ein. Darüber hinaus können Sie Gesten für die Verwendung in Ihrer Anwendung erstellen. Weitere Informationen zu Gesten finden Sie unter [Verwenden von Gesten.](using-gestures.md)
+      Ja, wir fügen eine Reihe von Gesten für Mausereignisse ein. Darüber hinaus können Sie Gesten für die Verwendung in Ihrer Anwendung erstellen. Weitere Informationen zu Gesten finden Sie unter [Verwenden von Gesten.](using-gestures.md)
   - question: >
       Wie kann ich feststellen, ob meine Anwendung auf einem Tablet ausgeführt wird?
     answer: >
-      Verwenden Sie Windows GetSystemMetricsAPI, und übergeben Sie SM \_ TABLETPC als Wert des Indexes. SM \_ TABLETPC ist in Winuser.h definiert. Der Wert von SM \_ TABLETPC ist 86.
+      Verwenden Sie die Windows GetSystemMetricsAPI, und übergeben Sie SM \_ TABLETPC als Wert des Indexes. SM \_ TABLETPC ist in Winuser.h definiert. Der Wert von SM \_ TABLETPC ist 86.
 
 
-      Für die Webentwicklung sollten Sie die USER \_ AGENT STRING-Umgebungsvariable \_ lesen. Sie können auf diese Request.ServerVariables-Auflistung zugreifen.
+      Für die Webentwicklung sollten Sie die \_ Umgebungsvariable USER AGENT \_ STRING lesen. Sie können auf diese Request.ServerVariables-Sammlung zugreifen.
 
 
-      Weitere Informationen zur Verwendung von GetSystemMetrics auf Tablet-PCs, auf denen entweder Windows Vista oder Windows XP Tablet PC Edition ausgeführt wird, finden Sie unter Bestimmen, ob ein PC ein [Tablet PC ist.](determining-whether-a-pc-is-a-tablet-pc.md)
+      Ausführliche Informationen zur Verwendung von GetSystemMetrics auf Tablet-PCs, auf denen entweder Windows Vista oder Windows XP Tablet PC Edition ausgeführt wird, finden Sie unter Bestimmen, ob es sich bei einem PC um [einen Tablet PC handelt.](determining-whether-a-pc-is-a-tablet-pc.md)
   - question: >
-      Wie kann ich ermitteln, ob Komponenten der Tablet-Plattform verfügbar sind?
-    answer: "Bestimmte Teile der Tablet PC-Plattform können auf Nicht-Tablet-Versionen der Betriebssysteme Windows XP Professional, Windows Server 2003 und Windows 2000 installiert werden.\n\nDie richtige Methode, um zu bestimmen, ob eine Komponente der API installiert ist, besteht im Versuch, eine Instanz eines Objekts oder Steuerelements zu erstellen und zu überprüfen, ob sie vorhanden ist, bevor Sie versuchen, sie zu verwenden.\n\nUm beispielsweise zu ermitteln, ob das [**InkCollector-Objekt**](inkcollector-class.md) verfügbar ist, versuchen Sie, es mit [**CoCreateInstance zu erstellen.**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)\n\n```C++\nIInkCollector* pIInkCollector = NULL;\nHRESULT hr = CoCreateInstance(CLSID_InkCollector,\n NULL, CLSCTX_INPROC_SERVER, \n IID_IInkCollector,\n (void **)&pIInkCollector);\nif (SUCCEEDED(hr)) \n{ \n  /* InkCollector is usable. */ \n} else \n{\n  /* InkCollector unavailable. */\n}\n```\n"
+      Wie kann ich feststellen, ob Tablet-Plattformkomponenten verfügbar sind?
+    answer: "Bestimmte Teile der Tablet PC-Plattform können auf Nicht-Tablet-Versionen der Betriebssysteme Windows XP Professional, Windows Server 2003 und Windows 2000 installiert werden.\n\nDie richtige Methode, um zu bestimmen, ob eine Komponente der API installiert ist, besteht darin, eine Instanz eines Objekts oder Steuerelements zu erstellen und zu überprüfen, ob es vorhanden ist, bevor versucht wird, es zu verwenden.\n\nUm beispielsweise zu bestimmen, ob das [**InkCollector-Objekt**](inkcollector-class.md) verfügbar ist, versuchen Sie, es mit [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)zu erstellen.\n\n```C++\nIInkCollector* pIInkCollector = NULL;\nHRESULT hr = CoCreateInstance(CLSID_InkCollector,\n NULL, CLSCTX_INPROC_SERVER, \n IID_IInkCollector,\n (void **)&pIInkCollector);\nif (SUCCEEDED(hr)) \n{ \n  /* InkCollector is usable. */ \n} else \n{\n  /* InkCollector unavailable. */\n}\n```\n"
   - question: >
-      Gewusst wie sie den Tablet Input Service auf Server-SKUs ausführen?
+      Gewusst wie den Tablet-Eingabedienst auf Server-SKUs ausführen?
     answer: >
-      TabletInputService ist so konzipiert, dass es nicht automatisch in Server-SKUs ausgeführt wird, wenn das Clientpaket installiert wird. Client Pack installiert alle Komponenten auf der Plattform, damit jede der Tablet-Clientanwendungen auch auf einem Server ausgeführt werden kann. Der Tablet-Eingabedienst lauselt auf PnP-Benachrichtigungen, dass ein externer Digitizer angeschlossen ist. Verwenden Sie das Systemkonfigurations-Hilfsprogramm, um den Tablet-Eingabedienst auf einem Server zu aktivieren.
+      TabletInputService ist nicht für die automatische Ausführung in Server-SKUs konzipiert, wenn das Clientpaket installiert ist. Das Client pack installiert alle Komponenten auf der Plattform, sodass alle Tablet-Clientanwendungen auch auf einem Server ausgeführt werden können. Der Tablet-Eingabedienst lauscht auf PnP-Benachrichtigungen, dass ein externer Digitizer angeschlossen ist. Verwenden Sie das Systemkonfigurationshilfsprogramm, um den Tablet-Eingabedienst auf einem Server zu aktivieren.
 
 
-      Wählen Sie **im Menü Start** die Option Ausführen **aus.** Geben Sie "msconfig" ein, und drücken Sie die EINGABETASTE. Wählen Sie **die Registerkarte Dienste** aus, suchen Sie nach den Diensten mit dem Namen "HID-Eingabedienst", aktivieren Sie das Kontrollkästchen daneben, und klicken Sie dann auf **Übernehmen.** Schließen Sie das Hilfsprogramm.
-additionalContent: "\n## <a name=\"more-faqs-and-other-resources\"></a>Weitere häufig gestellte Fragen und andere Ressourcen\n\n- [Microsoft-Entwickler Center](https://developer.microsoft.com)\n- [Core Tablet PC Reference](./core-reference---tablet-pc-com-library.md)"
+      Wählen Sie im **Menü Start** die Option **Ausführen** aus. Geben Sie "msconfig" ein, und drücken Sie die EINGABETASTE. Wählen Sie die Registerkarte **Dienste** aus, suchen Sie nach den Diensten mit dem Namen "HID-Eingabedienst", aktivieren Sie das Kontrollkästchen daneben, und klicken Sie dann auf **Übernehmen.** Schließen Sie das Hilfsprogramm.
+additionalContent: "\n## <a name=\"more-faqs-and-other-resources\"></a>Weitere häufig gestellte Fragen und andere Ressourcen\n\n- [Microsoft-Entwickler Center](https://developer.microsoft.com)\n- [Pc-Referenz zu Core Tablet](./core-reference---tablet-pc-com-library.md)"

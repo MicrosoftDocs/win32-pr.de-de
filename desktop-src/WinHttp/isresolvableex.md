@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob eine angegebene Host Zeichenfolge in eine IP-Adresse aufgelöst werden kann.
+description: Bestimmt, ob eine bestimmte Hostzeichenfolge in eine IP-Adresse aufgelöst werden kann.
 ms.assetid: 83e52ca7-2ea0-419d-b09d-9301c1982b98
-title: isresolvableex-Funktion
+title: isResolvableEx-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1172aaed93a9fc6cede5ae5393c5dd430613a466
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 580f5400b59a1142de90843e2be26790aef25a9311f7aa6f732aebeef606c701
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899170"
 ---
-# <a name="isresolvableex-function"></a>isresolvableex-Funktion
+# <a name="isresolvableex-function"></a>isResolvableEx-Funktion
 
-Bestimmt, ob eine angegebene Host Zeichenfolge in eine IP-Adresse aufgelöst werden kann.
+Bestimmt, ob eine bestimmte Hostzeichenfolge in eine IP-Adresse aufgelöst werden kann.
 
 ## <a name="parameters"></a>Parameter
 
@@ -30,13 +30,13 @@ Bestimmt, ob eine angegebene Host Zeichenfolge in eine IP-Adresse aufgelöst wer
 *host* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den HTTP-Host enthält, der für FindProxyForURL bereitgestellt wird.
+Eine Zeichenfolge, die den HTTP-Host enthält, der für FindProxyForUrl bereitgestellt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn der Host in eine IPv4-oder IPv6-Adresse aufgelöst werden kann. andernfalls false.
+TRUE, wenn der Host in eine IPv4- oder IPv6-Adresse aufgelöst werden kann; andernfalls FALSE.
 
 ## <a name="examples"></a>Beispiele
 
@@ -54,10 +54,10 @@ isResolvableEx(host);
 
 <dl> <dt>
 
-[IPv6-abhängige proxyhilfsobjekts-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
+[IPv6-fähige Proxyhilfs-API-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
 </dt> <dt>
 
-[IPv6-Erweiterungen für das Auto-config-Datei Format des Navigators](ipv6-extensions-to-navigator-auto-config-file-format.md)
+[IPv6-Erweiterungen für das Navigator-Dateiformat für die automatische Konfiguration](ipv6-extensions-to-navigator-auto-config-file-format.md)
 </dt> </dl>
 
  

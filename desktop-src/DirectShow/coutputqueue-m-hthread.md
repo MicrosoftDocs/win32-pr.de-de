@@ -1,7 +1,7 @@
 ---
-description: Handle für den Arbeits Thread.
+description: Handle für den Arbeitsthread.
 ms.assetid: 29eeb9b0-2fbc-4f31-a4ef-97b13f374f4f
-title: 'Coutputqueue:: m_hThread-Member (outputq. h)'
+title: COutputQueue::m_hThread Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a041982c2bc83bc650c21252851cf07340e014af
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1148c7959d3ebaa35fe621c49d06928c9fc69a815633d7f291a38c32484acb88
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087190"
 ---
-# <a name="coutputqueuem_hthread-member"></a>Coutputqueue:: m- \_ hThread-Member
+# <a name="coutputqueuem_hthread-member"></a>COutputQueue::m \_ hThread-Member
 
-Handle für den Arbeits Thread.
+Handle für den Arbeitsthread.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ HANDLE m_hThread;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ HANDLE m_hThread;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

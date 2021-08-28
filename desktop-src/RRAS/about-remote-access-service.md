@@ -1,45 +1,45 @@
 ---
 title: Informationen zum RAS-Dienst
-description: RAS-Dienst (RAS) bietet Remote Zugriffs Funktionen für Client Anwendungen auf Computern, auf denen Windows ausgeführt wird.
+description: Der Ras-Dienst (RAS) bietet Remotezugriffsfunktionen für Clientanwendungen auf Computern, auf denen Windows.
 ms.assetid: 5016fa0b-72eb-484e-b8d7-af9de2e25689
 keywords:
-- RAS-Dienst (RAS), beschrieben
+- RAS des Ras-Diensts ,beschrieben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a86b173f4ff9f23fffa2ff532e4f67a0ff5a7402
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0263e5168bf1aac990f94850f26b7be7abd71c4730bea691d18b11c00373f48e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030840"
 ---
 # <a name="about-remote-access-service"></a>Informationen zum RAS-Dienst
 
-RAS-Dienst (RAS) bietet Remote Zugriffs Funktionen für Client Anwendungen auf Computern, auf denen Windows ausgeführt wird.
+Der Ras-Dienst (RAS) bietet Remotezugriffsfunktionen für Clientanwendungen auf Computern, auf denen Windows.
 
-RAS-Anwendungen können folgende Aufgaben ausführen:
+RAS-Anwendungen können die folgenden Aufgaben ausführen:
 
--   Anzeigen der allgemeinen RAS-Dialogfelder. Dies schließt das Haupt Dialogfeld für das **Einwählnetzwerk** , das Eigenschaften Blatt für das **Einwähl Netzwerk Monitor** und andere Dialogfelder zum Erstellen, bearbeiten, kopieren oder untersuchen eines Telefonbucheintrags ein.
--   Starten und Beenden eines RAS-Verbindungs Vorgangs mithilfe der allgemeinen Dialogfelder oder der Low-Level-Wähl Funktionen.
--   Erstellen, bearbeiten oder Kopieren von Telefonbucheinträgen mithilfe der allgemeinen Dialogfelder oder der Low-Level-Telefonbuchfunktionen.
--   Arbeiten Sie mit Einträgen in der RAS-Datenbank für die automatische Wähl Zuordnung. Diese Datenbank ordnet Netzwerkadressen dem Telefonbucheintrag zu, der eine Verbindung mit der Adresse herstellen kann.
--   Hier erhalten Sie RAS-Informationen, einschließlich Informationen über vorhandene RAS-Verbindungen, Informationen zu den auf dem lokalen Computer konfigurierten RAS-fähigen Geräten sowie Benachrichtigungen, wenn eine RAS-Verbindung beginnt oder endet.
+-   Zeigt eines der allgemeinen RAS-Dialogfelder an. Dies schließt das Hauptdialogfeld **DFÜ-Netzwerk** Monitor, das **DFÜ-Netzwerk Monitor-Eigenschaftenblatt** und andere Dialogfelder zum Erstellen, Bearbeiten, Kopieren oder Auswählen eines Telefonbucheintrags ein.
+-   Starten und beenden Sie einen RAS-Verbindungsvorgang mithilfe der allgemeinen Dialogfelder oder der Wählfunktionen auf niedriger Ebene.
+-   Erstellen, Bearbeiten oder Kopieren von Telefonbucheinträgen mithilfe der allgemeinen Dialogfelder oder der Telefonbuchfunktionen auf niedriger Ebene.
+-   Arbeiten sie mit Einträgen in der automatischen RAS-Zuordnungsdatenbank. Diese Datenbank ordnet Netzwerkadressen dem Telefonbucheintrag zu, der eine Verbindung mit der Adresse herstellen kann.
+-   Erhalten Sie RAS-Informationen, einschließlich Informationen zu vorhandenen RAS-Verbindungen, Informationen zu den RAS-fähigen Geräten, die auf dem lokalen Computer konfiguriert sind, und Benachrichtigungen, wenn eine RAS-Verbindung beginnt oder endet.
 
-Windows NT 4,0 bietet auch Unterstützung für RAS-Serververwaltung und Erweiterungen von Drittanbietern für die Sicherheit und Verbindungs Verwaltung von RAS-Servern. Windows 95 bietet keine Unterstützung für RAS-Server.
+Windows NT 4.0 bietet auch Unterstützung für die RAS-Serververwaltung und für Drittanbietererweiterungen der RAS-Serversicherheit und -Verbindungsverwaltung. Windows 95 bietet keine RAS-Serverunterstützung.
 
 In diesem Abschnitt werden die folgenden Themen beschrieben:
 
--   [Allgemeine RAS-Dialog Felder](ras-common-dialog-boxes.md)
--   [RAS-Verbindungs Vorgänge](ras-connection-operations.md)
--   [RAS-Telefonbücher](ras-phone-books.md)
--   [RAS-AutoDial](ras-autodial.md)
+-   [Allgemeine RAS-Dialogfelder](ras-common-dialog-boxes.md)
+-   [RAS-Verbindungsvorgänge](ras-connection-operations.md)
+-   [RAS-Telefon Books](ras-phone-books.md)
+-   [RAS AutoDial](ras-autodial.md)
 -   [RAS-Konfiguration und Verbindungsinformationen](ras-configuration-and-connection-information.md)
--   [RAS-Server Verwaltung](ras-server-administration.md)
--   [Unterstützung für RAS-Sicherheits Host](ras-security-host-support.md)
+-   [RAS-Serververwaltung](ras-server-administration.md)
+-   [RAS-Sicherheitshostunterstützung](ras-security-host-support.md)
 
- 
+ 
 
- 
+ 
 
 
 

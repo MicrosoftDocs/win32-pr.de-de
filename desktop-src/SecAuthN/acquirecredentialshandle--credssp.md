@@ -1,22 +1,22 @@
 ---
-description: Die AcquireCredentialsHandle (kredssp)-Funktion Ruft ein Handle für bereits vorhandene Anmelde Informationen eines Sicherheits Prinzipals ab.
+description: Die Funktion AcquireCredentialsHandle (CredSSP) erhält ein Handle für bereits vorhandene Anmeldeinformationen eines Sicherheitsprinzipals.
 ms.assetid: 3b73decf-75d4-4bc4-b7ca-5f16aaadff29
 title: AcquireCredentialsHandle (CredSSP)-Funktion
 ms.topic: reference
 ms.date: 07/25/2019
-ms.openlocfilehash: 0dbece18bc7a7de8ec35764c9879380e29292e92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22ab5b4f9696e266e6d07b3085cafe10384e8b6b266c9e20672021fa04e97998
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101480"
 ---
 # <a name="acquirecredentialshandle-credssp-function"></a>AcquireCredentialsHandle (CredSSP)-Funktion
 
-Die **AcquireCredentialsHandle (kredssp)** -Funktion Ruft ein Handle für bereits vorhandene Anmelde Informationen eines Sicherheits Prinzipals ab. Dieses Handle ist für die Funktionen [**InitializeSecurityContext (**](initializesecuritycontext--credssp.md) Auflistungs Kontext) und [**accepted (kredssp)**](acceptsecuritycontext--credssp.md) erforderlich. Hierbei kann es sich um bereits vorhandene *Anmelde* Informationen handeln, die über eine System Anmeldung eingerichtet werden, die hier nicht beschrieben wird, oder der Aufrufer kann Alternative Anmelde Informationen bereitstellen.
+Die **Funktion AcquireCredentialsHandle (CredSSP)** erhält ein Handle für bereits vorhandene Anmeldeinformationen eines Sicherheitsprinzipals. Dieses Handle ist für die [**Funktionen InitializeSecurityContext (CredSSP) und**](initializesecuritycontext--credssp.md) [**AcceptSecurityContext (CredSSP)**](acceptsecuritycontext--credssp.md) erforderlich. Dies können entweder bereits vorhandene Anmeldeinformationen *sein,* die über eine Systemanmeldung eingerichtet werden, die hier nicht beschrieben wird, oder der Aufrufer kann alternative Anmeldeinformationen bereitstellen.
 
 > [!Note]  
-> Dabei handelt es sich nicht um eine "beim Netzwerk anmelden", und es ist nicht beabsichtigt, Anmelde Informationen zu sammeln.
+> Dies ist keine "Anmeldung beim Netzwerk" und impliziert nicht das Sammeln von Anmeldeinformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,94 +36,94 @@ SECURITY_STATUS SEC_ENTRY AcquireCredentialsHandle(
 
 ## <a name="parameters"></a>Parameter
 
-*pszprincipal* \[ in, optional\]
+*pszPrincipal* \[ in, optional\]
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Prinzipals angibt, auf dessen Anmelde Informationen das Handle verweist.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Prinzipals angibt, auf dessen Anmeldeinformationen das Handle verweist.
 
 > [!Note]  
-> Wenn der Prozess, der das Handle anfordert, keinen Zugriff auf die Anmelde Informationen hat, gibt die Funktion einen Fehler zurück. Eine NULL-Zeichenfolge gibt an, dass der Prozess ein Handle für die Anmelde Informationen des Benutzers erfordert, in dessen Sicherheitskontext er ausgeführt wird.
+> Wenn der Prozess, der das Handle angibt, keinen Zugriff auf die Anmeldeinformationen hat, gibt die Funktion einen Fehler zurück. Eine NULL-Zeichenfolge gibt an, dass der Prozess ein Handle für die Anmeldeinformationen des Benutzers erfordert, unter dessen Sicherheitskontext er ausgeführt wird.
 
-*pszpackage* \[ in\]
+*pszPackage* \[ In\]
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Sicherheitspakets angibt, mit dem diese Anmelde Informationen verwendet werden. Dies ist ein Sicherheitspaket Name, der im **Name** -Member einer [**secpkginfo**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) -Struktur zurückgegeben wird, die von der [**enumeratesecuritypackages**](/windows/win32/api/sspi/nf-sspi-enumeratesecuritypackagesa) -Funktion zurückgegeben wird. Nach dem Einrichten eines Kontexts kann [**QueryContextAttributes (kredssp)**](querycontextattributes--credssp.md) aufgerufen werden, wobei *ulattribute* auf **secpkg \_ attr \_ Package \_ Info** festgelegt ist, um Informationen zum verwendeten Sicherheitspaket zurückzugeben.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Sicherheitspakets angibt, mit dem diese Anmeldeinformationen verwendet werden. Dies ist ein Sicherheitspaketname, der im **Name-Member** einer [**SecPkgInfo-Struktur**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) zurückgegeben wird, die von der [**EnumerateSecurityPackages-Funktion zurückgegeben**](/windows/win32/api/sspi/nf-sspi-enumeratesecuritypackagesa) wird. Nachdem ein Kontext eingerichtet wurde, kann [**QueryContextAttributes (CredSSP)**](querycontextattributes--credssp.md) aufgerufen werden, während *ulAttribute* auf **SECPKG \_ ATTR \_ PACKAGE \_ INFO** festgelegt ist, um Informationen über das verwendete Sicherheitspaket zurück zu geben.
 
-*"f"* \[ in\]
+*fCredentialUse* \[ In\]
 
-Ein Flag, das angibt, wie diese Anmelde Informationen verwendet werden. Dieser Parameter kann einen der folgenden Werte annehmen.
+Ein Flag, das angibt, wie diese Anmeldeinformationen verwendet werden. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert                                                                                                                                                                                                                                        | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **secpkg-in \_ \_ eingehender Richtung**<br/>0x1  | Überprüfen Sie die Anmelde Informationen eines eingehenden Servers. Eingehende Anmelde Informationen können mithilfe einer authentifizier enden Zertifizierungsstelle überprüft werden, wenn [**InitializeSecurityContext (aufzurufen)**](initializesecuritycontext--credssp.md) oder [**Accept-SecurityContext (kredssp)**](acceptsecuritycontext--credssp.md) aufgerufen wird. Wenn eine solche Autorität nicht verfügbar ist, schlägt die Funktion fehl und gibt **Sek. \_ E \_ keine \_ authentifizier Ende Zertifizierungs \_** Stelle zurück. Validierung ist Paket spezifisch |
-| **Outbound für secpkg-Datenverkehr \_ \_**<br/>0x0 | Ermöglicht die Vorbereitung eines ausgehenden Tokens durch lokale Client Anmelde Informationen. |
+| **SECPKG \_ CRED \_ EINGEHEND**<br/>0x1  | Überprüfen Sie die Anmeldeinformationen eines eingehenden Servers. Eingehende Anmeldeinformationen können mithilfe einer Authentifizierungsstelle überprüft werden, wenn [**InitializeSecurityContext (CredSSP)**](initializesecuritycontext--credssp.md) oder [**AcceptSecurityContext (CredSSP)**](acceptsecuritycontext--credssp.md) aufgerufen wird. Wenn eine solche Autorität nicht verfügbar ist, ist die Funktion nicht verfügbar und gibt **SEC \_ E NO \_ \_ AUTHENTICATING AUTHORITY \_ zurück.** Die Validierung ist paketspezifisch. |
+| **SECPKG \_ CRED \_ OUTBOUND**<br/>0x0 | Ermöglichen Sie es lokalen Client-Anmeldeinformationen, ein ausgehendes Token vorzubereiten. |
 
-*pvlogonid* \[ in, optional\]
+*pvLogonId* \[ in, optional\]
 
-Ein Zeiger auf einen [*lokal eindeutigen Bezeichner*](../secgloss/l-gly.md#_security_locally_unique_identifier_gly) (LUID), der den Benutzer identifiziert. Dieser Parameter wird für Dateisystem Prozesse, z. b. netzwerkredirectors, bereitgestellt. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf einen lokal [*eindeutigen Bezeichner*](../secgloss/l-gly.md#_security_locally_unique_identifier_gly) (LUID), der den Benutzer identifiziert. Dieser Parameter wird für Dateisystemprozesse wie Netzwerkumleitungen bereitgestellt. Dieser Parameter kann **NULL** sein.
 
-*pauthdata* \[ in, optional\]
+*pAuthData* \[ in, optional\]
 
-Ein Zeiger auf eine [**kredssp \_ -**](/windows/win32/api/credssp/ns-credssp-credssp_cred) Erstellungs Struktur, die Authentifizierungsdaten für SChannel-und Aushandlungs Pakete angibt.
+Ein Zeiger auf eine [**CREDSSP \_ CRED-Struktur,**](/windows/win32/api/credssp/ns-credssp-credssp_cred) die Authentifizierungsdaten für Schannel- und Negotiate-Pakete angibt.
 
-*pgetkeyfn* \[ in, optional\]
+*pGetKeyFn* \[ in, optional\]
 
-Reserviert. Dieser Parameter wird nicht verwendet und sollte auf **null** festgelegt werden.
+Reserviert. Dieser Parameter wird nicht verwendet und sollte auf NULL **festgelegt werden.**
 
-*pvgetkeyargument* \[ in, optional\]
+*pvGetKeyArgument* \[ in, optional\]
 
-Reserviert. Dieser Parameter muss auf **null** festgelegt werden.
+Reserviert. Dieser Parameter muss auf NULL **festgelegt werden.**
 
-*phcredential* \[ vorgenommen\]
+*phCredential* \[ out\]
 
-Ein Zeiger auf die [kredhandle](sspi-handles.md) -Struktur, die das Handle für die Anmelde Informationen empfängt.
+Ein Zeiger auf die [CredHandle-Struktur,](sspi-handles.md) die das Anmeldeinformationshandle erhält.
 
-*ptsexpiry* \[ Out, optional\]
+*ptsExpiry* \[ out, optional\]
 
-Ein Zeiger auf eine [**Zeitstempel**](timestamp.md) Struktur, die die Uhrzeit empfängt, zu der die zurückgegebenen Anmelde Informationen ablaufen. Der empfangene Struktur Wert hängt vom Sicherheitspaket ab, das den Wert in Ortszeit angeben muss.
+Ein Zeiger auf eine [**TimeStamp-Struktur,**](timestamp.md) die den Zeitpunkt empfängt, zu dem die zurückgegebenen Anmeldeinformationen ablaufen. Der empfangene Strukturwert hängt vom Sicherheitspaket ab, das den Wert in Ortszeit angeben muss.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **Sek. \_ E \_ OK** zurückgegeben.
+Wenn die Funktion erfolgreich ist, wird **SEC \_ E OK \_ zurückgegeben.**
 
 Wenn die Funktion fehlschlägt, wird einer der folgenden Fehlercodes zurückgegeben.
 
 | Rückgabecode                      | Beschreibung                                                              |
 |----------------------------------|--------------------------------------------------------------------------|
-| **SEK \_ b \_ nicht genügend Arbeits \_ Speicher** | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abzuschließen. |
-| **Sek. \_ E ( \_ interner \_ Fehler)**      | Es ist ein Fehler aufgetreten, der keinem SSPI-Fehlercode zugeordnet wurde.                |
-| **s \_ E \_ keine \_ Anmelde Informationen**      | Im Sicherheitspaket sind keine Anmelde Informationen verfügbar.                    |
-| **Sek. \_ E \_ nicht \_ Besitzer**           | Der Aufrufer der Funktion verfügt nicht über die erforderlichen Anmelde Informationen.      |
-| **Sek. \_ E \_ secpkg \_ nicht \_ gefunden**   | Das angeforderte Sicherheitspaket ist nicht vorhanden.                           |
-| **SEK \_ . \_ unbekannte \_ Anmelde Informationen** | Die für das Paket angegebenen Anmelde Informationen wurden nicht erkannt.             |
+| **\_S.E \_ NICHT GENÜGEND \_ ARBEITSSPEICHER** | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abschließen zu können. |
+| **INTERNER \_ FEHLER IN SEKUNDE E \_ \_**      | Es ist ein Fehler aufgetreten, der einem SSPI-Fehlercode nicht zuordnen konnte.                |
+| **SEC \_ E \_ NO \_ CREDENTIALS**      | Im Sicherheitspaket sind keine Anmeldeinformationen verfügbar.                    |
+| **SEC \_ E \_ NOT \_ OWNER**           | Der Aufrufer der Funktion verfügt nicht über die erforderlichen Anmeldeinformationen.      |
+| **SEC \_ E \_ SECPKG \_ NICHT \_ GEFUNDEN**   | Das angeforderte Sicherheitspaket ist nicht vorhanden.                           |
+| **SEC \_ E \_ UNKNOWN \_ CREDENTIALS** | Die für das Paket angegebenen Anmeldeinformationen wurden nicht erkannt.             |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **AcquireCredentialsHandle (kredssp)** -Funktion gibt ein Handle für die Anmelde Informationen eines Prinzipals (z. b. einen Benutzer oder Client) zurück, wie er von einem bestimmten Sicherheitspaket verwendet wird. Die Funktion kann das Handle entweder für bereits vorhandene Anmelde Informationen oder für neu erstellte Anmelde Informationen zurückgeben und zurückgeben. Dieses Handle kann in nachfolgenden Aufrufen der Funktionen " [**Accept tsecuritycontext (**](acceptsecuritycontext--credssp.md) aufzurufen)" und " [**InitializeSecurityContext (aufzurufen)**](initializesecuritycontext--credssp.md) " verwendet werden.
+Die **Funktion AcquireCredentialsHandle (CredSSP)** gibt ein Handle für die Anmeldeinformationen eines Prinzipals zurück, z. B. eines Benutzers oder Clients, wie von einem bestimmten Sicherheitspaket verwendet. Die Funktion kann das Handle entweder an bereits vorhandene Anmeldeinformationen oder neu erstellte Anmeldeinformationen zurückgeben und zurückgeben. Dieses Handle kann in nachfolgenden Aufrufen der [**Funktionen AcceptSecurityContext (CredSSP)**](acceptsecuritycontext--credssp.md) und [**InitializeSecurityContext (CredSSP) verwendet**](initializesecuritycontext--credssp.md) werden.
 
-Im Allgemeinen gibt **AcquireCredentialsHandle (kredssp)** nicht die Anmelde Informationen anderer Benutzer an, die am gleichen Computer angemeldet sind. Ein Aufrufer mit SE \_ TCB- \_ namens [*Berechtigung*](../secgloss/p-gly.md#_security_privilege_gly) kann jedoch die Anmelde Informationen einer vorhandenen Anmelde Sitzung abrufen, indem er den [*Anmelde Bezeichner*](../secgloss/l-gly.md#_security_logon_identifier_gly) (LUID) der Sitzung angibt. Diese wird in der Regel von Kernelmodusmodulen verwendet, die im Auftrag eines angemeldeten Benutzers agieren müssen.
+Im Allgemeinen stellt **AcquireCredentialsHandle (CredSSP)** nicht die Anmeldeinformationen anderer Benutzer zur Verfügung, die auf demselben Computer angemeldet sind. Ein Aufrufer mit SE TCB NAME-Berechtigung kann jedoch die Anmeldeinformationen einer vorhandenen Anmeldesitzung abrufen, indem er den Anmeldebezeichner \_ \_ (LUID) dieser Sitzung anknöpf. [](../secgloss/p-gly.md#_security_privilege_gly) [](../secgloss/l-gly.md#_security_logon_identifier_gly) In der Regel wird dies von Kernelmodusmodulen verwendet, die im Auftrag eines angemeldeten Benutzers agieren müssen.
 
-Ein Paket kann die Funktion in *pgetkeyfn* aufrufen, die vom RPC-Lauf Zeit Transport bereitgestellt wird. Wenn der Transport die Rückruffunktion zum Abrufen von Anmelde Informationen nicht unterstützt, muss dieser Parameter **null** sein.
+Ein Paket kann die Funktion in *pGetKeyFn* aufrufen, die vom RPC-Laufzeittransport bereitgestellt wird. Wenn der Transport das Konzept des Rückrufs zum Abrufen von Anmeldeinformationen nicht unterstützt, muss dieser Parameter **NULL sein.**
 
-Bei kernelmodusaufrufern müssen die folgenden Unterschiede beachtet werden:
+Für Aufrufer im Kernelmodus müssen die folgenden Unterschiede beachtet werden:
 
-- Die beiden Zeichen folgen Parameter müssen [*Unicode*](../secgloss/u-gly.md#_security_unicode_gly) -Zeichen folgen sein.
-- Die Puffer Werte müssen im virtuellen Arbeitsspeicher des Prozesses zugeordnet werden, nicht aus dem Pool.
+- Die beiden Zeichenfolgenparameter müssen [*Unicode-Zeichenfolgen*](../secgloss/u-gly.md#_security_unicode_gly) sein.
+- Die Pufferwerte müssen im virtuellen Prozessspeicher und nicht aus dem Pool zugeordnet werden.
 
-Wenn Sie die zurückgegebenen Anmelde Informationen nicht mehr verwenden, geben Sie den von den Anmelde Informationen genutzten Arbeitsspeicher frei, indem Sie die [**freecredentialshandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle) -Funktion aufrufen.
+Wenn Sie die zurückgegebenen Anmeldeinformationen nicht mehr verwenden, geben Sie den von den Anmeldeinformationen verwendeten Arbeitsspeicher frei, indem Sie die [**FreeCredentialsHandle-Funktion**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |--------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Nur Windows Vista \[ -Desktop-Apps\]                                              |
-| Unterstützte Mindestversion (Server) | Nur Windows Server 2008 \[ -Desktop-Apps\]                                        |
-| Header                   | SSPI. h (Include Security. h)                                                      |
-| Bibliothek                  | Secur32. lib                                                                      |
+| Unterstützte Mindestversion (Client) | Windows Nur \[ Vista-Desktop-Apps\]                                              |
+| Unterstützte Mindestversion (Server) | Windows Nur Server \[ 2008-Desktop-Apps\]                                        |
+| Header                   | Sspi.h (einschließlich Security.h)                                                      |
+| Bibliothek                  | Secur32.lib                                                                      |
 | DLL                      | Secur32.dll                                                                      |
-| Unicode- und ANSI-Name   | **Acquirecredentialshandlew** (Unicode) und **AcquireCredentialsHandleA** (ANSI) |
+| Unicode- und ANSI-Name   | **AcquireCredentialsHandleW** (Unicode) und **AcquireCredentialsHandleA** (ANSI) |
 
 ## <a name="see-also"></a>Siehe auch
 
 - [SSPI-Funktionen](authentication-functions.md#sspi-functions)
-- [**Accept-SecurityContext (kredssp)**](acceptsecuritycontext--credssp.md)
-- [**InitializeSecurityContext (kredssp)**](initializesecuritycontext--credssp.md)
-- [**Freecredentialshandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle)
+- [**AcceptSecurityContext (CredSSP)**](acceptsecuritycontext--credssp.md)
+- [**InitializeSecurityContext (CredSSP)**](initializesecuritycontext--credssp.md)
+- [**FreeCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle)

@@ -1,7 +1,7 @@
 ---
-description: Die GetResult-Methode ruft die resultierende Argumentliste ab, sofern eine vorhanden ist.
+description: Die GetResult-Methode ruft die resultierende Argumentliste ab, sofern vorhanden.
 ms.assetid: a2a8b17c-3dcf-4f59-89c3-f42070d2a8eb
-title: Cdeferredcommand. GetResult-Methode (ctlutil. h)
+title: CDeferredCommand.GetResult-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e8c1638dc33be6457dd682f37e2ddd49e73a111a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2176d6787bd520517cccbf484bdf6642921d499aaeb97c2917d64fa148323b66
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076420"
 ---
-# <a name="cdeferredcommandgetresult-method"></a>Cdeferredcommand. GetResult-Methode
+# <a name="cdeferredcommandgetresult-method"></a>CDeferredCommand.GetResult-Methode
 
-Die- `GetResult` Methode ruft die resultierende Argumentliste ab, sofern eine vorhanden ist.
+Die `GetResult` -Methode ruft die resultierende Argumentliste ab, sofern vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf eine **Variante** zurück, die die Argumentliste der Methode enthält, sofern vorhanden.
+Gibt einen Zeiger auf eine **VARIANT** zurück, die die Argumentliste der Methode enthält, sofern vorhanden.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen Zeiger auf eine **Variante** zurück, die die Argumentliste der Metho
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

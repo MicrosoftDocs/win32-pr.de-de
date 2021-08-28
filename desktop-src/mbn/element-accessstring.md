@@ -16,16 +16,16 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 8066b722bb45e7296e48e65bb9bfd129ec9c7d4d
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 76e87747e3e452b5667278f97c067f15b278e71e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122469397"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986893"
 ---
 # <a name="span-idwwan_profile_v4element_accessstringspanmbnprofileextaccessstring-v4"></a><span id="WWAN_profile_v4.element_AccessString"></span>MBNProfileExt \/ ... \/ AccessString (v4)
 
-Identifiziert den APN oder die Wählzeichenfolge, der bzw. die zum Herstellen einer Datenverbindung verwendet werden soll.
+Identifiziert den APN oder die Wählzeichenfolge, die zum Herstellen einer Datenverbindung verwendet werden soll.
 
 Weitere Informationen finden Sie in der Dokumentation für das [**AccessString-Element**](./schema-accessstring-contexttype-element.md) v1.
 
@@ -72,7 +72,9 @@ Keine.
 ## <a name="requirements"></a>Anforderungen
 
 
-| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
 
 
  

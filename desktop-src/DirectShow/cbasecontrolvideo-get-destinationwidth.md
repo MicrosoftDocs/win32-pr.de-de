@@ -1,7 +1,7 @@
 ---
-description: Die get \_ destinationwidth-Methode ruft die Breite des aktuellen Ziel Rechtecks ab.
+description: Die methode get \_ DestinationWidth ruft die Breite des aktuellen Zielrechtecks ab.
 ms.assetid: 7d466d61-1768-48b4-8460-b15d28a294f3
-title: CBaseControlVideo.get_DestinationWidth-Methode (ctlutil. h)
+title: CBaseControlVideo.get_DestinationWidth-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 95fc5ccdf0c2b0dd6d198686e12edb3185489b45
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6e228d5da753d02cee2f82844d6dbf138bf815db8d6c9ad0df99124b099285f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057150"
 ---
-# <a name="cbasecontrolvideoget_destinationwidth-method"></a>Cbasecontrolvideo. get \_ destinationwidth-Methode
+# <a name="cbasecontrolvideoget_destinationwidth-method"></a>CBaseControlVideo.get \_ DestinationWidth-Methode
 
-Die- `get_DestinationWidth` Methode ruft die Breite des aktuellen Ziel Rechtecks ab.
+Die `get_DestinationWidth` -Methode ruft die Breite des aktuellen Zielrechtecks ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,35 +42,35 @@ HRESULT get_DestinationWidth(
 
 <dl> <dt>
 
-*pdestinationwidth* 
+*pDestinationWidth* 
 </dt> <dd>
 
-Ein Zeiger auf die Ziel Breite.
+Zeiger auf die Zielbreite.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte sein, oder andere Werte, die nicht aufgeführt sind.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler.<br/>                                                              |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>                                            |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler.<br/>                                                              |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>             | **NULL-Zeigerargument.**<br/>                                            |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
 | <dl> <dt>**NOERROR**</dt> </dl>                | Erfolg.<br/>                                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ destinationwidth**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_destinationwidth) -Methode.
+Diese Memberfunktion implementiert die [**IBasicVideo::get \_ DestinationWidth-Methode.**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_destinationwidth)
 
-Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle ändern. Das Quell Rechteck wirkt sich darauf aus, welcher Abschnitt der systemeigenen Videoquelle auf der Anzeige angezeigt wird. Das Ziel Rechteck wirkt sich darauf aus, wo das Video bei der Wiedergabe angezeigt wird. Das Ziel Rechteck ist relativ zum Client Bereich des Fensters, in dem es abgespielt wird. Die linke obere Ecke des Fensters ist Koordinaten (0,0).
+Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBasicVideo-Schnittstelle**](/windows/desktop/api/Control/nn-control-ibasicvideo) ändern. Das Quellrechteck wirkt sich darauf aus, welcher Abschnitt der nativen Videoquelle auf der Anzeige angezeigt wird. das Zielrechteck wirkt sich darauf aus, wo das Video angezeigt wird, wenn es wiedergegeben wird. Das Zielrechteck ist relativ zum Clientbereich des Fensters, in dem es wiedergegeben wird. Die obere linke Ecke des Fensters ist die Koordinate (0,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,8 +78,8 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

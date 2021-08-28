@@ -1,4 +1,4 @@
-- name: Cimwin32-WMI-Anbieter
+- name: CIMWin32-WMI-Anbieter
   href: cimwin32-wmi-providers.md
   items:
     - name: CIM-WMI-Anbieter
@@ -7,7 +7,7 @@
         - name: CIM_Action
           href: cim-action.md
           items:
-            - name: CIM_Action Methoden
+            - name: CIM_Action-Methoden
               href: cim-action-methods.md
               items:
                 - name: Invoke-Methode
@@ -21,7 +21,7 @@
         - name: CIM_AggregatePExtent
           href: cim-aggregatepextent.md
           items:
-            - name: CIM_AggregatePExtent Methoden
+            - name: CIM_AggregatePExtent-Methoden
               href: cim-aggregatepextent-methods.md
               items:
                 - name: Reset-Methode
@@ -31,7 +31,7 @@
         - name: CIM_AggregatePSExtent
           href: cim-aggregatepsextent.md
           items:
-            - name: CIM_AggregatePSExtent Methoden
+            - name: CIM_AggregatePSExtent-Methoden
               href: cim-aggregatepsextent-methods.md
               items:
                 - name: Reset-Methode
@@ -43,14 +43,14 @@
         - name: CIM_AlarmDevice
           href: cim-alarmdevice.md
           items:
-            - name: CIM_AlarmDevice Methoden
+            - name: CIM_AlarmDevice-Methoden
               href: cim-alarmdevice-methods.md
               items:
                 - name: Reset-Methode
                   href: reset-method-in-class-cim-alarmdevice.md
                 - name: SetPowerState-Methode
                   href: setpowerstate-method-in-class-cim-alarmdevice.md
-                - name: Methode "-Methode"
+                - name: SetEncy-Methode
                   href: seturgency-method-in-class-cim-alarmdevice.md
         - name: CIM_AllocatedResource
           href: cim-allocatedresource.md
@@ -79,7 +79,7 @@
         - name: CIM_Battery
           href: cim-battery.md
           items:
-            - name: CIM_Battery Methoden
+            - name: CIM_Battery-Methoden
               href: cim-battery-methods.md
               items:
                 - name: Reset-Methode
@@ -89,7 +89,7 @@
         - name: CIM_BinarySensor
           href: cim-binarysensor.md
           items:
-            - name: CIM_BinarySensor Methoden
+            - name: CIM_BinarySensor-Methoden
               href: cim-binarysensor-methods.md
               items:
                 - name: Reset-Methode
@@ -111,7 +111,7 @@
         - name: CIM_BootService
           href: cim-bootservice.md
           items:
-            - name: CIM_BootService Methoden
+            - name: CIM_BootService-Methoden
               href: cim-bootservice-methods.md
               items:
                 - name: StartService-Methode
@@ -123,7 +123,7 @@
         - name: CIM_CacheMemory
           href: cim-cachememory.md
           items:
-            - name: CIM_CacheMemory Methoden
+            - name: CIM_CacheMemory-Methoden
               href: cim-cachememory-methods.md
               items:
                 - name: Reset-Methode
@@ -133,10 +133,10 @@
         - name: CIM_Card
           href: cim-card.md
           items:
-            - name: CIM_Card Methoden
+            - name: CIM_Card-Methoden
               href: cim-card-methods.md
               items:
-                - name: Iscompatible-Methode
+                - name: IsCompatible-Methode
                   href: iscompatible-method-in-class-cim-card.md
         - name: CIM_CardInSlot
           href: cim-cardinslot.md
@@ -145,7 +145,7 @@
         - name: CIM_CDROMDrive
           href: cim-cdromdrive.md
           items:
-            - name: CIM_CDROMDrive Methoden
+            - name: CIM_CDROMDrive-Methoden
               href: cim-cdromdrive-methods.md
               items:
                 - name: Reset-Methode
@@ -155,17 +155,17 @@
         - name: CIM_Chassis
           href: cim-chassis.md
           items:
-            - name: CIM_Chassis Methoden
+            - name: CIM_Chassis-Methoden
               href: cim-chassis-methods.md
               items:
-                - name: Iscompatible-Methode
+                - name: IsCompatible-Methode
                   href: iscompatible-method-in-class-cim-chassis.md
         - name: CIM_ChassisInRack
           href: cim-chassisinrack.md
         - name: CIM_Check
           href: cim-check.md
           items:
-            - name: CIM_Check Methoden
+            - name: CIM_Check-Methoden
               href: cim-check-methods.md
               items:
                 - name: Invoke-Methode
@@ -177,12 +177,12 @@
         - name: CIM_ClusteringService
           href: cim-clusteringservice.md
           items:
-            - name: CIM_ClusteringService Methoden
+            - name: CIM_ClusteringService-Methoden
               href: cim-clusteringservice-methods.md
               items:
                 - name: AddNode-Methode
                   href: addnode-method-in-class-cim-clusteringservice.md
-                - name: Evictnode-Methode
+                - name: EvictNode-Methode
                   href: evictnode-method-in-class-cim-clusteringservice.md
                 - name: StartService-Methode
                   href: startservice-method-in-class-cim-clusteringservice.md
@@ -229,7 +229,7 @@
         - name: CIM_Controller
           href: cim-controller.md
           items:
-            - name: CIM_Controller Methoden
+            - name: CIM_Controller-Methoden
               href: cim-controller-methods.md
               items:
                 - name: Reset-Methode
@@ -239,7 +239,7 @@
         - name: CIM_CoolingDevice
           href: cim-coolingdevice.md
           items:
-            - name: CIM_CoolingDevice Methoden
+            - name: CIM_CoolingDevice-Methoden
               href: cim-coolingdevice-methods.md
               items:
                 - name: Reset-Methode
@@ -249,7 +249,7 @@
         - name: CIM_CopyFileAction
           href: cim-copyfileaction.md
           items:
-            - name: CIM_CopyFileAction Methoden
+            - name: CIM_CopyFileAction-Methoden
               href: cim-copyfileaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -257,7 +257,7 @@
         - name: CIM_CreateDirectoryAction
           href: cim-createdirectoryaction.md
           items:
-            - name: CIM_CreateDirectoryAction Methoden
+            - name: CIM_CreateDirectoryAction-Methoden
               href: cim-createdirectoryaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -265,7 +265,7 @@
         - name: CIM_CurrentSensor
           href: cim-currentsensor.md
           items:
-            - name: CIM_CurrentSensor Methoden
+            - name: CIM_CurrentSensor-Methoden
               href: cim-currentsensor-methods.md
               items:
                 - name: Reset-Methode
@@ -275,14 +275,14 @@
         - name: CIM_DataFile
           href: cim-datafile.md
           items:
-            - name: CIM_Datafile Methoden
+            - name: CIM_DataFile-Methoden
               href: cim-datafile-methods.md
               items:
-                - name: Changesecurrityberechtigungs-Methode
+                - name: ChangeSecurityPermissions-Methode
                   href: changesecuritypermissions-method-in-class-cim-datafile.md
-                - name: Changesecurritypermissionsex-Methode
+                - name: ChangeSecurityPermissionsEx-Methode
                   href: changesecuritypermissionsex-method-in-class-cim-datafile.md
-                - name: Methode komprimieren
+                - name: Compress-Methode
                   href: compress-method-in-class-cim-datafile.md
                 - name: CompressEx-Methode
                   href: compressex-method-in-class-cim-datafile.md
@@ -294,13 +294,13 @@
                   href: delete-method-in-class-cim-datafile.md
                 - name: DeleteEx-Methode
                   href: deleteex-method-in-class-cim-datafile.md
-                - name: Geteffectiveberechtigungs Methode
+                - name: GetEffectivePermission-Methode
                   href: geteffectivepermission-method-in-class-cim-datafile.md
                 - name: Umbenennen einer Methode
                   href: rename-method-in-class-cim-datafile.md
-                - name: TakeOwnership-Methode
+                - name: TakeOwnerShip-Methode
                   href: takeownership-method-in-class-cim-datafile.md
-                - name: Takebesitzshipex-Methode
+                - name: TakeOwnerShipEx-Methode
                   href: takeownershipex-method-in-class-cim-datafile.md
                 - name: Uncompress-Methode
                   href: uncompress-method-in-class-cim-datafile.md
@@ -313,7 +313,7 @@
         - name: CIM_DesktopMonitor
           href: cim-desktopmonitor.md
           items:
-            - name: CIM_DesktopMonitor Methoden
+            - name: CIM_DesktopMonitor-Methoden
               href: cim-desktopmonitor-methods.md
               items:
                 - name: Reset-Methode
@@ -327,7 +327,7 @@
         - name: CIM_DeviceErrorCounts
           href: cim-deviceerrorcounts.md
           items:
-            - name: CIM_DeviceErrorCounts Methoden
+            - name: CIM_DeviceErrorCounts-Methoden
               href: cim-deviceerrorcounts-methods.md
               items:
                 - name: ResetCounter-Methode
@@ -335,14 +335,14 @@
         - name: CIM_DeviceFile
           href: cim-devicefile.md
           items:
-            - name: CIM_DeviceFile Methoden
+            - name: CIM_DeviceFile-Methoden
               href: cim-devicefile-methods.md
               items:
-                - name: Changesecurrityberechtigungs-Methode
+                - name: ChangeSecurityPermissions-Methode
                   href: changesecuritypermissions-method-in-class-cim-devicefile.md
-                - name: Changesecurritypermissionsex-Methode
+                - name: ChangeSecurityPermissionsEx-Methode
                   href: changesecuritypermissionsex-method-in-class-cim-devicefile.md
-                - name: Methode komprimieren
+                - name: Compress-Methode
                   href: compress-method-in-class-cim-devicefile.md
                 - name: CompressEx-Methode
                   href: compressex-method-in-class-cim-devicefile.md
@@ -354,13 +354,13 @@
                   href: delete-method-in-class-cim-devicefile.md
                 - name: DeleteEx-Methode
                   href: deleteex-method-in-class-cim-devicefile.md
-                - name: Geteffectiveberechtigungs Methode
+                - name: GetEffectivePermission-Methode
                   href: geteffectivepermission-method-in-class-cim-devicefile.md
                 - name: Umbenennen einer Methode
                   href: rename-method-in-class-cim-devicefile.md
-                - name: TakeOwnership-Methode
+                - name: TakeOwnerShip-Methode
                   href: takeownership-method-in-class-cim-devicefile.md
-                - name: Takebesitzshipex-Methode
+                - name: TakeOwnerShipEx-Methode
                   href: takeownershipex-method-in-class-cim-devicefile.md
                 - name: Uncompress-Methode
                   href: uncompress-method-in-class-cim-devicefile.md
@@ -375,14 +375,14 @@
         - name: CIM_Directory
           href: cim-directory.md
           items:
-            - name: CIM_Directory Methoden
+            - name: CIM_Directory-Methoden
               href: cim-directory-methods.md
               items:
-                - name: Changesecurrityberechtigungs-Methode
+                - name: ChangeSecurityPermissions-Methode
                   href: changesecuritypermissions-method-in-class-cim-directory.md
-                - name: Changesecurritypermissionsex-Methode
+                - name: ChangeSecurityPermissionsEx-Methode
                   href: changesecuritypermissionsex-method-in-class-cim-directory.md
-                - name: Methode komprimieren
+                - name: Compress-Methode
                   href: compress-method-in-class-cim-directory.md
                 - name: CompressEx-Methode
                   href: compressex-method-in-class-cim-directory.md
@@ -394,13 +394,13 @@
                   href: delete-method-in-class-cim-directory.md
                 - name: DeleteEx-Methode
                   href: deleteex-method-in-class-cim-directory.md
-                - name: Geteffectiveberechtigungs Methode
+                - name: GetEffectivePermission-Methode
                   href: geteffectivepermission-method-in-class-cim-directory.md
                 - name: Umbenennen einer Methode
                   href: rename-method-in-class-cim-directory.md
-                - name: TakeOwnership-Methode
+                - name: TakeOwnerShip-Methode
                   href: takeownership-method-in-class-cim-directory.md
-                - name: Takebesitzshipex-Methode
+                - name: TakeOwnerShipEx-Methode
                   href: takeownershipex-method-in-class-cim-directory.md
                 - name: Uncompress-Methode
                   href: uncompress-method-in-class-cim-directory.md
@@ -409,7 +409,7 @@
         - name: CIM_DirectoryAction
           href: cim-directoryaction.md
           items:
-            - name: CIM_DirectoryAction Methoden
+            - name: CIM_DirectoryAction-Methoden
               href: cim-directoryaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -419,7 +419,7 @@
         - name: CIM_DirectorySpecification
           href: cim-directoryspecification.md
           items:
-            - name: CIM_DirectorySpecification Methoden
+            - name: CIM_DirectorySpecification-Methoden
               href: cim-directoryspecification-methods.md
               items:
                 - name: Invoke-Methode
@@ -429,7 +429,7 @@
         - name: CIM_DiscreteSensor
           href: cim-discretesensor.md
           items:
-            - name: CIM_DiscreteSensor Methoden
+            - name: CIM_DiscreteSensor-Methoden
               href: cim-discretesensor-methods.md
               items:
                 - name: Reset-Methode
@@ -439,7 +439,7 @@
         - name: CIM_DiskDrive
           href: cim-diskdrive.md
           items:
-            - name: CIM_DiskDrive Methoden
+            - name: CIM_DiskDrive-Methoden
               href: cim-diskdrive-methods.md
               items:
                 - name: Reset-Methode
@@ -449,7 +449,7 @@
         - name: CIM_DisketteDrive
           href: cim-diskettedrive.md
           items:
-            - name: CIM_DisketteDrive Methoden
+            - name: CIM_DisketteDrive-Methoden
               href: cim-diskettedrive-methods.md
               items:
                 - name: Reset-Methode
@@ -459,7 +459,7 @@
         - name: CIM_DiskPartition
           href: cim-diskpartition.md
           items:
-            - name: CIM_DiskPartition Methoden
+            - name: CIM_DiskPartition-Methoden
               href: cim-diskpartition-methods.md
               items:
                 - name: Reset-Methode
@@ -469,7 +469,7 @@
         - name: CIM_DiskSpaceCheck
           href: cim-diskspacecheck.md
           items:
-            - name: CIM_DiskSpaceCheck Methoden
+            - name: CIM_DiskSpaceCheck-Methoden
               href: cim-diskspacecheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -477,7 +477,7 @@
         - name: CIM_Display
           href: cim-display.md
           items:
-            - name: CIM_Display Methoden
+            - name: CIM_Display-Methoden
               href: cim-display-methods.md
               items:
                 - name: Reset-Methode
@@ -501,7 +501,7 @@
         - name: CIM_ExecuteProgram
           href: cim-executeprogram.md
           items:
-            - name: CIM_ExecuteProgram Methoden
+            - name: CIM_ExecuteProgram-Methoden
               href: cim-executeprogram-methods.md
               items:
                 - name: Invoke-Methode
@@ -513,7 +513,7 @@
         - name: CIM_Fan
           href: cim-fan.md
           items:
-            - name: CIM_Fan Methoden
+            - name: CIM_Fan-Methoden
               href: cim-fan-methods.md
               items:
                 - name: Reset-Methode
@@ -525,7 +525,7 @@
         - name: CIM_FileAction
           href: cim-fileaction.md
           items:
-            - name: CIM_FileAction Methoden
+            - name: CIM_FileAction-Methoden
               href: cim-fileaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -533,7 +533,7 @@
         - name: CIM_FileSpecification
           href: cim-filespecification.md
           items:
-            - name: CIM_FileSpecification Methoden
+            - name: CIM_FileSpecification-Methoden
               href: cim-filespecification-methods.md
               items:
                 - name: Invoke-Methode
@@ -545,7 +545,7 @@
         - name: CIM_FlatPanel
           href: cim-flatpanel.md
           items:
-            - name: CIM_FlatPanel Methoden
+            - name: CIM_FlatPanel-Methoden
               href: cim-flatpanel-methods.md
               items:
                 - name: Reset-Methode
@@ -565,7 +565,7 @@
         - name: CIM_HeatPipe
           href: cim-heatpipe.md
           items:
-            - name: CIM_HeatPipe Methoden
+            - name: CIM_HeatPipe-Methoden
               href: cim-heatpipe-methods.md
               items:
                 - name: Reset-Methode
@@ -587,7 +587,7 @@
         - name: CIM_InfraredController
           href: cim-infraredcontroller.md
           items:
-            - name: CIM_InfraredController Methoden
+            - name: CIM_InfraredController-Methoden
               href: cim-infraredcontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -609,7 +609,7 @@
         - name: CIM_Keyboard
           href: cim-keyboard.md
           items:
-            - name: CIM_Keyboard Methoden
+            - name: CIM_Keyboard-Methoden
               href: cim-keyboard-methods.md
               items:
                 - name: Reset-Methode
@@ -625,7 +625,7 @@
         - name: CIM_LogicalDevice
           href: cim-logicaldevice.md
           items:
-            - name: CIM_LogicalDevice Methoden
+            - name: CIM_LogicalDevice-Methoden
               href: cim-logicaldevice-methods.md
               items:
                 - name: Reset-Methode
@@ -635,7 +635,7 @@
         - name: CIM_LogicalDisk
           href: cim-logicaldisk.md
           items:
-            - name: CIM_LogicalDisk Methoden
+            - name: CIM_LogicalDisk-Methoden
               href: cim-logicaldisk-methods.md
               items:
                 - name: Reset-Methode
@@ -651,14 +651,14 @@
         - name: CIM_LogicalFile
           href: cim-logicalfile.md
           items:
-            - name: CIM_LogicalFile Methoden
+            - name: CIM_LogicalFile-Methoden
               href: cim-logicalfile-methods.md
               items:
-                - name: Changesecurrityberechtigungs-Methode
+                - name: ChangeSecurityPermissions-Methode
                   href: changesecuritypermissions-method-in-class-cim-logicalfile.md
-                - name: Changesecurritypermissionsex-Methode
+                - name: ChangeSecurityPermissionsEx-Methode
                   href: changesecuritypermissionsex-method-in-class-cim-logicalfile.md
-                - name: Methode komprimieren
+                - name: Compress-Methode
                   href: compress-method-in-class-cim-logicalfile.md
                 - name: CompressEx-Methode
                   href: compressex-method-in-class-cim-logicalfile.md
@@ -670,13 +670,13 @@
                   href: delete-method-in-class-cim-logicalfile.md
                 - name: DeleteEx-Methode
                   href: deleteex-method-in-class-cim-logicalfile.md
-                - name: Geteffectiveberechtigungs Methode
+                - name: GetEffectivePermission-Methode
                   href: geteffectivepermission-method-in-class-cim-logicalfile.md
                 - name: Umbenennen einer Methode
                   href: rename-method-in-class-cim-logicalfile.md
-                - name: TakeOwnership-Methode
+                - name: TakeOwnerShip-Methode
                   href: takeownership-method-in-class-cim-logicalfile.md
-                - name: Takebesitzshipex-Methode
+                - name: TakeOwnerShipEx-Methode
                   href: takeownershipex-method-in-class-cim-logicalfile.md
                 - name: Uncompress-Methode
                   href: uncompress-method-in-class-cim-logicalfile.md
@@ -687,7 +687,7 @@
         - name: CIM_MagnetoOpticalDrive
           href: cim-magnetoopticaldrive.md
           items:
-            - name: CIM_MagnetoOpticalDrive Methoden
+            - name: CIM_MagnetoOpticalDrive-Methoden
               href: cim-magnetoopticaldrive-methods.md
               items:
                 - name: Reset-Methode
@@ -699,7 +699,7 @@
         - name: CIM_ManagementController
           href: cim-managementcontroller.md
           items:
-            - name: CIM_ManagementController Methoden
+            - name: CIM_ManagementController-Methoden
               href: cim-managementcontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -709,7 +709,7 @@
         - name: CIM_MediaAccessDevice
           href: cim-mediaaccessdevice.md
           items:
-            - name: CIM_MediaAccessDevice Methoden
+            - name: CIM_MediaAccessDevice-Methoden
               href: cim-mediaaccessdevice-methods.md
               items:
                 - name: Reset-Methode
@@ -721,7 +721,7 @@
         - name: CIM_Memory
           href: cim-memory.md
           items:
-            - name: CIM_Memory Methoden
+            - name: CIM_Memory-Methoden
               href: cim-memory-methods.md
               items:
                 - name: Reset-Methode
@@ -733,7 +733,7 @@
         - name: CIM_MemoryCheck
           href: cim-memorycheck.md
           items:
-            - name: CIM_MemoryCheck Methoden
+            - name: CIM_MemoryCheck-Methoden
               href: cim-memorycheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -747,7 +747,7 @@
         - name: CIM_ModifySettingAction
           href: cim-modifysettingaction.md
           items:
-            - name: CIM_ModifySettingAction Methoden
+            - name: CIM_ModifySettingAction-Methoden
               href: cim-modifysettingaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -761,7 +761,7 @@
         - name: CIM_MultiStateSensor
           href: cim-multistatesensor.md
           items:
-            - name: CIM_MultiStateSensor Methoden
+            - name: CIM_MultiStateSensor-Methoden
               href: cim-multistatesensor-methods.md
               items:
                 - name: Reset-Methode
@@ -771,7 +771,7 @@
         - name: CIM_NetworkAdapter
           href: cim-networkadapter.md
           items:
-            - name: CIM_NetworkAdapter Methoden
+            - name: CIM_NetworkAdapter-Methoden
               href: cim-networkadapter-methods.md
               items:
                 - name: Reset-Methode
@@ -783,7 +783,7 @@
         - name: CIM_NonVolatileStorage
           href: cim-nonvolatilestorage.md
           items:
-            - name: CIM_NonVolatileStorage Methoden
+            - name: CIM_NonVolatileStorage-Methoden
               href: cim-nonvolatilestorage-methods.md
               items:
                 - name: Reset-Methode
@@ -793,7 +793,7 @@
         - name: CIM_NumericSensor
           href: cim-numericsensor.md
           items:
-            - name: CIM_NumericSensor Methoden
+            - name: CIM_NumericSensor-Methoden
               href: cim-numericsensor-methods.md
               items:
                 - name: Reset-Methode
@@ -803,10 +803,10 @@
         - name: CIM_OperatingSystem
           href: cim-operatingsystem.md
           items:
-            - name: CIM_OperatingSystem Methoden
+            - name: CIM_OperatingSystem-Methoden
               href: cim-operatingsystem-methods.md
               items:
-                - name: Reboot-Methode
+                - name: Neustartmethode
                   href: reboot-method-in-class-cim-operatingsystem.md
                 - name: shutdown-Methode
                   href: shutdown-method-in-class-cim-operatingsystem.md
@@ -817,7 +817,7 @@
         - name: CIM_OSVersionCheck
           href: cim-osversioncheck.md
           items:
-            - name: CIM_OSVersionCheck Methoden
+            - name: CIM_OSVersionCheck-Methoden
               href: cim-osversioncheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -837,7 +837,7 @@
         - name: CIM_ParallelController
           href: cim-parallelcontroller.md
           items:
-            - name: CIM_ParallelController Methoden
+            - name: CIM_ParallelController-Methoden
               href: cim-parallelcontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -849,7 +849,7 @@
         - name: CIM_PCIController
           href: cim-pcicontroller.md
           items:
-            - name: CIM_PCIController Methoden
+            - name: CIM_PCIController-Methoden
               href: cim-pcicontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -859,7 +859,7 @@
         - name: CIM_PCMCIAController
           href: cim-pcmciacontroller.md
           items:
-            - name: CIM_PCMCIAController Methoden
+            - name: CIM_PCMCIAController-Methoden
               href: cim-pcmciacontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -869,7 +869,7 @@
         - name: CIM_PCVideoController
           href: cim-pcvideocontroller.md
           items:
-            - name: CIM_PCVideoController Methoden
+            - name: CIM_PCVideoController-Methoden
               href: cim-pcvideocontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -891,7 +891,7 @@
         - name: CIM_PhysicalExtent
           href: cim-physicalextent.md
           items:
-            - name: CIM_PhysicalExtent Methoden
+            - name: CIM_PhysicalExtent-Methoden
               href: cim-physicalextent-methods.md
               items:
                 - name: Reset-Methode
@@ -901,10 +901,10 @@
         - name: CIM_PhysicalFrame
           href: cim-physicalframe.md
           items:
-            - name: CIM_PhysicalFrame Methoden
+            - name: CIM_PhysicalFrame-Methoden
               href: cim-physicalframe-methods.md
               items:
-                - name: Iscompatible-Methode
+                - name: IsCompatible-Methode
                   href: iscompatible-method-in-class-cim-physicalframe.md
         - name: CIM_PhysicalLink
           href: cim-physicallink.md
@@ -915,15 +915,15 @@
         - name: CIM_PhysicalPackage
           href: cim-physicalpackage.md
           items:
-            - name: CIM_PhysicalPackage Methoden
+            - name: CIM_PhysicalPackage-Methoden
               href: cim-physicalpackage-methods.md
               items:
-                - name: Iscompatible-Methode
+                - name: IsCompatible-Methode
                   href: iscompatible-method-in-class-cim-physicalpackage.md
         - name: CIM_PointingDevice
           href: cim-pointingdevice.md
           items:
-            - name: CIM_PointingDevice Methoden
+            - name: CIM_PointingDevice-Methoden
               href: cim-pointingdevice-methods.md
               items:
                 - name: Reset-Methode
@@ -933,7 +933,7 @@
         - name: CIM_POTSModem
           href: cim-potsmodem.md
           items:
-            - name: CIM_POTSModem Methoden
+            - name: CIM_POTSModem-Methoden
               href: cim-potsmodem-methods.md
               items:
                 - name: Reset-Methode
@@ -943,7 +943,7 @@
         - name: CIM_PowerSupply
           href: cim-powersupply.md
           items:
-            - name: CIM_PowerSupply Methoden
+            - name: CIM_PowerSupply-Methoden
               href: cim-powersupply-methods.md
               items:
                 - name: Reset-Methode
@@ -953,7 +953,7 @@
         - name: CIM_Printer
           href: cim-printer.md
           items:
-            - name: CIM_Printer Methoden
+            - name: CIM_Printer-Methoden
               href: cim-printer-methods.md
               items:
                 - name: Reset-Methode
@@ -967,7 +967,7 @@
         - name: CIM_Processor
           href: cim-processor.md
           items:
-            - name: CIM_Processor Methoden
+            - name: CIM_Processor-Methoden
               href: cim-processor-methods.md
               items:
                 - name: Reset-Methode
@@ -993,7 +993,7 @@
         - name: CIM_ProtectedSpaceExtent
           href: cim-protectedspaceextent.md
           items:
-            - name: CIM_ProtectedSpaceExtent Methoden
+            - name: CIM_ProtectedSpaceExtent-Methoden
               href: cim-protectedspaceextent-methods.md
               items:
                 - name: Reset-Methode
@@ -1005,10 +1005,10 @@
         - name: CIM_Rack
           href: cim-rack.md
           items:
-            - name: CIM_Rack Methoden
+            - name: CIM_Rack-Methoden
               href: cim-rack-methods.md
               items:
-                - name: Iscompatible-Methode
+                - name: IsCompatible-Methode
                   href: iscompatible-method-in-class-cim-rack.md
         - name: CIM_Realizes
           href: cim-realizes.md
@@ -1021,7 +1021,7 @@
         - name: CIM_RebootAction
           href: cim-rebootaction.md
           items:
-            - name: CIM_RebootAction Methoden
+            - name: CIM_RebootAction-Methoden
               href: cim-rebootaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -1033,7 +1033,7 @@
         - name: CIM_Refrigeration
           href: cim-refrigeration.md
           items:
-            - name: CIM_Refrigeration Methoden
+            - name: CIM_Refrigeration-Methoden
               href: cim-refrigeration-methods.md
               items:
                 - name: Reset-Methode
@@ -1047,7 +1047,7 @@
         - name: CIM_RemoveDirectoryAction
           href: cim-removedirectoryaction.md
           items:
-            - name: CIM_RemoveDirectoryAction Methoden
+            - name: CIM_RemoveDirectoryAction-Methoden
               href: cim-removedirectoryaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -1055,7 +1055,7 @@
         - name: CIM_RemoveFileAction
           href: cim-removefileaction.md
           items:
-            - name: CIM_RemoveFileAction Methoden
+            - name: CIM_RemoveFileAction-Methoden
               href: cim-removefileaction-methods.md
               items:
                 - name: Invoke-Methode
@@ -1071,7 +1071,7 @@
         - name: CIM_Scanner
           href: cim-scanner.md
           items:
-            - name: CIM_Scanner Methoden
+            - name: CIM_Scanner-Methoden
               href: cim-scanner-methods.md
               items:
                 - name: Reset-Methode
@@ -1081,7 +1081,7 @@
         - name: CIM_SCSIController
           href: cim-scsicontroller.md
           items:
-            - name: CIM_SCSIController Methoden
+            - name: CIM_SCSIController-Methoden
               href: cim-scsicontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -1093,7 +1093,7 @@
         - name: CIM_Sensor
           href: cim-sensor.md
           items:
-            - name: CIM_Sensor Methoden
+            - name: CIM_Sensor-Methoden
               href: cim-sensor-methods.md
               items:
                 - name: Reset-Methode
@@ -1103,7 +1103,7 @@
         - name: CIM_SerialController
           href: cim-serialcontroller.md
           items:
-            - name: CIM_SerialController Methoden
+            - name: CIM_SerialController-Methoden
               href: cim-serialcontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -1115,7 +1115,7 @@
         - name: CIM_Service
           href: cim-service.md
           items:
-            - name: CIM_Service Methoden
+            - name: CIM_Service-Methoden
               href: cim-service-methods.md
               items:
                 - name: StartService-Methode
@@ -1135,7 +1135,7 @@
         - name: CIM_SettingCheck
           href: cim-settingcheck.md
           items:
-            - name: CIM_SettingCheck Methoden
+            - name: CIM_SettingCheck-Methoden
               href: cim-settingcheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -1155,7 +1155,7 @@
         - name: CIM_SoftwareElementVersionCheck
           href: cim-softwareelementversioncheck.md
           items:
-            - name: CIM_SoftwareElementVersionCheck Methoden
+            - name: CIM_SoftwareElementVersionCheck-Methoden
               href: cim-softwareelementversioncheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -1181,7 +1181,7 @@
         - name: CIM_StorageExtent
           href: cim-storageextent.md
           items:
-            - name: CIM_StorageExtent Methoden
+            - name: CIM_StorageExtent-Methoden
               href: cim-storageextent-methods.md
               items:
                 - name: Reset-Methode
@@ -1195,7 +1195,7 @@
         - name: CIM_SwapSpaceCheck
           href: cim-swapspacecheck.md
           items:
-            - name: CIM_SwapSpaceCheck Methoden
+            - name: CIM_SwapSpaceCheck-Methoden
               href: cim-swapspacecheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -1211,7 +1211,7 @@
         - name: CIM_Tachometer
           href: cim-tachometer.md
           items:
-            - name: CIM_Tachometer Methoden
+            - name: CIM_Tachometer-Methoden
               href: cim-tachometer-methods.md
               items:
                 - name: Reset-Methode
@@ -1221,7 +1221,7 @@
         - name: CIM_TapeDrive
           href: cim-tapedrive.md
           items:
-            - name: CIM_TapeDrive Methoden
+            - name: CIM_TapeDrive-Methoden
               href: cim-tapedrive-methods.md
               items:
                 - name: Reset-Methode
@@ -1231,7 +1231,7 @@
         - name: CIM_TemperatureSensor
           href: cim-temperaturesensor.md
           items:
-            - name: CIM_TemperatureSensor Methoden
+            - name: CIM_TemperatureSensor-Methoden
               href: cim-temperaturesensor-methods.md
               items:
                 - name: Reset-Methode
@@ -1247,7 +1247,7 @@
         - name: CIM_UninterruptiblePowerSupply
           href: cim-uninterruptiblepowersupply.md
           items:
-            - name: CIM_UninterruptiblePowerSupply Methoden
+            - name: CIM_UninterruptiblePowerSupply-Methoden
               href: cim-uninterruptiblepowersupply-methods.md
               items:
                 - name: Reset-Methode
@@ -1257,7 +1257,7 @@
         - name: CIM_UnitaryComputerSystem
           href: cim-unitarycomputersystem.md
           items:
-            - name: CIM_UnitaryComputerSystem Methoden
+            - name: CIM_UnitaryComputerSystem-Methoden
               href: cim-unitarycomputersystem-methods.md
               items:
                 - name: SetPowerState-Methode
@@ -1265,7 +1265,7 @@
         - name: CIM_USBController
           href: cim-usbcontroller.md
           items:
-            - name: CIM_USBController Methoden
+            - name: CIM_USBController-Methoden
               href: cim-usbcontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -1277,7 +1277,7 @@
         - name: CIM_USBDevice
           href: cim-usbdevice.md
           items:
-            - name: CIM_USBDevice Methoden
+            - name: CIM_USBDevice-Methoden
               href: cim-usbdevice-methods.md
               items:
                 - name: GetDescriptor-Methode
@@ -1289,7 +1289,7 @@
         - name: CIM_USBHub
           href: cim-usbhub.md
           items:
-            - name: CIM_USBHub Methoden
+            - name: CIM_USBHub-Methoden
               href: cim-usbhub-methods.md
               items:
                 - name: GetDescriptor-Methode
@@ -1301,7 +1301,7 @@
         - name: CIM_UserDevice
           href: cim-userdevice.md
           items:
-            - name: CIM_UserDevice Methoden
+            - name: CIM_UserDevice-Methoden
               href: cim-userdevice-methods.md
               items:
                 - name: Reset-Methode
@@ -1311,7 +1311,7 @@
         - name: CIM_VersionCompatibilityCheck
           href: cim-versioncompatibilitycheck.md
           items:
-            - name: CIM_VersionCompatibilityCheck Methoden
+            - name: CIM_VersionCompatibilityCheck-Methoden
               href: cim-versioncompatibilitycheck-methods.md
               items:
                 - name: Invoke-Methode
@@ -1325,7 +1325,7 @@
         - name: CIM_VideoController
           href: cim-videocontroller.md
           items:
-            - name: CIM_VideoController Methoden
+            - name: CIM_VideoController-Methoden
               href: cim-videocontroller-methods.md
               items:
                 - name: Reset-Methode
@@ -1339,7 +1339,7 @@
         - name: CIM_VolatileStorage
           href: cim-volatilestorage.md
           items:
-            - name: CIM_VolatileStorage Methoden
+            - name: CIM_VolatileStorage-Methoden
               href: cim-volatilestorage-methods.md
               items:
                 - name: Reset-Methode
@@ -1349,7 +1349,7 @@
         - name: CIM_VoltageSensor
           href: cim-voltagesensor.md
           items:
-            - name: CIM_VoltageSensor Methoden
+            - name: CIM_VoltageSensor-Methoden
               href: cim-voltagesensor-methods.md
               items:
                 - name: Reset-Methode
@@ -1359,7 +1359,7 @@
         - name: CIM_VolumeSet
           href: cim-volumeset.md
           items:
-            - name: CIM_VolumeSet Methoden
+            - name: CIM_VolumeSet-Methoden
               href: cim-volumeset-methods.md
               items:
                 - name: Reset-Methode
@@ -1369,14 +1369,14 @@
         - name: CIM_WORMDrive
           href: cim-wormdrive.md
           items:
-            - name: CIM_WORMDrive Methoden
+            - name: CIM_WORMDrive-Methoden
               href: cim-wormdrive-methods.md
               items:
                 - name: Reset-Methode
                   href: reset-method-in-class-cim-wormdrive.md
                 - name: SetPowerState-Methode
                   href: setpowerstate-method-in-class-cim-wormdrive.md
-    - name: Energie Verwaltungs Ereignis Anbieter
+    - name: Energieverwaltungsereignisanbieter
       href: power-management-event-provider.md
       items:
         - name: Win32_PowerManagementEvent
@@ -1384,7 +1384,7 @@
     - name: Win32-Anbieter
       href: win32-provider.md
       items:
-        - name: Computer System-Hardware Klassen
+        - name: Hardwareklassen des Computersystems
           href: computer-system-hardware-classes.md
           items:
             - name: Win32_1394Controller
@@ -1465,14 +1465,14 @@
             - name: Win32_LogicalDisk
               href: win32-logicaldisk.md
               items:
-                - name: Win32_LogicalDisk Methoden
+                - name: Win32_LogicalDisk-Methoden
                   href: win32-logicaldisk-methods.md
                   items:
-                    - name: CHKDSK-Methode
+                    - name: Chkdsk-Methode
                       href: chkdsk-method-in-class-win32-logicaldisk.md
-                    - name: Excludefromautochk-Methode
+                    - name: ExcludeFromAutochk-Methode
                       href: excludefromautochk-method-in-class-win32-logicaldisk.md
-                    - name: Scheduleautochk-Methode
+                    - name: ScheduleAutoChk-Methode
                       href: scheduleautochk-method-in-class-win32-logicaldisk.md
             - name: Win32_LogicalDiskRootDirectory
               href: win32-logicaldiskrootdirectory.md
@@ -1503,17 +1503,17 @@
             - name: Win32_NetworkAdapter
               href: win32-networkadapter.md
               items:
-                - name: Win32_NetworkAdapter Methoden
+                - name: Win32_NetworkAdapter-Methoden
                   href: win32-networkadapter-methods.md
                   items:
                     - name: Enable-Methode
                       href: enable-method-in-class-win32-networkadapter.md
-                    - name: Methode deaktivieren
+                    - name: Disable-Methode
                       href: disable-method-in-class-win32-networkadapter.md
             - name: Win32_NetworkAdapterConfiguration
               href: win32-networkadapterconfiguration.md
               items:
-                - name: Win32_NetworkAdapterConfiguration Methoden
+                - name: Win32_NetworkAdapterConfiguration-Methoden
                   href: win32-networkadapterconfiguration-methods.md
                   items:
                     - name: DisableIPSec-Methode
@@ -1534,21 +1534,21 @@
                       href: releasedhcplease-method-in-class-win32-networkadapterconfiguration.md
                     - name: ReleaseDHCPLeaseAll-Methode
                       href: releasedhcpleaseall-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Erneuerdhcplease-Methode
+                    - name: RenewDHCPLease-Methode
                       href: renewdhcplease-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Erneuerdhcpleaseall-Methode
+                    - name: RenewDHCPLeaseAll-Methode
                       href: renewdhcpleaseall-method-in-class-win32-networkadapterconfiguration.md
-                    - name: '"Tartarpalwayssourceroute"-Methode'
+                    - name: SetArpAlwaysSourceRoute-Methode
                       href: setarpalwayssourceroute-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetArpUseEtherSNAP-Methode
                       href: setarpuseethersnap-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetDatabasePath-Methode
                       href: setdatabasepath-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setdeadgwdetect-Methode
+                    - name: SetDeadGWDetect-Methode
                       href: setdeadgwdetect-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setdefaulttos-Methode
+                    - name: SetDefaultTOS-Methode
                       href: setdefaulttos-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setdefaultttl-Methode
+                    - name: SetDefaultTTL-Methode
                       href: setdefaultttl-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetDNSDomain-Methode
                       href: setdnsdomain-method-in-class-win32-networkadapterconfiguration.md
@@ -1562,23 +1562,23 @@
                       href: setforwardbuffermemory-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetGateways-Methode
                       href: setgateways-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setigmplevel-Methode
+                    - name: SetIGMPLevel-Methode
                       href: setigmplevel-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Die Methode "stipconnectionmetric"
+                    - name: SetIPConnectionMetric-Methode
                       href: setipconnectionmetric-method-in-class-win32-networkadapterconfiguration.md
-                    - name: '""-Methode'
+                    - name: SetIPUseZeroBroadcast-Methode
                       href: setipusezerobroadcast-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Die Methode "setxframetypetworkpairs"
+                    - name: SetIPXFrameTypeNetworkPairs-Methode
                       href: win32-networkadapterconfiguration-setipxframetypenetworkpairs.md
-                    - name: '"NetworkNumber"-Methode'
+                    - name: SetIPXVirtualNetworkNumber-Methode
                       href: win32-networkadapterconfiguration-setipxvirtualnetworknumber.md
-                    - name: Setkeepaliveingeterval-Methode
+                    - name: SetKeepAliveInterval-Methode
                       href: setkeepaliveinterval-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setkeepalivetime-Methode
+                    - name: SetKeepAliveTime-Methode
                       href: setkeepalivetime-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Die Methode "stmtu"
+                    - name: SetMTU-Methode
                       href: setmtu-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Setnumforwardpaketen-Methode
+                    - name: SetNumForwardPackets-Methode
                       href: setnumforwardpackets-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetPMTUBHDetect-Methode
                       href: setpmtubhdetect-method-in-class-win32-networkadapterconfiguration.md
@@ -1586,15 +1586,15 @@
                       href: setpmtudiscovery-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetTcpipNetbios-Methode
                       href: settcpipnetbios-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Settcpmaxconnectretransmissions-Methode
+                    - name: SetTcpMaxConnectRetransmissions-Methode
                       href: settcpmaxconnectretransmissions-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetTcpMaxDataRetransmissions-Methode
                       href: settcpmaxdataretransmissions-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetTcpNumConnections-Methode
                       href: settcpnumconnections-method-in-class-win32-networkadapterconfiguration.md
-                    - name: SetTcpUseRFC1122UrgentPointer-Methode
+                    - name: SetTcpUseRFC1122 WietPointer-Methode
                       href: settcpuserfc1122urgentpointer-method-in-class-win32-networkadapterconfiguration.md
-                    - name: Settcpwindowsize-Methode
+                    - name: SetTcpWindowSize-Methode
                       href: settcpwindowsize-method-in-class-win32-networkadapterconfiguration.md
                     - name: SetWINSServer-Methode
                       href: setwinsserver-method-in-class-win32-networkadapterconfiguration.md
@@ -1685,14 +1685,14 @@
             - name: Win32_PnPEntity
               href: win32-pnpentity.md
               items:
-                - name: Win32_PnPEntity Methoden
+                - name: Win32_PnPEntity-Methoden
                   href: win32-pnpentity-methods.md
                   items:
-                    - name: Methode deaktivieren
+                    - name: Disable-Methode
                       href: disable-win32-pnpentity.md
                     - name: Enable-Methode
                       href: enable-win32-pnpentity.md
-                    - name: Getdeviceproperties-Methode
+                    - name: GetDeviceProperties-Methode
                       href: getdeviceproperties-win32-pnpentity.md
             - name: Win32_PointingDevice
               href: win32-pointingdevice.md
@@ -1709,26 +1709,26 @@
             - name: Win32_Printer
               href: win32-printer.md
               items:
-                - name: Win32_Printer Methoden
+                - name: Win32_Printer-Methoden
                   href: win32-printer-methods.md
                   items:
                     - name: AddPrinterConnection-Methode
                       href: addprinterconnection-method-in-class-win32-printer.md
-                    - name: Cancelalljobs-Methode
+                    - name: CancelAllJobs-Methode
                       href: cancelalljobs-method-in-class-win32-printer.md
-                    - name: Getsecuritydescriptor-Methode
+                    - name: GetSecurityDescriptor-Methode
                       href: getsecuritydescriptor-method-in-class-win32-printer.md
                     - name: Pause-Methode
                       href: pause-method-in-class-win32-printer.md
-                    - name: PrintTestpage-Methode
+                    - name: PrintTestPage-Methode
                       href: printtestpage-method-in-class-win32-printer.md
-                    - name: Renameprinter-Methode
+                    - name: RenamePrinter-Methode
                       href: renameprinter-method-in-class-win32-printer.md
                     - name: Resume-Methode
                       href: resume-method-in-class-win32-printer.md
                     - name: SetDefaultPrinter-Methode
                       href: setdefaultprinter-method-in-class-win32-printer.md
-                    - name: SETSECURITYDESCRIPTOR-Methode
+                    - name: SetSecurityDescriptor-Methode
                       href: setsecuritydescriptor-method-in-class-win32-printer.md
             - name: Win32_PrinterConfiguration
               href: win32-printerconfiguration.md
@@ -1737,10 +1737,10 @@
             - name: Win32_PrinterDriver
               href: win32-printerdriver.md
               items:
-                - name: Win32_PrinterDriver Methoden
+                - name: Win32_PrinterDriver-Methoden
                   href: win32-printerdriver-methods.md
                   items:
-                    - name: Addprinterdriver-Methode
+                    - name: AddPrinterDriver-Methode
                       href: addprinterdriver-method-in-class-win32-printerdriver.md
                     - name: StartService-Methode
                       href: startservice-method-in-class-win32-printerdriver.md
@@ -1755,7 +1755,7 @@
             - name: Win32_PrintJob
               href: win32-printjob.md
               items:
-                - name: Win32_PrintJob Methoden
+                - name: Win32_PrintJob-Methoden
                   href: win32-printjob-methods.md
                   items:
                     - name: Pause-Methode
@@ -1812,21 +1812,21 @@
             - name: Win32_ClusterShare
               href: win32-clustershare.md
               items:
-                - name: Win32_ClusterShare Methoden
+                - name: Win32_ClusterShare-Methoden
                   href: win32-clustershare-methods.md
                   items:
                     - name: Erstellungsmethode
                       href: create-win32-clustershare.md
                     - name: Delete-Methode
                       href: delete-win32-clustershare.md
-                    - name: Getaccessmask-Methode
+                    - name: GetAccessMask-Methode
                       href: getaccessmask-win32-clustershare.md
-                    - name: Setshareingefo-Methode
+                    - name: SetShareInfo-Methode
                       href: setshareinfo-win32-clustershare.md
             - name: Win32_BaseService
               href: win32-baseservice.md
               items:
-                - name: Win32_BaseService Methoden
+                - name: Win32_BaseService-Methoden
                   href: win32-baseservice-methods.md
                   items:
                     - name: Methode ändern
@@ -1854,14 +1854,14 @@
             - name: Win32_CodecFile
               href: win32-codecfile.md
               items:
-                - name: Win32_CodecFile Methoden
+                - name: Win32_CodecFile-Methoden
                   href: win32-codecfile-methods.md
                   items:
-                    - name: Changesecurrityberechtigungs-Methode
+                    - name: ChangeSecurityPermissions-Methode
                       href: changesecuritypermissions-method-in-class-win32-codecfile.md
-                    - name: Changesecurritypermissionsex-Methode
+                    - name: ChangeSecurityPermissionsEx-Methode
                       href: changesecuritypermissionsex-method-in-class-win32-codecfile.md
-                    - name: Methode komprimieren
+                    - name: Compress-Methode
                       href: compress-method-in-class-win32-codecfile.md
                     - name: CompressEx-Methode
                       href: compressex-method-in-class-win32-codecfile.md
@@ -1873,13 +1873,13 @@
                       href: delete-method-in-class-win32-codecfile.md
                     - name: DeleteEx-Methode
                       href: deleteex-method-in-class-win32-codecfile.md
-                    - name: Geteffectiveberechtigungs Methode
+                    - name: GetEffectivePermission-Methode
                       href: geteffectivepermission-method-in-class-win32-codecfile.md
                     - name: Umbenennen einer Methode
                       href: rename-method-in-class-win32-codecfile.md
-                    - name: TakeOwnership-Methode
+                    - name: TakeOwnerShip-Methode
                       href: takeownership-method-in-class-win32-codecfile.md
-                    - name: Takebesitzshipex-Methode
+                    - name: TakeOwnerShipEx-Methode
                       href: takeownershipex-method-in-class-win32-codecfile.md
                     - name: Uncompress-Methode
                       href: uncompress-method-in-class-win32-codecfile.md
@@ -1904,7 +1904,7 @@
             - name: Win32_ComputerSystem
               href: win32-computersystem.md
               items:
-                - name: Win32_ComputerSystem Methoden
+                - name: Win32_ComputerSystem-Methoden
                   href: win32-computersystem-methods.md
                   items:
                     - name: Umbenennen einer Methode
@@ -1918,20 +1918,20 @@
             - name: Win32_DCOMApplicationSetting
               href: win32-dcomapplicationsetting.md
               items:
-                - name: Win32_DCOMApplicationSetting Methoden
+                - name: Win32_DCOMApplicationSetting-Methoden
                   href: win32-dcomapplicationsetting-methods.md
                   items:
-                    - name: Getaccesssecuritydescriptor-Methode
+                    - name: GetAccessSecurityDescriptor-Methode
                       href: getaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md
-                    - name: Setaccesssecuritydescriptor-Methode
+                    - name: SetAccessSecurityDescriptor-Methode
                       href: setaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md
-                    - name: Getconfigurationsecuritydescriptor-Methode
+                    - name: GetConfigurationSecurityDescriptor-Methode
                       href: getconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md
-                    - name: Setconfigurationsecuritydescriptor-Methode
+                    - name: SetConfigurationSecurityDescriptor-Methode
                       href: setconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md
-                    - name: Setlaunchsecuritydescriptor-Methode
+                    - name: SetLaunchSecurityDescriptor-Methode
                       href: getlaunchsecuritydescriptor-in-class-win32-dcomapplicationsetting.md
-                    - name: Setlaunchsecuritydescriptor-Methode
+                    - name: SetLaunchSecurityDescriptor-Methode
                       href: setlaunchsecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md
             - name: Win32_DependentService
               href: win32-dependentservice.md
@@ -1942,14 +1942,14 @@
             - name: Win32_Directory
               href: win32-directory.md
               items:
-                - name: Win32_Directory Methoden
+                - name: Win32_Directory-Methoden
                   href: win32-directory-methods.md
                   items:
-                    - name: Changesecurrityberechtigungs-Methode
+                    - name: ChangeSecurityPermissions-Methode
                       href: changesecuritypermissions-method-in-class-win32-directory.md
-                    - name: Changesecurritypermissionsex-Methode
+                    - name: ChangeSecurityPermissionsEx-Methode
                       href: changesecuritypermissionsex-method-in-class-win32-directory.md
-                    - name: Methode komprimieren
+                    - name: Compress-Methode
                       href: compress-method-in-class-win32-directory.md
                     - name: CompressEx-Methode
                       href: compressex-method-in-class-win32-directory.md
@@ -1961,13 +1961,13 @@
                       href: delete-method-in-class-win32-directory.md
                     - name: DeleteEx-Methode
                       href: deleteex-method-in-class-win32-directory.md
-                    - name: Geteffectiveberechtigungs Methode
+                    - name: GetEffectivePermission-Methode
                       href: geteffectivepermission-method-in-class-win32-directory.md
                     - name: Umbenennen einer Methode
                       href: rename-method-in-class-win32-directory.md
-                    - name: TakeOwnership-Methode
+                    - name: TakeOwnerShip-Methode
                       href: takeownership-method-in-class-win32-directory.md
-                    - name: Takebesitzshipex-Methode
+                    - name: TakeOwnerShipEx-Methode
                       href: takeownershipex-method-in-class-win32-directory.md
                     - name: Uncompress-Methode
                       href: uncompress-method-in-class-win32-directory.md
@@ -1978,7 +1978,7 @@
             - name: Win32_Group
               href: win32-group.md
               items:
-                - name: Win32_Group Methoden
+                - name: Win32_Group-Methoden
                   href: win32-group-methods.md
                   items:
                     - name: Umbenennen einer Methode
@@ -2002,10 +2002,10 @@
             - name: Win32_OperatingSystem
               href: win32-operatingsystem.md
               items:
-                - name: Win32_OperatingSystem Methoden
+                - name: Win32_OperatingSystem-Methoden
                   href: win32-operatingsystem-methods.md
                   items:
-                    - name: Reboot-Methode
+                    - name: Neustartmethode
                       href: reboot-method-in-class-win32-operatingsystem.md
                     - name: SetDateTime-Methode
                       href: setdatetime-method-in-class-win32-operatingsystem.md
@@ -2026,14 +2026,14 @@
             - name: Win32_PageFile
               href: win32-pagefile.md
               items:
-                - name: Win32_PageFile Methoden
+                - name: Win32_PageFile-Methoden
                   href: win32-pagefile-methods.md
                   items:
-                    - name: Changesecurrityberechtigungs-Methode
+                    - name: ChangeSecurityPermissions-Methode
                       href: changesecuritypermissions-method-in-class-win32-pagefile.md
-                    - name: Changesecurritypermissionsex-Methode
+                    - name: ChangeSecurityPermissionsEx-Methode
                       href: changesecuritypermissionsex-method-in-class-win32-pagefile.md
-                    - name: Methode komprimieren
+                    - name: Compress-Methode
                       href: compress-method-in-class-win32-pagefile.md
                     - name: CompressEx-Methode
                       href: compressex-method-in-class-win32-pagefile.md
@@ -2045,13 +2045,13 @@
                       href: delete-method-in-class-win32-pagefile.md
                     - name: DeleteEx-Methode
                       href: deleteex-method-in-class-win32-pagefile.md
-                    - name: Geteffectiveberechtigungs Methode
+                    - name: GetEffectivePermission-Methode
                       href: geteffectivepermission-method-in-class-win32-pagefile.md
                     - name: Umbenennen einer Methode
                       href: rename-method-in-class-win32-pagefile.md
-                    - name: TakeOwnership-Methode
+                    - name: TakeOwnerShip-Methode
                       href: takeownership-method-in-class-win32-pagefile.md
-                    - name: Takebesitzshipex-Methode
+                    - name: TakeOwnerShipEx-Methode
                       href: takeownershipex-method-in-class-win32-pagefile.md
                     - name: Uncompress-Methode
                       href: uncompress-method-in-class-win32-pagefile.md
@@ -2068,18 +2068,18 @@
             - name: Win32_Process
               href: win32-process.md
               items:
-                - name: Win32_Process Methoden
+                - name: Win32_Process-Methoden
                   href: win32-process-methods.md
                   items:
                     - name: AttachDebugger-Methode
                       href: attachdebugger-method-in-class-win32-process.md
                     - name: Erstellungsmethode
                       href: create-method-in-class-win32-process.md
-                    - name: Getavailablevirtualsize-Methode
+                    - name: GetAvailableVirtualSize-Methode
                       href: getavailablevirtualsize-win32-process.md
                     - name: GetOwner-Methode
                       href: getowner-method-in-class-win32-process.md
-                    - name: GetOwnerSID-Methode
+                    - name: GetOwnerSid-Methode
                       href: getownersid-method-in-class-win32-process.md
                     - name: SetPriority-Methode
                       href: setpriority-method-in-class-win32-process.md
@@ -2100,7 +2100,7 @@
             - name: Win32_ScheduledJob
               href: win32-scheduledjob.md
               items:
-                - name: Win32_ScheduledJob Methoden
+                - name: Win32_ScheduledJob-Methoden
                   href: win32-scheduledjob-methods.md
                   items:
                     - name: Erstellungsmethode
@@ -2110,7 +2110,7 @@
             - name: Win32_Service
               href: win32-service.md
               items:
-                - name: Win32_Service Methoden
+                - name: Win32_Service-Methoden
                   href: win32-service-methods.md
                   items:
                     - name: Methode ändern
@@ -2121,7 +2121,7 @@
                       href: create-method-in-class-win32-service.md
                     - name: Delete-Methode
                       href: delete-method-in-class-win32-service.md
-                    - name: Getsecuritydescriptor-Methode
+                    - name: GetSecurityDescriptor-Methode
                       href: getsecuritydescriptor-method-in-class-win32-service.md
                     - name: InterrogateService-Methode
                       href: interrogateservice-method-in-class-win32-service.md
@@ -2129,7 +2129,7 @@
                       href: pauseservice-method-in-class-win32-service.md
                     - name: ResumeService-Methode
                       href: resumeservice-method-in-class-win32-service.md
-                    - name: SETSECURITYDESCRIPTOR-Methode
+                    - name: SetSecurityDescriptor-Methode
                       href: setsecuritydescriptor-method-in-class-win32-service.md
                     - name: StartService-Methode
                       href: startservice-method-in-class-win32-service.md
@@ -2146,16 +2146,16 @@
             - name: Win32_Share
               href: win32-share.md
               items:
-                - name: Win32_Share Methoden
+                - name: Win32_Share-Methoden
                   href: win32-share-methods.md
                   items:
                     - name: Erstellungsmethode
                       href: create-method-in-class-win32-share.md
                     - name: Delete-Methode
                       href: delete-method-in-class-win32-share.md
-                    - name: Getaccessmask-Methode
+                    - name: GetAccessMask-Methode
                       href: getaccessmask-method-in-class-win32-share.md
-                    - name: Setshareingefo-Methode
+                    - name: SetShareInfo-Methode
                       href: setshareinfo-method-in-class-win32-share.md
             - name: Win32_ShareToDirectory
               href: win32-sharetodirectory.md
@@ -2180,7 +2180,7 @@
             - name: Win32_SystemDriver
               href: win32-systemdriver.md
               items:
-                - name: Win32_SystemDriver Methoden
+                - name: Win32_SystemDriver-Methoden
                   href: win32-systemdriver-methods.md
                   items:
                     - name: Methode ändern
@@ -2242,7 +2242,7 @@
             - name: Win32_UserAccount
               href: win32-useraccount.md
               items:
-                - name: Win32_UserAccount Methoden
+                - name: Win32_UserAccount-Methoden
                   href: win32-useraccount-methods.md
                   items:
                     - name: Umbenennen einer Methode
@@ -2256,14 +2256,14 @@
             - name: Win32_ShortcutFile
               href: win32-shortcutfile.md
               items:
-                - name: Win32_ShortcutFile Methoden
+                - name: Win32_ShortcutFile-Methoden
                   href: win32-shortcutfile-methods.md
                   items:
-                    - name: Changesecurrityberechtigungs-Methode
+                    - name: ChangeSecurityPermissions-Methode
                       href: changesecuritypermissions-method-in-class-win32-shortcutfile.md
-                    - name: Changesecurritypermissionsex-Methode
+                    - name: ChangeSecurityPermissionsEx-Methode
                       href: changesecuritypermissionsex-method-in-class-win32-shortcutfile.md
-                    - name: Methode komprimieren
+                    - name: Compress-Methode
                       href: compress-method-in-class-win32-shortcutfile.md
                     - name: CompressEx-Methode
                       href: compressex-method-in-class-win32-shortcutfile.md
@@ -2275,19 +2275,19 @@
                       href: delete-method-in-class-win32-shortcutfile.md
                     - name: DeleteEx-Methode
                       href: deleteex-method-in-class-win32-shortcutfile.md
-                    - name: Geteffectiveberechtigungs Methode
+                    - name: GetEffectivePermission-Methode
                       href: geteffectivepermission-method-in-class-win32-shortcutfile.md
                     - name: Umbenennen einer Methode
                       href: rename-method-in-class-win32-shortcutfile.md
-                    - name: TakeOwnership-Methode
+                    - name: TakeOwnerShip-Methode
                       href: takeownership-method-in-class-win32-shortcutfile.md
-                    - name: Takebesitzshipex-Methode
+                    - name: TakeOwnerShipEx-Methode
                       href: takeownershipex-method-in-class-win32-shortcutfile.md
                     - name: Uncompress-Methode
                       href: uncompress-method-in-class-win32-shortcutfile.md
                     - name: UncompressEx-Methode
                       href: uncompressex-method-in-class-win32-shortcutfile.md
-        - name: Leistungs Leistungsdaten-Klassen
+        - name: Leistungsindikatorklassen
           href: performance-counter-classes.md
           items:
             - name: Win32_Perf
@@ -2296,7 +2296,7 @@
               href: win32-perfformatteddata.md
             - name: Win32_PerfRawData
               href: win32-perfrawdata.md
-        - name: WMI-Dienst Verwaltungs Klassen
+        - name: WMI-Dienstverwaltungsklassen
           href: wmi-service-management-classes.md
           items:
             - name: Win32_MethodParameterClass

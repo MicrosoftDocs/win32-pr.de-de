@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. currentvoreinstellung
-description: Das currentvoreinstellung-Attribut gibt den Index der aktuellen Voreinstellung an oder ruft ihn ab.
+title: EQUALIZERSETTINGS.currentPreset
+description: Das currentPreset-Attribut gibt den Index der aktuellen Voreinstellung an oder ruft den Index ab.
 ms.assetid: 0eb97da7-3ca0-4560-8702-2adbd8dcfc1e
 keywords:
-- Equalizersettings. currentvoreinstellung-Windows-Media Player
+- EQUALIZERSETTINGS.currentPreset Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a67e48670f100491f24bd4f0a46462f252603fd4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6bb52841174250b66eae28e7b60528fc60b20c17469461cf252b5897835c7d3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901970"
 ---
-# <a name="equalizersettingscurrentpreset"></a>Equalizersettings. currentvoreinstellung
+# <a name="equalizersettingscurrentpreset"></a>EQUALIZERSETTINGS.currentPreset
 
-Das **currentvoreinstellung** -Attribut gibt den Index der aktuellen Voreinstellung an oder ruft ihn ab.
+Das **currentPreset-Attribut** gibt den Index der aktuellen Voreinstellung an oder ruft den Index ab.
 
 ``` syntax
         elementID.currentPreset
@@ -29,9 +29,9 @@ Das **currentvoreinstellung** -Attribut gibt den Index der aktuellen Voreinstell
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**). 
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**). 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
@@ -41,7 +41,7 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,7 +49,7 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> </dl>
 
  

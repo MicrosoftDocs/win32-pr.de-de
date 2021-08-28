@@ -1,6 +1,6 @@
 ---
-title: Beleuchtungszustandsvariablen
-description: Beleuchtungszustandsvariablen
+title: Statusvariablen für die Helligkeit
+description: Statusvariablen für die Helligkeit
 ms.assetid: a9fb1e22-5e33-4b46-9c3b-2f64de5dd646
 keywords:
 - Beleuchtungszustandsvariablen OpenGL
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c5a2d029727f4ff4a9eee353230e0843a39f082
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: dfeb867f979a0f5f2da838cdd225c91da2b67913c18cdda89c5d40a3f8ed6b88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034910"
 ---
-# <a name="lighting-state-variables"></a>Beleuchtungszustandsvariablen
+# <a name="lighting-state-variables"></a>Statusvariablen für die Helligkeit
 
 <dl> <dt><span id="GL_LIGHTING"></span><span id="gl_lighting"></span>\_GL-BELEUCHTUNG</dt> <dd> 
 
@@ -66,7 +66,7 @@ ms.locfileid: "107909848"
 |------------------|----------------------------------------------------------------------------------|
 | Beschreibung:     | Von der Farbnachverfolgung betroffene Gesichter                                                 |
 | Attributgruppe: | Belichtung                                                                         |
-| Anfangswert:   | GL \_ FRONT \_ UND \_ BACK                                                             |
+| Anfangswert:   | GL \_ FRONT \_ AND \_ BACK                                                             |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
 
 
@@ -103,7 +103,7 @@ ms.locfileid: "107909848"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------------|
-| Beschreibung:     | Farbe des Specularmaterials                  |
+| Beschreibung:     | Specular material color (Farbe des Specular-Materials)                  |
 | Attributgruppe: | Belichtung                                 |
 | Anfangswert:   | (0.0,0.0,0.0,1.0)                        |
 | Get-Befehl:     | [**glGetMaterialfv**](glgetmaterial.md) |
@@ -125,7 +125,7 @@ ms.locfileid: "107909848"
 
  
 
-</dd> <dt><span id="GL_SHININESS"></span><span id="gl_shininess"></span>\_GL-VERTRAUENSWÜRDIGKEIT</dt> <dd> 
+</dd> <dt><span id="GL_SHININESS"></span><span id="gl_shininess"></span>\_GL-GL-SCHLÄFRIGKEIT</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------------|
@@ -207,7 +207,7 @@ ms.locfileid: "107909848"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Glanzstärke des Lichts *i*    |
+| Beschreibung:     | Specular intensity of light *i*    |
 | Attributgruppe: | Belichtung                           |
 | Anfangswert:   |                                    |
 | Get-Befehl:     | [**glGetLightfv**](glgetlight.md) |
@@ -216,7 +216,7 @@ ms.locfileid: "107909848"
 
  
 
-</dd> <dt><span id="GL_POSITION"></span><span id="gl_position"></span>\_GL-POSITION</dt> <dd> 
+</dd> <dt><span id="GL_POSITION"></span><span id="gl_position"></span>GL \_ POSITION</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
@@ -272,7 +272,7 @@ ms.locfileid: "107909848"
 
 | Eigenschaft | Wert |
 |------------------|------------------------------------|
-| Beschreibung:     | Blickpunktrichtung des *Lichts i*   |
+| Beschreibung:     | Blickpunktrichtung des Lichts *i*   |
 | Attributgruppe: | Belichtung                           |
 | Anfangswert:   | (0.0,0.0,-1.0)                     |
 | Get-Befehl:     | [**glGetLightfv**](glgetlight.md) |
@@ -320,11 +320,11 @@ ms.locfileid: "107909848"
 
  
 
-</dd> <dt><span id="GL_COLOR_INDEXES"></span><span id="gl_color_indexes"></span>\_ \_ GL-FARBINDIZES</dt> <dd> 
+</dd> <dt><span id="GL_COLOR_INDEXES"></span><span id="gl_color_indexes"></span>GL \_ COLOR \_ INDEXES</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | *C (a)*, *C (d)* und *C (s) für* farbindexbasierte Beleuchtung                         |
+| Beschreibung:     | *C (a)*, *C (d)* und *C (s)* für die Farbindexbeleuchtung                         |
 | Attributgruppe: | Beleuchtung/Aktivierung                                                                |
 | Anfangswert:   | 0,1,1                                                                          |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |

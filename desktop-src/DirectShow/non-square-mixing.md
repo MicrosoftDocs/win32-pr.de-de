@@ -1,68 +1,68 @@
 ---
-description: Nicht quadratische Vermischung
+description: Nicht quadratische Mischung
 ms.assetid: 8d27a921-5638-43ac-807d-e3bd7b9b2de8
-title: Nicht quadratische Vermischung
+title: Nicht quadratische Mischung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 79d23f423f0dbe19f1ff0ba35c44f8fd2f8732bc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4674891b7b9d44cb35522b6040723bc71436d677b10a4326d9f00a269ce3aff2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102410"
 ---
-# <a name="non-square-mixing"></a>Nicht quadratische Vermischung
+# <a name="non-square-mixing"></a>Nicht quadratische Mischung
 
 Dieses Thema gilt für Windows XP Service Pack 2 oder höher.
 
-Wenn VMR-9 zwei oder mehr Streams kombiniert, gibt es zwei Punkte, an denen die Skalierung stattfinden kann: Wenn der Mixer die Eingabestreams zusammensetzt und der zuordnerpresenter das zusammengesetzte Bild rendert.
+Wenn VMR-9 zwei oder mehr Streams kombiniert, gibt es zwei Punkte, an denen die Skalierung erfolgen kann: Wenn der Mixer die Eingabestreams zusammengesetzt, und wenn der Allocator-Presenter das zusammengesetzte Bild rendert.
 
-![VMR-Mischungs Vorgänge](images/vmr-nonsquare-mixing.png)
+![VMR-Mischungsvorgänge](images/vmr-nonsquare-mixing.png)
 
-In früheren Versionen von VMR-9 wurden die Eingabedaten Ströme stets mithilfe eines quadratischen (1:1) Pixel Seitenverhältnisses (par) zusammengesetzt, auch wenn nur ein einzelner Videostream vorhanden war. Wenn der Eingabedaten Strom nicht quadratische Pixel enthielt, verursachte dies einen unnötigen Skalierungs Vorgang. Die Skalierung sollte so weit wie möglich vermieden werden, da Sie die endgültige Bildqualität beeinträchtigt.
+In früheren Versionen von VMR-9 wurden die Eingabestreams immer mit einem quadratischen (1:1) Pixel-Seitenverhältnis (PAR) zusammengesetzt, auch wenn es nur einen einzelnen Videostream gab. Wenn der Eingabestream nicht quadratische Pixel auf hatte, verursachte dies einen unnötigen Skalierungsvorgang. Die Skalierung sollte natürlich so weit wie möglich vermieden werden, da sie die endgültige Qualität des Images beeinträchtigt.
 
 Ab Windows XP Service Pack 2 unterstützt VMR-9 zwei verschiedene Möglichkeiten, um das Problem der doppelten Skalierung zu vermeiden:
 
--   Implementieren Sie einen benutzerdefinierten Zuweiser und unterstützen Sie die [**IVMRSurfaceAllocatorEx9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrsurfaceallocatorex9) -Schnittstelle.
--   Verwenden Sie den nicht quadratischen Mischungs Modus.
+-   Implementieren Sie eine benutzerdefinierte Allocator-Presenter-Schnittstelle, und unterstützen Sie die [**IVMRSurfaceAllocatorEx9-Schnittstelle.**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrsurfaceallocatorex9)
+-   Verwenden Sie den Nicht-Quadrat-Mischungsmodus.
 
-In diesem Abschnitt wird der nicht quadratische Mischungs Modus beschrieben. Beide Verfahren können von Anwendungen kombiniert werden.
+In diesem Abschnitt wird der nicht quadratische Mischungsmodus beschrieben. Anwendungen können beide Techniken kombinieren.
 
-**Funktionsweise der nicht quadratischen Vermischung**
+**Funktionsweise von nicht quadratischem Mischen**
 
-Im nicht quadratischen Mischungs Modus wählt VMR-9 einen Eingabedaten Strom als Zielgröße und par aus. Der Mixer von VMR skaliert das Video nicht aus diesem Stream oder aus anderen Streams mit der gleichen Bildgröße und dem gleichen Wert. Datenströme mit einer anderen Größe oder einem anderen Seitenverhältnis werden so skaliert, dass Sie mit der Ziel Größe übereinstimmen, die der Größe des endgültigen Ausgabe Bilds entspricht.
+Im nicht quadratischen Mischungsmodus wählt VMR-9 einen Eingabestream als Zielgröße und PAR aus. Der Mixer des virtuellen Computers skaliert das Video aus diesem Stream oder aus anderen Streams mit der gleichen Imagegröße und PAR nicht. Streams mit einer anderen Größe oder einem anderen Seitenverhältnis werden so skaliert, dass sie dem Ziel-PAR und letterboxed an die endgültige Größe des Ausgabebilds passen.
 
-Die Auswahl der Streams hängt vom aktuellen Mischungs Modus ab:
+Die Auswahl der Streams hängt vom aktuellen Mischungsmodus ab:
 
--   Der YUV-Mischungs Modus ist auf einen Videodaten Strom auf Pin 0 beschränkt. (Die anderen Pins können über untergeordnete oder geschlossene Beschriftungs Datenströme verfügen.) Daher wählt VMR-9 immer Pin 0 für die zielbildgröße und-Größe aus.
--   Im RGB-Mischungs Modus wählt der VMR den Stream mit der größten Bildgröße aus. Wenn mehr als ein Wert vorhanden ist, wählt er den Wert mit der höchsten z-Reihenfolge aus. und wenn immer noch eine Verknüpfung vorhanden ist, wird der Stream mit der niedrigsten PIN-Nummer ausgewählt.
+-   Der YUV-Mischungsmodus ist auf einen Videostream an Pin 0 beschränkt. (Die anderen Stecknadeln können Unterbild- oder Untertitelstreams enthalten.) Daher wählt VMR-9 immer Pin 0 für die Größe des Zielimages und PAR aus.
+-   Im RGB-Mischungsmodus wählt der VMR den Stream mit der größten Bildgröße aus. Wenn es mehrere gibt, wird die mit der höchsten Z-Reihenfolge ausgewählt. Und wenn immer noch ein Unentschieden vor sich geht, wird der Stream mit der niedrigsten Pinnummer ausgewählt.
 
-**Beispiele für Vorgänge**
+**Beispiele für den Vorgang**
 
-**1. Beispiel:** Stream 0 ist 720 x 480 Pixel mit einem Bildseiten Verhältnis von 16:9. Stream 1 ist ein 640 x 480 Pixel mit einem Bildseiten Verhältnis von 4:3.
+**1. Beispiel:** Stream 0 ist 720 x 480 Pixel mit einem Bildbild-Seitenverhältnis von 16:9. Stream 1 ist ein 640 x 480 Pixel mit einem Bildbild-Seitenverhältnis von 4:3.
 
-In diesem Beispiel hat Stream 0 die größte Bildgröße. Daher wählt VMR diesen Stream aus, unabhängig vom RGB-Mischungs Modus oder dem yub-Mischungs Modus. Die par ist 32:27 (16:9/720:480). das bedeutet, dass das Bild horizontal durch dieses Verhältnis gestreckt werden muss, um das richtige 16:9 Bildseiten Verhältnis zu schaffen.
+In diesem Beispiel hat Stream 0 die größte Bildgröße, sodass der VMR diesen Stream unabhängig vom RGB-Mischungsmodus oder YUB-Mischungsmodus auswählt. Der PAR ist 32:27 (16:9 / 720:480), was bedeutet, dass das Bild horizontal um dieses Verhältnis gestreckt werden muss, um das richtige Seitenverhältnis von 16:9 zu erzeugen.
 
-Um dem Zielwert zu entsprechen, skaliert der VMR-Mixer den Stream 1 mit dem umgekehrten Verhältnis (27:32), was zu einem 540 x 480-Bild führt. Die beiden Streams werden dann auf eine Oberfläche zusammengesetzt. Um das resultierende Bild ordnungsgemäß anzuzeigen, muss der zuordnerpräsentator das Bild horizontal Strecken, um das Seitenverhältnis von 16:9 Bild anzupassen.
+Zur Übereinstimmung mit dem Ziel-PAR skaliert der VMR-Mixer Stream 1 um das umgekehrte Verhältnis (27:32), was zu einem Bild von 540 x 480 führt. Die beiden Streams werden dann auf einer Oberfläche zusammengesetzt. Um das resultierende Bild korrekt anzuzeigen, muss die Zuweisungsanzeige das Bild horizontal strecken, damit es dem Seitenverhältnis von 16:9 des Bilds passt.
 
 ![Beispiel 1.](images/vmr-nonsquare-mixing2.png)
 
-**2. Beispiel:** Stream 0 ist 720 x 480 Pixel mit einem Bildseiten Verhältnis von 16:9. Stream 1 ist ein 1024 x 768 Pixel mit einem Bildseiten Verhältnis von 4:3.
+**2. Beispiel:** Stream 0 ist 720 x 480 Pixel mit einem Bildbild-Seitenverhältnis von 16:9. Stream 1 ist ein 1024 x 768 Pixel mit einem Bildbild-Seitenverhältnis von 4:3.
 
-Wenn VMR-9 den YUV-Mischungs Modus verwendet, wählt er immer Stream 0 aus. Daher wird der Stream 1 auf 540 x 480 Pixel gestreckt, sodass er mit dem par von Stream 0 übereinstimmt.
+Wenn VMR-9 den YUV-Mischungsmodus verwendet, wird immer Stream 0 ausgewählt. Daher wird stream 1 auf 540 x 480 Pixel gestreckt, um dem PAR von Stream 0 zu passen.
 
-Wenn VMR-9 den RGB-Mischungs Modus verwendet, wählt er Stream 1 als Ziel aus, da dieser Stream die größte Bildgröße aufweist. Der Stream 0 wird auf eine Bildgröße von 1024 x 576 Pixel gestreckt. Beachten Sie, dass das zusammengesetzte Image in diesem Fall ein par von 1:1 hat, sodass der Zuordnungs-Presenter nicht für nicht quadratische Pixel korrekt ist. (Möglicherweise muss das Video nach wie vor für das Ziel Rechteck gestreckt werden.)
+Wenn VMR-9 den RGB-Mischungsmodus verwendet, wählt er Stream 1 als Ziel aus, da dieser Stream die größte Bildgröße hat. Stream 0 wird auf eine Bildgröße von 1.024 x 576 Pixel gestreckt. Beachten Sie, dass das zusammengesetzte Bild in diesem Fall einen PAR-1:1-Beschriftungswert hat, sodass der Allocator-Presenter nicht für nicht quadratische Pixel korrigieren muss. (Möglicherweise muss das Video trotzdem gestreckt werden, um das Zielrechteck zu berücksichtigen.)
 
-**Verwenden des nicht quadratischen Mischungs Modus**
+**Verwenden des nicht quadratischen Mischungsmodus**
 
-Der nicht quadratische Mischungs Modus wird empfohlen, wenn eine der folgenden Bedingungen zutrifft:
+Der nicht quadratische Mischungsmodus wird empfohlen, wenn eine der folgenden Bedingungen zutrifft:
 
--   Die Anwendung sendet nie mehr als einen Videodaten Strom an VMR-9.
--   Ihre Anwendung rendert DVD-, Fernseh-oder MS-DVR-Dateien. Sie sollten in diesem Fall auch den YUV-Mischungs Modus verwenden, wenn er von der Grafikhardware unterstützt wird.
+-   Ihre Anwendung sendet nie mehr als einen Videostream an VMR-9.
+-   Ihre Anwendung rendert DVD-, Fernseh- oder ms-dvr-Dateien. Sie sollten in diesem Fall auch den YUV-Mischungsmodus verwenden, wenn die Grafikhardware dies unterstützt.
 
-Wenn Ihre Anwendung mehrere Videostreams mit unterschiedlichen Bildgrößen oder Pixel Seitenverhältnissen kombiniert, wird der standardmäßige quadratische Mischungs Modus empfohlen.
+Wenn Ihre Anwendung mehrere Videostreams gemischt, die unterschiedliche Bildgrößen oder Pixel-Seitenverhältnisse haben können, wird der standardmäßige quadratische Mischungsmodus empfohlen.
 
-Um den nicht quadratischen Mischungs Modus zu konfigurieren, muss das Filter Diagramm angehalten werden, und alle Eingabe Pins sind auf VMR-9 getrennt. Rufen Sie dann [**IVMRMixerControl9:: setmixingprefs**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrmixercontrol9-setmixingprefs) mit dem MixerPref9 \_ nonsquaremischungsflag auf:
+Um den nicht quadratischen Mischungsmodus zu konfigurieren, muss das Filterdiagramm beendet und alle Eingabepins auf vmr-9 getrennt werden. Rufen Sie [**dann IVMRMixerControl9::SetMixingPrefs**](/previous-versions/windows/desktop/api/Vmr9/nf-vmr9-ivmrmixercontrol9-setmixingprefs) mit dem MixerPref9 \_ NonSquareMixing-Flag auf:
 
 
 ```C++
@@ -75,23 +75,23 @@ pMixControl->SetMixingPrefs(dwPrefs);
 
 
 > [!Note]  
-> Wenn Sie das MixerPref9 \_ nonsquaremischungsflag mit dem MixerPref9 \_ arsexory-Flag kombinieren, ignoriert VMR-9 das MixerPref9 \_ arsexory-Flag.
+> Wenn Sie das MixerPref9 \_ NonSquareMixing-Flag mit dem MixerPref9-Flag \_ ARAdjustXorY kombinieren, ignoriert VMR-9 das MixerPref9-Flag \_ ARAdjustXorY.
 
  
 
-Wenn Ihre Anwendung einen benutzerdefinierten zuordnerpräsentator mit einem nicht quadratischen Mischungs Modus verwendet, beachten Sie, dass das zusammengesetzte Bild möglicherweise eine nicht quadratische par-ID hat. Der zuordnerpräsentator muss das Bild auf einen quadratischen (1:1) par skalieren.
+Wenn Ihre Anwendung einen benutzerdefinierten Allocator-Presenter mit nicht quadratischem Mischungsmodus verwendet, beachten Sie, dass das zusammengesetzte Bild möglicherweise ein nicht quadratisches PAR hat. Der Allocator-Presenter muss das Bild auf ein quadratisches (1:1) PAR skalieren.
 
 **Statische Bitmaps**
 
-Wenn Sie die [**IVMRMixerBitmap9**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixerbitmap9) -Schnittstelle verwenden, um eine statische Bitmap in das Video zu mischen, sollten Sie die Bitmap als zweiten Videostream für den VMR-Mischungs Modus in Erwägung ziehen.
+Wenn Sie die [**IVMRMixerBitmap9-Schnittstelle**](/previous-versions/windows/desktop/api/Vmr9/nn-vmr9-ivmrmixerbitmap9) verwenden, um eine statische Bitmap in das Video zu mischen, sollten Sie die Bitmap als zweiten Videostream für den VMR-Gemischtmodus betrachten.
 
-Die Bitmap wird von VMR als identisch mit dem Ziel behandelt. Die Bitmap wird nicht skaliert, um das Pixel Seitenverhältnis des Ziels anzupassen. In der Standardkonfiguration von VMR hat das Ziel eine 1:1-Entsprechung, die den meisten Bitmaps entspricht. Im nicht quadratischen Mischungs Modus hat das Ziel möglicherweise nicht eckige Pixel. Um sicherzustellen, dass die Bitmap ordnungsgemäß angezeigt wird, sollte die Anwendung ein Bild bereitstellen, dessen par der Ziel-par entspricht.
+Die VMR behandelt die Bitmap so, als habe sie den gleichen PAR wie das Ziel. Die Bitmap wird nicht skaliert, um das Pixel-Seitenverhältnis des Ziels anzupassen. In der Standardkonfiguration des virtuellen Computers hat das Ziel einen 1:1 PAR, der den meisten Bitmaps entspricht. Im nicht quadratischen Mischungsmodus kann das Ziel nicht quadratische Pixel aufweisen. Um sicherzustellen, dass die Bitmap ordnungsgemäß angezeigt wird, sollte die Anwendung ein Bild angeben, dessen PAR dem Ziel-PAR entspricht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des VMR-Mischungs Modus](using-vmr-mixing-mode.md)
+[Verwenden des VMR-Gemischtmodus](using-vmr-mixing-mode.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatestream".
+description: Proxyfunktion für die CreateStream-Methode.
 ms.assetid: c827e1aa-13ae-459e-a1dc-5ff8c31a54bc
 title: IWICImagingFactory_CreateStream_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 61670dbe3c1689a3d5b8030585a2b13d281efd19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec69a5cb9fe03fe6ebb1e9c31ac27fe2a81ab8df69ed5595c877ba5064e17953
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088222"
 ---
-# <a name="iwicimagingfactory_createstream_proxy-function"></a>IWICImagingFactory- \_ Funktion "foratestream \_ Proxy"
+# <a name="iwicimagingfactory_createstream_proxy-function"></a>IWICImagingFactory-Funktion \_ "CreateStream \_ Proxy"
 
-Proxy Funktion für die Methode " [**kreatestream**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createstream) ".
+Proxyfunktion für die [**CreateStream-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createstream)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ HRESULT IWICImagingFactory_CreateStream_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_ppIWICStream * \[ out\]
+*ppIWICStream* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICStream**](/windows/desktop/api/Wincodec/nn-wincodec-iwicstream)\*\***
@@ -61,7 +61,7 @@ Ein Zeiger, der einen Zeiger auf einen neuen [**IWICStream**](/windows/desktop/a
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,9 +71,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

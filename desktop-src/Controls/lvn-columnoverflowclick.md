@@ -1,9 +1,9 @@
 ---
-title: LVN_COLUMNOVERFLOWCLICK Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Listenansicht-Steuerelement gesendet, wenn auf seine Überlauf Schaltfläche geklickt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: LVN_COLUMNOVERFLOWCLICK Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Listenansicht-Steuerelement gesendet, wenn auf die Überlaufschaltfläche geklickt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 3d3bb7be-b598-450a-b829-a5aa5b1a0c5d
 keywords:
-- Windows-Steuerelemente für LVN_COLUMNOVERFLOWCLICK Benachrichtigungs
+- LVN_COLUMNOVERFLOWCLICK Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7938d28be337f7255a9b84422fa090da5a494cc2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: edb28deb3dd98542791b4c8daf350e618e43db57d5090a93d49af5e55e8b39ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077120"
 ---
-# <a name="lvn_columnoverflowclick-notification-code"></a>LVN \_ COLUMNOVERFLOWCLICK Benachrichtigungs Code
+# <a name="lvn_columnoverflowclick-notification-code"></a>LVN \_ COLUMNOVERFLOWCLICK-Benachrichtigungscode
 
-Wird von einem Listenansicht-Steuerelement gesendet, wenn auf seine Überlauf Schaltfläche geklickt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Listenansicht-Steuerelement gesendet, wenn auf die Überlaufschaltfläche geklickt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -38,12 +38,12 @@ LVN_COLUMNOVERFLOWCLICK
 
 <dl> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**NMLISTVIEW**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) -Struktur, die den Benachrichtigungs Code beschreibt. Der Aufrufer ist dafür verantwortlich, diese Struktur zuzuordnen, einschließlich der enthaltenen [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur. Legen Sie die Member der **NMHDR** -Struktur fest. Der **Codemember** muss auf LVN COLUMNOVERFLOWCLICK festgelegt werden \_ .
+Zeiger auf eine [**NMLISTVIEW-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) die den Benachrichtigungscode beschreibt. Der Aufrufer ist für die Zuweisung dieser Struktur verantwortlich, einschließlich der enthaltenen [**NMHDR-Struktur.**](/windows/desktop/api/richedit/ns-richedit-nmhdr) Legen Sie die Member der **NMHDR-Struktur** fest. Der **Code** member muss auf LVN \_ COLUMNOVERFLOWCLICK festgelegt werden.
 
-Legen Sie den **iItem** -Member der [**NMLISTVIEW**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) -Struktur auf-1 fest. Legen Sie den **iSubItem** -Member auf den Index des unter Elements fest. Legen Sie die Member **unewstate**, **uoldstate** und **LPARAM** auf NULL fest. Die übrigen Member der **NMLISTVIEW** -Struktur werden nicht verwendet.
+Legen Sie **den iItem-Member** der [**NMLISTVIEW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) auf -1 fest. Legen Sie **das iSubItem-Member** auf den Index des Unteritems fest. Legen Sie **die Member uNewState,** **uOldState** und **lParam** auf 0 fest. Die verbleibenden Member der **NMLISTVIEW-Struktur** werden nicht verwendet.
 
 </dd> </dl>
 
@@ -51,21 +51,21 @@ Legen Sie den **iItem** -Member der [**NMLISTVIEW**](/windows/win32/api/commctrl
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Benachrichtigungs Empfänger wandelt *LPARAM* ein, um die [**NMLISTVIEW**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) -Struktur abzurufen. Der *wParam* -Parameter enthält die ID des Steuer Elements, das den Benachrichtigungs Code sendet.
+Der Benachrichtigungsempfänger casts *lParam,* um die [**NMLISTVIEW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmlistview) abzurufen. Der *wParam-Parameter* enthält die ID des Steuerelements, das den Benachrichtigungscode sendet.
 
-Wenn ein Header Steuerelement ein untergeordnetes Element von ListView ist, sollte das Header Steuerelement diesen Benachrichtigungs Code an das ListView-Steuerelement senden, wenn das Header-Steuerelement den Hdn-Benachrichtigungs Code für den [ \_ Überlauf](hdn-overflowclick.md) Befehl empfängt.
+Wenn ein Headersteuersatz ein untergeordnetes Steuerelement der Listview ist, sollte das Headersteuersteuersystem diesen Benachrichtigungscode an das Listview-Steuerelement senden, wenn das Headersteuersteuersatz den [HDN OVERFLOWCLICK-Benachrichtigungscode \_ ](hdn-overflowclick.md) empfängt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

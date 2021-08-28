@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. FullScreen-Eigenschaft
-description: Mit der FullScreen-Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob Videoinhalte im Vollbildmodus abgespielt werden.
+title: AxWindowsMediaPlayer.fullScreen-Eigenschaft
+description: Die fullScreen-Eigenschaft ruft einen Wert ab, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden, oder legt einen Wert fest.
 ms.assetid: 6c48a54a-e0f1-4bf5-8a53-7ccc78fc76ad
 keywords:
-- Vollbild-Eigenschaften Fenster Media Player
-- Vollbild-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, FullScreen-Eigenschaft
+- fullScreen-Eigenschaft Windows Media Player
+- fullScreen-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , fullScreen-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23bfb1a2c67ecfa3ba7cced6f0ccb564bb387b52
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e128d8c7e0cf49d3feaae723a7fb5a51740cda47e5016df6290b4852c20ec27b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902620"
 ---
-# <a name="axwindowsmediaplayerfullscreen-property"></a>AxWindowsMediaPlayer. FullScreen-Eigenschaft
+# <a name="axwindowsmediaplayerfullscreen-property"></a>AxWindowsMediaPlayer.fullScreen-Eigenschaft
 
-Mit der FullScreen-Eigenschaft wird ein Wert abgerufen oder festgelegt, der angibt, ob Videoinhalte im Vollbildmodus abgespielt werden.
+Die fullScreen-Eigenschaft ruft einen Wert ab, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden, oder legt einen Wert fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ Public Property fullScreen As System.Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein System. Boolean-Wert, der angibt, ob der Inhalt im Vollbildmodus wiedergegeben wird. Der Standardwert ist „FALSE“.
+Ein System.Boolean-Wert, der angibt, ob Inhalt im Vollbildmodus wiedergegeben wird. Der Standardwert ist „FALSE“.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Damit der Vollbildmodus beim Einbetten des Windows Media Player-Steuer Elements ordnungsgemäß funktioniert, muss der Videoanzeige Bereich eine Höhe und Breite von mindestens einem Pixel aufweisen. Wenn **uiMode** auf "Mini" oder "Full" festgelegt ist, muss die Höhe des Steuer Elements auf 65 oder höher festgelegt sein, um zusätzlich zur Benutzeroberfläche den Videoanzeige Bereich aufzunehmen.
+Damit der Vollbildmodus beim Einbetten des Windows Media Player-Steuerelements ordnungsgemäß funktioniert, muss der Videoanzeigebereich eine Höhe und Breite von mindestens einem Pixel aufweisen. Wenn **uiMode** auf "mini" oder "full" festgelegt ist, muss die Höhe des Steuerelements selbst mindestens 65 sein, um den Videoanzeigebereich zusätzlich zur Benutzeroberfläche aufnehmen zu können.
 
-Wenn **uiMode** auf "unsichtbar" festgelegt ist, löst das Festlegen dieser Eigenschaft auf true einen Fehler aus und wirkt sich nicht auf das Verhalten des Steuer Elements aus.
+Wenn **uiMode** auf "invisible" festgelegt ist, löst das Festlegen dieser Eigenschaft auf TRUE einen Fehler aus und wirkt sich nicht auf das Verhalten des Steuerelements aus.
 
-Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn [enablecontextmenu](axwmplib-axwindowsmediaplayer-enablecontextmenu--vb-and-c.md) den Wert false hat und **uiMode** den Wert "None" hat.
+Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn [enableContextMenu](axwmplib-axwindowsmediaplayer-enablecontextmenu--vb-and-c.md) false und **uiMode** gleich "none" ist.
 
-Wenn **uiMode** auf "Full" oder "Mini" festgelegt ist, zeigt Windows Media Player Transport Steuerelemente im Vollbildmodus an, wenn der Mauszeiger bewegt wird. Nach einem kurzen Intervall ohne Mausbewegung werden die Transport Steuerelemente ausgeblendet. Wenn **uiMode** auf "None" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
+Wenn **uiMode** auf "full" oder "mini" festgelegt ist, zeigt Windows Media Player Transportsteuerelemente im Vollbildmodus an, wenn der Mauszeiger bewegt wird. Nach einem kurzen Intervall ohne Mausbewegung werden die Transportsteuerelemente ausgeblendet. Wenn **uiMode** auf "none" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
 
 > [!Note]  
-> Zum Anzeigen von Transport Steuerelementen im Vollbildmodus ist das Betriebssystem Windows XP erforderlich.
+> Das Anzeigen von Transportsteuerelementen im Vollbildmodus erfordert das Windows XP-Betriebssystem.
 
  
 
-Wenn Transport Steuerelemente nicht im Vollbildmodus angezeigt werden, beendet Windows Media Player den Vollbildmodus automatisch, wenn die Wiedergabe angehalten wird.
+Wenn Transportsteuerelemente nicht im Vollbildmodus angezeigt werden, beendet Windows Media Player automatisch den Vollbildmodus, wenn die Wiedergabe beendet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Schaltfläche erstellt, die die FullScreen-Eigenschaft verwendet, um ein eingebettetes Player-Objekt in den Vollbildmodus zu wechseln. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird eine Schaltfläche erstellt, die die fullScreen-Eigenschaft verwendet, um ein eingebettetes Playerobjekt in den Vollbildmodus zu wechseln. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -106,9 +106,9 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|--------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                  |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                  |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                            |
-| Assembly<br/>  | <dl> <dt>AxInterop. WMPLib (AxInterop.WMPLib.dll)</dt> </dl> |
+| Assembly<br/>  | <dl> <dt>AxInterop.WMPLib (AxInterop.WMPLib.dll)</dt> </dl> |
 
 
 
@@ -116,10 +116,10 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. uiMode (VB und c#)**](axwmplib-axwindowsmediaplayer-uimode--vb-and-c.md)
+[**AxWindowsMediaPlayer.uiMode (VB und C#)**](axwmplib-axwindowsmediaplayer-uimode--vb-and-c.md)
 </dt> </dl>
 
  

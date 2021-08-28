@@ -1,6 +1,6 @@
 ---
-title: SecurityDescriptor (registrationinfotype)-Element
-description: Gibt die Sicherheits Beschreibung der Aufgabe an.
+title: SecurityDescriptor -Element (registrationInfoType)
+description: Gibt die Sicherheitsbeschreibung der Aufgabe an.
 ms.assetid: 79821b20-226a-4e7e-8ca1-6c9cf9f1b56e
 keywords:
 - SecurityDescriptor-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 20f352e20f1017029558a0de0a99186a978edbf0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83742ebbbc6b8fb653610bf8e20c00094a3c8a3984123765adf6e953935c9011
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099860"
 ---
-# <a name="securitydescriptor-registrationinfotype-element"></a>SecurityDescriptor (registrationinfotype)-Element
+# <a name="securitydescriptor-registrationinfotype-element"></a>SecurityDescriptor -Element (registrationInfoType)
 
-Gibt die Sicherheits Beschreibung der Aufgabe an.
+Gibt die Sicherheitsbeschreibung der Aufgabe an.
 
 ``` syntax
 <xs:element name="SecurityDescriptor"
@@ -30,7 +30,7 @@ Gibt die Sicherheits Beschreibung der Aufgabe an.
  />
 ```
 
-Das **securityDescriptor** -Element wird durch den komplexen Typ [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
+Das **SecurityDescriptor-Element** wird durch den komplexen [**RegistrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,15 +38,15 @@ Das **securityDescriptor** -Element wird durch den komplexen Typ [**registration
 
 | Element                                                                           | Abgeleitet von                                                                         | BESCHREIBUNG                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen zum Task an, z. b. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert ist.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt Administratorinformationen zum Task an, z. B. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird die Sicherheits Beschreibung einer Aufgabe mithilfe der [**RegistrationInfo. securityDescriptor**](registrationinfo-securitydescriptor.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird der Sicherheitsdeskriptor einer Aufgabe mithilfe der [**RegistrationInfo.SecurityDescriptor-Eigenschaft**](registrationinfo-securitydescriptor.md) angegeben.
 
-Bei der C++-Entwicklung wird die Sicherheits Beschreibung einer Aufgabe mithilfe der [**iregistrationinfo:: securityDescriptor**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_securitydescriptor) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird der Sicherheitsdeskriptor einer Aufgabe mithilfe der [**IRegistrationInfo::SecurityDescriptor-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_securitydescriptor) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Bei der C++-Entwicklung wird die Sicherheits Beschreibung einer Aufgabe mithilfe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -63,7 +63,7 @@ Bei der C++-Entwicklung wird die Sicherheits Beschreibung einer Aufgabe mithilfe
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

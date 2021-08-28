@@ -1,19 +1,19 @@
 ---
-description: Ein herkenzer-Handle wird verwendet, um einen Erkennungs Kontext zu erstellen, die Attribute und Eigenschaften der Erkennungsfunktion abzurufen und zu bestimmen, welche Paket Eigenschaften die Erkennung zum Durchführen der Erkennung benötigt.
+description: Ein HRECOGNIZER-Handle wird verwendet, um einen Erkennungskontext zu erstellen, die Attribute und Eigenschaften der Erkennung abzurufen und zu bestimmen, welche Paketeigenschaften die Erkennung für die Erkennung benötigt.
 ms.assetid: 1fc1901e-8c4d-4ef1-8c38-52d46ce10a48
-title: Herkenzer-handle ("recapis. h")
+title: HRECOGNIZER-Handle (Recapis.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e78086ff86453ef8b0157bb3b274f3c47be0dc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 192890991dcb7e8b0a0086bbca68a6ccbc2af790d9c7d78e76fe963d268c8240
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092450"
 ---
-# <a name="hrecognizer-handle"></a>Herkenzer-handle
+# <a name="hrecognizer-handle"></a>HRECOGNIZER-Handle
 
-Ein **herkenzer** -Handle wird verwendet, um einen Erkennungs Kontext zu erstellen, die Attribute und Eigenschaften der Erkennungsfunktion abzurufen und zu bestimmen, welche Paket Eigenschaften die Erkennung zum Durchführen der Erkennung benötigt.
+Ein **HRECOGNIZER-Handle** wird verwendet, um einen Erkennungskontext zu erstellen, die Attribute und Eigenschaften der Erkennung abzurufen und zu bestimmen, welche Paketeigenschaften die Erkennung für die Erkennung benötigt.
 
 
 ```C++
@@ -22,24 +22,24 @@ typedef HANDLE HRECOGNIZER;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Funktionen verwenden einen **herkenzer**.
+Die folgenden Funktionen verwenden **HRECOGNIZER**.
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                        |
+| Funktion                                                               | Beschreibung                                                                                        |
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [**"Kreaterecognizer"**](/windows/desktop/api/recapis/nf-recapis-createrecognizer)                           | Erstellt eine Erkennung.<br/>                                                                   |
-| [**Destroyerkenzer**](/windows/desktop/api/recapis/nf-recapis-destroyrecognizer)                         | Zerstört eine Erkennung.<br/>                                                                  |
-| [**Getrecoattribute**](/windows/desktop/api/recapis/nf-recapis-getrecoattributes)                         | Gibt die Attribute des Erkennungs Moduls zurück.<br/>                                               |
-| [**CreateContext**](/windows/desktop/api/recapis/nf-recapis-createcontext)                                 | Erstellt einen Erkennungs Kontext.<br/>                                                           |
-| [**Destroycontext**](/windows/desktop/api/recapis/nf-recapis-destroycontext)                               | Zerstört einen Erkennungs Kontext.<br/>                                                          |
-| [**Getallerkenzers**](/windows/desktop/api/recapis/nf-recapis-getallrecognizers)                         | Ruft alle erkenzer ab.<br/>                                                                   |
-| [**Getresultpropertylist**](/windows/desktop/api/recapis/nf-recapis-getresultpropertylist)                 | Ruft eine Liste von Eigenschaften ab, die die Erkennung für einen Ergebnisbereich zurückgeben kann.<br/>            |
-| [**Getpreferredpacketdescription**](/windows/desktop/api/recapis/nf-recapis-getpreferredpacketdescription) | Ruft eine Paketbeschreibung ab, die die Paket Eigenschaften enthält, die die Erkennung verwendet.<br/> |
-| [**GetUnicodeRanges**](/windows/desktop/api/recapis/nf-recapis-getunicoderanges)                           | Ruft die Bereiche von Unicode-Punkten ab, die von der Erkennung unterstützt werden.<br/>                    |
-| [**Loadcachedattributes**](/windows/desktop/api/recapis/nf-recapis-loadcachedattributes)                   | Lädt die zwischengespeicherten Attribute einer Erkennung.<br/>                                            |
+| [**CreateRecognizer**](/windows/desktop/api/recapis/nf-recapis-createrecognizer)                           | Erstellt eine Erkennung.<br/>                                                                   |
+| [**DestroyRecognizer**](/windows/desktop/api/recapis/nf-recapis-destroyrecognizer)                         | Zerstört eine Erkennung.<br/>                                                                  |
+| [**GetRecoAttributes**](/windows/desktop/api/recapis/nf-recapis-getrecoattributes)                         | Gibt die Attribute der Erkennung zurück.<br/>                                               |
+| [**CreateContext**](/windows/desktop/api/recapis/nf-recapis-createcontext)                                 | Erstellt einen Erkennungskontext.<br/>                                                           |
+| [**DestroyContext**](/windows/desktop/api/recapis/nf-recapis-destroycontext)                               | Zerstört einen Erkennungskontext.<br/>                                                          |
+| [**GetAllRecognizers**](/windows/desktop/api/recapis/nf-recapis-getallrecognizers)                         | Ruft alle Erkennungen ab.<br/>                                                                   |
+| [**GetResultPropertyList**](/windows/desktop/api/recapis/nf-recapis-getresultpropertylist)                 | Ruft eine Liste der Eigenschaften ab, die die Erkennung für einen Ergebnisbereich zurückgeben kann.<br/>            |
+| [**GetPreferredPacketDescription**](/windows/desktop/api/recapis/nf-recapis-getpreferredpacketdescription) | Ruft eine Paketbeschreibung ab, die die paketeigenschaften enthält, die von der Erkennung verwendet werden.<br/> |
+| [**GetUnicodeRanges**](/windows/desktop/api/recapis/nf-recapis-getunicoderanges)                           | Ruft die Bereiche von Unicode-Punkten ab, die die Erkennung unterstützt.<br/>                    |
+| [**LoadCachedAttributes**](/windows/desktop/api/recapis/nf-recapis-loadcachedattributes)                   | Lädt die zwischengespeicherten Attribute einer Erkennung.<br/>                                            |
 
 
 
@@ -51,9 +51,9 @@ Die folgenden Funktionen verwenden einen **herkenzer**.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                            |
-| Header<br/>                   | <dl> <dt>"Recapis. h"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Recapis.h</dt> </dl> |
 
 
 

@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Winshfhc.dll
 ms.assetid: 33a5589a-201b-4d94-afbf-5965a39e2748
-ms.openlocfilehash: 2def6cb5bc2ed59a98e9e513aba1b5b578cd8681
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 8cf7514be0d784085acd74536036c159c9f8e9217287e86bea2f75defbb94801
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090610"
 ---
 # <a name="estimatefilerisklevel-function"></a>EstimateFileRiskLevel-Funktion
 
-\[Diese Funktion ist unter Windows XP mit Service Pack 2 (SP2) über Windows Vista verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein. Clientanwendungen sollten stattdessen [**IAttachmentExecute**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iattachmentexecute) verwenden, um eine Benutzerumgebung zu präsentieren, die einen sicheren Download und Austausch von Dateien über E-Mail- und Messaginganlagen ermöglicht.\]
+\[Diese Funktion ist auf Windows XP mit Service Pack 2 (SP2) bis Windows Vista verfügbar. Er kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein. Clientanwendungen sollten stattdessen [**IAttachmentExecute**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iattachmentexecute) verwenden, um eine Benutzerumgebung zu präsentieren, die einen sicheren Download und Austausch von Dateien über E-Mail- und Messaginganlagen ermöglicht.\]
 
 Schätzt das Risiko der Ausführung von unbekanntem Code, wenn ein Handler für eine bestimmte Datei aufgerufen wird. Dieses Risiko basiert auf einem Verständnis des Handlers und des Codeinhalts der Datei.
 
@@ -49,7 +49,7 @@ HRESULT EstimateFileRiskLevel(
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pfad der Datei enthält, die für den Handler überprüft wird.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Pfad der Datei enthält, die für den Handler überprüft wird.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pfad der Datei enth�
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine mit NULL endende Zeichenfolge, die die Erweiterung der zu überprüfenden Datei enthält, entweder mit oder ohne führenden Punkt. Beispiel: ".txt" oder "txt".
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die Erweiterung der datei enthält, die überprüft wird, entweder mit oder ohne ihren führenden Punkt. Beispiel: ".txt" oder "txt".
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Ein Zeiger auf eine mit NULL endende Zeichenfolge, die die Erweiterung der zu ü
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pfad des Handlers für die Datei enthält.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Pfad des Handlers für die Datei enthält.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Pfad des Handlers f�
 
 Typ: **\_ \_ DATEIRISIKOSTUFE \***
 
-Enthält nach erfolgreicher Rückgabe dieser Funktion einen Zeiger auf einen der folgenden Werte, der das geschätzte Risiko angibt.
+Wenn diese Funktion erfolgreich zurückgegeben wird, enthält einen Zeiger auf einen der folgenden Werte, der das geschätzte Risiko angibt.
 
 <dt>
 
@@ -151,8 +151,8 @@ Diese Funktion ist nicht in einem öffentlichen Header deklariert oder in einer 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit \[ SP2-Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                           |
 | DLL<br/>                      | <dl> <dt>Winshfhc.dll (Version 5.1 oder höher)</dt> </dl> |
 
 

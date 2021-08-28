@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmlicenabmanagement-Schnittstelle
-description: Die iwmdrmlicenabmanagement-Schnittstelle stellt Methoden bereit, die allgemeine Vorgänge im Zusammenhang mit dem lokalen Lizenz Speicher ausführen. Um eine Instanz dieser Schnittstelle zu erhalten, rufen Sie iwmdrmprovider-Erstellungsobjekt auf. Übergeben Sie IID \_ iwmdrmlicenpasmanagement als riid-Parameter.
+title: IWMDRMLicenseManagement-Schnittstelle
+description: Die IWMDRMLicenseManagement-Schnittstelle stellt Methoden bereit, die allgemeine Vorgänge im Zusammenhang mit dem lokalen Lizenzspeicher ausführen. Rufen Sie IWMDRMProvider CreateObject auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie IID \_ IWMDRMLicenseManagement als riid-Parameter.
 ms.assetid: 254bf54e-8ea6-4fd1-8abd-9d32539d529b
 keywords:
-- Iwmdrmlicenabmanagement Interface Windows Media-Format
-- Iwmdrmlicensmanagement Interface Windows Media-Format, beschrieben
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format
+- IWMDRMLicenseManagement-Schnittstelle Windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,44 +14,44 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 14a7c555200e2eac99def75a1ad8c1d5dc1223fc
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 63baeeb46baa877ccc294d1136351ec123d6c4661ee73d548b62d8cb4db05734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027548"
 ---
-# <a name="iwmdrmlicensemanagement-interface"></a>Iwmdrmlicenabmanagement-Schnittstelle
+# <a name="iwmdrmlicensemanagement-interface"></a>IWMDRMLicenseManagement-Schnittstelle
 
-Die **iwmdrmlicenabmanagement** -Schnittstelle stellt Methoden bereit, die allgemeine Vorgänge im Zusammenhang mit dem lokalen Lizenz Speicher ausführen.
+Die **IWMDRMLicenseManagement-Schnittstelle** stellt Methoden bereit, die allgemeine Vorgänge im Zusammenhang mit dem lokalen Lizenzspeicher ausführen.
 
-Um eine Instanz dieser Schnittstelle abzurufen, rufen Sie [**iwmdrmprovider:: builateobject**](iwmdrmprovider-createobject.md)auf. Übergeben Sie **IID \_ iwmdrmlicenpasmanagement** als *riid* -Parameter.
+Rufen Sie [**IWMDRMProvider::CreateObject**](iwmdrmprovider-createobject.md)auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie **IID \_ IWMDRMLicenseManagement** als *riid-Parameter.*
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmlicenermanagement** -Schnittstelle erbt von [**iwmdrmeventgenerator**](iwmdrmeventgenerator.md). **Iwmdrmlicensmanagement** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMLicenseManagement-Schnittstelle** erbt von [**IWMDRMEventGenerator.**](iwmdrmeventgenerator.md) **IWMDRMLicenseManagement** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmlicenermanagement** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMLicenseManagement-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                               | BESCHREIBUNG                                                                                                             |
 |:-----------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
 | [**AcquireLicense**](iwmdrmlicensemanagement-acquirelicense.md)                                     | Ruft asynchron eine Lizenz von einer angegebenen URL ab.<br/>                                                      |
-| [**Backuplicenses**](iwmdrmlicensemanagement-backuplicenses.md)                                     | Erstellt eine Sicherung der Lizenzen im lokalen Lizenz Speicher.<br/>                                                 |
-| [**Cleanlicenabstore**](iwmdrmlicensemanagement-cleanlicensestore.md)                               | Entfernt markierte Lizenzen aus dem Lizenz Speicher und zerlegt den Speicher, um die Leistung zu verbessern.<br/>             |
-| [**"-Enumeration"**](iwmdrmlicensemanagement-createlicenseenumeration.md)                 | Erstellt ein Lizenz-Enumeratorobjekt, das anhand von Parameterwerten mit Lizenzinformationen aufgefüllt wird.<br/>            |
-| [**"Featelicenserevocationchallenge"**](iwmdrmlicensemanagement-createlicenserevocationchallenge.md) | Generiert eine Lizenz Sperr Aufforderung.<br/>                                                                    |
-| [**Delta eLicense**](iwmdrmlicensemanagement-deletelicense.md)                                       | Löscht eine Lizenz aus dem temporären lokalen Lizenz Speicher.<br/>                                                    |
-| [**Monitorlicensererwerbs**](iwmdrmlicensemanagement-monitorlicenseacquisition.md)               | Initiiert die Überwachung für einen Lizenz Erwerbs Vorgang.<br/>                                                      |
-| [**Processlicenabdeletionmessage**](iwmdrmlicensemanagement-processlicensedeletionmessage.md)       | Löscht eine Lizenz, die für den ursprünglich mit einem anderen Inhalts Schutzsystem geschützten Inhalt importiert wurde.<br/> |
-| [**Processlicenserevocationresponse**](iwmdrmlicensemanagement-processlicenserevocationresponse.md) | Widerruft Lizenzen aus dem lokalen Lizenz Speicher.<br/>                                                               |
-| [**Restorelicenses**](iwmdrmlicensemanagement-restorelicenses.md)                                   | Stellt zuvor gesicherte Lizenzen wieder her.<br/>                                                                      |
-| [**Storelicense**](iwmdrmlicensemanagement-storelicense.md)                                         | Fügt eine Lizenz zum lokalen Lizenz Speicher hinzu.<br/>                                                                   |
+| [**BackupLicenses**](iwmdrmlicensemanagement-backuplicenses.md)                                     | Erstellt eine Sicherung der Lizenzen im lokalen Lizenzspeicher.<br/>                                                 |
+| [**CleanLicenseStore**](iwmdrmlicensemanagement-cleanlicensestore.md)                               | Entfernt markierte Lizenzen aus dem Lizenzspeicher und defragmentiert den Speicher, um die Leistung zu verbessern.<br/>             |
+| [**CreateLicenseEnumeration**](iwmdrmlicensemanagement-createlicenseenumeration.md)                 | Erstellt ein Lizenzenumeratorobjekt, das mit Lizenzinformationen auf der Grundlage von Parameterwerten aufgefüllt wird.<br/>            |
+| [**CreateLicenseRevocationChallenge**](iwmdrmlicensemanagement-createlicenserevocationchallenge.md) | Generiert eine Lizenzsperrungsaufforderung.<br/>                                                                    |
+| [**DeleteLicense**](iwmdrmlicensemanagement-deletelicense.md)                                       | Löscht eine Lizenz aus dem temporären lokalen Lizenzspeicher.<br/>                                                    |
+| [**MonitorLicenseAcquisition**](iwmdrmlicensemanagement-monitorlicenseacquisition.md)               | Initiiert die Überwachung für einen Lizenzerwerbsprozess.<br/>                                                      |
+| [**ProcessLicenseDeletionMessage**](iwmdrmlicensemanagement-processlicensedeletionmessage.md)       | Löscht eine Lizenz, die für Inhalte importiert wurde, die ursprünglich mit einem anderen Inhaltsschutzsystem geschützt wurden.<br/> |
+| [**ProcessLicenseRevocationResponse**](iwmdrmlicensemanagement-processlicenserevocationresponse.md) | Widerruft Lizenzen aus dem lokalen Lizenzspeicher.<br/>                                                               |
+| [**RestoreLicenses**](iwmdrmlicensemanagement-restorelicenses.md)                                   | Stellt zuvor sicherungslizenzen wieder her.<br/>                                                                      |
+| [**StoreLicense**](iwmdrmlicensemanagement-storelicense.md)                                         | Fügt dem lokalen Lizenzspeicher eine Lizenz hinzu.<br/>                                                                   |
 
 
 
@@ -64,7 +64,7 @@ Die **iwmdrmlicenermanagement** -Schnittstelle verfügt über diese Methoden.
 [**Schnittstellen**](drm-interfaces.md)
 </dt> <dt>
 
-[**Iwmdrmeventgenerator**](iwmdrmeventgenerator.md)
+[**IWMDRMEventGenerator**](iwmdrmeventgenerator.md)
 </dt> </dl>
 
  

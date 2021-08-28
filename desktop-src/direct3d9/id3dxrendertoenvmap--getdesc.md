@@ -1,7 +1,7 @@
 ---
 description: Ruft die Beschreibung der Renderoberfläche ab.
 ms.assetid: 3c2612fa-540d-4d7a-9821-bf37fa3b6da4
-title: 'ID3DXRenderToEnvMap:: getdesc-Methode (D3dx9core. h)'
+title: ID3DXRenderToEnvMap::GetDesc-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d0b9faf5bdd4c57f7320749aef2010f457dd682e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7cfe9f3e8e857806895ec8be249d51f63ffe4818f24bbbf12d842754a885e855
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103761997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847304"
 ---
-# <a name="id3dxrendertoenvmapgetdesc-method"></a>ID3DXRenderToEnvMap:: getdesc-Methode
+# <a name="id3dxrendertoenvmapgetdesc-method"></a>ID3DXRenderToEnvMap::GetDesc-Methode
 
 Ruft die Beschreibung der Renderoberfläche ab.
 
@@ -40,12 +40,12 @@ HRESULT GetDesc(
 
 <dl> <dt>
 
-*PDE SC* \[ vorgenommen\]
+*pDesc* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXRTE \_ DESC**](d3dxrte-desc.md)\***
 
-Zeiger auf eine [**D3DXRTE \_**](d3dxrte-desc.md) -Struktur, die die Renderingoberfläche beschreibt.
+Zeiger auf eine [**D3DXRTE \_ DESC-Struktur,**](d3dxrte-desc.md) die die Renderingoberfläche beschreibt.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**D3DXRTE \_**](d3dxrte-desc.md) -Struktur, die die Renderingob
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

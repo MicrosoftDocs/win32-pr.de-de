@@ -1,37 +1,37 @@
 ---
-description: Mit der Windows-Energie Verwaltung können Benutzer sofort auf eine Schaltfläche oder einen Schlüssel zugreifen.
+description: Windows Energieverwaltung macht Computer für Benutzer sofort über eine Schaltfläche oder einen Schlüssel zugänglich.
 ms.assetid: 388dadb9-b722-43f8-ab2b-a9bbd96600a3
-title: Windows-Energie Verwaltung
+title: Windows Energieverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8abb3a040f8da8e2deb242a2aa607a9448d31c09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7335b521b22b762468d2b542ea3c4fdbfcacb798860d4997f4a512d8135bcf46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032720"
 ---
-# <a name="windows-power-management"></a>Windows-Energie Verwaltung
+# <a name="windows-power-management"></a>Windows Energieverwaltung
 
-Mit der Windows-Energie Verwaltung können Benutzer sofort auf eine Schaltfläche oder einen Schlüssel zugreifen. Außerdem wird sichergestellt, dass alle Elemente der System – Anwendungen, Geräte und Benutzeroberflächen – von den umfangreichen Verbesserungen bei der Energie Verwaltungs Technologie und den Funktionen profitieren können.
+Windows Energieverwaltung macht Computer für Benutzer sofort über eine Schaltfläche oder einen Schlüssel zugänglich. Außerdem wird sichergestellt, dass alle Elemente des Systems – Anwendungen, Geräte und Benutzeroberfläche – von den enormen Verbesserungen der Energieverwaltungstechnologie und -funktionen profitieren können.
 
-Das Windows-Betriebssystem verwendet die Energie Verwaltungs Hardware, um den Computer in einen Energiesparmodus zu versetzen *, anstatt ihn* vollständig herunterzufahren, damit das System schnell wieder funktionsfähig ist. Das Betriebssystem wechselt automatisch in den Standbymodus, wenn sich der Computer im Leerlauf befindet oder wenn der Benutzer eine Schaltfläche drückt, um anzugeben, dass die aktuelle Arbeitssitzung vorbei ist. Für den Benutzer scheint das System deaktiviert zu sein. Im Standbymodus führt der Prozessor des Computers keinen Code aus, und es wird keine Arbeit für den Benutzer ausgeführt. Allerdings können Ereignisse im System sowohl von Hardware Geräten als auch von der Echtzeit-Uhr aktiviert werden, damit das System den Ruhezustand verlässt (d. h. "reaktivieren") und schnell zum Arbeitszustand zurückkehrt.
+Das Windows-Betriebssystem verwendet Energieverwaltungshardware, um den Computer  in einen Niedrigen-Energie-Ruhezustand zu bringen, anstatt vollständig heruntergefahren zu werden, sodass das System schnell wieder arbeiten kann. Das Betriebssystem geht automatisch in den Ruhezustand über, wenn sich der Computer im Leerlauf befindet oder wenn der Benutzer eine Schaltfläche drückt, um anzuzeigen, dass die aktuelle Arbeitssitzung beendet ist. Für den Benutzer scheint das System deaktiviert zu sein. Im Ruhezustand wird vom Prozessor des Computers kein Code ausgeführt, und es wird keine Arbeit für den Benutzer ausgeführt. Ereignisse im System können jedoch sowohl von Hardwaregeräten als auch von der Echtzeituhr aktiviert werden, um das System dazu zu bringen, den Ruhezustand (d. h. "Reaktivieren") zu beenden und schnell in den Betriebszustand zurückzukehren.
 
-Wenn sich der Computer im Standbymodus befindet, muss die Computer Hardware, das System und die Anwendungen, die auf dem Computer ausgeführt werden, sofort auf den Strom Switch, die Kommunikations Ereignisse und andere Aktionen reagieren können. Wenn alle Anwendungen Energie Zustandsübergänge ordnungsgemäß verarbeiten, wird der Benutzer ein eleganteres und integriertes System betrachten. Anwendungen, die diese Übergänge nicht verarbeiten, können fehlschlagen, wenn die Stromversorgung ausgeschaltet und dann aktiviert wird, weil Daten verloren gehen oder eine Abhängigkeit von einem Gerät entfernt wurde, das möglicherweise entfernt wurde.
+Wenn sich der Computer im Ruhezustand befindet, müssen die Computerhardware, das System und die anwendungen, die auf dem Computer ausgeführt werden, sofort auf den Netzschalter, Kommunikationsereignisse und andere Aktionen reagieren können. Wenn alle Anwendungen Energiezustandsübergänge ordnungsgemäß verarbeiten, nimmt der Benutzer ein eleganteres und integriertes System wahr. Anwendungen, die diese Übergänge nicht verarbeiten, können fehlschlagen, wenn die Stromversorgung ausgeschaltet und dann eingeschaltet wird, weil Daten verloren gehen oder eine Abhängigkeit von einem Gerät besteht, das möglicherweise entfernt wurde.
 
-Im folgenden sind die Vorteile der Windows-Energie Verwaltung aufgeführt:
+Im Folgenden finden Sie die Vorteile Windows Energieverwaltung:
 
--   Beseitigt Verzögerungen beim Starten und Herunterfahren. Der Computer muss keinen vollständigen Systemstart ausführen, wenn der Standbymodus beendet oder ein vollständiges System heruntergefahren wird, wenn der Benutzer den Ruhezustand initiiert.
--   Ermöglicht das Ausführen automatisierter Tasks, während sich der Computer im Ruhezustand befindet. Der Taskplaner ermöglicht dem Benutzer das Planen der Ausführung von Anwendungen. geplante Ereignisse können auch dann ausgeführt werden, wenn sich das System im Ruhezustand befindet. Der Taskplaner verwendet [ausnutzbare Timer](/windows/desktop/Sync/waitable-timer-objects) , um sicherzustellen, dass das System bereit ist, wenn die Ausführung der Anwendung geplant ist. Weitere Informationen finden Sie in der Hilfedatei, die im Taskplaner enthalten ist.
--   Aktiviert die Geräte basierte Energie Verwaltung. Geräte, die nicht verwendet werden, können Energie sparen, indem Sie in den Ruhezustand wechseln.
--   Verbesserung der Energieeffizienz Die Energieeffizienz ist auf tragbaren Computern besonders wichtig. Die Reduzierung des System Stromverbrauchs wird direkt in niedrigere Stromkosten und eine längere Akku Lebensdauer übersetzt.
--   Ermöglicht Benutzern das Erstellen von [Energie Schemas](power-schemes.md), das Festlegen von Alarmen und das Angeben von Akku Optionen über die Anwendung Energieoptionen in der Systemsteuerung. Das Betriebssystem koordiniert alle Energie Verwaltungsaktivitäten basierend auf den Energierichtlinien Einstellungen. Weitere Informationen finden Sie in der Hilfedatei, die in der Power Options-Anwendung enthalten ist.
+-   Beseitigt Verzögerungen beim Starten und Herunterfahren. Der Computer muss beim Beenden des Ruhezustands oder beim vollständigen Herunterfahren des Systems keinen vollständigen Systemstart ausführen, wenn der Benutzer den Ruhezustand initiiert.
+-   Ermöglicht die Ausführung automatisierter Aufgaben, während sich der Computer im Ruhezustand befindet. Die Taskplaner ermöglicht es dem Benutzer, die Ausführung von Anwendungen zu planen. Geplante Ereignisse können auch ausgeführt werden, wenn sich das System im Ruhezustand befindet. Der Taskplaner verwendet [wartebare Timer,](/windows/desktop/Sync/waitable-timer-objects) um sicherzustellen, dass das System bereit ist, wenn die Ausführung der Anwendung geplant ist. Weitere Informationen finden Sie in der Hilfedatei, die im Taskplaner.
+-   Aktiviert die Energieverwaltung pro Gerät. Geräte, die nicht verwendet werden, können Energie sparen, indem sie in den Ruhezustand eintreten.
+-   Verbessert die Energieeffizienz. Die Energieeffizienz ist auf portablen Computern besonders wichtig. Eine Reduzierung des Systemleistungsverbrauchs führt direkt zu geringeren Energiekosten und längerer Akkulaufzeit.
+-   Ermöglicht Es Benutzern, Energieschemas [zu](power-schemes.md)erstellen, Alarme festzulegen und Akkuoptionen über die Energieoptionen anwendung in Systemsteuerung. Das Betriebssystem koordiniert alle Energieverwaltungsaktivitäten basierend auf den Energierichtlinieneinstellungen. Weitere Informationen finden Sie in der Hilfedatei, die in der Energieoptionen enthalten ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Energie Verwaltung](about-power-management.md)
+[Informationen zur Energieverwaltung](about-power-management.md)
 </dt> <dt>
 
 [Aufgabenplanung](/windows/desktop/TaskSchd/task-scheduler-start-page)

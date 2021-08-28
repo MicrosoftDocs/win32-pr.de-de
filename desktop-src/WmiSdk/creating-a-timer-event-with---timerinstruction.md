@@ -1,34 +1,34 @@
 ---
-description: Sie erstellen ein Timer-Ereignis, indem Sie eine Instanz von Klassen erstellen, die von der \_ \_ timerinstruction-Klasse in einem beliebigen WMI-Namespace abgeleitet sind.
+description: Sie erstellen ein Timerereignis, indem Sie eine Instanz von Klassen erstellen, die von der \_ \_ TimerInstruction-Klasse in einem beliebigen WMI-Namespace abgeleitet werden.
 ms.assetid: 3df2a75a-5231-40d7-ae9d-a7a735fbf316
 ms.tgt_platform: multiple
-title: Erstellen eines Zeit Geber Ereignisses mit __TimerInstruction
+title: Erstellen eines Timerereignisses mit __TimerInstruction
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e502678525569dae272edb7b03c0916db25edfd0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 31cb943419a255846fbde4e17e357f8ce199824085d542d8ad300fb7e301fa3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030670"
 ---
-# <a name="creating-a-timer-event-with-__timerinstruction"></a>Erstellen eines Timer-Ereignisses mit \_ \_ timerinstruction
+# <a name="creating-a-timer-event-with-__timerinstruction"></a>Erstellen eines Timerereignisses mit \_ \_ TimerInstruction
 
-Sie erstellen ein Timer-Ereignis, indem Sie eine Instanz von Klassen erstellen, die von der [**\_ \_ timerinstruction**](--timerinstruction.md) -Klasse in einem beliebigen WMI-Namespace abgeleitet sind. WMI generiert dann das Timer-Ereignis zum richtigen Zeitpunkt. Wenn Sie ein Timer-Ereignis aufgrund von Ausfallzeiten übersehen, werden Sie von WMI über das verpasste Ereignis benachrichtigt. WMI unterstützt Zeit Geber Ereignisse aus Gründen der Abwärtskompatibilität und Szenarios, in denen Sie wissen müssen, wie viele Ereignisse Sie seit dem letzten übermittelten Ereignis verpasst haben. Für die meisten Timer-Ereignisse sollten Sie jedoch einen Ereignis Filter für [**Win32 \_ localtime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ utcTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime)erstellen. Weitere Informationen finden Sie unter [Erstellen eines Zeit Geber Ereignisses mit Win32 \_ localtime oder Win32 \_ utcTime](creating-a-timer-event-with-win32-localtime-or-win32-utctime.md).
+Sie erstellen ein Timerereignis, indem Sie eine Instanz von Klassen erstellen, die von der [**\_ \_ TimerInstruction-Klasse**](--timerinstruction.md) in einem beliebigen WMI-Namespace abgeleitet werden. WMI generiert dann das Timerereignis zum entsprechenden Zeitpunkt. Wenn Sie aufgrund von Computerausfällen ein Timerereignis übersehen, benachrichtigt WMI Sie über das verpasste Ereignis. WMI unterstützt Timerereignisse aus Gründen der Abwärtskompatibilität und für Szenarien, in denen Sie wissen müssen, wie viele Ereignisse seit dem letzten übermittelten Ereignis verpasst wurden. Für die meisten Timerereignisse sollten Sie jedoch einen Ereignisfilter für [**Win32 \_ LocalTime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ UTCTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime)erstellen. Weitere Informationen finden Sie unter [Creating a Timer Event with Win32 LocalTime or Win32 UTCTime (Erstellen eines Timerereignisses mit \_ Win32 LocalTime oder Win32 \_ UTCTime).](creating-a-timer-event-with-win32-localtime-or-win32-utctime.md)
 
-Im folgenden Verfahren wird beschrieben, wie ein Timer-Ereignis mit \_ \_ timerinstruction erstellt und empfangen wird.
+Das folgende Verfahren beschreibt das Erstellen und Empfangen eines Timerereignisses mit \_ \_ TimerInstruction.
 
-**So erstellen Sie ein Timer-Ereignis mit \_ \_ timerinstruction und empfangen es**
+**So erstellen und empfangen Sie ein Timerereignis mit \_ \_ TimerInstruction**
 
-1.  Erstellen Sie eine Instanz der [**\_ \_ absolutetimerinstruction**](--absolutetimerinstruction.md) -Klasse oder der [**\_ \_ intervaltimerinstruction**](--intervaltimerinstruction.md) -Klasse.
+1.  Erstellen Sie eine Instanz der [**\_ \_ Klassen AbsoluteTimerInstruction**](--absolutetimerinstruction.md) oder [**\_ \_ IntervalTimerInstruction.**](--intervaltimerinstruction.md)
 
-    Die Klassen [**\_ \_ absolutetimerinstruction**](--absolutetimerinstruction.md) und [**\_ \_ intervaltimerinstruction**](--intervaltimerinstruction.md) werden von der [**\_ \_ timerinstruction**](--timerinstruction.md) -Klasse abgeleitet, die eine eindeutige, vom Entwickler zugewiesene Zeichenfolge enthält, die den Typ des Timer-Ereignisses identifiziert. Die **\_ \_ timerinstruction** -Klasse enthält außerdem einen Wert, der angibt, ob WMI eine späte Benachrichtigung senden soll, wenn das Timer-Ereignis auftritt, wenn WMI nicht verfügbar ist.
+    Die Klassen [**\_ \_ AbsoluteTimerInstruction**](--absolutetimerinstruction.md) und [**\_ \_ IntervalTimerInstruction**](--intervaltimerinstruction.md) werden von der [**\_ \_ TimerInstruction-Klasse**](--timerinstruction.md) abgeleitet, die eine eindeutige vom Entwickler zugewiesene Zeichenfolge enthält, die den Typ des Timerereignisses identifiziert. Die **\_ \_ TimerInstruction-Klasse** enthält auch einen Wert, der angibt, ob WMI eine Benachrichtigung senden soll, wenn das Timerereignis auftritt, wenn WMI nicht verfügbar ist.
 
-    Verwenden Sie [**\_ \_ absolutetimerinstruction**](--absolutetimerinstruction.md) , um absolute Timer-Ereignisse zu senden, die an einem bestimmten Datum zu einem bestimmten Zeitpunkt auftreten. Verwenden Sie [**\_ \_ intervaltimerinstruction**](--intervaltimerinstruction.md) , um Intervallzeit Geber Ereignisse zu senden, die in regelmäßigen Abständen auftreten.
+    Verwenden Sie [**\_ \_ AbsoluteTimerInstruction,**](--absolutetimerinstruction.md) um absolute Timerereignisse zu senden, die zu einem bestimmten Zeitpunkt an einem bestimmten Datum auftreten. Verwenden Sie [**\_ \_ IntervalTimerInstruction,**](--intervaltimerinstruction.md) um Intervalltimerereignisse zu senden, die in regelmäßigen Abständen auftreten.
 
-2.  Legen Sie fest, dass Ihre Anwendung eine [**\_ \_ TimerEvent**](--timerevent.md) -Instanz empfängt.
+2.  Legen Sie ihre Anwendung so fest, dass sie eine [**\_ \_ TimerEvent-Instanz empfängt.**](--timerevent.md)
 
-    Zum Generieren eines Ereignisses erstellt WMI eine Instanz der [**\_ \_ TimerEvent**](--timerevent.md) -Klasse und leitet die Instanz an den Consumer weiter. Die **\_ \_ TimerEvent** -Instanz enthält die timeranweisungs-ID des Consumers. Die-Instanz enthält außerdem einen Wert, der angibt, wie oft WMI die Zeit Geber Ereignis Benachrichtigung während eines beliebigen Intervalls senden soll, wenn WMI den Consumer nicht erreichen kann.
+    Um ein Ereignis zu generieren, erstellt WMI eine Instanz der [**\_ \_ TimerEvent-Klasse**](--timerevent.md) und leitet die Instanz an Ihren Consumer weiter. Die **\_ \_ TimerEvent-Instanz** enthält den Timeranweisungsbezeichner des Consumers. Die -Instanz enthält auch einen -Wert, der angibt, wie oft WMI die Timerereignisbenachrichtigung in einem beliebigen Intervall senden soll, wenn WMI den Consumer nicht erreichen kann.
 
  
 

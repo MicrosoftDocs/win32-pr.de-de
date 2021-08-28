@@ -1,27 +1,27 @@
 ---
-description: Ein logischer Consumer ist eine Instanz einer permanenten ereignisconsumerklasse.
+description: Ein logischer Consumer ist eine Instanz einer permanenten Ereignis-Consumerklasse.
 ms.assetid: fd984de8-0fe6-4b32-8e8c-4e2db84b4cc0
 ms.tgt_platform: multiple
 title: Erstellen eines logischen Consumers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dcbd62f2eee57a9e254d5700344d7b8da414469
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9514ce3f1c7982a96692dcdea62ec9bb92ebf99dd4c47cfe1a64b70257dcfc2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030660"
 ---
 # <a name="creating-a-logical-consumer"></a>Erstellen eines logischen Consumers
 
-Ein logischer Consumer ist eine Instanz einer permanenten ereignisconsumerklasse. Der Hauptzweck eines logischen Consumers besteht darin, dem physischen Consumer die Parameter für die Aktivitäten, die der physische Consumer ausführt, bereitzustellen. Weitere Informationen finden Sie unter [Erstellen einer neuen dauerhaften Ereignisconsumer-Klasse](creating-a-new-permanent-event-consumer-class.md). Der permanente Consumer muss in den Consumer-, Filter-und Binding-Instanzen die gleiche " [**kreatorsid**](--eventconsumer.md) " aufweisen. Weitere Informationen finden Sie unter [sicheres empfangen von Ereignissen](receiving-events-securely.md). Ein Beispiel für die Verwendung eines logischen Consumers finden Sie unter [Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md), das zeigt, wie die Standard Consumerklasse [**activescripteventconsumer**](activescripteventconsumer.md) verwendet wird, um einen permanenten Consumer zu konfigurieren.
+Ein logischer Consumer ist eine Instanz einer permanenten Ereignis-Consumerklasse. Der Hauptzweck eines logischen Consumers besteht in der Bereitstellung der Parameter für die Aktivitäten, die der physische Consumer ausführt. Weitere Informationen finden Sie unter [Creating a New Permanent Event Consumer Class](creating-a-new-permanent-event-consumer-class.md). Der permanente Consumer muss dieselbe [**CreatorSID**](--eventconsumer.md) in den Consumer-, Filter- und Bindungsinstanzen haben. Weitere Informationen finden Sie unter [Sicheres Empfangen von Ereignissen.](receiving-events-securely.md) Ein Beispiel für die Verwendung eines logischen Consumers finden Sie unter Running a Script Based on an Event (Ausführen eines Skripts basierend auf einem [Ereignis),](running-a-script-based-on-an-event.md)in dem die Verwendung der Standardconsumerklasse [**ActiveScriptEventConsumer**](activescripteventconsumer.md) zum Konfigurieren eines permanenten Consumers veranschaulicht wird.
 
 Im folgenden Verfahren wird beschrieben, wie ein logischer Consumer erstellt wird.
 
 **So erstellen Sie einen logischen Consumer**
 
-1.  Erstellen Sie eine Instanz ihrer permanenten Consumerklasse.
-2.  Füllen Sie die Eigenschaften der Instanz mit den Parametern der Aktion aus, die der physische Consumer durchführen soll.
+1.  Erstellen Sie eine Instanz Ihrer permanenten Consumerklasse.
+2.  Füllen Sie die Eigenschaften der -Instanz mit den Parametern der Aktion aus, die der physische Consumer ausführen soll.
 
 Im folgenden MOF-Codebeispiel wird ein logischer Consumer beschrieben, der ein Skript enthält.
 
@@ -45,7 +45,7 @@ instance of ActiveScriptEventConsumer as $CONSUMER
 };
 ```
 
-Nachdem Sie den logischen Consumer erstellt haben, müssen Sie jeden Filter mit einem Ereignis Filter verknüpfen, um die Aktion einem bestimmten Ereignis zuzuweisen. Weitere Informationen finden Sie unter [Erstellen eines Ereignis Filters](creating-an-event-filter.md).
+Nachdem Sie den logischen Consumer erstellt haben, müssen Sie jeden Filter mit einem Ereignisfilter verknüpfen, um die Aktion einem bestimmten Ereignis zu zuweisen. Weitere Informationen finden Sie unter [Erstellen eines Ereignisfilters.](creating-an-event-filter.md)
 
  
 

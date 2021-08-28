@@ -4,12 +4,12 @@ ms.assetid: ed53d1a8-d302-4855-9858-0f37dfbbd1d3
 title: Prüflisten für die PrintTicket-Konstruktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f76d47911d0060cc6d06604bfaeaa4abcebd3daa
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: cd6a3ae0c19fea01738dbf7c6ecfa52f6f156d59f67dae89d6d5a2952059a765
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091720"
 ---
 # <a name="printticket-construction-checklists"></a>Prüflisten für die PrintTicket-Konstruktion
 
@@ -21,7 +21,7 @@ Es gibt zwei grundlegend unterschiedliche Ansätze zum Erstellen eines PrintTick
 
 -   Richten Sie printTicket auf ein unbekanntes oder generisches Gerät aus, indem [Sie ein generisches PrintTicket erstellen.](creating-a-generic-printticket.md)
 
-    Wenn Ihr primäres Ziel darin besteht, die Absicht des Endbenutzers beizubehalten, sollten Sie diesen Ansatz verwenden, indem Sie ein nicht validiertes generisches PrintTicket mit dem Dokument erstellen und speichern.
+    Wenn Das Hauptziel darin besteht, die Absicht des Endbenutzers beizubehalten, sollten Sie diesen Ansatz verwenden, indem Sie ein nicht validiertes generisches PrintTicket mit dem Dokument erstellen und speichern.
 
 -   Richten Sie printTicket auf ein bestimmtes Gerät aus, indem [Sie einen Device-Specific PrintTicket erstellen.](creating-a-device-specific-printticket.md)
 

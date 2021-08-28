@@ -1,7 +1,7 @@
 ---
-description: Gibt die Rückruf Funktionen an, die vom optionalen Komponenten-Manager verwendet werden sollen.
+description: Gibt die Rückruffunktionen an, die vom optionalen Komponenten-Manager verwendet werden sollen.
 ms.assetid: 454cc07e-4a00-4c53-9759-47563a8ed62f
-title: OCM_CLIENT_CALLBACKS Struktur
+title: OCM_CLIENT_CALLBACKS-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: cc2c1d95e2b05de1ad7285e065e9742a24e0e5a5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 453eeaa49a7211793503f39f0b050904bcf7de41a83e2b06dce647fb4177e41e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058870"
 ---
-# <a name="ocm_client_callbacks-structure"></a>Struktur der OCM- \_ Client \_ Rückrufe
+# <a name="ocm_client_callbacks-structure"></a>OCM \_ CLIENT \_ CALLBACKS-Struktur
 
-Gibt die Rückruf Funktionen an, die vom optionalen Komponenten-Manager verwendet werden sollen.
+Gibt die Rückruffunktionen an, die vom optionalen Komponenten-Manager verwendet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,58 +44,58 @@ typedef struct _OCM_CLIENT_CALLBACKS {
 
 <dl> <dt>
 
-**Fillinsetupdataa**
+**FillInSetupDataA**
 </dt> <dd>
 
-Die Rückruffunktion zum Ausfüllen der Setup Datenstruktur, die Informationen über die Umgebung bereitstellt, in der der OC-Manager ausgeführt wird.
+Die Rückruffunktion, die die Setupdatenstruktur ausfüllen soll, die Informationen über die Umgebung enthält, in der der OC-Manager ausgeführt wird.
 
 </dd> <dt>
 
 **LogError**
 </dt> <dd>
 
-Die Rückruffunktion, die alle Fehler protokolliert.
+Die Rückruffunktion, die Fehler protokolliert.
 
 </dd> <dt>
 
-**"-Start"**
+**SetReboot**
 </dt> <dd>
 
 Die Rückruffunktion, die angibt, dass ein Neustart erforderlich ist.
 
 </dd> <dt>
 
-**Showhide WizardPage**
+**ShowHideWizardPage**
 </dt> <dd>
 
-Die Rückruffunktion, die angibt, ob der Assistent angezeigt oder ausgeblendet werden soll. Dies hat nur Auswirkungen, wenn das Billboard angezeigt wird.
+Die Rückruffunktion, die angibt, ob der Assistent angezeigt oder ausblendet werden soll. Dies hat nur dann Auswirkungen, wenn die Tafel angezeigt wird.
 
 </dd> <dt>
 
-**Billboardprogresscallback**
+**ChartsProgressCallback**
 </dt> <dd>
 
-Die Rückruffunktion, die das Fortschritts Feedback an das Billboard aufruft.
+Die Rückruffunktion, die das Statusfeedback an das Schild aufruft.
 
 </dd> <dt>
 
-**Billboardsetprogresstext**
+**BillBoardSetProgressText**
 </dt> <dd>
 
 Die Rückruffunktion, die die Zeichenfolge angibt, die in der Statusanzeige angezeigt werden soll.
 
 </dd> <dt>
 
-**Setupperfdata**
+**SetupPerfData**
 </dt> <dd>
 
-Die Rückruffunktion, mit der die Leistungsdaten festgelegt werden.
+Die Rückruffunktion, die die Leistungsdaten fest legt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Rückruf Funktionen werden wie folgt deklariert.
+Die Rückruffunktionen werden wie folgt deklariert.
 
 ``` syntax
 typedef
@@ -245,7 +245,7 @@ VOID
 
 <dl> <dt>
 
-[**Ocinitialize**](ocinitialize.md)
+[**OcInitialize**](ocinitialize.md)
 </dt> </dl>
 
  

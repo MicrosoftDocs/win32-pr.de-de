@@ -1,44 +1,44 @@
 ---
-title: Beispiel für die Verwendung der SSPI-Authentifizierungs Codierung mit Bits
-description: Sie können die SSPI-Authentifizierung (Security Support Provider Interface) und die Background Intelligent Transfer Service (Bits)-Methoden verwenden, um die Anmelde Informationen von einem Benutzer zu erhalten, die Anmelde Informationen zu codieren und die codierten Anmelde Informationen für einen Bits-Übertragungs Auftrag festzulegen.
+title: Beispiel für die Verwendung der SSPI-Authentifizierungscodierung mit BITS
+description: Sie können die Methoden security support provider interface (SSPI) authentication and Background Intelligent Transfer Service (BITS) verwenden, um die Anmeldeinformationen von einem Benutzer abzurufen, die Anmeldeinformationen zu codieren und die codierten Anmeldeinformationen für einen BITS-Übertragungsauftrag festzulegen.
 ms.assetid: 5c8a6df7-0056-463e-8d73-1695dc75e023
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b86248c4782789010a817755d9bc27b3e5373b0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: db13abe9b0bb6d8d4252575f70738f7b2f1a5c42b4cae1a4f042725c7bae15ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103730161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119528800"
 ---
-# <a name="example-using-sspi-authentication-encoding-with-bits"></a>Beispiel: Verwenden der SSPI-Authentifizierungs Codierung mit Bits
+# <a name="example-using-sspi-authentication-encoding-with-bits"></a>Beispiel: Verwenden der SSPI-Authentifizierungscodierung mit BITS
 
-Sie können die SSPI-Authentifizierung (Security Support Provider Interface) und die Background Intelligent Transfer Service (Bits)-Methoden verwenden, um die Anmelde Informationen von einem Benutzer zu erhalten, die Anmelde Informationen zu codieren und die codierten Anmelde Informationen für einen Bits-Übertragungs Auftrag festzulegen. Die Codierung ist erforderlich, um die Anmelde Informationsstruktur in Zeichen folgen zu konvertieren, die an einen Bits-Übertragungs Auftrag übergeben werden können.
+Sie können die Methoden security support provider interface (SSPI) authentication and Background Intelligent Transfer Service (BITS) verwenden, um die Anmeldeinformationen von einem Benutzer abzurufen, die Anmeldeinformationen zu codieren und die codierten Anmeldeinformationen für einen BITS-Übertragungsauftrag festzulegen. Die Codierung ist erforderlich, um die Anmeldeinformationsstruktur in Zeichenfolgen zu konvertieren, die an einen BITS-Übertragungsauftrag übergeben werden können.
 
-Weitere Informationen zur SSPI-Authentifizierung und zu Methoden finden Sie unter [SSPI](../secauthn/sspi.md).
+Weitere Informationen zur SSPI-Authentifizierung und zu SSPI-Methoden finden Sie unter [SSPI](../secauthn/sspi.md).
 
-Im folgenden Verfahren werden die Anmelde Informationen des Benutzers mithilfe des Aushandlungs Sicherheitspakets angefordert. Das Programm erstellt eine Authentifizierungs Identitäts Struktur und füllt die Struktur mit den codierten Zeichen folgen auf, die den Benutzernamen, die Domäne und das Kennwort des Benutzers darstellen. Das Programm erstellt dann einen Bits-Download Auftrag und legt den codierten Benutzernamen und das Kennwort als Anmelde Informationen für den Auftrag fest. Das Programm gibt die Authentifizierungs Identitäts Struktur frei, nachdem Sie nicht mehr benötigt wird.
+Im folgenden Verfahren wird der Benutzer mithilfe des Sicherheitspakets Negotiate zur Eingabe von Anmeldeinformationen aufgefordert. Das Programm erstellt eine Authentifizierungsidentitätsstruktur und füllt die Struktur mit den codierten Zeichenfolgen auf, die den Benutzernamen, die Domäne und das Kennwort des Benutzers darstellen. Anschließend erstellt das Programm einen BITS-Downloadauftrag und legt den codierten Benutzernamen und das Kennwort als Anmeldeinformationen für den Auftrag fest. Das Programm gibt die Authentifizierungsidentitätsstruktur frei, nachdem sie nicht mehr benötigt wird.
 
-In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: allgemeine Klassen](common-classes.md)definiert sind.
+In diesem Beispiel werden der Header und die Implementierung verwendet, die in [Beispiel: Allgemeine Klassen](common-classes.md)definiert sind.
 
-**So verwenden Sie die SSPI-Authentifizierungs Codierung mit Bits-Übertragungs Aufträgen**
+**So verwenden Sie die SSPI-Authentifizierungscodierung mit BITS-Übertragungsaufträgen**
 
-1.  Initialisieren Sie com-Parameter, indem Sie die ccoinitializer-Funktion aufrufen. Weitere Informationen zur ccoinitializer-Funktion finden Sie unter [Beispiel: allgemeine Klassen](common-classes.md).
-2.  Get-Zeiger für die [**ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager)-, [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob)-und [**IBackgroundCopyJob2**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) -Schnittstellen. In diesem Beispiel wird die [CComPtr-Klasse](/cpp/atl/reference/ccomptr-class?view=vs-2019) zum Verwalten von COM-Schnittstellen Zeigern verwendet.
-3.  Erstellen Sie eine " [fordui \_ Info](/windows/win32/api/wincred/ns-wincred-credui_infoa) "-Struktur, die Informationen zum Anpassen des Erscheinungs Bilds des Dialog Felds für die [Funktion "sspipromptforanmelde](/windows/win32/api/sspi/nf-sspi-sspipromptforcredentialsa)Informationen" enthält. Fordern Sie dann die Anmelde Informationen des Benutzers an. Weitere Informationen finden Sie unter der [Funktion "sspipromptforanmelde](/windows/win32/api/sspi/nf-sspi-sspipromptforcredentialsa)Informationen".
-4.  Codieren Sie die Struktur der Anmelde Informationen als Zeichen folgen, die mithilfe der [sspiencodeauthidentityasstrings](/windows/win32/api/sspi/nf-sspi-sspiencodeauthidentityasstrings) -Funktion an einen Bits-Übertragungs Auftrag übergeben werden können.
-5.  Bereiten Sie eine [**BG \_ auth- \_ Anmelde**](/windows/desktop/api/bits1_5/ns-bits1_5-bg_auth_credentials) Informationsstruktur vor.
-6.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity). Bits erfordert mindestens die Identitätswechsel Ebene des Identitäts Wechsels. Bits schlägt mit **E \_ AccessDenied** fehl, wenn die korrekte Identitätswechsel Ebene nicht festgelegt ist.
-7.  Rufen Sie den anfänglichen Serverlocatorpunkt in Bits ab, indem Sie die [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufrufen.
-8.  Erstellen Sie einen Bits-Übertragungs Auftrag, indem Sie die [**ibackgroundcopymanager:: createjob**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) -Methode aufrufen.
-9.  Ruft den Bezeichner für die [**IBackgroundCopyJob2**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) -Schnittstelle ab und ruft die **ibackgroundcopyjob:: QueryInterface** -Methode auf.
-10. Füllen Sie die [**BG \_ auth- \_ Anmelde**](/windows/desktop/api/bits1_5/ns-bits1_5-bg_auth_credentials) Informationsstruktur mit den codierten Benutzernamen-und Kenn Wort Zeichenfolgen auf, und legen Sie das Authentifizierungsschema auf Aushandeln (**BG \_ auth \_ Scheme-Schema \_ aushandeln**) fest
-11. Verwenden Sie den [**IBackgroundCopyJob2**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) -Zeiger, um Anforderungen an Bits zu senden. Dieses Programm verwendet die [**IBackgroundCopyJob2:: setanmelde**](/windows/desktop/api/bits1_5/nf-bits1_5-ibackgroundcopyjob2-setcredentials) -Methode, um die Anmelde Informationen für den Bits-Übertragungs Auftrag festzulegen.
-12. Dateien hinzufügen, Eigenschaften ändern oder den Bits-Übertragungs Auftrag fortsetzen.
-13. Nachdem der Bits-Übertragungs Auftrag fertiggestellt wurde, entfernen Sie den Auftrag aus der Warteschlange, indem Sie [**ibackgroundcopyjob:: Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)aufrufen.
-14. Schließlich können Sie die Authentifizierungs Identitäts Struktur durch Aufrufen der [sspifreeauthidentity](/windows/win32/api/sspi/nf-sspi-sspifreeauthidentity) -Funktion freigeben.
+1.  Initialisieren Sie COM-Parameter, indem Sie die CCoInitializer-Funktion aufrufen. Weitere Informationen zur CCoInitializer-Funktion finden Sie unter [Beispiel: Allgemeine Klassen.](common-classes.md)
+2.  Abrufen von Zeigern für die Schnittstellen [**IBackgroundCopyManager,**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager) [**IBackgroundCopyJob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob)und [**IBackgroundCopyJob2.**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) In diesem Beispiel wird die [CComPtr-Klasse](/cpp/atl/reference/ccomptr-class?view=vs-2019) verwendet, um COM-Schnittstellenzeiger zu verwalten.
+3.  Erstellen Sie eine [CREDUI \_ INFO-Struktur,](/windows/win32/api/wincred/ns-wincred-credui_infoa) die Informationen zum Anpassen der Darstellung des Dialogfelds für die [SspiPromptForCredentials-Funktion](/windows/win32/api/sspi/nf-sspi-sspipromptforcredentialsa)enthält. Fordern Sie dann den Benutzer zur Eingabe von Anmeldeinformationen auf. Weitere Informationen finden Sie unter [SspiPromptForCredentials-Funktion.](/windows/win32/api/sspi/nf-sspi-sspipromptforcredentialsa)
+4.  Codieren Sie die Anmeldeinformationsstruktur als Zeichenfolgen, die mithilfe der [SspiEncodeAuthIdentityAsStrings-Funktion](/windows/win32/api/sspi/nf-sspi-sspiencodeauthidentityasstrings) an einen BITS-Übertragungsauftrag übergeben werden können.
+5.  Bereiten Sie eine [**BG \_ AUTH \_ CREDENTIALS-Struktur vor.**](/windows/desktop/api/bits1_5/ns-bits1_5-bg_auth_credentials)
+6.  Initialisieren Sie die COM-Prozesssicherheit, indem [Sie CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)aufrufen. BITS erfordert mindestens die IMPERSONATE-Ebene des Identitätswechsels. BITS schlägt mit **E \_ ACCESSDENIED fehl,** wenn die richtige Identitätswechselebene nicht festgelegt ist.
+7.  Rufen Sie den anfänglichen Locator zu BITS ab, indem Sie die [CoCreateInstance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) aufrufen.
+8.  Erstellen Sie einen BITS-Übertragungsauftrag, indem Sie die [**IBackgroundCopyManager::CreateJob-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopymanager-createjob) aufrufen.
+9.  Rufen Sie den Bezeichner für die [**IBackgroundCopyJob2-Schnittstelle**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) ab, und rufen Sie die **IBackgroundCopyJob::QueryInterface-Methode** auf.
+10. Füllen Sie die [**BG \_ AUTH \_ CREDENTIALS-Struktur**](/windows/desktop/api/bits1_5/ns-bits1_5-bg_auth_credentials) mit den codierten Benutzernamen- und Kennwortzeichenfolgen auf, und legen Sie das Authentifizierungsschema auf Negotiate **(BG \_ AUTH \_ SCHEME \_ NEGOTIATE)** fest.
+11. Verwenden Sie den [**IBackgroundCopyJob2-Zeiger,**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2) um Anforderungen an BITS zu stellen. Dieses Programm verwendet die [**IBackgroundCopyJob2::SetCredentials-Methode,**](/windows/desktop/api/bits1_5/nf-bits1_5-ibackgroundcopyjob2-setcredentials) um die Anmeldeinformationen für den BITS-Übertragungsauftrag festzulegen.
+12. Fügen Sie Dateien hinzu, ändern Sie Eigenschaften, oder setzen Sie den BITS-Übertragungsauftrag fort.
+13. Nachdem der BITS-Übertragungsauftrag abgeschlossen ist, entfernen Sie den Auftrag aus der Warteschlange, indem [**Sie IBackgroundCopyJob::Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete)aufrufen.
+14. Schließlich können Sie die Authentifizierungsidentitätsstruktur freigeben, indem Sie die [SspiFreeAuthIdentity-Funktion](/windows/win32/api/sspi/nf-sspi-sspifreeauthidentity) aufrufen.
 
-Im folgenden Codebeispiel wird die Verwendung der SSPI-Authentifizierungs Codierung mit Bits-Übertragungs Aufträgen veranschaulicht.
+Im folgenden Codebeispiel wird die Verwendung der SSPI-Authentifizierungscodierung mit BITS-Übertragungsaufträgen veranschaulicht.
 
 
 ```C++
@@ -247,7 +247,7 @@ void _cdecl _tmain(int argc, LPWSTR* argv)
 [SSPI](../secauthn/sspi.md)
 </dt> <dt>
 
-[**Ibackgroundcopymanager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager)
+[**IBackgroundCopyManager**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopymanager)
 </dt> <dt>
 
 [**IBackgroundCopyJob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob)
@@ -256,9 +256,9 @@ void _cdecl _tmain(int argc, LPWSTR* argv)
 [**IBackgroundCopyJob2**](/windows/desktop/api/bits1_5/nn-bits1_5-ibackgroundcopyjob2)
 </dt> <dt>
 
-[Beispiel: allgemeine Klassen](common-classes.md)
+[Beispiel: Allgemeine Klassen](common-classes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

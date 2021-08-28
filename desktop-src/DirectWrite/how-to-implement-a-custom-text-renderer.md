@@ -1,57 +1,57 @@
 ---
 title: Rendern unter Verwendung eines benutzerdefinierten Textrenderers
-description: Ein DirectWrite \ 160; Text Layout kann von einem benutzerdefinierten TextRenderer gezeichnet werden, der von idschreitetextrenderer abgeleitet wurde.
+description: Ein DirectWrite \ 160;Textlayout kann von einem benutzerdefinierten Textrenderer gezeichnet werden, der von IDWriteTextRenderer abgeleitet wird.
 ms.assetid: a5b09733-24b2-408e-a1f9-cf7ad20c5c63
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17cda56fc5cc38a62e48a2f62066edfec2327e9e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c6f8e08bb8af3ce7fa0ae4d423103feb597e17cf46ab53b42903fad143c675db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902874"
 ---
 # <a name="render-using-a-custom-text-renderer"></a>Rendern unter Verwendung eines benutzerdefinierten Textrenderers
 
-Ein [DirectWrite](direct-write-portal.md)- [**Text Layout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) kann von einem benutzerdefinierten TextRenderer gezeichnet werden, der von [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer)abgeleitet wurde. Ein benutzerdefinierter Renderer ist erforderlich, um einige erweiterte Features von DirectWrite zu nutzen, z. b. das Rendern einer Bitmap oder GDI-Oberfläche, von Inline Objekten und von Client Zeichnungs Effekten. In diesem Tutorial werden die Methoden von **idschreitetextrenderer** beschrieben und eine Beispiel Implementierung bereitstellt, die [Direct2D](../direct2d/direct2d-portal.md) zum renderingtext mit einer Bitmap-Füllung verwendet.
+Ein [DirectWrite](direct-write-portal.md) [**Textlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) kann von einem benutzerdefinierten Textrenderer gezeichnet werden, der von [**IDWriteTextRenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer)abgeleitet wird. Ein benutzerdefinierter Renderer ist erforderlich, um einige erweiterte Features von DirectWrite zu nutzen, z. B. das Rendern auf einer Bitmap- oder GDI-Oberfläche, Inlineobjekte und Clientzeichnungseffekte. Dieses Tutorial beschreibt die Methoden von **IDWriteTextRenderer** und stellt eine Beispielimplementierung bereit, die [Direct2D](../direct2d/direct2d-portal.md) verwendet, um Text mit einer Bitmapfüllung zu rendern.
 
 Dieses Tutorial enthält die folgenden Teile:
 
 -   [Der Konstruktor](#the-constructor)
--   [DrawGlyphRun ()](#drawglyphrun)
--   [Drawunder Line () und drawstrikethrough ()](#drawunderline-and-drawstrikethrough)
--   [Pixel-Snapping, Pixel pro DIP und Transformation](#pixel-snapping-pixels-per-dip-and-transform)
-    -   [Ispixelsnappingdeaktiviert ()](#ispixelsnappingdisabled)
-    -   [Getcurrenttransform ()](#getcurrenttransform)
-    -   [Getpixelsperdip ()](#getpixelsperdip)
--   [Drawinlineobject ()](#drawinlineobject)
--   [Der Dekonstruktor](#the-destructor)
--   [Verwenden des benutzerdefinierten textrenderers](#using-the-custom-text-renderer)
+-   [DrawGlyphRun()](#drawglyphrun)
+-   [DrawUnderline() und DrawStrikethrough()](#drawunderline-and-drawstrikethrough)
+-   [Pixel-Ausrichtung, Pixel pro DIP und Transformation](#pixel-snapping-pixels-per-dip-and-transform)
+    -   [IsPixelSnappingDisabled()](#ispixelsnappingdisabled)
+    -   [GetCurrentTransform()](#getcurrenttransform)
+    -   [GetPixelsPerDip()](#getpixelsperdip)
+-   [DrawInlineObject()](#drawinlineobject)
+-   [Der Destruktor](#the-destructor)
+-   [Verwenden des benutzerdefinierten Textrenderers](#using-the-custom-text-renderer)
 
-Der benutzerdefinierte TextRenderer muss die Methoden, die von IUnknown geerbt wurden, zusätzlich zu den Methoden implementieren, die auf der Referenzseite [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) und darunter aufgeführt sind.
+Ihr benutzerdefinierter Textrenderer muss die von IUnknown geerbten Methoden zusätzlich zu den Methoden implementieren, die auf der [**Referenzseite IDWriteTextRenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) und unten aufgeführt sind.
 
-Den vollständigen Quellcode für den benutzerdefinierten TextRenderer finden Sie in den Dateien "customtextrenderer. cpp" und "customtextrenderer. h" im [DirectWrite-Hallo Welt-Beispiel](/samples/browse/?redirectedfrom=MSDN-samples).
+Den vollständigen Quellcode für den benutzerdefinierten Textrenderer finden Sie in den Dateien CustomTextRenderer.cpp und CustomTextRenderer.h des [DirectWrite Hallo Welt Beispiels](/samples/browse/?redirectedfrom=MSDN-samples).
 
 ## <a name="the-constructor"></a>Der Konstruktor
 
-Der benutzerdefinierte TextRenderer benötigt einen Konstruktor. In diesem Beispiel werden sowohl Solid-als auch Bitmap- [Direct2D](../direct2d/direct2d-portal.md) Pinsel verwendet, um den Text zu erzeugen.
+Ihr benutzerdefinierter Textrenderer benötigt einen Konstruktor. In diesem Beispiel werden sowohl einfarbige als auch [Bitmap-Direct2D-Pinsel](../direct2d/direct2d-portal.md) verwendet, um den Text zu rendern.
 
-Aus diesem Grund übernimmt der Konstruktor die in der Tabelle unten gefundenen Parameter mit Beschreibungen.
+Aus diesem Grund verwendet der Konstruktor die Parameter aus der folgenden Tabelle mit Beschreibungen.
 
 
 
 | Parameter       | BESCHREIBUNG                                                                                                                                                                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *pD2DFactory*   | Ein Zeiger auf ein [**ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) -Objekt, das verwendet wird, um alle benötigten Direct2D-Ressourcen zu erstellen.                                                                                                        |
-| *PRT*           | Ein Zeiger auf das [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) -Objekt, in dem der Text gerendert wird. |
-| *poutlinebrush* | Ein Zeiger auf die [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) , die zum Zeichnen des Texts verwendet wird.                                                                                                                     |
-| *pfillbrush*    | Ein Zeiger auf die [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) , die verwendet wird, um den Text auszufüllen.                                                                                                                                      |
+| *pD2DFactory*   | Ein Zeiger auf ein [**ID2D1Factory-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory) mit dem alle benötigten Direct2D-Ressourcen erstellt werden.                                                                                                        |
+| *Prt*           | Ein Zeiger auf das [**ID2D1HwndRenderTarget-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) in das der Text gerendert wird. |
+| *pOutlineBrush* | Ein Zeiger auf den [**ID2D1SolidColorBrush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) der zum Zeichnen der Kontur des Texts verwendet wird.                                                                                                                     |
+| *pFillBrush*    | Ein Zeiger auf den [**ID2D1BitmapBrush,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush) der zum Ausfüllen des Texts verwendet wird.                                                                                                                                      |
 
 
 
- 
+ 
 
-Diese werden vom-Konstruktor gespeichert, wie im folgenden Code gezeigt.
+Diese werden vom Konstruktor gespeichert, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -77,13 +77,13 @@ pFillBrush_(pFillBrush)
 
 
 
-## <a name="drawglyphrun"></a>DrawGlyphRun ()
+## <a name="drawglyphrun"></a>DrawGlyphRun()
 
-Die [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) Methode ist die Haupt Rückruf Methode des textrenderers. Es wird ein Ausführen von Symbolen, die gerendert werden sollen, sowie Informationen wie der Basis Linien Ursprung und der Mess Modus übermittelt. Außerdem übergibt Sie ein Client Zeichnungs Effekt-Objekt, das auf das Symbol "ausführen" angewendet werden soll. Weitere Informationen finden Sie im Thema [Hinzufügen von Client Zeichnungs Effekten zu einem Textlayout](how-to-add-custom-drawing-efffects-to-a-text-layout.md) .
+Die [**DrawGlyphRun-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) ist die Hauptrückrufmethode des Textrenderers. Es wird eine Ausführung von Glyphen übergeben, die zusätzlich zu Informationen wie dem Baselineursprung und dem Messmodus gerendert werden sollen. Außerdem wird ein Client-Zeichnungseffektobjekt übergeben, das auf die Glyphen-Ausführung angewendet werden soll. Weitere Informationen finden Sie im Thema [Hinzufügen von Clientzeichnungseffekten zu einem Textlayout.](how-to-add-custom-drawing-efffects-to-a-text-layout.md)
 
-Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](rendering-by-using-direct2d.md) Geometrien und anschließend die Geometrien gezeichnet und gefüllt werden. Dies umfasst die folgenden Schritte:
+Diese Textrendererimplementierung rendert Glyphenausführungen, indem sie sie in [Direct2D-Geometrien](rendering-by-using-direct2d.md) konvertiert und dann die Geometrien zeichnen und füllen. Dies umfasst die folgenden Schritte.
 
-1.  Erstellen Sie ein [**ID2D1PathGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) -Objekt, und rufen Sie dann das [**ID2D1GeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) -Objekt mithilfe der [**ID2D1PathGeometry:: Open**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) -Methode ab.
+1.  Erstellen Sie ein [**ID2D1PathGeometry-Objekt,**](/windows/win32/api/d2d1/nn-d2d1-id2d1pathgeometry) und rufen Sie dann das [**ID2D1GeometrySink-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) mithilfe der [**ID2D1PathGeometry::Open-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1pathgeometry-open) ab.
 
     ```C++
     // Create the path geometry.
@@ -104,7 +104,7 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-2.  Die an [**DrawGlyphRun an DrawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) über gegebene [**dwrite- \_ Glyphe \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_run) enthält ein [**idwrite-fontface**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface) -Objekt mit dem Namen *fontface*, das die Schriftart für die gesamte Symbol Ausführung darstellt. Fügen Sie den Umriss des Symbols in die Geometrie-Senke ein, indem Sie die [**idwrite-fontface:: getglyphrunoutline**](/windows/win32/api/dwrite/nf-dwrite-idwritefontface-getglyphrunoutline) -Methode verwenden, wie im folgenden Code gezeigt.
+2.  Die [**\_ DWRITE-GLYPH-AUSFÜHRUNG, \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_run) die an [**DrawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) übergeben wird, enthält ein [**IDWriteFontFace-Objekt**](/windows/win32/api/dwrite/nn-dwrite-idwritefontface) namens *fontFace,* das das Schriftartgesicht für die gesamte Glyphenrun darstellt. Legen Sie die Kontur des Glyphenlaufs wie im folgenden Code gezeigt mithilfe der [**IDWriteFontFace:: GetGlyphRunOutline-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritefontface-getglyphrunoutline) in die geometry-Senke ein.
 
     ```C++
     // Get the glyph run outline geometries back from DirectWrite and place them within the
@@ -126,7 +126,7 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-3.  Nachdem Sie die Geometry-Senke ausgefüllt haben, schließen Sie Sie.
+3.  Schließen Sie die Geometriesenke, nachdem Sie sie gefüllt haben.
 
     ```C++
     // Close the geometry sink
@@ -138,7 +138,7 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-4.  Der Ursprung der Glyphe muss übersetzt werden, damit er aus dem richtigen Baseline-Ursprung gerendert wird, wie im folgenden Code gezeigt.
+4.  Der Ursprung der Glyphenlauf muss übersetzt werden, damit er vom richtigen Baselineursprung gerendert wird, wie im folgenden Code gezeigt.
 
     ```C++
     // Initialize a matrix to translate the origin of the glyph run.
@@ -151,9 +151,9 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-    *Baselineoriginx* und *baselineoriginy* werden als Parameter an die [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) Rückruf Methode übermittelt.
+    *BaselineOriginX* und *baselineOriginY* werden als Parameter an die [**DrawGlyphRun-Rückrufmethode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) übergeben.
 
-5.  Erstellen Sie die transformierte Geometrie mithilfe der [**ID2D1Factory:: deatetransformedgeometry**](../direct2d/id2d1factory-createtransformedgeometry.md) -Methode, und übergeben Sie die Pfad Geometrie und die Übersetzungs Matrix.
+5.  Erstellen Sie die transformierte Geometrie mithilfe der [**ID2D1Factory::CreateTransformedGeometry-Methode,**](../direct2d/id2d1factory-createtransformedgeometry.md) und übergeben Sie die Pfadgeometrie und die Übersetzungsmatrix.
 
     ```C++
     // Create the transformed geometry
@@ -170,7 +170,7 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-6.  Zeichnen Sie schließlich den Umriss der transformierten Geometrie, und füllen Sie ihn mit den [**ID2D1RenderTarget::D rawgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) -und [**ID2D1RenderTarget:: fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methoden und den [Direct2D](../direct2d/direct2d-portal.md) -Pinseln, die als Element Variablen gespeichert sind.
+6.  Zeichnen Sie abschließend die Kontur der transformierten Geometrie, und füllen Sie sie mithilfe der Methoden [**ID2D1RenderTarget::D rawGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) und [**ID2D1RenderTarget::FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) und der [Direct2D-Pinsel,](../direct2d/direct2d-portal.md) die als Membervariablen gespeichert sind.
 
     ```C++
         // Draw the outline of the glyph run
@@ -188,7 +188,7 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-7.  Nachdem Sie das Zeichnen abgeschlossen haben, sollten Sie nicht vergessen, die Objekte zu bereinigen, die in dieser Methode erstellt wurden.
+7.  Nachdem Sie das Zeichnen abgeschlossen haben, vergessen Sie nicht, die Objekte zu bereinigen, die in dieser Methode erstellt wurden.
 
     ```C++
     SafeRelease(&pPathGeometry);
@@ -198,13 +198,13 @@ Diese Implementierung des textrenderers rendert Glyphe, indem Sie in [Direct2D](
 
     
 
-## <a name="drawunderline-and-drawstrikethrough"></a>Drawunder Line () und drawstrikethrough ()
+## <a name="drawunderline-and-drawstrikethrough"></a>DrawUnderline() und DrawStrikethrough()
 
-[**Idwrite tetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) verfügt auch über Rückrufe zum Zeichnen der Unterstreichung und durchgestrichen. In diesem Beispiel wird ein einfaches Rechteck für eine Unterstreichung oder durchgestrichen gezeichnet, aber andere Formen können gezeichnet werden.
+[**IDWriteTextRenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) verfügt auch über Rückrufe zum Zeichnen der Unterstreichung und des Durchstrichs. In diesem Beispiel wird ein einfaches Rechteck für eine Unterstreichung oder einen Durchstrich gezeichnet, aber andere Formen können gezeichnet werden.
 
-Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-portal.md) besteht aus den folgenden Schritten.
+Das Zeichnen einer Unterstreichung mit [Direct2D](../direct2d/direct2d-portal.md) besteht aus den folgenden Schritten.
 
-1.  Erstellen Sie zuerst eine [**D2D1 \_ Rect \_ F**](../direct2d/d2d1-rect-f.md) -Struktur der Größe und Form der Unterstreichung. Die [**dwrite \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_underline) -Unterstreichung-Struktur, die an die [**drawunder Line**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline) -Rückruf Methode übermittelt wird, bietet den Offset, die Breite und die Stärke der Unterstreichung.
+1.  Erstellen Sie zunächst eine [**D2D1 \_ RECT \_ F-Struktur**](../direct2d/d2d1-rect-f.md) der Größe und Form der Unterstreichung. Die [**DWRITE \_ UNDERLINE-Struktur,**](/windows/win32/api/dwrite/ns-dwrite-dwrite_underline) die an die [**DrawUnderline-Rückrufmethode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline) übergeben wird, stellt den Offset, die Breite und die Stärke der Unterstreichung bereit.
 
     ```C++
     D2D1_RECT_F rect = D2D1::RectF(
@@ -217,7 +217,7 @@ Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-
 
     
 
-2.  Erstellen Sie als nächstes ein [**ID2D1RectangleGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) -Objekt, indem Sie die [**ID2D1Factory:: kreaterectanglegeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createrectanglegeometry(constd2d1_rect_f_id2d1rectanglegeometry)) -Methode und die initialisierte [**D2D1 \_ Rect \_ F**](../direct2d/d2d1-rect-f.md) -Struktur verwenden.
+2.  Erstellen Sie als Nächstes ein [**ID2D1RectangleGeometry-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1rectanglegeometry) mithilfe der [**ID2D1Factory::CreateRectangleGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createrectanglegeometry(constd2d1_rect_f_id2d1rectanglegeometry)) und der initialisierten [**D2D1 \_ RECT \_ F-Struktur.**](../direct2d/d2d1-rect-f.md)
 
     ```C++
     ID2D1RectangleGeometry* pRectangleGeometry = NULL;
@@ -229,7 +229,7 @@ Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-
 
     
 
-3.  Wie bei der Symbol Führung muss der Ursprung der unterstrichsgeometrie mithilfe der Methode " [**kreatetransformedgeometry**](../direct2d/id2d1factory-createtransformedgeometry.md) " basierend auf den Baseline-Ursprungs Werten übersetzt werden.
+3.  Wie beim Glyphenlauf muss der Ursprung der Unterstreichungsgeometrie basierend auf den Basisursprungswerten mithilfe der [**CreateTransformedGeometry-Methode**](../direct2d/id2d1factory-createtransformedgeometry.md) übersetzt werden.
 
     ```C++
     // Initialize a matrix to translate the origin of the underline
@@ -252,7 +252,7 @@ Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-
 
     
 
-4.  Zeichnen Sie schließlich den Umriss der transformierten Geometrie, und füllen Sie ihn mit den [**ID2D1RenderTarget::D rawgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) -und [**ID2D1RenderTarget:: fillgeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) -Methoden und den [Direct2D](../direct2d/direct2d-portal.md) -Pinseln, die als Element Variablen gespeichert sind.
+4.  Zeichnen Sie abschließend die Kontur der transformierten Geometrie, und füllen Sie sie mithilfe der Methoden [**ID2D1RenderTarget::D rawGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawgeometry) und [**ID2D1RenderTarget::FillGeometry**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) und der [Direct2D-Pinsel,](../direct2d/direct2d-portal.md) die als Membervariablen gespeichert sind.
 
     ```C++
         // Draw the outline of the glyph run
@@ -270,7 +270,7 @@ Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-
 
     
 
-5.  Nachdem Sie das Zeichnen abgeschlossen haben, sollten Sie nicht vergessen, die Objekte zu bereinigen, die in dieser Methode erstellt wurden.
+5.  Nachdem Sie das Zeichnen abgeschlossen haben, vergessen Sie nicht, die Objekte zu bereinigen, die in dieser Methode erstellt wurden.
 
     ```C++
     SafeRelease(&pRectangleGeometry);
@@ -279,13 +279,13 @@ Das Zeichnen einer Unterstreichung mithilfe von [Direct2D](../direct2d/direct2d-
 
     
 
-Der Prozess zum Zeichnen eines durchgestrichen ist identisch. Allerdings hat das durchgestrichen eine andere Abweichung und wahrscheinlich eine andere Breite und Stärke.
+Der Prozess zum Zeichnen eines durchgestrichenen Vorgangs ist identisch. Der Durchstrich hat jedoch einen anderen Offset und wahrscheinlich eine andere Breite und Stärke.
 
-## <a name="pixel-snapping-pixels-per-dip-and-transform"></a>Pixel-Snapping, Pixel pro DIP und Transformation
+## <a name="pixel-snapping-pixels-per-dip-and-transform"></a>Pixel-Ausrichtung, Pixel pro DIP und Transformation
 
-### <a name="ispixelsnappingdisabled"></a>Ispixelsnappingdeaktiviert ()
+### <a name="ispixelsnappingdisabled"></a>IsPixelSnappingDisabled()
 
-Diese Methode wird aufgerufen, um zu bestimmen, ob das Ausrichten von Pixeln deaktiviert ist. Der empfohlene Standardwert ist **false**. Dies ist die Ausgabe dieses Beispiels.
+Diese Methode wird aufgerufen, um zu bestimmen, ob das Pixel-Snapping deaktiviert ist. Der empfohlene Standardwert ist **FALSE,** und dies ist die Ausgabe dieses Beispiels.
 
 
 ```C++
@@ -294,9 +294,9 @@ Diese Methode wird aufgerufen, um zu bestimmen, ob das Ausrichten von Pixeln dea
 
 
 
-### <a name="getcurrenttransform"></a>Getcurrenttransform ()
+### <a name="getcurrenttransform"></a>GetCurrentTransform()
 
-In diesem Beispiel wird in ein Direct2D-Renderziel gerendert, sodass die Transformation vom Renderziel mithilfe von [**ID2D1RenderTarget:: GetTransform**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-gettransform)weiterleiten soll.
+In diesem Beispiel wird in ein Direct2D-Renderziel gerendert. Leiten Sie daher die Transformation mit [**id2D1RenderTarget::GetTransform**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-gettransform)vom Renderziel weiter.
 
 
 ```C++
@@ -306,9 +306,9 @@ pRT_->GetTransform(reinterpret_cast<D2D1_MATRIX_3X2_F*>(transform));
 
 
 
-### <a name="getpixelsperdip"></a>Getpixelsperdip ()
+### <a name="getpixelsperdip"></a>GetPixelsPerDip()
 
-Diese Methode wird aufgerufen, um die Anzahl der Pixel pro geräteunabhängigen Pixel (DIP) zu erhalten.
+Diese Methode wird aufgerufen, um die Anzahl der Pixel pro geräteunabhängiges Pixel (Device Independent Pixel, DIP) abzurufen.
 
 
 ```C++
@@ -320,13 +320,13 @@ pRT_->GetDpi(&x, &yUnused);
 
 
 
-## <a name="drawinlineobject"></a>Drawinlineobject ()
+## <a name="drawinlineobject"></a>DrawInlineObject()
 
-Ein benutzerdefinierter TextRenderer verfügt auch über einen Rückruf zum Zeichnen von Inline Objekten. In diesem Beispiel gibt [**drawinlineobject**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject) E \_ notimpl zurück. Eine Erläuterung zum Zeichnen von Inline Objekten geht über den Rahmen dieses Tutorials hinaus. Weitere Informationen finden Sie im Thema Vorgehens [Weise beim Hinzufügen von Inline Objekten zu einem Text Layout](how-to-add-inline-objects-to-a-text-layout.md) .
+Ein benutzerdefinierter Textrenderer verfügt auch über einen Rückruf zum Zeichnen von Inlineobjekten. In diesem Beispiel gibt [**DrawInlineObject**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject) E \_ NOTIMPL zurück. Eine Erläuterung des Zeichnens von Inlineobjekten würde den Rahmen dieses Tutorials sprengen. Weitere Informationen finden Sie im Thema [Hinzufügen von Inlineobjekten zu einem Textlayout.](how-to-add-inline-objects-to-a-text-layout.md)
 
-## <a name="the-destructor"></a>Der Dekonstruktor
+## <a name="the-destructor"></a>Der Destruktor
 
-Es ist wichtig, alle Zeiger freizugeben, die von der benutzerdefinierten TextRenderer-Klasse verwendet wurden.
+Es ist wichtig, alle Zeiger freizugeben, die von der benutzerdefinierten Textrendererklasse verwendet wurden.
 
 
 ```C++
@@ -341,9 +341,9 @@ CustomTextRenderer::~CustomTextRenderer()
 
 
 
-## <a name="using-the-custom-text-renderer"></a>Verwenden des benutzerdefinierten textrenderers
+## <a name="using-the-custom-text-renderer"></a>Verwenden des benutzerdefinierten Textrenderers
 
-Sie werden mit dem benutzerdefinierten Renderer mithilfe der [**idwrite-Textlayout::D RAW**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) -Methode gerengt, die eine von [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) abgeleitete Rückruf Schnittstelle als Argument annimmt, wie im folgenden Code gezeigt.
+Sie rendern mit dem benutzerdefinierten Renderer mithilfe der [**IDWriteTextLayout::D raw-Methode,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) die eine von [**IDWriteTextRenderer abgeleitete**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) Rückrufschnittstelle als Argument verwendet, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -359,8 +359,8 @@ hr = pTextLayout_->Draw(
 
 
 
-Die [**idwrite-Textlayout::D RAW**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) -Methode ruft die Methoden des von Ihnen bereitgestellten benutzerdefinierten rendererrückrufs auf. Die oben beschriebenen Methoden [**DrawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun), [**drawunder Line**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline), [**drawinlineobject**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)und [**drawstrikethrough**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) führen die Zeichnungsfunktionen aus.
+Die [**IDWriteTextLayout::D raw-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) ruft die Methoden des von Ihnen bereitzustellenden benutzerdefinierten Rendererrückrufs auf. Die oben [**beschriebenen DrawGlyphRun-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) [**DrawUnderline-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline) [**DrawInlineObject-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)und [**DrawStrikethrough-Methoden**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) führen die Zeichnungsfunktionen aus.
 
- 
+ 
 
- 
+ 

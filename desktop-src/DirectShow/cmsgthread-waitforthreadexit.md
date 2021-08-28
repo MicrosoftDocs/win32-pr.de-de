@@ -1,7 +1,7 @@
 ---
 description: Blockiert, bis der Thread beendet wird.
 ms.assetid: 1ee547b5-cd73-4ce8-8e66-c2062714d0f0
-title: Cmsgthread. waitforthreadexit-Methode (msgthrd. h)
+title: CMsgThread.WaitForThreadExit-Methode (Msgthrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c8b48573c4297a2d5d5d008eba88fd8ea437333c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de9861a1c7cae3055be288c4624b9e0b98c7b719e1534c1841ddb17770d91cf3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915710"
 ---
-# <a name="cmsgthreadwaitforthreadexit-method"></a>Cmsgthread. waitforthreadexit-Methode
+# <a name="cmsgthreadwaitforthreadexit-method"></a>CMsgThread.WaitForThreadExit-Methode
 
 Blockiert, bis der Thread beendet wird.
 
@@ -42,20 +42,20 @@ BOOL WaitForThreadExit(
 
 <dl> <dt>
 
-*lpdwexitcode* 
+*lpdwExitCode* 
 </dt> <dd>
 
-Zeiger auf den Exitcode, der vom Thread zurückgegeben wurde.
+Zeiger auf den vom Thread zurückgegebenen Exitcode.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt entweder " **true** " oder " **false**" zurück. die Bedeutung von wird von der Klasse bestimmt, die die überschriebene [**cmsgthread:: threadmessageproc**](cmsgthread-threadmessageproc.md) -Member-Funktion und die aufrufende Member-Funktion bereitstellt.
+Gibt entweder **TRUE** oder **FALSE** zurück, deren Bedeutung von der Klasse bestimmt wird, die die überschriebene [**CMsgThread::ThreadMessageProc-Memberfunktion**](cmsgthread-threadmessageproc.md) und die aufrufende Memberfunktion angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Stellen Sie sicher, dass der Arbeitsthread vollständig beendet wurde, bevor Sie die Zerstörung ihrer abgeleiteten Klasse abschließen. Andernfalls kann der Thread nach dem Entladen der Dynamic Link Library (dll) aus dem Adressraum des Prozesses weiter ausgeführt werden. Auch wenn die einzige Anweisung, die zum Beenden übrig ist, eine-Anweisung ist, würde dies zu einer Ausnahme führen. Die einzige zuverlässige Möglichkeit, um sicherzustellen, dass der Thread beendet wurde, besteht darin, den Thread zu beenden (mithilfe eines privat ausgehandelten [**CMSG**](cmsg.md) -Objekts, das an die Member-Funktion [**cmsgthread::P utthreadmsg**](cmsgthread-putthreadmsg.md) gesendet wurde), und dann diese Member-Funktion aufzurufen. Dies sollte im Dekonstruktor für Ihre abgeleitete Klasse durchzuführen sein.
+Stellen Sie sicher, dass der Arbeitsthread vollständig beendet wurde, bevor Sie die Zerstörung Ihrer abgeleiteten Klasse abschließen. Andernfalls wird der Thread möglicherweise weiterhin ausgeführt, nachdem Die Dynamic Link Library (DLL) aus dem Adressraum des Prozesses entladen wurde. Selbst wenn die einzige anweisung, die beendet werden muss, eine einzelne Rückgabeanweisung ist, würde dies eine Ausnahme verursachen. Die einzige zuverlässige Möglichkeit, sicherzustellen, dass der Thread beendet wurde, besteht darin, dem Thread das Beenden zu signalisieren (mithilfe eines privat ausgehandelten [**CMsg-Objekts,**](cmsg.md) das an die [**Memberfunktion CMsgThread::P utThreadMsg**](cmsgthread-putthreadmsg.md) gesendet wird) und dann diese Memberfunktion aufzurufen. Dies sollten Sie im Destruktor für Ihre abgeleitete Klasse tun.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Stellen Sie sicher, dass der Arbeitsthread vollständig beendet wurde, bevor Sie
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Msgthrd. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msgthrd.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Stellen Sie sicher, dass der Arbeitsthread vollständig beendet wurde, bevor Sie
 
 <dl> <dt>
 
-[**Cmsgthread-Klasse**](cmsgthread.md)
+[**CMsgThread-Klasse**](cmsgthread.md)
 </dt> </dl>
 
  

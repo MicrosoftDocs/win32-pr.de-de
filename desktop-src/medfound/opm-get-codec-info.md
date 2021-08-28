@@ -1,37 +1,37 @@
 ---
-description: Ruft den Verdienst Wert eines Hardware Codecs ab.
+description: Ruft den Wert eines Hardwarecodecs ab.
 ms.assetid: 51987a79-78bf-41b2-8349-8c2725dd89d6
-title: OPM_GET_CODEC_INFO (opmapi. h)
+title: OPM_GET_CODEC_INFO (Opmapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bf310ae3dafee7823119b2d5d5bd2c6b61fe822
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 988ffa9a962d9ed04b6a978da1534a6da4fa506e873d89d238bcbb2aa00fd865
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847980"
 ---
-# <a name="opm_get_codec_info"></a>OPM- \_ get- \_ Codec- \_ Informationen
+# <a name="opm_get_codec_info"></a>OPM \_ GET \_ CODEC \_ INFO
 
-Ruft den Verdienst Wert eines Hardware Codecs ab.
+Ruft den Wert eines Hardwarecodecs ab.
 
 
 
 | Anforderung | Wert |
 |--------------|-------------------------------------------------------------------------------------------|
-| Anforderungs-GUID | **OPM- \_ get- \_ Codec- \_ Informationen**                                                                 |
-| Eingabedaten   | Eine [**OPM- \_ get \_ Codec \_ Info \_ Parameters**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_parameters) -Struktur   |
-| Daten zurückgeben  | Eine [**OPM- \_ get- \_ Codec- \_ \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_information) Struktur |
+| Anforderungs-GUID | **OPM \_ GET \_ CODEC \_ INFO**                                                                 |
+| Eingabedaten   | Eine [**OPM \_ GET CODEC \_ INFO \_ \_ PARAMETERS-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_parameters)   |
+| Daten zurückgeben  | EINE [**OPM \_ GET CODEC \_ INFO \_ \_ INFORMATION-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_get_codec_info_information) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl dieser Befehl die Schnittstelle des [Output Protection Managers](output-protection-manager.md) (OPM) verwendet, gilt er nur für Hardware Encoder und-Decoder. Dies gilt nicht für Videoausgabe Geräte.
+Dieser Befehl verwendet zwar die [OPM-Schnittstelle (Output Protection Manager),](output-protection-manager.md) gilt jedoch nur für Hardwareencoder und Decoder. Dies gilt nicht für Videoausgabegeräte.
 
-Im Allgemeinen sollten Sie diesen Befehl nicht direkt verwenden. Um den Wert für einen Hardwarecodec zu erhalten, müssen Sie die Funktion [**mfgetmftmerit**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) aufrufen. Diese Funktion führt alle OPM-Aufrufe aus, die erforderlich sind, um den **OPM \_ get \_ Codec \_ Info** -Befehl zu senden.
+Im Allgemeinen sollten Sie diesen Befehl nicht direkt verwenden. Rufen Sie die [**MFGetMFTMerit-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfgetmftmerit) auf, um den Wert für einen Hardwarecodec abzurufen. Diese Funktion führt alle OPM-Aufrufe aus, die zum Senden des **BEFEHLs OPM \_ GET CODEC \_ \_ INFO** erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,23 +39,23 @@ Im Allgemeinen sollten Sie diesen Befehl nicht direkt verwenden. Um den Wert fü
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>Opmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Opmapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[OPM-Status Anforderungen](opm-status-requests.md)
+[OPM-Statusanforderungen](opm-status-requests.md)
 </dt> <dt>
 
-[Output Protection Manager](output-protection-manager.md)
+[Ausgabeschutz-Manager](output-protection-manager.md)
 </dt> <dt>
 
-[**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
+[**IOPMVideoOutput::GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
 </dt> </dl>
 
  

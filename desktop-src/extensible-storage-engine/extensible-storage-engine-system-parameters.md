@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 531e599c66279312f80216f1eb09fc612636821227e76f3572645ab6b4ee5137
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 501f98ec1b360e3eaa10988c140f30b86dcacb5a
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118256447"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987343"
 ---
 # <a name="extensible-storage-engine-system-parameters"></a>Erweiterbare Storage-Engine-Systemparameter
 
@@ -65,55 +65,18 @@ JET_paramX
 
 Beschreibung des JET_paramX Systemparameters.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>Der Standardwert des Parameters.</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Der Datentyp des Parameters.</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>Die rechtlichen Werte für den Parameter.</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Ist der Parameter global oder pro Instanz?</p></td>
-</tr>
-<tr class="odd">
-<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
-<td><p>Kann der Parameter festgelegt werden, wenn Instanzen vorhanden sind?</p></td>
-</tr>
-<tr class="even">
-<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
-<td><p>Kann der Parameter bei der Initialisierung festgelegt werden?</p></td>
-</tr>
-<tr class="odd">
-<td><p>Wirkt sich auf das physische Layout aus:</p></td>
-<td><p>Wirkt sich der Parameter auf die Dateien auf dem Datenträger aus?</p></td>
-</tr>
-<tr class="even">
-<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
-<td><p>Wirkt sich der Parameter auf die Zuverlässigkeit der Engine aus?</p></td>
-</tr>
-<tr class="odd">
-<td><p>Wirkt sich auf die Leistung aus:</p></td>
-<td><p>Wirkt sich der Parameter auf die Engine-Leistung aus?</p></td>
-</tr>
-<tr class="even">
-<td><p>Wirkt sich auf Ressourcen aus:</p></td>
-<td><p>Wirkt sich der Parameter auf Engine-Ressourcen aus?</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Releases von Windows, die den Parameter unterstützen.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Bezeichnung | Wert |
+|--------|-------|
+| <p>Standardwert:</p> | <p>Der Standardwert des Parameters.</p> | 
+| <p>Typ:</p> | <p>Der Datentyp des Parameters.</p> | 
+| <p>Gültiger Bereich:</p> | <p>Die rechtlichen Werte für den Parameter.</p> | 
+| <p>Umfang:</p> | <p>Ist der Parameter global oder pro Instanz?</p> | 
+| <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p> | <p>Kann der Parameter festgelegt werden, wenn Instanzen vorhanden sind?</p> | 
+| <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Kann der Parameter bei der Initialisierung festgelegt werden?</p> | 
+| <p>Wirkt sich auf das physische Layout aus:</p> | <p>Wirkt sich der Parameter auf die Dateien auf dem Datenträger aus?</p> | 
+| <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Wirkt sich der Parameter auf die Zuverlässigkeit der Engine aus?</p> | 
+| <p>Wirkt sich auf die Leistung aus:</p> | <p>Wirkt sich der Parameter auf die Engine-Leistung aus?</p> | 
+| <p>Wirkt sich auf Ressourcen aus:</p> | <p>Wirkt sich der Parameter auf Engine-Ressourcen aus?</p> | 
+| <p>Verfügbarkeit:</p> | <p>Releases von Windows, die den -Parameter unterstützen.</p> | 
+

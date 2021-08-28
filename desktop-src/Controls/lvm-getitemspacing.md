@@ -1,9 +1,9 @@
 ---
-title: LVM_GETITEMSPACING Meldung (kommstrg. h)
-description: Bestimmt den Abstand zwischen Elementen in einem Listenansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des ListView \_ getitemspacing-Makros senden.
+title: LVM_GETITEMSPACING Nachricht (Commctrl.h)
+description: Bestimmt den Abstand zwischen Elementen in einem Listenansichtssteuerelement. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetItemSpacing-Makros senden.
 ms.assetid: 4e43fb43-468c-4b8a-9e3b-1694e90ffef8
 keywords:
-- Windows-Steuerelemente für LVM_GETITEMSPACING Meldung
+- LVM_GETITEMSPACING Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ea08a7fc1004ffb46d710da6d1c2a8b0fb18e57
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 687a1aa75d71b96cebe855bb97ea57f0a9c628ed49b1ef7a51a7557b23b5ce41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088890"
 ---
-# <a name="lvm_getitemspacing-message"></a>LVM- \_ getitemspacing-Nachricht
+# <a name="lvm_getitemspacing-message"></a>LVM \_ GETITEMSPACING-Nachricht
 
-Bestimmt den Abstand zwischen Elementen in einem Listenansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getitemspacing**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemspacing) -Makros senden.
+Bestimmt den Abstand zwischen Elementen in einem Listenansichtssteuerelement. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetItemSpacing-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemspacing) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Bestimmt den Abstand zwischen Elementen in einem Listenansicht-Steuerelement. Si
 *wParam* 
 </dt> <dd>
 
-Die Ansicht, für die die Element Abstände abgerufen werden sollen. Dieser Parameter ist für die kleine Symbol Ansicht **true** , oder für die Symbol Ansicht ist der Wert **false** .
+Ansicht, für die der Elementabstand abgerufen werden soll. Dieser Parameter ist **true** für die kleine Symbolansicht oder **FALSE** für die Symbolansicht.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Die Ansicht, für die die Element Abstände abgerufen werden sollen. Dieser Para
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Abstand zwischen Elementen zurück. Der horizontale Abstand ist im [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthalten, und der vertikale Abstand ist im [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))enthalten.
+Gibt den Abstand zwischen Elementen zurück. Der horizontale Abstand ist im [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthalten, und der vertikale Abstand ist im [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt den Abstand zwischen Elementen zurück. Der horizontale Abstand ist im [**L
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,24 +1,24 @@
 ---
-description: Der Zugriff auf die Schlüssel des LocalService-oder des Network Service-Kontos kann Programm gesteuert mithilfe der cryptsetprovparam-Funktion abgerufen werden, um den PP \_ Keyset \_ sec \_ descr-Parameter zu ändern.
+description: Der Zugriff auf die Schlüssel aus den Konten LocalService oder NetworkService kann programmgesteuert mithilfe der CryptSetProvParam-Funktion zum Ändern des PP \_ KEYSET \_ SEC \_ DESCR-Parameters erhalten werden.
 ms.assetid: 22e8a153-c218-426a-bd81-7bdbb504c96f
-title: Ändern des Zugriffs auf den Schlüssel Container
+title: Ändern des Zugriffs auf Schlüsselcontainer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f76c5b7202400064931e8014cf852ed49bf633b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c34e5c34d562d3a72b4343a2f18da65ae9c5a89689e89ef35b459aa4dec80397
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797140"
 ---
-# <a name="modifying-key-container-access"></a>Ändern des Zugriffs auf den Schlüssel Container
+# <a name="modifying-key-container-access"></a>Ändern des Zugriffs auf Schlüsselcontainer
 
-Der von CryptoAPI erstellte Standardschlüssel Container gestattet keinen Zugriff auf die Schlüssel aus den Konten "LocalService" oder "Network Service". Dies kann Programm gesteuert mithilfe der Funktion [**cryptsetprovparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetprovparam) korrigiert werden, um den Parameter **PP \_ Keyset \_ sec \_ descr** zu ändern.
+Der von CryptoAPI erstellte Standardschlüsselcontainer lässt keinen Zugriff auf die Schlüssel aus den Konten LocalService oder NetworkService zu. Dies kann programmgesteuert mithilfe der [**CryptSetProvParam-Funktion korrigiert**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetprovparam) werden, um den **PP \_ KEYSET SEC \_ \_ DESCR-Parameter zu** ändern.
 
-Im folgenden Beispiel wird gezeigt, wie die [**cryptsetprovparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetprovparam) -Funktion verwendet wird, um den **PP \_ Keyset \_ sec- \_ descr** zu ändern, um den Zugriff auf einen Schlüssel Container auf die Konten "LocalService" oder "Network Service" zuzulassen.
+Das folgende Beispiel zeigt, wie sie die [**CryptSetProvParam-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsetprovparam) zum Ändern des **PP \_ KEYSET \_ SEC \_ DESCR** verwendet, um den Zugriff auf einen Schlüsselcontainer auf die LocalService- oder NetworkService-Konten zu ermöglichen.
 
 > [!Note]  
-> Der folgende Code wird als Tool angegeben und sollte nur verwendet werden, wenn dies unbedingt erforderlich ist. Sie sollten diesen Code nur einmal auf jedem Computer ausführen müssen, um den Zugriff auf die Schlüssel zuzulassen.
+> Der folgende Code wird als Tool angegeben und sollte nur verwendet werden, wenn dies unbedingt erforderlich ist. Sie sollten diesen Code nur einmal auf jedem Computer ausführen müssen, um den Zugriff auf die Schlüssel zu ermöglichen.
 
  
 

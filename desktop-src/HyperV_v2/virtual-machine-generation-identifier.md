@@ -1,37 +1,37 @@
 ---
-description: Mit Windows 8 und Windows Server 2012 wird die Möglichkeit eingeführt, dass Software, die auf einem virtuellen Computer ausgeführt wird, erkennt, dass möglicherweise ein Zeit Verschiebungs Ereignis aufgetreten ist.
+description: Windows 8 und Windows Server 2012 können Software, die auf einem virtuellen Computer ausgeführt wird, erkennen, dass möglicherweise ein Zeitverschiebungsereignis aufgetreten ist.
 ms.assetid: 0793E46B-8464-425E-8C5B-77C14DA90004
-title: Generierungs Bezeichner der virtuellen Maschine
+title: Generierungsbezeichner für virtuelle Computer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7df6ecbb600dbc7ae2efe14d36cb17cc75816444
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d810a1a65e95f4dde0ccf9779b1e955f2630623e362ffbf94ab8ca36d51d116e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899010"
 ---
-# <a name="virtual-machine-generation-identifier"></a>Generierungs Bezeichner der virtuellen Maschine
+# <a name="virtual-machine-generation-identifier"></a>Generierungsbezeichner für virtuelle Computer
 
-Mit Windows 8 und Windows Server 2012 wird die Möglichkeit eingeführt, dass Software, die auf einem virtuellen Computer ausgeführt wird, erkennt, dass möglicherweise ein Zeit Verschiebungs Ereignis aufgetreten ist. Zeit Verschiebungs Ereignisse können aufgrund einer Anwendung einer Momentaufnahme eines virtuellen Computers oder der Wiederherstellung einer Sicherung virtueller Computer auftreten. Weitere Informationen zu dieser Funktion finden Sie im Whitepaper zum Generieren der [virtuellen Maschine](https://download.microsoft.com/download/3/1/C/31CFC307-98CA-4CA5-914C-D9772691E214/VirtualMachineGenerationID.docx).
+Windows 8 und Windows Server 2012 können Software, die auf einem virtuellen Computer ausgeführt wird, erkennen, dass möglicherweise ein Zeitverschiebungsereignis aufgetreten ist. Zeitverschiebungsereignisse können als Ergebnis einer Anwendung einer Momentaufnahme eines virtuellen Computers oder der Wiederherstellung einer Sicherung eines virtuellen Computers auftreten. Weitere Informationen zu dieser Funktionalität finden Sie im [Whitepaper Virtual Machine Generation ID (VM-Generations-ID).](https://download.microsoft.com/download/3/1/C/31CFC307-98CA-4CA5-914C-D9772691E214/VirtualMachineGenerationID.docx)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um die VM-Generations-ID von einem virtuellen Computer aus zu verwenden, muss der virtuelle Computer den folgenden entsprechen.
+Um den Generierungsbezeichner des virtuellen Computers innerhalb eines virtuellen Computers zu verwenden, muss Ihr virtueller Computer folgende Anforderungen erfüllen.
 
--   Der virtuelle Computer muss auf einem Hypervisor ausgeführt werden, der die Unterstützung für die Generierung von VM-Generierungs Bezeichners implementiert. Derzeit sind dies die folgenden:
+-   Der virtuelle Computer muss auf einem Hypervisor ausgeführt werden, der Unterstützung für Generierungsbezeichner virtueller Computer implementiert. Derzeit sind dies die folgenden:
     -   Windows 8
     -   Windows Server 2012
     -   Microsoft Hyper-V Server 2012
--   Auf dem virtuellen Computer muss ein Gast Betriebssystem ausgeführt werden, das die VM-Generations Kennung unterstützt. Derzeit sind dies die folgenden:
+-   Auf dem virtuellen Computer muss ein Gastbetriebssystem ausgeführt werden, das über Unterstützung für den Generierungsbezeichner des virtuellen Computers verfügt. Derzeit sind dies die folgenden.
 
-    Die folgenden Betriebssysteme verfügen über systemeigene Unterstützung für den Generierungs Bezeichner der virtuellen Maschine.
+    Die folgenden Betriebssysteme verfügen über native Unterstützung für den Generierungsbezeichner des virtuellen Computers.
 
     -   Windows 8
     -   Windows Server 2012
     -   
 
-    Der folgende Betrieb kann als Gast Betriebssystem verwendet werden, wenn die Hyper-V-Integrationsdienste von Windows 8 oder Windows Server 2012 installiert sind.
+    Der folgende Betriebssystem kann als Gastbetriebssystem verwendet werden, wenn die Hyper-V-Integrationsdienste aus Windows 8 oder Windows Server 2012 installiert sind.
 
     -   Windows Server 2008 R2 mit Service Pack 1 (SP1)
     -   Windows 7 mit Service Pack 1 (SP1)
@@ -41,16 +41,16 @@ Um die VM-Generations-ID von einem virtuellen Computer aus zu verwenden, muss de
     -   Windows Vista mit Service Pack 2 (SP2)
     -   Windows XP mit Service Pack 3 (SP3)
 
-## <a name="obtaining-the-virtual-machine-generation-identifier"></a>Abrufen des Generations Bezeichners für die virtuelle Maschine
+## <a name="obtaining-the-virtual-machine-generation-identifier"></a>Abrufen des Generierungsbezeichners des virtuellen Computers
 
-Führen Sie die folgenden Schritte aus, um den Generierungs Bezeichner für die virtuelle Maschine Programm gesteuert abzurufen.
+Führen Sie die folgenden Schritte aus, um den Generierungsbezeichner des virtuellen Computers programmgesteuert abzurufen.
 
 > [!Note]  
-> Folgendes muss mit Administrator-oder System Berechtigungen ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Folgendes muss mit Administrator- oder Systemberechtigungen ausgeführt werden, um ordnungsgemäß zu funktionieren.
 
  
 
-1.  Schließen Sie die Header Datei "vmgenerationcounter. h" in Ihre APP ein. Die Header Datei enthält die folgenden Definitionen:
+1.  Schließen Sie die Headerdatei "vmgenerationcounter.h" in Ihre App ein. Die Headerdatei enthält die folgenden Definitionen:
     ```C++
     DEFINE_GUID(
         GUID_DEVINTERFACE_VM_GENCOUNTER,
@@ -82,25 +82,25 @@ Führen Sie die folgenden Schritte aus, um den Generierungs Bezeichner für die 
 
     
 
-2.  Öffnen Sie ein Handle für die " \\ \\ . \\ Vmgenerationcounter "-Gerät, [**das die**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Funktion" Funktion "verwendet. Alternativ können Sie den PNP-Manager verwenden, um den Geräteschnittstellen- **GUID \_ devinterface- \_ VM \_ gencounter** ({3ff2c92b-6598-4e60-8e1c-0ccf4927e319}) zu verwenden. Diese Objekte sind nicht vorhanden, wenn die APP nicht auf einem virtuellen Computer ausgeführt wird.
-3.  Senden Sie den [**IOCTL- \_ vmgencounter- \_ Lese**](/windows/desktop/api/Vmgenerationcounter/ni-vmgenerationcounter-ioctl_vmgencounter_read) Vorgang IOCTL an den Treiber, um den Generierungs Bezeichner abzurufen.
+2.  Öffnen Sie ein Handle für den \\ \\ . \\ VmGenerationCounter"-Gerät mithilfe der [**CreateFile-Funktion.**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Alternativ können Sie den PnP-Manager verwenden, um die **Geräteschnittstellen-GUID \_ DEVINTERFACE \_ VM \_ GENCOUNTER** ({3ff2c92b-6598-4e60-8e1c-0ccf4927e319}) zu nutzen. Diese Objekte sind nicht vorhanden, wenn die App nicht auf einem virtuellen Computer ausgeführt wird.
+3.  Senden Sie [**IOCTL \_ VMGENCOUNTER \_ READ**](/windows/desktop/api/Vmgenerationcounter/ni-vmgenerationcounter-ioctl_vmgencounter_read) IOCTL an den Treiber, um den Generierungsbezeichner abzurufen.
 
-    Der [**IOCTL \_ vmgencounter- \_ Lese**](/windows/desktop/api/Vmgenerationcounter/ni-vmgenerationcounter-ioctl_vmgencounter_read) -ioctl-Vorgang funktioniert in einem von zwei Modi: Abruf und *ereignisgesteuert*. 
+    Die [**IOCTL-VMGENCOUNTER \_ READ-IOCTL \_**](/windows/desktop/api/Vmgenerationcounter/ni-vmgenerationcounter-ioctl_vmgencounter_read) wird in einem von zwei Modi betrieben: *abruft* und *ereignisgesteuert.*
 
-    Um die IOCTL im Abruf Modus auszugeben, senden Sie ioctl mit einem Eingabepuffer der Länge 0 (null). Als Reaktion darauf ruft der Treiber den aktuellen Generierungs Bezeichner ab, schreibt ihn in den Ausgabepuffer und schließt die IOCTL ab.
+    Um die IOCTL im Abrufmodus auszugeben, übermitteln Sie die IOCTL mit einem Eingabepuffer der Länge 0 (null). Als Reaktion darauf ruft der Treiber den aktuellen Generationsbezeichner ab, schreibt ihn in den Ausgabepuffer und schließt die IOCTL ab.
 
-    Um die IOCTL im ereignisbasierten Modus auszugeben, senden Sie die IOCTL mit einem Eingabepuffer, der einen vorhandenen Generations Bezeichner enthält. Als Reaktion darauf wartet der Treiber, bis sich der aktuelle Generations Bezeichner von dem weiter gegebenen Generations Bezeichner unterscheidet. Wenn sich der Generierungs Bezeichner ändert, schreibt der Treiber den aktuellen Generierungs Bezeichner in den Ausgabepuffer und schließt die IOCTL ab.
+    Um die IOCTL im ereignisgesteuerten Modus auszugeben, übermitteln Sie die IOCTL mit einem Eingabepuffer, der einen vorhandenen Generierungsbezeichner enthält. Als Reaktion darauf wartet der Treiber, bis sich der aktuelle Generierungsbezeichner von dem übergebenen Generierungsbezeichner unterscheidet. Wenn sich der Generierungsbezeichner ändert, schreibt der Treiber den aktuellen Generierungsbezeichner in den Ausgabepuffer und schließt die IOCTL ab.
 
-    In beiden Modi wird das Format und die Länge des Ausgabepuffers von der [**VM \_ gencounter**](/windows/desktop/api/Vmgenerationcounter/ns-vmgenerationcounter-vm_gencounter) -Struktur vorgegeben.
+    In beiden Modi wird das Format und die Länge des Ausgabepuffers durch die [**VM \_ GENCOUNTER-Struktur**](/windows/desktop/api/Vmgenerationcounter/ns-vmgenerationcounter-vm_gencounter) vorgegeben.
 
-    Der Abruf Modus wird von allen oben aufgeführten Gastbetriebssystemen unterstützt. Der Ereignis gestützte Modus wird nur unter Windows Vista mit SP2, Windows Server 2008 mit SP2 und neueren Betriebssystemen unterstützt. Unter früheren Betriebssystemen schlägt die IOCTL-Anweisung fehl, und der Fehlercode wird **\_ nicht \_ unterstützt** , wenn Sie im ereignisbasierten Modus ausgegeben wird.
+    Der Abrufmodus wird für alle oben aufgeführten Gastbetriebssysteme unterstützt. Der ereignisgesteuerte Modus wird nur unter Windows Vista mit SP2, Windows Server 2008 mit SP2 und höher unterstützt. Unter früheren Betriebssystemen schlägt die IOCTL mit dem Fehlercode **ERROR \_ NOT \_ SUPPORTED** fehl, wenn sie im ereignisgesteuerten Modus ausgegeben wird.
 
-    Es ist möglich, dass sich der Generations Bezeichner zwischen dem vom Treiber abgerufenen Zeitpunkt und dem Zeitpunkt, zu dem die IOCTL abgeschlossen ist, ändert. Dies kann dazu führen, dass die Client-App veraltete Daten empfängt. Um dies zu vermeiden, kann die Client-App den ereignisbasierten Modus verwenden, um sicherzustellen, dass Sie schließlich alle Aktualisierungen des Generations Bezeichners erfährt. Durch die Übernahme des aktuellen Bezeichners der Client-App als Eingabe vermeidet der Ereignis gesteuerter Modus potenzielle Racebedingungen, die dazu führen, dass der Aufrufer Benachrichtigungen verpasst.
+    Es ist möglich, dass sich der Generierungsbezeichner zwischen dem Zeitpunkt, zu dem er vom Treiber abgerufen wird, und dem Zeitpunkt, zu dem die IOCTL abgeschlossen ist, ändert. Dies kann dazu führen, dass die Client-App veraltete Daten empfängt. Um dies zu vermeiden, kann die Client-App den ereignisgesteuerten Modus verwenden, um sicherzustellen, dass sie letztendlich über Updates des Generierungsbezeichners informiert wird. Indem der aktuelle Bezeichner der Client-App als Eingabe verwendet wird, vermeidet der ereignisgesteuerte Modus potenzielle Racebedingungen, die dazu führen würden, dass der Aufrufer Benachrichtigungen auslassen würde.
 
-Im folgenden Codebeispiel wird gezeigt, wie die obigen Aktionen zum Abrufen des Generations Bezeichners für die virtuelle Maschine durchgeführt werden.
+Das folgende Codebeispiel zeigt, wie die oben genannten Aktionen ausgeführt werden, um den Generierungsbezeichner des virtuellen Computers abzurufen.
 
 > [!Note]  
-> Der folgende Code muss mit Administrator-oder System Berechtigungen ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Der folgende Code muss mit Administrator- oder Systemberechtigungen ausgeführt werden, damit er ordnungsgemäß funktioniert.
 
  
 
@@ -216,9 +216,9 @@ Cleanup:
 
 
 
-## <a name="determining-if-a-time-shift-event-has-occurred"></a>Ermitteln, ob ein Zeit Verschiebungs Ereignis aufgetreten ist
+## <a name="determining-if-a-time-shift-event-has-occurred"></a>Bestimmen, ob ein Zeitverschiebungsereignis aufgetreten ist
 
-Nachdem Sie den Generations Bezeichner für die virtuelle Maschine abgerufen haben, sollten Sie ihn zur späteren Verwendung speichern. Bevor Ihre APP einen zeitabhängigen Vorgang durchführt (z. b. das Ausführen eines Commits für eine Datenbank), sollten Sie den Generierungs Bezeichner erneut abrufen und ihn mit dem gespeicherten Wert vergleichen. Wenn sich der Bezeichner geändert hat, bedeutet dies, dass ein Zeit Verschiebungs Ereignis aufgetreten ist, und die APP muss entsprechend agieren.
+Nachdem Sie den Generierungsbezeichner des virtuellen Computers abgerufen haben, sollten Sie ihn zur zukünftigen Verwendung speichern. Bevor Ihre App einen zeitkritischen Vorgang ausführt, z. B. das Committen in eine Datenbank, sollten Sie den Generierungsbezeichner erneut abrufen und mit dem gespeicherten Wert vergleichen. Wenn sich der Bezeichner geändert hat, bedeutet dies, dass ein Zeitverschiebungsereignis aufgetreten ist und Ihre App entsprechend agieren muss.
 
  
 

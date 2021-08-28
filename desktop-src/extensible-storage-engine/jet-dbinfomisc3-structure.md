@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOMISC3 Struktur'
+description: 'Weitere Informationen zu: JET_DBINFOMISC3-Struktur'
 title: JET_DBINFOMISC3-Struktur
 TOCTitle: JET_DBINFOMISC3 Structure
 ms:assetid: ffb23ac1-21ad-4dc6-98f8-aa4e6ef395ac
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 761afe13638d7905b5d4a639b7100108ce6ec977
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b3f0d56702da29b4ddd0557c7d8f1f18e8addd8
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214578"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987289"
 ---
 # <a name="jet_dbinfomisc3-structure"></a>JET_DBINFOMISC3-Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_dbinfomisc3-structure"></a>JET_DBINFOMISC3-Struktur
 
-Die **JET_DBINFOMISC3** -Struktur enthält verschiedene Informationen zu einer-Datenbank. Dies sind die Informationen, die im Daten Bank Header enthalten sind.
+Die **JET_DBINFOMISC3-Struktur** enthält verschiedene Informationen zu einer Datenbank. Dies sind die Informationen, die im Datenbankheader enthalten sind.
 
 ```cpp
     typedef struct {
@@ -75,317 +75,204 @@ Die **JET_DBINFOMISC3** -Struktur enthält verschiedene Informationen zu einer-D
 
 ### <a name="members"></a>Member
 
-**ulversion**
+**ulVersion**
 
-Die native Version der Datenbank-Engine, die die Datenbank erstellt hat. Informationen zum Abrufen der systemeigenen Version für die aktuelle Datenbank-Engine finden Sie unter [jetgetversion](./jetgetversion-function.md) .
+Die native Version der Datenbank-Engine, die die Datenbank erstellt hat. Informationen zum Abrufen der nativen Version für die aktuelle Datenbank-Engine finden Sie unter [JetGetVersion.](./jetgetversion-function.md)
 
-**ulupdate**
+**ulUpdate**
 
-Verfolgt inkrementelle Datenbankformat Updates, die abwärts kompatibel sind.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ulversion, ulupdate =</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0x620, 0</p></td>
-<td><p>Ursprüngliches Betriebssystem-Beta Format (4/22/97).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 1</p></td>
-<td><p>Fügen Sie im Katalog Spalten für die bedingte Indizierung und die alte (5/29/97) hinzu.</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 2</p></td>
-<td><p>Fügen Sie das flocalizedtext-Flag in IDB (6/5/97) hinzu.</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 3</p></td>
-<td><p>Fügen Sie den Stamm Seiten der Speicherplatz Struktur SPLIT_BUFFER hinzu (10/30/97).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 2</p></td>
-<td><p>Revision wiederherstellen, damit ESE97 vorwärts kompatibel bleibt (1/28/98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 3</p></td>
-<td><p>Fügen Sie dem Katalog neue markierte Spalten hinzu ( &quot; callBackData &quot; und &quot; callbackdependen) &quot; .</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 4</p></td>
-<td><p>SLV-Unterstützung: signslv, fslvvorhanden in DB-Header (5/5/98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 5</p></td>
-<td><p>Neue SLV-Raumstruktur (5/29/98).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 6</p></td>
-<td><p>SLV-Speicherplatz Zuordnung (10/12/98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 7</p></td>
-<td><p>4-Byte-idxsekunden (12/10/98).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 8</p></td>
-<td><p>Neues Vorlagen Spalten Format (1/25/99).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 9</p></td>
-<td><p>Sortierte Vorlagen Spalten (6/24/99).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, A</p></td>
-<td><p>Zusammengeführte Codebasis (3/26/2003).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, B</p></td>
-<td><p>Neues Prüfsummen Format (1/08/2004).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, C</p></td>
-<td><p>Erweiterte maximale Schlüssellänge auf 1000/2000 Bytes für 4/8-KB-Seiten (1/15/2004).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, D</p></td>
-<td><p>Katalog Speicher Hinweise, space_header. v2 (7/15/2007).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, E</p></td>
-<td><p>Fügen Sie dem Space Manager ein neues Knoten-/Block Format hinzu, und verwenden Sie es für reservierte Speicherplätze (8/9/2007).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, F</p></td>
-<td><p>Komprimierung für systeminterne lange Werte (10/30/2007).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620, 10</p></td>
-<td><p>Komprimierung für getrennte lange Werte (12/05/2007).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620, 11</p></td>
-<td><p>Neue LV-Blockgröße für große Seiten (12/29/2007).</p></td>
-</tr>
-</tbody>
-</table>
+Verfolgt inkrementelle Datenbankformatupdates nach, die abwärtskompatibel sind.
 
 
-**signdb**
+| <p>ulVersion, ulUpdate =</p> | <p>Bedeutung</p> | 
+|------------------------------|----------------|
+| <p>0x620,0</p> | <p>Betaformat des ursprünglichen Betriebssystems (22.4.97).</p> | 
+| <p>0x620,1</p> | <p>Fügen Sie Im Katalog Spalten für die bedingte Indizierung und OLD (29.5.97) hinzu.</p> | 
+| <p>0x620,2</p> | <p>Fügen Sie das Flag fLocalizedText in IDB hinzu (5.6.97).</p> | 
+| <p>0x620,3</p> | <p>Fügen Sie SPLIT_BUFFER den Stammseiten der Raumstruktur hinzu (30.10.97).</p> | 
+| <p>0x620,2</p> | <p>Kehren Sie die Revision zurück, damit ESE97 vorwärtskompatibel bleibt (28.1.98).</p> | 
+| <p>0x620,3</p> | <p>Hinzufügen neuer markierter Spalten zum Katalog ("CallbackData" und "CallbackDependencies").</p> | 
+| <p>0x620,4</p> | <p>SLV-Unterstützung: signSLV, fSLVExists im Db-Header (5.5.98).</p> | 
+| <p>0x620,5</p> | <p>Neue SLV-Raumstruktur (29.5.98).</p> | 
+| <p>0x620,6</p> | <p>SLV-Raumkarte (12.10.98).</p> | 
+| <p>0x620,7</p> | <p>4-Byte-IDXSEG (10.12.98).</p> | 
+| <p>0x620,8</p> | <p>Neues Vorlagenspaltenformat (25.1.99).</p> | 
+| <p>0x620,9</p> | <p>Sortierte Vorlagenspalten (24.6.99).</p> | 
+| <p>0x620,A</p> | <p>Zusammengeführte Codebasis (26.3.2003)</p> | 
+| <p>0x620,B</p> | <p>Neues Prüfsummenformat (08.1.2004).</p> | 
+| <p>0x620,C</p> | <p>Maximale Schlüssellänge auf 1000/2000 Byte für 4/8 KB-Seiten (15.01.2004) erhöht.</p> | 
+| <p>0x620,D</p> | <p>Katalograumhinweise, space_header.v2 (15.7.2007).</p> | 
+| <p>0x620, E</p> | <p>Fügen Sie dem Speicherplatz-Manager ein neues Knoten-/Erweiterungsformat hinzu, und verwenden Sie es für reservierte Speicherplatzpools (9.08.2007).</p> | 
+| <p>0x620,F</p> | <p>Komprimierung für systeminterne Long-Werte (30.10.2007)</p> | 
+| <p>0x620,10</p> | <p>Komprimierung für getrennte lange Werte (05.12.2007).</p> | 
+| <p>0x620,11</p> | <p>Neue LV-Blockgröße für große Seiten (29.12.2007).</p> | 
 
-Signatur der Datenbank (einschließlich Erstellungszeit). Diese Struktur hat 28 bytes.
+
+
+**signDb**
+
+Signatur der Datenbank (einschließlich Erstellungszeit). Diese Struktur beträgt 28 Bytes.
 
 **dbstate**
 
-Dies ist der Daten Bank Status.
+Dies ist der Datenbankstatus.
 
 Die folgenden Optionen sind für diesen Member verfügbar.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_dbstateJustCreated<br />
-1</p></td>
-<td><p>Die Datenbank wurde soeben erstellt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_dbstateDirtyShutdown<br />
-2</p></td>
-<td><p>Für die Datenbank muss eine harte oder weiche Wiederherstellung ausgeführt werden, damit Sie verwendet werden kann. Es sollte nicht versucht werden, Datenbanken in diesem Zustand zu verschieben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_dbstateCleanShutdown<br />
-3</p></td>
-<td><p>Die Datenbank befindet sich in einem sauberen Zustand. Die Datenbank kann ohne Protokolldateien angefügt werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_dbstateBeingConverted<br />
-4</p></td>
-<td><p>Die Datenbank wird aktualisiert.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_dbstateForceDetach<br />
-5</p></td>
-<td><p>Intern.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_dbstateJustCreated<br />1</p> | <p>Die Datenbank wurde soeben erstellt.</p> | 
+| <p>JET_dbstateDirtyShutdown<br />2</p> | <p>Die Datenbank erfordert eine harte oder weiche Wiederherstellung, um verwendbar oder verschiebebar zu werden. Es sollte nicht versucht werden, Datenbanken in diesem Zustand zu verschieben.</p> | 
+| <p>JET_dbstateCleanShutdown<br />3</p> | <p>Die Datenbank befindet sich in einem fehlerfreien Zustand. Die Datenbank kann ohne Protokolldateien angefügt werden.</p> | 
+| <p>JET_dbstateBeingConverted<br />4</p> | <p>Die Datenbank wird aktualisiert.</p> | 
+| <p>JET_dbstateForceDetach<br />5</p> | <p>Intern.</p> | 
 
 
-**lgposkonsistent**
 
-NULL, wenn sich die Datenbank in einem fehlerhaften Zustand befindet. Dies ist die Protokoll Position, die verwendet wurde, als die Datenbank zuletzt in den Zustand "fehlerfreies Herunterfahren" gebracht wurde.
+**lgposConsistent**
 
-**logtimekonsistent**
+NULL, wenn sich die Datenbank in einem geänderten Zustand befindet. Dies ist die Protokollposition, die verwendet wurde, als die Datenbank zuletzt in einen fehlerfreien Herunterfahrzustand gebracht wurde.
 
-NULL, wenn sich die Datenbank in einem fehlerhaften Zustand befindet. Dies ist der Zeitpunkt, zu dem die Datenbank zuletzt in den Zustand "sauberes Herunterfahren" versetzt wurde.
+**logtimeConsistent**
 
-**logtimeattach**
+NULL, wenn sich die Datenbank in einem geänderten Zustand befindet. Dies ist der Zeitpunkt, zu dem die Datenbank zuletzt in einen fehlerfreien Herunterfahrzustand gebracht wurde.
 
-Der Zeitpunkt, zu dem die Datenbank zuletzt an [jetattachdatabase](./jetattachdatabase-function.md)angefügt wurde.
+**logtimeAttach**
 
-**lgposattach**
+Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetAttachDatabase](./jetattachdatabase-function.md)angefügt wurde.
 
-Die Protokoll Position, die beim letzten Anfügen der Datenbank mit [jetattachdatabase](./jetattachdatabase-function.md)verwendet wurde.
+**lgposAttach**
 
-**logtimedetach**
+Die Protokollposition, die beim letzten Anfügen der Datenbank mit [JetAttachDatabase](./jetattachdatabase-function.md)verwendet wurde.
 
-Der Zeitpunkt, zu dem die Datenbank zuletzt mit [jetdetachdatabase](./jetdetachdatabase-function.md)getrennt wurde.
+**logtimeDetach**
 
-**lgposdetach**
+Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetDetachDatabase](./jetdetachdatabase-function.md)getrennt wurde.
 
-Die Protokoll Position, die beim letzten Trennen der Datenbank mit [jetdetachdatabase](./jetdetachdatabase-function.md)verwendet wurde.
+**lgposDetach**
 
-**signlog**
+Die Protokollposition, die beim letzten Trennen der Datenbank mit [JetDetachDatabase](./jetdetachdatabase-function.md)verwendet wurde.
+
+**signLog**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**bkinfofullprev**
+**bkinfoFullPrev**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**bkinfoincprev**
+**bkinfoIncPrev**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**bkinfofullcur**
+**bkinfoFullCur**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**' f ' wingdeaktiviert**
+**fShadowingDisabled**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**FUpgrade DB**
+**fUpgradeDb**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
 **dwMajorVersion**
 
-Stellt die Windows NT-Versionsnummern beim Aktualisieren der Datenbankindizes dar. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **dwMinorVersion**
 
-Stellt die Windows NT-Versionsnummern beim Aktualisieren der Datenbankindizes dar. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **dwBuildNumber**
 
-Stellt die Windows NT-Versionsnummern beim Aktualisieren der Datenbankindizes dar. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
-**lspnumber**
+**lSPNumber**
 
-Stellt die Windows NT-Versionsnummern beim Aktualisieren der Datenbankindizes dar. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
-**cbpagesize**
+**cbPageSize**
 
 Größe der Datenbankseite. 0 bedeutet, dass die Seitengröße 4 KB beträgt.
 
-Dieser Wert wird nur abgerufen, wenn JET_DbInfoMisc an [jetgetdatabaseingefo](./jetgetdatabaseinfo-function.md) oder [jetgetdatabasefilinput Info](./jetgetdatabasefileinfo-function.md)übermittelt wurde.
+Dieser Wert wird nur abgerufen, wenn JET_DbInfoMisc an [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md) oder [JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)übergeben wurde.
 
-**genminrequired**
+**genMinRequired**
 
-Stellt die minimale Protokoll Generierung dar, die für die Wiedergabe der Protokolle erforderlich ist. Dies ist in der Regel mit der Prüf Punkt Generierung identisch.
+Stellt die minimale Protokollgenerierung dar, die für die Wiedergabe der Protokolle erforderlich ist. Dies entspricht in der Regel der Prüfpunktgenerierung.
 
-**genmaxrequired**
+**genMaxRequired**
 
-Stellt die maximale Protokoll Generierung dar, die für die Wiedergabe der Protokolle erforderlich ist.
+Stellt die maximale Protokollgenerierung dar, die für die Wiedergabe der Protokolle erforderlich ist.
 
-**logtimegenmaxcreate**
+**logtimeGenMaxCreate**
 
-Stellt das Erstellungsdatum und den Erstellungs Zeitpunkt der genmax-Protokolldatei dar.
+Stellt das Erstellungsdatum und die Uhrzeit der genMax-Protokolldatei dar.
 
-**ulrepairren count**
+**ulRepairCount**
 
 Gibt an, wie oft eine Reparatur für diese Datenbank aufgerufen wurde.
 
-**logtimerepair**
+**logtimeRepair**
 
 Stellt das Datum und die Uhrzeit der letzten Reparatur dar.
 
-**ulrepaungräfin**
+**ulRepairCountOld**
 
-Gibt an, wie oft die Reparatur für diese Datenbank ausgeführt wurde, bevor die letzte Defragmentierung durchgeführt wurde.
+Gibt an, wie oft die Reparatur für diese Datenbank vor der letzten Defragmentierung ausgeführt wurde.
 
-**uleccfixsuccess**
+**ulECCFixSuccess**
 
-Gibt an, wie oft ein einziger Bitfehler korrigiert wurde und zu einer guten Seite geführt hat.
+Gibt an, wie oft ein Ein-Bit-Fehler behoben wurde und zu einer guten Seite geführt hat.
 
-**logtimeeccfixsuccess**
+**logtimeECCFixSuccess**
 
-Stellt das Datum und die Uhrzeit dar, zu der der letzte Bitfehler korrigiert wurde, und führte zu einer guten Seite.
+Stellt das Datum und die Uhrzeit dar, zu der der letzte Ein-Bit-Fehler behoben wurde und zu einer guten Seite geführt hat.
 
-**uleccfixerfolgreiches verkauft**
+**ulECCFixSuccessOld**
 
-Stellt die Häufigkeit dar, mit der ein einzelnes Bitfehler behoben wurde und zu einer guten Seite vor der letzten Reparatur geführt hat.
+Stellt dar, wie oft ein Ein-Bit-Fehler behoben wurde und vor der letzten Reparatur zu einer guten Seite geführt hat.
 
-**uleccfixfail**
+**ulECCFixFail**
 
-Gibt an, wie oft ein einziger Bitfehler korrigiert wurde und zu einer ungültigen Seite geführt hat.
+Gibt an, wie oft ein Ein-Bit-Fehler behoben wurde und zu einer fehlerhaften Seite geführt hat.
 
-**logtimeeccfixfail**
+**logtimeECCFixFail**
 
-Stellt das Datum und die Uhrzeit dar, zu der der letzte Bitfehler korrigiert wurde, und führte zu einer ungültigen Seite.
+Stellt das Datum und die Uhrzeit dar, zu der der letzte Ein-Bit-Fehler behoben wurde und zu einer fehlerhaften Seite geführt hat.
 
-**uleccfixfailold**
+**ulECCFixFailOld**
 
-Gibt an, wie oft ein ein-Bit-Fehler korrigiert wurde und zu einer ungültigen Seite vor der letzten Reparatur geführt hat.
+Gibt an, wie oft ein Ein-Bit-Fehler behoben wurde und vor der letzten Reparatur zu einer fehlerhaften Seite geführt hat.
 
-**ulbadchecksum**
+**ulBadChecksum**
 
-Gibt an, wie oft ein nicht korrigier barer ECC/Checksum-Fehler gefunden wurde.
+Gibt an, wie oft ein nicht behebbarer ECC-/Prüfsummenfehler gefunden wurde.
 
-**logtimebadchecksum**
+**logtimeBadChecksum**
 
-Stellt das Datum und die Uhrzeit des letzten nicht korrigierbaren ECC/Checksum-Fehlers dar.
+Stellt das Datum und die Uhrzeit dar, zu der der letzte nicht behebbare ECC-/Prüfsummenfehler gefunden wurde.
 
-**ulbadchecksumold**
+**ulBadChecksumOld**
 
-Gibt an, wie oft ein nicht korrigier barer ECC/Checksum-Fehler vor der letzten Reparatur gefunden wurde.
+Gibt an, wie oft vor der letzten Reparatur ein nicht behebbarer ECC-/Prüfsummenfehler gefunden wurde.
 
-**gencommit**
+**genCommitted**
 
-Die aktuelle Protokoll Generierung. Dieser Wert kann kleiner als genmaxrequired sein, wenn JET_paramWaypointLatency ungleich 0 (null) ist.
+Die aktuelle Protokollgenerierung. Dies kann kleiner als genMaxRequired sein, wenn JET_paramWaypointLatency ungleich 0 (null) ist.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
@@ -394,5 +281,5 @@ Die aktuelle Protokoll Generierung. Dieser Wert kann kleiner als genmaxrequired 
 [JET_LOGTIME](./jet-logtime-structure.md)  
 [JET_LGPOS](./jet-lgpos-structure.md)  
 [JET_SIGNATURE](./jet-signature-structure.md)  
-[Jetgetdatabaseingefo](./jetgetdatabaseinfo-function.md)  
-[Jetgetdatabasefileingefo](./jetgetdatabasefileinfo-function.md)
+[JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md)  
+[JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)

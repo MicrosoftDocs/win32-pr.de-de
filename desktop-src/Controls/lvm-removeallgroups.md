@@ -1,9 +1,9 @@
 ---
-title: LVM_REMOVEALLGROUPS Meldung (kommstrg. h)
+title: LVM_REMOVEALLGROUPS (Commctrl.h)
 description: Entfernt alle Gruppen aus einem Listenansicht-Steuerelement.
 ms.assetid: b8971f35-dc04-4729-8ac1-8cabbc86caa6
 keywords:
-- Windows-Steuerelemente für LVM_REMOVEALLGROUPS Meldung
+- LVM_REMOVEALLGROUPS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c307233b794aea930c5419a6c1464526d84b4eb5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3c4550fcabd46574ba7c8806ddbb8b9ee23d1a684dfd56e8d27138607a1bd52b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915460"
 ---
-# <a name="lvm_removeallgroups-message"></a>LVM- \_ removeallgroups-Nachricht
+# <a name="lvm_removeallgroups-message"></a>LVM \_ REMOVEALLGROUPS-Meldung
 
 Entfernt alle Gruppen aus einem Listenansicht-Steuerelement.
 
@@ -30,19 +30,19 @@ Entfernt alle Gruppen aus einem Listenansicht-Steuerelement.
 <dl> <dt>
 
 *wParam* 
-</dt> <dd>Muss **null** sein.</dd> <dt>
+</dt> <dd>Muss NULL **sein.**</dd> <dt>
 
 *lParam* 
-</dt> <dd>Muss **null** sein.</dd> </dl>
+</dt> <dd>Muss NULL **sein.**</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -52,9 +52,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

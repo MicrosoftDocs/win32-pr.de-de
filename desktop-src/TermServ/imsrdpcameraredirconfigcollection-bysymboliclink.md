@@ -1,11 +1,11 @@
 ---
 title: IMsRdpCameraRedirConfigCollection BySymbolicLink-Eigenschaft
-description: Gibt ein imsrdpcameraredirconfig-Objekt aus der Auflistung zurück, das der angegebenen symbolischen Verknüpfung der **KSCATEGORY_VIDEO_CAMERA** -Schnittstelle für die Kamera entspricht.
+description: Gibt ein IMsRdpCameraRedirConfig-Objekt aus der Auflistung zurück, das der angegebenen **symbolischen** Verknüpfung der KSCATEGORY_VIDEO_CAMERA-Schnittstelle für die Kamera entspricht.
 ms.tgt_platform: multiple
 keywords:
-- Bysymboliclink-Eigenschaft Remotedesktopdienste
-- Bysymboliclink-Eigenschaft Remotedesktopdienste, imsrdpcameraredirconfigcollection-Schnittstelle
-- Imsrdpcameraredirconfigcollection-Schnittstelle Remotedesktopdienste, bysymboliclink (Eigenschaft)
+- BySymbolicLink-Remotedesktopdienste
+- BySymbolicLink-Eigenschaft Remotedesktopdienste , IMsRdpCameraRedirConfigCollection-Schnittstelle
+- IMsRdpCameraRedirConfigCollection-Schnittstelle Remotedesktopdienste , BySymbolicLink-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: d4888c7e468e0522240d8ef922563ab28eb33e77
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: a46cd3daf8cc4270473433bb0c4c20dee0616dba3619b056d33136e0d4dd8f5e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "106346379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033630"
 ---
-# <a name="imsrdpcameraredirconfigcollectionbysymboliclink-property"></a>Imsrdpcameraredirconfigcollection::. Bysymboliclink (Eigenschaft)
+# <a name="imsrdpcameraredirconfigcollectionbysymboliclink-property"></a>IMsRdpCameraRedirConfigCollection::. BySymbolicLink-Eigenschaft
 
-Gibt ein [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt aus der Auflistung zurück, das der angegebenen symbolischen Verknüpfung der **KSCATEGORY_VIDEO_CAMERA** -Schnittstelle für die Kamera entspricht.
+Gibt ein [IMsRdpCameraRedirConfig-Objekt](imsrdpcameraredirconfig.md) aus der Auflistung zurück, das der angegebenen **symbolischen** Verknüpfung der KSCATEGORY_VIDEO_CAMERA-Schnittstelle für die Kamera entspricht.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -41,7 +41,7 @@ HRESULT get_BySymbolicLink(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt, das der angegebenen symbolischen Verknüpfung entspricht.
+Das [IMsRdpCameraRedirConfig-Objekt,](imsrdpcameraredirconfig.md) das der angegebenen symbolischen Verknüpfung entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Das [imsrdpcameraredirconfig](imsrdpcameraredirconfig.md) -Objekt, das der angeg
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpcameraredirconfigcollection ist als AE45252B-aaab-4504-B681-649d6073a37a definiert.          |
+| IID                      | IID \_ IMsRdpCameraRedirConfigCollection ist als AE45252B-AAAB-4504-B681-649D6073A37A definiert.          |
 
 ## <a name="see-also"></a>Siehe auch
 

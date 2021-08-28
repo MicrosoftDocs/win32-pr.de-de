@@ -4,8 +4,8 @@ description: Der Name des Objekts, das über NetBIOS verwendet werden soll.
 ms.assetid: 03cbfa61-b747-4f3e-9bf5-17fd6da2e7be
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für NETBIOS-Name-Attribut
-- NetBIOSName-Attribut, AD-Schema
+- NETBIOS-Name AD-Attributschema
+- AD-Schema des nETBIOSName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4063b842200bf99910a3652b8f3bea9419c2728f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b5e5b7b28237facd30fb6fbfbcfc8f20f93699a8e8ab548889150250b38be4f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118424091"
 ---
 # <a name="netbios-name-attribute"></a>NETBIOS-Name-Attribut
 
@@ -30,10 +30,10 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | NETBIOS-Name                                |
-| LDAP-Display-Name | nETBIOSName                                 |
+| Ldap-Anzeigename | nETBIOSName                                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänen Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.87                       |
 | System-ID-GUID    | bf9679d8-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Ist einwertig       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Ist einwertig       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                               |
 | MAPI-Id                | \-                                                                               |
 | System-Only            | False                                                                            |
-| Ist-einwertig       | Richtig                                                                             |
-| Ist indiziert             | Richtig                                                                             |
+| Ist einwertig       | True                                                                             |
+| Ist indiziert             | True                                                                             |
 | Im globalen Katalog      | False                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                     |
 | Range-Lower            | 1                                                                                |
 | Range-Upper            | 16                                                                               |
 | Search-Flags           | 0x00000001                                                                       |
 | System-Flags           | 0x00000010                                                                       |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Servers**](c-server.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> [**Server**](c-server.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Is-Single-Valued       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Is-Single-Valued       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Is-Single-Valued       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Der Name des Objekts, das über NetBIOS verwendet werden soll.
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
 | System-Only            | False                                                                                   |
-| Ist-einwertig       | Richtig                                                                                    |
-| Ist indiziert             | Richtig                                                                                    |
+| Is-Single-Valued       | True                                                                                    |
+| Ist indiziert             | True                                                                                    |
 | Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | 1                                                                                       |
 | Range-Upper            | 16                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**Kreuz Verweis**](c-crossref.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die getfrecount-Methode ruft die Anzahl von Medien Beispielen ab, die nicht verwendet werden.
+description: Die GetFreeCount-Methode ruft die Anzahl der Medienbeispiele ab, die nicht verwendet werden.
 ms.assetid: f4ce4cca-0168-42db-9fe7-858862f033a8
-title: Cbasezucator. getfrecount-Methode (amfilter. h)
+title: CBaseAllocator.GetFreeCount-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a0538229053b5d47ca1bdc8f30b38a0937e36cb5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c4552829482a604b368a6710c62d0fc0b26a94aa3bb33b67ef386f2785d6c90e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057510"
 ---
-# <a name="cbaseallocatorgetfreecount-method"></a>Cbasezucator. getfrecount-Methode
+# <a name="cbaseallocatorgetfreecount-method"></a>CBaseAllocator.GetFreeCount-Methode
 
-Die- `GetFreeCount` Methode ruft die Anzahl von Medien Beispielen ab, die nicht verwendet werden.
+Die `GetFreeCount` -Methode ruft die Anzahl der Medienbeispiele ab, die nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT GetFreeCount(
 
 <dl> <dt>
 
-*plbuffersfree* 
+*plBuffersFree* 
 </dt> <dd>
 
-Adresse einer Variablen, die die Anzahl von Stichproben empfängt, die nicht verwendet werden.
+Adresse einer Variablen, die die Anzahl der nicht verwendeten Stichproben empfängt.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Adresse einer Variablen, die die Anzahl von Stichproben empfängt, die nicht ver
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode implementiert die [**imemzuzuchanorcallbacktemp:: getfrecount**](/windows/desktop/api/Strmif/nf-strmif-imemallocatorcallbacktemp-getfreecount) -Methode. Die Zuweisung wird von der Zuweisung nicht verfügbar gemacht, es sei denn, das *fenablereleasecallback* -Flag ist im cbasezucator-Konstruktor auf **true** festgelegt.
+Diese Methode implementiert die [**IMemAllocatorCallbackTemp::GetFreeCount-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocatorcallbacktemp-getfreecount) Die Zuweisung macht die IMemAllocatorCallbackTemp-Schnittstelle nur verfügbar, wenn das *Flag fEnableReleaseCallback* im CBaseAllocator-Konstruktor auf **TRUE** festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode implementiert die [**imemzuzuchanorcallbacktemp:: getfrecount**](/
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode implementiert die [**imemzuzuchanorcallbacktemp:: getfrecount**](/
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

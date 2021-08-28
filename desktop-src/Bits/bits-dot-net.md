@@ -1,50 +1,50 @@
 ---
-title: Verwenden von Bits aus .NET mithilfe von Verweis-DLLs
-description: In den folgenden Beispielen wird gezeigt, wie die Bits-com-Schnittstelle aus einem .NET-Programm aufgerufen wird.
+title: Verwenden von BITS aus .NET mitHilfe von Verweis-DLLs
+description: In den folgenden Beispielen wird das Aufrufen der BITS COM-Schnittstelle aus einem .NET-Programm gezeigt.
 ms.assetid: 1058970C-CE81-47D6-950E-3B6289E956B6
 ms.topic: article
 ms.date: 11/13/2018
-ms.openlocfilehash: c359bafe4f1937d49a6ec21896af32606a2ae894
-ms.sourcegitcommit: 00e0a8e56d28c4c720b97f0cf424c29f547460d7
+ms.openlocfilehash: 00f7d6287d86dd1816d7e4b0a7c6e18c9ae4916c5c85b01d0280758cf9d00b5b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103719583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119529150"
 ---
-# <a name="calling-into-bits-from-net-and-c-using-reference-dlls"></a>Aufrufen von Bits aus .net und c# mithilfe von Verweis-DLLs
+# <a name="calling-into-bits-from-net-and-c-using-reference-dlls"></a>Aufrufen von BITS aus .NET und C# mithilfe von Verweis-DLLs
 
-Eine Möglichkeit, die Bits-com-Klassen aus einem .NET-Programm aufzurufen, besteht darin, eine Verweis-dll-Datei zu erstellen, die mit den Bits [IDL](/windows/desktop/Midl/midl-start-page) (Interface Definition Language)-Dateien im Windows SDK beginnt, mithilfe der Tools " [Mittel l](/windows/desktop/Midl/using-the-midl-compiler-2) " und " [Tlbimp](/dotnet/framework/tools/tlbimp-exe-type-library-importer) " Die Verweis-dll ist ein Satz von Klassen-Wrappern für die Bits-com-Klassen. Anschließend können Sie die Wrapper Klassen direkt aus .NET verwenden.
+Eine Möglichkeit zum Aufrufen der BITS COM-Klassen aus einem .NET-Programm besteht in der Erstellung einer DLL-Referenzdatei, die mit den BITS [IDL-Dateien](/windows/desktop/Midl/midl-start-page) (Interface Definition Language) im Windows SDK beginnt, indem die [MIDL-](/windows/desktop/Midl/using-the-midl-compiler-2) und [TLBIMP-Tools](/dotnet/framework/tools/tlbimp-exe-type-library-importer) verwendet werden. Die Verweis-DLL ist ein Satz von Klassen-Wrappern für die BITS COM-Klassen. Anschließend können Sie die Wrapperklassen direkt aus .NET verwenden.
 
-Eine Alternative zur Verwendung automatisch erstellter Verweis-DLLs ist die Verwendung eines .net-Bits-Wrappers von Drittanbietern von [GitHub](https://github.com/) und [nuget](https://www.nuget.org/). Diese Wrapper verfügen häufig über einen natürlicheren .net-Programmierstil, Sie können jedoch hinter den Änderungen und Aktualisierungen in den Bits-Schnittstellen liegen.
+Eine Alternative zur Verwendung automatisch erstellter Verweis-DLLs ist die Verwendung eines .NET BITS-Wrappers von Drittanbietern aus GitHub [und](https://github.com/) [NuGet.](https://www.nuget.org/) Diese Wrapper verfügen häufig über einen natürlicheren .NET-Programmierstil, können aber hinter den Änderungen und Updates in den BITS-Schnittstellen zurück liegen.
 
 ## <a name="creating-the-reference-dlls"></a>Erstellen der Verweis-DLLs
-### <a name="bits-idl-files"></a>Bits-IDL-Dateien
+### <a name="bits-idl-files"></a>BITS-IDL-Dateien
 
-Sie beginnen mit dem Satz von Bits-IDL-Dateien. Dies sind Dateien, die die Bits-com-Schnittstelle vollständig definieren. Die Dateien befinden sich im Verzeichnis " **Windows Kits** " und heißen Bits-*Version*. idl (z. b. bits10_2. idl), mit Ausnahme der Datei der Version 1,0, die nur Bits. idl ist. Wenn neue Versionen von Bits erstellt werden, werden auch neue Bits-IDL-Dateien erstellt.
+Sie beginnen mit dem Satz von BITS-IDL-Dateien. Dies sind Dateien, die die BITS COM-Schnittstelle vollständig definieren. Die Dateien befinden sich im **Verzeichnis Windows Kits** und heißen bits version .idl (z.B. bits10_2.idl), mit Ausnahme der Datei version 1.0, die nur Bits.idl ist. Wenn neue Versionen von BITS erstellt werden, werden auch neue BITS-IDL-Dateien erstellt.
 
-Möglicherweise möchten Sie auch eine Kopie der SDK Bits-IDL-Dateien ändern, um Bits-Funktionen zu verwenden, die nicht automatisch in .NET-Entsprechungen konvertiert werden. Mögliche Änderungen an der IDL-Datei werden später erläutert.
+Sie können auch eine Kopie der SDK-BITS-IDL-Dateien ändern, um BITS-Funktionen zu verwenden, die nicht automatisch in .NET-Entsprechungen konvertiert werden. Mögliche IDL-Dateiänderungen werden später erläutert.
 
-Die Bits-IDL-Dateien enthalten mehrere andere IDL-Dateien als Verweis. Sie schachteln auch, sodass Sie bei Verwendung einer Version alle niedrigeren Versionen enthält.
+Die BITS-IDL-Dateien enthalten mehrere andere IDL-Dateien als Verweis. Sie schachteln sich auch, sodass sie alle niedrigeren Versionen enthalten, wenn Sie eine Version verwenden.
 
-Für jede Version von Bits, die in Ihrem Programm als Ziel verwendet werden soll, benötigen Sie eine Verweis-dll für diese Version. Wenn Sie z. b. ein Programm schreiben möchten, das mit Bits 1,5 und up funktioniert, aber zusätzliche Funktionen aufweist, wenn Bits 10,2 vorhanden ist, müssen Sie sowohl die bits1_5. idl-als auch die bits10_2. IDL-Dateien konvertieren.
-
-
-### <a name="midl-and-tlbimp-utilities"></a>Mittel l-und Tlbimp-Hilfsprogramme
-
-Das Hilfsprogramm " [Mittel l](/windows/desktop/Midl/using-the-midl-compiler-2) " (Microsoft Interface Definition Language) konvertiert die IDL-Dateien, die die Bits-com-Schnittstelle beschreiben, in eine TLB-Datei (Typbibliothek). Das Tool "Mittel l" hängt vom CL-Hilfsprogramm (C-Präprozessor) ab, um die IDL-Sprachdatei ordnungsgemäß zu lesen. Das CL-Hilfsprogramm ist Teil von Visual Studio und wird installiert, wenn Sie C/C++-Funktionen in die Visual Studio-Installation einbinden.
-
-Das Hilfsprogramm "Mittelwert" erstellt normalerweise einen Satz von c-und H-Dateien (c-Sprachcode und c-sprach Header). Sie können diese zusätzlichen Dateien unterdrücken, indem Sie die Ausgabe an das NUL:-Gerät senden. Wenn Sie z. b. den/dlldata NUL: Switch festlegen, wird das Erstellen einer dlldata. c-Datei unterdrückt. Die folgenden Beispiel Befehle zeigen, welche Switches auf NUL festgelegt werden sollten:.
-
-Das Hilfsprogramm [Tlbimp](/dotnet/framework/tools/tlbimp-exe-type-library-importer) (Typbibliotheks Import) liest in eine TLB-Datei und erstellt die entsprechende Verweis-dll-Datei. 
+Für jede Version von BITS, die Sie in Ihrem Programm als Ziel verwenden möchten, benötigen Sie eine Verweis-DLL für diese Version. Wenn Sie z. B. ein Programm schreiben möchten, das auf BITS 1.5 und up funktioniert, aber über zusätzliche Features verfügt, wenn BITS 10.2 vorhanden ist, müssen Sie sowohl die dateien bits1_5.idl als auch bits10_2.idl konvertieren.
 
 
-### <a name="example-commands-for-midl-and-tlbimp"></a>Beispiel Befehle für "Mittel l" und "Tlbimp"
+### <a name="midl-and-tlbimp-utilities"></a>MIDL- und TLBIMP-Hilfsprogramme
 
-Dies ist ein Beispiel für den kompletten Satz von Befehlen, um einen Satz von Verweis Dateien zu generieren. Möglicherweise müssen Sie die Befehle auf der Grundlage Ihrer Visual Studio-und Windows SDK Installation ändern und auf der Grundlage der Bits-Features und Betriebssystemversionen, auf die Sie abzielen. 
+Das [MIDL-Hilfsprogramm](/windows/desktop/Midl/using-the-midl-compiler-2) (Microsoft Interface Definition Language) konvertiert die IDL-Dateien, die die BITS COM-Schnittstelle beschreiben, in eine TLB-Datei (Typbibliothek). Das MIDL-Tool ist vom CL-Hilfsprogramm (C-Präprozessor) abhängig, um die IDL-Sprachdatei ordnungsgemäß zu lesen. Das CL-Hilfsprogramm ist Teil Visual Studio und wird installiert, wenn Sie C/C++-Features in die Visual Studio.
 
-Im Beispiel wird ein Verzeichnis erstellt, in dem die dll-Referenzdateien abgelegt werden, und es wird eine Umgebungsvariable bitwort p erstellt, um auf dieses Verzeichnis zu verweisen 
+Das MIDL-Hilfsprogramm erstellt normalerweise einen Satz von C- und H-Dateien (C-Sprachcode und C-Sprachheader). Sie können diese zusätzlichen Dateien unterdrücken, indem Sie die Ausgabe an das Gerät NUL: senden. Wenn Sie beispielsweise den Schalter /dlldata NUL: festlegen, wird das Erstellen einer dlldata.c-Datei unterdrückt. Die folgenden Beispielbefehle zeigen, welche Schalter auf NUL: festgelegt werden sollten.
 
-Mit den Beispiel Befehlen führen Sie dann die vsdevcmd.bat Datei aus, die vom Visual Studio-Installer erstellt wurde. Mit dieser bat-Datei werden Ihre Pfade und einige Umgebungsvariablen so eingerichtet, dass die Befehle "Mittel l" und "Tlbimp" ausgeführt werden. Außerdem werden die Variablen WindowsSdkDir und windowssdklibversion so eingerichtet, dass Sie auf die neuesten Windows SDK Verzeichnisse zeigen.
+Das [Hilfsprogramm TLBIMP](/dotnet/framework/tools/tlbimp-exe-type-library-importer) (Type Library Importer) liest eine TLB-Datei ein und erstellt die entsprechende DLL-Referenzdatei. 
+
+
+### <a name="example-commands-for-midl-and-tlbimp"></a>Beispielbefehle für MIDL und TLBIMP
+
+Dies ist ein Beispiel für den vollständigen Satz von Befehlen, um einen Satz von Verweisdateien zu generieren. Möglicherweise müssen Sie die Befehle basierend auf Ihrer Visual Studio- und Windows SDK-Installation und basierend auf den BITS-Features und Betriebssystemversionen ändern, auf die Sie abzielen. 
+
+Im Beispiel wird ein Verzeichnis zum Platzieren der DLL-Referenzdateien und eine Umgebungsvariable BITSTEMP erstellt, um auf dieses Verzeichnis zu verweisen. 
+
+Die Beispielbefehle führen dann die vsdevcmd.bat aus, die vom Installationsprogramm Visual Studio wird. Diese BAT-Datei richten Ihre Pfade und einige Umgebungsvariablen so ein, dass die MIDL- und TLBIMP-Befehle ausgeführt werden. Außerdem werden die Variablen WindowsSdkDir und WindowsSDKLibVersion so eingerichtet, dass sie auf die neuesten sdk Windows verweisen.
 
 ```console
 REM Create a working directory
@@ -85,25 +85,25 @@ DEL "%BITSTEMP%"\bits*.tlb
 POPD
 
 ```
-Nachdem diese Befehle ausgeführt wurden, verfügen Sie über eine Reihe von Verweis-DLLs im Verzeichnis "bitstemp".
+Nachdem diese Befehle ausgeführt wurden, verfügen Sie über eine Reihe von Verweis-DLLs im BITSTEMP-Verzeichnis.
 
 ### <a name="adding-the-reference-dlls-to-your-project"></a>Hinzufügen der Verweis-DLLs zu Ihrem Projekt
 
-Öffnen Sie das c#-Projekt in Visual Studio, um eine Verweis-dll in einem c#-Projekt zu verwenden. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf Verweise, und klicken Sie dann auf Verweis hinzufügen. Klicken Sie dann auf die Schaltfläche zum Durchsuchen und dann auf die Schaltfläche Navigieren Sie zu dem Verzeichnis mit den Verweis-DLLs, wählen Sie Sie aus, und klicken Sie auf hinzufügen. Im Fenster "Verweis-Manager" werden die Verweis-DLLs geprüft. Klicken Sie dann auf „OK“.
+Um eine Verweis-DLL in einem C#-Projekt zu verwenden, öffnen Sie Ihr C#-Projekt in Visual Studio. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die Verweise, und klicken Sie auf Verweis hinzufügen. Klicken Sie dann auf die Schaltfläche Durchsuchen und dann auf die Schaltfläche Hinzufügen. Navigieren Sie zum Verzeichnis mit den Referenz-DLLs, wählen Sie sie aus, und klicken Sie auf Hinzufügen. Im Fenster Verweis-Manager werden die Verweis-DLLs überprüft. Klicken Sie dann auf „OK“.
 
-Die Bits-Verweis-DLLs werden nun dem Projekt hinzugefügt.
+Die BITS-Verweis-DLLs werden ihrem Projekt jetzt hinzugefügt.
 
-Die Informationen in den Verweis-dll-Dateien werden in das endgültige Programm eingebettet. Sie müssen die dll-Referenzdateien nicht an Ihr Programm senden. Sie müssen lediglich das versenden. Speichert. 
+Die Informationen in den REFERENZ-DLL-Dateien werden in Ihr endgültiges Programm eingebettet. Sie müssen die DLL-Referenzdateien nicht mit Ihrem Programm versenden. Sie müssen nur die .EXE. 
 
-Sie können ändern, ob die Verweis-DLLs in die endgültige exe-Datei eingebettet werden. Verwenden Sie die Eigenschaft [Interop-Typen einbetten](/dotnet/framework/interop/how-to-add-references-to-type-libraries) , um festzulegen, ob die Verweis-DLLs eingebettet werden. Dies kann auf Verweis Basis erfolgen. Der Standardwert ist "true", um die DLLs einzubetten.
+Sie können ändern, ob die Verweis-DLLs in die endgültige EXE-Datei eingebettet sind. Legen Sie [mithilfe der Eigenschaft Interoptypen](/dotnet/framework/interop/how-to-add-references-to-type-libraries) einbetten fest, ob die Verweis-DLLs eingebettet werden sollen. Dies kann auf Referenzbasis erfolgen. Der Standardwert ist True zum Einbetten der DLLs.
 
-## <a name="modifying-idl-files-for-more-complete-net-code"></a>Ändern von IDL-Dateien für einen ausführlicheren .NET-Code
+## <a name="modifying-idl-files-for-more-complete-net-code"></a>Ändern von IDL-Dateien für vollständigeren .NET-Code
 
-Die Bits-IDL-Dateien (Microsoft Interface Definition Language) können unverändert verwendet werden, um die backgroundcopymanager-dll-Datei zu erstellen. Allerdings fehlen in der resultierenden .net-Verweis-dll einige nicht übersetzbare Unions und verfügt über schwer zu verwendende Namen für einige Strukturen und enums. In diesem Abschnitt werden einige der Änderungen beschrieben, die Sie vornehmen können, um die .net-dll zu vervollständigen und leichter zu verwenden.
+Die BITS-IDL-Dateien (Microsoft Interface Definition Language) können unverändert verwendet werden, um die BackgroundCopyManager-DLL-Datei zu erstellen. In der resultierenden .NET-Verweis-DLL fehlen jedoch einige nicht übersetzbare Unions, und sie verfügt über schwer zu verwendende Namen für einige Strukturen und Enumeren. In diesem Abschnitt werden einige der Änderungen beschrieben, die Sie vornehmen können, um die .NET-DLL vollständiger und einfacher zu verwenden.
 
-### <a name="simpler-enum-names"></a>Einfachere Enum-Namen
+### <a name="simpler-enum-names"></a>Einfachere ENUM-Namen
 
-Die Bits-IDL-Dateien definieren in der Regel Enumerationswerte wie folgt:
+Die BITS-IDL-Dateien definieren in der Regel Aufzählwerte wie die folgenden:
 ```
     typedef enum
     {
@@ -111,7 +111,7 @@ Die Bits-IDL-Dateien definieren in der Regel Enumerationswerte wie folgt:
             BG_AUTH_TARGET_PROXY
     } BG_AUTH_TARGET;
 ```
-Der BG_AUTH_TARGET ist der Name der typedef. die tatsächliche Aufzählung wird nicht benannt. Dies verursacht in der Regel keine Probleme mit C-Code, lässt sich jedoch nicht gut für die Verwendung mit einem .NET-Programm umsetzen. Ein neuer Name wird automatisch erstellt, kann aber in etwa wie _MIDL___MIDL_itf_bits4_0_0005_0001_0001 aussehen, anstelle eines lesbaren Werts. Sie können dieses Problem beheben, indem Sie die mittleren Dateien so aktualisieren, dass Sie einen Enumeration-Namen enthalten.
+Der BG_AUTH_TARGET ist der Name der typedef. Die tatsächliche -Enum ist nicht benannt. Dies führt in der Regel nicht zu Problemen mit C-Code, lässt sich aber nicht gut für die Verwendung mit einem .NET-Programm übersetzen. Ein neuer Name wird automatisch erstellt, aber er könnte in etwa wie _MIDL___MIDL_itf_bits4_0_0005_0001_0001 statt eines für Menschen lesbaren Werts aussehen. Sie können dieses Problem beheben, indem Sie die MIDL-Dateien so aktualisieren, dass sie einen Aufenumernamen enthalten.
 
 ```
     typedef enum BG_AUTH_TARGET
@@ -121,11 +121,11 @@ Der BG_AUTH_TARGET ist der Name der typedef. die tatsächliche Aufzählung wird 
     } BG_AUTH_TARGET;
 ```
 
-Der Enumeration-Name darf nicht mit dem Typedef-Namen identisch sein. Einige Programmierer verfügen über eine Benennungs Konvention, bei der Sie anders gehalten werden (z. b. durch Einfügen eines Unterstrichs vor dem Enumeration-Namen), aber dies verwechselt nur die .net-Übersetzungen. 
+Der Enum-Name darf mit dem TypeDef-Namen identisch sein. Einige Programmierer haben eine Benennungskonvention, bei der sie unterschiedlich gehalten werden (z. B. durch Setzen eines Unterstrichs vor dem Namen der Aufenumer), aber dies verwirren nur die .NET-Übersetzungen. 
 
-### <a name="string-types-in-unions"></a>Zeichen folgen Typen in Unions
+### <a name="string-types-in-unions"></a>Zeichenfolgentypen in Unions
 
-Die Bits-IDL-Dateien übergeben Zeichen folgen mithilfe der LPWSTR-Konvention (Long-Zeiger auf breit Zeichen Zeichenfolge). Dies funktioniert zwar beim Übergeben von Funktionsparametern (wie z. b. die Job. getDisplayName ([out] LPWSTR * PVal)-Methode), aber es funktioniert nicht, wenn die Zeichen folgen zu Unions gehören. Die bits5_0. IDL-Datei enthält z. b. die BITS_FILE_PROPERTY_VALUE Union:
+Die BITS-IDL-Dateien übergeben Zeichenfolgen mithilfe der LPWSTR-Konvention (long pointer to wide-character string). Obwohl dies beim Übergeben von Funktionsparametern (z.B. der Job.GetDisplayName([out] LPWSTR *pVal)-Methode funktioniert, funktioniert dies nicht, wenn die Zeichenfolgen Teil von Unions sind. Die Datei bits5_0.idl enthält z. B. die BITS_FILE_PROPERTY_VALUE Union:
 
 ```
 typedef [switch_type(BITS_FILE_PROPERTY_ID)] union
@@ -136,11 +136,11 @@ typedef [switch_type(BITS_FILE_PROPERTY_ID)] union
 BITS_FILE_PROPERTY_VALUE;
 ```
 
-Das Feld "LPWSTR" ist nicht in der .NET-Version der Union enthalten. Um dieses Problem zu beheben, ändern Sie "LPWSTR" in "WCHAR *". Das resultierende Feld (so genannte Zeichenfolge) wird als IntPtr übergeben. Konvertieren Sie diese in eine Zeichenfolge mithilfe von System. Runtime. InteropServices. Marshal. ptrumstringauto (Value). Zeichenfolge); anzuwenden.
+Das LPWSTR-Feld wird nicht in der .NET-Version der Union enthalten sein. Um dieses Problem zu beheben, ändern Sie LPWSTR in WCHAR*. Das resultierende Feld (string) wird als IntPtr übergeben. Konvertieren Sie dies mithilfe des Werts System.Runtime.InteropServices.Marshal.PtrToStringAuto() in eine Zeichenfolge. String); Methode.
 
 ### <a name="unions-in-structures"></a>Unions in Strukturen
 
-Manchmal sind Unions, die in Strukturen eingebettet sind, nicht in der Struktur enthalten. Beispielsweise wird in der Bits1_5. idl die BG_AUTH_CREDENTIALS wie folgt definiert:
+Manchmal werden Unions, die in Strukturen eingebettet sind, überhaupt nicht in die Struktur aufgenommen. In der Datei Bits1_5.idl wird die BG_AUTH_CREDENTIALS wie folgt definiert:
 ```
     typedef struct
     {
@@ -151,7 +151,7 @@ Manchmal sind Unions, die in Strukturen eingebettet sind, nicht in der Struktur 
     BG_AUTH_CREDENTIALS;
 ```
 
-Der BG_AUTH_CREDENTIALS_UNION wird wie folgt als Union definiert:
+Die BG_AUTH_CREDENTIALS_UNION ist wie folgt als Union definiert:
 ```
     typedef [switch_type(BG_AUTH_SCHEME)] union
     {
@@ -160,9 +160,9 @@ Der BG_AUTH_CREDENTIALS_UNION wird wie folgt als Union definiert:
             [default] ;
     } BG_AUTH_CREDENTIALS_UNION;
 ```
-Das Feld Anmelde Informationen im BG_AUTH_CREDENTIALS wird nicht in die .net-Klassendefinition eingeschlossen.
+Das Feld Anmeldeinformationen im BG_AUTH_CREDENTIALS nicht in der .NET-Klassendefinition enthalten.
 
-Beachten Sie, dass die Union so definiert ist, dass Sie unabhängig von der BG_AUTH_SCHEME immer ein BG_BASIC_CREDENTIALS ist. Da die Union nicht als Union verwendet wird, können wir einfach eine BG_BASIC_CREDENTIALS wie die folgende übergeben:
+Beachten Sie, dass die Union unabhängig vom BG_BASIC_CREDENTIALS immer als BG_AUTH_SCHEME. Da die Union nicht als Union verwendet wird, können wir einfach wie BG_BASIC_CREDENTIALS übergeben:
 ```
     typedef struct
     {
@@ -173,11 +173,11 @@ Beachten Sie, dass die Union so definiert ist, dass Sie unabhängig von der BG_A
     BG_AUTH_CREDENTIALS;
 ```
 
-## <a name="using-bits-from-c"></a>Verwenden von Bits aus C #
+## <a name="using-bits-from-c"></a>Verwenden von BITS aus C #
 
-### <a name="recommended-using-statement"></a>Empfohlene using-Anweisung
+### <a name="recommended-using-statement"></a>Empfohlene Using-Anweisung
 
-Wenn Sie einige using-Anweisungen in c# einrichten, verringern Sie die Anzahl der Zeichen, die Sie eingeben müssen, um die verschiedenen Bits-Versionen zu verwenden. Der Name "bizreference" stammt aus dem Namen der Verweis-dll.
+Durch das Einrichten einiger using-Anweisungen in C# wird die Anzahl der Zeichen reduziert, die Sie eingeben müssen, um die verschiedenen BITS-Versionen zu verwenden. Der Name "BITSReference" stammt aus dem Namen der Verweis-DLL.
 
 ```csharp
 // Set up the BITS namespaces
@@ -187,9 +187,9 @@ using BITS5 = BITSReference5_0;
 using BITS10_2 = BITSReference10_2;
 ```
 
-### <a name="quick-sample-download-a-file"></a>Kurzes Beispiel: Herunterladen einer Datei
+### <a name="quick-sample-download-a-file"></a>Schnellbeispiel: Herunterladen einer Datei
 
-Im folgenden finden Sie einen kurzen, aber kompletten Ausschnitt von c#-Code zum Herunterladen einer Datei aus einer URL. 
+Unten finden Sie einen kurzen, aber vollständigen Codeausschnitt mit C#-Code zum Herunterladen einer Datei von einer URL. 
 
 ```csharp
     var mgr = new BITS.BackgroundCopyManager1_5();
@@ -222,31 +222,31 @@ Im folgenden finden Sie einen kurzen, aber kompletten Ausschnitt von c#-Code zum
     // Job is complete
 ```
 
-In diesem Beispielcode wird ein Bits-Manager mit dem Namen "Mgr" erstellt. Sie entspricht direkt der [ibackgroundcopymanager](/windows/desktop/api/bits/nn-bits-ibackgroundcopymanager) -Schnittstelle. 
+In diesem Beispielcode wird ein BITS-Manager namens mgr erstellt. Er entspricht direkt der [IBackgroundCopyManager-Schnittstelle.](/windows/desktop/api/bits/nn-bits-ibackgroundcopymanager) 
 
-Aus dem Manager wird ein neuer Auftrag erstellt. Der Auftrag ist ein out-Parameter in der Methode "kreatejob". Außerdem wird der Name des Auftrags (der nicht eindeutig sein muss) und der Downloadtyp, bei dem es sich um einen Download Auftrag handelt, übermittelt. Außerdem wird eine Bits-GUID für den Auftrags Bezeichner ausgefüllt.
+Vom Vorgesetzten wird ein neuer Auftrag erstellt. Der Auftrag ist ein out-Parameter für die CreateJob-Methode. Ebenfalls übergeben wird der Auftragsname (der nicht eindeutig sein muss) und der Downloadtyp, bei dem es sich um einen Downloadauftrag handelt. Eine BITS-GUID für den Auftragsbezeichner wird ebenfalls ausgefüllt.
 
-Nachdem der Auftrag erstellt wurde, fügen Sie dem Auftrag mit der AddFile-Methode eine neue Downloaddatei hinzu. Sie müssen zwei Zeichen folgen übergeben, eine für die Remote Datei (URL oder Dateifreigabe) und eine für die lokale Datei. 
+Nachdem der Auftrag erstellt wurde, fügen Sie dem Auftrag mit der AddFile-Methode eine neue Downloaddatei hinzu. Sie müssen zwei Zeichenfolgen übergeben: eine für die Remotedatei (die URL oder Dateifreigabe) und eine für die lokale Datei. 
 
-Nachdem Sie die Datei hinzugefügt haben, können Sie den Auftrag fortsetzen, um ihn zu starten. Dann wartet der Code, bis sich der Auftrag in einem abschließenden Zustand befindet (Fehler oder übertragen) und dann abgeschlossen wird.
+Nachdem Sie die Datei hinzugefügt haben, rufen Sie Resume für den Auftrag auf, um sie zu starten. Anschließend wartet der Code, bis sich der Auftrag in einem endgültigen Zustand (ERROR oder TRANSFERD) befindet, und wird dann abgeschlossen.
 
-### <a name="bits-versions-casting-and-queryinterface"></a>Bits-Versionen, Umwandlung und QueryInterface
+### <a name="bits-versions-casting-and-queryinterface"></a>BITS-Versionen, Umwandlung und QueryInterface
 
-Sie werden feststellen, dass Sie häufig sowohl eine frühe Version eines Bits-Objekts als auch eine neuere Version in Ihrem Programm verwenden müssen.  
+Sie werden feststellen, dass Sie häufig sowohl eine frühe Version eines BITS-Objekts als auch eine neuere Version in Ihrem Programm verwenden müssen.  
 
-Wenn Sie z. b. ein Auftrags Objekt erstellen, erhalten Sie einen ibackgroundcopyjob (Teil der Bits-Version 1,0), auch wenn Sie ihn mit einem neueren Manager-Objekt erstellen und ein aktuelleres ibackgroundcopyjob-Objekt verfügbar ist. Da die Methode "kreatejob" eine Schnittstelle für die aktuellste Version nicht akzeptiert, können Sie die aktuellste Version nicht direkt erstellen.
+Wenn Sie beispielsweise ein Auftragsobjekt erstellen, erhalten Sie einen IBackgroundCopyJob (Teil der BITS-Version 1.0), auch wenn Sie es mit einem neueren Managerobjekt erstellen und ein neueres IBackgroundCopyJob-Objekt verfügbar ist. Da die CreateJob-Methode keine Schnittstelle für die neuere Version akzeptiert, können Sie die neuere Version nicht direkt erstellen.
 
-Verwenden Sie eine .net-Umwandlung, um von einem älteren Typobjekt in ein neueres Typobjekt zu konvertieren. Die Umwandlung ruft automatisch eine COM-QueryInterface-Schnittstelle auf. 
+Verwenden Sie eine .NET-Umwandlung, um von einem älteren Typobjekt in ein neueres Typobjekt zu konvertieren. Die Cast-Zeichenfolge wird automatisch ein COM QueryInterface aufrufen. 
 
-In diesem Beispiel gibt es ein ibackgroundcopyjob-Objekt mit dem Namen "Job", und wir möchten es in ein IBackgroundCopyJob5-Objekt mit dem Namen "job5" konvertieren, damit wir die Methode "Bits 5,0 GetProperty" aufrufen können. Wir haben einfach wie folgt eine Umwandlung in den IBackgroundCopyJob5-Typ durch:
+In diesem Beispiel gibt es ein BITS IBackgroundCopyJob-Objekt namens "job", und wir möchten es in ein IBackgroundCopyJob5-Objekt namens "job5" konvertieren, damit wir die BITS 5.0 GetProperty-Methode aufrufen können. Wir haben einfach in den IBackgroundCopyJob5-Typ wie den folgenden umstellen:
 
 ```csharp
 var job5 = (BITS5.IBackgroundCopyJob5)job;
 ```
 
-Die job5-Variable wird von .NET mithilfe der korrekten QueryInterface initialisiert. 
+Die Job5-Variable wird von .NET mit der richtigen QueryInterface initialisiert. 
 
-Wenn Ihr Code möglicherweise auf einem System ausgeführt wird, das eine bestimmte Version von Bits nicht unterstützt, können Sie die Umwandlung ausprobieren und die System. InvalidCastException-Ausnahme abfangen. 
+Wenn Ihr Code möglicherweise auf einem System ausgeführt wird, das keine bestimmte Version von BITS unterstützt, können Sie die Cast-Ausnahme ausprobieren und die System.InvalidCastException abfangen. 
 
 ```csharp
 BITS5.IBackgroundCopyJob5 job5 = null;
@@ -260,9 +260,9 @@ catch (System.InvalidCastException)
 }
 ```
 
-Ein häufiges Problem ist, wenn Sie versuchen, eine Umwandlung in die falsche Art von Objekt durchführen. Das .NET-System kennt die wirkliche Beziehung zwischen den Bits-Schnittstellen nicht. Wenn Sie nach der falschen Art der Schnittstelle gefragt werden, versucht .net, Sie für Sie zu verwenden, und es tritt ein Fehler mit InvalidCastException und HRESULT 0x80004002 (E_NOINTERFACE) auf.
+Ein häufiges Problem ist, wenn Sie versuchen, in die falsche Art von Objekt zu casten. Das .NET-System weiß nicht über die tatsächliche Beziehung zwischen den BITS-Schnittstellen. Wenn Sie nach der falschen Art von Schnittstelle fragen, versucht .NET, sie für Sie zu erstellen, und es wird ein Fehler mit einer InvalidCastException und einer HResult-0x80004002 (E_NOINTERFACE).
 
-### <a name="working-with-bits-versions-10_1-and-10_2"></a>Arbeiten mit Bits-Versionen 10_1 und 10_2
+### <a name="working-with-bits-versions-10_1-and-10_2"></a>Arbeiten mit BITS-Versionen 10_1 und 10_2
 
-In einigen Versionen von Windows 10 können Sie kein Bits-ibackgroundcopymanager-Objekt direkt mithilfe der 10,1-oder 10,2-Schnittstellen erstellen. Stattdessen müssen Sie mehrere Versionen der Referenzdateien der backgroundcopymanager-dll verwenden. Beispielsweise können Sie die Version 1,5 verwenden, um ein ibackgroundcopymanager-Objekt zu erstellen, und dann die resultierenden Aufträge oder Datei Objekte mithilfe der Versionen 10,1 oder 10,2 umwandeln.
+In einigen Versionen von Windows 10 können Sie ein BITS IBackgroundCopyManager-Objekt nicht direkt mithilfe der Schnittstellen 10.1 oder 10.2 erstellen. Stattdessen müssen Sie mehrere Versionen der BackgroundCopyManager-DLL-Verweisdateien verwenden. Beispielsweise können Sie die Version 1.5 verwenden, um ein IBackgroundCopyManager-Objekt zu erstellen, und dann die resultierenden Auftrags- oder Dateiobjekte mithilfe der Versionen 10.1 oder 10.2 casten.
 
